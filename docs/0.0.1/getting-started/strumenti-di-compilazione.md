@@ -15,15 +15,15 @@ Per usare il sistema di compilazione e lanciare la documentazione in ambiente lo
 1. [Scarica e installa Node.js](https://nodejs.org/download/), che è usato per gestire le dipendenze attraverso NPM.
 2. Naviga alla root del progetto e lancia il comando `npm install` per installare le dipendenze come indicato nel file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
 3. [Installa Ruby][install-ruby], e [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file [Gemfile]({{ site.repo }}/blob/v{{ site.current_version }}/Gemfile), come Jekyll e i suoi plugin.
-  - **Utenti Windows:** è bene leggere [questa guida](jekyll-windows) per installare Jekyll senza problemi.
+  - **Utenti Windows:** è bene leggere [questa guida][jekyll-windows] per installare Jekyll senza problemi.
   
-Puoi trovare maggiori informazioni su Jekyll a [questa pagina](jekyll).
+Puoi trovare maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
 Una volta completati questi passi, sarà possibile lanciare gli script che seguono.
 
 ### Utilizzare gli script NPM
 
-Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include i seguenti comandi, che fanno uso di  **Usa [SASS](sass), [Autoprefixer][autoprefixer], e [UglifyJS](uglify)**:
+Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include i seguenti comandi, che fanno uso di  **Usa [SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
 
 | Task | Description |
 | --- | --- |
@@ -37,7 +37,7 @@ Esegui `npm run` per consultare tutti gli script disponibili.
 
 ## Tema Bootstrap Italia
 
-Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi](https://getbootstrap.com/docs/4.0/getting-started/theming/) sul sito Bootstrap.
+Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][bootstrap-themes] sul sito Bootstrap.
 
 Le cartelle d'interesse sono:
 
@@ -48,7 +48,7 @@ _TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
 
 ## Documentazione
 
-La documentazione è gestita attraverso [Jekyll](jekyll) e utilizza file basati sul linguaggio Markdown.
+La documentazione è gestita attraverso [Jekyll][jekyll] e utilizza file basati sul linguaggio Markdown.
 
 1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
 2. Eseguire `npm start`.
@@ -56,15 +56,16 @@ La documentazione è gestita attraverso [Jekyll](jekyll) e utilizza file basati 
 
 La struttura delle cartelle della documentazione è la seguente:
 
-- `_data`: assieme al file `config-yml` definiscono le variabili utilizzate nei vari template ([documentazione](jekyll-data))
-- `_includes`: contiene porzioni di codice HTML ([documentazione](jekyll-includes))
-- `_layouts`: definisce alcuni modelli di pagina ([documentazione](jekyll-themes))
-- `_plugins`: contiene funzioni che aumentano le funzionalità di Jekyll ([documentazione](jekyll-plugins))
+- `_data`: assieme al file `config-yml` definiscono le variabili utilizzate nei vari template ([documentazione][jekyll-data])
+- `_includes`: contiene porzioni di codice HTML ([documentazione][jekyll-includes])
+- `_layouts`: definisce alcuni modelli di pagina ([documentazione][jekyll-themes])
+- `_plugins`: contiene funzioni che aumentano le funzionalità di Jekyll ([documentazione][jekyll-plugins])
 - `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
 - `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**.
 
 Una volta lanciato il comando `npm start`, Jekyll pubblica il sito statico contenente la documentazione nella cartella `_gh_pages`.
 
+[bootstrap-themes]: https://getbootstrap.com/docs/4.0/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
 [sass]: http://sass-lang.com/
