@@ -1,0 +1,50 @@
+// Modal extensions
+//
+// For tweaking scrolling, positioning, and more.
+
+.modal-body-scroller {
+  max-height: 500px;
+  overflow: auto;
+  @include border-radius($border-radius-lg);
+}
+
+.modal-body + .modal-body {
+  border-top: 1px solid $modal-footer-border-color;
+}
+
+
+// Modal actions
+//
+// Split equal width buttons at the bottom of modals, in place of modal footers.
+
+.modal-actions {
+  @include clearfix;
+}
+
+.modal-action {
+  float: left;
+  width: 50%;
+  padding: $modal-inner-padding;
+  border: solid $modal-footer-border-color;
+  border-width: 1px 0 0;
+
+  + .modal-action {
+    border-left-width: 1px;
+  }
+
+  &:first-child {
+    border-bottom-left-radius: ($border-radius-lg - 1);
+  }
+
+  &:last-child {
+    border-bottom-right-radius: ($border-radius-lg - 1);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-color: $modal-footer-border-color;
+  }
+}

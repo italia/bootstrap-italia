@@ -1,0 +1,49 @@
+//
+// OS X style notifications
+//
+
+.growl {
+  position: fixed;
+  top: 65px;
+  left: 15px;
+  right: 15px;
+  z-index: $zindex-growl;
+
+  &.growl-static {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: auto;
+  }
+
+  .alert {
+    animation: slide-from-top 1000ms cubic-bezier(.2,.7,.5,1);
+    margin-bottom: 10px;
+  }
+
+  .alert-dismissable .close,
+  .alert-dismissible .close {
+    color: #fff;
+    top: -5px;
+  }
+}
+
+
+@include media-breakpoint-up(sm) {
+  .growl {
+    left: auto;
+    width: 400px;
+  }
+}
+
+@keyframes slide-from-right {
+    0%   { transform: translateX(30%); opacity: 0 }
+    40%  { opacity: 1 }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide-from-top {
+    0%   { transform: translateY(-30%); opacity: 0 }
+    70%  { opacity: 1 }
+    100% { transform: translateY(0); }
+}

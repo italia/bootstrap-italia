@@ -1,0 +1,8 @@
+// dropdowns
+.dropdown-menu {
+  padding: $dropdown-padding;
+
+  > li > a {
+    padding: $dropdown-anchor-padding;
+  }
+}

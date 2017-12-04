@@ -1,0 +1,333 @@
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+), $grays);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$italia-blue:   hsb(210, 100, 80) !default;
+$italia-teal:   hsb(178, 95, 85)  !default;
+$italia-red:    hsb(351, 75, 97)  !default;
+$italia-orange: hsb(36, 100, 100)  !default;
+$italia-green:  hsb(159, 100, 81)  !default;
+
+$colors: () !default;
+$colors: map-merge((
+        "blue":       $blue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $italia-blue !default;
+$secondary:     $italia-teal !default;
+$success:       $italia-green !default;
+$info:          $gray-100 !default;
+$warning:       $italia-orange !default;
+$danger:        $italia-red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+), $theme-colors);
+// stylelint-enable
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:              true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+$border-radius:               .05rem !default;
+$border-radius-sm:            .1rem !default;
+$border-radius-lg:            .2rem !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3)
+) !default;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%
+) !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+) !default;
+
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           16px !default;
+
+// icons
+$icon-font-path: "../fonts/";
+$icon-font-name: "toolkit-entypo";
+
+// Body
+// $body-bg: #f5f8fa;
+
+// Component borders
+// Create a custom variable to base the border-color off the body background.
+$toolkit-border-color:  darken(#f5f8fa, 10%);
+// Then apply that to key components
+$panel-default-border:  $toolkit-border-color;
+$panel-inner-border:    $toolkit-border-color;
+$panel-footer-bg:       $body-bg;
+$list-group-border:     $toolkit-border-color;
+$navbar-border:         $toolkit-border-color;
+
+// Gray Scale
+$gray-darker:   #122a38;
+$gray-dark:     #1e3948;
+$gray:          #536570;
+$gray-light:    #9da9b0;
+$gray-lighter:  #d4dbe0;
+$gray-lightest: #f5f8fa;
+
+
+// Brand Scale
+$brand-primary: #06C;
+$brand-success: #4eb76e;
+$brand-warning: #cbb956;
+$brand-danger:  #bf5329;
+$brand-info:    #8eb4cb;
+
+// link and button colors
+$btn-primary-bg:     $brand-primary;
+$btn-primary-border: $brand-primary;
+$link-color:         $brand-primary;
+
+// alerts
+$alert-warning-border: #E6D0A1;
+
+
+// Text Color
+$font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
+$text-color:             $gray-dark;
+$letter-spacing-base:    0;
+$line-height-base:       1.5;
+$font-weight-base:       300;
+
+// Main typography
+$font-size-base:              1rem !default;
+
+// lead
+$lead-font-size:      floor(($font-size-base * 1.15));
+$lead-font-size-sm:   floor(($font-size-base * 1.5));
+$lead-font-weight:    300;
+$lead-line-height:    1.4;
+$lead-letter-spacing: 0;
+
+
+// Headings
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+
+
+// Btns
+$btn-font-size:      $font-size-base;
+$btn-text-transform: default;
+$btn-letter-spacing: none;
+$btn-default-color:  #536570;
+$btn-default-bg:     #fff;
+$btn-default-border: #d4dbe0;
+$btn-toolbar-divider-bg: $gray-lighter;
+
+
+// Inputs
+$input-border:            #d4dbe0;
+$input-color-placeholder: $gray-light;
+
+
+// z-index
+$zindex-zoom:  1080;
+$zindex-growl: 1090;
+
+
+$container-max-widths: (
+        lg: 960px + $grid-gutter-width,
+        xl: 1200px + $grid-gutter-width
+);
+
+
+// navbar
+$navbar-margin-bottom:                      0;
+$navbar-nav-active-font-weight:             inherit;
+
+$navbar-inverse-color:  rgba(255,255,255,.5);
+$navbar-inverse-bg:     $brand-primary;
+$navbar-inverse-border: #1C73A5;
+
+$navbar-inverse-hover-color:    rgba(255,255,255,.8);
+$navbar-inverse-active-color:   #fff;
+
+$navbar-inverse-toggle-border-color:  #1C73A5;
+$navbar-inverse-toggle-hover-bg:      darken($navbar-inverse-bg, 2%);
+
+$nav-item-inline-spacer: 2rem;
+
+
+// nav hover
+$nav-link-hover-bg: $gray-lightest;
+
+
+// nav bordered
+$nav-bordered-color:              inherit;
+$nav-bordered-color-active:       $brand-primary;
+$nav-bordered-font-weight:        300;
+$nav-bordered-font-weight-active: 500;
+
+
+// popover
+$popover-fallback-border-color: $gray-lighter;
+$popover-border-color:          $gray-lighter;
+
+
+
+// modal
+$modal-content-fallback-border-color: $gray-light;
+
+
+// misc colors
+$headings-small-color: inherit;
+
+
+// dropdowns
+$dropdown-border:         rgba(0,0,0,.05);
+$dropdown-padding:        10px 0;
+$dropdown-anchor-padding: 5px 20px;
+$dropdown-link-hover-bg:  $gray-lightest;
+
+
+// Spacing
+$spacer:   20px;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+
+// zoom
+$zoom-overlay-bg: #fff;
+
+
+// list group
+$list-group-hover-bg: $gray-lightest;

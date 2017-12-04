@@ -1,0 +1,331 @@
+//
+// Variables
+//
+
+$docs-sidebar-width: 220px;
+$docs-sidebar-gutter: 30px;
+
+//
+// Custom docs styles for Components page
+//
+
+body {
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
+
+//
+// Header
+//
+
+.docs-header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: $brand-primary;
+  background-image: linear-gradient(to bottom, darken($brand-primary, 15%), $brand-primary);
+
+  h1 {
+    margin-bottom: 5px;
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.4;
+    color: lighten($brand-primary, 30%);
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 24px;
+    h1 {
+      font-size: 60px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    h1,
+    p {
+      max-width: 75%;
+    }
+  }
+}
+
+
+//
+// Markdown generated ToC
+//
+
+#contents {
+  display: none;
+}
+
+#markdown-toc {
+  padding-left: 0;
+  margin-top: 30px;
+  font-size: 13px;
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 2px 10px 2px 10px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  > li {
+    margin-bottom: 5px;
+  }
+
+  // Hide the first child li because it's always going to be "Contents".
+  > li:first-child {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+
+    // hide more than 2 levels
+    ul {
+      display: none
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    a {
+      color: $gray;
+      padding-left: 20px;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .active + ul {
+      display: block;
+    }
+
+    .active {
+      padding-left: 18px;
+      color: $brand-primary;
+      background-color: transparent;
+      border-left: 2px solid $brand-primary;
+    }
+
+    float: right;
+    width: $docs-sidebar-width;
+    margin-right: (($docs-sidebar-width + $docs-sidebar-gutter) * -1);
+
+    &.affix {
+      top: 0;
+    }
+  }
+}
+
+
+//
+// Back to top link
+//
+
+.docs-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: darken($body-bg, 5%);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  // Only show it when the nav is floated on the right
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+
+//
+// Entypo icons
+//
+
+.docs-icons {
+  margin-bottom: 20px;
+  font-size: 20px;
+
+  .icon {
+    padding: 5px;
+  }
+}
+
+
+//
+// Jumbotron
+//
+
+.container .docs-jumbotron {
+  @include media-breakpoint-up(sm) {
+    padding-right: $grid-gutter-width-base;
+    padding-left: $grid-gutter-width-base;
+    margin-right: ($grid-gutter-width-base / -2);
+    margin-left: ($grid-gutter-width-base / -2);
+    border-radius: 0;
+  }
+}
+
+
+//
+// Docs type
+//
+
+.docs-content {
+  font-size: 16px;
+
+  > h1 {
+    // Copy-pasta-ed from .page-header
+    // NOTE: fix this – all the variables below are NOT a real variable so needs to be fixed
+    padding-bottom: (($spacer / 2) - 1);
+    margin: ($spacer * 2) 0 $spacer;
+    border-bottom: 1px solid $gray-lighter;
+
+
+    + p {
+      // Copy-pasta-ed from .lead
+      // NOTE: fix this – all the variables below are NOT a real variable so needs to be fixed
+      margin-bottom: $spacer;
+      font-size: floor(($font-size-base * 1.15));
+      font-weight: 300;
+      line-height: 1.5;
+
+      @include media-breakpoint-up(sm) {
+        font-size: ($font-size-base * 1.5);
+      }
+
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-right: ($docs-sidebar-width + $docs-sidebar-gutter + ($grid-gutter-width-base / 2));
+  }
+}
+
+
+//
+// Live examples
+//
+
+.docs-example {
+  position: relative;
+  padding: 20px;
+  margin: 20px -15px;
+  font-size: 14px; // reset from the parent .docs-content so components don't get messed up
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  @include clearfix;
+
+  + .highlight {
+    margin-top: -20px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 3px 3px 0 0;
+  }
+
+  + p {
+    margin-top: 30px;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  // Undo width of container
+  .container {
+    width: auto;
+  }
+
+  > .dropdown-menu:first-child {
+    position: static;
+    display: block;
+  }
+
+  // List groups
+  > .list-group {
+    max-width: 300px;
+  }
+
+  // Labels
+  @include media-breakpoint-up(sm) {
+    .label {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+
+  // Modals
+  &.docs-example-modal {
+    background-color: #fafafa;
+  }
+  .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+  }
+  .modal-dialog {
+    left: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .modal-lg {
+    max-width: 90%;
+  }
+
+  // Tooltips
+  &.bs-example-tooltips {
+    text-align: center;
+  }
+  &.bs-example-tooltips > .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  &.bs-example-tooltip .tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 10px 20px;
+    opacity: 1;
+  }
+
+  // Popovers
+  &.bs-example-popover {
+    padding-bottom: 24px;
+    background-color: #f9f9f9;
+  }
+  &.bs-example-popover .popover {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    margin: 20px;
+  }
+
+  > .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
