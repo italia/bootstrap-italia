@@ -46,7 +46,7 @@ _TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
 
 ## Documentazione
 
-La documentazione è gestita attraverso [Jekyll][jekyll] e utilizza file basati sul linguaggio Markdown.
+La documentazione è generata con [Jekyll][jekyll] e utilizza file basati sul linguaggio Markdown.
 
 1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
 2. Eseguire `npm start`.
@@ -62,6 +62,8 @@ La struttura delle cartelle della documentazione è la seguente:
 - `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**.
 
 Una volta lanciato il comando `npm start`, Jekyll pubblica il sito statico contenente la documentazione nella cartella `_gh_pages`.
+
+_TODO: al momento la cartella _gh_pages funziona correttamente come sito statico, ma non come GitHub Pages site._
 
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
