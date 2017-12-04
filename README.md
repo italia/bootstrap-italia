@@ -1,69 +1,76 @@
-# Design web toolkit - Bootstrap
+# Bootstrap Italia
 
-## Table of contents
+## Come iniziare
 
-- [Quick start](#quick-start)
-- [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
+Questo è un tema basato su [Bootstrap v4.0.0-beta.2](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
-## Quick start
+## Tooling setup
 
-Several quick start options are available:
+Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la compilazione dei file. Il file package.json include alcuni scripts per la compilazione del codice e della documentazione che stai leggendo.
 
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.0.0-beta.2.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@4.0.0-beta.2`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.0.0-beta.2`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.0.0-beta.2`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap -Pre` Sass: `Install-Package bootstrap.sass -Pre` (`-Pre` is only required until Bootstrap v4 has a stable release).
+Per usare il sistema di compilazione e lanciare la documentazione in ambiente locale, è sufficiente seguire i passi di seguito:
 
-Read the [Getting started page](https://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
+1. [Scarica e installa Node.js](https://nodejs.org/download/), che è usato per gestire le dipendenze attraverso NPM.
+2. Naviga alla root del progetto e lancia il comando `npm install` per installare le dipendenze come indicato nel file `package.json`.
+3. [Installa Ruby][install-ruby], e [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file `Gemfile` come Jekyll e i suoi plugin.
+  - **Utenti Windows:** è bene leggere [questa guida][jekyll-windows] per installare Jekyll senza problemi.
+  
+Puoi trovare maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
-## What's included
+Una volta completati questi passi, sarà possibile lanciare gli script che seguono.
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+### Utilizzare gli script NPM
 
-```
-bootstrap/
-├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   ├── bootstrap.min.css.map
-│   ├── bootstrap-grid.css
-│   ├── bootstrap-grid.css.map
-│   ├── bootstrap-grid.min.css
-│   ├── bootstrap-grid.min.css.map
-│   ├── bootstrap-reboot.css
-│   ├── bootstrap-reboot.css.map
-│   ├── bootstrap-reboot.min.css
-│   └── bootstrap-reboot.min.css.map
-└── js/
-    ├── bootstrap.bundle.js
-    ├── bootstrap.bundle.min.js
-    ├── bootstrap.js
-    └── bootstrap.min.js
-```
+Il file `package.json` include i seguenti comandi, che fanno uso di  **Usa [SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
 
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
+| Task | Description |
+| --- | --- |
+| `npm run-script build-code` | `npm run code-build` crea la cartella `/dist` dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia. |
+| `npm run-script build-docs` | `npm run docs-build` crea la cartella `/docs/assets/dist` dove sono pubblicati i file compilati usati nella documentazione che stai leggendo. |
+| `npm run-script build` | Lancia entrambe le compilazioni precedenti, compilando i file nelle cartelle `/dist` e `/docs/assets/dist`. |
+| `npm run-script watch` | Controlla le modifiche sui file soggetti a modifiche e ricompila i file `npm run docs-serve`. |
+| `npm start` | Pubblica i file della documenazione nella cartella `_gh_pages` e avvia Jekyll. |
 
+Esegui `npm run` per consultare tutti gli script disponibili.
 
-## Bugs and feature requests
+## Tema Bootstrap Italia
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi](https://getbootstrap.com/docs/4.0/getting-started/theming/) sul sito Bootstrap.
 
+Le cartelle d'interesse sono:
 
-## Documentation
+- `src` che contiene tutti i file sorgente.
+- `dist` che contiene i file di produzione da copiare ed utilizzare sul proprio HTML.
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
+_TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
 
-### Running documentation locally
+## Documentazione
 
-1. Run through the [tooling setup](https://getbootstrap.com/docs/4.0/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm install` to install Node.js dependencies.
-3. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-4. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-5. Open `http://localhost:9001` in your browser, and voilà.
+La documentazione è gestita attraverso [Jekyll][jekyll] e utilizza file basati sul linguaggio Markdown.
 
-Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
+1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
+2. Eseguire `npm start`.
+3. Navigare su `http://localhost:9001`.
+
+La struttura delle cartelle della documentazione è la seguente:
+
+- `_data`: assieme al file `config-yml` definiscono le variabili utilizzate nei vari template ([documentazione][jekyll-data])
+- `_includes`: contiene porzioni di codice HTML ([documentazione][jekyll-includes])
+- `_layouts`: definisce alcuni modelli di pagina ([documentazione][jekyll-themes])
+- `_plugins`: contiene funzioni che aumentano le funzionalità di Jekyll ([documentazione][jekyll-plugins])
+- `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
+- `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**.
+
+Una volta lanciato il comando `npm start`, Jekyll pubblica il sito statico contenente la documentazione nella cartella `_gh_pages`.
+
+[autoprefixer]: https://github.com/postcss/autoprefixer
+[uglify]: https://github.com/mishoo/UglifyJS2
+[sass]: http://sass-lang.com/
+[install-ruby]: https://www.ruby-lang.org/en/documentation/installation/
+[gembundler]: https://bundler.io/
+[jekyll]: https://jekyllrb.com/docs/home/
+[jekyll-windows]: https://jekyllrb.com/docs/windows/
+[jekyll-data]: https://jekyllrb.com/docs/datafiles/
+[jekyll-includes]: https://jekyllrb.com/docs/includes/
+[jekyll-themes]: https://jekyllrb.com/docs/themes/
+[jekyll-plugins]: https://jekyllrb.com/docs/plugins/
