@@ -14,6 +14,10 @@ destination:    ./_gh_pages
 port:           9001
 baseurl:        ""
 url:            ""
+# use these paths to build on my http://github.francescozaia.com/bootstrap-italia-documentation/
+# and run "bundle exec jekyll build"
+# baseurl:        "/bootstrap-italia-documentation"
+# url:            "/bootstrap-italia-documentation"
 encoding:       UTF-8
 exclude:
   - .git/
