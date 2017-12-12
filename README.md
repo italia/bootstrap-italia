@@ -4,32 +4,28 @@
 
 Questo è un tema basato su [Bootstrap v4.0.0-beta.2](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
-## Tooling setup
+## Setup strumenti
 
 Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la compilazione dei file. Il file package.json include alcuni scripts per la compilazione del codice e della documentazione che stai leggendo.
 
 Per usare il sistema di compilazione e lanciare la documentazione in ambiente locale, è sufficiente seguire i passi di seguito:
 
-1. [Scarica e installa Node.js](https://nodejs.org/download/), che è usato per gestire le dipendenze attraverso NPM.
-2. Naviga alla root del progetto e lancia il comando `npm install` per installare le dipendenze come indicato nel file `package.json`.
-3. [Installa Ruby][install-ruby], e [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file `Gemfile` come Jekyll e i suoi plugin.
-  - **Utenti Windows:** è bene leggere [questa guida][jekyll-windows] per installare Jekyll senza problemi.
+1. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso NPM.
+2. Navigare alla root del progetto e lanciare il comando `npm install` per installare le dipendenze secondo quanto indicato nel file `package.json`.
+3. Installare [Ruby][install-ruby], e poi [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file file `Gemfile`, come Jekyll e i suoi plugin.
+
+\* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Jekyll senza problemi. Gli step da seguire saranno:
+- Installazione di Ruby, che renderà disponibile il comando `gem install *`
+- Esecuzione di `gem install bundler`, che renderà disponibile il comando `bundle install`
+- Esecuzione di `bundle exec jekyll build`
   
-Puoi trovare maggiori informazioni su Jekyll a [questa pagina][jekyll].
+Sono disponibili maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
 Una volta completati questi passi, sarà possibile lanciare gli script che seguono.
 
 ### Utilizzare gli script NPM
 
-Il file `package.json` include i seguenti comandi, che fanno uso di  **Usa [SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
-
-| Task | Description |
-| --- | --- |
-| `npm run-script build-code` | `npm run code-build` crea la cartella `/dist` dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia. |
-| `npm run-script build-docs` | `npm run docs-build` crea la cartella `/docs/assets/dist` dove sono pubblicati i file compilati usati nella documentazione che stai leggendo. |
-| `npm run-script build` | Lancia entrambe le compilazioni precedenti, compilando i file nelle cartelle `/dist` e `/docs/assets/dist`. |
-| `npm run-script watch` | Controlla le modifiche sui file soggetti a modifiche e ricompila i file `npm run docs-serve`. |
-| `npm start` | Pubblica i file della documenazione nella cartella `_gh_pages` e avvia Jekyll. |
+Il file `package.json` include vari comandi per la compilazione degli asset, che fanno uso di  **Usa [SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
 
 Esegui `npm run` per consultare tutti gli script disponibili.
 
@@ -78,7 +74,7 @@ Maggiori dettagli sono disponibili **temporaneamente** a [questo indirizzo](http
 [install-ruby]: https://www.ruby-lang.org/en/documentation/installation/
 [gembundler]: https://bundler.io/
 [jekyll]: https://jekyllrb.com/docs/home/
-[jekyll-windows]: https://jekyllrb.com/docs/windows/
+[jekyll-windows]: https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller
 [jekyll-data]: https://jekyllrb.com/docs/datafiles/
 [jekyll-includes]: https://jekyllrb.com/docs/includes/
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
