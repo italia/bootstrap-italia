@@ -44,8 +44,10 @@ plugins:
 title:              "Bootstrap Italia"
 description:        "Bootstrap Italia Theme"
 twitter:            "teamdigitaleIT"
-authors:            "TODO"
-authors_url:        "TODO"
+authors:            "Team per la Trasformazione Digitale del Governo Italiano"
+authors_en:         "Digital Transformation Team - Italian Government"
+authors_url:        "https://teamdigitale.governo.it/"
+authors_url_en:     "https://teamdigitale.governo.it/en/"
 social_image_path:  "TODO"
 social_logo_path:   "TODO"
 

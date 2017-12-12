@@ -79,3 +79,7 @@ Maggiori dettagli sono disponibili **temporaneamente** a [questo indirizzo](http
 [jekyll-includes]: https://jekyllrb.com/docs/includes/
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
+
+## License
+  		  
+This project is licensed under the BSD-3-Clause License - see the [LICENSE](LICENSE) file for details
