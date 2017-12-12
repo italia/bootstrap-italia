@@ -1,32 +1,59 @@
 ---
 layout: docs
 title: Download
-description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+description: Da questa pagina è possibile scaricare i file compilati pronti per essere utilizzati su un progetto esterno o il codice sorgente di Bootstrap Italia, o includerlo come package npm o RubyGems.
 group: getting-started
 toc: true
 ---
 
-## Compiled CSS and JS
+## Codice compilato
 
-Download ready-to-use compiled code for **Bootstrap v{{ site.current_version}}** to easily drop into your project, which includes:
+Scarica il codice compilato di **Bootstrap Italia v{{ site.current_version}}**, che include CSS e Javascript già pronti per essere inclusi nel tuo progetto.
 
-- Compiled and minified CSS bundles (see [CSS files comparison]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#comparison-of-css-files))
-- Compiled and minified JavaScript plugins
+<a href="{{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
 
-This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
+### CSS
 
-<a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
+All'interno della cartella `css` è presente un file compilato (`bootstrap-italia-{{ site.current_version }}.css`) e un file minificato (`bootstrap-italia-{{ site.current_version }}.min.css`), con le rispettive [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap-italia-{{ site.current_version }}.*.map`).
 
-## Source files
 
-Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+### JavaScript
 
-- Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
-- [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
+All'interno della cartella Javascript sono presenti due file con le rispettive versioni minificate, che si differenziano soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
 
-Should you require [build tools]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup), they are included for developing Bootstrap and its docs, but they're likely unsuitable for your own purposes.
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">JS files</th>
+      <th scope="col">Popper</th>
+      <th scope="col">jQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-{{ site.current_version }}.bundle.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-{{ site.current_version }}.bundle.min.js</code></div>
+      </th>
+      <td class="text-success">Incluso</td>
+      <td class="text-success">Incluso</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-{{ site.current_version }}.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-{{ site.current_version }}.min.js</code></div>
+      </th>
+      <td class="bg-light text-muted">Non Incluso</td>
+      <td class="bg-light text-muted">Non Incluso</td>
+    </tr>
+  </tbody>
+</table>
 
-<a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+## Codice sorgente
+
+Il codice sorgente è visibile a questo indirizzo.
+
+<a href="{{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
 
 ## Bootstrap CDN
 

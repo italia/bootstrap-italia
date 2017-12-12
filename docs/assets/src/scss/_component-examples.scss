@@ -116,9 +116,9 @@
 
 .bd-example {
   // position: relative; // commented out due to a bug with the zoom plugin
+  // overflow: auto; // commented out due to a bug with the zoom plugin
   padding: 1rem;
   margin: 1rem (-$grid-gutter-width / 2);
-  overflow: auto;
   border: solid #f7f7f9;
   border-width: .2rem 0 0;
   @include clearfix();

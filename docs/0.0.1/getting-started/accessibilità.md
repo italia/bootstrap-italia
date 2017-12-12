@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Accessibility
+title: Accessibilità
 description: A brief overview of Bootstrap's features and limitations for the creation of accessible content.
 group: getting-started
 toc: true

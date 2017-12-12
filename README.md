@@ -63,7 +63,14 @@ La struttura delle cartelle della documentazione è la seguente:
 
 Una volta lanciato il comando `npm start`, Jekyll pubblica il sito statico contenente la documentazione nella cartella `_gh_pages`.
 
-_TODO: al momento la cartella _gh_pages funziona correttamente come sito statico, ma non come GitHub Pages site._
+Maggiori dettagli sono disponibili **temporaneamente** a [questo indirizzo](http://github.francescozaia.com/bootstrap-italia-documentation/docs/0.0.1/getting-started/introduzione/).
+
+## TODO
+
+- Far funzionare il repo come package npm o rubygem
+- Gestire le release e la creazione di pacchetti zip scaricabili (in modo simile a [come gestito su Bootstrap](https://github.com/twbs/bootstrap/releases/))
+- La cartella `_gh_pages` funziona correttamente come sito statico, ma non come GitHub Pages site. Al momento è necessario copiare la cartella `_gh_pages` su un repo separato (vedere [qui](https://github.com/francescozaia/bootstrap-italia-documentation) e [qui](http://github.francescozaia.com/bootstrap-italia-documentation/)).
+- Non utilizzare http://github.francescozaia.com/bootstrap-italia-documentation/
 
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2

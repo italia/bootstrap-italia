@@ -9,7 +9,6 @@
   border: 0;
 }
 
-
 .btn-xs {
   @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-base, $btn-border-radius-sm);
 }
@@ -22,34 +21,4 @@
   display: inline-block;
   padding-left: .3em;
   color: inherit;
-}
-
-//
-// Custom button groups
-//
-.btn-toolbar {
-  .btn-toolbar-item {
-    float: left;
-  }
-
-  > .btn-toolbar-item {
-    margin-left: 5px;
-  }
-}
-
-.btn-toolbar-divider {
-  float: left;
-  width: 1px;
-  height: 34px;
-  margin-left: 10px;
-  margin-right: 5px;
-  background-color: $btn-toolbar-divider-bg;
-}
-
-.btn-group-justified {
-  &.btn-group-justified-spaced {
-    width: calc(100% + 10px);
-    margin-left: -5px;
-    border-spacing: 5px;
-  }
 }

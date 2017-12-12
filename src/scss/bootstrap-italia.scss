@@ -42,19 +42,12 @@
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
 
-// These files are custom componen
 
 // Extended Bootstrap components
 //@import "./custom/type-custom.scss";
 //@import "./custom/alerts-custom.scss";
-//@import "./custom/buttons-custom.scss";
-//@import "./custom/buttons-radius.scss";
-//@import "./custom/modals-custom.scss";
+@import "./custom/buttons-custom.scss";
 //@import "./custom/container-custom.scss";
-//@import "./custom/dropdowns-custom.scss";
 
-// Custom theme components
-//@import "./custom/icons.scss";
-//@import "./custom/growl.scss";
-//@import "./custom/text-inherit.scss";
+// Custom components
 @import "./custom/zoom.scss";

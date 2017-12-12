@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: Browsers and devices
-description: Learn about the browsers and devices, from modern to old, that are supported by Bootstrap, including known quirks and bugs for each.
+description: In questa pagina sono indicati i browser e i dispositivi supportati dal tema Bootstrap Italia, che sono gli stessi della libreria Bootstrap v4 da cui deriva.
 group: getting-started
 toc: true
 ---
 
-## Supported browsers
+Bootstrap Italia supporta gli stessi browser e dispositivi della libreria Bootstrap v4 da cui deriva, è possibile avere informazioni aggiuntive alla <a href="https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/" target="_blank">pagina relativa</a> sul sito di Bootstrap.
 
-Bootstrap supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 10-11 / Microsoft Edge**.
+## Browser e dispositivi supportati
 
-Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
+Bootstrap Italia supporta l'**ultima release stabile** di tutti i principali browser e piattaforme. In particolare su Windows, **sono supportati Internet Explorer 10-11 e Microsoft Edge**.
 
 ### Mobile devices
 

@@ -1,12 +1,11 @@
 - title: Getting started
   pages:
     - title: Introduzione
-    # - title: Download
-    # - title: Contents
-    # - title: Browsers & devices
+    - title: Download
     - title: Strumenti di compilazione
+    - title: Browsers e dispositivi
+    - title: Accessibilità
     # - title: Best practices # TODO: Write this content
-    # - title: Accessibilità
 
 - title: Layout
   pages:

@@ -1,4 +1,5 @@
 <style>
+  /* .bd-search is currently hidden to allow JS to run, but it requires an additional component, so it's disabled for now */
   .bd-search {
     display: none !important;
   }
@@ -9,6 +10,7 @@
     {%- include icons/menu.svg width="30" height="30" -%}
   </button>
 </form>
+
 
 <nav class="collapse bd-links" id="bd-docs-nav">
   {%- assign page_slug = page.url | split: '/' | last -%}

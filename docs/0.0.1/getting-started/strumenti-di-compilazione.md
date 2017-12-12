@@ -1,20 +1,20 @@
 ---
 layout: docs
 title: Strumenti di compilazione
-description: Come utilizzare gli script NPM inclusi per compilare il codice sorgente, la documentazione, ed altro.
+description: Come compilare il codice sorgente, generare la documentazione, ed altro.
 group: getting-started
 toc: true
 ---
 
-## Tooling setup
+## Installazione strumenti
 
-Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la compilazione dei file. Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include alcuni scripts per la compilazione del codice e della documentazione che stai leggendo.
+Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la compilazione dei file. Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include alcuni scripts per la compilazione del codice e questa documentazione.
 
 Per usare il sistema di compilazione e lanciare la documentazione in ambiente locale, è sufficiente seguire i passi di seguito:
 
-1. [Scarica e installa Node.js](https://nodejs.org/download/), che è usato per gestire le dipendenze attraverso NPM.
-2. Naviga alla root del progetto e lancia il comando `npm install` per installare le dipendenze come indicato nel file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
-3. [Installa Ruby][install-ruby], e [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file [Gemfile]({{ site.repo }}/blob/v{{ site.current_version }}/Gemfile), come Jekyll e i suoi plugin.
+1. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso NPM.
+2. Navigare alla root del progetto e lanciare il comando `npm install` per installare le dipendenze secondo quanto indicato nel file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
+3. Installare [Ruby][install-ruby], e poi [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file [Gemfile]({{ site.repo }}blob/v{{ site.current_version }}/Gemfile), come Jekyll e i suoi plugin.
   - **Utenti Windows:** è bene leggere [questa guida][jekyll-windows] per installare Jekyll senza problemi.
   
 Puoi trovare maggiori informazioni su Jekyll a [questa pagina][jekyll].
@@ -23,13 +23,13 @@ Una volta completati questi passi, sarà possibile lanciare gli script che seguo
 
 ### Utilizzare gli script NPM
 
-Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include i seguenti comandi, che fanno uso di  **Usa [SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
+Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include i seguenti comandi, che fanno uso di  **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
 
 | Task | Description |
 | --- | --- |
-| `npm run-script build-code` | `npm run code-build` crea la cartella `/dist` dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia. |
-| `npm run-script build-docs` | `npm run docs-build` crea la cartella `/docs/assets/dist` dove sono pubblicati i file compilati usati nella documentazione che stai leggendo. |
-| `npm run-script build` | Lancia entrambe le compilazioni precedenti, compilando i file nelle cartelle `/dist` e `/docs/assets/dist`. |
+| `npm run-script build-code` | crea la cartella `/dist` dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia. |
+| `npm run-script build-docs` | crea la cartella `/docs/assets/dist` dove sono pubblicati i file compilati usati nella documentazione che stai leggendo. |
+| `npm run-script build` | esegue entrambe i precedenti comandi, compilando i file nelle cartelle `/dist` e `/docs/assets/dist`. |
 | `npm run-script watch` | Controlla le modifiche sui file soggetti a modifiche e ricompila i file `npm run docs-serve`. |
 | `npm start` | Pubblica i file della documenazione nella cartella `_gh_pages` e avvia Jekyll. |
 
@@ -51,7 +51,7 @@ _TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
 La documentazione è gestita attraverso [Jekyll][jekyll] e utilizza file basati sul linguaggio Markdown.
 
 1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
-2. Eseguire `npm start`.
+2. Eseguire `npm start` (che a sua volta esegue il comando per lanciare il server locale `bundle exec jekyll build`)
 3. Navigare su `http://localhost:9001`.
 
 La struttura delle cartelle della documentazione è la seguente:

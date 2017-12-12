@@ -52,13 +52,13 @@ social_logo_path:   "TODO"
 # Custom variables
 current_version:      0.0.1
 docs_version:         0.0.1
-repo:                 "https://github.com/italia/bootstrap-italia"
+repo:                 "https://github.com/italia/bootstrap-italia/"
 slack:                "http://slack.developers.italia.it/"
 developers:           "https://developers.italia.it/"
 
 download:
-  source:           "https://github.com/bootstrap-italia/src/"
-  dist:             "https://github.com/bootstrap-italia/dist/"
+  source:           "src/"
+  dist:             "dist/"
 
 cdn:
   css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
