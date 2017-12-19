@@ -1,6 +1,6 @@
 {
-  "name": "design-bootstrap",
-  "version": "0.0.1",
+  "name": "bootstrap-italia",
+  "version": "0.0.1-alpha",
   "keywords": [
     "css",
     "sass",
@@ -20,8 +20,9 @@
     "start": "gulp build && bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/italia/bootstrap-italia",
   "author": "",
-  "license": "BSD-3-clause",
+  "license": "BSD-3-Clause",
   "engines": {
     "node": ">=6"
   },
