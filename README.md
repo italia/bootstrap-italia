@@ -65,7 +65,7 @@ Maggiori dettagli sono disponibili **temporaneamente** a [questo indirizzo](http
 
 - Far funzionare il repo come package npm o rubygem
 - Gestire le release e la creazione di pacchetti zip scaricabili (in modo simile a [come gestito su Bootstrap](https://github.com/twbs/bootstrap/releases/))
-- La cartella `_gh_pages` funziona correttamente come sito statico, ma non come GitHub Pages site. Al momento è necessario copiare la cartella `_gh_pages` su un repo separato (vedere [qui](https://github.com/francescozaia/bootstrap-italia-documentation) e [qui](http://github.francescozaia.com/bootstrap-italia-documentation/)).
+- La cartella `_gh_pages` funziona correttamente come sito statico, ma non come GitHub Pages site. Al momento, per la pubblicazione sono tuttora necessari step manuali, vedere file `config.yaml` prima di copiare la cartella `_gh_pages` su un repo separato (vedere [qui](https://github.com/francescozaia/bootstrap-italia-documentation) e [qui](http://github.francescozaia.com/bootstrap-italia-documentation/)).
 - Non utilizzare http://github.francescozaia.com/bootstrap-italia-documentation/
 
 [autoprefixer]: https://github.com/postcss/autoprefixer

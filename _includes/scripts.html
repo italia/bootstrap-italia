@@ -17,20 +17,14 @@
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
-    apiKey: 'TODO',
-    indexName: 'TODO',
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
     inputSelector: '#search-input',
     handleSelected: function (input, event, suggestion) {
       var url = suggestion.url;
       url = suggestion.isLvl1 ? url.split('#')[0]: url;
       // If it's a title we remove the anchor so it does not jump.
       window.location.href = url;
-    },
-    transformData: function (hits) {
-      return hits.map(function (hit) {
-        hit.url = hit.url.replace('TODO', 'TODO');
-        return hit;
-      });
     },
     debug: false // Set debug to true if you want to inspect the dropdown
   });
