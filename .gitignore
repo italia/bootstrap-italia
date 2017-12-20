@@ -27,6 +27,7 @@ vendor/bundle
 .project
 .settings
 .tmproj
+.publish
 *.esproj
 *.sublime-project
 *.sublime-workspace

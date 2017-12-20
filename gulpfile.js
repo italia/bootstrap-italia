@@ -14,6 +14,7 @@ var babel = require('gulp-babel')
 var replace = require('gulp-replace')
 var wrapper = require('gulp-wrapper')
 var chalk = require('chalk')
+var ghPages = require('gulp-gh-pages')
 var pkg = require('./package.json')
 
 var FILENAME = 'bootstrap-italia';
@@ -192,3 +193,8 @@ gulp.task('watch', function () {
     gulp.watch([Paths.SCSS_WATCH, Paths.SCSS_DOCUMENTATION_WATCH], ['scss-min']);
     gulp.watch([Paths.JS_WATCH, Paths.JS_DOCUMENTATION_WATCH], ['js-min', 'js-bundle-min']);
 })
+
+gulp.task('docs-deploy', function() {
+    return gulp.src('./_gh_pages/**/*')
+        .pipe(ghPages());
+});

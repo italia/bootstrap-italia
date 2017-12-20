@@ -12,13 +12,8 @@ permalink:      pretty
 source:         "."
 destination:    ./_gh_pages
 port:           9001
-baseurl:        ""
-url:            ""
-# to build on github pages (ie. http://github.francescozaia.com/bootstrap-italia-documentation/)
-# uncomment these paths:
-# baseurl:        "/bootstrap-italia-documentation"
-# url:            "/bootstrap-italia-documentation"
-# and run "bundle exec jekyll build" to create a _gh_pages folder with the right paths
+baseurl:        "/bootstrap-italia"
+url:            "/bootstrap-italia"
 encoding:       UTF-8
 exclude:
   - .git/
