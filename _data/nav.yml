@@ -1,11 +1,12 @@
-- title: Getting started
+- title: Come iniziare
   pages:
     - title: Introduzione
     - title: Download
     - title: Strumenti di compilazione
     - title: Browsers e dispositivi
-    - title: Accessibilità
-    # - title: Best practices # TODO: Write this content
+    # - title: Accessibilità # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
+    # - title: Javascript # TODO: Aggiungere questa pagina per specularità con Bootstrap? Ci sono pagine che la linkano
+    # - title: Best practices # TODO: Ha senso avere una pagina per le best practices?
 
 - title: Layout
   pages:
@@ -14,7 +15,7 @@
     - title: Media object
     - title: Utilities for layout
 
-- title: Content
+- title: Contenuti
   pages:
     - title: Reboot
     - title: Typography
@@ -23,7 +24,7 @@
     - title: Tables
     - title: Figures
 
-- title: Components
+- title: Componenti
   pages:
     - title: Alerts
     - title: Badge
@@ -47,7 +48,12 @@
     - title: Scrollspy
     - title: Tooltips
 
-- title: Utilities
+- title: Componenti Aggiuntivi
+  pages:
+    - title: Image Grid
+    - title: Zoom
+
+- title: Utilità
   pages:
     - title: Borders
     - title: Clearfix
@@ -66,16 +72,11 @@
     - title: Vertical align
     - title: Visibility
 
-- title: Plugins
-  pages:
-    - title: Image Grid
-    - title: Zoom
-
-- title: Extend
+- title: Estensioni
   pages:
     - title: Icons
 
-- title: About
+- title: Informazioni
   pages:
     - title: Overview
     - title: License
