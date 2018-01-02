@@ -10,13 +10,13 @@ I componenti di Bootstrap Italia sono divisi in due macro-aree: i [Componenti _B
  
 #### Componenti base
 
-I componenti _base_ sono quelli già presenti nella libreria Bootstrap, che di conseguenza avranno una corrispondente voce in inglese anche nella [documentazione](documentazione-bootstrap) di Bootstrap stesso.
+I componenti _base_ sono quelli già presenti nella libreria Bootstrap, che di conseguenza avranno una corrispondente voce in inglese anche nella [documentazione][documentazione-bootstrap] di Bootstrap stesso.
 
-Tali componenti, all'interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell'accessibilità e nelle funzionalità per rispondere alle [Linee guida di design per i servizi web della PA](linee-guida).
+Tali componenti, all'interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell'accessibilità e nelle funzionalità per rispondere alle [Linee guida di design per i servizi web della PA][linee-guida].
 
 #### Componenti aggiuntivi
 
-I componenti _aggiuntivi_, al contrario, sono quei componenti che supportano l'implementazione delle [Linee guida di design per i servizi web della PA](linee-guida), ma che non sono presenti nella libreria Bootstrap.
+I componenti _aggiuntivi_, al contrario, sono quei componenti che supportano l'implementazione delle [Linee guida di design per i servizi web della PA][linee-guida], ma che non sono presenti nella libreria Bootstrap.
 
 Sul web, essi possono anche essere identificati come _plugin_, ma qui si è preferito mantenere la denominazione "componente" per sottolinearne l'uniformità di contesto con i componenti di base, con i quali condividono struttura e utilizzo.
 
