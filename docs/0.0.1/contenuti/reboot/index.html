@@ -38,15 +38,15 @@
 <meta name="twitter:creator" content="@teamdigitaleIT">
 <meta name="twitter:title" content="Reboot">
 <meta name="twitter:description" content="Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.">
-<meta name="twitter:image" content="http://localhost:9001TODO">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="http://localhost:9001/docs/0.0.1/contenuti/reboot/">
+<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/contenuti/reboot/">
 <meta property="og:title" content="Reboot">
 <meta property="og:description" content="Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://localhost:9001TODO">
-<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -385,11 +385,12 @@
 <li class="toc-entry toc-h3"><a href="#address">Address</a></li>
 <li class="toc-entry toc-h3"><a href="#blockquote">Blockquote</a></li>
 <li class="toc-entry toc-h3"><a href="#inline-elements">Inline elements</a></li>
+<li class="toc-entry toc-h3"><a href="#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#html5-hidden-attribute">HTML5 [hidden] attribute</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#jquery-incompatibility">jQuery incompatibility</a></li>
+<li class="toc-entry toc-h5"><a href="#jquery-incompatibility">jQuery incompatibility</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#click-delay-optimization-for-touch">Click delay optimization for touch</a></li>
@@ -746,6 +747,22 @@
   Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
 </div>
 
+<h3 id="summary">Summary</h3>
+
+<p>The default <code class="highlighter-rouge">cursor</code> on summary is <code class="highlighter-rouge">text</code>, so we reset that to <code class="highlighter-rouge">pointer</code> to convey that the element can be interacted with by clicking on it.</p>
+
+<div class="bd-example">
+  <details>
+    <summary>Some details</summary>
+    <p>More info about the details.</p>
+  </details>
+
+  <details open="">
+    <summary>Even more details</summary>
+    <p>Here are even more details about the details.</p>
+  </details>
+</div>
+
 <h2 id="html5-hidden-attribute">HTML5 <code class="highlighter-rouge">[hidden]</code> attribute</h2>
 
 <p>HTML5 adds <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">a new global attribute named <code class="highlighter-rouge">[hidden]</code></a>, which is styled as <code class="highlighter-rouge">display: none</code> by default. Borrowing an idea from <a href="https://purecss.io/">PureCSS</a>, we improve upon this default by making <code class="highlighter-rouge">[hidden] { display: none !important; }</code> to help prevent its <code class="highlighter-rouge">display</code> from getting accidentally overridden. While <code class="highlighter-rouge">[hidden]</code> isn’t natively supported by IE10, the explicit declaration in our CSS gets around that problem.</p>
@@ -753,7 +770,7 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">hidden</span><span class="nt">&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
-<h4 id="jquery-incompatibility">jQuery incompatibility</h4>
+<h5 id="jquery-incompatibility">jQuery incompatibility</h5>
 
 <p><code class="highlighter-rouge">[hidden]</code> is not compatible with jQuery’s <code class="highlighter-rouge">$(...).hide()</code> and <code class="highlighter-rouge">$(...).show()</code> methods. Therefore, we don’t currently especially endorse <code class="highlighter-rouge">[hidden]</code> over other techniques for managing the <code class="highlighter-rouge">display</code> of elements.</p>
 </div>

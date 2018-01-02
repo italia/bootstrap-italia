@@ -38,15 +38,15 @@
 <meta name="twitter:creator" content="@teamdigitaleIT">
 <meta name="twitter:title" content="Modificare componenti">
 <meta name="twitter:description" content="Come modificare i componenti e i moduli esistenti, e crearne di nuovi">
-<meta name="twitter:image" content="http://localhost:9001TODO">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="http://localhost:9001/docs/0.0.1/come-iniziare/modificare-componenti/">
+<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/come-iniziare/modificare-componenti/">
 <meta property="og:title" content="Modificare componenti">
 <meta property="og:description" content="Come modificare i componenti e i moduli esistenti, e crearne di nuovi">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://localhost:9001TODO">
-<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -374,11 +374,8 @@
             <ul class="section-nav">
 <li class="toc-entry toc-h4"><a href="#componenti-base">Componenti base</a></li>
 <li class="toc-entry toc-h4"><a href="#componenti-aggiuntivi">Componenti aggiuntivi</a></li>
-<li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#documentazione-dei-componenti">Documentazione dei componenti</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a></li>
+<li class="toc-entry toc-h2"><a href="#documentazione-dei-componenti">Documentazione dei componenti</a></li>
 </ul>
           </div>
         
@@ -404,18 +401,20 @@
 
 <p>Ogni componente può avere una personalizzazione di stile e di funzionalità attraverso l’utilizzo di file <code class="highlighter-rouge">scss</code> e <code class="highlighter-rouge">javascript</code>.</p>
 
-<p>I componenti base ereditano quindi stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4.0.0-beta.2</a>, di cui si potrà trovare il codice sorgente nella cartella rispettiva all’interno di <code class="highlighter-rouge">node_modules</code>. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:</p>
+<p>I componenti base ereditano quindi stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4.0.0-beta.3</a>, di cui si potrà trovare il codice sorgente nella cartella rispettiva all’interno di <code class="highlighter-rouge">node_modules</code>. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:</p>
 
 <ul>
-  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src\scss</code></li>
-  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella <code class="highlighter-rouge">src\js</code></li>
+  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src\scss</code>. Si può notare in particolare come il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importi ed estenda gli stili e le funzioni di base di Bootstrap.</li>
+  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella `src\js.</li>
 </ul>
 
 <p>Queste due cartelle, assieme alla cartella <code class="highlighter-rouge">docs</code> per la stesura della documentazione (vedi di seguito), sono le uniche cartelle dove avviene la personalizzazione dei componenti.</p>
 
 <p>Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per “sovrascrivere” il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle <code class="highlighter-rouge">dist\js</code> e <code class="highlighter-rouge">dist\css</code>.</p>
 
-<h3 id="documentazione-dei-componenti">Documentazione dei componenti</h3>
+<p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap.</p>
+
+<h2 id="documentazione-dei-componenti">Documentazione dei componenti</h2>
 
 <p>Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella <code class="highlighter-rouge">docs</code>, che ne descrive comportamenti, varianti e utilizzo.</p>
 

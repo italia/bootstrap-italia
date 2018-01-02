@@ -38,15 +38,15 @@
 <meta name="twitter:creator" content="@teamdigitaleIT">
 <meta name="twitter:title" content="Overview">
 <meta name="twitter:description" content="Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.">
-<meta name="twitter:image" content="http://localhost:9001TODO">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="http://localhost:9001/docs/0.0.1/layout/overview/">
+<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/layout/overview/">
 <meta property="og:title" content="Overview">
 <meta property="og:description" content="Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://localhost:9001TODO">
-<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -517,7 +517,9 @@
 
 <p>Several Bootstrap components utilize <code class="highlighter-rouge">z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
 
-<p>We don’t encourage customization of these values; should you change one, you likely need to change them all.</p>
+<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code class="highlighter-rouge">100</code>+ or <code class="highlighter-rouge">500</code>+.</p>
+
+<p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$zindex-dropdown</span><span class="p">:</span>          <span class="m">1000</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 <span class="nv">$zindex-sticky</span><span class="p">:</span>            <span class="m">1020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
@@ -528,9 +530,7 @@
 <span class="nv">$zindex-tooltip</span><span class="p">:</span>           <span class="m">1070</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Background elements—like the backdrops that allow click-dismissing—tend to reside on a lower <code class="highlighter-rouge">z-index</code>s, while navigation and popovers utilize higher <code class="highlighter-rouge">z-index</code>s to ensure they overlay surrounding content.</p>
-
-<p>Additionally, the <code class="highlighter-rouge">button-group</code>, <code class="highlighter-rouge">input-group</code>, <code class="highlighter-rouge">list-group</code>, and <code class="highlighter-rouge">pagination</code> components make use of setting <code class="highlighter-rouge">z-index</code> to <code class="highlighter-rouge">1</code> or <code class="highlighter-rouge">2</code> in order to ensure that the borders of the <em>active</em> element correctly appear “above” their sibling elements.</p>
+<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class="highlighter-rouge">z-index</code> values of <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, and <code class="highlighter-rouge">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class="highlighter-rouge">z-index</code> value to show their border over the sibling elements.</p>
 
         </main>
       </div>
