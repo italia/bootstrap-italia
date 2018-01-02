@@ -85,10 +85,10 @@
 <loc>/bootstrap-italia/bootstrap-italia/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/estensioni/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/esempi/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/esempi/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/estensioni/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/input-group/</loc>
@@ -110,6 +110,9 @@
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/modal/</loc>
+</url>
+<url>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/come-iniziare/modificare-componenti/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/navbar/</loc>

@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Test Documentation">
+<meta name="description" content="Come modificare i componenti e i moduli esistenti, e crearne di nuovi">
 <meta name="author" content="Agenzia per l'Italia Digitale">
 <meta name="generator" content="Jekyll v3.6.2">
 <meta name="robots" content="noindex">
 
-<title>Image Grids · Bootstrap Italia</title>
+<title>Modificare componenti · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 
@@ -36,14 +36,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="@teamdigitaleIT">
-<meta name="twitter:title" content="Image Grids">
-<meta name="twitter:description" content="Test Documentation">
+<meta name="twitter:title" content="Modificare componenti">
+<meta name="twitter:description" content="Come modificare i componenti e i moduli esistenti, e crearne di nuovi">
 <meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/componenti-aggiuntivi/image-grid/">
-<meta property="og:title" content="Image Grids">
-<meta property="og:description" content="Test Documentation">
+<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/come-iniziare/modificare-componenti/">
+<meta property="og:title" content="Modificare componenti">
+<meta property="og:description" content="Come modificare i componenti e i moduli esistenti, e crearne di nuovi">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italiaTODO">
 <meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
@@ -146,7 +146,7 @@
 </form>
 
 
-<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/">
         Come iniziare
       </a>
@@ -160,7 +160,7 @@
             </a></li><li>
             <a href="/bootstrap-italia/docs/0.0.1/come-iniziare/strumenti-di-compilazione/">
               Strumenti di compilazione
-            </a></li><li>
+            </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/0.0.1/come-iniziare/modificare-componenti/">
               Modificare Componenti
             </a></li><li>
@@ -278,12 +278,12 @@
             <a href="/bootstrap-italia/docs/0.0.1/componenti/tooltips/">
               Tooltips
             </a></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/0.0.1/componenti-aggiuntivi/image-grid/">
         Componenti Aggiuntivi
       </a>
 
-      <ul class="nav bd-sidenav pl-2"><li class="active bd-sidenav-active">
+      <ul class="nav bd-sidenav pl-2"><li>
             <a href="/bootstrap-italia/docs/0.0.1/componenti-aggiuntivi/image-grid/">
               Image Grid
             </a></li><li>
@@ -372,11 +372,11 @@
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#image-grids">Image grids</a>
+<li class="toc-entry toc-h4"><a href="#componenti-base">Componenti base</a></li>
+<li class="toc-entry toc-h4"><a href="#componenti-aggiuntivi">Componenti aggiuntivi</a></li>
+<li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#options">Options</a></li>
-<li class="toc-entry toc-h3"><a href="#javascript-api">JavaScript API</a></li>
-<li class="toc-entry toc-h3"><a href="#data-api">Data Api</a></li>
+<li class="toc-entry toc-h3"><a href="#documentazione-dei-componenti">Documentazione dei componenti</a></li>
 </ul>
 </li>
 </ul>
@@ -384,45 +384,42 @@
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Image Grids</h1>
-          <p class="bd-lead">Test Documentation</p>
-          <h2 id="image-grids">Image grids</h2>
+          <h1 class="bd-title" id="content">Modificare componenti</h1>
+          <p class="bd-lead">Come modificare i componenti e i moduli esistenti, e crearne di nuovi</p>
+          <p>I componenti di Bootstrap Italia sono divisi in due macro-aree: i <a href="/bootstrap-italia/docs/0.0.1/componenti/">Componenti <em>Base</em></a> e i <a href="/bootstrap-italia/docs/0.0.1/componenti-aggiuntivi/">Componenti <em>Aggiuntivi</em></a>.</p>
 
-<p>Use the image grid plugin to quickly layout multi sized images in a grid. For the image grid to work properly, it needs to get the raw image sizes (either from a data attribute, like <code class="highlighter-rouge">data-width</code> and <code class="highlighter-rouge">data-height</code> or you need to wait for image load before calling <code class="highlighter-rouge">.imageGrid</code>).</p>
+<h4 id="componenti-base">Componenti base</h4>
 
-<h3 id="options">Options</h3>
+<p>I componenti <em>base</em> sono quelli già presenti nella libreria Bootstrap, che di conseguenza avranno una corrispondente voce in inglese anche nella <a href="documentazione-bootstrap">documentazione</a> di Bootstrap stesso.</p>
+
+<p>Tali componenti, all’interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell’accessibilità e nelle funzionalità per rispondere alle <a href="linee-guida">Linee guida di design per i servizi web della PA</a>.</p>
+
+<h4 id="componenti-aggiuntivi">Componenti aggiuntivi</h4>
+
+<p>I componenti <em>aggiuntivi</em>, al contrario, sono quei componenti che supportano l’implementazione delle <a href="linee-guida">Linee guida di design per i servizi web della PA</a>, ma che non sono presenti nella libreria Bootstrap.</p>
+
+<p>Sul web, essi possono anche essere identificati come <em>plugin</em>, ma qui si è preferito mantenere la denominazione “componente” per sottolinearne l’uniformità di contesto con i componenti di base, con i quali condividono struttura e utilizzo.</p>
+
+<h2 id="struttura-di-un-componente">Struttura di un componente</h2>
+
+<p>Ogni componente può avere una personalizzazione di stile e di funzionalità attraverso l’utilizzo di file <code class="highlighter-rouge">scss</code> e <code class="highlighter-rouge">javascript</code>.</p>
+
+<p>I componenti base ereditano quindi stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4.0.0-beta.2</a>, di cui si potrà trovare il codice sorgente nella cartella rispettiva all’interno di <code class="highlighter-rouge">node_modules</code>. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:</p>
 
 <ul>
-  <li>padding: 10,</li>
-  <li>targetHeight: 300,</li>
-  <li>display: ‘inline-block’</li>
+  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src\scss</code></li>
+  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella <code class="highlighter-rouge">src\js</code></li>
 </ul>
 
-<h3 id="javascript-api">JavaScript API</h3>
+<p>Queste due cartelle, assieme alla cartella <code class="highlighter-rouge">docs</code> per la stesura della documentazione (vedi di seguito), sono le uniche cartelle dove avviene la personalizzazione dei componenti.</p>
 
-<div class="bd-example">
-$('.myGrid').imageGrid()
-</div>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.myGrid'</span><span class="p">).</span><span class="nx">imageGrid</span><span class="p">()</span></code></pre></div>
+<p>Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per “sovrascrivere” il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle <code class="highlighter-rouge">dist\js</code> e <code class="highlighter-rouge">dist\css</code>.</p>
 
-<h3 id="data-api">Data Api</h3>
+<h3 id="documentazione-dei-componenti">Documentazione dei componenti</h3>
 
-<div class="bd-example">
-<div data-grid="images">
-  <img data-width="350" data-height="300" src="http://placehold.it/350x300/EEE04A/ffffff" />
-  <img data-width="420" data-height="320" src="http://placehold.it/420x320/5cb85c/ffffff" />
-  <img data-width="320" data-height="380" src="http://placehold.it/320x380/5bc0de/ffffff" />
-  <img data-width="472" data-height="500" src="http://placehold.it/472x500/f0ad4e/ffffff" />
-  <img data-width="540" data-height="360" src="http://placehold.it/540x360/FF3167/ffffff" />
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-grid=</span><span class="s">"images"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">data-width=</span><span class="s">"350"</span> <span class="na">data-height=</span><span class="s">"300"</span> <span class="na">src=</span><span class="s">"http://placehold.it/350x300/EEE04A/ffffff"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">data-width=</span><span class="s">"420"</span> <span class="na">data-height=</span><span class="s">"320"</span> <span class="na">src=</span><span class="s">"http://placehold.it/420x320/5cb85c/ffffff"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">data-width=</span><span class="s">"320"</span> <span class="na">data-height=</span><span class="s">"380"</span> <span class="na">src=</span><span class="s">"http://placehold.it/320x380/5bc0de/ffffff"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">data-width=</span><span class="s">"472"</span> <span class="na">data-height=</span><span class="s">"500"</span> <span class="na">src=</span><span class="s">"http://placehold.it/472x500/f0ad4e/ffffff"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">data-width=</span><span class="s">"540"</span> <span class="na">data-height=</span><span class="s">"360"</span> <span class="na">src=</span><span class="s">"http://placehold.it/540x360/FF3167/ffffff"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<p>Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella <code class="highlighter-rouge">docs</code>, che ne descrive comportamenti, varianti e utilizzo.</p>
+
+<p>Tale documentazione è redatta in codice <code class="highlighter-rouge">markdown</code> ed è comprensiva di una breve descrizione testuale corredata da un esempio di applicazione in codice <code class="highlighter-rouge">html</code>.</p>
 
 
         </main>
