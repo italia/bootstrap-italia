@@ -1,5 +1,7 @@
 # Bootstrap Italia
 
+:exclamation: Attenzione! Questo codice è ancora in fase di sviluppo e non è pronto per essere utilizzato!
+
 ## Come iniziare
 
 Questo è un tema basato su [Bootstrap v4.0.0-beta.2](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
@@ -37,8 +39,6 @@ Le cartelle d'interesse sono:
 
 - `src` che contiene tutti i file sorgente.
 - `dist` che contiene i file di produzione da copiare ed utilizzare sul proprio HTML.
-
-_TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
 
 ## Documentazione
 

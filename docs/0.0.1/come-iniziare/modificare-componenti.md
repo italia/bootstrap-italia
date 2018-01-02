@@ -26,14 +26,16 @@ Ogni componente può avere una personalizzazione di stile e di funzionalità att
 
 I componenti base ereditano quindi stili e funzionalità da [Bootstrap v{{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/getting-started/introduction/), di cui si potrà trovare il codice sorgente nella cartella rispettiva all'interno di `node_modules`. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:
  
-- per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella `src\scss`
-- per l'implementazione di funzionalità `javascript`, si farà invece riferimento alla cartella `src\js`
+- per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella `src\scss`. Si può notare in particolare come il file `bootstrap-italia.scss` importi ed estenda gli stili e le funzioni di base di Bootstrap.
+- per l'implementazione di funzionalità `javascript`, si farà invece riferimento alla cartella `src\js.
 
 Queste due cartelle, assieme alla cartella `docs` per la stesura della documentazione (vedi di seguito), sono le uniche cartelle dove avviene la personalizzazione dei componenti.
 
 Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando `gulp build` nel file `gulpfile.js`), viene usato per "sovrascrivere" il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle `dist\js` e `dist\css`.
 
-### Documentazione dei componenti
+Informazioni aggiuntive si possono trovare alla [pagina relativa alla creazione di temi](https://getbootstrap.com/docs/4.0/getting-started/theming/) sul sito Bootstrap.
+
+## Documentazione dei componenti
 
 Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella `docs`, che ne descrive comportamenti, varianti e utilizzo.
 
