@@ -2,7 +2,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): zoom.js
+ * Bootstrap (v4.0.0-beta.3): zoom.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const Zoom = (($) => {
 
   const NAME                = 'zoom'
   const DATA_KEY            = 'bs.zoom'
-  const VERSION             = 'v4.0.0-beta.2'
+  const VERSION             = 'v4.0.0-beta.3'
   const DATA_API            = '[data-action="zoom"]'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'

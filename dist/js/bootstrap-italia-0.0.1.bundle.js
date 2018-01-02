@@ -16604,7 +16604,7 @@ console.log("bootstrap italia");
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.2): ImageGrid.js
+ * Bootstrap (v4.0.0-beta.3): ImageGrid.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16619,7 +16619,7 @@ var ImageGrid = function ($) {
 
   var NAME = 'imageGrid';
   var DATA_KEY = 'bs.image-grid';
-  var VERSION = 'v4.0.0-beta.2';
+  var VERSION = 'v4.0.0-beta.3';
   var DATA_API = '[data-grid="images"]';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -16814,7 +16814,7 @@ var ImageGrid = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): zoom.js
+ * Bootstrap (v4.0.0-beta.3): zoom.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16829,7 +16829,7 @@ var Zoom = function ($) {
 
   var NAME = 'zoom';
   var DATA_KEY = 'bs.zoom';
-  var VERSION = 'v4.0.0-beta.2';
+  var VERSION = 'v4.0.0-beta.3';
   var DATA_API = '[data-action="zoom"]';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';

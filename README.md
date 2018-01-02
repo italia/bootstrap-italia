@@ -4,7 +4,7 @@
 
 ## Come iniziare
 
-Questo è un tema basato su [Bootstrap v4.0.0-beta.2](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+Questo è un tema basato su [Bootstrap v4.0.0-beta.3](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
 ## Setup strumenti
 
