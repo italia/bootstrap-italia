@@ -6,6 +6,8 @@ group: come-iniziare
 redirect_from:
   - /docs/
   - /docs/come-iniziare/
+  - /docs/0.0.1/
+  - /docs/0.0.1/come-iniziare/
 toc: true
 ---
 

@@ -4,6 +4,9 @@ title: Alerts
 description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 group: componenti
 toc: true
+redirect_from:
+  - /docs/componenti/
+  - /docs/0.0.1/componenti/
 ---
 
 ## Examples
