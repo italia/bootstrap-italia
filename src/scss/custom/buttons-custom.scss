@@ -1,0 +1,24 @@
+//
+// Custom button styles
+//
+.btn {
+  text-transform: $btn-text-transform;
+  letter-spacing: $btn-letter-spacing;
+}
+.btn-borderless {
+  border: 0;
+}
+
+.btn-xs {
+  @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-base, $btn-border-radius-sm);
+}
+
+// More buttons
+.btn-more:after {
+  position: relative;
+  top: 1px;
+  content: '〉';
+  display: inline-block;
+  padding-left: .3em;
+  color: inherit;
+}

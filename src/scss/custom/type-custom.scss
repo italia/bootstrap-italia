@@ -1,0 +1,65 @@
+body {
+  font-weight: $font-weight-base;
+  letter-spacing: $letter-spacing-base;
+}
+
+// Override normalize sans-serif setting
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+// lead override
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  line-height: $lead-line-height;
+  letter-spacing: $lead-letter-spacing;
+
+  @include media-breakpoint-up(sm) {
+    font-size: $lead-font-size-sm
+  }
+}
+
+// improve list readability
+.list-spaced li {
+  margin-bottom: 5px;
+}
+
+.list-bordered li {
+  border-top: 1px solid $gray-light;
+}
+.list-bordered li:last-child {
+  border-bottom: 1px solid $gray-light;
+}
+
+// serif family helper
+.text-serif {
+  font-family: $font-family-base;
+}
+
+// responsive text helpers
+.text-xs-left   { text-align: left; }
+.text-xs-right  { text-align: right; }
+.text-xs-center { text-align: center; }
+
+@include media-breakpoint-up(sm) {
+  .text-sm-left   { text-align: left; }
+  .text-sm-right  { text-align: right; }
+  .text-sm-center { text-align: center; }
+}
+
+@include media-breakpoint-up(md) {
+  .text-md-left   { text-align: left; }
+  .text-md-right  { text-align: right; }
+  .text-md-center { text-align: center; }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-lg-left   { text-align: left; }
+  .text-lg-right  { text-align: right; }
+  .text-lg-center { text-align: center; }
+}

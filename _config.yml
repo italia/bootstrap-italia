@@ -1,0 +1,68 @@
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+
+# Permalinks
+permalink:      pretty
+
+# Server
+source:         "."
+destination:    ./_gh_pages
+port:           9001
+baseurl:        "/bootstrap-italia"
+url:            "/bootstrap-italia"
+encoding:       UTF-8
+exclude:
+  - .git/
+  - .github/
+  - src/
+  - public/
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+  - yarn.lock
+  - package.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+  - gulpfile.js
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Social
+title:              "Bootstrap Italia"
+description:        "Bootstrap Italia Theme"
+twitter:            "teamdigitaleIT"
+authors:            "Agenzia per l'Italia Digitale"
+authors_url:        ""
+social_image_path:  "TODO"
+social_logo_path:   "TODO"
+
+# Custom variables
+current_version:      0.0.1
+docs_version:         0.0.1
+bootstrap_version:    4.0.0-beta.2
+repo:                 "https://github.com/italia/bootstrap-italia/"
+slack:                "http://slack.developers.italia.it/"
+developers:           "https://developers.italia.it/"
+
+download:
+  source:           "src/"
+  dist:             "dist/"
+
+cdn:
+  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+  jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+
+design_bootstrap:
+  css:              "css/bootstrap-italia-0.0.1.css"
+  js:               "js/bootstrap-italia-0.0.1.bundle.min.js"
