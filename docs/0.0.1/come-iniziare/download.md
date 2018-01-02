@@ -55,9 +55,9 @@ Il codice sorgente è visibile a questo indirizzo.
 
 <a href="{{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.source }}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
 
-## Bootstrap CDN
+## BootstrapCDN
 
-Skip the download with the Bootstrap CDN to deliver cached version of Bootstrap's compiled CSS and JS to your project.
+Skip the download with [BootstrapCDN](https://www.bootstrapcdn.com/) to deliver cached version of Bootstrap's compiled CSS and JS to your project.
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">

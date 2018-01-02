@@ -49,7 +49,7 @@ var Paths = {
 
 var banner = '/*!\n' +
     ' * Bootstrap\n' +
-    ' * Copyright 2011-2016\n' +
+    ' * Copyright 2011-2017\n' +
     ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
     ' */\n'
 var jqueryCheck = 'if (typeof jQuery === \'undefined\') {\n' +
@@ -103,6 +103,7 @@ gulp.task('js', function () {
                     ]
                 ],
                 plugins: [
+                    'transform-object-rest-spread',
                     'transform-es2015-modules-strip'
                 ]
             }
