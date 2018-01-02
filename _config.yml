@@ -48,7 +48,7 @@ social_logo_path:   "TODO"
 # Custom variables
 current_version:      0.0.1
 docs_version:         0.0.1
-bootstrap_version:    4.0.0-beta.2
+bootstrap_version:    4.0.0-beta.3
 repo:                 "https://github.com/italia/bootstrap-italia/"
 slack:                "http://slack.developers.italia.it/"
 developers:           "https://developers.italia.it/"
@@ -58,8 +58,8 @@ download:
   dist:             "dist/"
 
 cdn:
-  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
   jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
   popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 

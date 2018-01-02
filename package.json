@@ -32,6 +32,7 @@
   ],
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-strip": "^0.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "chalk": "^2.3.0",
     "gulp": "^3.9.1",
@@ -51,7 +52,7 @@
     "gulp-wrapper": "^1.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "4.0.0-beta.3",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9"
   }
