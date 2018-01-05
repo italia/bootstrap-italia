@@ -195,7 +195,7 @@ gulp.task('watch', function () {
     gulp.watch([Paths.JS_WATCH, Paths.JS_DOCUMENTATION_WATCH], ['js-min', 'js-bundle-min']);
 })
 
-gulp.task('docs-deploy', function() {
+gulp.task('deploy-docs', function() {
     return gulp.src('./_gh_pages/**/*')
         .pipe(ghPages());
 });

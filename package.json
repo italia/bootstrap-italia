@@ -17,6 +17,7 @@
     "build": "gulp build",
     "build-code": "gulp build-code",
     "build-docs": "gulp build-docs && bundle exec jekyll build",
+    "deploy-docs": "gulp deploy-docs",
     "start": "gulp build && bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,7 +42,7 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
-    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages": "git@github.com:tekd/gulp-gh-pages.git#update-dependency",
     "gulp-open": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",

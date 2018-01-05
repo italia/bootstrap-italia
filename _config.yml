@@ -50,7 +50,7 @@ current_version:      0.0.1
 docs_version:         0.0.1
 bootstrap_version:    4.0.0-beta.3
 repo:                 "https://github.com/italia/bootstrap-italia/"
-slack:                "http://slack.developers.italia.it/"
+slack:                "https://slack.developers.italia.it/"
 developers:           "https://developers.italia.it/"
 
 download:
