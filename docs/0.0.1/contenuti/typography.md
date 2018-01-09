@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Typography
-description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
+title: Tipografia
+description: Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.
 group: contenuti
 toc: true
 ---
 
-## Global settings
+## Impostazioni globali
 
-Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/).
+Bootstrap imposta la visualizzazione globale di base, la tipografia e gli stili dei collegamenti. Quando è necessario un maggiore controllo, definisce le [classi di utilità testuali]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/).
 
-- Use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
-- For a more inclusive and accessible type scale, we assume the browser default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
-- Set the global link color via `$link-color` and apply link underlines only on `:hover`.
-- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
+- Utilizza un [gruppo di caratteri nativi]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/#native-font-stack) che seleziona la migliore `famiglia di font` per ogni sistema operativo e dispositivo.
+- Per avere una più completa e accessibile scelta di font, assumiamo la radice predefinita del browser `font-size` (in genere 16px) in modo che i visitatori possano personalizzare le impostazioni predefinite del browser in base alle esigenze.
+- Usa gli attributi `$font-family-base`, `$font-size-base`, e `$line-height-base` come nostra base tipografica applicata al `<body>`.
+- Imposta il colore dei collegamenti tramite `$link-color` e applica le sottolineature dei collegamenti solo sull' `:hover`.
+- Usa `$body-bg` per impostare il `background-color` sul `<body>` (`#fff` predefinito).
 
-These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
+Questi stili possono essere trovati all'interno di `_reboot.scss`, e le variabili globali sono definite in `_variables.scss`. Assicurati di impostare `$font-size-base` in `rem`.
 
-## Headings
+## Intestazioni
 
-All HTML headings, `<h1>` through `<h6>`, are available.
+Tutte le intestazioni HTML, `<h1>` fino a `<h6>`, sono disponibili.
 
 <table>
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Example</th>
+      <th>Intestazione</th>
+      <th>Esempio</th>
     </tr>
   </thead>
   <tbody>
@@ -34,112 +34,112 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <td>
         {% markdown %}`<h1></h1>`{% endmarkdown %}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="h1">h1. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {% markdown %}`<h2></h2>`{% endmarkdown %}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="h2">h2. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {% markdown %}`<h3></h3>`{% endmarkdown %}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="h3">h3. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {% markdown %}`<h4></h4>`{% endmarkdown %}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="h4">h4. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {% markdown %}`<h5></h5>`{% endmarkdown %}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="h5">h5. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {% markdown %}`<h6></h6>`{% endmarkdown %}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="h6">h6. Intestazione di Bootstrap</span></td>
     </tr>
   </tbody>
 </table>
 
 {% highlight html %}
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<h1>h1. Intestazione di Bootstrap</h1>
+<h2>h2. Intestazione di Bootstrap</h2>
+<h3>h3. Intestazione di Bootstrap</h3>
+<h4>h4. Intestazione di Bootstrap</h4>
+<h5>h5. Intestazione di Bootstrap</h5>
+<h6>h6. Intestazione di Bootstrap</h6>
 {% endhighlight %}
 
-`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+Anche le classi `.h1` fino a `.h6` sono disponibili, per quando tu voglia presentare il testo nello stesso stile delle intestazioni ma non puoi utilizzare l'elemento HTML associato.
 
 {% example html %}
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="h1">h1. Intestazione di Bootstrap</p>
+<p class="h2">h2. Intestazione di Bootstrap</p>
+<p class="h3">h3. Intestazione di Bootstrap</p>
+<p class="h4">h4. Intestazione di Bootstrap</p>
+<p class="h5">h5. Intestazione di Bootstrap</p>
+<p class="h6">h6. Intestazione di Bootstrap</p>
 {% endexample %}
 
-### Customizing headings
+### Personalizzazione delle intestazioni
 
-Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+Utilizza le classi di utilità incluse per ricreare il piccolo testo di intestazione secondaria da Bootstrap 3.
 
 <div class="bd-example">
   <span class="h3">
-    Fancy display heading
-    <small class="text-muted">With faded secondary text</small>
+    Titolo di fantasia
+    <small class="text-muted">Con testo secondario schiarito</small>
   </span>
 </div>
 
 {% highlight html %}
 <h3>
-  Fancy display heading
-  <small class="text-muted">With faded secondary text</small>
+  Titolo di fantasia
+  <small class="text-muted">Con testo secondario schiarito</small>
 </h3>
 {% endhighlight %}
 
-## Display headings
+## Titoli in evidenza
 
-Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
+Gli elementi di intestazione tradizionali sono progettati per funzionare al meglio nel contenuto della pagina. Quando hai bisogno di un titolo da mettere in evidenza, prendi in considerazione l'uso di **display heading**—uno stile di titolo più grande, leggermente più supponente.
 
 <div class="bd-example bd-example-type">
   <table class="table">
     <tbody>
       <tr>
-        <td><span class="display-1">Display 1</span></td>
+        <td><span class="display-1">Titolo in evidenza 1</span></td>
       </tr>
       <tr>
-      <td><span class="display-2">Display 2</span></td>
+      <td><span class="display-2">Titolo in evidenza 2</span></td>
       </tr>
       <tr>
-      <td><span class="display-3">Display 3</span></td>
+      <td><span class="display-3">Titolo in evidenza 3</span></td>
       </tr>
       <tr>
-      <td><span class="display-4">Display 4</span></td>
+      <td><span class="display-4">Titolo in evidenza 4</span></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 {% highlight html %}
-<h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
+<h1 class="display-1">Titolo in evidenza 1</h1>
+<h1 class="display-2">Titolo in evidenza 2</h1>
+<h1 class="display-3">Titolo in evidenza 3</h1>
+<h1 class="display-4">Titolo in evidenza 4</h1>
 {% endhighlight %}
 
-## Lead
+## In primo piano
 
-Make a paragraph stand out by adding `.lead`.
+Fai risaltare un paragrafo aggiungendo la classe `.lead`.
 
 {% example html %}
 <p class="lead">
@@ -147,9 +147,9 @@ Make a paragraph stand out by adding `.lead`.
 </p>
 {% endexample %}
 
-## Inline text elements
+## Elementi di testo inline
 
-Styling for common inline HTML5 elements.
+Stili per elementi comuni HTML5 inline. 
 
 {% example html %}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -162,19 +162,19 @@ Styling for common inline HTML5 elements.
 <p><em>This line rendered as italicized text.</em></p>
 {% endexample %}
 
-`.mark` and `.small` classes are also available to apply the same styles as `<mark>` and `<small>` while avoiding any unwanted semantic implications that the tags would bring.
+Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche indesiderate che i tag porterebbero.
 
-While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
+Anche se non mostrato sopra, sentiti libero di usare `<b>` e `<i>` in HTML5. `<b>` ha lo scopo di evidenziare parole o frasi senza conferire ulteriore importanza mentre `<i>` è principalmente per voce, termini tecnici, etc.
 
-## Text utilities
+## Utilità per il testo
 
-Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/) and [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
+Cambia allineamento, trasformazione, stile, peso e colore del testo con il nostro [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/) e [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
 
-## Abbreviations
+## Abbreviazioni
 
-Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
+Implementazione stilizzata dell'elemento HTML `<abbr>` per abbreviazioni e acronimi per mostrare la versione espansa sull' hover. Le abbreviazioni hanno una sottolineatura predefinita e ottengono un cursore di aiuto per fornire un contesto aggiuntivo al passaggio del mouse e agli utenti delle tecnologie assistive.
 
-Add `.initialism` to an abbreviation for a slightly smaller font-size.
+Aggiungi `.initialism` a un'abbreviazione per una dimensione del font leggermente più piccola.
 
 {% example html %}
 <p><abbr title="attribute">attr</abbr></p>
@@ -183,7 +183,7 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
+Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Avvolgi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno di un  `<blockquote class="blockquote">` come la citazione.
 
 {% example html %}
 <blockquote class="blockquote">
@@ -191,9 +191,9 @@ For quoting blocks of content from another source within your document. Wrap `<b
 </blockquote>
 {% endexample %}
 
-### Naming a source
+### Citare una fonte
 
-Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the name of the source work in `<cite>`.
+Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte. Includi il nome delle fonte di origine in `<cite>`.
 
 {% example html %}
 <blockquote class="blockquote">
@@ -202,9 +202,9 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 </blockquote>
 {% endexample %}
 
-### Alignment
+### Allineamento
 
-Use text utilities as needed to change the alignment of your blockquote.
+Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo blockquote.
 
 {% example html %}
 <blockquote class="blockquote text-center">
@@ -220,11 +220,11 @@ Use text utilities as needed to change the alignment of your blockquote.
 </blockquote>
 {% endexample %}
 
-## Lists
+## Liste
 
-### Unstyled
+### Senza stile
 
-Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi elenco (solo per i figli diretti). **Questo si applica solo agli elementi della lista che sono figli diretti**, il che significa che dovrai aggiungere la classe per tutti gli elenchi annidati.
 
 {% example html %}
 <ul class="list-unstyled">
@@ -248,7 +248,7 @@ Remove the default `list-style` and left margin on list items (immediate childre
 
 ### Inline
 
-Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
+Rimuovi i punti elenco di una lista e applica un leggero `margin` con una combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
 {% example html %}
 <ul class="list-inline">
@@ -258,9 +258,9 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 </ul>
 {% endexample %}
 
-### Description list alignment
+### Allineamento lista descrizione
 
-Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
+Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia (or semantic mixins). Per termini più lunghi, puoi facoltativamente aggiungere la classe `.text-truncate` per troncare il testo con un ellipsis.
 
 {% example html %}
 <dl class="row">
@@ -289,11 +289,11 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 </dl>
 {% endexample %}
 
-## Responsive typography
+## Tipografia responsive
 
-*Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
+*Tipografia responsive* si riferisce al ridimensionamento di testo e componenti semplicemente regolando il `font-size` dell'elemento radice all'interno di una serie di media queries. Bootstrap non fa questo per te, ma è abbastanza facile da aggiungere se ne hai bisogno.
 
-Here's an example of it in practice. Choose whatever `font-size`s and media queries you wish.
+Ecco un esempio pratico. Scegli qualunque `font-size` e media queries desideri.
 
 {% highlight scss %}
 html {
