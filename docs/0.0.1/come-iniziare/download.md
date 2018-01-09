@@ -16,12 +16,11 @@ Scarica il codice compilato di **Bootstrap Italia v{{ site.current_version}}**, 
 
 All'interno della cartella `css` è presente un file compilato (`bootstrap-italia-{{ site.current_version }}.css`) e un file minificato (`bootstrap-italia-{{ site.current_version }}.min.css`), con le rispettive [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap-italia-{{ site.current_version }}.*.map`).
 
-
 ### JavaScript
 
 All'interno della cartella Javascript sono presenti due file con le rispettive versioni minificate, che si differenziano soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">JS files</th>

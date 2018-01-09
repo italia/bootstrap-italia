@@ -17,6 +17,8 @@
 
     $(function () {
 
+        $('[data-toggle="tooltip"]').tooltip()
+
         // Tooltip and popover demos
         $('.tooltip-demo').tooltip({
             selector: '[data-toggle="tooltip"]',

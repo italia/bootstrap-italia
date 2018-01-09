@@ -63,14 +63,17 @@ Maggiori dettagli sono disponibili a [questo indirizzo](https://italia.github.io
 
 ## Pubblicare la documentazione
 
-Per pubblicare la documentazione su github pages (ie. https://italia.github.io/bootstrap-italia/), prima di tutto è necessario generare i file statici nella cartella `_gh_pages`. Per far questo, è sufficiente lanciare il comando:
+La documentazione del tema Bootstrap Italia è gestita con [GitHub Pages](https://pages.github.com/), utilizzando file statici che risiedono sul branch `gh-pages`.
+
+Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d'appoggio `_gh_pages`. Per fare questo, è sufficiente lanciare il comando:
 
 `bundle exec jekyll build`
 
-Per copiare tutto il contenuto di tale cartella sul branch `gh-pages` (usato da [GitHub Pages](https://pages.github.com/) come sorgente dei file statici), lanciare il comando `gulp`:
+È necessario quindi portare tutto il contenuto di tale cartella sul branch `gh-pages` con il comando:
 
-`gulp docs-deploy`
+`npm run deploy-docs`
 
+Tale comando creerà un nuovo commit sul branch `gh-pages`, lanciando così la pubblicazione immediata della documentazione su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/).
 
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2

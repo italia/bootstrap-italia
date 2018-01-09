@@ -14,7 +14,6 @@ var babel = require('gulp-babel')
 var replace = require('gulp-replace')
 var wrapper = require('gulp-wrapper')
 var chalk = require('chalk')
-var ghPages = require('gulp-gh-pages')
 var pkg = require('./package.json')
 
 var FILENAME = 'bootstrap-italia';
@@ -153,7 +152,7 @@ gulp.task('introduction', function () {
     var manifest = chalk.hex('#06C')(pkg.description) + ' | ' + chalk.yellow('v' + pkg.version);
     var flagRow = chalk.bgRgb(0, 146, 70)('       ') + chalk.bgRgb(241, 242, 241)('       ') + chalk.bgRgb(206, 43, 55)('       ')
     console.log(manifest);
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 5; i++) {
         console.log(flagRow);
     }
 })
@@ -194,8 +193,3 @@ gulp.task('watch', function () {
     gulp.watch([Paths.SCSS_WATCH, Paths.SCSS_DOCUMENTATION_WATCH], ['scss-min']);
     gulp.watch([Paths.JS_WATCH, Paths.JS_DOCUMENTATION_WATCH], ['js-min', 'js-bundle-min']);
 })
-
-gulp.task('deploy-docs', function() {
-    return gulp.src('./_gh_pages/**/*')
-        .pipe(ghPages());
-});

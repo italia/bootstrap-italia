@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduzione
-description: Questo tema Bootstrap è conforme alle linee guida di design definite nel toolkit per la creazione di siti web per le Pubbliche Amministrazioni (PA)
+description: Questo tema Bootstrap è conforme alle linee guida di design per i siti web delle Pubbliche Amministrazioni
 group: come-iniziare
 redirect_from:
   - /docs/
