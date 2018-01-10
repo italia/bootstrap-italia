@@ -17,7 +17,19 @@ textarea {
 //
 
 h1, .h1 {
-  line-height: 2;
+  line-height: $headings-line-height;
+}
+
+h2, .h2 {
+  line-height: 1.25;
+}
+
+h3, .h3 {
+  line-height: 1.16;
+}
+
+h4, .h4 {
+  line-height: $headings-line-height;
 }
 
 // lead override
