@@ -1,11 +1,8 @@
-[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
-[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
-
 [![CSS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/css/bootstrap-italia-0.0.1.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/italia/bootstrap-italia/tree/master/dist/css/bootstrap-italia-0.0.1.min.css)
 [![JS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/js/bootstrap-italia-0.0.1.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/italia/bootstrap-italia/blob/master/dist/js/bootstrap-italia-0.0.1.min.js)
-
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
+[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
 <p align="center">
 
@@ -27,20 +24,21 @@
 ## Indice
 
 - [Come iniziare](#come-iniziare)
-- [Segnalazione bug e richieste](#segnalazione-bug-e-richieste)
+- [Segnalazione bug e richieste](#segnalazione-bug-e-richieste-di-aiuto)
 - [Come contribuire](#come-contribuire)
-- [Documentazione](#documentazione)
-- [Copyright](#copyright)
 
 ## Come iniziare
 
 Per utilizzare Bootstrap Italia all'interno del tuo progetto, è sufficiente includere i file compilati come descritto
 in dettaglio alla [pagina introduttiva della documentazione](https://italia.github.io/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/).
 
-## Segnalazione bug e richieste
+## Segnalazione bug e richieste di aiuto
 
-Vuoi segnalate un bug o fare una richiesta? Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non a Bootstrap stesso,
-dai un'occhiata a [come creare una issue](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) 
+Vuoi segnalare un bug o fare una richiesta?
+
+Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva 
+(in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
+dai un'occhiata a come [creare una issue](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#creare-una-issue).
 
 ## Come contribuire
 
@@ -54,12 +52,4 @@ A questo punto, è necessario impostare il tuo ambiente locale per la compilazio
 della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/0.0.1/come-iniziare/strumenti-di-compilazione/)
 è possibile avere tutte le informazioni necessarie a questo scopo.
 
-## Documentazione
-
-La documentazione visibile [qui](https://italia.github.io/bootstrap-italia/) è generata con [Jekyll](https://jekyllrb.com/docs/home/).
-
-Maggiori dettagli sono disponibili a [questo indirizzo](https://italia.github.io/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/).
-
-## Copyright
-
-Questo progetto usa la licenza BSD-3-Clause - fare riferimento al file [LICENSE](LICENSE) per maggiori dettagli.
+[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
