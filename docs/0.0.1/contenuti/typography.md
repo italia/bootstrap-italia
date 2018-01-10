@@ -260,7 +260,7 @@ Rimuovi i punti elenco di una lista e applica un leggero `margin` con una combin
 
 ### Allineamento lista descrizione
 
-Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia (or semantic mixins). Per termini più lunghi, puoi facoltativamente aggiungere la classe `.text-truncate` per troncare il testo con un ellipsis.
+Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia. Per termini più lunghi, puoi facoltativamente aggiungere la classe `.text-truncate` per troncare il testo con un ellipsis.
 
 {% example html %}
 <dl class="row">
