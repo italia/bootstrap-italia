@@ -10,9 +10,9 @@ toc: true
 
 Bootstrap imposta la visualizzazione globale di base, la tipografia e gli stili dei collegamenti. Quando è necessario un maggiore controllo, definisce le [classi di utilità testuali]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/).
 
-- Utilizza un [gruppo di caratteri nativi]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/#native-font-stack) che seleziona la migliore `famiglia di font` per ogni sistema operativo e dispositivo.
-- Per avere una più completa e accessibile scelta di font, assumiamo la radice predefinita del browser `font-size` (in genere 16px) in modo che i visitatori possano personalizzare le impostazioni predefinite del browser in base alle esigenze.
-- Usa gli attributi `$font-family-base`, `$font-size-base`, e `$line-height-base` come nostra base tipografica applicata al `<body>`.
+- Utilizza un [gruppo di caratteri nativi]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/#native-font-stack) che seleziona la migliore `font-family` per ogni sistema operativo e dispositivo.
+- Per avere una più completa e accessibile scelta di font, assumiamo la radice predefinita del browser `font-size` (in genere 16px) in modo che i visitatori possano personalizzare le impostazioni predefinite del browser in base a specifiche esigenze.
+- Usa gli attributi `$font-family-base`, `$font-size-base`, e `$line-height-base` come base tipografica applicata al `<body>`.
 - Imposta il colore dei collegamenti tramite `$link-color` e applica le sottolineature dei collegamenti solo sull' `:hover`.
 - Usa `$body-bg` per impostare il `background-color` sul `<body>` (`#fff` predefinito).
 
@@ -107,7 +107,7 @@ Utilizza le classi di utilità incluse per ricreare il piccolo testo di intestaz
 </h3>
 {% endhighlight %}
 
-## Titoli in evidenza
+## Intestazioni in evidenza
 
 Gli elementi di intestazione tradizionali sono progettati per funzionare al meglio nel contenuto della pagina. Quando hai bisogno di un titolo da mettere in evidenza, prendi in considerazione l'uso di **display heading**—uno stile di titolo più grande, leggermente più supponente.
 
@@ -115,7 +115,7 @@ Gli elementi di intestazione tradizionali sono progettati per funzionare al megl
   <table class="table">
     <tbody>
       <tr>
-        <td><span class="display-1">Titolo in evidenza 1</span></td>
+      <td><span class="display-1">Titolo in evidenza 1</span></td>
       </tr>
       <tr>
       <td><span class="display-2">Titolo in evidenza 2</span></td>
@@ -152,23 +152,21 @@ Fai risaltare un paragrafo aggiungendo la classe `.lead`.
 Stili per elementi comuni HTML5 inline. 
 
 {% example html %}
-<p>You can use the mark tag to <mark>highlight</mark> text.</p>
-<p><del>This line of text is meant to be treated as deleted text.</del></p>
-<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-<p><u>This line of text will render as underlined</u></p>
-<p><small>This line of text is meant to be treated as fine print.</small></p>
-<p><strong>This line rendered as bold text.</strong></p>
-<p><em>This line rendered as italicized text.</em></p>
+<p>Questa linea di testo mostra come è rappresentato del <mark>testo evidenziato</mark>.</p>
+<p><del>Questa linea di testo mostra come è rappresentato del testo cancellato.</del></p>
+<p><s>Questa linea di testo mostra come è rappresentato del testo non più valido.</s></p>
+<p><ins>Questa linea di testo mostra come è rappresentato un testo aggiuntivo al documento.</ins></p>
+<p><u>Questa linea di testo mostra come è rappresentato un testo sottolineato.</u></p>
+<p><small>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.</small></p>
+<p><strong>Questa linea di testo mostra come è rappresentato un testo grassetto.</strong></p>
+<p><em>Questa linea di testo mostra come è rappresentato un testo corsivo.</em></p>
 {% endexample %}
 
 Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche indesiderate che i tag porterebbero.
 
-Anche se non mostrato sopra, sentiti libero di usare `<b>` e `<i>` in HTML5. `<b>` ha lo scopo di evidenziare parole o frasi senza conferire ulteriore importanza mentre `<i>` è principalmente per voce, termini tecnici, etc.
-
 ## Utilità per il testo
 
-Cambia allineamento, trasformazione, stile, peso e colore del testo con il nostro [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/) e [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
+Cambia allineamento, trasformazione, stile, peso e colore del testo con le [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/) e le [utilità di colore]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
 
 ## Abbreviazioni
 

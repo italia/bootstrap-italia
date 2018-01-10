@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Code
-description: Documentazione ed esempi per la visualizzazione di blocchi di codice in linea e multilinea con Bootstrap..
+title: Codice
+description: Documentazione ed esempi per la visualizzazione di blocchi di codice in linea e multilinea.
 group: contenuti
 toc: true
 ---
