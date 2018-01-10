@@ -1,13 +1,10 @@
 - title: Come iniziare
   pages:
     - title: Introduzione
-    - title: Download
     - title: Strumenti di compilazione
     - title: Modificare Componenti
     - title: Browsers e dispositivi
     # - title: Accessibilità # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
-    # - title: Javascript # TODO: Aggiungere questa pagina per specularità con Bootstrap? Ci sono pagine che la linkano
-    # - title: Best practices # TODO: Ha senso avere una pagina per le best practices?
 
 - title: Layout
   pages:
