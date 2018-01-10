@@ -10,8 +10,7 @@
     "framework",
     "web"
   ],
-  "description": "Designers Italia - Bootstrap Theme",
-  "main": "index.js",
+  "description": "Bootstrap Italia: tema Bootstrap aderente alle linee guida per i servizi web delle Pubbliche Amministrazioni",
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp build",
@@ -22,7 +21,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
-  "author": "",
+  "author": "AgID + Team per la Trasformazione Digitale",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=6"

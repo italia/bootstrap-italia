@@ -19,11 +19,13 @@ di cui ne implementa le indicazioni per la creazione di interfacce utente.
 
 Per utilizzare il codice compilato di **Bootstrap Italia v{{ site.current_version}}** nel tuo progetto, è sufficiente
 scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javascript. Tali file si trovano nella cartella
-[`dist`]({{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.dist }}) di questo repository
+[`dist`]({{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.dist }}) di questo repository, oltre ad essere
+scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
-<div class="alert alert-warning" role="alert">
-  TODO: creare e linkare a una release
-</div>
+<a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia-v{{ site.current_version }}-dist.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap Italia');">Scarica Bootstrap Italia v{{ site.current_version }}</a>
+
+Bootstrap Italia contiene al suo interno anche Bootstrap stesso, ereditandone quindi tutte le funzionalità e gli stili
+visibili al sito di Bootstrap.
 
 #### CSS
 
@@ -32,15 +34,16 @@ e la sua versione minificata (`bootstrap-italia-{{ site.current_version }}.min.c
 [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps)
 (`bootstrap-italia-{{ site.current_version }}.*.map`).
 
-Copiare il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente.
+Copiare i file all'interno del vostro progetto e aggiungere il tag `<link>` di seguito riportato all'interno del tag
+`<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
 {% highlight html %}
-<link rel="stylesheet" href="bootstrap-italia-{{ site.current_version }}.css" crossorigin="anonymous">
+<link rel="stylesheet" href="./bootstrap-italia-{{ site.current_version }}.min.css" crossorigin="anonymous">
 {% endhighlight %}
 
 #### JavaScript
 
-All'interno della cartella Javascript sono presenti due file con le rispettive versioni minificate, che si differenziano
+All'interno della cartella `js` sono presenti due file con le rispettive versioni minificate, che si differenziano
 soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
 
 <table class="table table-bordered">
@@ -71,15 +74,17 @@ soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
   </tbody>
 </table>
 
-Copiare il tag `<script>`s di seguito riportato alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`.
+In questo caso, dopo aver copiato i file all'interno del vostro progetto, inserire una versione dei tag `<script>` di
+seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`.
 
-Includendo la versione `*.bundle.*` non sarà necessario aggiungere riferimenti a jQuery e Popper.js:
+Per includendo la versione `*.bundle.*` non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, per
+cui sarà necessario solo aggiungere un tag `<script>` per la libreria javascript Bootstrap Italia.
 
 {% highlight html %}
-<script src="/bootstrap-italia-{{ site.current_version }}.bundle.min.js"></script>
+<script src="./bootstrap-italia-{{ site.current_version }}.bundle.min.js"></script>
 {% endhighlight %}
 
-In caso contrario:
+In caso contrario, sarà necessario includere anche jQuery (è sufficiente la versione slim) e Popper.js:
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_integrity }}" crossorigin="anonymous"></script>
@@ -100,24 +105,24 @@ In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/bootstrap-italia-{{ site.current_version }}.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-italia-{{ site.current_version }}.min.css">
   </head>
   <body>
     <h1>Hello, world!</h1>
     <!-- JS -->
-    <script src="/bootstrap-italia-{{ site.current_version }}.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="./bootstrap-italia-{{ site.current_version }}.bundle.min.js"></script>
   </body>
 </html>
 {% endhighlight %}
 
-Questo è tutto ciò che è sufficiente per avere a disposizione tutte le funzionalità e gli stili visibili di seguito.
+Questo è tutto ciò che è sufficiente per avere a disposizione tutte le funzionalità e gli stili di Bootstrap Italia.
 Si possono visitare le pagine su [come creare un layout]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/)
 o [consultare gli esempi]({{ site.baseurl }}/docs/{{ site.docs_version }}/esempi/) per iniziare a personalizzare la tua pagina.
 
 ### npm
 
-Alternativamente, se utilizzi [Webpack](https://webpack.github.io/) o altri tool simili, puoi aggiungere Bootstrap Italia
-come dipendenza della tua app basata su node.js con il seguente comando:
+Alternativamente, se utilizzi [Webpack](https://webpack.github.io/) o altri tool simili per l'inclusione di librerie,
+puoi aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
 {% highlight sh %}
 npm i --save git+https://git@github.com/italia/bootstrap-italia.git
