@@ -6,10 +6,6 @@ group: come-iniziare
 toc: true
 ---
 
-<div class="alert alert-warning" role="alert">
-  TODO: linkare a CONTRIBUTING.md
-</div>
-
 I componenti di Bootstrap Italia sono divisi in due macro-aree: i [Componenti _Base_]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/) e i [Componenti _Aggiuntivi_]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti-aggiuntivi/).
  
 #### Componenti base

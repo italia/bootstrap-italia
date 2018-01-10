@@ -182,6 +182,9 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 Per un miglior rendering cross-browser, Bootstrap usa [Reboot](https://getbootstrap.com/docs/4.0/content/reboot/),
 che corregge inconsistenze tra browsers e dispositivi.
 
-<div class="alert alert-warning" role="alert">
-  TODO: aggiungere link a pagina successiva (strumenti di compilazione)
-</div>
+---
+
+###### Continua la lettura >
+
+Se ti interessa sapere come funziona il processo di compilazione dei file e la creazione della documenatazione di Bootstrap Italia,
+continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/{{ site.docs_version }}come-iniziare/strumenti-di-compilazione/)

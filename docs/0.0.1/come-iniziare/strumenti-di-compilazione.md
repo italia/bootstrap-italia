@@ -56,7 +56,9 @@ Le cartelle d'interesse sono:
 - `src` che contiene tutti i file sorgente.
 - `dist` che contiene i file di produzione da copiare ed utilizzare sul proprio HTML.
 
-_TODO: definire meglio le inclusioni nel SASS e le differenze nei compilati_
+<div class="alert alert-warning" role="alert">
+  TODO: definire meglio le inclusioni SASS e JS e le differenze nei compilati
+</div>
 
 ### Codice sorgente
 
@@ -113,4 +115,10 @@ su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-ita
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
 
-- [ ] todo: aggiungere link alla pagina successiva (modificare componenti)
+---
+
+###### Continua la lettura >
+
+Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
+continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/{{ site.docs_version }}come-iniziare/modificare-componenti/).
+
