@@ -7,6 +7,8 @@ $grid-gutter-width:           16px !default;
 // Main typography
 $font-size-base:              1rem !default;
 
+$headings-line-height:        1.2 !default;
+
 // Btns
 $btn-font-size:      $font-size-base;
 $btn-text-transform: uppercase;
@@ -121,20 +123,23 @@ $letter-spacing-base:    0;
 $line-height-base:       1.5;
 $font-weight-base:       300;
 
-
-
-// lead
-$lead-font-size:      floor(($font-size-base * 1.15));
-$lead-font-size-sm:   floor(($font-size-base * 1.5));
-$lead-font-weight:    300;
-$lead-line-height:    1.4;
-$lead-letter-spacing: 0;
-
-
 // Headings
 $headings-font-weight: 600;
 $headings-line-height: 1.2;
 
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+
+$display1-size: 3.5rem;
+$display2-size: 2.5rem;
+$display3-size: 1.5rem;
+$display4-size: 1.25rem;
+$display5-size: 1rem;
+
+$display1-weight: 600;
+$display2-weight: 600;
+$display3-weight: 600;
 
 // Inputs
 $input-border:            $gray-200;
