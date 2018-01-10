@@ -34,7 +34,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/utilit%C3%A0/close-icon/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/contenuti/code/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/contenuti/codice/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/collapse/</loc>
@@ -44,9 +44,6 @@
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/utilit%C3%A0/display/</loc>
-</url>
-<url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/come-iniziare/download/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/dropdowns/</loc>
@@ -85,10 +82,10 @@
 <loc>/bootstrap-italia/bootstrap-italia/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/esempi/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/estensioni/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/estensioni/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/esempi/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/input-group/</loc>
@@ -163,10 +160,10 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/utilit%C3%A0/text/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/tooltips/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/contenuti/tipografia/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/contenuti/typography/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/componenti/tooltips/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/0.0.1/layout/utilities-for-layout/</loc>

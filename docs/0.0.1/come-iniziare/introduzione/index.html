@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Questo tema Bootstrap è conforme alle linee guida di design per i siti web delle Pubbliche Amministrazioni">
-<meta name="author" content="Agenzia per l'Italia Digitale">
+<meta name="description" content="Cos’è Bootstrap Italia e come utilizzarlo all’interno del tuo progetto">
+<meta name="author" content="AgID + Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.6.2">
 <meta name="robots" content="noindex">
 
@@ -34,16 +34,16 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@teamdigitaleIT">
-<meta name="twitter:creator" content="@teamdigitaleIT">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:title" content="Introduzione">
-<meta name="twitter:description" content="Questo tema Bootstrap è conforme alle linee guida di design per i siti web delle Pubbliche Amministrazioni">
+<meta name="twitter:description" content="Cos’è Bootstrap Italia e come utilizzarlo all’interno del tuo progetto">
 <meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
 <meta property="og:url" content="/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/">
 <meta property="og:title" content="Introduzione">
-<meta property="og:description" content="Questo tema Bootstrap è conforme alle linee guida di design per i siti web delle Pubbliche Amministrazioni">
+<meta property="og:description" content="Cos’è Bootstrap Italia e come utilizzarlo all’interno del tuo progetto">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italiaTODO">
 <meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
@@ -105,9 +105,6 @@
       <li class="nav-item">
         <a class="nav-link " href="/bootstrap-italia/docs/0.0.1/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://developers.italia.it/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Developers');" target="_blank" rel="noopener">Developers</a>
-      </li>
     </ul>
   </div>
 
@@ -131,8 +128,6 @@
 </a>
     </li>
   </ul>
-
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/bootstrap-italia/docs/0.0.1/come-iniziare/download/">Download</a>
 </header>
 
 
@@ -154,9 +149,6 @@
       <ul class="nav bd-sidenav pl-2"><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/">
               Introduzione
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/0.0.1/come-iniziare/download/">
-              Download
             </a></li><li>
             <a href="/bootstrap-italia/docs/0.0.1/come-iniziare/strumenti-di-compilazione/">
               Strumenti di compilazione
@@ -194,11 +186,11 @@
             <a href="/bootstrap-italia/docs/0.0.1/contenuti/reboot/">
               Reboot
             </a></li><li>
-            <a href="/bootstrap-italia/docs/0.0.1/contenuti/typography/">
-              Typography
+            <a href="/bootstrap-italia/docs/0.0.1/contenuti/tipografia/">
+              Tipografia
             </a></li><li>
-            <a href="/bootstrap-italia/docs/0.0.1/contenuti/code/">
-              Code
+            <a href="/bootstrap-italia/docs/0.0.1/contenuti/codice/">
+              Codice
             </a></li><li>
             <a href="/bootstrap-italia/docs/0.0.1/contenuti/images/">
               Images
@@ -374,17 +366,25 @@
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#come-iniziare">Come iniziare</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
-<li class="toc-entry toc-h3"><a href="#js">JS</a></li>
+<li class="toc-entry toc-h4"><a href="#css">CSS</a></li>
+<li class="toc-entry toc-h4"><a href="#javascript">JavaScript</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#pagina-html-di-esempio">Pagina HTML di esempio</a></li>
+<li class="toc-entry toc-h2"><a href="#pagina-html-di-esempio">Pagina HTML di esempio</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#npm">npm</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#impostazioni-globali">Impostazioni globali</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#doctype-html5">Doctype HTML5</a></li>
 <li class="toc-entry toc-h3"><a href="#meta-tag-responsive">Meta tag responsive</a></li>
 <li class="toc-entry toc-h3"><a href="#box-sizing">Box-sizing</a></li>
-<li class="toc-entry toc-h3"><a href="#reboot">Reboot</a></li>
+<li class="toc-entry toc-h3"><a href="#reboot">Reboot</a>
+<ul>
+<li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -393,24 +393,81 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <h1 class="bd-title" id="content">Introduzione</h1>
-          <p class="bd-lead">Questo tema Bootstrap è conforme alle linee guida di design per i siti web delle Pubbliche Amministrazioni</p>
-          <h2 id="come-iniziare">Come iniziare</h2>
+          <p class="bd-lead">Cos’è Bootstrap Italia e come utilizzarlo all’interno del tuo progetto</p>
+          <p>Bootstrap Italia è un tema basato su <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4.0.0-beta.3</a>.
+Esso è conforme alle <a href="https://design-italia.readthedocs.io/it/stable/index.html">linee guida di design per i servizi web della PA</a>,
+di cui ne implementa le indicazioni per la creazione di interfacce utente.</p>
 
-<p>Questo è un tema basato su <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4.0.0-beta.3</a>.</p>
+<h2 id="come-iniziare">Come iniziare</h2>
 
-<p>Per utilizzare il tema, è sufficiente includere nell’HTML della pagina i file che si trovano nella cartella <code class="highlighter-rouge">dist\</code> di questo repository. In particolare, è necessario aggiungere un CSS e un Javascript.</p>
+<p>Per utilizzare il codice compilato di <strong>Bootstrap Italia v0.0.1</strong> nel tuo progetto, è sufficiente
+scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javascript. Tali file si trovano nella cartella
+<a href="https://github.com/italia/bootstrap-italia/tree/v0.0.1/dist/"><code class="highlighter-rouge">dist</code></a> di questo repository, oltre ad essere
+scaricabili alla <a href="https://github.com/italia/bootstrap-italia/releases">pagina delle release di progetto</a>:</p>
 
-<h3 id="css">CSS</h3>
+<p><a href="https://github.com/italia/bootstrap-italia/releases/download/0.0.1/bootstrap-italia-v0.0.1-dist.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap Italia');">Scarica Bootstrap Italia v0.0.1</a></p>
 
-<p>Copiare il tag <code class="highlighter-rouge">&lt;link&gt;</code> di seguito riportato all’interno del tag <code class="highlighter-rouge">&lt;head&gt;</code> della pagina, prima di ogni altro CSS già presente.</p>
+<p>Bootstrap Italia contiene al suo interno anche Bootstrap stesso, ereditandone quindi tutte le funzionalità e gli stili
+visibili al sito di Bootstrap.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/bootstrap-italia-0.0.1.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+<h4 id="css">CSS</h4>
 
-<h3 id="js">JS</h3>
+<p>All’interno della cartella <code class="highlighter-rouge">css</code> è presente un file CSS (<code class="highlighter-rouge">bootstrap-italia-0.0.1.css</code>)
+e la sua versione minificata (<code class="highlighter-rouge">bootstrap-italia-0.0.1.min.css</code>), con le rispettive
+<a href="https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps">source maps</a>
+(<code class="highlighter-rouge">bootstrap-italia-0.0.1.*.map</code>).</p>
 
-<p>Copiare il tag <code class="highlighter-rouge">&lt;script&gt;</code>s di seguito riportato alla fine della pagina HTML, giusto prima della chiusura del tag <code class="highlighter-rouge">&lt;/body&gt;</code>.</p>
+<p>Copiare i file all’interno del vostro progetto e aggiungere il tag <code class="highlighter-rouge">&lt;link&gt;</code> di seguito riportato all’interno del tag
+<code class="highlighter-rouge">&lt;head&gt;</code> della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap-italia-0.0.1.bundle.min.js"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./bootstrap-italia-0.0.1.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h4 id="javascript">JavaScript</h4>
+
+<p>All’interno della cartella <code class="highlighter-rouge">js</code> sono presenti due file con le rispettive versioni minificate, che si differenziano
+soltanto per l’inclusione in linea delle librerie jQuery e popper.js.</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">JS files</th>
+      <th scope="col">Popper</th>
+      <th scope="col">jQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-0.0.1.bundle.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-0.0.1.bundle.min.js</code></div>
+      </th>
+      <td class="text-success">Incluso</td>
+      <td class="text-success">Incluso</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-0.0.1.js</code></div>
+        <div><code class="font-weight-normal text-nowrap">bootstrap-italia-0.0.1.min.js</code></div>
+      </th>
+      <td class="bg-light text-muted">Non Incluso</td>
+      <td class="bg-light text-muted">Non Incluso</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In questo caso, dopo aver copiato i file all’interno del vostro progetto, inserire una versione dei tag <code class="highlighter-rouge">&lt;script&gt;</code> di
+seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag <code class="highlighter-rouge">&lt;/body&gt;</code>.</p>
+
+<p>Per includendo la versione <code class="highlighter-rouge">*.bundle.*</code> non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, per
+cui sarà necessario solo aggiungere un tag <code class="highlighter-rouge">&lt;script&gt;</code> per la libreria javascript Bootstrap Italia.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./bootstrap-italia-0.0.1.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>In caso contrario, sarà necessario includere anche jQuery (è sufficiente la versione slim) e Popper.js:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/bootstrap-italia-0.0.1.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h2 id="pagina-html-di-esempio">Pagina HTML di esempio</h2>
 
@@ -424,20 +481,34 @@
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
     
     <span class="c">&lt;!-- CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/bootstrap-italia-0.0.1.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./bootstrap-italia-0.0.1.min.css"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
     <span class="c">&lt;!-- JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap-italia-0.0.1.bundle.min.js"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./bootstrap-italia-0.0.1.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
-<p>Questo è tutto ciò che è sufficiente per avere a disposizione tutte le funzionalità e gli stili visibili di seguito. Si possono visitare le pagine su <a href="/bootstrap-italia/docs/0.0.1/layout/overview/">come creare un layout</a> o <a href="/bootstrap-italia/docs/0.0.1/esempi/">consultare gli esempi</a> per iniziare a personalizzare la tua pagina.</p>
+<p>Questo è tutto ciò che è sufficiente per avere a disposizione tutte le funzionalità e gli stili di Bootstrap Italia.
+Si possono visitare le pagine su <a href="/bootstrap-italia/docs/0.0.1/layout/overview/">come creare un layout</a>
+o <a href="/bootstrap-italia/docs/0.0.1/esempi/">consultare gli esempi</a> per iniziare a personalizzare la tua pagina.</p>
+
+<h3 id="npm">npm</h3>
+
+<p>Alternativamente, se utilizzi <a href="https://webpack.github.io/">Webpack</a> o altri tool simili per l’inclusione di librerie,
+puoi aggiungere Bootstrap Italia come dipendenza con il seguente comando:</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">npm i <span class="nt">--save</span> git+https://git@github.com/italia/bootstrap-italia.git</code></pre></figure>
+
+<div class="alert alert-warning" role="alert">
+  TODO: usare il registro npm
+</div>
 
 <h2 id="impostazioni-globali">Impostazioni globali</h2>
 
-<p>Bootstrap, e di conseguenza il tema Bootstrap-Italia, utilizza alcune impostazioni globali di cui è bene essere al corrente durante lo sviluppo, che tendono <em>normalizzare</em> gli stili tra i vari browser. Vediamoli in dettaglio.</p>
+<p>Bootstrap, e di conseguenza il tema Bootstrap-Italia, utilizza alcune impostazioni globali di cui è bene essere al
+corrente durante lo sviluppo, che tendono <em>normalizzare</em> gli stili tra i vari browser. Vediamoli in dettaglio.</p>
 
 <h3 id="doctype-html5">Doctype HTML5</h3>
 
@@ -450,7 +521,10 @@
 
 <h3 id="meta-tag-responsive">Meta tag responsive</h3>
 
-<p>Bootstrap è sviluppato in modalità <em>mobile first</em>, una strategia in cui il codice è progettato inizialmente per dispositivi mobili e poi ottimizzato per schermi di dimensioni maggiori utilizzando CSS media queries. Per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario <strong>aggiungere il meta tag responsive che segue</strong> all’interno del tag <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
+<p>Bootstrap è sviluppato in modalità <em>mobile first</em>, una strategia in cui il codice è progettato inizialmente per
+dispositivi mobili e poi ottimizzato per schermi di dimensioni maggiori utilizzando CSS media queries.
+Per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario <strong>aggiungere
+il meta tag responsive che segue</strong> all’interno del tag <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span></code></pre></figure>
 
@@ -458,7 +532,9 @@
 
 <h3 id="box-sizing">Box-sizing</h3>
 
-<p>Per un migliore dimensionamento degli elementi nella pagina, Bootstrap imposta il valore di <code class="highlighter-rouge">box-sizing</code> da <code class="highlighter-rouge">content-box</code> a <code class="highlighter-rouge">border-box</code>. Questo assicura che ogni <code class="highlighter-rouge">padding</code> non abbia effetto sulla dimensione finale di un elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.</p>
+<p>Per un migliore dimensionamento degli elementi nella pagina, Bootstrap imposta il valore di <code class="highlighter-rouge">box-sizing</code> da
+<code class="highlighter-rouge">content-box</code> a <code class="highlighter-rouge">border-box</code>. Questo assicura che ogni <code class="highlighter-rouge">padding</code> non abbia effetto sulla dimensione finale di un
+elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.</p>
 
 <p>Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare codice simile a quanto segue:</p>
 
@@ -470,7 +546,15 @@
 
 <h3 id="reboot">Reboot</h3>
 
-<p>Per un miglior rendering cross-browser, Bootstrap usa <a href="https://getbootstrap.com/docs/4.0/content/reboot/">Reboot</a>, che corregge inconsistenze tra browsers e dispositivi.</p>
+<p>Per un miglior rendering cross-browser, Bootstrap usa <a href="https://getbootstrap.com/docs/4.0/content/reboot/">Reboot</a>,
+che corregge inconsistenze tra browsers e dispositivi.</p>
+
+<hr />
+
+<h6 id="continua-la-lettura-">Continua la lettura &gt;</h6>
+
+<p>Se ti interessa sapere come funziona il processo di compilazione dei file e la creazione della documenatazione di Bootstrap Italia,
+continua a leggere alla pagina <a href="/bootstrap-italia/docs/0.0.1come-iniziare/strumenti-di-compilazione/">strumenti di compilazione</a></p>
 
         </main>
       </div>
