@@ -23,10 +23,15 @@ Il repository di Bootstrap Italia usa alcune label per identificare le issues:
 
 - `accessibility` - Issue riguardanti accessibilità.
 - `bug` - segnalazione di malfunzionamenti nel codice o problemi tecnici con i tool di compilazione.
-- `docs` - Issues riguardanti la documentazione dei componenti.
 - `design` - Issue riguardanti il design dei componenti e la loro conformità alle [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
-- `feature` - Issue che possono riguardare nuovi componenti o nuove funzionalità.
+- `docs` - Issues riguardanti la documentazione dei componenti.
+- `duplicate` - Issue o pull request duplicata.
+- `enhancement` - Issue che possono riguardare nuovi componenti o nuove funzionalità.
+- `good first issue` - Issue particolarmente semplici da prendere in carico per chi non ha conoscenza approfondita del progetto.
 - `help wanted` - Issues per le quali il team di Developers Italia è aperto al supporto della comunità degli sviluppatori.
+- `invalid` - Issue invalida.
+- `question` - Indica una issue o pull request che ha bisogno di maggiori informazioni.
+- `wontfix` - Indica che la issue o la pull request viene chiusa senza alcun lavoro aggiuntivo.
 
 ## Licenza
 
