@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Breadcrumb
-description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+description: Indica la posizione della pagina corrente all'interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.
 group: componenti
 ---
 
-## Overview
+## Panoramica
 
-Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
+I separatori vengono aggiunti automaticamente in CSS tramite [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) e [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
 
 {% example html %}
 <nav aria-label="breadcrumb">
@@ -32,8 +32,8 @@ Separators are automatically added in CSS through [`::before`](https://developer
 </nav>
 {% endexample %}
 
-## Accessibility
+## Accessibilità
 
-Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
+Dato che i breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="breadcrumb"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+Per maggiorni informazioni, guarda il [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).

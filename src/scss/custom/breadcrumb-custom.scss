@@ -1,0 +1,24 @@
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb-item {
+	font-size: 1rem !important;
+    letter-spacing: .01em !important;
+    color: #212529 !important;
+}
+
+.breadcrumb-item a {
+	font-weight: 700 !important;
+	text-decoration: none !important;
+    padding-right: .8rem !important;
+    color: #06c !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: " › ";
+	margin-right: .8rem !important;
+	padding: 0 !important;
+    color: inherit !important;
+}
