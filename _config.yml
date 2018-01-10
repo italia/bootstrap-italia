@@ -38,10 +38,9 @@ plugins:
 
 # Social
 title:              "Bootstrap Italia"
-description:        "Bootstrap Italia Theme"
-twitter:            "teamdigitaleIT"
-authors:            "Agenzia per l'Italia Digitale"
-authors_url:        ""
+description:        "Tema Bootstrap aderente alle linee guida per i servizi web delle Pubbliche Amministrazioni"
+authors:            "AgID + Team per la Trasformazione Digitale"
+authors_url:        "https://teamdigitale.governo.it/"
 social_image_path:  "TODO"
 social_logo_path:   "TODO"
 
@@ -50,8 +49,9 @@ current_version:      0.0.1
 docs_version:         0.0.1
 bootstrap_version:    4.0.0-beta.3
 repo:                 "https://github.com/italia/bootstrap-italia/"
-slack:                "https://slack.developers.italia.it/"
 developers:           "https://developers.italia.it/"
+slack:                "https://slack.developers.italia.it/"
+twitter:              "https://twitter.com/teamdigitaleIT"
 
 download:
   source:           "src/"
@@ -60,9 +60,7 @@ download:
 cdn:
   css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
   js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
-  jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-
-design_bootstrap:
-  css:              "css/bootstrap-italia-0.0.1.css"
-  js:               "js/bootstrap-italia-0.0.1.bundle.min.js"
+  jquery:           "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+  jquery_integrity: "sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"
+  popper_integrity: "sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY="
