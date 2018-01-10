@@ -183,7 +183,7 @@ Aggiungi `.initialism` a un'abbreviazione per una dimensione del font leggerment
 
 ## Blockquotes
 
-Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Avvolgi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno di un  `<blockquote class="blockquote">` come la citazione.
+Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno di un  `<blockquote class="blockquote">` come la citazione.
 
 {% example html %}
 <blockquote class="blockquote">
