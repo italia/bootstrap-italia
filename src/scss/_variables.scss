@@ -141,6 +141,11 @@ $display1-weight: 600;
 $display2-weight: 600;
 $display3-weight: 600;
 
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-item-padding: .75rem;
+$breadcrumb-divider-color: $text-color;
+
 // Inputs
 $input-border:            $gray-200;
 $input-color-placeholder: $gray-500;
