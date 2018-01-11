@@ -179,12 +179,12 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 
 ### Reboot
 
-Per un miglior rendering cross-browser, Bootstrap usa [Reboot](https://getbootstrap.com/docs/4.0/content/reboot/),
-che corregge inconsistenze tra browsers e dispositivi.
+Per un miglior rendering cross-browser, Bootstrap Italia eredita da Bootstrap [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/),
+una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
 
 ---
 
 ###### Continua la lettura >
 
 Se ti interessa sapere come funziona il processo di compilazione dei file e la creazione della documenatazione di Bootstrap Italia,
-continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/{{ site.docs_version }}come-iniziare/strumenti-di-compilazione/)
+continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/strumenti-di-compilazione/)

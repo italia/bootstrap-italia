@@ -38,7 +38,7 @@ Vuoi segnalare un bug o fare una richiesta?
 
 Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva 
 (in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
-dai un'occhiata a come [creare una issue](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#creare-una-issue).
+dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md#creare-una-issue).
 
 ## Come contribuire
 
