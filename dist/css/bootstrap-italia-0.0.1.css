@@ -3587,14 +3587,14 @@ tbody.collapse.show {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: transparent;
   border-radius: 0.25rem; }
 
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  color: #868e96;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  color: #495057;
   content: "/"; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -6861,6 +6861,12 @@ a.text-dark:focus, a.text-dark:hover {
   display: inline-block;
   padding-left: .3em;
   color: inherit; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›"; }
+
+.breadcrumb-item a {
+  font-weight: 600; }
 
 img[data-action="zoom"] {
   cursor: pointer;

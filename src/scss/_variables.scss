@@ -135,6 +135,11 @@ $lead-letter-spacing: 0;
 $headings-font-weight: 600;
 $headings-line-height: 1.2;
 
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-item-padding: .75rem;
+$breadcrumb-divider-color: $text-color;
+
 
 // Inputs
 $input-border:            $gray-200;
