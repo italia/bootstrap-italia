@@ -20,20 +20,20 @@ richieste di nuove funzionalità e creazione di pull request, nel rispetto di qu
 
 ## Issue e label
 
-Il repository di Bootstrap Italia usa alcune label per identificare le issues:
+Il repository di Bootstrap Italia usa alcune label per identificare le issue (criticità):
 
-- `accessibility` - Issue riguardanti accessibilità.
-- `bug` - segnalazione di malfunzionamenti nel codice o problemi tecnici con i tool di compilazione.
-- `design` - Issue riguardanti il design dei componenti e la loro conformità alle [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
-- `docs` - Issues riguardanti la documentazione dei componenti.
-- `duplicate` - Issue o pull request duplicata.
-- `enhancement` - Issue che possono riguardare nuovi componenti o nuove funzionalità.
-- `good first issue` - Issue particolarmente semplici da prendere in carico per chi non ha conoscenza approfondita del progetto.
-- `help wanted` - Issues per le quali il team di Developers Italia è aperto al supporto della comunità degli sviluppatori.
-- `invalid` - Issue invalida.
-- `question` - Indica una issue o pull request che ha bisogno di maggiori informazioni.
-- `wontfix` - Indica che la issue o la pull request viene chiusa senza alcun lavoro aggiuntivo.
+- `accessibility` - Criticità riguardanti accessibilità.
+- `bug` - Segnalazione di malfunzionamenti nel codice o problemi tecnici con i tool di compilazione.
+- `design` - Criticità riguardanti il design dei componenti e la loro conformità alle [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
+- `docs` - Criticità riguardanti la documentazione dei componenti.
+- `duplicate` - Criticità o pull request duplicata.
+- `enhancement` - Criticità che possono riguardare nuovi componenti o nuove funzionalità.
+- `good first issue` - Criticità particolarmente semplici da prendere in carico per chi non ha conoscenza approfondita del progetto.
+- `help wanted` - Criticità pronte per ricevere contributi da parte della comunità e di nuovi aspiranti sviluppatori.
+- `invalid` - Criticità considerata invalida.
+- `question` - Indica una criticità o pull request per la quale si ha bisogno di maggiori informazioni.
+- `wontfix` - Indica che la criticità o la pull request viene chiusa senza alcun lavoro aggiuntivo.
 
 ## Licenza
 
-Contribuendo al codice o alla documentazione accetti di rilasciare il tuo codice secondo le rispettive licenze.
+Contribuendo al codice o alla documentazione accetti di rilasciare il tuo codice secondo la licenza open source già presente nel repository.
