@@ -1,0 +1,9 @@
+.table thead th {
+    border-color: currentColor;
+}
+
+.table td, .table th {
+    text-align: $table-cell-text-align;
+    border-bottom: $table-border-width solid $table-border-color;
+    border-top: none;
+}
