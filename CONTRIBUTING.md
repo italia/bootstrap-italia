@@ -1,11 +1,12 @@
 # Contribuire a Bootstrap Italia
 
-Prenditi un momento per leggere questo documento così da rendere il processo semplice e consistente con quello degli altri.
+Prenditi un momento per leggere questo documento così da rendere il processo semplice e consistente con quello utilizzato
+dal resto della comunità degli sviluppatori.
 
 ## Creare una issue
 
-L'[issue tracker](https://github.com/italia/bootstrap-italia/issues) è il posto giusto dove inserire [segnalazioni di bug](#segnalazione-di-bug),
-[richieste di nuove funzionalità](#richieste-di-nuove-funzionalità) e [creazione di pull request](#pull-request), nel rispetto di queste condizioni:
+L'[issue tracker](https://github.com/italia/bootstrap-italia/issues) è il posto giusto dove inserire segnalazioni di bug,
+richieste di nuove funzionalità e creazione di pull request, nel rispetto di queste condizioni:
 
 - Per favore, **non** usare l'issue tracker per richieste di supporto personali.
   [Slack di Developers Italia])(https://slack.developers.italia.it/), [Slack di Bootstrap](https://bootstrap-slack.herokuapp.com/)
