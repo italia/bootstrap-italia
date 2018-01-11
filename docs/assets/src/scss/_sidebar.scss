@@ -90,9 +90,9 @@
 
 .bd-search {
   position: relative; // To contain the Algolia search
-  padding: 1rem 15px;
-  margin-right: -15px;
-  margin-left: -15px;
+  padding: 1rem $grid-gutter-width; // to fix sidebar width
+  margin-right: - $grid-gutter-width/2; // to fix sidebar width
+  margin-left: - $grid-gutter-width/2; // to fix sidebar width
   border-bottom: 1px solid rgba(0, 0, 0, .05);
 
   .form-control:focus {
