@@ -41,6 +41,6 @@ Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella 
 
 Tale documentazione è redatta in codice `markdown` ed è comprensiva di una breve descrizione testuale corredata da un esempio di applicazione in codice `html`.
 
-
 [documentazione-bootstrap]: https://getbootstrap.com/docs/4.0/getting-started/introduction/
 [linee-guida]: https://design-italia.readthedocs.io/it/stable/index.html
+

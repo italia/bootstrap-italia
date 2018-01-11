@@ -362,38 +362,38 @@ h2, .h2 {
   font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
-
-h4, .h4 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h4, .h4 {
   font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1rem; }
 
 h6, .h6 {
   font-size: 1rem; }
 
 .lead {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 300; }
 
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
+  font-size: 3.5rem;
+  font-weight: 600;
   line-height: 1.2; }
 
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
+  font-size: 2.5rem;
+  font-weight: 600;
   line-height: 1.2; }
 
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.2; }
 
 .display-4 {
-  font-size: 3.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.2; }
 
@@ -6840,6 +6840,28 @@ a.text-dark:focus, a.text-dark:hover {
 
 .invisible {
   visibility: hidden !important; }
+
+body {
+  font-weight: 300;
+  letter-spacing: 0; }
+
+h2, .h2 {
+  line-height: 1.25; }
+
+h3, .h3 {
+  line-height: 1.1667; }
+
+h4, .h4 {
+  font-weight: 400; }
+
+.display-1 {
+  font-weight: 600; }
+
+.display-2 {
+  font-weight: 600; }
+
+.display-3 {
+  font-weight: 600; }
 
 .btn {
   text-transform: uppercase;

@@ -14,7 +14,7 @@ In breve, il tema Bootstrap Italia supporta l'**ultima release stabile** di tutt
 
 Riguardo i dispositivi mobili Bootstrap Italia supporta l'**ultima release stabile** di tutti i principali browser e piattaforme, ad esclusione dei proxy browsers (come Opera Mini, Opera Mobile Turbo mode, UC Browser Mini, Amazon Silk), che non sono supportati.
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <td></td>
@@ -57,7 +57,7 @@ Riguardo i dispositivi mobili Bootstrap Italia supporta l'**ultima release stabi
 
 Allo stesso modo di quanto avviene in ambito mobile, l'**ultima release stabile** di tutti i principali browser e piattaforme è supportata.
 
-<table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <td></td>

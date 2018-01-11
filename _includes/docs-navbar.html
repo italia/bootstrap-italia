@@ -11,9 +11,6 @@
       <li class="nav-item">
         <a class="nav-link {% if page.title == "Examples" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ site.developers }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Developers');" target="_blank" rel="noopener">Developers</a>
-      </li>
     </ul>
   </div>
 
@@ -30,7 +27,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
+      <a class="nav-link p-2" href="{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
         {%- include icons/twitter.svg class="navbar-nav-svg" -%}
       </a>
     </li>
@@ -40,6 +37,4 @@
       </a>
     </li>
   </ul>
-
-  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/download/">Download</a>
 </header>
