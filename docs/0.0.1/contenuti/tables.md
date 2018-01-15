@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+title: Tabelle
+description: Documentazione ed esempi per lo styling opt-in delle tabelle (dato il loro uso prevalente nei plugin JavaScript) con Bootstrap.
 group: contenuti
 toc: true
 ---
 
 ## Examples
 
-Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e campi di selezione data, abbiamo progettato le nostre tabelle per essere **opt-in**. asta aggiungere la classe `.table` a qualsiasi `<table>`, quindi estendere con stili personalizzati o con le nostre varie classi incluse di modificatori.
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+Usando il markup di base della tabella, ecco come appaiono le tabelle `.table`-based in Bootstrap. **Tutti gli stili di tabella sono ereditati in Bootstrap 4**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
 
 {% example html %}
 <table class="table">
@@ -45,7 +45,7 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 </table>
 {% endexample %}
 
-You can also invert the colors—with light text on dark backgrounds—with `.table-dark`.
+Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark`.
 
 {% example html %}
 <table class="table table-dark">
@@ -80,9 +80,9 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 </table>
 {% endexample %}
 
-## Table head options
+## Opzioni delle intestazioni di tabella
 
-Similar to tables and dark tables, use the modifier classes `.thead-light` or `.thead-dark` to make `<thead>`s appear light or dark gray.
+Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.thead-light` o `.thead-dark` per far apparire `<thead>` chiaro o grigio scuro.
 
 {% example html %}
 <table class="table">
@@ -148,9 +148,9 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
 </table>
 {% endexample %}
 
-## Striped rows
+## Righe striate
 
-Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
 
 {% example html %}
 <table class="table table-striped">
@@ -218,9 +218,9 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 </table>
 {% endexample %}
 
-## Bordered table
+## Tabella con bordi
 
-Add `.table-bordered` for borders on all sides of the table and cells.
+Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su tutte le celle.
 
 {% example html %}
 <table class="table table-bordered">
@@ -286,9 +286,9 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 </table>
 {% endexample %}
 
-## Hoverable rows
+## Hover delle righe
 
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  contenute in `<tbody>`.
 
 {% example html %}
 <table class="table table-hover">
@@ -354,9 +354,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 </table>
 {% endexample %}
 
-## Small table
+## Tabella compatta
 
-Add `.table-sm` to make tables more compact by cutting cell padding in half.
+Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell padding.
 
 {% example html %}
 <table class="table table-sm">
@@ -422,9 +422,9 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 </table>
 {% endexample %}
 
-## Contextual classes
+## Classi contestuali
 
-Use contextual classes to color table rows or individual cells.
+Usa le classi contestuali per colorare le righe delle tabelle o le singole celle.
 
 <div class="bd-example">
   <table class="table">
@@ -471,7 +471,8 @@ Use contextual classes to color table rows or individual cells.
 </tr>
 {% endhighlight %}
 
-Regular table background variants are not available with the dark table, however, you may use [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/) to achieve similar styles.
+Le consuete varianti di sfondo della tabella non sono disponibili con la tabella scura, tuttavia, è possibile utilizzare [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/) per ottenere stili simili.
+ 
 
 <div class="bd-example">
   <table class="table table-dark">
@@ -553,18 +554,18 @@ Regular table background variants are not available with the dark table, however
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-Create responsive tables by wrapping any `.table` with `.table-responsive{-sm|-md|-lg|-xl}`, making the table scroll horizontally at each `max-width` breakpoint of 575.99px, 767.99px, 991.99px, and 1119.99px, respectively.
+Crea tabelle responsive racchiudendo ogni `.table` con `.table-responsive{-sm|-md|-lg|-xl}`, facendo scorrere orizzontalmente la tabella ad ogni breakpoint, rispettivamente con `max-width` di 575.99px, 767.99px, 991.99px, e 1119.99px.
 
 {% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
 ## Captions
 
-A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti con screen reader a trovare una tabella e capire di cosa si tratta e decidere se vogliono leggerla.
 
 {% example html %}
 <table class="table">
-  <caption>List of users</caption>
+  <caption>Lista di utenti</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -596,19 +597,19 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 </table>
 {% endexample %}
 
-## Responsive tables
+## Tabelle responsive
 
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl}`.
+Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl}`.
 
 {% callout warning %}
-##### Vertical clipping/truncation
+##### Ritaglio / troncamento verticale
 
-Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.
 {% endcallout %}
 
-### Always responsive
+### Sempre responsive
 
-Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento verticale.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -677,9 +678,9 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 {% endhighlight %}
 
-### Breakpoint specific
+### Breakpoint specifici
 
-Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Usa `.table-responsive{-sm|-md|-lg|-xl}` come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.
 
 <div class="bd-example">
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
