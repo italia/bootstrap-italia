@@ -6,7 +6,7 @@ group: contenuti
 toc: true
 ---
 
-## Examples
+## Esempi
 
 A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e campi di selezione data, abbiamo progettato le nostre tabelle per essere **opt-in**. asta aggiungere la classe `.table` a qualsiasi `<table>`, quindi estendere con stili personalizzati o con le nostre varie classi incluse di modificatori.
 
@@ -286,7 +286,7 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
 </table>
 {% endexample %}
 
-## Hover delle righe
+## Righe ed hover
 
 Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  contenute in `<tbody>`.
 
