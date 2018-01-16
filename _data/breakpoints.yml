@@ -1,3 +1,5 @@
+# used in documentation as site.data.breakpoints
+
 - breakpoint: xs
   abbr: ""
   name: Extra small

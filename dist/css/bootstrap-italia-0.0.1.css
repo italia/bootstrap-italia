@@ -6863,27 +6863,6 @@ h4, .h4 {
 .display-3 {
   font-weight: 600; }
 
-.btn {
-  text-transform: uppercase;
-  letter-spacing: normal; }
-
-.btn-borderless {
-  border: 0; }
-
-.btn-xs {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem; }
-
-.btn-more:after {
-  position: relative;
-  top: 1px;
-  content: '〉';
-  display: inline-block;
-  padding-left: .3em;
-  color: inherit; }
-
 .breadcrumb-item + .breadcrumb-item::before {
   content: "›"; }
 

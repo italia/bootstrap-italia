@@ -125,12 +125,8 @@ Alternativamente, se utilizzi [Webpack](https://webpack.github.io/) o altri tool
 puoi aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
 {% highlight sh %}
-npm i --save git+https://git@github.com/italia/bootstrap-italia.git
+npm i bootstrap-italia --save
 {% endhighlight %}
-
-<div class="alert alert-warning" role="alert">
-  TODO: usare il registro npm
-</div>
 
 ## Impostazioni globali
 
