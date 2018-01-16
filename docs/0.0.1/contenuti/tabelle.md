@@ -1,45 +1,45 @@
 ---
 layout: docs
 title: Tabelle
-description: Documentazione ed esempi per lo styling opt-in delle tabelle (dato il loro uso prevalente nei plugin JavaScript) con Bootstrap.
+description: Documentazione ed esempi per lo stile delle tabelle.
 group: contenuti
 toc: true
 ---
 
 ## Esempi
 
-A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e campi di selezione data, abbiamo progettato le nostre tabelle per essere **opt-in**. asta aggiungere la classe `.table` a qualsiasi `<table>`, quindi estendere con stili personalizzati o con le nostre varie classi incluse di modificatori.
+A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e campi di selezione data, Bootstrap ha progettato le tabelle senza forzarne lo stile. È sufficiente aggiungere la classe `.table` a qualsiasi `<table>`, quindi estendere con stili personalizzati o con le nostre varie classi incluse di modificatori.
 
-Usando il markup di base della tabella, ecco come appaiono le tabelle `.table`-based in Bootstrap. **Tutti gli stili di tabella sono ereditati in Bootstrap 4**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
+Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap. **Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
 
 {% example html %}
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -52,29 +52,29 @@ Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -89,29 +89,29 @@ Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.the
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -120,29 +120,29 @@ Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.the
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -157,29 +157,29 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -190,29 +190,29 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -227,28 +227,29 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -259,28 +260,29 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -295,28 +297,29 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -327,28 +330,29 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -363,28 +367,29 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -395,28 +400,29 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
     </tr>
   </tbody>
 </table>
@@ -446,9 +452,7 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-
-      {% for color in site.data.theme-colors %}
-      <tr class="table-{{ color.name }}">
+      {% for color in site.data.theme-colors %}<tr class="table-{{ color.name }}">
         <th scope="row">{{ color.name | capitalize }}</th>
         <td>Cell</td>
         <td>Cell</td>
@@ -459,14 +463,13 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
 
 {% highlight html %}
 <!-- On rows -->
-<tr class="table-active">...</tr>
-{% for color in site.data.theme-colors %}
+<tr class="table-active">...</tr>{% for color in site.data.theme-colors %}
 <tr class="table-{{ color.name }}">...</tr>{% endfor %}
+
 
 <!-- On cells (`td` or `th`) -->
 <tr>
-  <td class="table-active">...</td>
-  {% for color in site.data.theme-colors %}
+  <td class="table-active">...</td>{% for color in site.data.theme-colors %}
   <td class="table-{{ color.name }}">...</td>{% endfor %}
 </tr>
 {% endhighlight %}
@@ -484,13 +487,13 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
       </tr>
     </thead>
     <tbody>
-      <tr class="bg-primary">
-        <th scope="row">1</th>
+      <tr>
+        <th scope="row">2</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
+      <tr class="bg-primary">
+        <th scope="row">1</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -499,33 +502,18 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-info">
-        <th scope="row">5</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
       <tr class="bg-warning">
         <th scope="row">7</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr>
-        <th scope="row">8</th>
+      <tr class="bg-danger">
+        <th scope="row">9</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr class="bg-danger">
-        <th scope="row">9</th>
+      <tr class="bg-info">
+        <th scope="row">5</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -535,6 +523,7 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
 
 {% highlight html %}
 <!-- On rows -->
+<tr>...</tr>
 <tr class="bg-primary">...</tr>
 <tr class="bg-success">...</tr>
 <tr class="bg-warning">...</tr>
@@ -554,7 +543,7 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-Crea tabelle responsive racchiudendo ogni `.table` con `.table-responsive{-sm|-md|-lg|-xl}`, facendo scorrere orizzontalmente la tabella ad ogni breakpoint, rispettivamente con `max-width` di 575.99px, 767.99px, 991.99px, e 1119.99px.
+Crea tabelle responsive racchiudendo ogni `.table` con `.table-responsive{-sm|-md|-lg|-xl}`, facendo scorrere orizzontalmente la tabella ad ogni breakpoint, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
 
 {% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -617,53 +606,53 @@ Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento 
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
         </tr>
       </tbody>
     </table>
@@ -689,37 +678,37 @@ Usa `.table-responsive{-sm|-md|-lg|-xl}` come necessario per creare tabelle resp
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Intestazione</th>
+        <th scope="col">Intestazione</th>
+        <th scope="col">Intestazione</th>
+        <th scope="col">Intestazione</th>
+        <th scope="col">Intestazione</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
+        <td>Cella</td>
       </tr>
     </tbody>
   </table>
