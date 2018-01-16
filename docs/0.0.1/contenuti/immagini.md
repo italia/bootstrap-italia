@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Immagini
-description: Documentazione ed esempi per l'opting delle immagini in un comportamento responsive (quindi non diventano mai più grandi dei loro elementi genitore) e aggiungere loro stili leggeri, tutto attraverso le classi.
+description: Documentazione ed esempi per l'inserimento di immagini responsive (che quindi non diventano mai più grandi dei loro elementi genitore), aggiungendo loro stili non invasivi.
 
 group: contenuti
 toc: true
@@ -9,7 +9,7 @@ toc: true
 
 ## Immagini responsive
 
-Le immagini in Bootstrap sono rese responsive con `.img-fluid`. `max-width: 100%;` e `height: auto;` applicati all'immagine in modo che venga ridimensionata con l'elemento padre.
+Le immagini in Bootstrap Italia sono rese responsive con `.img-fluid`. `max-width: 100%;` e `height: auto;` vengono applicati all'immagine in modo che sia ridimensionata attraverso l'elemento padre.
 
 <div class="bd-example">
   <img data-src="holder.js/100px250" class="img-fluid" alt="Immagine responsive generica">
@@ -18,12 +18,6 @@ Le immagini in Bootstrap sono rese responsive con `.img-fluid`. `max-width: 100%
 {% highlight html %}
 <img src="..." class="img-fluid" alt="Immagine responsive">
 {% endhighlight %}
-
-{% callout warning %}
-##### Immagini SVG e IE 10
-
-In Internet Explorer 10, le immagini SVG con `.img-fluid` sono ridimensionate in modo sproporzionato. Per rimediare a questo, aggiungi `width: 100% \9;` dove necessario. Questa correzione adatta in modo errato altri formati di immagine, quindi Bootstrap non lo applica automaticamente.
-{% endcallout %}
 
 ## Thumbnails di immagini
 
@@ -39,7 +33,7 @@ Oltre alle nostre [utilità sul border-radius]({{ site.baseurl }}/docs/{{ site.d
 
 ## Allineare le immagini
 
-Allineare le immagini con le [classi di supporto sul float]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/float) o con le [classi sul text alignment]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/#text-alignment). le immagini a livello `block` possono essere centrate usando [la classe di utilità  margin `.mx-auto`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spacing/#horizontal-centering).
+Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/float) o con le [classi sul text alignment]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/#text-alignment). Le immagini a livello `block` possono essere centrate usando [la classe di utilità  margin `.mx-auto`]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spacing/#horizontal-centering).
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/200x200" class="rounded float-left" alt="Un'immagine generica segnaposto con angoli arrotondati">
