@@ -1,26 +1,26 @@
 ---
 layout: docs
-title: Figures
-description: Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+title: Figure
+description: Documentazione ed esempi per la visualizzazione di immagini e testo correlati con il componente figure in Bootstrap.
 group: contenuti
 ---
 
-Anytime you need to display a piece of content—like an image with an optional caption, consider using a `<figure>`.
+Ogni volta che è necessario visualizzare un contenuto, ad esempio un'immagine con una didascalia opzionale, considerare l'utilizzo di `<figure>`.
 
-Use the included `.figure` , `.figure-img` and `.figure-caption` classes to provide some baseline styles for the HTML5 `<figure>` and `<figcaption>` elements. Images in figures have no explicit size, so be sure to add the `.img-fluid` class to your `<img>` to make it responsive.
+Usa le classi incluse `.figure` , `.figure-img` e `.figure-caption` per fornire alcuni stili di base per gli elementi HTML5 `<figure>` e `<figcaption>`. Le immagini in figure non hanno determinate dimensioni, assicurati quindi di aggiungere la classe `.img-fluid` al tuo elemento `<img>` per renderlo responsive.
 
 {% example html %}
 <figure class="figure">
-  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endexample %}
 
-Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/#text-alignment).
+Allineare la didascalia di una figura è semplice con le nostre [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/#text-alignment).
 
 {% example html %}
 <figure class="figure">
-  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-  <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+  <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <figcaption class="figure-caption text-right">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endexample %}
