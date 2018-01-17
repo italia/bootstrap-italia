@@ -1,7 +1,7 @@
 {% callout danger %}
-#### Asynchronous methods and transitions
+#### Metodi asincroni e transizioni
 
-All API methods are **asynchronous** and start a **transition**. They return to the caller as soon as the transition is started but **before it ends**. In addition, a method call on a **transitioning component will be ignored**.
+Tutti i metodi API sono **asincroni** e avviano una **transizione**. Ritornano al chiamante non appena viene avviata la transizione ma **prima che termini**. Inoltre, una chiamata al metodo su un **componente in transizione verrà ignorata**.
 
-[See our JavaScript documentation for more information.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/)
+[Per maggiori informazioni guarda la documentazione Javascript di Bootstrap.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/)
 {% endcallout %}
