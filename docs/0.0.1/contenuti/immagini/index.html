@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.">
+<meta name="description" content="Documentazione ed esempi per l’inserimento di immagini responsive (che quindi non diventano mai più grandi dei loro elementi genitore), aggiungendo loro stili non invasivi.">
 <meta name="author" content="AgID + Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.6.2">
 <meta name="robots" content="noindex">
 
-<title>Images · Bootstrap Italia</title>
+<title>Immagini · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 
@@ -29,21 +29,21 @@
 <link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
 <meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+<meta name="theme-color" content="#0066CC">
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
-<meta name="twitter:title" content="Images">
-<meta name="twitter:description" content="Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.">
+<meta name="twitter:title" content="Immagini">
+<meta name="twitter:description" content="Documentazione ed esempi per l’inserimento di immagini responsive (che quindi non diventano mai più grandi dei loro elementi genitore), aggiungendo loro stili non invasivi.">
 <meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/contenuti/images/">
-<meta property="og:title" content="Images">
-<meta property="og:description" content="Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.">
+<meta property="og:url" content="/bootstrap-italia/docs/0.0.1/contenuti/immagini/">
+<meta property="og:title" content="Immagini">
+<meta property="og:description" content="Documentazione ed esempi per l’inserimento di immagini responsive (che quindi non diventano mai più grandi dei loro elementi genitore), aggiungendo loro stili non invasivi.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italiaTODO">
 <meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
@@ -192,14 +192,14 @@
             <a href="/bootstrap-italia/docs/0.0.1/contenuti/codice/">
               Codice
             </a></li><li class="active bd-sidenav-active">
-            <a href="/bootstrap-italia/docs/0.0.1/contenuti/images/">
-              Images
+            <a href="/bootstrap-italia/docs/0.0.1/contenuti/immagini/">
+              Immagini
             </a></li><li>
-            <a href="/bootstrap-italia/docs/0.0.1/contenuti/tables/">
-              Tables
+            <a href="/bootstrap-italia/docs/0.0.1/contenuti/tabelle/">
+              Tabelle
             </a></li><li>
-            <a href="/bootstrap-italia/docs/0.0.1/contenuti/figures/">
-              Figures
+            <a href="/bootstrap-italia/docs/0.0.1/contenuti/figure/">
+              Figure
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/0.0.1/componenti/alerts/">
@@ -364,68 +364,58 @@
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#responsive-images">Responsive images</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#svg-images-and-ie-10">SVG images and IE 10</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#image-thumbnails">Image thumbnails</a></li>
-<li class="toc-entry toc-h2"><a href="#aligning-images">Aligning images</a></li>
+<li class="toc-entry toc-h2"><a href="#immagini-responsive">Immagini responsive</a></li>
+<li class="toc-entry toc-h2"><a href="#thumbnails-di-immagini">Thumbnails di immagini</a></li>
+<li class="toc-entry toc-h2"><a href="#allineare-le-immagini">Allineare le immagini</a></li>
 <li class="toc-entry toc-h2"><a href="#picture">Picture</a></li>
 </ul>
           </div>
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-          <h1 class="bd-title" id="content">Images</h1>
-          <p class="bd-lead">Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.</p>
-          <h2 id="responsive-images">Responsive images</h2>
+          <h1 class="bd-title" id="content">Immagini</h1>
+          <p class="bd-lead">Documentazione ed esempi per l’inserimento di immagini responsive (che quindi non diventano mai più grandi dei loro elementi genitore), aggiungendo loro stili non invasivi.</p>
+          <h2 id="immagini-responsive">Immagini responsive</h2>
 
-<p>Images in Bootstrap are made responsive with <code class="highlighter-rouge">.img-fluid</code>. <code class="highlighter-rouge">max-width: 100%;</code> and <code class="highlighter-rouge">height: auto;</code> are applied to the image so that it scales with the parent element.</p>
+<p>Le immagini in Bootstrap Italia sono rese responsive con <code class="highlighter-rouge">.img-fluid</code>. <code class="highlighter-rouge">max-width: 100%;</code> e <code class="highlighter-rouge">height: auto;</code> vengono applicati all’immagine in modo che sia ridimensionata attraverso l’elemento padre.</p>
 
 <div class="bd-example">
-  <img data-src="holder.js/100px250" class="img-fluid" alt="Generic responsive image" />
+  <img data-src="holder.js/100px250" class="img-fluid" alt="Immagine responsive generica" />
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">alt=</span><span class="s">"Immagine responsive"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<div class="bd-callout bd-callout-warning">
-<h5 id="svg-images-and-ie-10">SVG images and IE 10</h5>
+<h2 id="thumbnails-di-immagini">Thumbnails di immagini</h2>
 
-<p>In Internet Explorer 10, SVG images with <code class="highlighter-rouge">.img-fluid</code> are disproportionately sized. To fix this, add <code class="highlighter-rouge">width: 100% \9;</code> where necessary. This fix improperly sizes other image formats, so Bootstrap doesn’t apply it automatically.</p>
-</div>
-
-<h2 id="image-thumbnails">Image thumbnails</h2>
-
-<p>In addition to our <a href="/bootstrap-italia/docs/0.0.1/utilità/borders/">border-radius utilities</a>, you can use <code class="highlighter-rouge">.img-thumbnail</code> to give an image a rounded 1px border appearance.</p>
+<p>Oltre alle nostre <a href="/bootstrap-italia/docs/0.0.1/utilità/borders/">utilità sul border-radius</a>, puoi usare <code class="highlighter-rouge">.img-thumbnail</code> per dare a un’immagine un aspetto del bordo arrotondato di 1 pixel.</p>
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" />
+  <img data-src="holder.js/200x200" class="img-thumbnail" alt="Una generica immagine segnaposto quadrata con un bordo bianco attorno ad essa, che la rende simile a una foto scattata con una vecchia macchina fotografica istantanea" />
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-thumbnail"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<h2 id="aligning-images">Aligning images</h2>
+<h2 id="allineare-le-immagini">Allineare le immagini</h2>
 
-<p>Align images with the <a href="/bootstrap-italia/docs/0.0.1/utilità/float">helper float classes</a> or <a href="/bootstrap-italia/docs/0.0.1/utilità/text/#text-alignment">text alignment classes</a>. <code class="highlighter-rouge">block</code>-level images can be centered using <a href="/bootstrap-italia/docs/0.0.1/utilità/spacing/#horizontal-centering">the <code class="highlighter-rouge">.mx-auto</code> margin utility class</a>.</p>
+<p>Puoi allineare le immagini con le <a href="/bootstrap-italia/docs/0.0.1/utilità/float">classi di supporto sul float</a> o con le <a href="/bootstrap-italia/docs/0.0.1/utilità/text/#text-alignment">classi sul text alignment</a>. Le immagini a livello <code class="highlighter-rouge">block</code> possono essere centrate usando <a href="/bootstrap-italia/docs/0.0.1/utilità/spacing/#horizontal-centering">la classe di utilità  margin <code class="highlighter-rouge">.mx-auto</code></a>.</p>
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded float-left" alt="A generic square placeholder image with rounded corners" />
-  <img data-src="holder.js/200x200" class="rounded float-right" alt="A generic square placeholder image with rounded corners" />
+  <img data-src="holder.js/200x200" class="rounded float-left" alt="Un'immagine generica segnaposto con angoli arrotondati" />
+  <img data-src="holder.js/200x200" class="rounded float-right" alt="Un'immagine generica segnaposto con angoli arrotondati" />
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-left"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded float-right"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/200x200" class="rounded mx-auto d-block" alt="A generic square placeholder image with rounded corners" />
+  <img data-src="holder.js/200x200" class="rounded mx-auto d-block" alt="Un'immagine generica segnaposto con angoli arrotondati" />
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded mx-auto d-block"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span></code></pre></figure>
 
 <div class="bd-example bd-example-images">
   <div class="text-center">
-    <img data-src="holder.js/200x200" class="rounded" alt="A generic square placeholder image with rounded corners" />
+    <img data-src="holder.js/200x200" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati" />
   </div>
 </div>
 
@@ -435,7 +425,7 @@
 
 <h2 id="picture">Picture</h2>
 
-<p>If you are using the <code class="highlighter-rouge">&lt;picture&gt;</code> element to specify multiple <code class="highlighter-rouge">&lt;source&gt;</code> elements for a specific <code class="highlighter-rouge">&lt;img&gt;</code>, make sure to add the <code class="highlighter-rouge">.img-*</code> classes to the <code class="highlighter-rouge">&lt;img&gt;</code> and not to the <code class="highlighter-rouge">&lt;picture&gt;</code> tag.</p>
+<p>Se stai usando l’elemento <code class="highlighter-rouge">&lt;picture&gt;</code> per specificare multipli elementi <code class="highlighter-rouge">&lt;source&gt;</code> per una specifica <code class="highlighter-rouge">&lt;img&gt;</code>, assicurati di aggiungere la classe <code class="highlighter-rouge">.img-*</code> al tag <code class="highlighter-rouge">&lt;img&gt;</code> e non al tag <code class="highlighter-rouge">&lt;picture&gt;</code>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">​<span class="nt">&lt;picture&gt;</span>
   <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"..."</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="nt">&gt;</span>
