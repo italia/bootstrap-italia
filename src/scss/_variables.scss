@@ -146,6 +146,13 @@ $breadcrumb-bg: transparent;
 $breadcrumb-item-padding: .75rem;
 $breadcrumb-divider-color: $text-color;
 
+// Tables
+$table-cell-padding:          1em !default;
+$table-border-color:          #d6dce3 !default;
+$table-cell-text-align:       left !default;
+$table-accent-bg:             #f6f7f9 !default;
+$table-hover-bg:              #e5f1fa !default;
+
 // Inputs
 $input-border:            $gray-200;
 $input-color-placeholder: $gray-500;
