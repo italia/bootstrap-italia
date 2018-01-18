@@ -152,6 +152,14 @@ $card-spacer-x: 2rem !default;
 $card-border-radius: 0 !default;
 $card-body-spacer: 1rem !default;
 
+// Tables
+$table-cell-padding:          1em !default;
+$table-border-color:          #d6dce3 !default;
+$table-cell-text-align:       left !default;
+$table-accent-bg:             #f6f7f9 !default;
+$table-hover-bg:              #e5f1fa !default;
+
+
 // Inputs
 $input-border:            $gray-200;
 $input-color-placeholder: $gray-500;
