@@ -232,8 +232,8 @@ table {
   border-collapse: collapse; }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
   color: #868e96;
   text-align: left;
   caption-side: bottom; }
@@ -1352,14 +1352,14 @@ pre {
   background-color: transparent; }
   .table th,
   .table td {
-    padding: 0.75rem;
+    padding: 1em;
     vertical-align: top;
-    border-top: 1px solid #dee2e6; }
+    border-top: 1px solid #d6dce3; }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6; }
+    border-bottom: 2px solid #d6dce3; }
   .table tbody + tbody {
-    border-top: 2px solid #dee2e6; }
+    border-top: 2px solid #d6dce3; }
   .table .table {
     background-color: #fff; }
 
@@ -1368,19 +1368,19 @@ pre {
   padding: 0.3rem; }
 
 .table-bordered {
-  border: 1px solid #dee2e6; }
+  border: 1px solid #d6dce3; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #dee2e6; }
+    border: 1px solid #d6dce3; }
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: #f6f7f9; }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #e5f1fa; }
 
 .table-primary,
 .table-primary > th,
@@ -1473,13 +1473,13 @@ pre {
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #e5f1fa; }
 
 .table-hover .table-active:hover {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #d0e5f6; }
   .table-hover .table-active:hover > td,
   .table-hover .table-active:hover > th {
-    background-color: rgba(0, 0, 0, 0.075); }
+    background-color: #d0e5f6; }
 
 .table .thead-dark th {
   color: #fff;
@@ -1489,7 +1489,7 @@ pre {
 .table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
-  border-color: #dee2e6; }
+  border-color: #d6dce3; }
 
 .table-dark {
   color: #fff;
@@ -6868,6 +6868,14 @@ h4, .h4 {
 
 .breadcrumb-item a {
   font-weight: 600; }
+
+.table thead th {
+  border-color: currentColor; }
+
+.table td, .table th {
+  text-align: left;
+  border-bottom: 1px solid #d6dce3;
+  border-top: none; }
 
 img[data-action="zoom"] {
   cursor: pointer;

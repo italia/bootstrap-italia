@@ -1,0 +1,14 @@
+.table {
+
+  th,
+  td {
+    text-align: $table-cell-text-align;
+    border-bottom: $table-border-width solid $table-border-color;
+    border-top: none;
+  }
+
+  thead th {
+    border-color: currentColor;
+  }
+  
+}
