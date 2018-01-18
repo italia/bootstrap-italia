@@ -6869,13 +6869,14 @@ h4, .h4 {
 .breadcrumb-item a {
   font-weight: 600; }
 
-.table thead th {
-  border-color: currentColor; }
-
-.table td, .table th {
+.table th,
+.table td {
   text-align: left;
   border-bottom: 1px solid #d6dce3;
   border-top: none; }
+
+.table thead th {
+  border-color: currentColor; }
 
 img[data-action="zoom"] {
   cursor: pointer;

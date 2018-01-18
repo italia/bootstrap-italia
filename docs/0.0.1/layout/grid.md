@@ -1,51 +1,51 @@
 ---
 layout: docs
 title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+description: Utilizza la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne, cinque livelli responsive predefiniti, variabili Sass e mixin, e decine di classi predefinite.
 group: layout
 toc: true
 ---
 
-## How it works
+## Come funziona
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti. È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) ed è completamente responsive. In basso trovi un esempio and uno sguardo approfondito su come la griglia viene costruita.
 
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+**Nuovo o poco pratico di flexbox?** [Leggi questo manuale di trucchi CSS su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) per background, terminologia, linee guida, e frammenti di codice.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      One of three columns
+      Una di tre colonne
     </div>
     <div class="col-sm">
-      One of three columns
+      Una di tre colonne
     </div>
     <div class="col-sm">
-      One of three columns
+      Una di tre colonne
     </div>
   </div>
 </div>
 {% endexample %}
 </div>
 
-The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le classi di griglia predefinite di Bootstrap. Quelle colonne sono centrate nella pagina con l'elemento genitore `.container`.
 
-Breaking it down, here's how it works:
+Analizzandolo nel dettaglio, ecco come funziona:
 
-- Containers provide a means to center and horizontally pad your site's contents. Use `.container` for a responsive pixel width or `.container-fluid` for `width: 100%` across all viewport and device sizes.
-- Rows are wrappers for columns. Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
-- In a grid layout, content must be placed within columns and only columns may be immediate children of rows.
-- Thanks to flexbox, grid columns without a specified `width` will automatically layout as equal width columns. For example, four instances of `.col-sm` will each automatically be 25% wide from the small breakpoint and up. See the [auto-layout columns](#auto-layout-columns) section for more examples.
-- Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use `.col-4`.
-- Column `width`s are set in percentages, so they're always fluid and sized relative to their parent element.
-- Columns have horizontal `padding` to create the gutters between individual columns, however, you can remove the `margin` from rows and `padding` from columns with `.no-gutters` on the `.row`.
-- To make the grid responsive, there are five grid breakpoints, one for each [responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): all breakpoints (extra small), small, medium, large, and extra large.
-- Grid breakpoints are based on minimum width media queries, meaning **they apply to that one breakpoint and all those above it** (e.g., `.col-sm-4` applies to small, medium, large, and extra large devices, but not the first `xs` breakpoint).
-- You can use predefined grid classes (like `.col-4`) or [Sass mixins](#sass-mixins) for more semantic markup.
+- I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Use `.container` per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e dimensioni dei device.
+- Le righe sono involucri per colonne. Ogni colonna ha un `padding` orizzontale (chiamato gutter) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
+- In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
+- Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [auto-layout columns](#auto-layout-columns) per più esempi.
+- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
+- Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluidi e dimensionati rispetto al loro elemento genitore.
+- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne, comunque, puoi rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
+- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni [responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints): tutti i breakpoint (extra small), small, medium, large, and extra large.
+- I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
+- È possibile utilizzare classi di griglia predefinite (come `.col-4`) o [Sass mixins](#sass-mixins) per altri markup semantici.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
+Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
 ## Grid options
 
