@@ -1,14 +1,16 @@
 ---
 layout: docs
-title: Collapse
-description: Attiva/disattiva la visibilità del contenuto nel tuo progetto con alcune classi e i nostri plug-in JavaScript.
+title: Elementi richiudibili
+description: Attiva/disattiva la visibilità di contenuti con l'ausilio di alcune classi e di plug-in JavaScript.
 group: componenti
 toc: true
 ---
 
-## Esempio
+Questa pagina introduce il funzionamento di singoli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_) e di sistemi di elementi a fisarmonica (solitamente _accordion_), più in basso nella pagina.
 
-Clicca sul pulsante in basso per mostrare e nascondere un altro elemento cambiando la classe:
+## Esempio di elemento richiudibile
+
+Puoi cliccare su uno dei bottoni di seguito per mostrare e nascondere un altro elemento cambiando la classe:
 
 - `.collapse` nasconde il contenuto
 - `.collapsing` viene applicata durante la transizione
@@ -32,15 +34,15 @@ Puoi usare un link con l'attributo `href`, o un bottone con l'attributo `data-ta
 </div>
 {% endexample %}
 
-## Molteplici obiettivi
+## Esempio con molteplici elementi richiudibili
 
-Un `<button>` o un `<a>` può mostrare o nascondere molteplici elementi facendo riferimento ad essi con un selettore JQuery nell'attributo `href` o nell'attributo `data-target`.
+Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore jQuery nell'attributo `href` o nell'attributo `data-target`.
 Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-target`
 
 {% example html %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Attiva/disattiva primo elemento</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Attiva/disattiva secono elemento</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Attiva/disattiva secondo elemento</button>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Attiva/disattiva entrambi gli elementi</button>
 </p>
 <div class="row">
@@ -61,9 +63,9 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 </div>
 {% endexample %}
 
-## Esempio di accordion
+## Esempio di elemento a fisarmonica
 
-Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/card/), puoi estendere il comportamento predefinito del collapse per creare un accordion.
+Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/card/), puoi estendere il comportamento predefinito del collapse per creare una fisarmonica, o accordion.
 
 {% example html %}
 <div id="accordion" role="tablist">
@@ -75,7 +77,6 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
         </a>
       </h5>
     </div>
-
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -113,7 +114,7 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
 </div>
 {% endexample %}
 
-Puoi creare accordion anche con codice personalizzato. Aggiungi l'attributo `data-children` e specificare un insieme di elementi fratelli da attivare/disattivare (e.g., `.item`). Poi, usa gli stessi attributi e le stesse classi come mostrato sopra per connettere i toggles ai loro contenuti associati.
+Puoi creare accordion anche con codice personalizzato. Aggiungi l'attributo `data-children` e specifica un insieme di elementi fratelli da attivare/disattivare (ad esempio `.item`). Poi, usa gli stessi attributi e le stesse classi come mostrato sopra per connettere i link che fanno da "interruttore" ai loro contenuti associati.
 
 {% example html %}
 <div id="exampleAccordion" data-children=".item">
@@ -142,13 +143,13 @@ Puoi creare accordion anche con codice personalizzato. Aggiungi l'attributo `dat
 
 ## Accessibilità
 
-Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento collassabile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento collassabile). Se il componente HTML dell'elemento di controllo non è un bottone (e.g., un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
+Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento collassabile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento collassabile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
 
-Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento collassabile – i.e. l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento collassabile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento collassabile stesso.
+Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento collassabile – cioè l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento collassabile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento collassabile stesso.
 
 ## Uso
 
-Il plug-in di compressione utilizza alcune classi per gestire il sollevamento pesante:
+Il plug-in per richiudere elementi utilizza alcune classi per gestire il tutto:
 
 - `.collapse` nasconde il contenuto
 - `.collapse.show` mostra il contenuto
@@ -158,7 +159,7 @@ Queste classi possono essere trovate in `_transitions.scss`.
 
 ### Tramite data attributes
 
-Basta aggiungere `data-toggle="collapse"` e un `data-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi collassabili. L'attributo `data-target` accetta un selettore CSS per applicare la compressione. Assicurati di aggiungere la classe  `collapse` all'elemento collassabile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
+Basta aggiungere `data-toggle="collapse"` e un `data-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi collassabili. L'attributo `data-target` accetta un selettore CSS per rendere l'elemento richiudibile. Assicurati di aggiungere la classe `collapse` all'elemento collassabile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
 
 Per aggiungere un'impostazione tipo accordion ad un'area collassabile, aggiungi l'attributo `data-parent="#selector"`. Fai riferimento alla demo per vederlo in azione.
 
@@ -228,11 +229,11 @@ Nasconde un elemento collassabile. **Ritorna al chiamante prima che l'elemento c
 
 #### `.collapse('dispose')`
 
-Elimina la possibilità di un elemento di collassare.
+Elimina la possibilità di un elemento di essere collassabile.
 
 ### Eventi
 
-La classe collapse di Bootstrap espone alcuni eventi per l'aggancio alla funzionalità di collasso.
+La classe `.collapse` di Bootstrap espone alcuni eventi agganciare comporamenti alla funzionalità di apertura/chiusura attraverso Javascript.
 
 <table class="table table-bordered table-striped">
   <thead>
