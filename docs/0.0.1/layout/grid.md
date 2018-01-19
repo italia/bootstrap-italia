@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Grid system
+title: La griglia
 description: Utilizza la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne, cinque livelli responsive predefiniti, variabili Sass e mixin, e decine di classi predefinite.
 group: layout
 toc: true
@@ -47,11 +47,11 @@ Analizzandolo nel dettaglio, ecco come funziona:
 
 Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
-## Grid options
+## Le opzioni
 
-While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perchè la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -81,15 +81,15 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Max container width</th>
-      <td>None (auto)</td>
+      <th class="text-nowrap" scope="row">Larghezza massima del contenitore</th>
+      <td>Nessuno (auto)</td>
       <td>540px</td>
       <td>720px</td>
       <td>960px</td>
       <td>1140px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Class prefix</th>
+      <th class="text-nowrap" scope="row">Prefisso della classe</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -97,134 +97,134 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
       <td><code>.col-xl-</code></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
+      <th class="text-nowrap" scope="row"># di colonne</th>
       <td colspan="5">12</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="5">30px (15px on each side of a column)</td>
+      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+      <td colspan="5">30px (15px su ogni lato della colonna)</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Nestable</th>
+      <th class="text-nowrap" scope="row">Annidabile</th>
       <td colspan="5">Yes</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Column ordering</th>
+      <th class="text-nowrap" scope="row">Ordinamento delle colonne</th>
       <td colspan="5">Yes</td>
     </tr>
   </tbody>
 </table>
 
-## Auto-layout columns
+## Colonne a disposizione automatica
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come `.col-sm-6`. 
 
-### Equal-width
+### ParUgualii larghezze
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da `xs` a `xl`. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 2
+      1 di 2
     </div>
     <div class="col">
-      2 of 2
+      2 di 2
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 di 3
     </div>
     <div class="col">
-      2 of 3
+      2 di 3
     </div>
     <div class="col">
-      3 of 3
+      3 di 3
     </div>
   </div>
 </div>
 {% endexample %}
 </div>
 
-Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if you're up-to-date.
+Colonne con uguale larghezza possono essere spezzate su più linee, ma c'è un [bug di flexbox su Safari](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) che gli ha impedito di lavorare senza uno specifico `flex-basis` o `border`. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
     <div class="w-100"></div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endexample %}
 </div>
 
-### Setting one column width
+### Impostare la larghezza di una colonna
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+La disposizione automatica per le colonne della griglia di flexbox significa anche che puoi impostare la larghezza di una colonna e avere le colonne sorelle automaticamente ridimensionate in base ad essa. È possibile utilizzare classi di griglia predefinite (come mostrato di seguito), mixins di griglia o larghezze in linea. Notare che le altre colonne si ridimensioneranno indipendentemente dalla larghezza della colonna centrale.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 3
+      1 di 3
     </div>
     <div class="col-6">
-      2 of 3 (wider)
+      2 di 3 (wider)
     </div>
     <div class="col">
-      3 of 3
+      3 di 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 di 3
     </div>
     <div class="col-5">
-      2 of 3 (wider)
+      2 di 3 (wider)
     </div>
     <div class="col">
-      3 of 3
+      3 di 3
     </div>
   </div>
 </div>
 {% endexample %}
 </div>
 
-### Variable width content
+### Contenuto a larghezza variabile
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+Puoi usare la classe `col-{breakpoint}-auto` per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
-      1 of 3
+      1 di 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Contenuto a larghezza variabile
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 di 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 di 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Contenuto a larghezza variabile
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 di 3
     </div>
   </div>
 </div>
@@ -233,7 +233,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ### Equal-width multi-row
 
-Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/display/).
+Crea colonne di uguale larghezza che si estendono su più righe inserendo un `.w-100` dove vuoi che le colonne vengano divise su un'altra riga. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/display/).
 
 <div class="bd-example-row">
 {% example html %}
