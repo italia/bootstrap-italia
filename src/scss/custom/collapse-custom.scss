@@ -1,5 +1,4 @@
 .card {
-    border: none;
     border-bottom: $card-border-width solid $card-border-color;
 }
 
@@ -10,7 +9,6 @@
       }
       h5 {
         padding: 1rem;
-        //font-size: 1.5rem;
       }
 }
 
