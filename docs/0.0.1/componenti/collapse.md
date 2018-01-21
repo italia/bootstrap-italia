@@ -72,9 +72,9 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
       <h5 class="mb-0">
-        <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Collapsible Group Item #1
-        </a>
+        </button>
       </h5>
     </div>
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
@@ -86,9 +86,9 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
   <div class="card">
     <div class="card-header" role="tab" id="headingTwo">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Collapsible Group Item #2
-        </a>
+        </button>
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -100,9 +100,9 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
   <div class="card">
     <div class="card-header" role="tab" id="headingThree">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Collapsible Group Item #3
-        </a>
+        </button>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">

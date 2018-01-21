@@ -474,7 +474,7 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
 </tr>
 {% endhighlight %}
 
-Le consuete varianti di sfondo della tabella non sono disponibili con la tabella scura, tuttavia, è possibile utilizzare [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/) per ottenere stili simili.
+Le consuete varianti di sfondo della tabella non sono disponibili con la tabella scura, tuttavia, è possibile utilizzare [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) per ottenere stili simili.
  
 
 <div class="bd-example">
@@ -487,13 +487,13 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">2</th>
+      <tr class="bg-primary">
+        <th scope="row">1</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr class="bg-primary">
-        <th scope="row">1</th>
+      <tr>
+        <th scope="row">2</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -502,18 +502,33 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
         <td>Cell</td>
         <td>Cell</td>
       </tr>
-      <tr class="bg-warning">
-        <th scope="row">7</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-danger">
-        <th scope="row">9</th>
+      <tr>
+        <th scope="row">4</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
       <tr class="bg-info">
         <th scope="row">5</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="bg-warning">
+        <th scope="row">7</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="bg-danger">
+        <th scope="row">9</th>
         <td>Cell</td>
         <td>Cell</td>
       </tr>
@@ -523,7 +538,6 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
 
 {% highlight html %}
 <!-- On rows -->
-<tr>...</tr>
 <tr class="bg-primary">...</tr>
 <tr class="bg-success">...</tr>
 <tr class="bg-warning">...</tr>

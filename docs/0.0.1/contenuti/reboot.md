@@ -3,7 +3,10 @@ layout: docs
 title: Reboot
 description: Reboot è una collezione di regole CSS applicate agli elementi HTML, che Bootstrap utilizza per definire una base consistente di stile su cui è costruito tutto il resto.
 group: contenuti
-redirect_from: "/docs/contenuti/"
+redirect_from:
+  - "/contenuti/"
+  - "/docs/contenuti/"
+  - "/docs/0.0.1/contenuti/"
 toc: true
 ---
 

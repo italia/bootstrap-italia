@@ -233,7 +233,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 ### Equal-width multi-row
 
-Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/display/).
+Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
 
 <div class="bd-example-row">
 {% example html %}
@@ -272,7 +272,7 @@ For grids that are the same from the smallest of devices to the largest, use the
 
 ### Stacked to horizontal
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked on extra small devices before becoming horizontal on desktop (medium) devices.
+Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked before becoming horizontal with at the small breakpoint (`sm`).
 
 <div class="bd-example-row">
 {% example html %}
@@ -432,7 +432,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 
 The gutters between columns in our predefined grid classes can be removed with `.no-gutters`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
 
-Here's the source code for creating these styles. Note that column overrides are scoped to only the first children columns and are targeted via [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). While this generates a more specific selector, column padding can still be further customized with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spacing/).
+Here's the source code for creating these styles. Note that column overrides are scoped to only the first children columns and are targeted via [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). While this generates a more specific selector, column padding can still be further customized with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).
 
 **Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid`.
 
@@ -493,7 +493,7 @@ Breaking columns to a new line in flexbox requires a small hack: add an element 
 {% endexample %}
 </div>
 
-You may also apply this break at specific breakpoints with our [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/display/).
+You may also apply this break at specific breakpoints with our [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
 
 <div class="bd-example-row">
 {% example html %}
@@ -534,14 +534,14 @@ Use `.order-` classes for controlling the **visual order** of your content. Thes
 {% endexample %}
 </div>
 
-There's also a responsive `.order-first` class that quickly changes the order of one element by applying `order: -1`. This class can also be intermixed with the numbered `.order-*` classes as needed.
+There are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 13` (`order: $columns + 1`), respectively. These classes can also be intermixed with the numbered `.order-*` classes as needed.
 
 <div class="bd-example-row">
 {% example html %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      First, but unordered
+    <div class="col order-last">
+      First, but last
     </div>
     <div class="col">
       Second, but unordered
@@ -556,7 +556,7 @@ There's also a responsive `.order-first` class that quickly changes the order of
 
 ### Offsetting columns
 
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spacing/). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
 
 #### Offset classes
 

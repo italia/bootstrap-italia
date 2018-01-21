@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: informazioni
+title: Informazioni
 description: Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved.
-redirect_from:
-  - "/docs/informazioni/"
 group: informazioni
+redirect_from:
+  - "/informazioni/"
+  - "/docs/informazioni/"
+  - "/docs/0.0.1/informazioni/"
 ---
 
 ## Team

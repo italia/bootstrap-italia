@@ -2,7 +2,11 @@
 layout: simple
 title: Esempi
 description: Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
-redirect_from: "/esempi/"
+
+redirect_from:
+  - "/esempi/"
+  - "/docs/esempi/"
+  - "/docs/0.0.1/esempi/"
 ---
 
 [Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
