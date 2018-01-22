@@ -13,9 +13,13 @@
 - title: Layout
   pages:
     - title: Introduzione
+      status: to do
     - title: Grid
+      status: to do
     - title: Media object
+      status: to do
     - title: Utilities for layout
+      status: to do
 
 - title: Contenuti
   pages:
@@ -29,59 +33,103 @@
 - title: Componenti
   pages:
     - title: Introduzione
+      status: to do
     - title: Alerts
+      status: to do
     - title: Badge
+      status: to do
     - title: Breadcrumb
     - title: Buttons
+      status: to do
     - title: Button group
+      status: to do
     - title: Card
+      status: to do
     - title: Carousel
+      status: to do
     - title: Collapse
+      status: work in progress
     - title: Dropdowns
+      status: to do
     - title: Forms
+      status: to do
     - title: Input group
+      status: to do
     - title: Jumbotron
+      status: to do
     - title: List group
+      status: to do
     - title: Modal
+      status: to do
     - title: Navs
+      status: to do
     - title: Navbar
+      status: to do
     - title: Pagination
+      status: to do
     - title: Popovers
+      status: to do
     - title: Progress
+      status: to do
     - title: Scrollspy
+      status: to do
     - title: Tooltips
+      status: to do
 
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
+      status: to do
     - title: Image Grid
+      status: to do
     - title: Zoom
+      status: to do
 
 - title: Utilities
   pages:
     - title: Borders
+      status: to do
     - title: Clearfix
+      status: to do
     - title: Close icon
+      status: to do
     - title: Colors
+      status: to do
     - title: Display
+      status: to do
     - title: Embed
+      status: to do
     - title: Flex
+      status: to do
     - title: Float
+      status: to do
     - title: Image replacement
+      status: to do
     - title: Position
+      status: to do
     - title: Screenreaders
+      status: to do
     - title: Sizing
+      status: to do
     - title: Spacing
+      status: to do
     - title: Text
+      status: to do
     - title: Vertical align
+      status: to do
     - title: Visibility
+      status: to do
 
 - title: Estensioni
   pages:
     - title: Approach
+      status: to do
     - title: Icons
+      status: to do
 
 - title: Informazioni
   pages:
     - title: Introduzione
+      status: to do
     - title: License
+      status: to do
