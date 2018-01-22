@@ -73,7 +73,7 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
     <div class="card-header" role="tab" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+          <i class="pr-3 collapse-icon"></i>Collapsible Group Item #1
         </button>
       </h5>
     </div>
@@ -87,7 +87,7 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
     <div class="card-header" role="tab" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+          <i class="pr-3 collapse-icon"></i>Collapsible Group Item #2
         </button>
       </h5>
     </div>
@@ -101,7 +101,7 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
     <div class="card-header" role="tab" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+          <i class="pr-3 collapse-icon"></i>Collapsible Group Item #3
         </button>
       </h5>
     </div>
@@ -114,38 +114,13 @@ Usando il componente [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/comp
 </div>
 {% endexample %}
 
-Puoi creare accordion anche con codice personalizzato. Aggiungi l'attributo `data-children` e specifica un insieme di elementi fratelli da attivare/disattivare (ad esempio `.item`). Poi, usa gli stessi attributi e le stesse classi come mostrato sopra per connettere i link che fanno da "interruttore" ai loro contenuti associati.
-
-{% example html %}
-<div id="exampleAccordion" data-children=".item">
-  <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button" aria-expanded="true" aria-controls="exampleAccordion1">
-      Attiva/disattiva elemento
-    </a>
-    <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-      <p class="mb-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.
-      </p>
-    </div>
-  </div>
-  <div class="item">
-    <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
-      Attiva/disattiva elemento 2
-    </a>
-    <div id="exampleAccordion2" class="collapse" role="tabpanel">
-      <p class="mb-3">
-        Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </p>
-    </div>
-  </div>
-</div>
-{% endexample %}
-
 ## Accessibilità
 
 Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento collassabile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento collassabile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
 
 Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento collassabile – cioè l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento collassabile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento collassabile stesso.
+
+*Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript.*
 
 ## Uso
 
