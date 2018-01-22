@@ -35,7 +35,7 @@ Put that all together, and you have the following examples.
 </div>
 {% endexample %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
 
 {% example html %}
 <div class="progress">
@@ -122,8 +122,6 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 ## Animated stripes
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
-
-**Animated progress bars don't work in Opera 12**—as they don't support CSS3 animations.
 
 <div class="bd-example">
   <div class="progress">

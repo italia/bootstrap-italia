@@ -6,11 +6,13 @@
     - title: Strumenti di compilazione
     - title: Modificare Componenti
     - title: Browsers e dispositivi
-    # - title: Accessibilità # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
+    # - title: Accessibility # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
+    # - title: Theming # TODO
+    # - title: Webpack # TODO
 
 - title: Layout
   pages:
-    - title: Overview
+    - title: Introduzione
     - title: Grid
     - title: Media object
     - title: Utilities for layout
@@ -26,6 +28,7 @@
 
 - title: Componenti
   pages:
+    - title: Introduzione
     - title: Alerts
     - title: Badge
     - title: Breadcrumb
@@ -33,7 +36,7 @@
     - title: Button group
     - title: Card
     - title: Carousel
-    - title: Elementi richiudibili
+    - title: Collapse
     - title: Dropdowns
     - title: Forms
     - title: Input group
@@ -50,10 +53,11 @@
 
 - title: Componenti Aggiuntivi
   pages:
+    - title: Introduzione
     - title: Image Grid
     - title: Zoom
 
-- title: Utilità
+- title: Utilities
   pages:
     - title: Borders
     - title: Clearfix
@@ -74,9 +78,10 @@
 
 - title: Estensioni
   pages:
+    - title: Approach
     - title: Icons
 
 - title: Informazioni
   pages:
-    - title: Overview
+    - title: Introduzione
     - title: License

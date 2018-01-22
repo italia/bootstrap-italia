@@ -16,7 +16,7 @@ Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire al
 </figure>
 {% endexample %}
 
-Puoi allineare la didascalia di una figura è semplice con le nostre [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/#text-alignment).
+Puoi allineare la didascalia di una figura è semplice con le nostre [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment).
 
 {% example html %}
 <figure class="figure">

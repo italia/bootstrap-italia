@@ -4,9 +4,6 @@ title: Image Grids
 description: Test Documentation
 group: componenti-aggiuntivi
 toc: true
-redirect_from:
-  - /docs/componenti-aggiuntivi/
-  - /docs/0.0.1/componenti-aggiuntivi/
 ---
 
 ## Image grids
