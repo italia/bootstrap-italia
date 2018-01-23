@@ -1,8 +1,15 @@
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
-
 $grid-columns:                12 !default;
-$grid-gutter-width:           16px !default;
+$grid-gutter-width:           12px !default;
+
+// Responsive gutter widths
+$grid-gutter-widths: (
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px
+) !default;
 
 // Main typography
 $font-size-base:              1rem !default;
@@ -18,9 +25,7 @@ $zindex-zoom:  1080;
 $zindex-growl: 1090;
 $zoom-overlay-bg: #fff;
 
-
 // Color system
-
 
 // stylelint-disable
 $white:    #fff !default; //TODO
@@ -83,7 +88,7 @@ $brand-warning: $italia-orange;
 $brand-danger:  $italia-red;
 $brand-info:    $italia-teal;
 
-// link and button colors
+// Link and button colors
 $btn-primary-bg:     $brand-primary;
 $btn-primary-border: $brand-primary;
 $link-color:         $brand-primary;
@@ -108,11 +113,9 @@ $theme-colors: map-merge((
         "light":      $light,
         "dark":       $dark
 ), $theme-colors);
-// stylelint-enable
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
-
 
 // Text Color
 $font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -170,11 +173,11 @@ $input-color-placeholder: $gray-500;
 // adapting to different screen sizes, for use in media queries.
 //
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 
 
@@ -183,136 +186,8 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 ) !default;
-
-
-//
-//
-//// Options
-////
-//// Quickly modify global styling by enabling or disabling optional features.
-//
-//$enable-caret:              true !default;
-//$enable-rounded:            true !default;
-//$enable-shadows:            false !default;
-//$enable-gradients:          false !default;
-//$enable-transitions:        true !default;
-//$enable-hover-media-query:  false !default;
-//$enable-grid-classes:       true !default;
-//$enable-print-styles:       true !default;
-//
-//$border-radius:               .05rem !default;
-//$border-radius-sm:            .1rem !default;
-//$border-radius-lg:            .2rem !default;
-//
-//
-//// Spacing
-////
-//// Control the default styling of most Bootstrap elements by modifying these
-//// variables. Mostly focused on spacing.
-//// You can add more entries to the $spacers map, should you need more variation.
-//
-//$spacer: 1rem !default;
-//$spacers: (
-//        0: 0,
-//        1: ($spacer * .25),
-//        2: ($spacer * .5),
-//        3: $spacer,
-//        4: ($spacer * 1.5),
-//        5: ($spacer * 3)
-//) !default;
-//
-//// This variable affects the `.h-*` and `.w-*` classes.
-//$sizes: (
-//        25: 25%,
-//        50: 50%,
-//        75: 75%,
-//        100: 100%
-//) !default;
-//
-//// Body
-////
-//// Settings for the `<body>` element.
-//
-//$body-bg:                   $white !default;
-//$body-color:                $gray-900 !default;
-//
-//// Paragraphs
-////
-//// Style p element.
-//
-//$paragraph-margin-bottom:   1rem !default;
-//
-//
-
-//
-//
-//// icons
-//$icon-font-path: "../fonts/";
-//$icon-font-name: "toolkit-entypo";
-//
-//
-//// Body
-//// $body-bg: #f5f8fa;
-//
-//// Component borders
-//// Create a custom variable to base the border-color off the body background.
-//$toolkit-border-color:  darken(#f5f8fa, 10%);
-//// Then apply that to key components
-//$panel-default-border:  $toolkit-border-color;
-//$panel-inner-border:    $toolkit-border-color;
-//$panel-footer-bg:       $body-bg;
-//$list-group-border:     $toolkit-border-color;
-//$navbar-border:         $toolkit-border-color;
-//
-//// Gray Scale
-//$gray-darker:   #122a38;
-//$gray-dark:     #1e3948;
-//$gray:          #536570;
-//$gray-light:    #9da9b0;
-//$gray-lighter:  #d4dbe0;
-//$gray-lightest: #f5f8fa;
-//
-//
-//// alerts
-//$alert-warning-border: #E6D0A1;
-//
-//
-
-//
-//
-//
-//
-//
-//$container-max-widths: (
-//        lg: 960px + $grid-gutter-width,
-//        xl: 1200px + $grid-gutter-width
-//);
-//
-//
-//// navbar
-//$navbar-margin-bottom:                      0;
-//$navbar-nav-active-font-weight:             inherit;
-//
-//$navbar-inverse-color:  rgba(255,255,255,.5);
-//$navbar-inverse-bg:     $brand-primary;
-//$navbar-inverse-border: #1C73A5;
-//
-//$navbar-inverse-hover-color:    rgba(255,255,255,.8);
-//$navbar-inverse-active-color:   #fff;
-//
-//$navbar-inverse-toggle-border-color:  #1C73A5;
-//$navbar-inverse-toggle-hover-bg:      darken($navbar-inverse-bg, 2%);
-//
-//$nav-item-inline-spacer: 2rem;
-//
-//
-//// nav bordered
-//$nav-bordered-color:              inherit;
-//$nav-bordered-color-active:       $brand-primary;
-//$nav-bordered-font-weight:        300;
-//$nav-bordered-font-weight-active: 500;
