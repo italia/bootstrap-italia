@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Componenti Aggiuntivi
-description: I componenti aggiuntivi del tema Bootstrap Italia...
+description: I componenti definiti "aggiuntivi" di Bootstrap Italia presenti in questa sezione non sono presenti nativamente nella libreria Bootstrap 4.
 group: componenti-aggiuntivi
 redirect_from:
   - "/componenti-aggiuntivi/"
@@ -9,4 +9,4 @@ redirect_from:
   - "/docs/0.0.1/componenti-aggiuntivi/"
 ---
 
-Pagina introduttiva su questa sezione riguardante i componenti aggiuntivi del tema Bootstrap Italia
+Al contrario dei componenti "base", che semplicemente implementano le [linee guida di design per i servizi web della PA](https://design-italia.readthedocs.io/it/stable/index.html) per componenti già presenti nella libreria Bootstrap 4, questi componenti sono stati sviluppati per realizzare interfacce e interazioni che soddifino i bisogni delle PA.
