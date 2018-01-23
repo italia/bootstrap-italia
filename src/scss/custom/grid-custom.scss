@@ -1,0 +1,32 @@
+//Questa variabile è un array che definisce i gutters per i vari breakpoints:
+$grid-gutter-widths: ( 
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px
+) !default;
+
+//Questa è una "funzione" per generare i gutters, dato un array di dimensioni (sopra) e di breakpoints ($grid-breakpoints è parte di bootstrap, dovrebbe essere anche in variables.scss ma non ne sono certo):
+@mixin make-variable-gutters($gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) { 
+  // Questo è un ciclo "for" che dice di scrivere il CSS al suo interno per ogni breakpoint e per ogni valore di gutter
+  @each $breakpoint, $grid-gutter-width in $gutter-widths {
+	//media-breakpoint-up è un'altra funzione che però è definita dentro Bootstrap
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      margin-right: ($grid-gutter-width / -2);
+      margin-left: ($grid-gutter-width / -2);
+
+      > .col, 
+      > [class*="col-"] {
+        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width / 2);
+      }
+    }
+  }
+}
+
+@if $enable-grid-classes {
+  .variable-gutters {
+	// questo chiama la "funzione" sopra
+    @include make-variable-gutters();
+  }
+}
