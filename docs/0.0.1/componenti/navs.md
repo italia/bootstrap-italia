@@ -50,7 +50,7 @@ Change the style of `.nav`s component with modifiers and utilities. Mix and matc
 
 ### Horizontal alignment
 
-Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
+Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
 
 Centered with `.justify-content-center`:
 
@@ -220,7 +220,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation, be sure to 
 {% endexample %}
 ## Working with flex utilities
 
-If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/flex/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {% example html %}
 <nav class="nav nav-pills flex-column flex-sm-row">

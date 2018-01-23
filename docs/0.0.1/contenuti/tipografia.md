@@ -8,7 +8,7 @@ toc: true
 
 ## Impostazioni globali
 
-Bootstrap imposta la visualizzazione globale di base, la tipografia e gli stili dei collegamenti. Quando è necessario un maggiore controllo, definisce le [classi di utilità testuali]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/).
+Bootstrap imposta la visualizzazione globale di base, la tipografia e gli stili dei collegamenti. Quando è necessario un maggiore controllo, definisce le [classi di utilità testuali]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
 
 - Utilizza un [gruppo di caratteri nativi]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/#native-font-stack) che seleziona la migliore `font-family` per ogni sistema operativo e dispositivo.
 - Per avere una più completa e accessibile scelta di font, assumiamo la radice predefinita del browser `font-size` (in genere 16px) in modo che i visitatori possano personalizzare le impostazioni predefinite del browser in base a specifiche esigenze.
@@ -166,7 +166,7 @@ Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi sti
 
 ## Utilità per il testo
 
-Cambia allineamento, trasformazione, stile, peso e colore del testo con le [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/text/) e le [utilità di colore]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
+Cambia allineamento, trasformazione, stile, peso e colore del testo con le [utilità di testo]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/) e le [utilità di colore]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/colors/).
 
 ## Abbreviazioni
 

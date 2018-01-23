@@ -113,26 +113,27 @@
 .bd-toc-link {
   display: block;
   padding: .25rem 1.5rem;
-  font-weight: 500;
-  color: rgba(0, 0, 0, .65);
+  color: $gray-700;
 
   &:hover {
-    color: rgba(0, 0, 0, .85);
+    color: $gray-900;
     text-decoration: none;
   }
 }
 
 .bd-toc-item {
   &.active {
-    background-color: $gray-100;
+    background-color: $gray-200;
     margin-bottom: 1rem;
+    padding: 1rem 0;
 
     &:not(:first-child) {
       margin-top: 1rem;
     }
 
     > .bd-toc-link {
-      color: rgba(0, 0, 0, .85);
+      color: $gray-900;
+      font-weight: 600;
 
       &:hover {
         background-color: transparent;
@@ -146,22 +147,24 @@
 }
 
 // All levels of nav
-.bd-sidebar .nav > li > a {
-  display: block;
-  padding: .25rem 1.5rem;
-  font-size: 90%;
-  color: rgba(0, 0, 0, .65);
+.bd-sidebar .nav {
+  > li > a {
+    display: block;
+    padding: .25rem 1.5rem;
+    font-size: 90%;
+    color: $gray-700;
+    &:hover {
+      color: $gray-900;
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+  > .active > a,
+  > .active:hover > a {
+    font-weight: 600;
+    color: $gray-900;
+    background-color: transparent;
+  }
 }
 
-.bd-sidebar .nav > li > a:hover {
-  color: rgba(0, 0, 0, .85);
-  text-decoration: none;
-  background-color: transparent;
-}
 
-.bd-sidebar .nav > .active > a,
-.bd-sidebar .nav > .active:hover > a {
-  font-weight: 500;
-  color: rgba(0, 0, 0, .85);
-  background-color: transparent;
-}

@@ -2,7 +2,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta.3): ImageGrid.js
+ * Bootstrap (v4.0.0): ImageGrid.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const ImageGrid = (($) => {
 
   const NAME                = 'imageGrid'
   const DATA_KEY            = `bs.image-grid`
-  const VERSION             = 'v4.0.0-beta.3'
+  const VERSION             = 'v4.0.0'
   const DATA_API            = '[data-grid="images"]'
   const EVENT_KEY           = `.${DATA_KEY}`
   const DATA_API_KEY        = '.data-api'

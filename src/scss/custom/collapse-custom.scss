@@ -1,0 +1,22 @@
+// work-in-progress
+
+$arrow-size: $font-size-base/2;
+
+*[data-toggle="collapse"] {
+  .collapse-icon::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: $arrow-size solid;
+    border-right: $arrow-size solid transparent;
+    border-bottom: 0;
+    border-left: $arrow-size solid transparent;
+    vertical-align: $btn-padding-y/2;
+  }
+  &.collapsed {
+    .collapse-icon::before {
+      transform: rotate(180deg);
+    }
+  }
+}

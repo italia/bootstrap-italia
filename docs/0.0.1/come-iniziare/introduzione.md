@@ -5,29 +5,31 @@ description: Cos'è Bootstrap Italia e come utilizzarlo all'interno del tuo prog
 group: come-iniziare
 redirect_from:
   - /docs/
-  - /docs/come-iniziare/
   - /docs/0.0.1/
+  - /come-iniziare/
+  - /docs/come-iniziare/
   - /docs/0.0.1/come-iniziare/
 toc: true
 ---
 
-Bootstrap Italia è un tema basato su [Bootstrap v{{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+Bootstrap Italia è un tema basato su [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 Esso è conforme alle [linee guida di design per i servizi web della PA](https://design-italia.readthedocs.io/it/stable/index.html),
 di cui ne implementa le indicazioni per la creazione di interfacce utente.
 
 ## Come iniziare
 
 Per utilizzare il codice compilato di **Bootstrap Italia v{{ site.current_version}}** nel tuo progetto, è sufficiente
-scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javascript. Tali file si trovano nella cartella
-[`dist`]({{ site.repo }}tree/v{{ site.current_version }}/{{ site.download.dist }}) di questo repository, oltre ad essere
-scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
+scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javascript.
+
+Tali file si trovano nella cartella [`dist`]({{ site.repo }}tree/master/{{ site.download.dist }}) di questo repository,
+oltre ad essere scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia-v{{ site.current_version }}-dist.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap Italia');">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
-Bootstrap Italia contiene al suo interno anche Bootstrap stesso, ereditandone quindi tutte le funzionalità e gli stili
-visibili al sito di Bootstrap.
+Le librerie Javascript e CSS di Bootstrap Italia contengono al suo interno anche Bootstrap 4 stesso, ereditandone quindi
+tutte le funzionalità e gli stili consultabili al sito di Bootstrap 4.
 
-#### CSS
+### CSS
 
 All'interno della cartella `css` è presente un file CSS (`bootstrap-italia-{{ site.current_version }}.css`)
 e la sua versione minificata (`bootstrap-italia-{{ site.current_version }}.min.css`), con le rispettive
@@ -38,10 +40,10 @@ Copiare i file all'interno del vostro progetto e aggiungere il tag `<link>` di s
 `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
 {% highlight html %}
-<link rel="stylesheet" href="./bootstrap-italia-{{ site.current_version }}.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="./bootstrap-italia-{{ site.current_version }}.min.css">
 {% endhighlight %}
 
-#### JavaScript
+### Javascript
 
 All'interno della cartella `js` sono presenti due file con le rispettive versioni minificate, che si differenziano
 soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
@@ -77,18 +79,23 @@ soltanto per l'inclusione in linea delle librerie jQuery e popper.js.
 In questo caso, dopo aver copiato i file all'interno del vostro progetto, inserire una versione dei tag `<script>` di
 seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`.
 
-Per includendo la versione `*.bundle.*` non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, per
-cui sarà necessario solo aggiungere un tag `<script>` per la libreria javascript Bootstrap Italia.
+#### Versione "bundle"
+
+Includendo la versione `*.bundle.*` non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, per
+cui sarà sufficiente aggiungere un solo tag `<script>` per la libreria javascript Bootstrap Italia.
 
 {% highlight html %}
 <script src="./bootstrap-italia-{{ site.current_version }}.bundle.min.js"></script>
 {% endhighlight %}
 
-In caso contrario, sarà necessario includere anche jQuery (è sufficiente la versione slim) e Popper.js:
+#### Versione semplice
+
+In caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere tag `<script>` per jQuery, di
+cui è sufficiente la versione slim, e per Popper.js come mostrato di seguito:
 
 {% highlight html %}
-<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_integrity }}" crossorigin="anonymous"></script>
-<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_integrity }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_integrity }}"></script>
+<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_integrity }}"></script>
 <script src="/bootstrap-italia-{{ site.current_version }}.min.js"></script>
 {% endhighlight %}
 
@@ -116,22 +123,28 @@ In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
 {% endhighlight %}
 
 Questo è tutto ciò che è sufficiente per avere a disposizione tutte le funzionalità e gli stili di Bootstrap Italia.
-Si possono visitare le pagine su [come creare un layout]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/)
-o [consultare gli esempi]({{ site.baseurl }}/docs/{{ site.docs_version }}/esempi/) per iniziare a personalizzare la tua pagina.
 
-### npm
+### Altri esempi
 
-Alternativamente, se utilizzi [Webpack](https://webpack.github.io/) o altri tool simili per l'inclusione di librerie,
+Assieme a questa documentazione, si possono [consultare una vasta quantità di esempi]({{ site.baseurl }}/docs/{{ site.docs_version }}/esempi/)
+per iniziare a personalizzare la tua pagina semplicemente copiando il loro codice.
+
+## Utilizzo come dipendenza
+
+Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri tool simili per l'inclusione di librerie,
 puoi aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
 {% highlight sh %}
 npm i bootstrap-italia --save
 {% endhighlight %}
 
+_Al momento, il package npm espone tutto il contenuto del repository. In futuro, saranno disponibili maggiori informazioni
+per l'utilizzo di singole parti Bootstrap Italia a seconda delle necessità._
+
 ## Impostazioni globali
 
 Bootstrap, e di conseguenza il tema Bootstrap-Italia, utilizza alcune impostazioni globali di cui è bene essere al
-corrente durante lo sviluppo, che tendono *normalizzare* gli stili tra i vari browser. Vediamoli in dettaglio.
+corrente durante lo sviluppo, che tendono *normalizzare* gli stili tra i vari browser.
 
 ### Doctype HTML5
 
@@ -175,12 +188,12 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 
 ### Reboot
 
-Per un miglior rendering cross-browser, Bootstrap Italia eredita da Bootstrap [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/),
+Infine, per "normalizzare" alcuni comportamenti cross-browser, Bootstrap Italia eredita da Bootstrap [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/contenuti/reboot/),
 una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
 
 ---
 
 ###### Continua la lettura >
 
-Se ti interessa sapere come funziona il processo di compilazione dei file e la creazione della documenatazione di Bootstrap Italia,
+Se ti interessa contribuire alla libreria o sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
 continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/strumenti-di-compilazione/)

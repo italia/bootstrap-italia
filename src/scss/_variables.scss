@@ -6,7 +6,6 @@ $grid-gutter-width:           16px !default;
 
 // Main typography
 $font-size-base:              1rem !default;
-
 $headings-line-height:        1.2 !default;
 
 // Btns
@@ -146,12 +145,20 @@ $breadcrumb-bg: transparent;
 $breadcrumb-item-padding: .75rem;
 $breadcrumb-divider-color: $text-color;
 
+//Accordion
+$card-cap-bg: transparent !default;
+$card-spacer-y: 1rem !default;
+$card-spacer-x: 2rem !default;
+$card-border-radius: 0 !default;
+$card-body-spacer: 1rem !default;
+
 // Tables
 $table-cell-padding:          1em !default;
 $table-border-color:          #d6dce3 !default;
 $table-cell-text-align:       left !default;
 $table-accent-bg:             #f6f7f9 !default;
 $table-hover-bg:              #e5f1fa !default;
+
 
 // Inputs
 $input-border:            $gray-200;
