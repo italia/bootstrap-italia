@@ -6,27 +6,34 @@ group: come-iniziare
 toc: true
 ---
 
+*Le informazioni di seguito non sono necessarie per utilizzare Bootstrap Italia nel tuo sito.*
+
+Questa pagina si occupa di approfondire gli strumenti per ricompilare o personalizzare i file sorgente di Bootstrap Italia
+e creare la documentazione che stai leggendo in un ambiente di svluppo locale.
+
 ## Setup strumenti
 
 Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la
-compilazione dei file. Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include
-alcuni scripts per la compilazione del codice e questa documentazione.
+compilazione dei file.
 
-Per usare il sistema di compilazione e lanciare la documentazione in ambiente locale, è sufficiente seguire i passi di
-seguito:
+Il file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json) include
+alcuni comodi scripts per la compilazione del codice e di questa documentazione.
+
+Per rendere funzionante il sistema di compilazione di Bootstrap Italia e poter lanciare la documentazione in ambiente locale,
+è necessario seguire i passi di seguito:
 
 1. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso NPM.
 2. Navigare alla root del progetto e lanciare il comando `npm install` per installare le dipendenze secondo quanto
-indicato nel file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
-3. Installare [Ruby][install-ruby], e poi [Bundler][gembundler] con `gem install bundler`, e sarai in grado di lanciare
-il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come indicato nel file
+descritto nel file [package.json]({{ site.repo }}/blob/v{{ site.current_version }}/package.json).
+3. Installare [Ruby][install-ruby]*.
+4. Installare [Bundler][gembundler] con `gem install bundler`, con il quale sarai in grado di lanciare
+il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come descritto nel file
 [Gemfile]({{ site.repo }}blob/v{{ site.current_version }}/Gemfile), come Jekyll e i suoi plugin.
 
 \* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Jekyll senza problemi. Gli step da
 seguire saranno:
 - Installazione di Ruby, che renderà disponibile il comando `gem install *`
 - Esecuzione di `gem install bundler`, che renderà disponibile il comando `bundle install`
-- Esecuzione di `bundle exec jekyll build`
   
 Sono disponibili maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
