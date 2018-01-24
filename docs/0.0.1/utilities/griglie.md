@@ -676,23 +676,23 @@ le colonne mobili. Li usiamo per generare le classi di griglia predefinite docum
 $grid-columns:      12;
 $grid-gutter-width: 12px;
 
+// Larghezza del gutter a seconda delle dimensioni del viewport
 $grid-gutter-widths: (
+  // Schermo Extra small / smartphone
   sm: 12px,
+  // Schermo medio / tablet
   md: 20px,
+  // Schermo grande / desktop
   lg: 20px,
+  // Schermo extra large / wide desktop
   xl: 28px
 ) !default;
 
 $grid-breakpoints: (
-  // Schermo Extra small / smartphone
   xs: 0,
-  // Schermo piccolo / smartphone
   sm: 576px,
-  // Schrmo medio / tablet
   md: 768px,
-  // Schermo grande / desktop
   lg: 992px,
-  // Schermo extra large / wide desktop
   xl: 1200px
 );
 
@@ -722,7 +722,9 @@ I mixins sono usati insieme alle variabili della griglia per generare CSS semant
 
 ### Esempio di utilizzo
 
-È possibile modificare le variabili con i propri valori personalizzati o semplicemente utilizzare i mixins con i loro valori predefiniti. Ecco un esempio di utilizzo delle impostazioni predefinite per creare un layout a due colonne con uno spazio vuoto.
+È possibile modificare le variabili con i propri valori personalizzati o semplicemente utilizzare i mixins con i loro
+valori predefiniti. Ecco un esempio di utilizzo delle impostazioni predefinite per creare un layout a due colonne con
+uno spazio vuoto.
 
 {% highlight scss %}
 .example-container {
@@ -774,8 +776,6 @@ Usando la nostra griglia integrata con le variabili e le mappe di Sass, è possi
 
 Il numero di colonne della griglia può essere modificato tramite variabili Sass. `$grid-columns` viene usato per generare le larghezze (in percentuale) di ogni singola colonna mentre `$grid-gutter-width` consente larghezze a breakpoint specifici che vengono suddivise in modo uniforme tra `padding-left` e `padding-right` per i gutter della colonna.
 
-
-
 {% highlight scss %}
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
@@ -783,7 +783,7 @@ $grid-gutter-width: 30px !default;
 
 ### Livelli di griglia
 
-Andando oltre le colonne stesse, puoi personalizzare anche il numero dei livelli di griglia. Se volevi solo quattro livelli di griglia, avresi dovuto aggiornare `$grid-breakpoints` e `$container-max-widths` in questo modo:
+Andando oltre le colonne stesse, puoi personalizzare anche il numero dei livelli di griglia. Se volevi solo quattro livelli di griglia, avresti dovuto aggiornare `$grid-breakpoints` e `$container-max-widths` in questo modo:
 
 {% highlight scss %}
 $grid-breakpoints: (
