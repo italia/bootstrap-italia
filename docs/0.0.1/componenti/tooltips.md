@@ -12,7 +12,7 @@ Cose da sapere quando usi il plugin del tooltip:
 
 - I tooltip si basano su librerie di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. È necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` che contiene Popper.js per fare in modo che i tooltip funzionino!
 - Se stai compilando il Javascript di Bootstrap dalla fonte, è [necessario `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
-- I tooltip sono opt-in per ragioni di performance, quindi **quindi è necessario inizializzarli da soli**.
+- I tooltip sono opt-in per ragioni di performance, quindi **è necessario inizializzarli da soli**.
 - I tooltip con titoli vuoti non saranno mai visualizzati.
 - Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
 - Attivare i tooltip su elementi nascosti non funzionerà.
