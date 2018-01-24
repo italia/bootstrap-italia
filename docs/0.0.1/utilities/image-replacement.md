@@ -1,26 +1,27 @@
 ---
 layout: docs
-title: Sostituzione con immagine (Image replacement)
-description: Scambia il testo con una immagine di sfondo tramite la classe apposita.(Swap text for background images with the image replacement class.)
+title: Sostituzione con immagine
+description: Sostituisce il testo con una immagine di sfondo tramite la classe apposita.
 group: utilities
 toc: true
 ---
 
-Utilizza la classe `.text-hide` o il mixin per aiutarti a sostituire il testo di un elemento con una immagine di sfondo. (Utilize the `.text-hide` class or mixin to help replace an element's text content with a background image.)
+Utilizza la classe `.text-hide` o il relativo mixin per sostituire del testo in un elemento con una immagine di sfondo.
 
 {% highlight html %}
-<h1 class="text-hide">Testata personalizzata (Custom heading)</h1>
+<h1 class="text-hide">Testata personalizzata</h1>
 {% endhighlight %}
 
 {% highlight scss %}
-// Usato come un mixin (Usage as a mixin)
+// Usato come mixin
 .heading {
   @include text-hide;
 }
 {% endhighlight %}
 
-Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO dei tags di testata pur volendo usare un `background-image` invece del testo. (Use the `.text-hide` class to maintain the accessibility and SEO benefits of heading tags, but want to utilize a `background-image` instead of text.)
+Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO dei tags di intestazione pur utilizzando
+un'immagine di sfondo invece del testo.
 
 {% example html %}
-<h1 class="text-hide" style="background-image: url('/docs/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>
+<h1 class="text-hide" style="background-image: url('{{ site.baseurl }}/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;">Bootstrap Italia</h1>
 {% endexample %}
