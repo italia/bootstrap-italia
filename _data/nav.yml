@@ -10,17 +10,6 @@
     # - title: Theming # TODO
     # - title: Webpack # TODO
 
-- title: Layout
-  pages:
-    - title: Introduzione
-      status: to do
-    - title: Grid
-      status: to do
-    - title: Media object
-      status: to do
-    - title: Utilities for layout
-      status: to do
-
 - title: Contenuti
   pages:
     - title: Reboot
@@ -33,7 +22,7 @@
 - title: Componenti
   pages:
     - title: Introduzione
-      status: to do
+      status: work in progress
     - title: Alerts
       status: to do
     - title: Badge
@@ -79,7 +68,7 @@
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
-      status: to do
+      status: work in progress
     - title: Image Grid
       status: to do
     - title: Zoom
@@ -87,6 +76,8 @@
 
 - title: Utilities
   pages:
+    - title: Introduzione
+      status: to do
     - title: Borders
       status: to do
     - title: Clearfix
@@ -103,7 +94,11 @@
       status: to do
     - title: Float
       status: to do
+    - title: Grid
+      status: to do
     - title: Image replacement
+      status: to do
+    - title: Media object
       status: to do
     - title: Position
       status: to do
@@ -120,16 +115,9 @@
     - title: Visibility
       status: to do
 
-- title: Estensioni
-  pages:
-    - title: Approach
-      status: to do
-    - title: Icons
-      status: to do
-
-- title: Informazioni
-  pages:
-    - title: Introduzione
-      status: to do
-    - title: License
-      status: to do
+# - title: Estensioni
+#   pages:
+#     - title: Approach
+#       status: to do
+#     - title: Icons
+#       status: to do
