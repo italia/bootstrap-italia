@@ -1,31 +1,31 @@
 ---
 layout: docs
-title: Popovers
-description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+title: Popover
+description: Documentazione ed esempi per aggiungere popover Bootstrap, come quelli trovati in iOS, a qualsiasi elemento del tuo sito.
 group: componenti
 toc: true
 ---
 
-## Overview
+## Panoramica
 
-Things to know when using the popover plugin:
+Cose da sapere quando si utilizza il plugin popover:
 
-- Popovers rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{ site.cdn.popper }}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for popovers to work!
-- Popovers require the [tooltip plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/tooltips/) as a dependency.
-- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
-- Popovers are opt-in for performance reasons, so **you must initialize them yourself**.
-- Zero-length `title` and `content` values will never show a popover.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering popovers on hidden elements will not work.
-- Popovers for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
-- Popovers must be hidden before their corresponding elements have been removed from the DOM.
+- I popover si basano su librerie di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. Per fare in modo che i popover funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` wche contiene Popper.js.
+- I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/tooltips/) come dipendenza.
+- Se stai compilando il Javascript di Bootstrap dalla fonte, è [richiesto `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
+- I popover sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso**.
+- I `title` e i `content` con valori vuoti non mostreranno mai popover.
+- Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
+- Attivare i popover su elementi nascosti non funzionerà.
+- I popover per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
+- Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa `white-space: nowrap;` sugli elementi `<a>` per evitare questo comportamento.
+- I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
 
-Keep reading to see how popovers work with some examples.
+Continua a leggere per vedere come i popover funzionano con alcuni esempi.
 
-## Example: Enable popovers everywhere
+## Esempio: Abilita i popover ovunque
 
-One way to initialize all popovers on a page would be to select them by their `data-toggle` attribute:
+Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
 
 {% highlight js %}
 $(function () {
@@ -33,9 +33,9 @@ $(function () {
 })
 {% endhighlight %}
 
-## Example: Using the `container` option
+## Esempio: Usare l'opzione `container`
 
-When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead.
+Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un `container` personalizzato in modo che l'HTML del popover appaia invece all'interno di quell'elemento.
 
 {% highlight js %}
 $(function () {
@@ -45,64 +45,64 @@ $(function () {
 })
 {% endhighlight %}
 
-## Example
+## Esempio
 
 {% example html %}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Clicca par attivare/disattivare il popover</button>
 {% endexample %}
 
-### Four directions
+### Le quattro direzioni
 
-Four options are available: top, right, bottom, and left aligned.
+Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on top
+      Popover in alto
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on right
+      Popover a destra
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on bottom
+      Popover in basso
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on left
+      Popover a sinistra
     </button>
   </div>
 </div>
 
 {% highlight html %}
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on top
+  Popover in alto
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on right
+  Popover a destra
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on bottom
+  Popover in basso
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on left
+  Popover a sinistra
 </button>
 {% endhighlight %}
 
-### Dismiss on next click
+### Dismiss al click successivo
 
-Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
+Usa l'evento `focus` per ignorare i popover sul clic successivo dell'utente di un elemento diverso rispetto all'elemento di attivazione / disattivazione.
 
 {% callout danger %}
-#### Specific markup required for dismiss-on-next-click
+#### Markup specifico richiesto per ignorare il click successivo
 
-For proper cross-browser and cross-platform behavior, you must use the `<a>` tag, _not_ the `<button>` tag, and you also must include a [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
+Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag `<a>`, _non_ il tag `<button>`, ed è necessario anche includere l'attributo [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 {% endcallout %}
 
 {% example html %}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Dismissible popover</a>
 {% endexample %}
 
 {% highlight js %}
@@ -111,35 +111,35 @@ $('.popover-dismiss').popover({
 })
 {% endhighlight %}
 
-### Disabled elements
+### Elementi disabilitati
 
-Elements with the `disabled` attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper `<div>` or `<span>` and override the `pointer-events` on the disabled element.
+Elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento `<div>` o `<span>` contenitore e sovrascrivere il `pointer-events` su un elemento disabilitato.
 
-For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
+Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
 
 {% example html %}
-<span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+<span class="d-inline-block" data-toggle="popover" data-content="Popover disabilitato">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>
 </span>
 {% endexample %}
 
-## Usage
+## Uso
 
-Enable popovers via JavaScript:
+Abilita i popover tramite JavaScript:
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-### Options
+### Opzioni
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
+Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 100px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
@@ -147,14 +147,14 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>animation</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Apply a CSS fade transition to the popover</td>
+      <td>Applica una transizione di dissolvenza CSS al popover</td>
     </tr>
     <tr>
       <td>container</td>
       <td>string | element | false</td>
       <td>false</td>
       <td>
-        <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+        <p>Aggiunge il popover a un elemento specifico. Esempio: <code>container: 'body'</code>. Questa opzione è particolarmente utile in quanto consente di posizionare il popover nel flusso del documento vicino all'elemento di attivazione - che impedirà al popover di fluttuare dall'elemento di attivazione durante il ridimensionamento della finestra.</p>
       </td>
     </tr>
     <tr>
@@ -162,8 +162,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default content value if <code>data-content</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>Il valore predefinito del contenuto se l'attributo <code>data-content</code> non è presente.</p>
+        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
       </td>
     </tr>
     <tr>
@@ -171,42 +171,42 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>number | object</td>
       <td>0</td>
       <td>
-        <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
-        <p>If a number is supplied, delay is applied to both hide/show</p>
-        <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>Il ritardo che mostra e nasconde il popover (ms) - non si applica al tipo di trigger manuale</p>
+        <p>Se viene fornito un numero, il ritardo viene applicato sia sul mostra che sul nascondi</p>
+        <p>La struttura dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
       <td>html</td>
       <td>boolean</td>
       <td>false</td>
-      <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+      <td>Inserisce l' HTML all'interno del popover. Se false, il metodo jQuery <code>text</code> verrà utilizzato per inserire contenuto nel DOM. Usa il testo se sei preoccupato per gli attacchi XSS.</td>
     </tr>
     <tr>
       <td>placement</td>
       <td>string | function</td>
       <td>'right'</td>
       <td>
-        <p>How to position the popover - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the popover.</p>
-        <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+        <p>Come posizionare il popover - auto | top | bottom | left | right.<br>Quando è specificato <code>auto</code>, il popover verrà direzionato in modo dinamico.</p>
+        <p>Quando viene utilizzata una funzione per determinare il posizionamento, viene chiamato con il nodo DOM del popover come primo argomento e il nodo DOM dell'elemento di attivazione come secondo. Il contesto <code>this</code> è impostato sull'istanza del popover.</p>
       </td>
     </tr>
     <tr>
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://jsbin.com/zopod/1/edit">an informative example</a>.</td>
+      <td>Dato un selettore, gli oggetti del popover saranno delegati agli obiettivi specificati. In pratica, questo viene usato per abilitare il contenuto HTML dinamico per aggiungere i popover. Guarda <a href="https://github.com/twbs/bootstrap/issues/4215">questo</a> e <a href="https://jsbin.com/zopod/1/edit">un esempio informativo</a>.</td>
     </tr>
     <tr>
       <td>template</td>
       <td>string</td>
       <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
-        <p>Base HTML to use when creating the popover.</p>
-        <p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
-        <p>The popover's <code>content</code> will be injected into the <code>.popover-body</code>.</p>
-        <p><code>.arrow</code> will become the popover's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+        <p>Codice HTML di base da usare quando viene creato un popover.</p>
+        <p>Il <code>title</code> del popover verrà inserito nel <code>.popover-header</code>.</p>
+        <p>Il <code>content</code> del popover verrà inserito nel <code>.popover-body</code>.</p>
+        <p><code>.arrow</code> sarà la freccia del popover.</p>
+        <p>L'elemento contenitore più esterno dovrebbe avere la classe <code>.popover</code>.</p>
       </td>
     </tr>
     <tr>
@@ -214,130 +214,130 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default title value if <code>title</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>Il valore predefinito del sel'attributo  <code>title</code> non è presente.</p>
+        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
       </td>
     </tr>
     <tr>
       <td>trigger</td>
       <td>string</td>
       <td>'click'</td>
-      <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. `manual` cannot be combined with any other trigger.</td>
+      <td>Come viene richiamato il popover - click | hover | focus | manual. Puoi passare più eventi; separati da uno spazio. `manual` non può essere combinato con nessun altreo evento.</td>
     </tr>
     <tr>
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Offset of the popover relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">offset docs</a>.</td>
+      <td>Offset del popover relativo al suo target. Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">documentazione sugli offset</a> di Popper.js.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Allow to specify which position Popper will use on fallback. For more information refer to
-      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">behavior docs</a></td>
+      <td>Permette di specificare quale posizione Popper userà nel fallback. Per maggiori informazioni fare riferimento alla
+      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">documentazione sui comportamenti</a> di Popper.js</td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+      <td>Limite del vincolo di overflow del popover. Accetta i valori di <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, o un riferimento HTMLElement (JavaScript only). Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a> di Popper.js.</td>
     </tr>
   </tbody>
 </table>
 
 {% callout info %}
-#### Data attributes for individual popovers
+#### Attributi data per singoli popovers
 
-Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.
+Le opzioni per singoli popover possono essere in alternativa specificati attraverso l'uso di attributi data, come spiegato sopra.
 {% endcallout %}
 
-### Methods
+### Metodi
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
 #### `$().popover(options)`
 
-Initializes popovers for an element collection.
+Inizializza i popover per una raccolta di elementi.
 
 #### `.popover('show')`
 
-Reveals an element's popover. **Returns to the caller before the popover has actually been shown** (i.e. before the `shown.bs.popover` event occurs). This is considered a "manual" triggering of the popover. Popovers whose both title and content are zero-length are never displayed.
+Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (i.e. prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
 
 {% highlight js %}$('#element').popover('show'){% endhighlight %}
 
 #### `.popover('hide')`
 
-Hides an element's popover. **Returns to the caller before the popover has actually been hidden** (i.e. before the `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (i.e. prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
 {% highlight js %}$('#element').popover('hide'){% endhighlight %}
 
 #### `.popover('toggle')`
 
-Toggles an element's popover. **Returns to the caller before the popover has actually been shown or hidden** (i.e. before the `shown.bs.popover` or `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (i.e. prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
 {% highlight js %}$('#element').popover('toggle'){% endhighlight %}
 
 #### `.popover('dispose')`
 
-Hides and destroys an element's popover. Popovers that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+Nascondi e distrugge il popover di un elemento. I popover che utilizzano la delega (che vengono creati utilizzando [the `selector` option](#options)) on posono essere distrutti individualmente su elementi trigger discendenti.
 
 {% highlight js %}$('#element').popover('dispose'){% endhighlight %}
 
 #### `.popover('enable')`
 
-Gives an element's popover the ability to be shown. **Popovers are enabled by default.**
+Fornisce al popover di un elemento la possibilità di essere mostrato. **I popover sono abilitati in modo predefinito.**
 
 {% highlight js %}$('#element').popover('enable'){% endhighlight %}
 
 #### `.popover('disable')`
 
-Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled.
+Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.
 
 {% highlight js %}$('#element').popover('disable'){% endhighlight %}
 
 #### `.popover('toggleEnabled')`
 
-Toggles the ability for an element's popover to be shown or hidden.
+Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.
 
 {% highlight js %}$('#element').popover('toggleEnabled'){% endhighlight %}
 
 #### `.popover('update')`
 
-Updates the position of an element's popover.
+Aggiorna la posizione del popover di un elemento.
 
 {% highlight js %}$('#element').popover('update'){% endhighlight %}
 
-### Events
+### Eventi
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Tipo di evento</th>
+      <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.popover</td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>show</code>.</td>
     </tr>
     <tr>
       <td>shown.bs.popover</td>
-      <td>This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>Questo evento viene attivato quando il popover è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
     </tr>
     <tr>
       <td>hide.bs.popover</td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>hide</code>.</td>
     </tr>
     <tr>
       <td>hidden.bs.popover</td>
-      <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>Questo evento viene generato quando il popover ha finito di essere nascosto all'utente (attenderà il completamento delle transizioni CSS)..</td>
     </tr>
     <tr>
       <td>inserted.bs.popover</td>
-      <td>This event is fired after the <code>show.bs.popover</code> event when the popover template has been added to the DOM.</td>
+      <td>Questo evento si attiva dopo l'evento <code>show.bs.popover</code> quando il modello del popover è stato aggiunto al DOM.</td>
     </tr>
   </tbody>
 </table>
