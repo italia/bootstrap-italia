@@ -159,6 +159,16 @@ $table-cell-text-align:       left !default;
 $table-accent-bg:             #f6f7f9 !default;
 $table-hover-bg:              #e5f1fa !default;
 
+// Tooltips
+
+$tooltip-max-width:           32em !default;
+$tooltip-bg:                  #004a4d  !default;
+$tooltip-opacity:             1 !default;
+$tooltip-padding-y:           1rem !default;
+$tooltip-padding-x:           1rem !default;
+
+$tooltip-arrow-color:         $tooltip-bg !default;
+
 
 // Inputs
 $input-border:            $gray-200;
