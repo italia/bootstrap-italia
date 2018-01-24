@@ -8,15 +8,15 @@ toc: true
 
 ## Panoramica
 
-Cose da sapere quando usi il plugin del tooltip:
+Cose da sapere quando usi il plugin tooltip:
 
-- I tooltip si basano su librerie di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. È necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` che contiene Popper.js per fare in modo che i tooltip funzionino!
-- Se stai compilando il Javascript di Bootstrap dalla fonte, è [necessario `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
-- I tooltip sono opt-in per ragioni di performance, quindi **è necessario inizializzarli da soli**.
+- I tooltip si basano su librerie di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. Per fare in modo che i tooltip funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` che contiene Popper.js.
+- Se stai compilando il Javascript di Bootstrap dalla fonte, è [richiesto `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
+- I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso**.
 - I tooltip con titoli vuoti non saranno mai visualizzati.
 - Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
 - Attivare i tooltip su elementi nascosti non funzionerà.
-- I tooltip per gli elementi `.disabled` o `disabled` devono essere attivati su un elemento contenitore.
+- I tooltip per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
 - Quando attivati da collegamenti ipertestuali che si estendono su più righe, i tooltip verranno centrati. Usa `white-space: nowrap;`sui tuoi `<a>` per evitare questo comportamento.
 - I tooltip devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
 
@@ -24,7 +24,7 @@ Hai tutto questo? Ottimo, vediamo come funzionano con qualche esempio.
 
 ## Esempio: Abilita i tooltip ovunque
 
-Un modo per inizializzare tutti i tooltip su una pagina sarebbe quello di selezionarli tramite il loro attributo `data-toggle`:
+Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
 
 {% highlight js %}
 $(function () {
@@ -113,7 +113,7 @@ Inoltre, non fare affidamento esclusivamente sull' `hover` come innesco del tuo 
 
 ### Elementi disabilitati
 
-Gli elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivarli, passarci sopra con il mouse, o cliccarli per attivare un tooltip (o un popover). Come soluzione, ti consigliamo di attivare il tooltip da un contenitore `<div>` o `<span>`, mafari rendendolo attivabile da tastiera usando `tabindex="0"`, e sovrascrivendo il `pointer-events` sull'elemento disabilitato.
+Gli elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivare un tooltip (o un popover) attivando il focus, con il passaggio delmouse o cliccando su di essi. Come soluzione, ti consigliamo di attivare il tooltip da un contenitore `<div>` o `<span>`, magari rendendolo attivabile da tastiera usando `tabindex="0"`, e sovrascrivendo il `pointer-events` sull'elemento disabilitato.
 
 <div class="tooltip-demo">
 {% example html %}
@@ -125,7 +125,7 @@ Gli elementi con l'attributo `disabled` non sono interattivi, il che significa c
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite attibuti data o JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
+Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -141,7 +141,7 @@ Le opzioni possono essere passate tramite attibuti data o JavaScript. Per gli at
       <td>animation</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Applicare una transizione di dissolvenza CSS al tooltip</td>
+      <td>Applica una transizione di dissolvenza CSS al tooltip</td>
     </tr>
     <tr>
       <td>container</td>
@@ -176,7 +176,7 @@ Le opzioni possono essere passate tramite attibuti data o JavaScript. Per gli at
       <td>string | function</td>
       <td>'top'</td>
       <td>
-        <p>Come posizionare il tooltip - auto | top | bottom | left | right.<br>Quando è specificato <code>auto</code>, cambierà in modo dinamico il tooltip.</p>
+        <p>Come posizionare il tooltip - auto | top | bottom | left | right.<br>Quando è specificato <code>auto</code>, il tooltip cambierà in modo dinamico.</p>
         <p>Quando viene utilizzata una funzione per determinare il posizionamento, viene chiamato con il nodo DOM del tooltip come primo argomento e il nodo DOM dell'elemento di attivazione come secondo. Il contesto <code>this</code> è impostato sull'istanza del tooltip.</p>
       </td>
     </tr>
@@ -203,7 +203,7 @@ Le opzioni possono essere passate tramite attibuti data o JavaScript. Per gli at
       <td>''</td>
       <td>
         <p>Il valore predefinito del titolo se l'attributo <code>title</code> non è presente.</p>
-        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il tooltip..</p>
+        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il tooltip.</p>
       </td>
     </tr>
     <tr>
@@ -211,7 +211,7 @@ Le opzioni possono essere passate tramite attibuti data o JavaScript. Per gli at
       <td>string</td>
       <td>'hover focus'</td>
       <td>
-        <p>Come viene attivato il tooltip  - click | hover | focus | manualmente. Puoi passare più trigger; separati da uno spazio.</p>
+        <p>Come viene richiamato il tooltip  - click | hover | focus | manual. Puoi passare più eventi; separati da uno spazio.</p>
         <p><code>'manual'</code> indica che il tooltip verrà attivato a livello di codice tramite i metodi <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> e <code>.tooltip('toggle')</code>; questo valore non può essere combinato con nessun altro trigger.</p>
         <p><code>'hover'</code> ne deriverà che i tooltip non possono essere attivati tramite la tastiera, e dovrebbero essere usati solo se sono presenti metodi alternativi per trasmettere le stesse informazioni per gli utenti di tastiera.</p>
       </td>
@@ -272,7 +272,7 @@ Attiva/Disattiva il tooltip di un elemento. **Ritorna al chiamante prima che il 
 
 #### `.tooltip('dispose')`
 
-Nascond e distrugge il tooltip di un elemento. I tooltip che utilizzano la delega (che vengono creati utilizzando [l'opzione `selector`](#options)) non può essere distrutto individualmente su elementi trigger discendenti.
+Nascondi e distrugge il tooltip di un elemento. I tooltip che utilizzano la delega (che vengono creati utilizzando [l'opzione `selector`](#options)) non posono essere distrutti individualmente su elementi trigger discendenti.
 
 {% highlight js %}$('#element').tooltip('dispose'){% endhighlight %}
 
@@ -290,7 +290,7 @@ Rimuove la capacità di mostrare il tooltip di un elemento. Il tooltip potrà es
 
 #### `.tooltip('toggleEnabled')`
 
-Attiva / disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.
+Attiva/disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.
 
 {% highlight js %}$('#element').tooltip('toggleEnabled'){% endhighlight %}
 
