@@ -1,16 +1,24 @@
 ---
 layout: docs
 title: La griglia
-description: Utilizza la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne, cinque livelli responsive predefiniti, variabili Sass e mixin, e decine di classi predefinite.
+description: Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.
 group: utilities
 toc: true
 ---
 
 ## Come funziona
 
-Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti. È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) ed è completamente responsive. In basso trovi un esempio and uno sguardo approfondito su come la griglia viene costruita.
+Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti.
+È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+ed è completamente responsive.
 
-**Nuovo o poco pratico di flexbox?** [Leggi questo manuale di trucchi CSS su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) per background, terminologia, linee guida, e frammenti di codice.
+Bootstrap Italia aggiunge una _spaziatura_ orizzontale tra le colonne (chiamato `gutter`) variabile a seconda delle
+dimensioni dello schermo.
+
+Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
+
+**Se sei poco pratico di flexbox**, puoi leggere [questo manuale di trucchi CSS su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+(in inglese) per background, terminologia, linee guida, e frammenti di codice.
 
 <div class="bd-example-row">
 {% example html %}
@@ -30,20 +38,37 @@ Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne
 {% endexample %}
 </div>
 
-L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le classi di griglia predefinite di Bootstrap. Quelle colonne sono centrate nella pagina con l'elemento genitore `.container`.
+L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le
+classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l'utilizzo dell'elemento genitore `.container`.
 
 Analizzandolo nel dettaglio, ecco come funziona:
 
-- I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Use `.container` per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e dimensioni dei device.
-- Le righe sono involucri per colonne. Ogni colonna ha un `padding` orizzontale (chiamato gutter) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
-- In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
-- Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [auto-layout columns](#auto-layout-columns) per più esempi.
-- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
-- Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluidi e dimensionati rispetto al loro elemento genitore.
-- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne, comunque, puoi rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
-- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni [responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/introduzione/#responsive-breakpoints): tutti i breakpoint (extra small), small, medium, large, and extra large.
-- I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
-- È possibile utilizzare classi di griglia predefinite (come `.col-4`) o [Sass mixins](#sass-mixins) per altri markup semantici.
+- I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza `.container`
+per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e
+dimensioni dei device.
+- Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio
+tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto
+nelle colonne viene allineato sul lato sinistro.
+- In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere
+figlie dirette delle righe.
+- Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne
+di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo
+breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori
+informazioni.
+- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga.
+Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
+- Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro
+elemento genitore.
+- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il
+`margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
+- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni
+[responsive breakpoint]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/introduzione/#responsive-breakpoints):
+tutti i breakpoint (extra small), small, medium, large, and extra large.
+- I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel
+breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large,
+ma non al primo breakpoint `xs`).
+- È possibile utilizzare classi di griglia predefinite (come `.col-4`) o [Sass mixins](#sass-mixins) per altri markup
+semantici.
 
 
 Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
@@ -640,17 +665,23 @@ Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` 
 
 ## Sass mixins
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
-
 Quando si utilizzano i file Sass sorgente di Bootstrap, è possibile utilizzare le variabili Sass e i mixin per creare layout di pagina personalizzati, semantici e responsive. Le classi di griglia predefinite di Bootstrap utilizzano queste stesse variabili e mixins per fornire un'intera suite di classi pronte all'uso per veloci layout responsive.
 
 ### Variabili
 
-Le variabili e le mappe determinano il numero di colonne, la larghezza del gutter e i media query in base al quale iniziare le colonne mobili. Li usiamo per generare le classi di griglia predefinite documentate sopra, così come per i mixins personalizzati elencati di seguito.
+Le variabili e le mappe determinano il numero di colonne, la larghezza del gutter e i media query in base al quale iniziare
+le colonne mobili. Li usiamo per generare le classi di griglia predefinite documentate sopra, così come per i mixins personalizzati elencati di seguito.
 
 {% highlight scss %}
 $grid-columns:      12;
-$grid-gutter-width: 30px;
+$grid-gutter-width: 12px;
+
+$grid-gutter-widths: (
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px
+) !default;
 
 $grid-breakpoints: (
   // Schermo Extra small / smartphone
