@@ -12,13 +12,13 @@ Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne
 È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 ed è completamente responsive.
 
-Bootstrap Italia aggiunge una _spaziatura_ orizzontale tra le colonne (chiamato `gutter`) variabile a seconda delle
+Bootstrap Italia aggiunge una _spaziatura_ orizzontale tra le colonne (in gergo `gutter`) variabile a seconda delle
 dimensioni dello schermo.
 
 Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
 
-**Se sei poco pratico di flexbox**, puoi leggere [questo manuale di trucchi CSS su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
-(in inglese) per background, terminologia, linee guida, e frammenti di codice.
+**Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+(in inglese) per informazioni generali, terminologia, linee guida, e frammenti di codice.
 
 <div class="bd-example-row">
 {% example html %}
@@ -67,8 +67,7 @@ tutti i breakpoint (extra small), small, medium, large, and extra large.
 - I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel
 breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large,
 ma non al primo breakpoint `xs`).
-- È possibile utilizzare classi di griglia predefinite (come `.col-4`) o [Sass mixins](#sass-mixins) per altri markup
-semantici.
+- È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
 
 
 Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
@@ -145,7 +144,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
 
 Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come `.col-sm-6`. 
 
-### ParUgualii larghezze
+### Uniformare larghezze tra colonne
 
 Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da `xs` a `xl`. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.
 
@@ -486,6 +485,30 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 {% endexample %}
 </div>
 
+### Gutter variabile
+
+Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni di seguito:  TODO
+
+{% highlight sass %}
+$grid-gutter-widths: (
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px
+) !default;
+{% endhighlight %}
+
+Attraverso questo codice... TODO
+
+<div class="bd-example-row">
+{% example html %}
+<div class="row variable-gutters">
+  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+{% endexample %}
+</div>
+
 ### Colonna a capo
 
 Se in una singola riga vengono inserite più di 12 colonne, ogni gruppo di colonne extra, come ogni singola, andrà a capo su una nuova linea.
@@ -662,142 +685,3 @@ Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` 
 </div>
 {% endexample %}
 </div>
-
-## Sass mixins
-
-Quando si utilizzano i file Sass sorgente di Bootstrap, è possibile utilizzare le variabili Sass e i mixin per creare layout di pagina personalizzati, semantici e responsive. Le classi di griglia predefinite di Bootstrap utilizzano queste stesse variabili e mixins per fornire un'intera suite di classi pronte all'uso per veloci layout responsive.
-
-### Variabili
-
-Le variabili e le mappe determinano il numero di colonne, la larghezza del gutter e i media query in base al quale iniziare
-le colonne mobili. Li usiamo per generare le classi di griglia predefinite documentate sopra, così come per i mixins personalizzati elencati di seguito.
-
-{% highlight scss %}
-$grid-columns:      12;
-$grid-gutter-width: 12px;
-
-// Larghezza del gutter a seconda delle dimensioni del viewport
-$grid-gutter-widths: (
-  // Schermo Extra small / smartphone
-  sm: 12px,
-  // Schermo medio / tablet
-  md: 20px,
-  // Schermo grande / desktop
-  lg: 20px,
-  // Schermo extra large / wide desktop
-  xl: 28px
-) !default;
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-);
-{% endhighlight %}
-
-### Mixins
-
-I mixins sono usati insieme alle variabili della griglia per generare CSS semantico per colonne di una griglia.
-
-{% highlight scss %}
-// Crea un wrapper per una serie di colonne
-@include make-row();
-
-// Rendi l'elemento grid-ready (applica tutto tranne la larghezza)
-@include make-col-ready();
-@include make-col($size, $columns: $grid-columns);
-
-// Get fancy by offsetting, or changing the sort order
-@include make-col-offset($size, $columns: $grid-columns);
-{% endhighlight %}
-
-### Esempio di utilizzo
-
-È possibile modificare le variabili con i propri valori personalizzati o semplicemente utilizzare i mixins con i loro
-valori predefiniti. Ecco un esempio di utilizzo delle impostazioni predefinite per creare un layout a due colonne con
-uno spazio vuoto.
-
-{% highlight scss %}
-.example-container {
-  width: 800px;
-  @include make-container();
-}
-
-.example-row {
-  @include make-row();
-}
-
-.example-content-main {
-  @include make-col-ready();
-
-  @include media-breakpoint-up(sm) {
-    @include make-col(6);
-  }
-  @include media-breakpoint-up(lg) {
-    @include make-col(8);
-  }
-}
-
-.example-content-secondary {
-  @include make-col-ready();
-
-  @include media-breakpoint-up(sm) {
-    @include make-col(6);
-  }
-  @include media-breakpoint-up(lg) {
-    @include make-col(4);
-  }
-}
-{% endhighlight %}
-
-{% example html %}
-<div class="example-container">
-  <div class="example-row">
-    <div class="example-content-main">Contenuto principale</div>
-    <div class="example-content-secondary">Contenuto secondario</div>
-  </div>
-</div>
-{% endexample %}
-
-## Personalizzare la griglia
-
-Usando la nostra griglia integrata con le variabili e le mappe di Sass, è possibile personalizzare completamente le classi di griglia predefinite. Cambia il numero di livelli, le dimensioni della query multimediale e le larghezze del contenitore, quindi ricompila.
-
-### Colonne e gutter
-
-Il numero di colonne della griglia può essere modificato tramite variabili Sass. `$grid-columns` viene usato per generare le larghezze (in percentuale) di ogni singola colonna mentre `$grid-gutter-width` consente larghezze a breakpoint specifici che vengono suddivise in modo uniforme tra `padding-left` e `padding-right` per i gutter della colonna.
-
-{% highlight scss %}
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
-{% endhighlight %}
-
-### Livelli di griglia
-
-Andando oltre le colonne stesse, puoi personalizzare anche il numero dei livelli di griglia. Se volevi solo quattro livelli di griglia, avresti dovuto aggiornare `$grid-breakpoints` e `$container-max-widths` in questo modo:
-
-{% highlight scss %}
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px
-);
-
-$container-max-widths: (
-  sm: 420px,
-  md: 720px,
-  lg: 960px
-);
-{% endhighlight %}
-
-Quando si apportano modifiche alle variabili o alle mappe di Sass, è necessario salvare le modifiche e ricompilare. In questo modo verrà generato un nuovo set di classi di griglia predefinite per larghezze, offset e ordini delle colonne. Verranno inoltre aggiornate le utilità di visibilità responsive per utilizzare i breakpoint personalizzati. Assicurati di impostare i valori della griglia in `px` (no `rem`, `em`, o `%`).

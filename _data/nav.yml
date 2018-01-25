@@ -89,27 +89,23 @@
     - title: Display
       status: to do
     - title: Embed
-      status: to do
     - title: Flex
       status: to do
     - title: Float
       status: to do
     - title: Griglie
       status: work in progress
-    - title: Image replacement
-      status: to do
+    - title: Immagini sostitutive
     - title: Media object
       status: to do
     - title: Position
       status: to do
     - title: Screenreaders
-      status: to do
     - title: Sizing
       status: to do
     - title: Spacing
       status: to do
-    - title: Text
-      status: to do
+    - title: Testo
     - title: Vertical align
       status: to do
     - title: Visibility

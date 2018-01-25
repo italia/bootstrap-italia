@@ -6942,41 +6942,45 @@ h4, .h4 {
 .table thead th {
   border-color: currentColor; }
 
-@media (min-width: 576px) {
-  .row {
-    margin-right: -6px;
-    margin-left: -6px; }
-    .row > .col,
-    .row > [class*="col-"] {
-      padding-right: 6px;
-      padding-left: 6px; } }
-
-@media (min-width: 768px) {
-  .row {
-    margin-right: -10px;
-    margin-left: -10px; }
-    .row > .col,
-    .row > [class*="col-"] {
-      padding-right: 10px;
-      padding-left: 10px; } }
-
-@media (min-width: 992px) {
-  .row {
-    margin-right: -10px;
-    margin-left: -10px; }
-    .row > .col,
-    .row > [class*="col-"] {
-      padding-right: 10px;
-      padding-left: 10px; } }
-
-@media (min-width: 1200px) {
-  .row {
-    margin-right: -14px;
-    margin-left: -14px; }
-    .row > .col,
-    .row > [class*="col-"] {
-      padding-right: 14px;
-      padding-left: 14px; } }
+.row.variable-gutters {
+  margin-right: -6px;
+  margin-left: -6px; }
+  .row.variable-gutters > .col,
+  .row.variable-gutters > [class*="col-"] {
+    padding-right: 6px;
+    padding-left: 6px; }
+  @media (min-width: 576px) {
+    .row.variable-gutters {
+      margin-right: -6px;
+      margin-left: -6px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 6px;
+        padding-left: 6px; } }
+  @media (min-width: 768px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 992px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 1200px) {
+    .row.variable-gutters {
+      margin-right: -14px;
+      margin-left: -14px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 14px;
+        padding-left: 14px; } }
 
 img[data-action="zoom"] {
   cursor: pointer;
