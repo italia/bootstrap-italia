@@ -6918,18 +6918,20 @@ h4, .h4 {
 .breadcrumb-item a {
   font-weight: 600; }
 
-.card {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+*[data-toggle="collapse"] .collapse-icon::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0;
+  border-left: 0.5rem solid transparent;
+  vertical-align: 0.1875rem; }
 
-.card-header {
-  border: none; }
-  .card-header:first-child {
-    border-radius: 0; }
-  .card-header h5 {
-    padding: 1rem; }
-
-.card-body {
-  padding: 1rem; }
+*[data-toggle="collapse"].collapsed .collapse-icon::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .table th,
 .table td {

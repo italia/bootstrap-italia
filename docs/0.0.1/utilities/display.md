@@ -12,7 +12,7 @@ Modifica il valore della [proprietà `display`](https://developer.mozilla.org/en
 
 ## Nota
 
-Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/introduzione/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
 Per questo motivo le classi sono denominate utilizzando il formato:
 

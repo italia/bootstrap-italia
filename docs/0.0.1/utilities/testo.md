@@ -1,0 +1,77 @@
+---
+layout: docs
+title: Testo
+description: Documentazione e esempi di strumenti per il controllo dell'allineamento nelle aree di testo, dello stile del carattere e altro.
+group: utilities
+toc: true
+---
+
+## Allineamento del testo
+
+Riallinea facilmente il contenuto dei componenti con le classi di allineamento testo.
+
+{% example html %}
+<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+{% endexample %}
+
+Per l'allineamento a sinistra, a destra e centrale sono disponibili classi che si adattano in base alla griglia utilizzata.
+
+{% example html %}
+<p class="text-left">Testo allineato a sinistra per tutte le dimensioni del viewport.</p>
+<p class="text-center">Testo allineato al centro per tutte le dimensioni del viewport.</p>
+<p class="text-right">Testo allineato a destra per tutte le dimensioni del viewport.</p>
+
+<p class="text-sm-left">Testo allineato a sinistra per dimensioni SM (small) o maggiori.</p>
+<p class="text-md-left">Testo allineato a sinistra per dimensioni MD (medium) o maggiori.</p>
+<p class="text-lg-left">Testo allineato a sinistra per dimensioni LG (large) o maggiori.</p>
+<p class="text-xl-left">Testo allineato a sinistra per dimensioni XL (extra-large) o maggiori.</p>
+{% endexample %}
+
+## Testo per esteso e overflow
+
+Previeni l'andare a capo del testo con la classe `.text-nowrap`.
+
+{% example html %}
+<div class="text-nowrap bd-highlight" style="width: 8rem;">
+  Questo testo oltrepassa il contenitore.
+</div>
+{% endexample %}
+
+Per contenuti più lunghi puoi aggiungere la classe `.text-truncate` per troncare il testo con i punti di sospensione. **Necessita della classe `display: inline-block` oppure `display: block`**.
+
+{% example html %}
+<!-- Block level -->
+<div class="row">
+  <div class="col-2 text-truncate">
+    Praeterea iter est quasdam res quas ex communi.
+  </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+  Praeterea iter est quasdam res quas ex communi.
+</span>
+{% endexample %}
+
+## Trasformazione del testo
+
+Trasforma il testo presente nei componenti con una delle classi per la scrittura in maiuscolo.
+
+{% example html %}
+<p class="text-lowercase">Testo tutto minuscolo.</p>
+<p class="text-uppercase">Testo tutto maiuscolo.</p>
+<p class="text-capitalize">Testo con prime lettere MaiuscOLE.</p>
+{% endexample %}
+
+Nota come la classe `text-capitalize` cambi solamente la prima lettera di ogni parola lasciando le altre inalterate.
+
+## Carattere grassetto e corsivo
+
+Modifica rapidamente il testo in grassetto o in corsivo. 
+
+{% example html %}
+<p class="font-weight-bold">Testo in grassetto.</p>
+<p class="font-weight-normal">Testo normale.</p>
+<p class="font-weight-light">Testo sottile.</p>
+<p class="font-italic">Testo in corsivo.</p>
+{% endexample %}
