@@ -1,19 +1,19 @@
 ---
 layout: docs
 title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+description: Per annullare il float di un contenitore.
 group: utilities
 toc: true
 ---
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+Annulla il `float` del contenuto aggiungendo la classe `.clearfix` **all'elemento padre**. Può essere usato come un mixin.
 
 {% highlight html %}
 <div class="clearfix">...</div>
 {% endhighlight %}
 
 {% highlight scss %}
-// Mixin itself
+// Mixin se stesso
 @mixin clearfix() {
   &::after {
     display: block;
@@ -22,17 +22,26 @@ Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also 
   }
 }
 
-// Usage as a mixin
+// Usato come un mixin
 .element {
   @include clearfix;
 }
 {% endhighlight %}
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo caso il div contenitore non si estende attorno ai pulsanti mostrando un layout incompleto.
+
+<div class="bd-example">
+  <div class="bg-primary p-2">
+    <button type="button" class="btn btn-secondary float-left">Bottone con float a sinistra</button>
+    <button type="button" class="btn btn-secondary float-right">Bottone con float a destra</button>
+  </div>
+</div>
+
+Mentre nel seguente esempio con l'utilizzo della classe `.clearfix` viene annullato il float del contenuto permettendo una visualizzazione ottimale.
 
 {% example html %}
-<div class="bg-info clearfix">
-  <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
-  <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+<div class="bg-primary p-2 clearfix">
+  <button type="button" class="btn btn-secondary float-left">Bottone con float a sinistra</button>
+  <button type="button" class="btn btn-secondary float-right">Bottone con float a destra</button>
 </div>
 {% endexample %}

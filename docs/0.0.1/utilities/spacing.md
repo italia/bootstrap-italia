@@ -1,51 +1,51 @@
 ---
 layout: docs
-title: Spacing
-description: Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.
+title: Spaziatura
+description: Una vasta gamma di classi per la gestione del 'padding' e del 'margin' anche in ottica responsive.
 group: utilities
 toc: true
 ---
 
-## How it works
+## Come funziona
 
-Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
+Assegna agli elementi per impostare i valori di `margin` o di `padding` con le classi apposite.  ??? Le classi sono presenti nella mappa variabili Sass con un range che va da `.25rem` a `3rem`. (Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.)
 
-## Notation
+## Nota
 
-Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Le classi sono applicabili per tutti i breakpoint da `xs` to `xl`. ??? (Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.)
 
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+Le classi sono denominate utilizzando il formato `{proprietà}{lato}-{dimensione}` per `xs` e `{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, e `xl`.
 
-Where *property* is one of:
+Dove la *proprietà* è una tra:
 
-* `m` - for classes that set `margin`
-* `p` - for classes that set `padding`
+* `m` - per le classi che impostano `margin`
+* `p` - per le classi che impostano `padding`
 
-Where *sides* is one of:
+Dove uno dei *lati* è tra:
 
-* `t` - for classes that set `margin-top` or `padding-top`
-* `b` - for classes that set `margin-bottom` or `padding-bottom`
-* `l` - for classes that set `margin-left` or `padding-left`
-* `r` - for classes that set `margin-right` or `padding-right`
-* `x` - for classes that set both `*-left` and `*-right`
-* `y` - for classes that set both `*-top` and `*-bottom`
-* blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+* `t` - per le classi che impostano `margin-top` o `padding-top`
+* `b` - per le classi che impostano `margin-bottom` o `padding-bottom`
+* `l` - per le classi che impostano `margin-left` o `padding-left`
+* `r` - per le classi che impostano `margin-right` o `padding-right`
+* `x` - per le classi che impostano insieme `*-left` e `*-right`
+* `y` - per le classi che impostano insieme `*-top` e `*-bottom`
+* blank - per le classi che impostano `margin` o `padding` su tutti e quattro i lati dell'elemento
 
-Where *size* is one of:
+Dove la *dimensione* è una tra:
 
-* `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
-* `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-* `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
-* `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
-* `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-* `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
-* `auto` - for classes that set the `margin` to auto
+* `0` - per le classi che eliminano `margin` o `padding` impostandolo a `0`
+* `1` - (di default) per le classi che impostano `margin` o `padding` a `$spacer * .25`
+* `2` - (di default) per le classi che impostano `margin` o `padding` a `$spacer * .5`
+* `3` - (di default) per le classi che impostano `margin` o `padding` a `$spacer`
+* `4` - (di default) per le classi che impostano `margin` o `padding` a `$spacer * 1.5`
+* `5` - (di default) per le classi che impostano `margin` o `padding` a `$spacer * 3`
+* `auto` - per le classi che impostano `margin` ad auto
 
-(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
+(Puoi aggiungere dimensioni inserendo nuovi `$spacers` nella mappa variabili di Sass.)
 
-## Examples
+## Esempi
 
-Here are some representative examples of these classes:
+Ecco alcuni esempi delle classi di spaziatura:
 
 {% highlight scss %}
 .mt-0 {
@@ -66,18 +66,18 @@ Here are some representative examples of these classes:
 }
 {% endhighlight %}
 
-### Horizontal centering
+### Centratura orizzontale
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+Per centrare orizzontalmente un elemento con una larghezza fissa e `display: block` puoi utilizzare la classe `.mx-auto` che imposta i margini laterali ad `auto`.
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
-    Centered element
+    Elemento centrato
   </div>
 </div>
 
 {% highlight html %}
 <div class="mx-auto" style="width: 200px;">
-  Centered element
+  Elemento centrato
 </div>
 {% endhighlight %}

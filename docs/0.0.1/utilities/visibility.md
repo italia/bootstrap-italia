@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Visibility
-description: Control the visibility, without modifying the display, of elements with visibility utilities.
+title: Visibilità
+description: Controlla la visibilità degli elementi senza modificarne il valore 'display'. 
 group: utilities
 ---
 
-Set the `visibility` of elements with our visibility utilities. These do not modify the `display` value at all and are helpful for hiding content from most users, but still keeping them for screen readers.
+Imposta la `visibility` degli elementi con le nostre utilità di visibilità. Queste non modificano  il valore `display` e sono utili per nascondere i contenuti alla maggior parte degli utenti, ma conservandoli per gli screen reader.
 
-Apply `.visible` or `.invisible` as needed.
+Applica `.visible` oppure `.invisible` al bisogno.
 
 {% highlight html %}
 <div class="visible">...</div>

@@ -1,28 +1,28 @@
 ---
 layout: docs
 title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+description: Gestisci i float di qualsiasi elemento con le classi apposite
 group: utilities
 toc: true
 ---
 
-## Overview
+## Panoramica
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system.
+Queste classi permettono di dare a un elemento il `float` a sinistra, a destra o di disabilitarlo. `!important` è incluso nelle classi per evitare problemi di ereditarietà pregressa.
 
-## Classes
+## Classi
 
-Toggle a float with a class:
+Attiva o disattiva il `float` con le seguenti classi:
 
 {% example html %}
-<div class="float-left">Float left on all viewport sizes</div><br>
-<div class="float-right">Float right on all viewport sizes</div><br>
-<div class="float-none">Don't float on all viewport sizes</div>
+<div class="float-left">Esempio di float a sinistra per tutte le dimensioni</div><br>
+<div class="float-right">Esempio di float a destra per tutte le dimensioni</div><br>
+<div class="float-none">Float disattivo per tutte le dimensioni</div>
 {% endexample %}
 
 ## Mixins
 
-Or by Sass mixin:
+O tramite Sass mixin:
 
 {% highlight scss %}
 .element {
@@ -38,16 +38,16 @@ Or by Sass mixin:
 
 ## Responsive
 
-Responsive variations also exist for each `float` value.
+Esistono variazioni delle classi `float` per i vari tipi di dimensione dello schermo.
 
 {% example html %}
-<div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br>
-<div class="float-md-left">Float left on viewports sized MD (medium) or wider</div><br>
-<div class="float-lg-left">Float left on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-left">Float left on viewports sized XL (extra-large) or wider</div><br>
+<div class="float-sm-left">Esempio di float a sinistra per dimensioni SM (small) o maggiori.</div><br>
+<div class="float-md-left">Esempio di float a sinistra per dimensioni MD (medium) o maggiori.</div><br>
+<div class="float-lg-left">Esempio di float a sinistra per dimensioni LG (large)  o maggiori.</div><br>
+<div class="float-xl-left">Esempio di float a sinistra per dimensioni XL (extra-large) o maggiori.</div><br>
 {% endexample %}
 
-Here are all the support classes;
+Di seguito l'elenco completo delle classi a disposizione:
 
 {% for bp in site.data.breakpoints %}
 - `.float{{ bp.abbr }}-left`

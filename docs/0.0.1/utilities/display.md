@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Display property
-description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+title: Display
+description: Modifica in modalità responsive la proprietà 'display' degli elementi con le classi apposite. Puoi gestire anche gli elementi per ottimizzare la visualizzazione per la stampa.
 group: utilities
 toc: true
 ---
 
-## How it works
+## Come funziona
 
-Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
+Modifica il valore della [proprietà `display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) con le classi apposite. Sono presenti solo una parte di tutti i tipi di valori sopportati dalla proprietà. Puoi combinare le classi per ottenere l'effetto di cui hai bisogno.
 
-## Notation
+## Nota
 
 Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-As such, the classes are named using the format:
+Per questo motivo le classi sono denominate utilizzando il formato:
 
-* `.d-{value}` for `xs`
-* `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, and `xl`.
+* `.d-{value}` per `xs`
+* `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, e `xl`.
 
-Where *value* is one of:
+Dove il *valore* è uno tra:
 
 * `none`
 * `inline`
@@ -31,9 +31,9 @@ Where *value* is one of:
 * `flex`
 * `inline-flex`
 
-The media queries effect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on both `lg` and `xl` screens.
+The media queries effect screen widths with the given breakpoint *or larger*. ??? Per esempio, `.d-lg-none` imposta `display: none;` sia nella visualizzazione in `lg` che in `xl`.
 
-## Examples
+## Esempi
 
 {% example html %}
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
@@ -45,37 +45,37 @@ The media queries effect screen widths with the given breakpoint *or larger*. Fo
 <span class="d-block p-2 bg-dark text-white">d-block</span>
 {% endexample %}
 
-## Hiding elements
+## Elementi nascosti
 
-For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide element responsively for each screen size.
+Utilizza le classi responsive per mostrare e nascondere un elemento tra i vari dispositivi. Evita di creare versioni completamente diverse dello stesso sito, piuttosto scegli di nascondere l'elemento per ogni dimensione dello schermo di non interesse.
 
-To hide elements simply use the `.d-none` class or one of the `.d-{sm,md,lg,xl}-none` classes for any responsive screen variation.
+Per nascondere gli elementi usa semplicemente la classe `.d-none` o una delle classi `.d-{sm,md,lg,xl}-none` per qualsiasi variazione di dimensione dello schermo.
 
-To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none` will hide the element for all screen sizes except on medium and large devices.
+Per mostrare un elemento solo su un dato intervallo di dimensioni dello schermo, puoi combinare una classe `.d-*-none` con una classe `.d-*-*`. Ad esempio `.d-none .d-md-block .d-xl-none` nasconderà l'elemento per tutti gli schermi tranne che per i dispositivi di medie e grandi dimensioni.
 
-| Screen Size        | Class |
+| Dimensione dello schermo        | Classe |
 | ---                | --- |
-| Hidden on all      | `.d-none` |
-| Hidden only on xs  | `.d-none .d-sm-block` |
-| Hidden only on sm  | `.d-sm-none .d-md-block` |
-| Hidden only on md  | `.d-md-none .d-lg-block` |
-| Hidden only on lg  | `.d-lg-none .d-xl-block` |
-| Hidden only on xl  | `.d-xl-none` |
-| Visible on all     | `.d-block` |
-| Visible only on xs | `.d-block .d-sm-none` |
-| Visible only on sm | `.d-none .d-sm-block .d-md-none` |
-| Visible only on md | `.d-none .d-md-block .d-lg-none` |
-| Visible only on lg | `.d-none .d-lg-block .d-xl-none` |
-| Visible only on xl | `.d-none .d-xl-block` |
+| Nascosto a tutti      | `.d-none` |
+| Nascosto solo su xs  | `.d-none .d-sm-block` |
+| Nascosto solo su sm  | `.d-sm-none .d-md-block` |
+| Nascosto solo su md  | `.d-md-none .d-lg-block` |
+| Nascosto solo su lg  | `.d-lg-none .d-xl-block` |
+| Nascosto solo su xl  | `.d-xl-none` |
+| Visibile a tutti     | `.d-block` |
+| Visibile solo su xs | `.d-block .d-sm-none` |
+| Visibile solo su sm | `.d-none .d-sm-block .d-md-none` |
+| Visibile solo su md | `.d-none .d-md-block .d-lg-none` |
+| Visibile solo su lg | `.d-none .d-lg-block .d-xl-none` |
+| Visibile solo su xl | `.d-none .d-xl-block` |
 
 {% example html %}
-<div class="d-lg-none">hide on screens wider than lg</div>
-<div class="d-none d-lg-block">hide on screens smaller than lg</div>
+<div class="d-lg-none">Nascosto su schermi più larghi di lg</div>
+<div class="d-none d-lg-block">Nascosto su schermi più piccoli di lg</div>
 {% endexample %}
 
-## Display in print
+## Visualizza in stampa
 
-Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities.
+Modifica il valore `display` degli elementi per la stampa con le classi apposite. Sono presenti gli stessi valori usati per le classi `display`.
 
 - `.d-print-none`
 - `.d-print-inline`
@@ -87,10 +87,10 @@ Change the `display` value of elements when printing with our print display util
 - `.d-print-flex`
 - `.d-print-inline-flex`
 
-The print and display classes can be combined.
+Le classi di stampa e di visualizzazione possono essere combinate insieme.
 
 {% example html %}
-<div class="d-print-none">Screen Only (Hide on print only)</div>
-<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
-<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+<div class="d-print-none">Solo schermo (Nascondi solo su stampa)</div>
+<div class="d-none d-print-block">Solo stampa (Nascondi solo sullo schermo)</div>
+<div class="d-none d-lg-block d-print-block">Nascondi fino al grande schermo, ma mostra sempre sulla stampa</div>
 {% endexample %}

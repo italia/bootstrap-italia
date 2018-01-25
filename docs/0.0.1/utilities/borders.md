@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+title: Bordi
+description: Modifica lo stile del bordo e il suo arrotondamento.
 group: utilities
 redirect_from: "/docs/0.0.1/utilities/"
 redirect_from: "/docs/utilities/"
 toc: true
 ---
 
-## Border
+## Bordo
 
-Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
+Aggiungi o rimuovi il bordo a un elemento. Puoi scegliere fra il bordo completo oppure un lato alla volta.
 
-### Additive
+### Aggiuntivo
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -24,7 +24,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 {% endexample %}
 </div>
 
-### Subtractive
+### Sottrattivo
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
 {% example html %}
@@ -36,9 +36,9 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 {% endexample %}
 </div>
 
-## Border color
+## Colore del bordo
 
-Change the border color using utilities built on our theme colors.
+Cambia il colore del bordo usando la palette del tema grafico in uso.
 
 <div class="bd-example-border-utils">
 {% example html %}
@@ -48,18 +48,18 @@ Change the border color using utilities built on our theme colors.
 {% endexample %}
 </div>
 
-## Border-radius
+## Bordi arrotondati
 
-Add classes to an element to easily round its corners.
+Tutte le classi per arrotondare facilmente gli angoli di un elemento.
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">
-  <img data-src="holder.js/75x75" class="rounded-top" alt="Example top rounded image">
-  <img data-src="holder.js/75x75" class="rounded-right" alt="Example right rounded image">
-  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Example bottom rounded image">
-  <img data-src="holder.js/75x75" class="rounded-left" alt="Example left rounded image">
-  <img data-src="holder.js/75x75" class="rounded-circle" alt="Completely round image">
-  <img data-src="holder.js/75x75" class="rounded-0" alt="Example non-rounded image (overrides rounding applied elsewhere)">
+  <img data-src="holder.js/75x75" class="rounded" alt="Esempio di immagine arrotondata">
+  <img data-src="holder.js/75x75" class="rounded-top" alt="Esempio di immagine arrotondata in alto">
+  <img data-src="holder.js/75x75" class="rounded-right" alt="Esempio di immagine arrotondata a destra">
+  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Esempio di immagine arrotondata in basso">
+  <img data-src="holder.js/75x75" class="rounded-left" alt="Esempio di immagine arrotondata a sinistra">
+  <img data-src="holder.js/75x75" class="rounded-circle" alt="Esempio di immagine arrotondata a cerchio">
+  <img data-src="holder.js/75x75" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
 </div>
 
 {% highlight html %}
