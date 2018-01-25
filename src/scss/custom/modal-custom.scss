@@ -1,0 +1,54 @@
+.modal-dialog {
+    margin: $modal-dialog-margin;
+    //padding: $modal-dialog-padding;
+  }
+
+  .modal-content {
+    border-radius: $reset-border-radius;
+    padding: $modal-content-padding;
+  }
+
+  .modal-header {
+      border-radius: $reset-border-radius;
+      padding: $reset-padding;
+      border-width: $reset-border-width;
+      h5 {
+          margin-bottom: 1.6rem;
+      }
+  }
+
+  .modal-body {
+    padding: $reset-padding;
+    p {
+        margin-bottom: 3.2rem;
+    }
+  }
+
+  .modal-footer {
+    padding: $reset-padding;
+    border-width: $reset-border-width;
+}
+
+// Scale up the modal
+@include media-breakpoint-up(sm) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+      max-width: $modal-max-width;
+      margin: $modal-dialog-margin;
+    }
+  
+    .modal-dialog-centered {
+      min-height: calc(100% - (#{$modal-dialog-margin} * 2));
+    }
+  
+    /*.modal-content {
+      @include box-shadow($modal-content-box-shadow-sm-up);
+    }*/
+
+    .modal-sm { max-width: $modal-max-width; }
+  
+  }
+  
+  @include media-breakpoint-up(lg) {
+    .modal-lg { max-width: $modal-max-width; }
+  }
