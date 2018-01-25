@@ -10,7 +10,7 @@ toc: true
 
 Cose da sapere quando si utilizza il plugin popover:
 
-- I popover si basano su librerie di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. Per fare in modo che i popover funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` wche contiene Popper.js.
+- I popover si basano per il posizionamento sulla libreria di terze parti [Popper.js](https://popper.js.org/). Per fare in modo che i popover funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` wche contiene Popper.js.
 - I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/tooltips/) come dipendenza.
 - Se stai compilando il Javascript di Bootstrap dalla fonte, è [richiesto `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
 - I popover sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso**.
