@@ -8,7 +8,10 @@ toc: true
 
 ## Panoramica
 
-Queste classi permettono di dare a un elemento il `float` a sinistra, a destra o di disabilitarlo. `!important` è incluso nelle classi per evitare problemi di ereditarietà pregressa.
+Queste classi permettono di dare a un elemento la [proprietà `float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+a sinistra, a destra o di disabilitarlo.
+.
+`!important` è incluso nelle classi per evitare problemi di ereditarietà pregressa.
 
 ## Classi
 
@@ -19,22 +22,6 @@ Attiva o disattiva il `float` con le seguenti classi:
 <div class="float-right">Esempio di float a destra per tutte le dimensioni</div><br>
 <div class="float-none">Float disattivo per tutte le dimensioni</div>
 {% endexample %}
-
-## Mixins
-
-O tramite Sass mixin:
-
-{% highlight scss %}
-.element {
-  @include float-left;
-}
-.another-element {
-  @include float-right;
-}
-.one-more {
-  @include float-none;
-}
-{% endhighlight %}
 
 ## Responsive
 

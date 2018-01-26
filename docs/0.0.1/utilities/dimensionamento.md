@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-Le grandezze di default presenti sono: `25%`, `50%`, `75%` e `100%`. Le classi di larghezza e altezza sono generate dai `$sizes` presenti nella mappa variabili Sass [`_variables.scss`], modifica o aggiunti nuovi valori per crearne di differenti al bisogno.
+Le grandezze di default presenti sono: `25%`, `50%`, `75%` e `100%`.
 
 {% example html %}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>

@@ -1,16 +1,15 @@
 ---
 layout: docs
 title: Bordi
-description: Modifica lo stile del bordo e il suo arrotondamento.
+description: Modifica lo stile di bordi e il loro arrotondamento.
 group: utilities
 redirect_from: "/docs/0.0.1/utilities/"
 redirect_from: "/docs/utilities/"
 toc: true
 ---
 
-## Bordo
-
-Aggiungi o rimuovi il bordo a un elemento. Puoi scegliere fra il bordo completo oppure un lato alla volta.
+Aggiungi o rimuovi il bordo a un elemento. Puoi scegliere fra un bordo completo oppure un lato alla volta, secondo una
+logica aggiuntiva o sottrattiva.
 
 ### Aggiuntivo
 
@@ -36,9 +35,9 @@ Aggiungi o rimuovi il bordo a un elemento. Puoi scegliere fra il bordo completo 
 {% endexample %}
 </div>
 
-## Colore del bordo
+## Colore dei bordi
 
-Cambia il colore del bordo usando la palette del tema grafico in uso.
+Cambia il colore del bordo usando la palette del tema in uso.
 
 <div class="bd-example-border-utils">
 {% example html %}

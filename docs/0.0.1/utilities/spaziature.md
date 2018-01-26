@@ -1,20 +1,27 @@
 ---
 layout: docs
 title: Spaziatura
-description: Una vasta gamma di classi per la gestione del 'padding' e del 'margin' anche in ottica responsive.
+description: Una vasta gamma di classi per la gestione di 'padding' e 'margin' anche in ottica responsive.
 group: utilities
 toc: true
 ---
 
 ## Come funziona
 
-Assegna agli elementi per impostare i valori di `margin` o di `padding` con le classi apposite.  ??? Le classi sono presenti nella mappa variabili Sass con un range che va da `.25rem` a `3rem`. (Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.)
+Assegna agli elementi per impostare i valori di `margin` o di `padding` con le classi apposite per le singole proprietà o
+per coppie di proprietà in base alla direzione (`x` e `y` per orizzontale e verticale).
+ 
+Le dimensioni delle spaziature possono variare da `.25rem` a `3rem`. Questo si traduce in diversi valori tra mobile e
+desktop, visto che il tema Bootstrap-Italia usa un font-size di base di 16px per dispositivi mobili e 18px per dispositivi
+desktop.
 
-## Nota
+## Note
 
-Le classi sono applicabili per tutti i breakpoint da `xs` to `xl`. ??? (Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.)
+Le classi che sono applicabili per tutti i breakpoint da `xs` to `xl` non hanno alcun breakpoint nei loro nome, poiché
+sono applicate da `min-width: 0` in su, e quindi non sono legate a media query.
 
-Le classi sono denominate utilizzando il formato `{proprietà}{lato}-{dimensione}` per `xs` e `{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, e `xl`.
+Le classi sono denominate utilizzando il formato `{proprietà}{lato}-{dimensione}` per `xs` e
+`{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, e `xl`.
 
 Dove la *proprietà* è una tra:
 
@@ -45,7 +52,7 @@ Dove la *dimensione* è una tra:
 
 ## Esempi
 
-Ecco alcuni esempi delle classi di spaziatura:
+Ecco alcuni esempi di utilizzo delle classi di spaziatura:
 
 {% highlight scss %}
 .mt-0 {

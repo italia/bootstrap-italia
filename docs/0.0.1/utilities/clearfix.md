@@ -6,26 +6,10 @@ group: utilities
 toc: true
 ---
 
-Annulla il `float` del contenuto aggiungendo la classe `.clearfix` **all'elemento padre**. Può essere usato come un mixin.
+Annulla il `float` del contenuto aggiungendo la classe `.clearfix` **all'elemento padre**.
 
 {% highlight html %}
 <div class="clearfix">...</div>
-{% endhighlight %}
-
-{% highlight scss %}
-// Mixin se stesso
-@mixin clearfix() {
-  &::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-}
-
-// Usato come un mixin
-.element {
-  @include clearfix;
-}
 {% endhighlight %}
 
 Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo caso il div contenitore non si estende attorno ai pulsanti mostrando un layout incompleto.

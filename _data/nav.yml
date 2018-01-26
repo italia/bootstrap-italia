@@ -77,39 +77,30 @@
 - title: Utilities
   pages:
     - title: Introduzione
-      status: to do
-    - title: Borders
-      status: to do
+      status: work in progress
+    - title: Allineamento verticale
+    - title: Bordi
     - title: Clearfix
-      status: to do
     - title: Close icon
       status: to do
     - title: Colors
       status: to do
+    - title: Dimensionamento
     - title: Display
-      status: to do
     - title: Embed
     - title: Flex
       status: to do
     - title: Float
-      status: to do
     - title: Grid
       status: to do
     - title: Immagini sostitutive
     - title: Media object
       status: to do
     - title: Position
-      status: to do
     - title: Screenreaders
-    - title: Sizing
-      status: to do
-    - title: Spacing
-      status: to do
+    - title: Spaziature
     - title: Testo
-    - title: Vertical align
-      status: to do
     - title: Visibility
-      status: to do
 
 # - title: Estensioni
 #   pages:

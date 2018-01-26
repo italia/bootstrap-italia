@@ -8,13 +8,14 @@ toc: true
 
 ## Come funziona
 
-Modifica il valore della [proprietà `display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) con le classi apposite. Sono presenti solo una parte di tutti i tipi di valori sopportati dalla proprietà. Puoi combinare le classi per ottenere l'effetto di cui hai bisogno.
+Modifica il valore della [proprietà `display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) con le classi apposite.
+Sono presenti solo una parte di tutti i tipi di valori sopportati dalla proprietà. Puoi combinare le classi per ottenere l'effetto di cui hai bisogno.
 
-## Nota
+## Responsive
 
-Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/introduzione/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
-
-Per questo motivo le classi sono denominate utilizzando il formato:
+Le classi _display_ che si applicano a tutte le dimensioni dello schermo, da `xs` fino a `xl`, non hanno bisogno di alcuna
+indicazione di breakpoints, per cui ad esempio sarà sufficiente usare `.d-none` per nascondere un elemento ad ogni risoluzione.
+In caso contrario, è sufficiente utilizzare i classici breakpoints utilizzando il formato:
 
 * `.d-{value}` per `xs`
 * `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, e `xl`.
@@ -31,7 +32,8 @@ Dove il *valore* è uno tra:
 * `flex`
 * `inline-flex`
 
-The media queries effect screen widths with the given breakpoint *or larger*. ??? Per esempio, `.d-lg-none` imposta `display: none;` sia nella visualizzazione in `lg` che in `xl`.
+L'utilizzo delle classi `d-` con breakpoint ha effetto su dispositivi dal breakpoint indicato *fino a xl*.
+Per esempio, `.d-lg-none` imposta `display: none;` sia nella visualizzazione in `lg` che in `xl`.
 
 ## Esempi
 
@@ -47,11 +49,17 @@ The media queries effect screen widths with the given breakpoint *or larger*. ??
 
 ## Elementi nascosti
 
-Utilizza le classi responsive per mostrare e nascondere un elemento tra i vari dispositivi. Evita di creare versioni completamente diverse dello stesso sito, piuttosto scegli di nascondere l'elemento per ogni dimensione dello schermo di non interesse.
+Utilizza le classi responsive per mostrare e nascondere un elemento a seconda dei vari dispositivi. Evita di creare
+versioni completamente diverse dello stesso sito, piuttosto scegli di nascondere l'elemento per dimensioni dello
+schermo di non interesse.
 
-Per nascondere gli elementi usa semplicemente la classe `.d-none` o una delle classi `.d-{sm,md,lg,xl}-none` per qualsiasi variazione di dimensione dello schermo.
+Per nascondere elementi puoi usare semplicemente la classe `.d-none` o una delle classi `.d-{sm,md,lg,xl}-none` per
+qualsiasi variazione di dimensione dello schermo.
 
-Per mostrare un elemento solo su un dato intervallo di dimensioni dello schermo, puoi combinare una classe `.d-*-none` con una classe `.d-*-*`. Ad esempio `.d-none .d-md-block .d-xl-none` nasconderà l'elemento per tutti gli schermi tranne che per i dispositivi di medie e grandi dimensioni.
+Per mostrare un elemento solo su un dato intervallo di dimensioni dello schermo, puoi combinare una classe `.d-*-none`
+con una classe `.d-*-*`. Ad esempio `.d-none .d-md-block .d-xl-none` nasconderà l'elemento per tutti gli schermi tranne
+che per i dispositivi di medie e grandi dimensioni (fino alla dimensione `xl`, oltre la quale tornerà ad essere
+nascosto).
 
 | Dimensione dello schermo        | Classe |
 | ---                | --- |
@@ -87,7 +95,7 @@ Modifica il valore `display` degli elementi per la stampa con le classi apposite
 - `.d-print-flex`
 - `.d-print-inline-flex`
 
-Le classi di stampa e di visualizzazione possono essere combinate insieme.
+Le classi di stampa e di visualizzazione possono essere combinate insieme:
 
 {% example html %}
 <div class="d-print-none">Solo schermo (Nascondi solo su stampa)</div>

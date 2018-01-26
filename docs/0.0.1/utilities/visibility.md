@@ -5,7 +5,8 @@ description: Controlla la visibilità degli elementi senza modificarne il valore
 group: utilities
 ---
 
-Imposta la `visibility` degli elementi con le nostre utilità di visibilità. Queste non modificano  il valore `display` e sono utili per nascondere i contenuti alla maggior parte degli utenti, ma conservandoli per gli screen reader.
+Imposta la `visibility` degli elementi con le nostre utilità di visibilità. Queste non modificano il valore `display`
+e sono utili per nascondere i contenuti alla maggior parte degli utenti, ma conservandoli per gli screen reader.
 
 Applica `.visible` oppure `.invisible` al bisogno.
 
@@ -21,13 +22,5 @@ Applica `.visible` oppure `.invisible` al bisogno.
 }
 .invisible {
   visibility: hidden;
-}
-
-// Usage as a mixin
-.element {
-  @include invisible(visible);
-}
-.element {
-  @include invisible(hidden);
 }
 {% endhighlight %}

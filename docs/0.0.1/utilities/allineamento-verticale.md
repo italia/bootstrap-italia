@@ -5,7 +5,8 @@ description: Cambia l'allineamento verticale di elementi inline, inline-block, i
 group: utilities
 ---
 
-Cambia l'allineamento verticale, con le utilità di [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align), di elementi inline, inline-block, inline-table e celle di tabella.
+Cambia l'allineamento verticale, con le utilità di [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+di elementi inline, inline-block, inline-table e celle di tabella.
 
 Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, e `.align-text-top`.
 
