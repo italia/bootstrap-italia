@@ -6,7 +6,18 @@ group: componenti
 toc: true
 ---
 
-## Come funziona
+{% callout accessibility %}
+#### Accessibilità
+
+Assicurati di aggiungere sempre:
+- l'attributo `role="dialog"` all'elemento con classe `.modal` ([maggiori info su MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role))
+- l'attributo `aria-labelledby="..."` all'elemento con classe `.modal`, con riferimento al titolo della modale stesso ([maggiori info su MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute))
+- l'attributo `role="document"` applicato al `.modal-dialog` stesso
+
+Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
+
+Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
+{% endcallout %}
 
 Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
@@ -74,7 +85,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 </div>
 {% endhighlight %}
 
-#### Bottone di chiusura
+### Bottone di chiusura
 
 Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 
@@ -477,10 +488,6 @@ Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe
 
 Se l'altezza della modale cambia quando è aperta, dovresti chiamare `$('#myModal').modal('handleUpdate')` per regolare nuovamente la posizione della modale nel caso appaia una barra di scorrimento.
 
-### Accessibilità
-
-Assicurati di aggiungere `role="dialog"` e `aria-labelledby="..."`, facendo riferimento al titolo della modale, a `.modal`, e `role="document"` al `.modal-dialog` stesso. Inoltre, puoi dare una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
-
 ### Incorporare i video di YouTube
 
 Incorporare i video di YouTube nelle modali richiede codice JavaScript aggiuntivo non presente in Bootstrap per interrompere automaticamente la riproduzione e altro. [Vedi questo utile post di Stack Overflow](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) per maggiori informazioni.
@@ -521,7 +528,6 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-
       <div class="modal-header">
         <h4 class="modal-title" id="myLargeModalLabel">Modale grande</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
