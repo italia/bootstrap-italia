@@ -6,10 +6,15 @@ group: come-iniziare
 toc: true
 ---
 
-*Le informazioni di seguito non sono necessarie per utilizzare Bootstrap Italia nel tuo sito.*
+{% callout info %}
+#### Questa pagina serve a chi desidera personalizzare la libreria.
 
 Questa pagina si occupa di approfondire gli strumenti per ricompilare o personalizzare i file sorgente di Bootstrap Italia
 e creare la documentazione che stai leggendo in un ambiente di svluppo locale.
+
+Le informazioni di seguito non sono indispensabili per utilizzare Bootstrap Italia nel tuo sito, in tal caso ti può essere
+utile la [pagina introduttiva]({{ site.baseurl }}/docs/{{ site.docs_version }}come-iniziare/introduzione/).
+{% endcallout %}
 
 ## Setup strumenti
 

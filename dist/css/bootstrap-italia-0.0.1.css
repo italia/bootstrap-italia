@@ -6890,9 +6890,11 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
-body {
-  font-weight: 300;
-  letter-spacing: 0; }
+html {
+  font-size: 16px; }
+  @media (min-width: 576px) {
+    html {
+      font-size: 18px; } }
 
 h2, .h2 {
   line-height: 1.25; }

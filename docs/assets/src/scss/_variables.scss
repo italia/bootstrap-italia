@@ -2,7 +2,7 @@
 $docs-blue:           rgb(0, 102, 204) !default; // #06C
 $docs-blue-bright:    lighten(saturate($docs-blue, 5%), 15%) !default;
 $docs-blue-light:     lighten(saturate($docs-blue, 5%), 45%) !default;
-$docs-info:           rgb(0, 207, 134) !default;
+$docs-info:           rgb(23, 50, 77) !default;
 $docs-warning:        rgb(255, 151, 0) !default;
 $docs-danger:         rgb(248, 62, 90) !default;
-$docs-accessibility:  rgb(23, 50, 77) !default;
+$docs-accessibility:  rgb(0, 207, 134) !default;
