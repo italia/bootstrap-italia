@@ -1,56 +1,38 @@
 .modal-dialog {
-    margin: $modal-dialog-margin;
-    max-height: 90%;
-    //padding: $modal-dialog-padding;
-  }
-
-  .modal-content {
-    border-radius: $reset-border-radius;
-    padding: $modal-content-padding;
-  }
-
-  .modal-header {
-      border-radius: $reset-border-radius;
-      padding: $reset-padding;
-      border-width: $reset-border-width;
-      h5 {
-          margin-bottom: 1.6rem;
-      }
-  }
-
-  .modal-body {
-    padding: $reset-padding;
-    margin-bottom: 1.6rem;
-    /*p { 
-        
-    }*/
-  }
-
-  .modal-footer {
-    padding: $reset-padding;
-    border-width: $reset-border-width;
+  margin: $modal-dialog-margin;
+  max-height: 90%;
 }
 
-// Scale up the modal
-@include media-breakpoint-up(sm) {
-    // Automatically set modal's width for larger viewports
-    .modal-dialog {
-      //max-width: $modal-max-width;
-      margin: $modal-dialog-margin;
-    }
-  
-    .modal-dialog-centered {
-      min-height: calc(100% - (#{$modal-dialog-margin} * 2));
-    }
-  
-    /*.modal-content {
-      @include box-shadow($modal-content-box-shadow-sm-up);
-    }*/
+.modal-content {
+  border-radius: $reset-border-radius;
+  padding: $modal-content-padding;
+}
 
-    //.modal-sm { max-width: $modal-max-width; }
-  
+.modal-header {
+  border-radius: $reset-border-radius;
+  padding: $reset-padding;
+  border-width: $reset-border-width;
+  h5 {
+    margin-bottom: 1.6rem;
   }
-  
-  /*@include media-breakpoint-up(lg) {
-    .modal-lg { max-width: $modal-max-width; }
-  }*/
+}
+
+.modal-body {
+  padding: $reset-padding;
+  margin-bottom: 1.6rem;
+}
+
+.modal-footer {
+  padding: $reset-padding;
+  border-width: $reset-border-width;
+}
+
+@include media-breakpoint-up(sm) {
+  .modal-dialog {
+    margin: $modal-dialog-margin;
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - (#{$modal-dialog-margin} * 2));
+  }
+}

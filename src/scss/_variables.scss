@@ -172,6 +172,10 @@ $modal-max-width:             32rem !default;
 $modal-dialog-margin:         1.4rem auto !default;
 $modal-content-padding:       1.4rem !default;
 
+//Reset
+$reset-border-width:     0 !default;
+$reset-border-radius:    0 !default;
+$reset-padding:          0 !default;
 
 // Inputs
 $input-border:            $gray-200;
@@ -201,8 +205,3 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px
 ) !default;
-
-//Reset
-$reset-border-width:     0 !default;
-$reset-border-radius:    0 !default;
-$reset-padding:          0 !default;
