@@ -10,15 +10,20 @@ toc: true
 
 Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti.
 È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-ed è completamente responsive.
+ed è completamente responsive. 
 
-Bootstrap Italia aggiunge una _spaziatura_ orizzontale tra le colonne (in gergo `gutter`) variabile a seconda delle
-dimensioni dello schermo.
+{% callout info %}
+#### Griglia fluida: spaziatura variabile a seconda delle dimensioni del dispositivo 
+
+Bootstrap Italia può aggiungere una _spaziatura_ orizzontale tra le colonne (in gergo `gutter`) variabile a seconda delle
+dimensioni dello schermo. Tale comportamento è mostrato di seguito nella pagina, alla sezione [gutter variabile](#gutter-variabile).
+{% endcallout %}
 
 Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
 
 **Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
-(in inglese) per informazioni generali, terminologia, linee guida, e frammenti di codice.
+(in inglese) per informazioni generali, terminologia, linee guida, e frammenti di codice, oppure giocando con
+[questo simpatico tutorial](http://flexboxfroggy.com/#it).
 
 <div class="bd-example-row">
 {% example html %}
@@ -455,9 +460,13 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 
 ### Senza gutter
 
-I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.no-gutters`. Questo rimuove i margini negativi  `margin` dalla classe `.row` e il `padding` orizzonatale da tutte le colonne figlie dirette.
+I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.no-gutters`.
+Questo rimuove i margini negativi `margin` dalla classe `.row` e il `padding` orizzonatale da tutte le colonne figlie dirette.
 
-Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le [utilità di spaziatura]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spacing/).
+Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le
+prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le
+[utilità di spaziatura]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilità/spaziature/).
 
 **Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
 
@@ -487,7 +496,7 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 
 ### Gutter variabile
 
-Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni di seguito:  TODO
+Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:
 
 {% highlight sass %}
 $grid-gutter-widths: (
@@ -498,7 +507,50 @@ $grid-gutter-widths: (
 ) !default;
 {% endhighlight %}
 
-Attraverso questo codice... TODO
+Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione
+dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla
+classe `.row`, la classe `.variable-gutters`.
+
+In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="text-center">
+        Extra small<br>
+        <small>&lt;576px</small>
+      </th>
+      <th class="text-center">
+        Small<br>
+        <small>&ge;576px</small>
+      </th>
+      <th class="text-center">
+        Medium<br>
+        <small>&ge;768px</small>
+      </th>
+      <th class="text-center">
+        Large<br>
+        <small>&ge;992px</small>
+      </th>
+      <th class="text-center">
+        Extra large<br>
+        <small>&ge;1200px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+      <td><code>12px</code></td>
+      <td><code>12px</code></td>
+      <td><code>20px</code></td>
+      <td><code>20px</code></td>
+      <td><code>28px</code></td>
+    </tr>
+  </tbody>
+</table>
+
 
 <div class="bd-example-row">
 {% example html %}
