@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Sizing
-description: Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.
+title: Dimensionamento
+description: Per dare larghezza o altezza a un elemento in relazione al contenitore padre.
 group: utilities
 toc: true
 ---
 
-Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, and `100%` by default. Modify those values as you need to generate different utilities here.
+Le grandezze di default presenti sono: `25%`, `50%`, `75%` e `100%`.
 
 {% example html %}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
@@ -24,7 +24,7 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 </div>
 {% endexample %}
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
+Sono previste anche le classi `mw-100` e `mh-100` per i corrispettivi `max-width: 100%;` e `max-height: 100%;`. 
 
 {% example html %}
 <img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">
