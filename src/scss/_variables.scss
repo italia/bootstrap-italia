@@ -166,6 +166,16 @@ $table-cell-text-align:       left !default;
 $table-accent-bg:             #f6f7f9 !default;
 $table-hover-bg:              #e5f1fa !default;
 
+//Modals
+$modal-backdrop-opacity:      .8 !default;
+$modal-max-width:             32rem !default;
+$modal-dialog-margin:         1.4rem auto !default;
+$modal-content-padding:       1.4rem !default;
+
+//Reset
+$reset-border-width:     0 !default;
+$reset-border-radius:    0 !default;
+$reset-padding:          0 !default;
 
 // Inputs
 $input-border:            $gray-200;

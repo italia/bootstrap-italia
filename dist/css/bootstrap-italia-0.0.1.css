@@ -4212,7 +4212,7 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0.5rem;
+  margin: 1.4rem auto;
   pointer-events: none; }
   .modal.fade .modal-dialog {
     transition: -webkit-transform 0.3s ease-out;
@@ -4231,7 +4231,7 @@ button.close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: calc(100% - (0.5rem * 2)); }
+  min-height: calc(100% - (1.4rem auto * 2)); }
 
 .modal-content {
   position: relative;
@@ -4261,7 +4261,7 @@ button.close {
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 0.8; }
 
 .modal-header {
   display: -webkit-box;
@@ -6941,6 +6941,35 @@ h4, .h4 {
 
 .table thead th {
   border-color: currentColor; }
+
+.modal-dialog {
+  margin: 1.4rem auto;
+  max-height: 90%; }
+
+.modal-content {
+  border-radius: 0;
+  padding: 1.4rem; }
+
+.modal-header {
+  border-radius: 0;
+  padding: 0;
+  border-width: 0; }
+  .modal-header h5 {
+    margin-bottom: 1.6rem; }
+
+.modal-body {
+  padding: 0;
+  margin-bottom: 1.6rem; }
+
+.modal-footer {
+  padding: 0;
+  border-width: 0; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    margin: 1.4rem auto; }
+  .modal-dialog-centered {
+    min-height: calc(100% - (1.4rem auto * 2)); } }
 
 .row.variable-gutters {
   margin-right: -6px;

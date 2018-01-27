@@ -1,0 +1,38 @@
+.modal-dialog {
+  margin: $modal-dialog-margin;
+  max-height: 90%;
+}
+
+.modal-content {
+  border-radius: $reset-border-radius;
+  padding: $modal-content-padding;
+}
+
+.modal-header {
+  border-radius: $reset-border-radius;
+  padding: $reset-padding;
+  border-width: $reset-border-width;
+  h5 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.modal-body {
+  padding: $reset-padding;
+  margin-bottom: 1.6rem;
+}
+
+.modal-footer {
+  padding: $reset-padding;
+  border-width: $reset-border-width;
+}
+
+@include media-breakpoint-up(sm) {
+  .modal-dialog {
+    margin: $modal-dialog-margin;
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - (#{$modal-dialog-margin} * 2));
+  }
+}
