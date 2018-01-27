@@ -22,8 +22,6 @@ $('#myModal').on('shown.bs.modal', function () {
 })
 {% endhighlight %}
 
-Continua a leggere per demo e linee guida.
-
 ## Esempi
 
 ### Componenti della modale
@@ -75,6 +73,18 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
   </div>
 </div>
 {% endhighlight %}
+
+#### Bottone di chiusura
+
+Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
+
+**Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
+
+{% example html %}
+<button type="button" class="close" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+{% endexample %}
 
 ### Demo
 

@@ -194,6 +194,15 @@ gulp.task('build', ['introduction', 'build-code', 'build-docs']);
 
 // Main watch task
 gulp.task('watch', function () {
-  gulp.watch([Paths.SCSS_WATCH, Paths.SCSS_DOCUMENTATION_WATCH], ['scss-min']);
-  gulp.watch([Paths.JS_WATCH, Paths.JS_DOCUMENTATION_WATCH], ['js-min', 'js-bundle-min']);
+
+  gulp.watch([
+    Paths.SCSS_WATCH,
+    Paths.JS_WATCH
+  ], ['build-code']);
+
+  gulp.watch([
+    Paths.SCSS_DOCUMENTATION_WATCH,
+    Paths.JS_DOCUMENTATION_WATCH
+  ], ['build-docs']);
+
 })
