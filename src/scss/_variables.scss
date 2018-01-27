@@ -25,6 +25,10 @@ $zindex-zoom:  1080;
 $zindex-growl: 1090;
 $zoom-overlay-bg: #fff;
 
+// Border Radius - using ixels instead or rems as it has to be consistent across devices
+$border-radius:               4px !default;
+$border-radius-sm:            2px !default;
+$border-radius-lg:            8px !default;
 // Color system
 
 // stylelint-disable

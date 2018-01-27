@@ -1,15 +1,16 @@
 ---
 layout: docs
-title: Vertical alignment
-description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+title: Allineamento verticale
+description: Cambia l'allineamento verticale di elementi inline, inline-block, inline-table e celle di tabella.
 group: utilities
 ---
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+Cambia l'allineamento verticale, con le utilità di [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+di elementi inline, inline-block, inline-table e celle di tabella.
 
-Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
+Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, e `.align-text-top`.
 
-With inline elements:
+Con elementi inline:
 
 {% example html %}
 <span class="align-baseline">baseline</span>
@@ -20,7 +21,7 @@ With inline elements:
 <span class="align-text-bottom">text-bottom</span>
 {% endexample %}
 
-With table cells:
+Con le celle di tabella:
 
 {% example html %}
 <table style="height: 100px;">
