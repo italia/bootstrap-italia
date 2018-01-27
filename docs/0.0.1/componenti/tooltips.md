@@ -6,21 +6,33 @@ group: componenti
 toc: true
 ---
 
-## Panoramica
+{% callout accessibility %}
+##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
+
+È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
+bottoni, o elementi di form).
+
+Sebbene arbitrariamente gli elementi HTML (come `<span>`) possano essere resi attivabili tramite l'attributo `tabindex="0"`,
+ciò aggiungerà interruzioni di tabulazioni potenzialmente dannose per gli utenti che usano la tastiera per navigare.
+Inoltre, la maggior parte delle tecnologie assistive in questa situazione non annuncia il tooltip come ci si potrebbe
+invece attendere.
+
+Infine, non fare affidamento esclusivamente sull'`hover` come innesco del tooltip, in quanto ciò renderà impossibile
+l'attivazione per gli utenti che usano la tastiera per navigare.
+{% endcallout %}
 
 Cose da sapere quando usi il plugin tooltip:
 
-- I tooltip si basano per il posizionamento sulla libreria di terze parti [Popper.js](https://popper.js.org/) per il posizionamento. Per fare in modo che i tooltip funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` che contiene Popper.js.
-- Se stai compilando il Javascript di Bootstrap dalla fonte, è [richiesto `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
-- I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso**.
+- I tooltip si basano sulla libreria di terze parti [Popper.js](https://popper.js.org/).
+Per fare in modo che i tooltip funzionino è quindi necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di
+bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
+- I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I tooltip con titoli vuoti non saranno mai visualizzati.
 - Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
 - Attivare i tooltip su elementi nascosti non funzionerà.
 - I tooltip per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
 - Quando attivati da collegamenti ipertestuali che si estendono su più righe, i tooltip verranno centrati. Usa `white-space: nowrap;`sui tuoi `<a>` per evitare questo comportamento.
 - I tooltip devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
-
-Hai tutto questo? Ottimo, vediamo come funzionano con qualche esempio.
 
 ## Esempio: Abilita i tooltip ovunque
 
@@ -37,7 +49,22 @@ $(function () {
 Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+  <p class="muted">
+    Ecco un <a href="#" data-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
+    per tratteggiarvi l’accompagnamento<br/>
+    degli oggetti di sfondo che pur vivono.<br/>
+    Non ne sarò <a href="#" data-toggle="tooltip" title="Secondo tooltip">l’artefice</a> impaziente.<br/>
+    Berrò alle coppe della nostalgia,<br/>
+    avrò preteso d’ozio nelle lacrime...<br/>
+    perché non mi ribello alla natura:<br/>
+    la mia lentezza li esaspera...<br/>
+    La mia lentezza? No, la mia fiducia.<br/>
+    Per adesso è deserto.<br/>
+    <a href="#" data-toggle="tooltip" title="Terzo tooltip">Il mondo può rifarsi senza me</a>,<br/>
+    E intanto gli altri mi denigreranno
+  </p>
+  <p>
+    <em>La città nuova, Alda Merini</em>
   </p>
 </div>
 
@@ -88,58 +115,44 @@ $('#example').tooltip(options)
 
 ### Markup
 
-Il markup richiesto per un tooltip è solo un attributo `data` e `title` sull'elemento HTML sul quale vuoi il tooltip. Il markup generato di un tooltip è piuttosto semplice, sebbene richieda una posizione (impostato in modo predefinito su `top` dal plugin).
+Di seguito è mostrato un esempio che esplicita il funzionamento interno di Bootstrap per la gestione di Tooltip.
 
-{% callout warning %}
-##### I tooltip funzionano sia con la tastiera che per gli utenti di tecnologia assistiva
-
-Dovresti solamente aggiungere i tooltip agli elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (come  i link o gli elementi dei form). Sebbene arbitrariamente gli elementi HTML (come gli `<span>`) possono essere resi attivabili tramite l'attributo `tabindex="0"`, ciò aggiungerà interruzioni di tabulazioni potenzialmente fastidiose e confuse sugli elementi non interattivi per gli utenti di tastiera. Inoltre, la maggior parte delle tecnologie assistive attualmente non annuncia il tooltip in questa situazione.
-
-Inoltre, non fare affidamento esclusivamente sull' `hover` come innesco del tuo tooltip, in quanto ciò renderà impossibile l'attivazione dei tuoi tooltip per gli utenti di tastiera.
-{% endcallout %}
+Il markup richiesto per un tooltip è costituito da un attributo `data-` e `title` sull'elemento HTML sul quale si vuole
+abilitare un tooltip. Ad esempio, quando nella pagina è scritto questo codice HTML:
 
 {% highlight html %}
-<!-- HTML to write -->
-<a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip!">Passa il mouse sopra di me</a>
+<a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip">Link che attiva il tooltip</a>
+{% endhighlight %}
 
-<!-- Generated markup by the plugin -->
-<div class="tooltip bs-tooltip-top" role="tooltip">
+Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hover`), Bootstrap genera il markup seguente:
+
+{% highlight html %}
+<a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip!" aria-describedby="tooltip0123456">Link che attiva il tooltip</a>
+
+<div class="tooltip bs-tooltip-top" role="tooltip" id="tooltip0123456">
   <div class="arrow"></div>
-  <div class="tooltip-inner">
-    Testo di esempio del tooltip!
-  </div>
+  <div class="tooltip-inner">Testo di esempio del tooltip</div>
 </div>
 {% endhighlight %}
 
-### Elementi disabilitati
-
-Gli elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivare un tooltip (o un popover) attivando il focus, con il passaggio delmouse o cliccando su di essi. Come soluzione, ti consigliamo di attivare il tooltip da un contenitore `<div>` o `<span>`, magari rendendolo attivabile da tastiera usando `tabindex="0"`, e sovrascrivendo il `pointer-events` sull'elemento disabilitato.
-
-<div class="tooltip-demo">
-{% example html %}
-<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tooltip disabilitato">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Bottone disabilitato</button>
-</span>
-{% endexample %}
-</div>
-
 ### Opzioni
 
-Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
+Le opzioni possono essere passate tramite attibuti data o tramite JavaScript.
+Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 100px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
       <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>animation</td>
-      <td>boolean</td>
+      <td><code>'true'</code> o <code>'false'</code></td>
       <td>true</td>
       <td>Applica una transizione di dissolvenza CSS al tooltip</td>
     </tr>
@@ -237,12 +250,6 @@ Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Pe
   </tbody>
 </table>
 
-{% callout info %}
-#### Attributi data per singoli tooltip
-
-Le opzioni per singoli tooltip possono essere in alternativa specificati attraverso l'uso di attributi data, come spiegato sopra.
-{% endcallout %}
-
 ### Metodi
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
@@ -335,6 +342,6 @@ Aggiorna la posizione del tooltip di un elemento.
 
 {% highlight js %}
 $('#myTooltip').on('hidden.bs.tooltip', function () {
-  // do something…
+  // fai qualcosa
 })
 {% endhighlight %}

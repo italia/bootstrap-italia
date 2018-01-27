@@ -1,27 +1,31 @@
 ---
 layout: docs
 title: Popover
-description: Documentazione ed esempi per aggiungere popover Bootstrap, come quelli trovati in iOS, a qualsiasi elemento del tuo sito.
+description: Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.
 group: componenti
 toc: true
 ---
 
-## Panoramica
+{% callout accessibility %}
+##### Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
+
+Allo stesso modo di quanto avviene per i [tooltip]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/tooltips/),
+il codice generato per i popover è accessibile.
+{% endcallout %}
 
 Cose da sapere quando si utilizza il plugin popover:
 
-- I popover si basano per il posizionamento sulla libreria di terze parti [Popper.js](https://popper.js.org/). Per fare in modo che i popover funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di bootstrap.js o usare `bootstrap.bundle.min.js` / `bootstrap.bundle.js` wche contiene Popper.js.
+- I popover si basano sulla libreria di terze parti [Popper.js](https://popper.js.org/).
+Per fare in modo che i popover funzionino è necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di
+bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 - I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/{{ site.docs_version }}/componenti/tooltips/) come dipendenza.
-- Se stai compilando il Javascript di Bootstrap dalla fonte, è [richiesto `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/javascript/#util).
-- I popover sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso**.
+- I popover sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I `title` e i `content` con valori vuoti non mostreranno mai popover.
 - Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
 - Attivare i popover su elementi nascosti non funzionerà.
 - I popover per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
 - Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa `white-space: nowrap;` sugli elementi `<a>` per evitare questo comportamento.
 - I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
-
-Continua a leggere per vedere come i popover funzionano con alcuni esempi.
 
 ## Esempio: Abilita i popover ovunque
 
@@ -136,9 +140,9 @@ Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Pe
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 100px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
       <th>Descrizione</th>
     </tr>
   </thead>
@@ -245,12 +249,6 @@ Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Pe
     </tr>
   </tbody>
 </table>
-
-{% callout info %}
-#### Attributi data per singoli popovers
-
-Le opzioni per singoli popover possono essere in alternativa specificati attraverso l'uso di attributi data, come spiegato sopra.
-{% endcallout %}
 
 ### Metodi
 
