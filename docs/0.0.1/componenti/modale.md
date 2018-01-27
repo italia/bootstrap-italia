@@ -1,21 +1,20 @@
 ---
 layout: docs
 title: Finestre modali
-description: Usa il plugin Javascript di Bootstrap per le finestre modali per aggiungere finestre di dialogo al tuo sito per i lightbox, notifiche degli utenti, o contenuti completamente personalizzato.
+description: Usa il plugin Javascript di Bootstrap per aprire finestre modali per mostrare contenuti in evidenza, notifiche agli utenti, o contenuti personalizzati.
 group: componenti
 toc: true
 ---
 
 ## Come funziona
 
-Prima di iniziare con il componente modale di Bootstrap, assicurati di leggere quanto segue poiché le nostre opzioni di menu sono cambiate di recente.
+Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
-- Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di e rimuove lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
-- Cliccando sul "backdrop" della modale questa verrà chiusa automativamente.
-- Bootstrap supporta solo una finestra modale alla volta. Le modali annidate non sono supportate in quanto riteniamo che siano negative per la user experience.
-- Le modali usano `position: fixed`, che a volte può essere un pò particolare sul rendering. Quando possibile, posiziona il tuo codice HTML della modale in una posizione di primo livello per evitare potenziali interferenze da altri elementi. Probabilmente incontrerai problemi durante l'annidamento di un `.modal` all'interno di un altro elemento fisso.
-- Ancora una volta, a causa di `position: fixed`, ci sono alcune avvertenze sull'uso delle modali sui dispositivi mobili. [Consulta la documentazione di supporto del browser]({{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/browsers-devices/#modals-and-dropdowns-on-mobile) per maggiori dettagli.
-- A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
+- Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
+e rimuove lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
+- Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automativamente.
+- A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)
+non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
 
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
@@ -29,7 +28,9 @@ Continua a leggere per demo e linee guida.
 
 ### Componenti della modale
 
-In basso un esempio di ina modale  _statica_  (il che significa che `position` e `display` sono stati sovrascritti). Sono inclusi l'intestazione, il corpo (obbligatorio per il `padding`), e il footer della modale (opzionale). Viene richiesto di includere intestazioni con azioni di chiusura quando possibile, o fornire un'altra azione esplicita di chiusura.
+In basso un esempio di una modale _statica_, dove `position` e `display` sono stati sovrascritti.
+Sono inclusi l'intestazione, il corpo (obbligatorio per il `padding`), e il footer della modale (opzionale). È
+richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.
 
 <div class="bd-example bd-example-modal">
   <div class="modal" tabindex="-1" role="dialog">
@@ -75,9 +76,10 @@ In basso un esempio di ina modale  _statica_  (il che significa che `position` e
 </div>
 {% endhighlight %}
 
-### Live demo
+### Demo
 
-Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto. Scivolerà verso il basso e si dissolverà dalla parte superiore della pagina.
+Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto. Essa scivolerà verso il basso e si
+dissolverà dalla parte superiore della pagina.
 
 <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -135,7 +137,8 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto. Sc
 
 ### Scroll di contenuti lunghi
 
-Quando le modali diventano troppo lunghe per il viewport o il dispositivo dell'utente, scorrono indipendentemente dalla pagina stessa. Prova la demo qui sotto per vedere cosa intendiamo.
+Quando le modali diventano troppo lunghe per il viewport o il dispositivo dell'utente, scorrono indipendentemente dalla
+pagina stessa.
 
 <div id="exampleModalLong" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -208,7 +211,7 @@ Quando le modali diventano troppo lunghe per il viewport o il dispositivo dell'u
 </div>
 {% endhighlight %}
 
-### Vertically centered
+### Centratura verticale
 
 Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente la modale.
 
@@ -396,14 +399,17 @@ Utilizza la griglia di Bootstrap all'interno di una modale  annidando `.containe
 
 ### Contenuto della modale variabile
 
-Hai un gruppo di pulsanti che attivano tutti la stessa modale con contenuti leggermente diversi? Usa `event.relatedTarget` e gli [attributi HTML `data-*`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (possibilmente [tramite jQuery](https://api.jquery.com/data/)) per variare il contenuto della modale in base al pulsante su cui è stato fatto click.
+Hai un gruppo di pulsanti che attivano tutti la stessa modale con contenuti leggermente diversi? Usa `event.relatedTarget`
+e gli [attributi HTML `data-*`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (possibilmente
+[tramite jQuery](https://api.jquery.com/data/)) per variare il contenuto della modale in base al pulsante cliccato.
 
-In basso una live demo seguita da un esempio in HTML e JavaScript. Per maggiori informazioni, [leggi la documentazione sugli eventi delleamodale](#events) per dettagli su `relatedTarget`.
+In basso una demo seguita da un esempio in HTML e JavaScript. Per maggiori informazioni, [leggi la documentazione sugli
+eventi della modale](#eventi) per dettagli su `relatedTarget`.
 
 {% example html %}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Apri la modale per @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Apri la modale per @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Apri la modale per @getbootstrap</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Mario">Apri la modale per Mario</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Paolo">Apri la modale per Paolo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Luca">Apri la modale per Luca</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -537,11 +543,14 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 
 ## Uso
 
-Il modal plugin attiva/disattiva il tuo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript. Aggiunge anche `.modal-open` al `<body>` per sovrascrivere comportamento di scroll predefinito e genera un `.modal-backdrop` per fornire un'area clic per chiudere le modali mostrate quando si fa click all'esterno di esse.
+Il plugin per le modali attiva/disattiva il tuo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.
+Aggiunge anche `.modal-open` al `<body>` per sovrascrivere comportamento di scroll predefinito e genera un `.modal-backdrop`
+per fornire un'area cliccabile per chiudere le modali mostrate quando si clicca all'esterno di esse.
 
-### Tramite attributi data
+### Tramite data attributes
 
-Attiva una modale senza scrivere codice JavaScript. Imposta `data-toggle="modal"` su un elemento di controllo, come un pulsante, insieme a `data-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica modale.
+Attiva una modale senza scrivere codice JavaScript. Imposta `data-toggle="modal"` su un elemento di controllo, come un
+pulsante, insieme a `data-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica modale.
 
 {% highlight html %}
 <button type="button" data-toggle="modal" data-target="#myModal">Lancia la modale</button>
@@ -555,39 +564,40 @@ Richiama una modale con id `myModal` con una singola riga di JavaScript:
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi l'opzione name a `data-`, così com in `data-backdrop=""`.
+Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per quanto riguarda i data attributes,
+aggiungi l'opzione a `data-` (come ad esempio in `data-backdrop=""`):
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
       <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>backdrop</td>
-      <td>boolean or the string <code>'static'</code></td>
+      <td><code>'true'</code>, <code>'false'</code> o la stringa <code>'static'</code></td>
       <td>true</td>
       <td>Include un elemento modal-backdrop. In alternativa, specifica <code>static</code> per un backdrop che non chiude la modale al click.</td>
     </tr>
     <tr>
       <td>keyboard</td>
-      <td>boolean</td>
+      <td><code>'true'</code> o <code>'false'</code></td>
       <td>true</td>
       <td>Chiude la modale quando viene premuto il tasto escape</td>
     </tr>
     <tr>
       <td>focus</td>
-      <td>boolean</td>
+      <td><code>'true'</code> o <code>'false'</code></td>
       <td>true</td>
       <td>Mette il focus sulla modale quando viene inizializzata.</td>
     </tr>
     <tr>
       <td>show</td>
-      <td>boolean</td>
+      <td><code>'true'</code> o <code>'false'</code></td>
       <td>true</td>
       <td>Mostra la modale quando viene inizializzata.</td>
     </tr>
@@ -601,7 +611,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
 
 #### `.modal(options)`
 
-Attiva i tuoi contenuti come modali. Accetta l'opzione facoltativa `object`.
+Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 {% highlight js %}
 $('#myModal').modal({
@@ -611,25 +621,29 @@ $('#myModal').modal({
 
 #### `.modal('toggle')`
 
-Attiva/disattiva manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta** (i.e. prima che si verifichi l'evento `shown.bs.modal` o l'evento `hidden.bs.modal`).
+Attiva/disattiva manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta**
+(cioè prima che si verifichi l'evento `shown.bs.modal` o l'evento `hidden.bs.modal`).
 
 {% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
 
 #### `.modal('show')`
 
-Apre manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata** (i.e. prima che si verifichi l'evento `shown.bs.modal`).
+Apre manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata**
+(cioè prima che si verifichi l'evento `shown.bs.modal`).
 
 {% highlight js %}$('#myModal').modal('show'){% endhighlight %}
 
 #### `.modal('hide')`
 
-Nasconde manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente nascosta** (i.e. prima che si verifichi l'evento `hidden.bs.modal`).
+Nasconde manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente nascosta**
+(cioè prima che si verifichi l'evento `hidden.bs.modal`).
 
 {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
 #### `.modal('handleUpdate')`
 
-Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta (i.e. nel caso appaia una barra di scorrimento).
+Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta
+(nel caso appaia una barra di scorrimento).
 
 {% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
 
@@ -639,7 +653,8 @@ Distrugge la modale di un elemento.
 
 ### Eventi
 
-La classe della modale di Bootstrap espone alcuni eventi per l'aggancio alla funzionalità modale. Tutti gli eventi modali vengono attivati dalla modale stessa (i.e. `<div class="modal">`).
+La classe della modale di Bootstrap espone alcuni eventi per l'aggancio alla funzionalità modale.
+Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal">`).
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -670,6 +685,6 @@ La classe della modale di Bootstrap espone alcuni eventi per l'aggancio alla fun
 
 {% highlight js %}
 $('#myModal').on('hidden.bs.modal', function (e) {
-  // do something...
+  // fai qualcosa...
 })
 {% endhighlight %}
