@@ -89,7 +89,7 @@
     > ul,
     > ol,
     > p {
-      max-width: 80%;
+      //max-width: 80%;
     }
   }
 }
@@ -109,11 +109,11 @@
   font-weight: 300;
 
   @include media-breakpoint-up(sm) {
-    max-width: 80%;
+    //max-width: 80%;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
 }
 
-.bd-text-purple { color: $bd-purple; }
-.bd-text-purple-bright { color: $bd-purple-bright; }
+.bd-text-purple { color: $docs-blue; }
+.bd-text-purple-bright { color: $docs-blue-bright; }

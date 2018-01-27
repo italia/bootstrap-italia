@@ -48,8 +48,8 @@
       status: to do
     - title: List group
       status: to do
-    - title: Modal
-      status: to do
+    - title: Modale
+      status: work in progress
     - title: Navs
       status: to do
     - title: Navbar
@@ -80,8 +80,6 @@
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
-    - title: Close icon
-      status: to do
     - title: Colors
       status: to do
     - title: Dimensionamento
@@ -90,8 +88,8 @@
     - title: Flex
       status: to do
     - title: Float
-    - title: Grid
-      status: to do
+    - title: Griglie
+      status: work in progress
     - title: Immagini sostitutive
     - title: Media object
       status: to do

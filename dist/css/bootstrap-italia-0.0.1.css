@@ -496,8 +496,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -515,8 +515,8 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -526,8 +526,8 @@ pre {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -8px;
-  margin-left: -8px; }
+  margin-right: -6px;
+  margin-left: -6px; }
 
 .no-gutters {
   margin-right: 0;
@@ -546,8 +546,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px; }
+  padding-right: 6px;
+  padding-left: 6px; }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -3568,15 +3568,15 @@ tbody.collapse.show {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 8px; }
+    margin-bottom: 6px; }
   @media (min-width: 576px) {
     .card-deck {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      margin-right: -8px;
-      margin-left: -8px; }
+      margin-right: -6px;
+      margin-left: -6px; }
       .card-deck .card {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3588,9 +3588,9 @@ tbody.collapse.show {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-right: 8px;
+        margin-right: 6px;
         margin-bottom: 0;
-        margin-left: 8px; } }
+        margin-left: 6px; } }
 
 .card-group {
   display: -webkit-box;
@@ -3601,7 +3601,7 @@ tbody.collapse.show {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-group > .card {
-    margin-bottom: 8px; }
+    margin-bottom: 6px; }
   @media (min-width: 576px) {
     .card-group {
       -webkit-box-orient: horizontal;
@@ -4212,7 +4212,7 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0.5rem;
+  margin: 1.4rem auto;
   pointer-events: none; }
   .modal.fade .modal-dialog {
     transition: -webkit-transform 0.3s ease-out;
@@ -4231,7 +4231,7 @@ button.close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: calc(100% - (0.5rem * 2)); }
+  min-height: calc(100% - (1.4rem auto * 2)); }
 
 .modal-content {
   position: relative;
@@ -4261,7 +4261,7 @@ button.close {
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 0.8; }
 
 .modal-header {
   display: -webkit-box;
@@ -6890,9 +6890,11 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
-body {
-  font-weight: 300;
-  letter-spacing: 0; }
+html {
+  font-size: 16px; }
+  @media (min-width: 576px) {
+    html {
+      font-size: 18px; } }
 
 h2, .h2 {
   line-height: 1.25; }
@@ -6941,6 +6943,75 @@ h4, .h4 {
 
 .table thead th {
   border-color: currentColor; }
+
+.modal-dialog {
+  margin: 1.4rem auto;
+  max-height: 90%; }
+
+.modal-content {
+  border-radius: 0;
+  padding: 1.4rem; }
+
+.modal-header {
+  border-radius: 0;
+  padding: 0;
+  border-width: 0; }
+  .modal-header h5 {
+    margin-bottom: 1.6rem; }
+
+.modal-body {
+  padding: 0;
+  margin-bottom: 1.6rem; }
+
+.modal-footer {
+  padding: 0;
+  border-width: 0; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    margin: 1.4rem auto; }
+  .modal-dialog-centered {
+    min-height: calc(100% - (1.4rem auto * 2)); } }
+
+.row.variable-gutters {
+  margin-right: -6px;
+  margin-left: -6px; }
+  .row.variable-gutters > .col,
+  .row.variable-gutters > [class*="col-"] {
+    padding-right: 6px;
+    padding-left: 6px; }
+  @media (min-width: 576px) {
+    .row.variable-gutters {
+      margin-right: -6px;
+      margin-left: -6px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 6px;
+        padding-left: 6px; } }
+  @media (min-width: 768px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 992px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 1200px) {
+    .row.variable-gutters {
+      margin-right: -14px;
+      margin-left: -14px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 14px;
+        padding-left: 14px; } }
 
 img[data-action="zoom"] {
   cursor: pointer;

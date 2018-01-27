@@ -1,0 +1,30 @@
+@mixin make-variable-gutters($gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+  }
+
+  @each $breakpoint, $grid-gutter-width in $gutter-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      margin-right: ($grid-gutter-width / -2);
+      margin-left: ($grid-gutter-width / -2);
+
+      > .col,
+      > [class*="col-"] {
+        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width / 2);
+      }
+    }
+  }
+}
+
+// Bootstrap Italia personalizza la griglia di Bootstrap impostando un gutter variabile se viene usato .variable-gutters
+@if $enable-grid-classes {
+  .row.variable-gutters {
+    @include make-variable-gutters();
+  }
+}

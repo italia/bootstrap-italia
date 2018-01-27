@@ -1,6 +1,8 @@
-body {
-  font-weight: $font-weight-base;
-  letter-spacing: $letter-spacing-base;
+html {
+  font-size: 16px;
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+  }
 }
 
 //
