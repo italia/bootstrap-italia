@@ -7,7 +7,7 @@ module Jekyll
       def initialize(tag_name, type, tokens)
         super
         type.strip!
-        if %w(info danger warning).include?(type)
+        if %w(info danger warning accessibility).include?(type)
           @type = type
         else
           puts "#{type} callout not supported. Defaulting to info"
