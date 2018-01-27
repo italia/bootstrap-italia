@@ -23,7 +23,7 @@ Classi per il posizionamento, tra loro non sono presenti le varianti per gestire
 Posiziona un elemento in alto al viewport. Attraverso l'utilizzo di ogni classe `fixed-*` l'elemento assumerà una posizione
 _fixed_, ancorandosi al viewport (cioè la finestra del browser) ed uscendo quindi dal normale flusso di posizionamento
 del documento.
-Assicurati quindi di comprendere appieno le implicazione della [posizione `fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed)
+Assicurati quindi di comprendere appieno le implicazioni della [posizione `fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed)
 nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi. 
 
 {% highlight html %}

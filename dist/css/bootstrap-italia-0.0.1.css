@@ -496,8 +496,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -515,8 +515,8 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 6px;
+  padding-left: 6px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -526,8 +526,8 @@ pre {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -8px;
-  margin-left: -8px; }
+  margin-right: -6px;
+  margin-left: -6px; }
 
 .no-gutters {
   margin-right: 0;
@@ -546,8 +546,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px; }
+  padding-right: 6px;
+  padding-left: 6px; }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -3568,15 +3568,15 @@ tbody.collapse.show {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 8px; }
+    margin-bottom: 6px; }
   @media (min-width: 576px) {
     .card-deck {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      margin-right: -8px;
-      margin-left: -8px; }
+      margin-right: -6px;
+      margin-left: -6px; }
       .card-deck .card {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3588,9 +3588,9 @@ tbody.collapse.show {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-right: 8px;
+        margin-right: 6px;
         margin-bottom: 0;
-        margin-left: 8px; } }
+        margin-left: 6px; } }
 
 .card-group {
   display: -webkit-box;
@@ -3601,7 +3601,7 @@ tbody.collapse.show {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-group > .card {
-    margin-bottom: 8px; }
+    margin-bottom: 6px; }
   @media (min-width: 576px) {
     .card-group {
       -webkit-box-orient: horizontal;
@@ -6941,6 +6941,46 @@ h4, .h4 {
 
 .table thead th {
   border-color: currentColor; }
+
+.row.variable-gutters {
+  margin-right: -6px;
+  margin-left: -6px; }
+  .row.variable-gutters > .col,
+  .row.variable-gutters > [class*="col-"] {
+    padding-right: 6px;
+    padding-left: 6px; }
+  @media (min-width: 576px) {
+    .row.variable-gutters {
+      margin-right: -6px;
+      margin-left: -6px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 6px;
+        padding-left: 6px; } }
+  @media (min-width: 768px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 992px) {
+    .row.variable-gutters {
+      margin-right: -10px;
+      margin-left: -10px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  @media (min-width: 1200px) {
+    .row.variable-gutters {
+      margin-right: -14px;
+      margin-left: -14px; }
+      .row.variable-gutters > .col,
+      .row.variable-gutters > [class*="col-"] {
+        padding-right: 14px;
+        padding-left: 14px; } }
 
 img[data-action="zoom"] {
   cursor: pointer;

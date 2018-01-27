@@ -30,11 +30,12 @@
 
 // Variations
 @mixin bs-callout-variant($color) {
+  background-color: rgba($color, .05);
   border-left-color: $color;
 
   h4 { color: $color; }
 }
 
-.bd-callout-info { @include bs-callout-variant($bd-info); }
-.bd-callout-warning { @include bs-callout-variant($bd-warning); }
-.bd-callout-danger { @include bs-callout-variant($bd-danger); }
+.bd-callout-info { @include bs-callout-variant($docs-info); }
+.bd-callout-warning { @include bs-callout-variant($docs-warning); }
+.bd-callout-danger { @include bs-callout-variant($docs-danger); }

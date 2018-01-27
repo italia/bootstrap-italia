@@ -1,29 +1,31 @@
 // Buttons
 //
 // Custom buttons for the docs.
+$docs-dark:          #2a2730 !default;
+$docs-download:      #ffe484 !default;
 
 .btn-bd-primary {
   font-weight: 500;
-  color: $bd-purple-bright;
-  border-color: $bd-purple-bright;
+  color: $docs-blue-bright;
+  border-color: $docs-blue-bright;
 
   &:hover,
   &:active {
     color: #fff;
-    background-color: $bd-purple-bright;
-    border-color: $bd-purple-bright;
+    background-color: $docs-blue-bright;
+    border-color: $docs-blue-bright;
   }
 }
 
 .btn-bd-download {
   font-weight: 500;
-  color: $bd-download;
-  border-color: $bd-download;
+  color: $docs-download;
+  border-color: $docs-download;
 
   &:hover,
   &:active {
-    color: $bd-dark;
-    background-color: $bd-download;
-    border-color: $bd-download;
+    color: $docs-dark;
+    background-color: $docs-download;
+    border-color: $docs-download;
   }
 }

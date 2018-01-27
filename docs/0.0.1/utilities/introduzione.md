@@ -106,8 +106,9 @@ We occasionally use media queries that go in the other direction (the given scre
 // No media query since the extra-large breakpoint has no upper bound on its width
 {% endhighlight %}
 
-{% capture callout-include %}{% include callout-info-mediaqueries-breakpoints.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% callout info %}
+Nota che in quanto i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo aggirando i limiti dei [prefissi `min-` and `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.
+{% endcallout %}
 
 Once again, these media queries are also available via Sass mixins:
 
