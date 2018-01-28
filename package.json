@@ -30,6 +30,10 @@
     "> 1%",
     "last 2 versions"
   ],
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-strip": "^0.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
