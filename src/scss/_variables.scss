@@ -1,7 +1,7 @@
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
-$grid-columns:                12 !default;
-$grid-gutter-width:           12px !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 12px !default;
 
 // Responsive gutter widths
 $grid-gutter-widths: (
@@ -12,27 +12,27 @@ $grid-gutter-widths: (
 ) !default;
 
 // Main typography
-$font-size-base:              1rem !default;
-$headings-line-height:        1.2 !default;
+$font-size-base: 1rem !default;
+$headings-line-height: 1.2 !default;
 
 // Btns
-$btn-font-size:      $font-size-base;
+$btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
 
 // z-index
-$zindex-zoom:  1080;
+$zindex-zoom: 1080;
 $zindex-growl: 1090;
 $zoom-overlay-bg: #fff;
 
 // Border Radius - using ixels instead or rems as it has to be consistent across devices
-$border-radius:               4px !default;
-$border-radius-sm:            2px !default;
-$border-radius-lg:            8px !default;
+$border-radius: 4px !default;
+$border-radius-sm: 2px !default;
+$border-radius-lg: 8px !default;
 // Color system
 
 // stylelint-disable
-$white:    #fff !default; //TODO
+$white: #fff !default; //TODO
 $gray-100: #f8f9fa !default; //TODO
 $gray-200: #e9ecef !default; //TODO
 $gray-300: #dee2e6 !default; //TODO
@@ -42,92 +42,92 @@ $gray-600: #868e96 !default; //TODO
 $gray-700: #495057 !default; //TODO
 $gray-800: #343a40 !default; //TODO
 $gray-900: #212529 !default; //TODO
-$black:    #000 !default;
+$black: #000 !default;
 
 $grays: () !default;
 $grays: map-merge((
-        "100": $gray-100,
-        "200": $gray-200,
-        "300": $gray-300,
-        "400": $gray-400,
-        "500": $gray-500,
-        "600": $gray-600,
-        "700": $gray-700,
-        "800": $gray-800,
-        "900": $gray-900
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
 ), $grays);
 
-$indigo:  #6610f2 !default; //TODO
-$purple:  #6f42c1 !default; //TODO
-$pink:    #e83e8c !default; //TODO
-$yellow:  #ffc107 !default; //TODO
-$cyan:    #17a2b8 !default; //TODO
-$italia-blue:   hsb(210, 100, 80) !default;
-$italia-teal:   hsb(178, 95, 85)  !default;
-$italia-red:    hsb(351, 75, 97)  !default;
-$italia-orange: hsb(36, 100, 100)  !default;
-$italia-green:  hsb(159, 100, 81)  !default;
+$indigo: #6610f2 !default; //TODO
+$purple: #6f42c1 !default; //TODO
+$pink: #e83e8c !default; //TODO
+$yellow: #ffc107 !default; //TODO
+$cyan: #17a2b8 !default; //TODO
+$italia-blue: hsb(210, 100, 80) !default;
+$italia-teal: hsb(178, 95, 85) !default;
+$italia-red: hsb(351, 75, 97) !default;
+$italia-orange: hsb(36, 100, 100) !default;
+$italia-green: hsb(159, 100, 81) !default;
 
 $colors: () !default;
 $colors: map-merge((
-        "blue":       $italia-blue,
-        "indigo":     $indigo,
-        "purple":     $purple,
-        "pink":       $pink,
-        "red":        $italia-red,
-        "orange":     $italia-orange,
-        "yellow":     $yellow,
-        "green":      $italia-green,
-        "teal":       $italia-teal,
-        "cyan":       $cyan,
-        "white":      $white,
-        "gray":       $gray-600,
-        "gray-dark":  $gray-800
+  "blue": $italia-blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $italia-red,
+  "orange": $italia-orange,
+  "yellow": $yellow,
+  "green": $italia-green,
+  "teal": $italia-teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800
 ), $colors);
 
 // Brand Scale
 $brand-primary: $italia-blue;
 $brand-success: $italia-green;
 $brand-warning: $italia-orange;
-$brand-danger:  $italia-red;
-$brand-info:    $italia-teal;
+$brand-danger: $italia-red;
+$brand-info: $italia-teal;
 
 // Link and button colors
-$btn-primary-bg:     $brand-primary;
+$btn-primary-bg: $brand-primary;
 $btn-primary-border: $brand-primary;
-$link-color:         $brand-primary;
+$link-color: $brand-primary;
 
-$primary:       $italia-blue !default;
-$secondary:     $italia-teal !default;
-$success:       $italia-green !default;
-$info:          $gray-100 !default;
-$warning:       $italia-orange !default;
-$danger:        $italia-red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$primary: $italia-blue !default;
+$secondary: $italia-teal !default;
+$success: $italia-green !default;
+$info: $gray-100 !default;
+$warning: $italia-orange !default;
+$danger: $italia-red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
-        "primary":    $primary,
-        "secondary":  $secondary,
-        "success":    $success,
-        "info":       $info,
-        "warning":    $warning,
-        "danger":     $danger,
-        "light":      $light,
-        "dark":       $dark
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
 ), $theme-colors);
 
 // Set a specific jump point for requesting color jumps
-$theme-color-interval:      8% !default;
+$theme-color-interval: 8% !default;
 
 // Text Color
 $font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-base:       $font-family-sans-serif;
-$text-color:             $gray-700;
-$letter-spacing-base:    0;
-$line-height-base:       1.5;
-$font-weight-base:       300;
+$font-family-base: $font-family-sans-serif;
+$text-color: $gray-700;
+$letter-spacing-base: 0;
+$line-height-base: 1.5;
+$font-weight-base: 300;
 
 // Headings
 $headings-font-weight: 600;
@@ -160,25 +160,34 @@ $card-border-radius: 0 !default;
 $card-body-spacer: 1rem !default;
 
 // Tables
-$table-cell-padding:          1em !default;
-$table-border-color:          #d6dce3 !default;
-$table-cell-text-align:       left !default;
-$table-accent-bg:             #f6f7f9 !default;
-$table-hover-bg:              #e5f1fa !default;
+$table-cell-padding: 1em !default;
+$table-border-color: #d6dce3 !default; // TODO use a variable
+$table-cell-text-align: left !default;
+$table-accent-bg: #f6f7f9 !default; // TODO use a variable
+$table-hover-bg: #e5f1fa !default; // TODO use a variable
+
+// Tooltips
+$tooltip-max-width: 32em !default;
+$tooltip-bg: #004a4d !default; // TODO use a variable
+$tooltip-opacity: 1 !default;
+$tooltip-padding-y: 1rem !default;
+$tooltip-padding-x: 1rem !default;
+
+$tooltip-arrow-color: $tooltip-bg !default;
 
 //Modals
-$modal-backdrop-opacity:      .8 !default;
-$modal-max-width:             32rem !default;
-$modal-dialog-margin:         1.4rem auto !default;
-$modal-content-padding:       1.4rem !default;
+$modal-backdrop-opacity: .8 !default;
+$modal-max-width: 32rem !default;
+$modal-dialog-margin: 1.4rem auto !default;
+$modal-content-padding: 1.4rem !default;
 
 //Reset
-$reset-border-width:     0 !default;
-$reset-border-radius:    0 !default;
-$reset-padding:          0 !default;
+$reset-border-width: 0 !default;
+$reset-border-radius: 0 !default;
+$reset-padding: 0 !default;
 
 // Inputs
-$input-border:            $gray-200;
+$input-border: $gray-200;
 $input-color-placeholder: $gray-500;
 
 // Grid breakpoints
@@ -194,11 +203,10 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
-
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
-
+//
 $container-max-widths: (
   sm: 540px,
   md: 720px,
