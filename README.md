@@ -11,7 +11,7 @@ Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/doc
 
 Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
 
-**[Vedi la documentazione completa »]**(https://italia.github.io/bootstrap-italia/)
+**[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
 
 _Attenzione: questo codice è ancora in fase di sviluppo e non è pronto per essere utilizzato!_
 
