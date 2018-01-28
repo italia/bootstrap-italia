@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.">
+<meta name="author" content="AgID + Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.6.2">
+<meta name="robots" content="noindex">
+
+<title>Popover · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:title" content="Popover">
+<meta name="twitter:description" content="Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.">
+<meta name="twitter:image" content="http://localhost:9001TODO">
+
+<!-- Facebook -->
+<meta property="og:url" content="http://localhost:9001/docs/componenti/popovers/">
+<meta property="og:title" content="Popover">
+<meta property="og:description" content="Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://localhost:9001TODO">
+<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXX-XX', 'example.com');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-dark bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg  width="36" height="36" viewBox="0 0 43 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home---1280up" transform="translate(-284.000000, -2880.000000)" fill-rule="nonzero" fill="#FFF">
+            <g id="Group-11" transform="translate(209.000000, 2880.000000)">
+                <g id="lego" transform="translate(75.000000, 0.000000)">
+                    <path d="M27.6581377,17.7213003 L27.6581377,3.31034483 L0,3.31034483 L0,19.178089 L14.548665,19.178089 L14.548665,32.1322559 L0,32.1322559 L0,48 L27.6582315,48 L27.6582315,33.5888587 L42.2068966,33.5888587 L42.2068966,17.7213003 L27.6581377,17.7213003 Z M1.47070953,17.7213003 L1.47070953,4.76713345 L26.1876158,4.76713345 L26.1876158,17.7213003 L14.548665,17.7213003 L1.47070953,17.7213003 L1.47070953,17.7213003 Z M26.1876158,46.5430256 L26.187522,46.5430256 L1.47070953,46.5430256 L1.47070953,33.5888587 L14.548665,33.5888587 L26.1876158,33.5888587 L26.1876158,46.5430256 Z M40.736187,32.13207 L40.7360932,32.13207 L27.6581377,32.13207 L16.0192808,32.13207 L16.0192808,19.1779961 L27.6582315,19.1779961 L40.736187,19.1779961 L40.736187,32.13207 Z" id="Shape"></path>
+                    <polygon id="Shape" points="6.62068966 31.4482759 6.62068966 28.9655172 1.65517241 28.9655172 1.65517241 31.4482759 3.08489924 31.4482759 3.08489924 30.6325989 5.19096282 30.6325989 5.19096282 31.4482759"></polygon>
+                    <polygon id="Shape" points="13.2413793 31.4482759 13.2413793 28.9655172 8.27586207 28.9655172 8.27586207 31.4482759 9.7055889 31.4482759 9.7055889 30.6325989 11.8116525 30.6325989 11.8116525 31.4482759"></polygon>
+                    <polygon id="Shape" points="30.3952178 16.5637397 32.5013339 16.5637397 32.5013339 17.3793103 33.9310345 17.3793103 33.9310345 14.8965517 28.9655172 14.8965517 28.9655172 17.3793103 30.3952178 17.3793103"></polygon>
+                    <polygon id="Shape" points="37.0159337 16.5637397 39.1219973 16.5637397 39.1219973 17.3793103 40.5517241 17.3793103 40.5517241 14.8965517 35.5862069 14.8965517 35.5862069 17.3793103 37.0159337 17.3793103"></polygon>
+                    <rect id="Rectangle-path" x="3.31034483" y="43.862069" width="2.48275862" height="1.65517241"></rect>
+                    <rect id="Rectangle-path" x="6.62068966" y="43.862069" width="4.96551724" height="1.65517241"></rect>
+                    <polygon id="Shape" points="17.3793103 24 18.7148976 24 18.7148976 22.3582375 20.6896552 22.3582375 20.6896552 20.6896552 17.3793103 20.6896552"></polygon>
+                    <rect id="Rectangle-path" x="17.3793103" y="24.8275862" width="1.65517241" height="1.65517241"></rect>
+                    <polygon id="Shape" points="9.7055889 1.66718799 11.8116525 1.66718799 11.8116525 2.48275862 13.2413793 2.48275862 13.2413793 0 8.27586207 0 8.27586207 2.48275862 9.7055889 2.48275862"></polygon>
+                    <polygon id="Shape" points="3.08480806 1.66718799 5.19096282 1.66718799 5.19096282 2.48275862 6.62068966 2.48275862 6.62068966 0 1.65517241 0 1.65517241 2.48275862 3.08480806 2.48275862"></polygon>
+                    <polygon id="Shape" points="22.9469682 1.66718799 25.053123 1.66718799 25.053123 2.48275862 26.4827586 2.48275862 26.4827586 0 21.5172414 0 21.5172414 2.48275862 22.9469682 2.48275862"></polygon>
+                    <polygon id="Shape" points="16.3262523 1.66718799 18.4323684 1.66718799 18.4323684 2.48275862 19.862069 2.48275862 19.862069 0 14.8965517 0 14.8965517 2.48275862 16.3262523 2.48275862"></polygon>
+                    <rect id="Rectangle-path" x="3.31034483" y="14.8965517" width="10.7586207" height="1.65517241"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="/bootstrap-italia/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link " href="/bootstrap-italia/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
+      </li>-->
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2 disabled" href="#" aria-label="Version">
+        0.1.0-alpha
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener" aria-label="GitHub"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/teamdigitaleIT" target="_blank" rel="noopener" aria-label="Twitter"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://slack.developers.italia.it/" target="_blank" rel="noopener" aria-label="Slack"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" fill="currentColor"/></svg>
+</a>
+    </li>
+  </ul>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#06C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
+</form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/browsers-e-dispositivi/">
+              Browsers e dispositivi</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure</a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alerts/">
+              Alerts <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
+              Breadcrumb</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/buttons/">
+              Buttons <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/button-group/">
+              Button group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdowns/">
+              Dropdowns <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/forms/">
+              Forms <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/input-group/">
+              Input group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/jumbotron/">
+              Jumbotron <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/list-group/">
+              List group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navs/">
+              Navs <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pagination/">
+              Pagination <span class="badge badge-info">to do</span></a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti/popovers/">
+              Popovers</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/progress/">
+              Progress <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltips/">
+              Tooltips</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/image-grid/">
+              Image Grid <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/zoom/">
+              Zoom <span class="badge badge-info">to do</span></a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colors/">
+              Colors <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/position/">
+              Position</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility</a></li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h5"><a href="#accessibiltà-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio-abilita-i-popover-ovunque">Esempio: Abilita i popover ovunque</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio-usare-lopzione-container">Esempio: Usare l’opzione container</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio">Esempio</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#le-quattro-direzioni">Le quattro direzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#dismiss-al-click-successivo">Dismiss al click successivo</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#markup-specifico-richiesto-per-ignorare-il-click-successivo">Markup specifico richiesto per ignorare il click successivo</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#elementi-disabilitati">Elementi disabilitati</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#uso">Uso</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</a></li>
+<li class="toc-entry toc-h4"><a href="#popoveroptions">$().popover(options)</a></li>
+<li class="toc-entry toc-h4"><a href="#popovershow">.popover('show')</a></li>
+<li class="toc-entry toc-h4"><a href="#popoverhide">.popover('hide')</a></li>
+<li class="toc-entry toc-h4"><a href="#popovertoggle">.popover('toggle')</a></li>
+<li class="toc-entry toc-h4"><a href="#popoverdispose">.popover('dispose')</a></li>
+<li class="toc-entry toc-h4"><a href="#popoverenable">.popover('enable')</a></li>
+<li class="toc-entry toc-h4"><a href="#popoverdisable">.popover('disable')</a></li>
+<li class="toc-entry toc-h4"><a href="#popovertoggleenabled">.popover('toggleEnabled')</a></li>
+<li class="toc-entry toc-h4"><a href="#popoverupdate">.popover('update')</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
+</ul>
+</li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content" role="main">
+          <h1 class="bd-title" id="content">Popover</h1>
+          <p class="bd-lead">Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.</p>
+          <div class="bd-callout bd-callout-accessibility">
+<h5 id="accessibiltà-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</h5>
+
+<p>Allo stesso modo di quanto avviene per i <a href="/bootstrap-italia/docs/componenti/tooltips/">tooltip</a>,
+il codice generato per i popover è accessibile.</p>
+</div>
+
+<p>Cose da sapere quando si utilizza il plugin popover:</p>
+
+<ul>
+  <li>I popover si basano sulla libreria di terze parti <a href="https://popper.js.org/">Popper.js</a>.
+Per fare in modo che i popover funzionino è necessario includere <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js">popper.min.js</a> prima di
+bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper.js.</li>
+  <li>I popovers richiedono il <a href="/bootstrap-italia/docs/componenti/tooltips/">plugin tooltip</a> come dipendenza.</li>
+  <li>I popover sono opt-in per ragioni di performance, quindi <strong>devi inizializzarli tu stesso</strong> con il codice che trovi di seguito.</li>
+  <li>I <code class="highlighter-rouge">title</code> e i <code class="highlighter-rouge">content</code> con valori vuoti non mostreranno mai popover.</li>
+  <li>Specifica <code class="highlighter-rouge">container: 'body'</code> per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).</li>
+  <li>Attivare i popover su elementi nascosti non funzionerà.</li>
+  <li>I popover per gli elementi <code class="highlighter-rouge">.disabled</code> o <code class="highlighter-rouge">disabled</code> devono essere attivati da un elemento contenitore.</li>
+  <li>Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa <code class="highlighter-rouge">white-space: nowrap;</code> sugli elementi <code class="highlighter-rouge">&lt;a&gt;</code> per evitare questo comportamento.</li>
+  <li>I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.</li>
+</ul>
+
+<h2 id="esempio-abilita-i-popover-ovunque">Esempio: Abilita i popover ovunque</h2>
+
+<p>Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo <code class="highlighter-rouge">data-toggle</code>:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="popover"]'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
+<span class="p">})</span></code></pre></figure>
+
+<h2 id="esempio-usare-lopzione-container">Esempio: Usare l’opzione <code class="highlighter-rouge">container</code></h2>
+
+<p>Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un <code class="highlighter-rouge">container</code> personalizzato in modo che l’HTML del popover appaia invece all’interno di quell’elemento.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.example-popover'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+    <span class="na">container</span><span class="p">:</span> <span class="s1">'body'</span>
+  <span class="p">})</span>
+<span class="p">})</span></code></pre></figure>
+
+<h2 id="esempio">Esempio</h2>
+
+<div class="bd-example">
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Clicca par attivare/disattivare il popover</button>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?"</span><span class="nt">&gt;</span>Clicca par attivare/disattivare il popover<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h3 id="le-quattro-direzioni">Le quattro direzioni</h3>
+
+<p>Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.</p>
+
+<div class="bd-example popover-demo">
+  <div class="bd-example-popovers">
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover in alto
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover a destra
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover in basso
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover a sinistra
+    </button>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover in alto
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover a destra
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">data-content=</span><span class="s">"Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover in basso
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover a sinistra
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="dismiss-al-click-successivo">Dismiss al click successivo</h3>
+
+<p>Usa l’evento <code class="highlighter-rouge">focus</code> per ignorare i popover sul clic successivo dell’utente di un elemento diverso rispetto all’elemento di attivazione / disattivazione.</p>
+
+<div class="bd-callout bd-callout-danger">
+<h4 id="markup-specifico-richiesto-per-ignorare-il-click-successivo">Markup specifico richiesto per ignorare il click successivo</h4>
+
+<p>Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag <code class="highlighter-rouge">&lt;a&gt;</code>, <em>non</em> il tag <code class="highlighter-rouge">&lt;button&gt;</code>, ed è necessario anche includere l’attributo <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code class="highlighter-rouge">tabindex</code></a>.</p>
+</div>
+
+<div class="bd-example">
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Dismissible popover</a>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"focus"</span> <span class="na">title=</span><span class="s">"Dismissible popover"</span> <span class="na">data-content=</span><span class="s">"Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?"</span><span class="nt">&gt;</span>Dismissible popover<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.popover-dismiss'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+  <span class="na">trigger</span><span class="p">:</span> <span class="s1">'focus'</span>
+<span class="p">})</span></code></pre></figure>
+
+<h3 id="elementi-disabilitati">Elementi disabilitati</h3>
+
+<p>Elementi con l’attributo <code class="highlighter-rouge">disabled</code> non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento <code class="highlighter-rouge">&lt;div&gt;</code> o <code class="highlighter-rouge">&lt;span&gt;</code> contenitore e sovrascrivere il <code class="highlighter-rouge">pointer-events</code> su un elemento disabilitato.</p>
+
+<p>Per gli eventi dei popover disabilitati, potresti preferire <code class="highlighter-rouge">data-trigger="hover"</code> in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di <em>cliccare</em> su un elemento disabilitato.</p>
+
+<div class="bd-example">
+<span class="d-inline-block" data-toggle="popover" data-content="Popover disabilitato">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled="">Popover disabilitato</button>
+</span>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-content=</span><span class="s">"Popover disabilitato"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Popover disabilitato<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="uso">Uso</h2>
+
+<p>Abilita i popover tramite JavaScript:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="opzioni">Opzioni</h3>
+
+<p>Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-animation=""</code>.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>animation</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Applica una transizione di dissolvenza CSS al popover</td>
+    </tr>
+    <tr>
+      <td>container</td>
+      <td>string | element | false</td>
+      <td>false</td>
+      <td>
+        <p>Aggiunge il popover a un elemento specifico. Esempio: <code>container: 'body'</code>. Questa opzione è particolarmente utile in quanto consente di posizionare il popover nel flusso del documento vicino all'elemento di attivazione - che impedirà al popover di fluttuare dall'elemento di attivazione durante il ridimensionamento della finestra.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>string | element | function</td>
+      <td>''</td>
+      <td>
+        <p>Il valore predefinito del contenuto se l'attributo <code>data-content</code> non è presente.</p>
+        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>number | object</td>
+      <td>0</td>
+      <td>
+        <p>Il ritardo che mostra e nasconde il popover (ms) - non si applica al tipo di trigger manuale</p>
+        <p>Se viene fornito un numero, il ritardo viene applicato sia sul mostra che sul nascondi</p>
+        <p>La struttura dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td>html</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Inserisce l' HTML all'interno del popover. Se false, il metodo jQuery <code>text</code> verrà utilizzato per inserire contenuto nel DOM. Usa il testo se sei preoccupato per gli attacchi XSS.</td>
+    </tr>
+    <tr>
+      <td>placement</td>
+      <td>string | function</td>
+      <td>'right'</td>
+      <td>
+        <p>Come posizionare il popover - auto | top | bottom | left | right.<br />Quando è specificato <code>auto</code>, il popover verrà direzionato in modo dinamico.</p>
+        <p>Quando viene utilizzata una funzione per determinare il posizionamento, viene chiamato con il nodo DOM del popover come primo argomento e il nodo DOM dell'elemento di attivazione come secondo. Il contesto <code>this</code> è impostato sull'istanza del popover.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>selector</td>
+      <td>string | false</td>
+      <td>false</td>
+      <td>Dato un selettore, gli oggetti del popover saranno delegati agli obiettivi specificati. In pratica, questo viene usato per abilitare il contenuto HTML dinamico per aggiungere i popover. Guarda <a href="https://github.com/twbs/bootstrap/issues/4215">questo</a> e <a href="https://jsbin.com/zopod/1/edit">un esempio informativo</a>.</td>
+    </tr>
+    <tr>
+      <td>template</td>
+      <td>string</td>
+      <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+      <td>
+        <p>Codice HTML di base da usare quando viene creato un popover.</p>
+        <p>Il <code>title</code> del popover verrà inserito nel <code>.popover-header</code>.</p>
+        <p>Il <code>content</code> del popover verrà inserito nel <code>.popover-body</code>.</p>
+        <p><code>.arrow</code> sarà la freccia del popover.</p>
+        <p>L'elemento contenitore più esterno dovrebbe avere la classe <code>.popover</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>string | element | function</td>
+      <td>''</td>
+      <td>
+        <p>Il valore predefinito del sel'attributo  <code>title</code> non è presente.</p>
+        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>trigger</td>
+      <td>string</td>
+      <td>'click'</td>
+      <td>Come viene richiamato il popover - click | hover | focus | manual. Puoi passare più eventi; separati da uno spazio. `manual` non può essere combinato con nessun altreo evento.</td>
+    </tr>
+    <tr>
+      <td>offset</td>
+      <td>number | string</td>
+      <td>0</td>
+      <td>Offset del popover relativo al suo target. Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">documentazione sugli offset</a> di Popper.js.</td>
+    </tr>
+    <tr>
+      <td>fallbackPlacement</td>
+      <td>string | array</td>
+      <td>'flip'</td>
+      <td>Permette di specificare quale posizione Popper userà nel fallback. Per maggiori informazioni fare riferimento alla
+      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">documentazione sui comportamenti</a> di Popper.js</td>
+    </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Limite del vincolo di overflow del popover. Accetta i valori di <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, o un riferimento HTMLElement (JavaScript only). Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a> di Popper.js.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="metodi">Metodi</h3>
+
+<div class="bd-callout bd-callout-danger">
+<h4 id="metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</h4>
+
+<p>Tutti i metodi API sono <strong>asincroni</strong> e avviano una <strong>transizione</strong>. Ritornano al chiamante non appena viene avviata la transizione ma <strong>prima che termini</strong>. Inoltre, una chiamata al metodo su un <strong>componente in transizione verrà ignorata</strong>.</p>
+
+<p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
+</div>
+
+<h4 id="popoveroptions"><code class="highlighter-rouge">$().popover(options)</code></h4>
+
+<p>Inizializza i popover per una raccolta di elementi.</p>
+
+<h4 id="popovershow"><code class="highlighter-rouge">.popover('show')</code></h4>
+
+<p>Mostra il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popoverhide"><code class="highlighter-rouge">.popover('hide')</code></h4>
+
+<p>Nasconde il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente nascosto</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popovertoggle"><code class="highlighter-rouge">.popover('toggle')</code></h4>
+
+<p>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code> o l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popoverdispose"><code class="highlighter-rouge">.popover('dispose')</code></h4>
+
+<p>Nascondi e distrugge il popover di un elemento. I popover che utilizzano la delega (che vengono creati utilizzando <a href="#options">the <code class="highlighter-rouge">selector</code> option</a>) on posono essere distrutti individualmente su elementi trigger discendenti.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'dispose'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popoverenable"><code class="highlighter-rouge">.popover('enable')</code></h4>
+
+<p>Fornisce al popover di un elemento la possibilità di essere mostrato. <strong>I popover sono abilitati in modo predefinito.</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'enable'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popoverdisable"><code class="highlighter-rouge">.popover('disable')</code></h4>
+
+<p>Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'disable'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popovertoggleenabled"><code class="highlighter-rouge">.popover('toggleEnabled')</code></h4>
+
+<p>Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggleEnabled'</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="popoverupdate"><code class="highlighter-rouge">.popover('update')</code></h4>
+
+<p>Aggiorna la posizione del popover di un elemento.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'update'</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="eventi">Eventi</h3>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Tipo di evento</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show.bs.popover</td>
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>show</code>.</td>
+    </tr>
+    <tr>
+      <td>shown.bs.popover</td>
+      <td>Questo evento viene attivato quando il popover è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
+    </tr>
+    <tr>
+      <td>hide.bs.popover</td>
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>hide</code>.</td>
+    </tr>
+    <tr>
+      <td>hidden.bs.popover</td>
+      <td>Questo evento viene generato quando il popover ha finito di essere nascosto all'utente (attenderà il completamento delle transizioni CSS)..</td>
+    </tr>
+    <tr>
+      <td>inserted.bs.popover</td>
+      <td>Questo evento si attiva dopo l'evento <code>show.bs.popover</code> quando il modello del popover è stato aggiunto al DOM.</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myPopover'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.popover'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span></code></pre></figure>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/holder.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/docs.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>

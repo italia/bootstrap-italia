@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.">
+<meta name="author" content="AgID + Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.6.2">
+<meta name="robots" content="noindex">
+
+<title>La griglia · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:title" content="La griglia">
+<meta name="twitter:description" content="Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.">
+<meta name="twitter:image" content="http://localhost:9001TODO">
+
+<!-- Facebook -->
+<meta property="og:url" content="http://localhost:9001/docs/utilities/griglie/">
+<meta property="og:title" content="La griglia">
+<meta property="og:description" content="Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://localhost:9001TODO">
+<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXX-XX', 'example.com');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <header class="navbar navbar-dark bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg  width="36" height="36" viewBox="0 0 43 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home---1280up" transform="translate(-284.000000, -2880.000000)" fill-rule="nonzero" fill="#FFF">
+            <g id="Group-11" transform="translate(209.000000, 2880.000000)">
+                <g id="lego" transform="translate(75.000000, 0.000000)">
+                    <path d="M27.6581377,17.7213003 L27.6581377,3.31034483 L0,3.31034483 L0,19.178089 L14.548665,19.178089 L14.548665,32.1322559 L0,32.1322559 L0,48 L27.6582315,48 L27.6582315,33.5888587 L42.2068966,33.5888587 L42.2068966,17.7213003 L27.6581377,17.7213003 Z M1.47070953,17.7213003 L1.47070953,4.76713345 L26.1876158,4.76713345 L26.1876158,17.7213003 L14.548665,17.7213003 L1.47070953,17.7213003 L1.47070953,17.7213003 Z M26.1876158,46.5430256 L26.187522,46.5430256 L1.47070953,46.5430256 L1.47070953,33.5888587 L14.548665,33.5888587 L26.1876158,33.5888587 L26.1876158,46.5430256 Z M40.736187,32.13207 L40.7360932,32.13207 L27.6581377,32.13207 L16.0192808,32.13207 L16.0192808,19.1779961 L27.6582315,19.1779961 L40.736187,19.1779961 L40.736187,32.13207 Z" id="Shape"></path>
+                    <polygon id="Shape" points="6.62068966 31.4482759 6.62068966 28.9655172 1.65517241 28.9655172 1.65517241 31.4482759 3.08489924 31.4482759 3.08489924 30.6325989 5.19096282 30.6325989 5.19096282 31.4482759"></polygon>
+                    <polygon id="Shape" points="13.2413793 31.4482759 13.2413793 28.9655172 8.27586207 28.9655172 8.27586207 31.4482759 9.7055889 31.4482759 9.7055889 30.6325989 11.8116525 30.6325989 11.8116525 31.4482759"></polygon>
+                    <polygon id="Shape" points="30.3952178 16.5637397 32.5013339 16.5637397 32.5013339 17.3793103 33.9310345 17.3793103 33.9310345 14.8965517 28.9655172 14.8965517 28.9655172 17.3793103 30.3952178 17.3793103"></polygon>
+                    <polygon id="Shape" points="37.0159337 16.5637397 39.1219973 16.5637397 39.1219973 17.3793103 40.5517241 17.3793103 40.5517241 14.8965517 35.5862069 14.8965517 35.5862069 17.3793103 37.0159337 17.3793103"></polygon>
+                    <rect id="Rectangle-path" x="3.31034483" y="43.862069" width="2.48275862" height="1.65517241"></rect>
+                    <rect id="Rectangle-path" x="6.62068966" y="43.862069" width="4.96551724" height="1.65517241"></rect>
+                    <polygon id="Shape" points="17.3793103 24 18.7148976 24 18.7148976 22.3582375 20.6896552 22.3582375 20.6896552 20.6896552 17.3793103 20.6896552"></polygon>
+                    <rect id="Rectangle-path" x="17.3793103" y="24.8275862" width="1.65517241" height="1.65517241"></rect>
+                    <polygon id="Shape" points="9.7055889 1.66718799 11.8116525 1.66718799 11.8116525 2.48275862 13.2413793 2.48275862 13.2413793 0 8.27586207 0 8.27586207 2.48275862 9.7055889 2.48275862"></polygon>
+                    <polygon id="Shape" points="3.08480806 1.66718799 5.19096282 1.66718799 5.19096282 2.48275862 6.62068966 2.48275862 6.62068966 0 1.65517241 0 1.65517241 2.48275862 3.08480806 2.48275862"></polygon>
+                    <polygon id="Shape" points="22.9469682 1.66718799 25.053123 1.66718799 25.053123 2.48275862 26.4827586 2.48275862 26.4827586 0 21.5172414 0 21.5172414 2.48275862 22.9469682 2.48275862"></polygon>
+                    <polygon id="Shape" points="16.3262523 1.66718799 18.4323684 1.66718799 18.4323684 2.48275862 19.862069 2.48275862 19.862069 0 14.8965517 0 14.8965517 2.48275862 16.3262523 2.48275862"></polygon>
+                    <rect id="Rectangle-path" x="3.31034483" y="14.8965517" width="10.7586207" height="1.65517241"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="/bootstrap-italia/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link " href="/bootstrap-italia/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
+      </li>-->
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2 disabled" href="#" aria-label="Version">
+        0.1.0-alpha
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener" aria-label="GitHub"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://twitter.com/teamdigitaleIT" target="_blank" rel="noopener" aria-label="Twitter"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false"><title>Twitter</title><path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/></svg>
+</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://slack.developers.italia.it/" target="_blank" rel="noopener" aria-label="Slack"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" fill="currentColor"/></svg>
+</a>
+    </li>
+  </ul>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#06C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
+</form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/browsers-e-dispositivi/">
+              Browsers e dispositivi</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alerts/">
+              Alerts <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
+              Breadcrumb</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/buttons/">
+              Buttons <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/button-group/">
+              Button group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdowns/">
+              Dropdowns <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/forms/">
+              Forms <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/input-group/">
+              Input group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/jumbotron/">
+              Jumbotron <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/list-group/">
+              List group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navs/">
+              Navs <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pagination/">
+              Pagination <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popovers/">
+              Popovers</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/progress/">
+              Progress <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltips/">
+              Tooltips</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/image-grid/">
+              Image Grid <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/zoom/">
+              Zoom <span class="badge badge-info">to do</span></a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colors/">
+              Colors <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float</a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/position/">
+              Position</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility</a></li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#come-funziona">Come funziona</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#griglia-fluida-spaziatura-variabile-a-seconda-delle-dimensioni-del-dispositivo">Griglia fluida: spaziatura variabile a seconda delle dimensioni del dispositivo</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#le-opzioni">Le opzioni</a></li>
+<li class="toc-entry toc-h2"><a href="#colonne-a-disposizione-automatica">Colonne a disposizione automatica</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#uniformare-larghezze-tra-colonne">Uniformare larghezze tra colonne</a></li>
+<li class="toc-entry toc-h3"><a href="#impostare-la-larghezza-di-una-colonna">Impostare la larghezza di una colonna</a></li>
+<li class="toc-entry toc-h3"><a href="#contenuto-a-larghezza-variabile">Contenuto a larghezza variabile</a></li>
+<li class="toc-entry toc-h3"><a href="#equal-width-multi-row">Equal-width multi-row</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#classi-responsive">Classi responsive</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#tutti-i-breakpoint">Tutti i breakpoint</a></li>
+<li class="toc-entry toc-h3"><a href="#raccolti-in-orizzontale">Raccolti in orizzontale</a></li>
+<li class="toc-entry toc-h3"><a href="#mischiare-e-abbinare">Mischiare e abbinare</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#allineamento">Allineamento</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#allineamento-verticale">Allineamento verticale</a></li>
+<li class="toc-entry toc-h3"><a href="#allineamento-orizzontale">Allineamento orizzontale</a></li>
+<li class="toc-entry toc-h3"><a href="#senza-gutter">Senza gutter</a></li>
+<li class="toc-entry toc-h3"><a href="#gutter-variabile">Gutter variabile</a></li>
+<li class="toc-entry toc-h3"><a href="#colonna-a-capo">Colonna a capo</a></li>
+<li class="toc-entry toc-h3"><a href="#interruzioni-di-colonna">Interruzioni di colonna</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#riordinamento">Riordinamento</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#classi-order">Classi order</a></li>
+<li class="toc-entry toc-h3"><a href="#colonne-di-compensazione">Colonne di compensazione</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#classi-offset">Classi offset</a></li>
+<li class="toc-entry toc-h4"><a href="#utilità-del-margin">Utilità del margin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#annidamento">Annidamento</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content" role="main">
+          <h1 class="bd-title" id="content">La griglia</h1>
+          <p class="bd-lead">Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.</p>
+          <h2 id="come-funziona">Come funziona</h2>
+
+<p>Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti.
+È costruito con <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a>
+ed è completamente responsive.</p>
+
+<div class="bd-callout bd-callout-info">
+<h4 id="griglia-fluida-spaziatura-variabile-a-seconda-delle-dimensioni-del-dispositivo">Griglia fluida: spaziatura variabile a seconda delle dimensioni del dispositivo</h4>
+
+<p>Bootstrap Italia può aggiungere una <em>spaziatura</em> orizzontale tra le colonne (in gergo <code class="highlighter-rouge">gutter</code>) variabile a seconda delle
+dimensioni dello schermo. Tale comportamento è mostrato di seguito nella pagina, alla sezione <a href="#gutter-variabile">gutter variabile</a>.</p>
+</div>
+
+<p>Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.</p>
+
+<p><strong>Se sei poco pratico di flexbox</strong>, puoi iniziare da <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">questa pratica guida su flexbox</a>
+(in inglese) per informazioni generali, terminologia, linee guida, e frammenti di codice, oppure giocando con
+<a href="http://flexboxfroggy.com/#it">questo simpatico tutorial</a>.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      Una di tre colonne
+    </div>
+    <div class="col-sm">
+      Una di tre colonne
+    </div>
+    <div class="col-sm">
+      Una di tre colonne
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>L’esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le
+classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l’utilizzo dell’elemento genitore <code class="highlighter-rouge">.container</code>.</p>
+
+<p>Analizzandolo nel dettaglio, ecco come funziona:</p>
+
+<ul>
+  <li>I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza <code class="highlighter-rouge">.container</code>
+per una larghezza al pixel responsive o <code class="highlighter-rouge">.container-fluid</code> per una larghezza del <code class="highlighter-rouge">width: 100%</code> su tutti i viewport e
+dimensioni dei device.</li>
+  <li>Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (<code class="highlighter-rouge">gutter</code>) per regolare lo spazio
+tra di esse. Questo <code class="highlighter-rouge">padding</code> viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto
+nelle colonne viene allineato sul lato sinistro.</li>
+  <li>In un layout a griglia, il contenuto deve essere posizionato all’interno di colonne e solo le colonne possono essere
+figlie dirette delle righe.</li>
+  <li>Grazie a flexbox, le colonne della griglia senza uno specifico <code class="highlighter-rouge">width</code> verranno automaticamente impostate come colonne
+di uguale larghezza. Per esempio, quattro casi di <code class="highlighter-rouge">.col-sm</code> avranno automaticamente una larghezza del 25% dal più piccolo
+breakpoint in su. Guarda la sezione <a href="#colonne-a-disposizione-automatica">colonne a disposizione automatica</a> per maggiori
+informazioni.</li>
+  <li>Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga.
+Quindi, se vuoi tre colonne di uguale larghezza , puoi usare <code class="highlighter-rouge">.col-4</code>.</li>
+  <li>Le <code class="highlighter-rouge">width</code> delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro
+elemento genitore.</li>
+  <li>Le colonne hanno un <code class="highlighter-rouge">padding</code> orizzontale per creare il gutter tra le singole colonne. Per rimuovere il
+<code class="highlighter-rouge">margin</code> dalle righe e il <code class="highlighter-rouge">padding</code> dalle colonne aggiungendo la classe <code class="highlighter-rouge">.no-gutters</code> alla classe <code class="highlighter-rouge">.row</code>.</li>
+  <li>Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni
+<a href="/bootstrap-italia/docs/utilities/introduzione/#responsive-breakpoints">responsive breakpoint</a>:
+tutti i breakpoint (extra small), small, medium, large, and extra large.</li>
+  <li>I breakpoint della griglia si basano su media query con larghezza minima, significa che <strong>si applicano a quel
+breakpoint e a tutti quelli sopra di esso</strong> (e.g., <code class="highlighter-rouge">.col-sm-4</code> si applica a device piccoli, medi, grandi e extra large,
+ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
+  <li>È possibile utilizzare classi di griglia predefinite (come <code class="highlighter-rouge">.col-4</code>) per altri markup semantici.</li>
+</ul>
+
+<p>Sii consapevole dei limiti e dei <a href="https://github.com/philipwalton/flexbugs">bug di flexbox</a>, come l’ <a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">incapacità di utilizzare alcuni elementi HTML come i contenitori di flex</a>.</p>
+
+<h2 id="le-opzioni">Le opzioni</h2>
+
+<p>Mentre Bootstrap utilizza <code class="highlighter-rouge">em</code> or <code class="highlighter-rouge">rem</code> per definire gran parte delle misure, i <code class="highlighter-rouge">px</code> sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perchè la larghezza della viewport è definita in pixel e non cambia con il <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+
+<p>Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="text-center">
+        Extra small<br />
+        <small>&lt;576px</small>
+      </th>
+      <th class="text-center">
+        Small<br />
+        <small>&ge;576px</small>
+      </th>
+      <th class="text-center">
+        Medium<br />
+        <small>&ge;768px</small>
+      </th>
+      <th class="text-center">
+        Large<br />
+        <small>&ge;992px</small>
+      </th>
+      <th class="text-center">
+        Extra large<br />
+        <small>&ge;1200px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-nowrap" scope="row">Larghezza massima del contenitore</th>
+      <td>Nessuno (auto)</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Prefisso della classe</th>
+      <td><code>.col-</code></td>
+      <td><code>.col-sm-</code></td>
+      <td><code>.col-md-</code></td>
+      <td><code>.col-lg-</code></td>
+      <td><code>.col-xl-</code></td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row"># di colonne</th>
+      <td colspan="5">12</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+      <td colspan="5">30px (15px su ogni lato della colonna)</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Annidabile</th>
+      <td colspan="5">Yes</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap" scope="row">Ordinamento delle colonne</th>
+      <td colspan="5">Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="colonne-a-disposizione-automatica">Colonne a disposizione automatica</h2>
+
+<p>Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come <code class="highlighter-rouge">.col-sm-6</code>.</p>
+
+<h3 id="uniformare-larghezze-tra-colonne">Uniformare larghezze tra colonne</h3>
+
+<p>Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da <code class="highlighter-rouge">xs</code> a <code class="highlighter-rouge">xl</code>. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 di 2
+    </div>
+    <div class="col">
+      2 di 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 di 3
+    </div>
+    <div class="col">
+      2 di 3
+    </div>
+    <div class="col">
+      3 di 3
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 di 2
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      2 di 2
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      2 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 di 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>Colonne con uguale larghezza possono essere spezzate su più linee, ma c’è un <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">bug di flexbox su Safari</a> che gli ha impedito di lavorare senza uno specifico <code class="highlighter-rouge">flex-basis</code> o <code class="highlighter-rouge">border</code>. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="w-100"></div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="impostare-la-larghezza-di-una-colonna">Impostare la larghezza di una colonna</h3>
+
+<p>La disposizione automatica per le colonne della griglia di flexbox significa anche che puoi impostare la larghezza di una colonna e avere le colonne sorelle automaticamente ridimensionate in base ad essa. È possibile utilizzare classi di griglia predefinite (come mostrato di seguito), mixins di griglia o larghezze in linea. Notare che le altre colonne si ridimensioneranno indipendentemente dalla larghezza della colonna centrale.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 di 3
+    </div>
+    <div class="col-6">
+      2 di 3 (wider)
+    </div>
+    <div class="col">
+      3 di 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 di 3
+    </div>
+    <div class="col-5">
+      2 di 3 (wider)
+    </div>
+    <div class="col">
+      3 di 3
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      2 di 3 (wider)
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 di 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      2 di 3 (wider)
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 di 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="contenuto-a-larghezza-variabile">Contenuto a larghezza variabile</h3>
+
+<p>Puoi usare la classe <code class="highlighter-rouge">col-{breakpoint}-auto</code> per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      1 di 3
+    </div>
+    <div class="col-md-auto">
+      Contenuto a larghezza variabile
+    </div>
+    <div class="col col-lg-2">
+      3 di 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 di 3
+    </div>
+    <div class="col-md-auto">
+      Contenuto a larghezza variabile
+    </div>
+    <div class="col col-lg-2">
+      3 di 3
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-md-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      1 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-auto"</span><span class="nt">&gt;</span>
+      Contenuto a larghezza variabile
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      3 di 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 di 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-auto"</span><span class="nt">&gt;</span>
+      Contenuto a larghezza variabile
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      3 di 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="equal-width-multi-row">Equal-width multi-row</h3>
+
+<p>Crea colonne di uguale larghezza che si estendono su più righe inserendo un <code class="highlighter-rouge">.w-100</code> dove vuoi che le colonne vengano divise su un’altra riga. Make the breaks responsive by mixing the <code class="highlighter-rouge">.w-100</code> with some <a href="/bootstrap-italia/docs/utilities/display/">responsive display utilities</a>.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col">col</div>
+  <div class="col">col</div>
+  <div class="w-100"></div>
+  <div class="col">col</div>
+  <div class="col">col</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="classi-responsive">Classi responsive</h2>
+
+<p>La griglia di Bootstrap include cinque livelli di classi predefinite per la creazione di layout responsive complessi. Personalizza le dimensioni delle tue colonne su dispositivi piccoli, medi, grandi o extra large a tuo piacimento.</p>
+
+<h3 id="tutti-i-breakpoint">Tutti i breakpoint</h3>
+
+<p>Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grande, usa le classi <code class="highlighter-rouge">.col</code> e <code class="highlighter-rouge">.col-*</code>. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti, sentiti libero di attenerti alla classe <code class="highlighter-rouge">.col</code>.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col">col</div>
+  <div class="col">col</div>
+  <div class="col">col</div>
+  <div class="col">col</div>
+</div>
+<div class="row">
+  <div class="col-8">col-8</div>
+  <div class="col-4">col-4</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8"</span><span class="nt">&gt;</span>col-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="raccolti-in-orizzontale">Raccolti in orizzontale</h3>
+
+<p>Utilizzando un singolo set di classi <code class="highlighter-rouge">.col-sm-*</code>, puoi creare un sistema di base che inizia raccolto su dispositivi extra-small prima di diventare orizzontale su dispositivi desktop (medi).</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-sm-8">col-sm-8</div>
+  <div class="col-sm-4">col-sm-4</div>
+</div>
+<div class="row">
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>col-sm-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>col-sm-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="mischiare-e-abbinare">Mischiare e abbinare</h3>
+
+<p>Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di griglia? Puoi utilizzare una combinazione di classi diverse per ogni riga secondo necessità. Guarda l’esempio di seguito per farti un’idea migliore di come funziona.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza -->
+<div class="row">
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Le colonne partono con una larghezza del 50% sui dispositivi mobile e arrivano al 33.3% sui desktop -->
+<div class="row">
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+
+<!-- Le colonne sono sempre larghe 50%, su dispositivi mobile e desktop -->
+<div class="row">
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-md-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Le colonne partono con una larghezza del 50% sui dispositivi mobile e arrivano al 33.3% sui desktop --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Le colonne sono sempre larghe 50%, su dispositivi mobile e desktop --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="allineamento">Allineamento</h2>
+
+<p>Usa le utilità d’allineamento di flexbox per allineare orizzontalmente e vericalmente le colonne.</p>
+
+<h3 id="allineamento-verticale">Allineamento verticale</h3>
+
+<div class="bd-example-row bd-example-row-flex-cols">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+    <div class="col">
+      Una di tre colonne
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<div class="bd-example-row bd-example-row-flex-cols">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">
+      Una di tre colonne
+    </div>
+    <div class="col align-self-center">
+      Una di tre colonne
+    </div>
+    <div class="col align-self-end">
+      Una di tre colonne
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-start"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-center"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-end"</span><span class="nt">&gt;</span>
+      Una di tre colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="allineamento-orizzontale">Allineamento orizzontale</h3>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-4">
+      Una di due colonne
+    </div>
+    <div class="col-4">
+      Una di due colonne
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      Una di due colonne
+    </div>
+    <div class="col-4">
+      Una di due colonne
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4">
+      Una di due colonne
+    </div>
+    <div class="col-4">
+      Una di due colonne
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-4">
+      Una di due colonne
+    </div>
+    <div class="col-4">
+      Una di due colonne
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-4">
+      Una di due colonne
+    </div>
+    <div class="col-4">
+      Una di due colonne
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-start"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-around"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-between"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Una di due colonne
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="senza-gutter">Senza gutter</h3>
+
+<p>I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con <code class="highlighter-rouge">.no-gutters</code>.
+Questo rimuove i margini negativi <code class="highlighter-rouge">margin</code> dalla classe <code class="highlighter-rouge">.row</code> e il <code class="highlighter-rouge">padding</code> orizzonatale da tutte le colonne figlie dirette.</p>
+
+<p>Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l’override delle colonne vale solo per le
+prime colonne figlie e sono agganciate tramite il <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">selettore di attributi</a>.
+Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le
+<a href="/bootstrap-italia/docs/utilities/spaziature/">utilità di spaziatura</a>.</p>
+
+<p><strong>Hai bisogno di un design edge-to-edge?</strong> Abbandona l’elemento genitore <code class="highlighter-rouge">.container</code> o <code class="highlighter-rouge">.container-fluid</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nc">.no-gutters</span> <span class="err">{</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
+
+  <span class="o">&gt;</span> <span class="nc">.col</span><span class="o">,</span>
+  <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="s2">"col-"</span><span class="o">]</span> <span class="err">{</span>
+    <span class="nl">padding-right</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
+    <span class="nl">padding-left</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span></code></pre></figure>
+
+<p>In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row no-gutters">
+  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row no-gutters"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="gutter-variabile">Gutter variabile</h3>
+
+<p>Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$grid-gutter-widths</span><span class="p">:</span> <span class="p">(</span>
+  <span class="na">sm</span><span class="p">:</span> <span class="m">12px</span><span class="o">,</span>
+  <span class="na">md</span><span class="p">:</span> <span class="m">20px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="p">:</span> <span class="m">20px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="p">:</span> <span class="m">28px</span>
+<span class="o">)</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre></figure>
+
+<p>Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione
+dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla
+classe <code class="highlighter-rouge">.row</code>, la classe <code class="highlighter-rouge">.variable-gutters</code>.</p>
+
+<p>In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="text-center">
+        Extra small<br />
+        <small>&lt;576px</small>
+      </th>
+      <th class="text-center">
+        Small<br />
+        <small>&ge;576px</small>
+      </th>
+      <th class="text-center">
+        Medium<br />
+        <small>&ge;768px</small>
+      </th>
+      <th class="text-center">
+        Large<br />
+        <small>&ge;992px</small>
+      </th>
+      <th class="text-center">
+        Extra large<br />
+        <small>&ge;1200px</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+      <td><code>12px</code></td>
+      <td><code>12px</code></td>
+      <td><code>20px</code></td>
+      <td><code>20px</code></td>
+      <td><code>28px</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row variable-gutters">
+  <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row variable-gutters"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="colonna-a-capo">Colonna a capo</h3>
+
+<p>Se in una singola riga vengono inserite più di 12 colonne, ogni gruppo di colonne extra, come ogni singola, andrà a capo su una nuova linea.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-9">.col-9</div>
+  <div class="col-4">.col-4<br />Dato che 9 + 4 = 13 &gt; 12, questo div largo come 4 colonne viene portato a capo su una nuova linea come un'unità contigua.</div>
+  <div class="col-6">.col-6<br />Le colonne successive continuano lungo la nuova riga.</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-9"</span><span class="nt">&gt;</span>.col-9<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>.col-4<span class="nt">&lt;br&gt;</span>Dato che 9 + 4 = 13 <span class="ni">&amp;gt;</span> 12, questo div largo come 4 colonne viene portato a capo su una nuova linea come un'unità contigua.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;br&gt;</span>Le colonne successive continuano lungo la nuova riga.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="interruzioni-di-colonna">Interruzioni di colonna</h3>
+
+<p>Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con <code class="highlighter-rouge">width: 100%</code> ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo è realizzato con <code class="highlighter-rouge">.row</code> multiple, ma non tutti i metodi di implementazione possono rendere conto di questo.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+  <!-- Forza le prossime colonne per passare a una nuova riga -->
+  <div class="w-100"></div>
+
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Forza le prossime colonne per passare a una nuova riga --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>Puoi anche applicare questa interruzione a specifici breakpoint con le nostre <a href="/bootstrap-italia/docs/utilities/display/">utilità di visualizzazione responsive</a>.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+  <!-- Forza le prossime colonne per passare alla nuova riga al breakpoint md e superiori -->
+  <div class="w-100 d-none d-md-block"></div>
+
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Forza le prossime colonne per passare alla nuova riga al breakpoint md e superiori --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100 d-none d-md-block"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="riordinamento">Riordinamento</h2>
+
+<h3 id="classi-order">Classi order</h3>
+
+<p>Usa le classi <code class="highlighter-rouge">.order-</code> per controllare l’ <strong>ordine di visualizzazione</strong> del tuo contenuto. Queste classi sono responsive, così puoi impostare <code class="highlighter-rouge">order</code> tramite breakpoint (e.g., <code class="highlighter-rouge">.order-1.order-md-2</code>). Include il supporto per <code class="highlighter-rouge">1</code> a <code class="highlighter-rouge">12</code> su tutti e cinque i livelli della griglia.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Primo, ma non ordinato
+    </div>
+    <div class="col order-12">
+      Secondo, ma ultimo
+    </div>
+    <div class="col order-1">
+      Terzo ma primo
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Primo, ma non ordinato
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-12"</span><span class="nt">&gt;</span>
+      Secondo, ma ultimo
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-1"</span><span class="nt">&gt;</span>
+      Terzo ma primo
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>Esiste anche una classe reposnsive <code class="highlighter-rouge">.order-first</code> che cambia velocemente l’ordine di un elemento applicando <code class="highlighter-rouge">order: -1</code>. Questa classe può anche essere mescolata con le classi numerate <code class="highlighter-rouge">.order-*</code> se necessario.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col order-last">
+      Prima, ma non ordinata
+    </div>
+    <div class="col">
+      Seconda, ma non ordinata
+    </div>
+    <div class="col order-first">
+      Terza ma prima
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-last"</span><span class="nt">&gt;</span>
+      Prima, ma non ordinata
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Seconda, ma non ordinata
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-first"</span><span class="nt">&gt;</span>
+      Terza ma prima
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h3 id="colonne-di-compensazione">Colonne di compensazione</h3>
+
+<p>È possibile sfalsare le colonne della griglia in due modi: con le classi responsive della griglia di Bootstrap <code class="highlighter-rouge">.offset-</code> e con le [utilità dei margin] di Bootstrap(/bootstrap-italia/docs/utilities/spacing/). Le classi griglia sono dimensionate in modo che corrispondano alle colonne, mentre i margini sono più utili per i layout rapidi in cui la larghezza dell’offset è variabile.</p>
+
+<h4 id="classi-offset">Classi offset</h4>
+
+<p>Sposta le colonne sulla destra usando le classi <code class="highlighter-rouge">.offset-md-*</code>. Queste class aumentano il margine sinistro della colonna con <code class="highlighter-rouge">*</code>. Ad esempio, <code class="highlighter-rouge">.offset-md-4</code> sposta <code class="highlighter-rouge">.col-md-4</code> di quattro colonne.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+  <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 offset-md-4"</span><span class="nt">&gt;</span>.col-md-4 .offset-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 offset-md-3"</span><span class="nt">&gt;</span>.col-md-3 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 offset-md-3"</span><span class="nt">&gt;</span>.col-md-3 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6 offset-md-3"</span><span class="nt">&gt;</span>.col-md-6 .offset-md-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario reimpostare gli offset. Guardalo in azione negli <a href="/bootstrap-italia/docs/esempi/grid/">esempi della griglia</a>.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+  <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-md-6"</span><span class="nt">&gt;</span>.col-sm-5 .col-md-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 offset-sm-2 col-md-6 offset-md-0"</span><span class="nt">&gt;</span>.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 col-lg-6"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .col-lg-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h4 id="utilità-del-margin">Utilità del margin</h4>
+
+<p>Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come <code class="highlighter-rouge">.mr-auto</code> per forzare lo spazio tra colonne adiacenti.</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+</div>
+<div class="row">
+  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+</div>
+<div class="row">
+  <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+  <div class="col-auto">.col-auto</div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 ml-auto"</span><span class="nt">&gt;</span>.col-md-4 .ml-auto<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ml-md-auto"</span><span class="nt">&gt;</span>.col-md-3 .ml-md-auto<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ml-md-auto"</span><span class="nt">&gt;</span>.col-md-3 .ml-md-auto<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto mr-auto"</span><span class="nt">&gt;</span>.col-auto .mr-auto<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto"</span><span class="nt">&gt;</span>.col-auto<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<h2 id="annidamento">Annidamento</h2>
+
+<p>Per annidare il contenuto con la griglia predefinita, aggiungi una nuova <code class="highlighter-rouge">.row</code> e un set di colonne <code class="highlighter-rouge">.col-sm-*</code> all’interno di una esistente <code class="highlighter-rouge">.col-sm-*</code>. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario che tu usi tutte e 12 le colonne disponibili).</p>
+
+<div class="bd-example-row">
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-sm-9">
+    Level 1: .col-sm-9
+    <div class="row">
+      <div class="col-8 col-sm-6">
+        Level 2: .col-8 .col-sm-6
+      </div>
+      <div class="col-4 col-sm-6">
+        Level 2: .col-4 .col-sm-6
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+    Level 1: .col-sm-9
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8 col-sm-6"</span><span class="nt">&gt;</span>
+        Level 2: .col-8 .col-sm-6
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4 col-sm-6"</span><span class="nt">&gt;</span>
+        Level 2: .col-4 .col-sm-6
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/holder.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/docs.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>
