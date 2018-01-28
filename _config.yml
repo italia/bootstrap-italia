@@ -21,6 +21,9 @@ exclude:
   - src/
   - public/
   - node_modules/
+  - AUTHORS
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
   - Gemfile
   - Gemfile.lock
   - yarn.lock
@@ -28,7 +31,6 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - LICENSE
   - gulpfile.js
 
 plugins:
@@ -45,8 +47,7 @@ social_image_path:  "TODO"
 social_logo_path:   "TODO"
 
 # Custom variables
-current_version:      0.0.1
-docs_version:         0.0.1
+current_version:      0.1.0-alpha
 bootstrap_version:    4
 repo:                 "https://github.com/italia/bootstrap-italia/"
 developers:           "https://developers.italia.it/"

@@ -6,10 +6,10 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item">
-        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
+        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
       </li>
       <!--<li class="nav-item">
-        <a class="nav-link {% if page.title == "Esempi" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
+        <a class="nav-link {% if page.title == "Esempi" %}active{% endif %}" href="{{ site.baseurl }}/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
       </li>-->
     </ul>
   </div>
@@ -17,7 +17,7 @@
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item">
       <a class="nav-link p-2 disabled" href="#" aria-label="Version">
-        v0.0.1
+        {{ site.current_version }}
       </a>
     </li>
 

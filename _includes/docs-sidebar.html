@@ -19,7 +19,7 @@
   {%- endif -%}
 
   <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless %}">
-      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
+      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
         {{ group.title }}
       </a>
 
@@ -33,7 +33,7 @@
           {%- endif -%}
 
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ doc_slug }}/">
+            <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
               {{ doc.title }}
               {%- if doc.status %} <span class="badge badge-info">{{ doc.status }}</span>{%- endif -%}
             </a>

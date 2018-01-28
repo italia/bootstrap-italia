@@ -1,6 +1,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
-[![CSS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/css/bootstrap-italia-0.0.1.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/italia/bootstrap-italia/tree/master/dist/css/bootstrap-italia-0.0.1.min.css)
-[![JS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/js/bootstrap-italia-0.0.1.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/italia/bootstrap-italia/blob/master/dist/js/bootstrap-italia-0.0.1.min.js)
+[![CSS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/css/bootstrap-italia.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/italia/bootstrap-italia/tree/master/dist/css/bootstrap-italia.min.css)
+[![JS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/js/bootstrap-italia.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/italia/bootstrap-italia/blob/master/dist/js/bootstrap-italia.min.js)
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
@@ -30,7 +30,7 @@
 ## Come iniziare
 
 Per utilizzare Bootstrap Italia all'interno del tuo progetto, è sufficiente includere i file compilati come descritto
-in dettaglio alla [pagina introduttiva della documentazione](https://italia.github.io/bootstrap-italia/docs/0.0.1/come-iniziare/introduzione/).
+in dettaglio alla [pagina introduttiva della documentazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/).
 
 ## Segnalazione bug e richieste di aiuto
 
@@ -49,7 +49,7 @@ Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua
 e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md).
 
 A questo punto, è necessario impostare il tuo ambiente locale per la compilazione dei file sorgente e la generazione
-della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/0.0.1/come-iniziare/strumenti-di-compilazione/)
+della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/)
 è possibile avere tutte le informazioni necessarie a questo scopo.
 
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)

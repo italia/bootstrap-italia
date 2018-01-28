@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha",
   "keywords": [
     "css",
     "sass",
@@ -10,7 +10,7 @@
     "framework",
     "web"
   ],
-  "description": "Bootstrap Italia: tema Bootstrap aderente alle linee guida per i servizi web delle Pubbliche Amministrazioni",
+  "description": "Bootstrap Italia è un tema open-source basato su Bootstrap 4 per la creazione di applicazioni responsive, mobile-first per il web",
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp build",

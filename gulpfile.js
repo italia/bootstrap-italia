@@ -46,10 +46,11 @@ var Paths = {
   JS_DOCUMENTATION_WATCH: 'docs/assets/src/js/**/**'
 }
 
-var banner = '/*!\n' +
-  ' * Bootstrap\n' +
-  ' * Copyright 2011-2017\n' +
-  ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
+
+var bootstrapItaliaBanner = '/*!\n' +
+  ' * Bootstrap Italia v' + pkg.version + '\n' +
+  ' * Copyright 2018\n' +
+  ' * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)\n' +
   ' */\n'
 var jqueryCheck = 'if (typeof jQuery === \'undefined\') {\n' +
   '  throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\\'s JavaScript.\')\n' +
@@ -66,8 +67,9 @@ gulp.task('scss', function () {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(rename({
-      suffix: '-' + pkg.version
+    .pipe(wrapper({
+      header: bootstrapItaliaBanner +
+      '\n'
     }))
     .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST + '/css'))
@@ -79,8 +81,12 @@ gulp.task('scss-min', ['scss'], function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie9'}))
     .pipe(autoprefixer())
+    .pipe(wrapper({
+      header: bootstrapItaliaBanner +
+      '\n'
+    }))
     .pipe(rename({
-      suffix: '-' + pkg.version + '.min'
+      suffix: '.min'
     }))
     .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST + '/css'))
@@ -88,7 +94,7 @@ gulp.task('scss-min', ['scss'], function () {
 
 gulp.task('js', function () {
   return gulp.src(Paths.SOURCE_JS)
-    .pipe(concat(FILENAME + '-' + pkg.version + '.js'))
+    .pipe(concat(FILENAME + '.js'))
     .pipe(replace(/^(export|import).*/gm, ''))
     .pipe(babel({
         compact: false,
@@ -108,7 +114,7 @@ gulp.task('js', function () {
       }
     ))
     .pipe(wrapper({
-      header: banner +
+      header: bootstrapItaliaBanner +
       '\n' +
       jqueryCheck +
       '\n' +
@@ -120,9 +126,13 @@ gulp.task('js', function () {
 })
 
 gulp.task('js-min', ['js'], function () {
-  return gulp.src(Paths.DIST + '/js/' + FILENAME + '-' + pkg.version + '.js')
+  return gulp.src(Paths.DIST + '/js/' + FILENAME + '.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
+    .pipe(wrapper({
+      header: bootstrapItaliaBanner +
+      '\n'
+    }))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -134,17 +144,25 @@ gulp.task('js-bundle', ['js'], function () {
   var BUNDLE_JS = [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
-    Paths.DIST + '/js/' + FILENAME + '-' + pkg.version + '.js'
+    Paths.DIST + '/js/' + FILENAME + '.js'
   ];
   return gulp.src(BUNDLE_JS)
-    .pipe(concat(FILENAME + '-' + pkg.version + '.bundle.js'))
+    .pipe(wrapper({
+      header: bootstrapItaliaBanner +
+      '\n'
+    }))
+    .pipe(concat(FILENAME + '.bundle.js'))
     .pipe(gulp.dest(Paths.DIST + '/js'))
 })
 
 gulp.task('js-bundle-min', ['js-bundle', 'js'], function () {
-  return gulp.src(Paths.DIST + '/js/' + FILENAME + '-' + pkg.version + '.bundle.js')
+  return gulp.src(Paths.DIST + '/js/' + FILENAME + '.bundle.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
+    .pipe(wrapper({
+      header: bootstrapItaliaBanner +
+      '\n'
+    }))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -153,10 +171,13 @@ gulp.task('js-bundle-min', ['js-bundle', 'js'], function () {
 })
 
 gulp.task('introduction', function () {
-  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' + chalk.yellow('v' + pkg.version);
-  var flagRow = chalk.bgRgb(0, 146, 70)('       ') + chalk.bgRgb(241, 242, 241)('       ') + chalk.bgRgb(206, 43, 55)('       ')
+  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' +
+    chalk.yellow('v' + pkg.version);
+  var flagRow = chalk.rgb(0, 146, 70)('############') +
+    chalk.rgb(241, 242, 241)('############') +
+    chalk.rgb(206, 43, 55)('############');
   console.log(manifest);
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 8; i++) {
     console.log(flagRow);
   }
 })
