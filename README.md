@@ -1,25 +1,19 @@
+[![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![CSS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/css/bootstrap-italia.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/italia/bootstrap-italia/tree/master/dist/css/bootstrap-italia.min.css)
 [![JS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/js/bootstrap-italia.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/italia/bootstrap-italia/blob/master/dist/js/bootstrap-italia.min.js)
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-<p align="center">
+# Bootstrap Italia
 
-  <h3 align="center">Bootstrap Italia</h3>
+Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
 
-  <p align="center">
-    Bootstrap Italia è un tema <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">Bootstrap v4.0.0-beta.3</a> per la creazione di applicazioni responsive, mobile-first per il web.
-    <br>
-    Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap, e le personalizza secondo le <a href="https://design-italia.readthedocs.io/it/stable/index.html">linee guida di design per i servizi web delle Pubbliche Amministrazioni</a>.
-    <br><br>
-    <a href="https://italia.github.io/bootstrap-italia/"><strong>Vedi la documentazione completa »</strong></a>
-  </p>
-</p>
+Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
 
-<br>
+**[Vedi la documentazione completa »]**(https://italia.github.io/bootstrap-italia/)
 
-:warning: Attenzione! Questo codice è ancora in fase di sviluppo e non è pronto per essere utilizzato! :warning: 
+_Attenzione: questo codice è ancora in fase di sviluppo e non è pronto per essere utilizzato!_
 
 ## Indice
 
