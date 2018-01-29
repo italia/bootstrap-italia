@@ -6,9 +6,15 @@ group: utilities
 toc: true
 ---
 
+{% callout info %}
+**Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+(in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
+[questo simpatico tutorial](http://flexboxfroggy.com/#it).
+{% endcallout %}
+
 ## Abilita il comportamento flex
 
-Applica l'utility `display` per creare un contenitore flexbox e trasformare **direttamente i suoi figli** in elementi flex. Il contenitore flex e i suoi elementi potranno essere personalizzati con le ulteriori proprietà flex.
+Applica le [`display` utilities]({{ site.baseurl }}/docs/utilities/display/) per creare un contenitore flexbox e trasformare **i suoi figli** in elementi flex. Il contenitore flex e i suoi elementi potranno essere personalizzati con le ulteriori proprietà flex.
 
 {% example html %}
 <div class="d-flex p-2 bd-highlight">Io sono un contenitore flexbox!</div>
@@ -217,7 +223,11 @@ Sono previste anche seguenti le varianti  responsive per `align-self`:
 
 Flexbox può fare cose meravigliose quando si mescolano gli allineamenti flessibili con i margini automatici. Di seguito sono mostrati tre esempi di controllo degli elementi flex tramite margini automatici: predefinito (nessun margine automatico), inserito con due elementi a destra (`.mr-auto`) e inserito con due elementi a sinistra (`.ml-auto`).
 
-**Sfortunatamente IE10 e IE11 non supportano correttamente i margini automatici sugli elementi flex quando il contenitore ha un valore dell'utility `justify-content` non predefinito.** Per maggiori dettagli [leggi questa risposta su StackOverflow](https://stackoverflow.com/a/37535548).
+{% callout warning %}
+Sfortunatamente IE10 e IE11 non supportano correttamente i margini automatici sugli elementi flex quando il contenitore ha un valore dell'utility `justify-content` non predefinito.
+
+Per maggiori dettagli, [leggi questa risposta su StackOverflow](https://stackoverflow.com/a/37535548).
+{% endcallout %}
 
 {% example html %}
 <div class="d-flex bd-highlight mb-3">
@@ -339,7 +349,8 @@ Sono previste anche seguenti le varianti responsive per `flex-wrap`:
 
 ## Ordinamento
 
-Modifica l'ordine in _visualizzazione_ di elementi flex specifici con l'utility `order`. Sono disponibili le opzioni per il primo elemento o l'ultimo, come anche il reset dell'ordinamento DOM. Le classi `order` prendono un valore intero (es.:`5`) per cui puoi creare delle classi personalizzate per aggiungere i valori di cui hai bisogno.
+Modifica l'ordine in _visualizzazione_ di elementi flex specifici con l'utility `order-`. Sono disponibili le opzioni per il primo elemento o l'ultimo, come anche il reset dell'ordinamento DOM.
+Le classi `order-` sono accompagnate da un ordinale intero (`1`, `2`, `3`, e così via), per cui puoi creare delle classi personalizzate per aggiungere i valori di cui hai bisogno.
 
 {% example html %}
 <div class="d-flex flex-nowrap bd-highlight">
