@@ -21,7 +21,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
-  "author": "AgID + Team per la Trasformazione Digitale",
+  "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=6"
