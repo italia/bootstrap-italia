@@ -1,4 +1,4 @@
-<header class="navbar navbar-dark bd-navbar">
+<header class="navbar-main navbar navbar-dark bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
     {%- include icons/bricks.svg width="36" height="36" class="d-block" -%}
   </a>
@@ -8,6 +8,11 @@
       <li class="nav-item">
         <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" aria-label="Version">
+          {{ site.current_version }}
+        </a>
+      </li>
       <!--<li class="nav-item">
         <a class="nav-link {% if page.title == "Esempi" %}active{% endif %}" href="{{ site.baseurl }}/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
       </li>-->
@@ -15,11 +20,7 @@
   </div>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item">
-      <a class="nav-link p-2 disabled" href="#" aria-label="Version">
-        {{ site.current_version }}
-      </a>
-    </li>
+
 
     <li class="nav-item">
       <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
