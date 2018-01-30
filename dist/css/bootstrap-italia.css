@@ -6972,10 +6972,17 @@ h4, .h4 {
 
 .list-group-item {
   padding: 1rem; }
+  .list-group-item.disabled, .list-group-item:disabled {
+    cursor: default; }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
   text-decoration: underline;
   background-color: #d9e6f2; }
+
+.list-group-item-action.disabled:focus, .list-group-item-action.disabled:hover, .list-group-item-action:disabled:focus, .list-group-item-action:disabled:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border-top-color: transparent; }
 
 .list-group-item.active:focus, .list-group-item.active:hover {
   background-color: #0066cc; }

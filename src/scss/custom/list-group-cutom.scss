@@ -4,6 +4,10 @@
 
 .list-group-item {
     padding: $list-group-item-padding-y;
+    &.disabled,
+    &:disabled {
+      cursor: $list-group-disabled-cursor;
+    }
   }
 
   .list-group-item-action {  
@@ -11,6 +15,14 @@
     @include hover-focus {
       text-decoration: underline;
       background-color: $list-group-hover-bg;
+    }
+    &.disabled,
+    &:disabled {
+      @include hover-focus {
+        text-decoration: none;
+        background-color: transparent;
+        border-top-color: transparent;
+      }
     }
 }
 
