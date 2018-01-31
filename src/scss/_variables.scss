@@ -183,9 +183,9 @@ $modal-content-padding: 1.4rem !default;
 
 //List group
 $list-group-item-padding-y: 1rem !default;
-$list-group-action-color: #0066cc !default;
-$list-group-action-hover-color: #00264d !default;
-$list-group-hover-bg: #d9e6f2 !default;
+$list-group-action-color: $primary !default;
+$list-group-action-hover-color: #00264d !default; // TODO use a variable
+$list-group-hover-bg: #d9e6f2 !default; // TODO use a variable
 $list-group-disabled-cursor: default !default;
 
 //Reset
