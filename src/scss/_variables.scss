@@ -15,23 +15,6 @@ $gray-800: hsb(225, 0, 20) !default;
 $gray-900: hsb(225, 0, 10) !default;
 $black:    rgb(0, 0, 0) !default;
 
-//mains
-$primary-b-1: hsb(210, 100, 10) !default;
-$primary-b-2: hsb(210, 100, 20) !default;
-$primary-b-3: hsb(210, 100, 30) !default;
-$primary-b-4: hsb(210, 100, 40) !default;
-$primary-b-5: hsb(210, 100, 50) !default;
-$primary-b-6: hsb(210, 100, 60) !default;
-$primary-b-7: hsb(210, 100, 70) !default;
-$primary-b-8: hsb(210, 100, 80) !default;
-$primary-b-9: hsb(210, 100, 90) !default;
-$primary-b-A: hsb(210, 75, 84) !default;
-$primary-b-B: hsb(210, 60, 87) !default;
-$primary-b-C: hsb(210, 45, 90) !default;
-$primary-b-D: hsb(210, 30, 93) !default;
-$primary-b-E: hsb(210, 15, 96) !default;
-$primary-b-F: hsb(210, 5, 99) !default;
-
 $grays: () !default;
 $grays: map-merge((
   "100": $gray-100,
@@ -77,7 +60,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:         $primary-b-8 !default;
+$primary:         hsb(210, 100, 80) !default;
 $secondary:       $teal !default;
 $success:         $green !default;
 $info:            $gray-400 !default;
@@ -98,22 +81,26 @@ $theme-colors: map-merge((
   "dark":       $dark
 ), $theme-colors);
 
+// Color Variations
+$primary-h: hue($primary);
+$primary-s: saturation($primary);
+
 $theme-colors: (
-  "primary-b-F": $primary-b-F,
-  "primary-b-E": $primary-b-E,
-  "primary-b-D": $primary-b-D,
-  "primary-b-C": $primary-b-C,
-  "primary-b-B": $primary-b-B,
-  "primary-b-A": $primary-b-A,
-  "primary-b-9": $primary-b-9,
-  "primary-b-8": $primary-b-8,
-  "primary-b-7": $primary-b-7,
-  "primary-b-6": $primary-b-6,
-  "primary-b-5": $primary-b-5,
-  "primary-b-4": $primary-b-4,
-  "primary-b-3": $primary-b-3,
-  "primary-b-2": $primary-b-2,
-  "primary-b-1": $primary-b-1
+  "primary-b-1": hsb($primary-h, $primary-s, 10),
+  "primary-b-2": hsb($primary-h, $primary-s, 20),
+  "primary-b-3": hsb($primary-h, $primary-s, 30),
+  "primary-b-4": hsb($primary-h, $primary-s, 40),
+  "primary-b-5": hsb($primary-h, $primary-s, 50),
+  "primary-b-6": hsb($primary-h, $primary-s, 60),
+  "primary-b-7": hsb($primary-h, $primary-s, 70),
+  "primary-b-8": hsb($primary-h, $primary-s, 80),
+  "primary-b-9": hsb($primary-h, $primary-s, 90),
+  "primary-b-A": hsb($primary-h, $primary-s * .75, 84),
+  "primary-b-B": hsb($primary-h, $primary-s * .60, 87),
+  "primary-b-C": hsb($primary-h, $primary-s * .45, 90),
+  "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
+  "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
+  "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
 );
 // stylelint-enable
 
