@@ -11,7 +11,7 @@ redirect_from:
 
 ## Containers
 
-Il "container" (contenitore) è uno degli elementi base nell'utilizzo di Bootstrap Italia, ed è **richiesto quando si utilizza il [grid system]({{ site.baseurl }}/docs/utilities/grid/)**.
+Il "container" (contenitore) è uno degli elementi base nell'utilizzo di Bootstrap Italia, ed è **richiesto quando si utilizza il [grid system]({{ site.baseurl }}/docs/utilities/griglie/)**.
 
 La prima scelta è tra un container a larghezza _fissa_, la cui `max-width` cambia ad ogni breakpoint, o _fluida_, la cui larghezza rimane al 100% per ogni dimensione del viewport.
 
@@ -48,9 +48,9 @@ Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'are
 
 ## Responsive breakpoints
 
-Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.
+Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.
 
-Bootstrap Italia utilizza le media query seguenti per definire i breakpoint usati nelle sue griglie e componenti.
+Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usati nelle sue griglie e componenti.
 
 {% highlight scss %}
 // Schermi piccoli (meno di 576px)
@@ -69,7 +69,7 @@ Bootstrap Italia utilizza le media query seguenti per definire i breakpoint usat
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Dal momento che scriviamo il codice sorgente CSS in Sass, tutti i media query sono già disponibili tramite i mixin di Sass:
+Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 
 {% highlight scss %}
 @include media-breakpoint-up(xs) { ... }
@@ -86,7 +86,7 @@ Dal momento che scriviamo il codice sorgente CSS in Sass, tutti i media query so
 }
 {% endhighlight %}
 
-Occasionalmente possiamo utilizzare i media query che vanno nella direzione opposta (la dimensione dello schermo *o inferiore*):
+In casi eccezionali, è possibile utilizzare le media query che vanno nella direzione opposta (la dimensione dello schermo *o inferiore*):
 
 {% highlight scss %}
 // Schermi piccoli (meno di 576px)
@@ -106,10 +106,13 @@ Occasionalmente possiamo utilizzare i media query che vanno nella direzione oppo
 {% endhighlight %}
 
 {% callout info %}
-Nota che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo evitando di utilizzare i limiti dei [prefissi `min-` e `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione) utilizzando valori con maggiore precisione per questi confronti.
+Nota che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context),
+stiamo evitando di utilizzare i limiti dei [prefissi `min-` e `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max)
+e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta
+risoluzione), utilizzando valori con maggiore precisione per questi confronti.
 {% endcallout %}
 
-Come sopra, dal momento che scriviamo il codice sorgente CSS in Sass, tutti i media query sono già disponibili tramite i mixin di Sass:
+Come sopra, quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 
 {% highlight scss %}
 @include media-breakpoint-down(xs) { ... }
@@ -118,7 +121,8 @@ Come sopra, dal momento che scriviamo il codice sorgente CSS in Sass, tutti i me
 @include media-breakpoint-down(lg) { ... }
 {% endhighlight %}
 
-Sono previsti anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando la larghezza minima e massima di breakpoint.
+Sono previste anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando
+la larghezza minima e massima dei breakpoint.
 
 {% highlight scss %}
 // Schermi piccoli (meno di 576px)
@@ -137,7 +141,7 @@ Sono previsti anche media query e mixin per il targeting di un singolo segmento 
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Anche questi media query sono disponibili tramite Sass mixin:
+Anche queste media query sono disponibili tramite Sass mixin:
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -147,7 +151,7 @@ Anche questi media query sono disponibili tramite Sass mixin:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Similmente i media query possono estendersi su più breakpoint:
+Similmente le media query possono estendersi su più breakpoint:
 
 {% highlight scss %}
 // Esempio
@@ -163,9 +167,13 @@ Per ottenere il mixin Sass di questo stesso range:
 
 ## Z-index
 
-Alcuni componenti Bootstrap Italia utilizzano `z-index`, la proprietà CSS che aiuta a controllare il layout fornendo un terzo livello di asse per organizzare graficamente il contenuto. Utilizziamo una scala graduale z-index predefinita che è stata progettata per stratificare correttamente navigazione, tooltip, popover, finestre modali e altro ancora.
+Alcuni componenti Bootstrap Italia utilizzano `z-index`, la proprietà CSS che aiuta a controllare il layout fornendo un
+terzo livello di asse per organizzare graficamente il contenuto. Utilizziamo una scala graduale z-index predefinita che
+è stata progettata per stratificare correttamente navigazione, tooltip, popover, finestre modali e altro ancora.
 
-Questi valori partono da un numero arbitrario, alto e abbastanza specifico, per evitare idealmente conflitti. Abbiamo un set standard di questi valori attraverso i quali i componenti coesistano a diversi livelli (tooltip, popover, navbar, dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.
+Questi valori partono da un numero arbitrario, alto e abbastanza specifico, per evitare idealmente conflitti. Abbiamo un
+set standard di questi valori attraverso i quali i componenti coesistano a diversi livelli (tooltip, popover, navbar,
+dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.
 
 Si scoraggia di personalizzare singolarmente questi valori; se dovessi cambiarne uno, probabilmente dovrai cambiarli tutti.
 
@@ -179,24 +187,39 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 {% endhighlight %}
 
-Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori di `z-index` a una sola cifra di `1`,` 2` e `3` per default, hover e stati attivi. Al passaggio del mouse/focus/active portiamo un particolare elemento in primo piano con un valore più alto di 'z-index` per mostrare il loro confine sugli elementi di pari livello.
+Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori
+di `z-index` a una sola cifra di `1`,` 2` e `3` per default, hover e stati attivi. Al passaggio del mouse/focus/active
+portiamo un particolare elemento in primo piano con un valore più alto di 'z-index` per mostrare il loro confine sugli
+elementi di pari livello.
 
 ---
 
 ## Modificare `display`
 
-Utilizza insieme le [display utility]({{ site.baseurl }}/docs/utilities/display/) con il grid system, i contenuti o i componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.
+Utilizza insieme le [display utility]({{ site.baseurl }}/docs/utilities/display/) con il grid system, i contenuti o i
+componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.
 
 ## Opzioni Flexbox
 
-Bootstrap Italia è realizzato con flexbox, ma non tutti i `display` di ogni elemento sono stati modificati con `display: flex` in quanto ciò avrebbe costretto a fare molti override non necessari e cambiando inaspettatamente il comportamento del browser in uso. La maggior parte dei [componenti]({{ site.baseurl }}/docs/componenti/alerts/) sono costruiti con flexbox abilitato.
+Bootstrap Italia è realizzato con flexbox, ma non tutti i `display` utilizzano `display: flex` in quanto ciò avrebbe
+costretto a molti override non necessari.
 
-Se ritieni necessario aggiungere `display: flex` a un elemento puoi farlo con `.d-flex` o una delle sue varianti responsive (es.: `.d-sm-flex`). Avrai bisogno di queste classi `display` per consentire l'uso delle [utility flexbox]({{ site.baseurl }}/docs/utilities/flex/) per così modificarne il dimensionamento, l'allineamento, la spaziatura e altro ancora.
+Se ritieni necessario aggiungere `display: flex` a un elemento puoi farlo con `.d-flex` o una delle sue varianti
+responsive (es.: `.d-sm-flex`). Avrai bisogno di queste classi `display` per consentire l'uso delle
+[utility flexbox]({{ site.baseurl }}/docs/utilities/flex/) per così modificarne il dimensionamento, l'allineamento, la
+spaziatura e altro ancora.
 
 ## Margin e padding
 
-Usa il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/utilities/spacing/)per gestire spazi e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su una variabile predefinita `$spacer` di valore `1rem`. Scegli i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o scegli le varianti responsive per viewport specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
+Usa il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/utilities/spaziature/) per gestire spazi
+e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
+una variabile predefinita `$spacer` di valore `1rem`.
 
-## Toggle `visibility`
+Scegli i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o scegli le varianti responsive per viewport
+specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
 
- Quando è necessario nascondere o rendere visibile un elemento si possono usare le [utility di visibilità]({{ site.baseurl }}/docs/utilities/visibility/). Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.
+## Modificare la visibilità
+
+Quando è necessario nascondere o rendere visibile un elemento si possono usare le [utility di visibilità]({{ site.baseurl }}/docs/utilities/visibility/).
+ 
+Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.

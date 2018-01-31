@@ -10,7 +10,7 @@ toc: true
 
 L'[oggetto media](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) aiuta a costruire complessi e ripetitivi componenti dove alcuni media si posizionano accanto ai contenuti senza sovrapporsi.
 
-Grazie a flexbox è necessario l'utilizzo di solo due classi: nel contenitore `.media` e nell'elemento contenuto `.media-body`. Padding e margin possono essere gestiti tramite le [utility di spaziatura]({{ site.baseurl }}/docs/utilities/spacing/).
+Grazie a flexbox è necessario l'utilizzo di solo due classi: nel contenitore `.media` e nell'elemento contenuto `.media-body`. Padding e margin possono essere gestiti tramite le [utility di spaziatura]({{ site.baseurl }}/docs/utilities/spaziature/).
 
 {% example html %}
 <div class="media">
@@ -32,7 +32,7 @@ IE10 e IE11 non eseguono il rendering di elementi inline di link o immagini (o `
 
 ## Annidamento
 
-Per annidare gli oggetti media posiziona il nuovo elemento `.media` all'interno del contenitore `.media-body`. In linea teorica gli oggetti media possono essere annidati all'infinito, me per una corretta visualizzazione grafica ti suggeriamo di non creare troppi livelli di sprofondamento.
+Per annidare gli oggetti media posiziona il nuovo elemento `.media` all'interno del contenitore `.media-body`. In linea teorica gli oggetti media possono essere annidati all'infinito, me per una corretta visualizzazione grafica ti suggeriamo di non creare troppi livelli di annidamento.
 
 {% example html %}
 <div class="media">
@@ -93,7 +93,7 @@ Il media presente dentro l'oggetto media può essere allineato grazie alle utili
 
 ## Ordinamento
 
-Puoi modifica l'ordine del contenuto negli oggetti media modificando l'HTML stesso oppure aggiungendo alcuni CSS personalizzati per impostare la proprietà `order` (di un numero intero di tua scelta).
+Puoi modificare l'ordine del contenuto negli oggetti media utilizzando HTML stesso oppure aggiungendo alcuni CSS personalizzati per impostare la proprietà `order` (di un numero intero di tua scelta).
 
 {% example html %}
 <div class="media">
