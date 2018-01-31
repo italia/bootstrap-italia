@@ -74,7 +74,6 @@
 - title: Utilities
   pages:
     - title: Introduzione
-      status: work in progress
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
@@ -84,13 +83,11 @@
     - title: Display
     - title: Embed
     - title: Flex
-      status: to do
     - title: Float
     - title: Griglie
       status: work in progress
     - title: Immagini sostitutive
     - title: Media object
-      status: to do
     - title: Position
     - title: Screenreaders
     - title: Spaziature

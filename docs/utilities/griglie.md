@@ -10,20 +10,15 @@ toc: true
 
 Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti.
 È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-ed è completamente responsive. 
+ed è completamente responsive.
 
 {% callout info %}
-#### Griglia fluida: spaziatura variabile a seconda delle dimensioni del dispositivo 
-
-Bootstrap Italia può aggiungere una _spaziatura_ orizzontale tra le colonne (in gergo `gutter`) variabile a seconda delle
-dimensioni dello schermo. Tale comportamento è mostrato di seguito nella pagina, alla sezione [gutter variabile](#gutter-variabile).
+**Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
+(in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
+[questo simpatico tutorial](http://flexboxfroggy.com/#it).
 {% endcallout %}
 
 Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
-
-**Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
-(in inglese) per informazioni generali, terminologia, linee guida, e frammenti di codice, oppure giocando con
-[questo simpatico tutorial](http://flexboxfroggy.com/#it).
 
 <div class="bd-example-row">
 {% example html %}
