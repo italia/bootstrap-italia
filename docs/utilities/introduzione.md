@@ -11,7 +11,7 @@ redirect_from:
 
 ## Containers
 
-Il "container" (contenitore) è uno degli elementi base nell'utilizzo di Bootstrap, ed è **richiesto quando si utilizza il [grid system]({{ site.baseurl }}/docs/utilities/grid/)**.
+Il "container" (contenitore) è uno degli elementi base nell'utilizzo di Bootstrap Italia, ed è **richiesto quando si utilizza il [grid system]({{ site.baseurl }}/docs/utilities/grid/)**.
 
 La prima scelta è tra un container a larghezza _fissa_, la cui `max-width` cambia ad ogni breakpoint, o _fluida_, la cui larghezza rimane al 100% per ogni dimensione del viewport.
 
@@ -48,7 +48,7 @@ Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'are
 
 ## Responsive breakpoints
 
-Visto che la progettazione web è bene che venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.
+Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.
 
 Bootstrap Italia utilizza le media query seguenti per definire i breakpoint usati nelle sue griglie e componenti.
 
@@ -69,7 +69,7 @@ Bootstrap Italia utilizza le media query seguenti per definire i breakpoint usat
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
+Dal momento che scriviamo il codice sorgente CSS in Sass, tutti i media query sono già disponibili tramite i mixin di Sass:
 
 {% highlight scss %}
 @include media-breakpoint-up(xs) { ... }
@@ -86,30 +86,30 @@ Since we write our source CSS in Sass, all our media queries are available via S
 }
 {% endhighlight %}
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+Occasionalmente possiamo utilizzare i media query che vanno nella direzione opposta (la dimensione dello schermo *o inferiore*):
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 576px)
+// Schermi piccoli (meno di 576px)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, less than 768px)
+// Schermi medio-piccoli (meno di 768px)
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
+// Schermi medi (meno di 992px)
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
+// Schermi grandi (meno di 1200px)
 @media (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+// Schermi molto grandi (uguale o più di 1200px)
+// Non è necessaria alcuna media query, in quanto la progettazione per schermi molto grandi fa sì che questo sia il codice di default
 {% endhighlight %}
 
 {% callout info %}
-Nota che in quanto i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo aggirando i limiti dei [prefissi `min-` and `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.
+Nota che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo evitando di utilizzare i limiti dei [prefissi `min-` e `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione) utilizzando valori con maggiore precisione per questi confronti.
 {% endcallout %}
 
-Once again, these media queries are also available via Sass mixins:
+Come sopra, dal momento che scriviamo il codice sorgente CSS in Sass, tutti i media query sono già disponibili tramite i mixin di Sass:
 
 {% highlight scss %}
 @include media-breakpoint-down(xs) { ... }
@@ -118,26 +118,26 @@ Once again, these media queries are also available via Sass mixins:
 @include media-breakpoint-down(lg) { ... }
 {% endhighlight %}
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+Sono previsti anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando la larghezza minima e massima di breakpoint.
 
 {% highlight scss %}
-// Extra small devices (portrait phones, less than 576px)
+// Schermi piccoli (meno di 576px)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, 576px and up)
+// Schermi medio-piccoli (da 576px a meno di 768px)
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, 768px and up)
+// Schermi medi (da 768px a meno di 992px)
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 
-// Large devices (desktops, 992px and up)
+// Schermi grandi (da 992px a meno di 1200px)
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+// Schermi molto grandi (da 1200px in su)
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-These media queries are also available via Sass mixins:
+Anche questi media query sono disponibili tramite Sass mixin:
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -147,15 +147,15 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Similarly, media queries may span multiple breakpoint widths:
+Similmente i media query possono estendersi su più breakpoint:
 
 {% highlight scss %}
-// Example
-// Apply styles starting from medium devices and up to extra large devices
+// Esempio
+// Applica gli stili partendo da uno schermo medio fino a uno grande 
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 {% endhighlight %}
 
-The Sass mixin for targeting the same screen size range would be:
+Per ottenere il mixin Sass di questo stesso range:
 
 {% highlight scss %}
 @include media-breakpoint-between(md, xl) { ... }
@@ -163,11 +163,11 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Alcuni componenti Bootstrap Italia utilizzano `z-index`, la proprietà CSS che aiuta a controllare il layout fornendo un terzo livello di asse per organizzare graficamente il contenuto. Utilizziamo una scala graduale z-index predefinita che è stata progettata per stratificare correttamente navigazione, tooltip, popover, finestre modali e altro ancora.
 
-These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
+Questi valori partono da un numero arbitrario, alto e abbastanza specifico, per evitare idealmente conflitti. Abbiamo un set standard di questi valori attraverso i quali i componenti coesistano a diversi livelli (tooltip, popover, navbar, dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.
 
-We don't encourage customization of these individual values; should you change one, you likely need to change them all.
+Si scoraggia di personalizzare singolarmente questi valori; se dovessi cambiarne uno, probabilmente dovrai cambiarli tutti.
 
 {% highlight scss %}
 $zindex-dropdown:          1000 !default;
@@ -179,24 +179,24 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 {% endhighlight %}
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori di `z-index` a una sola cifra di `1`,` 2` e `3` per default, hover e stati attivi. Al passaggio del mouse/focus/active portiamo un particolare elemento in primo piano con un valore più alto di 'z-index` per mostrare il loro confine sugli elementi di pari livello.
 
 ---
 
-## Changing `display`
+## Modificare `display`
 
-Use our [display utilities]({{ site.baseurl }}/docs/utilities/display/) for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+Utilizza insieme le [display utility]({{ site.baseurl }}/docs/utilities/display/) con il grid system, i contenuti o i componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.
 
-## Flexbox options
+## Opzioni Flexbox
 
-Bootstrap 4 is built with flexbox, but not every element's `display` has been changed to `display: flex` as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{ site.baseurl }}/docs/componenti/alerts/) are built with flexbox enabled.
+Bootstrap Italia è realizzato con flexbox, ma non tutti i `display` di ogni elemento sono stati modificati con `display: flex` in quanto ciò avrebbe costretto a fare molti override non necessari e cambiando inaspettatamente il comportamento del browser in uso. La maggior parte dei [componenti]({{ site.baseurl }}/docs/componenti/alerts/) sono costruiti con flexbox abilitato.
 
-Should you need to add `display: flex` to an element, do so with `.d-flex` or one of the responsive variants (e.g., `.d-sm-flex`). You'll need this class or `display` value to allow the use of our extra [flexbox utilities]({{ site.baseurl }}/docs/utilities/flex/) for sizing, alignment, spacing, and more.
+Se ritieni necessario aggiungere `display: flex` a un elemento puoi farlo con `.d-flex` o una delle sue varianti responsive (es.: `.d-sm-flex`). Avrai bisogno di queste classi `display` per consentire l'uso delle [utility flexbox]({{ site.baseurl }}/docs/utilities/flex/) per così modificarne il dimensionamento, l'allineamento, la spaziatura e altro ancora.
 
-## Margin and padding
+## Margin e padding
 
-Use the `margin` and `padding` [spacing utilities]({{ site.baseurl }}/docs/utilities/spacing/) to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a `1rem` value default `$spacer` variable. Choose values for all viewports (e.g., `.mr-3` for `margin-right: 1rem`), or pick responsive variants to target specific viewports (e.g., `.mr-md-3` for `margin-right: 1rem` starting at the `md` breakpoint).
+Usa il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/utilities/spacing/)per gestire spazi e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su una variabile predefinita `$spacer` di valore `1rem`. Scegli i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o scegli le varianti responsive per viewport specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
 
 ## Toggle `visibility`
 
-When toggling `display` isn't needed, you can toggle the `visibility` of an element with our [visibility utilities]({{ site.baseurl }}/docs/utilities/visibility/). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+ Quando è necessario nascondere o rendere visibile un elemento si possono usare le [utility di visibilità]({{ site.baseurl }}/docs/utilities/visibility/). Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.
