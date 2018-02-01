@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.1.0
+ * Bootstrap Italia v0.1.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -10370,7 +10370,7 @@ return jQuery;
 } );
 
 /*!
- * Bootstrap Italia v0.1.0
+ * Bootstrap Italia v0.1.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -12822,13 +12822,13 @@ return Popper;
 //# sourceMappingURL=popper.js.map
 
 /*!
- * Bootstrap Italia v0.1.0
+ * Bootstrap Italia v0.1.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
 
 /*!
- * Bootstrap Italia v0.1.0
+ * Bootstrap Italia v0.1.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
