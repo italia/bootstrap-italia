@@ -1,7 +1,3 @@
-.carousel {
-    padding: $carousel-padding;
-    background-color: $carousel-bg;
-}
 .carousel-control-prev,
 .carousel-control-next {
     top: 1em;
@@ -12,7 +8,7 @@
     right: 5em;
 }
 .carousel-control-next {
-    right: 3em;
+    right: 1em;
 }
 .carousel-caption {
     position: static;

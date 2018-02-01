@@ -184,9 +184,10 @@ $modal-content-padding: 1.4rem !default;
 // Carousel
 $carousel-bg: #444e57 !default;
 $carousel-padding: 3em !default;
-$carousel-control-color: #65dcdf !default;
+$carousel-control-color: $secondary !default;
 $carousel-control-width: auto !default;
-$carousel-control-opacity: 1 !default; 
+$carousel-control-opacity: 1 !default;
+$carousel-control-icon-width: 32px !default;
 
 // Inputs
 $input-border: $gray-200;
