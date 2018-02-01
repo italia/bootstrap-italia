@@ -181,6 +181,13 @@ $modal-max-width: 32rem !default;
 $modal-dialog-margin: 1.4rem auto !default;
 $modal-content-padding: 1.4rem !default;
 
+//List group
+$list-group-item-padding-y: 1rem !default;
+$list-group-action-color: $primary !default;
+$list-group-action-hover-color: #00264d !default; // TODO use a variable
+$list-group-hover-bg: #d9e6f2 !default; // TODO use a variable
+$list-group-disabled-cursor: default !default;
+
 //Reset
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
