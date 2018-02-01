@@ -1,65 +1,65 @@
 ---
 layout: docs
-title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+title: Alert
+description: Puoi fornire dei feedback all'utente tramite messaggi di avviso.
 group: componenti
 toc: true
 ---
 
-## Examples
+## Esempi
 
-Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
+Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre può prevedere un pulsante di chiusura utilizzando la [plugin alerts di jQuery](#dismissing).
 
 {% example html %}
 {% for color in site.data.theme-colors %}
+{% if color.name == "danger" or color.name == "warning" or color.name == "success" or color.name == "info" %}
 <div class="alert alert-{{ color.name }}" role="alert">
-  This is a {{ color.name }} alert—check it out!
-</div>{% endfor %}
+  Questo è un alert di {{ color.name }}!
+</div>{% endif %}{% endfor %}
 {% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-### Link color
+### Link evidenziato
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+Usa la classe `.alert-link` per dare risalto a un link all'interno dell'alert.
 
 {% example html %}
-{% for color in site.data.theme-colors %}
-<div class="alert alert-{{ color.name }}" role="alert">
-  This is a {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>{% endfor %}
+<div class="alert alert-danger" role="alert">
+  Questo è un alert con un esempio di <a href="#" class="alert-link">link</a> evidenziato.
+</div>
 {% endexample %}
 
-### Additional content
+### Contenuto aggiuntivo
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli heading, paragrafi e divisori.
 
 {% example html %}
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <h4 class="alert-heading">Avviso di successo!</h4>
+  <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sarà più a lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>
   <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <p class="mb-0">Quando necessario, assicurarti di inserire le utilità di margine per mantenere gli spazi equilibrati.</p>
 </div>
 {% endexample %}
 
 
-### Dismissing
+### Chiusura
 
-Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
+Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avviso. Ecco come:
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
-- If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/come-iniziare/javascript/#util). The compiled version includes this.
-- Add a dismiss button and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the `.close` button.
-- On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+- Assicurati di aver caricato il plugin di alert o di aver compilato il codice Bootstrap JavaScript. 
+- Se stai costruendo il JavaScript dal sorgente, nella versione che compilerai assicurati di includere [`util.js`]({{ site.baseurl }}/docs/come-iniziare/javascript/#util).
+- Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.close`.
+- Sul pulsante di chiusura, aggiungi l'attributo `data-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
+- Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi `.fade` e `.show`.
 
-You can see this in action with a live demo:
+Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:
 
 {% example html %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -68,15 +68,15 @@ You can see this in action with a live demo:
 
 ## JavaScript behavior
 
-### Triggers
+### Trigger
 
-Enable dismissal of an alert via JavaScript:
+Ablita la chiusura di un alert tramite JavaScript:
 
 {% highlight js %}
 $('.alert').alert()
 {% endhighlight %}
 
-Or with `data` attributes on a button **within the alert**, as demonstrated above:
+Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno dell'alert**, come nell'esempio seguente:
 
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -84,29 +84,29 @@ Or with `data` attributes on a button **within the alert**, as demonstrated abov
 </button>
 {% endhighlight %}
 
-Note that closing an alert will remove it from the DOM.
+Nota che chiudendo un alert lo rimuoverai dal DOM.
 
-### Methods
+### Metodo
 
-| Method | Description |
+| Metodo | Descrizione |
 | --- | --- |
-| `$().alert()` | Makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.) |
-| `$().alert('close')` | Closes an alert by removing it from the DOM. If the `.fade` and `.show` classes are present on the element, the alert will fade out before it is removed. |
-| `$().alert('dispose')` | Destroys an element's alert. |
+| `$().alert()` | Attiva l'ascolto dell'evento click negli elementi che hanno l'attributo `data-dismiss="alert"` (Non è necessario quando c'è l'inizializzazione automativa tramite API.) |
+| `$().alert('close')` | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa. |
+| `$().alert('dispose')` | L'alert viene rimosso. |
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 
-### Events
+### Eventi
 
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+Il plugin  alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.
 
-| Event | Description |
+| Evento | Descrizione |
 | --- | --- |
-| `close.bs.alert` | This event fires immediately when the <code>close</code> instance method is called. |
-| `closed.bs.alert` | This event is fired when the alert has been closed (will wait for CSS transitions to complete). |
+| `close.bs.alert` | Questo evento si attiva immediatamente quando viene chiamato il metodo di istanza <code>close</code>. |
+| `closed.bs.alert` | Questo evento viene attivato quando l'avviso è stato chiuso (attenderà il completamento delle transizioni CSS). |
 
 {% highlight js %}
 $('#myAlert').on('closed.bs.alert', function () {
-  // do something…
+  // esegue qualcosa
 })
 {% endhighlight %}
