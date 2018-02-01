@@ -4588,13 +4588,13 @@ button.close {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
-  color: #65dcdf;
+  color: #0bd9d2;
   text-align: center;
   opacity: 1; }
   .carousel-control-prev:focus, .carousel-control-prev:hover,
   .carousel-control-next:focus,
   .carousel-control-next:hover {
-    color: #65dcdf;
+    color: #0bd9d2;
     text-decoration: none;
     outline: 0;
     opacity: .9; }
@@ -4608,16 +4608,16 @@ button.close {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   background: transparent no-repeat center center;
   background-size: 100% 100%; }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2365dcdf' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230bd9d2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2365dcdf' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230bd9d2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
 .carousel-indicators {
   position: absolute;
@@ -6970,10 +6970,6 @@ h4, .h4 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
-.carousel {
-  padding: 3em;
-  background-color: #444e57; }
-
 .carousel-control-prev,
 .carousel-control-next {
   top: 1em;
@@ -6986,7 +6982,7 @@ h4, .h4 {
   right: 5em; }
 
 .carousel-control-next {
-  right: 3em; }
+  right: 1em; }
 
 .carousel-caption {
   position: static;
@@ -6996,7 +6992,7 @@ h4, .h4 {
   background-color: rgba(101, 220, 223, 0.5); }
 
 .carousel-indicators .active {
-  background-color: #65dcdf; }
+  background-color: #0bd9d2; }
 
 img[data-action="zoom"] {
   cursor: pointer;

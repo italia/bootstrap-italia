@@ -111,7 +111,7 @@ Aggiungere i controlli precedente e successivo:
 
 ### Con le didascalie
 
-Aggiungi facilmente le didascalie alle diapositive con l'elemento `.carousel-caption` all'interno di ogni `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+Aggiungi facilmente le didascalie alle diapositive con l'elemento `.carousel-caption` all'interno di ogni `.carousel-item`. Possono essere facilmente nascosti su finestre più piccole, come mostrato di seguito, con [utilità di visualizzazione]({{ site.baseurl }}/docs/utilities/display/) opzionali. Vengono nascosti inizialmente con `.d-none` e riportarti su dispositivi di medie dimensioni con `.d-md-block`.
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -168,29 +168,29 @@ Aggiungi facilmente le didascalie alle diapositive con l'elemento `.carousel-cap
 
 ### Tramite attributi data
 
-Usa gli attributi data per un semplice controllo della posizione del carousel. `data-slide` accetta le keyword `prev` o `next`, che cambiano la posizione della diapositiva rispetto alla sua posizione attuale. In alternativa, usa `data-slide-to` to pass a raw slide index to the carousel `data-slide-to="2"`, which shifts the slide position to a particular index beginning with `0`.
+Usa gli attributi data per un semplice controllo della posizione del carousel. `data-slide` accetta le keyword `prev` o `next`, che cambiano la posizione della diapositiva rispetto alla sua posizione attuale. In alternativa, usa `data-slide-to` per passare un indice di diapositiva al carousel `data-slide-to="2"`, che sposta la posizione della diapositiva in un particolare indice che inizia con `0`.
 
-The `data-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.**
+L'attributo `data-ride="carousel"` viene usato per indicare che l'animazione del carousel parte al caricamento della pagina. **Non può essere utilizzato in combinazione con l'inizializzazione JavaScript (ridondante e non necessaria) dello stesso carosello.**
 
-### Via JavaScript
+### Tramite JavaScript
 
-Call carousel manually with:
+Richiama il carousel manualmente con:
 
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
-### Options
+### Opzioni
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-interval=""`.
+Le opzioni possono essere passate tramite attributi data o JavaScript. Per gli attributi data, aggiungi il nome dell'opzione a `data-`, come in `data-interval=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 50px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
@@ -198,44 +198,44 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>interval</td>
       <td>number</td>
       <td>5000</td>
-      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+      <td>L'intervallo di tempo tra la successione automatica di un oggetto. Se falso, il carousel non si muoverà automaticamente.</td>      
     </tr>
     <tr>
       <td>keyboard</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Whether the carousel should react to keyboard events.</td>
+      <td>Se il carousel deve reagire agli eventi da tastiera.</td>
     </tr>
     <tr>
       <td>pause</td>
       <td>string | boolean</td>
       <td>"hover"</td>
-      <td><p>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td><p>Se impostato su <code>"hover"</code>, ferma lo scorrimento del carousel sul <code>mouseenter</code> e lo riprende sul <code>mouseleave</code>. Se impostato su <code>false</code>, il passaggio del mouse sul carousel non lo fermerà.</p>
+      <p>Sui dispositivi abilitati al touch, quando impostato su <code>"hover"</code>, lo scorrimento si fermerà su <code>touchend</code> (una volta che l'utente ha terminato di interagire con il carousel) per due intervalli, prima di riprendere automaticamente. Si noti che questo è in aggiunta al comportamento del mouse riportati sopra.</p></td>
     </tr>
     <tr>
       <td>ride</td>
       <td>string</td>
       <td>false</td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.</td>
+      <td>Riproduce automaticamente il carousel dopo che l'utente ha eseguito manualmente il ciclo del primo elemento. Se "carousel", Riproduce automaticamente il carousel al caricamento.</td>
     </tr>
     <tr>
       <td>wrap</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Whether the carousel should cycle continuously or have hard stops.</td>
+      <td>Se il carousel deve andare in ciclo continuo o fermarsi.</td>
     </tr>
   </tbody>
 </table>
 
-### Methods
+### Metodi
 
 {% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
 #### `.carousel(options)`
 
-Initializes the carousel with an optional options `object` and starts cycling through items.
+Inizializza il carousel con l'opzione facoltativa `object` e inizia lo scorrimento tra gli elementi.
 
 {% highlight js %}
 $('.carousel').carousel({
@@ -245,54 +245,54 @@ $('.carousel').carousel({
 
 #### `.carousel('cycle')`
 
-Cycles through the carousel items from left to right.
+Scorre gli elementi del carousel da sinistra a destra.
 
 #### `.carousel('pause')`
 
-Stops the carousel from cycling through items.
+Ferma lo scorrimentio degli elementi del carousel.
 
 #### `.carousel(number)`
 
-Cycles the carousel to a particular frame (0 based, similar to an array). **Returns to the caller before the target item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Fa scorrere il carosello su una particolare frame (Basato su 0, simile a un array). **Ritorna al chiamante prima che l'elemento di destinazione sia stato mostrato** (i.e. prima che l'evento `slid.bs.carousel` si verifichi).
 
 #### `.carousel('prev')`
 
-Cycles to the previous item. **Returns to the caller before the previous item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Scorre all'elemento precedente. **Ritorna al chiamante prima che l'elemento precedente sia stato mostrato** (i.e. prima che l'evento `slid.bs.carousel` si verifichi).
 
 #### `.carousel('next')`
 
-Cycles to the next item. **Returns to the caller before the next item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+Scorre all'elemento successivo. **Ritorna al chiamante prima che l'elemento successivo sia stato mostrato** (i.e. prima che l'evento `slid.bs.carousel` si verifichi).
 
 #### `.carousel('dispose')`
 
-Destroys an element's carousel.
+Distrugge un elemento del carousel.
 
-### Events
+### Eventi
 
-Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
+La classe del carousel di Bootstrap espone due eventi per l'aggancio alla funzionalità del carousel. Entrambi gli eventi hanno le seguenti proprietà aggiuntive:
 
-- `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
-- `relatedTarget`: The DOM element that is being slid into place as the active item.
-- `from`: The index of the current item
-- `to`: The index of the next item
+- `direction`: La direzione nella quale il carousel sta scorrendo (`"sinistra"` o `"destra"`).
+- `relatedTarget`: L'elemento DOM che viene inserito in posizione come elemento attivo.
+- `from`: L'indice dell'elemento corrente
+- `to`: L'indice dell'elemento successivo
 
-All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
+Tutti gli eventi del carousel sono attivati sul carousel stesso (i.e. su `<div class="carousel">`).
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Tipo di Evento</th>
+      <th>Descrizione</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>slide.bs.carousel</td>
-      <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+      <td>Questo evento si attiva immediatamente quando viene richiamato il metodo dell'istanza della <code>diapositiva</code>.</td>
     </tr>
     <tr>
       <td>slid.bs.carousel</td>
-      <td>This event is fired when the carousel has completed its slide transition.</td>
+      <td>Questo evento si attiva quando il carousel ha completato la transizione della diapositiva.</td>
     </tr>
   </tbody>
 </table>
