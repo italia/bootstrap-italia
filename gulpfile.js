@@ -227,12 +227,12 @@ gulp.task('watch', function watch(done) {
   gulp.watch([
     Paths.SCSS_WATCH,
     Paths.JS_WATCH
-  ], ['build-code']);
+  ], gulp.series('build-code'));
 
   gulp.watch([
     Paths.SCSS_DOCUMENTATION_WATCH,
     Paths.JS_DOCUMENTATION_WATCH
-  ], ['build-docs']);
+  ], gulp.series('build-docs'));
 
   done();
 
