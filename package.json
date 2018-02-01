@@ -16,7 +16,7 @@
     "code-build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
-    "documentation-deploy-to-gh-pages": "documentation-build && gh-pages -d _gh_pages",
+    "documentation-deploy-to-gh-pages": "npm run documentation-build && gh-pages -d _gh_pages",
     "start": "npm-run-parallel code-watch documentation-serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
