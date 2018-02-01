@@ -176,15 +176,7 @@ gulp.task('js-bundle-min', gulp.series('js-bundle', 'js', function createBundleM
 }))
 
 gulp.task('introduction', function introduction(done) {
-  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' +
-    chalk.yellow('v' + pkg.version);
-  var flagRow = chalk.rgb(0, 146, 70)('############') +
-    chalk.rgb(241, 242, 241)('############') +
-    chalk.rgb(206, 43, 55)('############');
-  console.log(manifest);
-  for (var i = 0; i < 8; i++) {
-    console.log(flagRow);
-  }
+  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' + chalk.yellow('v' + pkg.version);
   done();
 })
 
@@ -222,8 +214,7 @@ gulp.task('build-docs', gulp.series('docs-scss', 'docs-js'));
 gulp.task('build', gulp.series('introduction', 'build-code', 'build-docs'));
 
 // Main watch task
-gulp.task('watch', function watch(done) {
-
+gulp.task('watch', gulp.series('build', function watch(done) {
   gulp.watch([
     Paths.SCSS_WATCH,
     Paths.JS_WATCH
@@ -233,7 +224,5 @@ gulp.task('watch', function watch(done) {
     Paths.SCSS_DOCUMENTATION_WATCH,
     Paths.JS_DOCUMENTATION_WATCH
   ], gulp.series('build-docs'));
-
   done();
-
-})
+}))

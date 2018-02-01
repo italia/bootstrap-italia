@@ -46,7 +46,7 @@ social_image_path:  "TODO"
 social_logo_path:   "TODO"
 
 # Custom variables
-current_version:      0.1.0-alpha
+current_version:      0.1.0
 bootstrap_version:    4
 repo:                 "https://github.com/italia/bootstrap-italia/"
 developers:           "https://developers.italia.it/"

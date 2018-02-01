@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "keywords": [
     "css",
     "sass",
@@ -12,12 +12,12 @@
   ],
   "description": "Bootstrap Italia è un tema open-source basato su Bootstrap 4 per la creazione di applicazioni responsive, mobile-first per il web",
   "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp build",
-    "build-code": "gulp build-code",
-    "build-docs": "gulp build-docs && bundle exec jekyll build",
-    "deploy-docs": "gh-pages -d _gh_pages",
-    "start": "gulp build && bundle exec jekyll serve",
+    "code-watch": "gulp watch",
+    "code-build": "gulp build",
+    "documentation-build": "bundle exec jekyll build",
+    "documentation-serve": "bundle exec jekyll serve",
+    "documentation-deploy-to-gh-pages": "documentation-build && gh-pages -d _gh_pages",
+    "start": "npm-run-parallel code-watch documentation-serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
@@ -51,7 +51,8 @@
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^1.2.0",
-    "gulp-wrapper": "^1.0.0"
+    "gulp-wrapper": "^1.0.0",
+    "npm-run-parallel": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
