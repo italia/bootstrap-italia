@@ -38,15 +38,15 @@
 <meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:title" content="Introduzione">
 <meta name="twitter:description" content="In questa sezione sono mostrati alcuni componenti e utilità per l’organizzazione del layout e delle funzionalità di una pagina.">
-<meta name="twitter:image" content="http://localhost:9001TODO">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="http://localhost:9001/docs/utilities/introduzione/">
+<meta property="og:url" content="/bootstrap-italia/docs/utilities/introduzione/">
 <meta property="og:title" content="Introduzione">
 <meta property="og:description" content="In questa sezione sono mostrati alcuni componenti e utilità per l’organizzazione del layout e delle funzionalità di una pagina.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://localhost:9001TODO">
-<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -111,7 +111,7 @@
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item">
       <a class="nav-link p-2 disabled" href="#" aria-label="Version">
-        0.1.0-alpha
+        0.1.0
       </a>
     </li>
 
@@ -199,14 +199,14 @@
               Collapse <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/dropdowns/">
               Dropdowns <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/forms/">
               Forms <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/input-group/">
               Input group <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/jumbotron/">
               Jumbotron <span class="badge badge-info">to do</span></a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/list-group/">
-              List group <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navs/">
@@ -242,7 +242,7 @@
 
       <ul class="nav bd-sidenav pl-2"><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/utilities/introduzione/">
-              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+              Introduzione</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
               Allineamento verticale</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/bordi/">
@@ -258,7 +258,7 @@
             <a href="/bootstrap-italia/docs/utilities/embed/">
               Embed</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/flex/">
-              Flex <span class="badge badge-info">to do</span></a></li><li>
+              Flex</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/float/">
               Float</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/griglie/">
@@ -266,7 +266,7 @@
             <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
               Immagini sostitutive</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/media-object/">
-              Media object <span class="badge badge-info">to do</span></a></li><li>
+              Media object</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/position/">
               Position</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/screenreaders/">
@@ -287,10 +287,10 @@
 <li class="toc-entry toc-h2"><a href="#containers">Containers</a></li>
 <li class="toc-entry toc-h2"><a href="#responsive-breakpoints">Responsive breakpoints</a></li>
 <li class="toc-entry toc-h2"><a href="#z-index">Z-index</a></li>
-<li class="toc-entry toc-h2"><a href="#changing-display">Changing display</a></li>
-<li class="toc-entry toc-h2"><a href="#flexbox-options">Flexbox options</a></li>
-<li class="toc-entry toc-h2"><a href="#margin-and-padding">Margin and padding</a></li>
-<li class="toc-entry toc-h2"><a href="#toggle-visibility">Toggle visibility</a></li>
+<li class="toc-entry toc-h2"><a href="#modificare-display">Modificare display</a></li>
+<li class="toc-entry toc-h2"><a href="#opzioni-flexbox">Opzioni Flexbox</a></li>
+<li class="toc-entry toc-h2"><a href="#margin-e-padding">Margin e padding</a></li>
+<li class="toc-entry toc-h2"><a href="#modificare-la-visibilità">Modificare la visibilità</a></li>
 </ul>
           </div>
         
@@ -300,7 +300,7 @@
           <p class="bd-lead">In questa sezione sono mostrati alcuni componenti e utilità per l’organizzazione del layout e delle funzionalità di una pagina.</p>
           <h2 id="containers">Containers</h2>
 
-<p>Il “container” (contenitore) è uno degli elementi base nell’utilizzo di Bootstrap, ed è <strong>richiesto quando si utilizza il <a href="/bootstrap-italia/docs/utilities/grid/">grid system</a></strong>.</p>
+<p>Il “container” (contenitore) è uno degli elementi base nell’utilizzo di Bootstrap Italia, ed è <strong>richiesto quando si utilizza il <a href="/bootstrap-italia/docs/utilities/griglie/">grid system</a></strong>.</p>
 
 <p>La prima scelta è tra un container a larghezza <em>fissa</em>, la cui <code class="highlighter-rouge">max-width</code> cambia ad ogni breakpoint, o <em>fluida</em>, la cui larghezza rimane al 100% per ogni dimensione del viewport.</p>
 
@@ -332,9 +332,9 @@
 
 <h2 id="responsive-breakpoints">Responsive breakpoints</h2>
 
-<p>Visto che la progettazione web è bene che venga gestita <em>mobile-first</em>, in Bootstrap Italia sono definite alcune <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l’alto quando la dimensione della finesta aumenta.</p>
+<p>Visto che la progettazione web è bene venga gestita <em>mobile-first</em>, in Bootstrap Italia sono definite alcune <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a> per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l’alto quando la dimensione della finesta aumenta.</p>
 
-<p>Bootstrap Italia utilizza le media query seguenti per definire i breakpoint usati nelle sue griglie e componenti.</p>
+<p>Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usati nelle sue griglie e componenti.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Schermi piccoli (meno di 576px)
 // Non è necessaria alcuna media query, in quanto la progettazione mobile-first fa sì che questo sia il codice di default
@@ -351,7 +351,7 @@
 <span class="c1">// Schermi molto grandi (almeno 1200px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1200px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>Since we write our source CSS in Sass, all our media queries are available via Sass mixins:</p>
+<p>Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
@@ -366,52 +366,56 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>We occasionally use media queries that go in the other direction (the given screen size <em>or smaller</em>):</p>
+<p>In casi eccezionali, è possibile utilizzare le media query che vanno nella direzione opposta (la dimensione dello schermo <em>o inferiore</em>):</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 576px)
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Schermi piccoli (meno di 576px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">575</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Small devices (landscape phones, less than 768px)
+<span class="c1">// Schermi medio-piccoli (meno di 768px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Medium devices (tablets, less than 992px)
+<span class="c1">// Schermi medi (meno di 992px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">991</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, less than 1200px)
+<span class="c1">// Schermi grandi (meno di 1200px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1199</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (large desktops)
-</span><span class="o">//</span> <span class="nt">No</span> <span class="nt">media</span> <span class="nt">query</span> <span class="nt">since</span> <span class="nt">the</span> <span class="nt">extra-large</span> <span class="nt">breakpoint</span> <span class="nt">has</span> <span class="nt">no</span> <span class="nt">upper</span> <span class="nt">bound</span> <span class="nt">on</span> <span class="nt">its</span> <span class="nt">width</span></code></pre></figure>
+<span class="c1">// Schermi molto grandi (uguale o più di 1200px)
+</span><span class="o">//</span> <span class="nt">Non</span> <span class="err">è</span> <span class="nt">necessaria</span> <span class="nt">alcuna</span> <span class="nt">media</span> <span class="nt">query</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">quanto</span> <span class="nt">la</span> <span class="nt">progettazione</span> <span class="nt">per</span> <span class="nt">schermi</span> <span class="nt">molto</span> <span class="nt">grandi</span> <span class="nt">fa</span> <span class="nt">s</span><span class="err">ì</span> <span class="nt">che</span> <span class="nt">questo</span> <span class="nt">sia</span> <span class="nt">il</span> <span class="nt">codice</span> <span class="nt">di</span> <span class="nt">default</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-info">
-<p>Nota che in quanto i browser non supportano attualmente i <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>, stiamo aggirando i limiti dei <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefissi <code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-</code></a> e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.</p>
+<p>Nota che, dal momento che i browser non supportano attualmente i <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>,
+stiamo evitando di utilizzare i limiti dei <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefissi <code class="highlighter-rouge">min-</code> e <code class="highlighter-rouge">max-</code></a>
+e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta
+risoluzione), utilizzando valori con maggiore precisione per questi confronti.</p>
 </div>
 
-<p>Once again, these media queries are also available via Sass mixins:</p>
+<p>Come sopra, quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">media-breakpoint-down</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-down</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-down</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.</p>
+<p>Sono previste anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando
+la larghezza minima e massima dei breakpoint.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 576px)
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Schermi piccoli (meno di 576px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">575</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Small devices (landscape phones, 576px and up)
+<span class="c1">// Schermi medio-piccoli (da 576px a meno di 768px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">576px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Medium devices (tablets, 768px and up)
+<span class="c1">// Schermi medi (da 768px a meno di 992px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">991</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, 992px and up)
+<span class="c1">// Schermi grandi (da 992px a meno di 1200px)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">992px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1199</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (large desktops, 1200px and up)
+<span class="c1">// Schermi molto grandi (da 1200px in su)
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1200px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>These media queries are also available via Sass mixins:</p>
+<p>Anche queste media query sono disponibili tramite Sass mixin:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
@@ -419,23 +423,27 @@
 <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>Similarly, media queries may span multiple breakpoint widths:</p>
+<p>Similmente le media query possono estendersi su più breakpoint:</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Example
-// Apply styles starting from medium devices and up to extra large devices
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Esempio
+// Applica gli stili partendo da uno schermo medio fino a uno grande 
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="nf">and</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1199</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
-<p>The Sass mixin for targeting the same screen size range would be:</p>
+<p>Per ottenere il mixin Sass di questo stesso range:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">media-breakpoint-between</span><span class="p">(</span><span class="n">md</span><span class="o">,</span> <span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre></figure>
 
 <h2 id="z-index">Z-index</h2>
 
-<p>Several Bootstrap components utilize <code class="highlighter-rouge">z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
+<p>Alcuni componenti Bootstrap Italia utilizzano <code class="highlighter-rouge">z-index</code>, la proprietà CSS che aiuta a controllare il layout fornendo un
+terzo livello di asse per organizzare graficamente il contenuto. Utilizziamo una scala graduale z-index predefinita che
+è stata progettata per stratificare correttamente navigazione, tooltip, popover, finestre modali e altro ancora.</p>
 
-<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code class="highlighter-rouge">100</code>+ or <code class="highlighter-rouge">500</code>+.</p>
+<p>Questi valori partono da un numero arbitrario, alto e abbastanza specifico, per evitare idealmente conflitti. Abbiamo un
+set standard di questi valori attraverso i quali i componenti coesistano a diversi livelli (tooltip, popover, navbar,
+dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.</p>
 
-<p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
+<p>Si scoraggia di personalizzare singolarmente questi valori; se dovessi cambiarne uno, probabilmente dovrai cambiarli tutti.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$zindex-dropdown</span><span class="p">:</span>          <span class="m">1000</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 <span class="nv">$zindex-sticky</span><span class="p">:</span>            <span class="m">1020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
@@ -445,27 +453,42 @@
 <span class="nv">$zindex-popover</span><span class="p">:</span>           <span class="m">1060</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 <span class="nv">$zindex-tooltip</span><span class="p">:</span>           <span class="m">1070</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
 
-<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class="highlighter-rouge">z-index</code> values of <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, and <code class="highlighter-rouge">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class="highlighter-rouge">z-index</code> value to show their border over the sibling elements.</p>
+<p>Per gestire i bordi sovrapposti all’interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori
+di <code class="highlighter-rouge">z-index</code> a una sola cifra di <code class="highlighter-rouge">1</code>,<code class="highlighter-rouge"> 2</code> e <code class="highlighter-rouge">3</code> per default, hover e stati attivi. Al passaggio del mouse/focus/active
+portiamo un particolare elemento in primo piano con un valore più alto di ‘z-index` per mostrare il loro confine sugli
+elementi di pari livello.</p>
 
 <hr />
 
-<h2 id="changing-display">Changing <code class="highlighter-rouge">display</code></h2>
+<h2 id="modificare-display">Modificare <code class="highlighter-rouge">display</code></h2>
 
-<p>Use our <a href="/bootstrap-italia/docs/utilities/display/">display utilities</a> for responsively toggling common values of the <code class="highlighter-rouge">display</code> property. Mix it with our grid system, content, or components to show or hide them across specific viewports.</p>
+<p>Utilizza insieme le <a href="/bootstrap-italia/docs/utilities/display/">display utility</a> con il grid system, i contenuti o i
+componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.</p>
 
-<h2 id="flexbox-options">Flexbox options</h2>
+<h2 id="opzioni-flexbox">Opzioni Flexbox</h2>
 
-<p>Bootstrap 4 is built with flexbox, but not every element’s <code class="highlighter-rouge">display</code> has been changed to <code class="highlighter-rouge">display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of <a href="/bootstrap-italia/docs/componenti/alerts/">our components</a> are built with flexbox enabled.</p>
+<p>Bootstrap Italia è realizzato con flexbox, ma non tutti i <code class="highlighter-rouge">display</code> utilizzano <code class="highlighter-rouge">display: flex</code> in quanto ciò avrebbe
+costretto a molti override non necessari.</p>
 
-<p>Should you need to add <code class="highlighter-rouge">display: flex</code> to an element, do so with <code class="highlighter-rouge">.d-flex</code> or one of the responsive variants (e.g., <code class="highlighter-rouge">.d-sm-flex</code>). You’ll need this class or <code class="highlighter-rouge">display</code> value to allow the use of our extra <a href="/bootstrap-italia/docs/utilities/flex/">flexbox utilities</a> for sizing, alignment, spacing, and more.</p>
+<p>Se ritieni necessario aggiungere <code class="highlighter-rouge">display: flex</code> a un elemento puoi farlo con <code class="highlighter-rouge">.d-flex</code> o una delle sue varianti
+responsive (es.: <code class="highlighter-rouge">.d-sm-flex</code>). Avrai bisogno di queste classi <code class="highlighter-rouge">display</code> per consentire l’uso delle
+<a href="/bootstrap-italia/docs/utilities/flex/">utility flexbox</a> per così modificarne il dimensionamento, l’allineamento, la
+spaziatura e altro ancora.</p>
 
-<h2 id="margin-and-padding">Margin and padding</h2>
+<h2 id="margin-e-padding">Margin e padding</h2>
 
-<p>Use the <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code> <a href="/bootstrap-italia/docs/utilities/spacing/">spacing utilities</a> to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a <code class="highlighter-rouge">1rem</code> value default <code class="highlighter-rouge">$spacer</code> variable. Choose values for all viewports (e.g., <code class="highlighter-rouge">.mr-3</code> for <code class="highlighter-rouge">margin-right: 1rem</code>), or pick responsive variants to target specific viewports (e.g., <code class="highlighter-rouge">.mr-md-3</code> for <code class="highlighter-rouge">margin-right: 1rem</code> starting at the <code class="highlighter-rouge">md</code> breakpoint).</p>
+<p>Usa il <code class="highlighter-rouge">margin</code> e <code class="highlighter-rouge">padding</code> delle <a href="/bootstrap-italia/docs/utilities/spaziature/">utility spaziatura</a> per gestire spazi
+e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
+una variabile predefinita <code class="highlighter-rouge">$spacer</code> di valore <code class="highlighter-rouge">1rem</code>.</p>
 
-<h2 id="toggle-visibility">Toggle <code class="highlighter-rouge">visibility</code></h2>
+<p>Scegli i valori per tutti i viewport (es.: <code class="highlighter-rouge">.mr-3</code> per <code class="highlighter-rouge">margin-right: 1rem</code>), o scegli le varianti responsive per viewport
+specifici (es.: <code class="highlighter-rouge">.mr-md-3</code> per <code class="highlighter-rouge">margin-right: 1rem</code> a partire dal breakpoint <code class="highlighter-rouge">md</code>).</p>
 
-<p>When toggling <code class="highlighter-rouge">display</code> isn’t needed, you can toggle the <code class="highlighter-rouge">visibility</code> of an element with our <a href="/bootstrap-italia/docs/utilities/visibility/">visibility utilities</a>. Invisible elements will still affect the layout of the page, but are visually hidden from visitors.</p>
+<h2 id="modificare-la-visibilità">Modificare la visibilità</h2>
+
+<p>Quando è necessario nascondere o rendere visibile un elemento si possono usare le <a href="/bootstrap-italia/docs/utilities/visibility/">utility di visibilità</a>.</p>
+
+<p>Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.</p>
 
           <div id="disqus_thread"></div>
           <script>

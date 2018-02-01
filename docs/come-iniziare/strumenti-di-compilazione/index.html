@@ -38,15 +38,15 @@
 <meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:title" content="Strumenti di compilazione">
 <meta name="twitter:description" content="Come compilare il codice sorgente, generare la documentazione, ed altro.">
-<meta name="twitter:image" content="http://localhost:9001TODO">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="http://localhost:9001/docs/come-iniziare/strumenti-di-compilazione/">
+<meta property="og:url" content="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
 <meta property="og:title" content="Strumenti di compilazione">
 <meta property="og:description" content="Come compilare il codice sorgente, generare la documentazione, ed altro.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="http://localhost:9001TODO">
-<meta property="og:image:secure_url" content="http://localhost:9001TODO">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -111,7 +111,7 @@
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item">
       <a class="nav-link p-2 disabled" href="#" aria-label="Version">
-        0.1.0-alpha
+        0.1.0
       </a>
     </li>
 
@@ -199,14 +199,14 @@
               Collapse <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/dropdowns/">
               Dropdowns <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/forms/">
               Forms <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/input-group/">
               Input group <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/jumbotron/">
               Jumbotron <span class="badge badge-info">to do</span></a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/list-group/">
-              List group <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navs/">
@@ -242,7 +242,7 @@
 
       <ul class="nav bd-sidenav pl-2"><li>
             <a href="/bootstrap-italia/docs/utilities/introduzione/">
-              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+              Introduzione</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
               Allineamento verticale</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/bordi/">
@@ -258,7 +258,7 @@
             <a href="/bootstrap-italia/docs/utilities/embed/">
               Embed</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/flex/">
-              Flex <span class="badge badge-info">to do</span></a></li><li>
+              Flex</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/float/">
               Float</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/griglie/">
@@ -266,7 +266,7 @@
             <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
               Immagini sostitutive</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/media-object/">
-              Media object <span class="badge badge-info">to do</span></a></li><li>
+              Media object</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/position/">
               Position</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/screenreaders/">
@@ -318,7 +318,7 @@
 e creare la documentazione che stai leggendo in un ambiente di svluppo locale.</p>
 
 <p>Le informazioni di seguito non sono indispensabili per utilizzare Bootstrap Italia nel tuo sito, in tal caso ti può essere
-utile la <a href="/bootstrap-italia/docscome-iniziare/introduzione/">pagina introduttiva</a>.</p>
+utile la <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">pagina introduttiva</a>.</p>
 </div>
 
 <h2 id="setup-strumenti">Setup strumenti</h2>
@@ -422,7 +422,7 @@ per questo è composta di file statici che risiedono sul branch <code class="hig
 <ol>
   <li>Installare Jekyll seguendo le istruzioni nel paragrafo <a href="#tooling-setup">tooling setup</a>.</li>
   <li>Eseguire <code class="highlighter-rouge">npm start</code> (che a sua volta esegue il comando per lanciare il server locale <code class="highlighter-rouge">bundle exec jekyll build</code>)</li>
-  <li>Navigare su <code class="highlighter-rouge">http://localhost:9001</code>.</li>
+  <li>Navigare su <code class="highlighter-rouge">http://127.0.0.1:4000/bootstrap-italia/</code>.</li>
 </ol>
 
 <p>La struttura delle cartelle della documentazione è la seguente:</p>
@@ -447,7 +447,7 @@ Per fare questo, è sufficiente lanciare il comando:</p>
 
 <p>È necessario quindi portare tutto il contenuto di tale cartella sul branch <code class="highlighter-rouge">gh-pages</code> con il comando:</p>
 
-<p><code class="highlighter-rouge">npm run deploy-docs</code></p>
+<p><code class="highlighter-rouge">npm run documentation-deploy-to-gh-pages</code></p>
 
 <p>Tale comando creerà un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code>, lanciando così la pubblicazione immediata della documentazione
 su GitHub Pages e visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a>.</p>
@@ -457,7 +457,7 @@ su GitHub Pages e visibile all’indirizzo <a href="https://italia.github.io/boo
 <h6 id="continua-la-lettura-">Continua la lettura &gt;</h6>
 
 <p>Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
-continua a leggere alla <a href="/bootstrap-italia/docscome-iniziare/modificare-componenti/">pagina che spiega come farlo</a>.</p>
+continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">pagina che spiega come farlo</a>.</p>
 
 
           <div id="disqus_thread"></div>
