@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.1.0
+ * Bootstrap Italia v0.1.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
