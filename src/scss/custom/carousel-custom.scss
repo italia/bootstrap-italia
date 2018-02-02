@@ -1,3 +1,8 @@
+.carousel {
+    background-color: $carousel-bg;
+    padding: $carousel-padding;
+    padding-top: 3.5em;
+}
 .carousel-control-prev,
 .carousel-control-next {
     top: 1em;
@@ -5,20 +10,19 @@
 }
 .carousel-control-prev {
     left: auto;
-    right: 5em;
+    right: 6em;
 }
 .carousel-control-next {
-    right: 1em;
+    right: 3em;
 }
 .carousel-caption {
     position: static;
     padding-bottom: 0;
 }
-
 .carousel-indicators li {
     background-color: rgba(101, 220, 223, 0.5);
 }
-
 .carousel-indicators .active {
     background-color: $carousel-control-color;
 }
+

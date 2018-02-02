@@ -7019,6 +7019,11 @@ h4, .h4 {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
+.carousel {
+  background-color: #444e57;
+  padding: 3em;
+  padding-top: 3.5em; }
+
 .carousel-control-prev,
 .carousel-control-next {
   top: 1em;
@@ -7028,10 +7033,10 @@ h4, .h4 {
 
 .carousel-control-prev {
   left: auto;
-  right: 5em; }
+  right: 6em; }
 
 .carousel-control-next {
-  right: 1em; }
+  right: 3em; }
 
 .carousel-caption {
   position: static;
