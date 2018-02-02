@@ -4,7 +4,7 @@ jQuery(function($) {
   function checkCookie_eu() {
       var consent = getCookie_eu("cookies_consent");
       if (consent == null || consent == "" || consent == undefined) {
-          $('#cookie-bar').show();
+          $('#cookie-bar').removeClass("d-none");
       }
   }
 
@@ -13,7 +13,7 @@ jQuery(function($) {
       exdate.setDate(exdate.getDate() + exdays);
       var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
       document.cookie = c_name + "=" + c_value+"; path=/";
-      $('#cookie-bar').hide();
+      $('#cookie-bar').addClass("d-none");
   }
 
   function getCookie_eu(c_name) {
