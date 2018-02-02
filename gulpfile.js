@@ -8,7 +8,6 @@ var cleanCSS = require('gulp-clean-css')
 var rename = require('gulp-rename')
 var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
-var connect = require('gulp-connect')
 var open = require('gulp-open')
 var babel = require('gulp-babel')
 var replace = require('gulp-replace')
@@ -62,7 +61,7 @@ var jqueryVersionCheck = '+function ($) {\n' +
   '  }\n' +
   '}(jQuery);\n\n'
 
-gulp.task('scss', function () {
+gulp.task('scss', function createSCSS(done) {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -73,9 +72,10 @@ gulp.task('scss', function () {
     }))
     .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST + '/css'))
+  done()
 })
 
-gulp.task('scss-min', ['scss'], function () {
+gulp.task('scss-min', gulp.series('scss', function createMinifiedSCSS (done) {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -90,9 +90,10 @@ gulp.task('scss-min', ['scss'], function () {
     }))
     .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST + '/css'))
-})
+  done()
+}))
 
-gulp.task('js', function () {
+gulp.task('js', function createJS(done) {
   return gulp.src(Paths.SOURCE_JS)
     .pipe(concat(FILENAME + '.js'))
     .pipe(replace(/^(export|import).*/gm, ''))
@@ -123,9 +124,10 @@ gulp.task('js', function () {
       footer: '\n}();\n'
     }))
     .pipe(gulp.dest(Paths.DIST + '/js'))
+  done();
 })
 
-gulp.task('js-min', ['js'], function () {
+gulp.task('js-min', gulp.series('js', function createMinifiedJS(done) {
   return gulp.src(Paths.DIST + '/js/' + FILENAME + '.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -138,9 +140,10 @@ gulp.task('js-min', ['js'], function () {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(Paths.DIST + '/js'))
-})
+  done();
+}))
 
-gulp.task('js-bundle', ['js'], function () {
+gulp.task('js-bundle', gulp.series('js', function createBundleJS(done) {
   var BUNDLE_JS = [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
@@ -153,9 +156,10 @@ gulp.task('js-bundle', ['js'], function () {
     }))
     .pipe(concat(FILENAME + '.bundle.js'))
     .pipe(gulp.dest(Paths.DIST + '/js'))
-})
+  done();
+}))
 
-gulp.task('js-bundle-min', ['js-bundle', 'js'], function () {
+gulp.task('js-bundle-min', gulp.series('js-bundle', 'js', function createBundleMinifiedJS(done) {
   return gulp.src(Paths.DIST + '/js/' + FILENAME + '.bundle.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -168,22 +172,16 @@ gulp.task('js-bundle-min', ['js-bundle', 'js'], function () {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(Paths.DIST + '/js'))
-})
+  done();
+}))
 
-gulp.task('introduction', function () {
-  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' +
-    chalk.yellow('v' + pkg.version);
-  var flagRow = chalk.rgb(0, 146, 70)('############') +
-    chalk.rgb(241, 242, 241)('############') +
-    chalk.rgb(206, 43, 55)('############');
-  console.log(manifest);
-  for (var i = 0; i < 8; i++) {
-    console.log(flagRow);
-  }
+gulp.task('introduction', function introduction(done) {
+  var manifest = chalk.hex('#06C')(pkg.description) + ' | ' + chalk.yellow('v' + pkg.version);
+  done();
 })
 
 /* Documentation */
-gulp.task('docs-scss', function () {
+gulp.task('docs-scss', function createDocumentationSCSS(done) {
   return gulp.src(Paths.SOURCE_DOCUMENTATION_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -194,36 +192,37 @@ gulp.task('docs-scss', function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/css'))
+  done();
 })
 
-gulp.task('docs-js', function () {
+gulp.task('docs-js', function createDocumentationJS(done) {
   return gulp.src(Paths.SOURCE_DOCUMENTATION_JS)
     .pipe(concat('docs.js'))
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/js'))
+  done();
 })
 
 // Code build
-gulp.task('build-code', ['scss-min', 'js-min', 'js-bundle-min']);
+gulp.task('build-code', gulp.series('scss-min', 'js-min', 'js-bundle-min'));
 // Docs build
-gulp.task('build-docs', ['docs-scss', 'docs-js']);
+gulp.task('build-docs', gulp.series('docs-scss', 'docs-js'));
 
 // Main build task
-gulp.task('build', ['introduction', 'build-code', 'build-docs']);
+gulp.task('build', gulp.series('introduction', 'build-code', 'build-docs'));
 
 // Main watch task
-gulp.task('watch', function () {
-
+gulp.task('watch', gulp.series('build', function watch(done) {
   gulp.watch([
     Paths.SCSS_WATCH,
     Paths.JS_WATCH
-  ], ['build-code']);
+  ], gulp.series('build-code'));
 
   gulp.watch([
     Paths.SCSS_DOCUMENTATION_WATCH,
     Paths.JS_DOCUMENTATION_WATCH
-  ], ['build-docs']);
-
-})
+  ], gulp.series('build-docs'));
+  done();
+}))

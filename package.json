@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1",
   "keywords": [
     "css",
     "sass",
@@ -14,10 +14,10 @@
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp build",
-    "build-code": "gulp build-code",
-    "build-docs": "gulp build-docs && bundle exec jekyll build",
-    "deploy-docs": "gh-pages -d _gh_pages",
-    "start": "gulp build && bundle exec jekyll serve",
+    "documentation-build": "bundle exec jekyll build",
+    "documentation-serve": "bundle exec jekyll serve",
+    "documentation-deploy-to-gh-pages": "npm run documentation-build && gh-pages -d _gh_pages",
+    "start": "npm run documentation-serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
@@ -40,19 +40,17 @@
     "babel-preset-env": "^1.6.1",
     "chalk": "^2.3.0",
     "gh-pages": "^1.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.0.0",
     "gulp-open": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.8",
     "gulp-wrapper": "^1.0.0"
   },
   "dependencies": {
