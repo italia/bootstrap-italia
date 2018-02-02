@@ -8,13 +8,13 @@ toc: true
 
 ## Esempi
 
-Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre può prevedere un pulsante di chiusura utilizzando la [plugin alerts di jQuery](#dismissing).
+Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando il [plugin _alerts_ di jQuery](#chiusura).
 
 {% example html %}
 {% for color in site.data.theme-colors %}
 {% if color.name == "danger" or color.name == "warning" or color.name == "success" or color.name == "info" %}
 <div class="alert alert-{{ color.name }}" role="alert">
-  Questo è un alert di {{ color.name }}!
+  Questo è un alert di <em>{{ color.name }}</em>!
 </div>{% endif %}{% endfor %}
 {% endexample %}
 
@@ -23,7 +23,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghez
 
 ### Link evidenziato
 
-Usa la classe `.alert-link` per dare risalto a un link all'interno dell'alert.
+Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
 
 {% example html %}
 <div class="alert alert-danger" role="alert">
@@ -90,7 +90,7 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 
 | Metodo | Descrizione |
 | --- | --- |
-| `$().alert()` | Attiva l'ascolto dell'evento click negli elementi che hanno l'attributo `data-dismiss="alert"` (Non è necessario quando c'è l'inizializzazione automativa tramite API.) |
+| `$().alert()` | Attiva l'ascolto dell'evento click negli elementi che hanno l'attributo `data-dismiss="alert"` (Non è necessario quando c'è l'inizializzazione automatica tramite API). |
 | `$().alert('close')` | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa. |
 | `$().alert('dispose')` | L'alert viene rimosso. |
 
@@ -98,7 +98,7 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 
 ### Eventi
 
-Il plugin  alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.
+Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.
 
 | Evento | Descrizione |
 | --- | --- |
