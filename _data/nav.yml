@@ -65,6 +65,8 @@
   pages:
     - title: Introduzione
       status: work in progress
+    - title: Cookiebar
+      status: work in progress
     - title: Image Grid
       status: to do
     - title: Zoom
