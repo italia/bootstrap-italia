@@ -13,18 +13,18 @@ Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bot
 Con elementi inline:
 
 {% example html %}
-<span class="align-baseline">baseline</span>
-<span class="align-top">top</span>
-<span class="align-middle">middle</span>
-<span class="align-bottom">bottom</span>
-<span class="align-text-top">text-top</span>
-<span class="align-text-bottom">text-bottom</span>
+<span class="align-baseline p-1 bg-secondary">baseline</span>
+<span class="align-top p-1 bg-secondary">top</span>
+<span class="align-middle p-1 bg-secondary">middle</span>
+<span class="align-bottom p-1 bg-secondary">bottom</span>
+<span class="align-text-top p-1 bg-secondary">text-top</span>
+<span class="align-text-bottom p-1 bg-secondary">text-bottom</span>
 {% endexample %}
 
 Con le celle di tabella:
 
 {% example html %}
-<table style="height: 100px;">
+<table style="height: 100px;" class="table table-bordered">
   <tbody>
     <tr>
       <td class="align-baseline">baseline</td>

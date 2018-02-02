@@ -13,7 +13,7 @@ Questa pagina si occupa di approfondire gli strumenti per ricompilare o personal
 e creare la documentazione che stai leggendo in un ambiente di svluppo locale.
 
 Le informazioni di seguito non sono indispensabili per utilizzare Bootstrap Italia nel tuo sito, in tal caso ti può essere
-utile la [pagina introduttiva]({{ site.baseurl }}/docscome-iniziare/introduzione/).
+utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
 {% endcallout %}
 
 ## Setup strumenti
@@ -87,7 +87,7 @@ Per poter testare la documentazione in ambiente locale, è sufficiente seguire l
 
 1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
 2. Eseguire `npm start` (che a sua volta esegue il comando per lanciare il server locale `bundle exec jekyll build`)
-3. Navigare su `http://localhost:9001`.
+3. Navigare su `http://127.0.0.1:4000/bootstrap-italia/`.
 
 La struttura delle cartelle della documentazione è la seguente:
 
@@ -109,7 +109,7 @@ Per fare questo, è sufficiente lanciare il comando:
 
 È necessario quindi portare tutto il contenuto di tale cartella sul branch `gh-pages` con il comando:
 
-`npm run deploy-docs`
+`npm run documentation-deploy-to-gh-pages`
 
 Tale comando creerà un nuovo commit sul branch `gh-pages`, lanciando così la pubblicazione immediata della documentazione
 su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/).
@@ -132,5 +132,5 @@ su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-ita
 ###### Continua la lettura >
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
-continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docscome-iniziare/modificare-componenti/).
+continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).
 
