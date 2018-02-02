@@ -64,9 +64,12 @@ $yellow: #ffc107 !default; //TODO
 $cyan: #17a2b8 !default; //TODO
 $italia-blue: hsb(210, 100, 80) !default;
 $italia-teal: hsb(178, 95, 85) !default;
-$italia-red: hsb(351, 75, 97) !default;
-$italia-orange: hsb(36, 100, 100) !default;
-$italia-green: hsb(159, 100, 81) !default;
+//$italia-red: hsb(351, 75, 97) !default;
+//$italia-orange: hsb(36, 100, 100) !default;
+//$italia-green: hsb(159, 100, 81) !default;
+$italia-red: red !default;
+$italia-orange: #d1ae00 !default;
+$italia-green: #65b446 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -100,7 +103,7 @@ $link-color: $brand-primary;
 $primary: $italia-blue !default;
 $secondary: $italia-teal !default;
 $success: $italia-green !default;
-$info: $gray-100 !default;
+$info: $gray-300 !default;
 $warning: $italia-orange !default;
 $danger: $italia-red !default;
 $light: $gray-100 !default;
@@ -196,6 +199,10 @@ $reset-padding: 0 !default;
 // Inputs
 $input-border: $gray-200;
 $input-color-placeholder: $gray-500;
+
+// Alert
+$alert-padding-y: 16px;
+$alert-padding-x: 16px;
 
 // Grid breakpoints
 //
