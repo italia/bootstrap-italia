@@ -20,7 +20,7 @@ Infine, se stai costruendo il JavaScript dal sorgente, è [richiesto `util.js`](
 
 I carousel non normalizzano automaticamente le dimensioni della diapositiva. Pertanto, potrebbe essere necessario utilizzare utilità aggiuntive o stili personalizzati per ridimensionare il contenuto in modo appropriato. Mentre i carousel supportano i controlli e gli indicatori precedente/successivo, questi non sono esplicitamente richiesti. Aggiungi e personalizza come ritieni opportuno.
 
-Assicurati di impostare un unico id su `.carousel` per i controlli opzionali, specialmente se stai usando più di un carousel nella pagina.
+Assicurati di impostare un id univoco su `.carousel` per i controlli opzionali, specialmente se stai usando più di un carousel nella pagina.
 
 ### Solo diapositive
 
@@ -114,7 +114,7 @@ Aggiungere i controlli precedente e successivo:
 Aggiungi facilmente le didascalie alle diapositive con l'elemento `.carousel-caption` all'interno di ogni `.carousel-item`. Possono essere facilmente nascosti su finestre più piccole, come mostrato di seguito, con [utilità di visualizzazione]({{ site.baseurl }}/docs/utilities/display/) opzionali. Vengono nascosti inizialmente con `.d-none` e riportarti su dispositivi di medie dimensioni con `.d-md-block`.
 
 <div class="bd-example">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel slide">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
