@@ -3863,13 +3863,13 @@ tbody.collapse.show {
     background-color: #1d2124; }
 
 .jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #e9ecef;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #eee;
   border-radius: 8px; }
   @media (min-width: 576px) {
     .jumbotron {
-      padding: 4rem 2rem; } }
+      padding: 2rem 1rem; } }
 
 .jumbotron-fluid {
   padding-right: 0;
@@ -7059,6 +7059,18 @@ h4, .h4 {
 
 .list-group-item.active:hover, .list-group-item.active:focus {
   background-color: #0066cc; }
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0; }
+  @media (min-width: 576px) {
+    .jumbotron {
+      padding: 1rem; } }
+  .jumbotron .display-4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00264d;
+    margin-bottom: 0.8rem; }
 
 img[data-action="zoom"] {
   cursor: pointer;
