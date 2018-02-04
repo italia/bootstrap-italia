@@ -1,0 +1,68 @@
+//
+// Base styles
+//
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: 1px solid $gray-300;
+  padding-left: 4em;
+}
+
+// Headings for larger alerts
+.alert-heading {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+// Provide class for links that match alerts
+.alert-link {
+  font-weight: $alert-link-font-weight;
+}
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  padding-right: ($close-font-size + $alert-padding-x * 2);
+
+  // Adjust close link position
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .8rem $alert-padding-x;
+    color: inherit;
+  }
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  @if ($color == "danger" or $color == "warning" or $color == "success" or $color == "info") {
+    .alert-#{$color} {
+      background-position: 1em .8em;
+      background-repeat: no-repeat;
+      border-left: 8px solid #{$value};
+    }
+  }
+}
+
+.alert-danger {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Eerror%3C/title%3E%3Cpath d='M16 1.6C24 1.6 30.4 8 30.4 16S24 30.4 16 30.4 1.6 24 1.6 16 8 1.6 16 1.6zM16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z'/%3E%3Cpath d='M14.4 24c0-.96.64-1.6 1.6-1.6s1.6.64 1.6 1.6c0 .96-.64 1.6-1.6 1.6s-1.6-.64-1.6-1.6zM15.04 20.8l-.32-14.4h2.56l-.32 14.4z'/%3E%3C/svg%3E");
+}
+.alert-warning {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Ewarning%3C/title%3E%3Cpath d='M14.333 26c0-1 .667-1.667 1.667-1.667S17.667 25 17.667 26 17 27.667 16 27.667 14.333 27 14.333 26zM15 22.667l-.333-15h2.667l-.333 15z'/%3E%3Cpath d='M16 2.667c1 0 2 .5 2.5 1.333l10.333 20.833c.5.833.5 2 0 2.833s-1.5 1.5-2.5 1.5H5.666c-1 0-2-.5-2.5-1.5-.5-.833-.5-2 0-2.833L13.499 4c.5-.833 1.5-1.333 2.5-1.333zM16 1c-1.5 0-3 .833-4 2.333L1.667 24.166c-1.667 3 .5 6.833 4 6.833h20.667c3.5 0 5.667-3.833 4-6.833L20.001 3.333c-1-1.667-2.5-2.333-4-2.333z'/%3E%3C/svg%3E");
+}
+.alert-success {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Echeck%3C/title%3E%3Cpath d='M32 6.682l-2.824-2.635-18.447 18.635-8.094-8.094L0 17.412l8.094 7.906h-.188l2.824 2.635 2.635-2.635z'/%3E%3C/svg%3E");
+}
+.alert-info {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Einfo%3C/title%3E%3Cpath d='M16 1.6C24 1.6 30.4 8 30.4 16S24 30.4 16 30.4 1.6 24 1.6 16 8.16 1.6 16 1.6zM16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z'/%3E%3Cpath d='M14.72 9.76V6.72h2.88v3.04h-2.88zm0 15.84V12h2.88v13.6h-2.88z'/%3E%3C/svg%3E");
+}

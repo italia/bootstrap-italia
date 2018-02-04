@@ -31,7 +31,7 @@
 @import "node_modules/bootstrap/scss/pagination";
 @import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/jumbotron";
-@import "node_modules/bootstrap/scss/alert";
+//@import "node_modules/bootstrap/scss/alert";
 @import "node_modules/bootstrap/scss/progress";
 @import "node_modules/bootstrap/scss/media";
 @import "node_modules/bootstrap/scss/list-group";
@@ -52,6 +52,7 @@
 @import "./custom/carousel-custom.scss";
 @import "./custom/list-group-custom.scss";
 @import "./custom/jumbotron-custom.scss";
+@import "./custom/alert-custom.scss";
 
 // Custom components
 @import "./custom/zoom.scss";
