@@ -1,21 +1,19 @@
 ---
 layout: docs
-title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+title: Barra di avanzamento
+description: Documentazione ed esempi per l'utilizzo e personalizzazione delle barre di avanzamento.
 group: componenti
 toc: true
 ---
 
-## How it works
+## Come funziona
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+I componenti di avanzamento progressivo sono costruiti con due elementi HTML, alcuni CSS per impostare la larghezza e alcuni attributi. Non è previsto l'utilizzo dell'elemento [`<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) di HTML5.
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- We use the inner `.progress-bar` to indicate the progress so far.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
-- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
-
-Put that all together, and you have the following examples.
+- Utilizziamo `.progress` come contenitore che indica il valore massimo della barra di avanzamento.
+- Utilizziamo `.progress-bar` come barra interna per indicare fin dove si è arrivati con l'avanzamento.
+- La classe `.progress-bar` richiede uno stile inline, una classe di utility di dimensionamento o un CSS personalizzato per impostare la larghezza.
+- Per rendere accessibile l'elemento `.progress-bar` sono necessari alcuni attributi come `role` e `aria`.
 
 {% example html %}
 <div class="progress">
@@ -35,7 +33,7 @@ Put that all together, and you have the following examples.
 </div>
 {% endexample %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+Sono utilizzare le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/utilities/sizing/) per poter settare i vari avanzamenti.
 
 {% example html %}
 <div class="progress">
@@ -43,9 +41,9 @@ Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}
 </div>
 {% endexample %}
 
-## Labels
+## Etichette
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+Aggiungi le etichette alle barre di avanzamento posizionando il testo all'interno di `.progress-bar`.
 
 {% example html %}
 <div class="progress">
@@ -53,12 +51,15 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 {% endexample %}
 
-## Height
+## Altezza
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+Può essere impostato un solo valore `height` su `.progress`, quindi se cambi questo valore il `.progress-bar` interno verrà automaticamente ridimensionato di conseguenza.
 
 {% example html %}
 <div class="progress" style="height: 1px;">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress" style="height: 10px;">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress" style="height: 20px;">
@@ -66,9 +67,9 @@ We only set a `height` value on the `.progress`, so if you change that value the
 </div>
 {% endexample %}
 
-## Backgrounds
+## Background
 
-Use background utility classes to change the appearance of individual progress bars.
+Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramite le classi delle [utility background]({{ site.baseurl }}/docs/utilities/colors/#background-color)
 
 {% example html %}
 <div class="progress">
@@ -85,55 +86,6 @@ Use background utility classes to change the appearance of individual progress b
 </div>
 {% endexample %}
 
-## Multiple bars
+## Altre personalizzazioni
 
-Include multiple progress bars in a progress component if you need.
-
-{% example html %}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-{% endexample %}
-
-## Striped
-
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
-
-{% example html %}
-<div class="progress">
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-{% endexample %}
-
-## Animated stripes
-
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
-
-<div class="bd-example">
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-  </div>
-  <button type="button" class="btn btn-secondary bd-toggle-animated-progress" data-toggle="button" aria-pressed="false" autocomplete="off">
-    Toggle animation
-  </button>
-</div>
-
-{% highlight html %}
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>
-{% endhighlight %}
+Per ulteriori personalizzazioni della barra di avanzamento si rimanda alla sezione [componente progress](https://getbootstrap.com/docs/4.0/components/progress/) del sito di Bootstrap.
