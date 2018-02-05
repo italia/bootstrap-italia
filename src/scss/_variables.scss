@@ -1,3 +1,112 @@
+// Color system
+
+$white:    rgb(255, 255, 255) !default;
+$gray-100: hsb(225, 0, 90) !default;
+$gray-200: hsb(225, 0, 80) !default;
+$gray-300: hsb(225, 0, 70) !default;
+$gray-400: hsb(225, 0, 60) !default;
+$gray-500: hsb(225, 0, 50) !default;
+$gray-600: hsb(225, 0, 40) !default;
+$gray-700: hsb(225, 0, 30) !default;
+$gray-800: hsb(225, 0, 20) !default;
+$gray-900: hsb(225, 0, 10) !default;
+$black:    rgb(0, 0, 0) !default;
+
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+@function main($key: "80") {
+  @return map-get($mains, $key);
+}
+
+$blue:    hsb(210, 100, 80) !default;
+$indigo:  hsb(243, 70, 100) !default;
+$purple:  hsb(243, 40, 100) !default;
+$pink:    hsb(350, 30, 100) !default;
+$red:     hsb(350, 75, 100) !default;
+$orange:  hsb(36, 100, 100) !default;
+$yellow:  hsb(44, 55, 100) !default;
+$green:   hsb(159, 100, 80) !default;
+$teal:    hsb(178, 95, 85) !default;
+$cyan:    hsb(178, 100, 100) !default;
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$primary:         hsb(210, 100, 80) !default;
+$secondary:       $teal !default;
+$success:         $green !default;
+$info:            $gray-400 !default;
+$warning:         $orange !default;
+$danger:          $red !default;
+$light:           hsb(255, 5, 95) !default;
+$dark:            hsb(210, 70, 30) !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+// Color Variations
+
+// HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV) è lo spazio colore
+// scelto per ottenere le varianti colore della tonalità primaria.
+// Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in quanto hue e, in gran parte anche
+// saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
+// componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
+
+$primary-h: hue($primary);
+$primary-s: saturation($primary);
+
+$theme-colors: (
+  "primary-b-1": hsb($primary-h, $primary-s, 10),
+  "primary-b-2": hsb($primary-h, $primary-s, 20),
+  "primary-b-3": hsb($primary-h, $primary-s, 30),
+  "primary-b-4": hsb($primary-h, $primary-s, 40),
+  "primary-b-5": hsb($primary-h, $primary-s, 50),
+  "primary-b-6": hsb($primary-h, $primary-s, 60),
+  "primary-b-7": hsb($primary-h, $primary-s, 70),
+  "primary-b-8": hsb($primary-h, $primary-s, 80),
+  "primary-b-9": hsb($primary-h, $primary-s, 90),
+  "primary-b-A": hsb($primary-h, $primary-s * .75, 84),
+  "primary-b-B": hsb($primary-h, $primary-s * .60, 87),
+  "primary-b-C": hsb($primary-h, $primary-s * .45, 90),
+  "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
+  "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
+  "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
+);
+
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
 $grid-columns: 12 !default;
@@ -31,108 +140,25 @@ $zoom-overlay-bg: #fff;
 $border-radius: 4px !default;
 $border-radius-sm: 2px !default;
 $border-radius-lg: 8px !default;
-// Color system
-
-// stylelint-disable
-$white: #fff !default; //TODO
-$gray-100: #f8f9fa !default; //TODO
-$gray-200: #e9ecef !default; //TODO
-$gray-300: #dee2e6 !default; //TODO
-$gray-400: #ced4da !default; //TODO
-$gray-500: #adb5bd !default; //TODO
-$gray-600: #868e96 !default; //TODO
-$gray-700: #495057 !default; //TODO
-$gray-800: #343a40 !default; //TODO
-$gray-900: #212529 !default; //TODO
-$black: #000 !default;
-
-$grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
-
-$indigo: #6610f2 !default; //TODO
-$purple: #6f42c1 !default; //TODO
-$pink: #e83e8c !default; //TODO
-$yellow: #ffc107 !default; //TODO
-$cyan: #17a2b8 !default; //TODO
-$italia-blue: hsb(210, 100, 80) !default;
-$italia-teal: hsb(178, 95, 85) !default;
-//$italia-red: hsb(351, 75, 97) !default;
-//$italia-orange: hsb(36, 100, 100) !default;
-//$italia-green: hsb(159, 100, 81) !default;
-$italia-red: red !default;
-$italia-orange: #d1ae00 !default;
-$italia-green: #65b446 !default;
-
-$colors: () !default;
-$colors: map-merge((
-  "blue": $italia-blue,
-  "indigo": $indigo,
-  "purple": $purple,
-  "pink": $pink,
-  "red": $italia-red,
-  "orange": $italia-orange,
-  "yellow": $yellow,
-  "green": $italia-green,
-  "teal": $italia-teal,
-  "cyan": $cyan,
-  "white": $white,
-  "gray": $gray-600,
-  "gray-dark": $gray-800
-), $colors);
-
-// Brand Scale
-$brand-primary: $italia-blue;
-$brand-success: $italia-green;
-$brand-warning: $italia-orange;
-$brand-danger: $italia-red;
-$brand-info: $italia-teal;
 
 // Link and button colors
-$btn-primary-bg: $brand-primary;
-$btn-primary-border: $brand-primary;
-$link-color: $brand-primary;
-
-$primary: $italia-blue !default;
-$secondary: $italia-teal !default;
-$success: $italia-green !default;
-$info: $gray-300 !default;
-$warning: $italia-orange !default;
-$danger: $italia-red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
-
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark
-), $theme-colors);
+$btn-primary-bg: $primary;
+$btn-primary-border: $primary;
+$link-color: $primary;
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
 
-// Text Color
+// Text
 $font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
 $text-color: $gray-700;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
 $font-weight-base: 300;
+
+// Code
+$code-color: $dark;
 
 // Headings
 $headings-font-weight: 700;
@@ -153,6 +179,10 @@ $display3-weight: 700;
 $display4-weight: 700;
 
 $display1-line-height: 1.1;
+
+// Hero
+$hero-padding: 1rem !default;
+$hero-bg: $gray-200 !default;
 
 // Breadcrumbs
 $breadcrumb-bg: transparent;
@@ -188,6 +218,18 @@ $modal-max-width: 32rem !default;
 $modal-dialog-margin: 1.4rem auto !default;
 $modal-content-padding: 1.4rem !default;
 
+// Carousel
+$carousel-bg: #444e57 !default;
+$carousel-padding: 3em !default;
+$carousel-control-color: $secondary !default;
+$carousel-control-width: auto !default;
+$carousel-control-opacity: 1 !default;
+$carousel-control-icon-width: 32px !default;
+
+// Inputs
+$input-border: $gray-200;
+$input-color-placeholder: $gray-500;
+
 //List group
 $list-group-item-padding-y: 1rem !default;
 $list-group-action-color: $primary !default;
@@ -199,10 +241,6 @@ $list-group-disabled-cursor: default !default;
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
 $reset-padding: 0 !default;
-
-// Inputs
-$input-border: $gray-200;
-$input-color-placeholder: $gray-500;
 
 // Alert
 $alert-padding-y: 1rem;

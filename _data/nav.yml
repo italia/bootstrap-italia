@@ -25,7 +25,7 @@
       status: work in progress
     - title: Alerts
     - title: Badge
-      status: to do
+    - title: Barre di Avanzamento
     - title: Breadcrumb
     - title: Buttons
       status: to do
@@ -34,7 +34,6 @@
     - title: Card
       status: to do
     - title: Carousel
-      status: to do
     - title: Collapse
       status: work in progress
     - title: Dropdowns
@@ -42,9 +41,8 @@
     - title: Elenchi
     - title: Forms
       status: to do
+    - title: Hero
     - title: Input group
-      status: to do
-    - title: Jumbotron
       status: to do
     - title: Modale
       status: work in progress
@@ -55,8 +53,6 @@
     - title: Pagination
       status: to do
     - title: Popovers
-    - title: Progress
-      status: to do
     - title: Scrollspy
     - title: Tooltips
 
@@ -77,8 +73,8 @@
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
-    - title: Colors
-      status: to do
+    - title: Colori
+      status: work in progress
     - title: Dimensionamento
     - title: Display
     - title: Embed

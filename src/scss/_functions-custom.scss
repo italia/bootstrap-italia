@@ -1,10 +1,15 @@
 // Custom functions (not available in Bootstrap)
-@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+@function hsb($h-hsb, $s-hsb, $b-hsb) {
   @if $b-hsb == 0 {
     @return hsla(0, 0, 0, $a)
   } @else {
     $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
     $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+    @return hsl($h-hsb, $s-hsl, $l-hsl);
   }
+}
+
+@function hsb-with-brightness-modifier($h-hsb, $s-hsb, $b-hsb, $b-variant) {
+  $b-hsb: $b-hsb + $b-variant;
+  @return hsb($h-hsb, $s-hsb, $b-hsb);
 }
