@@ -6,6 +6,7 @@
 
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700");
 :root {
   --blue: #0066cc;
   --indigo: #554dff;
@@ -48,8 +49,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: "Roboto Mono", monospace; }
 
 @media print {
   *,
@@ -482,7 +483,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  font-family: "Roboto Mono", monospace; }
 
 code {
   font-size: 87.5%;

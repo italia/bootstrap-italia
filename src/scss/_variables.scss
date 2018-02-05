@@ -150,8 +150,9 @@ $link-color: $primary;
 $theme-color-interval: 8% !default;
 
 // Text
-$font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:       "Roboto Mono", monospace !default;
+$font-family-base:            "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $text-color: $gray-700;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
