@@ -14,6 +14,7 @@ $grid-gutter-widths: (
 // Main typography
 $font-size-base: 1rem !default;
 $headings-line-height: 1.2 !default;
+$small-font-size: 0.777rem !default;
 
 // Btns
 $btn-font-size: $font-size-base;
@@ -134,22 +135,24 @@ $line-height-base: 1.5;
 $font-weight-base: 300;
 
 // Headings
-$headings-font-weight: 600;
-$headings-line-height: 1.2;
+$headings-font-weight: 700;
+$headings-line-height: 1.2 !default;
 
-$h3-font-size: 1.5rem;
-$h4-font-size: 1.25rem;
-$h5-font-size: 1rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
 
 $display1-size: 3.5rem;
 $display2-size: 2.5rem;
 $display3-size: 1.5rem;
 $display4-size: 1.25rem;
-$display5-size: 1rem;
 
-$display1-weight: 600;
-$display2-weight: 600;
-$display3-weight: 600;
+$display1-weight: 700;
+$display2-weight: 700;
+$display3-weight: 700;
+$display4-weight: 700;
+
+$display1-line-height: 1.1;
 
 // Breadcrumbs
 $breadcrumb-bg: transparent;

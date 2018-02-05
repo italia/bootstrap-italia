@@ -9,16 +9,49 @@ html {
 // Intestazioni
 //
 
+h1, .h1 {
+  letter-spacing: -1px;
+  @include media-breakpoint-up(sm) {
+    font-size: 2.666rem;
+    letter-spacing: -1.3px;
+    line-height: 1.25;
+  }
+}
+
 h2, .h2 {
   line-height: 1.25;
+  @include media-breakpoint-up(sm) {
+    font-size: 2.222rem;
+    letter-spacing: -2px;
+  }
 }
 
 h3, .h3 {
-  line-height: 1.1667;
+  line-height: 1.1428;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.777rem;
+    line-height: 1.25;
+  }
 }
 
 h4, .h4 {
+  line-height: 1.1666;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.555rem;
+    line-height: 1.428;
+    font-weight: 600;
+  }
+}
+
+h5, .h5 {
   font-weight: 400;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.333rem;
+  }
+}
+
+h6, .h6 {
+  line-height: 1.5;
 }
 
 //
@@ -26,11 +59,20 @@ h4, .h4 {
 //
 
 .display-1 {
-  font-weight: 600;
+  line-height: $display1-line-height;
 }
-.display-2 {
+/*.display-2 {
   font-weight: 600;
 }
 .display-3 {
   font-weight: 600;
+}*/
+
+blockquote, .blockquote {
+  margin: 1.5rem 0;
+}
+
+caption {
+  font-size: 0.777rem;
+  line-height: 1.4285;
 }
