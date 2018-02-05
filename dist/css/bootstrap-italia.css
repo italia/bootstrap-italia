@@ -3862,20 +3862,6 @@ tbody.collapse.show {
     text-decoration: none;
     background-color: #1d2124; }
 
-.jumbotron {
-  padding: 1rem 0.5rem;
-  margin-bottom: 1rem;
-  background-color: #eee;
-  border-radius: 8px; }
-  @media (min-width: 576px) {
-    .jumbotron {
-      padding: 2rem 1rem; } }
-
-.jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  border-radius: 0; }
-
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0; }
@@ -6971,18 +6957,6 @@ h4, .h4 {
 .list-group-item.active:hover, .list-group-item.active:focus {
   background-color: #0066cc; }
 
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0; }
-  @media (min-width: 576px) {
-    .jumbotron {
-      padding: 1rem; } }
-  .jumbotron .display-4 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #00264d;
-    margin-bottom: 0.8rem; }
-
 .alert {
   position: relative;
   padding: 1rem 1rem;
@@ -7050,6 +7024,25 @@ h4, .h4 {
     top: 0; }
   .cookiebar.show {
     opacity: 1; }
+
+.hero {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0; }
+  @media (min-width: 576px) {
+    .hero {
+      padding: 1rem; } }
+  .hero .hero-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00264d;
+    margin-bottom: 0.8rem; }
+
+.hero-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0; }
 
 img[data-action="zoom"] {
   cursor: pointer;

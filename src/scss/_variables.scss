@@ -151,6 +151,10 @@ $display1-weight: 600;
 $display2-weight: 600;
 $display3-weight: 600;
 
+// Hero
+$hero-padding: 1rem !default;
+$hero-bg: $gray-200 !default;
+
 // Breadcrumbs
 $breadcrumb-bg: transparent;
 $breadcrumb-item-padding: .75rem;
@@ -204,16 +208,10 @@ $list-group-action-hover-color: #00264d !default; // TODO use a variable
 $list-group-hover-bg: #d9e6f2 !default; // TODO use a variable
 $list-group-disabled-cursor: default !default;
 
-// Jumbotron
-$jumbotron-padding: 1rem !default;
-$jumbotron-bg: #eee !default; // TODO use a variable
-
 //Reset
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
 $reset-padding: 0 !default;
-
-
 
 // Alert
 $alert-padding-y: 1rem;
