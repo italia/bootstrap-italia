@@ -59,7 +59,7 @@ Aggiungi una delle seguenti classi per modificare l'aspetto di un badge.
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
 
-## Badges stondati
+## Badges arrotondati
 
 Per rendere i badge arrotondati puoi usare la classe `.badge-pill`.
 

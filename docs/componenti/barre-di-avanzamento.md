@@ -1,12 +1,10 @@
 ---
 layout: docs
-title: Barra di avanzamento
+title: Barre di avanzamento
 description: Documentazione ed esempi per l'utilizzo e personalizzazione delle barre di avanzamento.
 group: componenti
 toc: true
 ---
-
-## Come funziona
 
 I componenti di avanzamento progressivo sono costruiti con due elementi HTML, alcuni CSS per impostare la larghezza e alcuni attributi. Non è previsto l'utilizzo dell'elemento [`<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) di HTML5.
 
@@ -33,7 +31,7 @@ I componenti di avanzamento progressivo sono costruiti con due elementi HTML, al
 </div>
 {% endexample %}
 
-Sono utilizzare le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/utilities/sizing/) per poter settare i vari avanzamenti.
+Sono utilizzate le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/utilities/sizing/) per poter settare i vari avanzamenti.
 
 {% example html %}
 <div class="progress">

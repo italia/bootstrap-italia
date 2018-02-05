@@ -25,7 +25,7 @@
       status: work in progress
     - title: Alerts
     - title: Badge
-      status: to do
+    - title: Barre di Avanzamento
     - title: Breadcrumb
     - title: Buttons
       status: to do
@@ -53,8 +53,6 @@
     - title: Pagination
       status: to do
     - title: Popovers
-    - title: Progress
-      status: to do
     - title: Scrollspy
     - title: Tooltips
 
