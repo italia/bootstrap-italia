@@ -24,7 +24,6 @@
     - title: Introduzione
       status: work in progress
     - title: Alerts
-      status: to do
     - title: Badge
       status: to do
     - title: Breadcrumb
@@ -40,13 +39,12 @@
       status: work in progress
     - title: Dropdowns
       status: to do
+    - title: Elenchi
     - title: Forms
       status: to do
     - title: Input group
       status: to do
     - title: Jumbotron
-      status: to do
-    - title: List group
       status: to do
     - title: Modale
       status: work in progress
@@ -74,7 +72,6 @@
 - title: Utilities
   pages:
     - title: Introduzione
-      status: work in progress
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
@@ -84,13 +81,11 @@
     - title: Display
     - title: Embed
     - title: Flex
-      status: to do
     - title: Float
     - title: Griglie
       status: work in progress
     - title: Immagini sostitutive
     - title: Media object
-      status: to do
     - title: Position
     - title: Screenreaders
     - title: Spaziature
