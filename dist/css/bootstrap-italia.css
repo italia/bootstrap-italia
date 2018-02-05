@@ -6996,6 +6996,20 @@ h4, .h4 {
 .list-group-item.active:hover, .list-group-item.active:focus {
   background-color: #0066cc; }
 
+.cookiebar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1100; }
+  .cookiebar.cookiebar-top {
+    bottom: auto;
+    top: 0; }
+  .cookiebar.show {
+    opacity: 1; }
+
 img[data-action="zoom"] {
   cursor: pointer;
   cursor: -moz-zoom-in; }

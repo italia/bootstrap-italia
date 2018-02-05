@@ -1,0 +1,18 @@
+.cookiebar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  z-index: $zindex-cookiebar;
+
+  &.cookiebar-top {
+    bottom: auto;
+    top: 0;
+  }
+
+  &.show {
+    opacity: $cookiebar-opacity;
+  }
+}

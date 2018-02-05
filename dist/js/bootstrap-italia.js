@@ -3889,6 +3889,228 @@ console.log("bootstrap italia");
 
 /**
  * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): cookiebar.js
+ * --------------------------------------------------------------------------
+ */
+
+var Cookiebar = function ($) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'cookiebar';
+  var VERSION = '4.0.0';
+  var DATA_KEY = 'bs.cookiebar';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var TRANSITION_DURATION = 0; // TODO
+  var COOKIE_NAME = "cookies_consent";
+  var COOKIE_VALUE = 1;
+  var COOKIE_EXPIRE = 30;
+
+  var Selector = {
+    COOKIE_BAR: '.cookiebar',
+    ACCEPT: '[data-accept="cookiebar"]'
+  };
+
+  var Event = {
+    CLOSE: 'close' + EVENT_KEY,
+    CLOSED: 'closed' + EVENT_KEY,
+    LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY,
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+  };
+
+  var ClassName = {
+    COOKIE_BAR: 'cookiebar',
+    SHOW: 'show'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+  var Cookiebar = function () {
+    function Cookiebar(element) {
+      _classCallCheck(this, Cookiebar);
+
+      this._element = element;
+    }
+
+    // Getters
+
+    // Public
+
+    Cookiebar.prototype.show = function show(element) {
+      $(element).addClass(ClassName.SHOW).attr('aria-hidden', 'false').attr('aria-live', 'polite');
+    };
+
+    Cookiebar.prototype.close = function close(element) {
+      element = element || this._element;
+
+      var rootElement = this._getRootElement(element);
+      var customEvent = this._triggerCloseEvent(rootElement);
+
+      if (customEvent.isDefaultPrevented()) {
+        return;
+      }
+      this._setCookieEU();
+      this._removeElement(rootElement);
+    };
+
+    Cookiebar.prototype.dispose = function dispose() {
+      $.removeData(this._element, DATA_KEY);
+      this._element = null;
+    };
+
+    // Private
+
+    Cookiebar.prototype._setCookieEU = function _setCookieEU() {
+      var exdate = new Date();
+      exdate.setDate(exdate.getDate() + COOKIE_EXPIRE);
+      var c_value = escape(COOKIE_VALUE) + (COOKIE_EXPIRE == null ? "" : "; expires=" + exdate.toUTCString());
+      document.cookie = COOKIE_NAME + "=" + c_value + "; path=/";
+    };
+
+    Cookiebar.prototype._getRootElement = function _getRootElement(element) {
+      var selector = Util.getSelectorFromElement(element);
+      var parent = false;
+
+      if (selector) {
+        parent = $(selector)[0];
+      }
+
+      if (!parent) {
+        parent = $(element).closest('.' + ClassName.COOKIE_BAR)[0];
+      }
+
+      return parent;
+    };
+
+    Cookiebar.prototype._triggerCloseEvent = function _triggerCloseEvent(element) {
+      var closeEvent = $.Event(Event.CLOSE);
+
+      $(element).trigger(closeEvent);
+      return closeEvent;
+    };
+
+    Cookiebar.prototype._removeElement = function _removeElement(element) {
+      $(element).removeClass(ClassName.SHOW).attr('aria-hidden', 'true').attr('aria-live', 'off');
+
+      this._destroyElement(element);
+    };
+
+    Cookiebar.prototype._destroyElement = function _destroyElement(element) {
+      $(element).detach().trigger(Event.CLOSED).remove();
+    };
+
+    // Static
+
+    Cookiebar._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $element = $(this);
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new Cookiebar(this);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError('No method named "' + config + '"');
+          }
+          data[config](this);
+        }
+      });
+    };
+
+    Cookiebar._handleAccept = function _handleAccept(cookiebarInstance) {
+      return function (event) {
+        if (event) {
+          event.preventDefault();
+        }
+
+        cookiebarInstance.close(this);
+      };
+    };
+
+    Cookiebar._handleConsent = function _handleConsent(cookiebarInstance) {
+      return function (event) {
+        if (event) {
+          event.preventDefault();
+        }
+
+        cookiebarInstance.close(this);
+      };
+    };
+
+    Cookiebar._getCookieEU = function _getCookieEU() {
+      var i,
+          x,
+          y,
+          ARRcookies = document.cookie.split(";");
+      for (i = 0; i < ARRcookies.length; i++) {
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g, "");
+        if (x == COOKIE_NAME) {
+          return unescape(y);
+        }
+      }
+    };
+
+    _createClass(Cookiebar, null, [{
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+
+    return Cookiebar;
+  }();
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  $(document).on(Event.CLICK_DATA_API, Selector.ACCEPT, Cookiebar._handleAccept(new Cookiebar()));
+
+  $(window).on(Event.LOAD_DATA_API, function () {
+    var cookiebars = $.makeArray($(Selector.COOKIE_BAR));
+    var consent = Cookiebar._getCookieEU();
+    if (!consent) {
+      for (var i = cookiebars.length; i--;) {
+        var $cookiebar = $(cookiebars[i]);
+        Cookiebar._jQueryInterface.call($cookiebar, 'show');
+      }
+    }
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME] = Cookiebar._jQueryInterface;
+  $.fn[NAME].Constructor = Cookiebar;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Cookiebar._jQueryInterface;
+  };
+
+  return Cookiebar;
+}($);
+
+/**
+ * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0): ImageGrid.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
