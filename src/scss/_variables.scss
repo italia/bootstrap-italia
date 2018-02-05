@@ -151,6 +151,10 @@ $display1-weight: 600;
 $display2-weight: 600;
 $display3-weight: 600;
 
+// Hero
+$hero-padding: 1rem !default;
+$hero-bg: $gray-200 !default;
+
 // Breadcrumbs
 $breadcrumb-bg: transparent;
 $breadcrumb-item-padding: .75rem;
@@ -185,6 +189,18 @@ $modal-max-width: 32rem !default;
 $modal-dialog-margin: 1.4rem auto !default;
 $modal-content-padding: 1.4rem !default;
 
+// Carousel
+$carousel-bg: #444e57 !default;
+$carousel-padding: 3em !default;
+$carousel-control-color: $secondary !default;
+$carousel-control-width: auto !default;
+$carousel-control-opacity: 1 !default;
+$carousel-control-icon-width: 32px !default;
+
+// Inputs
+$input-border: $gray-200;
+$input-color-placeholder: $gray-500;
+
 //List group
 $list-group-item-padding-y: 1rem !default;
 $list-group-action-color: $primary !default;
@@ -196,10 +212,6 @@ $list-group-disabled-cursor: default !default;
 $reset-border-width: 0 !default;
 $reset-border-radius: 0 !default;
 $reset-padding: 0 !default;
-
-// Inputs
-$input-border: $gray-200;
-$input-color-placeholder: $gray-500;
 
 // Alert
 $alert-padding-y: 1rem;
