@@ -23,6 +23,7 @@ $btn-letter-spacing: normal;
 // z-index
 $zindex-zoom: 1080;
 $zindex-growl: 1090;
+$zindex-cookiebar: 1100;
 $zoom-overlay-bg: #fff;
 
 // Border Radius - using ixels instead or rems as it has to be consistent across devices
@@ -217,6 +218,9 @@ $reset-padding: 0 !default;
 // Alert
 $alert-padding-y: 1rem;
 $alert-padding-x: 1rem;
+
+// CookieBar
+$cookiebar-opacity: 1;
 
 // Grid breakpoints
 //

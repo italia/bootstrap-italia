@@ -7037,6 +7037,20 @@ h4, .h4 {
 .alert-info {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Einfo%3C/title%3E%3Cpath d='M16 1.6C24 1.6 30.4 8 30.4 16S24 30.4 16 30.4 1.6 24 1.6 16 8.16 1.6 16 1.6zM16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z'/%3E%3Cpath d='M14.72 9.76V6.72h2.88v3.04h-2.88zm0 15.84V12h2.88v13.6h-2.88z'/%3E%3C/svg%3E"); }
 
+.cookiebar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1100; }
+  .cookiebar.cookiebar-top {
+    bottom: auto;
+    top: 0; }
+  .cookiebar.show {
+    opacity: 1; }
+
 img[data-action="zoom"] {
   cursor: pointer;
   cursor: -moz-zoom-in; }
