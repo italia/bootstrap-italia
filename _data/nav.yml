@@ -34,7 +34,6 @@
     - title: Card
       status: to do
     - title: Carousel
-      status: to do
     - title: Collapse
       status: work in progress
     - title: Dropdowns
@@ -42,9 +41,8 @@
     - title: Elenchi
     - title: Forms
       status: to do
+    - title: Hero
     - title: Input group
-      status: to do
-    - title: Jumbotron
       status: to do
     - title: Modale
       status: work in progress
@@ -63,6 +61,8 @@
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
+      status: work in progress
+    - title: Cookiebar
       status: work in progress
     - title: Image Grid
       status: to do
