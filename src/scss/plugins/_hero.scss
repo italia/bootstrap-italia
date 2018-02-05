@@ -1,0 +1,23 @@
+.hero {
+  padding: $hero-padding;
+  margin-bottom: $hero-padding; // TODO - no paddings for margins!
+  background-color: $hero-bg;
+  @include border-radius($reset-border-radius);
+
+  @include media-breakpoint-up(sm) {
+    padding: $hero-padding;
+  }
+
+  .hero-heading { // TODO - this class shouldn't set colors and font properties
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00264d;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.hero-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}
