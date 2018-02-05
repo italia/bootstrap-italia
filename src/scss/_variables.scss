@@ -1,8 +1,5 @@
-//
 // Color system
-//
 
-// stylelint-disable
 $white:    rgb(255, 255, 255) !default;
 $gray-100: hsb(225, 0, 90) !default;
 $gray-200: hsb(225, 0, 80) !default;
@@ -82,6 +79,13 @@ $theme-colors: map-merge((
 ), $theme-colors);
 
 // Color Variations
+
+// HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV) è lo spazio colore
+// scelto per ottenere le varianti colore della tonalità primaria.
+// Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in quanto hue e, in gran parte anche
+// saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
+// componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
+
 $primary-h: hue($primary);
 $primary-s: saturation($primary);
 
@@ -102,7 +106,6 @@ $theme-colors: (
   "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
   "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
 );
-// stylelint-enable
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
