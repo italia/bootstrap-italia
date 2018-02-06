@@ -8246,6 +8246,10 @@ h6, .h6 {
 
 .display-1 {
   line-height: 1.1; }
+  @media (min-width: 576px) {
+    .display-1 {
+      font-size: 3.111rem;
+      line-height: 1.5; } }
 
 /*.display-2 {
   font-weight: 600;

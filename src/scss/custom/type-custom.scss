@@ -60,6 +60,10 @@ h6, .h6 {
 
 .display-1 {
   line-height: $display1-line-height;
+  @include media-breakpoint-up(sm) {
+    font-size: 3.111rem;
+    line-height: 1.5;
+  }
 }
 /*.display-2 {
   font-weight: 600;
