@@ -125,6 +125,12 @@ $font-size-base: 1rem !default;
 $headings-line-height: 1.2 !default;
 $small-font-size: 0.777rem !default;
 
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1.6rem !default;
+
 // Btns
 $btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
