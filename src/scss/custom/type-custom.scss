@@ -1,7 +1,9 @@
 html {
   font-size: 16px;
+  line-height: 1.5;
   @include media-breakpoint-up(sm) {
     font-size: 18px;
+    line-height: 1.555;
   }
 }
 
@@ -22,6 +24,7 @@ h2, .h2 {
   line-height: 1.25;
   @include media-breakpoint-up(sm) {
     font-size: 2.222rem;
+    line-height: 1.2;
     letter-spacing: -2px;
   }
 }
@@ -51,6 +54,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -59,18 +63,12 @@ h6, .h6 {
 //
 
 .display-1 {
-  line-height: $display1-line-height;
+  line-height: 1.071;
   @include media-breakpoint-up(sm) {
     font-size: 3.111rem;
-    line-height: 1.5;
+    line-height: 1.428;
   }
 }
-/*.display-2 {
-  font-weight: 600;
-}
-.display-3 {
-  font-weight: 600;
-}*/
 
 blockquote, .blockquote {
   margin: 1.5rem 0;
@@ -79,4 +77,21 @@ blockquote, .blockquote {
 caption {
   font-size: 0.777rem;
   line-height: 1.4285;
+}
+
+small,
+.small {
+  font-size: .9375rem;
+  font-weight: $font-weight-normal;
+  @include media-breakpoint-up(sm) {
+    font-size: 0.8888rem;
+  }
+}
+
+.x-small {
+  font-size: .875rem;
+  font-weight: $font-weight-normal;
+  @include media-breakpoint-up(sm) {
+    font-size: 0.7777rem;
+  }
 }
