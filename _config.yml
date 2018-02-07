@@ -39,7 +39,7 @@ plugins:
 
 # Social
 title:              "Bootstrap Italia"
-description:        "Tema Bootstrap conforme alle linee guida per i servizi web delle Pubbliche Amministrazioni"
+description:        "Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA"
 authors:            "Team per la Trasformazione Digitale"
 authors_url:        "https://teamdigitale.governo.it/"
 social_card_path:   "/docs/assets/img/favicons/social-card.png"
