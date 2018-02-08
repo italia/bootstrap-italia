@@ -8430,11 +8430,11 @@ h4, .h4 {
 [type="checkbox"] + label,
 [type="radio"] + label {
   position: relative;
-  padding-left: 35px;
+  padding-left: 1.944rem;
   cursor: pointer;
   display: inline-block;
   height: 25px;
-  line-height: 25px;
+  line-height: 1.389rem;
   font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -8458,7 +8458,7 @@ h4, .h4 {
   height: 17px;
   border: 1.5px solid #5C6F82;
   border-radius: 1px;
-  margin-top: 2px;
+  margin-top: 0.111rem;
   -webkit-transition: .2s;
   -webkit-transform: rotateZ(37deg);
           transform: rotateZ(37deg);
@@ -8505,14 +8505,13 @@ h4, .h4 {
   left: 6px;
   top: 10px; }
 
-/* checkbox disabled */
 [type="checkbox"]:disabled + label {
   cursor: not-allowed; }
 
 [type="checkbox"]:disabled:not(:checked) + label::before {
   border: none;
-  margin-left: 2px;
-  margin-top: 2px;
+  margin-left: 0.111rem;
+  margin-top: 0.111rem;
   background-color: rgba(0, 0, 0, 0.46); }
 
 [type="checkbox"]:disabled:not(:checked) + label::after {
@@ -8533,7 +8532,7 @@ h4, .h4 {
   position: absolute;
   left: 0;
   top: 0;
-  margin: 4px;
+  margin: 0.222rem;
   width: 22px;
   height: 22px;
   z-index: 0;
@@ -8561,7 +8560,6 @@ h4, .h4 {
 [type="radio"]:checked + label::before {
   border-color: #0073E6; }
 
-/* radio disabled */
 [type="radio"]:disabled + label {
   cursor: not-allowed; }
 
@@ -8585,7 +8583,7 @@ h4, .h4 {
 .form-check-group [type="checkbox"] + label,
 .form-check-group [type="radio"] + label {
   position: static;
-  padding: 0 50px 0 0; }
+  padding: 0 2.778rem 0 0; }
 
 .form-check-group [type="checkbox"] + label::after,
 .form-check-group [type="checkbox"] + label::before,
@@ -8602,7 +8600,7 @@ h4, .h4 {
 
 .form-check-group .form-text {
   opacity: 0.6;
-  margin: 0 50px 0 0; }
+  margin: 0 2.778rem 0 0; }
 
 .cookiebar {
   bottom: 0;
