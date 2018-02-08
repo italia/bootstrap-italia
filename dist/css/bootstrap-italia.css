@@ -5,7 +5,8 @@
  */
 
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700");
 :root {
   --blue: #0066cc;
   --indigo: #554dff;
@@ -48,8 +49,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: "Roboto Mono", monospace; }
 
 @media print {
   *,
@@ -142,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.6rem; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -365,7 +366,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   color: inherit; }
 
@@ -376,13 +377,13 @@ h2, .h2 {
   font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 h4, .h4 {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -393,22 +394,22 @@ h6, .h6 {
 
 .display-1 {
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2; }
 
 .display-2 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2; }
 
 .display-3 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2; }
 
 .display-4 {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.2; }
 
 hr {
@@ -419,7 +420,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 0.777rem;
   font-weight: 400; }
 
 mark,
@@ -482,7 +483,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  font-family: "Roboto Mono", monospace; }
 
 code {
   font-size: 87.5%;
@@ -1950,7 +1951,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 0.777rem;
   color: #00cc85; }
 
 .valid-tooltip {
@@ -2027,7 +2028,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 80%;
+  font-size: 0.777rem;
   color: #ff4060; }
 
 .invalid-tooltip {
@@ -8199,28 +8200,83 @@ a.text-primary-b-F:hover, a.text-primary-b-F:focus {
   visibility: hidden !important; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.5; }
   @media (min-width: 576px) {
     html {
-      font-size: 18px; } }
+      font-size: 18px;
+      line-height: 1.555; } }
+
+h1, .h1 {
+  letter-spacing: -1px; }
+  @media (min-width: 576px) {
+    h1, .h1 {
+      font-size: 2.666rem;
+      letter-spacing: -1.3px;
+      line-height: 1.25; } }
 
 h2, .h2 {
   line-height: 1.25; }
+  @media (min-width: 576px) {
+    h2, .h2 {
+      font-size: 2.222rem;
+      line-height: 1.2;
+      letter-spacing: -2px; } }
 
 h3, .h3 {
-  line-height: 1.1667; }
+  line-height: 1.1428; }
+  @media (min-width: 576px) {
+    h3, .h3 {
+      font-size: 1.777rem;
+      line-height: 1.25; } }
 
 h4, .h4 {
+  line-height: 1.1666; }
+  @media (min-width: 576px) {
+    h4, .h4 {
+      font-size: 1.555rem;
+      line-height: 1.428;
+      font-weight: 600; } }
+
+h5, .h5 {
   font-weight: 400; }
+  @media (min-width: 576px) {
+    h5, .h5 {
+      font-size: 1.333rem; } }
+
+h6, .h6 {
+  font-weight: 600;
+  line-height: 1.5; }
 
 .display-1 {
-  font-weight: 600; }
+  line-height: 1.071; }
+  @media (min-width: 576px) {
+    .display-1 {
+      font-size: 3.111rem;
+      line-height: 1.428; } }
 
-.display-2 {
-  font-weight: 600; }
+blockquote, .blockquote {
+  margin: 1.5rem 0; }
 
-.display-3 {
-  font-weight: 600; }
+caption {
+  font-size: 0.777rem;
+  line-height: 1.4285; }
+
+small,
+.small {
+  font-size: .9375rem;
+  font-weight: 400; }
+  @media (min-width: 576px) {
+    small,
+    .small {
+      font-size: 0.8888rem; } }
+
+.x-small {
+  font-size: .875rem;
+  font-weight: 400; }
+  @media (min-width: 576px) {
+    .x-small {
+      font-size: 0.7777rem; } }
 
 .row.variable-gutters {
   margin-right: -6px;
