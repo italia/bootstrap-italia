@@ -123,6 +123,13 @@ $grid-gutter-widths: (
 // Main typography
 $font-size-base: 1rem !default;
 $headings-line-height: 1.2 !default;
+$small-font-size: 0.777rem !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1.6rem !default;
 
 // Btns
 $btn-font-size: $font-size-base;
@@ -149,8 +156,9 @@ $link-color: $primary;
 $theme-color-interval: 8% !default;
 
 // Text
-$font-family-sans-serif: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:       "Roboto Mono", monospace !default;
+$font-family-base:            "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $text-color: $gray-700;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
@@ -160,22 +168,22 @@ $font-weight-base: 300;
 $code-color: $dark;
 
 // Headings
-$headings-font-weight: 600;
-$headings-line-height: 1.2;
+$headings-font-weight: 700;
+$headings-line-height: 1.2 !default;
 
-$h3-font-size: 1.5rem;
-$h4-font-size: 1.25rem;
-$h5-font-size: 1rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
 
 $display1-size: 3.5rem;
 $display2-size: 2.5rem;
 $display3-size: 1.5rem;
 $display4-size: 1.25rem;
-$display5-size: 1rem;
 
-$display1-weight: 600;
-$display2-weight: 600;
-$display3-weight: 600;
+$display1-weight: 700;
+$display2-weight: 700;
+$display3-weight: 700;
+$display4-weight: 700;
 
 // Hero
 $hero-padding: 1rem !default;
