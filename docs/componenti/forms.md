@@ -1,29 +1,99 @@
 ---
 layout: docs
-title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+title: Form
+description: Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.
 group: componenti
 toc: true
 ---
 
-## Overview
+## Panoramica
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/docs/contenuti/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Bootstrap utilizza [Reboot]({{ site.baseurl }}/docs/contenuti/reboot/#forms) per definire una base consistente di stile su cui è costruito tutto il resto così da attivare le visualizzazioni personalizzate per un rendering più uniforme su browser e dispositivi.
 
-Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+Assicurati di utilizzare uno degli attributi appositi `type` per gli elementi input (ad esempio, `email` per l'indirizzo email o `number` per le informazioni numeriche) in modo da sfruttare i controlli di input più recenti come la verifica dell'email, la selezione del numero e altro.
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
+Attenetevi alla sintassi HTML qui di seguito per ottenere, sia graficamente che funzionalmente, gli effetti predisposti. Ad esempio l'elemento `label` va inserito dopo l'elemento `input` anche se inusuale, grazie all'attributo `for` risulterà sempre accessibile agli screenreader.
+
+## Elementi Form
+
+Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficamente personalizzati grazie alla classe `.form-control` e debbono essere contenuti in un `.form-group`.
+
+### Input text
 
 {% example html %}
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <input type="text" class="form-control" id="exampleInputText">
+    <label for="exampleInputText">Nominativo</label>
   </div>
   <div class="form-group">
+    <input type="number" class="form-control" id="exampleInputNumber">
+    <label for="exampleInputNumber">Numero partecipanti</label>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp1">
+    <label for="exampleInputEmail1">Indirizzo email</label>
+    <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
+  </div>
+</form>
+{% endexample %}
+
+### Input password
+
+Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <input type="password" class="form-control" id="exampleInputPassword">
+    <label for="exampleInputPassword">Password</label>
+  </div>
+</form>
+{% endexample %}
+
+### Input file
+
+Avete la possibilità di usare l'elemento input file predefinito oppure con la personalizzazione grafica aggiungendo a `.form-group` la classe `.form-file`.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <input type="file" class="form-control-file" id="exampleFormControlFile">
+    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
+  </div>
+  <div class="form-group form-file">
+    <input id="file" class="form-control" type="file">
+    <label for="file">Esempio campo per l'upload di un singolo file</label>
+    <span class="form-file-name"></span>
+  </div>
+  <div class="form-group form-file">
+    <input id="fileM" class="form-control" type="file" multiple="multiple">
+    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
+    <span class="form-file-name"></span>
+  </div>
+</form>
+{% endexample %}
+
+### Select
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <select class="form-control" id="exampleFormControlSelects">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="exampleFormControlSelects">Esempio di un campo select</label>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" id="exampleInputPassword1">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <span class="btnEye eyeOn" toggle="exampleInputPassword1">
+      <svg aria-hidden="true" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-3x"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z" class=""></path></svg>
+    </span>
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -33,38 +103,10 @@ Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for 
 </form>
 {% endexample %}
 
-## Form controls
-
-Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
-
-Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s.
+### Textarea
 
 {% example html %}
 <form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -72,20 +114,11 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 </form>
 {% endexample %}
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
+## Personalizzazioni
 
-{% example html %}
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-{% endexample %}
+### Dimensione
 
-### Sizing
-
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.form-control-sm` che modificheranno la grandezza del carattere e la spaziatura interna.
 
 {% example html %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
@@ -107,50 +140,29 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 ### Readonly
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+Aggiungi l'attributo booleano `readonly` su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.
 
 {% example html %}
-<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+<input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly>
 {% endexample %}
 
-### Readonly plain text
+### Readonly normalizzato
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext`.
 
 {% example html %}
 <form>
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-    </div>
+  <div class="form-group">
+    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly>
+    <label for="staticEmail">Email</label>
   </div>
 </form>
 {% endexample %}
 
-{% example html %}
-<form class="form-inline">
-  <div class="form-group mb-2">
-    <label for="staticEmail2" class="sr-only">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-  </div>
-  <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-</form>
-{% endexample %}
 
-## Checkboxes and radios
+## Checkboxe and radio button
 
-Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+Lo stile dei checkbox e radio button è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nel contenitore padre. Mentre le checkbox servono a selezionare una o più opzioni in un elenco, i radio button consentono di selezionare una sola opzione tra molte.
 
 Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `disabled` attribute to the `.form-check-input`. The disabled attribute will apply a lighter color to help indicate the input's state.
 
@@ -245,216 +257,104 @@ Add `.position-static` to inputs within `.form-check` that don't have any label 
 
 ## Layout
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Di base quasi tutti gli elementi del form vengono applicati `display: block` e `width: 100%`. Nella visualizzazione predefinita gli elementi verranno impilati verticalmente. È possibile utilizzare classi aggiuntive per variare questo tipo di layout.
 
-### Form groups
+### Form group
 
-The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe `.form-group` per ogni singolo blocco, in questo modo l'elemento input, l'etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità predisposte per loro. Puoi usarlo con `<fieldset>`, `<div>` o qualsiasi altro elemento.
 
 {% example html %}
 <form>
   <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    <input type="text" class="form-control" id="formGroupExampleInput">
+    <label for="formGroupExampleInput">Esempio di etichetta</label>
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    <input type="text" class="form-control" id="formGroupExampleInput2">
+    <label for="formGroupExampleInput2">Altro esempio di etichetta</label>
   </div>
 </form>
 {% endexample %}
 
-### Form grid
+### Form a griglia
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+Strutture più complesse possono essere costruite usando il sistema a griglia. Utilizzali per i layout dei moduli che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive.
 
 {% example html %}
 <form>
   <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+    <div class="form-group col">
+      <input type="text" class="form-control" id="formNome">
+      <label for="formNome">Nome</label>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
-  </div>
-</form>
-{% endexample %}
-
-#### Form row
-
-You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
-
-{% example html %}
-<form>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+    <div class="form-group col">
+      <input type="text" class="form-control" id="formCognome">
+      <label for="formCognome">Cognome</label>
     </div>
   </div>
 </form>
 {% endexample %}
 
-More complex layouts can also be created with the grid system.
+Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
 {% example html %}
 <form>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6">
+      <input type="email" class="form-control" id="inputEmail4">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
+      <input type="password" class="form-control" id="inputPassword4">
       <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="inputAddress" value="1234 Main St">
+    <label for="inputAddress">Indirizzo</label>
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text" class="form-control" id="inputAddress2" value="Apartment, studio, or floor">
+    <label for="inputAddress2">Indirizzo secondario</label>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
       <input type="text" class="form-control" id="inputCity">
+      <label for="inputCity">Città</label>
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
       <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
+        <option selected>Scegli...</option>
         <option>...</option>
       </select>
+      <label for="inputState">Comune</label>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-{% endexample %}
-
-#### Horizontal form
-
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
-
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
-
-{% example html %}
-<form>
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            First radio
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            Second radio
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
-          </label>
-        </div>
-      </div>
-    </div>
-  </fieldset>
-  <div class="form-group row">
-    <div class="col-sm-2">Checkbox</div>
-    <div class="col-sm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1">
-        <label class="form-check-label" for="gridCheck1">
-          Example checkbox
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <input type="text" class="form-control" id="inputCAP">
+      <label for="inputCAP">CAP</label>
     </div>
   </div>
 </form>
 {% endexample %}
 
-##### Horizontal form label sizing
+#### Dimensione delle colonne
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
-
-{% example html %}
-<form>
-  <div class="form-group row">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
-    </div>
-  </div>
-</form>
-{% endexample %}
-
-#### Column sizing
-
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`.
+Puoi scegliere di dare una dimensione a una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
 
 {% example html %}
 <form>
   <div class="form-row">
-    <div class="col-7">
-      <input type="text" class="form-control" placeholder="City">
+    <div class="form-group col-7">
+      <input type="text" class="form-control" id="Citta">
+      <label for="Citta">Città</label>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="State">
+    <div class="form-group col">
+      <input type="text" class="form-control" id="Comune">
+      <label for="Comune">Comune</label>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
+    <div class="form-group col">
+      <input type="text" class="form-control" id="CAP">
+      <label for="CAP">CAP</label>
     </div>
   </div>
 </form>
