@@ -29,16 +29,22 @@ $grays: map-merge((
   @return map-get($mains, $key);
 }
 
-$blue:    hsb(210, 100, 80) !default;
-$indigo:  hsb(243, 70, 100) !default;
-$purple:  hsb(243, 40, 100) !default;
-$pink:    hsb(350, 30, 100) !default;
-$red:     hsb(350, 75, 100) !default;
-$orange:  hsb(36, 100, 100) !default;
-$yellow:  hsb(44, 55, 100) !default;
-$green:   hsb(159, 100, 80) !default;
-$teal:    hsb(178, 95, 85) !default;
-$cyan:    hsb(178, 100, 100) !default;
+$blue:      hsb(210, 100, 80) !default;
+$indigo:    hsb(243, 70, 100) !default;
+$purple:    hsb(243, 40, 100) !default;
+$pink:      hsb(350, 30, 100) !default;
+$red:       hsb(351, 75, 97) !default;
+$orange:    hsb(36, 100, 100) !default;
+$yellow:    hsb(44, 55, 100) !default;
+$green:     hsb(159, 100, 80) !default;
+$teal:      hsb(178, 95, 85) !default;
+$cyan:      hsb(178, 100, 100) !default;
+$blue-b:    hsb(210, 100, 90) !default;
+$green-b:   hsb(159, 100, 66) !default;
+$gray-b:    hsb(210, 29, 51) !default;
+$gray-d:    hsb(225, 5, 95) !default;
+$label-d:   hsb(222, 5, 79) !default;
+$border-d:  hsb(224, 8, 95) !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -54,7 +60,10 @@ $colors: map-merge((
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "blue-b":     $blue-b,
+  "green-b":    $green-b,
+  "gray-b":     $gray-b
 ), $colors);
 
 $primary:         hsb(210, 100, 80) !default;
@@ -65,17 +74,25 @@ $warning:         $orange !default;
 $danger:          $red !default;
 $light:           hsb(255, 5, 95) !default;
 $dark:            hsb(210, 70, 30) !default;
+$primary-b:       $blue-b !default;
+$success-b:       $green-b !default;
+$secondary-b:     $white !default;
+$info-b:          $gray-b !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark,
+  "primary-b":    $primary-b,
+  "success-b":    $success-b,
+  "secondary-b":  $secondary-b,
+  "info-b":       $info-b
 ), $theme-colors);
 
 // Color Variations
@@ -86,8 +103,9 @@ $theme-colors: map-merge((
 // saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
 // componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
 
-$primary-h: hue($primary);
+/*$primary-h: hue($primary);
 $primary-s: saturation($primary);
+
 
 $theme-colors: (
   "primary-b-1": hsb($primary-h, $primary-s, 10),
@@ -105,7 +123,7 @@ $theme-colors: (
   "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
   "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
   "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
-);
+);*/
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
@@ -135,8 +153,10 @@ $paragraph-margin-bottom:   1.6rem !default;
 $btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
-$input-btn-padding-y: .665rem !default;
-$input-btn-line-height: 1.4 !default;
+$input-btn-line-height: 1.35 !default;
+$input-btn-padding-y: .63rem !default;
+$input-btn-padding-y-lg: .81rem !default;
+$input-btn-padding-y-sm: .4rem !default;
 
 // z-index
 $zindex-zoom: 1080;
