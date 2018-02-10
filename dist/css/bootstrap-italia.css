@@ -7874,10 +7874,10 @@ small,
   @media (min-width: 576px) {
     small,
     .small {
-      font-size: 0.8888; } }
+      font-size: 0.8888rem; } }
 
 .x-small {
-  font-size: .875;
+  font-size: .875rem;
   font-weight: 400; }
   @media (min-width: 576px) {
     .x-small {

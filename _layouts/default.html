@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% include header.html %}
+    {% include head.html %}
   </head>
   <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
@@ -15,7 +15,7 @@
     {% if page.layout == "simple" %}
       {{ content }}
     {% else %}
-      <main id="content" role="main">
+      <main id="content">
         {{ content }}
       </main>
     {% endif %}
