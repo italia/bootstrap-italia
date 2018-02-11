@@ -34,6 +34,7 @@
     - title: Card
       status: to do
     - title: Carousel
+    - title: Checkbox
     - title: Collapse
       status: work in progress
     - title: Dropdowns
@@ -53,6 +54,7 @@
     - title: Pagination
       status: to do
     - title: Popovers
+    - title: Radio Button
     - title: Scrollspy
     - title: Tooltips
 
