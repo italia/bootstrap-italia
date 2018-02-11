@@ -8511,8 +8511,7 @@ small,
   top: 0;
   width: 17px;
   height: 17px;
-  border: 1.5px solid #5C6F82;
-  border: 1.5px solid #5C6F82;
+  border: 1px solid #5C6F82;
   border-radius: 1px;
   margin: 2px 0;
   -webkit-transform: rotateZ(37deg);
@@ -8540,7 +8539,7 @@ small,
           backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-  opacity: 0.8; }
+  opacity: .8; }
 
 [type="checkbox"]:checked + label::after {
   border-color: #0066cc;
@@ -8642,7 +8641,7 @@ small,
   .form-check.form-check-group [type="radio"]:checked + label::before {
     right: 15px; }
   .form-check.form-check-group .form-text {
-    opacity: 0.6;
+    opacity: .6;
     margin: 0;
     padding-left: 8px;
     padding-right: 52px; }
