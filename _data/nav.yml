@@ -24,9 +24,8 @@
     - title: Introduzione
       status: work in progress
     - title: Alerts
-      status: to do
     - title: Badge
-      status: to do
+    - title: Barre di Avanzamento
     - title: Breadcrumb
     - title: Buttons
       status: to do
@@ -35,18 +34,16 @@
     - title: Card
       status: to do
     - title: Carousel
-      status: to do
+    - title: Checkbox
     - title: Collapse
       status: work in progress
     - title: Dropdowns
       status: to do
+    - title: Elenchi
     - title: Forms
       status: to do
+    - title: Hero
     - title: Input group
-      status: to do
-    - title: Jumbotron
-      status: to do
-    - title: List group
       status: to do
     - title: Modale
       status: work in progress
@@ -57,14 +54,15 @@
     - title: Pagination
       status: to do
     - title: Popovers
-    - title: Progress
-      status: to do
+    - title: Radio Button
     - title: Scrollspy
     - title: Tooltips
 
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
+      status: work in progress
+    - title: Cookiebar
       status: work in progress
     - title: Image Grid
       status: to do
@@ -74,23 +72,20 @@
 - title: Utilities
   pages:
     - title: Introduzione
-      status: work in progress
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
-    - title: Colors
-      status: to do
+    - title: Colori
+      status: work in progress
     - title: Dimensionamento
     - title: Display
     - title: Embed
     - title: Flex
-      status: to do
     - title: Float
     - title: Griglie
       status: work in progress
     - title: Immagini sostitutive
     - title: Media object
-      status: to do
     - title: Position
     - title: Screenreaders
     - title: Spaziature

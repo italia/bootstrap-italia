@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
 @import "functions-custom"; // here to be available to "variables"
 @import "variables";
@@ -30,8 +31,8 @@
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "node_modules/bootstrap/scss/pagination";
 @import "node_modules/bootstrap/scss/badge";
-@import "node_modules/bootstrap/scss/jumbotron";
-@import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
 @import "node_modules/bootstrap/scss/progress";
 @import "node_modules/bootstrap/scss/media";
 @import "node_modules/bootstrap/scss/list-group";
@@ -49,6 +50,12 @@
 @import "./custom/breadcrumb-custom.scss";
 @import "./custom/modal-custom.scss";
 @import "./custom/collapse-custom.scss";
+@import "./custom/carousel-custom.scss";
+@import "./custom/list-group-custom.scss";
+@import "./custom/alert-custom.scss";
+@import "./custom/checkbox-radio-custom.scss";
 
 // Custom components
-@import "./custom/zoom.scss";
+@import "./plugins/cookiebar.scss";
+@import "./plugins/hero.scss";
+@import "./plugins/zoom.scss";

@@ -6,17 +6,20 @@ group: contenuti
 toc: true
 ---
 
-## Impostazioni globali
+Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei link. Quando è necessario un maggiore controllo, fornisce delle [classi di utilità testuali]({{ site.baseurl }}/docs/utilities/testo/).
 
-Bootstrap imposta la visualizzazione globale di base, la tipografia e gli stili dei collegamenti. Quando è necessario un maggiore controllo, definisce le [classi di utilità testuali]({{ site.baseurl }}/docs/utilities/text/).
+### Tipografia responsive
 
-- Utilizza un [gruppo di caratteri nativi]({{ site.baseurl }}/docs/contenuti/reboot/#native-font-stack) che seleziona la migliore `font-family` per ogni sistema operativo e dispositivo.
-- Per avere una più completa e accessibile scelta di font, assumiamo la radice predefinita del browser `font-size` (in genere 16px) in modo che i visitatori possano personalizzare le impostazioni predefinite del browser in base a specifiche esigenze.
-- Usa gli attributi `$font-family-base`, `$font-size-base`, e `$line-height-base` come base tipografica applicata al `<body>`.
-- Imposta il colore dei collegamenti tramite `$link-color` e applica le sottolineature dei collegamenti solo sull' `:hover`.
-- Usa `$body-bg` per impostare il `background-color` sul `<body>` (`#fff` predefinito).
+Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando il `font-size` dell'elemento radice, con una media query che imposta dimensioni lievemente maggiori per schermi con dimensioni maggiorni di _576px_. Questa impostazione, unita all'utilizzo di dimensioni in `rem` o in semplici valori numerici all'interno del CSS, fa sì che testo e altre proprietà occupino sensibilmente più spazio quando lo schermo lo permette:
 
-Questi stili possono essere trovati all'interno di `_reboot.scss`, e le variabili globali sono definite in `_variables.scss`. Assicurati di impostare `$font-size-base` in `rem`.
+{% highlight scss %}
+html {
+  font-size: 16px;
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+  }
+}
+{% endhighlight %}
 
 ## Intestazioni
 
@@ -286,33 +289,3 @@ Allineare i termini e le descrizioni orizzontalmente utilizzando le classi prede
   </dd>
 </dl>
 {% endexample %}
-
-## Tipografia responsive
-
-*Tipografia responsive* si riferisce al ridimensionamento di testo e componenti semplicemente regolando il `font-size` dell'elemento radice all'interno di una serie di media queries. Bootstrap non fa questo per te, ma è abbastanza facile da aggiungere se ne hai bisogno.
-
-Ecco un esempio pratico. Scegli qualunque `font-size` e media queries desideri.
-
-{% highlight scss %}
-html {
-  font-size: 1rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-{% endhighlight %}

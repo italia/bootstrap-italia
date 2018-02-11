@@ -1,0 +1,34 @@
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+    padding: $list-group-item-padding-y;
+    &.disabled,
+    &:disabled {
+      cursor: $list-group-disabled-cursor;
+    }
+  }
+
+  .list-group-item-action {  
+    // Hover state
+    @include hover-focus {
+      text-decoration: underline;
+      background-color: $list-group-hover-bg;
+    }
+    &.disabled,
+    &:disabled {
+      @include hover-focus {
+        text-decoration: none;
+        background-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+}
+
+.list-group-item.active {
+    @include hover-focus {
+        background-color: $list-group-active-bg;
+      }
+}
+

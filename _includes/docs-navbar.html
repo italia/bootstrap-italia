@@ -9,31 +9,24 @@
         <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" aria-label="Version">
-          {{ site.current_version }}
-        </a>
-      </li>
-      <!--<li class="nav-item">
         <a class="nav-link {% if page.title == "Esempi" %}active{% endif %}" href="{{ site.baseurl }}/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
-      </li>-->
+      </li>
     </ul>
   </div>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-
-
     <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
+      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         {%- include icons/github.svg class="navbar-nav-svg" -%}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
+      <a class="nav-link p-2" href="{{ site.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
         {%- include icons/twitter.svg class="navbar-nav-svg" -%}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.slack }}" target="_blank" rel="noopener" aria-label="Slack">
+      <a class="nav-link p-2" href="{{ site.slack }}" target="_blank" rel="noopener noreferrer" aria-label="Slack">
         {%- include icons/slack.svg class="navbar-nav-svg" -%}
       </a>
     </li>
