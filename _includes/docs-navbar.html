@@ -1,4 +1,4 @@
-<header class="navbar navbar-dark bd-navbar">
+<header class="navbar-main navbar navbar-dark bd-navbar">
   <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
     {%- include icons/bricks.svg width="36" height="36" class="d-block" -%}
   </a>
@@ -16,24 +16,8 @@
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item">
-      <a class="nav-link p-2 disabled" href="#" aria-label="Version">
-        {{ site.current_version }}
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
+      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         {%- include icons/github.svg class="navbar-nav-svg" -%}
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
-        {%- include icons/twitter.svg class="navbar-nav-svg" -%}
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.slack }}" target="_blank" rel="noopener" aria-label="Slack">
-        {%- include icons/slack.svg class="navbar-nav-svg" -%}
       </a>
     </li>
   </ul>
