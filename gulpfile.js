@@ -32,8 +32,11 @@ var Paths = {
     './node_modules/bootstrap/js/src/popover.js',
     './node_modules/bootstrap/js/src/scrollspy.js',
     './node_modules/bootstrap/js/src/tab.js',
-    'src/js/' + FILENAME + '.js',
-    'src/js/plugins/*'
+    './src/js/plugins/cookiebar.js',
+    './src/js/plugins/image-grid.js',
+    './src/js/plugins/zoom.js',
+    './src/js/plugins/select.js',
+    './src/js/' + FILENAME + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
   SOURCE_DOCUMENTATION_JS: 'docs/assets/src/js/**/*.js',
