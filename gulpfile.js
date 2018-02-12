@@ -82,7 +82,7 @@ gulp.task('scss-min', gulp.series('scss', function createMinifiedSCSS (done) {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({compatibility: 'ie9'}))
+    .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(autoprefixer())
     .pipe(wrapper({
       header: bootstrapItaliaBanner +
@@ -188,7 +188,7 @@ gulp.task('docs-scss', function createDocumentationSCSS(done) {
   return gulp.src(Paths.SOURCE_DOCUMENTATION_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({compatibility: 'ie9'}))
+    .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(rename({
@@ -198,9 +198,12 @@ gulp.task('docs-scss', function createDocumentationSCSS(done) {
   done();
 })
 
-gulp.task('docs-js', function createDocumentationJS(done) {
+gulp.task('docs-js-min', function createDocumentationJS(done) {
   return gulp.src(Paths.SOURCE_DOCUMENTATION_JS)
     .pipe(concat('docs.js'))
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -208,10 +211,22 @@ gulp.task('docs-js', function createDocumentationJS(done) {
   done();
 })
 
+/* Font */
+gulp.task('icons-css', function copyIconFontCSS(done) {
+  return gulp.src(['src/icons/css/**'])
+    .pipe(gulp.dest(Paths.DIST + '/css'))
+  done()
+})
+gulp.task('icons-font', function copyIconFont(done) {
+  return gulp.src(['src/icons/font/**'])
+    .pipe(gulp.dest(Paths.DIST + '/font'))
+  done()
+})
+
 // Code build
-gulp.task('build-code', gulp.series('scss-min', 'js-min', 'js-bundle-min'));
+gulp.task('build-code', gulp.series('scss-min', 'js-min', 'js-bundle-min', 'icons-css', 'icons-font'));
 // Docs build
-gulp.task('build-docs', gulp.series('docs-scss', 'docs-js'));
+gulp.task('build-docs', gulp.series('docs-scss', 'docs-js-min'));
 
 // Main build task
 gulp.task('build', gulp.series('introduction', 'build-code', 'build-docs'));
