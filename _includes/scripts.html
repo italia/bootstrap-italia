@@ -1,11 +1,13 @@
+{% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+
 {%- if site.github -%}
-  <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 {%- else -%}
-  <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.js"></script>
+  <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.js?{{ buildTime }}"></script>
 {%- endif -%}
 
 {%- if site.github -%}
-  <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js"></script>
+  <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
 {%- else -%}
   <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/anchor.min.js"></script>
   <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/clipboard.min.js"></script>
