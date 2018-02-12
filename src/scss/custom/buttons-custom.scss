@@ -1,31 +1,46 @@
-.btn-secondary-b {
-    border-color: $primary-b;
-    color: $primary-b;
+.btn {
+    padding: 12px 16px; 
+    &.btn-sm, 
+    &.btn-lg {
+        border-radius: $btn-border-radius;
+        font-size: $font-size-base;
+        line-height: $input-btn-line-height;
+    }
+    &.btn-sm {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &.btn-lg {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    &.btn-block {
+        border-radius:$reset-border-radius;
+    }
+    &.btn-secondary-b {
+        border-color: $primary-b;
+        color: $primary-b;
+    }
+    &.btn-warning {
+        color: $white;
+    }
+    &.btn-primary {
+        &:disabled {
+        color: $label-d;
+        background-color: $gray-d;
+        border-color: $border-d;
+        }
+    }    
+    &.btn-secondary-b {
+        &.disabled, 
+        &:disabled {
+        border-color: $border-d;
+        color: $label-d;
+        }
+    }
 }
 
-.btn-warning {
-    color: $white;
-}
 
-.btn-sm, 
-.btn-lg {
-    border-radius: $btn-border-radius;
-    font-size: $btn-font-size;
-    line-height: $input-btn-line-height;
-}
 
-.btn-block {
-    border-radius:$reset-border-radius;
-}
 
-.btn-primary:disabled {
-    color: $label-d;
-    background-color: $gray-d;
-    border-color: $border-d;
-}
 
-.btn-secondary-b.disabled, 
-.btn-secondary-b:disabled {
-    border-color: $border-d;
-    color: $label-d;
-}

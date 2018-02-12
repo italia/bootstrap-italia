@@ -139,7 +139,7 @@ $grid-gutter-widths: (
 ) !default;
 
 // Main typography
-$font-size-base: 1rem !default;
+//$font-size-base: 16px !default;
 $headings-line-height: 1.2 !default;
 $small-font-size: 0.777rem !default;
 
@@ -150,13 +150,14 @@ $small-font-size: 0.777rem !default;
 $paragraph-margin-bottom:   1.6rem !default;
 
 // Btns
-$btn-font-size: $font-size-base;
+//$btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
 $input-btn-line-height: 1.35 !default;
-$input-btn-padding-y: .63rem !default;
-$input-btn-padding-y-lg: .81rem !default;
-$input-btn-padding-y-sm: .4rem !default;
+//$input-btn-padding-y: 12px !default;
+//$input-btn-padding-y-lg: 16px !default;
+//$input-btn-padding-y-sm: 8px !default;
+//$input-btn-padding-x: 16px !default;
 
 // z-index
 $zindex-zoom: 1080;
