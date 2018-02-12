@@ -8262,6 +8262,9 @@ caption {
   font-size: 0.777rem;
   line-height: 1.4285; }
 
+b, strong {
+  font-weight: 600; }
+
 small,
 .small {
   font-size: .9375rem;
@@ -8523,7 +8526,8 @@ small,
   border-radius: 4px;
   height: 20px;
   width: 20px;
-  margin: 6px 0; }
+  margin: 6px 0;
+  top: 0; }
 
 [type="checkbox"]:checked + label::before {
   top: 6px;
@@ -8629,7 +8633,8 @@ small,
   .form-check.form-check-group [type="checkbox"] + label,
   .form-check.form-check-group [type="radio"] + label {
     position: static;
-    padding-left: 8px; }
+    padding-left: 8px;
+    padding-right: 52px; }
   .form-check.form-check-group [type="checkbox"] + label::after,
   .form-check.form-check-group [type="checkbox"] + label::before,
   .form-check.form-check-group [type="radio"] + label::after,

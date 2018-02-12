@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Documentazione ed esempi sull’utilizzo del componente Tab.">
+<meta name="author" content="AgID + Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.6.2">
+<meta name="robots" content="noindex">
+
+<title>Tab · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802121643" rel="stylesheet">
+
+
+<!-- Icon Font CSS -->
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802121643" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802121643" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.webmanifest">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:title" content="Tab">
+<meta name="twitter:description" content="Documentazione ed esempi sull’utilizzo del componente Tab.">
+<meta name="twitter:image" content="/bootstrap-italiaTODO">
+
+<!-- Facebook -->
+<meta property="og:url" content="/bootstrap-italia/docs/componenti/tab/">
+<meta property="og:title" content="Tab">
+<meta property="og:description" content="Documentazione ed esempi sull’utilizzo del componente Tab.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/bootstrap-italiaTODO">
+<meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXX-XX', 'example.com');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+  <span class="navbar-brand text-white"> + </span>
+  <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+  <div class="collapse navbar-collapse" id="navbarsExample05">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.developers.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="navbar-main navbar navbar-dark bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage"><svg  width="36" height="36" viewBox="0 0 43 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-284.000000, -2880.000000)" fill-rule="nonzero" fill="#FFF">
+            <g transform="translate(209.000000, 2880.000000)">
+                <g transform="translate(75.000000, 0.000000)">
+                    <path d="M27.6581377,17.7213003 L27.6581377,3.31034483 L0,3.31034483 L0,19.178089 L14.548665,19.178089 L14.548665,32.1322559 L0,32.1322559 L0,48 L27.6582315,48 L27.6582315,33.5888587 L42.2068966,33.5888587 L42.2068966,17.7213003 L27.6581377,17.7213003 Z M1.47070953,17.7213003 L1.47070953,4.76713345 L26.1876158,4.76713345 L26.1876158,17.7213003 L14.548665,17.7213003 L1.47070953,17.7213003 L1.47070953,17.7213003 Z M26.1876158,46.5430256 L26.187522,46.5430256 L1.47070953,46.5430256 L1.47070953,33.5888587 L14.548665,33.5888587 L26.1876158,33.5888587 L26.1876158,46.5430256 Z M40.736187,32.13207 L40.7360932,32.13207 L27.6581377,32.13207 L16.0192808,32.13207 L16.0192808,19.1779961 L27.6582315,19.1779961 L40.736187,19.1779961 L40.736187,32.13207 Z"></path>
+                    <polygon points="6.62068966 31.4482759 6.62068966 28.9655172 1.65517241 28.9655172 1.65517241 31.4482759 3.08489924 31.4482759 3.08489924 30.6325989 5.19096282 30.6325989 5.19096282 31.4482759"></polygon>
+                    <polygon points="13.2413793 31.4482759 13.2413793 28.9655172 8.27586207 28.9655172 8.27586207 31.4482759 9.7055889 31.4482759 9.7055889 30.6325989 11.8116525 30.6325989 11.8116525 31.4482759"></polygon>
+                    <polygon points="30.3952178 16.5637397 32.5013339 16.5637397 32.5013339 17.3793103 33.9310345 17.3793103 33.9310345 14.8965517 28.9655172 14.8965517 28.9655172 17.3793103 30.3952178 17.3793103"></polygon>
+                    <polygon points="37.0159337 16.5637397 39.1219973 16.5637397 39.1219973 17.3793103 40.5517241 17.3793103 40.5517241 14.8965517 35.5862069 14.8965517 35.5862069 17.3793103 37.0159337 17.3793103"></polygon>
+                    <rect x="3.31034483" y="43.862069" width="2.48275862" height="1.65517241"></rect>
+                    <rect x="6.62068966" y="43.862069" width="4.96551724" height="1.65517241"></rect>
+                    <polygon points="17.3793103 24 18.7148976 24 18.7148976 22.3582375 20.6896552 22.3582375 20.6896552 20.6896552 17.3793103 20.6896552"></polygon>
+                    <rect x="17.3793103" y="24.8275862" width="1.65517241" height="1.65517241"></rect>
+                    <polygon points="9.7055889 1.66718799 11.8116525 1.66718799 11.8116525 2.48275862 13.2413793 2.48275862 13.2413793 0 8.27586207 0 8.27586207 2.48275862 9.7055889 2.48275862"></polygon>
+                    <polygon points="3.08480806 1.66718799 5.19096282 1.66718799 5.19096282 2.48275862 6.62068966 2.48275862 6.62068966 0 1.65517241 0 1.65517241 2.48275862 3.08480806 2.48275862"></polygon>
+                    <polygon points="22.9469682 1.66718799 25.053123 1.66718799 25.053123 2.48275862 26.4827586 2.48275862 26.4827586 0 21.5172414 0 21.5172414 2.48275862 22.9469682 2.48275862"></polygon>
+                    <polygon points="16.3262523 1.66718799 18.4323684 1.66718799 18.4323684 2.48275862 19.862069 2.48275862 19.862069 0 14.8965517 0 14.8965517 2.48275862 16.3262523 2.48275862"></polygon>
+                    <rect x="3.31034483" y="14.8965517" width="10.7586207" height="1.65517241"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" href="/bootstrap-italia/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/bootstrap-italia/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/></svg>
+</a>
+    </li>
+  </ul>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="#06C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+</button>
+</form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti</a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/browsers-e-dispositivi/">
+              Browsers e dispositivi</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle</a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure</a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alerts/">
+              Alerts</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
+              Barre di Avanzamento</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
+              Breadcrumb</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/buttons/">
+              Buttons <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/button-group/">
+              Button group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/checkbox/">
+              Checkbox</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdowns/">
+              Dropdowns <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/forms/">
+              Forms <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/hero/">
+              Hero</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/input-group/">
+              Input group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navigazione/">
+              Navigazione</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pagination/">
+              Pagination <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popovers/">
+              Popovers</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/radio-button/">
+              Radio Button</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy</a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltips/">
+              Tooltips</a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
+              Cookiebar <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/image-grid/">
+              Image Grid <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/zoom/">
+              Zoom <span class="badge badge-info">to do</span></a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori/">
+              Colori <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone <span class="badge badge-info">work in progress</span></a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/position/">
+              Position</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility</a></li></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h4"><a href="#accessibilità">Accessibilità</a></li>
+<li class="toc-entry toc-h3"><a href="#tab-a-bottoni">Tab a bottoni</a></li>
+<li class="toc-entry toc-h3"><a href="#allineamento-verticale">Allineamento Verticale</a></li>
+<li class="toc-entry toc-h2"><a href="#attivazione-tab">Attivazione Tab</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#con-lutilizzo-di-attributi-data-">Con l’utilizzo di attributi data-</a></li>
+<li class="toc-entry toc-h3"><a href="#con-javascript">Con Javascript</a></li>
+<li class="toc-entry toc-h3"><a href="#effetto-a-comparsa">Effetto “a comparsa”</a></li>
+</ul>
+</li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Tab</h1>
+          <p class="bd-lead">Documentazione ed esempi sull’utilizzo del componente Tab.</p>
+          <p>L’interfaccia a tab (o schede) di Bootstrap si basa sull’utilizzo del <a href="/bootstrap-italia/docs/componenti/navigazione">layout di navigazione</a>, con l’aggiunta della classe <code class="highlighter-rouge">.nav-tabs</code>.</p>
+
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<p>Le interfacce a tab, come descritto nelle <a href="https:// www. w3.org/TR/wai-aria-practices/#tabpanel">pratiche di implementazione WAI ARIA</a>, richiedono l’utilizzo di attributi <code class="highlighter-rouge">role="tablist"</code>, <code class="highlighter-rouge">role="tab"</code>, <code class="highlighter-rouge">role="tabpanel"</code>, e ulteriori attributi <code class="highlighter-rouge">aria-</code>, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).</p>
+
+<p>Nota che le interfacce dinamiche a tab <strong>non devono</strong> contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell’usabilità, il fatto che l’elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all’interno del menu a discesa chiuso) può causare confusione. Dal punto di vista dell’accessibilità, attualmente non esiste un modo sensato per mappare questo tipo di costrutto a un modello standard WAI ARIA, il che significa che non può essere facilmente reso comprensibile agli utenti delle tecnologie assistive. (TODO verificare)</p>
+</div>
+
+<div class="bd-example">
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#">Link Attivo</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#">Link Disabilitato</a></li>
+</ul>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link Attivo<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link Disabilitato<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<p>L’esempio sopra riportato non ha molto senso senza un contenuto che cambi al di sotto di esso; per rendere tali interfacce navigabili è necessario utilizzare Javascript, come mostrato di seguito:</p>
+
+<div class="bd-example bd-example-tabs">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
+    <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a></li>
+    <li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a></li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+      <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+    </div>
+    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+      <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+    </div>
+    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+    </div>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">id=</span><span class="s">"tab1-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab1"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab1"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab2-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab2"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab3-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab3"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"myTabContent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab1-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Allo stesso modo di quanto avviene con i normali <code class="highlighter-rouge">.nav</code>, a seconda delle tue necessità, è possibile modificare tale codice con un markup diverso, diverso dalla classica lista basata su <code class="highlighter-rouge">&lt;ul&gt;</code>. È importante notare però, che nel caso si desideri usare l’elemento <code class="highlighter-rouge">&lt;nav&gt;</code>, l’attributo <code class="highlighter-rouge">role="tablist"</code> non deve essere applicato direttamente su di esso, in quanto sovrascriverebbe il ruolo dell’elemento stesso per la navigazione.</p>
+
+<p>Si può, alternativamente, usare un diverso elemento (nell’esempio seguente un semplice <code class="highlighter-rouge">&lt;div&gt;</code>) e racchiuderlo con <code class="highlighter-rouge">&lt;nav&gt;</code>:</p>
+
+<div class="bd-example bd-example-tabs">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-tab1-tab" data-toggle="tab" href="#nav-tab1" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</a>
+      <a class="nav-item nav-link" id="nav-tab2-tab" data-toggle="tab" href="#nav-tab2" role="tab" aria-controls="nav-tab2" aria-selected="false">Tab 2</a>
+      <a class="nav-item nav-link" id="nav-tab3-tab" data-toggle="tab" href="#nav-tab3" role="tab" aria-controls="nav-tab3" aria-selected="false">Tab 3</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">
+      <p>Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">
+      <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute laboris nisi. Labore labore veniam irure irure ipsum pariatur mollit magna in cupidatat dolore magna irure esse tempor ad mollit. Dolore commodo nulla minim amet ipsum officia consectetur amet ullamco voluptate nisi commodo ea sit eu.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">
+      <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>
+    </div>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"nav-tab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-item nav-link active"</span> <span class="na">id=</span><span class="s">"nav-tab1-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#nav-tab1"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"nav-tab1"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-item nav-link"</span> <span class="na">id=</span><span class="s">"nav-tab2-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#nav-tab2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"nav-tab2"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-item nav-link"</span> <span class="na">id=</span><span class="s">"nav-tab3-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#nav-tab3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"nav-tab3"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"nav-tabContent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"nav-tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"nav-tab1-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"nav-tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"nav-tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"nav-tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"nav-tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="tab-a-bottoni">Tab a bottoni</h3>
+
+<p>I tab possono ereditare dalla navigazione l’utilizzo della classe <code class="highlighter-rouge">.nav-pills</code> per generare tab a bottoni:</p>
+
+<div class="bd-example bd-example-tabs">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#pills-tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
+    <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#pills-tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a></li>
+    <li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#pills-tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a></li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-tab1-tab">
+      <p>Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab">
+      <p>Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-tab3-tab">
+      <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
+    </div>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills mb-3"</span> <span class="na">id=</span><span class="s">"pills-tab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">id=</span><span class="s">"pills-tab1-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab1"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"pills-tab1"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"pills-tab2-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"pills-tab2"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"pills-tab3-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"pills-tab3"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"pills-tabContent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"pills-tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"pills-tab1-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"pills-tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"pills-tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"pills-tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"pills-tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="allineamento-verticale">Allineamento Verticale</h3>
+
+<p>Esempio:</p>
+
+<div class="bd-example bd-example-tabs">
+  <div class="row">
+    <div class="col-3">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1" aria-selected="true">Tab 1</a>
+        <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2" aria-selected="false">Tab 2</a>
+        <a class="nav-link" id="v-pills-tab3-tab" data-toggle="pill" href="#v-pills-tab3" role="tab" aria-controls="v-pills-tab3" aria-selected="false">Tab 3</a>
+        <a class="nav-link" id="v-pills-tab4-tab" data-toggle="pill" href="#v-pills-tab4" role="tab" aria-controls="v-pills-tab4" aria-selected="false">Tab 4</a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-tab1-tab">
+          <p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p>
+        </div>
+        <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
+          <p>Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</p>
+        </div>
+        <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">
+          <p>Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p>
+        </div>
+        <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-tab4-tab">
+          <p>Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav flex-column nav-pills"</span> <span class="na">id=</span><span class="s">"v-pills-tab"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">id=</span><span class="s">"v-pills-tab1-tab"</span> <span class="na">data-toggle=</span><span class="s">"pill"</span> <span class="na">href=</span><span class="s">"#v-pills-tab1"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"v-pills-tab1"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"v-pills-tab2-tab"</span> <span class="na">data-toggle=</span><span class="s">"pill"</span> <span class="na">href=</span><span class="s">"#v-pills-tab2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"v-pills-tab2"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"v-pills-tab3-tab"</span> <span class="na">data-toggle=</span><span class="s">"pill"</span> <span class="na">href=</span><span class="s">"#v-pills-tab3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"v-pills-tab3"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"v-pills-tab4-tab"</span> <span class="na">data-toggle=</span><span class="s">"pill"</span> <span class="na">href=</span><span class="s">"#v-pills-tab4"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"v-pills-tab4"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 4<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"v-pills-tabContent"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"v-pills-tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"v-pills-home-tab1"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"v-pills-tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"v-pills-tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"v-pills-tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"v-pills-tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"v-pills-tab4"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"v-pills-tab4-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="attivazione-tab">Attivazione Tab</h2>
+
+<h3 id="con-lutilizzo-di-attributi-data-">Con l’utilizzo di attributi <code class="highlighter-rouge">data-</code></h3>
+
+<p>Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente specificando <code class="highlighter-rouge">data-toggle="tab"</code> o <code class="highlighter-rouge">data-toggle="pill"</code> su link all’interno di liste di tipo<code class="highlighter-rouge">.nav-tabs</code> or <code class="highlighter-rouge">.nav-pills</code>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">id=</span><span class="s">"tab1-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab1"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab1"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab2-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab2"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab3-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab3"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab4-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab4"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab4"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;</span>Tab 4<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="c">&lt;!-- Tab panes --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane active"</span> <span class="na">id=</span><span class="s">"tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab1-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tab4"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab4-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="con-javascript">Con Javascript</h3>
+
+<p>Per attivare tab funzionanti con Javascript:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>È possibile attivare tab individualmente in diversi modi:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a[href="#tab1"]'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:first-child a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:last-child a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:nth-child(3) a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="effetto-a-comparsa">Effetto “a comparsa”</h3>
+
+<p>Per fare in modo che i tab appaiano con un’animazione “a comparsa” (fade in), è sufficiente aggiungere la classe <code class="highlighter-rouge">.fade</code> ad ogni <code class="highlighter-rouge">.tab-pane</code>. Il primo <code class="highlighter-rouge">.tab-pane</code> dovrà anche avere la classe <code class="highlighter-rouge">.show</code> per rendere il contenuto iniziale visibile.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab1-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab2-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab3-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab4"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab4-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla <a href="https://getbootstrap.com/docs/4.0/components/navs/#methods">pagina corrispondente</a> sul sito di Bootstrap.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js?201802121643"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/vendor/holder.min.js"></script>
+  <script src="/bootstrap-italia/docs/assets/src/js/docs.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>

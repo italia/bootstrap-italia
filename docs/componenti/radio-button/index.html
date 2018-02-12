@@ -14,14 +14,17 @@
 
 <!-- Bootstrap core CSS -->
 
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802121023" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802121643" rel="stylesheet">
 
+
+<!-- Icon Font CSS -->
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802121643" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802121023" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802121643" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -232,8 +235,8 @@
               Input group <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale <span class="badge badge-info">work in progress</span></a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/navs/">
-              Navs <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navigazione/">
+              Navigazione</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navbar/">
               Navbar <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/pagination/">
@@ -244,6 +247,8 @@
               Radio Button</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy</a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/tooltips/">
               Tooltips</a></li></ul>
     </div><div class="bd-toc-item">
@@ -290,6 +295,8 @@
               Griglie <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
               Immagini sostitutive</a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone <span class="badge badge-info">work in progress</span></a></li><li>
             <a href="/bootstrap-italia/docs/utilities/media-object/">
               Media object</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/position/">
@@ -423,7 +430,7 @@
 
 <div class="bd-example">
 <div class="row">
-  <div class="col-5">
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input name="gruppo4" type="radio" id="radio10" checked="" />
       <label for="radio10">Opzione 1</label>
@@ -437,8 +444,8 @@
       <label for="radio12" class="disabled">Opzione 3</label>
     </div>
   </div>
-  <div class="col-2"></div>
-  <div class="col-5">
+  <div class="col-md-2"></div>
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input checked="" name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help" />
       <label for="radio13">Opzione 1</label>
@@ -458,7 +465,7 @@
 </div>
 </div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-5"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio10"</span> <span class="na">checked</span> <span class="na">checked</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio10"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
@@ -472,8 +479,8 @@
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio12"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-5"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio13"</span> <span class="na">aria-describedby=</span><span class="s">"radio13-help"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio13"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
@@ -497,7 +504,7 @@
       </div>
     </div>
 
-    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js?201802121023"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js?201802121643"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/vendor/holder.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/docs.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
