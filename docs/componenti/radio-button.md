@@ -68,7 +68,7 @@ Radio button disabilitati
 
 {% example html %}
 <div class="row">
-  <div class="col-5">
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input name="gruppo4" type="radio" id="radio10" checked checked>
       <label for="radio10">Opzione 1</label>
@@ -82,8 +82,8 @@ Radio button disabilitati
       <label for="radio12" class="disabled">Opzione 3</label>
     </div>
   </div>
-  <div class="col-2"></div>
-  <div class="col-5">
+  <div class="col-md-2"></div>
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input checked name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help">
       <label for="radio13">Opzione 1</label>
