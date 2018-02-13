@@ -53,7 +53,9 @@ Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elem
 
 ### Input file
 
-Avete la possibilità di usare l'elemento input file predefinito oppure con la personalizzazione grafica aggiungendo a `.form-group` la classe `.form-file`.
+Avete la possibilità di usare l'elemento input file predefinito oppure avente la personalizzazione grafica aggiungendo a `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
+
+Per i `.form-file` è stato previsto un javascript che permetterà di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
 
 {% example html %}
 <form>
@@ -74,6 +76,29 @@ Avete la possibilità di usare l'elemento input file predefinito oppure con la p
 </form>
 {% endexample %}
 
+#### Tradurre o personalizzare le stringhe di testo
+
+La [pseudo-classe `:lang ()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) viene utilizzata per consentire la traduzione del testo "Sfoglia" in altri le lingue. Sovrascrivi o aggiungi voci alla variabile Sass `$custom-file-text` con il [tag lingua](https://en.wikipedia.org/wiki/IETF_language_tag) pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è `en`):
+
+{% highlight scss %}
+$custom-file-text: (
+  it: "Sfoglia",
+  en: "Browse"
+);
+{% endhighlight %}
+
+Eccoti un esempio in funzione per la traduzione in inglese:
+
+{% example html %}
+<div class="form-group form-file">
+  <input id="fileEn" class="form-control" type="file" lang="en">
+  <label for="fileEn">Choose file...</label>
+  <span class="form-file-name"></span>
+</div>
+{% endexample %}
+
+È necessario impostare correttamente la lingua del documento (o dell'albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando [l'attributo `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) sull'elemento `<html>` o modificando il [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) ad esempio.
+
 ### Select
 
 {% example html %}
@@ -88,18 +113,6 @@ Avete la possibilità di usare l'elemento input file predefinito oppure con la p
     </select>
     <label for="exampleFormControlSelects">Esempio di un campo select</label>
   </div>
-  <div class="form-group">
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    <label for="exampleInputPassword1">Password</label>
-    <span class="btnEye eyeOn" toggle="exampleInputPassword1">
-      <svg aria-hidden="true" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-3x"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z" class=""></path></svg>
-    </span>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endexample %}
 
@@ -160,99 +173,161 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 {% endexample %}
 
 
-## Checkboxe and radio button
+## Checkbox e radio
 
-Lo stile dei checkbox e radio button è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nel contenitore padre. Mentre le checkbox servono a selezionare una o più opzioni in un elenco, i radio button consentono di selezionare una sola opzione tra molte.
-
-Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `disabled` attribute to the `.form-check-input`. The disabled attribute will apply a lighter color to help indicate the input's state.
-
-Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
-
-### Default (stacked)
-
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+Lo stile dei **checkbox** e **radio** è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nel contenitore padre. Mentre le **checkbox** servono a selezionare una o più opzioni in un elenco, i **radio** consentono di selezionare una sola opzione tra molte.
 
 {% example html %}
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-  <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
-  </label>
-</div>
+<form>
+  <div class="form-check">
+    <input id="checkbox1" type="checkbox">
+    <label for="checkbox1">Checkbox di esempio</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo1" type="radio" id="radio1" checked>
+    <label for="radio1">Radio di esempio 1</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo1" type="radio" id="radio2">
+    <label for="radio2">Radio di esempio 2</label>
+  </div>
+</form>
+{% endexample %}
+
+### Inline 
+
+Per allineare orizzontalmente le **checkbox** o i **radio** basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="form-check form-check-inline">
+      <input id="checkbox2" type="checkbox">
+      <label for="checkbox2">Checkbox non selezionato</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input id="checkbox3" type="checkbox" checked="checked">
+      <label for="checkbox3">Checkbox selezionato</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-check form-check-inline">
+      <input name="gruppo2" type="radio" id="radio4" checked>
+      <label for="radio4">Opzione 1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input name="gruppo2" type="radio" id="radio5">
+      <label for="radio5">Opzione 2</label>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
+### Disabilitato
+
+Affinchè i campi **checkbox** e **radio** risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
+
+{% example html %}
+<form>
+  <div class="form-check">
+    <input id="checkbox4" type="checkbox" disabled>
+    <label for="checkbox4" class="disabled">Checkbox disabilitato non selezionato</label>
+  </div>
+  <div class="form-check">
+    <input id="checkbox5" type="checkbox" disabled checked="checked">
+    <label for="checkbox5" class="disabled">Checkbox disabilitato selezionato</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo3" type="radio" class="with-gap" id="radio7" checked disabled>
+    <label for="radio7" class="disabled">Opzione 1 selezionato</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo3" type="radio" class="with-gap" id="radio8" disabled>
+    <label for="radio8" class="disabled">Opzione 2 non selezionato</label>
+  </div>
+</form>
+{% endexample %}
+
+### Gruppi
+
+Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input id="checkbox6" type="checkbox" checked="checked">
+        <label for="checkbox6">Checkbox selezionato</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox7" type="checkbox">
+        <label for="checkbox7">Checkbox non selezionato</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox8" type="checkbox" disabled="disabled">
+        <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked">
+        <label for="checkbox9">Checkbox selezionato</label>
+        <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox10" type="checkbox" aria-describedby="checkbox10-help">
+        <label for="checkbox10">Checkbox non selezionato</label>
+        <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox11" type="checkbox" aria-describedby="checkbox11-help" disabled="disabled">
+        <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
+        <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+    </div>
+  </div>
+</form>
 {% endexample %}
 
 {% example html %}
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Default radio
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Second default radio
-  </label>
-</div>
-<div class="form-check disabled">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-  <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
-  </label>
-</div>
-{% endexample %}
-
-### Inline
-
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
-
-{% example html %}
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">2</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-</div>
-{% endexample %}
-
-{% example html %}
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">2</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-</div>
-{% endexample %}
-
-### Without labels
-
-Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
-
-{% example html %}
-<div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-</div>
-<div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-</div>
+<form>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio10" checked>
+        <label for="radio10">Opzione 1</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio11">
+        <label for="radio11">Opzione 2</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio12" disabled>
+        <label for="radio12" class="disabled">Opzione 3</label>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input checked name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help">
+        <label for="radio13">Opzione 1</label>
+        <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo5" type="radio" id="radio14" aria-describedby="radio14-help">
+        <label for="radio14">Opzione 2</label>
+        <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo5" type="radio" id="radio15" aria-describedby="radio15-help" disabled="disabled">
+        <label for="radio15" class="disabled">Opzione 3</label>
+        <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+    </div>
+  </div>
+</form>
 {% endexample %}
 
 ## Layout
@@ -334,6 +409,16 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <label for="inputCAP">CAP</label>
     </div>
   </div>
+  <div class="form-row">
+    <div class="form-check col-md-6">
+      <input id="checkbox1a" type="checkbox">
+      <label for="checkbox1a">Attivazione</label>
+    </div>
+    <div class="form-group col">
+      <input type="text" class="form-control" id="campofac">
+      <label for="campofac">Campo facoltativo</label>
+    </div>
+  </div>
 </form>
 {% endexample %}
 
@@ -360,16 +445,16 @@ Puoi scegliere di dare una dimensione a una colonna, ad esempio dandogli una cla
 </form>
 {% endexample html %}
 
-#### Auto-sizing
+#### Auto-dimensionamento
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto.
 
 {% example html %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInput">Nome</label>
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Mario Rossi">
     </div>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInputGroup">Username</label>
@@ -384,25 +469,25 @@ The example below uses a flexbox utility to vertically center the contents and c
       <div class="form-check mb-2">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck">
         <label class="form-check-label" for="autoSizingCheck">
-          Remember me
+          Ricordami
         </label>
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" class="btn btn-primary mb-2">Invia</button>
     </div>
   </div>
 </form>
 {% endexample %}
 
-You can then remix that once again with size-specific column classes.
+È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche.
 
 {% example html %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-sm-3 my-1">
-      <label class="sr-only" for="inlineFormInputName">Name</label>
-      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInputName">Nome</label>
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Mario Rossi">
     </div>
     <div class="col-sm-3 my-1">
       <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
@@ -417,12 +502,12 @@ You can then remix that once again with size-specific column classes.
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
-          Remember me
+          Ricordami
         </label>
       </div>
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Invia</button>
     </div>
   </div>
 </form>
@@ -511,39 +596,41 @@ Custom form controls and selects are also supported.
 {% endexample %}
 
 {% callout warning %}
-##### Alternatives to hidden labels
-Assistive technologies such as screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the `.sr-only` class. There are further alternative methods of providing a label for assistive technologies, such as the `aria-label`, `aria-labelledby` or `title` attribute. If none of these are present, assistive technologies may resort to using the `placeholder` attribute, if present, but note that use of `placeholder` as a replacement for other labelling methods is not advised.
+##### Alternative alle etichette nascoste
+Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, puoi nascondere le etichette usando la classe `.sr-only`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
 {% endcallout %}
 
-## Help text
+## Testo di aiuto
 
-Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`.
+Il testo di aiuto può essere creato usando `.form-text` (precedentemente noto come `.help-block` nella versione 3 di Bootstrap). Può essere esteso usando le classi di utilità come `.text-muted`.
 
 {% callout warning %}
-##### Associating help text with form controls
+##### Associazione del testo di aiuto con gli elementi del mudulo form
 
-Help text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this help text when the user focuses or enters the control.
+Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcallout %}
 
-Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.
+Il testo di aiuto sotto gli input può essere abbinato a `.form-text`. Questa classe include `display: block` e aggiunge un margine superiore per una facile spaziatura dagli input sopra.
 
 {% example html %}
-<label for="inputPassword5">Password</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-<small id="passwordHelpBlock" class="form-text text-muted">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-</small>
+<div class="form-group">
+  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+  <label for="inputPassword5">Password</label>
+  <small id="passwordHelpBlock" class="form-text text-muted">
+    La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
+  </small>
+</div>
 {% endexample %}
 
-Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
+Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un `<small>`, `<span>`, o qualcos'altro) con nient'altro che una classe di utilità.
 
 {% example html %}
 <form class="form-inline">
   <div class="form-group">
-    <label for="inputPassword6">Password</label>
     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+    <label for="inputPassword6">Password</label>
     <small id="passwordHelpInline" class="text-muted">
-      Must be 8-20 characters long.
+      Deve essere lunga 8-20 caratteri.
     </small>
   </div>
 </form>
@@ -1070,38 +1157,3 @@ As is the `size` attribute:
   <option value="3">Three</option>
 </select>
 {% endexample %}
-
-### File browser
-
-The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
-
-{% example html %}
-<div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Choose file</label>
-</div>
-{% endexample %}
-
-We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
-
-#### Translating or customizing the strings
-
-The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
-
-{% highlight scss %}
-$custom-file-text: (
-  en: "Browse",
-  es: "Elegir"
-);
-{% endhighlight %}
-
-Here's `lang(es)` in action on the custom file input for a Spanish translation:
-
-{% example html %}
-<div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-</div>
-{% endexample %}
-
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
