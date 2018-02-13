@@ -47,8 +47,7 @@
       status: to do
     - title: Modale
       status: work in progress
-    - title: Navs
-      status: to do
+    - title: Navigazione
     - title: Navbar
       status: to do
     - title: Pagination
@@ -56,6 +55,7 @@
     - title: Popovers
     - title: Radio Button
     - title: Scrollspy
+    - title: Tab
     - title: Tooltips
 
 - title: Componenti Aggiuntivi
@@ -85,16 +85,11 @@
     - title: Griglie
       status: work in progress
     - title: Immagini sostitutive
+    - title: Icone
+      status: work in progress
     - title: Media object
     - title: Position
     - title: Screenreaders
     - title: Spaziature
     - title: Testo
     - title: Visibility
-
-# - title: Estensioni
-#   pages:
-#     - title: Approach
-#       status: to do
-#     - title: Icons
-#       status: to do

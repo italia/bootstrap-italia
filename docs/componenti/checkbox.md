@@ -48,7 +48,7 @@ Checkbox disabilitate
 
 {% example html %}
 <div class="row">
-  <div class="col-5">
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input id="checkbox6" type="checkbox" checked="checked">
       <label for="checkbox6">Checkbox selezionato</label>
@@ -62,8 +62,8 @@ Checkbox disabilitate
       <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
     </div>
   </div>
-  <div class="col-2"></div>
-  <div class="col-5">
+  <div class="col-md-2"></div>
+  <div class="col-md-5">
     <div class="form-check form-check-group">
       <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked">
       <label for="checkbox9">Checkbox selezionato</label>

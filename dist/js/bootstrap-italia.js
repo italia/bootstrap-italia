@@ -1102,8 +1102,8 @@ var Collapse = function ($) {
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
       var tabToggles = $(Selector.DATA_TOGGLE);
-      for (var _i = 0; _i < tabToggles.length; _i++) {
-        var elem = tabToggles[_i];
+      for (var i = 0; i < tabToggles.length; i++) {
+        var elem = tabToggles[i];
         var selector = Util.getSelectorFromElement(elem);
         if (selector !== null && $(selector).filter(element).length > 0) {
           this._selector = selector;
@@ -1228,8 +1228,8 @@ var Collapse = function ($) {
       $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
 
       if (this._triggerArray.length > 0) {
-        for (var _i2 = 0; _i2 < this._triggerArray.length; _i2++) {
-          var trigger = this._triggerArray[_i2];
+        for (var i = 0; i < this._triggerArray.length; i++) {
+          var trigger = this._triggerArray[i];
           var selector = Util.getSelectorFromElement(trigger);
           if (selector !== null) {
             var $elem = $(selector);
@@ -1697,11 +1697,11 @@ var Dropdown = function ($) {
       }
 
       var toggles = $.makeArray($(Selector.DATA_TOGGLE));
-      for (var _i3 = 0; _i3 < toggles.length; _i3++) {
-        var parent = Dropdown._getParentFromElement(toggles[_i3]);
-        var context = $(toggles[_i3]).data(DATA_KEY);
+      for (var i = 0; i < toggles.length; i++) {
+        var parent = Dropdown._getParentFromElement(toggles[i]);
+        var context = $(toggles[i]).data(DATA_KEY);
         var relatedTarget = {
-          relatedTarget: toggles[_i3]
+          relatedTarget: toggles[i]
         };
 
         if (!context) {
@@ -1729,7 +1729,7 @@ var Dropdown = function ($) {
           $('body').children().off('mouseover', null, $.noop);
         }
 
-        toggles[_i3].setAttribute('aria-expanded', 'false');
+        toggles[i].setAttribute('aria-expanded', 'false');
 
         $(dropdownMenu).removeClass(ClassName.SHOW);
         $(parent).removeClass(ClassName.SHOW).trigger($.Event(Event.HIDDEN, relatedTarget));
@@ -3521,11 +3521,11 @@ var ScrollSpy = function ($) {
         return;
       }
 
-      for (var _i4 = this._offsets.length; _i4--;) {
-        var isActiveTarget = this._activeTarget !== this._targets[_i4] && scrollTop >= this._offsets[_i4] && (typeof this._offsets[_i4 + 1] === 'undefined' || scrollTop < this._offsets[_i4 + 1]);
+      for (var i = this._offsets.length; i--;) {
+        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
 
         if (isActiveTarget) {
-          this._activate(this._targets[_i4]);
+          this._activate(this._targets[i]);
         }
       }
     };
@@ -3610,8 +3610,8 @@ var ScrollSpy = function ($) {
   $(window).on(Event.LOAD_DATA_API, function () {
     var scrollSpys = $.makeArray($(Selector.DATA_SPY));
 
-    for (var _i5 = scrollSpys.length; _i5--;) {
-      var $spy = $(scrollSpys[_i5]);
+    for (var i = scrollSpys.length; i--;) {
+      var $spy = $(scrollSpys[i]);
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
   });
@@ -3885,8 +3885,6 @@ var Tab = function ($) {
   return Tab;
 }($);
 
-console.log("bootstrap italia");
-
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0): cookiebar.js
@@ -4086,8 +4084,8 @@ var Cookiebar = function ($) {
     var cookiebars = $.makeArray($(Selector.COOKIE_BAR));
     var consent = Cookiebar._getCookieEU();
     if (!consent) {
-      for (var _i6 = cookiebars.length; _i6--;) {
-        var $cookiebar = $(cookiebars[_i6]);
+      for (var i = cookiebars.length; i--;) {
+        var $cookiebar = $(cookiebars[i]);
         Cookiebar._jQueryInterface.call($cookiebar, 'show');
       }
     }
@@ -4108,65 +4106,6 @@ var Cookiebar = function ($) {
 
   return Cookiebar;
 }($);
-
-$(".form-group input + label, .form-group select, .form-group textarea + label").click(function () {
-  $(this).parent(".form-group").addClass("active");
-});
-$(".form-group input, .form-group select, .form-group textarea").on("focusin", function () {
-  $(this).parent(".form-group").addClass("active");
-});
-$(".form-group input, .form-group select, .form-group textarea").on("focusout", function () {
-  if ($(this).val() == "") {
-    $(this).siblings("label").removeClass("active");
-  } else {
-    $(this).siblings("label").addClass("active");
-  }
-  $(this).parent(".form-group").removeClass("active");
-});
-
-// Inizializzazione effetto active sulle label quando i loro input valorizzati
-$(document).ready(function () {
-  $('.form-group :input[value]').siblings("label").addClass("active");
-});
-
-// Gestione visibilità password
-$(document).ready(function () {
-  $("input:password").each(function (e) {
-    //$(this).siblings("label").after('<span class="btnEye eyeOn" toggle="'+$(this).attr("id")+'"><svg aria-hidden="true" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-3x"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z" class=""></path></svg></span>');
-    $(this).siblings("label").after('<span class="btnEye eyeOn" toggle="' + $(this).attr("id") + '"></span>');
-  });
-
-  $(".btnEye").on("click", function () {
-    $(this).toggleClass("eyeOff");
-    var input = $("#" + $(this).attr("toggle"));
-    input.focus();
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
-    }
-  });
-});
-
-// Gestione input[type="file"]
-$(".form-group input[type='file']").on("focusout", function () {
-  $(this).siblings("label").addClass("active");
-});
-
-$('input:file').on('change', function (e) {
-  var numFiles = e.currentTarget.files.length;
-  var nomiFiles = "";
-  var multi = "";
-  for (i = 0; i < numFiles; i++) {
-    fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024;
-    filesize = Math.round(fileSize);
-    nomiFiles = nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); ';
-  }
-  if (numFiles > 1) {
-    multi = numFiles + " file da caricare: ";
-  }
-  $(this).siblings('.form-file-name').text(multi + nomiFiles);
-});
 
 /**
  * --------------------------------------------------------------------------
@@ -4707,4 +4646,444 @@ var Zoom = function ($) {
     new ZoomService().listen();
   });
 }(jQuery);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): Select.js
+ * --------------------------------------------------------------------------
+ */
+
+var Select = function ($) {
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'it-select';
+  var DATA_KEY = 'bs.it-select';
+  var VERSION = 'v4.0.0';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+
+  var Default = {};
+
+  var Event = {
+    LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY
+  };
+
+  var Selector = {
+    SELECT: '.it-select'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+  var Select = function () {
+    function Select(element, config) {
+      _classCallCheck(this, Select);
+
+      this._elements = [];
+      this._element = element;
+      this._customElement = null;
+      this._isMultiple = false;
+      this._isSearchable = false;
+      this._optionsHover = false;
+
+      this._processImages();
+    }
+
+    // public
+
+    Select.prototype.dispose = function dispose() {
+      $(window).off(EVENT_KEY);
+      $.removeData(this._element, DATA_KEY);
+
+      this._elements = null;
+      this._element = null;
+      this._customElement = null;
+      this._isMultiple = false;
+      this._isSearchable = false;
+      this._optionsHover = false;
+    };
+
+    // private
+
+    Select.prototype._handleResize = function _handleResize() {};
+
+    Select.prototype._processImages = function _processImages() {
+      var that = this;
+      var $select = $(this._element);
+      var uniqueID = this._guid();
+
+      var filterQuery = [];
+
+      var wrapper = $('<div class="select-wrapper"></div>');
+
+      var selectChildren = $select.children('option, optgroup');
+      var valuesSelected = [];
+
+      this._isMultiple = Boolean($select.attr('multiple'));
+      this._isSearchable = Boolean($select.attr('searchable'));
+
+      this._customElement = $('<ul id="select-options-' + uniqueID + '" class="dropdown-menu ' + (this._isMultiple ? 'multiple-select-dropdown' : '') + '"></ul>');
+
+      var label = $select.find('option:selected').html() || $select.find('option:first').html() || '';
+
+      if ($select.data('select-id')) {
+        var selectOptionsListElement = 'ul#select-options-' + $select.data('select-id');
+        $select.parent().find('span.caret, input').remove().unwrap();
+        $(selectOptionsListElement).remove();
+      }
+
+      $select.data('select-id', uniqueID);
+
+      wrapper.addClass($select.attr('class'));
+
+      if (this._isSearchable) {
+        this._setSearchableOption();
+      }
+
+      if (selectChildren && selectChildren.length) {
+        selectChildren.each(function () {
+          if ($(this).is('option')) {
+            if (that._isMultiple) {
+              that._appendOptionWithIcon($select, $(this), 'multiple');
+            } else {
+              that._appendOptionWithIcon($select, $(this));
+            }
+          } else if ($(this).is('optgroup')) {
+            that._customElement.append($('<li class="optgroup"><span>' + $(this).attr('label') + '</span></li>'));
+
+            $(this).children('option').each(function () {
+              that._appendOptionWithIcon($select, $(this), 'optgroup-option');
+            });
+          }
+        });
+      }
+
+      this._customElement.find('li:not(.optgroup)').each(function (i) {
+        $(this).click(function (e) {
+          if (!$(this).hasClass('disabled') && !$(this).hasClass('optgroup')) {
+            var selected = true;
+
+            if (that._isMultiple) {
+              $('input[type="checkbox"]', this).prop('checked', function (i, v) {
+                return !v;
+              });
+              var optgroup = $select.find('optgroup').length;
+              if (that._isSearchable) {
+                if (optgroup) {
+                  selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length - 1, $select);
+                } else {
+                  selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - 1, $select);
+                }
+              } else if (optgroup) {
+                selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length, $select);
+              } else {
+                selected = that._toggleEntryFromArray(valuesSelected, $(this).index(), $select);
+              }
+              $newSelect.trigger('focus');
+            } else {
+              that._customElement.find('li').removeClass('active');
+              $(this).toggleClass('active');
+              $newSelect.val($(this).text());
+            }
+
+            that._activateOption(that._customElement, $(this));
+            $select.find('option').eq(i).prop('selected', selected);
+            $select.trigger('change');
+          }
+
+          e.stopPropagation();
+        });
+      });
+
+      $select.wrap(wrapper);
+
+      var dropdownIcon = $('<span class="caret"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="arrow_down" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 452 452" xml:space="preserve"><path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" fill="#0073e6"/></g></svg></span>');
+      if ($select.is(':disabled')) {
+        dropdownIcon.addClass('disabled');
+      }
+
+      var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
+
+      var $newSelect = $('<input type="text" class="dropdown select-dropdown" data-toggle="dropdown" readonly="true" ' + ($select.is(':disabled') ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
+      $select.before($newSelect);
+      $newSelect.before(dropdownIcon);
+
+      $newSelect.after(this._customElement);
+      if (!$select.is(':disabled')) {
+        $newSelect.dropdown({
+          hover: false,
+          closeOnClick: false
+        });
+      }
+
+      if ($select.attr('tabindex')) {
+        $($newSelect[0]).attr('tabindex', $select.attr('tabindex'));
+      }
+
+      $select.addClass('initialized');
+
+      if (!this._isMultiple && this._isSearchable) {
+        this._customElement.find('li').on('click', function () {
+          $newSelect.trigger('close');
+        });
+      }
+
+      this._customElement.hover(function () {
+        that._optionsHover = true;
+      }, function () {
+        that._optionsHover = false;
+      });
+
+      if (this._isMultiple) {
+        $select.find('option:selected:not(:disabled)').each(function () {
+          var index = $(this).index();
+
+          this._toggleEntryFromArray(valuesSelected, index, $select);
+          this._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
+        });
+      }
+
+      $newSelect.on({
+        focus: function focus(e) {
+          if ($('ul.select-dropdown').not(that._customElement[0]).is(':visible')) {
+            $('input.select-dropdown').trigger('close');
+          }
+          if (!that._customElement.is(':visible')) {
+            $(this).trigger('open', ['focus']);
+            var _label = $(this).val();
+            var selectedOption = that._customElement.find('li').filter(function () {
+              return $(this).text().toLowerCase() === _label.toLowerCase();
+            })[0];
+            that._activateOption(that._customElement, selectedOption);
+          }
+        },
+        click: function click(e) {
+          e.stopPropagation();
+        },
+        blur: function blur(e) {
+          if (!that._isMultiple && !that._isSearchable) {
+            $(this).trigger('close');
+          }
+          that._customElement.find('li.selected').removeClass('selected');
+        },
+        keydown: function keydown(e) {
+          if (e.which == 9) {
+            $newSelect.trigger('close');
+            return;
+          }
+
+          if (e.which == 40 && !that._customElement.is(':visible')) {
+            $newSelect.trigger('open');
+            return;
+          }
+
+          if (e.which == 13 && !that._customElement.is(':visible')) {
+            return;
+          }
+
+          e.preventDefault();
+
+          var letter = String.fromCharCode(e.which).toLowerCase(),
+              nonLetters = [9, 13, 27, 38, 40];
+          if (letter && nonLetters.indexOf(e.which) === -1) {
+            filterQuery.push(letter);
+
+            var string = filterQuery.join(''),
+                newOption = that._customElement.find('li').filter(function () {
+              return $(this).text().toLowerCase().indexOf(string) === 0;
+            })[0];
+
+            if (newOption) {
+              that._activateOption(that._customElement, newOption);
+            }
+          }
+
+          if (e.which == 13) {
+            var activeOption = that._customElement.find('li.selected:not(.disabled)')[0];
+            if (activeOption) {
+              $(activeOption).trigger('click');
+              if (!that._isMultiple) {
+                $newSelect.trigger('close');
+              }
+            }
+          }
+
+          if (e.which == 40) {
+            newOption = that._customElement.find('li.selected').length ? that._customElement.find('li.selected').next('li:not(.disabled)')[0] : that._customElement.find('li:not(.disabled)')[0];
+            that._activateOption(this._customElement, newOption);
+          }
+
+          if (e.which == 27) {
+            $newSelect.trigger('close');
+          }
+
+          if (e.which == 38) {
+            newOption = that._customElement.find('li.selected').prev('li:not(.disabled)')[0];
+            if (newOption) {
+              that._activateOption(that._customElement, newOption);
+            }
+          }
+
+          setTimeout(function () {
+            filterQuery = [];
+          }, 1000);
+        }
+      });
+
+      $(window).on('click', function (e) {
+        (that._isMultiple || that._isSearchable) && (that._optionsHover || $newSelect.trigger('close'));
+      });
+    };
+
+    Select.prototype._activateOption = function _activateOption(collection, newOption) {
+      if (newOption) {
+        collection.find('li.selected').removeClass('selected');
+        var option = $(newOption);
+        option.addClass('selected');
+      }
+    };
+
+    Select.prototype._setSearchableOption = function _setSearchableOption() {
+      var $select = $(this._element);
+      var element = $('<span class="search-wrap"><input type="text" class="search" placeholder="' + $select.attr('searchable') + '"></span>');
+      this._customElement.append(element);
+      element.find('.search').on('keyup', function (e) {
+
+        var ul = $(this).closest('ul');
+        var searchValue = $(this).val();
+
+        ul.find('li').find('span.filtrable').each(function () {
+          if (typeof this.outerText === 'string') {
+            var liValue = this.outerText.toLowerCase();
+
+            if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
+              $(this).hide();
+              $(this).parent().hide();
+            } else {
+              $(this).show();
+              $(this).parent().show();
+            }
+          }
+        });
+      });
+    };
+
+    Select.prototype._appendOptionWithIcon = function _appendOptionWithIcon(select, option, type) {
+      var disabledClass = option.is(':disabled') ? 'disabled ' : '';
+      var optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : '';
+
+      var icon_url = option.data('icon');
+      var classes = option.attr('class');
+      if (icon_url) {
+        var classString = '';
+        if (classes) {
+          classString = ' class="' + classes + '"';
+        }
+        var listDOM = this._isMultiple ? '<li class="' + disabledClass + '">\n                      <img alt="" src="' + icon_url + '" ' + classString + '>\n                      <span class="filtrable">\n                        <input type="checkbox" ' + disabledClass + '/>\n                        <label></label>\n                        ' + option.html() + '\n                      </span>\n                    </li>' : '<li class="' + disabledClass + ' ' + optgroupClass + '">\n                      <img alt="" src="' + icon_url + '" ' + classString + '>\n                      <span class="filtrable">\n                        ' + option.html() + '\n                      </span>\n                    </li>';
+        this._customElement.append($(listDOM));
+        return true;
+      }
+
+      if (this._isMultiple) {
+        this._customElement.append($('<li class="' + disabledClass + '"><span class="filtrable"><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+      } else {
+        this._customElement.append($('<li class="' + disabledClass + optgroupClass + '"><span class="filtrable">' + option.html() + '</span></li>'));
+      }
+    };
+
+    Select.prototype._toggleEntryFromArray = function _toggleEntryFromArray(entriesArray, entryIndex, select) {
+      var index = entriesArray.indexOf(entryIndex),
+          notAdded = index === -1;
+
+      if (notAdded) {
+        entriesArray.push(entryIndex);
+      } else {
+        entriesArray.splice(index, 1);
+      }
+
+      select.siblings('ul.dropdown-menu').find('li:not(.optgroup)').eq(entryIndex).toggleClass('active');
+
+      select.find('option').eq(entryIndex).prop('selected', notAdded);
+      var value = '';
+
+      for (var i = 0, count = entriesArray.length; i < count; i++) {
+        var text = select.find('option').eq(entriesArray[i]).text();
+
+        i === 0 ? value += text : value += ', ' + text;
+      }
+
+      if (value === '') {
+        value = select.find('option:disabled').eq(0).text();
+      }
+
+      select.siblings('.dropdown').val(value);
+
+      return notAdded;
+    };
+
+    Select.prototype._guid = function _guid() {
+      function S4() {
+        return ((1 + Math.random()) * 0x10000 | 0).toString(16).substring(1);
+      }
+
+      return (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+    };
+
+    // static
+
+    Select._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $this = $(this);
+        var data = $this.data(DATA_KEY);
+        var config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+
+        if (!data) $this.data(DATA_KEY, data = new Select(this, config));
+        if (typeof config === 'string') data[config].call($this);
+      });
+    };
+
+    return Select;
+  }();
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  $(window).on(Event.LOAD_DATA_API, function () {
+    var selects = $.makeArray($(Selector.SELECT));
+
+    for (var i = selects.length; i--;) {
+      var $select = $(selects[i]);
+      Select._jQueryInterface.call($select, $select.data());
+    }
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME] = Select._jQueryInterface;
+  $.fn[NAME].Constructor = Select;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Enter._jQueryInterface;
+  };
+
+  return Select;
+}(jQuery);
+
+console.log("bootstrap italia");
 }();
