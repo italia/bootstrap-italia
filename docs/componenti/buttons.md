@@ -27,11 +27,11 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
 {% example html %}
-<a class="btn btn-primary-b" href="#" role="button">Link</a>
-<button class="btn btn-primary-b" type="submit">Button</button>
-<input class="btn btn-primary-b" type="button" value="Input">
-<input class="btn btn-primary-b" type="submit" value="Submit">
-<input class="btn btn-primary-b" type="reset" value="Reset">
+<a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input">
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">
 {% endexample %}
 
 ## Outline buttons
@@ -48,20 +48,20 @@ In need of a button, but not the hefty background colors they bring? Replace the
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {% example html %}
-<button type="button" class="btn btn-primary-b btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary-b btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>
 {% endexample %}
 
 {% example html %}
-<button type="button" class="btn btn-primary-b btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary-b btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {% endexample %}
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
 {% example html %}
-<button type="button" class="btn btn-primary-b btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary-b btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
 {% endexample %}
 
 ## Active state
@@ -69,8 +69,8 @@ Create block level buttons—those that span the full width of a parent—by add
 Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
 {% example html %}
-<a href="#" class="btn btn-primary-b btn-lg active" role="button" aria-pressed="true">Primary link</a>
-<a href="#" class="btn btn-secondary-b btn-lg active" role="button" aria-pressed="true">Link</a>
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
 {% endexample %}
 
 ## Disabled state
@@ -78,8 +78,13 @@ Buttons will appear pressed (with a darker background, darker border, and inset 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 
 {% example html %}
-<button type="button" class="btn btn-lg btn-primary-b" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary-b btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-tertiary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-quaternary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-success btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-warning btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-danger btn-lg" disabled>Button</button>
 {% endexample %}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -89,8 +94,8 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 
 {% example html %}
-<a href="#" class="btn btn-primary-b btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary-b btn-lg disabled" role="button" aria-disabled="true">Link</a>
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
 {% endexample %}
 
 {% callout warning %}
@@ -108,7 +113,7 @@ Do more with buttons. Control button states or create groups of buttons for more
 Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
 
 {% example html %}
-<button type="button" class="btn btn-primary-b" data-toggle="button" aria-pressed="false" autocomplete="off">
+<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
   Single toggle
 </button>
 {% endexample %}

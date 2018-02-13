@@ -1,46 +1,86 @@
 .btn {
-    padding: 12px 16px; 
+    padding: 12px 24px; 
+    font-size: $btn-font-size;
+    border: none;
     &.btn-sm, 
     &.btn-lg {
         border-radius: $btn-border-radius;
-        font-size: $font-size-base;
         line-height: $input-btn-line-height;
     }
     &.btn-sm {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding: 10px 20px;
+        font-size: $btn-font-size-sm;
+        line-height: $input-btn-line-height-sm;
     }
     &.btn-lg {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding: 14px 28px;
+        font-size: $btn-font-size-lg;
+        line-height: $input-btn-line-height-lg;
     }
     &.btn-block {
-        border-radius:$reset-border-radius;
+        @include border-radius(0);
     }
-    &.btn-secondary-b {
-        border-color: $primary-b;
-        color: $primary-b;
+    &.btn-primary {
+        &:disabled,
+        &.disabled {
+        color: $gray-label-disabled;
+        background-color: $gray-disabled;
+        border-color: $gray-border-disabled;
+        }
+    }
+    &.btn-secondary {
+        color: $primary;
+        box-shadow: $btn-box-shadow-secondary;
+        &.disabled, 
+        &:disabled {
+            color: $gray-label-disabled;
+            box-shadow: $btn-box-shadow-disabled;
+        }
+        &.focus,
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 115, 230, 0.25);
+        }
+    } 
+    &.btn.btn-tertiary {
+        &:disabled,
+        &.disabled {
+        color: $gray-label-disabled;
+        background-color: $gray-disabled;
+        border-color: $gray-border-disabled;
+        }
+    }
+    &.btn-quaternary {
+        color: $gray-tertiary;
+        box-shadow: $btn-box-shadow-quaternary;
+        &.focus,
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(230, 233, 242, 0.5);
+        }
+        &.disabled, 
+        &:disabled {
+            color: $gray-label-disabled;
+            box-shadow: $btn-box-shadow-disabled;
+            background-color: $white;
+        }
+    }
+    &.btn-success {
+        &.disabled, 
+        &:disabled {
+            opacity: 0.2;
+        }
     }
     &.btn-warning {
         color: $white;
-    }
-    &.btn-primary {
-        &:disabled {
-        color: $label-d;
-        background-color: $gray-d;
-        border-color: $border-d;
-        }
-    }    
-    &.btn-secondary-b {
         &.disabled, 
         &:disabled {
-        border-color: $border-d;
-        color: $label-d;
+            opacity: 0.2;
         }
     }
+    &.btn-danger {
+        &.disabled, 
+        &:disabled {
+            opacity: 0.2;
+        }
+    }
+    
 }
-
-
-
-
-

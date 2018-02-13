@@ -29,70 +29,69 @@ $grays: map-merge((
   @return map-get($mains, $key);
 }
 
-$blue:      hsb(210, 100, 80) !default;
-$indigo:    hsb(243, 70, 100) !default;
-$purple:    hsb(243, 40, 100) !default;
-$pink:      hsb(350, 30, 100) !default;
-$red:       hsb(351, 75, 97) !default;
-$orange:    hsb(36, 100, 100) !default;
-$yellow:    hsb(44, 55, 100) !default;
-$green:     hsb(159, 100, 80) !default;
-$teal:      hsb(178, 95, 85) !default;
-$cyan:      hsb(178, 100, 100) !default;
-$blue-b:    hsb(210, 100, 90) !default;
-$green-b:   hsb(159, 100, 66) !default;
-$gray-b:    hsb(210, 29, 51) !default;
-$gray-d:    hsb(225, 5, 95) !default;
-$label-d:   hsb(222, 5, 79) !default;
-$border-d:  hsb(224, 8, 95) !default;
+$italia:                hsb(210, 100, 80) !default;
+$indigo:                hsb(243, 70, 100) !default;
+$purple:                hsb(243, 40, 100) !default;
+$pink:                  hsb(350, 30, 100) !default;
+$red:                   hsb(351, 75, 97) !default;
+$orange:                hsb(36, 100, 100) !default;
+$yellow:                hsb(44, 55, 100) !default;
+$green:                 hsb(159, 100, 80) !default;
+$teal:                  hsb(178, 95, 85) !default;
+$cyan:                  hsb(178, 100, 100) !default;
+$blue:                  hsb(210, 100, 90) !default;
+$gray-tertiary:         hsb(210, 29, 51) !default;
+$gray-quaternary:       hsb(238, 1, 100) !default;
+$gray-disabled:         hsb(225, 5, 95) !default;
+$gray-label-disabled:   hsb(222, 5, 79) !default;
+$gray-border-disabled:  hsb(224, 8, 95) !default;
 
 $colors: () !default;
 $colors: map-merge((
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800,
-  "blue-b":     $blue-b,
-  "green-b":    $green-b,
-  "gray-b":     $gray-b
+  "italia":       $italia,
+  "indigo":           $indigo,
+  "purple":           $purple,
+  "pink":             $pink,
+  "red":              $red,
+  "orange":           $orange,
+  "yellow":           $yellow,
+  "green":            $green,
+  "teal":             $teal,
+  "cyan":             $cyan,
+  "white":            $white,
+  "gray":             $gray-600,
+  "gray-dark":        $gray-800,
+  "blue":             $blue,
+  "gray-tertiary":    $gray-tertiary,
+  "gray-quaternary":  $gray-quaternary
 ), $colors);
 
-$primary:         hsb(210, 100, 80) !default;
-$secondary:       $teal !default;
+$blu-italia:      $italia !default;
+$primary:         $blue !default;
+$secondary:       $white !default;
+$tertiary:        $gray-tertiary !default;
+$quaternary:      $gray-quaternary !default;
 $success:         $green !default;
 $info:            $gray-400 !default;
 $warning:         $orange !default;
 $danger:          $red !default;
 $light:           hsb(255, 5, 95) !default;
 $dark:            hsb(210, 70, 30) !default;
-$primary-b:       $blue-b !default;
-$success-b:       $green-b !default;
-$secondary-b:     $white !default;
-$info-b:          $gray-b !default;
+
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
+  "italia":       $blu-italia,
   "primary":      $primary,
   "secondary":    $secondary,
+  "tertiary":     $tertiary,
+  "quaternary":   $quaternary,
   "success":      $success,
   "info":         $info,
   "warning":      $warning,
   "danger":       $danger,
   "light":        $light,
-  "dark":         $dark,
-  "primary-b":    $primary-b,
-  "success-b":    $success-b,
-  "secondary-b":  $secondary-b,
-  "info-b":       $info-b
+  "dark":         $dark
 ), $theme-colors);
 
 // Color Variations
@@ -150,14 +149,18 @@ $small-font-size: 0.777rem !default;
 $paragraph-margin-bottom:   1.6rem !default;
 
 // Btns
-//$btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
-$input-btn-line-height: 1.35 !default;
-//$input-btn-padding-y: 12px !default;
-//$input-btn-padding-y-lg: 16px !default;
-//$input-btn-padding-y-sm: 8px !default;
-//$input-btn-padding-x: 16px !default;
+$btn-font-weight: 700 !default;
+$btn-font-size: 16px !default;
+$btn-font-size-sm: 14px !default;
+$btn-font-size-lg: 18px !default;
+$input-btn-line-height: 1.5 !default;
+$input-btn-line-height-sm: 1.428 !default;
+$input-btn-line-height-lg: 1.556 !default;
+$btn-box-shadow-secondary: inset 0 0 0 1px $primary;
+$btn-box-shadow-quaternary: inset 0 0 0 1px $gray-disabled;
+$btn-box-shadow-disabled: inset 0 0 0 1px $gray-border-disabled;
 
 // z-index
 $zindex-zoom: 1080;

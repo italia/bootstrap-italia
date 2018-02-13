@@ -1,8 +1,10 @@
 # used in documentation as site.data.theme-colors
 
-- name: primary-b
-- name: secondary-b
-- name: success-b
+- name: italia
+- name: primary
+- name: secondary
+- name: tertiary
+- name: quaternary
+- name: success
 - name: danger
 - name: warning
-- name: info-b
