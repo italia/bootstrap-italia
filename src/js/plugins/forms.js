@@ -1,8 +1,8 @@
 $(".form-group input + label, .form-group select, .form-group textarea + label").click(function() {
-  $(this).parent(".form-group").addClass("active");
+  $(this).closest(".form-group").addClass("active");
 });
 $(".form-group input, .form-group select, .form-group textarea").on("focusin", function() {
-  $(this).parent(".form-group").addClass("active");
+  $(this).closest(".form-group").addClass("active");
 });
 $(".form-group input, .form-group select, .form-group textarea").on("focusout", function() {
   if($(this).val()==""){
@@ -10,7 +10,7 @@ $(".form-group input, .form-group select, .form-group textarea").on("focusout", 
   } else {
     $(this).siblings("label").addClass("active");
   }
-  $(this).parent(".form-group").removeClass("active");
+  $(this).closest(".form-group").removeClass("active");
 });
 
 // Inizializzazione effetto active sulle label quando i loro input valorizzati

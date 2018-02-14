@@ -101,17 +101,78 @@ Eccoti un esempio in funzione per la traduzione in inglese:
 
 ### Select
 
+Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.it-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
+
+Di seguito sono mostrate alcune di queste combinazioni.
+
+#### Select classica
+
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="form-control" id="exampleFormControlSelects">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="it-select">
+      <option value="" disabled selected>Seleziona una opzione</option>
+      <option value="1">Opzione 1</option>
+      <option value="2">Opzione 2</option>
+      <option value="3">Opzione 3</option>
     </select>
-    <label for="exampleFormControlSelects">Esempio di un campo select</label>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endexample %}
+
+#### Select multipla
+
+La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <select class="it-select" multiple>
+      <option value="" disabled selected>Seleziona una o più regioni</option>
+      {% for regione in site.data.regioni %}
+      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endexample %}
+
+#### Select con ricerca
+
+Esempio di _select_ con ricerca:
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <select class="it-select" searchable="Cerca una regione">
+      <option value="" disabled selected>Seleziona una regione</option>
+      {% for regione in site.data.regioni %}
+      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endexample %}
+
+#### Select con gruppi di opzioni
+
+Esempio di _select_ con gruppi di opzioni:
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <select class="it-select" multiple>
+        <optgroup label="Gruppo 1">
+            <option value="1">Opzione 1</option>
+            <option value="2">Opzione 2</option>
+        </optgroup>
+        <optgroup label="Gruppo 2">
+            <option value="3">Opzione 3</option>
+            <option value="4">Opzione 4</option>
+        </optgroup>
+    </select>
+    <label>Label di esempio</label>
   </div>
 </form>
 {% endexample %}
@@ -121,13 +182,37 @@ Eccoti un esempio in funzione per la traduzione in inglese:
 {% example html %}
 <form>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Example textarea</label>
   </div>
 </form>
 {% endexample %}
 
 ## Personalizzazioni
+
+### Icone
+
+Hai la possibilità di inserire un'icona a lato dei campi input, select e textarea. Basterà inserire l'icona come elemeto prima del campo.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <i class="icoPrefix it-youtube"></i>
+    <input class="form-control" type="text" id="videoYoutube">
+    <label for="videoYoutube">Link video di youtube</label>
+  </div>
+  <div class="form-group">
+    <i class="icoPrefix it-youtube"></i>
+    <select class="it-select">
+      <option value="" disabled selected>Seleziona un video</option>
+      <option value="1">Video 1</option>
+      <option value="2">Video 2</option>
+      <option value="3">Video 3</option>
+    </select>
+    <label>Elenco video</label>
+  </div>
+</form>
+{% endexample %}
 
 ### Dimensione
 
@@ -135,19 +220,19 @@ Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.for
 
 {% example html %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control" type="text" placeholder="Input predefinito">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
 {% endexample %}
 
 {% example html %}
-<select class="form-control form-control-lg">
-  <option>Large select</option>
+<select class="it-select form-control-lg">
+  <option>Select grande</option>
 </select>
-<select class="form-control">
-  <option>Default select</option>
+<select class="it-select ">
+  <option>Select predefinita</option>
 </select>
-<select class="form-control form-control-sm">
-  <option>Small select</option>
+<select class="it-select form-control-sm">
+  <option>Select piccola</option>
 </select>
 {% endexample %}
 
@@ -398,7 +483,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <label for="inputCity">Città</label>
     </div>
     <div class="form-group col-md-4">
-      <select id="inputState" class="form-control">
+      <select id="inputState" class="it-select">
         <option selected>Scegli...</option>
         <option>...</option>
       </select>
@@ -454,11 +539,11 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
   <div class="form-row align-items-center">
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Nome</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Mario Rossi">
+      <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
     </div>
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInputGroup">Username</label>
-      <div class="input-group mb-2">
+      <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
@@ -466,7 +551,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
       </div>
     </div>
     <div class="col-auto">
-      <div class="form-check mb-2">
+      <div class="form-check m-0">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck">
         <label class="form-check-label" for="autoSizingCheck">
           Ricordami
@@ -474,7 +559,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-2">Invia</button>
+      <button type="submit" class="btn btn-primary">Invia</button>
     </div>
   </div>
 </form>
@@ -499,7 +584,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
       </div>
     </div>
     <div class="col-auto my-1">
-      <div class="form-check">
+      <div class="form-check m-0">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
           Ricordami
@@ -519,13 +604,13 @@ And of course [custom form controls](#custom-forms) are supported.
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+      <select class="it-select">
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="1">Opzione 1</option>
+        <option value="2">Opzione 2</option>
+        <option value="3">Opzione 3</option>
       </select>
+      <label>Label di esempio</label>
     </div>
     <div class="col-auto my-1">
       <div class="custom-control custom-checkbox mr-sm-2">
@@ -636,145 +721,148 @@ Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un `
 </form>
 {% endexample %}
 
-## Disabled forms
+## Form disabilitato
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni dell'utente e renderlo più chiaro.
 
 {% highlight html %}
 <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 {% endhighlight %}
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
+Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli elementi del form contenuti.
 
 {% example html %}
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <label for="disabledTextInput">Input </label>
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <select id="exampleSelect" class="it-select">
+        <option selected>Scegli...</option>
+        <option>...</option>
+      </select>
+      <label for="exampleSelect">Select disabilitata</label>
+    </div>
+    <div class="form-group">
       <select id="disabledSelect" class="form-control">
         <option>Disabled select</option>
       </select>
+      <label for="disabledSelect">Select default disabilitata</label>
     </div>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
       <label class="form-check-label" for="disabledFieldsetCheck">
-        Can't check this
+        Check disabilitato
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </fieldset>
 </form>
 {% endexample %}
 
 {% callout warning %}
-##### Caveat with anchors
+##### Caveat con ancore
 
-By default, browsers will treat all native form controls (`<input>`, `<select>` and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes `<a ... class="btn btn-*">` elements, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{ site.baseurl }}/docs/components/buttons/#disabled-state) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Internet Explorer 10, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.
+Per impostazione predefinita, i browser tratteranno tutti i controlli nativi del form (`<input>`, `<select>` e `<button>`) contenuti in un `<fieldset disabled>` come disabilitati, impedendo su di essi le interazioni tra tastiera e mouse. Tuttavia, se il tuo modulo include anche gli elementi `<a ... class="btn btn-*">`, a questi verranno assegnati uno stile di `pointer-events: none`. Come indicato nella sezione [stato disabilitato per i pulsanti]({{ site.baseurl }}/docs/components/buttons/#disabled-state) (e in particolare nella sottosezione per gli elementi di ancoraggio), questa proprietà CSS non è standardizzata e non è completamente supportato in Internet Explorer 10 che non impedirà agli utenti da tastiera di mettere in focus o attivare questi collegamenti. Per sicurezza, usa JavaScript personalizzato per disabilitare tali collegamenti.
 {% endcallout %}
 
 {% callout danger %}
-#### Cross-browser compatibility
+#### Compatibilità Cross-browser
 
-While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
+Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 11 e successivi non supportano completamente l'attributo `disabled` nel `<fieldset>`. Usa un JavaScript personalizzato per disabilitare il fieldset in questi browser.
 {% endcallout %}
 
-## Validation
+## Validazione
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+Fornisci un feedback ai tuoi utenti con la validazione del form HTML5 [disponibile nei browser supportati](https://caniuse.com/#feat=form-validation). Scegli tra le risposte di convalida predefinite del browser o implementa messaggi personalizzati con le classi integrate inizializzate con JavaScript.
 
 {% callout warning %}
-We **highly recommend** custom validation styles as native browser defaults are not announced to screen readers.
+Vi **consigliamo caldamente** gli stili di convalida personalizzati in quanto le impostazioni predefinite del browser non vengono segnalati agli screenreader.
 {% endcallout %}
 
-### How it works
+### Come funziona
 
-Here's how form validation works with Bootstrap:
+Ecco come funziona la validazione delle form:
 
-- HTML form validation is applied via CSS's two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-- Bootstrap scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server side validation](#server-side). They do not require a `.was-validated` parent class.
-- Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- La validzione viene applicata tramite due pseudo-classi CSS: `:invalid` e `:valid`. Si applicano agli elementi `<input>`, `<select>` e `<textarea>`.
+- Agli stili `:invalid` e `:valid` si abbina a una classe `.was-validated` al loro contenitore padre, di solito applicata a `<form>`. Altrimenti, qualsiasi campo richiesto senza un valore appare come non valido sul caricamento della pagina. In questo modo, puoi scegliere quando attivarli (in genere dopo aver tentato l'invio del modulo).
+- In alternativa esistono le classi `.is-invalid` e `.is-valid` che possono essere usate al posto delle pseudo-classi per una [validazione lato server](#server-side). Non richiedono la presenza della classe  `.was-validated` nel contenitore padre.
+- A causa dei vincoli nel modo in cui i CSS funzionano, non possiamo (al momento) applicare gli stili a un `<label>` che precede un controllo del form nel DOM senza l'aiuto del codice JavaScript personalizzato.
+- Tutti i browser moderni supportano le [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), una serie di metodi JavaScript per la convalida dei controlli del modulo.
+- I messaggi di feedback possono utilizzare le [impostazioni predefinite del browser](#browser-defaults) (diversi da un browser all'altro e non stilizzati tramite CSS) o gli stili di feedback personalizzati con HTML e CSS aggiuntivi.
+- Puoi fornire messaggi di validazioni personalizzati con `setCustomValidity` in JavaScript.
 
-With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+Tenendo presente tutto questo, prendi in considerazione i seguenti esempi personalizzati per convalidare i moduli.
 
-### Custom styles
+### Stili personalizzati
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you.
-
-When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attributo booleano `novalidate` al tuo `<form>`. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l'accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante `Invia` del modulo sottostante; JavaScript intercetterà l'evento e mostrerà i feedback all'utente. Vedrai così gli stili `:invalid` e `:valid` applicati ai controlli del modulo.
 
 {% example html %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+    <div class="form-group col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+      <label for="validationCustom01">Nome</label>
       <div class="valid-feedback">
-        Looks good!
+        Validato!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+    <div class="form-group col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+      <label for="validationCustom02">Cognome</label>
       <div class="valid-feedback">
-        Looks good!
+        Validato!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername">Username</label>
+    <div class="form-group col-md-4 mb-3">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Per favore scegli un username.
         </div>
       </div>
+      <label for="validationCustomUsername">Username</label>
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+    <div class="form-group col-md-6 mb-3">
+      <input type="text" class="form-control" id="validationCustom03" required>
+      <label for="validationCustom03">Città</label>
       <div class="invalid-feedback">
-        Please provide a valid city.
+        Per favore inserisci un nome di città valido.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
+    <div class="form-group col-md-3 mb-3">
+      <input type="text" class="form-control" id="validationCustom04" required>
       <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
       <div class="invalid-feedback">
-        Please provide a valid state.
+        Per favore inserisci un nome di Stato valido.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+    <div class="form-group col-md-3 mb-3">
+      <input type="text" class="form-control" id="validationCustom05" required>
+      <label for="validationCustom05">CAP</label>
       <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
+        Per favore inserisci un CAP valido.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+    <label class="form-check-label" for="invalidCheck">
+      Accetto i termini e le condizioni.
+    </label>
+    <div class="invalid-feedback">
+      Devi accettare i termini e le condizioni prima di inviare il modulo.
+    </div>
+  </div>
+  <button class="btn btn-primary mt-3" type="submit">Invia</button>
 </form>
 
 <script>
@@ -799,82 +887,79 @@ When attempting to submit, you'll see the `:invalid` and `:valid` styles applied
 </script>
 {% endexample %}
 
-### Browser defaults
+### Predefinito dal Browser
 
-Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
+Non sei interessato ai messaggi di feedback di convalida personalizzati o alla scrittura di JavaScript per modificare i comportamenti dei moduli? In tal caso è possibile utilizzare le impostazioni predefinite del browser. Prova ad inviare il modulo qui sotto. A seconda del browser e del sistema operativo, vedrai uno stile di feedback leggermente diverso.
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+Sebbene questi stili di feedback non possano essere abbinati a CSS, puoi comunque personalizzare il testo del feedback tramite JavaScript.
 
 {% example html %}
 <form>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault01">First name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+      <label for="validationDefault01">First name</label>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02">Last name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+      <label for="validationDefault02">Last name</label>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefaultUsername">Username</label>
+    <div class="form-group col-md-4 mb-3">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend2">@</span>
         </div>
         <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
       </div>
+      <label for="validationDefaultUsername">Username</label>
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationDefault03">City</label>
+    <div class="form-group col-md-6 mb-3">
       <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+      <label for="validationDefault03">City</label>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationDefault04">State</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+      <label for="validationDefault04">State</label>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationDefault05">Zip</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+      <label for="validationDefault05">Zip</label>
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
-    </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+    <label class="form-check-label" for="invalidCheck2">
+      Agree to terms and conditions
+    </label>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary mt-3" type="submit">Invia</button>
 </form>
 {% endexample %}
 
-### Server side
+### Lato Server
 
-We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+Si consiglia di utilizzare la convalida lato client, ma nel caso in cui si richieda il lato server, è possibile indicare campi modulo validi e non validi con `.is-invalid` e `.is-valid`. Si noti che `.invalid-feedback` è supportato anche con queste classi.
 
 {% example html %}
 <form>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationServer01">First name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+      <label for="validationServer01">First name</label>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationServer02">Last name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
+      <label for="validationServer02">Last name</label>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationServerUsername">Username</label>
+    <div class="form-group col-md-4 mb-3">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
@@ -884,47 +969,46 @@ We recommend using client side validation, but in case you require server side, 
           Please choose a username.
         </div>
       </div>
+      <label for="validationServerUsername">Username</label>
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">City</label>
+    <div class="form-group col-md-6 mb-3">
       <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
+      <label for="validationServer03">City</label>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">State</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
+      <label for="validationServer04">State</label>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer05">Zip</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+      <label for="validationServer05">Zip</label>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
+  <div class="form-check">
+    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+    <label class="form-check-label" for="invalidCheck3">
+      Agree to terms and conditions
+    </label>
+    <div class="invalid-feedback">
+      You must agree before submitting.
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary mt-3" type="submit">Invia</button>
 </form>
 {% endexample %}
 
-### Supported elements
+### Elementi supportati
 
 Our example forms show native textual `<input>`s above, but form validation styles are available for our custom form controls, too.
 
@@ -964,29 +1048,28 @@ Our example forms show native textual `<input>`s above, but form validation styl
 </form>
 {% endexample %}
 
-### Tooltips
+### Tooltip
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+Se il layout del modulo lo consente, è possibile scambiare le classi `.{valid|invalid}-feedback` con `.{valid|invalid}-tooltip` per visualizzare i messaggi di validazione in un tooltip. Assicurati di avere un genitore con `position: relative` su di esso per il posizionamento tooltip. Nell'esempio seguente, le nostre classi di colonne lo hanno già, ma il tuo progetto potrebbe richiedere una configurazione alternativa.
 
 {% example html %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+      <label for="validationTooltip01">First name</label>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
+    <div class="form-group col-md-4 mb-3">
       <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+      <label for="validationTooltip02">Last name</label>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
+    <div class="form-group col-md-4 mb-3">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
@@ -996,164 +1079,32 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
           Please choose a unique and valid username.
         </div>
       </div>
+      <label for="validationTooltipUsername">Username</label>
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
+    <div class="form-group col-md-6 mb-3">
       <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+      <label for="validationTooltip03">City</label>
       <div class="invalid-tooltip">
         Please provide a valid city.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+      <label for="validationTooltip04">State</label>
       <div class="invalid-tooltip">
         Please provide a valid state.
       </div>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
+    <div class="form-group col-md-3 mb-3">
       <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+      <label for="validationTooltip05">Zip</label>
       <div class="invalid-tooltip">
         Please provide a valid zip.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Invia</button>
 </form>
-{% endexample %}
-
-## Custom forms
-
-For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control.
-
-### Checkboxes and radios
-
-Each checkbox and radio is wrapped in a `<div>` with a sibling `<span>` to create our custom control and a `<label>` for the accompanying text. Structurally, this is the same approach as our default `.form-check`.
-
-We use the sibling selector (`~`) for all our `<input>` states—like `:checked`—to properly style our custom form indicator. When combined with the `.custom-control-label` class, we can also style the text for each item based on the `<input>`'s state.
-
-We hide the default `<input>` with `opacity` and use the `.custom-control-label` to build a new custom form indicator in its place with `::before` and `::after`. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
-
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://useiconic.com/open). This provides us the best control for styling and positioning across browsers and devices.
-
-#### Checkboxes
-
-{% example html %}
-<div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-</div>
-{% endexample %}
-
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
-
-<div class="bd-example bd-example-indeterminate">
-  <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="customCheck2">
-    <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
-  </div>
-</div>
-
-If you're using jQuery, something like this should suffice:
-
-{% highlight js %}
-$('.your-checkbox').prop('indeterminate', true)
-{% endhighlight %}
-
-#### Radios
-
-{% example html %}
-<div class="custom-control custom-radio">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-</div>
-<div class="custom-control custom-radio">
-  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-</div>
-{% endexample %}
-
-#### Inline
-
-{% example html %}
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
-</div>
-{% endexample %}
-
-#### Disabled
-
-Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
-
-{% example html %}
-<div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
-  <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
-</div>
-
-<div class="custom-control custom-radio">
-  <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
-  <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
-</div>
-{% endexample %}
-
-### Select menu
-
-Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles.
-
-{% example html %}
-<select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-{% endexample %}
-
-You may also choose from small and large custom selects to match our similarly sized text inputs.
-
-{% example html %}
-<select class="custom-select custom-select-lg mb-3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-
-<select class="custom-select custom-select-sm">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-{% endexample %}
-
-The `multiple` attribute is also supported:
-
-{% example html %}
-<select class="custom-select" multiple>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-{% endexample %}
-
-As is the `size` attribute:
-
-{% example html %}
-<select class="custom-select" size="3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
 {% endexample %}

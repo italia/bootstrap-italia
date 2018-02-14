@@ -3,8 +3,9 @@
   padding-bottom: .5rem;
   margin-top: 1rem;
 	margin-bottom: 0;
-	padding-right: 6px;
-	padding-left: 6px;
+}
+.form-row .form-group {
+	padding-bottom: 0;
 }
 .form-group label {
   -webkit-transition: .2s ease-out;
@@ -17,14 +18,14 @@
   display: block;
   width: 100%;
   background-color: #fff;
-  padding: 0 0.6rem;
+  padding: 0;
   z-index: 6;
 }
 input[type="file"] + label {
   background-color: transparent;
 }
 
-.form-group.active label, .form-group label.active, .form-group select.form-control + label, .form-group input.form-control-file + label, .form-control-plaintext + label {
+.input-group + label, .input-group ~ label, :disabled .form-group label, .form-group.active label, .form-group label.active, .form-group select.form-control + label, .form-group input.form-control-file + label, .form-control-plaintext + label {
   -webkit-transform: translateY(-140%);
   -ms-transform: translateY(-140%);
   transform: translateY(-140%);
@@ -32,9 +33,31 @@ input[type="file"] + label {
   background: transparent;
   padding: 0;
 }
-.form-group.active label {
-  color:#005bf3
+.form-group.active label, .form-group.active .icoPrefix {
+  color: $primary;
 }
+.it-select.form-control-sm, .it-select.form-control-lg {
+  padding: 0;
+}
+.select-wrapper.it-select .select-dropdown {
+	color: #4d4d4d;
+	border-bottom: 1px solid #bdbdbd;
+	padding-right: 2rem;
+}
+.select-wrapper.it-select.show .select-dropdown {
+	color: $primary;
+	border-bottom: 1px solid $primary;
+}
+.it-select.show .caret {
+  color: $primary;
+}
+.select-wrapper + label {
+  padding: 0;
+}
+:disabled .form-group label {
+  top: 0;
+}
+
 input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.form-control, select.form-control {
   background-color: transparent;
   border: none;
@@ -65,7 +88,7 @@ select.form-control, textarea.form-control {
 }
 .form-control:focus, .form-control:active {
   box-shadow: none !important;
-  border-bottom: 1px solid #005bf3;
+  border-bottom: 1px solid $primary;
 }
 
 /* INPUT PASSWORD */
@@ -112,25 +135,6 @@ select.form-control, textarea.form-control {
   user-select: none;
   z-index: 5;
 }
-/*
-.form-file-name::before {
-  background-color: #0066cc;
-  border-color: #0066cc;
-  bottom: -1px;
-  color: #fff;
-  content: "Sfoglia";
-  display: block;
-  height: 2.5rem;
-  line-height: 1.7;
-  padding: 0.3rem 1rem 1.5rem;
-  border-radius: 4px;
-  border: 1px solid #FFF;
-  position: absolute;
-  right: -1px;
-  top: -1px;
-  z-index: 6;
-}*/
-
 .form-file-name::before {
   background-color: #fff;
   border-color: #0066cc;
@@ -167,6 +171,23 @@ select.form-control, textarea.form-control {
   border-radius: 0;
 }
 
+/* ICONE A SINISTRA */
+.icoPrefix {
+	position: absolute;
+	width: 3rem;
+	font-size: 1.8rem;
+	z-index: 10;
+	text-align: center;
+}
+.icoPrefix ~ .form-file-name {
+	padding-left: 3.5rem;
+}
+.icoPrefix ~ input, .icoPrefix ~ textarea, .icoPrefix ~ label, .icoPrefix ~ .select-wrapper .select-dropdown {
+	padding-left: 3rem;
+}
+.icoPrefix ~ .it-select ~ label {
+	padding-left: 0;
+}
 
 /* CHECKBOX e RADIO */
 .form-row .form-check, .form-group .form-check, .row .form-check {
