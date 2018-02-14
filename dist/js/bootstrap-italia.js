@@ -1102,8 +1102,8 @@ var Collapse = function ($) {
       this._config = this._getConfig(config);
       this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
       var tabToggles = $(Selector.DATA_TOGGLE);
-      for (var i = 0; i < tabToggles.length; i++) {
-        var elem = tabToggles[i];
+      for (var _i = 0; _i < tabToggles.length; _i++) {
+        var elem = tabToggles[_i];
         var selector = Util.getSelectorFromElement(elem);
         if (selector !== null && $(selector).filter(element).length > 0) {
           this._selector = selector;
@@ -1228,8 +1228,8 @@ var Collapse = function ($) {
       $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.SHOW);
 
       if (this._triggerArray.length > 0) {
-        for (var i = 0; i < this._triggerArray.length; i++) {
-          var trigger = this._triggerArray[i];
+        for (var _i2 = 0; _i2 < this._triggerArray.length; _i2++) {
+          var trigger = this._triggerArray[_i2];
           var selector = Util.getSelectorFromElement(trigger);
           if (selector !== null) {
             var $elem = $(selector);
@@ -1697,11 +1697,11 @@ var Dropdown = function ($) {
       }
 
       var toggles = $.makeArray($(Selector.DATA_TOGGLE));
-      for (var i = 0; i < toggles.length; i++) {
-        var parent = Dropdown._getParentFromElement(toggles[i]);
-        var context = $(toggles[i]).data(DATA_KEY);
+      for (var _i3 = 0; _i3 < toggles.length; _i3++) {
+        var parent = Dropdown._getParentFromElement(toggles[_i3]);
+        var context = $(toggles[_i3]).data(DATA_KEY);
         var relatedTarget = {
-          relatedTarget: toggles[i]
+          relatedTarget: toggles[_i3]
         };
 
         if (!context) {
@@ -1729,7 +1729,7 @@ var Dropdown = function ($) {
           $('body').children().off('mouseover', null, $.noop);
         }
 
-        toggles[i].setAttribute('aria-expanded', 'false');
+        toggles[_i3].setAttribute('aria-expanded', 'false');
 
         $(dropdownMenu).removeClass(ClassName.SHOW);
         $(parent).removeClass(ClassName.SHOW).trigger($.Event(Event.HIDDEN, relatedTarget));
@@ -3521,11 +3521,11 @@ var ScrollSpy = function ($) {
         return;
       }
 
-      for (var i = this._offsets.length; i--;) {
-        var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
+      for (var _i4 = this._offsets.length; _i4--;) {
+        var isActiveTarget = this._activeTarget !== this._targets[_i4] && scrollTop >= this._offsets[_i4] && (typeof this._offsets[_i4 + 1] === 'undefined' || scrollTop < this._offsets[_i4 + 1]);
 
         if (isActiveTarget) {
-          this._activate(this._targets[i]);
+          this._activate(this._targets[_i4]);
         }
       }
     };
@@ -3610,8 +3610,8 @@ var ScrollSpy = function ($) {
   $(window).on(Event.LOAD_DATA_API, function () {
     var scrollSpys = $.makeArray($(Selector.DATA_SPY));
 
-    for (var i = scrollSpys.length; i--;) {
-      var $spy = $(scrollSpys[i]);
+    for (var _i5 = scrollSpys.length; _i5--;) {
+      var $spy = $(scrollSpys[_i5]);
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
   });
@@ -4084,8 +4084,8 @@ var Cookiebar = function ($) {
     var cookiebars = $.makeArray($(Selector.COOKIE_BAR));
     var consent = Cookiebar._getCookieEU();
     if (!consent) {
-      for (var i = cookiebars.length; i--;) {
-        var $cookiebar = $(cookiebars[i]);
+      for (var _i6 = cookiebars.length; _i6--;) {
+        var $cookiebar = $(cookiebars[_i6]);
         Cookiebar._jQueryInterface.call($cookiebar, 'show');
       }
     }
@@ -4647,6 +4647,65 @@ var Zoom = function ($) {
   });
 }(jQuery);
 
+$(".form-group input + label, .form-group select, .form-group textarea + label").click(function () {
+  $(this).closest(".form-group").addClass("active");
+});
+$(".form-group input, .form-group select, .form-group textarea").on("focusin", function () {
+  $(this).closest(".form-group").addClass("active");
+});
+$(".form-group input, .form-group select, .form-group textarea").on("focusout", function () {
+  if ($(this).val() == "") {
+    $(this).siblings("label").removeClass("active");
+  } else {
+    $(this).siblings("label").addClass("active");
+  }
+  $(this).closest(".form-group").removeClass("active");
+});
+
+// Inizializzazione effetto active sulle label quando i loro input valorizzati
+$(document).ready(function () {
+  $('.form-group :input[value]').siblings("label").addClass("active");
+});
+
+// Gestione visibilità password
+$(document).ready(function () {
+  $("input:password").each(function (e) {
+    //$(this).siblings("label").after('<span class="btnEye eyeOn" toggle="'+$(this).attr("id")+'"><svg aria-hidden="true" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-3x"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z" class=""></path></svg></span>');
+    $(this).siblings("label").after('<span class="btnEye eyeOn" toggle="' + $(this).attr("id") + '"></span>');
+  });
+
+  $(".btnEye").on("click", function () {
+    $(this).toggleClass("eyeOff");
+    var input = $("#" + $(this).attr("toggle"));
+    input.focus();
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });
+});
+
+// Gestione input[type="file"]
+$(".form-group input[type='file']").on("focusout", function () {
+  $(this).siblings("label").addClass("active");
+});
+
+$('input:file').on('change', function (e) {
+  var numFiles = e.currentTarget.files.length;
+  var nomiFiles = "";
+  var multi = "";
+  for (i = 0; i < numFiles; i++) {
+    fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024;
+    filesize = Math.round(fileSize);
+    nomiFiles = nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); ';
+  }
+  if (numFiles > 1) {
+    multi = numFiles + " file da caricare: ";
+  }
+  $(this).siblings('.form-file-name').text(multi + nomiFiles);
+});
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0): Select.js
@@ -4661,8 +4720,8 @@ var Select = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  var NAME = 'it-select';
-  var DATA_KEY = 'bs.it-select';
+  var NAME = 'custom-select';
+  var DATA_KEY = 'bs.custom-select';
   var VERSION = 'v4.0.0';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -4675,7 +4734,7 @@ var Select = function ($) {
   };
 
   var Selector = {
-    SELECT: '.it-select'
+    SELECT: '.custom-select'
 
     /**
      * ------------------------------------------------------------------------
@@ -4806,7 +4865,7 @@ var Select = function ($) {
 
       $select.wrap(wrapper);
 
-      var dropdownIcon = $('<span class="caret"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="arrow_down" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 452 452" xml:space="preserve"><path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" fill="#0073e6"/></g></svg></span>');
+      var dropdownIcon = $('<span class="caret it-expand"></span>');
       if ($select.is(':disabled')) {
         dropdownIcon.addClass('disabled');
       }
@@ -4847,8 +4906,8 @@ var Select = function ($) {
         $select.find('option:selected:not(:disabled)').each(function () {
           var index = $(this).index();
 
-          this._toggleEntryFromArray(valuesSelected, index, $select);
-          this._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
+          that._toggleEntryFromArray(valuesSelected, index, $select);
+          that._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
         });
       }
 
@@ -5063,8 +5122,8 @@ var Select = function ($) {
   $(window).on(Event.LOAD_DATA_API, function () {
     var selects = $.makeArray($(Selector.SELECT));
 
-    for (var i = selects.length; i--;) {
-      var $select = $(selects[i]);
+    for (var _i7 = selects.length; _i7--;) {
+      var $select = $(selects[_i7]);
       Select._jQueryInterface.call($select, $select.data());
     }
   });

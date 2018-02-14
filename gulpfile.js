@@ -36,7 +36,7 @@ var Paths = {
     './src/js/plugins/image-grid.js',
     './src/js/plugins/zoom.js',
     './src/js/plugins/forms.js',
-    './src/js/plugins/select.js',
+    './src/js/plugins/custom-select.js',
     './src/js/' + FILENAME + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',

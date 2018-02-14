@@ -29,36 +29,48 @@ $grays: map-merge((
   @return map-get($mains, $key);
 }
 
-$blue:    hsb(210, 100, 80) !default;
-$indigo:  hsb(243, 70, 100) !default;
-$purple:  hsb(243, 40, 100) !default;
-$pink:    hsb(350, 30, 100) !default;
-$red:     hsb(350, 75, 100) !default;
-$orange:  hsb(36, 100, 100) !default;
-$yellow:  hsb(44, 55, 100) !default;
-$green:   hsb(159, 100, 80) !default;
-$teal:    hsb(178, 95, 85) !default;
-$cyan:    hsb(178, 100, 100) !default;
+$italia:                hsb(210, 100, 80) !default;
+$indigo:                hsb(243, 70, 100) !default;
+$purple:                hsb(243, 40, 100) !default;
+$pink:                  hsb(350, 30, 100) !default;
+$red:                   hsb(351, 75, 97) !default;
+$orange:                hsb(36, 100, 100) !default;
+$yellow:                hsb(44, 55, 100) !default;
+$green:                 hsb(159, 100, 80) !default;
+$teal:                  hsb(178, 95, 85) !default;
+$cyan:                  hsb(178, 100, 100) !default;
+$blue:                  hsb(210, 100, 90) !default;
+$gray-tertiary:         hsb(210, 29, 51) !default;
+$gray-quaternary:       hsb(238, 1, 100) !default;
+$gray-disabled:         hsb(225, 5, 95) !default;
+$gray-label-disabled:   hsb(222, 5, 79) !default;
+$gray-border-disabled:  hsb(224, 8, 95) !default;
 
 $colors: () !default;
 $colors: map-merge((
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "italia":       $italia,
+  "indigo":           $indigo,
+  "purple":           $purple,
+  "pink":             $pink,
+  "red":              $red,
+  "orange":           $orange,
+  "yellow":           $yellow,
+  "green":            $green,
+  "teal":             $teal,
+  "cyan":             $cyan,
+  "white":            $white,
+  "gray":             $gray-600,
+  "gray-dark":        $gray-800,
+  "blue":             $blue,
+  "gray-tertiary":    $gray-tertiary,
+  "gray-quaternary":  $gray-quaternary
 ), $colors);
 
-$primary:         hsb(210, 100, 80) !default;
-$secondary:       $teal !default;
+$blu-italia:      $italia !default;
+$primary:         $blue !default;
+$secondary:       $white !default;
+$tertiary:        $gray-tertiary !default;
+$quaternary:      $gray-quaternary !default;
 $success:         $green !default;
 $info:            $gray-400 !default;
 $warning:         $orange !default;
@@ -66,16 +78,20 @@ $danger:          $red !default;
 $light:           hsb(255, 5, 95) !default;
 $dark:            hsb(210, 70, 30) !default;
 
+
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "italia":       $blu-italia,
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "tertiary":     $tertiary,
+  "quaternary":   $quaternary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark
 ), $theme-colors);
 
 // Color Variations
@@ -86,8 +102,9 @@ $theme-colors: map-merge((
 // saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
 // componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
 
-$primary-h: hue($primary);
+/*$primary-h: hue($primary);
 $primary-s: saturation($primary);
+
 
 $theme-colors: (
   "primary-b-1": hsb($primary-h, $primary-s, 10),
@@ -105,7 +122,7 @@ $theme-colors: (
   "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
   "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
   "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
-);
+);*/
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
@@ -121,7 +138,7 @@ $grid-gutter-widths: (
 ) !default;
 
 // Main typography
-$font-size-base: 1rem !default;
+//$font-size-base: 16px !default;
 $headings-line-height: 1.2 !default;
 $small-font-size: 0.777rem !default;
 
@@ -132,9 +149,18 @@ $small-font-size: 0.777rem !default;
 $paragraph-margin-bottom:   1.6rem !default;
 
 // Btns
-$btn-font-size: $font-size-base;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
+$btn-font-weight: 700 !default;
+$btn-font-size: 16px !default;
+$btn-font-size-sm: 14px !default;
+$btn-font-size-lg: 18px !default;
+$input-btn-line-height: 1.5 !default;
+$input-btn-line-height-sm: 1.428 !default;
+$input-btn-line-height-lg: 1.556 !default;
+$btn-box-shadow-secondary: inset 0 0 0 1px $primary;
+$btn-box-shadow-quaternary: inset 0 0 0 1px $gray-disabled;
+$btn-box-shadow-disabled: inset 0 0 0 1px $gray-border-disabled;
 
 // z-index
 $zindex-zoom: 1080;

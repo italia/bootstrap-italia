@@ -14,8 +14,8 @@ const Select = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'it-select'
-  const DATA_KEY = `bs.it-select`
+  const NAME = 'custom-select'
+  const DATA_KEY = `bs.custom-select`
   const VERSION = 'v4.0.0'
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
@@ -28,7 +28,7 @@ const Select = (($) => {
   }
 
   const Selector = {
-    SELECT: '.it-select',
+    SELECT: '.custom-select',
   }
 
 
@@ -202,8 +202,8 @@ const Select = (($) => {
         $select.find('option:selected:not(:disabled)').each(function () {
           var index = $(this).index();
 
-          this._toggleEntryFromArray(valuesSelected, index, $select);
-          this._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
+          that._toggleEntryFromArray(valuesSelected, index, $select);
+          that._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
         });
       }
 

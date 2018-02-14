@@ -24,7 +24,7 @@
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/button-group";
 @import "node_modules/bootstrap/scss/input-group";
-@import "node_modules/bootstrap/scss/custom-forms";
+//@import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/card";
@@ -54,6 +54,7 @@
 @import "./custom/list-group-custom.scss";
 @import "./custom/alert-custom.scss";
 @import "./custom/checkbox-radio-custom.scss";
+@import "./custom/buttons-custom.scss";
 @import "./custom/forms.scss";
 
 // Custom components
