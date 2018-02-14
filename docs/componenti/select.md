@@ -50,7 +50,7 @@ Esempio di _select_ con ricerca:
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select" searchable="Cerca una regione">
+    <select class="custom-select" searchable="Cerca una regione">
       <option value="" disabled selected>Seleziona una regione</option>
       {% for regione in site.data.regioni %}
       <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
@@ -67,7 +67,7 @@ Esempio di _select_ con gruppi di opzioni:
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select" multiple>
+    <select class="custom-select" multiple>
         <optgroup label="Gruppo 1">
             <option value="1">Opzione 1</option>
             <option value="2">Opzione 2</option>
