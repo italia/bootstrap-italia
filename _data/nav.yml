@@ -27,8 +27,8 @@
     - title: Badge
     - title: Barre di Avanzamento
     - title: Breadcrumb
-    - title: Buttons
-      status: to do
+    - title: Bottoni
+      status: work in progress
     - title: Button group
       status: to do
     - title: Card
