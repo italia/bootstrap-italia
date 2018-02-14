@@ -8,7 +8,6 @@
   @supports (position: sticky) {
     position: sticky;
     top: 4rem;
-    height: calc(100vh - 4rem);
     overflow-y: auto;
   }
   order: 2;
@@ -51,7 +50,7 @@
 
 .bd-sidebar {
   order: 0;
-  // background-color: #f5f2f9;
+  background-color: $gray-100;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 
   @include media-breakpoint-up(md) {
@@ -59,7 +58,6 @@
       position: sticky;
       top: 4rem;
       z-index: 1000;
-      height: calc(100vh - 4rem);
     }
     border-right: 1px solid rgba(0, 0, 0, .1);
   }
@@ -70,14 +68,11 @@
 }
 
 .bd-links {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-right: - $grid-gutter-width/2; // to fix sidebar width
-  margin-left: - $grid-gutter-width/2; // to fix sidebar width
+  margin-right: - $grid-gutter-width/2;
+  margin-left: - $grid-gutter-width/2;
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
-      max-height: calc(100vh - 9rem);
       overflow-y: auto;
     }
   }
@@ -88,23 +83,6 @@
   }
 }
 
-.bd-search {
-  position: relative; // To contain the Algolia search
-  padding: 1rem $grid-gutter-width; // to fix sidebar width
-  margin-right: - $grid-gutter-width/2; // to fix sidebar width
-  margin-left: - $grid-gutter-width/2; // to fix sidebar width
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-
-  .form-control:focus {
-    border-color: $docs-blue-bright;
-    box-shadow: 0 0 0 3px rgba($docs-blue-bright, .25);
-  }
-}
-
-.bd-search-docs-toggle {
-  line-height: 1;
-  color: $gray-900;
-}
 
 .bd-sidenav {
   display: none;
@@ -123,7 +101,7 @@
 
 .bd-toc-item {
   &.active {
-    background-color: $gray-200;
+    background-color: $white;
     margin-bottom: 1rem;
     padding: 1rem 0;
 

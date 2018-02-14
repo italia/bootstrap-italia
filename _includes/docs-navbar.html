@@ -1,24 +1,31 @@
 <header class="navbar-main navbar navbar-dark bd-navbar">
-  <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
-    {%- include icons/bricks.svg width="36" height="36" class="d-block" -%}
+  <a class="navbar-brand py-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+    <div class="d-flex flex-row">
+      {%- include icons/it-logo.svg height="48" class="d-block" -%}
+      <div class="d-flex flex-column pl-3 pl-sm-4">
+        <h1 class="bd-logo-title">Bootstrap Italia</h1>
+        <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+      </div>
+    </div>
   </a>
 
-  <div class="navbar-nav-scroll">
-    <ul class="navbar-nav bd-navbar-nav flex-row">
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentazione</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.title == "Esempi" %}active{% endif %}" href="{{ site.baseurl }}/docs/esempi/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Esempi');">Esempi</a>
-      </li>
-    </ul>
-  </div>
+  {% if page.layout == "docs" %}
+  <button class="btn btn-secondary bd-menu-docs-toggle d-md-none p-1" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    {%- include icons/menu.svg width="30" height="30" -%}
+  </button>
+  {% endif %}
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item">
-      <a class="nav-link p-2" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        {%- include icons/github.svg class="navbar-nav-svg" -%}
+      <a class="nav-link d-flex align-items-center px-4" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        {%- include icons/github.svg height="24" -%}
       </a>
     </li>
   </ul>
+
+  {% if page.layout == "docs" %}
+  <form class="bd-search w-100">
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+  </form>
+  {% endif %}
 </header>

@@ -22,36 +22,31 @@
 - title: Componenti
   pages:
     - title: Introduzione
-      status: work in progress
     - title: Alerts
     - title: Badge
     - title: Barre di Avanzamento
     - title: Breadcrumb
     - title: Bottoni
       status: work in progress
-    - title: Button group
-      status: to do
-    - title: Card
-      status: to do
+    # - title: Button group
+    # - title: Card
     - title: Carousel
     - title: Checkbox
     - title: Collapse
       status: work in progress
-    - title: Dropdowns
-      status: to do
+    # - title: Dropdowns
     - title: Elenchi
     - title: Forms
-      status: to do
+      status: work in progress
     - title: Hero
     - title: Input group
-      status: to do
+      status: work in progress
     - title: Modale
       status: work in progress
     - title: Navigazione
-    - title: Navbar
-      status: to do
-    - title: Pagination
-      status: to do
+      status: work in progress
+    # - title: Navbar
+    # - title: Pagination
     - title: Popovers
     - title: Radio Button
     - title: Scrollspy
@@ -61,13 +56,10 @@
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
-      status: work in progress
     - title: Cookiebar
       status: work in progress
-    - title: Image Grid
-      status: to do
-    - title: Zoom
-      status: to do
+    # - title: Image Grid
+    # - title: Zoom
 
 - title: Utilities
   pages:
@@ -93,3 +85,5 @@
     - title: Spaziature
     - title: Testo
     - title: Visibility
+
+- title: Esempi

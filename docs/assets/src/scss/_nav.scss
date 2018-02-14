@@ -74,3 +74,41 @@
     background-size: .75rem .75rem;
   }
 }
+
+.bd-search {
+  position: relative; // To contain the Algolia search
+  @include media-breakpoint-up(md) {
+    max-width: 12rem;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 20rem;
+  }
+
+  .form-control:focus {
+    border-color: $docs-blue-bright;
+    box-shadow: 0 0 0 3px rgba($docs-blue-bright, .25);
+  }
+}
+
+.bd-menu-docs-toggle {
+  line-height: 1;
+  color: $gray-900;
+}
+
+.bd-logo-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: unset;
+  margin-bottom: 0;
+  @include media-breakpoint-up(sm) {
+    font-size:24px;
+  }
+}
+
+.bd-logo-subtitle {
+  font-size:14px;
+  font-weight: 300;
+  letter-spacing: unset;
+}
+
