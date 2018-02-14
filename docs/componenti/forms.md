@@ -101,7 +101,7 @@ Eccoti un esempio in funzione per la traduzione in inglese:
 
 ### Select
 
-Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.it-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
+Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.custom-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
 
 Di seguito sono mostrate alcune di queste combinazioni.
 
@@ -110,7 +110,7 @@ Di seguito sono mostrate alcune di queste combinazioni.
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select">
+    <select class="custom-select">
       <option value="" disabled selected>Seleziona una opzione</option>
       <option value="1">Opzione 1</option>
       <option value="2">Opzione 2</option>
@@ -128,7 +128,7 @@ La personalizzazione attraverso Bootstrap Italia permette di selezionare più el
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select" multiple>
+    <select class="custom-select" multiple>
       <option value="" disabled selected>Seleziona una o più regioni</option>
       {% for regione in site.data.regioni %}
       <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
@@ -145,7 +145,7 @@ Esempio di _select_ con ricerca:
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select" searchable="Cerca una regione">
+    <select class="custom-select" searchable="Cerca una regione">
       <option value="" disabled selected>Seleziona una regione</option>
       {% for regione in site.data.regioni %}
       <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
@@ -162,7 +162,7 @@ Esempio di _select_ con gruppi di opzioni:
 {% example html %}
 <form>
   <div class="form-group">
-    <select class="it-select" multiple>
+    <select class="custom-select" multiple>
         <optgroup label="Gruppo 1">
             <option value="1">Opzione 1</option>
             <option value="2">Opzione 2</option>
@@ -203,7 +203,7 @@ Hai la possibilità di inserire un'icona a lato dei campi input, select e textar
   </div>
   <div class="form-group">
     <i class="icoPrefix it-youtube"></i>
-    <select class="it-select">
+    <select class="custom-select">
       <option value="" disabled selected>Seleziona un video</option>
       <option value="1">Video 1</option>
       <option value="2">Video 2</option>
@@ -225,13 +225,13 @@ Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.for
 {% endexample %}
 
 {% example html %}
-<select class="it-select form-control-lg">
+<select class="custom-select form-control-lg">
   <option>Select grande</option>
 </select>
-<select class="it-select ">
+<select class="custom-select ">
   <option>Select predefinita</option>
 </select>
-<select class="it-select form-control-sm">
+<select class="custom-select form-control-sm">
   <option>Select piccola</option>
 </select>
 {% endexample %}
@@ -483,7 +483,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <label for="inputCity">Città</label>
     </div>
     <div class="form-group col-md-4">
-      <select id="inputState" class="it-select">
+      <select id="inputState" class="custom-select">
         <option selected>Scegli...</option>
         <option>...</option>
       </select>
@@ -604,7 +604,7 @@ And of course [custom form controls](#custom-forms) are supported.
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <select class="it-select">
+      <select class="custom-select">
         <option value="" disabled selected>Seleziona una opzione</option>
         <option value="1">Opzione 1</option>
         <option value="2">Opzione 2</option>
@@ -739,7 +739,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
       <label for="disabledTextInput">Input </label>
     </div>
     <div class="form-group">
-      <select id="exampleSelect" class="it-select">
+      <select id="exampleSelect" class="custom-select">
         <option selected>Scegli...</option>
         <option>...</option>
       </select>
