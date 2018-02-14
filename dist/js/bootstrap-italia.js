@@ -4661,8 +4661,8 @@ var Select = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  var NAME = 'it-select';
-  var DATA_KEY = 'bs.it-select';
+  var NAME = 'custom-select';
+  var DATA_KEY = 'bs.custom-select';
   var VERSION = 'v4.0.0';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -4675,7 +4675,7 @@ var Select = function ($) {
   };
 
   var Selector = {
-    SELECT: '.it-select'
+    SELECT: '.custom-select'
 
     /**
      * ------------------------------------------------------------------------
@@ -4847,8 +4847,8 @@ var Select = function ($) {
         $select.find('option:selected:not(:disabled)').each(function () {
           var index = $(this).index();
 
-          this._toggleEntryFromArray(valuesSelected, index, $select);
-          this._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
+          that._toggleEntryFromArray(valuesSelected, index, $select);
+          that._customElement.find('li').eq(index).find(':checkbox').prop('checked', true);
         });
       }
 

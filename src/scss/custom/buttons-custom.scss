@@ -10,23 +10,23 @@
   line-height: $input-btn-line-height;
 }
 
-&.btn-sm {
+.btn-sm {
   padding: 10px 20px;
   font-size: $btn-font-size-sm;
   line-height: $input-btn-line-height-sm;
 }
 
-&.btn-lg {
+.btn-lg {
   padding: 14px 28px;
   font-size: $btn-font-size-lg;
   line-height: $input-btn-line-height-lg;
 }
 
-&.btn-block {
+.btn-block {
   @include border-radius(0);
 }
 
-&.btn-primary {
+.btn-primary {
   &:disabled,
   &.disabled {
     color: $gray-label-disabled;
@@ -35,7 +35,7 @@
   }
 }
 
-&.btn-secondary {
+.btn-secondary {
   color: $primary;
   box-shadow: $btn-box-shadow-secondary;
   &.disabled,
@@ -49,7 +49,7 @@
   }
 }
 
-&.btn.btn-tertiary {
+.btn.btn-tertiary {
   &:disabled,
   &.disabled {
     color: $gray-label-disabled;
@@ -58,7 +58,7 @@
   }
 }
 
-&.btn-quaternary {
+.btn-quaternary {
   color: $gray-tertiary;
   box-shadow: $btn-box-shadow-quaternary;
   &.focus,
@@ -73,14 +73,14 @@
   }
 }
 
-&.btn-success {
+.btn-success {
   &.disabled,
   &:disabled {
     opacity: 0.2;
   }
 }
 
-&.btn-warning {
+.btn-warning {
   color: $white;
   &.disabled,
   &:disabled {
@@ -88,7 +88,7 @@
   }
 }
 
-&.btn-danger {
+.btn-danger {
   &.disabled,
   &:disabled {
     opacity: 0.2;
