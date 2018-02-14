@@ -50,7 +50,6 @@
 
 .bd-sidebar {
   order: 0;
-  background-color: $gray-100;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 
   @include media-breakpoint-up(md) {
@@ -91,27 +90,20 @@
 
 .bd-toc-link {
   display: block;
-  padding: .25rem 1.5rem;
-  color: $gray-700;
+  padding: .25rem 1rem;
+  color: $gray-800;
 
   &:hover {
-    color: $gray-900;
-    text-decoration: none;
+    color: $primary;
   }
 }
 
 .bd-toc-item {
   &.active {
     background-color: $white;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
-
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
 
     > .bd-toc-link {
-      color: $gray-900;
+      color: $primary;
       font-weight: 600;
 
       &:hover {
@@ -131,17 +123,16 @@
     display: block;
     padding: .25rem 1.5rem;
     font-size: 90%;
-    color: $gray-700;
+    color: $gray-800;
     &:hover {
-      color: $gray-900;
-      text-decoration: none;
+      color: $primary;
       background-color: transparent;
     }
   }
   > .active > a,
   > .active:hover > a {
     font-weight: 600;
-    color: $gray-900;
+    color: $primary;
     background-color: transparent;
   }
 }
