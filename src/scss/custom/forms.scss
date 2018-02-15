@@ -1,3 +1,7 @@
+input, button, select, optgroup, textarea {
+	font-weight: bold;
+	color: $gray-tertiary;
+}
 .form-group {
   position: relative;
   padding-bottom: .5rem;
@@ -10,7 +14,7 @@
 .form-group label {
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
-  color: #757575;
+  color: $gray-tertiary;
   position: absolute;
   top: .6rem;
   font-size: 1rem;
@@ -18,7 +22,8 @@
   display: block;
   width: 100%;
   background-color: #fff;
-  padding: 0;
+	padding: 0 .75rem;
+	font-weight: bold;
   z-index: 6;
 }
 input[type="file"] + label {
@@ -31,28 +36,27 @@ input[type="file"] + label {
   transform: translateY(-140%);
   font-size: .8rem;
   background: transparent;
-  padding: 0;
 }
 .form-group.active label, .form-group.active .icoPrefix {
   color: $primary;
 }
-.it-select.form-control-sm, .it-select.form-control-lg {
+.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
   padding: 0;
 }
-.select-wrapper.it-select .select-dropdown {
-	color: #4d4d4d;
-	border-bottom: 1px solid #bdbdbd;
+.select-wrapper.custom-select .select-dropdown {
+	color: $gray-tertiary;
+	border-bottom: 1px solid $gray-tertiary;
 	padding-right: 2rem;
 }
-.select-wrapper.it-select.show .select-dropdown {
+.select-wrapper.custom-select.show .select-dropdown {
 	color: $primary;
 	border-bottom: 1px solid $primary;
 }
-.it-select.show .caret {
+.custom-select.show .caret {
   color: $primary;
 }
 .select-wrapper + label {
-  padding: 0;
+  padding: 0 .75rem !important;
 }
 :disabled .form-group label {
   top: 0;
@@ -64,7 +68,7 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
   border-bottom-width: medium;
   border-bottom-style: none;
   border-bottom-color: currentcolor;
-  border-bottom: 1px solid #bdbdbd;
+  border-bottom: 1px solid $gray-tertiary;
   border-radius: 0;
   outline: 0;
   height: 2.5rem;
@@ -77,7 +81,7 @@ select.form-control, textarea.form-control {
   height: inherit;
 }
 .form-group.active input.form-control, .form-group.active select.form-control, .form-group.active textarea.form-control, .form-group.active .form-file-name, .form-group.active .form-control-plaintext, input:focus {
-  border-bottom: 1px solid #005bf3;
+  border-bottom: 1px solid $primary;
 }
 .form-group.active .form-file-name {
   padding-bottom: 1.95rem
@@ -137,15 +141,15 @@ select.form-control, textarea.form-control {
 }
 .form-file-name::before {
   background-color: #fff;
-  border-color: #0066cc;
+  border-color: $primary;
   bottom: -1px;
-  color: #0066cc;
+  color: $primary;
   content: "Sfoglia";
   display: block;
   height: 2.5rem;
   line-height: 1.7;
   padding: 0.4rem 1rem 1.5rem;
-  border: 1px solid #0066cc;
+  border: 1px solid $primary;
   position: absolute;
   right: 0;
   top: 0;
@@ -185,8 +189,8 @@ select.form-control, textarea.form-control {
 .icoPrefix ~ input, .icoPrefix ~ textarea, .icoPrefix ~ label, .icoPrefix ~ .select-wrapper .select-dropdown {
 	padding-left: 3rem;
 }
-.icoPrefix ~ .it-select ~ label {
-	padding-left: 0;
+.icoPrefix ~ .custom-select ~ label, .icoPrefix ~ label.active, .form-group.active .icoPrefix ~ label {
+	padding-left: .75rem;
 }
 
 /* CHECKBOX e RADIO */

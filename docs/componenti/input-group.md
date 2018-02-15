@@ -147,7 +147,7 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 {% example html %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 </div>
@@ -155,14 +155,14 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-describedby="basic-addon2">
   <div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
   </div>
 </div>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 </div>
@@ -170,8 +170,8 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 <div class="input-group">
   <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-describedby="basic-addon2">
   <div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
-    <button class="btn btn-outline-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
+    <button class="btn btn-primary" type="button">Bottone</button>
   </div>
 </div>
 {% endexample %}
@@ -181,7 +181,7 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 {% example html %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -196,7 +196,7 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Inserimento di testo con dropdown">
   <div class="input-group-append">
-    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -213,8 +213,8 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 {% example html %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button type="button" class="btn btn-outline-primary">Action</button>
-    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-primary">Action</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
@@ -231,8 +231,8 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
   <div class="input-group-append">
-    <button type="button" class="btn btn-outline-primary">Action</button>
-    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-primary">Action</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
