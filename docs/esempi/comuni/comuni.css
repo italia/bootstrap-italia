@@ -1,9 +1,6 @@
-/*body {
-  padding-top: 5rem;
-}
 .header {
   padding: 3rem 1.5rem;
-}*/
+}
 
 section {
   padding: 20px 0;
@@ -12,3 +9,21 @@ section {
 .bg-gray-100 {
   background-color: #e6e6e6;
 }
+
+
+/*codice da eiminare*/
+.dropdown-menu.full-width {  
+  width: 100%;      
+}
+
+.dropdown-menu.full-width .dropdown-item {
+  display: inline-block;
+  width: auto;
+}   
+
+.dropdown-menu.full-width .dropdown-item:hover,
+.dropdown-menu.full-width .dropdown-item:focus {
+  background: none;
+  text-decoration: underline;
+}
+/**/
