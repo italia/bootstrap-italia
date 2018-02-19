@@ -1,17 +1,22 @@
 .header {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
 }
 
 section {
   padding: 20px 0;
 }
 
-.bg-gray-100 {
-  background-color: #e6e6e6;
+.footer a {
+  color: #333;
+  text-decoration: underline;
 }
 
+.footer .list-group-item {
+  background: transparent;
+  border-color: #FFF;
+}
 
-/*codice da eiminare*/
+/*codice da eiminare dopo merge con branch "Dropdown"*/
 .dropdown-menu.full-width {  
   width: 100%;      
 }
