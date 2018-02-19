@@ -76,6 +76,7 @@
 }
 
 .bd-search {
+  background-color: $white;
   position: relative; // To contain the Algolia search
   @include media-breakpoint-up(md) {
     max-width: 12rem;
@@ -95,19 +96,19 @@
   color: $gray-900;
 }
 
-.bd-logo-title {
+.bd-logo-title {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: unset;
   margin-bottom: 0;
   @include media-breakpoint-up(sm) {
-    font-size:24px;
+    font-size: 24px;
   }
 }
 
-.bd-logo-subtitle {
-  font-size:14px;
+.bd-logo-subtitle  {
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: unset;
 }

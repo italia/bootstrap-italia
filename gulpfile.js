@@ -35,6 +35,7 @@ var Paths = {
     './src/js/plugins/cookiebar.js',
     './src/js/plugins/image-grid.js',
     './src/js/plugins/zoom.js',
+    './src/js/plugins/forms.js',
     './src/js/plugins/custom-select.js',
     './src/js/' + FILENAME + '.js'
   ],
