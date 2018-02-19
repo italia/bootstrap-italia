@@ -197,12 +197,12 @@ Hai la possibilità di inserire un'icona a lato dei campi input, select e textar
 {% example html %}
 <form>
   <div class="form-group">
-    <i class="icoPrefix it-youtube"></i>
+    <i class="ico-prefix it-youtube"></i>
     <input class="form-control" type="text" id="videoYoutube">
     <label for="videoYoutube">Link video di youtube</label>
   </div>
   <div class="form-group">
-    <i class="icoPrefix it-youtube"></i>
+    <i class="ico-prefix it-youtube"></i>
     <select class="custom-select">
       <option value="" disabled selected>Seleziona un video</option>
       <option value="1">Video 1</option>
