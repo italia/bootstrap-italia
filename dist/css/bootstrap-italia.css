@@ -7426,6 +7426,10 @@ small,
 .btn-danger.disabled, .btn-danger:disabled {
   opacity: 0.2; }
 
+.pagination .page-item .page-link {
+  border: none;
+  padding: 0.5rem 1rem; }
+
 .cookiebar {
   bottom: 0;
   left: 0;
