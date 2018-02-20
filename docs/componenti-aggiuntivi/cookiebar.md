@@ -25,7 +25,7 @@ Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `
 <style>
   /* Style override for Documentation purposes */
   .cookiebar {
-    opacity: 1 !important;
+    display: block !important;
     position: relative !important;
   }
 </style>
