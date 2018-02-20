@@ -7426,6 +7426,15 @@ small,
 .btn-danger.disabled, .btn-danger:disabled {
   opacity: 0.2; }
 
+.dropdown-menu.full-width {
+  width: 100%; }
+  .dropdown-menu.full-width .dropdown-item {
+    display: inline-block;
+    width: auto; }
+    .dropdown-menu.full-width .dropdown-item:hover, .dropdown-menu.full-width .dropdown-item:focus {
+      background: none;
+      text-decoration: underline; }
+
 .cookiebar {
   bottom: 0;
   left: 0;

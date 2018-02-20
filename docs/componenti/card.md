@@ -1,22 +1,22 @@
 ---
 layout: docs
 title: Card
-description: Un contenitore flessibile ed estendibile con molte opzioni e varianti.
+description: Un contenitore di contenuti con molte opzioni e varianti.
 group: componenti
 toc: true
 ---
 
 ## Panoramica
 
-Le **card** sono contenitori flessibile ed estendibili. Costruiti con flexbox, offrono un facile allineamento e si combinano bene con altri componenti. Si possono personalizzare con intestazioni e piè di pagina, inserirvi componenti e contenuti, variare i colori di sfondo contestuali e opzioni di visualizzazione. 
+Le **card** sono contenitori flessibili ed estendibili. Costruiti con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti. Si possono personalizzare con intestazioni e piè di pagina, contenere altri componenti e contenuti, avere colori di sfondo contestuali e varie opzioni di visualizzazione. 
 
 Non hanno `margin` di default, se ne avrai bisogno usa le [utilità di spaziatura]({{ site.baseurl }}/docs/utilities/spacing/).
 
-Di default le card si estendono completamente al 100%. Se vuoi cambiarne la larghezza puoi incorporarle in delle [griglie]({{ site.baseurl }}/docs/utilities/griglie/), usare le [utilitià di dimensionamento]({{ site.baseurl }}/docs/utilities/dimensionamento/), o un CSS personalizzato (es.: `style="width: 18rem;"`).
+Di default le card si estendono completamente al 100% del loro elemento contenitore. Se vuoi cambiarne la larghezza puoi incorporarle in delle [griglie]({{ site.baseurl }}/docs/utilities/griglie/), usare le [utilitià di dimensionamento]({{ site.baseurl }}/docs/utilities/dimensionamento/), o un CSS personalizzato (es.: `style="width: 18rem;"`).
 
 Puoi allineare tutto il contenuto di una card usando una delle classi delle [utilità di allineamento]({{ site.baseurl }}/docs/utilities/testo/#allineamento-del-testo) direttamente sul contenitore `.card`.
 
-Le card possono essere personalizzate nel colore del testo e di sfondo con le [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/) e nei [bordi]({{ site.baseurl }}/docs/utilities/bordi/). 
+Le card possono essere personalizzate nel colore del testo e di sfondo con le [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/) e nelle bordature con le relative [utilità per i bordi]({{ site.baseurl }}/docs/utilities/bordi/). 
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -38,7 +38,7 @@ Le card supportano un'ampia varietà di contenuti come immagini, testo, gruppi d
 
 ### Body
 
-Per il blocco principale di contenuto è il `.card-body`.
+Per il blocco principale di contenuto l'elemento di riferimento è contrassegnato dalla classe `.card-body`.
 
 {% example html %}
 <div class="card">
@@ -332,7 +332,7 @@ Come con i gruppi di card anche in questo caso si allineano automaticamente.
 
 Le card possono essere organizzate in colonne simili a [Masonry](https://masonry.desandro.com/) con la classe `.card-columns`. Le card sono costruite con proprietà CSS `column` invece che con flexbox per un allineamento più semplice. Le card sono ordinate da cima a fondo e da sinistra a destra.
 
-**Nota** L'altezza delle colonne con card può variare. Per evitare che le card spezzino le colonne  dobbiamo impostarle su `display: inline-block` come `column-break-inside: avoid` non è ancora una soluzione a prova di proiettile.
+**Nota** L'altezza delle colonne con card può variare. Per evitare che le card spezzino le colonne  dobbiamo impostarle su `display: inline-block;` come `column-break-inside: avoid;`: non è ancora una soluzione a prova di proiettile.
 
 {% example html %}
 <div class="card-columns">

@@ -29,12 +29,13 @@
     - title: Bottoni
       status: work in progress
     # - title: Button group
-    # - title: Card
+    - title: Card
     - title: Carousel
     - title: Checkbox
     - title: Collapse
       status: work in progress
-    # - title: Dropdowns
+    - title: Dropdowns
+      status: work in progress
     - title: Elenchi
     - title: Forms
       status: work in progress
@@ -45,13 +46,15 @@
       status: work in progress
     - title: Navigazione
       status: work in progress
-    # - title: Navbar
+    - title: Navbar
+      status: todo
     # - title: Pagination
     - title: Popovers
     - title: Radio Button
     - title: Scrollspy
     - title: Select
     - title: Tab
+      status: work in progress
     - title: Tooltips
 
 - title: Componenti Aggiuntivi
