@@ -2,6 +2,38 @@
   padding: 3rem 0;
 }
 
+@media only screen and (max-width: 991px) {
+  .header-title .display-3,
+  .footer-title .display-3 {
+    font-size: 1rem;
+  }
+  .header-title small {
+    display: none;
+  }
+  .header-social {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  color: rgba(0,114.75,229.5,.5);
+  border-color: rgba(0,114.75,229.5,.1);
+}
+
+.bg-italia .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border-color: rgba(255,255,255,.5);
+}
+
+.bg-italia .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.right-0 {
+  right: 0;
+  left: auto;
+}
+
 section {
   padding: 20px 0;
 }
@@ -17,57 +49,46 @@ section {
 }
 
 /*back to top*/
-.cd-top {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
+#return-to-top {
   position: fixed;
-  bottom: 40px;
-  right: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  /* image replacement properties */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: rgba(0, 115, 230, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 114.75, 229.5);
+  background: rgba(0, 114.75, 229.5, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 999999;
 }
-.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
-  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  -moz-transition: opacity .3s 0s, visibility 0s 0s;
-  transition: opacity .3s 0s, visibility 0s 0s;
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 11px;
+  top: 10px;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.cd-top.cd-is-visible {
-  /* the button becomes visible */
-  visibility: visible;
-  opacity: 1;
+#return-to-top:hover {
+  background: rgba(0, 114.75, 229.5, 0.9);
 }
-.cd-top.cd-fade-out {
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .5;
-}
-.no-touch .cd-top:hover {
-  background-color: #e86256;
-  opacity: 1;
-}
-@media only screen and (min-width: 768px) {
-  .cd-top {
-    right: 20px;
-    bottom: 20px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .cd-top {
-    height: 60px;
-    width: 60px;
-    right: 30px;
-    bottom: 30px;
-  }
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
 }
 
 /*codice da eiminare dopo merge con branch "Dropdown"*/
