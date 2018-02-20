@@ -61,6 +61,8 @@
       description: Un esempio di corretto utilizzo del componente Carousel.
     - name: Cookiebar
       description: Una barra di avviso sui cookie basata su un cookie nominato 'cookies_consent'.
+    - name: Form
+      description: Un esempio di form che mostra molti componenti disponibili.
 
 - category: Esempi di Bootstrap
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.0/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
