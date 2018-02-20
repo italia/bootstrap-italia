@@ -27,34 +27,36 @@
     - title: Barre di Avanzamento
     - title: Breadcrumb
     - title: Bottoni
-      status: work in progress
-    # - title: Button group
+      status: wip
+    - title: Button group
+      status: to do
     - title: Card
     - title: Carousel
     - title: Checkbox
     - title: Collapse
-      status: work in progress
+      status: wip
     - title: Dropdowns
-      status: work in progress
+      status: wip
     - title: Elenchi
     - title: Forms
-      status: work in progress
+      status: wip
     - title: Hero
     - title: Input group
-      status: work in progress
+      status: wip
     - title: Modale
-      status: work in progress
+      status: wip
     - title: Navigazione
-      status: work in progress
+      status: to do
     - title: Navbar
-      status: todo
-    # - title: Pagination
+      status: to do
+    - title: Paginazione
+      status: wip
     - title: Popovers
     - title: Radio Button
     - title: Scrollspy
     - title: Select
     - title: Tab
-      status: work in progress
+      status: wip
     - title: Tooltips
 
 - title: Componenti Aggiuntivi
@@ -72,7 +74,7 @@
     - title: Bordi
     - title: Clearfix
     - title: Colori
-      status: work in progress
+      status: wip
     - title: Dimensionamento
     - title: Display
     - title: Embed
@@ -82,7 +84,7 @@
       status: work in progress
     - title: Immagini sostitutive
     - title: Icone
-      status: work in progress
+      status: wip
     - title: Media object
     - title: Position
     - title: Screenreaders

@@ -7757,6 +7757,10 @@ select.form-control, textarea.form-control {
       background: none;
       text-decoration: underline; }
 
+.pagination .page-item .page-link {
+  border: none;
+  padding: 0.5rem 1rem; }
+
 .cookiebar {
   bottom: 0;
   left: 0;
