@@ -44,19 +44,20 @@
 @import "node_modules/bootstrap/scss/utilities";
 
 // Extended Bootstrap components
-@import "./custom/type-custom.scss";
-@import "./custom/grid-custom.scss";
-@import "./custom/tables-custom.scss";
-@import "./custom/breadcrumb-custom.scss";
-@import "./custom/modal-custom.scss";
-@import "./custom/collapse-custom.scss";
-@import "./custom/carousel-custom.scss";
-@import "./custom/list-group-custom.scss";
-@import "./custom/alert-custom.scss";
-@import "./custom/buttons-custom.scss";
-@import "./custom/forms.scss";
+@import "./custom/type-custom";
+@import "./custom/grid-custom";
+@import "./custom/tables-custom";
+@import "./custom/breadcrumb-custom";
+@import "./custom/modal-custom";
+@import "./custom/collapse-custom";
+@import "./custom/carousel-custom";
+@import "./custom/list-group-custom";
+@import "./custom/alert-custom";
+@import "./custom/buttons-custom";
+@import "./custom/forms";
+@import "./custom/dropdown-custom";
 
 // Custom components
-@import "./plugins/cookiebar.scss";
-@import "./plugins/hero.scss";
-@import "./plugins/zoom.scss";
+@import "./plugins/cookiebar";
+@import "./plugins/hero";
+@import "./plugins/zoom";
