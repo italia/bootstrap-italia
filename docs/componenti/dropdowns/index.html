@@ -14,17 +14,17 @@
 
 <!-- Bootstrap core CSS -->
 
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802151144" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802201158" rel="stylesheet">
 
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802151144" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802201158" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802151144" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802201158" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -196,25 +196,35 @@
             <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
               Breadcrumb</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/bottoni/">
-              Bottoni <span class="badge badge-info">work in progress</span></a></li><li>
+              Bottoni <span class="badge badge-info">wip</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/button-group/">
+              Button group <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/checkbox/">
               Checkbox</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/collapse/">
-              Collapse <span class="badge badge-info">work in progress</span></a></li><li>
+              Collapse <span class="badge badge-info">wip</span></a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti/dropdowns/">
+              Dropdowns <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/elenchi/">
               Elenchi</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/forms/">
-              Forms <span class="badge badge-info">work in progress</span></a></li><li>
+              Forms <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/input-group/">
-              Input group <span class="badge badge-info">work in progress</span></a></li><li>
+              Input group <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/modale/">
-              Modale <span class="badge badge-info">work in progress</span></a></li><li>
+              Modale <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navigazione/">
-              Navigazione <span class="badge badge-info">work in progress</span></a></li><li>
+              Navigazione <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar <span class="badge badge-info">to do</span></a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/paginazione/">
+              Paginazione <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/popovers/">
               Popovers</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/radio-button/">
@@ -224,7 +234,7 @@
             <a href="/bootstrap-italia/docs/componenti/select/">
               Select</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/tab/">
-              Tab</a></li><li>
+              Tab <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/tooltips/">
               Tooltips</a></li></ul>
     </div><div class="bd-toc-item">
@@ -252,7 +262,7 @@
             <a href="/bootstrap-italia/docs/utilities/clearfix/">
               Clearfix</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/colori/">
-              Colori <span class="badge badge-info">work in progress</span></a></li><li>
+              Colori <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
               Dimensionamento</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/display/">
@@ -268,7 +278,7 @@
             <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
               Immagini sostitutive</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/icone/">
-              Icone <span class="badge badge-info">work in progress</span></a></li><li>
+              Icone <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/utilities/media-object/">
               Media object</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/position/">
@@ -299,6 +309,7 @@
 <li class="toc-entry toc-h2"><a href="#examples">Examples</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#single-button-dropdowns">Single button dropdowns</a></li>
+<li class="toc-entry toc-h3"><a href="#full-width-dropdown-sub-menu">Full width dropdown sub-menu</a></li>
 <li class="toc-entry toc-h3"><a href="#split-button-dropdowns">Split button dropdowns</a></li>
 </ul>
 </li>
@@ -405,6 +416,31 @@
   <span class="nt">&lt;/a&gt;</span>
 
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuLink"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="full-width-dropdown-sub-menu">Full width dropdown sub-menu</h3>
+
+<div class="bd-example">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu full-width" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu full-width"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
@@ -1227,7 +1263,7 @@
       </div>
     </div>
 
-    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js?201802151144"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+    <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.js?201802201158"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/vendor/holder.min.js"></script>
   <script src="/bootstrap-italia/docs/assets/src/js/docs.js"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

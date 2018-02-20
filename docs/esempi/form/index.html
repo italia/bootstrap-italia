@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../favicon.ico">
+
+    <title>Esempio di form complessa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../dist/css/bootstrap-italia.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1>Esempio di form</h1>
+      <p class="lead">Lorem ipsum grid system.</p>
+
+      <form>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" id="inputEmail4">
+            <label for="inputEmail4">Email</label>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="password" class="form-control" id="inputPassword4">
+            <label for="inputPassword4">Password</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputAddress" value="">
+          <label for="inputAddress">Indirizzo</label>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputAddress2" value="Esempio di campo precompilato">
+          <label for="inputAddress2">Indirizzo secondario</label>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="inputCity">
+            <label for="inputCity">Città</label>
+          </div>
+          <div class="form-group col-md-4">
+            <select id="inputState" class="custom-select">
+              <option selected>Scegli...</option>
+              <option>...</option>
+            </select>
+            <label for="inputState">Comune</label>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" id="inputCAP">
+            <label for="inputCAP">CAP</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-check col-md-6">
+            <input id="checkbox1a" type="checkbox">
+            <label for="checkbox1a">Attivazione</label>
+          </div>
+          <div class="form-group col">
+            <input type="text" class="form-control" id="campofac">
+            <label for="campofac">Campo facoltativo</label>
+          </div>
+        </div>
+      </form>
+
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <label for="validationCustom01">Nome</label>
+            <div class="valid-feedback">
+              Validato!
+            </div>
+          </div>
+          <div class="form-group col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationCustom02" value="" required>
+            <label for="validationCustom02">Cognome</label>
+            <div class="valid-feedback">
+              Validato!
+            </div>
+          </div>
+          <div class="form-group col-md-4 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Per favore scegli uno username.
+              </div>
+            </div>
+            <label for="validationCustomUsername">Username</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-3">
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <label for="validationCustom03">Città</label>
+            <div class="invalid-feedback">
+              Per favore inserisci un nome di città valido.
+            </div>
+          </div>
+          <div class="form-group col-md-3 mb-3">
+            <input type="text" class="form-control" id="validationCustom04" required>
+            <label for="validationCustom04">Nazione</label>
+            <div class="invalid-feedback">
+              Per favore inserisci un nome di nazione valido.
+            </div>
+          </div>
+          <div class="form-group col-md-3 mb-3">
+            <input type="text" class="form-control" id="validationCustom05" required>
+            <label for="validationCustom05">CAP</label>
+            <div class="invalid-feedback">
+              Per favore inserisci un CAP valido.
+            </div>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Accetto i termini e le condizioni.
+          </label>
+          <div class="invalid-feedback">
+            Devi accettare i termini e le condizioni prima di inviare il modulo.
+          </div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Invia</button>
+        <button class="btn btn-secondary ml-3 mt-3" type="submit">Annulla</button>
+      </form>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>
+
+    <script>
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          var forms = document.getElementsByClassName('needs-validation');
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+
+  </body>
+</html>
