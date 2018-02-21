@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.1.1
+ * Bootstrap Italia v0.2.0
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -8568,6 +8568,19 @@ select.form-control, textarea.form-control {
     display: none !important; }
   .select-wrapper select:disabled {
     color: rgba(0, 0, 0, 0.3); }
+
+.dropdown-menu.full-width {
+  width: 100%; }
+  .dropdown-menu.full-width .dropdown-item {
+    display: inline-block;
+    width: auto; }
+    .dropdown-menu.full-width .dropdown-item:hover, .dropdown-menu.full-width .dropdown-item:focus {
+      background: none;
+      text-decoration: underline; }
+
+.pagination .page-item .page-link {
+  border: none;
+  padding: 0.5rem 1rem; }
 
 .cookiebar {
   bottom: 0;
