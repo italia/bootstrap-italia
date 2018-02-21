@@ -158,7 +158,7 @@ $small-font-size: 0.777rem !default;
 $paragraph-margin-bottom:   1.6rem !default;
 
 // Navbar
-$navbar-brand-font-size:  $font-size-base !default;
+$navbar-brand-font-size: 1rem !default;
 
 // Btns
 $btn-text-transform: uppercase;
@@ -258,8 +258,11 @@ $tooltip-arrow-color: $tooltip-bg !default;
 //Modals
 $modal-backdrop-opacity: .8 !default;
 $modal-max-width: 32rem !default;
-$modal-dialog-margin: 1.4rem auto !default;
-$modal-content-padding: 1.4rem !default;
+$modal-dialog-margin-y-sm-up: 1.5rem !default;
+$modal-footer-border-width: 0 !default;
+$modal-header-border-width: 0 !default;
+$modal-header-padding: 1.5rem !default;
+$modal-inner-padding: 1.5rem !default;
 
 // Carousel
 $carousel-bg: #444e57 !default;

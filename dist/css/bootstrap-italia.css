@@ -3661,10 +3661,10 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4874,7 +4874,7 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 1.4rem auto;
+  margin: 0.5rem;
   pointer-events: none; }
   .modal.fade .modal-dialog {
     transition: -webkit-transform 0.3s ease-out;
@@ -4893,7 +4893,7 @@ button.close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: calc(100% - (1.4rem auto * 2)); }
+  min-height: calc(100% - (0.5rem * 2)); }
 
 .modal-content {
   position: relative;
@@ -4936,7 +4936,7 @@ button.close {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 0 solid #cccccc;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px; }
   .modal-header .close {
@@ -4965,7 +4965,7 @@ button.close {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 1rem;
-  border-top: 1px solid #cccccc; }
+  border-top: 0 solid #cccccc; }
   .modal-footer > :not(:first-child) {
     margin-left: .25rem; }
   .modal-footer > :not(:last-child) {
@@ -4981,9 +4981,9 @@ button.close {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto; }
+    margin: 1rem auto; }
   .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2)); }
+    min-height: calc(100% - (1rem * 2)); }
   .modal-sm {
     max-width: 300px; } }
 
@@ -7893,34 +7893,14 @@ small,
 .breadcrumb-item a {
   font-weight: 600; }
 
-.modal-dialog {
-  margin: 1.4rem auto;
-  max-height: 90%; }
-
 .modal-content {
-  border-radius: 0;
-  padding: 1.4rem; }
+  border-radius: 0; }
 
 .modal-header {
-  border-radius: 0;
-  padding: 0;
-  border-width: 0; }
-  .modal-header h5 {
-    margin-bottom: 1.6rem; }
+  border-radius: 0; }
 
 .modal-body {
-  padding: 0;
   margin-bottom: 1.6rem; }
-
-.modal-footer {
-  padding: 0;
-  border-width: 0; }
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    margin: 1.4rem auto; }
-  .modal-dialog-centered {
-    min-height: calc(100% - (1.4rem auto * 2)); } }
 
 *[data-toggle="collapse"] .collapse-icon::before {
   content: "";
