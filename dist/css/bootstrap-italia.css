@@ -4935,13 +4935,13 @@ button.close {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: 0 solid #cccccc;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px; }
   .modal-header .close {
-    padding: 1rem;
-    margin: -1rem -1rem -1rem auto; }
+    padding: 1.5rem;
+    margin: -1.5rem -1.5rem -1.5rem auto; }
 
 .modal-title {
   margin-bottom: 0;
@@ -4952,7 +4952,7 @@ button.close {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 1.5rem; }
 
 .modal-footer {
   display: -webkit-box;
@@ -4964,7 +4964,7 @@ button.close {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 1rem;
+  padding: 1.5rem;
   border-top: 0 solid #cccccc; }
   .modal-footer > :not(:first-child) {
     margin-left: .25rem; }
@@ -4981,9 +4981,9 @@ button.close {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1rem auto; }
+    margin: 1.5rem auto; }
   .modal-dialog-centered {
-    min-height: calc(100% - (1rem * 2)); }
+    min-height: calc(100% - (1.5rem * 2)); }
   .modal-sm {
     max-width: 300px; } }
 
@@ -7893,14 +7893,9 @@ small,
 .breadcrumb-item a {
   font-weight: 600; }
 
-.modal-content {
-  border-radius: 0; }
-
+.modal-content,
 .modal-header {
   border-radius: 0; }
-
-.modal-body {
-  margin-bottom: 1.6rem; }
 
 *[data-toggle="collapse"] .collapse-icon::before {
   content: "";
