@@ -1,0 +1,40 @@
+/*back to top*/
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: $primary;
+    background: rgba($primary, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    display: none;
+    transition: $transition-base;
+    z-index: 999999;
+  }
+  #return-to-top i {
+    color: $white;
+    margin: 0;
+    position: relative;
+    left: 11px;
+    top: 9px;
+    font-size: 20px;
+    transition: $transition-base;
+  }
+  #return-to-top:hover {
+    background: rgba($primary, 0.9);
+  }
+  #return-to-top:hover i {
+    color: $white;
+    top: 5px;
+  }
+  
+  /*forward*/
+  .forward {
+    display: block;
+    text-align: center;
+    font-size: $font-size-base * 3;
+    transition: $transition-base;
+  }
