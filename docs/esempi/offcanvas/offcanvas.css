@@ -6,7 +6,7 @@ body {
 body {
   padding-top: 56px;
 }
-
+ 
 @media (max-width: 767.98px) {
   .offcanvas-collapse {
     position: fixed;
