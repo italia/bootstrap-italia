@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../favicon.ico">
+
+    <title>Template di base per i Comuni</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../dist/css/bootstrap-italia.min.css" rel="stylesheet">
+    <link href="../../../dist/css/italia-icon-font.css?201802191543" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="comuni.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+          <p class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti.
+              <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
+          </p>
+          <p>
+              <button data-accept="cookiebar" class="btn btn-info mr-2">Accetto</button>
+              <a href="" class="btn btn-outline-info">Privacy policy</a>
+          </p>
+      </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Nome amministrazione afferente</a>
+
+        <div class="dropdown ml-auto">
+          <a href="#" class="dropdown-toggle text-white" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            ITA
+          </a>
+          <div class="dropdown-menu right-0" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">عربي</a>
+            <a class="dropdown-item" href="#">中文网</a>
+            <a class="dropdown-item" href="#">Deutsch</a>
+            <a class="dropdown-item" href="#">Español</a>
+            <a class="dropdown-item" href="#">Français</a>
+            <a class="dropdown-item" href="#">日本語</a>
+            <a class="dropdown-item" href="#">Portuguese</a>
+            <a class="dropdown-item" href="#">НА РУССКОМ</a>
+            <a class="dropdown-item" href="#">УКРАЇНСЬКA</a>
+            <a class="dropdown-item" href="#">TÜRKÇE</a>
+          </div>
+
+        </div>
+
+          <!--<ul class="navbar-nav ">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ITA</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">عربي</a>
+                <a class="dropdown-item" href="#">中文网</a>
+                <a class="dropdown-item" href="#">Deutsch</a>
+                <a class="dropdown-item" href="#">Español</a>
+                <a class="dropdown-item" href="#">Français</a>
+                <a class="dropdown-item" href="#">日本語</a>
+                <a class="dropdown-item" href="#">НА РУССКОМ</a>
+                <a class="dropdown-item" href="#">УКРАЇНСЬКA</a>
+                <a class="dropdown-item" href="#">TÜRKÇE</a>
+              </div>
+            </li>
+          </ul>    -->
+      </div>
+    </nav>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-6">
+          <div class="media header-title">
+            <img class="img-fluid mr-3" data-src="holder.js/64x64" alt="75x80" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1619948f286%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1619948f286%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+            <div class="media-body">
+              <h1 class="display-3">Nome della Pubblica Amministrazione</h1>
+              <small>sit amet nibh libero</small>
+            </div>
+          </div>
+          </div>
+          <div class="col-4 d-block d-sm-block d-md-none text-right align-middle">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchForm" aria-controls="searchForm" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="it-search"></i>
+            </button>
+          </div>
+           <div class="col-12 col-md-6">
+          <div class="navbar-expand-md header-utils">
+              <div class="header-social text-right">
+                <ul class="list-inline">
+                  <li class="list-inline-item">Seguici su</li>
+                    <li class="list-inline-item"><a href=""><i class="it-facebook"></i><span class="sr-only">Facebook</span></a></li>
+                    <li class="list-inline-item"><a href=""><i class="it-twitter"></i><span class="sr-only">Twitter</span></a></li>
+                    <li class="list-inline-item"><a href=""><i class="it-youtube"></i><span class="sr-only">Youtube</span></a></li>
+                  </ul>
+              </div>
+              <form class="form-inline my-2 my-lg-0 collapse navbar-collapse" id="searchForm">
+                <input class="form-control mr-sm-2 ml-auto" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<nav class="nav">
+      <a class="nav-link" href="#">A est rerum</a>
+      <a class="nav-link" href="#">Voluptatibus esse corporis</a>
+      <a class="nav-link" href="#">blanditiis soluta exercitationem</a>
+      <a class="nav-link" href="#">voluptatem eligendi laboriosam</a>
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu full-width" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </nav>-->
+
+    <nav class="navbar navbar-expand-md bg-italia">
+      <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="#">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Notifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Switch account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+              <div class="dropdown-menu full-width py-4" aria-labelledby="dropdown02">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md mb-3">
+                      <a href="#" class="display-4">Autem reiciendis maiores</a>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Sed et velit</a></li>
+                        <li><a href="#">Autem quae numquam</a></li>
+                        <li><a href="#">Nulla quibusdam necessitatibus</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md mb-3">
+                      <a href="#" class="display-4">Blanditiis soluta exercitationem</a>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Sed et velit</a></li>
+                        <li><a href="#">Autem quae numquam</a></li>
+                        <li><a href="#">Nulla quibusdam necessitatibus</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md mb-3">
+                      <a href="#" class="display-4">Voluptatem eligendi laboriosam</a>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Sed et velit</a></li>
+                        <li><a href="#">Autem quae numquam</a></li>
+                        <li><a href="#">Nulla quibusdam necessitatibus</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Accedi</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero hero-fluid">
+      <div class="container">
+        <h1 class="hero-heading display-4">Hero fluido</h1>
+        <p class="lead">Questo è un hero modificato che occupa l'intero spazio orizzontale del suo contenitore.</p>
+        <hr class="my-4">
+        <p>Utilizza le classi di utilità per la tipografia e la spaziatura per l'ingombro del contenuto all'interno del contenitore più grande.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Per saperne di più</a>
+        </p>
+      </div>
+    </div>
+
+    <main role="main">
+      <section id="section1">
+        <div class="container">
+          <h2>a est rerum</h2>
+          <div class="row">
+            <div class="col-md">
+              <h3 class="display-4 mt-3">Titolo di esempio</h3>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+              </div>
+            </div>
+            <div class="col-md">
+              <h3 class="display-4 mt-3">Titolo di esempio</h3>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+              </div>
+            </div>
+            <div class="col-md">
+              <h3 class="display-4 mt-3">Titolo di esempio</h3>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-deck mt-3">
+            <div class="card bg-primary">
+              <div class="card-body">
+                <a href="#" class="card-link text-white">Another link</a>
+              </div>
+            </div>
+            <div class="card bg-primary">
+              <div class="card-body">
+                <a href="#" class="card-link text-white">Another link</a>
+              </div>
+            </div>
+            <div class="card bg-primary">
+                <div class="card-body">
+                  <a href="#" class="card-link text-white">Another link</a>
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <div class="card-body">
+                  <a href="#" class="card-link text-white">Another link</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section2" class="bg-100">
+        <div class="container">
+          <h2>a est rerum</h2>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22383%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20383%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1619a1005dc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A19pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1619a1005dc%22%3E%3Crect%20width%3D%22383%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22142.91666793823242%22%20y%3D%2298.7%22%3E383x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22383%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20383%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1619a1005dd%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A19pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1619a1005dd%22%3E%3Crect%20width%3D%22383%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22142.91666793823242%22%20y%3D%2298.7%22%3E383x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22383%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20383%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1619a1005df%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A19pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1619a1005df%22%3E%3Crect%20width%3D%22383%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22142.91666793823242%22%20y%3D%2298.7%22%3E383x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section3">
+        <div class="container">
+          <h2>a est rerum</h2>
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="pr-3 collapse-icon"></i>Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="pr-3 collapse-icon"></i>Collapsible Group Item #2
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="pr-3 collapse-icon"></i>Collapsible Group Item #3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main><!-- /.container -->
+
+    <footer class="footer bg-300 py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="media footer-title">
+              <img class="img-fluid mr-3" data-src="holder.js/64x64" alt="75x80" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1619948f286%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1619948f286%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <div class="media-body">
+                <h1 class="display-3">Nome della Pubblica Amministrazione</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Argomento 1</h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="">blanditiis soluta exercitationem</a></li>
+              <li class="list-group-item"><a href="">voluptatem eligendi laboriosam</a></li>
+              <li class="list-group-item"><a href="">laboriosam porro dolor</a></li>
+              <li class="list-group-item"><a href="">sed et velit</a></li>
+            </ul>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Argomento 2</h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="">blanditiis soluta exercitationem</a></li>
+              <li class="list-group-item"><a href="">voluptatem eligendi laboriosam</a></li>
+              <li class="list-group-item"><a href="">laboriosam porro dolor</a></li>
+              <li class="list-group-item"><a href="">sed et velit</a></li>
+            </ul>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Argomento 3</h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="">blanditiis soluta exercitationem</a></li>
+              <li class="list-group-item"><a href="">voluptatem eligendi laboriosam</a></li>
+              <li class="list-group-item"><a href="">laboriosam porro dolor</a></li>
+              <li class="list-group-item"><a href="">sed et velit</a></li>
+            </ul>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Argomento 4</h2>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="">blanditiis soluta exercitationem</a></li>
+              <li class="list-group-item"><a href="">voluptatem eligendi laboriosam</a></li>
+              <li class="list-group-item"><a href="">laboriosam porro dolor</a></li>
+              <li class="list-group-item"><a href="">sed et velit</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Contatti</h2>
+            <div>
+              <h3 class="display-4">Recapiti</h3>
+              <address>
+                Via autem reiciendis maiores<br>
+                autem reiciendis maiores<br>
+                Tel. (+00) 00.0000.0000
+              </address>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Contatti</h2>
+            <div>
+              <h3 class="display-4">Recapiti</h3>
+              <address>
+                Via blanditiis soluta exercitationem<br>
+                blanditiis soluta exercitationem<br>
+                Tel. (+00) 00.0000.0000
+              </address>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Contatti</h2>
+            <div>
+              <h3 class="display-4">Indirizzo PEC</h3>
+              <p><a href="">indirizzo.pec@gov.it</a></p>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <h2 class="display-3 mb-4">Seguici su</h2>
+            <div>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href=""><i class="it-facebook"></i><span class="sr-only">Facebook</span></a></li>
+                <li class="list-inline-item"><a href=""><i class="it-twitter"></i><span class="sr-only">Twitter</span></a></li>
+                <li class="list-inline-item"><a href=""><i class="it-youtube"></i><span class="sr-only">Youtube</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list-inline border-top">
+          <li class="list-inline-item"><a href="" title="Privacy policy">Privacy</a></li>
+          <li class="list-inline-item"><a href="" title="Note legali">Note legali</a></li>
+          <li class="list-inline-item"><a href="" title="Contatti">Contatti</a></li>
+          <li class="list-inline-item"><a href="" title="a est rerum">a est rerum</a></li>
+          <li class="list-inline-item">autem reiciendis maiores</li>
+        </ul>
+      </div>
+    </footer>
+
+    
+
+
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              Non dimenticare che questa pagina di esempio è attualmente in lavorazione e non è consigliabile usarla come template di partenza per la realizzazione di un sito web.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-block" data-dismiss="modal" aria-label="Close">Ho capito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
