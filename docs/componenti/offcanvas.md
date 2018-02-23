@@ -7,8 +7,19 @@ group: componenti
 
 ## Esempio
 
-{% example html %}
+<style>
+  /* Style override for Documentation purposes */
+  .bd-example {
+    height: 480px;
+  }
+</style>
 
+<div class="bd-example">
+    <iframe class="iframe" data-role="window" src="../../esempi/offcanvas/componente.html" sandbox="allow-same-origin allow-scripts allow-forms" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="yes" frameborder="0" width="100%" height="100%">
+            </iframe>
+</div>
+
+{% highlight html %}
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Offcanvas navbar</a>
   <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
@@ -44,4 +55,4 @@ group: componenti
     </form>
   </div>
 </nav>
-{% endexample %}
+{% endhighlight %}
