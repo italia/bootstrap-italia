@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: Back to top
-description: Test Documentation 
+description: Consente agli utenti di scorrere agevolmente verso la parte superiore della pagina 
 group: componenti-aggiuntivi
 toc: true
 ---
 
-### Codice HTML
+### Esempio
 
 <style>
   /* Style override for Documentation purposes */
-  #return-to-top {
+  .return-to-top {
     position: relative;
     bottom: unset;
     right: unset;
@@ -19,9 +19,13 @@ toc: true
   }
 </style>
 
-<a href="javascript:" id="return-to-top"><i class="it-collapse"></i></a>
+<a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
+
+### Codice HTML
+
+Devi usare un link con l'attributo `data-attribute="return-to-top"` e con la classe `.return-to-top`.
 
 {% highlight html %}
-<a href="javascript:" id="return-to-top"><i class="it-collapse"></i></a>
+<a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
 {% endhighlight %}
 
