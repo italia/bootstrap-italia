@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.1.1
+ * Bootstrap Italia v0.2.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -10370,7 +10370,7 @@ return jQuery;
 } );
 
 /*!
- * Bootstrap Italia v0.1.1
+ * Bootstrap Italia v0.2.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -12822,13 +12822,13 @@ return Popper;
 //# sourceMappingURL=popper.js.map
 
 /*!
- * Bootstrap Italia v0.1.1
+ * Bootstrap Italia v0.2.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
 
 /*!
- * Bootstrap Italia v0.1.1
+ * Bootstrap Italia v0.2.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -17987,5 +17987,30 @@ $(document).ready(function () {
   var $inputTime = $('.timepicker').pickatime();
   var pickerTime = $input.pickatime('picker');
 });
+// ===== Scroll to Top ====
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() >= 50) {
+    $('a[data-attribute*="return-to-top"]').fadeIn(200);
+  } else {
+    $('a[data-attribute*="return-to-top"]').fadeOut(200);
+  }
+});
+$('a[data-attribute*="return-to-top"]').on('click', function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500);
+});
+
+// ===== Forward ====
+$('a[data-attribute*="forward"]').on('click', function (event) {
+  var target = $(this.hash);
+  if (target.length) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 500);
+  }
+});
+
 console.log("bootstrap italia");
 }();

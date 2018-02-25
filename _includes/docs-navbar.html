@@ -1,4 +1,4 @@
-<header class="navbar-main navbar navbar-dark bd-navbar">
+<header class="navbar-main navbar navbar-dark bd-navbar" id="particles-js">
   <a class="navbar-brand py-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
     <div class="d-flex flex-row">
       {%- include icons/it-logo.svg height="48" class="d-block" -%}
@@ -10,8 +10,8 @@
   </a>
 
   {% if page.layout == "docs" %}
-  <button class="btn btn-secondary bd-menu-docs-toggle d-md-none p-1" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-    {%- include icons/menu.svg width="30" height="30" -%}
+  <button class="btn btn-secondary d-md-none px-2" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    menu
   </button>
   {% endif %}
 

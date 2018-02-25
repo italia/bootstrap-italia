@@ -38,6 +38,7 @@ var Paths = {
     './src/js/plugins/forms.js',
     './src/js/plugins/custom-select.js',
     './src/js/plugins/datetimepicker.js',
+    './src/js/plugins/forward-back-to-top.js',
     './src/js/' + FILENAME + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
