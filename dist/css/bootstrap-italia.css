@@ -8653,4 +8653,42 @@ img.zoom-img {
 .media-body {
   overflow: visible; }
 
+.forward {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  transition: all 0.2s ease-in-out; }
+  .forward:hover {
+    text-decoration: none; }
+
+/*back to top*/
+.return-to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: #0073e6;
+  background: rgba(0, 115, 230, 0.7);
+  width: 48px;
+  height: 48px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 1; }
+  .return-to-top i {
+    color: white;
+    margin: 0;
+    position: relative;
+    left: 10px;
+    top: 8px;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out; }
+  .return-to-top:hover {
+    background: rgba(0, 115, 230, 0.9);
+    text-decoration: none; }
+    .return-to-top:hover i {
+      color: white;
+      top: 5px; }
+
 /*# sourceMappingURL=bootstrap-italia.css.map */
