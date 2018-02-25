@@ -8653,6 +8653,14 @@ img.zoom-img {
 .media-body {
   overflow: visible; }
 
+.forward {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  transition: all 0.2s ease-in-out; }
+  .forward:hover {
+    text-decoration: none; }
+
 /*back to top*/
 .return-to-top {
   position: fixed;
@@ -8682,14 +8690,5 @@ img.zoom-img {
     .return-to-top:hover i {
       color: white;
       top: 5px; }
-
-/*forward*/
-.forward {
-  display: block;
-  text-align: center;
-  font-size: 3rem;
-  transition: all 0.2s ease-in-out; }
-  .forward:hover {
-    text-decoration: none; }
 
 /*# sourceMappingURL=bootstrap-italia.css.map */

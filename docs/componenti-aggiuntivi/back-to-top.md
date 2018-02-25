@@ -8,6 +8,8 @@ toc: true
 
 ### Esempio
 
+Per aggiungere un bottone che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-attribute="return-to-top"` e con una classe `.return-to-top` chesi occupa del suo posizionamento in basso a destra nella pagina.
+
 <style>
   /* Style override for Documentation purposes */
   .return-to-top {
@@ -19,13 +21,8 @@ toc: true
   }
 </style>
 
+
+{% example html %}
 <a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
-
-### Codice HTML
-
-Devi usare un link con l'attributo `data-attribute="return-to-top"` e con la classe `.return-to-top`.
-
-{% highlight html %}
-<a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
-{% endhighlight %}
+{% endexample %}
 
