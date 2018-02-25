@@ -4661,10 +4661,13 @@ $(".form-group input, .form-group select, .form-group textarea").on("focusout", 
   }
   $(this).closest(".form-group").removeClass("active");
 });
+$("input[class$='picker']").on("focusout", function () {
+  $(this).siblings("label").addClass("active");
+});
 
 // Inizializzazione effetto active sulle label quando i loro input valorizzati
 $(function () {
-  $('.form-group :input[value]').siblings("label").addClass("active");
+  $(".form-group :input[value], input[class$='picker']").siblings("label").addClass("active");
 });
 
 // Gestione visibilità password
@@ -5143,5 +5146,17 @@ var Select = function ($) {
   return Select;
 }(jQuery);
 
+$(document).ready(function () {
+  var $input = $('.datepicker').pickadate({
+    formatSubmit: 'yyyy/mm/dd',
+    container: 'body',
+    closeOnSelect: false,
+    closeOnClear: false
+  });
+  var picker = $input.pickadate('picker');
+
+  var $inputTime = $('.timepicker').pickatime();
+  var pickerTime = $input.pickatime('picker');
+});
 console.log("bootstrap italia");
 }();
