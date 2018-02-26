@@ -127,6 +127,19 @@ su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-ita
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
 
+### Creare una nuova release
+
+Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi:
+
+* Aggiornamento numero di versione in formato semver x.x.x su file `package.json` e `_config.yml`
+* Lanciare i comandi `npm run build && npm run documentation-build`
+* Lanciare il comando `npm i` per aggiornare il file `package.lock`
+* Commit e push delle modifiche
+* Tag del commit con numero di versione in formato semver x.x.x
+* Creazione manuale di un file compresso `bootstrap-italia.zip` della cartella `/dist`
+* Scrivere le release notes su GitHub e allegare il suddetto file compresso
+* `npm publish` per aggiornare la versione su `npm`
+
 ---
 
 ###### Continua la lettura >
