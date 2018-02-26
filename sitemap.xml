@@ -4,7 +4,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/come-iniziare/accessibility/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/alerts/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/alert/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/utilities/allineamento-verticale/</loc>
@@ -67,7 +67,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/utilities/display/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/dropdowns/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/dropdown/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/componenti/elenchi/</loc>
@@ -85,7 +85,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/utilities/float/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/forms/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/form/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/componenti-aggiuntivi/forward/</loc>
@@ -148,7 +148,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/componenti/paginazione/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/popovers/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/popover/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/utilities/position/</loc>
@@ -190,7 +190,7 @@
 <loc>/bootstrap-italia/bootstrap-italia/docs/contenuti/tipografia/</loc>
 </url>
 <url>
-<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/tooltips/</loc>
+<loc>/bootstrap-italia/bootstrap-italia/docs/componenti/tooltip/</loc>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/utilities/visibility/</loc>
@@ -219,11 +219,11 @@
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/esempi/comuni/index.html</loc>
-<lastmod>2018-02-25T19:14:22+01:00</lastmod>
+<lastmod>2018-02-26T09:59:02+01:00</lastmod>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/esempi/cookiebar/index.html</loc>
-<lastmod>2018-02-26T09:30:46+01:00</lastmod>
+<lastmod>2018-02-26T09:59:02+01:00</lastmod>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/esempi/cover/index.html</loc>
@@ -239,7 +239,7 @@
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/esempi/form/index.html</loc>
-<lastmod>2018-02-25T19:14:22+01:00</lastmod>
+<lastmod>2018-02-26T09:59:02+01:00</lastmod>
 </url>
 <url>
 <loc>/bootstrap-italia/bootstrap-italia/docs/esempi/grid/index.html</loc>
