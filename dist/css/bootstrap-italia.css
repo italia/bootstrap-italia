@@ -8582,6 +8582,26 @@ select.form-control, textarea.form-control {
   border: none;
   padding: 0.5rem 1rem; }
 
+@media (max-width: 767.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 1em;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-y: auto;
+    background-color: #333333;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+    .offcanvas-collapse.open {
+      -webkit-transform: translateX(-1rem);
+              transform: translateX(-1rem); } }
+
 .cookiebar {
   bottom: 0;
   left: 0;

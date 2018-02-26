@@ -9,6 +9,7 @@ group: componenti
 
 <style>
   /* Style override for Documentation purposes */
+
   .bd-example {
     height: 480px;
   }
@@ -22,7 +23,7 @@ group: componenti
 {% highlight html %}
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Offcanvas navbar</a>
-  <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+  <button class="navbar-toggler p-0 border-0 ml-auto" type="button" data-toggle="offcanvas">
     <span class="navbar-toggler-icon"></span>
   </button>
 

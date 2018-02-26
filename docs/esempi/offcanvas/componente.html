@@ -12,47 +12,43 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../dist/css/bootstrap-italia.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="offcanvas.css" rel="stylesheet">
-
-    <style>
-      /* Style override for Documentation purposes */
-      .navbar-expand-md .navbar-toggler {
-        display: block;
-      }
-
-      .offcanvas-collapse {
-        position: fixed;
-        top: 56px; /* Height of navbar */
-        bottom: 0;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        overflow-y: auto;
-        background-color: var(--gray-dark);
-        transition: -webkit-transform .3s ease-in-out;
-        transition: transform .3s ease-in-out;
-        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-      }
-
-      .offcanvas-collapse.open {
-        -webkit-transform: translateX(-1rem);
-        transform: translateX(-1rem); /* Account for horizontal padding on navbar */
-      }
-
-      .navbar-expand-md .navbar-nav {
-        flex-direction: column;
-      }
-
-      .navbar-expand-md .navbar-collapse {
-        display: block !important;
-      }
-      .navbar-expand-md .navbar-nav .dropdown-menu {
-        position: static;
-      }
-    </style>
+  <style>
+    /* Style override for Documentation purposes */
+  
+    .navbar-expand-md .navbar-toggler {
+      display: block;
+    }
+  
+    .offcanvas-collapse {
+      position: fixed;
+      top: 56px;
+      bottom: 0;
+      left: 1em;
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      overflow-y: auto;
+      background-color: #333;
+      transition: transform .3s ease-in-out;
+      transform: translateX(100%);
+    }
+  
+    .offcanvas-collapse.open {
+      transform: translateX(-1rem);
+    }
+  
+    .navbar-expand-md .navbar-nav {
+      flex-direction: column;
+    }
+  
+    .navbar-expand-md .navbar-collapse {
+      display: block !important;
+    }
+    .navbar-expand-md .navbar-nav .dropdown-menu {
+      position: static;
+    }
+  </style>
+    
   </head>
 
   <body class="bg-light">
@@ -103,6 +99,6 @@
     <!-- Holder renders image placeholders entirely in browser. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 
-    <script src="offcanvas.js"></script>
+
   </body>
 </html>
