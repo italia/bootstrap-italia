@@ -5146,18 +5146,130 @@ var Select = function ($) {
   return Select;
 }(jQuery);
 
-$(document).ready(function () {
-  var $input = $('.datepicker').pickadate({
-    formatSubmit: 'yyyy/mm/dd',
-    container: 'body',
-    closeOnSelect: false,
-    closeOnClear: false
-  });
-  var picker = $input.pickadate('picker');
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): DatePicker.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-  var $inputTime = $('.timepicker').pickatime();
-  var pickerTime = $input.pickatime('picker');
-});
+var DatePicker = function ($) {
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'datePicker';
+  var DATA_KEY = 'bs.date-picker';
+  var VERSION = 'v4.0.0';
+  var DATA_API_TIME = '[data-action="timepicker"]';
+  var DATA_API_DATE = '[data-action="datepicker"]';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var DatePicker = function () {
+    function DatePicker(element) {
+      _classCallCheck(this, DatePicker);
+
+      this._element = element;
+    }
+
+    // Getters
+
+    // static
+
+    DatePicker._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $element = $(this);
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new DatePicker(this);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError('No method named "' + config + '"');
+          }
+          data[config](this);
+        }
+      });
+    };
+
+    _createClass(DatePicker, null, [{
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+
+    return DatePicker;
+  }();
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  $(function () {
+
+    // Italian
+
+    jQuery.extend(jQuery.fn.pickadate.defaults, {
+      monthsFull: ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'],
+      monthsShort: ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'],
+      weekdaysFull: ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'],
+      weekdaysShort: ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'],
+      today: 'Oggi',
+      clear: 'Cancella',
+      close: 'Chiudi',
+      firstDay: 1,
+      format: 'dddd d mmmm yyyy',
+      formatSubmit: 'yyyy/mm/dd',
+      labelMonthNext: 'Mese successivo',
+      labelMonthPrev: 'Mese precedente',
+      labelMonthSelect: 'Seleziona un mese',
+      labelYearSelect: 'Seleziona un anno'
+    });
+
+    jQuery.extend(jQuery.fn.pickatime.defaults, {
+      clear: 'Cancella',
+      format: 'HH:i',
+      formatSubmit: 'HH:i'
+    });
+
+    $(DATA_API_DATE).pickadate();
+
+    $(DATA_API_TIME).pickatime();
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME] = DatePicker._jQueryInterface;
+  $.fn[NAME].Constructor = DatePicker;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return DatePicker._jQueryInterface;
+  };
+
+  return DatePicker;
+}($);
+
 // ===== Scroll to Top ====
 $(window).on('scroll', function () {
   if ($(this).scrollTop() >= 50) {
@@ -5166,6 +5278,7 @@ $(window).on('scroll', function () {
     $('a[data-attribute*="return-to-top"]').fadeOut(200);
   }
 });
+
 $('a[data-attribute*="return-to-top"]').on('click', function () {
   $('body,html').animate({
     scrollTop: 0

@@ -63,13 +63,13 @@
   pages:
     - title: Introduzione
     - title: Cookiebar
-      status: work in progress
+      status: wip
     - title: Forward
-      status: work in progress
+      status: wip
     - title: Back to top
-      status: work in progress
-    # - title: Image Grid
-    # - title: Zoom
+      status: wip
+    - title: Datepicker
+      status: wip
 
 - title: Utilities
   pages:
