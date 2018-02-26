@@ -19,6 +19,13 @@ var FILENAME = 'bootstrap-italia';
 
 var Paths = {
   HERE: './',
+  VENDOR_JS: [
+    './node_modules/jquery/dist/jquery.js',
+    './node_modules/popper.js/dist/umd/popper.js',
+    './node_modules/pickadate/lib/compressed/picker.js',
+    './node_modules/pickadate/lib/compressed/picker.date.js',
+    './node_modules/pickadate/lib/compressed/picker.time.js'
+  ],
   SOURCE_SCSS: 'src/scss/' + FILENAME + '.scss',
   SOURCE_JS: [
     './node_modules/bootstrap/js/src/util.js',
@@ -37,11 +44,14 @@ var Paths = {
     './src/js/plugins/zoom.js',
     './src/js/plugins/forms.js',
     './src/js/plugins/custom-select.js',
-    './src/js/plugins/forward-back-to-top.js',
+    './src/js/plugins/date-picker.js',
+    './src/js/plugins/back-to-top.js',
+    './src/js/plugins/forward.js',
     './src/js/' + FILENAME + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
-  SOURCE_DOCUMENTATION_JS: 'docs/assets/src/js/**/*.js',
+  VENDOR_DOCUMENTATION_JS: 'docs/assets/src/js/vendor/*.js',
+  SOURCE_DOCUMENTATION_JS: 'docs/assets/src/js/docs.js',
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
@@ -149,11 +159,7 @@ gulp.task('js-min', gulp.series('js', function createMinifiedJS(done) {
 }))
 
 gulp.task('js-bundle', gulp.series('js', function createBundleJS(done) {
-  var BUNDLE_JS = [
-    './node_modules/jquery/dist/jquery.js',
-    './node_modules/popper.js/dist/umd/popper.js',
-    Paths.DIST + '/js/' + FILENAME + '.js'
-  ];
+  var BUNDLE_JS = Paths.VENDOR_JS.concat(Paths.DIST + '/js/' + FILENAME + '.js');
   return gulp.src(BUNDLE_JS)
     .pipe(wrapper({
       header: bootstrapItaliaBanner +
@@ -201,11 +207,12 @@ gulp.task('docs-scss', function createDocumentationSCSS(done) {
 })
 
 gulp.task('docs-js-min', function createDocumentationJS(done) {
-  return gulp.src(Paths.SOURCE_DOCUMENTATION_JS)
+  return gulp.src([
+    Paths.VENDOR_DOCUMENTATION_JS,
+    Paths.SOURCE_DOCUMENTATION_JS
+  ])
     .pipe(concat('docs.js'))
-    .pipe(sourcemaps.init())
     .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
     .pipe(rename({
       suffix: '.min'
     }))
