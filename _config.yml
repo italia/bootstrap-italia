@@ -39,11 +39,11 @@ plugins:
 
 # Social
 title:              "Bootstrap Italia"
-description:        "Tema Bootstrap aderente alle linee guida per i servizi web delle Pubbliche Amministrazioni"
+description:        "Tema Bootstrap conforme alle linee guida per i servizi web delle Pubbliche Amministrazioni"
 authors:            "Team per la Trasformazione Digitale"
 authors_url:        "https://teamdigitale.governo.it/"
-social_image_path:  "TODO"
-social_logo_path:   "TODO"
+social_card_path:   "/docs/assets/img/favicons/social-card.png"
+social_logo_path:   "/docs/assets/img/favicons/android-chrome-192x192.png"
 
 # Custom variables
 current_version:      0.3.0
