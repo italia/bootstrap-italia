@@ -44,6 +44,7 @@ var Paths = {
     './src/js/plugins/zoom.js',
     './src/js/plugins/forms.js',
     './src/js/plugins/custom-select.js',
+    './src/js/plugins/spid-sp-access-button.min.js',
     './src/js/plugins/date-picker.js',
     './src/js/plugins/back-to-top.js',
     './src/js/plugins/forward.js',
