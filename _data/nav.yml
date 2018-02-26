@@ -22,7 +22,7 @@
 - title: Componenti
   pages:
     - title: Introduzione
-    - title: Alerts
+    - title: Alert
     - title: Badge
     - title: Barre di Avanzamento
     - title: Breadcrumb
@@ -35,10 +35,10 @@
     - title: Checkbox
     - title: Collapse
       status: wip
-    - title: Dropdowns
+    - title: Dropdown
       status: wip
     - title: Elenchi
-    - title: Forms
+    - title: Form
       status: wip
     - title: Hero
     - title: Input group
@@ -51,13 +51,13 @@
       status: to do
     - title: Paginazione
       status: wip
-    - title: Popovers
+    - title: Popover
     - title: Radio Button
     - title: Scrollspy
     - title: Select
     - title: Tab
       status: wip
-    - title: Tooltips
+    - title: Tooltip
 
 - title: Componenti Aggiuntivi
   pages:
