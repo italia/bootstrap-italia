@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.2.0
+ * Bootstrap Italia v0.2.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -4661,10 +4661,13 @@ $(".form-group input, .form-group select, .form-group textarea").on("focusout", 
   }
   $(this).closest(".form-group").removeClass("active");
 });
+$("input[class$='picker']").on("focusout", function () {
+  $(this).siblings("label").addClass("active");
+});
 
 // Inizializzazione effetto active sulle label quando i loro input valorizzati
 $(function () {
-  $('.form-group :input[value]').siblings("label").addClass("active");
+  $(".form-group :input[value], input[class$='picker']").siblings("label").addClass("active");
 });
 
 // Gestione visibilità password
@@ -5142,6 +5145,156 @@ var Select = function ($) {
 
   return Select;
 }(jQuery);
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.0.0): DatePicker.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+var DatePicker = function ($) {
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'datePicker';
+  var DATA_KEY = 'bs.date-picker';
+  var VERSION = 'v4.0.0';
+  var DATA_API_TIME = '[data-action="timepicker"]';
+  var DATA_API_DATE = '[data-action="datepicker"]';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
+
+  var DatePicker = function () {
+    function DatePicker(element) {
+      _classCallCheck(this, DatePicker);
+
+      this._element = element;
+    }
+
+    // Getters
+
+    // static
+
+    DatePicker._jQueryInterface = function _jQueryInterface(config) {
+      return this.each(function () {
+        var $element = $(this);
+        var data = $element.data(DATA_KEY);
+
+        if (!data) {
+          data = new DatePicker(this);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (typeof data[config] === 'undefined') {
+            throw new TypeError('No method named "' + config + '"');
+          }
+          data[config](this);
+        }
+      });
+    };
+
+    _createClass(DatePicker, null, [{
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+
+    return DatePicker;
+  }();
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  $(function () {
+
+    // Italian
+
+    jQuery.extend(jQuery.fn.pickadate.defaults, {
+      monthsFull: ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'],
+      monthsShort: ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'],
+      weekdaysFull: ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'],
+      weekdaysShort: ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'],
+      today: 'Oggi',
+      clear: 'Cancella',
+      close: 'Chiudi',
+      firstDay: 1,
+      format: 'dddd d mmmm yyyy',
+      formatSubmit: 'yyyy/mm/dd',
+      labelMonthNext: 'Mese successivo',
+      labelMonthPrev: 'Mese precedente',
+      labelMonthSelect: 'Seleziona un mese',
+      labelYearSelect: 'Seleziona un anno'
+    });
+
+    jQuery.extend(jQuery.fn.pickatime.defaults, {
+      clear: 'Cancella',
+      format: 'HH:i',
+      formatSubmit: 'HH:i'
+    });
+
+    $(DATA_API_DATE).pickadate();
+
+    $(DATA_API_TIME).pickatime();
+  });
+
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
+
+  $.fn[NAME] = DatePicker._jQueryInterface;
+  $.fn[NAME].Constructor = DatePicker;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return DatePicker._jQueryInterface;
+  };
+
+  return DatePicker;
+}($);
+
+// ===== Scroll to Top ====
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() >= 50) {
+    $('a[data-attribute*="return-to-top"]').fadeIn(200);
+  } else {
+    $('a[data-attribute*="return-to-top"]').fadeOut(200);
+  }
+});
+
+$('a[data-attribute*="return-to-top"]').on('click', function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500);
+});
+
+// ===== Forward ====
+$('a[data-attribute*="forward"]').on('click', function (event) {
+  var target = $(this.hash);
+  if (target.length) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 500);
+  }
+});
 
 console.log("bootstrap italia");
 }();

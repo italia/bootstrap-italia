@@ -5,12 +5,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Una utility per nascondere degli elementi su tutti i dispositivi a eccezione degli screen readers.">
+<meta name="description" content="Un comodo componente per la selezione di una data o di un orario.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.6.2">
 <meta name="robots" content="noindex">
 
-<title>Screenreaders · Bootstrap Italia</title>
+<title>Datepicker · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 
@@ -41,14 +41,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="@https://twitter.com/teamdigitaleIT">
-<meta name="twitter:title" content="Screenreaders">
-<meta name="twitter:description" content="Una utility per nascondere degli elementi su tutti i dispositivi a eccezione degli screen readers.">
+<meta name="twitter:title" content="Datepicker">
+<meta name="twitter:description" content="Un comodo componente per la selezione di una data o di un orario.">
 <meta name="twitter:image" content="/bootstrap-italiaTODO">
 
 <!-- Facebook -->
-<meta property="og:url" content="/bootstrap-italia/docs/utilities/screenreaders/">
-<meta property="og:title" content="Screenreaders">
-<meta property="og:description" content="Una utility per nascondere degli elementi su tutti i dispositivi a eccezione degli screen readers.">
+<meta property="og:url" content="/bootstrap-italia/docs/componenti-aggiuntivi/datepicker/">
+<meta property="og:title" content="Datepicker">
+<meta property="og:description" content="Un comodo componente per la selezione di una data o di un orario.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italiaTODO">
 <meta property="og:image:secure_url" content="/bootstrap-italiaTODO">
@@ -238,7 +238,7 @@
               Tab <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/tooltips/">
               Tooltips</a></li></ul>
-    </div><div class="bd-toc-item">
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
         Componenti Aggiuntivi
       </a>
@@ -251,10 +251,10 @@
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/forward/">
               Forward <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
-              Back to top <span class="badge badge-info">wip</span></a></li><li>
+              Back to top <span class="badge badge-info">wip</span></a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/datepicker/">
               Datepicker <span class="badge badge-info">wip</span></a></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
         Utilities
       </a>
@@ -289,7 +289,7 @@
             <a href="/bootstrap-italia/docs/utilities/media-object/">
               Media object</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/position/">
-              Position</a></li><li class="active bd-sidenav-active">
+              Position</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/screenreaders/">
               Screenreaders</a></li><li>
             <a href="/bootstrap-italia/docs/utilities/spaziature/">
@@ -311,23 +311,103 @@
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#panoramica">Panoramica</a></li>
+<li class="toc-entry toc-h2"><a href="#calendario">Calendario</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#usabilità">Usabilità</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#scelta-oraria">Scelta oraria</a></li>
+<li class="toc-entry toc-h2"><a href="#personalizzazione">Personalizzazione</a></li>
 </ul>
           </div>
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Screenreaders</h1>
-          <p class="bd-lead">Una utility per nascondere degli elementi su tutti i dispositivi a eccezione degli screen readers.</p>
-          <p>Nascondi un elemento su tutti i dispositivi <strong>eccetto screen readers</strong> con la classe <code class="highlighter-rouge">.sr-only</code>. Combina <code class="highlighter-rouge">.sr-only</code> con <code class="highlighter-rouge">.sr-only-focusable</code> per mostrare l’elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.</p>
+          <h1 class="bd-title" id="content">Datepicker</h1>
+          <p class="bd-lead">Un comodo componente per la selezione di una data o di un orario.</p>
+          <h2 id="panoramica">Panoramica</h2>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span> <span class="na">href=</span><span class="s">"#content"</span><span class="nt">&gt;</span>Vai al contenuto principale<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+<p>Per la gestione della data e degli orari abbiamo scelto di usare un plugin che risulta responsive e accessibile. Sfrutteremo questo componente per mettere a disposizione la possibilità di inserire una data o un orario in modo semplice e veloce.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Usato come mixin
-</span><span class="nc">.skip-navigation</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">sr-only</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">sr-only-focusable</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<div class="bd-callout bd-callout-info">
+<p>Il componente datepicker include il plugin <a href="http://amsul.ca/pickadate.js/">pickadate.js</a>, aggiungendo circa 30kb alla dimensione finale del file JS di Bootstrap Italia <code class="highlighter-rouge">bootstrap-italia.bundle.min.js</code>.</p>
 
+<p>Se il componente datepicker non è d’interesse per il proprio sito web, è buona prassi ricompilare la libreria senza i file di <code class="highlighter-rouge">pickadate.js</code>, oppure utilizzare la versione del JS di Bootstrap Italia che non comprende le librerie esterne <code class="highlighter-rouge">bootstrap-italia.min.js</code>, includendo però a quel punto nell’HTML della pagina le altre librerie necessarie, come indicato nell’<a href="/bootstrap-italia/docs/docs/come-iniziare/introduzione/#versione-semplice">introduzione</a>.</p>
+</div>
+
+<h2 id="calendario">Calendario</h2>
+
+<p>Per inserire un campo di tipo <em>datepicker</em>, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perchè risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="datepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">datepicker</code>.</p>
+
+<div class="bd-example">
+<div class="form-group">
+    <div class="">
+        <input id="datepicker" data-action="datepicker" class="form-control-plaintext datepicker" name="date" type="text" autofocuss="" />
+        <label for="datepicker">Data</label>
+    </div>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"datepicker"</span> <span class="na">data-action=</span><span class="s">"datepicker"</span> <span class="na">class=</span><span class="s">"form-control-plaintext datepicker"</span> <span class="na">name=</span><span class="s">"date"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autofocuss</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"datepicker"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="usabilità">Usabilità</h3>
+
+<p>Si tenga presente che per l’inserimento di date con un range maggiore di un anno si consiglia l’utilizzo di campi distinti per giorno, mese e anno per una compilazione manuale.</p>
+
+<div class="bd-example">
+<div class="form-group col-6">
+    <div class="input-group">
+        <input id="Giorno" type="number" class="form-control col-3" placeholder="GG" aria-label="Giorno" min="1" max="31" maxlength="2" />
+        <div class="input-group-prepend">
+            <span class="input-group-text">/</span>
+        </div>
+        <input type="number" class="form-control col-3" placeholder="MM" aria-label="Mese" min="1" max="12" maxlength="2" />
+        <div class="input-group-prepend">
+            <span class="input-group-text">/</span>
+        </div>
+        <input id="Anno" type="number" class="form-control col-4" placeholder="AAAA" aria-label="Anno" min="1890" max="2020" maxlength="4" />
+    </div>
+    <label for="Giorno">Data di nascita</label>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"Giorno"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">class=</span><span class="s">"form-control col-3"</span> <span class="na">placeholder=</span><span class="s">"GG"</span> <span class="na">aria-label=</span><span class="s">"Giorno"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"31"</span> <span class="na">maxlength=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">class=</span><span class="s">"form-control col-3"</span> <span class="na">placeholder=</span><span class="s">"MM"</span> <span class="na">aria-label=</span><span class="s">"Mese"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"12"</span> <span class="na">maxlength=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"Anno"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">class=</span><span class="s">"form-control col-4"</span> <span class="na">placeholder=</span><span class="s">"AAAA"</span> <span class="na">aria-label=</span><span class="s">"Anno"</span> <span class="na">min=</span><span class="s">"1890"</span> <span class="na">max=</span><span class="s">"2020"</span> <span class="na">maxlength=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"Giorno"</span><span class="nt">&gt;</span>Data di nascita<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="scelta-oraria">Scelta oraria</h2>
+
+<p>Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il <em>datepicker</em>, ance in questo caso il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perchè risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="timepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">timepicker</code>.</p>
+
+<div class="bd-example">
+<div class="form-group">
+    <input id="timepicker" data-action="timepicker" class="form-control-plaintext timepicker" type="time" name="time" autofocuss="" />
+    <label for="timepicker">Orario</label>
+</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"timepicker"</span> <span class="na">data-action=</span><span class="s">"timepicker"</span> <span class="na">class=</span><span class="s">"form-control-plaintext timepicker"</span> <span class="na">type=</span><span class="s">"time"</span> <span class="na">name=</span><span class="s">"time"</span> <span class="na">autofocuss</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"timepicker"</span><span class="nt">&gt;</span>Orario<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="personalizzazione">Personalizzazione</h2>
+
+<p>Per un utilizzo più complesso e personalizzato della plugin si rimanda alle istruzioni presenti su  <a href="http://amsul.ca/pickadate.js/date/">datepicker</a> e su <a href="http://amsul.ca/pickadate.js/time/">timepicker</a>.</p>
 
         </main>
       </div>
