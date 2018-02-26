@@ -16,7 +16,7 @@
   <body>
     <div class="container">
 
-      <h1>Esempio di form complessa</h1>
+      <h1>Esempio di form</h1>
       <p class="lead">Lorem ipsum grid system.</p>
 
       <form>
@@ -31,11 +31,11 @@
           </div>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputAddress" value="1234 Main St">
+          <input type="text" class="form-control" id="inputAddress" value="">
           <label for="inputAddress">Indirizzo</label>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputAddress2" value="Apartment, studio, or floor">
+          <input type="text" class="form-control" id="inputAddress2" value="Esempio di campo precompilato">
           <label for="inputAddress2">Indirizzo secondario</label>
         </div>
         <div class="form-row">
@@ -70,14 +70,14 @@
       <form class="needs-validation" novalidate>
         <div class="form-row">
           <div class="form-group col-md-4 mb-3">
-            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
             <label for="validationCustom01">Nome</label>
             <div class="valid-feedback">
               Validato!
             </div>
           </div>
           <div class="form-group col-md-4 mb-3">
-            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+            <input type="text" class="form-control" id="validationCustom02" value="" required>
             <label for="validationCustom02">Cognome</label>
             <div class="valid-feedback">
               Validato!
@@ -90,7 +90,7 @@
               </div>
               <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
-                Per favore scegli un username.
+                Per favore scegli uno username.
               </div>
             </div>
             <label for="validationCustomUsername">Username</label>
@@ -106,9 +106,9 @@
           </div>
           <div class="form-group col-md-3 mb-3">
             <input type="text" class="form-control" id="validationCustom04" required>
-            <label for="validationCustom04">State</label>
+            <label for="validationCustom04">Nazione</label>
             <div class="invalid-feedback">
-              Per favore inserisci un nome di Stato valido.
+              Per favore inserisci un nome di nazione valido.
             </div>
           </div>
           <div class="form-group col-md-3 mb-3">
@@ -129,22 +129,21 @@
           </div>
         </div>
         <button class="btn btn-primary mt-3" type="submit">Invia</button>
+        <button class="btn btn-secondary ml-3 mt-3" type="submit">Annulla</button>
       </form>
 
-    </div> <!-- /container -->
+    </div>
 
-    
-    <script src="../../../dist/js/bootstrap-italia.min.js"></script>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>
 
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         'use strict';
         window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
           var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
               if (form.checkValidity() === false) {

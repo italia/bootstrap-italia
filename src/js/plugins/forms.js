@@ -12,10 +12,13 @@ $(".form-group input, .form-group select, .form-group textarea").on("focusout", 
   }
   $(this).closest(".form-group").removeClass("active");
 });
+$("input[class$='picker']").on("focusout", function() {
+  $(this).siblings("label").addClass("active");
+});
 
 // Inizializzazione effetto active sulle label quando i loro input valorizzati
 $(function() {
-  $('.form-group :input[value]').siblings("label").addClass("active");
+  $(".form-group :input[value], input[class$='picker']").siblings("label").addClass("active");
 });
 
 // Gestione visibilità password

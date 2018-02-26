@@ -59,6 +59,21 @@ And with `<a>` elements:
 </div>
 {% endexample %}
 
+### Full width dropdown sub-menu
+
+{% example html %}
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu full-width" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+{% endexample %}
+
 The best part is you can do this with any button variant, too:
 
 <div class="bd-example">
