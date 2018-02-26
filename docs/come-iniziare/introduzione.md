@@ -22,7 +22,7 @@ scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javas
 Tali file si trovano nella cartella [`dist`]({{ site.repo }}tree/master/{{ site.download.dist }}) di questo repository,
 oltre ad essere scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
-<a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap Italia');">Scarica Bootstrap Italia v{{ site.current_version }}</a>
+<a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
 Le librerie Javascript e CSS di Bootstrap Italia contengono al suo interno anche Bootstrap 4 stesso, ereditandone quindi
 tutte le funzionalità e gli stili consultabili al sito di Bootstrap 4.
