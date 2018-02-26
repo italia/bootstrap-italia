@@ -3,9 +3,8 @@
 //
 
 .bd-navbar {
-  min-height: 4rem;
+  min-height: 5rem;
   background-color: $docs-blue;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
 
   @include media-breakpoint-down(md) {
     padding-right: .5rem;
@@ -78,9 +77,6 @@
 .bd-search {
   background-color: $white;
   position: relative; // To contain the Algolia search
-  @include media-breakpoint-up(md) {
-    max-width: 12rem;
-  }
   @include media-breakpoint-up(lg) {
     max-width: 20rem;
   }
@@ -113,3 +109,12 @@
   letter-spacing: unset;
 }
 
+.particles-js-canvas-el {
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  vertical-align: bottom;
+  height: auto;
+  width: 100vw;
+  background-attachment:fixed;
+}

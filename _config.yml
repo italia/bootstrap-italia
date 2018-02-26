@@ -40,13 +40,13 @@ plugins:
 # Social
 title:              "Bootstrap Italia"
 description:        "Tema Bootstrap aderente alle linee guida per i servizi web delle Pubbliche Amministrazioni"
-authors:            "AgID + Team per la Trasformazione Digitale"
+authors:            "Team per la Trasformazione Digitale"
 authors_url:        "https://teamdigitale.governo.it/"
 social_image_path:  "TODO"
 social_logo_path:   "TODO"
 
 # Custom variables
-current_version:      0.2.0
+current_version:      0.3.0
 bootstrap_version:    4
 repo:                 "https://github.com/italia/bootstrap-italia/"
 developers:           "https://developers.italia.it/"

@@ -1,0 +1,9 @@
+.forward {
+  display: block;
+  text-align: center;
+  font-size: $font-size-base * 3;
+  transition: $transition-base;
+  &:hover {
+    text-decoration: none;
+  }
+}

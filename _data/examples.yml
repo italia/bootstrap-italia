@@ -65,6 +65,8 @@
       description: Un esempio di form che mostra molti componenti disponibili.
     - name: Offcanvas
       description: Trasforma la tua barra di navigazione in un menu a comparsa.
+    - name: Comuni
+      description: Pagina di esempio per il sito di un comune.
 
 - category: Esempi di Bootstrap
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.0/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.

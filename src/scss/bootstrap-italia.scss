@@ -63,3 +63,10 @@
 @import "./plugins/cookiebar";
 @import "./plugins/hero";
 @import "./plugins/zoom";
+@import "./plugins/forward";
+@import "./plugins/back-to-top";
+
+// Pickadate
+@import "node_modules/pickadate/lib/themes/default";
+@import "node_modules/pickadate/lib/themes/default.date";
+@import "node_modules/pickadate/lib/themes/default.time";
