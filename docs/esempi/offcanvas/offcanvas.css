@@ -1,6 +1,6 @@
 html,
 body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 body {
@@ -56,3 +56,19 @@ body {
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
+
+
+.navbar-expand-md .navbar-toggler {
+  display: block;
+}
+
+.navbar-expand-md .navbar-nav {
+  flex-direction: column;
+}
+
+.navbar-expand-md .navbar-collapse {
+  display: block !important;
+}
+.navbar-expand-md .navbar-nav .dropdown-menu {
+  position: static;
+}

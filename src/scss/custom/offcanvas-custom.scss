@@ -1,19 +1,19 @@
-@media (max-width: 767.98px) {
-    .offcanvas-collapse {
-      position: fixed;
-      top: 56px;
-      bottom: 0;
-      left: 1em;
-      width: 100%;
-      padding-right: 16px;
-      padding-left: 16px;
-      overflow-y: auto;
-      background-color: $gray-800;
-      transition: transform .3s ease-in-out;
-      transform: translateX(100%);
-      &.open {
-        transform: translateX(-1rem); 
-      }
+@include media-breakpoint-down(sm) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 1em;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-y: auto;
+    background-color: $gray-800;
+    transition: transform .3s ease-in-out;
+    transform: translateX(100%);
+    &.open {
+      transform: translateX(-1rem);
     }
   }
+}
 
