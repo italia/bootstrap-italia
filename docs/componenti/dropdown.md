@@ -12,9 +12,7 @@ Il plugin Javascript per costruire dropdown è basato su una libreria di terze p
 Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file `bootstrap-italia.bundle.min.js` che contiene già ogni dipendenza, oppure che il file [popper.min.js]({{ site.cdn.popper }}) sia incluso prima del file `bootstrap-italia.min.js`. Maggiori informazioni si possono trovare alla [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/#javascript) sull'utilizzo del Javascript di Bootstrap Italia.
 {% endcallout %}
 
-## Esempi
-
-Racchiudi il tuo link per l'attivazione del dropdown e il menu a discesa stesso all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
+Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertura e il menu a discesa all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
 
 {% callout accessibility %}
 Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget [`role="menu"`](https://www.w3.org/TR/wai-aria/roles#menu), che però è specifico per i menu applicativi che attivano azioni o funzioni. I menu ARIA possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
@@ -148,14 +146,14 @@ Aggiungendo la classe `full-width` al menù del dropdown, è possibile ottenere 
 </div>
 {% endexample %}
 
-## Dropup
+### Dropup, dropright e dropleft
 
 Aggiungendo semplicemente la class `.dropup` all'elemento contenitore, la _dropdown_ si aprirà verso l'alto. Allo stesso modo, utilizzando invece le classi `.dropright` e `.dropleft`, il menù a tendina si aprirà rispettivamente a destra e sinistra.
 
 {% example html %}
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
+    DropUp
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item" href="#">Azione 1</a>
@@ -167,7 +165,7 @@ Aggiungendo semplicemente la class `.dropup` all'elemento contenitore, la _dropd
 </div>
 {% endexample %}
 
-## Allineamento orizzontale
+### Allineamento orizzontale
 
 Un dropdown è allineato di default lungo il lato sinistro del suo elemento contenitore; per modificare questo comportamento e allineare il dropdown a destra, è sufficiente aggiungere la classe `.dropdown-menu-right` a `.dropdown-menu`
 
@@ -184,7 +182,7 @@ Un dropdown è allineato di default lungo il lato sinistro del suo elemento cont
 </div>
 {% endexample %}
 
-## Voci di menù attive
+### Voci di menù attive
 
 Aggiungere la classe `.active` agli elementi del dropdown che si vogliono mostrare come **attivi**.
 
@@ -196,7 +194,7 @@ Aggiungere la classe `.active` agli elementi del dropdown che si vogliono mostra
 </div>
 {% endexample %}
 
-## Voci di menù disabilitate
+### Voci di menù disabilitate
 
 Aggiungere la classe `.disabled` agli elementi del dropdown che si vogliono mostrare come **disabilitati**.
 
