@@ -10,14 +10,19 @@
   </a>
 
   {% if page.layout == "docs" %}
-  <button class="btn btn-secondary d-md-none px-2" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+  <button class="btn btn-sm btn-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
     menu
   </button>
   {% endif %}
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item">
-      <a class="nav-link d-flex align-items-center px-4" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <li class="nav-item pr-2">
+      <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" aria-label="Download">
+        {%- include icons/download.svg height="24" -%}
+      </a>
+    </li>
+    <li class="nav-item pr-2">
+      <a title="GitHub" class="nav-link d-flex align-items-center" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         {%- include icons/github.svg height="24" -%}
       </a>
     </li>

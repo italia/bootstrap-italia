@@ -77,9 +77,6 @@
 .bd-search {
   background-color: $white;
   position: relative; // To contain the Algolia search
-  @include media-breakpoint-up(md) {
-    max-width: 12rem;
-  }
   @include media-breakpoint-up(lg) {
     max-width: 20rem;
   }
