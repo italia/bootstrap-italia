@@ -3906,7 +3906,7 @@ var Cookiebar = function ($) {
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var TRANSITION_DURATION = 0; // TODO
   var COOKIE_NAME = "cookies_consent";
-  var COOKIE_VALUE = 1;
+  var COOKIE_VALUE = "true";
   var COOKIE_EXPIRE = 30;
 
   var Selector = {

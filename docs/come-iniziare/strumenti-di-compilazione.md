@@ -76,7 +76,7 @@ Le cartelle d'interesse sono:
 
 Il codice sorgente è visibile a questo indirizzo.
 
-<a href="{{ site.repo }}tree/master/{{ site.download.source }}" class="btn btn-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+<a href="{{ site.repo }}tree/master/{{ site.download.source }}" class="btn btn-primary">Download source</a>
 
 ## Documentazione
 
