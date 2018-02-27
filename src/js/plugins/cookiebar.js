@@ -22,7 +22,7 @@ const Cookiebar = (($) => {
   const JQUERY_NO_CONFLICT = $.fn[NAME]
   const TRANSITION_DURATION = 0 // TODO
   const COOKIE_NAME = "cookies_consent"
-  const COOKIE_VALUE = 1
+  const COOKIE_VALUE = "true"
   const COOKIE_EXPIRE = 30
 
   const Selector = {
