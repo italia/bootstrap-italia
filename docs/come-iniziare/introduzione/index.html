@@ -13,18 +13,16 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201802270921" rel="stylesheet">
-
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201802271330" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802270921" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201802271330" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802270921" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201802271330" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -35,7 +33,6 @@
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
 <meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#0066CC">
-
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
@@ -57,14 +54,24 @@
 <meta property="og:image:height" content="630">
 
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-XXXXXX-XX', 'example.com');
-  ga('send', 'pageview');
+// Disabilita tracciamento se il cookie cookies_consent non esiste
+if (document.cookie.indexOf('cookies_consent=true') === -1) {
+  window['ga-disable-UA-114758441-1'] = true;
+}
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114758441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114758441-1');
+</script>
+
+
 
   </head>
   <body>
@@ -367,7 +374,7 @@ scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javas
 <p>Tali file si trovano nella cartella <a href="https://github.com/italia/bootstrap-italia/tree/master/dist/"><code class="highlighter-rouge">dist</code></a> di questo repository,
 oltre ad essere scaricabili alla <a href="https://github.com/italia/bootstrap-italia/releases">pagina delle release di progetto</a>:</p>
 
-<p><a href="https://github.com/italia/bootstrap-italia/releases/download/0.3.0/bootstrap-italia.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap Italia');">Scarica Bootstrap Italia v0.3.0</a></p>
+<p><a href="https://github.com/italia/bootstrap-italia/releases/download/0.3.0/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v0.3.0</a></p>
 
 <p>Le librerie Javascript e CSS di Bootstrap Italia contengono al suo interno anche Bootstrap 4 stesso, ereditandone quindi
 tutte le funzionalità e gli stili consultabili al sito di Bootstrap 4.</p>
@@ -529,10 +536,24 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
       </div>
     </div>
 
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-6">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
+        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201802270921"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201802270921"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201802271330"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201802271330"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',
