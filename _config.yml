@@ -11,8 +11,8 @@ permalink:      pretty
 # Server
 source:         "."
 destination:    ./_gh_pages
-baseurl:        "/bootstrap-italia"
-url:            "/bootstrap-italia"
+baseurl:        ""
+url:            ""
 encoding:       UTF-8
 exclude:
   - .git/
