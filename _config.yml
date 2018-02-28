@@ -17,8 +17,8 @@ encoding:       UTF-8
 exclude:
   - .git/
   - .github/
+  - .idea/
   - src/
-  - public/
   - node_modules/
   - AUTHORS
   - CODE_OF_CONDUCT.md
@@ -26,7 +26,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - yarn.lock
-  - package.js
   - package.json
   - package-lock.json
   - README.md
