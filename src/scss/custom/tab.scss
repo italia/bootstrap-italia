@@ -1,52 +1,59 @@
 .nav-tabs {
-  -webkit-box-shadow: 0 15px 15px -10px rgba(135, 135, 135, 0.2);
-	-moz-box-shadow: 0 15px 15px -10px rgba(135, 135, 135, 0.2);
-  box-shadow: 0 15px 15px -10px rgba(135, 135, 135, 0.2);
-  border: 0;
-}
-.nav-tabs .nav-link {
-  border-radius: 0;
-  font-weight: 600;
-  color: $tertiary;
-  border: none;
-  border-bottom: 2px solid transparent;
-}
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  border-bottom: 2px solid $italia;
-  color: $italia;
-  cursor: inherit;
-}
-.nav-tabs .nav-link.disabled {
-  color: $gray-300;
-  font-weight: 400;
-}
-.nav-tabs .nav-item {
-  margin-bottom: 0;
+  position: relative;
+  background-color: $white;
+  border-bottom: 0;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    bottom: 0px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 50%;
+    border-radius: 100%;
+  }
+  .nav-link {
+    border-radius: 0;
+    font-weight: 600;
+    color: $tertiary;
+    border: none;
+    border-bottom: 2px solid transparent;
+    &.disabled {
+      color: $gray-300;
+      font-weight: 400;
+    }
+  }
+  .nav-link.active, .nav-item.show .nav-link {
+    border-bottom: 2px solid $italia;
+    color: $italia;
+    cursor: inherit;
+  }
+  .nav-item {
+    margin-bottom: 0;
+  }
+  &.nav-dark {
+    background-color: $tertiary;
+    .nav-link {
+      color: #C3CFDB; // TODO quando i colori dark saranno definiti, gestire questo colore come variabile
+    }
+    .nav-link.active, .nav-item.show .nav-link {
+      background-color: $tertiary;
+      color: $cyan;
+      border-bottom: 2px solid $cyan;
+    }
+  }
 }
 
-/* TAB DARK */
-.nav-dark {
-  background-color: $tertiary;
-  -webkit-box-shadow: none;
-	-moz-box-shadow: none;
-  box-shadow: none;
-}
-.nav-tabs .nav-link {
-  color: #C3CFDB;
-}
-.nav-dark .nav-link.active, .nav-dark .nav-item.show .nav-link {
-  background-color: $tertiary;
-  color: $cyan;
-  border-bottom: 2px solid $cyan;
-}
-
-/* Grandezze icone standard */
 .it-ico-sm {
   font-size: $h3-font-size;
 }
+
 .it-ico {
   font-size: $h5-font-size;
 }
+
 .it-ico-lg {
   font-size: $h4-font-size;
 }
