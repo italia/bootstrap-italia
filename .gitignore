@@ -4,6 +4,7 @@ _gh_pages
 # Ignore ruby files
 .ruby-version
 .bundle
+Gemfile.lock # This is ignored due to issue with cross-env deps
 vendor/cache
 vendor/bundle
 
