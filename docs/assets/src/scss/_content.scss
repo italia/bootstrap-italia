@@ -84,14 +84,6 @@
   > ol li {
     margin-bottom: .25rem;
   }
-
-  @include media-breakpoint-up(lg) {
-    > ul,
-    > ol,
-    > p {
-      //max-width: 80%;
-    }
-  }
 }
 
 .bd-title {
@@ -104,7 +96,6 @@
   font-weight: 300;
 
   @include media-breakpoint-up(sm) {
-    //max-width: 80%;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }

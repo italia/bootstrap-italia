@@ -10,14 +10,13 @@
     "framework",
     "web"
   ],
-  "description": "Bootstrap Italia è un tema open-source basato su Bootstrap 4 per la creazione di applicazioni responsive, mobile-first per il web",
+  "description": "Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
   "scripts": {
-    "watch": "gulp watch",
+    "start": "gulp serve",
     "build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
     "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages",
-    "start": "npm run documentation-serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
@@ -38,7 +37,9 @@
     "babel-plugin-transform-es2015-modules-strip": "^0.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
     "chalk": "^2.3.0",
+    "child_process": "^1.0.2",
     "gh-pages": "^1.1.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.1",
@@ -50,6 +51,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-touch": "^1.0.1",
     "gulp-uglify": "^1.2.0",
     "gulp-wrapper": "^1.0.0"
   },
