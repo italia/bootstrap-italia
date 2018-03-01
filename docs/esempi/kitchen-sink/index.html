@@ -18,23 +18,472 @@
   <body>
       
       <div class="container">
-        <h1 class="display-1">Pagina di riferimento Kitchen Sink</h1>
+        <h1 class="display-1 mb-5 text-primary">Pagina di riferimento Kitchen Sink</h1>
         <section>
-          <h2>Hero</h2>
-          <div class="hero">
-            <h1 class="hero-heading display-4">Ciao, mondo!</h1>
-            <p class="lead">Questa è una semplice unità hero, un semplice per richiamare un'attenzione particolare al contenuto o alle informazioni in primo piano.</p>
-            <hr class="my-4">
-            <p>Utilizza le classi di utilità per la tipografia e la spaziatura per l'ingombro del contenuto all'interno del contenitore più grande.</p>
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Per saperne di più</a>
-            </p>
+          
+          <h2 class="text-tertiary mb-4">Contenuti</h2>
+          <h3 class="mb-4">Tipografia</h3>          
+          <h4 class="text-muted border-bottom">Intestazioni</h4>
+          <div class="mb-5">
+            <h1>h1. Intestazione di Bootstrap</h1>
+            <h2>h2. Intestazione di Bootstrap</h2>
+            <h3>h3. Intestazione di Bootstrap</h3>
+            <h4>h4. Intestazione di Bootstrap</h4>
+            <h5>h5. Intestazione di Bootstrap</h5>
+            <h6>h6. Intestazione di Bootstrap</h6>
+          </div>
+
+          <h4 class="text-muted border-bottom">Intestazioni in evidenza</h4>
+          <div class="mb-5">
+            <h1 class="display-1">Titolo in evidenza 1</h1>
+            <h1 class="display-2">Titolo in evidenza 2</h1>
+            <h1 class="display-3">Titolo in evidenza 3</h1>
+            <h1 class="display-4">Titolo in evidenza 4</h1>
+          </div>
+
+          <h4 class="text-muted border-bottom">Elementi di testo inline</h4>
+          <div class="mb-5">
+            <p>Questa linea di testo mostra come è rappresentato del <mark>testo evidenziato</mark>.</p>
+            <p><del>Questa linea di testo mostra come è rappresentato del testo cancellato.</del></p>
+            <p><s>Questa linea di testo mostra come è rappresentato del testo non più valido.</s></p>
+            <p><ins>Questa linea di testo mostra come è rappresentato un testo aggiuntivo al documento.</ins></p>
+            <p><u>Questa linea di testo mostra come è rappresentato un testo sottolineato.</u></p>
+            <p><small>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.</small></p>
+            <p><strong>Questa linea di testo mostra come è rappresentato un testo grassetto.</strong></p>
+            <p><em>Questa linea di testo mostra come è rappresentato un testo corsivo.</em></p>
+          </div>
+
+          <h4 class="text-muted border-bottom">Liste senza stile</h4>
+          <div class="mb-5">
+            <ul class="list-unstyled">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+          </div>
+
+          <h4 class="text-muted border-bottom">Liste inline</h4>
+          <div class="mb-5">
+            <ul class="list-inline">
+              <li class="list-inline-item">Lorem ipsum</li>
+              <li class="list-inline-item">Phasellus iaculis</li>
+              <li class="list-inline-item">Nulla volutpat</li>
+            </ul>
+          </div>
+
+          <h3 class="mb-4">Immagini</h3>          
+          <h4 class="text-muted border-bottom">Immagini responsive</h4>
+          <div class="mb-5">
+            <img data-src="holder.js/100px250" class="img-fluid" alt="100%x250" style="height: 250px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%221173%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201173%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161e1ce9eaf%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A59pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161e1ce9eaf%22%3E%3Crect%20width%3D%221173%22%20height%3D%22250%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22413.6666717529297%22%20y%3D%22151.7%22%3E1173x250%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+          </div>
+
+          <h4 class="text-muted border-bottom">Thumbnails</h4>
+          <div class="mb-5">
+            <img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" style="width: 200px; height: 200px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161e1ce7bc8%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161e1ce7bc8%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2273.5%22%20y%3D%22104.8%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+          </div>
+
+          <h4 class="mb-4">Figure</h4>
+          <div class="mb-5">
+            <figure class="figure">
+              <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="400x300" style="width: 400px; height: 300px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161e1d1baa7%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161e1d1baa7%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22147.83333206176758%22%20y%3D%22159.3%22%3E400x300%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
+            </figure>
+          </div>    
+
+          <h3 class="mb-4">Tabelle</h3>          
+          <h4 class="text-muted border-bottom">Tabella base</h4>
+          <div class="mb-5">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mb-5">
+            <h4 class="text-muted border-bottom">Righe striate</h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mb-5">
+            <h4 class="text-muted border-bottom">Tabella con bordi</h4>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mb-5">
+            <h4 class="text-muted border-bottom">Righe ed hover</h4>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mb-5">
+            <h4 class="text-muted border-bottom">Tabella compatta</h4>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mb-5">
+            <h4 class="text-muted border-bottom">Tabella responsive</h4>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cognome</th>
+                    <th scope="col">Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mario</td>
+                    <td>Verdi</td>
+                    <td>mario.verdi</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Francesco</td>
+                    <td>Bianchi</td>
+                    <td>francesco.bianchi</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Alessandro</td>
+                    <td>Rossi</td>
+                    <td>alessandro.rossi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
         <section>
-          <h2>Carousel</h2>
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <h2 class="text-tertiary mb-4">Componenti</h2>
+          <h3 class="mb-4">Bottoni</h3>
+          <h4 class="text-muted border-bottom">Varianti di colore</h4>
+          <div class="mb-5">
+            <button type="button" class="btn btn-italia">Italia</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-tertiary">Tertiary</button>
+            <button type="button" class="btn btn-quaternary">Quaternary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-link">Link</button>
+          </div>
+
+          <h4 class="text-muted border-bottom">Varianti di dimensione</h4>
+          <div class="mb-5">
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>
+            <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+          </div>
+
+          <h4 class="text-muted border-bottom">Stato attivo</h4>
+          <div class="mb-5">
+            <button type="button" class="btn btn-italia active" aria-pressed="true">Italia</button>
+            <button type="button" class="btn btn-primary active" aria-pressed="true">Primary</button>
+            <button type="button" class="btn btn-secondary active" aria-pressed="true">Secondary</button>
+            <button type="button" class="btn btn-tertiary active" aria-pressed="true">Tertiary</button>
+            <button type="button" class="btn btn-quaternary active" aria-pressed="true">Quaternary</button>
+            <button type="button" class="btn btn-success active" aria-pressed="true">Success</button>
+            <button type="button" class="btn btn-danger active" aria-pressed="true">Danger</button>
+            <button type="button" class="btn btn-warning active" aria-pressed="true">Warning</button>
+            <button type="button" class="btn btn-link">Link</button>
+          </div>
+
+          <h4 class="text-muted border-bottom">Stato disabilitato</h4>
+          <div class="mb-5">
+            <button type="button" class="btn btn-italia disabled">Italia</button>
+            <button type="button" class="btn btn-primary disabled">Primary</button>
+            <button type="button" class="btn btn-secondary disabled">Secondary</button>
+            <button type="button" class="btn btn-tertiary disabled">Tertiary</button>
+            <button type="button" class="btn btn-quaternary disabled">Quaternary</button>
+            <button type="button" class="btn btn-success disabled">Success</button>
+            <button type="button" class="btn btn-danger disabled">Danger</button>
+            <button type="button" class="btn btn-warning disabled">Warning</button>
+          </div>
+
+          <h3 class="mb-4">Alert</h3>
+          <div class="mb-5">
+            <div class="alert alert-success" role="alert">
+              Questo è un alert di <em>success</em>!
+            </div>
+            
+            <div class="alert alert-danger" role="alert">
+              Questo è un alert di <em>danger</em>!
+            </div>
+            
+            <div class="alert alert-warning" role="alert">
+              Questo è un alert di <em>warning</em>!
+            </div>
+          </div>
+
+          <h4 class="text-muted border-bottom">Link evidenziato</h4>
+          <div class="mb-5">
+            <div class="alert alert-danger" role="alert">
+              Questo è un alert con un esempio di <a href="#" class="alert-link">link</a> evidenziato.
+            </div>
+          </div>
+
+          <h4 class="text-muted border-bottom">Contenuto aggiuntivo</h4>
+          <div class="mb-5">
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Avviso di successo!</h4>
+              <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sarà più a lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>
+              <hr>
+              <p class="mb-0">Quando necessario, assicurarti di inserire le utilità di margine per mantenere gli spazi equilibrati.</p>
+            </div>
+          </div>
+
+          <h4 class="text-muted border-bottom">Chiusura</h4>
+          <div class="mb-5">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+
+          <h3 class="mb-4">Form</h3>
+          <h4 class="text-muted border-bottom">Elementi form</h4>
+          <div class="mb-5">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputText">
+                <label for="exampleInputText">Nominativo</label>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="exampleInputNumber">
+                <label for="exampleInputNumber">Numero partecipanti</label>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp1">
+                <label for="exampleInputEmail1">Indirizzo email</label>
+                <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword">
+                <label for="exampleInputPassword">Password</label>
+              </div>
+              <div class="form-group form-file">
+                <input id="file" class="form-control" type="file">
+                <label for="file">Esempio campo per l'upload di un singolo file</label>
+                <span class="form-file-name"></span>
+              </div>
+              <div class="form-group">
+                <select class="custom-select">
+                  <option value="" disabled selected>Seleziona una opzione</option>
+                  <option value="1">Opzione 1</option>
+                  <option value="2">Opzione 2</option>
+                  <option value="3">Opzione 3</option>
+                </select>
+                <label>Label di esempio</label>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly>
+              </div>
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <input id="checkbox2" type="checkbox">
+                  <label for="checkbox2">Checkbox non selezionato</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input id="checkbox3" type="checkbox" checked="checked">
+                  <label for="checkbox3">Checkbox selezionato</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <input name="gruppo2" type="radio" id="radio4" checked>
+                  <label for="radio4">Opzione 1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input name="gruppo2" type="radio" id="radio5">
+                  <label for="radio5">Opzione 2</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <h3 class="mb-4">Hero</h3>
+          <div class="mb-5">              
+            <div class="hero">
+              <h1 class="hero-heading display-4">Ciao, mondo!</h1>
+              <p class="lead">Questa è una semplice unità hero, un semplice per richiamare un'attenzione particolare al contenuto o alle informazioni in primo piano.</p>
+              <hr class="my-4">
+              <p>Utilizza le classi di utilità per la tipografia e la spaziatura per l'ingombro del contenuto all'interno del contenitore più grande.</p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Per saperne di più</a>
+              </p>
+            </div>
+          </div>
+
+          <h3 class="mb-4">Carousel</h3>
+          <div class="mb-5"> 
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -42,21 +491,21 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                  <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Titolo prima diapositiva</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                  <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=Second slide" alt="Second slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Titolo seconda diapositiva</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                    <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=Third slide" alt="Third slide [800x400]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161dd1f7120%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161dd1f7120%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22274.0250015258789%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Titolo terza diapositiva</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -72,7 +521,10 @@
                 <span class="sr-only">Successivo</span>
               </a>
             </div>
+          </div>
         </section>
+        
+
       </div>
     
     
