@@ -1,0 +1,17 @@
+@include media-breakpoint-down(sm) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 1em;
+    width: 100%;
+    overflow-y: auto;
+    background-color: $gray-800;
+    transition: transform .3s ease-in-out;
+    transform: translateX(100%);
+    &.open {
+      transform: translateX(-1rem);
+    }
+  }
+}
+

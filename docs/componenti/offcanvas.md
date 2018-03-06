@@ -1,28 +1,33 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../../favicon.ico">
+---
+layout: docs
+title: Offcanvas
+description: Menu di navigazione a comparsa per dispositivi come tablet o smartphone.
+group: componenti
+---
 
-  <title>Offcanvas</title>
+## Esempio
 
-  <!-- Bootstrap core CSS -->
-  <link href="../../../dist/css/bootstrap-italia.min.css" rel="stylesheet">
+<style>
+  /* Style override for Documentation purposes */
 
-</head>
+  .bd-example {
+    height: 480px;
+    width: 360px;
+  }
+</style>
 
-<body class="bg-light">
+<div class="bd-example">
+    <iframe class="iframe" data-role="window" src="../../esempi/offcanvas/index.html" sandbox="allow-same-origin allow-scripts allow-forms" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="yes" frameborder="0" width="100%" height="100%"></iframe>
+</div>
 
+{% highlight html %}
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Esempio Offcanvas</a>
   <button class="navbar-toggler p-0 border-0 ml-auto" type="button" data-toggle="offcanvas">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="navbar-collapse offcanvas-collapse px-2" id="navbarsExampleDefault">
+  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Link 1 <span class="sr-only">(current)</span></a>
@@ -47,11 +52,4 @@
     </ul>
   </div>
 </nav>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>
-
-</body>
-</html>
+{% endhighlight %}
