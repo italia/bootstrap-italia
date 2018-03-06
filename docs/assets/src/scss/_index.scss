@@ -1,0 +1,21 @@
+.main-content {
+  color: #17324D;
+  height: calc(100vh - 7rem);
+}
+.bottom-content {
+  position:relative;
+  background-color:$primary;
+  color:white;
+}
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  display: block;
+  vertical-align: bottom;
+  height: auto;
+  width: 100vw;
+  background-attachment:fixed;
+  margin: 0 -1rem; // horizontal scroll reset
+  z-index: 0
+}
