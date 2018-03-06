@@ -40,13 +40,17 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 ### Input password
 
-Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato.
+Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato. Inoltre è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`, questo grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter).
 
 {% example html %}
 <form>
   <div class="form-group">
     <input type="password" class="form-control" id="exampleInputPassword">
     <label for="exampleInputPassword">Password</label>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control form-password" id="exampleInputPassword2">
+    <label for="exampleInputPassword2">Password con strength meter</label>
   </div>
 </form>
 {% endexample %}

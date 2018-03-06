@@ -27,7 +27,8 @@ const Paths = {
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/pickadate/lib/compressed/picker.js',
     './node_modules/pickadate/lib/compressed/picker.date.js',
-    './node_modules/pickadate/lib/compressed/picker.time.js'
+    './node_modules/pickadate/lib/compressed/picker.time.js',
+    './node_modules/password-strength-meter/dist/password.min.js'
   ],
   SOURCE_SCSS: 'src/scss/' + FILENAME + '.scss',
   SOURCE_JS: [

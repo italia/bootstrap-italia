@@ -12862,6 +12862,285 @@ return Popper;
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
 
+/**
+ * @author Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
+ * @link https://github.com/elboletaire/password-strength-meter
+ */
+//!function(a){"use strict";var e=function(e,s){function t(a){return-1===a?s.shortPass:-2===a?s.containsUsername:(a=a<0?0:a,a<34?s.badPass:a<68?s.goodPass:s.strongPass)}function n(a,e){var t=0;if(a.length<s.minimumLength)return-1;if(s.username){if(a.toLowerCase()===e.toLowerCase())return-2;if(s.usernamePartialMatch&&e.length){var n=new RegExp(e.toLowerCase());if(a.toLowerCase().match(n))return-2}}t+=4*a.length,t+=r(1,a).length-a.length,t+=r(2,a).length-a.length,t+=r(3,a).length-a.length,t+=r(4,a).length-a.length,a.match(/(.*[0-9].*[0-9].*[0-9])/)&&(t+=5);var o=".*[!,@,#,$,%,^,&,*,?,_,~]";return o=new RegExp("("+o+o+")"),a.match(o)&&(t+=5),a.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)&&(t+=10),a.match(/([a-zA-Z])/)&&a.match(/([0-9])/)&&(t+=15),a.match(/([!,@,#,$,%,^,&,*,?,_,~])/)&&a.match(/([0-9])/)&&(t+=15),a.match(/([!,@,#,$,%,^,&,*,?,_,~])/)&&a.match(/([a-zA-Z])/)&&(t+=15),(a.match(/^\w+$/)||a.match(/^\d+$/))&&(t-=10),t>100&&(t=100),t<0&&(t=0),t}function r(a,e){for(var s="",t=!1,n=0;n<e.length;n++){t=!0;for(var r=0;r<a&&r+n+a<e.length;r++)t=t&&e.charAt(r+n)===e.charAt(r+n+a);r<a&&(t=!1),t?(n+=a-1,t=!1):s+=e.charAt(n)}return s}function o(){var r=!0,o=s.showText,h=s.showPercent,i=a("<div>").addClass("pass-graybar"),c=a("<div>").addClass("pass-colorbar"),l=a("<div>").addClass("pass-wrapper").append(i.append(c));return e.parent().addClass("pass-strength-visible"),s.animate&&(l.css("display","none"),r=!1,e.parent().removeClass("pass-strength-visible")),s.showPercent&&(h=a("<span>").addClass("pass-percent").text("0%"),l.append(h)),s.showText&&(o=a("<span>").addClass("pass-text").html(s.enterPass),l.append(o)),e.after(l),e.keyup(function(){var r=s.username||"";r&&(r=a(r).val());var i=n(e.val(),r);e.trigger("password.score",[i]);var l=i<0?0:i;if(c.css({backgroundPosition:"0px -"+l+"px",width:l+"%"}),s.showPercent&&h.html(l+"%"),s.showText){var p=t(i);!e.val().length&&i<=0&&(p=s.enterPass),o.html()!==a("<div>").html(p).html()&&(o.html(p),e.trigger("password.text",[p,i]))}}),s.animate&&(e.focus(function(){r||l.slideDown(s.animateSpeed,function(){r=!0,e.parent().addClass("pass-strength-visible")})}),e.blur(function(){!e.val().length&&r&&l.slideUp(s.animateSpeed,function(){r=!1,e.parent().removeClass("pass-strength-visible")})})),this}var h={shortPass:"The password is too short",badPass:"Weak; try combining letters & numbers",goodPass:"Medium; try using special charecters",strongPass:"Strong password",containsUsername:"The password contains the username",enterPass:"Type your password",showPercent:!1,showText:!0,animate:!0,animateSpeed:"fast",username:!1,usernamePartialMatch:!0,minimumLength:4};return s=a.extend({},h,s),o.call(this)};a.fn.password=function(s){return this.each(function(){new e(a(this),s)})}}(jQuery);
+/**
+ * @author Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
+ * @link https://github.com/elboletaire/password-strength-meter
+ */
+;(function($) {
+    'use strict';
+  
+    var Password = function ($object, options) {
+      var defaults = {
+        shortPass: 'The password is too short',
+        badPass: 'Weak; try combining letters & numbers',
+        goodPass: 'Medium; try using special charecters',
+        strongPass: 'Strong password',
+        containsUsername: 'The password contains the username',
+        enterPass: 'Type your password',
+        showPercent: false,
+        showText: true,
+        animate: true,
+        animateSpeed: 'fast',
+        username: false,
+        usernamePartialMatch: true,
+        minimumLength: 4
+      };
+  
+      options = $.extend({}, defaults, options);
+  
+      /**
+       * Returns strings based on the score given.
+       *
+       * @param int score Score base.
+       * @return string
+       */
+      function scoreText(score) {
+        if (score === -1) {
+          return options.shortPass;
+        }
+        if (score === -2) {
+          return options.containsUsername;
+        }
+  
+        score = score < 0 ? 0 : score;
+  
+        if (score < 34) {
+          return options.badPass;
+        }
+        if (score < 68) {
+          return options.goodPass;
+        }
+  
+        return options.strongPass;
+      }
+  
+      /**
+       * Returns a value between -2 and 100 to score
+       * the user's password.
+       *
+       * @param  string password The password to be checked.
+       * @param  string username The username set (if options.username).
+       * @return int
+       */
+      function calculateScore(password, username) {
+        var score = 0;
+  
+        // password < options.minimumLength
+        if (password.length < options.minimumLength) {
+          return -1;
+        }
+  
+        if (options.username) {
+          // password === username
+          if (password.toLowerCase() === username.toLowerCase()) {
+            return -2;
+          }
+          // password contains username (and usernamePartialMatch is set to true)
+          if (options.usernamePartialMatch && username.length) {
+            var user = new RegExp(username.toLowerCase());
+            if (password.toLowerCase().match(user)) {
+              return -2;
+            }
+          }
+        }
+  
+        // password length
+        score += password.length * 4;
+        score += checkRepetition(1, password).length - password.length;
+        score += checkRepetition(2, password).length - password.length;
+        score += checkRepetition(3, password).length - password.length;
+        score += checkRepetition(4, password).length - password.length;
+  
+        // password has 3 numbers
+        if (password.match(/(.*[0-9].*[0-9].*[0-9])/)) {
+          score += 5;
+        }
+  
+        // password has at least 2 sybols
+        var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]';
+        symbols = new RegExp('(' + symbols + symbols + ')');
+        if (password.match(symbols)) {
+          score += 5;
+        }
+  
+        // password has Upper and Lower chars
+        if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+          score += 10;
+        }
+  
+        // password has number and chars
+        if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/)) {
+          score += 15;
+        }
+  
+        // password has number and symbol
+        if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([0-9])/)) {
+          score += 15;
+        }
+  
+        // password has char and symbol
+        if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([a-zA-Z])/)) {
+          score += 15;
+        }
+  
+        // password is just numbers or chars
+        if (password.match(/^\w+$/) || password.match(/^\d+$/)) {
+          score -= 10;
+        }
+  
+        if (score > 100) {
+          score = 100;
+        }
+  
+        if (score < 0) {
+          score = 0;
+        }
+  
+        return score;
+      }
+  
+      /**
+       * Checks for repetition of characters in
+       * a string
+       *
+       * @param int rLen Repetition length.
+       * @param string str The string to be checked.
+       * @return string
+       */
+      function checkRepetition(rLen, str) {
+        var res = "", repeated = false;
+        for (var i = 0; i < str.length; i++) {
+          repeated = true;
+          for (var j = 0; j < rLen && (j + i + rLen) < str.length; j++) {
+            repeated = repeated && (str.charAt(j + i) === str.charAt(j + i + rLen));
+          }
+          if (j < rLen) {
+            repeated = false;
+          }
+          if (repeated) {
+            i += rLen - 1;
+            repeated = false;
+          }
+          else {
+            res += str.charAt(i);
+          }
+        }
+        return res;
+      }
+  
+      /**
+       * Initializes the plugin creating and binding the
+       * required layers and events.
+       *
+       * @return void
+       */
+      function init() {
+        var shown = true;
+        var $text = options.showText;
+        var $percentage = options.showPercent;
+        var $graybar = $('<div>').addClass('pass-graybar');
+        var $colorbar = $('<div>').addClass('pass-colorbar');
+        var $insert = $('<div>').addClass('pass-wrapper').append(
+          $graybar.append($colorbar)
+        );
+  
+        $object.parent().addClass('pass-strength-visible');
+        if (options.animate) {
+          $insert.css('display', 'none');
+          shown = false;
+          $object.parent().removeClass('pass-strength-visible');
+        }
+  
+        if (options.showPercent) {
+          $percentage = $('<span>').addClass('pass-percent').text('0%');
+          $insert.append($percentage);
+        }
+  
+        if (options.showText) {
+          var msgId = "msg"+$object.attr("id");
+          $object.attr("aria-describedby",msgId);
+          $text = $('<span>').addClass('pass-text').html(options.enterPass).attr("id",msgId);
+          $insert.prepend($text);
+        }
+  
+        $object.after($insert);
+  
+        $object.keyup(function() {
+          var username = options.username || '';
+          if (username) {
+            username = $(username).val();
+          }
+  
+          var score = calculateScore($object.val(), username);
+          $object.trigger('password.score', [score]);
+          var perc = score < 0 ? 0 : score;
+
+          $colorbar.css({
+            backgroundPosition: "0px -" + perc + "px",
+            width: perc + '%'
+          });
+  
+          if (options.showPercent) {
+            $percentage.html(perc + '%');
+          }
+  
+          if (options.showText) {
+            var text = scoreText(score);
+            if (!$object.val().length && score <= 0) {
+              text = options.enterPass;
+            }
+  
+            if ($text.html() !== $('<div>').html(text).html()) {
+              $text.html(text);
+              $object.trigger('password.text', [text, score]);
+            }
+          }
+        });
+  
+        if (options.animate) {
+          $object.focus(function() {
+            if (!shown) {
+              $insert.slideDown(options.animateSpeed, function () {
+                shown = true;
+                $object.parent().addClass('pass-strength-visible');
+              });
+            }
+          });
+  
+          $object.blur(function() {
+            if (!$object.val().length && shown) {
+              $insert.slideUp(options.animateSpeed, function () {
+                shown = false;
+                $object.parent().removeClass('pass-strength-visible')
+              });
+            }
+          });
+        }
+  
+        return this;
+      }
+  
+      return init.call(this);
+    }
+  
+    // Bind to jquery
+    $.fn.password = function(options) {
+      return this.each(function() {
+        new Password($(this), options);
+      });
+    };
+})(jQuery);
+/*!
+ * Bootstrap Italia v0.3.0
+ * Copyright 2018
+ * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
+ */
+
 /*!
  * Bootstrap Italia v0.3.0
  * Copyright 2018
@@ -16336,12 +16615,12 @@ var ScrollSpy = function ($) {
       config = _extends({}, Default, config);
 
       if (typeof config.target !== 'string') {
-        var id = $(config.target).attr('id');
-        if (!id) {
-          id = Util.getUID(NAME);
-          $(config.target).attr('id', id);
+        var _id = $(config.target).attr('id');
+        if (!_id) {
+          _id = Util.getUID(NAME);
+          $(config.target).attr('id', _id);
         }
-        config.target = '#' + id;
+        config.target = '#' + _id;
       }
 
       Util.typeCheckConfig(NAME, config, DefaultType);
@@ -17532,6 +17811,98 @@ $("input[class$='picker']").on("focusout", function () {
 // Inizializzazione effetto active sulle label quando i loro input valorizzati
 $(function () {
   $(".form-group :input[value], input[class$='picker']").siblings("label").addClass("active");
+});
+
+// Gestione password capslock
+var getCursorX = function getCursorX(input, selectionPoint) {
+  var inputX = input.offsetLeft;
+  var div = document.createElement('div');
+  var copyStyle = getComputedStyle(input);
+  var swap = '.';
+  var inputValue = input.tagName === 'INPUT' ? input.value.replace(/ /g, swap) : input.value;
+  var textContent = inputValue.substr(0, selectionPoint);
+  div.textContent = textContent;
+  div.style.width = 'auto';
+  var span = document.createElement('span');
+  span.textContent = inputValue.substr(selectionPoint) || '.';
+  div.appendChild(span);
+  document.body.appendChild(div);
+  var spanX = span.offsetLeft;
+  document.body.removeChild(div);
+  return {
+    x: inputX + spanX
+  };
+};
+function creaPopoverCapsLock(id) {
+  $("div[id*='capslock_'").remove();
+  $("#" + id).after('<div id="capslock_' + id + '" class="popover fade show bs-popover-right popover-capslock" role="tooltip"><div class="arrow" style="top: 4px;"></div><div class="popover-body"><strong>CAPS LOCK inserito</strong></div></div>');
+}
+function allineamentoPopover(id) {
+  if ($("#capslock_" + id).length > 0) {
+    var _input = document.getElementById(id);
+    var _getCursorX = getCursorX(_input, _input.selectionEnd),
+        startLeft = _getCursorX.x;
+    $("#capslock_" + id).css("left", startLeft + 21 + "px");
+  }
+}
+$(function () {
+  var isShiftPressed = false;
+  var isCapsOn = null;
+  $("input[type=password]").bind("keydown", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    if (keyCode == 16) {
+      isShiftPressed = true;
+    }
+  });
+  $("input[type=password]").bind("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    id = $(this).attr("id");
+    if (keyCode == 16) {
+      isShiftPressed = false;
+    }
+    if (keyCode == 20) {
+      if (isCapsOn == true) {
+        isCapsOn = false;
+        $("div[id*='capslock_'").remove();
+      } else if (isCapsOn == false) {
+        isCapsOn = true;
+        $("input:focus").each(function (e) {
+          creaPopoverCapsLock(id);
+          allineamentoPopover(id);
+        });
+      }
+    }
+  });
+  $("input[type=password]").bind("keypress", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    id = $(this).attr("id");
+    if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
+      isCapsOn = true;
+      creaPopoverCapsLock(id);
+      allineamentoPopover(id);
+    } else {
+      allineamentoPopover(id);
+    }
+  });
+});
+
+// Gestione password strength meter
+$(function () {
+  $('.form-password').password({
+    shortPass: 'password troppo debole',
+    badPass: 'password debole',
+    goodPass: 'password sicura',
+    strongPass: 'password molto sicura',
+    containsUsername: 'la password contiene l\'username',
+    enterPass: 'inserisci almeno 8 caratteri e una lettera maiuscola',
+    showPercent: false,
+    showText: true, // shows the text tips
+    animate: false, // whether or not to animate the progress bar on input blur/focus
+    animateSpeed: 'fast', // the above animation speed
+    username: false, // select the username field (selector or jQuery instance) for better password checks
+    usernamePartialMatch: true, // whether to check for username partials
+    minimumLength: 4 // minimum password length (below this threshold, the score is 0)
+  });
 });
 
 // Gestione visibilità password

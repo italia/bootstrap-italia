@@ -21,6 +21,98 @@ $(function() {
   $(".form-group :input[value], input[class$='picker']").siblings("label").addClass("active");
 });
 
+// Gestione password capslock
+var getCursorX = function getCursorX(input, selectionPoint) {
+  var inputX = input.offsetLeft;
+  var div = document.createElement('div');
+  var copyStyle = getComputedStyle(input);
+  var swap = '.';
+  var inputValue = input.tagName === 'INPUT' ? input.value.replace(/ /g, swap) : input.value;
+  var textContent = inputValue.substr(0, selectionPoint);
+  div.textContent = textContent;
+  div.style.width = 'auto';
+  var span = document.createElement('span');
+  span.textContent = inputValue.substr(selectionPoint) || '.';
+  div.appendChild(span);
+  document.body.appendChild(div);
+  var spanX = span.offsetLeft;
+  document.body.removeChild(div);
+  return {
+    x: inputX + spanX
+  };
+};
+function creaPopoverCapsLock(id){
+  $("div[id*='capslock_'").remove();
+  $("#"+id).after('<div id="capslock_'+id+'" class="popover fade show bs-popover-right popover-capslock" role="tooltip"><div class="arrow" style="top: 4px;"></div><div class="popover-body"><strong>CAPS LOCK inserito</strong></div></div>');
+}
+function allineamentoPopover(id){
+  if($("#capslock_"+id).length>0){
+    var _input = document.getElementById(id);
+    var _getCursorX = getCursorX(_input, _input.selectionEnd),
+    startLeft = _getCursorX.x;
+    $("#capslock_"+id).css("left",(startLeft+21)+"px")
+  }
+}
+$(function () {
+  var isShiftPressed = false;
+  var isCapsOn = null;
+  $("input[type=password]").bind("keydown", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    if (keyCode == 16) {
+      isShiftPressed = true;
+    }
+  });
+  $("input[type=password]").bind("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    id = $(this).attr("id");
+    if (keyCode == 16) {
+      isShiftPressed = false;
+    }
+    if (keyCode == 20) {
+      if (isCapsOn == true) {
+        isCapsOn = false;
+        $("div[id*='capslock_'").remove();
+      } else if (isCapsOn == false) {
+        isCapsOn = true;
+        $("input:focus").each(function(e) {
+          creaPopoverCapsLock(id);
+          allineamentoPopover(id);
+        });
+      }
+    }
+  });
+  $("input[type=password]").bind("keypress", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+    id = $(this).attr("id");
+    if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
+      isCapsOn = true;
+      creaPopoverCapsLock(id);
+      allineamentoPopover(id);
+    } else {
+      allineamentoPopover(id);
+    }
+  });
+});
+
+// Gestione password strength meter
+$(function() {
+  $('.form-password').password({ 
+    shortPass: 'password troppo debole',
+    badPass: 'password debole',
+    goodPass: 'password sicura',
+    strongPass: 'password molto sicura',
+    containsUsername: 'la password contiene l\'username',
+    enterPass: 'inserisci almeno 8 caratteri e una lettera maiuscola',
+    showPercent: false,
+    showText: true, // shows the text tips
+    animate: false, // whether or not to animate the progress bar on input blur/focus
+    animateSpeed: 'fast', // the above animation speed
+    username: false, // select the username field (selector or jQuery instance) for better password checks
+    usernamePartialMatch: true, // whether to check for username partials
+    minimumLength: 4 // minimum password length (below this threshold, the score is 0)
+  });
+});
+
 // Gestione visibilità password
 $(function() {
   $("input:password").each(function(e){
