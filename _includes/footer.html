@@ -1,13 +1,34 @@
 <footer class="bd-footer text-muted">
-  <div class="container-fluid p-3 p-md-5">
-    <ul class="bd-footer-links">
-      <li><a href="{{ site.developers }}">Developers Italia</a></li>
-      <li><a href="{{ site.twitter }}">Twitter</a></li>
-      <li><a href="{{ site.slack }}">Slack</a></li>
-    </ul>
-    <p class="x-small">
-      Bootstrap Italia è un progetto a cura del {{ site.authors }} ed è costruito su <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4</a>, che è stato creato da <a href="https://twitter.com/mdo" target="_blank" rel="noopener noreferrer">@mdo</a> e <a href="https://twitter.com/fat" target="_blank" rel="noopener noreferrer">@fat</a>.<br/>
-      Questo progetto è coperto da licenza <a href="https://github.com/italia/bootstrap-italia/blob/master/LICENSE" target="_blank" rel="license noopener noreferrer">BSD-3-Clause</a>, la documentazione è <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener noreferrer">CC BY 3.0</a>.
-    </p>
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center py-4">
+      <div class="d-flex">
+        <div class="px-2 team-logo--icon">
+          <img src="{{ site.baseurl }}/docs/assets/img/icons/logo-team-digitale.svg" alt="{{ site.authors }}" />
+        </div>
+        <div class="px-2 border-white border-left team-logo--text text-white">Team per la Trasformazione Digitale</div>
+      </div>
+      <div>
+        <span class="text-white">
+          <span class="d-none d-sm-inline">Seguici su: &nbsp</span>
+          <a class="text-white" href="https://twitter.com/teamdigitaleIT" target="_blank"><i class="it-twitter"></i></a>
+          <a class="text-white" href="https://medium.com/team-per-la-trasformazione-digitale" target="_blank"><i class="it-medium"></i></a>
+          <a class="text-white" href="https://www.linkedin.com/company/teamdigitale" target="_blank"><i class="it-linkedin"></i></a>
+          <a class="text-white" href="https://www.youtube.com/channel/UCwOMMmrMXiktlvKXx4vHJ-g/" target="_blank"><i class="it-youtube"></i></a>
+        </span>
+      </div>
+    </div>
+    <div class="row py-4 border-white border-top">
+      <ul class="col list-inline small">
+        <li class="list-inline-item">
+          <a href="{{ site.developers }}/it/privacy-policy/" class="small-prints">Privacy Policy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ site.developers }}/it/note-legali/" class="small-prints">Note Legali</a>
+        </li>
+        <!--<li class="list-inline-item">
+          <a href="{{ site.baseurl }}/docs/informazioni/" class="small-prints">Informazioni</a>
+        </li>-->
+      </ul>
+    </div>
   </div>
 </footer>

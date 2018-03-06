@@ -18010,6 +18010,14 @@ var Select = function ($) {
   return Select;
 }(jQuery);
 
+$(function () {
+  'use strict';
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open');
+  });
+});
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0): DatePicker.js

@@ -1,0 +1,59 @@
+.nav-tabs {
+  position: relative;
+  background-color: $white;
+  border-bottom: 0;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    bottom: 0px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 50%;
+    border-radius: 100%;
+  }
+  .nav-link {
+    border-radius: 0;
+    font-weight: 600;
+    color: $tertiary;
+    border: none;
+    border-bottom: 2px solid transparent;
+    &.disabled {
+      color: $gray-300;
+      font-weight: 400;
+    }
+  }
+  .nav-link.active, .nav-item.show .nav-link {
+    border-bottom: 2px solid $italia;
+    color: $italia;
+    cursor: inherit;
+  }
+  .nav-item {
+    margin-bottom: 0;
+  }
+  &.nav-dark {
+    background-color: $tertiary;
+    .nav-link {
+      color: #C3CFDB; // TODO quando i colori dark saranno definiti, gestire questo colore come variabile
+    }
+    .nav-link.active, .nav-item.show .nav-link {
+      background-color: $tertiary;
+      color: $cyan;
+      border-bottom: 2px solid $cyan;
+    }
+  }
+}
+
+.it-ico-sm {
+  font-size: $h3-font-size;
+}
+
+.it-ico {
+  font-size: $h5-font-size;
+}
+
+.it-ico-lg {
+  font-size: $h4-font-size;
+}

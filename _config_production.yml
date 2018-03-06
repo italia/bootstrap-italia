@@ -1,1 +1,3 @@
-environment: 'production'
+environment:    "production"
+baseurl:        "/bootstrap-italia"
+url:            "/bootstrap-italia"
