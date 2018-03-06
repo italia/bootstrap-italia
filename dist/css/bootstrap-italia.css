@@ -8589,8 +8589,6 @@ select.form-control, textarea.form-control {
     bottom: 0;
     left: 1em;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
     overflow-y: auto;
     background-color: #333333;
     transition: -webkit-transform .3s ease-in-out;

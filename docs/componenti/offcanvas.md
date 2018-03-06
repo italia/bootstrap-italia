@@ -12,10 +12,11 @@ group: componenti
 
   .bd-example {
     height: 480px;
+    width: 360px;
   }
 </style>
 
-<div class="bd-example" style="width: 400px">
+<div class="bd-example">
     <iframe class="iframe" data-role="window" src="../../esempi/offcanvas/index.html" sandbox="allow-same-origin allow-scripts allow-forms" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="yes" frameborder="0" width="100%" height="100%"></iframe>
 </div>
 

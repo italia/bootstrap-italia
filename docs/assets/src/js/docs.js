@@ -108,6 +108,7 @@
     $('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5').wrapInner('<div></div>')
   });
 
-  particlesJS('particles-js', particlesJSON);
+  if ($('#particles-js').length)
+    particlesJS('particles-js', particlesJSON);
 
 }(jQuery, particlesJS))
