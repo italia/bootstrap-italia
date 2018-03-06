@@ -76,12 +76,12 @@ const Select = (($) => {
       const $select = $(this._element);
       const uniqueID = this._guid();
 
-      var filterQuery = [];
+      var filterQuery = [],
 
-      var wrapper = $('<div class="select-wrapper"></div>');
+       wrapper = $('<div class="select-wrapper"></div>'),
 
-      var selectChildren = $select.children('option, optgroup');
-      var valuesSelected = [];
+      selectChildren = $select.children('option, optgroup'),
+       valuesSelected = [];
 
       this._isMultiple = Boolean($select.attr('multiple'));
       this._isSearchable = Boolean($select.attr('searchable'));
