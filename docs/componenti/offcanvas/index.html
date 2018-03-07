@@ -5,12 +5,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Test Documentation">
+<meta name="description" content="Menu di navigazione a comparsa per dispositivi come tablet o smartphone.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.7.3">
 <meta name="robots" content="noindex">
 
-<title>Zoom · Bootstrap Italia</title>
+<title>Offcanvas · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803071437" rel="stylesheet">
@@ -38,14 +38,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Zoom">
-<meta name="twitter:description" content="Test Documentation">
+<meta name="twitter:title" content="Offcanvas">
+<meta name="twitter:description" content="Menu di navigazione a comparsa per dispositivi come tablet o smartphone.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="/bootstrap-italia/docs/componenti-aggiuntivi/zoom/">
-<meta property="og:title" content="Zoom">
-<meta property="og:description" content="Test Documentation">
+<meta property="og:url" content="/bootstrap-italia/docs/componenti/offcanvas/">
+<meta property="og:title" content="Offcanvas">
+<meta property="og:description" content="Menu di navigazione a comparsa per dispositivi come tablet o smartphone.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -195,7 +195,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
               Tabelle</a></li><li>
             <a href="/bootstrap-italia/docs/contenuti/figure/">
               Figure</a></li></ul>
-    </div><div class="bd-toc-item">
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
         Componenti
       </a>
@@ -238,7 +238,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/navigazione/">
               Navigazione <span class="badge badge-info">to do</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navbar/">
-              Navbar <span class="badge badge-info">to do</span></a></li><li>
+              Navbar <span class="badge badge-info">to do</span></a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/offcanvas/">
               Offcanvas</a></li><li>
             <a href="/bootstrap-italia/docs/componenti/paginazione/">
@@ -255,7 +255,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
               Tab <span class="badge badge-info">wip</span></a></li><li>
             <a href="/bootstrap-italia/docs/componenti/tooltip/">
               Tooltip</a></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
         Componenti Aggiuntivi
       </a>
@@ -326,30 +326,57 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         </div>
 
         
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#zoom">Zoom</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#data-api">Data API</a></li>
-</ul>
-</li>
-</ul>
-          </div>
-        
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Zoom</h1>
-          <p class="bd-lead">Test Documentation</p>
-          <h2 id="zoom">Zoom</h2>
+          <h1 class="bd-title" id="content">Offcanvas</h1>
+          <p class="bd-lead">Menu di navigazione a comparsa per dispositivi come tablet o smartphone.</p>
+          <h2 id="esempio">Esempio</h2>
 
-<p>The zoom plugin provides simple image zoom functionality. Add a <code class="highlighter-rouge">data-action="zoom"</code> attribute to any image you want to make zoomable. Zoomed images can be closed by scroll, <code class="highlighter-rouge">esc</code>, or click. Use the meta key to open raw element in new tab.</p>
+<style>
+  /* Style override for Documentation purposes */
 
-<h3 id="data-api">Data API</h3>
+  .bd-example {
+    height: 480px;
+    width: 360px;
+  }
+</style>
 
 <div class="bd-example">
-<img data-action="zoom" style="width: 150px;" src="http://placekitten.com/g/400/400" />
+    <iframe class="iframe" data-role="window" src="../../esempi/offcanvas/index.html" sandbox="allow-same-origin allow-scripts allow-forms" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="yes" frameborder="0" width="100%" height="100%"></iframe>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">data-action=</span><span class="s">"zoom"</span> <span class="na">style=</span><span class="s">"width: 150px;"</span> <span class="na">src=</span><span class="s">"http://placekitten.com/g/400/400"</span><span class="nt">&gt;</span></code></pre></div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-md fixed-top navbar-dark bg-dark"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Esempio Offcanvas<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler p-0 border-0 ml-auto"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"offcanvas"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapse offcanvas-collapse"</span> <span class="na">id=</span><span class="s">"navbarsExampleDefault"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav mr-auto"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 1 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>(current)<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link 4<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link dropdown-toggle"</span> <span class="na">href=</span><span class="s">"http://example.com"</span> <span class="na">id=</span><span class="s">"dropdown01"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>Dropdown<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdown01"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione 1<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione 2<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione 3<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
 
         </main>
       </div>
