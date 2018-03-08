@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.3.0
+ * Bootstrap Italia v0.3.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -8227,6 +8227,20 @@ select.form-control, textarea.form-control {
 .pagination .page-item .page-link {
   border: none;
   padding: 0.5rem 1rem; }
+
+@media (max-width: 767.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 1em;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #333333;
+    transition: transform .3s ease-in-out;
+    transform: translateX(100%); }
+    .offcanvas-collapse.open {
+      transform: translateX(-1rem); } }
 
 .nav-tabs {
   position: relative;

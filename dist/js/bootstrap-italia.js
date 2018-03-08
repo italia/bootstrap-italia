@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.3.0
+ * Bootstrap Italia v0.3.1
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -4874,12 +4874,10 @@ var Select = function ($) {
       var $select = $(this._element);
       var uniqueID = this._guid();
 
-      var filterQuery = [];
-
-      var wrapper = $('<div class="select-wrapper"></div>');
-
-      var selectChildren = $select.children('option, optgroup');
-      var valuesSelected = [];
+      var filterQuery = [],
+          wrapper = $('<div class="select-wrapper"></div>'),
+          selectChildren = $select.children('option, optgroup'),
+          valuesSelected = [];
 
       this._isMultiple = Boolean($select.attr('multiple'));
       this._isSearchable = Boolean($select.attr('searchable'));
@@ -5237,6 +5235,14 @@ var Select = function ($) {
 
   return Select;
 }(jQuery);
+
+$(function () {
+  'use strict';
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open');
+  });
+});
 
 /**
  * --------------------------------------------------------------------------

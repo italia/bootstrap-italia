@@ -1,40 +1,23 @@
-//
-// Footer
-//
-
 .bd-footer {
-  font-size: 85%;
-  text-align: center;
-  background-color: #f7f7f7;
-
-  a {
-    font-weight: 500;
-    color: $gray-700;
-
-    &:hover,
-    &:focus {
-      color: $link-color;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
+  background-color: $docs-dark;
+  color: $white;
 
   @include media-breakpoint-up(sm) {
     text-align: left;
   }
-}
-
-.bd-footer-links {
-  padding-left: 0;
-  margin-bottom: 1rem;
-
-  li {
-    display: inline-block;
-
-    + li {
-      margin-left: 1rem;
+  .team-logo {
+    &--icon {
+      width: 72px
     }
+    &--text {
+      font-size: 16px;
+      line-height: 1rem;
+      max-width: 160px;
+      text-transform: uppercase;
+    }
+  }
+  .small-prints {
+    color: #00FFF8;
+    font-weight: 600;
   }
 }

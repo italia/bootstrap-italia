@@ -108,14 +108,3 @@
   font-weight: 300;
   letter-spacing: unset;
 }
-
-.particles-js-canvas-el {
-  position: absolute;
-  pointer-events: none;
-  display: block;
-  vertical-align: bottom;
-  height: auto;
-  width: 100vw;
-  background-attachment:fixed;
-  margin: 0 -1rem; // horizontal scroll reset
-}
