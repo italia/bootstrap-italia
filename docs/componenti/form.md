@@ -22,6 +22,23 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 {% example html %}
 <form>
+
+  <div class="input-group pb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text it-search" id="basic-addon1"></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <input type="search" id="form-autocomplete-1" class="form-control mdb-autocomplete">
+    <button class="mdb-autocomplete-clear">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+    </button>
+    <label for="form-autocomplete-1" class="active">Your country</label>
+  </div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText">
     <label for="exampleInputText">Nominativo</label>
