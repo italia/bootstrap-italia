@@ -47,7 +47,8 @@ input[type="file"] + label {
 .select-wrapper.custom-select .select-dropdown {
 	color: $gray-tertiary;
 	border-bottom: 1px solid $gray-tertiary;
-	padding-right: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 0;
 }
 .select-wrapper.custom-select.show .select-dropdown {
 	color: $primary;
