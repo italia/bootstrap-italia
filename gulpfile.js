@@ -263,11 +263,12 @@ gulp.task('jekyll', done => {
     buffer.toString()
       .split(/\n/)
       .forEach((message) => gutil.log('Jekyll: ' + message))
+    if (buffer.toString().indexOf('done') > -1)
+      done() // jekyll first run complete - TODO: find a better way to detect this event
   }
 
   jekyll.stdout.on('data', jekyllLogger)
   jekyll.stderr.on('data', jekyllLogger)
-  done()
 })
 
 const siteRoot = '_gh_pages'
