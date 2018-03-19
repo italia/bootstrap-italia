@@ -49,6 +49,11 @@ Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elem
     <label for="exampleInputPassword">Password</label>
   </div>
   <div class="form-group">
+    <i class="ico-prefix it-lock"></i>
+    <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="infoPassword" placeholder="Password">
+    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+  </div>
+  <div class="form-group">
     <input type="password" class="form-control form-password" id="exampleInputPassword2">
     <label for="exampleInputPassword2">Password con strength meter</label>
   </div>
