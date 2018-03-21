@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1rem; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -7733,7 +7733,8 @@ input[type="file"] + label {
 .select-wrapper.custom-select .select-dropdown {
   color: #5c6f82;
   border-bottom: 1px solid #5c6f82;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  margin-bottom: 0; }
 
 .select-wrapper.custom-select.show .select-dropdown {
   color: #0073e6;
