@@ -18264,7 +18264,7 @@ $(function () {
   });
   $("input[type=password]").bind("keypress", function (e) {
     var keyCode = e.keyCode ? e.keyCode : e.which;
-    // i keyCode dal 65 al 90 identificano i caratteri alfabetici da "a" a "z"
+    // i keyCode dal 65 al 90 identificano i caratteri alfabetici maiuscoli da "A" a "Z"
     if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
       isCapsOn = true;
       msgCapsLock($(this));
