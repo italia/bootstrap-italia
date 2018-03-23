@@ -1,7 +1,6 @@
-/** 
- * @author Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
+/**
+ * Original code by Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
  * @link https://github.com/elboletaire/password-strength-meter
- * Modificato dal Team Digitale 22 Marzo 2018
  */
 ;(function($) {
   'use strict';
@@ -176,7 +175,7 @@
     function init() {
       var shown = true;
       var $text = options.showText;
-      
+
       var $graybar = $('<div>').addClass('progress rounded-0 position-relative psw-meter');
       $graybar.append('<div class="row position-absolute w-100 m-0"><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div></div>');
       var $colorbar = $('<div>').attr({
@@ -227,7 +226,7 @@
         }
       });
 
-      
+
 
       return this;
     }
@@ -281,7 +280,7 @@ $(function () {
     if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
       isCapsOn = true;
       msgCapsLock($(this));
-    } 
+    }
   });
 });
 
@@ -295,7 +294,7 @@ $(function() {
   $("input:password").each(function(e){
     $(this).after('<span class="btn-eye eye-on" toggle="'+$(this).attr("id")+'"></span>');
   });
-  
+
   $(".btn-eye").on("click", function() {
     $(this).toggleClass("eye-off");
     var input = $("#"+$(this).attr("toggle"));
