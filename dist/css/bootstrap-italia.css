@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Italia v0.3.1
+ * Bootstrap Italia v0.3.2
  * Copyright 2018
  * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
  */
@@ -4838,15 +4838,12 @@ button.close {
   .bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
     bottom: calc((0.5rem + 1px) * -1); }
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
-  .bs-popover-top .arrow::after,
-  .bs-popover-auto[x-placement^="top"] .arrow::after {
+  .bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after {
     border-width: 0.5rem 0.5rem 0; }
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-top .arrow::after,
-  .bs-popover-auto[x-placement^="top"] .arrow::after {
+  .bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
     border-top-color: white; }
 
@@ -4858,15 +4855,12 @@ button.close {
     height: 1rem;
     margin: 8px 0; }
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before,
-  .bs-popover-right .arrow::after,
-  .bs-popover-auto[x-placement^="right"] .arrow::after {
+  .bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
     border-width: 0.5rem 0.5rem 0.5rem 0; }
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-right .arrow::after,
-  .bs-popover-auto[x-placement^="right"] .arrow::after {
+  .bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
     border-right-color: white; }
 
@@ -4875,15 +4869,12 @@ button.close {
   .bs-popover-bottom .arrow, .bs-popover-auto[x-placement^="bottom"] .arrow {
     top: calc((0.5rem + 1px) * -1); }
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before,
-  .bs-popover-bottom .arrow::after,
-  .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     border-width: 0 0.5rem 0.5rem 0.5rem; }
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-bottom .arrow::after,
-  .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
     border-bottom-color: white; }
   .bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
@@ -4904,15 +4895,12 @@ button.close {
     height: 1rem;
     margin: 8px 0; }
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before,
-  .bs-popover-left .arrow::after,
-  .bs-popover-auto[x-placement^="left"] .arrow::after {
+  .bs-popover-left .arrow::after, .bs-popover-auto[x-placement^="left"] .arrow::after {
     border-width: 0.5rem 0 0.5rem 0.5rem; }
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-left .arrow::after,
-  .bs-popover-auto[x-placement^="left"] .arrow::after {
+  .bs-popover-left .arrow::after, .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
     border-left-color: white; }
 
@@ -7437,8 +7425,7 @@ caption {
   font-size: 0.777rem;
   line-height: 1.4285; }
 
-b,
-strong {
+b, strong {
   font-weight: 600; }
 
 small,
@@ -7634,7 +7621,9 @@ small,
   font-size: 16px;
   border: none; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-lg, .btn-group-lg > .btn {
+.btn-sm, .btn-group-sm > .btn,
+.btn-lg,
+.btn-group-lg > .btn {
   border-radius: 4px;
   line-height: 1.5; }
 
@@ -7692,11 +7681,7 @@ small,
   opacity: 0.2; }
 
 /* CLASSI FORM */
-input,
-button,
-select,
-optgroup,
-textarea {
+input, button, select, optgroup, textarea {
   font-weight: bold;
   color: #5c6f82; }
 
@@ -8230,8 +8215,7 @@ select.form-control, textarea.form-control {
     .nav-tabs .nav-link.disabled {
       color: #b3b3b3;
       font-weight: 400; }
-  .nav-tabs .nav-link.active,
-  .nav-tabs .nav-item.show .nav-link {
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     border-bottom: 2px solid #0066cc;
     color: #0066cc;
     cursor: inherit; }
