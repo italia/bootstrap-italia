@@ -5126,10 +5126,9 @@ var Select = function ($) {
   return Select;
 }(jQuery)
 
-/** 
- * @author Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
+/**
+ * Original code by Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
  * @link https://github.com/elboletaire/password-strength-meter
- * Modificato dal Team Digitale 22 Marzo 2018
  */
 ;(function ($) {
   'use strict';
