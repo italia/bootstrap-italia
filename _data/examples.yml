@@ -57,6 +57,8 @@
 - category: Esperimenti
   description: Di seguito sono riportati alcuni esempi per il corretto utilizzo dei componenti, secondo le linee guida di design.
   examples:
+    - name: Kitchen-Sink
+      description: Una lunghissima pagina di test che mostra tutti i principali componenti.
     - name: Carousel
       description: Un esempio di corretto utilizzo del componente Carousel.
     - name: Cookiebar
