@@ -67,9 +67,6 @@ input[type="file"] + label {
 input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.form-control, select.form-control {
   background-color: transparent;
   border: none;
-  border-bottom-width: medium;
-  border-bottom-style: none;
-  border-bottom-color: currentcolor;
   border-bottom: 1px solid $gray-tertiary;
   border-radius: 0;
   outline: 0;

@@ -99,10 +99,10 @@ gulp.task('scss-min', gulp.series('scss', done => {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({
-      compatibility: 'ie10'
-    }))
     .pipe(autoprefixer())
+    .pipe(cleanCSS({
+      level: 2
+    }))
     .pipe(wrapper({
       header: bootstrapItaliaBanner +
       '\n'
