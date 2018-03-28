@@ -13,16 +13,16 @@
 <title>Modificare componenti · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803071541" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803281741" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803071541" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803281741" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803071541" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803281741" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.3.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.3.2/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -360,13 +360,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>I componenti base ereditano quindi stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap v4</a>, di cui si potrà trovare il codice sorgente nella cartella rispettiva all’interno di <code class="highlighter-rouge">node_modules</code>. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:</p>
 
 <ul>
-  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src\scss</code>. Si può notare in particolare come il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importi ed estenda gli stili e le funzioni di base di Bootstrap.</li>
-  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella `src\js.</li>
+  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src/scss</code>. Si può notare in particolare come il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importi ed estenda gli stili e le funzioni di base di Bootstrap.</li>
+  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella <code class="highlighter-rouge">src/js</code>.</li>
 </ul>
 
 <p>Queste due cartelle, assieme alla cartella <code class="highlighter-rouge">docs</code> per la stesura della documentazione (vedi di seguito), sono le uniche cartelle dove avviene la personalizzazione dei componenti.</p>
 
-<p>Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per “sovrascrivere” il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle <code class="highlighter-rouge">dist\js</code> e <code class="highlighter-rouge">dist\css</code>.</p>
+<p>Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per “sovrascrivere” il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle <code class="highlighter-rouge">dist/js</code> e <code class="highlighter-rouge">dist/css</code>.</p>
 
 <p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap.</p>
 
@@ -397,8 +397,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803071541"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803071541"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803281741"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803281741"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',
