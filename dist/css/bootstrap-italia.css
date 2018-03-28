@@ -7902,6 +7902,79 @@ select.form-control, textarea.form-control {
         -ms-user-select: none;
             user-select: none; }
 
+/* TOGGLES */
+.toggles,
+.toggles * {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.toggles label {
+  cursor: pointer;
+  width: 100%;
+  margin: 0 8px 8px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold; }
+  .toggles label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .toggles label input[type=checkbox] + .lever {
+      content: "";
+      position: relative;
+      width: 46px;
+      height: 16px;
+      background-color: #e6e9f2;
+      border-radius: 10px;
+      margin-right: 10px;
+      transition: background 0.3s ease;
+      vertical-align: middle;
+      margin: 0 16px;
+      float: right;
+      margin-top: 8px; }
+      .toggles label input[type=checkbox] + .lever:before, .toggles label input[type=checkbox] + .lever:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        left: 0;
+        top: -5px;
+        left: -3px;
+        transition: left 0.3s ease, background .1s ease, transform .1s ease; }
+      .toggles label input[type=checkbox] + .lever:before {
+        background-color: rgba(0, 115, 230, 0.15); }
+      .toggles label input[type=checkbox] + .lever:after {
+        background-color: #5c6f82;
+        background-size: 10px 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='10px' height='10px' viewBox='0 0 10 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.8'%3e%3cg id='Data-entry/toggle/Light_bg/disabledOff' transform='translate(-8.000000, -11.000000)' fill='%23FFFFFF'%3e%3cpath d='M14.363961,15.9497475 L17.8994949,19.4852814 L16.4852814,20.8994949 L12.9497475,17.363961 L9.41421356,20.8994949 L8,19.4852814 L11.5355339,15.9497475 L8,12.4142136 L9.41421356,11 L12.9497475,14.5355339 L16.4852814,11 L17.8994949,12.4142136 L14.363961,15.9497475 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+        border: 2px solid #fff; }
+    .toggles label input[type=checkbox]:checked + .lever {
+      background-color: #e6e9f2; }
+      .toggles label input[type=checkbox]:checked + .lever:before, .toggles label input[type=checkbox]:checked + .lever:after {
+        left: 23px; }
+      .toggles label input[type=checkbox]:checked + .lever:after {
+        background-color: #0073e6;
+        background-size: 14px 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='14px' height='11px' viewBox='0 0 14 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch --%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.5'%3e%3cg id='Data-entry/toggle/Light_bg/on' transform='translate(-28.000000, -11.000000)' fill='%23FFFFFF'%3e%3cg id='Group-3-Copy-5' transform='translate(24.000000, 16.000000) scale(-1, 1) translate(-24.000000, -16.000000) translate(1.000000, 4.000000)'%3e%3cpath d='M13,15 L13,5 L15,5 L15,15 L15,17 L9,17 L9,15 L13,15 Z' id='Combined-Shape' transform='translate(12.000000, 11.000000) scale(-1, 1) rotate(45.000000) translate(-12.000000, -11.000000) '%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"); }
+    .toggles label input[type=checkbox][disabled] + .lever {
+      cursor: default;
+      background-color: #e6e9f2; }
+      .toggles label input[type=checkbox][disabled] + .lever:after {
+        background-color: #e6e9f2; }
+    .toggles label input[type=checkbox][disabled]:checked + .lever:after {
+      background-color: #e6e9f2; }
+
 /* CHECKBOX */
 [type="checkbox"] + label::after,
 [type="checkbox"] + label::before {
@@ -7917,7 +7990,7 @@ select.form-control, textarea.form-control {
   top: 0;
   width: 17px;
   height: 17px;
-  border: 1px solid #5C6F82;
+  border: 1px solid #e6e9f2;
   border-radius: 1px;
   margin: 2px 5px;
   transform: rotateZ(37deg);
