@@ -10,11 +10,11 @@ toc: true
 
 Per attivare lo scorrimento automatico del documento all'àncora indicata nell'attibuto `href`, è sufficiente aggiungere al tag link l'attributo `data-attribute="forward"` e la classe `.forward`:
 
-{% example html %}
+{% capture example %}
 <a href="#sezione-di-esempio" data-attribute="forward" class="forward" aria-hidden="true">
     <i class="it-expand"></i>
 </a>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Sezione di esempio
 

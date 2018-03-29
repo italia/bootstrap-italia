@@ -18,10 +18,9 @@ Puoi allineare tutto il contenuto di una card usando una delle classi delle [uti
 
 Le card possono essere personalizzate nel colore del testo e di sfondo con le [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/) e nelle bordature con le relative [utilità per i bordi]({{ site.baseurl }}/docs/utilities/bordi/). 
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
-{% example html %}
+{% capture example %}
 <div class="card w-50">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Immagine testata Card">
   <div class="card-body">
@@ -30,7 +29,7 @@ Le card possono essere personalizzate nel colore del testo e di sfondo con le [u
     <a href="#" class="btn btn-primary">Vai avanti</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Struttura
 
@@ -40,13 +39,13 @@ Le card supportano un'ampia varietà di contenuti come immagini, testo, gruppi d
 
 Per il blocco principale di contenuto l'elemento di riferimento è contrassegnato dalla classe `.card-body`.
 
-{% example html %}
+{% capture example %}
 <div class="card">
   <div class="card-body">
     Questo è un testo all'interno del corpo di una "card-body".
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Titoli, testo e link
 
@@ -56,7 +55,7 @@ Per il testo è prevista la classe `.card-text` da aggiungere a un tag `<p>` opp
 
 Allo stesso modo con la classe `.card-link` sui tag `<a>`per avere i link posizionati uno accanto all'altro.
 
-{% example html %}
+{% capture example %}
 <div class="card w-50">
   <div class="card-body">
     <h4 class="card-title">Titolo card</h4>
@@ -66,24 +65,24 @@ Allo stesso modo con la classe `.card-link` sui tag `<a>`per avere i link posizi
     <a href="#" class="card-link">Altro link</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Immagini
 
 Puoi inserire delle immagini all'interno delle card: in alto, in basso, incorporato nel contenuto oppure come sfondo. Con `.card-img-top` inserito prima del `.card-body` posiziona l'immagine nella parte superiore della card. Se invece vuoi che sia posizionata in fondo l'immagine dovrà avere la classe `.card-img-bottom` e inserita dopo il body.
 
-{% example html %}
+{% capture example %}
 <div class="card w-50">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
   <div class="card-body">
     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Per utilizzare l'immagine come sfondo della card questa dovrà avere la classe `.card-img` mentre al posto del `.card-body` dovrà esserci `.card-img-overlay`. Così facendo il contenuto si sovrapporrà all'immagine. Fate attenzione al contrasto tra sfondo e colore del testo affinchè risulti il contenuto leggibile ai fini dell'accessibilità.
 
-{% example html %}
+{% capture example %}
 <div class="card">
   <img class="card-img" data-src="holder.js/100px270/?text=Immagine" alt="Card image">
   <div class="card-img-overlay">
@@ -92,13 +91,13 @@ Per utilizzare l'immagine come sfondo della card questa dovrà avere la classe `
     <p class="card-text">Ultimo aggiornamento 3 minuti fa</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Testata e piè di pagina
 
 Puoi aggiungere opzionalmente una testata `.card-header` e un piè di pagina `.card-footer` alla card.
 
-{% example html %}
+{% capture example %}
 <div class="card">
   <div class="card-header">
     Featured
@@ -112,7 +111,7 @@ Puoi aggiungere opzionalmente una testata `.card-header` e un piè di pagina `.c
     2 giorni fa
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Esempi componenti
 
@@ -120,7 +119,7 @@ Puoi aggiungere opzionalmente una testata `.card-header` e un piè di pagina `.c
 
 Puoi avere un elenco al posto o in aggiunta a `.card-body` inserendo il [componente elenco]({{ site.baseurl }}/docs/componenti/elenchi/).
 
-{% example html %}
+{% capture example %}
 <div class="card w-50">
   <div class="card-body">
     <h4 class="card-title">Titolo card</h4>
@@ -132,13 +131,13 @@ Puoi avere un elenco al posto o in aggiunta a `.card-body` inserendo il [compone
     <li class="list-group-item">Vestibulum at eros</li>
   </ul>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Barra di navigazione
 
 Aggiungi nella testata (o all'interno) della card una [barra di navigazione]({{ site.baseurl }}/docs/componenti/navigazione/).
 
-{% example html %}
+{% capture example %}
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
@@ -159,9 +158,9 @@ Aggiungi nella testata (o all'interno) della card una [barra di navigazione]({{ 
     <a href="#" class="btn btn-primary">Vai avanti</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
@@ -182,7 +181,7 @@ Aggiungi nella testata (o all'interno) della card una [barra di navigazione]({{ 
     <a href="#" class="btn btn-primary">Vai avanti</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Card layout
 
@@ -192,7 +191,7 @@ Oltre alla personalizzazione grafica del contenuto, ci sono anche altre opzioni 
 
 Usa i gruppi di card per dare l'idea di un singolo elemento collegato con colonne di larghezza e altezza uguali. I gruppi di card usano `display: flex;` per ottenere il loro dimensionamento uniforme.
 
-{% example html %}
+{% capture example %}
 <div class="card-group">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
@@ -219,11 +218,11 @@ Usa i gruppi di card per dare l'idea di un singolo elemento collegato con colonn
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Quando si utilizzano gruppi di card con piè di pagina, il loro contenuto si allinea automaticamente.
 
-{% example html %}
+{% capture example %}
 <div class="card-group">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
@@ -256,13 +255,13 @@ Quando si utilizzano gruppi di card con piè di pagina, il loro contenuto si all
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Set di card
 
 Per usare un gruppo di card uguali per larghezza e altezza, ma che non siano attaccate si applica la classe `card-deck` al contenitore padre.
 
-{% example html %}
+{% capture example %}
 <div class="card-deck">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine">
@@ -289,11 +288,11 @@ Per usare un gruppo di card uguali per larghezza e altezza, ma che non siano att
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Come con i gruppi di card anche in questo caso si allineano automaticamente.
 
-{% example html %}
+{% capture example %}
 <div class="card-deck">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
@@ -326,7 +325,7 @@ Come con i gruppi di card anche in questo caso si allineano automaticamente.
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Colonne di card
 
@@ -334,7 +333,7 @@ Le card possono essere organizzate in colonne simili a [Masonry](https://masonry
 
 **Nota** L'altezza delle colonne con card può variare. Per evitare che le card spezzino le colonne  dobbiamo impostarle su `display: inline-block;` come `column-break-inside: avoid;`: non è ancora una soluzione a prova di proiettile.
 
-{% example html %}
+{% capture example %}
 <div class="card-columns">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100px160/" alt="Card Immagine">
@@ -399,7 +398,7 @@ Le card possono essere organizzate in colonne simili a [Masonry](https://masonry
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Le colonne di card possono anche essere estese e personalizzate con un codice aggiuntivo. Di seguito viene mostrata un'estensione della classe `.card-columns` che utilizza lo stesso CSS che usiamo —CSS columns— per generare un insieme di livelli responsive per la modifica del numero di colonne.
 

@@ -20,20 +20,20 @@ Se il componente datepicker non è d'interesse per il proprio sito web, è buona
 
 Per inserire un campo di tipo _datepicker_, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perchè risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="datepicker"` e per stilizzarlo la classe `datepicker`.
 
-{% example html %}
+{% capture example %}
 <div class="form-group">
     <div class="">
         <input id="datepicker" data-action="datepicker" class="form-control-plaintext datepicker" name="date" type="text" autofocuss>
         <label for="datepicker">Data</label>
     </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Usabilità
 
 Si tenga presente che per l'inserimento di date con un range maggiore di un anno si consiglia l'utilizzo di campi distinti per giorno, mese e anno per una compilazione manuale.
 
-{% example html %}
+{% capture example %}
 <div class="form-group col-6">
     <div class="input-group">
         <input id="Giorno" type="number" class="form-control col-3" placeholder="GG" aria-label="Giorno" min="1" max="31" maxlength="2">
@@ -48,18 +48,18 @@ Si tenga presente che per l'inserimento di date con un range maggiore di un anno
     </div>
     <label for="Giorno">Data di nascita</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Scelta oraria
 
 Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il _datepicker_, ance in questo caso il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perchè risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="timepicker"` e per stilizzarlo la classe `timepicker`.
 
-{% example html %}
+{% capture example %}
 <div class="form-group">
     <input id="timepicker" data-action="timepicker" class="form-control-plaintext timepicker" type="time" name="time" autofocuss>
     <label for="timepicker">Orario</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Personalizzazione
 

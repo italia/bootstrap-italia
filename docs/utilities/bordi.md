@@ -13,25 +13,25 @@ logica aggiuntiva o sottrattiva.
 ### Aggiuntivo
 
 <div class="bd-example-border-utils">
-{% example html %}
+{% capture example %}
 <span class="border"></span>
 <span class="border-top"></span>
 <span class="border-right"></span>
 <span class="border-bottom"></span>
 <span class="border-left"></span>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 </div>
 
 ### Sottrattivo
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
-{% example html %}
+{% capture example %}
 <span class="border-0"></span>
 <span class="border-top-0"></span>
 <span class="border-right-0"></span>
 <span class="border-bottom-0"></span>
 <span class="border-left-0"></span>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 </div>
 
 ## Colore dei bordi
@@ -39,11 +39,11 @@ logica aggiuntiva o sottrattiva.
 Cambia il colore del bordo usando la palette del tema in uso.
 
 <div class="bd-example-border-utils">
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <span class="border border-{{ color.name }}"></span>{% endfor %}
 <span class="border border-white"></span>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 </div>
 
 ## Bordi arrotondati
