@@ -16,7 +16,7 @@ Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA]
 Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell'usabilità, il fatto che l'elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all'interno del menu a discesa chiuso) può causare confusione. Dal punto di vista dell'accessibilità, attualmente non esiste un modo sensato per mappare questo tipo di costrutto a un modello standard WAI ARIA, il che significa che non può essere facilmente reso comprensibile agli utenti delle tecnologie assistive. (TODO verificare)
 {% endcallout %}
 
-{% example html %}
+{% capture example %}
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#">Link Attivo</a></li>
   <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
@@ -29,7 +29,7 @@ Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, 
   <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
   <li class="nav-item"><a class="nav-link disabled" href="#">Link Disabilitato</a></li>
 </ul>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 L'esempio sopra riportato non ha molto senso senza un contenuto che cambi al di sotto di esso; per rendere tali interfacce navigabili è necessario utilizzare Javascript, come mostrato di seguito:
 
@@ -67,7 +67,7 @@ L'esempio sopra riportato non ha molto senso senza un contenuto che cambi al di 
 
 Oppure al posto della label usare una icona.
 
-{% example html %}
+{% capture example %}
   <ul class="nav nav-tabs" id="myTab2" role="tablist">
     <li class="nav-item"><a class="nav-link pl-4 pr-4 active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file d-block text-center"></i><span class="sr-only"> Tab titolo 1</span></a></li>
     <li class="nav-item"><a class="nav-link pl-4 pr-4" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false"><i class="it-ico-lg it-calendar  d-block text-center"></i><span class="sr-only"> Tab titolo 2</span></a></li>
@@ -78,11 +78,11 @@ Oppure al posto della label usare una icona.
     <div class="tab-pane p-3 fade" id="tab2a" role="tabpanel" aria-labelledby="tab2a-tab"><p>Testo 2</p></div>
     <div class="tab-pane p-3 fade" id="tab3a" role="tabpanel" aria-labelledby="tab3a-tab"><p>Testo 3</p></div>
   </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Oppure con label e icona insieme
 
-{% example html %}
+{% capture example %}
 <ul class="nav nav-tabs" id="myTab3" role="tablist">
   <li class="nav-item"><a class="nav-link active" id="tab1b-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab titolo 1</a></li>
   <li class="nav-item"><a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false"><i class="it-ico it-calendar d-block text-center"></i> Tab titolo 2</a></li>
@@ -99,7 +99,7 @@ Oppure con label e icona insieme
     <p>Testo 3</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Allo stesso modo di quanto avviene con i normali `.nav`, a seconda delle tue necessità, è possibile modificare tale codice con un markup diverso, diverso dalla classica lista basata su `<ul>`. È importante notare però, che nel caso si desideri usare l'elemento `<nav>`, l'attributo `role="tablist"` non deve essere applicato direttamente su di esso, in quanto sovrascriverebbe il ruolo dell'elemento stesso per la navigazione.
 

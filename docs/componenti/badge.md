@@ -30,49 +30,48 @@ La grandezza di ogni badge si adatta come dimensione a quella del font (misurato
 
 I badge possono essere utilizzati come parte di link o pulsanti per fornire un contatore.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary">
   Notifiche <span class="badge badge-light">4</span>
 </button>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 A seconda di come i badge vengono utilizzati, questi potrebbero confondere gli utenti che usano lo screen reader e tecnologie assistive simili. Mentre lo stile dei badge fornisce un indizio visivo sul loro scopo, a questi utenti saranno semplicemente presentati come semplice contenuto. A seconda della situazione specifica, questi badge possono sembrare parole o numeri aggiuntivi casuali alla fine di una frase, un collegamento o un pulsante.
 
 A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si capisce che il "4" è il numero di notifiche), considera l'eventualità di includere un testo aggiuntivo nascosto.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary">
   Profilo <span class="badge badge-light">9</span>
   <span class="sr-only">Messaggi non letti</span>
 </button>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Variazioni contestuali
 
 Aggiungi una delle seguenti classi per modificare l'aspetto di un badge.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <span class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
 ## Badges arrotondati
 
 Per rendere i badge arrotondati puoi usare la classe `.badge-pill`.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <span class="badge badge-pill badge-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Link
 
 Se hai bisogno che un badge sia anche un link, aggiungi una delle classi contestuali `.badge-*` sull'elemento `<a>`. Di conseguenza anche gli stati **hover** e **focus** saranno attivi sul badge.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <a href="#" class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</a>{% endfor %}
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

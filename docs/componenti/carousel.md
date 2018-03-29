@@ -26,7 +26,7 @@ Assicurati di impostare un id univoco su `.carousel` per i controlli opzionali, 
 
 Questo è un carousel con sole diapositive. Nota la presenza di `.d-block` e di `.img-fluid` sulle immagini del carousel per impedire l'allineamento dell'immagine predefinito del browser.
 
-{% example html %}
+{% capture example %}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -40,13 +40,13 @@ Questo è un carousel con sole diapositive. Nota la presenza di `.d-block` e di 
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Con i controlli
 
 Aggiungere i controlli precedente e successivo:
 
-{% example html %}
+{% capture example %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -68,13 +68,13 @@ Aggiungere i controlli precedente e successivo:
     <span class="sr-only">Successivo</span>
   </a>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Con gli indicatori
 
 È possibile anche aggiungere gli indicatori al carousel, anche a fianco dei controlli.
 
-{% example html %}
+{% capture example %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -101,7 +101,7 @@ Aggiungere i controlli precedente e successivo:
     <span class="sr-only">Successivo</span>
   </a>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 {% callout warning %}
 ##### È richiesto un elemento attivo iniziale

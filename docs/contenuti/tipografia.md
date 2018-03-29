@@ -35,37 +35,37 @@ Tutte le intestazioni HTML, `<h1>` fino a `<h6>`, sono disponibili.
   <tbody>
     <tr>
       <td>
-        {% markdown %}`<h1></h1>`{% endmarkdown %}
+        {{ "`<h1></h1>`" | markdownify }}
       </td>
       <td><span class="h1">h1. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
-        {% markdown %}`<h2></h2>`{% endmarkdown %}
+        {{ "`<h2></h2>`" | markdownify }}
       </td>
       <td><span class="h2">h2. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
-        {% markdown %}`<h3></h3>`{% endmarkdown %}
+        {{ "`<h3></h3>`" | markdownify }}
       </td>
       <td><span class="h3">h3. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
-        {% markdown %}`<h4></h4>`{% endmarkdown %}
+        {{ "`<h4></h4>`" | markdownify }}
       </td>
       <td><span class="h4">h4. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
-        {% markdown %}`<h5></h5>`{% endmarkdown %}
+        {{ "`<h5></h5>`" | markdownify }}
       </td>
       <td><span class="h5">h5. Intestazione di Bootstrap</span></td>
     </tr>
     <tr>
       <td>
-        {% markdown %}`<h6></h6>`{% endmarkdown %}
+        {{ "`<h6></h6>`" | markdownify }}
       </td>
       <td><span class="h6">h6. Intestazione di Bootstrap</span></td>
     </tr>
@@ -83,14 +83,14 @@ Tutte le intestazioni HTML, `<h1>` fino a `<h6>`, sono disponibili.
 
 Anche le classi `.h1` fino a `.h6` sono disponibili, per quando tu voglia presentare il testo nello stesso stile delle intestazioni ma non puoi utilizzare l'elemento HTML associato.
 
-{% example html %}
+{% capture example %}
 <p class="h1">h1. Intestazione di Bootstrap</p>
 <p class="h2">h2. Intestazione di Bootstrap</p>
 <p class="h3">h3. Intestazione di Bootstrap</p>
 <p class="h4">h4. Intestazione di Bootstrap</p>
 <p class="h5">h5. Intestazione di Bootstrap</p>
 <p class="h6">h6. Intestazione di Bootstrap</p>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Personalizzazione delle intestazioni
 
@@ -144,17 +144,17 @@ Gli elementi di intestazione tradizionali sono progettati per funzionare al megl
 
 Fai risaltare un paragrafo aggiungendo la classe `.lead`.
 
-{% example html %}
+{% capture example %}
 <p class="lead">
   Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 </p>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Elementi di testo inline
 
 Stili per elementi comuni HTML5 inline. 
 
-{% example html %}
+{% capture example %}
 <p>Questa linea di testo mostra come è rappresentato del <mark>testo evidenziato</mark>.</p>
 <p><del>Questa linea di testo mostra come è rappresentato del testo cancellato.</del></p>
 <p><s>Questa linea di testo mostra come è rappresentato del testo non più valido.</s></p>
@@ -163,7 +163,7 @@ Stili per elementi comuni HTML5 inline.
 <p><small>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.</small></p>
 <p><strong>Questa linea di testo mostra come è rappresentato un testo grassetto.</strong></p>
 <p><em>Questa linea di testo mostra come è rappresentato un testo corsivo.</em></p>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche indesiderate che i tag porterebbero.
 
@@ -177,49 +177,49 @@ Implementazione stilizzata dell'elemento HTML `<abbr>` per abbreviazioni e acron
 
 Aggiungi `.initialism` a un'abbreviazione per una dimensione del font leggermente più piccola.
 
-{% example html %}
+{% capture example %}
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Blockquotes
 
 Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno di un  `<blockquote class="blockquote">` come la citazione.
 
-{% example html %}
+{% capture example %}
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Citare una fonte
 
 Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte. Includi il nome delle fonte di origine in `<cite>`.
 
-{% example html %}
+{% capture example %}
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Allineamento
 
 Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo blockquote.
 
-{% example html %}
+{% capture example %}
 <blockquote class="blockquote text-center">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <blockquote class="blockquote text-right">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Liste
 
@@ -227,7 +227,7 @@ Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo b
 
 Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi elenco (solo per i figli diretti). **Questo si applica solo agli elementi della lista che sono figli diretti**, il che significa che dovrai aggiungere la classe per tutti gli elenchi annidati.
 
-{% example html %}
+{% capture example %}
 <ul class="list-unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -245,25 +245,25 @@ Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi elenco 
   <li>Aenean sit amet erat nunc</li>
   <li>Eget porttitor lorem</li>
 </ul>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Inline
 
 Rimuovi i punti elenco di una lista e applica un leggero `margin` con una combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
-{% example html %}
+{% capture example %}
 <ul class="list-inline">
   <li class="list-inline-item">Lorem ipsum</li>
   <li class="list-inline-item">Phasellus iaculis</li>
   <li class="list-inline-item">Nulla volutpat</li>
 </ul>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Allineamento lista descrizione
 
 Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia. Per termini più lunghi, puoi facoltativamente aggiungere la classe `.text-truncate` per troncare il testo con un ellipsis.
 
-{% example html %}
+{% capture example %}
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -288,4 +288,4 @@ Allineare i termini e le descrizioni orizzontalmente utilizzando le classi prede
     </dl>
   </dd>
 </dl>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

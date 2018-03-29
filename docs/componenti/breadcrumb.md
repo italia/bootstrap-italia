@@ -9,7 +9,7 @@ group: componenti
 
 I separatori vengono aggiunti automaticamente in CSS tramite [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) e [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
 
-{% example html %}
+{% capture example %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -30,7 +30,7 @@ I separatori vengono aggiunti automaticamente in CSS tramite [`::before`](https:
     <li class="breadcrumb-item active" aria-current="page">Data</li>
   </ol>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Accessibilità
 

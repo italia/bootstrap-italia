@@ -12,18 +12,18 @@ Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bot
 
 Con elementi inline:
 
-{% example html %}
+{% capture example %}
 <span class="align-baseline p-1 bg-secondary">baseline</span>
 <span class="align-top p-1 bg-secondary">top</span>
 <span class="align-middle p-1 bg-secondary">middle</span>
 <span class="align-bottom p-1 bg-secondary">bottom</span>
 <span class="align-text-top p-1 bg-secondary">text-top</span>
 <span class="align-text-bottom p-1 bg-secondary">text-bottom</span>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Con le celle di tabella:
 
-{% example html %}
+{% capture example %}
 <table style="height: 100px;" class="table table-bordered">
   <tbody>
     <tr>
@@ -36,4 +36,4 @@ Con le celle di tabella:
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

@@ -22,7 +22,7 @@ Per aggiungere un bottone che si abilita automaticamente allo scorrimento della 
 </style>
 
 
-{% example html %}
+{% capture example %}
 <a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 

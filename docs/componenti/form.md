@@ -20,7 +20,7 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 ### Input text
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="input-group pb-3">
     <div class="input-group-prepend">
@@ -42,20 +42,20 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
     <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Input password
 
 Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <input type="password" class="form-control" id="exampleInputPassword">
     <label for="exampleInputPassword">Password</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Input file
 
@@ -63,7 +63,7 @@ Avete la possibilità di usare l'elemento input file predefinito oppure avente l
 
 Per i `.form-file` è stato previsto un javascript che permetterà di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <input type="file" class="form-control-file" id="exampleFormControlFile">
@@ -80,7 +80,7 @@ Per i `.form-file` è stato previsto un javascript che permetterà di avere una 
     <span class="form-file-name"></span>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Tradurre o personalizzare le stringhe di testo
 
@@ -95,13 +95,13 @@ $custom-file-text: (
 
 Eccoti un esempio in funzione per la traduzione in inglese:
 
-{% example html %}
+{% capture example %}
 <div class="form-group form-file">
   <input id="fileEn" class="form-control" type="file" lang="en">
   <label for="fileEn">Choose file...</label>
   <span class="form-file-name"></span>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 È necessario impostare correttamente la lingua del documento (o dell'albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando [l'attributo `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) sull'elemento `<html>` o modificando il [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) ad esempio.
 
@@ -143,7 +143,7 @@ Di seguito sono mostrate alcune di queste combinazioni.
 
 #### Select classica
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select">
@@ -155,13 +155,13 @@ Di seguito sono mostrate alcune di queste combinazioni.
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Select multipla
 
 La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" multiple>
@@ -172,13 +172,13 @@ La personalizzazione attraverso Bootstrap Italia permette di selezionare più el
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Select con ricerca
 
 Esempio di _select_ con ricerca:
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" searchable="Cerca una regione">
@@ -189,13 +189,13 @@ Esempio di _select_ con ricerca:
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Select con gruppi di opzioni
 
 Esempio di _select_ con gruppi di opzioni:
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" multiple>
@@ -211,18 +211,18 @@ Esempio di _select_ con gruppi di opzioni:
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Textarea
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <label for="exampleFormControlTextarea1">Example textarea</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Personalizzazioni
 
@@ -230,7 +230,7 @@ Esempio di _select_ con gruppi di opzioni:
 
 Hai la possibilità di inserire un'icona a lato dei campi input, select e textarea. Basterà inserire l'icona come elemeto prima del campo.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <i class="ico-prefix it-youtube"></i>
@@ -248,19 +248,19 @@ Hai la possibilità di inserire un'icona a lato dei campi input, select e textar
     <label>Elenco video</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Dimensione
 
 Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.form-control-sm` che modificheranno la grandezza del carattere e la spaziatura interna.
 
-{% example html %}
+{% capture example %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
 <input class="form-control" type="text" placeholder="Input predefinito">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <select class="custom-select form-control-lg">
   <option>Select grande</option>
 </select>
@@ -270,35 +270,35 @@ Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.for
 <select class="custom-select form-control-sm">
   <option>Select piccola</option>
 </select>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Readonly
 
 Aggiungi l'attributo booleano `readonly` su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.
 
-{% example html %}
+{% capture example %}
 <input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Readonly normalizzato
 
 Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext`.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly>
     <label for="staticEmail">Email</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 
 ## Checkbox e radio
 
 Lo stile dei **checkbox** e **radio** è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nel contenitore padre. Mentre le **checkbox** servono a selezionare una o più opzioni in un elenco, i **radio** consentono di selezionare una sola opzione tra molte.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-check">
     <input id="checkbox1" type="checkbox">
@@ -313,13 +313,13 @@ Lo stile dei **checkbox** e **radio** è stato migliorato graficamente per rende
     <label for="radio2">Radio di esempio 2</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Inline 
 
 Per allineare orizzontalmente le **checkbox** o i **radio** basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="form-check form-check-inline">
@@ -342,13 +342,13 @@ Per allineare orizzontalmente le **checkbox** o i **radio** basterà aggiungere 
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Disabilitato
 
 Affinchè i campi **checkbox** e **radio** risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-check">
     <input id="checkbox4" type="checkbox" disabled>
@@ -367,13 +367,13 @@ Affinchè i campi **checkbox** e **radio** risultino disabilitati occorrerà agg
     <label for="radio8" class="disabled">Opzione 2 non selezionato</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Gruppi
 
 Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="col-5">
@@ -410,9 +410,9 @@ Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiunger
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="col-5">
@@ -449,14 +449,14 @@ Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiunger
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 
 ## Toggles
 
 Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno **span** con classe `.lever`.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="form-check col-6">
@@ -479,13 +479,13 @@ Per ottenere un interruttore con levetta basterà seguire la seguente sintassi h
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Disabilitato
 
 Affinchè l'interruttore risulti disabilitato occorrerà aggiungere l'attributo `disabled` al checkbox.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="form-check col-6">
@@ -508,13 +508,13 @@ Affinchè l'interruttore risulti disabilitato occorrerà aggiungere l'attributo 
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Gruppi
 
 Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="col-5">
@@ -581,7 +581,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Layout
 
@@ -591,7 +591,7 @@ Di base quasi tutti gli elementi del form vengono applicati `display: block` e `
 
 Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe `.form-group` per ogni singolo blocco, in questo modo l'elemento input, l'etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità predisposte per loro. Puoi usarlo con `<fieldset>`, `<div>` o qualsiasi altro elemento.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <input type="text" class="form-control" id="formGroupExampleInput">
@@ -602,13 +602,13 @@ Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare 
     <label for="formGroupExampleInput2">Altro esempio di etichetta</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Form a griglia
 
 Strutture più complesse possono essere costruite usando il sistema a griglia. Utilizzali per i layout dei moduli che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="form-group col">
@@ -621,11 +621,11 @@ Strutture più complesse possono essere costruite usando il sistema a griglia. U
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="row">
     <div class="form-group col-md-6">
@@ -673,13 +673,13 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Dimensione delle colonne
 
 Puoi scegliere di dare una dimensione a una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-row">
     <div class="form-group col-7">
@@ -696,13 +696,13 @@ Puoi scegliere di dare una dimensione a una colonna, ad esempio dandogli una cla
     </div>
   </div>
 </form>
-{% endexample html %}
+{% endcapture %}{% include example.html content=example %}
 
 #### Auto-dimensionamento
 
 L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto">
@@ -731,7 +731,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
     </div>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Inline forms
 
@@ -743,7 +743,7 @@ Use the `.form-inline` class to display a series of labels, form controls, and b
 
 You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
 
-{% example html %}
+{% capture example %}
 <form class="form-inline">
   <label class="sr-only" for="inlineFormInputName2">Name</label>
   <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
@@ -765,11 +765,11 @@ You may need to manually address the width and alignment of individual form cont
 
   <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Custom form controls and selects are also supported.
 
-{% example html %}
+{% capture example %}
 <form class="form-inline">
   <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
   <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
@@ -786,7 +786,7 @@ Custom form controls and selects are also supported.
 
   <button type="submit" class="btn btn-primary my-1">Submit</button>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 {% callout warning %}
 ##### Alternative alle etichette nascoste
@@ -805,7 +805,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 Il testo di aiuto sotto gli input può essere abbinato a `.form-text`. Questa classe include `display: block` e aggiunge un margine superiore per una facile spaziatura dagli input sopra.
 
-{% example html %}
+{% capture example %}
 <div class="form-group">
   <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
   <label for="inputPassword5">Password</label>
@@ -813,11 +813,11 @@ Il testo di aiuto sotto gli input può essere abbinato a `.form-text`. Questa cl
     La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
   </small>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un `<small>`, `<span>`, o qualcos'altro) con nient'altro che una classe di utilità.
 
-{% example html %}
+{% capture example %}
 <form class="form-inline">
   <div class="form-group">
     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
@@ -827,7 +827,7 @@ Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un `
     </small>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Form disabilitato
 
@@ -839,7 +839,7 @@ Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni
 
 Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli elementi del form contenuti.
 
-{% example html %}
+{% capture example %}
 <form>
   <fieldset disabled>
     <div class="form-group">
@@ -868,7 +868,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </fieldset>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 {% callout warning %}
 ##### Caveat con ancore
@@ -908,7 +908,7 @@ Tenendo presente tutto questo, prendi in considerazione i seguenti esempi person
 
 Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attributo booleano `novalidate` al tuo `<form>`. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l'accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante `Invia` del modulo sottostante; JavaScript intercetterà l'evento e mostrerà i feedback all'utente. Vedrai così gli stili `:invalid` e `:valid` applicati ai controlli del modulo.
 
-{% example html %}
+{% capture example %}
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="form-group col-md-4 mb-3">
@@ -993,4 +993,4 @@ Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attribu
   }, false);
 })();
 </script>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

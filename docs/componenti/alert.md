@@ -10,39 +10,41 @@ toc: true
 
 Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando il [plugin _alerts_ di jQuery](#chiusura).
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 {% if color.name == "danger" or color.name == "warning" or color.name == "success" or color.name == "info" %}
 <div class="alert alert-{{ color.name }}" role="alert">
   Questo è un alert di <em>{{ color.name }}</em>!
 </div>{% endif %}{% endfor %}
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
 ### Link evidenziato
 
 Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
 
-{% example html %}
+{% capture example %}
 <div class="alert alert-danger" role="alert">
   Questo è un alert con un esempio di <a href="#" class="alert-link">link</a> evidenziato.
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Contenuto aggiuntivo
 
 I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli heading, paragrafi e divisori.
 
-{% example html %}
+{% capture example %}
 <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Avviso di successo!</h4>
   <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sarà più a lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>
   <hr>
   <p class="mb-0">Quando necessario, assicurarti di inserire le utilità di margine per mantenere gli spazi equilibrati.</p>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 
 ### Chiusura
@@ -57,14 +59,15 @@ Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avvi
 
 Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:
 
-{% example html %}
+{% capture example %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-{% endexample %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ## JavaScript behavior
 
