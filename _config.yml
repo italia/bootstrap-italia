@@ -56,7 +56,6 @@ ga_property:        "UA-114758441-1"
 
 download:
   source:           "src/"
-  dist:             "dist/"
 
 cdn:
   css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"

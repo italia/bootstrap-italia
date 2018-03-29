@@ -19,8 +19,7 @@ di cui ne implementa le indicazioni per la creazione di interfacce utente.
 Per utilizzare il codice compilato di **Bootstrap Italia v{{ site.current_version}}** nel tuo progetto, è sufficiente
 scaricare ed includere nella pagina HTML un paio di file, un file CSS e un Javascript.
 
-Tali file si trovano nella cartella [`dist`]({{ site.repo }}tree/master/{{ site.download.dist }}) di questo repository,
-oltre ad essere scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
+Tali file sono scaricabili alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
