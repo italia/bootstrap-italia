@@ -13,16 +13,16 @@
 <title>Tab · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803291702" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803291702" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803291702" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.3.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.1/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -369,7 +369,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <li class="nav-item"><a class="nav-link disabled" href="#">Link Disabilitato</a></li>
 </ul>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link Attivo<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -380,7 +380,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link Disabilitato<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
 <p>L’esempio sopra riportato non ha molto senso senza un contenuto che cambi al di sotto di esso; per rendere tali interfacce navigabili è necessario utilizzare Javascript, come mostrato di seguito:</p>
 
@@ -417,7 +417,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Oppure al posto della label usare una icona.</p>
 
 <div class="bd-example">
-<ul class="nav nav-tabs" id="myTab2" role="tablist">
+  <ul class="nav nav-tabs" id="myTab2" role="tablist">
     <li class="nav-item"><a class="nav-link pl-4 pr-4 active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file d-block text-center"></i><span class="sr-only"> Tab titolo 1</span></a></li>
     <li class="nav-item"><a class="nav-link pl-4 pr-4" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false"><i class="it-ico-lg it-calendar  d-block text-center"></i><span class="sr-only"> Tab titolo 2</span></a></li>
     <li class="nav-item"><a class="nav-link pl-4 pr-4" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false"><i class="it-ico-lg it-comment d-block text-center"></i><span class="sr-only"> Tab titolo 3</span></a></li>
@@ -428,7 +428,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <div class="tab-pane p-3 fade" id="tab3a" role="tabpanel" aria-labelledby="tab3a-tab"><p>Testo 3</p></div>
   </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab2"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab2"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link pl-4 pr-4 active"</span> <span class="na">id=</span><span class="s">"tab1a-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab1a"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab1a"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico-lg it-file d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> Tab titolo 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link pl-4 pr-4"</span> <span class="na">id=</span><span class="s">"tab2a-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab2a"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab2a"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico-lg it-calendar  d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> Tab titolo 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link pl-4 pr-4"</span> <span class="na">id=</span><span class="s">"tab3a-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab3a"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab3a"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico-lg it-comment d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> Tab titolo 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
@@ -437,7 +437,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane p-3 fade show active"</span> <span class="na">id=</span><span class="s">"tab1a"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab1a-tab"</span><span class="nt">&gt;&lt;p&gt;</span>Testo 1<span class="nt">&lt;/p&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane p-3 fade"</span> <span class="na">id=</span><span class="s">"tab2a"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab2a-tab"</span><span class="nt">&gt;&lt;p&gt;</span>Testo 2<span class="nt">&lt;/p&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane p-3 fade"</span> <span class="na">id=</span><span class="s">"tab3a"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab3a-tab"</span><span class="nt">&gt;&lt;p&gt;</span>Testo 3<span class="nt">&lt;/p&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></div>
+  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Oppure con label e icona insieme</p>
 
@@ -459,7 +459,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab3"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab3"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">id=</span><span class="s">"tab1b-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab1b"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab1b"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-file d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;</span> Tab titolo 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab2b-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab2b"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab2b"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-calendar d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;</span> Tab titolo 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">id=</span><span class="s">"tab3b-tab"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tab3b"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">aria-controls=</span><span class="s">"tab3b"</span> <span class="na">aria-selected=</span><span class="s">"false"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-comment d-block text-center"</span><span class="nt">&gt;&lt;/i&gt;</span> Tab titolo 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -474,7 +474,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane p-3 fade"</span> <span class="na">id=</span><span class="s">"tab3b"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab3b-tab"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Testo 3<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Allo stesso modo di quanto avviene con i normali <code class="highlighter-rouge">.nav</code>, a seconda delle tue necessità, è possibile modificare tale codice con un markup diverso, diverso dalla classica lista basata su <code class="highlighter-rouge">&lt;ul&gt;</code>. È importante notare però, che nel caso si desideri usare l’elemento <code class="highlighter-rouge">&lt;nav&gt;</code>, l’attributo <code class="highlighter-rouge">role="tablist"</code> non deve essere applicato direttamente su di esso, in quanto sovrascriverebbe il ruolo dell’elemento stesso per la navigazione.</p>
 
@@ -673,8 +673,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803281741"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803281741"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803291702"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803291702"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

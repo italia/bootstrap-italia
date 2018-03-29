@@ -13,16 +13,16 @@
 <title>La griglia · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803291702" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803291702" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803291702" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.3.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.1/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -389,7 +389,6 @@ ed è completamente responsive.</p>
 <p>Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -404,7 +403,8 @@ ed è completamente responsive.</p>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
       Una di tre colonne
@@ -416,7 +416,7 @@ ed è completamente responsive.</p>
       Una di tre colonne
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -532,7 +532,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da <code class="highlighter-rouge">xs</code> a <code class="highlighter-rouge">xl</code>. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -555,7 +554,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
       1 di 2
@@ -575,14 +575,13 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       3 di 3
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <p>Colonne con uguale larghezza possono essere spezzate su più linee, ma c’è un <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">bug di flexbox su Safari</a> che gli ha impedito di lavorare senza uno specifico <code class="highlighter-rouge">flex-basis</code> o <code class="highlighter-rouge">border</code>. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -593,7 +592,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     <div class="col">Colonna</div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
@@ -601,7 +601,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Colonna<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -610,7 +610,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>La disposizione automatica per le colonne della griglia di flexbox significa anche che puoi impostare la larghezza di una colonna e avere le colonne sorelle automaticamente ridimensionate in base ad essa. È possibile utilizzare classi di griglia predefinite (come mostrato di seguito), mixins di griglia o larghezze in linea. Notare che le altre colonne si ridimensioneranno indipendentemente dalla larghezza della colonna centrale.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -636,7 +635,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
       1 di 3
@@ -659,7 +659,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       3 di 3
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -668,7 +668,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Puoi usare la classe <code class="highlighter-rouge">col-{breakpoint}-auto</code> per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row justify-content-md-center">
@@ -694,7 +693,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-md-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
       1 di 3
@@ -717,7 +717,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       3 di 3
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -726,7 +726,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Crea colonne di uguale larghezza che si estendono su più righe inserendo un <code class="highlighter-rouge">.w-100</code> dove vuoi che le colonne vengano divise su un’altra riga. Make the breaks responsive by mixing the <code class="highlighter-rouge">.w-100</code> with some <a href="/bootstrap-italia/docs/utilities/display/">responsive display utilities</a>.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col">col</div>
@@ -735,13 +734,14 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
   <div class="col">col</div>
   <div class="col">col</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -754,7 +754,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grande, usa le classi <code class="highlighter-rouge">.col</code> e <code class="highlighter-rouge">.col-*</code>. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti, sentiti libero di attenerti alla classe <code class="highlighter-rouge">.col</code>.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col">col</div>
@@ -766,7 +765,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
   <div class="col-8">col-8</div>
   <div class="col-4">col-4</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
@@ -775,7 +775,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8"</span><span class="nt">&gt;</span>col-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -784,7 +784,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Utilizzando un singolo set di classi <code class="highlighter-rouge">.col-sm-*</code>, puoi creare un sistema di base che inizia raccolto su dispositivi extra-small prima di diventare orizzontale su dispositivi desktop (medi).</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-8">col-sm-8</div>
@@ -795,7 +794,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
   <div class="col-sm">col-sm</div>
   <div class="col-sm">col-sm</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>col-sm-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>col-sm-4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -803,7 +803,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>col-sm<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -812,7 +812,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <p>Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di griglia? Puoi utilizzare una combinazione di classi diverse per ogni riga secondo necessità. Guarda l’esempio di seguito per farti un’idea migliore di come funziona.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza -->
 <div class="row">
@@ -832,7 +831,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
   <div class="col-6">.col-6</div>
   <div class="col-6">.col-6</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza --&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-md-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
@@ -849,7 +849,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -860,7 +860,6 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
 <h3 id="allineamento-verticale">Allineamento verticale</h3>
 
 <div class="bd-example-row bd-example-row-flex-cols">
-
 <div class="bd-example">
 <div class="container">
   <div class="row align-items-start">
@@ -897,7 +896,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
       Una di tre colonne
@@ -931,12 +931,11 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       Una di tre colonne
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <div class="bd-example-row bd-example-row-flex-cols">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -951,7 +950,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-start"</span><span class="nt">&gt;</span>
       Una di tre colonne
@@ -963,14 +963,13 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       Una di tre colonne
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <h3 id="allineamento-orizzontale">Allineamento orizzontale</h3>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row justify-content-start">
@@ -1014,7 +1013,8 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-start"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
       Una di due colonne
@@ -1055,7 +1055,7 @@ ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
       Una di due colonne
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1085,16 +1085,16 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row no-gutters">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row no-gutters"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row no-gutters"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1154,16 +1154,16 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 </table>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row variable-gutters">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row variable-gutters"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row variable-gutters"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1172,18 +1172,18 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Se in una singola riga vengono inserite più di 12 colonne, ogni gruppo di colonne extra, come ogni singola, andrà a capo su una nuova linea.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-9">.col-9</div>
   <div class="col-4">.col-4<br />Dato che 9 + 4 = 13 &gt; 12, questo div largo come 4 colonne viene portato a capo su una nuova linea come un'unità contigua.</div>
   <div class="col-6">.col-6<br />Le colonne successive continuano lungo la nuova riga.</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-9"</span><span class="nt">&gt;</span>.col-9<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>.col-4<span class="nt">&lt;br&gt;</span>Dato che 9 + 4 = 13 <span class="ni">&amp;gt;</span> 12, questo div largo come 4 colonne viene portato a capo su una nuova linea come un'unità contigua.<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;br&gt;</span>Le colonne successive continuano lungo la nuova riga.<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1192,7 +1192,6 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con <code class="highlighter-rouge">width: 100%</code> ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo è realizzato con <code class="highlighter-rouge">.row</code> multiple, ma non tutti i metodi di implementazione possono rendere conto di questo.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -1204,7 +1203,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
 
@@ -1213,14 +1213,13 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-3"</span><span class="nt">&gt;</span>.col-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <p>Puoi anche applicare questa interruzione a specifici breakpoint con le nostre <a href="/bootstrap-italia/docs/utilities/display/">utilità di visualizzazione responsive</a>.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -1232,7 +1231,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
 
@@ -1241,7 +1241,7 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-sm-4"</span><span class="nt">&gt;</span>.col-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1252,7 +1252,6 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Usa le classi <code class="highlighter-rouge">.order-</code> per controllare l’ <strong>ordine di visualizzazione</strong> del tuo contenuto. Queste classi sono responsive, così puoi impostare <code class="highlighter-rouge">order</code> tramite breakpoint (e.g., <code class="highlighter-rouge">.order-1.order-md-2</code>). Include il supporto per <code class="highlighter-rouge">1</code> a <code class="highlighter-rouge">12</code> su tutti e cinque i livelli della griglia.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -1267,7 +1266,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
       Primo, ma non ordinato
@@ -1279,14 +1279,13 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
       Terzo ma primo
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <p>Esiste anche una classe reposnsive <code class="highlighter-rouge">.order-first</code> che cambia velocemente l’ordine di un elemento applicando <code class="highlighter-rouge">order: -1</code>. Questa classe può anche essere mescolata con le classi numerate <code class="highlighter-rouge">.order-*</code> se necessario.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -1301,7 +1300,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col order-last"</span><span class="nt">&gt;</span>
       Prima, ma non ordinata
@@ -1313,7 +1313,7 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
       Terza ma prima
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1326,7 +1326,6 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Sposta le colonne sulla destra usando le classi <code class="highlighter-rouge">.offset-md-*</code>. Queste class aumentano il margine sinistro della colonna con <code class="highlighter-rouge">*</code>. Ad esempio, <code class="highlighter-rouge">.offset-md-4</code> sposta <code class="highlighter-rouge">.col-md-4</code> di quattro colonne.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
@@ -1339,7 +1338,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <div class="row">
   <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 offset-md-4"</span><span class="nt">&gt;</span>.col-md-4 .offset-md-4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -1349,14 +1349,13 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6 offset-md-3"</span><span class="nt">&gt;</span>.col-md-6 .offset-md-3<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
 <p>Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario reimpostare gli offset. Guardalo in azione negli <a href="/bootstrap-italia/docs/esempi/grid/">esempi della griglia</a>.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -1367,7 +1366,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
   <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
   <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-md-6"</span><span class="nt">&gt;</span>.col-sm-5 .col-md-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 offset-sm-2 col-md-6 offset-md-0"</span><span class="nt">&gt;</span>.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -1375,7 +1375,7 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 col-lg-6"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .col-lg-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1384,7 +1384,6 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come <code class="highlighter-rouge">.mr-auto</code> per forzare lo spazio tra colonne adiacenti.</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
@@ -1398,7 +1397,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
   <div class="col-auto mr-auto">.col-auto .mr-auto</div>
   <div class="col-auto">.col-auto</div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 ml-auto"</span><span class="nt">&gt;</span>.col-md-4 .ml-auto<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -1409,7 +1409,7 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto mr-auto"</span><span class="nt">&gt;</span>.col-auto .mr-auto<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto"</span><span class="nt">&gt;</span>.col-auto<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1418,7 +1418,6 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 <p>Per annidare il contenuto con la griglia predefinita, aggiungi una nuova <code class="highlighter-rouge">.row</code> e un set di colonne <code class="highlighter-rouge">.col-sm-*</code> all’interno di una esistente <code class="highlighter-rouge">.col-sm-*</code>. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario che tu usi tutte e 12 le colonne disponibili).</p>
 
 <div class="bd-example-row">
-
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-9">
@@ -1433,7 +1432,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
     Level 1: .col-sm-9
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -1445,7 +1445,7 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 </div>
 
@@ -1469,8 +1469,8 @@ classe <code class="highlighter-rouge">.row</code>, la classe <code class="highl
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803281741"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803281741"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803291702"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803291702"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

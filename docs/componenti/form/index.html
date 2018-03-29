@@ -13,16 +13,16 @@
 <title>Form · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803291702" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803291702" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803281741" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803291702" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.3.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.1/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -338,6 +338,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h4"><a href="#tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#input-autocomplete">Input autocomplete</a></li>
 <li class="toc-entry toc-h3"><a href="#select">Select</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#select-classica">Select classica</a></li>
@@ -426,6 +427,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <form>
+  <div class="input-group pb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text it-search" id="basic-addon1"></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+  </div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText" />
     <label for="exampleInputText">Nominativo</label>
@@ -441,7 +448,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group pb-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text it-search"</span> <span class="na">id=</span><span class="s">"basic-addon1"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Username"</span> <span class="na">aria-label=</span><span class="s">"Username"</span> <span class="na">aria-describedby=</span><span class="s">"basic-addon1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>Nominativo<span class="nt">&lt;/label&gt;</span>
@@ -455,11 +468,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Indirizzo email<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"emailHelp1"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Non condivideremo mai la tua email con nessun altro.<span class="nt">&lt;/small&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="input-password">Input password</h3>
 
-<p>Per rendere migliore l’utilizzo del campo password sui dispositivi mobili l’elemento è stato dotato di un visualizzatore di quanto digitato.</p>
+<p>Per rendere migliore l’utilizzo del campo password sui dispositivi mobili l’elemento è stato dotato di un visualizzatore di quanto digitato. Inoltre è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>, questo grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>.</p>
 
 <div class="bd-example">
 <form>
@@ -467,14 +480,32 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <input type="password" class="form-control" id="exampleInputPassword" />
     <label for="exampleInputPassword">Password</label>
   </div>
+  <div class="form-group">
+    <i class="ico-prefix it-lock"></i>
+    <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="infoPassword" placeholder="Password" />
+    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control form-password" id="exampleInputPassword2" />
+    <label for="exampleInputPassword2">Password con strength meter</label>
+  </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-lock"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword3"</span> <span class="na">aria-describedby=</span><span class="s">"infoPassword"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"infoPassword"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>inserisci almeno 8 caratteri e una lettera maiuscola<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control form-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>Password con strength meter<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="input-file">Input file</h3>
 
@@ -500,7 +531,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control-file"</span> <span class="na">id=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>Esempio campo senza personalizzazione grafica<span class="nt">&lt;/label&gt;</span>
@@ -515,7 +546,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileM"</span><span class="nt">&gt;</span>Esempio campo per l'upload multiplo di file<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</h4>
 
@@ -535,13 +566,54 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="form-file-name"></span>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"fileEn"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileEn"</span><span class="nt">&gt;</span>Choose file...<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>È necessario impostare correttamente la lingua del documento (o dell’albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">l’attributo <code class="highlighter-rouge">lang</code></a> sull’elemento <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> o modificando il <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12"><code class="highlighter-rouge">Content-Language</code> HTTP header</a> ad esempio.</p>
+
+<h3 id="input-autocomplete">Input autocomplete</h3>
+
+<p>Per ottenere l’autocomplete bisogna aggiungere all’input la classe <code class="highlighter-rouge">.autocomplete</code> e l’attributo <code class="highlighter-rouge">.data-db</code> con il nome della variabile javascript che contiene l’array da filtrare oppure il nome della funzione che dinamicamente restituirà un array.</p>
+
+<script>
+  function functionRegioni() {
+    var regioni = [
+    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
+    "Tutte"
+    ];
+    return regioni
+  }
+  var regioni = [
+    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
+    "Tutte"
+  ];
+</script>
+
+<div class="bd-example">
+<form>
+  <div class="form-group">
+    <input type="search" id="autocomplete1" class="form-control autocomplete" data-db="regioni" />
+    <label for="autocomplete1">Regione</label>
+  </div>
+  <div class="form-group">
+    <input type="search" id="autocomplete2" class="form-control autocomplete" data-db="functionRegioni()" />
+    <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete1"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"regioni"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete1"</span><span class="nt">&gt;</span>Regione<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete2"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"functionRegioni()"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete2"</span><span class="nt">&gt;</span>Regione (con caricamento tramite funzione)<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="select">Select</h3>
 
@@ -564,7 +636,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una opzione<span class="nt">&lt;/option&gt;</span>
@@ -574,7 +646,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="select-multipla">Select multipla</h4>
 
@@ -611,7 +683,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
       <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una o più regioni<span class="nt">&lt;/option&gt;</span>
@@ -639,7 +711,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="select-con-ricerca">Select con ricerca</h4>
 
@@ -676,7 +748,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">searchable=</span><span class="s">"Cerca una regione"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una regione<span class="nt">&lt;/option&gt;</span>
@@ -704,7 +776,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="select-con-gruppi-di-opzioni">Select con gruppi di opzioni</h4>
 
@@ -727,7 +799,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
         <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
@@ -741,7 +813,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="textarea">Textarea</h3>
 
@@ -753,12 +825,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleFormControlTextarea1"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlTextarea1"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="personalizzazioni">Personalizzazioni</h2>
 
@@ -785,7 +857,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>
@@ -801,7 +873,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;label&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="dimensione">Dimensione</h3>
 
@@ -812,9 +884,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <input class="form-control" type="text" placeholder="Input predefinito" />
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-lg"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-lg"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input predefinito"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-sm"</span><span class="nt">&gt;</span></code></pre></div>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-sm"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <div class="bd-example">
 <select class="custom-select form-control-lg">
@@ -827,7 +899,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <option>Select piccola</option>
 </select>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select form-control-lg"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select form-control-lg"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;</span>Select grande<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select "</span><span class="nt">&gt;</span>
@@ -835,7 +907,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select form-control-sm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option&gt;</span>Select piccola<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span></code></pre></div>
+<span class="nt">&lt;/select&gt;</span></code></pre></figure>
 
 <h3 id="readonly">Readonly</h3>
 
@@ -844,7 +916,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-example">
 <input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly="" />
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span></code></pre></figure>
 
 <h3 id="readonly-normalizzato">Readonly normalizzato</h3>
 
@@ -858,12 +930,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control-plaintext"</span> <span class="na">id=</span><span class="s">"staticEmail"</span> <span class="na">value=</span><span class="s">"email@example.com"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"staticEmail"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="checkbox-e-radio">Checkbox e radio</h2>
 
@@ -885,7 +957,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>Checkbox di esempio<span class="nt">&lt;/label&gt;</span>
@@ -898,7 +970,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>Radio di esempio 2<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="inline">Inline</h3>
 
@@ -928,7 +1000,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
@@ -949,7 +1021,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio5"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="disabilitato">Disabilitato</h3>
 
@@ -975,7 +1047,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
@@ -992,7 +1064,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo3"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"with-gap"</span> <span class="na">id=</span><span class="s">"radio8"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio8"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 2 non selezionato<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="gruppi">Gruppi</h3>
 
@@ -1036,7 +1108,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
@@ -1071,7 +1143,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <div class="bd-example">
 <form>
@@ -1111,7 +1183,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
@@ -1146,7 +1218,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="toggles">Toggles</h2>
 
@@ -1176,7 +1248,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
@@ -1197,7 +1269,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="disabilitato-1">Disabilitato</h3>
 
@@ -1227,7 +1299,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
@@ -1248,7 +1320,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="gruppi-1">Gruppi</h3>
 
@@ -1322,7 +1394,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
@@ -1387,7 +1459,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="layout">Layout</h2>
 
@@ -1409,7 +1481,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>Esempio di etichetta<span class="nt">&lt;/label&gt;</span>
@@ -1418,7 +1490,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>Altro esempio di etichetta<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="form-a-griglia">Form a griglia</h3>
 
@@ -1438,7 +1510,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formNome"</span><span class="nt">&gt;</span>
@@ -1449,7 +1521,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formCognome"</span><span class="nt">&gt;</span>Cognome<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <p>Ecco l’esempio di una struttura più complessa creata con il sistema a griglie.</p>
 
@@ -1502,7 +1574,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail4"</span><span class="nt">&gt;</span>
@@ -1548,7 +1620,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"campofac"</span><span class="nt">&gt;</span>Campo facoltativo<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="dimensione-delle-colonne">Dimensione delle colonne</h4>
 
@@ -1572,7 +1644,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-7"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"Citta"</span><span class="nt">&gt;</span>
@@ -1587,7 +1659,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"CAP"</span><span class="nt">&gt;</span>CAP<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h4 id="auto-dimensionamento">Auto-dimensionamento</h4>
 
@@ -1623,7 +1695,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row align-items-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormInput"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/label&gt;</span>
@@ -1650,7 +1722,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Invia<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="inline-forms">Inline forms</h3>
 
@@ -1687,7 +1759,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormInputName2"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control mb-2 mr-sm-2"</span> <span class="na">id=</span><span class="s">"inlineFormInputName2"</span> <span class="na">placeholder=</span><span class="s">"Jane Doe"</span><span class="nt">&gt;</span>
 
@@ -1707,7 +1779,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mb-2"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <p>Custom form controls and selects are also supported.</p>
 
@@ -1729,7 +1801,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <button type="submit" class="btn btn-primary my-1">Submit</button>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"my-1 mr-2"</span> <span class="na">for=</span><span class="s">"inlineFormCustomSelectPref"</span><span class="nt">&gt;</span>Preference<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select my-1 mr-sm-2"</span> <span class="na">id=</span><span class="s">"inlineFormCustomSelectPref"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Choose...<span class="nt">&lt;/option&gt;</span>
@@ -1744,7 +1816,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary my-1"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="alternative-alle-etichette-nascoste">Alternative alle etichette nascoste</h5>
@@ -1772,13 +1844,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </small>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword5"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">aria-describedby=</span><span class="s">"passwordHelpBlock"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword5"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"passwordHelpBlock"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>
     La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
   <span class="nt">&lt;/small&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un <code class="highlighter-rouge">&lt;small&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, o qualcos’altro) con nient’altro che una classe di utilità.</p>
 
@@ -1793,7 +1865,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword6"</span> <span class="na">class=</span><span class="s">"form-control mx-sm-3"</span> <span class="na">aria-describedby=</span><span class="s">"passwordHelpInline"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword6"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
@@ -1801,7 +1873,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       Deve essere lunga 8-20 caratteri.
     <span class="nt">&lt;/small&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="form-disabilitato">Form disabilitato</h2>
 
@@ -1841,7 +1913,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </fieldset>
 </form>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;fieldset</span> <span class="na">disabled</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"disabledTextInput"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Disabled input"</span><span class="nt">&gt;</span>
@@ -1868,7 +1940,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mt-3"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="caveat-con-ancore">Caveat con ancore</h5>
@@ -1996,7 +2068,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 })();
 </script>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"needs-validation"</span> <span class="na">novalidate</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"needs-validation"</span> <span class="na">novalidate</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-4 mb-3"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"validationCustom01"</span> <span class="na">value=</span><span class="s">"Mark"</span> <span class="na">required</span><span class="nt">&gt;</span>
@@ -2079,7 +2151,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="p">});</span>
   <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
 <span class="p">})();</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
 
         </main>
       </div>
@@ -2101,8 +2174,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803281741"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803281741"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803291702"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803291702"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',
