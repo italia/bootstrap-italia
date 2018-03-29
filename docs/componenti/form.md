@@ -46,13 +46,22 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 ### Input password
 
-Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato.
+Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato. Inoltre è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`, questo grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter).
 
 {% capture example %}
 <form>
   <div class="form-group">
     <input type="password" class="form-control" id="exampleInputPassword">
     <label for="exampleInputPassword">Password</label>
+  </div>
+  <div class="form-group">
+    <i class="ico-prefix it-lock"></i>
+    <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="infoPassword" placeholder="Password">
+    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control form-password" id="exampleInputPassword2">
+    <label for="exampleInputPassword2">Password con strength meter</label>
   </div>
 </form>
 {% endcapture %}{% include example.html content=example %}
@@ -122,7 +131,7 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
     "Tutte"
   ];
 </script>
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <input type="search" id="autocomplete1" class="form-control autocomplete" data-db="regioni">
@@ -133,7 +142,7 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
     <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Select
 
@@ -788,20 +797,20 @@ Custom form controls and selects are also supported.
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### Alternative alle etichette nascoste
 Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, puoi nascondere le etichette usando la classe `.sr-only`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Testo di aiuto
 
 Il testo di aiuto può essere creato usando `.form-text` (precedentemente noto come `.help-block` nella versione 3 di Bootstrap). Può essere esteso usando le classi di utilità come `.text-muted`.
 
-{% callout warning %}
+{% capture callout %}
 ##### Associazione del testo di aiuto con gli elementi del mudulo form
 
 Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Il testo di aiuto sotto gli input può essere abbinato a `.form-text`. Questa classe include `display: block` e aggiunge un margine superiore per una facile spaziatura dagli input sopra.
 
@@ -870,25 +879,25 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### Caveat con ancore
 
 Per impostazione predefinita, i browser tratteranno tutti i controlli nativi del form (`<input>`, `<select>` e `<button>`) contenuti in un `<fieldset disabled>` come disabilitati, impedendo su di essi le interazioni tra tastiera e mouse. Tuttavia, se il tuo modulo include anche gli elementi `<a ... class="btn btn-*">`, a questi verranno assegnati uno stile di `pointer-events: none`. Come indicato nella sezione [stato disabilitato per i pulsanti]({{ site.baseurl }}/docs/components/buttons/#disabled-state) (e in particolare nella sottosezione per gli elementi di ancoraggio), questa proprietà CSS non è standardizzata e non è completamente supportato in Internet Explorer 10 che non impedirà agli utenti da tastiera di mettere in focus o attivare questi collegamenti. Per sicurezza, usa JavaScript personalizzato per disabilitare tali collegamenti.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% callout danger %}
+{% capture callout %}
 #### Compatibilità Cross-browser
 
 Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 11 e successivi non supportano completamente l'attributo `disabled` nel `<fieldset>`. Usa un JavaScript personalizzato per disabilitare il fieldset in questi browser.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 ## Validazione
 
 Fornisci un feedback ai tuoi utenti con la validazione del form HTML5 [disponibile nei browser supportati](https://caniuse.com/#feat=form-validation). Scegli tra le risposte di convalida predefinite del browser o implementa messaggi personalizzati con le classi integrate inizializzate con JavaScript.
 
-{% callout warning %}
+{% capture callout %}
 Vi **consigliamo caldamente** gli stili di convalida personalizzati in quanto le impostazioni predefinite del browser non vengono segnalati agli screenreader.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Come funziona
 

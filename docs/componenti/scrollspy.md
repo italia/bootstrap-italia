@@ -260,19 +260,19 @@ Dopo aver aggiunto `position: relative;` al tuo CSS, lancia la chiamata alla fun
 $('body').scrollspy({ target: '#navbar-example' })
 {% endhighlight %}
 
-{% callout danger %}
+{% capture callout %}
 
 #### ID target richiesto
 
 I link della barra di navigazione devono richiamare un ID target specifico. Per esempio a `<a href="#home">home</a>` deve corrispondere un elemento del DOM simile a `<div id="home"></div>`.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% callout info %}
+{% capture callout %}
 
 #### Gli elementi target non `:visible` sono ignorati
 
 Gli elementi target non [`:visible` secondo jQuery](https://api.jquery.com/visible-selector/) verranno ignorati e i relativi elementi di navigazione non verranno mai evidenziati.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ### Metodi
 

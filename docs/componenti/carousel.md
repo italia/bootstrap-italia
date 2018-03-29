@@ -103,11 +103,11 @@ Aggiungere i controlli precedente e successivo:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### È richiesto un elemento attivo iniziale
 
 È necessario aggiungere la classe `.active` ad una delle diapositive. Altrimenti il carousel non sarà visibile.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Con le didascalie
 

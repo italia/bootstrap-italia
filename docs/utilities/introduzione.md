@@ -105,12 +105,12 @@ In casi eccezionali, è possibile utilizzare le media query che vanno nella dire
 // Non è necessaria alcuna media query, in quanto la progettazione per schermi molto grandi fa sì che questo sia il codice di default
 {% endhighlight %}
 
-{% callout info %}
+{% capture callout %}
 Nota che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context),
 stiamo evitando di utilizzare i limiti dei [prefissi `min-` e `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max)
 e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta
 risoluzione), utilizzando valori con maggiore precisione per questi confronti.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 Come sopra, quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 

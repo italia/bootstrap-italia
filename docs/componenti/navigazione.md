@@ -6,19 +6,19 @@ group: componenti
 toc: true
 ---
 
-{% callout accessibility %}
+{% capture callout %}
 #### Accessibilità dei componenti di navigazione
 
 Per ogni componente che si occupi della navigazione di un sito web, assicurati di aggiungere l'attributo `role="navigation"` al contenitore della lista di link, oppure aggiungi un elemento `<nav>` che contenga l'intera navigazione. Non aggiungere l'attributo `role` al tag `<ul>` stesso, poiché questa pratica impedirà alle tecnologia assistive (come gli screen reader) di annunciare la lista stessa; aggiungilo al suo esterno.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Layout della navigazione
 
 Il componente identificato dalla classe `.nav`, si basa su flexbox e fornisce solide fondamenta per la costruzione di ogni tipo di navigazione. Esso include alcuni stili per l'override del layout di base delle liste, aggiungendo spaziature per ottenere aree cliccabili più ampie, e gestendo lo stile per le voci disabilitate.
 
-{% callout info %}
+{% capture callout %}
 Il componente base `.nav` non include nessuno stile per lo stato `.active`. Gli esempi di seguito includono la classe per dimostrare che la sua presenza non abilita alcuno stile aggiuntivo.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 {% capture example %}
 <ul class="nav">

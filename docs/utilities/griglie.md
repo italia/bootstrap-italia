@@ -12,11 +12,11 @@ Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne
 È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 ed è completamente responsive.
 
-{% callout info %}
+{% capture callout %}
 **Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
 (in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
 [questo simpatico tutorial](http://flexboxfroggy.com/#it).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
 

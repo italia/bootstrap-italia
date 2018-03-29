@@ -6,7 +6,7 @@ group: componenti
 toc: true
 ---
 
-{% callout accessibility %}
+{% capture callout %}
 #### Accessibilità
 
 Assicurati di aggiungere sempre:
@@ -17,7 +17,7 @@ Assicurati di aggiungere sempre:
 Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
 
 Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 

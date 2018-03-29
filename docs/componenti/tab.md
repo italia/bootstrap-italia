@@ -8,13 +8,13 @@ toc: true
 
 L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del [layout di navigazione]({{ site.baseurl }}/docs/componenti/navigazione), con l'aggiunta della classe `.nav-tabs`. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un'ulteriore classe: `.nav-dark`.
 
-{% callout accessibility %}
+{% capture callout %}
 #### Accessibilità
 
 Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https:// www. w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
 
 Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell'usabilità, il fatto che l'elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all'interno del menu a discesa chiuso) può causare confusione. Dal punto di vista dell'accessibilità, attualmente non esiste un modo sensato per mappare questo tipo di costrutto a un modello standard WAI ARIA, il che significa che non può essere facilmente reso comprensibile agli utenti delle tecnologie assistive. (TODO verificare)
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <ul class="nav nav-tabs">

@@ -6,12 +6,12 @@ group: componenti
 toc: true
 ---
 
-{% callout accessibility %}
+{% capture callout %}
 ##### Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
 
 Allo stesso modo di quanto avviene per i [tooltip]({{ site.baseurl }}/docs/componenti/tooltips/),
 il codice generato per i popover è accessibile.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Cose da sapere quando si utilizza il plugin popover:
 
@@ -99,11 +99,11 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
 Usa l'evento `focus` per ignorare i popover sul clic successivo dell'utente di un elemento diverso rispetto all'elemento di attivazione / disattivazione.
 
-{% callout danger %}
+{% capture callout %}
 #### Markup specifico richiesto per ignorare il click successivo
 
 Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag `<a>`, _non_ il tag `<button>`, ed è necessario anche includere l'attributo [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture example %}
 <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Dismissible popover</a>

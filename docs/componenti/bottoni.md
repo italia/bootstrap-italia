@@ -87,11 +87,11 @@ Alcune note a questo proposito:
 <a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
 {% endcapture %}{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### Disabilitazione link
 
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Altri dettagli
 

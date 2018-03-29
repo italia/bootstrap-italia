@@ -38,12 +38,12 @@ Poichè è molto probabile che la pagina possa contenere più di un elemento `<n
 
 I link della paginazione uno stato disabilitato usando la classe `.disabled` nel tag `<li>` per i collegamenti che appaiono non cliccabili e `.active` per indicare la pagina attiva corrente.
 
-{% callout warning %}
+{% capture callout %}
 ##### Disabilitazione link
 
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
 In alternativa per la paginazione puoi sostituire il link disabilitato con uno `<span>` avente classe `page-link` (es.: `<span class="page-link">1</span>`).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <nav aria-label="Esempio di paginazione">

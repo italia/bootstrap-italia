@@ -1,5 +1,5 @@
-// Inizializzazione effetto active sulle label quando i loro input valorizzati
 $(function () {
+  // Inizializzazione effetto active sulle label quando i loro input valorizzati
   $('body').on('click', '.form-group input + label, .form-group textarea + label', function () {
     $(this).closest('.form-group').addClass('active');
   }).on('focusin', '.form-group input:not(.select-dropdown, .select-dropdown-search), .form-group textarea', function () {
@@ -22,19 +22,9 @@ $(function () {
       multi = numFiles + ' file da caricare: '
     }
     $(this).siblings('.form-file-name').text(multi + nomiFiles);
-  }).on('click', '.btn-eye', function () {
-    $(this).toggleClass('eye-off');
-    var input = $('#' + $(this).attr('toggle'));
-    input.focus();
-    input.attr('type', (input.attr('type') === 'password') ? 'text' : 'password');
   });
 
   $(`.form-group :input[value], input[class$='picker']`).siblings('label').addClass('active');
-
-  // Gestione visibilità password
-  $('input:password').each(function (e) {
-    $(this).siblings('label').after('<span class="btn-eye eye-on" toggle="' + $(this).attr("id") + '"></span>');
-  });
 
   $('.autocomplete').autocomplete();
 });

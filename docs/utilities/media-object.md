@@ -22,13 +22,13 @@ Grazie a flexbox è necessario l'utilizzo di solo due classi: nel contenitore `.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-{% callout warning %}
+{% capture callout %}
 ##### Flexbug #12: Gli elementi inline non sono trattati come elementi flex.
 
 IE10 e IE11 non eseguono il rendering di elementi inline di link o immagini (o `::before` e `::after` pseudo-elementi) come elementi flex. L'unica soluzione è impostare un valore `display` non inline (es.: `block`, `inline-block` o `flex`). Ti suggeriamo di usare `.d-flex`, una delle  [display utility]({{ site.baseurl }}/docs/utilities/display/), come soluzione.
 
 **Fonte:** [Flexbugs su GitHub](https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items)
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Annidamento
 

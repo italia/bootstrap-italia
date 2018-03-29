@@ -6,11 +6,11 @@ group: utilities
 toc: true
 ---
 
-{% callout info %}
+{% capture callout %}
 **Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
 (in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
 [questo simpatico tutorial](http://flexboxfroggy.com/#it).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Abilita il comportamento flex
 
@@ -223,11 +223,11 @@ Sono previste anche seguenti le varianti  responsive per `align-self`:
 
 Flexbox può fare cose meravigliose quando si mescolano gli allineamenti flessibili con i margini automatici. Di seguito sono mostrati tre esempi di controllo degli elementi flex tramite margini automatici: predefinito (nessun margine automatico), inserito con due elementi a destra (`.mr-auto`) e inserito con due elementi a sinistra (`.ml-auto`).
 
-{% callout warning %}
+{% capture callout %}
 Sfortunatamente IE10 e IE11 non supportano correttamente i margini automatici sugli elementi flex quando il contenitore ha un valore dell'utility `justify-content` non predefinito.
 
 Per maggiori dettagli, [leggi questa risposta su StackOverflow](https://stackoverflow.com/a/37535548).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <div class="d-flex bd-highlight mb-3">
