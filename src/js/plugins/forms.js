@@ -35,6 +35,6 @@ $(function () {
   $('input:password').each(function (e) {
     $(this).siblings('label').after('<span class="btn-eye eye-on" toggle="' + $(this).attr("id") + '"></span>');
   });
+
+  $('.autocomplete').autocomplete();
 });
-
-

@@ -42,6 +42,7 @@ const Paths = {
     './node_modules/bootstrap/js/src/popover.js',
     './node_modules/bootstrap/js/src/scrollspy.js',
     './node_modules/bootstrap/js/src/tab.js',
+    './src/js/plugins/autocomplete.js',
     './src/js/plugins/cookiebar.js',
     './src/js/plugins/image-grid.js',
     './src/js/plugins/zoom.js',

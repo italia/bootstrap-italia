@@ -22,6 +22,12 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 {% capture example %}
 <form>
+  <div class="input-group pb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text it-search" id="basic-addon1"></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText">
     <label for="exampleInputText">Nominativo</label>
@@ -98,6 +104,36 @@ Eccoti un esempio in funzione per la traduzione in inglese:
 {% endcapture %}{% include example.html content=example %}
 
 È necessario impostare correttamente la lingua del documento (o dell'albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando [l'attributo `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) sull'elemento `<html>` o modificando il [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) ad esempio.
+
+### Input autocomplete
+
+Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplete` e l'attributo `.data-db` con il nome della variabile javascript che contiene l'array da filtrare oppure il nome della funzione che dinamicamente restituirà un array. 
+
+<script>
+  function functionRegioni() {
+    var regioni = [
+    {% for regione in site.data.regioni %}"{{ regione }}",{% endfor %}
+    "Tutte"
+    ];
+    return regioni
+  }
+  var regioni = [
+    {% for regione in site.data.regioni %}"{{ regione }}",{% endfor %}
+    "Tutte"
+  ];
+</script>
+{% example html %}
+<form>
+  <div class="form-group">
+    <input type="search" id="autocomplete1" class="form-control autocomplete" data-db="regioni">
+    <label for="autocomplete1">Regione</label>
+  </div>
+  <div class="form-group">
+    <input type="search" id="autocomplete2" class="form-control autocomplete" data-db="functionRegioni()">
+    <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
+  </div>
+</form>
+{% endexample %}
 
 ### Select
 
