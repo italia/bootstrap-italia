@@ -16751,11 +16751,6 @@ var Tab = function ($) {
 
 'use strict';
 
-/* 
- * Material Design for Bootstrap 
- * MDB Autocomplete Plugin
- */
-
 $.fn.autocomplete = function (options) {
 
   // Default options
