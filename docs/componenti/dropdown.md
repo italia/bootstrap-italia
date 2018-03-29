@@ -8,25 +8,25 @@ toc: true
 
 Il plugin Javascript per costruire dropdown è basato su una libreria di terze parti, [Popper.js](https://popper.js.org/), che si occupa del posizionamento dinamico del dropdown stesso in congiunzione con la sua posizione all'interno del viewport.
 
-{% callout info %}
+{% capture callout %}
 Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file `bootstrap-italia.bundle.min.js` che contiene già ogni dipendenza, oppure che il file [popper.min.js]({{ site.cdn.popper }}) sia incluso prima del file `bootstrap-italia.min.js`. Maggiori informazioni si possono trovare alla [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/#javascript) sull'utilizzo del Javascript di Bootstrap Italia.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertura e il menu a discesa all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
 
-{% callout accessibility %}
+{% capture callout %}
 Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget [`role="menu"`](https://www.w3.org/TR/wai-aria/roles#menu), che però è specifico per i menu applicativi che attivano azioni o funzioni. I menu ARIA possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
 
 I dropdown di Bootstrap, al contrario, sono progettati per essere generici e applicabili a una varietà di situazioni e strutture di markup. Ad esempio, è possibile creare elenchi a discesa contenenti input e controlli di moduli aggiuntivi, ad esempio campi di ricerca o moduli di accesso. Per questo motivo, Bootstrap non si aspetta (né aggiunge automaticamente) alcuno degli attributi di aria e di ruolo richiesti per i veri menu ARIA. Gli autori dovranno includere questi attributi più specifici.
 
 Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle interazioni standard del menu della tastiera, come la possibilità di spostarsi tra i singoli elementi `.dropdown-item` usando i tasti cursore e chiude il menu con il tasto ESC.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Dropdown con bottone
 
 Ogni singolo `.btn` può essere trasformato in un bottone per l'apertura di dropdown con del semplice markdown HTML. Eccone un esempio:
 
-{% example html %}
+{% capture example %}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
@@ -41,11 +41,11 @@ Ogni singolo `.btn` può essere trasformato in un bottone per l'apertura di drop
     <a class="dropdown-item" href="#">Azone 4</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Lo stesso vale per elementi `<a>`:
 
-{% example html %}
+{% capture example %}
 <div class="dropdown show">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
@@ -56,11 +56,11 @@ Lo stesso vale per elementi `<a>`:
     <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 È possibile anche usare elementi di tipo `<button>` all'interno dei dropdown.
 
-{% example html %}
+{% capture example %}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
@@ -71,11 +71,11 @@ Lo stesso vale per elementi `<a>`:
     <button class="dropdown-item" type="button">Azione 3</button>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Ovviamente, funzionano anche tutte le varianti già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classe `btn-danger`:
 
-{% example html %}
+{% capture example %}
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
@@ -86,11 +86,11 @@ Ovviamente, funzionano anche tutte le varianti già disponibili per i bottoni. D
     <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Un esempio con bottoni divisi:
 
-{% example html %}
+{% capture example %}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary">Bottone diviso</button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,11 +102,11 @@ Un esempio con bottoni divisi:
     <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Un esempio con bottoni grandi e piccoli:
 
-{% example html %}
+{% capture example %}
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Large button
@@ -127,13 +127,13 @@ Un esempio con bottoni grandi e piccoli:
     <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Dropdown a tutta larghezza
 
 Aggiungendo la classe `full-width` al menù del dropdown, è possibile ottenere un dropdown che occupa tutta la larghezza disponibile. Utile per la creazione di menu:
 
-{% example html %}
+{% capture example %}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
@@ -144,13 +144,13 @@ Aggiungendo la classe `full-width` al menù del dropdown, è possibile ottenere 
       <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Dropup, dropright e dropleft
 
 Aggiungendo semplicemente la class `.dropup` all'elemento contenitore, la _dropdown_ si aprirà verso l'alto. Allo stesso modo, utilizzando invece le classi `.dropright` e `.dropleft`, il menù a tendina si aprirà rispettivamente a destra e sinistra.
 
-{% example html %}
+{% capture example %}
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     DropUp
@@ -163,13 +163,13 @@ Aggiungendo semplicemente la class `.dropup` all'elemento contenitore, la _dropd
     <a class="dropdown-item" href="#">Azione 4</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Allineamento orizzontale
 
 Un dropdown è allineato di default lungo il lato sinistro del suo elemento contenitore; per modificare questo comportamento e allineare il dropdown a destra, è sufficiente aggiungere la classe `.dropdown-menu-right` a `.dropdown-menu`
 
-{% example html %}
+{% capture example %}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Dropdown allineato a destra
@@ -180,31 +180,31 @@ Un dropdown è allineato di default lungo il lato sinistro del suo elemento cont
     <a class="dropdown-item" href="#">Azione 3</a>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Voci di menù attive
 
 Aggiungere la classe `.active` agli elementi del dropdown che si vogliono mostrare come **attivi**.
 
-{% example html %}
+{% capture example %}
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Azione 1</a>
   <a class="dropdown-item active" href="#">Azione 2</a>
   <a class="dropdown-item" href="#">Azione 3</a>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Voci di menù disabilitate
 
 Aggiungere la classe `.disabled` agli elementi del dropdown che si vogliono mostrare come **disabilitati**.
 
-{% example html %}
+{% capture example %}
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Azione 1</a>
   <a class="dropdown-item disabled" href="#">Azione 2</a>
   <a class="dropdown-item" href="#">Azione 3</a>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Informazioni aggiuntive
 

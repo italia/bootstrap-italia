@@ -19,11 +19,11 @@ sovrascritto.
 Estendi ogni oggetto simile a un `<iframe>` aggiungendo al suo contenitore la classe `.embed-responsive` e le proporzioni
 relative. La classe `.embed-responsive-item` non è strettamente necessaria, ma ne incoraggiamo l'utilizzo.
 
-{% example html %}
+{% capture example %}
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Proporzioni
 

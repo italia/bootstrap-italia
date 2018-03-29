@@ -17,13 +17,13 @@ Use the image grid plugin to quickly layout multi sized images in a grid. For th
 - display: 'inline-block'
 
 ### JavaScript API
-{% example js %}
+{% capture example %}
 $('.myGrid').imageGrid()
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Data Api
 
-{% example html %}
+{% capture example %}
 <div data-grid="images">
   <img data-width="350" data-height="300" src="http://placehold.it/350x300/EEE04A/ffffff">
   <img data-width="420" data-height="320" src="http://placehold.it/420x320/5cb85c/ffffff">
@@ -31,4 +31,4 @@ $('.myGrid').imageGrid()
   <img data-width="472" data-height="500" src="http://placehold.it/472x500/f0ad4e/ffffff">
   <img data-width="540" data-height="360" src="http://placehold.it/540x360/FF3167/ffffff">
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

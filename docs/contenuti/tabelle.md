@@ -12,7 +12,7 @@ A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e ca
 
 Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap. **Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
 
-{% example html %}
+{% capture example %}
 <table class="table">
   <thead>
     <tr>
@@ -43,11 +43,11 @@ Usando il markup di base della tabella, ecco come appaiono le tabelle che utiliz
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark`.
 
-{% example html %}
+{% capture example %}
 <table class="table table-dark">
   <thead>
     <tr>
@@ -78,13 +78,13 @@ Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Opzioni delle intestazioni di tabella
 
 Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.thead-light` o `.thead-dark` per far apparire `<thead>` chiaro o grigio scuro.
 
-{% example html %}
+{% capture example %}
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -146,13 +146,13 @@ Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.the
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Righe striate
 
 Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
 
-{% example html %}
+{% capture example %}
 <table class="table table-striped">
   <thead>
     <tr>
@@ -183,9 +183,9 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -216,13 +216,13 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabella con bordi
 
 Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su tutte le celle.
 
-{% example html %}
+{% capture example %}
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -253,9 +253,9 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <table class="table table-bordered table-dark">
   <thead>
     <tr>
@@ -286,13 +286,13 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Righe ed hover
 
 Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  contenute in `<tbody>`.
 
-{% example html %}
+{% capture example %}
 <table class="table table-hover">
   <thead>
     <tr>
@@ -323,9 +323,9 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <table class="table table-hover table-dark">
   <thead>
     <tr>
@@ -356,13 +356,13 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabella compatta
 
 Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell padding.
 
-{% example html %}
+{% capture example %}
 <table class="table table-sm">
   <thead>
     <tr>
@@ -393,9 +393,9 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <table class="table table-sm table-dark">
   <thead>
     <tr>
@@ -426,7 +426,7 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Classi contestuali
 
@@ -554,20 +554,19 @@ Le consuete varianti di sfondo della tabella non sono disponibili con la tabella
 </tr>
 {% endhighlight %}
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}
 
 Crea tabelle responsive racchiudendo ogni `.table` con `.table-responsive{-sm|-md|-lg|-xl}`, facendo scorrere orizzontalmente la tabella ad ogni breakpoint, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
 
-{% callout info %}
+{% capture callout %}
 Nota che in quanto i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo aggirando i limiti dei [prefissi `min-` and `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Captions
 
 Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti con screen reader a trovare una tabella e capire di cosa si tratta e decidere se vogliono leggerla.
 
-{% example html %}
+{% capture example %}
 <table class="table">
   <caption>Lista di utenti</caption>
   <thead>
@@ -599,17 +598,17 @@ Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti c
     </tr>
   </tbody>
 </table>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabelle responsive
 
 Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl}`.
 
-{% callout warning %}
+{% capture callout %}
 ##### Ritaglio / troncamento verticale
 
 Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Sempre responsive
 

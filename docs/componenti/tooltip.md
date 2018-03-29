@@ -6,7 +6,7 @@ group: componenti
 toc: true
 ---
 
-{% callout accessibility %}
+{% capture callout %}
 ##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
@@ -19,7 +19,7 @@ invece attendere.
 
 Infine, non fare affidamento esclusivamente sull'`hover` come innesco del tooltip, in quanto ciò renderà impossibile
 l'attivazione per gli utenti che usano la tastiera per navigare.
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Cose da sapere quando usi il plugin tooltip:
 
@@ -252,8 +252,7 @@ Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animati
 
 ### Metodi
 
-{% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-danger-async-methods.md %}
 
 #### `$().tooltip(options)`
 

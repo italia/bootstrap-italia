@@ -177,7 +177,12 @@
       var $text = options.showText;
 
       var $graybar = $('<div>').addClass('progress rounded-0 position-relative psw-meter');
-      $graybar.append('<div class="row position-absolute w-100 m-0"><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div><div class="col-3 border-left border-right border-white"></div></div>');
+      $graybar.append(`<div class="row position-absolute w-100 m-0">
+        <div class="col-3 border-left border-right border-white"></div>
+        <div class="col-3 border-left border-right border-white"></div>
+        <div class="col-3 border-left border-right border-white"></div>
+        <div class="col-3 border-left border-right border-white"></div>
+      </div>`);
       var $colorbar = $('<div>').attr({
         class: "progress-bar",
         role: "progressbar",

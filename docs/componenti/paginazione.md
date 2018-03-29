@@ -12,7 +12,7 @@ I collegamenti della paginazione sono contenuti per praticità in un elemento `<
 
 Poichè è molto probabile che la pagina possa contenere più di un elemento `<nav>` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
 
-{% example html %}
+{% capture example %}
 <nav aria-label="Esempio di navigazione della pagina">
   <ul class="pagination">
     <li class="page-item">
@@ -32,20 +32,20 @@ Poichè è molto probabile che la pagina possa contenere più di un elemento `<n
     </li>
   </ul>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Stato disabilitato e attivo
 
 I link della paginazione uno stato disabilitato usando la classe `.disabled` nel tag `<li>` per i collegamenti che appaiono non cliccabili e `.active` per indicare la pagina attiva corrente.
 
-{% callout warning %}
+{% capture callout %}
 ##### Disabilitazione link
 
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
 In alternativa per la paginazione puoi sostituire il link disabilitato con uno `<span>` avente classe `page-link` (es.: `<span class="page-link">1</span>`).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% example html %}
+{% capture example %}
 <nav aria-label="Esempio di paginazione">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -69,13 +69,13 @@ In alternativa per la paginazione puoi sostituire il link disabilitato con uno `
     </li>
   </ul>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Dimensione e allineamento
 
 Sono previste due classi che permettono di aumentare (`.pagination-lg`) o diminuire (`.pagination-sm`) la dimensione della paginazione. Inoltre, grazie alle [utilità di Flexbox]({{ site.baseurl }}/docs/utilities/flex/), si può allineare facilmente il blocco.
 
-{% example html %}
+{% capture example %}
 <nav aria-label="...">
   <ul class="pagination pagination-lg justify-content-center">
     <li class="page-item disabled">
@@ -99,9 +99,9 @@ Sono previste due classi che permettono di aumentare (`.pagination-lg`) o diminu
     </li>
   </ul>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <nav aria-label="...">
   <ul class="pagination pagination-sm justify-content-end">
     <li class="page-item disabled">
@@ -125,13 +125,13 @@ Sono previste due classi che permettono di aumentare (`.pagination-lg`) o diminu
     </li>
   </ul>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Responsive
 
 Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilità display]({{ site.baseurl }}/docs/utilities/display/) si può trasformare la paginazione in base alla risoluzione del dispositivo in uso dell'utente.
 
-{% example html %}
+{% capture example %}
 <nav aria-label="Esempio di navigazione responsive della pagina">
   <ul class="pagination justify-content-center">
     <li class="page-item">
@@ -159,4 +159,4 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
     </li>
   </ul>
 </nav>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

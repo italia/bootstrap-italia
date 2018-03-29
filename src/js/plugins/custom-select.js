@@ -312,7 +312,7 @@ const Select = (($) => {
 
     _setSearchableOption() {
       const $select = $(this._element)
-      var element = $(`<span class="search-wrap"><input type="text" class="search" placeholder="${$select.attr('searchable')}"></span>`)
+      var element = $(`<span class="search-wrap"><input type="text" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}"></span>`)
       this._customElement.append(element);
       element.find('.search').on('keyup', function (e) {
 

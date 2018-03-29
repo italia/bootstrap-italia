@@ -6,23 +6,23 @@ group: utilities
 toc: true
 ---
 
-{% callout info %}
+{% capture callout %}
 **Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
 (in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
 [questo simpatico tutorial](http://flexboxfroggy.com/#it).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Abilita il comportamento flex
 
 Applica le [`display` utilities]({{ site.baseurl }}/docs/utilities/display/) per creare un contenitore flexbox e trasformare **i suoi figli** in elementi flex. Il contenitore flex e i suoi elementi potranno essere personalizzati con le ulteriori proprietà flex.
 
-{% example html %}
+{% capture example %}
 <div class="d-flex p-2 bd-highlight">Io sono un contenitore flexbox!</div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div class="d-inline-flex p-2 bd-highlight">Io sono un contenitore inline flexbox!</div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Sono previste anche seguenti le varianti responsive  per `.d-flex` e `.d-inline-flex`:
 
@@ -36,7 +36,7 @@ La direzione degli elementi flex è dettata dall'impostazione predefinita del br
 
 Usa `.flex-row` per impostare la direzione orizzontale dell'elemento flex come quella predefinita dal browser. Oppure usa `.flex-row-reverse` per invertire la direzione del contenuto rispetto a quella predefinita.
 
-{% example html %}
+{% capture example %}
 <div class="d-flex flex-row bd-highlight mb-3">
   <div class="p-2 bd-highlight">Elemento flex 1</div>
   <div class="p-2 bd-highlight">Elemento flex 2</div>
@@ -47,11 +47,11 @@ Usa `.flex-row` per impostare la direzione orizzontale dell'elemento flex come q
   <div class="p-2 bd-highlight">Elemento flex 2</div>
   <div class="p-2 bd-highlight">Elemento flex 3</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Usa `.flex-column` per impostare la direzione verticale, oppure `.flex-column-reverse` per far partire gli elementi dal lato opposto.
 
-{% example html %}
+{% capture example %}
 <div class="d-flex flex-column bd-highlight mb-3">
   <div class="p-2 bd-highlight">Elemento flex 1</div>
   <div class="p-2 bd-highlight">Elemento flex 2</div>
@@ -62,7 +62,7 @@ Usa `.flex-column` per impostare la direzione verticale, oppure `.flex-column-re
   <div class="p-2 bd-highlight">Elemento flex 2</div>
   <div class="p-2 bd-highlight">Elemento flex 3</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Sono previste anche seguenti le varianti responsive per `flex-direction`:
 
@@ -223,13 +223,13 @@ Sono previste anche seguenti le varianti  responsive per `align-self`:
 
 Flexbox può fare cose meravigliose quando si mescolano gli allineamenti flessibili con i margini automatici. Di seguito sono mostrati tre esempi di controllo degli elementi flex tramite margini automatici: predefinito (nessun margine automatico), inserito con due elementi a destra (`.mr-auto`) e inserito con due elementi a sinistra (`.ml-auto`).
 
-{% callout warning %}
+{% capture callout %}
 Sfortunatamente IE10 e IE11 non supportano correttamente i margini automatici sugli elementi flex quando il contenitore ha un valore dell'utility `justify-content` non predefinito.
 
 Per maggiori dettagli, [leggi questa risposta su StackOverflow](https://stackoverflow.com/a/37535548).
-{% endcallout %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% example html %}
+{% capture example %}
 <div class="d-flex bd-highlight mb-3">
   <div class="p-2 bd-highlight">Elemento flex</div>
   <div class="p-2 bd-highlight">Elemento flex</div>
@@ -247,13 +247,13 @@ Per maggiori dettagli, [leggi questa risposta su StackOverflow](https://stackove
   <div class="p-2 bd-highlight">Elemento flex</div>
   <div class="ml-auto p-2 bd-highlight">Elemento flex</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Con 'align-items'
 
 Spostare verticalmente un elemento flex in cima o in fondo a un contenitore mescolando `align-items`,` flex-direction: column` e `margin-top: auto` o` margin-bottom: auto`.
 
-{% example html %}
+{% capture example %}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
   <div class="mb-auto p-2 bd-highlight">Elemento flex</div>
   <div class="p-2 bd-highlight">Elemento flex</div>
@@ -265,7 +265,7 @@ Spostare verticalmente un elemento flex in cima o in fondo a un contenitore mesc
   <div class="p-2 bd-highlight">Elemento flex</div>
   <div class="mt-auto p-2 bd-highlight">Elemento flex</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Wrap
 
@@ -352,13 +352,13 @@ Sono previste anche seguenti le varianti responsive per `flex-wrap`:
 Modifica l'ordine in _visualizzazione_ di elementi flex specifici con l'utility `order-`. Sono disponibili le opzioni per il primo elemento o l'ultimo, come anche il reset dell'ordinamento DOM.
 Le classi `order-` sono accompagnate da un ordinale intero (`1`, `2`, `3`, e così via), per cui puoi creare delle classi personalizzate per aggiungere i valori di cui hai bisogno.
 
-{% example html %}
+{% capture example %}
 <div class="d-flex flex-nowrap bd-highlight">
   <div class="order-3 p-2 bd-highlight">Primo elemento flex</div>
   <div class="order-2 p-2 bd-highlight">Secondo elemento flex</div>
   <div class="order-1 p-2 bd-highlight">Terzo elemento flex</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Sono previste anche seguenti le varianti responsive per `order`:
 

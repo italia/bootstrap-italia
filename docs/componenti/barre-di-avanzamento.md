@@ -13,7 +13,7 @@ I componenti di avanzamento progressivo sono costruiti con due elementi HTML, al
 - La classe `.progress-bar` richiede uno stile inline, una classe di utility di dimensionamento o un CSS personalizzato per impostare la larghezza.
 - Per rendere accessibile l'elemento `.progress-bar` sono necessari alcuni attributi come `role` e `aria`.
 
-{% example html %}
+{% capture example %}
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
@@ -29,31 +29,31 @@ I componenti di avanzamento progressivo sono costruiti con due elementi HTML, al
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Sono utilizzate le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/utilities/sizing/) per poter settare i vari avanzamenti.
 
-{% example html %}
+{% capture example %}
 <div class="progress">
   <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Etichette
 
 Aggiungi le etichette alle barre di avanzamento posizionando il testo all'interno di `.progress-bar`.
 
-{% example html %}
+{% capture example %}
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Altezza
 
 Può essere impostato un solo valore `height` su `.progress`, quindi se cambi questo valore il `.progress-bar` interno verrà automaticamente ridimensionato di conseguenza.
 
-{% example html %}
+{% capture example %}
 <div class="progress" style="height: 1px;">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
@@ -63,13 +63,13 @@ Può essere impostato un solo valore `height` su `.progress`, quindi se cambi qu
 <div class="progress" style="height: 20px;">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Background
 
 Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramite le classi delle [utility background]({{ site.baseurl }}/docs/utilities/colors/#background-color)
 
-{% example html %}
+{% capture example %}
 <div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
@@ -82,7 +82,7 @@ Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramit
 <div class="progress">
   <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Altre personalizzazioni
 
