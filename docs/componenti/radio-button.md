@@ -9,7 +9,7 @@ toc: true
 
 Radio buttons classici
 
-{% example html %}
+{% capture example %}
 <div class="form-check">
   <input name="gruppo1" type="radio" id="radio1" checked>
   <label for="radio1">Opzione 1</label>
@@ -24,11 +24,11 @@ Radio buttons classici
   <input name="gruppo1" type="radio" id="radio3">
   <label for="radio3">Opzione 3</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Radio buttons inline
 
-{% example html %}
+{% capture example %}
   <div class="form-check form-check-inline">
     <input name="gruppo2" type="radio" id="radio4" checked>
     <label for="radio4">Opzione 1</label>
@@ -43,11 +43,11 @@ Radio buttons inline
     <input name="gruppo2" type="radio" id="radio6">
     <label for="radio6">Opzione 3</label>
   </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Radio button disabilitati
 
-{% example html %}
+{% capture example %}
 <div class="form-check">
   <input name="gruppo3" type="radio" class="with-gap" id="radio7" checked disabled>
   <label for="radio7" class="disabled">Opzione 1</label>
@@ -62,11 +62,11 @@ Radio button disabilitati
   <input name="gruppo3" type="radio" class="with-gap" id="radio9" disabled>
   <label for="radio9" class="disabled">Opzione 3</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Gruppi di radio buttons
 
-{% example html %}
+{% capture example %}
 <div class="row">
   <div class="col-md-5">
     <div class="form-check form-check-group">
@@ -101,4 +101,4 @@ Radio button disabilitati
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

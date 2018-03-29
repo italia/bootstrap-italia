@@ -12,7 +12,7 @@ Di seguito sono mostrate alcune di queste combinazioni.
 
 ### Select classica
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select">
@@ -24,13 +24,13 @@ Di seguito sono mostrate alcune di queste combinazioni.
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Select multipla
 
 La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" multiple>
@@ -41,13 +41,13 @@ La personalizzazione attraverso Bootstrap Italia permette di selezionare più el
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Select con ricerca
 
 Esempio di _select_ con ricerca:
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" searchable="Cerca una regione">
@@ -58,13 +58,13 @@ Esempio di _select_ con ricerca:
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Select con gruppi di opzioni
 
 Esempio di _select_ con gruppi di opzioni:
 
-{% example html %}
+{% capture example %}
 <form>
   <div class="form-group">
     <select class="custom-select" multiple>
@@ -80,4 +80,4 @@ Esempio di _select_ con gruppi di opzioni:
     <label>Label di esempio</label>
   </div>
 </form>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

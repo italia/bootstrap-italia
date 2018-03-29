@@ -10,7 +10,7 @@ toc: true
 
 Posiziona un componente aggiuntivo o un bottone su uno o entrambi i lati di un input.  **Ogni singolo gruppo di input supporta un solo elemento input** e il `<label>` viene sostituito dall'attributo `aria-label` oppure inserito fuori da `input-group`.
 
-{% example html %}
+{% capture example %}
 <div class="input-group pb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">@</span>
@@ -51,7 +51,7 @@ Posiziona un componente aggiuntivo o un bottone su uno o entrambi i lati di un i
   </div>
   <textarea class="form-control" aria-label="With textarea"></textarea>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Dimensione
 
@@ -59,7 +59,7 @@ Aggiungi le relative classi di dimensionamento del form in `.input-group`, il co
 
 **Il dimensionamento sui singoli elementi nel gruppo di input non è supportato.**
 
-{% example html %}
+{% capture example %}
 <div class="input-group input-group-sm mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-sm">Testo piccolo</span>
@@ -80,13 +80,13 @@ Aggiungi le relative classi di dimensionamento del form in `.input-group`, il co
   </div>
   <input type="text" class="form-control" aria-label="Testo grande" aria-describedby="inputGroup-sizing-sm">
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Checkbox e radio
 
 Posiziona qualsiasi checkbox e radio all'interno di un addon del gruppo di input anziché nel testo.
 
-{% example html %}
+{% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <div class="input-group-text">
@@ -104,13 +104,13 @@ Posiziona qualsiasi checkbox e radio all'interno di un addon del gruppo di input
   </div>
   <input type="text" class="form-control" aria-label="Text input with radio button">
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Input multipli
 
 Sebbene siano supportati visivamente più `<input>`, gli stili per la validazione sono disponibili solo per gruppi di input con un singolo `<input>`.
 
-{% example html %}
+{% capture example %}
 <div class="input-group">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Nominativo</span>
@@ -118,13 +118,13 @@ Sebbene siano supportati visivamente più `<input>`, gli stili per la validazion
   <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
   <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome">
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Aggiunte multiple
 
 Sono supportati più add-on insieme e possono essere combinati anche con checkbox e input radio.
 
-{% example html %}
+{% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text">€</span>
@@ -140,11 +140,11 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
     <span class="input-group-text">0,00</span>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Aggiunta bottoni
 
-{% example html %}
+{% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <button class="btn btn-primary" type="button">Bottone</button>
@@ -174,11 +174,11 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
     <button class="btn btn-primary" type="button">Bottone</button>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Bottoni con dropdown
 
-{% example html %}
+{% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
@@ -206,11 +206,11 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Pulsanti segmentati
 
-{% example html %}
+{% capture example %}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <button type="button" class="btn btn-primary">Action</button>
@@ -244,7 +244,7 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Accessibilità
 

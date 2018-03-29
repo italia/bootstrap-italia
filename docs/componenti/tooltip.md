@@ -252,8 +252,7 @@ Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animati
 
 ### Metodi
 
-{% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-danger-async-methods.md %}
 
 #### `$().tooltip(options)`
 

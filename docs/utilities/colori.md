@@ -22,22 +22,22 @@ Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in
 
 ## Colore del testo
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <p class="text-{{ color.name }}{% if color.name == "light" %} bg-dark{% endif %}">.text-{{ color.name }}</p>{% endfor %}
 <p class="text-muted">.text-muted</p>
 <p class="text-white bg-dark">.text-white</p>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Colore di sfondo
 
 Allo stesso modo di quanto avviene per il testo, le classi `bg-*` permettono di colorare lo sfondo di un elemento; le classi per gli sfondi **non hanno alcun impatto sulla proprità `color`**, per cui in alcuni casi sarà necessario affiancarle alle classi `.text-*`.
 
-{% example html %}
+{% capture example %}
 {% for color in site.data.theme-colors %}
 <div class="p-3 mb-2 bg-{{ color.name }} {% if color.name == "light" or color.name == "warning" %}text-dark{% else %}text-white{% endif %}">.bg-{{ color.name }}</div>{% endfor %}
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Colore di sfondo con gradiente
 
@@ -45,5 +45,4 @@ Bootstrap Italia eredita da Bootstrap la possibilità di avere comodamente sfond
 
 Si possono trovare maggiori informazioni a riguardo sul [sito di Bootstrap 4](https://getbootstrap.com/docs/4.0/utilities/colors/#background-gradient).
 
-{% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-warning-color-assistive-technologies.md %}

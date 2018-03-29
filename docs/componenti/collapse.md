@@ -18,7 +18,7 @@ Puoi cliccare su uno dei bottoni di seguito per mostrare e nascondere un altro e
 
 Puoi usare un link con l'attributo `href`, o un bottone con l'attributo `data-target`. In entrambi i casi, l'attributo `data-toggle="collapse"` è obbligatorio.
 
-{% example html %}
+{% capture example %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link con href
@@ -32,14 +32,14 @@ Puoi usare un link con l'attributo `href`, o un bottone con l'attributo `data-ta
     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Esempio con molteplici elementi richiudibili
 
 Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore jQuery nell'attributo `href` o nell'attributo `data-target`.
 Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-target`
 
-{% example html %}
+{% capture example %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Attiva/disattiva primo elemento</a>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Attiva/disattiva secondo elemento</button>
@@ -61,13 +61,13 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Esempio di elemento a fisarmonica
 
 Usando il componente [card]({{ site.baseurl }}/docs/componenti/card/), puoi estendere il comportamento predefinito del collapse per creare una fisarmonica, o accordion.
 
-{% example html %}
+{% capture example %}
 <div id="accordion" role="tablist">
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
@@ -112,7 +112,7 @@ Usando il componente [card]({{ site.baseurl }}/docs/componenti/card/), puoi este
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Accessibilità
 
@@ -177,8 +177,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 ### Metodi
 
-{% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-danger-async-methods.md %}
 
 #### `.collapse(options)`
 

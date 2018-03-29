@@ -12,7 +12,7 @@ L'[oggetto media](http://www.stubbornella.org/content/2010/06/25/the-media-objec
 
 Grazie a flexbox è necessario l'utilizzo di solo due classi: nel contenitore `.media` e nell'elemento contenuto `.media-body`. Padding e margin possono essere gestiti tramite le [utility di spaziatura]({{ site.baseurl }}/docs/utilities/spaziature/).
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <img class="mr-3" data-src="holder.js/64x64" alt="testo alternativo">
   <div class="media-body">
@@ -20,7 +20,7 @@ Grazie a flexbox è necessario l'utilizzo di solo due classi: nel contenitore `.
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 {% callout warning %}
 ##### Flexbug #12: Gli elementi inline non sono trattati come elementi flex.
@@ -34,7 +34,7 @@ IE10 e IE11 non eseguono il rendering di elementi inline di link o immagini (o `
 
 Per annidare gli oggetti media posiziona il nuovo elemento `.media` all'interno del contenitore `.media-body`. In linea teorica gli oggetti media possono essere annidati all'infinito, me per una corretta visualizzazione grafica ti suggeriamo di non creare troppi livelli di annidamento.
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <img class="mr-3" data-src="holder.js/64x64" alt="testo alternativo">
   <div class="media-body">
@@ -52,13 +52,13 @@ Per annidare gli oggetti media posiziona il nuovo elemento `.media` all'interno 
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Allineamento
 
 Il media presente dentro l'oggetto media può essere allineato grazie alle utility flexbox in alto (prefedinito), in mezzo o in basso del contenuto `.media-body`.
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <img class="align-self-start mr-3" data-src="holder.js/64x64" alt="testo alternativo">
   <div class="media-body">
@@ -67,9 +67,9 @@ Il media presente dentro l'oggetto media può essere allineato grazie alle utili
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <img class="align-self-center mr-3" data-src="holder.js/64x64" alt="testo alternativo">
   <div class="media-body">
@@ -78,9 +78,9 @@ Il media presente dentro l'oggetto media può essere allineato grazie alle utili
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <img class="align-self-end mr-3" data-src="holder.js/64x64" alt="testo alternativo">
   <div class="media-body">
@@ -89,13 +89,13 @@ Il media presente dentro l'oggetto media può essere allineato grazie alle utili
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Ordinamento
 
 Puoi modificare l'ordine del contenuto negli oggetti media utilizzando HTML stesso oppure aggiungendo alcuni CSS personalizzati per impostare la proprietà `order` (di un numero intero di tua scelta).
 
-{% example html %}
+{% capture example %}
 <div class="media">
   <div class="media-body">
     <h5 class="mt-0 mb-1">Media object</h5>
@@ -103,13 +103,13 @@ Puoi modificare l'ordine del contenuto negli oggetti media utilizzando HTML stes
   </div>
   <img class="ml-3" data-src="holder.js/64x64" alt="testo alternativo">
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Elenco Media
 
 Poiché l'oggetto media ha pochi requisiti strutturali, è anche possibile utilizzare queste classi sugli elementi HTML di elenco. Su `<ul>` o `<ol>` aggiungi `.list-unstyled` per rimuovere tutti gli stili di elenco predefiniti del browser, quindi applica `.media` ai tuoi `<li>`. Come sempre, utilizzare le utilità di spaziatura ovunque sia necessario per ottimizzare la visualizzazione grafica.
 
-{% example html %}
+{% capture example %}
 <ul class="list-unstyled">
   <li class="media">
     <img class="mr-3" data-src="holder.js/64x64" alt="testo alternativo">
@@ -133,4 +133,4 @@ Poiché l'oggetto media ha pochi requisiti strutturali, è anche possibile utili
     </div>
   </li>
 </ul>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

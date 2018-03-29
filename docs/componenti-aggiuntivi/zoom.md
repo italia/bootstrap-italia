@@ -12,6 +12,6 @@ The zoom plugin provides simple image zoom functionality. Add a `data-action="zo
 
 ### Data API
 
-{% example html %}
+{% capture example %}
 <img data-action="zoom" style="width: 150px;" src="http://placekitten.com/g/400/400">
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

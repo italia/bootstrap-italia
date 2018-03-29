@@ -91,11 +91,11 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="close" aria-label="Close">
   <span aria-hidden="true">&times;</span>
 </button>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Demo
 
@@ -427,7 +427,7 @@ e gli [attributi HTML `data-*`](https://developer.mozilla.org/en-US/docs/Learn/H
 In basso una demo seguita da un esempio in HTML e JavaScript. Per maggiori informazioni, [leggi la documentazione sugli
 eventi della modale](#eventi) per dettagli su `relatedTarget`.
 
-{% example html %}
+{% capture example %}
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Mario">Apri la modale per Mario</button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Paolo">Apri la modale per Paolo</button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Luca">Apri la modale per Luca</button>
@@ -460,7 +460,7 @@ eventi della modale](#eventi) per dettagli su `relatedTarget`.
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 {% highlight js %}
 $('#exampleModal').on('show.bs.modal', function (event) {
@@ -622,8 +622,7 @@ aggiungi l'opzione a `data-` (come ad esempio in `data-backdrop=""`):
 
 ### Metodi
 
-{% capture callout-include %}{% include callout-danger-async-methods.md %}{% endcapture %}
-{{ callout-include | markdownify }}
+{% include callout-danger-async-methods.md %}
 
 #### `.modal(options)`
 

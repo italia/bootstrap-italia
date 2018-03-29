@@ -22,6 +22,6 @@ Utilizza la classe `.text-hide` o il relativo mixin per sostituire del testo in 
 Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO dei tags di intestazione pur utilizzando
 un'immagine di sfondo invece del testo.
 
-{% example html %}
+{% capture example %}
 <h1 class="text-hide" style="background-image: url('{{ site.baseurl }}/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;">Bootstrap Italia</h1>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

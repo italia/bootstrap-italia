@@ -9,16 +9,16 @@ toc: true
 
 Checkbox classico
 
-{% example html %}
+{% capture example %}
 <div class="form-check">
   <input id="checkbox1" type="checkbox">
   <label for="checkbox1">Label di esempio</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Checkbox inline 
 
-{% example html %}
+{% capture example %}
 <div class="form-check form-check-inline">
   <input id="checkbox2" type="checkbox">
   <label for="checkbox2">Checkbox non selezionato</label>
@@ -28,11 +28,11 @@ Checkbox inline
   <input id="checkbox3" type="checkbox" checked="checked">
   <label for="checkbox3">Checkbox selezionato</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 Checkbox disabilitate
 
-{% example html %}
+{% capture example %}
 <div class="form-check">
   <input id="checkbox4" type="checkbox" disabled>
   <label for="checkbox4" class="disabled">Checkbox disabilitato non selezionato</label>
@@ -42,11 +42,11 @@ Checkbox disabilitate
   <input id="checkbox5" type="checkbox" disabled checked="checked">
   <label for="checkbox5" class="disabled">Checkbox disabilitato selezionato</label>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
 
 ## Gruppi di Checkbox
 
-{% example html %}
+{% capture example %}
 <div class="row">
   <div class="col-md-5">
     <div class="form-check form-check-group">
@@ -81,4 +81,4 @@ Checkbox disabilitate
     </div>
   </div>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}

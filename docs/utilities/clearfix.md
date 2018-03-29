@@ -23,9 +23,9 @@ Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo 
 
 Mentre nel seguente esempio con l'utilizzo della classe `.clearfix` viene annullato il float del contenuto permettendo una visualizzazione ottimale.
 
-{% example html %}
+{% capture example %}
 <div class="bg-primary p-2 clearfix">
   <button type="button" class="btn btn-secondary float-left">Bottone con float a sinistra</button>
   <button type="button" class="btn btn-secondary float-right">Bottone con float a destra</button>
 </div>
-{% endexample %}
+{% endcapture %}{% include example.html content=example %}
