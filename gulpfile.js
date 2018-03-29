@@ -14,7 +14,7 @@ const wrapper = require('gulp-wrapper')
 const chalk = require('chalk')
 const child = require('child_process')
 const gutil = require('gulp-util')
-const touch = require('gulp-touch')
+const touch = require('gulp-touch-cmd')
 const browserSync = require('browser-sync').create()
 const pkg = require('./package.json')
 
@@ -48,6 +48,7 @@ const Paths = {
     './src/js/plugins/zoom.js',
     './src/js/plugins/forms.js',
     './src/js/plugins/custom-select.js',
+    './src/js/plugins/offcanvas.js',
     './src/js/plugins/date-picker.js',
     './src/js/plugins/back-to-top.js',
     './src/js/plugins/forward.js',
@@ -80,7 +81,7 @@ const jqueryVersionCheck = '+function ($) {\n' +
   '  }\n' +
   '}(jQuery);\n\n'
 
-gulp.task('scss', function SCSSTask(done) {
+gulp.task('scss', done => {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -95,14 +96,14 @@ gulp.task('scss', function SCSSTask(done) {
   done()
 })
 
-gulp.task('scss-min', gulp.series('scss', function SCSSMinTask(done) {
+gulp.task('scss-min', gulp.series('scss', done => {
   return gulp.src(Paths.SOURCE_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({
-      compatibility: 'ie10'
-    }))
     .pipe(autoprefixer())
+    .pipe(cleanCSS({
+      level: 2
+    }))
     .pipe(wrapper({
       header: bootstrapItaliaBanner +
       '\n'
@@ -116,7 +117,7 @@ gulp.task('scss-min', gulp.series('scss', function SCSSMinTask(done) {
   done()
 }))
 
-gulp.task('js', function JSTask(done) {
+gulp.task('js', done => {
   return gulp.src(Paths.SOURCE_JS)
     .pipe(concat(FILENAME + '.js'))
     .pipe(replace(/^(export|import).*/gm, ''))
@@ -149,7 +150,7 @@ gulp.task('js', function JSTask(done) {
   done()
 })
 
-gulp.task('js-min', gulp.series('js', function JSMinTask(done) {
+gulp.task('js-min', gulp.series('js', done => {
   return gulp.src(Paths.DIST + '/js/' + FILENAME + '.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -166,7 +167,7 @@ gulp.task('js-min', gulp.series('js', function JSMinTask(done) {
   done()
 }))
 
-gulp.task('js-bundle', gulp.series('js', function JSBundleTask(done) {
+gulp.task('js-bundle', gulp.series('js', done => {
   var BUNDLE_JS = Paths.VENDOR_JS.concat(Paths.DIST + '/js/' + FILENAME + '.js')
   return gulp.src(BUNDLE_JS)
     .pipe(wrapper({
@@ -179,7 +180,7 @@ gulp.task('js-bundle', gulp.series('js', function JSBundleTask(done) {
   done()
 }))
 
-gulp.task('js-bundle-min', gulp.series('js-bundle', 'js', function JSBundleMinTask(done) {
+gulp.task('js-bundle-min', gulp.series('js-bundle', 'js', done => {
   return gulp.src(Paths.DIST + '/js/' + FILENAME + '.bundle.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -198,7 +199,7 @@ gulp.task('js-bundle-min', gulp.series('js-bundle', 'js', function JSBundleMinTa
 
 
 /* Documentation */
-gulp.task('docs-scss-min', function docsSCSSMinTask(done) {
+gulp.task('docs-scss-min', done => {
   return gulp.src(Paths.SOURCE_DOCUMENTATION_SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -215,7 +216,7 @@ gulp.task('docs-scss-min', function docsSCSSMinTask(done) {
   done()
 })
 
-gulp.task('docs-js-min', function docsJSMinTask(done) {
+gulp.task('docs-js-min', done => {
   return gulp.src([
     Paths.VENDOR_DOCUMENTATION_JS,
     Paths.SOURCE_DOCUMENTATION_JS
@@ -231,12 +232,12 @@ gulp.task('docs-js-min', function docsJSMinTask(done) {
 })
 
 /* Font */
-gulp.task('icons-css', function iconsCSSTask(done) {
+gulp.task('icons-css', done => {
   return gulp.src(['src/icons/css/**'])
     .pipe(gulp.dest(Paths.DIST + '/css'))
   done()
 })
-gulp.task('icons-font', function iconsFontTask(done) {
+gulp.task('icons-font', done => {
   return gulp.src(['src/icons/font/**'])
     .pipe(gulp.dest(Paths.DIST + '/font'))
   done()
@@ -250,7 +251,7 @@ gulp.task('build-docs', gulp.series('docs-scss-min', 'docs-js-min'))
 // Main build task
 gulp.task('build', gulp.series('build-code', 'build-docs'))
 
-gulp.task('jekyll', function jekyllTask(done) {
+gulp.task('jekyll', done => {
   var jekyllExecutable = process.platform === "win32" ? "jekyll.bat" : "jekyll"
   const jekyll = child.spawn(jekyllExecutable, ['build',
     '--watch',
@@ -263,16 +264,17 @@ gulp.task('jekyll', function jekyllTask(done) {
     buffer.toString()
       .split(/\n/)
       .forEach((message) => gutil.log('Jekyll: ' + message))
+    if (buffer.toString().indexOf('done') > -1)
+      done() // jekyll first run complete - TODO: find a better way to detect this event
   }
 
   jekyll.stdout.on('data', jekyllLogger)
   jekyll.stderr.on('data', jekyllLogger)
-  done()
 })
 
 const siteRoot = '_gh_pages'
 
-gulp.task('sync', function sync() {
+gulp.task('sync', done => {
   browserSync.init({
     files: [siteRoot + '/**'],
     port: 4000,

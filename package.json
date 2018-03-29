@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "keywords": [
     "css",
     "sass",
@@ -51,12 +51,13 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
-    "gulp-touch": "^1.0.1",
+    "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^1.2.0",
     "gulp-wrapper": "^1.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "gulp-install": "^1.1.0",
     "jquery": "^3.2.1",
     "pickadate": "^3.5.6",
     "popper.js": "^1.12.9"
