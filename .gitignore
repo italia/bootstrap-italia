@@ -1,6 +1,10 @@
 # Ignore docs files
 _gh_pages
 
+# Ignore dist files
+dist
+docs/assets/dist
+
 # Ignore ruby files
 .ruby-version
 .bundle
