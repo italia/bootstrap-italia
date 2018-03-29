@@ -61,22 +61,7 @@ $('input:file').on('change', function(e){
 })
 
 
-// Esempio autocomplete
-var countries = [
-  "Afghanistan",
-  "Albania",
-  "Algeria",
-  "Andorra",
-  "Angola",
-  "Antigua and Barbuda",
-  "Argentina",
-  "Armenia",
-  "Australia",
-  "Austria",
-  "Azerbaijan",
-  "Zambia",
-  "Zimbabwe"
-];
-$('#form-autocomplete-1').mdb_autocomplete({
-  data: countries
-});
+// Autocomplete
+$(function() {
+  $('.autocomplete').autocomplete();
+})

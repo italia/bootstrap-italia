@@ -1,21 +1,22 @@
-.mdb-autocomplete {
+.autocomplete {
   margin-bottom: 1px;
 }
 
-.mdb-autocomplete-clear {
+.autocomplete-clear {
   visibility: hidden;
   position: absolute;
   z-index: 2;
-  right: 0;
-  top: 0.85rem;
+  right: .25rem;
+  top: .5rem;
   background: transparent;
   border: none;
+  cursor: pointer;
   svg {
     fill: #a6a6a6;
   }
 }
 
-.mdb-autocomplete-wrap {
+.autocomplete-wrap {
   position: absolute;
   left: 0;
   right: 0;
