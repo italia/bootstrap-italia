@@ -65,13 +65,7 @@
       white-space: nowrap;
     }
   }
-}
 
-//
-// Docs sections
-//
-
-.bd-content {
   > h2:not(:first-child) {
     margin-top: 3rem;
   }
@@ -83,6 +77,10 @@
   > ul li,
   > ol li {
     margin-bottom: .25rem;
+  }
+
+  p {
+    max-width: 40rem;
   }
 }
 

@@ -174,7 +174,11 @@ $btn-font-size-lg: 18px !default;
 $input-btn-line-height: 1.5 !default;
 $input-btn-line-height-sm: 1.428 !default;
 $input-btn-line-height-lg: 1.556 !default;
+
+$btn-box-shadow-focus: 0 0 0 0.2rem rgba(0, 115, 230, 0.25);
+
 $btn-box-shadow-secondary: inset 0 0 0 1px $primary;
+$btn-box-shadow-secondary-hover: inset 0 0 0 1px $primary;
 $btn-box-shadow-quaternary: inset 0 0 0 1px $gray-disabled;
 $btn-box-shadow-disabled: inset 0 0 0 1px $gray-border-disabled;
 

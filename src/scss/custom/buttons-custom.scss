@@ -37,6 +37,7 @@
 
 .btn-secondary {
   color: $primary;
+  background-color: $white;
   box-shadow: $btn-box-shadow-secondary;
   &.disabled,
   &:disabled {
@@ -45,7 +46,18 @@
   }
   &.focus,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 115, 230, 0.25);
+    box-shadow: $btn-box-shadow-secondary, $btn-box-shadow-focus;
+  }
+  &:hover {
+    color: $primary;
+    background-color: $white;
+    box-shadow: $btn-box-shadow-secondary-hover;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    color: $primary;
+    background-color: $white;
+    box-shadow: $btn-box-shadow-secondary-hover;
   }
 }
 

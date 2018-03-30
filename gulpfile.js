@@ -109,10 +109,10 @@ gulp.task('scss-min', gulp.series('scss', done => {
       header: bootstrapItaliaBanner +
       '\n'
     }))
+    .pipe(sourcemaps.write(Paths.HERE))
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(sourcemaps.write(Paths.HERE))
     .pipe(gulp.dest(Paths.DIST + '/css'))
     .pipe(touch())
   done()
