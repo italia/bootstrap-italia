@@ -45,7 +45,7 @@ social_card_path:   "/docs/assets/img/favicons/social-card.png"
 social_logo_path:   "/docs/assets/img/favicons/android-chrome-192x192.png"
 
 # Custom variables
-current_version:      0.4.1
+current_version:      0.4.2
 bootstrap_version:    4
 repo:                 "https://github.com/italia/bootstrap-italia/"
 developers:           "https://developers.italia.it/"
