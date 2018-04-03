@@ -6,6 +6,11 @@ group: come-iniziare
 toc: true
 ---
 
+
+## Tema Bootstrap Italia
+
+Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][bootstrap-themes] sul sito Bootstrap.
+
 I componenti di Bootstrap Italia sono divisi in due macro-aree: i [Componenti _Base_]({{ site.baseurl }}/docs/componenti/) e i [Componenti _Aggiuntivi_]({{ site.baseurl }}/docs/componenti-aggiuntivi/).
  
 #### Componenti base
@@ -24,7 +29,7 @@ Sul web, essi possono anche essere identificati come _plugin_, ma qui si è pref
 
 Ogni componente può avere una personalizzazione di stile e di funzionalità attraverso l'utilizzo di file `scss` e `javascript`.
 
-I componenti base ereditano quindi stili e funzionalità da [Bootstrap v{{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/getting-started/introduction/), di cui si potrà trovare il codice sorgente nella cartella rispettiva all'interno di `node_modules`. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:
+I componenti base ereditano quindi stili e funzionalità da [Bootstrap {{ site.bootstrap_version }}][documentazione-bootstrap], di cui si potrà trovare il codice sorgente nella cartella rispettiva all'interno di `node_modules`. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:
  
 - per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella `src/scss`. Si può notare in particolare come il file `bootstrap-italia.scss` importi ed estenda gli stili e le funzioni di base di Bootstrap.
 - per l'implementazione di funzionalità `javascript`, si farà invece riferimento alla cartella `src/js`.
@@ -33,14 +38,15 @@ Queste due cartelle, assieme alla cartella `docs` per la stesura della documenta
 
 Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando `gulp build` nel file `gulpfile.js`), viene usato per "sovrascrivere" il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle `dist/js` e `dist/css`.
 
-Informazioni aggiuntive si possono trovare alla [pagina relativa alla creazione di temi](https://getbootstrap.com/docs/4.0/getting-started/theming/) sul sito Bootstrap.
+Informazioni aggiuntive si possono trovare alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] sul sito Bootstrap.
 
 ## Documentazione dei componenti
 
-Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella `docs`, che ne descrive comportamenti, varianti e utilizzo.
+Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella `/docs`, che ne descrive comportamenti, varianti e utilizzo.
 
 Tale documentazione è redatta in codice `markdown` ed è comprensiva di una breve descrizione testuale corredata da un esempio di applicazione in codice `html`.
 
 [documentazione-bootstrap]: https://getbootstrap.com/docs/4.0/getting-started/introduction/
+[documentazione-bootstrap-theming]: https://getbootstrap.com/docs/4.0/getting-started/theming/
 [linee-guida]: https://design-italia.readthedocs.io/it/stable/index.html
 

@@ -5,7 +5,7 @@
     - title: Introduzione
     - title: Strumenti di compilazione
     - title: Modificare Componenti
-    - title: Browsers e dispositivi
+    # - title: Browsers e dispositivi
     # - title: Accessibility # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
     # - title: Theming # TODO
     # - title: Webpack # TODO

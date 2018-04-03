@@ -17,13 +17,16 @@
     > a {
       pointer-events: auto;
     }
+  }
 
+  > h2[id] {
     &::before {
       display: block;
-      height: 6rem;
-      margin-top: -6rem;
-      visibility: hidden;
+      border-bottom: 1px solid #EDEDED;
+      height: 1rem;
       content: "";
+      margin-bottom: 1.5rem;
+      width: 4rem;
     }
   }
 
@@ -69,6 +72,7 @@
   > ul li,
   > ol li {
     margin-bottom: .25rem;
+    max-width: 40rem;
   }
 
   > p {
