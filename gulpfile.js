@@ -125,12 +125,10 @@ gulp.task('js', done => {
     .pipe(babel({
       compact: false,
       presets: [
-        [
-          'env', {
+        [ 'env', {
           modules: false,
           loose: true
-        }
-        ]
+        }]
       ],
       plugins: [
         'transform-object-rest-spread',
@@ -138,13 +136,9 @@ gulp.task('js', done => {
       ]
     }))
     .pipe(wrapper({
-      header: bootstrapItaliaBanner +
-      '\n' +
-      jqueryCheck +
-      '\n' +
-      jqueryVersionCheck +
-      '\n+function () {\n',
-      footer: '\n}();\n'
+      header: bootstrapItaliaBanner + '\n' +
+      jqueryCheck + '\n' +
+      jqueryVersionCheck + '\n+function () {\n', footer: '\n}();\n'
     }))
     .pipe(gulp.dest(Paths.DIST + '/js'))
     .pipe(touch())
@@ -156,8 +150,7 @@ gulp.task('js-min', gulp.series('js', done => {
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(wrapper({
-      header: bootstrapItaliaBanner +
-      '\n'
+      header: bootstrapItaliaBanner + '\n'
     }))
     .pipe(rename({
       suffix: '.min'

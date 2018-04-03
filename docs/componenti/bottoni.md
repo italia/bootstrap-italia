@@ -32,8 +32,11 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>{% endfor %}
-<button type="button" class="btn btn-link">Link</button>
+<div class="py-1">
+<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
+<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
+<button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
+</div>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
@@ -43,30 +46,20 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare rispettivamente le classi `.btn-lg` e `.btn-sm`.
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-lg">Primary Large</button>
+<button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
 {% endcapture %}{% include example.html content=example %}
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-sm">Primary Small</button>
+<button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
 {% endcapture %}{% include example.html content=example %}
 
 Aggiungendo la classe `.btn-block` si ottengono invece bottoni che prendono tutta l'ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-{% endcapture %}{% include example.html content=example %}
-
-## Stato Attivo
-
-Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
-
-{% capture example %}
-{% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-{{ color.name }} active" aria-pressed="true">{{ color.name | capitalize }}</button>{% endfor %}
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Primary Block</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Secondary Block</button>
 {% endcapture %}{% include example.html content=example %}
 
 ## Stato Disabilitato

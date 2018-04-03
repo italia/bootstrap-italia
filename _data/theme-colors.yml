@@ -1,10 +1,7 @@
 # used in documentation as site.data.theme-colors
 
-- name: italia
 - name: primary
 - name: secondary
-- name: tertiary
-- name: quaternary
 - name: success
 - name: danger
 - name: warning

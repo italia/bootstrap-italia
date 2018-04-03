@@ -13,3 +13,8 @@
   $b-hsb: $b-hsb + $b-variant;
   @return hsb($h-hsb, $s-hsb, $b-hsb);
 }
+
+@function color-hover($color) {
+  @return desaturate( darken( $color, 10% ), 10%) // TODO
+}
+

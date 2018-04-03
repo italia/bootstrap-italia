@@ -40,7 +40,8 @@ $green:                 hsb(159, 100, 80) !default;
 $teal:                  hsb(178, 95, 85) !default;
 $cyan:                  hsb(178, 100, 100) !default;
 $blue:                  hsb(210, 100, 90) !default;
-$gray-tertiary:         hsb(210, 29, 51) !default;
+$gray-secondary:        hsb(210, 29, 51) !default;
+$gray-tertiary:         hsb(238, 1, 100) !default;
 $gray-quaternary:       hsb(238, 1, 100) !default;
 $gray-disabled:         hsb(225, 5, 95) !default;
 $gray-label-disabled:   hsb(222, 5, 79) !default;
@@ -62,13 +63,14 @@ $colors: map-merge((
   "gray":             $gray-600,
   "gray-dark":        $gray-800,
   "blue":             $blue,
+  "gray-secondary":   $gray-secondary,
   "gray-tertiary":    $gray-tertiary,
   "gray-quaternary":  $gray-quaternary
 ), $colors);
 
 $blu-italia:      $italia !default;
 $primary:         $blue !default;
-$secondary:       $white !default;
+$secondary:       $gray-secondary !default;
 $tertiary:        $gray-tertiary !default;
 $quaternary:      $gray-quaternary !default;
 $success:         $green !default;
@@ -81,7 +83,6 @@ $dark:            hsb(210, 70, 30) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  "italia":       $blu-italia,
   "primary":      $primary,
   "secondary":    $secondary,
   "tertiary":     $tertiary,
@@ -165,22 +166,31 @@ $navbar-dark-toggler-icon-bg: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0i
 $navbar-dark-toggler-border-color: transparent;
 
 // Btns
+
+$spacer: 16px !default;
+
+$btn-border-width: 0;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
-$btn-font-weight: 700 !default;
+$btn-font-weight: 600 !default;
 $btn-font-size: 16px !default;
 $btn-font-size-sm: 14px !default;
 $btn-font-size-lg: 18px !default;
 $input-btn-line-height: 1.5 !default;
 $input-btn-line-height-sm: 1.428 !default;
 $input-btn-line-height-lg: 1.556 !default;
-
+/*
 $btn-box-shadow-focus: 0 0 0 0.2rem rgba(0, 115, 230, 0.25);
 
 $btn-box-shadow-secondary: inset 0 0 0 1px $primary;
 $btn-box-shadow-secondary-hover: inset 0 0 0 1px $primary;
 $btn-box-shadow-quaternary: inset 0 0 0 1px $gray-disabled;
 $btn-box-shadow-disabled: inset 0 0 0 1px $gray-border-disabled;
+*/
+
+// progress
+$progress-height: 16px;
+$progress-border-radius: 0;
 
 // z-index
 $zindex-zoom: 1080;
