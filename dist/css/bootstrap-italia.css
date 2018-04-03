@@ -7270,11 +7270,11 @@ a.text-900:hover, a.text-900:focus {
 .invisible {
   visibility: hidden !important; }
 
-html {
+html, body {
   font-size: 16px;
   line-height: 1.5; }
   @media (min-width: 576px) {
-    html {
+    html, body {
       font-size: 18px;
       line-height: 1.555; } }
 
@@ -7320,7 +7320,7 @@ h6, .h6 {
   line-height: 1.5; }
 
 .display-1 {
-  line-height: 1.071; }
+  font-size: 3.111rem; }
   @media (min-width: 576px) {
     .display-1 {
       font-size: 3.111rem;

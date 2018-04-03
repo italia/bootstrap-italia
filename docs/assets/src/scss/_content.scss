@@ -66,20 +66,12 @@
     }
   }
 
-  > h2:not(:first-child) {
-    margin-top: 3rem;
-  }
-
-  > h3 {
-    margin-top: 1.5rem;
-  }
-
   > ul li,
   > ol li {
     margin-bottom: .25rem;
   }
 
-  p {
+  > p {
     max-width: 40rem;
   }
 }
