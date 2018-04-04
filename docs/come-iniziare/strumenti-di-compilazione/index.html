@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Come compilare il codice sorgente, generare la documentazione, ed altro.">
+<meta name="description" content="Come compilare il codice sorgente e generare la documentazione che stai leggendo">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.7.3">
 <meta name="robots" content="noindex">
@@ -13,16 +13,16 @@
 <title>Strumenti di compilazione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201804041301" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804041301" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804041301" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -39,13 +39,13 @@
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Strumenti di compilazione">
-<meta name="twitter:description" content="Come compilare il codice sorgente, generare la documentazione, ed altro.">
+<meta name="twitter:description" content="Come compilare il codice sorgente e generare la documentazione che stai leggendo">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/come-iniziare/strumenti-di-compilazione/">
 <meta property="og:title" content="Strumenti di compilazione">
-<meta property="og:description" content="Come compilare il codice sorgente, generare la documentazione, ed altro.">
+<meta property="og:description" content="Come compilare il codice sorgente e generare la documentazione che stai leggendo">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.3/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -174,9 +174,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
               Strumenti di compilazione</a></li><li>
             <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
-              Modificare Componenti</a></li><li>
-            <a href="/bootstrap-italia/docs/come-iniziare/browsers-e-dispositivi/">
-              Browsers e dispositivi</a></li></ul>
+              Modificare Componenti</a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
         Contenuti
@@ -328,25 +326,20 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h4"><a href="#questa-pagina-serve-a-chi-desidera-personalizzare-la-libreria">Questa pagina serve a chi desidera personalizzare la libreria.</a></li>
-<li class="toc-entry toc-h2"><a href="#setup-strumenti">Setup strumenti</a>
+<li class="toc-entry toc-h2"><a href="#compilare-la-libreria">Compilare la libreria</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#utilizzare-gli-script-npm">Utilizzare gli script NPM</a></li>
+<li class="toc-entry toc-h3"><a href="#script-di-compilazione">Script di compilazione</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#tema-bootstrap-italia">Tema Bootstrap Italia</a>
+<li class="toc-entry toc-h2"><a href="#compilare-la-documentazione">Compilare la documentazione</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#codice-sorgente">Codice sorgente</a></li>
+<li class="toc-entry toc-h3"><a href="#script-di-compilazione-1">Script di compilazione</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#documentazione">Documentazione</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#pubblicare-la-documentazione">Pubblicare la documentazione</a></li>
-<li class="toc-entry toc-h3"><a href="#creare-una-nuova-release">Creare una nuova release</a>
+<li class="toc-entry toc-h2"><a href="#pubblicare-la-documentazione">Pubblicare la documentazione</a></li>
+<li class="toc-entry toc-h2"><a href="#creare-una-nuova-release">Creare una nuova release</a>
 <ul>
 <li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -355,120 +348,67 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Strumenti di compilazione</h1>
-          <p class="bd-lead">Come compilare il codice sorgente, generare la documentazione, ed altro.</p>
+          <p class="bd-lead">Come compilare il codice sorgente e generare la documentazione che stai leggendo</p>
           <div class="bd-callout bd-callout-info">
-<h4 id="questa-pagina-serve-a-chi-desidera-personalizzare-la-libreria">Questa pagina serve a chi desidera personalizzare la libreria.</h4>
+<p><strong>Questa pagina è destinata a chi desidera personalizzare la libreria.</strong></p>
 
-<p>Questa pagina si occupa di approfondire gli strumenti per ricompilare o personalizzare i file sorgente di Bootstrap Italia
-e creare la documentazione che stai leggendo in un ambiente di svluppo locale.</p>
-
-<p>Le informazioni di seguito non sono indispensabili per utilizzare Bootstrap Italia nel tuo sito, in tal caso ti può essere
-utile la <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">pagina introduttiva</a>.</p>
+<p>Di seguito si possono trovare gli strumenti per personalizzare e ricompilare i file sorgente di Bootstrap Italia, oltre a poter generare la documentazione che stai leggendo in un ambiente di sviluppo locale. Le informazioni di seguito non sono indispensabili per l’utilizzo di Bootstrap Italia come libreria. In tal caso ti può essere utile la <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">pagina introduttiva</a>.</p>
 </div>
 
-<h2 id="setup-strumenti">Setup strumenti</h2>
+<h2 id="compilare-la-libreria">Compilare la libreria</h2>
 
-<p>Il tema Bootstrap Italia (così come Bootstrap stesso) usa <a href="https://docs.npmjs.com/misc/scripts">script NPM</a> per la
-compilazione dei file.</p>
-
-<p>Il file <a href="https://github.com/italia/bootstrap-italia//blob/master/package.json">package.json</a> include
-alcuni comodi scripts per la compilazione del codice e di questa documentazione.</p>
-
-<p>Per rendere funzionante il sistema di compilazione di Bootstrap Italia e poter lanciare la documentazione in ambiente locale,
-è necessario seguire i passi di seguito:</p>
+<p>Il tema Bootstrap Italia, così come Bootstrap 4 stesso, usa script <code class="highlighter-rouge">npm</code> per la compilazione dei file (è ovviamente possibile usare <code class="highlighter-rouge">yarn</code> in alternativa). Per rendere operativo il sistema di compilazione di Bootstrap Italia, è necessario:</p>
 
 <ol>
-  <li><a href="https://nodejs.org/download/">Scaricare e installare Node.js</a>, che è necessario per gestire le dipendenze attraverso NPM.</li>
-  <li>Navigare alla root del progetto e lanciare il comando <code class="highlighter-rouge">npm install</code> per installare le dipendenze secondo quanto
-descritto nel file <a href="https://github.com/italia/bootstrap-italia//blob/master/package.json">package.json</a>.</li>
-  <li>Installare <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a>*.</li>
-  <li>Installare <a href="https://bundler.io/">Bundler</a> con <code class="highlighter-rouge">gem install bundler</code>, con il quale sarai in grado di lanciare
-il comando <code class="highlighter-rouge">bundle install</code>. Questo comando installerà tutte le dipendenze Ruby come descritto nel file
-<a href="https://github.com/italia/bootstrap-italia/blob/master/Gemfile">Gemfile</a>, come Jekyll e i suoi plugin.</li>
+  <li>Clonare attraverso GIT o scaricare l’intero repository in una cartella sul proprio computer.</li>
+  <li><a href="https://nodejs.org/download/">Scaricare e installare Node.js</a>, che è necessario per gestire le dipendenze attraverso <code class="highlighter-rouge">npm</code> o <code class="highlighter-rouge">yarn</code>.</li>
+  <li>Verificare che i comandi siano disponibili provando a lanciare <code class="highlighter-rouge">node -v</code> e <code class="highlighter-rouge">npm -v</code>.</li>
+  <li>Dalla cartella del progetto, lanciare il comando <code class="highlighter-rouge">npm install</code> per installare le dipendenze descritte nel file <a href="https://github.com/italia/bootstrap-italia//blob/master/package.json">package.json</a>.</li>
 </ol>
 
-<p>* <strong>Utenti Windows:</strong> è bene seguire <a href="https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller">questa guida</a> per installare Jekyll senza problemi. Gli step da
-seguire saranno:</p>
-<ul>
-  <li>Installazione di Ruby, che renderà disponibile il comando <code class="highlighter-rouge">gem install *</code></li>
-  <li>Esecuzione di <code class="highlighter-rouge">gem install bundler</code>, che renderà disponibile il comando <code class="highlighter-rouge">bundle install</code></li>
-</ul>
+<h3 id="script-di-compilazione">Script di compilazione</h3>
 
-<p>Sono disponibili maggiori informazioni su Jekyll a <a href="https://jekyllrb.com/docs/home/">questa pagina</a>.</p>
+<p>Il file <a href="https://github.com/italia/bootstrap-italia//blob/master/package.json">package.json</a> include il seguente comando, che fa uso di  <strong><a href="http://sass-lang.com/">SASS</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, e <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a></strong> per la compilazione dei file sorgente di Bootstrap Italia:</p>
 
-<p>Una volta completati questi passi, sarà possibile lanciare gli script che seguono.</p>
+<p><code class="highlighter-rouge">npm run build</code></p>
 
-<h3 id="utilizzare-gli-script-npm">Utilizzare gli script NPM</h3>
+<p>Tale comando crea una cartella <code class="highlighter-rouge">/dist</code>, dove vengono pubblicati i file compilati da utilizzare nelle proprie pagine HTML.</p>
 
-<p>Il file <a href="https://github.com/italia/bootstrap-italia//blob/master/package.json">package.json</a> include i seguenti comandi, che
-fanno uso di  <strong><a href="http://sass-lang.com/">SASS</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, e <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a></strong>:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">npm run-script build-code</code></td>
-      <td>crea la cartella <code class="highlighter-rouge">/dist</code> dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">npm run-script build-docs</code></td>
-      <td>crea la cartella <code class="highlighter-rouge">/docs/assets/dist</code> dove sono pubblicati i file compilati usati nella documentazione che stai leggendo.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">npm run-script build</code></td>
-      <td>esegue entrambe i precedenti comandi, compilando i file nelle cartelle <code class="highlighter-rouge">/dist</code> e <code class="highlighter-rouge">/docs/assets/dist</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">npm run-script watch</code></td>
-      <td>Controlla le modifiche sui file soggetti a modifiche e ricompila i file <code class="highlighter-rouge">npm run docs-serve</code>.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">npm start</code></td>
-      <td>Pubblica i file della documenazione nella cartella <code class="highlighter-rouge">_gh_pages</code> e avvia Jekyll.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Esegui <code class="highlighter-rouge">npm run</code> per consultare tutti gli script disponibili.</p>
-
-<h2 id="tema-bootstrap-italia">Tema Bootstrap Italia</h2>
-
-<p>Il tema è generato secondo le direttive mostrate alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap.</p>
-
-<p>Le cartelle d’interesse sono:</p>
+<p>Per iniziare a modificare la libreria, la cartella d’interesse è <code class="highlighter-rouge">/src</code>, che contiene tutti i file sorgente, e in particolare i file:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">src</code> che contiene tutti i file sorgente.</li>
-  <li><code class="highlighter-rouge">dist</code> che contiene i file di produzione da copiare ed utilizzare sul proprio HTML.</li>
+  <li><code class="highlighter-rouge">/src/scss/bootstrap-italia.scss</code></li>
+  <li><code class="highlighter-rouge">/src/js/bootstrap-italia.js</code></li>
 </ul>
 
-<div class="alert alert-warning" role="alert">
-  TODO: definire meglio le inclusioni SASS e JS e le differenze nei compilati
-</div>
+<h2 id="compilare-la-documentazione">Compilare la documentazione</h2>
 
-<h3 id="codice-sorgente">Codice sorgente</h3>
+<p>La documentazione di Bootstrap Italia è gestita con <a href="https://pages.github.com/">GitHub Pages</a> attraverso <a href="https://jekyllrb.com/docs/home/">Jekyll</a>: per questo è composta di file statici che risiedono sul branch <code class="highlighter-rouge">gh-pages</code>. I file presenti a questo branch corrispondono esattamente ai file generati con il comando <code class="highlighter-rouge">bundle exec jekyll build</code> nella cartella locale <code class="highlighter-rouge">_gh-pages</code>.</p>
 
-<p>Il codice sorgente è visibile a questo indirizzo.</p>
-
-<p><a href="https://github.com/italia/bootstrap-italia/tree/master/src/" class="btn btn-primary">Download source</a></p>
-
-<h2 id="documentazione">Documentazione</h2>
-
-<p>La documentazione di Bootstrap Italia è gestita con <a href="https://pages.github.com/">GitHub Pages</a> attraverso <a href="https://jekyllrb.com/docs/home/">Jekyll</a>;
-per questo è composta di file statici che risiedono sul branch <code class="highlighter-rouge">gh-pages</code>.</p>
-
-<p>Per poter testare la documentazione in ambiente locale, è sufficiente seguire le</p>
+<p>Per poter generare e testare la documentazione in ambiente locale, è necessario:</p>
 
 <ol>
-  <li>Installare Jekyll seguendo le istruzioni nel paragrafo <a href="#tooling-setup">tooling setup</a>.</li>
-  <li>Eseguire <code class="highlighter-rouge">npm start</code> (che a sua volta esegue il comando per lanciare il server locale <code class="highlighter-rouge">bundle exec jekyll build</code>)</li>
-  <li>Navigare su <code class="highlighter-rouge">http://127.0.0.1:4000/bootstrap-italia/</code>.</li>
+  <li>Installare <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a>*, che renderà disponibile il comando <code class="highlighter-rouge">gem install *</code>.</li>
+  <li>Lanciare il comando <code class="highlighter-rouge">gem install bundler</code> per installare <a href="https://bundler.io/">Bundler</a>.</li>
+  <li>Lanciare il comando <code class="highlighter-rouge">bundle install</code>. Questo comando, in modo simile a quanto avviene per <code class="highlighter-rouge">npm install</code> si occuperà di installare tutte le dipendenze Ruby come descritto nel file <a href="https://github.com/italia/bootstrap-italia/blob/master/Gemfile">Gemfile</a>; in questo caso Jekyll e i suoi plugin.</li>
 </ol>
+
+<p>* <strong>Utenti Windows:</strong> è bene seguire <a href="https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller">questa guida</a> per installare Jekyll senza problemi.</p>
+
+<p>Sono inoltre disponibili maggiori informazioni su Jekyll a <a href="https://jekyllrb.com/docs/home/">questa pagina</a>.</p>
+
+<h3 id="script-di-compilazione-1">Script di compilazione</h3>
+
+<p>Il comando</p>
+
+<p><code class="highlighter-rouge">npm start</code></p>
+
+<p>avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l’esecuzione del comando <code class="highlighter-rouge">bundle exec jekyll build</code>. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:</p>
+<ul>
+  <li>ricompilare i file sorgente Javascript/SASS</li>
+  <li>ricompilare i file della documentazione (principalmente in formato Markdown)</li>
+  <li>rendere disponibile all’indirizzo <code class="highlighter-rouge">http://127.0.0.1:4000/</code> e ricaricare automaticamente la documentazione</li>
+</ul>
 
 <p>La struttura delle cartelle della documentazione è la seguente:</p>
 
@@ -481,25 +421,18 @@ per questo è composta di file statici che risiedono sul branch <code class="hig
   <li><code class="highlighter-rouge">docs/assets</code>: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. <strong>Non sono file compilati nella libreria finale Bootstrap Italia</strong>.</li>
 </ul>
 
-<p>Una volta lanciato il comando <code class="highlighter-rouge">npm start</code>, Jekyll pubblica il sito statico contenente la documentazione nella cartella <code class="highlighter-rouge">_gh_pages</code>.</p>
+<h2 id="pubblicare-la-documentazione">Pubblicare la documentazione</h2>
 
-<h3 id="pubblicare-la-documentazione">Pubblicare la documentazione</h3>
-
-<p>Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d’appoggio <code class="highlighter-rouge">_gh_pages</code>.
-Per fare questo, è sufficiente lanciare il comando:</p>
-
-<p><code class="highlighter-rouge">bundle exec jekyll build</code></p>
-
-<p>È necessario quindi portare tutto il contenuto di tale cartella sul branch <code class="highlighter-rouge">gh-pages</code> con il comando:</p>
+<p>Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d’appoggio <code class="highlighter-rouge">_gh_pages</code>. Per fare questo, è necessario portare tutto il contenuto di tale cartella sul branch <code class="highlighter-rouge">gh-pages</code> con il comando:</p>
 
 <p><code class="highlighter-rouge">npm run documentation-deploy-to-gh-pages</code></p>
 
-<p>Tale comando creerà un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code>, lanciando così la pubblicazione immediata della documentazione
+<p>Tale comando creerà <em>automagicamente</em> un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code> del repository remoto su cui si sta lavorando, lanciando così la pubblicazione immediata della documentazione
 su GitHub Pages e visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a>.</p>
 
-<h3 id="creare-una-nuova-release">Creare una nuova release</h3>
+<h2 id="creare-una-nuova-release">Creare una nuova release</h2>
 
-<p>Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi:</p>
+<p>Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi manuali:</p>
 
 <ul>
   <li>Aggiornamento numero di versione in formato semver x.x.x su file <code class="highlighter-rouge">package.json</code> e <code class="highlighter-rouge">_config.yml</code></li>
@@ -540,8 +473,8 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803291702"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803291702"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804041301"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804041301"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

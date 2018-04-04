@@ -5,19 +5,6 @@
 (function ($, particlesJS) {
   'use strict'
 
-  const particlesJSON = {
-    "particles": {
-      "number":{"value":160,"density":{"enable":true,"value_area":800}},
-      "color":{"value":"#FFF"},
-      "shape":{"type":"circle","stroke":{"width":0,"color":"#000000"}},
-      "opacity":{"value":0.8,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},
-      "size":{"value":2,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},
-      "line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.1,"width":1},
-      "move":{"enable":true,"speed":0.2,"direction":"top","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}
-    },
-    "retina_detect":true
-  }
-
   $(function () {
 
     $('[data-toggle="tooltip"]').tooltip()
@@ -72,12 +59,12 @@
         })
     })
 
+    // ClipboardJS - Docs copy code handling
     var clipboard = new Clipboard('.btn-clipboard', {
       target: function (trigger) {
         return trigger.parentNode.nextElementSibling
       }
     })
-
     clipboard.on('success', function (e) {
       $(e.trigger)
         .attr('title', 'Copied!')
@@ -88,7 +75,6 @@
 
       e.clearSelection()
     })
-
     clipboard.on('error', function (e) {
       var modifierKey = /Mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
       var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
@@ -101,6 +87,7 @@
         .tooltip('_fixTitle')
     })
 
+    // AnchorJS - Shows Anchors
     anchors.options = {
       icon: '#'
     }
@@ -108,7 +95,21 @@
     $('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5').wrapInner('<div></div>')
   });
 
-  if ($('#particles-js').length)
+  // ParticlesJS - Docs homepage particles
+  if ($('#particles-js').length) {
+    const particlesJSON = {
+      "particles": {
+        "number":{"value":160,"density":{"enable":true,"value_area":800}},
+        "color":{"value":"#FFF"},
+        "shape":{"type":"circle","stroke":{"width":0,"color":"#000000"}},
+        "opacity":{"value":0.8,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},
+        "size":{"value":2,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},
+        "line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.1,"width":1},
+        "move":{"enable":true,"speed":0.2,"direction":"top","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}
+      },
+      "retina_detect":true
+    }
     particlesJS('particles-js', particlesJSON);
+  }
 
 }(jQuery, particlesJS))

@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.">
+<meta name="description" content="Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.7.3">
 <meta name="robots" content="noindex">
@@ -13,16 +13,16 @@
 <title>Tipografia · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201804041301" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804041301" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201803291702" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804041301" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -39,13 +39,13 @@
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Tipografia">
-<meta name="twitter:description" content="Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.">
+<meta name="twitter:description" content="Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/contenuti/tipografia/">
 <meta property="og:title" content="Tipografia">
-<meta property="og:description" content="Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.">
+<meta property="og:description" content="Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.3/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -174,9 +174,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
               Strumenti di compilazione</a></li><li>
             <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
-              Modificare Componenti</a></li><li>
-            <a href="/bootstrap-italia/docs/come-iniziare/browsers-e-dispositivi/">
-              Browsers e dispositivi</a></li></ul>
+              Modificare Componenti</a></li></ul>
     </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
         Contenuti
@@ -328,18 +326,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#tipografia-responsive">Tipografia responsive</a></li>
+<li class="toc-entry toc-h2"><a href="#tipografia-responsive">Tipografia responsive</a></li>
 <li class="toc-entry toc-h2"><a href="#intestazioni">Intestazioni</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#intestazioni-in-evidenza">Intestazioni in evidenza</a></li>
 <li class="toc-entry toc-h3"><a href="#personalizzazione-delle-intestazioni">Personalizzazione delle intestazioni</a></li>
+<li class="toc-entry toc-h3"><a href="#intestazione-con-testo-secondario">Intestazione con testo secondario</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#intestazioni-in-evidenza">Intestazioni in evidenza</a></li>
-<li class="toc-entry toc-h2"><a href="#in-primo-piano">In primo piano</a></li>
-<li class="toc-entry toc-h2"><a href="#elementi-di-testo-inline">Elementi di testo inline</a></li>
-<li class="toc-entry toc-h2"><a href="#utilità-per-il-testo">Utilità per il testo</a></li>
+<li class="toc-entry toc-h2"><a href="#paragrafi">Paragrafi</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#paragrafi-in-evidenza">Paragrafi in evidenza</a></li>
+<li class="toc-entry toc-h3"><a href="#personalizzazione-dei-paragrafi">Personalizzazione dei paragrafi</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#abbreviazioni">Abbreviazioni</a></li>
-<li class="toc-entry toc-h2"><a href="#blockquotes">Blockquotes</a>
+<li class="toc-entry toc-h2"><a href="#citazioni">Citazioni</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#citare-una-fonte">Citare una fonte</a></li>
 <li class="toc-entry toc-h3"><a href="#allineamento">Allineamento</a></li>
@@ -347,7 +349,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </li>
 <li class="toc-entry toc-h2"><a href="#liste">Liste</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#senza-stile">Senza stile</a></li>
 <li class="toc-entry toc-h3"><a href="#inline">Inline</a></li>
 <li class="toc-entry toc-h3"><a href="#allineamento-lista-descrizione">Allineamento lista descrizione</a></li>
 </ul>
@@ -358,12 +359,19 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Tipografia</h1>
-          <p class="bd-lead">Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.</p>
-          <p>Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei link. Quando è necessario un maggiore controllo, fornisce delle <a href="/bootstrap-italia/docs/utilities/testo/">classi di utilità testuali</a>.</p>
+          <p class="bd-lead">Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.</p>
+          <p>Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
+link. Quando è necessario un maggiore controllo, fornisce delle
+<a href="/bootstrap-italia/docs/utilities/testo/">classi di utilità testuali</a>.</p>
 
-<h3 id="tipografia-responsive">Tipografia responsive</h3>
+<h2 id="tipografia-responsive">Tipografia responsive</h2>
 
-<p>Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando il <code class="highlighter-rouge">font-size</code> dell’elemento radice, con una media query che imposta dimensioni lievemente maggiori per schermi con dimensioni maggiorni di <em>576px</em>. Questa impostazione, unita all’utilizzo di dimensioni in <code class="highlighter-rouge">rem</code> o in semplici valori numerici all’interno del CSS, fa sì che testo e altre proprietà occupino sensibilmente più spazio quando lo schermo lo permette:</p>
+<p>Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando
+il <code class="highlighter-rouge">font-size</code> dell’elemento radice, con una media query che imposta dimensioni
+lievemente maggiori per schermi con dimensioni maggiori di <em>576px</em>. Questa
+impostazione, unita all’utilizzo di dimensioni in <code class="highlighter-rouge">rem</code> o in semplici valori
+numerici all’interno del CSS, fa sì che testo e altre proprietà occupino più
+spazio quando lo schermo lo permette:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">html</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
@@ -374,176 +382,175 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="intestazioni">Intestazioni</h2>
 
-<p>Tutte le intestazioni HTML, <code class="highlighter-rouge">&lt;h1&gt;</code> fino a <code class="highlighter-rouge">&lt;h6&gt;</code>, sono disponibili.</p>
+<p>Tutte le intestazioni HTML, da <code class="highlighter-rouge">&lt;h1&gt;</code> fino a <code class="highlighter-rouge">&lt;h6&gt;</code>, sono disponibili, anche se
+è buona norma non utilizzare più di 4 livelli di intestazione.</p>
+
+<p>Nel caso in cui si voglia presentare il testo nello stesso stile delle
+intestazioni, ma non sia possibile utilizzare l’elemento HTML appropriato,
+sono disponibili anche classi di tipo <code class="highlighter-rouge">.h1</code>, <code class="highlighter-rouge">.h2</code>, ecc.</p>
+
+<p class="h1">Intestazione di tipo h1</p>
+<p class="h2">Intestazione di tipo h2</p>
+<p class="h3">Intestazione di tipo h3</p>
+<p class="h4">Intestazione di tipo h4</p>
+<p class="h5">Intestazione di tipo h5</p>
+<p class="h6">Intestazione di tipo h6</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Intestazione di tipo h1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Intestazione di tipo h2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Intestazione di tipo h3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Intestazione di tipo h4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Intestazione di tipo h5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Intestazione di tipo h6<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+
+<p>Queste le dimensioni nel dettaglio:</p>
 
 <table>
   <thead>
     <tr>
       <th>Intestazione</th>
-      <th>Esempio</th>
+      <th>Mobile</th>
+      <th>Schermo &gt; 576px</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
-
+        <p class="h1">h1</p>
       </td>
-      <td><span class="h1">h1. Intestazione di Bootstrap</span></td>
+      <td>Bold, 40px/48px</td>
+      <td>Bold, 48px/60px</td>
     </tr>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
-
+        <p class="h2">h2</p>
       </td>
-      <td><span class="h2">h2. Intestazione di Bootstrap</span></td>
+      <td>Bold, 32px/40px</td>
+      <td>Bold, 40px/48px</td>
     </tr>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
-
+        <p class="h3">h3</p>
       </td>
-      <td><span class="h3">h3. Intestazione di Bootstrap</span></td>
+      <td>Bold, 28px/32px</td>
+      <td>Bold, 32px/40px</td>
     </tr>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
-
+        <p class="h4">h4</p>
       </td>
-      <td><span class="h4">h4. Intestazione di Bootstrap</span></td>
+      <td>SemiBold, 24px/28px</td>
+      <td>SemiBold, 28px/40px</td>
     </tr>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
-
+        <p class="h5">h5</p>
       </td>
-      <td><span class="h5">h5. Intestazione di Bootstrap</span></td>
+      <td>Regular, 20px/24px</td>
+      <td>Regular, 24px/40px</td>
     </tr>
     <tr>
       <td>
-        <p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
-
+        <p class="h6">h6</p>
       </td>
-      <td><span class="h6">h6. Intestazione di Bootstrap</span></td>
+      <td>SemiBold, 16px/24px</td>
+      <td>SemiBold, 18px/28px</td>
     </tr>
   </tbody>
 </table>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Intestazione di Bootstrap<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. Intestazione di Bootstrap<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. Intestazione di Bootstrap<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. Intestazione di Bootstrap<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. Intestazione di Bootstrap<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. Intestazione di Bootstrap<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+<h3 id="intestazioni-in-evidenza">Intestazioni in evidenza</h3>
 
-<p>Anche le classi <code class="highlighter-rouge">.h1</code> fino a <code class="highlighter-rouge">.h6</code> sono disponibili, per quando tu voglia presentare il testo nello stesso stile delle intestazioni ma non puoi utilizzare l’elemento HTML associato.</p>
+<p>Gli elementi di intestazione tradizionali sono progettati per funzionare al
+meglio nel contesto della pagina. Nel caso sia necessario mettere in ulteriore
+evidenza un’intestazione di tipo <code class="highlighter-rouge">&lt;h1&gt;</code>, si può prendere in considerazione l’uso
+della classe <code class="highlighter-rouge">.display-1</code>, che restituirà una dimensione sensibilmente più
+grande.</p>
 
-<div class="bd-example">
-<p class="h1">h1. Intestazione di Bootstrap</p>
-<p class="h2">h2. Intestazione di Bootstrap</p>
-<p class="h3">h3. Intestazione di Bootstrap</p>
-<p class="h4">h4. Intestazione di Bootstrap</p>
-<p class="h5">h5. Intestazione di Bootstrap</p>
-<p class="h6">h6. Intestazione di Bootstrap</p>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>h1. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>h2. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>h3. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>h4. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>h5. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>h6. Intestazione di Bootstrap<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+<p><span class="h1 display-1">Intestazione di tipo h1</span></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-1"</span><span class="nt">&gt;</span>Intestazione di tipo h1<span class="nt">&lt;/h1&gt;</span></code></pre></figure>
 
 <h3 id="personalizzazione-delle-intestazioni">Personalizzazione delle intestazioni</h3>
 
-<p>Utilizza le classi di utilità incluse per ricreare il piccolo testo di intestazione secondaria da Bootstrap 3.</p>
+<p>È possibile utilizzare le classi di utilità incluse in Bootstrap 4 per
+dare uno stile diverso per testi di intestazione secondaria.</p>
 
 <div class="bd-example">
-  <span class="h3">
-    Titolo di fantasia
-    <small class="text-muted">Con testo secondario schiarito</small>
-  </span>
+<h3>Intestazione <small class="text-muted">con testo secondario</small></h3>
 </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Intestazione <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>con testo secondario<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>
-  Titolo di fantasia
-  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Con testo secondario schiarito<span class="nt">&lt;/small&gt;</span>
-<span class="nt">&lt;/h3&gt;</span></code></pre></figure>
+<h2 id="paragrafi">Paragrafi</h2>
 
-<h2 id="intestazioni-in-evidenza">Intestazioni in evidenza</h2>
-
-<p>Gli elementi di intestazione tradizionali sono progettati per funzionare al meglio nel contenuto della pagina. Quando hai bisogno di un titolo da mettere in evidenza, prendi in considerazione l’uso di <strong>display heading</strong>—uno stile di titolo più grande, leggermente più supponente.</p>
-
-<div class="bd-example bd-example-type">
-  <table class="table">
-    <tbody>
-      <tr>
-      <td><span class="display-1">Titolo in evidenza 1</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-2">Titolo in evidenza 2</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-3">Titolo in evidenza 3</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-4">Titolo in evidenza 4</span></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-1"</span><span class="nt">&gt;</span>Titolo in evidenza 1<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-2"</span><span class="nt">&gt;</span>Titolo in evidenza 2<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-3"</span><span class="nt">&gt;</span>Titolo in evidenza 3<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-4"</span><span class="nt">&gt;</span>Titolo in evidenza 4<span class="nt">&lt;/h1&gt;</span></code></pre></figure>
-
-<h2 id="in-primo-piano">In primo piano</h2>
-
-<p>Fai risaltare un paragrafo aggiungendo la classe <code class="highlighter-rouge">.lead</code>.</p>
+<p>Il semplice paragrafo prevede una dimensione di testo e un’interlinea di
+<code class="highlighter-rouge">16px/24px</code> per dispositivi mobili, e di <code class="highlighter-rouge">18px/28px</code> per schermi con dimensioni
+maggiori di 576px.</p>
 
 <div class="bd-example">
-<p class="lead">
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-</p>
+<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
+<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
 
-<h2 id="elementi-di-testo-inline">Elementi di testo inline</h2>
+<p>Per una lettura più confortevole, è buona norma mantenere la lunghezza di un paragrafo
+compresa tra 45 e 74 caratteri. Per testo su colonne multiple, si considera una
+lunghezza compresa tra 40 e 50 caratteri. Per i testi a margine la lunghezza
+minima è di 12-15 caratteri.</p>
 
-<p>Stili per elementi comuni HTML5 inline.</p>
+<h3 id="paragrafi-in-evidenza">Paragrafi in evidenza</h3>
+
+<p>Per mettere in risalto un paragrafo è sufficiente aggiungere la classe <code class="highlighter-rouge">.lead</code>.</p>
 
 <div class="bd-example">
-<p>Questa linea di testo mostra come è rappresentato del <mark>testo evidenziato</mark>.</p>
-<p><del>Questa linea di testo mostra come è rappresentato del testo cancellato.</del></p>
-<p><s>Questa linea di testo mostra come è rappresentato del testo non più valido.</s></p>
-<p><ins>Questa linea di testo mostra come è rappresentato un testo aggiuntivo al documento.</ins></p>
-<p><u>Questa linea di testo mostra come è rappresentato un testo sottolineato.</u></p>
-<p><small>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.</small></p>
-<p><strong>Questa linea di testo mostra come è rappresentato un testo grassetto.</strong></p>
-<p><em>Questa linea di testo mostra come è rappresentato un testo corsivo.</em></p>
+<p class="lead">Paragrafo in evidenza</p>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Questa linea di testo mostra come è rappresentato del <span class="nt">&lt;mark&gt;</span>testo evidenziato<span class="nt">&lt;/mark&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;del&gt;</span>Questa linea di testo mostra come è rappresentato del testo cancellato.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;s&gt;</span>Questa linea di testo mostra come è rappresentato del testo non più valido.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;ins&gt;</span>Questa linea di testo mostra come è rappresentato un testo aggiuntivo al documento.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;u&gt;</span>Questa linea di testo mostra come è rappresentato un testo sottolineato.<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;small&gt;</span>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Questa linea di testo mostra come è rappresentato un testo grassetto.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;em&gt;</span>Questa linea di testo mostra come è rappresentato un testo corsivo.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>Paragrafo in evidenza<span class="nt">&lt;/p&gt;</span></code></pre></figure>
 
-<p>Le classi <code class="highlighter-rouge">.mark</code> e <code class="highlighter-rouge">.small</code> sono disponibili anche per applicare gli stessi stili di <code class="highlighter-rouge">&lt;mark&gt;</code> e <code class="highlighter-rouge">&lt;small&gt;</code> evitando eventuali implicazioni semantiche indesiderate che i tag porterebbero.</p>
+<h3 id="personalizzazione-dei-paragrafi">Personalizzazione dei paragrafi</h3>
 
-<h2 id="utilità-per-il-testo">Utilità per il testo</h2>
+<p>È possibile stilizzare correttamente lo stile anche nel caso vengano utilizzati
+semplicemente gli elementi HTML5 per il trattamento di testo.</p>
 
-<p>Cambia allineamento, trasformazione, stile, peso e colore del testo con le <a href="/bootstrap-italia/docs/utilities/text/">utilità di testo</a> e le <a href="/bootstrap-italia/docs/utilit/colors/">utilità di colore</a>.</p>
+<div class="bd-example">
+<p>Esempio di testo <u>sottolineato</u>.</p>
+<p>Esempio di testo <mark>evidenziato</mark>.</p>
+<p>Esempio di testo <em>corsivo</em>.</p>
+<p>Esempio di testo <strong>in grassetto</strong>.</p>
+<p>Esempio di testo <small>rimpicciolito</small>.</p>
+<p>Esempio di testo <ins>aggiuntivo</ins>.</p>
+<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
+<p>Esempio di testo <code>monospace</code>.</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;u&gt;</span>sottolineato<span class="nt">&lt;/u&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;mark&gt;</span>evidenziato<span class="nt">&lt;/mark&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;em&gt;</span>corsivo<span class="nt">&lt;/em&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;strong&gt;</span>in grassetto<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;small&gt;</span>rimpicciolito<span class="nt">&lt;/small&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;ins&gt;</span>aggiuntivo<span class="nt">&lt;/ins&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;del&gt;</span>cancellato<span class="nt">&lt;/del&gt;</span> o <span class="nt">&lt;s&gt;</span>invalido<span class="nt">&lt;/s&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Esempio di testo <span class="nt">&lt;code&gt;</span>monospace<span class="nt">&lt;/code&gt;</span>.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>Le classi <code class="highlighter-rouge">.mark</code> e <code class="highlighter-rouge">.small</code> sono disponibili anche per applicare gli stessi
+stili di <code class="highlighter-rouge">&lt;mark&gt;</code> e <code class="highlighter-rouge">&lt;small&gt;</code> evitando eventuali implicazioni semantiche
+indesiderate che i tag porterebbero con sé.</p>
+
+<p>È possibile sfruttare le classi di Bootstrap 4 anche per modificare allineamento,
+stile, peso e colore del testo. Per questo, si può fare riferimento alla
+documentazione delle <a href="/bootstrap-italia/docs/utilities/text/">utilità di testo</a>
+e <a href="/bootstrap-italia/docs/utilit/colors/">utilità di colore</a>.</p>
 
 <h2 id="abbreviazioni">Abbreviazioni</h2>
 
-<p>Implementazione stilizzata dell’elemento HTML <code class="highlighter-rouge">&lt;abbr&gt;</code> per abbreviazioni e acronimi per mostrare la versione espansa sull’ hover. Le abbreviazioni hanno una sottolineatura predefinita e ottengono un cursore di aiuto per fornire un contesto aggiuntivo al passaggio del mouse e agli utenti delle tecnologie assistive.</p>
+<p>Implementazione stilizzata dell’elemento HTML <code class="highlighter-rouge">&lt;abbr&gt;</code> per abbreviazioni e
+acronimi per mostrare la versione espansa sull’ hover. Le abbreviazioni hanno
+una sottolineatura predefinita e ottengono un cursore di aiuto per fornire un
+contesto aggiuntivo al passaggio del mouse e agli utenti delle tecnologie
+assistive.</p>
 
-<p>Aggiungi <code class="highlighter-rouge">.initialism</code> a un’abbreviazione per una dimensione del font leggermente più piccola.</p>
+<p>Aggiungi <code class="highlighter-rouge">.initialism</code> a un’abbreviazione per una dimensione del font
+leggermente più piccola.</p>
 
 <div class="bd-example">
 <p><abbr title="attribute">attr</abbr></p>
@@ -552,9 +559,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span></code></pre></figure>
 
-<h2 id="blockquotes">Blockquotes</h2>
+<h2 id="citazioni">Citazioni</h2>
 
-<p>Per citare blocchi di contenuti da un’altra fonte all’interno del documento. Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all’interno di un  <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> come la citazione.</p>
+<p>Per citare blocchi di contenuti da un’altra fonte all’interno del documento.
+Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all’interno
+di un <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> come la citazione.</p>
 
 <div class="bd-example">
 <blockquote class="blockquote">
@@ -567,7 +576,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="citare-una-fonte">Citare una fonte</h3>
 
-<p>Aggiungi un <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> per identificare la fonte. Includi il nome delle fonte di origine in <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
+<p>Aggiungi un <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> per identificare la fonte.
+Includi il nome delle fonte di origine in <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
 
 <div class="bd-example">
 <blockquote class="blockquote">
@@ -582,7 +592,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="allineamento">Allineamento</h3>
 
-<p>Utilizza le utilità di testo necessarie per modificare l’allineamento del tuo blockquote.</p>
+<p>Utilizza le utilità di testo necessarie per modificare l’allineamento del tuo
+blockquote.</p>
 
 <div class="bd-example">
 <blockquote class="blockquote text-center">
@@ -608,9 +619,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="liste">Liste</h2>
 
-<h3 id="senza-stile">Senza stile</h3>
-
-<p>Rimuovi il predefinito <code class="highlighter-rouge">list-style</code> e il margine sinistro sugli elementi elenco (solo per i figli diretti). <strong>Questo si applica solo agli elementi della lista che sono figli diretti</strong>, il che significa che dovrai aggiungere la classe per tutti gli elenchi annidati.</p>
+<p>Rimuovi il predefinito <code class="highlighter-rouge">list-style</code> e il margine sinistro sugli elementi
+elenco (solo per i figli diretti). <strong>Questo si applica solo agli elementi della
+lista che sono figli diretti</strong>, il che significa che dovrai aggiungere la classe
+per tutti gli elenchi annidati.</p>
 
 <div class="bd-example">
 <ul class="list-unstyled">
@@ -651,7 +663,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="inline">Inline</h3>
 
-<p>Rimuovi i punti elenco di una lista e applica un leggero <code class="highlighter-rouge">margin</code> con una combinazione di due classi, <code class="highlighter-rouge">.list-inline</code> e <code class="highlighter-rouge">.list-inline-item</code>.</p>
+<p>Rimuovi i punti elenco di una lista e applica un leggero <code class="highlighter-rouge">margin</code> con una
+combinazione di due classi, <code class="highlighter-rouge">.list-inline</code> e <code class="highlighter-rouge">.list-inline-item</code>.</p>
 
 <div class="bd-example">
 <ul class="list-inline">
@@ -668,7 +681,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="allineamento-lista-descrizione">Allineamento lista descrizione</h3>
 
-<p>Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia. Per termini più lunghi, puoi facoltativamente aggiungere la classe <code class="highlighter-rouge">.text-truncate</code> per troncare il testo con un ellipsis.</p>
+<p>Allineare i termini e le descrizioni orizzontalmente utilizzando le classi
+predefinite del nostro sistema di griglia. Per termini più lunghi, puoi
+facoltativamente aggiungere la classe <code class="highlighter-rouge">.text-truncate</code> per troncare il testo
+con un <code class="highlighter-rouge">ellipsis</code>.</p>
 
 <div class="bd-example">
 <dl class="row">
@@ -742,8 +758,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201803291702"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201803291702"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804041301"></script>
+  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804041301"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

@@ -25,12 +25,12 @@
 
 // Load Bootstrap variables and mixins
 
-@import "../../../../src/scss/functions-custom"; // here to be available to "variables"
+@import "../../../../src/scss/functions"; // here to be available to "variables"
 @import "../../../../src/scss/variables";
 
 @import "node_modules/bootstrap/scss/functions";
 
-@import "../../../../src/scss/functions-overrides"; // here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
+@import "../../../../src/scss/custom/mixins/buttons"; // here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
 
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
