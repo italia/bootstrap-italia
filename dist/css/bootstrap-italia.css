@@ -7498,6 +7498,9 @@ small,
   .form-group .form-text {
     margin-left: 0.75rem;
     font-size: 0.777rem; }
+  .form-group.active label {
+    transform: translateY(-140%);
+    font-size: .8rem; }
   .form-group.active label, .form-group.active .ico-prefix {
     color: #5c6f82; }
 
@@ -7510,7 +7513,6 @@ input[type="file"] + label {
 .input-group + label,
 .input-group ~ label,
 :disabled .form-group label,
-.form-group.active label,
 .form-group label.active,
 .form-group select.form-control + label,
 .form-group input.form-control-file + label,
@@ -7518,33 +7520,6 @@ input[type="file"] + label {
   transform: translateY(-140%);
   font-size: .8rem;
   background: transparent; }
-
-.select-wrapper.form-control-sm, .input-group-sm > .select-wrapper.form-control,
-.input-group-sm > .input-group-prepend > .select-wrapper.input-group-text,
-.input-group-sm > .input-group-append > .select-wrapper.input-group-text,
-.input-group-sm > .input-group-prepend > .select-wrapper.btn,
-.input-group-sm > .input-group-append > .select-wrapper.btn, .select-wrapper.form-control-lg, .input-group-lg > .select-wrapper.form-control,
-.input-group-lg > .input-group-prepend > .select-wrapper.input-group-text,
-.input-group-lg > .input-group-append > .select-wrapper.input-group-text,
-.input-group-lg > .input-group-prepend > .select-wrapper.btn,
-.input-group-lg > .input-group-append > .select-wrapper.btn {
-  padding: 0; }
-
-.select-wrapper.custom-select .select-dropdown {
-  color: #17324d;
-  border-bottom: 1px solid #5c6f82;
-  padding-right: 2rem;
-  margin-bottom: 0; }
-
-.select-wrapper.custom-select.show .select-dropdown {
-  color: #0073e6;
-  border-bottom: 1px solid #0073e6; }
-
-.custom-select.show .caret {
-  color: #0073e6; }
-
-.select-wrapper + label {
-  padding: 0 .75rem !important; }
 
 :disabled .form-group label {
   top: 0; }
@@ -7560,9 +7535,6 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
   box-shadow: none;
   transition: all .3s;
   font-weight: 700; }
-
-select.form-control, textarea.form-control {
-  height: inherit; }
 
 .form-group.active .form-file-name {
   padding-bottom: 1.95rem; }
@@ -7663,11 +7635,11 @@ select.form-control, textarea.form-control {
 .input-group-append {
   margin-left: 0px; }
 
-.form-control-lg, .input-group-lg > .form-control,
+.input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn, .input-group-lg > .form-control, .input-group-lg > .input-group-prepend > .input-group-text, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-append > .btn {
+.input-group-lg > .input-group-append > .btn {
   padding: 0rem 1rem;
   border-radius: 0; }
 
@@ -7689,7 +7661,9 @@ select.form-control, textarea.form-control {
   padding-left: .75rem; }
 
 /* CHECKBOX e RADIO */
-.form-row .form-check, .form-group .form-check, .row .form-check {
+.form-row .form-check,
+.form-group .form-check,
+.row .form-check {
   padding-left: 0;
   margin-top: 1rem; }
 
@@ -7982,7 +7956,7 @@ select.form-control, textarea.form-control {
         background-position: center center;
         float: right;
         display: block;
-        height: 16px;
+        height: 32px;
         width: 16px;
         opacity: .5; }
       .select-wrapper .dropdown-menu li > a,
@@ -8003,6 +7977,10 @@ select.form-control, textarea.form-control {
         height: inherit;
         line-height: inherit; }
   .select-wrapper .select-dropdown {
+    color: #17324d;
+    border-bottom: 1px solid #5c6f82;
+    padding-right: 2rem;
+    margin-bottom: 0;
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -8039,7 +8017,13 @@ select.form-control, textarea.form-control {
     top: calc(50% - 8px); }
     .select-wrapper .caret .disabled {
       color: rgba(0, 0, 0, 0.46); }
+  .select-wrapper.show .select-dropdown {
+    color: #0073e6;
+    border-bottom: 1px solid #0073e6; }
+  .select-wrapper.show .caret {
+    color: #0073e6; }
   .select-wrapper + label {
+    padding: 0 .75rem !important;
     position: absolute;
     top: -18px;
     font-size: .8rem; }

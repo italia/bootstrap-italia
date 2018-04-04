@@ -26,6 +26,10 @@
     font-size: $small-font-size;
   }
   &.active {
+    label {
+      transform: translateY(-140%);
+      font-size: .8rem;
+    }
     label, .ico-prefix {
       color: $gray-secondary;
     }
@@ -41,7 +45,6 @@ input[type="file"] + label {
 .input-group + label,
 .input-group ~ label,
 :disabled .form-group label,
-.form-group.active label,
 .form-group label.active,
 .form-group select.form-control + label,
 .form-group input.form-control-file + label,
@@ -51,25 +54,10 @@ input[type="file"] + label {
   background: transparent;
 }
 
-.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
-  padding: 0;
-}
-.select-wrapper.custom-select .select-dropdown {
-	color: $dark;
-	border-bottom: 1px solid $gray-secondary;
-  padding-right: 2rem;
-  margin-bottom: 0;
-}
-.select-wrapper.custom-select.show .select-dropdown {
-	color: $primary;
-	border-bottom: 1px solid $primary;
-}
-.custom-select.show .caret {
-  color: $primary;
-}
-.select-wrapper + label {
-  padding: 0 .75rem !important;
-}
+//.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
+//  padding: 0;
+//}
+
 :disabled .form-group label {
   top: 0;
 }
@@ -86,9 +74,9 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
   transition: all .3s;
   font-weight: 700;
 }
-select.form-control, textarea.form-control {
-  height: inherit;
-}
+//select.form-control, textarea.form-control {
+//  height: inherit;
+//}
 .form-group.active .form-file-name {
   padding-bottom: 1.95rem
 }
@@ -190,12 +178,17 @@ select.form-control, textarea.form-control {
 .input-group-append {
   margin-left: 0px;
 }
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-prepend > .input-group-text, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-append > .btn {
+//.form-control-lg,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-prepend > .input-group-text,
+.input-group-lg > .input-group-append > .input-group-text,
+.input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-append > .btn {
   padding: 0rem 1rem;
   border-radius: 0;
 }
 
-/* ICONE A SINISTRA */
+/* ICONE A SINISTRA */ // TODO non usare .ico-prefix
 .ico-prefix {
 	position: absolute;
 	width: 3rem;
@@ -217,7 +210,9 @@ select.form-control, textarea.form-control {
 }
 
 /* CHECKBOX e RADIO */
-.form-row .form-check, .form-group .form-check, .row .form-check {
+.form-row .form-check,
+.form-group .form-check,
+.row .form-check {
   padding-left: 0;
   margin-top: 1rem;
 }
@@ -546,7 +541,7 @@ select.form-control, textarea.form-control {
           background-position: center center;
           float: right;
           display: block;
-          height: 16px;
+          height: 32px;
           width: 16px;
           opacity: .5;
         }
@@ -574,6 +569,10 @@ select.form-control, textarea.form-control {
     }
   }
   .select-dropdown {
+    color: $dark;
+    border-bottom: 1px solid $gray-secondary;
+    padding-right: 2rem; // TODO
+    margin-bottom: 0; // TODO
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -622,7 +621,17 @@ select.form-control, textarea.form-control {
       color: rgba(0, 0, 0, .46);
     }
   }
+  &.show {
+    .select-dropdown {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+    }
+    .caret {
+      color: $primary;
+    }
+  }
   & + label {
+    padding: 0 .75rem !important;
     position: absolute;
     top: -18px;
     font-size: .8rem;
