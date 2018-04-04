@@ -27,8 +27,8 @@
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
             <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
               {{ doc.title }}
-              {%- if doc.status %} <span class="badge badge-info">{{ doc.status }}</span>{%- endif -%}
             </a>
+            {%- if doc.status %}<span class="badge badge-info">{{ doc.status }}</span>{%- endif -%}
 
             {%- comment -%}
             {% unless doc.sections == nil %}

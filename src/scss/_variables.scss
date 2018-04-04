@@ -41,10 +41,10 @@ $teal:    hsb(178, 95, 85) !default;
 $cyan:    hsb(178, 100, 100) !default;
 $blue:    hsb(210, 100, 90) !default;
 $light:   hsb(255, 5, 95) !default;
-$dark:    hsb(210, 70, 30) !default;
+$dark:    hsb(210, 70, 30) !default; // #17324D
 
-$gray-secondary:        hsb(210, 29, 51) !default;
-$gray-tertiary:         hsb(238, 1, 100) !default;
+$gray-secondary:        hsb(210, 29, 51) !default; // #5c6f82
+$gray-tertiary:         hsb(205, 35, 54) !default; // #5A768A
 $gray-quaternary:       hsb(238, 1, 100) !default;
 $gray-disabled:         hsb(225, 5, 95) !default;
 $gray-label-disabled:   hsb(222, 5, 79) !default;
@@ -74,8 +74,6 @@ $colors: map-merge((
 // Main Palette
 $primary:     $blue !default;
 $secondary:   $gray-secondary !default;
-$tertiary:    $gray-tertiary !default;
-$quaternary:  $gray-quaternary !default;
 
 // Info Colors
 $success:     $green !default;
@@ -87,8 +85,6 @@ $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary": $primary,
   "secondary": $secondary,
-  "tertiary": $tertiary,
-  "quaternary": $quaternary,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -161,6 +157,7 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 $font-family-monospace: "Roboto Mono", monospace !default;
 $font-family-base: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $text-color: $gray-700;
+$text-muted: $gray-tertiary;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
 $font-weight-base: 300;
@@ -289,6 +286,7 @@ $carousel-control-icon-width: 32px !default;
 // Inputs
 $input-border: $gray-200;
 $input-color-placeholder: $gray-500;
+$input-focus-border-color: $gray-secondary;
 
 //List group
 $list-group-item-padding-y: 1rem !default;

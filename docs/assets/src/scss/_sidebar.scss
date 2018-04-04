@@ -126,7 +126,7 @@
 // All levels of nav
 .bd-sidebar .nav {
   > li > a {
-    display: block;
+    display: inline-block;
     padding: .25rem .5rem .25rem 1.5rem;
     font-size: 16px;
     color: $gray-800;
