@@ -22,16 +22,16 @@ $arrow-size: $font-size-base/2;
 }
 .collapse-div {
   border-bottom: 1px solid $gray-100;
-}
-.collapse-div .collapse-div {
-  border: 1px solid $gray-100;
-  border-top: 0;
+  .collapse-div {
+    border: 1px solid $gray-100;
+    border-top: 0;
+  }
 }
 
 .collapse-header {
   position: relative;
 
-  button {
+  *[data-toggle="collapse"] {
     width: 100%;
     text-align: left;
     border: 0;
@@ -40,60 +40,58 @@ $arrow-size: $font-size-base/2;
     padding: 14px 24px;
     cursor: pointer;
     color: $gray-secondary;
-    font-size: 18px;
     font-weight: 600;
-    line-height: 27px;
-  }
-  button[aria-expanded="false"] {
-    color: $primary;
-  }
-  button[aria-expanded="true"]:before {
-    height: 2px;
-    width: 56px;
-    border-radius: 2px;
-    background-color: $primary;
-    position: absolute;
-    top: 0;
-    display: block;
-    content: "";
-    left: 20px;
-  }
-  button:after {
-    content: '\e810';
-    font-family: "italia-icon-font";
-    font-style: normal;
-    font-weight: normal;
-    float: right;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    margin-top: 5px;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-  }
-  button[aria-expanded="false"]:after {
-    content: '\e818';
-  }
-  button:hover {
-    background-color: #E6ECF2;
-    text-decoration: underline;
-  }
-  button[aria-expanded="false"]:hover:after, button[aria-expanded="true"]:hover:after {
-    text-decoration: none;
-  }
-  button:active {
-    background-color: $primary;
-    color: $white;
-    border-color: $primary;
+    &[aria-expanded="false"] {
+      color: $primary;
+      &:after {
+        content: '\e818';
+      }
+    }
+    &[aria-expanded="true"]:before {
+      height: 2px;
+      width: 56px;
+      border-radius: 2px;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      display: block;
+      content: "";
+      left: 20px;
+    }
+    &[aria-expanded="false"]:hover:after,
+    &[aria-expanded="true"]:hover:after {
+      text-decoration: none;
+    }
+    &:after {
+      content: '\e810';
+      font-family: "italia-icon-font";
+      font-style: normal;
+      font-weight: normal;
+      float: right;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      margin-top: 5px;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+    }
+    &:hover {
+      background-color: #E6ECF2;
+      text-decoration: underline;
+    }
+    &:active {
+      background-color: $primary;
+      color: $white;
+      border-color: $primary;
+    }
   }
 }
 .collapse-body {
   padding: 12px 24px 42px;
-  font-size: 18px;
-}
-.collapse-body .collapse-header button[aria-expanded="true"]:before {
-  height: 0;
-  width: 0;
+  .collapse-header button[aria-expanded="true"]:before {
+    height: 0;
+    width: 0;
+  }
 }

@@ -6,13 +6,13 @@ group: componenti
 toc: true
 ---
 
-Per ottimizzare l'incombro del contenuto di una pagina si possono usare degli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_) che possono essere attivati indipendentemente l'uno dall'altro oppure in modo esclusivo aprendo solo un blocco alla volta (in gergo definiti _fisarmoniche_ o _accordion_).
+Per ottimizzare l'ingombro dei contenuti di una pagina si possono usare degli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_), che possono essere attivati indipendentemente l'uno dall'altro oppure in modo esclusivo con l'attivazione di solo un blocco alla volta (in gergo definiti _fisarmoniche_ o _accordion_).
 
 ## Come funziona
 
 Puoi usare un bottone con l'attributo `data-target` o in alternativa un link con l'attributo `href`. In entrambi i casi, l'attributo `data-toggle="collapse"` è obbligatorio.
 
-Nell'iterazione il javascript cambierà le seguenti classi del contenitore:
+L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudibile:
 
 - `.collapse` nasconde il contenuto
 - `.collapsing` viene applicata durante la transizione
@@ -34,10 +34,10 @@ Nell'iterazione il javascript cambierà le seguenti classi del contenitore:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Collapse multipli
+### Attivazione di elementi richiudibili
 
 Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore jQuery nell'attributo `href` o nell'attributo `data-target`.
-Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-target`
+Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-target`.
 
 {% capture example %}
 <p>
@@ -63,8 +63,9 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Gruppi di elementi richiudibili
 
-## Collapse group
+Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili. 
 
 {% capture example %}
 <div id="collapseDiv1" class="collapse-div" role="tablist">
@@ -101,9 +102,9 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Accordion group
+## Accordion
 
-Per ottenere un lista accordion basterà aggiungere al codice del collapse su ogni `div.collapse` l'attributo `data-parent` con il relativo *ID* del contenitore padre.
+Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è sufficiente aggiungere ad ogni elemento `.collapse` l'attributo `data-parent` con il relativo *ID* del contenitore padre.
 
 {% capture example %}
 <div id="accordionDiv1" class="collapse-div" role="tablist">
@@ -140,7 +141,7 @@ Per ottenere un lista accordion basterà aggiungere al codice del collapse su og
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Nested panel
+## Collapse e Accordion innestati
 
 Più gruppi di collapse possono essere annidati.
 
@@ -210,29 +211,23 @@ Più gruppi di collapse possono essere annidati.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Accessibilità
+{% capture callout %}
+**Accessibilità**
 
-Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento collassabile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento collassabile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
+Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento richiudibile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento richiudibile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
 
-Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento collassabile – cioè l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento collassabile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento collassabile stesso.
+Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento richiudibile stesso.
 
-*Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript.*
+*Al momento Bootstrap Italia, al pari di Bootstrap 4, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript.*
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-## Uso
-
-Il plug-in per richiudere elementi utilizza alcune classi per gestire il tutto:
-
-- `.collapse` nasconde il contenuto
-- `.collapse.show` mostra il contenuto
-- `.collapsing` vine aggiunto quando parte la transizione, e rimossa quando finisce
-
-Queste classi possono essere trovate in `_transitions.scss`.
+## Implementazione
 
 ### Tramite data attributes
 
-Basta aggiungere `data-toggle="collapse"` e un `data-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi collassabili. L'attributo `data-target` accetta un selettore CSS per rendere l'elemento richiudibile. Assicurati di aggiungere la classe `collapse` all'elemento collassabile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
+Basta aggiungere `data-toggle="collapse"` e un `data-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi richiudibili. L'attributo `data-target` accetta un selettore CSS per rendere l'elemento richiudibile. Assicurati di aggiungere la classe `collapse` all'elemento richiudibile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
 
-Per aggiungere un'impostazione tipo accordion ad un'area collassabile, aggiungi l'attributo `data-parent="#selector"`. Fai riferimento alla demo per vederlo in azione.
+Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-parent="#selector"`. Fai riferimento alla demo per vederlo in azione.
 
 ### Tramite JavaScript
 
@@ -260,13 +255,13 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>parent</td>
       <td>selector | jQuery object | DOM element </td>
       <td>false</td>
-      <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento collassabile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area comprimibile associata.</td>
+      <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area comprimibile associata.</td>
     </tr>
     <tr>
       <td>toggle</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Attiva/disattiva l'elemento collassabile su richiesta</td>
+      <td>Attiva/disattiva l'elemento richiudibile su richiesta</td>
     </tr>
   </tbody>
 </table>
@@ -277,7 +272,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 #### `.collapse(options)`
 
-Attiva i tuoi contenuti come elementi collassabili. Accetta un'opzione facoltativa `object`.
+Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltativa `object`.
 
 {% highlight js %}
 $('#myCollapsible').collapse({
@@ -287,19 +282,19 @@ $('#myCollapsible').collapse({
 
 #### `.collapse('toggle')`
 
-Attiva/disattiva un elemento collassabile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento collassabile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento `shown.bs.collapse` o `hidden.bs.collapse`).
+Attiva/disattiva un elemento richiudibile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento `shown.bs.collapse` o `hidden.bs.collapse`).
 
 #### `.collapse('show')`
 
-Mostra un elemento collassabile. **Ritorna al chiamante prima che l'elemento collassabile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento `shown.bs.collapse`).
+Mostra un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento `shown.bs.collapse`).
 
 #### `.collapse('hide')`
 
-Nasconde un elemento collassabile. **Ritorna al chiamante prima che l'elemento collassabile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento `hidden.bs.collapse`).
+Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento `hidden.bs.collapse`).
 
 #### `.collapse('dispose')`
 
-Elimina la possibilità di un elemento di essere collassabile.
+Elimina la possibilità di un elemento di essere richiudibile.
 
 ### Eventi
 
@@ -319,7 +314,7 @@ La classe `.collapse` di Bootstrap espone alcuni eventi agganciare comporamenti 
     </tr>
     <tr>
       <td>shown.bs.collapse</td>
-      <td>Questo evento viene attivato quando un elemento collassabile è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
+      <td>Questo evento viene attivato quando un elemento richiudibile è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
     </tr>
     <tr>
       <td>hide.bs.collapse</td>
@@ -327,7 +322,7 @@ La classe `.collapse` di Bootstrap espone alcuni eventi agganciare comporamenti 
     </tr>
     <tr>
       <td>hidden.bs.collapse</td>
-      <td>Questo evento viene attivato quando un elemento collassabile è stato nascosto all'utente (attenderà il completamento delle transizioni CSS).</td>
+      <td>Questo evento viene attivato quando un elemento richiudibile è stato nascosto all'utente (attenderà il completamento delle transizioni CSS).</td>
     </tr>
   </tbody>
 </table>

@@ -7269,6 +7269,68 @@ small,
 *[data-toggle="collapse"].collapsed .collapse-icon::before {
   transform: rotate(180deg); }
 
+.collapse-div {
+  border-bottom: 1px solid #e6e6e6; }
+  .collapse-div .collapse-div {
+    border: 1px solid #e6e6e6;
+    border-top: 0; }
+
+.collapse-header {
+  position: relative; }
+  .collapse-header *[data-toggle="collapse"] {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background-color: transparent;
+    border-top: 1px solid #e6e6e6;
+    padding: 14px 24px;
+    cursor: pointer;
+    color: #5c6f82;
+    font-weight: 600; }
+    .collapse-header *[data-toggle="collapse"][aria-expanded="false"] {
+      color: #0073e6; }
+      .collapse-header *[data-toggle="collapse"][aria-expanded="false"]:after {
+        content: '\e818'; }
+    .collapse-header *[data-toggle="collapse"][aria-expanded="true"]:before {
+      height: 2px;
+      width: 56px;
+      border-radius: 2px;
+      background-color: #0073e6;
+      position: absolute;
+      top: 0;
+      display: block;
+      content: "";
+      left: 20px; }
+    .collapse-header *[data-toggle="collapse"][aria-expanded="false"]:hover:after, .collapse-header *[data-toggle="collapse"][aria-expanded="true"]:hover:after {
+      text-decoration: none; }
+    .collapse-header *[data-toggle="collapse"]:after {
+      content: '\e810';
+      font-family: "italia-icon-font";
+      font-style: normal;
+      font-weight: normal;
+      float: right;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      margin-top: 5px;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em; }
+    .collapse-header *[data-toggle="collapse"]:hover {
+      background-color: #E6ECF2;
+      text-decoration: underline; }
+    .collapse-header *[data-toggle="collapse"]:active {
+      background-color: #0073e6;
+      color: white;
+      border-color: #0073e6; }
+
+.collapse-body {
+  padding: 12px 24px 42px; }
+  .collapse-body .collapse-header button[aria-expanded="true"]:before {
+    height: 0;
+    width: 0; }
+
 .carousel {
   background-color: #444e57;
   padding: 3em;
