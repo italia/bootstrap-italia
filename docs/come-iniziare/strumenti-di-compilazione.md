@@ -9,12 +9,12 @@ toc: true
 {% capture callout %}
 **Questa pagina è destinata a chi desidera personalizzare la libreria.**
 
-Di seguito si possono trovare gli strumenti per personalizzare e ricompilare i file sorgente di Bootstrap Italia, oltre a poter generare la documentazione che stai leggendo in un ambiente di sviluppo locale. Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap Italia come libreria. In tal caso ti può essere utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
+Di seguito si possono trovare gli strumenti per personalizzare e ricompilare i file sorgente di Bootstrap Italia, oltre a poter generare la documentazione che stai leggendo in un ambiente di sviluppo locale. Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap Italia come libreria, ma sono caldamente consigliate per **ottimizzare le performance** in termini di tempi di caricamento. In tal caso ti può essere utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Compilare la libreria
 
-Il tema Bootstrap Italia, così come Bootstrap 4 stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Per rendere operativo il sistema di compilazione di Bootstrap Italia, è necessario:
+Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Per rendere operativo il sistema di compilazione di Bootstrap Italia, è necessario:
 
 1. Clonare attraverso GIT o scaricare l'intero repository in una cartella sul proprio computer.
 2. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso `npm` o `yarn`.
@@ -34,6 +34,44 @@ Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che co
 - `/src/scss/bootstrap-italia.scss`
 - `/src/js/bootstrap-italia.js`
 
+## Ottimizzare la libreria
+
+È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli che non sono di interesse, attraverso le seguenti azioni:
+
+- commentare o rimuovere le linee relative allo stile del modulo da escludere nel file `src/scss/bootstrap-italia.scss`
+- commentare o rimuovere le linee relative agli script del modulo da escludere nel file `gulpfile.js`, nella lista `SOURCE_JS`
+- ricompilare la libreria con il comando `npm run build`
+
+Questo ricompilerà i file all'interno della cartella `dist`, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
+Di seguito un paio di esempi pratici.
+
+### Rimozione Datepicker
+
+Ad esempio, nel caso non sia necessario il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)), è sufficiente rimuovere queste linee dal file `src/scss/bootstrap-italia.scss`:
+ 
+- `@import "node_modules/pickadate/lib/themes/default";`
+- `@import "node_modules/pickadate/lib/themes/default.date";`
+- `@import "node_modules/pickadate/lib/themes/default.time";`
+  
+E queste dal file `gulpfile.js`:
+
+- `'./node_modules/pickadate/lib/compressed/picker.js',`
+- `'./node_modules/pickadate/lib/compressed/picker.date.js',`
+- `'./node_modules/pickadate/lib/compressed/picker.time.js',`
+- `'./src/js/plugins/date-picker.js',`
+
+### Rimozione Cookiebar
+
+Se invece si desidera escludere il componente ([Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dal file `src/scss/bootstrap-italia.scss`:
+
+- `@import "custom/cookiebar";`
+
+E queste dal file `gulpfile.js`:
+
+- `'./src/js/plugins/cookiebar.js',`
+
+In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice.
+
 ## Compilare la documentazione
 
 La documentazione di Bootstrap Italia è gestita con [GitHub Pages](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `bundle exec jekyll build` nella cartella locale `_gh-pages`.
@@ -50,11 +88,7 @@ Sono inoltre disponibili maggiori informazioni su Jekyll a [questa pagina][jekyl
 
 ### Script di compilazione
 
-Il comando
-
-`npm start`
-
-avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l'esecuzione del comando `bundle exec jekyll build`. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:
+Il comando `npm start` avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l'esecuzione del comando `bundle exec jekyll build`. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:
 - ricompilare i file sorgente Javascript/SASS
 - ricompilare i file della documentazione (principalmente in formato Markdown)
 - rendere disponibile all'indirizzo `http://127.0.0.1:4000/` e ricaricare automaticamente la documentazione
