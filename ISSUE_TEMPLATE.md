@@ -15,3 +15,5 @@
 ## Contesto
 <!-- Se pertinente, aggiungi il sistema operativo, browser, ecc. e gli step per riprodurre il comportamento descritto -->
 
+
+<!-- Se qualcosa non è chiaro, contattaci sullo [Slack di Developers Italia](https://developersitalia.slack.com/messages/C7VPAUVB3)! -->
