@@ -18,7 +18,7 @@ Tali componenti, all'interno di questo tema Bootstrap Italia, sono personalizzat
 
 #### Componenti aggiuntivi
 
-I componenti _aggiuntivi_, al contrario, sono quei componenti che supportano l'implementazione delle [Linee guida di design per i servizi web della PA][linee-guida], ma che non sono presenti nativamente nella libreria Bootstrap {{ site.bootstrap_version }}.
+I componenti _aggiuntivi_, al contrario, sono quei componenti che non sono presenti nativamente nella libreria Bootstrap {{ site.bootstrap_version }}.
 
 Sul web, essi possono anche essere identificati come _plugin_, ma qui si è preferito mantenere la denominazione "componente" per sottolinearne l'uniformità di contesto con i componenti di base, con i quali condividono struttura e utilizzo.
 

@@ -22,9 +22,9 @@ Le librerie Javascript e CSS di Bootstrap Italia contengono al loro interno anch
 
 ### CSS
 
-Una volta scaricato e decompresso il file, all'interno della cartella `css` sarà presente un file CSS (`bootstrap-italia.css`) e la sua versione minificata (`bootstrap-italia.min.css`).
+Una volta scaricato e decompresso il file, all'interno della cartella `css` sarà presente un file CSS minificato (`bootstrap-italia.min.css`) con la sua [sourcemap](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) (opzionale).
 
-Per includere questi file all'interno del vostro progetto sarà quindi sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
+Per includere questo file all'interno del tuo progetto sarà quindi sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
 {% highlight html %}
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
@@ -33,11 +33,15 @@ Per includere questi file all'interno del vostro progetto sarà quindi sufficien
 
 #### Icon font
 
-Nel caso si vogliano utilizzare le icone fornite nel pacchetto di release, sarà necessario includere anche il file CSS `italia-icon-font.min.css`, che a sua volta richiederà la presenza di una serie di file di font, visibili nella cartella `font`.
+Nel caso si desideri utilizzare le icone fornite nel pacchetto di release, sarà necessario includere anche il file CSS `italia-icon-font.min.css`, che a sua volta richiederà la presenza di una serie di file di font, visibili nella cartella `font`. In questo caso, il codice da inserire sarà:
+
+{% highlight html %}
+<link rel="stylesheet" href="./italia-icon-font.min.css">
+{% endhighlight %}
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file con le rispettive versioni minificate, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery e popper.js. Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery e popper.js. Vediamo nel dettaglio di cosa si tratta:
 
 <table class="table table-bordered">
   <thead>
@@ -53,21 +57,23 @@ All'interno della cartella `js` saranno invece presenti due file con le rispetti
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.bundle.min.js</code></div>
       </th>
       <td class="text-success">Incluso</td>
+      <td class="text-success">Incluso</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.min.js</code></div>
       </th>
       <td class="bg-light text-muted">Non Incluso</td>
+      <td class="bg-light text-muted">Non Incluso</td>
     </tr>
   </tbody>
 </table>
 
-In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi scegliere se includere la versione **bundle** o caricare i file separatamente, come descritto di seguito.
+In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
 
 #### Versione "bundle"
 
-Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, pin quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
+Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
 {% highlight html %}
 <script src="./bootstrap-italia.bundle.min.js"></script>
@@ -75,7 +81,7 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 
 #### Versione semplice
 
-Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi), sarà necessario includere tag `<script>` per jQuery, di cui è sufficiente la versione _slim_, e per Popper.js come mostrato di seguito:
+Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere tag `<script>` per jQuery (di cui è sufficiente la versione _slim_) e per Popper.js come mostrato di seguito:
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_integrity }}"></script>
@@ -112,11 +118,11 @@ Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalit�
 
 ### Altri esempi
 
-Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, visibili sia alla sezione [esempi]({{ site.baseurl }}/docs/esempi/) che [al sito di Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/examples/), per iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente, che si può trovare nella cartella `docs/esempi/`.
+Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, visibili sia alla sezione [esempi]({{ site.baseurl }}/docs/esempi/) che [al sito di Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/examples/), per iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente, che si può trovare anche nella cartella di questo repository, dentro `docs/esempi/`.
 
 ## Utilizzo come dipendenza
 
-Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri module bundlers per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
+Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
 {% highlight sh %}
 npm i bootstrap-italia --save
@@ -124,7 +130,7 @@ npm i bootstrap-italia --save
 
 ## Impostazioni globali
 
-Bootstrap {{ site.bootstrap_version }}, e di conseguenza il tema Bootstrap Italia, utilizzano alcune impostazioni globali di cui è bene essere al corrente durante lo sviluppo, che tendono *normalizzare* gli stili tra i vari browser. Di seguito alcuni esempi.
+Bootstrap {{ site.bootstrap_version }}, e di conseguenza il tema Bootstrap Italia, utilizza alcune impostazioni globali di cui è bene essere al corrente durante lo sviluppo, che tendono *normalizzare* gli stili tra i vari browser. Di seguito alcuni esempi.
 
 ### Doctype HTML5
 
@@ -154,7 +160,7 @@ Per un migliore dimensionamento degli elementi nella pagina, Bootstrap {{ site.b
 Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare codice simile a quanto segue:
 
 {% highlight css %}
-.selector-for-some-widget {
+.selettore-per-creare-eccezione {
   box-sizing: content-box;
 }
 {% endhighlight %}
