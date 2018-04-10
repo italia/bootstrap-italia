@@ -13,16 +13,16 @@
 <title>Strumenti di compilazione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804101138" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804101138" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804101138" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.4/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.5.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -177,6 +177,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
               Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
@@ -391,6 +394,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#script-di-compilazione">Script di compilazione</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#ottimizzare-la-libreria">Ottimizzare la libreria</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#rimozione-datepicker">Rimozione Datepicker</a></li>
+<li class="toc-entry toc-h3"><a href="#rimozione-cookiebar">Rimozione Cookiebar</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#compilare-la-documentazione">Compilare la documentazione</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#script-di-compilazione-1">Script di compilazione</a></li>
@@ -412,7 +421,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <div class="bd-callout bd-callout-info">
 <p><strong>Questa pagina è destinata a chi desidera personalizzare la libreria.</strong></p>
 
-<p>Di seguito si possono trovare gli strumenti per personalizzare e ricompilare i file sorgente di Bootstrap Italia, oltre a poter generare la documentazione che stai leggendo in un ambiente di sviluppo locale. Le informazioni di seguito non sono indispensabili per l’utilizzo di Bootstrap Italia come libreria. In tal caso ti può essere utile la <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">pagina introduttiva</a>.</p>
+<p>Di seguito si possono trovare gli strumenti per:</p>
+
+<ul>
+  <li>personalizzare e ricompilare i file sorgente di Bootstrap Italia</li>
+  <li>generare la documentazione che stai leggendo in un ambiente di sviluppo locale</li>
+</ul>
+
+<p>Le informazioni di seguito non sono indispensabili per l’utilizzo di Bootstrap Italia come libreria, ma sono caldamente consigliate per <strong>ottimizzare le performance</strong> in termini di tempi di caricamento. Se stai cercando informazioni su come usare Bootstrap Italia, ti può essere utile la <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">pagina introduttiva</a>.</p>
 </div>
 
 <h2 id="compilare-la-libreria">Compilare la libreria</h2>
@@ -441,9 +457,57 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <li><code class="highlighter-rouge">/src/js/bootstrap-italia.js</code></li>
 </ul>
 
+<h2 id="ottimizzare-la-libreria">Ottimizzare la libreria</h2>
+
+<p>È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli che non sono di interesse, attraverso le seguenti azioni:</p>
+
+<ul>
+  <li>commentare o rimuovere le linee relative allo stile del modulo da escludere nel file <code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code></li>
+  <li>commentare o rimuovere le linee relative agli script del modulo da escludere nel file <code class="highlighter-rouge">gulpfile.js</code>, nella lista <code class="highlighter-rouge">SOURCE_JS</code></li>
+  <li>ricompilare la libreria con il comando <code class="highlighter-rouge">npm run build</code></li>
+</ul>
+
+<p>Questo ricompilerà i file all’interno della cartella <code class="highlighter-rouge">dist</code>, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
+Di seguito un paio di esempi pratici.</p>
+
+<h3 id="rimozione-datepicker">Rimozione Datepicker</h3>
+
+<p>Ad esempio, nel caso non sia necessario il componente per la gestione del calendario (<a href="/bootstrap-italia/docs/componenti-avanzati/datepicker/">Datepicker</a>), è sufficiente rimuovere queste linee dal file <code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default";</code></li>
+  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default.date";</code></li>
+  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default.time";</code></li>
+</ul>
+
+<p>E queste dal file <code class="highlighter-rouge">gulpfile.js</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.js',</code></li>
+  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.date.js',</code></li>
+  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.time.js',</code></li>
+  <li><code class="highlighter-rouge">'./src/js/plugins/date-picker.js',</code></li>
+</ul>
+
+<h3 id="rimozione-cookiebar">Rimozione Cookiebar</h3>
+
+<p>Se invece si desidera escludere il componente <a href="/bootstrap-italia/docs/componenti-avanzati/cookiebar/">Cookiebar</a>, è sufficiente rimuovere le seguenti linee dal file <code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@import "custom/cookiebar";</code></li>
+</ul>
+
+<p>E queste dal file <code class="highlighter-rouge">gulpfile.js</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">'./src/js/plugins/cookiebar.js',</code></li>
+</ul>
+
+<p>In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.</p>
+
 <h2 id="compilare-la-documentazione">Compilare la documentazione</h2>
 
-<p>La documentazione di Bootstrap Italia è gestita con <a href="https://pages.github.com/">GitHub Pages</a> attraverso <a href="https://jekyllrb.com/docs/home/">Jekyll</a>: per questo è composta di file statici che risiedono sul branch <code class="highlighter-rouge">gh-pages</code>. I file presenti a questo branch corrispondono esattamente ai file generati con il comando <code class="highlighter-rouge">bundle exec jekyll build</code> nella cartella locale <code class="highlighter-rouge">_gh-pages</code>.</p>
+<p>La documentazione di Bootstrap Italia è gestita con <a href="https://pages.github.com/"><strong>GitHub Pages</strong></a> attraverso <a href="https://jekyllrb.com/docs/home/">Jekyll</a>: per questo è composta di file statici che risiedono sul branch <code class="highlighter-rouge">gh-pages</code>. I file presenti a questo branch corrispondono esattamente ai file generati con il comando <code class="highlighter-rouge">jekyll build</code> nella cartella locale <code class="highlighter-rouge">_gh_pages</code>.</p>
 
 <p>Per poter generare e testare la documentazione in ambiente locale, è necessario:</p>
 
@@ -453,32 +517,28 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <li>Lanciare il comando <code class="highlighter-rouge">bundle install</code>. Questo comando, in modo simile a quanto avviene per <code class="highlighter-rouge">npm install</code> si occuperà di installare tutte le dipendenze Ruby come descritto nel file <a href="https://github.com/italia/bootstrap-italia/blob/master/Gemfile">Gemfile</a>; in questo caso Jekyll e i suoi plugin.</li>
 </ol>
 
-<p>* <strong>Utenti Windows:</strong> è bene seguire <a href="https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller">questa guida</a> per installare Jekyll senza problemi.</p>
+<p>* <strong>Utenti Windows:</strong> è bene seguire <a href="https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller">questa guida</a> per installare Ruby e Jekyll senza problemi.</p>
 
 <p>Sono inoltre disponibili maggiori informazioni su Jekyll a <a href="https://jekyllrb.com/docs/home/">questa pagina</a>.</p>
 
 <h3 id="script-di-compilazione-1">Script di compilazione</h3>
 
-<p>Il comando</p>
-
-<p><code class="highlighter-rouge">npm start</code></p>
-
-<p>avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l’esecuzione del comando <code class="highlighter-rouge">bundle exec jekyll build</code>. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:</p>
+<p>Il comando <code class="highlighter-rouge">npm start</code> avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l’esecuzione del comando <code class="highlighter-rouge">jekyll build --watch</code>. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:</p>
 <ul>
   <li>ricompilare i file sorgente Javascript/SASS</li>
-  <li>ricompilare i file della documentazione (principalmente in formato Markdown)</li>
+  <li>ricompilare i file markdown della documentazione</li>
   <li>rendere disponibile all’indirizzo <code class="highlighter-rouge">http://127.0.0.1:4000/</code> e ricaricare automaticamente la documentazione</li>
 </ul>
 
 <p>La struttura delle cartelle della documentazione è la seguente:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">_data</code>: assieme al file <code class="highlighter-rouge">config-yml</code> definiscono le variabili utilizzate nei vari template (<a href="https://jekyllrb.com/docs/datafiles/">documentazione</a>)</li>
+  <li><code class="highlighter-rouge">_data</code>: assieme al file <code class="highlighter-rouge">_config.yml</code> definiscono le variabili utilizzate nei vari template (<a href="https://jekyllrb.com/docs/datafiles/">documentazione</a>)</li>
   <li><code class="highlighter-rouge">_includes</code>: contiene porzioni di codice HTML (<a href="https://jekyllrb.com/docs/includes/">documentazione</a>)</li>
   <li><code class="highlighter-rouge">_layouts</code>: definisce alcuni modelli di pagina (<a href="https://jekyllrb.com/docs/themes/">documentazione</a>)</li>
   <li><code class="highlighter-rouge">_plugins</code>: contiene funzioni che aumentano le funzionalità di Jekyll (<a href="https://jekyllrb.com/docs/plugins/">documentazione</a>)</li>
   <li><code class="highlighter-rouge">docs</code>: è la cartella principale dove risiede la documentazione in formato Markdown.</li>
-  <li><code class="highlighter-rouge">docs/assets</code>: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. <strong>Non sono file compilati nella libreria finale Bootstrap Italia</strong>.</li>
+  <li><code class="highlighter-rouge">docs/assets</code>: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. <strong>Non sono file compilati nella libreria finale Bootstrap Italia</strong>, servono soltanto per documentare la libreria in queste pagine che stai leggendo.</li>
 </ul>
 
 <h2 id="pubblicare-la-documentazione">Pubblicare la documentazione</h2>
@@ -487,20 +547,19 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p><code class="highlighter-rouge">npm run documentation-deploy-to-gh-pages</code></p>
 
-<p>Tale comando creerà <em>automagicamente</em> un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code> del repository remoto su cui si sta lavorando, lanciando così la pubblicazione immediata della documentazione
-su GitHub Pages e visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a>.</p>
+<p>Tale comando creerà un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code> del repository remoto su cui si sta lavorando, lanciando così la pubblicazione immediata della documentazione su GitHub Pages e rendendola visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a>.</p>
 
 <h2 id="creare-una-nuova-release">Creare una nuova release</h2>
 
 <p>Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi manuali:</p>
 
 <ul>
-  <li>Aggiornamento numero di versione in formato semver x.x.x su file <code class="highlighter-rouge">package.json</code> e <code class="highlighter-rouge">_config.yml</code></li>
-  <li>Lanciare i comandi <code class="highlighter-rouge">npm run build &amp;&amp; npm run documentation-build</code></li>
+  <li>Aggiornamento numero di versione in formato <a href="https://semver.org/">semver</a> su file <code class="highlighter-rouge">package.json</code> e <code class="highlighter-rouge">_config.yml</code></li>
+  <li>Lanciare i comandi <code class="highlighter-rouge">npm run build</code> e <code class="highlighter-rouge">npm run documentation-build</code> per compilare libreria e documentazione</li>
   <li>Lanciare il comando <code class="highlighter-rouge">npm i</code> per aggiornare il file <code class="highlighter-rouge">package.lock</code></li>
-  <li>Commit e push delle modifiche</li>
-  <li>Tag del commit con numero di versione in formato semver x.x.x</li>
-  <li>Creazione manuale di un file compresso <code class="highlighter-rouge">bootstrap-italia.zip</code> della cartella <code class="highlighter-rouge">/dist</code></li>
+  <li>Commit e push delle modifiche, commentare con <code class="highlighter-rouge">version bump vx.x.x</code></li>
+  <li>Tag del commit con numero di versione in formato <code class="highlighter-rouge">x.x.x</code></li>
+  <li>Creare manualmente un file compresso <code class="highlighter-rouge">bootstrap-italia.zip</code> dei contenuti della cartella <code class="highlighter-rouge">/dist</code></li>
   <li>Scrivere le release notes su GitHub e allegare il suddetto file compresso</li>
   <li><code class="highlighter-rouge">npm publish</code> per aggiornare la versione su <code class="highlighter-rouge">npm</code></li>
 </ul>
@@ -533,8 +592,15 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804041628"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804041628"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804101138"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804101138"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

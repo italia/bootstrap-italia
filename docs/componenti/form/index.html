@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.">
+<meta name="description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.7.3">
 <meta name="robots" content="noindex">
@@ -13,16 +13,16 @@
 <title>Form · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804101138" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804101138" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804101138" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -39,13 +39,13 @@
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Form">
-<meta name="twitter:description" content="Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.">
+<meta name="twitter:description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/componenti/form/">
 <meta property="og:title" content="Form">
-<meta property="og:description" content="Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.">
+<meta property="og:description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.4/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.5.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -177,6 +177,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
               Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
@@ -386,8 +389,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#panoramica">Panoramica</a></li>
-<li class="toc-entry toc-h2"><a href="#elementi-form">Elementi Form</a>
+<li class="toc-entry toc-h2"><a href="#input">Input</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#input-text">Input text</a></li>
 <li class="toc-entry toc-h3"><a href="#input-password">Input password</a></li>
@@ -397,23 +399,20 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#input-autocomplete">Input autocomplete</a></li>
-<li class="toc-entry toc-h3"><a href="#select">Select</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#select-classica">Select classica</a></li>
-<li class="toc-entry toc-h4"><a href="#select-multipla">Select multipla</a></li>
-<li class="toc-entry toc-h4"><a href="#select-con-ricerca">Select con ricerca</a></li>
-<li class="toc-entry toc-h4"><a href="#select-con-gruppi-di-opzioni">Select con gruppi di opzioni</a></li>
-</ul>
-</li>
 <li class="toc-entry toc-h3"><a href="#textarea">Textarea</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#personalizzazioni">Personalizzazioni</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#icone">Icone</a></li>
+<li class="toc-entry toc-h3"><a href="#icone-aggiuntive">Icone aggiuntive</a></li>
 <li class="toc-entry toc-h3"><a href="#dimensione">Dimensione</a></li>
 <li class="toc-entry toc-h3"><a href="#readonly">Readonly</a></li>
 <li class="toc-entry toc-h3"><a href="#readonly-normalizzato">Readonly normalizzato</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#select">Select</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#select-classica">Select classica</a></li>
+<li class="toc-entry toc-h3"><a href="#select-multipla">Select multipla</a></li>
+<li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
+<li class="toc-entry toc-h3"><a href="#select-con-gruppi-di-opzioni">Select con gruppi di opzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#dimensione-1">Dimensione</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#checkbox-e-radio">Checkbox e radio</a>
@@ -435,21 +434,16 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#form-a-griglia">Form a griglia</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#dimensione-delle-colonne">Dimensione delle colonne</a></li>
-<li class="toc-entry toc-h4"><a href="#auto-dimensionamento">Auto-dimensionamento</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#inline-forms">Inline forms</a>
+<li class="toc-entry toc-h4"><a href="#auto-dimensionamento">Auto-dimensionamento</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#alternative-alle-etichette-nascoste">Alternative alle etichette nascoste</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#testo-di-aiuto">Testo di aiuto</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#associazione-del-testo-di-aiuto-con-gli-elementi-del-mudulo-form">Associazione del testo di aiuto con gli elementi del mudulo form</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#testo-di-aiuto">Testo di aiuto</a></li>
 <li class="toc-entry toc-h2"><a href="#form-disabilitato">Form disabilitato</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#caveat-con-ancore">Caveat con ancore</a></li>
@@ -468,29 +462,15 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Form</h1>
-          <p class="bd-lead">Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.</p>
-          <h2 id="panoramica">Panoramica</h2>
+          <p class="bd-lead">Elementi e stili per la creazione di form accessibili e responsivi.</p>
+          <h2 id="input">Input</h2>
 
-<p>Bootstrap utilizza <a href="/bootstrap-italia/docs/contenuti/reboot/#forms">Reboot</a> per definire una base consistente di stile su cui è costruito tutto il resto così da attivare le visualizzazioni personalizzate per un rendering più uniforme su browser e dispositivi.</p>
-
-<p>Assicurati di utilizzare uno degli attributi appositi <code class="highlighter-rouge">type</code> per gli elementi input (ad esempio, <code class="highlighter-rouge">email</code> per l’indirizzo email o <code class="highlighter-rouge">number</code> per le informazioni numeriche) in modo da sfruttare i controlli di input più recenti come la verifica dell’email, la selezione del numero e altro.</p>
-
-<p>Attenetevi alla sintassi HTML qui di seguito per ottenere, sia graficamente che funzionalmente, gli effetti predisposti. Ad esempio l’elemento <code class="highlighter-rouge">label</code> va inserito dopo l’elemento <code class="highlighter-rouge">input</code> anche se inusuale, grazie all’attributo <code class="highlighter-rouge">for</code> risulterà sempre accessibile agli screenreader.</p>
-
-<h2 id="elementi-form">Elementi Form</h2>
-
-<p>Gli elementi del form come <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;select&gt;</code> e <code class="highlighter-rouge">&lt;textarea&gt;</code> sono graficamente personalizzati grazie alla classe <code class="highlighter-rouge">.form-control</code> e debbono essere contenuti in un <code class="highlighter-rouge">.form-group</code>.</p>
+<p>Per il corretto funzionamento degli elementi di tipo <code class="highlighter-rouge">&lt;input&gt;</code>, è di fondamentale importanza l’utilizzo uno degli appositi attributi <code class="highlighter-rouge">type</code> (ad esempio, <code class="highlighter-rouge">email</code> per l’inserimento di indirizzi email o <code class="highlighter-rouge">number</code> per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell’email, l’utilizzo di metodo di input numerico e altro.</p>
 
 <h3 id="input-text">Input text</h3>
 
 <div class="bd-example">
 <form>
-  <div class="input-group pb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text it-search" id="basic-addon1"></span>
-    </div>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-  </div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText" />
     <label for="exampleInputText">Nominativo</label>
@@ -507,12 +487,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </form>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group pb-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text it-search"</span> <span class="na">id=</span><span class="s">"basic-addon1"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Username"</span> <span class="na">aria-label=</span><span class="s">"Username"</span> <span class="na">aria-describedby=</span><span class="s">"basic-addon1"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>Nominativo<span class="nt">&lt;/label&gt;</span>
@@ -530,7 +504,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="input-password">Input password</h3>
 
-<p>Per rendere migliore l’utilizzo del campo password sui dispositivi mobili l’elemento è stato dotato di un visualizzatore di quanto digitato. Inoltre è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>, questo grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>.</p>
+<p>Per rendere più semplice l’inserimento della password, l’elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>) per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>.</p>
 
 <div class="bd-example">
 <form>
@@ -567,9 +541,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="input-file">Input file</h3>
 
-<p>Avete la possibilità di usare l’elemento input file predefinito oppure avente la personalizzazione grafica aggiungendo a <code class="highlighter-rouge">.form-group</code> la classe <code class="highlighter-rouge">.form-file</code>. Con l’aggiunta di questa classe viene nascosto l’elemento <code class="highlighter-rouge">&lt;input&gt;</code> tramite <code class="highlighter-rouge">opacity</code> mentre la <code class="highlighter-rouge">&lt;label&gt;</code> si sovrappone coprendone l’area. Poi un finto pulsante viene generato e posizionato con <code class="highlighter-rouge">::before</code>.</p>
+<p>È possibile personalizzare l’elemento <code class="highlighter-rouge">&lt;input type="file"&gt;</code> aggiungendo all’elemento identificato con <code class="highlighter-rouge">.form-group</code> la classe <code class="highlighter-rouge">.form-file</code>. Con l’aggiunta di questa classe, viene nascosto l’elemento <code class="highlighter-rouge">&lt;input&gt;</code> tramite <code class="highlighter-rouge">opacity</code> mentre la <code class="highlighter-rouge">&lt;label&gt;</code> si sovrappone coprendone l’area. Poi un finto pulsante viene generato e posizionato con <code class="highlighter-rouge">::before</code>.</p>
 
-<p>Per i <code class="highlighter-rouge">.form-file</code> è stato previsto un javascript che permetterà di avere una visione di quanti e quali file sono stati scelti una volta selezionati.</p>
+<p>Per gli elementi che usano <code class="highlighter-rouge">.form-file</code> è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.</p>
 
 <div class="bd-example">
 <form>
@@ -608,14 +582,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h4 id="tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</h4>
 
-<p>La <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang">pseudo-classe <code class="highlighter-rouge">:lang ()</code></a> viene utilizzata per consentire la traduzione del testo “Sfoglia” in altri le lingue. Sovrascrivi o aggiungi voci alla variabile Sass <code class="highlighter-rouge">$custom-file-text</code> con il <a href="https://en.wikipedia.org/wiki/IETF_language_tag">tag lingua</a> pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è <code class="highlighter-rouge">en</code>):</p>
+<p>La <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang">pseudo-classe <code class="highlighter-rouge">:lang ()</code></a> viene utilizzata per consentire la traduzione del testo “Sfoglia” in altri le lingue. Sovrascrivi o aggiungi voci alla variabile SASS <code class="highlighter-rouge">$custom-file-text</code> con il <a href="https://en.wikipedia.org/wiki/IETF_language_tag">tag lingua</a> pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è <code class="highlighter-rouge">en</code>):</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$custom-file-text</span><span class="p">:</span> <span class="p">(</span>
   <span class="n">it</span><span class="o">:</span> <span class="s2">"Sfoglia"</span><span class="o">,</span>
   <span class="n">en</span><span class="o">:</span> <span class="s2">"Browse"</span>
 <span class="p">);</span></code></pre></figure>
 
-<p>Eccoti un esempio in funzione per la traduzione in inglese:</p>
+<p>Di seguito un esempio in funzione per la traduzione in inglese:</p>
 
 <div class="bd-example">
 <div class="form-group form-file">
@@ -673,13 +647,112 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h3 id="select">Select</h3>
+<h3 id="textarea">Textarea</h3>
+
+<div class="bd-example">
+<form>
+  <div class="form-group">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleFormControlTextarea1"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlTextarea1"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+<h3 id="icone-aggiuntive">Icone aggiuntive</h3>
+
+<p>È possibile inserire un’icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo <code class="highlighter-rouge">&lt;input&gt;</code>.</p>
+
+<div class="bd-example">
+<form>
+  <div class="form-group">
+    <i class="ico-prefix it-youtube"></i>
+    <input class="form-control" type="text" id="videoYoutube" />
+    <label for="videoYoutube">Link video di youtube</label>
+  </div>
+  <div class="form-group">
+    <i class="ico-prefix it-youtube"></i>
+    <select class="custom-select">
+      <option value="" disabled="" selected="">Seleziona un video</option>
+      <option value="1">Video 1</option>
+      <option value="2">Video 2</option>
+      <option value="3">Video 3</option>
+    </select>
+    <label>Elenco video</label>
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>Link video di youtube<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona un video<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Video 1<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Video 2<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Video 3<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+<h3 id="dimensione">Dimensione</h3>
+
+<p>È possibile modificare la dimensione dell’elemento utilizzando le classi <code class="highlighter-rouge">.form-control-lg</code> e <code class="highlighter-rouge">.form-control-sm</code>, che modificano la grandezza del carattere e la spaziatura interna.</p>
+
+<div class="bd-example">
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
+<input class="form-control" type="text" placeholder="Input predefinito" />
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-lg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input predefinito"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-sm"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="readonly">Readonly</h3>
+
+<p>Aggiungi l’attributo booleano <code class="highlighter-rouge">readonly</code> su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.</p>
+
+<div class="bd-example">
+<input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly="" />
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h3 id="readonly-normalizzato">Readonly normalizzato</h3>
+
+<p>Se vuoi avere gli elementi <code class="highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="highlighter-rouge">.form-control-plaintext</code>.</p>
+
+<div class="bd-example">
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly="" />
+    <label for="staticEmail">Email</label>
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control-plaintext"</span> <span class="na">id=</span><span class="s">"staticEmail"</span> <span class="na">value=</span><span class="s">"email@example.com"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"staticEmail"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+<h2 id="select">Select</h2>
 
 <p>Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag <code class="highlighter-rouge">&lt;select&gt;</code> la classe <code class="highlighter-rouge">.custom-select</code> e seguire le indicazioni riportate di seguito. Il componente <em>select</em> è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.</p>
 
 <p>Di seguito sono mostrate alcune di queste combinazioni.</p>
 
-<h4 id="select-classica">Select classica</h4>
+<h3 id="select-classica">Select classica</h3>
 
 <div class="bd-example">
 <form>
@@ -706,7 +779,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h4 id="select-multipla">Select multipla</h4>
+<h3 id="select-multipla">Select multipla</h3>
 
 <p>La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.</p>
 
@@ -771,9 +844,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h4 id="select-con-ricerca">Select con ricerca</h4>
+<h3 id="select-con-ricerca">Select con ricerca</h3>
 
-<p>Esempio di <em>select</em> con ricerca:</p>
+<p>Esempio di <code class="highlighter-rouge">select</code> con ricerca:</p>
 
 <div class="bd-example">
 <form>
@@ -836,9 +909,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h4 id="select-con-gruppi-di-opzioni">Select con gruppi di opzioni</h4>
+<h3 id="select-con-gruppi-di-opzioni">Select con gruppi di opzioni</h3>
 
-<p>Esempio di <em>select</em> con gruppi di opzioni:</p>
+<p>Esempio di <code class="highlighter-rouge">select</code> con gruppi di opzioni:</p>
 
 <div class="bd-example">
 <form>
@@ -873,78 +946,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h3 id="textarea">Textarea</h3>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleFormControlTextarea1"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlTextarea1"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h2 id="personalizzazioni">Personalizzazioni</h2>
-
-<h3 id="icone">Icone</h3>
-
-<p>Hai la possibilità di inserire un’icona a lato dei campi input, select e textarea. Basterà inserire l’icona come elemeto prima del campo.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <input class="form-control" type="text" id="videoYoutube" />
-    <label for="videoYoutube">Link video di youtube</label>
-  </div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <select class="custom-select">
-      <option value="" disabled="" selected="">Seleziona un video</option>
-      <option value="1">Video 1</option>
-      <option value="2">Video 2</option>
-      <option value="3">Video 3</option>
-    </select>
-    <label>Elenco video</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>Link video di youtube<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona un video<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Video 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Video 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Video 3<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="dimensione">Dimensione</h3>
-
-<p>Gestisci la dimensione dell’elemento usando le classi <code class="highlighter-rouge">.form-control-lg</code> e <code class="highlighter-rouge">.form-control-sm</code> che modificheranno la grandezza del carattere e la spaziatura interna.</p>
-
-<div class="bd-example">
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
-<input class="form-control" type="text" placeholder="Input predefinito" />
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-lg"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input predefinito"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-sm"</span><span class="nt">&gt;</span></code></pre></figure>
+<h3 id="dimensione-1">Dimensione</h3>
 
 <div class="bd-example">
 <select class="custom-select form-control-lg">
@@ -967,37 +969,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;option&gt;</span>Select piccola<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre></figure>
 
-<h3 id="readonly">Readonly</h3>
-
-<p>Aggiungi l’attributo booleano <code class="highlighter-rouge">readonly</code> su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.</p>
-
-<div class="bd-example">
-<input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly="" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span></code></pre></figure>
-
-<h3 id="readonly-normalizzato">Readonly normalizzato</h3>
-
-<p>Se vuoi avere gli elementi <code class="highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="highlighter-rouge">.form-control-plaintext</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly="" />
-    <label for="staticEmail">Email</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control-plaintext"</span> <span class="na">id=</span><span class="s">"staticEmail"</span> <span class="na">value=</span><span class="s">"email@example.com"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"staticEmail"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
 <h2 id="checkbox-e-radio">Checkbox e radio</h2>
 
-<p>Lo stile dei <strong>checkbox</strong> e <strong>radio</strong> è stato migliorato graficamente per rendere l’esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe <code class="highlighter-rouge">.form-check</code> nel contenitore padre. Mentre le <strong>checkbox</strong> servono a selezionare una o più opzioni in un elenco, i <strong>radio</strong> consentono di selezionare una sola opzione tra molte.</p>
+<p>Lo stile degli input di tipo <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> è stato migliorato graficamente per rendere l’esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe <code class="highlighter-rouge">.form-check</code> nell’elemento padre. Mentre le <code class="highlighter-rouge">checkbox</code> servono a selezionare una o più opzioni in un elenco, i <code class="highlighter-rouge">radio</code> consentono di selezionare una sola opzione tra molte.</p>
 
 <div class="bd-example">
 <form>
@@ -1032,7 +1006,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="inline">Inline</h3>
 
-<p>Per allineare orizzontalmente le <strong>checkbox</strong> o i <strong>radio</strong> basterà aggiungere la classe <code class="highlighter-rouge">.form-check-inline</code> a qualsiasi <code class="highlighter-rouge">.form-check</code>.</p>
+<p>Per allineare orizzontalmente le <code class="highlighter-rouge">checkbox</code> o i <code class="highlighter-rouge">radio</code> basterà aggiungere la classe <code class="highlighter-rouge">.form-check-inline</code> a qualsiasi <code class="highlighter-rouge">.form-check</code>.</p>
 
 <div class="bd-example">
 <form>
@@ -1083,7 +1057,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="disabilitato">Disabilitato</h3>
 
-<p>Affinchè i campi <strong>checkbox</strong> e <strong>radio</strong> risultino disabilitati occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> all’input e la classe <code class="highlighter-rouge">.disabled</code> alla label relativa.</p>
+<p>Affinchè i campi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> risultino disabilitati occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> all’input e la classe <code class="highlighter-rouge">.disabled</code> alla label relativa.</p>
 
 <div class="bd-example">
 <form>
@@ -1126,7 +1100,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="gruppi">Gruppi</h3>
 
-<p>Per poter raggruppare gli elementi <strong>checkbox</strong> e <strong>radio</strong> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>. L’elemento grafico di spunta verrà allineato alla destra del contenuto testuale.</p>
+<p>Per poter raggruppare gli elementi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>. L’elemento grafico di spunta verrà allineato alla destra del contenuto testuale.</p>
 
 <div class="bd-example">
 <form>
@@ -1280,7 +1254,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="toggles">Toggles</h2>
 
-<p>Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe <code class="highlighter-rouge">.toggles</code>, mentre la label conterrà sia la checkbox che uno <strong>span</strong> con classe <code class="highlighter-rouge">.lever</code>.</p>
+<p>Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe <code class="highlighter-rouge">.toggles</code>, mentre la label conterrà sia la checkbox che uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.lever</code>.</p>
 
 <div class="bd-example">
 <form>
@@ -1782,100 +1756,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
-<h3 id="inline-forms">Inline forms</h3>
-
-<p>Use the <code class="highlighter-rouge">.form-inline</code> class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.</p>
-
-<ul>
-  <li>Controls are <code class="highlighter-rouge">display: flex</code>, collapsing any HTML white space and allowing you to provide alignment control with <a href="/bootstrap-italia/docs/utilities/spacing/">spacing</a> and <a href="/bootstrap-italia/docs/utilities/flex/">flexbox</a> utilities.</li>
-  <li>Controls and input groups receive <code class="highlighter-rouge">width: auto</code> to override the Bootstrap default <code class="highlighter-rouge">width: 100%</code>.</li>
-  <li>Controls <strong>only appear inline in viewports that are at least 576px wide</strong> to account for narrow viewports on mobile devices.</li>
-</ul>
-
-<p>You may need to manually address the width and alignment of individual form controls with <a href="/bootstrap-italia/docs/utilities/spacing/">spacing utilities</a> (as shown below). Lastly, be sure to always include a <code class="highlighter-rouge">&lt;label&gt;</code> with each form control, even if you need to hide it from non-screenreader visitors with <code class="highlighter-rouge">.sr-only</code>.</p>
-
-<div class="bd-example">
-<form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe" />
-
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">@</div>
-    </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username" />
-  </div>
-
-  <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
-    <label class="form-check-label" for="inlineFormCheck">
-      Remember me
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormInputName2"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control mb-2 mr-sm-2"</span> <span class="na">id=</span><span class="s">"inlineFormInputName2"</span> <span class="na">placeholder=</span><span class="s">"Jane Doe"</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormInputGroupUsername2"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group mb-2 mr-sm-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inlineFormInputGroupUsername2"</span> <span class="na">placeholder=</span><span class="s">"Username"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check mb-2 mr-sm-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-check-input"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"inlineFormCheck"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-check-label"</span> <span class="na">for=</span><span class="s">"inlineFormCheck"</span><span class="nt">&gt;</span>
-      Remember me
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mb-2"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<p>Custom form controls and selects are also supported.</p>
-
-<div class="bd-example">
-<form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-    <option selected="">Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-
-  <div class="custom-control custom-checkbox my-1 mr-sm-2">
-    <input type="checkbox" class="custom-control-input" id="customControlInline" />
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
-  </div>
-
-  <button type="submit" class="btn btn-primary my-1">Submit</button>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"my-1 mr-2"</span> <span class="na">for=</span><span class="s">"inlineFormCustomSelectPref"</span><span class="nt">&gt;</span>Preference<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select my-1 mr-sm-2"</span> <span class="na">id=</span><span class="s">"inlineFormCustomSelectPref"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Choose...<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>One<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Three<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;/select&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox my-1 mr-sm-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customControlInline"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customControlInline"</span><span class="nt">&gt;</span>Remember my preference<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary my-1"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
 <div class="bd-callout bd-callout-warning">
 <h5 id="alternative-alle-etichette-nascoste">Alternative alle etichette nascoste</h5>
 <p>Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un’etichetta per ogni input. Per questi moduli in linea, puoi nascondere le etichette usando la classe <code class="highlighter-rouge">.sr-only</code>. Esistono altri metodi alternativi per fornire un’etichetta per le tecnologie assistive, come l’attributo <code class="highlighter-rouge">aria-label</code>,<code class="highlighter-rouge"> aria-labelledby</code> o <code class="highlighter-rouge">title</code>. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all’uso dell’attributo <code class="highlighter-rouge">placeholder</code>, se presente, ma è sconsigliato.</p>
@@ -1886,7 +1766,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Il testo di aiuto può essere creato usando <code class="highlighter-rouge">.form-text</code> (precedentemente noto come <code class="highlighter-rouge">.help-block</code> nella versione 3 di Bootstrap). Può essere esteso usando le classi di utilità come <code class="highlighter-rouge">.text-muted</code>.</p>
 
 <div class="bd-callout bd-callout-warning">
-<h5 id="associazione-del-testo-di-aiuto-con-gli-elementi-del-mudulo-form">Associazione del testo di aiuto con gli elementi del mudulo form</h5>
+<p><strong>Associazione del testo di aiuto con gli elementi del modulo form</strong></p>
 
 <p>Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l’attributo <code class="highlighter-rouge">aria-describedby</code>. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l’utente avrà il focus sull’elemento.</p>
 </div>
@@ -2038,7 +1918,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="stili-personalizzati">Stili personalizzati</h3>
 
-<p>Per i messaggi personalizzati di convalida del form, dovrai aggiungere l’attributo booleano <code class="highlighter-rouge">novalidate</code> al tuo <code class="highlighter-rouge">&lt;form&gt;</code>. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l’accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante <code class="highlighter-rouge">Invia</code> del modulo sottostante; JavaScript intercetterà l’evento e mostrerà i feedback all’utente. Vedrai così gli stili <code class="highlighter-rouge">:invalid</code> e <code class="highlighter-rouge">:valid</code> applicati ai controlli del modulo.</p>
+<p>Per i messaggi personalizzati di convalida del form, dovrai aggiungere l’attributo booleano <code class="highlighter-rouge">novalidate</code> al tuo <code class="highlighter-rouge">&lt;form&gt;</code>. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l’accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante <code class="highlighter-rouge">Invia</code> del modulo sottostante; Javascript intercetterà l’evento e mostrerà i feedback all’utente. Vedrai così gli stili <code class="highlighter-rouge">:invalid</code> e <code class="highlighter-rouge">:valid</code> applicati ai controlli del modulo.</p>
 
 <div class="bd-example">
 <form class="needs-validation" novalidate="">
@@ -2106,13 +1986,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </form>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
@@ -2191,13 +2068,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <span class="nt">&lt;/form&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
-<span class="c1">// Example starter JavaScript for disabling form submissions if there are invalid fields</span>
 <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="s1">'use strict'</span><span class="p">;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Fetch all the forms we want to apply custom Bootstrap validation styles to</span>
     <span class="kd">var</span> <span class="nx">forms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s1">'needs-validation'</span><span class="p">);</span>
-    <span class="c1">// Loop over them and prevent submission</span>
     <span class="kd">var</span> <span class="nx">validation</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">filter</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">forms</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">form</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">form</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">form</span><span class="p">.</span><span class="nx">checkValidity</span><span class="p">()</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
@@ -2232,8 +2106,15 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804041628"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804041628"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804101138"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804101138"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

@@ -13,16 +13,16 @@
 <title>Modificare componenti · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804101138" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804101138" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804041628" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804101138" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.4.4/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.5.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -177,6 +177,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
               Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
@@ -386,14 +389,19 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#tema-bootstrap-italia">Tema Bootstrap Italia</a>
-<ul>
 <li class="toc-entry toc-h4"><a href="#componenti-base">Componenti base</a></li>
 <li class="toc-entry toc-h4"><a href="#componenti-aggiuntivi">Componenti aggiuntivi</a></li>
+<li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#documentazione-del-componente">Documentazione del componente</a></li>
+<li class="toc-entry toc-h3"><a href="#personalizzazione-di-stile">Personalizzazione di stile</a></li>
+<li class="toc-entry toc-h3"><a href="#personalizzazione-di-comportamento">Personalizzazione di comportamento</a>
+<ul>
+<li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a></li>
-<li class="toc-entry toc-h2"><a href="#documentazione-dei-componenti">Documentazione dei componenti</a></li>
+</ul>
+</li>
 </ul>
           </div>
         
@@ -401,46 +409,63 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Modificare componenti</h1>
           <p class="bd-lead">Come modificare i componenti e i moduli esistenti, e crearne di nuovi</p>
-          <h2 id="tema-bootstrap-italia">Tema Bootstrap Italia</h2>
+          <p>Il tema Bootstrap Italia è generato secondo le direttive mostrate alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito ufficiale di Bootstrap 4.</p>
 
-<p>Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][bootstrap-themes] sul sito Bootstrap.</p>
-
-<p>I componenti di Bootstrap Italia sono divisi in due macro-aree: i <a href="/bootstrap-italia/docs/componenti/">Componenti <em>Base</em></a> e i <a href="/bootstrap-italia/docs/componenti-aggiuntivi/">Componenti <em>Aggiuntivi</em></a>.</p>
+<p>I componenti di Bootstrap Italia sono mostrati in due macro-aree: i <a href="/bootstrap-italia/docs/componenti/">Componenti <em>Base</em></a> e i <a href="/bootstrap-italia/docs/componenti-aggiuntivi/">Componenti <em>Aggiuntivi</em></a> (o <em>Plugin</em>).</p>
 
 <h4 id="componenti-base">Componenti base</h4>
 
-<p>I componenti <em>base</em> sono quelli già presenti nella libreria Bootstrap, che di conseguenza avranno una corrispondente voce in inglese anche nella <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">documentazione</a> di Bootstrap stesso.</p>
+<p>I componenti <em>base</em> sono quelli già presenti nella libreria Bootstrap 4, che di conseguenza avranno una corrispondente voce in inglese anche nella <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">documentazione</a> di Bootstrap 4 stesso.</p>
 
 <p>Tali componenti, all’interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell’accessibilità e nelle funzionalità per rispondere alle <a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida di design per i servizi web della PA</a>.</p>
 
 <h4 id="componenti-aggiuntivi">Componenti aggiuntivi</h4>
 
-<p>I componenti <em>aggiuntivi</em>, al contrario, sono quei componenti che supportano l’implementazione delle <a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida di design per i servizi web della PA</a>, ma che non sono presenti nella libreria Bootstrap.</p>
+<p>I componenti <em>aggiuntivi</em>, al contrario, sono quei componenti che non sono presenti nativamente nella libreria Bootstrap 4.</p>
 
 <p>Sul web, essi possono anche essere identificati come <em>plugin</em>, ma qui si è preferito mantenere la denominazione “componente” per sottolinearne l’uniformità di contesto con i componenti di base, con i quali condividono struttura e utilizzo.</p>
 
 <h2 id="struttura-di-un-componente">Struttura di un componente</h2>
 
-<p>Ogni componente può avere una personalizzazione di stile e di funzionalità attraverso l’utilizzo di file <code class="highlighter-rouge">scss</code> e <code class="highlighter-rouge">javascript</code>.</p>
+<p>Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l’utilizzo di un singolo file <code class="highlighter-rouge">scss</code> nella cartella <code class="highlighter-rouge">src/scss/custom/</code> e, opzionalmente, di un file <code class="highlighter-rouge">javascript</code> nella cartella <code class="highlighter-rouge">src/js/plugins/</code>. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.</p>
 
-<p>I componenti base ereditano quindi stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a>, di cui si potrà trovare il codice sorgente nella cartella rispettiva all’interno di <code class="highlighter-rouge">node_modules</code>. Ovviamente, tale codice servirà soltanto come riferimento e non andrà modificato ma esteso come segue:</p>
+<p>Queste due cartelle, assieme alla cartella <code class="highlighter-rouge">docs</code> per la stesura della documentazione, sono le uniche cartelle dove avviene l’editing dei componenti.</p>
+
+<p>Il codice presente in esse, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per <em>sovrascrivere</em> il codice già presente in Bootstrap 4 e ne esporta una versione personalizzata (un tema) nelle cartelle <code class="highlighter-rouge">dist/js</code> e <code class="highlighter-rouge">dist/css</code>.</p>
+
+<p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap 4.</p>
+
+<p>In breve, gli elementi su cui intervenire per la creazione o la modifica di componenti personalizzati possono essere:</p>
 
 <ul>
-  <li>per la personalizzazione dello stile di tali componenti, andranno sovrascritte o aggiunte variabili e classi nella cartella <code class="highlighter-rouge">src/scss</code>. Si può notare in particolare come il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importi ed estenda gli stili e le funzioni di base di Bootstrap.</li>
-  <li>per l’implementazione di funzionalità <code class="highlighter-rouge">javascript</code>, si farà invece riferimento alla cartella <code class="highlighter-rouge">src/js</code>.</li>
+  <li>Un file <code class="highlighter-rouge">.md</code> per la documentazione del componente</li>
+  <li>Un file <code class="highlighter-rouge">.scss</code> per lo stile</li>
+  <li>Un file <code class="highlighter-rouge">.js</code> per comportamenti dinamici</li>
 </ul>
 
-<p>Queste due cartelle, assieme alla cartella <code class="highlighter-rouge">docs</code> per la stesura della documentazione (vedi di seguito), sono le uniche cartelle dove avviene la personalizzazione dei componenti.</p>
+<h3 id="documentazione-del-componente">Documentazione del componente</h3>
 
-<p>Il codice presente in queste cartelle, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per “sovrascrivere” il codice già presente in Bootstrap e ne esporta una versione personalizzata (un tema) alle cartelle <code class="highlighter-rouge">dist/js</code> e <code class="highlighter-rouge">dist/css</code>.</p>
+<p>Ogni componente ha una pagina (o un paragrafo) nella documentazione alla cartella <code class="highlighter-rouge">/docs/componenti</code> o <code class="highlighter-rouge">/docs/componenti-aggiuntivi</code>. Tale documentazione è redatta in codice <a href="https://it.wikipedia.org/wiki/Markdown"><code class="highlighter-rouge">markdown</code></a> ed è comprensiva di una breve descrizione testuale, oltre ad eventuali varianti, comportamenti, esempi di codice <code class="highlighter-rouge">html</code> ed eventuali peculiarità in termini di codice Javascript.</p>
 
-<p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap.</p>
+<h3 id="personalizzazione-di-stile">Personalizzazione di stile</h3>
 
-<h2 id="documentazione-dei-componenti">Documentazione dei componenti</h2>
+<p>I componenti base ereditano ovviamente stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a>, di cui si può trovare il codice sorgente all’interno di <code class="highlighter-rouge">node_modules/bootstrap/</code>. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all’interno di <code class="highlighter-rouge">node_modules</code> andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap 4 mette a disposizione.</p>
 
-<p>Ogni componente ha una pagina o un paragrafo nella documentazione alla cartella <code class="highlighter-rouge">/docs</code>, che ne descrive comportamenti, varianti e utilizzo.</p>
+<p>Per la personalizzazione dello stile di tali componenti, andranno infatti sovrascritte o aggiunte variabili nella cartella <code class="highlighter-rouge">src/scss/_variables.scss</code>; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella <code class="highlighter-rouge">src/scss/custom/</code>. Si può notare le modalità con cui il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap 4.</p>
 
-<p>Tale documentazione è redatta in codice <code class="highlighter-rouge">markdown</code> ed è comprensiva di una breve descrizione testuale corredata da un esempio di applicazione in codice <code class="highlighter-rouge">html</code>.</p>
+<p>Il componente dovrebbe utilizzare una classe base <code class="highlighter-rouge">.nome-componente</code>, che ne definisce gli stili, e dei modificatori (se necessari) che ne possano alterare alcune proprietà (es.: <code class="highlighter-rouge">.nome-componente-sm</code>, <code class="highlighter-rouge">.nome-componente-primary</code>, ecc.).</p>
+
+<h3 id="personalizzazione-di-comportamento">Personalizzazione di comportamento</h3>
+
+<p>Per l’implementazione di funzionalità dinamiche che richiedano l’uso di <code class="highlighter-rouge">javascript</code>, si può invece fare riferimento alla cartella <code class="highlighter-rouge">src/js/plugins/</code>.</p>
+
+<p>Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella <code class="highlighter-rouge">node_modules/bootstrap/js/</code> e alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> e la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">pagina relativa all’utilizzo di Javascript</a> sul sito Bootstrap 4. In generale, è bene usare attributi <code class="highlighter-rouge">data-</code> per collegare Javascript ai componenti, e non usare i nomi delle classi.</p>
+
+<hr />
+
+<h6 id="continua-la-lettura-">Continua la lettura &gt;</h6>
+
+<p>Per analizzare un componente di esempio da cui partire per lo sviluppo di componenti avanzati personalizzati, puoi fare riferimento alla pagina descrittiva del <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">componente base</a>.</p>
 
 
         </main>
@@ -463,8 +488,15 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-  <script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804041628"></script>
-  <script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804041628"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804101138"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804101138"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',
