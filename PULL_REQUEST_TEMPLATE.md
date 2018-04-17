@@ -10,7 +10,7 @@
 - [ ] Le modifiche sono conformi alle [linee guida di design](https://design-italia.readthedocs.io/it/stable/index.html).
 - [ ] Il codice è coerente con le [indicazioni di progetto](https://italia.github.io/bootstrap-italia/docs/come-iniziare/).
 - [ ] Le modifiche sono state verificate sui [Browser supportati](https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/) e per diverse risoluzioni dello schermo.
-- [ ] Sono stati effettuati test di accessibilità in ottemperanza a quanto descritto nelle [linee guida di design](https://design-italia.readthedocs.io/it/stable/doc/service-design/accessibilita.html).
+- [ ] Sono stati effettuati test di accessibilità in ottemperanza a quanto descritto nell'[area "Accessibilità" delle linee guida di design](https://design-italia.readthedocs.io/it/stable/doc/service-design/accessibilita.html).
 - [ ] La documentazione è stata aggiornata.
 
 <!-- Se qualcosa non è chiaro, contattaci sullo Slack di Developers Italia (https://developersitalia.slack.com/messages/C7VPAUVB3)! -->
