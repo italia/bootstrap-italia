@@ -1,6 +1,6 @@
 ## Comportamento atteso
 <!--- In caso di bug, descrivi come ti aspetti che dovrebbe funzionare -->
-<!--- In caso di feature, descivi cosa si dovrebbe implementare -->
+<!--- In caso di feature, descrivi cosa si dovrebbe implementare -->
 
 
 ## Comportamento attuale
