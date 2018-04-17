@@ -13,16 +13,16 @@
 <title>Datepicker · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804101138" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804171751" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804101138" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804171751" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804101138" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804171751" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.5.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.6.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -229,9 +229,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/bottoni/">
               Bottoni
             </a><span class="badge badge-info">wip</span></li><li>
-            <a href="/bootstrap-italia/docs/componenti/button-group/">
-              Button group
-            </a><span class="badge badge-info">to do</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
             </a></li><li>
@@ -262,12 +259,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale
             </a><span class="badge badge-info">wip</span></li><li>
-            <a href="/bootstrap-italia/docs/componenti/navigazione/">
-              Navigazione
-            </a><span class="badge badge-info">to do</span></li><li>
-            <a href="/bootstrap-italia/docs/componenti/navbar/">
-              Navbar
-            </a><span class="badge badge-info">to do</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/offcanvas/">
               Offcanvas
             </a></li><li>
@@ -361,8 +352,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/utilities/media-object/">
               Media object
             </a></li><li>
-            <a href="/bootstrap-italia/docs/utilities/position/">
-              Position
+            <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
+              Ombreggiature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/posizionamento/">
+              Posizionamento
             </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/screenreaders/">
               Screenreaders
@@ -408,15 +402,15 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Per la gestione della data e degli orari abbiamo scelto di usare un plugin che risulta responsive e accessibile. Sfrutteremo questo componente per mettere a disposizione la possibilità di inserire una data o un orario in modo semplice e veloce.</p>
 
-<div class="bd-callout bd-callout-info">
+<div class="bd-callout bd-callout-warning">
 <p>Il componente datepicker è basato su una libreria di terze parti, <a href="http://amsul.ca/pickadate.js/">pickadate.js</a>, che aggiunge circa 30kb alla dimensione finale del file JS di Bootstrap Italia <code class="highlighter-rouge">bootstrap-italia.bundle.min.js</code>.</p>
 
-<p>Se il componente datepicker non è d’interesse per il proprio sito web, è buona prassi ricompilare la libreria senza i file di <code class="highlighter-rouge">pickadate.js</code>, oppure utilizzare la versione del JS di Bootstrap Italia che non comprende le librerie esterne <code class="highlighter-rouge">bootstrap-italia.min.js</code>, includendo però a quel punto nell’HTML della pagina le altre librerie necessarie, come indicato nell’<a href="/bootstrap-italia/docs/docs/come-iniziare/introduzione/#versione-semplice">introduzione</a>.</p>
+<p>Se il componente datepicker non è d’interesse per il proprio sito web, è buona prassi ricompilare la libreria senza i file di <code class="highlighter-rouge">pickadate.js</code>, come indicato nell’<a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/#rimozione-datepicker">introduzione</a>.</p>
 </div>
 
 <h2 id="calendario">Calendario</h2>
 
-<p>Per inserire un campo di tipo <em>datepicker</em>, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perchè risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="datepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">datepicker</code>.</p>
+<p>Per inserire un campo di tipo <em>datepicker</em>, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perchéqua risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="datepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">datepicker</code>.</p>
 
 <div class="bd-example">
 <div class="form-group">
@@ -470,7 +464,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="scelta-oraria">Scelta oraria</h2>
 
-<p>Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il <em>datepicker</em>, ance in questo caso il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perchè risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="timepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">timepicker</code>.</p>
+<p>Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il <em>datepicker</em>, ance in questo caso il tag input dovrà avere come classe non <code class="highlighter-rouge">form-control</code>, ma <code class="highlighter-rouge">form-control-plaintext</code> perché risulterà readonly. Per attivare il componente va aggiunto l’attributo <code class="highlighter-rouge">data-action="timepicker"</code> e per stilizzarlo la classe <code class="highlighter-rouge">timepicker</code>.</p>
 
 <div class="bd-example">
 <div class="form-group">
@@ -507,14 +501,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804101138"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804171751"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804101138"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804171751"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

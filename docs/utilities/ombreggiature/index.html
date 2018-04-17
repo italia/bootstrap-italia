@@ -5,12 +5,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Banner informativo sull’utilizzo dei cookie all’interno del sito web">
+<meta name="description" content="Aggiungi o rimuovi ombreggiature con questa utility.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.7.3">
 <meta name="robots" content="noindex">
 
-<title>Cookiebar · Bootstrap Italia</title>
+<title>Ombreggiature · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804171751" rel="stylesheet">
@@ -38,14 +38,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Cookiebar">
-<meta name="twitter:description" content="Banner informativo sull’utilizzo dei cookie all’interno del sito web">
+<meta name="twitter:title" content="Ombreggiature">
+<meta name="twitter:description" content="Aggiungi o rimuovi ombreggiature con questa utility.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="/docs/componenti-aggiuntivi/cookiebar/">
-<meta property="og:title" content="Cookiebar">
-<meta property="og:description" content="Banner informativo sull’utilizzo dei cookie all’interno del sito web">
+<meta property="og:url" content="/docs/utilities/ombreggiature/">
+<meta property="og:title" content="Ombreggiature">
+<meta property="og:description" content="Aggiungi o rimuovi ombreggiature con questa utility.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -283,7 +283,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/tooltip/">
               Tooltip
             </a></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
         Componenti Aggiuntivi
       </a>
@@ -291,7 +291,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <ul class="nav bd-sidenav pl-2"><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
               Introduzione
-            </a></li><li class="active bd-sidenav-active">
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
               Cookiebar
             </a><span class="badge badge-info">wip</span></li><li>
@@ -304,7 +304,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/datepicker/">
               Datepicker
             </a><span class="badge badge-info">wip</span></li></ul>
-    </div><div class="bd-toc-item">
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
         Utilities
       </a>
@@ -351,7 +351,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/utilities/media-object/">
               Media object
-            </a></li><li>
+            </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
               Ombreggiature
             </a></li><li>
@@ -381,66 +381,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         </div>
 
         
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#perché-usarlo">Perché usarlo</a></li>
-<li class="toc-entry toc-h2"><a href="#come-usarlo">Come usarlo</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#codice-html">Codice HTML</a></li>
-</ul>
-</li>
-</ul>
-          </div>
-        
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Cookiebar</h1>
-          <p class="bd-lead">Banner informativo sull’utilizzo dei cookie all’interno del sito web</p>
-          <h2 id="perché-usarlo">Perché usarlo</h2>
-
-<p>Come previsto dal Provvedimento dell’8 maggio 2014 sull’<a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884">individuazione delle modalità semplificate per l’informativa e l’acquisizione del consenso per l’uso dei cookie</a>, è necessario inserire una barra informativa per i cookie (in gergo <strong>Cookiebar</strong>) qualora ci sia l’effettiva registrazione di dati personali.</p>
-
-<p>Per maggiori informazioni si rimanda alla pagina <a href="http://www.garanteprivacy.it/cookie">www.garanteprivacy.it/cookie</a> dove sono raccolti documenti e informazioni utili.</p>
-
-<h2 id="come-usarlo">Come usarlo</h2>
-
-<p>Bootstrap Italia ha predisposto un codice HTML da prendere e copiare all’interno delle proprie pagine web inserendolo appena dopo l’apertura del tag <code class="highlighter-rouge">body</code>.</p>
-
-<p>Esso può essere personalizzato nel testo, ma è importante lasciare inalterata la classe <code class="highlighter-rouge">cookiebar</code> perché ad essa è collegata la funzione Javascript che gestisce la visualizzazione della Cookiebar.</p>
-
-<p>Il bottone permette la chiusura della Cookiebar attraverso il <em>data attribute</em> <code class="highlighter-rouge">data-accept="cookiebar"</code>.</p>
-
-<h3 id="codice-html">Codice HTML</h3>
-
-<style>
-  /* Style override for Documentation purposes */
-  .cookiebar {
-    display: block !important;
-    position: relative !important;
-  }
-</style>
+          <h1 class="bd-title" id="content">Ombreggiature</h1>
+          <p class="bd-lead">Aggiungi o rimuovi ombreggiature con questa utility.</p>
+          <p>Nonostante le ombreggiature siano disabilitate in Bootstrap e siano attivabili soltanto attraverso l’utilizzo della variabile <code class="highlighter-rouge">$enable-shadows</code>, è possibile rapidamente aggiungere un’ombreggiatura nella parte sottostante un elemento con le classi che seguono.</p>
 
 <div class="bd-example">
-    <div class="cookiebar bg-dark p-4" aria-hidden="true">
-        <p class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti.
-            <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br />
-        </p>
-        <p>
-            <button data-accept="cookiebar" class="btn btn-info mr-2">Accetto</button>
-            <a href="#" class="btn btn-outline-info">Privacy policy</a>
-        </p>
-    </div>
+<div class="shadow-none p-3 mb-5 bg-light">Nessuna ombra</div>
+<div class="shadow-sm p-3 mb-5 bg-white">Ombra piccola</div>
+<div class="shadow p-3 mb-5 bg-white">Ombra media</div>
+<div class="shadow-lg p-3 mb-5 bg-white">Ombra grande</div>
 </div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cookiebar bg-dark p-4 hide"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>Questo sito utilizza cookie tecnici, analytics e di terze parti.
-        <span class="nt">&lt;br&gt;</span>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<span class="nt">&lt;br&gt;</span>
-    <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">data-accept=</span><span class="s">"cookiebar"</span> <span class="na">class=</span><span class="s">"btn btn-info mr-2"</span><span class="nt">&gt;</span>Accetto<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Privacy policy<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-none p-3 mb-5 bg-light"</span><span class="nt">&gt;</span>Nessuna ombra<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-sm p-3 mb-5 bg-white"</span><span class="nt">&gt;</span>Ombra piccola<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow p-3 mb-5 bg-white"</span><span class="nt">&gt;</span>Ombra media<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"shadow-lg p-3 mb-5 bg-white"</span><span class="nt">&gt;</span>Ombra grande<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
         </main>
