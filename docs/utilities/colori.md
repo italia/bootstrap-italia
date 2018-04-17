@@ -43,6 +43,6 @@ Allo stesso modo di quanto avviene per il testo, le classi `bg-*` permettono di 
 
 Bootstrap Italia eredita da Bootstrap la possibilità di avere comodamente sfondi con gradiente. Tale funzionalità è però disabilitata di default, e va esplicitamente attivata impostando la variabile Sass `$enable-gradients` a true, e ricompilando i CSS.
 
-Si possono trovare maggiori informazioni a riguardo sul [sito di Bootstrap 4](https://getbootstrap.com/docs/4.0/utilities/colors/#background-gradient).
+Si possono trovare maggiori informazioni a riguardo sul [sito di Bootstrap](https://getbootstrap.com/docs/4.0/utilities/colors/#background-gradient).
 
 {% include callout-warning-color-assistive-technologies.md %}

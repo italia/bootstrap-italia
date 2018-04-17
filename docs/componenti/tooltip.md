@@ -24,7 +24,7 @@ l'attivazione per gli utenti che usano la tastiera per navigare.
 Cose da sapere quando usi il plugin tooltip:
 
 - I tooltip si basano sulla libreria di terze parti [Popper.js](https://popper.js.org/).
-Per fare in modo che i tooltip funzionino è quindi necessario includere [popper.min.js]({{ site.cdn.popper }}) prima di
+Per fare in modo che i tooltip funzionino è quindi necessario includere `popper.min.js` prima di
 bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 - I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I tooltip con titoli vuoti non saranno mai visualizzati.

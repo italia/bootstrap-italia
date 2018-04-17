@@ -36,7 +36,7 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 Nel caso si desideri utilizzare le icone fornite nel pacchetto di release, sarà necessario includere anche il file CSS `italia-icon-font.min.css`, che a sua volta richiederà la presenza di una serie di file di font, visibili nella cartella `font`. In questo caso, il codice da inserire sarà:
 
 {% highlight html %}
-<link rel="stylesheet" href="./italia-icon-font.min.css">
+<link rel="stylesheet" href="./italia-icon-font.css">
 {% endhighlight %}
 
 ### Javascript
@@ -84,8 +84,8 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere tag `<script>` per jQuery (di cui è sufficiente la versione _slim_) e per Popper.js come mostrato di seguito:
 
 {% highlight html %}
-<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_integrity }}"></script>
-<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_integrity }}"></script>
+{{ site.cdn.jquery }}
+{{ site.cdn.popper }}
 <script src="/bootstrap-italia.min.js"></script>
 {% endhighlight %}
 

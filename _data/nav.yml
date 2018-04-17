@@ -26,8 +26,8 @@
     - title: Breadcrumb
     - title: Bottoni
       status: wip
-    - title: Button group
-      status: to do
+    #- title: Button group
+    #  status: to do
     - title: Card
     - title: Carousel
     - title: Checkbox
@@ -43,10 +43,10 @@
       status: wip
     - title: Modale
       status: wip
-    - title: Navigazione
-      status: to do
-    - title: Navbar
-      status: to do
+    #- title: Navigazione
+    #  status: to do
+    #- title: Navbar
+    #  status: to do
     - title: Offcanvas
     - title: Paginazione
       status: wip

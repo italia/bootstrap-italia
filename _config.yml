@@ -1,14 +1,11 @@
 # Dependencies
 markdown:       kramdown
 highlighter:    rouge
-
 kramdown:
   auto_ids:     true
 
-# Permalinks
 permalink:      pretty
 
-# Server
 source:         "."
 destination:    ./_gh_pages
 baseurl:        ""
@@ -37,30 +34,28 @@ plugins:
   - jekyll-toc
 
 # Social
-title:              "Bootstrap Italia"
-description:        "Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA"
-authors:            "Team per la Trasformazione Digitale"
-authors_url:        "https://teamdigitale.governo.it/"
-social_card_path:   "/docs/assets/img/favicons/social-card.png"
-social_logo_path:   "/docs/assets/img/favicons/android-chrome-192x192.png"
+title:              'Bootstrap Italia'
+description:        'Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA'
+authors:            'Team per la Trasformazione Digitale'
+authors_url:        'https://teamdigitale.governo.it/'
+social_card_path:   '/docs/assets/img/favicons/social-card.png'
+social_logo_path:   '/docs/assets/img/favicons/android-chrome-192x192.png'
+repo:               'https://github.com/italia/bootstrap-italia/'
+developers:         'https://developers.italia.it/'
+slack:              'https://slack.developers.italia.it/'
+twitter:            'https://twitter.com/teamdigitaleIT'
 
-# Custom variables
-current_version:      0.5.0
-bootstrap_version:    4
-repo:                 "https://github.com/italia/bootstrap-italia/"
-developers:           "https://developers.italia.it/"
-slack:                "https://slack.developers.italia.it/"
-twitter:              "https://twitter.com/teamdigitaleIT"
+# Versions
+current_version:    0.5.0
+bootstrap_version:  4.1
 
-ga_property:        "UA-114758441-1"
+# Analytics
+ga_property:        'UA-114758441-1'
 
-download:
-  source:           "src/"
-
+# CDN links
 cdn:
-  css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  jquery:           "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
-  jquery_integrity: "sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"
-  popper_integrity: "sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY="
+  bootstrap_css:    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU=" crossorigin="anonymous" />'
+  bootstrap_js:     '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha256-C8oQVJ33cKtnkARnmeWp6SDChkU+u7KvsNMFUzkkUzk=" crossorigin="anonymous"></script>'
+  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>'
+  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4=" crossorigin="anonymous"></script>'
+

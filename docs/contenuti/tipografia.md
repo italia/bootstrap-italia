@@ -125,7 +125,7 @@ grande.
 
 ### Personalizzazione delle intestazioni
 
-È possibile utilizzare le classi di utilità incluse in Bootstrap 4 per
+È possibile utilizzare le classi di utilità incluse in Bootstrap per
 dare uno stile diverso per testi di intestazione secondaria.
 
 {% capture example %}
@@ -176,7 +176,7 @@ Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi
 stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche
 indesiderate che i tag porterebbero con sé.
 
-È possibile sfruttare le classi di Bootstrap 4 anche per modificare allineamento,
+È possibile sfruttare le classi di Bootstrap anche per modificare allineamento,
 stile, peso e colore del testo. Per questo, si può fare riferimento alla
 documentazione delle [utilità di testo]({{ site.baseurl }}/docs/utilities/text/)
 e [utilità di colore]({{ site.baseurl }}/docs/utilit/colors/).
