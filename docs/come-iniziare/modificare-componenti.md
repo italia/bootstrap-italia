@@ -42,6 +42,8 @@ In breve, gli elementi su cui intervenire per la creazione o la modifica di comp
 
 Ogni componente ha una pagina (o un paragrafo) nella documentazione alla cartella `/docs/componenti` o `/docs/componenti-aggiuntivi`. Tale documentazione è redatta in codice [`markdown`](https://it.wikipedia.org/wiki/Markdown) ed è comprensiva di una breve descrizione testuale, oltre ad eventuali varianti, comportamenti, esempi di codice `html` ed eventuali peculiarità in termini di codice Javascript.
 
+Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md` dedicato e la rispettiva voce al menù principale nel file `_data/nav.yml`.
+
 ### Personalizzazione di stile
 
 I componenti base ereditano ovviamente stili e funzionalità da [Bootstrap {{ site.bootstrap_version }}][documentazione-bootstrap], di cui si può trovare il codice sorgente all'interno di `node_modules/bootstrap/`. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all'interno di `node_modules` andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap {{ site.bootstrap_version }} mette a disposizione.

@@ -13,12 +13,12 @@ Per la gestione della data e degli orari abbiamo scelto di usare un plugin che r
 {% capture callout %}
 Il componente datepicker è basato su una libreria di terze parti, [pickadate.js](http://amsul.ca/pickadate.js/), che aggiunge circa 30kb alla dimensione finale del file JS di Bootstrap Italia `bootstrap-italia.bundle.min.js`.
 
-Se il componente datepicker non è d'interesse per il proprio sito web, è buona prassi ricompilare la libreria senza i file di `pickadate.js`, oppure utilizzare la versione del JS di Bootstrap Italia che non comprende le librerie esterne `bootstrap-italia.min.js`, includendo però a quel punto nell'HTML della pagina le altre librerie necessarie, come indicato nell'[introduzione]({{ site.baseurl }}/docs/docs/come-iniziare/introduzione/#versione-semplice).
-{% endcapture %}{% include callout.html content=callout type="info" %}
+Se il componente datepicker non è d'interesse per il proprio sito web, è buona prassi ricompilare la libreria senza i file di `pickadate.js`, come indicato nell'[introduzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/#rimozione-datepicker).
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Calendario
 
-Per inserire un campo di tipo _datepicker_, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perchè risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="datepicker"` e per stilizzarlo la classe `datepicker`.
+Per inserire un campo di tipo _datepicker_, che apre un calendario per la selezione delle date, il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perchéqua risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="datepicker"` e per stilizzarlo la classe `datepicker`.
 
 {% capture example %}
 <div class="form-group">
@@ -52,7 +52,7 @@ Si tenga presente che per l'inserimento di date con un range maggiore di un anno
 
 ## Scelta oraria
 
-Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il _datepicker_, ance in questo caso il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perchè risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="timepicker"` e per stilizzarlo la classe `timepicker`.
+Oltre al calendario il plugin offre la possibilità di fare una scelta su base oraria. Come per il _datepicker_, ance in questo caso il tag input dovrà avere come classe non `form-control`, ma `form-control-plaintext` perché risulterà readonly. Per attivare il componente va aggiunto l'attributo `data-action="timepicker"` e per stilizzarlo la classe `timepicker`.
 
 {% capture example %}
 <div class="form-group">

@@ -28,7 +28,7 @@ In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi 
 
 ### Varianti di colore
 
-Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap 4, con alcune personalizzazioni:
+Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
