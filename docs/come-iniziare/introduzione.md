@@ -18,6 +18,8 @@ Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è suff
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
+Oppure installalo tramite npm: `npm i --save bootstrap-italia`
+
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
 ### CSS
