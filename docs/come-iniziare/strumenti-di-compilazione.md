@@ -52,28 +52,43 @@ Di seguito un paio di esempi pratici.
 
 ### Rimozione Datepicker
 
-Ad esempio, nel caso non sia necessario il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)), è sufficiente rimuovere queste linee dal file `src/scss/bootstrap-italia.scss`:
+Ad esempio, al momento il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)) è di default disabilitato in quanto non definitivo.
  
-- `@import "node_modules/pickadate/lib/themes/default";`
-- `@import "node_modules/pickadate/lib/themes/default.date";`
-- `@import "node_modules/pickadate/lib/themes/default.time";`
-  
-E queste dal file `gulpfile.js`:
+Si può vedere come tale componente sia escluso dal processo di compilazione nei file:
+ 
+ `src/scss/bootstrap-italia.scss`:
+ 
+{% highlight html %}
+// @import "node_modules/pickadate/lib/themes/default";
+// @import "node_modules/pickadate/lib/themes/default.date";
+// @import "node_modules/pickadate/lib/themes/default.time";
+{% endhighlight %}
 
-- `'./node_modules/pickadate/lib/compressed/picker.js',`
-- `'./node_modules/pickadate/lib/compressed/picker.date.js',`
-- `'./node_modules/pickadate/lib/compressed/picker.time.js',`
-- `'./src/js/plugins/date-picker.js',`
+`gulpfile.js`:
+
+{% highlight html %}
+// './node_modules/pickadate/lib/compressed/picker.js',
+// './node_modules/pickadate/lib/compressed/picker.date.js',
+// './node_modules/pickadate/lib/compressed/picker.time.js'
+(...)
+// './src/js/plugins/date-picker.js'
+{% endhighlight %}
 
 ### Rimozione Cookiebar
 
-Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dal file `src/scss/bootstrap-italia.scss`:
+Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
 
-- `@import "custom/cookiebar";`
+`src/scss/bootstrap-italia.scss`:
 
-E queste dal file `gulpfile.js`:
+{% highlight html %}
+// @import "custom/cookiebar";
+{% endhighlight %}
 
-- `'./src/js/plugins/cookiebar.js',`
+`gulpfile.js`:
+
+{% highlight html %}
+// './src/js/plugins/cookiebar.js',
+{% endhighlight %}
 
 In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.
 

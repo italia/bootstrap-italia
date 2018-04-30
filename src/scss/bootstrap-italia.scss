@@ -46,10 +46,10 @@
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
 
-// Pickadate
-@import "node_modules/pickadate/lib/themes/default";
-@import "node_modules/pickadate/lib/themes/default.date";
-@import "node_modules/pickadate/lib/themes/default.time";
+// Pickadate: temporaneamente disabilitato in quanto stile non definitivo
+// @import "node_modules/pickadate/lib/themes/default";
+// @import "node_modules/pickadate/lib/themes/default.date";
+// @import "node_modules/pickadate/lib/themes/default.time";
 
 // Customizzazioni e nuovi componenti
 @import "custom/type";
@@ -74,5 +74,3 @@
 @import "custom/back-to-top";
 @import "custom/autocomplete";
 @import "custom/componente-base";
-
-

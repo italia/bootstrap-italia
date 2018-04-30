@@ -67,8 +67,8 @@
       status: wip
     - title: Back to top
       status: wip
-    - title: Datepicker
-      status: wip
+    #- title: Datepicker
+    #  status: wip
 
 - title: Utilities
   pages:

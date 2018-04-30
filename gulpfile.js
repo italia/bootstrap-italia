@@ -1,5 +1,4 @@
 const gulp = require('gulp'),
-  path = require('path'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -10,21 +9,22 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   replace = require('gulp-replace'),
   wrapper = require('gulp-wrapper'),
-  child = require('child_process'),
   log = require('fancy-log'),
-  touch = require('gulp-touch-cmd')
+  touch = require('gulp-touch-cmd'),
+  spawn = require('cross-spawn'),
   browserSync = require('browser-sync').create(),
   pkg = require('./package.json');
 
 const DOCUMENTATION_DESTINATION = '_gh_pages';
 
+// Pickadate: temporaneamente disabilitato in quanto stile non definitivo
 const Paths = {
   VENDOR_JS: [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
-    './node_modules/pickadate/lib/compressed/picker.js',
-    './node_modules/pickadate/lib/compressed/picker.date.js',
-    './node_modules/pickadate/lib/compressed/picker.time.js'
+    // './node_modules/pickadate/lib/compressed/picker.js',
+    // './node_modules/pickadate/lib/compressed/picker.date.js',
+    // './node_modules/pickadate/lib/compressed/picker.time.js'
   ],
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_JS: [
@@ -44,7 +44,7 @@ const Paths = {
     'src/js/plugins/componente-base.js',
     'src/js/plugins/cookiebar.js',
     'src/js/plugins/custom-select.js',
-    'src/js/plugins/date-picker.js',
+    // 'src/js/plugins/date-picker.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/forward.js',
     'src/js/plugins/offcanvas.js',
@@ -208,7 +208,7 @@ gulp.task('icons-font', () => {
 
 gulp.task('jekyll', done => {
   let jekyllExecutable = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-  const jekyll = child.spawn(jekyllExecutable, ['build',
+  const jekyll = spawn(jekyllExecutable, ['build',
     '--watch',
     '--incremental',
     '--drafts',
