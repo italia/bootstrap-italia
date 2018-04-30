@@ -7,22 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Come compilare il codice sorgente e generare la documentazione che stai leggendo">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v3.7.3">
+<meta name="generator" content="Jekyll v3.8.0">
 <meta name="robots" content="noindex">
 
 <title>Strumenti di compilazione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804171751" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201804301335" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804171751" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201804301335" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804171751" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201804301335" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.6.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.7.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -300,9 +300,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
               Back to top
-            </a><span class="badge badge-info">wip</span></li><li>
-            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/datepicker/">
-              Datepicker
             </a><span class="badge badge-info">wip</span></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
@@ -466,36 +463,35 @@ Di seguito un paio di esempi pratici.</p>
 
 <h3 id="rimozione-datepicker">Rimozione Datepicker</h3>
 
-<p>Ad esempio, nel caso non sia necessario il componente per la gestione del calendario (<a href="/bootstrap-italia/docs/componenti-avanzati/datepicker/">Datepicker</a>), è sufficiente rimuovere queste linee dal file <code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
+<p>Ad esempio, al momento il componente per la gestione del calendario (<a href="/bootstrap-italia/docs/componenti-avanzati/datepicker/">Datepicker</a>) è di default disabilitato in quanto non definitivo.</p>
 
-<ul>
-  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default";</code></li>
-  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default.date";</code></li>
-  <li><code class="highlighter-rouge">@import "node_modules/pickadate/lib/themes/default.time";</code></li>
-</ul>
+<p>Si può vedere come tale componente sia escluso dal processo di compilazione nei file:</p>
 
-<p>E queste dal file <code class="highlighter-rouge">gulpfile.js</code>:</p>
+<p><code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
 
-<ul>
-  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.js',</code></li>
-  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.date.js',</code></li>
-  <li><code class="highlighter-rouge">'./node_modules/pickadate/lib/compressed/picker.time.js',</code></li>
-  <li><code class="highlighter-rouge">'./src/js/plugins/date-picker.js',</code></li>
-</ul>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">// @import "node_modules/pickadate/lib/themes/default";
+// @import "node_modules/pickadate/lib/themes/default.date";
+// @import "node_modules/pickadate/lib/themes/default.time";</code></pre></figure>
+
+<p><code class="highlighter-rouge">gulpfile.js</code>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">// './node_modules/pickadate/lib/compressed/picker.js',
+// './node_modules/pickadate/lib/compressed/picker.date.js',
+// './node_modules/pickadate/lib/compressed/picker.time.js'
+(...)
+// './src/js/plugins/date-picker.js'</code></pre></figure>
 
 <h3 id="rimozione-cookiebar">Rimozione Cookiebar</h3>
 
-<p>Se invece si desidera escludere il componente <a href="/bootstrap-italia/docs/componenti-avanzati/cookiebar/">Cookiebar</a>, è sufficiente rimuovere le seguenti linee dal file <code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
+<p>Se invece si desidera escludere il componente <a href="/bootstrap-italia/docs/componenti-avanzati/cookiebar/">Cookiebar</a>, è sufficiente rimuovere le seguenti linee dai file</p>
 
-<ul>
-  <li><code class="highlighter-rouge">@import "custom/cookiebar";</code></li>
-</ul>
+<p><code class="highlighter-rouge">src/scss/bootstrap-italia.scss</code>:</p>
 
-<p>E queste dal file <code class="highlighter-rouge">gulpfile.js</code>:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">// @import "custom/cookiebar";</code></pre></figure>
 
-<ul>
-  <li><code class="highlighter-rouge">'./src/js/plugins/cookiebar.js',</code></li>
-</ul>
+<p><code class="highlighter-rouge">gulpfile.js</code>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">// './src/js/plugins/cookiebar.js',</code></pre></figure>
 
 <p>In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.</p>
 
@@ -586,14 +582,14 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804171751"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201804301335"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804171751"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201804301335"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

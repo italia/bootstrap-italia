@@ -97,7 +97,7 @@
 
   // ParticlesJS - Docs homepage particles
   if ($('#particles-js').length) {
-    const particlesJSON = {
+    var particlesJSON = {
       "particles": {
         "number":{"value":160,"density":{"enable":true,"value_area":800}},
         "color":{"value":"#FFF"},
