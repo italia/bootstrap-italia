@@ -8,7 +8,7 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 
-@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/mixins"; 
 @import "custom/mixins/buttons";
 
 @import "node_modules/bootstrap/scss/root";
@@ -32,8 +32,8 @@
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "node_modules/bootstrap/scss/pagination";
 @import "node_modules/bootstrap/scss/badge";
-// @import "node_modules/bootstrap/scss/jumbotron";
-// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/jumbotron"; 
+// @import "node_modules/bootstrap/scss/alert"; 
 @import "node_modules/bootstrap/scss/progress";
 @import "node_modules/bootstrap/scss/media";
 @import "node_modules/bootstrap/scss/list-group";
@@ -43,6 +43,7 @@
 @import "node_modules/bootstrap/scss/popover";
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
+
 
 // Extended Bootstrap components
 @import "custom/type";
@@ -61,6 +62,7 @@
 @import "custom/pagination";
 @import "custom/offcanvas";
 @import "custom/tab";
+@import "custom/skiplinks";
 
 // Custom components
 @import "plugins/cookiebar";

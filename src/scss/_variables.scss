@@ -310,6 +310,10 @@ $reset-padding: 0 !default;
 $alert-padding-y: 1rem;
 $alert-padding-x: 1rem;
 
+// Skiplinks
+$skiplink-padding-y: .5rem; 
+$skiplink-padding-x: .5rem;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
@@ -323,6 +327,11 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
+// Hover states breackpoint
+// Define minimum dimension for over states activation
+//
+$grid-breakpoints-hover: 1025px;
+//
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.

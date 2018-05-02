@@ -1,0 +1,37 @@
+//mobile
+.skiplinks{
+	background-color: $teal;
+	text-align: center;
+	a{
+		display: inline-block;
+		padding: $skiplink-padding-y $skiplink-padding-x;
+		display: block;
+		font-weight: 600;
+	}
+	
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+	
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	
+}
+
+//Hover states
+@media (min-width: $grid-breakpoints-hover) {
+	
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	
+}

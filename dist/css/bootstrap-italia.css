@@ -8321,6 +8321,15 @@ select.form-control, textarea.form-control {
 .it-ico-lg {
   font-size: 1.5rem; }
 
+.skiplinks {
+  background-color: #0bd9d2;
+  text-align: center; }
+  .skiplinks a {
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    display: block;
+    font-weight: 600; }
+
 .cookiebar {
   bottom: 0;
   left: 0;
