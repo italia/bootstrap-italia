@@ -1,0 +1,59 @@
+// primary colors tinte e ombre------------------
+$colorlistA : 
+	$primary-a1
+	$primary-a2
+	$primary-a3
+	$primary-a4
+	$primary-a5
+	$primary-a6
+	$primary-a7
+	$primary-a8
+	$primary-a9
+	$primary-a10
+	$primary-a11
+	$primary-a12
+	$primary-a13; 
+
+@for $i from 1 through length($colorlistA){
+	$color: nth($colorlistA, $i);
+	.primary-bg-a#{$i}{
+		background-color:$color; 
+	}
+}
+// primary colors toni------------------
+$colorlistB : 
+	$primary-b1
+	$primary-b2
+	$primary-b3
+	$primary-b4
+	$primary-b5
+	$primary-b6
+	$primary-b7;
+
+@for $i from 1 through length($colorlistB){
+	$color: nth($colorlistB, $i);
+	.primary-bg-b#{$i}{
+		background-color:$color; 
+	}
+}
+// primary colors saturazione------------------
+$colorlistC : 
+	$primary-c1
+	$primary-c2
+	$primary-c3
+	$primary-c4
+	$primary-c5
+	$primary-c6
+	$primary-c7
+	$primary-c8
+	$primary-c9
+	$primary-c10
+	$primary-c11
+	$primary-c12; 
+
+@for $i from 1 through length($colorlistC){
+	$color: nth($colorlistC, $i);
+	.primary-bg-c#{$i}{
+		background-color:$color; 
+	}
+}
