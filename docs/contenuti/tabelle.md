@@ -288,6 +288,43 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
 </table>
 {% endcapture %}{% include example.html content=example %}
 
+## Tabella senza bordi
+
+Aggiungi la classe `.table-borderless` per una tabella senza bordi.
+
+{% capture example %}
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mario</td>
+      <td>Verdi</td>
+      <td>mario.verdi</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Francesco</td>
+      <td>Bianchi</td>
+      <td>francesco.bianchi</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Alessandro</td>
+      <td>Rossi</td>
+      <td>alessandro.rossi</td>
+    </tr>
+  </tbody>
+</table>
+{% endcapture %}{% include example.html content=example %}
+
 ## Righe ed hover
 
 Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  contenute in `<tbody>`.

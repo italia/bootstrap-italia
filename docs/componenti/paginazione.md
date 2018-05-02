@@ -10,7 +10,7 @@ toc: true
 
 I collegamenti della paginazione sono contenuti per praticità in un elemento `<nav>` per dare la possibilità agli screenreader, e altre tecnologie assistive, di identificarli come una sezione di navigazione.
 
-Poichè è molto probabile che la pagina possa contenere più di un elemento `<nav>` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
+Poiché è molto probabile che la pagina possa contenere più di un elemento `<nav>` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
 
 {% capture example %}
 <nav aria-label="Esempio di navigazione della pagina">

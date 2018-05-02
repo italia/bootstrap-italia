@@ -98,7 +98,7 @@ const Select = (($) => {
 
       $select.data('select-id', uniqueID);
 
-      wrapper.addClass($select.attr('class'));
+      //wrapper.addClass($select.attr('class'));
 
       if (this._isSearchable) {
         this._setSearchableOption();
@@ -170,7 +170,8 @@ const Select = (($) => {
 
       var $newSelect = $('<input type="text" class="dropdown select-dropdown" data-toggle="dropdown" readonly="true" ' + ($select.is(':disabled') ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
       $select.before($newSelect);
-      $newSelect.before(dropdownIcon);
+      $newSelect.before(dropdownIcon).addClass($select.attr('class').replace('custom-select', ''));
+
 
       $newSelect.after(this._customElement);
       if (!$select.is(':disabled')) {

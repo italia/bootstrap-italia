@@ -74,7 +74,7 @@ Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalto
 
 ## Le opzioni
 
-Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perchè la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
 Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.
 

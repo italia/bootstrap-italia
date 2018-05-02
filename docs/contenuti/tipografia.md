@@ -1,16 +1,24 @@
 ---
 layout: docs
 title: Tipografia
-description: Documentazione ed esempi per la tipografia di Bootstrap, incluse impostazioni globali, intestazioni, testo del corpo, elenchi e altro.
+description: Documentazione sulla gestione della tipografia, come intestazioni,
+  paragrafi, citazioni, elenchi e altro.
 group: contenuti
 toc: true
 ---
 
-Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei link. Quando è necessario un maggiore controllo, fornisce delle [classi di utilità testuali]({{ site.baseurl }}/docs/utilities/testo/).
+Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
+link. Quando è necessario un maggiore controllo, fornisce delle
+[classi di utilità testuali]({{ site.baseurl }}/docs/utilities/testo/).
 
-### Tipografia responsive
+## Tipografia responsive
 
-Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando il `font-size` dell'elemento radice, con una media query che imposta dimensioni lievemente maggiori per schermi con dimensioni maggiorni di _576px_. Questa impostazione, unita all'utilizzo di dimensioni in `rem` o in semplici valori numerici all'interno del CSS, fa sì che testo e altre proprietà occupino sensibilmente più spazio quando lo schermo lo permette:
+Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando
+il `font-size` dell'elemento radice, con una media query che imposta dimensioni
+lievemente maggiori per schermi con dimensioni maggiori di _576px_. Questa
+impostazione, unita all'utilizzo di dimensioni in `rem` o in semplici valori
+numerici all'interno del CSS, fa sì che testo e altre proprietà occupino più
+spazio quando lo schermo lo permette:
 
 {% highlight scss %}
 html {
@@ -23,168 +31,177 @@ html {
 
 ## Intestazioni
 
-Tutte le intestazioni HTML, `<h1>` fino a `<h6>`, sono disponibili.
+Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
+è buona norma non utilizzare più di 4 livelli di intestazione.
+
+Nel caso in cui si voglia presentare il testo nello stesso stile delle
+intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
+sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
+
+<p class="h1">Intestazione di tipo h1</p>
+<p class="h2">Intestazione di tipo h2</p>
+<p class="h3">Intestazione di tipo h3</p>
+<p class="h4">Intestazione di tipo h4</p>
+<p class="h5">Intestazione di tipo h5</p>
+<p class="h6">Intestazione di tipo h6</p>
+{% highlight html %}
+<h1>Intestazione di tipo h1</h1>
+<h2>Intestazione di tipo h2</h2>
+<h3>Intestazione di tipo h3</h3>
+<h4>Intestazione di tipo h4</h4>
+<h5>Intestazione di tipo h5</h5>
+<h6>Intestazione di tipo h6</h6>
+{% endhighlight %}
+
+Queste le dimensioni nel dettaglio:
 
 <table>
   <thead>
     <tr>
       <th>Intestazione</th>
-      <th>Esempio</th>
+      <th>Mobile</th>
+      <th>Schermo > 576px</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{ "`<h1></h1>`" | markdownify }}
+        <p class="h1">h1</p>
       </td>
-      <td><span class="h1">h1. Intestazione di Bootstrap</span></td>
+      <td>Bold, 40px/48px</td>
+      <td>Bold, 48px/60px</td>
     </tr>
     <tr>
       <td>
-        {{ "`<h2></h2>`" | markdownify }}
+        <p class="h2">h2</p>
       </td>
-      <td><span class="h2">h2. Intestazione di Bootstrap</span></td>
+      <td>Bold, 32px/40px</td>
+      <td>Bold, 40px/48px</td>
     </tr>
     <tr>
       <td>
-        {{ "`<h3></h3>`" | markdownify }}
+        <p class="h3">h3</p>
       </td>
-      <td><span class="h3">h3. Intestazione di Bootstrap</span></td>
+      <td>Bold, 28px/32px</td>
+      <td>Bold, 32px/40px</td>
     </tr>
     <tr>
       <td>
-        {{ "`<h4></h4>`" | markdownify }}
+        <p class="h4">h4</p>
       </td>
-      <td><span class="h4">h4. Intestazione di Bootstrap</span></td>
+      <td>SemiBold, 24px/28px</td>
+      <td>SemiBold, 28px/40px</td>
     </tr>
     <tr>
       <td>
-        {{ "`<h5></h5>`" | markdownify }}
+        <p class="h5">h5</p>
       </td>
-      <td><span class="h5">h5. Intestazione di Bootstrap</span></td>
+      <td>Regular, 20px/24px</td>
+      <td>Regular, 24px/40px</td>
     </tr>
     <tr>
       <td>
-        {{ "`<h6></h6>`" | markdownify }}
+        <p class="h6">h6</p>
       </td>
-      <td><span class="h6">h6. Intestazione di Bootstrap</span></td>
+      <td>SemiBold, 16px/24px</td>
+      <td>SemiBold, 18px/28px</td>
     </tr>
   </tbody>
 </table>
 
+
+### Intestazioni in evidenza
+
+Gli elementi di intestazione tradizionali sono progettati per funzionare al
+meglio nel contesto della pagina. Nel caso sia necessario mettere in ulteriore
+evidenza un'intestazione di tipo `<h1>`, si può prendere in considerazione l'uso
+della classe `.display-1`, che restituirà una dimensione sensibilmente più
+grande.
+
+<span class="h1 display-1">Intestazione di tipo h1</span>
 {% highlight html %}
-<h1>h1. Intestazione di Bootstrap</h1>
-<h2>h2. Intestazione di Bootstrap</h2>
-<h3>h3. Intestazione di Bootstrap</h3>
-<h4>h4. Intestazione di Bootstrap</h4>
-<h5>h5. Intestazione di Bootstrap</h5>
-<h6>h6. Intestazione di Bootstrap</h6>
+<h1 class="display-1">Intestazione di tipo h1</h1>
 {% endhighlight %}
-
-Anche le classi `.h1` fino a `.h6` sono disponibili, per quando tu voglia presentare il testo nello stesso stile delle intestazioni ma non puoi utilizzare l'elemento HTML associato.
-
-{% capture example %}
-<p class="h1">h1. Intestazione di Bootstrap</p>
-<p class="h2">h2. Intestazione di Bootstrap</p>
-<p class="h3">h3. Intestazione di Bootstrap</p>
-<p class="h4">h4. Intestazione di Bootstrap</p>
-<p class="h5">h5. Intestazione di Bootstrap</p>
-<p class="h6">h6. Intestazione di Bootstrap</p>
-{% endcapture %}{% include example.html content=example %}
 
 ### Personalizzazione delle intestazioni
 
-Utilizza le classi di utilità incluse per ricreare il piccolo testo di intestazione secondaria da Bootstrap 3.
-
-<div class="bd-example">
-  <span class="h3">
-    Titolo di fantasia
-    <small class="text-muted">Con testo secondario schiarito</small>
-  </span>
-</div>
-
-{% highlight html %}
-<h3>
-  Titolo di fantasia
-  <small class="text-muted">Con testo secondario schiarito</small>
-</h3>
-{% endhighlight %}
-
-## Intestazioni in evidenza
-
-Gli elementi di intestazione tradizionali sono progettati per funzionare al meglio nel contenuto della pagina. Quando hai bisogno di un titolo da mettere in evidenza, prendi in considerazione l'uso di **display heading**—uno stile di titolo più grande, leggermente più supponente.
-
-<div class="bd-example bd-example-type">
-  <table class="table">
-    <tbody>
-      <tr>
-      <td><span class="display-1">Titolo in evidenza 1</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-2">Titolo in evidenza 2</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-3">Titolo in evidenza 3</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-4">Titolo in evidenza 4</span></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-{% highlight html %}
-<h1 class="display-1">Titolo in evidenza 1</h1>
-<h1 class="display-2">Titolo in evidenza 2</h1>
-<h1 class="display-3">Titolo in evidenza 3</h1>
-<h1 class="display-4">Titolo in evidenza 4</h1>
-{% endhighlight %}
-
-## In primo piano
-
-Fai risaltare un paragrafo aggiungendo la classe `.lead`.
+È possibile utilizzare le classi di utilità incluse in Bootstrap per
+dare uno stile diverso per testi di intestazione secondaria.
 
 {% capture example %}
-<p class="lead">
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-</p>
+<h3>Intestazione <small class="text-muted">con testo secondario</small></h3>
 {% endcapture %}{% include example.html content=example %}
 
-## Elementi di testo inline
+## Paragrafi
 
-Stili per elementi comuni HTML5 inline. 
+Il semplice paragrafo prevede una dimensione di testo e un'interlinea di
+`16px/24px` per dispositivi mobili, e di `18px/28px` per schermi con dimensioni
+maggiori di 576px.
 
 {% capture example %}
-<p>Questa linea di testo mostra come è rappresentato del <mark>testo evidenziato</mark>.</p>
-<p><del>Questa linea di testo mostra come è rappresentato del testo cancellato.</del></p>
-<p><s>Questa linea di testo mostra come è rappresentato del testo non più valido.</s></p>
-<p><ins>Questa linea di testo mostra come è rappresentato un testo aggiuntivo al documento.</ins></p>
-<p><u>Questa linea di testo mostra come è rappresentato un testo sottolineato.</u></p>
-<p><small>Questa linea di testo mostra come sono rappresentate le "righe piccole" di un documento.</small></p>
-<p><strong>Questa linea di testo mostra come è rappresentato un testo grassetto.</strong></p>
-<p><em>Questa linea di testo mostra come è rappresentato un testo corsivo.</em></p>
+<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
+<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 {% endcapture %}{% include example.html content=example %}
 
-Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche indesiderate che i tag porterebbero.
+Per una lettura più confortevole, è buona norma mantenere la lunghezza di un paragrafo
+compresa tra 45 e 74 caratteri. Per testo su colonne multiple, si considera una
+lunghezza compresa tra 40 e 50 caratteri. Per i testi a margine la lunghezza
+minima è di 12-15 caratteri.
 
-## Utilità per il testo
+### Paragrafi in evidenza
 
-Cambia allineamento, trasformazione, stile, peso e colore del testo con le [utilità di testo]({{ site.baseurl }}/docs/utilities/text/) e le [utilità di colore]({{ site.baseurl }}/docs/utilit/colors/).
+Per mettere in risalto un paragrafo è sufficiente aggiungere la classe `.lead`.
+
+{% capture example %}
+<p class="lead">Paragrafo in evidenza</p>
+{% endcapture %}{% include example.html content=example %}
+
+### Personalizzazione dei paragrafi
+
+È possibile stilizzare correttamente lo stile anche nel caso vengano utilizzati
+semplicemente gli elementi HTML5 per il trattamento di testo. 
+
+{% capture example %}
+<p>Esempio di testo <u>sottolineato</u>.</p>
+<p>Esempio di testo <mark>evidenziato</mark>.</p>
+<p>Esempio di testo <em>corsivo</em>.</p>
+<p>Esempio di testo <strong>in grassetto</strong>.</p>
+<p>Esempio di testo <small>rimpicciolito</small>.</p>
+<p>Esempio di testo <ins>aggiuntivo</ins>.</p>
+<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
+<p>Esempio di testo <code>monospace</code>.</p>
+{% endcapture %}{% include example.html content=example %}
+
+Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi
+stili di `<mark>` e `<small>` evitando eventuali implicazioni semantiche
+indesiderate che i tag porterebbero con sé.
+
+È possibile sfruttare le classi di Bootstrap anche per modificare allineamento,
+stile, peso e colore del testo. Per questo, si può fare riferimento alla
+documentazione delle [utilità di testo]({{ site.baseurl }}/docs/utilities/text/)
+e [utilità di colore]({{ site.baseurl }}/docs/utilit/colors/).
 
 ## Abbreviazioni
 
-Implementazione stilizzata dell'elemento HTML `<abbr>` per abbreviazioni e acronimi per mostrare la versione espansa sull' hover. Le abbreviazioni hanno una sottolineatura predefinita e ottengono un cursore di aiuto per fornire un contesto aggiuntivo al passaggio del mouse e agli utenti delle tecnologie assistive.
+Implementazione stilizzata dell'elemento HTML `<abbr>` per abbreviazioni e
+acronimi per mostrare la versione espansa sull' hover. Le abbreviazioni hanno
+una sottolineatura predefinita e ottengono un cursore di aiuto per fornire un
+contesto aggiuntivo al passaggio del mouse e agli utenti delle tecnologie
+assistive.
 
-Aggiungi `.initialism` a un'abbreviazione per una dimensione del font leggermente più piccola.
+Aggiungi `.initialism` a un'abbreviazione per una dimensione del font
+leggermente più piccola.
 
 {% capture example %}
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {% endcapture %}{% include example.html content=example %}
 
-## Blockquotes
+## Citazioni
 
-Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno di un  `<blockquote class="blockquote">` come la citazione.
+Per citare blocchi di contenuti da un'altra fonte all'interno del documento.
+Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno
+di un `<blockquote class="blockquote">` come la citazione.
 
 {% capture example %}
 <blockquote class="blockquote">
@@ -194,7 +211,8 @@ Per citare blocchi di contenuti da un'altra fonte all'interno del documento. Rac
 
 ### Citare una fonte
 
-Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte. Includi il nome delle fonte di origine in `<cite>`.
+Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte.
+Includi il nome delle fonte di origine in `<cite>`.
 
 {% capture example %}
 <blockquote class="blockquote">
@@ -205,7 +223,8 @@ Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte. Incl
 
 ### Allineamento
 
-Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo blockquote.
+Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo
+blockquote.
 
 {% capture example %}
 <blockquote class="blockquote text-center">
@@ -223,9 +242,10 @@ Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo b
 
 ## Liste
 
-### Senza stile
-
-Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi elenco (solo per i figli diretti). **Questo si applica solo agli elementi della lista che sono figli diretti**, il che significa che dovrai aggiungere la classe per tutti gli elenchi annidati.
+Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi
+elenco (solo per i figli diretti). **Questo si applica solo agli elementi della
+lista che sono figli diretti**, il che significa che dovrai aggiungere la classe
+per tutti gli elenchi annidati.
 
 {% capture example %}
 <ul class="list-unstyled">
@@ -249,7 +269,8 @@ Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi elenco 
 
 ### Inline
 
-Rimuovi i punti elenco di una lista e applica un leggero `margin` con una combinazione di due classi, `.list-inline` e `.list-inline-item`.
+Rimuovi i punti elenco di una lista e applica un leggero `margin` con una
+combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
 {% capture example %}
 <ul class="list-inline">
@@ -261,7 +282,10 @@ Rimuovi i punti elenco di una lista e applica un leggero `margin` con una combin
 
 ### Allineamento lista descrizione
 
-Allineare i termini e le descrizioni orizzontalmente utilizzando le classi predefinite del nostro sistema di griglia. Per termini più lunghi, puoi facoltativamente aggiungere la classe `.text-truncate` per troncare il testo con un ellipsis.
+Allineare i termini e le descrizioni orizzontalmente utilizzando le classi
+predefinite del nostro sistema di griglia. Per termini più lunghi, puoi
+facoltativamente aggiungere la classe `.text-truncate` per troncare il testo
+con un `ellipsis`.
 
 {% capture example %}
 <dl class="row">

@@ -1,33 +1,19 @@
 ---
 layout: docs
 title: Form
-description: Esempi e linee guida per utilizzare gli elementi di un modulo form seguendo gli stili predisposti.
+description: Elementi e stili per la creazione di form accessibili e responsivi.
 group: componenti
 toc: true
 ---
 
-## Panoramica
+## Input
 
-Bootstrap utilizza [Reboot]({{ site.baseurl }}/docs/contenuti/reboot/#forms) per definire una base consistente di stile su cui è costruito tutto il resto così da attivare le visualizzazioni personalizzate per un rendering più uniforme su browser e dispositivi.
-
-Assicurati di utilizzare uno degli attributi appositi `type` per gli elementi input (ad esempio, `email` per l'indirizzo email o `number` per le informazioni numeriche) in modo da sfruttare i controlli di input più recenti come la verifica dell'email, la selezione del numero e altro.
-
-Attenetevi alla sintassi HTML qui di seguito per ottenere, sia graficamente che funzionalmente, gli effetti predisposti. Ad esempio l'elemento `label` va inserito dopo l'elemento `input` anche se inusuale, grazie all'attributo `for` risulterà sempre accessibile agli screenreader.
-
-## Elementi Form
-
-Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficamente personalizzati grazie alla classe `.form-control` e debbono essere contenuti in un `.form-group`.
+Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico e altro.
 
 ### Input text
 
 {% capture example %}
 <form>
-  <div class="input-group pb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text it-search" id="basic-addon1"></span>
-    </div>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText">
     <label for="exampleInputText">Nominativo</label>
@@ -46,7 +32,7 @@ Gli elementi del form come `<input>`, `<select>` e `<textarea>` sono graficament
 
 ### Input password
 
-Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elemento è stato dotato di un visualizzatore di quanto digitato. Inoltre è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`, questo grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter).
+Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter)) per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`.
 
 {% capture example %}
 <form>
@@ -68,9 +54,9 @@ Per rendere migliore l'utilizzo del campo password sui dispositivi mobili l'elem
 
 ### Input file
 
-Avete la possibilità di usare l'elemento input file predefinito oppure avente la personalizzazione grafica aggiungendo a `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
+È possibile personalizzare l'elemento `<input type="file">` aggiungendo all'elemento identificato con `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe, viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
 
-Per i `.form-file` è stato previsto un javascript che permetterà di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
+Per gli elementi che usano `.form-file` è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
 
 {% capture example %}
 <form>
@@ -93,7 +79,7 @@ Per i `.form-file` è stato previsto un javascript che permetterà di avere una 
 
 #### Tradurre o personalizzare le stringhe di testo
 
-La [pseudo-classe `:lang ()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) viene utilizzata per consentire la traduzione del testo "Sfoglia" in altri le lingue. Sovrascrivi o aggiungi voci alla variabile Sass `$custom-file-text` con il [tag lingua](https://en.wikipedia.org/wiki/IETF_language_tag) pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è `en`):
+La [pseudo-classe `:lang ()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) viene utilizzata per consentire la traduzione del testo "Sfoglia" in altri le lingue. Sovrascrivi o aggiungi voci alla variabile SASS `$custom-file-text` con il [tag lingua](https://en.wikipedia.org/wiki/IETF_language_tag) pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è `en`):
 
 {% highlight scss %}
 $custom-file-text: (
@@ -102,7 +88,7 @@ $custom-file-text: (
 );
 {% endhighlight %}
 
-Eccoti un esempio in funzione per la traduzione in inglese:
+Di seguito un esempio in funzione per la traduzione in inglese:
 
 {% capture example %}
 <div class="form-group form-file">
@@ -131,6 +117,7 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
     "Tutte"
   ];
 </script>
+
 {% capture example %}
 <form>
   <div class="form-group">
@@ -140,84 +127,6 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
   <div class="form-group">
     <input type="search" id="autocomplete2" class="form-control autocomplete" data-db="functionRegioni()">
     <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
-  </div>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
-### Select
-
-Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.custom-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
-
-Di seguito sono mostrate alcune di queste combinazioni.
-
-#### Select classica
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <select class="custom-select">
-      <option value="" disabled selected>Seleziona una opzione</option>
-      <option value="1">Opzione 1</option>
-      <option value="2">Opzione 2</option>
-      <option value="3">Opzione 3</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
-#### Select multipla
-
-La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple>
-      <option value="" disabled selected>Seleziona una o più regioni</option>
-      {% for regione in site.data.regioni %}
-      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
-#### Select con ricerca
-
-Esempio di _select_ con ricerca:
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <select class="custom-select" searchable="Cerca una regione">
-      <option value="" disabled selected>Seleziona una regione</option>
-      {% for regione in site.data.regioni %}
-      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
-#### Select con gruppi di opzioni
-
-Esempio di _select_ con gruppi di opzioni:
-
-{% capture example %}
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple>
-        <optgroup label="Gruppo 1">
-            <option value="1">Opzione 1</option>
-            <option value="2">Opzione 2</option>
-        </optgroup>
-        <optgroup label="Gruppo 2">
-            <option value="3">Opzione 3</option>
-            <option value="4">Opzione 4</option>
-        </optgroup>
-    </select>
-    <label>Label di esempio</label>
   </div>
 </form>
 {% endcapture %}{% include example.html content=example %}
@@ -233,11 +142,9 @@ Esempio di _select_ con gruppi di opzioni:
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-## Personalizzazioni
+### Icone aggiuntive
 
-### Icone
-
-Hai la possibilità di inserire un'icona a lato dei campi input, select e textarea. Basterà inserire l'icona come elemeto prima del campo.
+È possibile inserire un'icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo `<input>`.
 
 {% capture example %}
 <form>
@@ -261,24 +168,12 @@ Hai la possibilità di inserire un'icona a lato dei campi input, select e textar
 
 ### Dimensione
 
-Gestisci la dimensione dell'elemento usando le classi `.form-control-lg` e `.form-control-sm` che modificheranno la grandezza del carattere e la spaziatura interna.
+È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
 
 {% capture example %}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
 <input class="form-control" type="text" placeholder="Input predefinito">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
-{% endcapture %}{% include example.html content=example %}
-
-{% capture example %}
-<select class="custom-select form-control-lg">
-  <option>Select grande</option>
-</select>
-<select class="custom-select ">
-  <option>Select predefinita</option>
-</select>
-<select class="custom-select form-control-sm">
-  <option>Select piccola</option>
-</select>
 {% endcapture %}{% include example.html content=example %}
 
 ### Readonly
@@ -302,10 +197,101 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 </form>
 {% endcapture %}{% include example.html content=example %}
 
+## Select
+
+Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.custom-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
+
+Di seguito sono mostrate alcune di queste combinazioni.
+
+### Select classica
+
+{% capture example %}
+<form>
+  <div class="form-group">
+    <select class="custom-select">
+      <option value="" disabled selected>Seleziona una opzione</option>
+      <option value="1">Opzione 1</option>
+      <option value="2">Opzione 2</option>
+      <option value="3">Opzione 3</option>
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endcapture %}{% include example.html content=example %}
+
+### Select multipla
+
+La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.
+
+{% capture example %}
+<form>
+  <div class="form-group">
+    <select class="custom-select" multiple>
+      <option value="" disabled selected>Seleziona una o più regioni</option>
+      {% for regione in site.data.regioni %}
+      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endcapture %}{% include example.html content=example %}
+
+### Select con ricerca
+
+Esempio di `select` con ricerca:
+
+{% capture example %}
+<form>
+  <div class="form-group">
+    <select class="custom-select" searchable="Cerca una regione">
+      <option value="" disabled selected>Seleziona una regione</option>
+      {% for regione in site.data.regioni %}
+      <option value="{{ forloop.index }}">{{ regione }}</option>{% endfor %}
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endcapture %}{% include example.html content=example %}
+
+### Select con gruppi di opzioni
+
+Esempio di `select` con gruppi di opzioni:
+
+{% capture example %}
+<form>
+  <div class="form-group">
+    <select class="custom-select" multiple>
+        <optgroup label="Gruppo 1">
+            <option value="1">Opzione 1</option>
+            <option value="2">Opzione 2</option>
+        </optgroup>
+        <optgroup label="Gruppo 2">
+            <option value="3">Opzione 3</option>
+            <option value="4">Opzione 4</option>
+        </optgroup>
+    </select>
+    <label>Label di esempio</label>
+  </div>
+</form>
+{% endcapture %}{% include example.html content=example %}
+
+### Dimensione
+
+{% capture example %}
+<select class="custom-select form-control-lg">
+  <option>Select grande</option>
+</select>
+<select class="custom-select ">
+  <option>Select predefinita</option>
+</select>
+<select class="custom-select form-control-sm">
+  <option>Select piccola</option>
+</select>
+{% endcapture %}{% include example.html content=example %}
 
 ## Checkbox e radio
 
-Lo stile dei **checkbox** e **radio** è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nel contenitore padre. Mentre le **checkbox** servono a selezionare una o più opzioni in un elenco, i **radio** consentono di selezionare una sola opzione tra molte.
+Lo stile degli input di tipo `checkbox` e `radio` è stato migliorato graficamente per rendere l'esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe `.form-check` nell'elemento padre. Mentre le `checkbox` servono a selezionare una o più opzioni in un elenco, i `radio` consentono di selezionare una sola opzione tra molte.
 
 {% capture example %}
 <form>
@@ -326,7 +312,7 @@ Lo stile dei **checkbox** e **radio** è stato migliorato graficamente per rende
 
 ### Inline 
 
-Per allineare orizzontalmente le **checkbox** o i **radio** basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
+Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
 
 {% capture example %}
 <form>
@@ -355,7 +341,7 @@ Per allineare orizzontalmente le **checkbox** o i **radio** basterà aggiungere 
 
 ### Disabilitato
 
-Affinchè i campi **checkbox** e **radio** risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
+Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
 
 {% capture example %}
 <form>
@@ -380,7 +366,7 @@ Affinchè i campi **checkbox** e **radio** risultino disabilitati occorrerà agg
 
 ### Gruppi
 
-Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
+Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
 {% capture example %}
 <form>
@@ -460,10 +446,9 @@ Per poter raggruppare gli elementi **checkbox** e **radio** occorrerà aggiunger
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-
 ## Toggles
 
-Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno **span** con classe `.lever`.
+Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
 {% capture example %}
 <form>
@@ -742,61 +727,6 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-### Inline forms
-
-Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
-
-- Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{ site.baseurl }}/docs/utilities/spacing/) and [flexbox]({{ site.baseurl }}/docs/utilities/flex/) utilities.
-- Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
-- Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
-
-You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
-
-{% capture example %}
-<form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
-
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">@</div>
-    </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-  </div>
-
-  <div class="form-check mb-2 mr-sm-2">
-    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-    <label class="form-check-label" for="inlineFormCheck">
-      Remember me
-    </label>
-  </div>
-
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
-Custom form controls and selects are also supported.
-
-{% capture example %}
-<form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-
-  <div class="custom-control custom-checkbox my-1 mr-sm-2">
-    <input type="checkbox" class="custom-control-input" id="customControlInline">
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
-  </div>
-
-  <button type="submit" class="btn btn-primary my-1">Submit</button>
-</form>
-{% endcapture %}{% include example.html content=example %}
-
 {% capture callout %}
 ##### Alternative alle etichette nascoste
 Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, puoi nascondere le etichette usando la classe `.sr-only`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
@@ -807,7 +737,7 @@ Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli
 Il testo di aiuto può essere creato usando `.form-text` (precedentemente noto come `.help-block` nella versione 3 di Bootstrap). Può essere esteso usando le classi di utilità come `.text-muted`.
 
 {% capture callout %}
-##### Associazione del testo di aiuto con gli elementi del mudulo form
+**Associazione del testo di aiuto con gli elementi del modulo form**
 
 Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
@@ -915,7 +845,7 @@ Tenendo presente tutto questo, prendi in considerazione i seguenti esempi person
 
 ### Stili personalizzati
 
-Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attributo booleano `novalidate` al tuo `<form>`. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l'accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante `Invia` del modulo sottostante; JavaScript intercetterà l'evento e mostrerà i feedback all'utente. Vedrai così gli stili `:invalid` e `:valid` applicati ai controlli del modulo.
+Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attributo booleano `novalidate` al tuo `<form>`. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l'accesso alle API di validazione JavaScript. Prova a cliccare sul pulsante `Invia` del modulo sottostante; Javascript intercetterà l'evento e mostrerà i feedback all'utente. Vedrai così gli stili `:invalid` e `:valid` applicati ai controlli del modulo.
 
 {% capture example %}
 <form class="needs-validation" novalidate>
@@ -983,13 +913,10 @@ Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attribu
 </form>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
