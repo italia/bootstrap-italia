@@ -17,7 +17,7 @@
   .nav-link {
     border-radius: 0;
     font-weight: 600;
-    color: $tertiary;
+    color: $gray-secondary;
     border: none;
     border-bottom: 2px solid transparent;
     &.disabled {
@@ -34,12 +34,12 @@
     margin-bottom: 0;
   }
   &.nav-dark {
-    background-color: $tertiary;
+    background-color: $gray-secondary;
     .nav-link {
       color: #C3CFDB; // TODO quando i colori dark saranno definiti, gestire questo colore come variabile
     }
     .nav-link.active, .nav-item.show .nav-link {
-      background-color: $tertiary;
+      background-color: $gray-secondary;
       color: $cyan;
       border-bottom: 2px solid $cyan;
     }

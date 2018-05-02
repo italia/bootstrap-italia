@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Componenti
-description: I componenti di Bootstrap Italia presenti in questa sezione sono già presenti nativamente nella libreria Bootstrap 4.
+description: I componenti di Bootstrap Italia presenti in questa sezione sono già presenti nativamente nella libreria Bootstrap.
 group: componenti
 redirect_from:
   - "/componenti/"

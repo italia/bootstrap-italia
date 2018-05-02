@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![CSS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/css/bootstrap-italia.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/italia/bootstrap-italia/tree/master/dist/css/bootstrap-italia.min.css)
 [![JS gzip size](http://img.badgesize.io/italia/bootstrap-italia/master/dist/js/bootstrap-italia.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/italia/bootstrap-italia/blob/master/dist/js/bootstrap-italia.min.js)
-[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
+[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
 # Bootstrap Italia

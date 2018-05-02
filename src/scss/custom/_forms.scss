@@ -1,72 +1,63 @@
 /* CLASSI FORM */
 .form-group {
-  input, button, select, optgroup, textarea {
-    font-weight: bold;
-    color: $gray-tertiary;
-  }
-}
-.form-group {
   position: relative;
   padding-bottom: .5rem;
   margin-top: 1rem;
-	margin-bottom: 0;
+  margin-bottom: 0;
+  input, button, select, optgroup, textarea {
+    color: $dark;
+  }
+  label {
+    color: $gray-secondary;
+    font-weight: 600;
+    transition: .2s ease-out;
+    position: absolute;
+    top: .6rem;
+    font-size: 1rem;
+    cursor: text;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 .75rem;
+    z-index: 6;
+  }
+  .form-text {
+    margin-left: 0.75rem;
+    font-size: $small-font-size;
+  }
+  &.active {
+    label {
+      transform: translateY(-140%);
+      font-size: .8rem;
+    }
+    label, .ico-prefix {
+      color: $gray-secondary;
+    }
+  }
 }
 .form-row .form-group {
 	padding-bottom: 0;
-}
-.form-group label {
-  -webkit-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
-  transition: .2s ease-out;
-  color: $gray-tertiary;
-  position: absolute;
-  top: .6rem;
-  font-size: 1rem;
-  cursor: text;
-  display: block;
-  width: 100%;
-  background-color: #fff;
-	padding: 0 .75rem;
-	font-weight: bold;
-  z-index: 6;
-}
-.form-group .form-text {
-  margin-left: 0.75rem;
-  font-size: $small-font-size;
 }
 input[type="file"] + label {
   background-color: transparent;
 }
 
-.input-group + label, .input-group ~ label, :disabled .form-group label, .form-group.active label, .form-group label.active, .form-group select.form-control + label, .form-group input.form-control-file + label, .form-control-plaintext + label {
-  -webkit-transform: translateY(-140%);
-  -ms-transform: translateY(-140%);
+.input-group + label,
+.input-group ~ label,
+:disabled .form-group label,
+.form-group label.active,
+.form-group select.form-control + label,
+.form-group input.form-control-file + label,
+.form-control-plaintext + label {
   transform: translateY(-140%);
   font-size: .8rem;
   background: transparent;
 }
-.form-group.active label, .form-group.active .ico-prefix {
-  color: $primary;
-}
-.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
-  padding: 0;
-}
-.select-wrapper.custom-select .select-dropdown {
-	color: $gray-tertiary;
-	border-bottom: 1px solid $gray-tertiary;
-  padding-right: 2rem;
-  margin-bottom: 0;
-}
-.select-wrapper.custom-select.show .select-dropdown {
-	color: $primary;
-	border-bottom: 1px solid $primary;
-}
-.custom-select.show .caret {
-  color: $primary;
-}
-.select-wrapper + label {
-  padding: 0 .75rem !important;
-}
+
+//.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
+//  padding: 0;
+//}
+
 :disabled .form-group label {
   top: 0;
 }
@@ -74,23 +65,18 @@ input[type="file"] + label {
 input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.form-control, select.form-control {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $gray-tertiary;
+  border-bottom: 1px solid $gray-secondary;
   border-radius: 0;
   outline: 0;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
+  box-shadow: none;
   transition: all .3s;
+  font-weight: 700;
 }
-select.form-control, textarea.form-control {
-  height: inherit;
-}
-.form-group.active input.form-control, .form-group.active select.form-control, .form-group.active textarea.form-control, .form-group.active .form-file-name, .form-group.active .form-control-plaintext, input:focus {
-  border-bottom: 1px solid $primary;
-}
+//select.form-control, textarea.form-control {
+//  height: inherit;
+//}
 .form-group.active .form-file-name {
   padding-bottom: 1.95rem
 }
@@ -99,9 +85,7 @@ select.form-control, textarea.form-control {
   background-color: #FFFFFF;
 }
 .form-control:focus, .form-control:active {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  border-bottom: 1px solid $primary;
+  box-shadow: none !important;
 }
 
 .custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid {
@@ -137,8 +121,6 @@ select.form-control, textarea.form-control {
   margin-left: .75rem;
 }
 
-
-
 /* INPUT FILE */
 .form-file {
   input[type="file"] {
@@ -161,10 +143,7 @@ select.form-control, textarea.form-control {
     position: absolute;
     right: 0;
     top: 0;
-    -webkit-user-select: none;
-      -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     z-index: 5;
   }
   .form-file-name::before {
@@ -199,31 +178,41 @@ select.form-control, textarea.form-control {
 .input-group-append {
   margin-left: 0px;
 }
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-prepend > .input-group-text, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-append > .btn {
+//.form-control-lg,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-prepend > .input-group-text,
+.input-group-lg > .input-group-append > .input-group-text,
+.input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-append > .btn {
   padding: 0rem 1rem;
   border-radius: 0;
 }
 
-/* ICONE A SINISTRA */
+/* ICONE A SINISTRA */ // TODO non usare .ico-prefix
 .ico-prefix {
 	position: absolute;
 	width: 3rem;
 	font-size: 1.8rem;
 	z-index: 10;
 	text-align: center;
+  ~ .form-file-name {
+    padding-left: 3.5rem;
+  }
+  ~ input, ~ textarea, ~ label, ~ .select-wrapper .select-dropdown {
+    padding-left: 3rem;
+  }
+  ~ .custom-select ~ label, ~ label.active {
+    padding-left: .75rem;
+  }
 }
-.ico-prefix ~ .form-file-name {
-	padding-left: 3.5rem;
-}
-.ico-prefix ~ input, .ico-prefix ~ textarea, .ico-prefix ~ label, .ico-prefix ~ .select-wrapper .select-dropdown {
-	padding-left: 3rem;
-}
-.ico-prefix ~ .custom-select ~ label, .ico-prefix ~ label.active, .form-group.active .ico-prefix ~ label {
-	padding-left: .75rem;
+.form-group.active .ico-prefix ~ label {
+  padding-left: .75rem;
 }
 
 /* CHECKBOX e RADIO */
-.form-row .form-check, .form-group .form-check, .row .form-check {
+.form-row .form-check,
+.form-group .form-check,
+.row .form-check {
   padding-left: 0;
   margin-top: 1rem;
 }
@@ -241,10 +230,7 @@ select.form-control, textarea.form-control {
     height: 32px;
     line-height: 32px;
     font-size: 1rem;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
   }
 }
 
@@ -346,8 +332,6 @@ select.form-control, textarea.form-control {
 		content: '';
 		left: 0;
 		position: absolute;
-		-webkit-transition: .2s;
-		-o-transition: .2s;
 		transition: .2s;
 		z-index: 1;
 		border-style: solid;
@@ -360,12 +344,8 @@ select.form-control, textarea.form-control {
 		border: 1px solid #e6e9f2;
 		border-radius: 1px;
 		margin: 2px 5px;
-		-webkit-transform: rotateZ(37deg);
-		    -ms-transform: rotate(37deg);
-		        transform: rotateZ(37deg);
-		-webkit-transform-origin: 100% 100%;
-		    -ms-transform-origin: 100% 100%;
-		        transform-origin: 100% 100%;
+    transform: rotateZ(37deg);
+		transform-origin: 100% 100%;
 	}
 	+ label::after {
 		border-radius: 4px;
@@ -382,14 +362,9 @@ select.form-control, textarea.form-control {
 		border-style: solid;
 		border-width: 2px;
 		border-color: transparent #fff #fff transparent;
-		-webkit-transform: rotate(40deg);
-		    -ms-transform: rotate(40deg);
-		        transform: rotate(40deg);
-		-webkit-backface-visibility: hidden;
-		        backface-visibility: hidden;
-		-webkit-transform-origin: 100% 100%;
-		    -ms-transform-origin: 100% 100%;
-		        transform-origin: 100% 100%;
+		transform: rotate(40deg);
+		backface-visibility: hidden;
+		transform-origin: 100% 100%;
 		opacity: .8;
 	}
 	&:checked + label::after {
@@ -425,8 +400,6 @@ select.form-control, textarea.form-control {
 /* RADIO */
 [type="radio"] {
 	+ label {
-	-webkit-transition: .2s ease;
-	-o-transition: .2s ease;
 	transition: .2s ease;
 	}
 	+ label::after,
@@ -442,8 +415,6 @@ select.form-control, textarea.form-control {
 		border-radius: 50%;
 		border-style: solid;
 		border-width: 2px;
-		-webkit-transition: .2s ease;
-		-o-transition: .2s ease;
 		transition: .2s ease;
 	}
 	&:not(:checked) + label::after,
@@ -452,17 +423,13 @@ select.form-control, textarea.form-control {
 	}
 	&:not(:checked) + label::after {
 		z-index: -1;
-		-webkit-transform: scale(0);
-		    -ms-transform: scale(0);
-		        transform: scale(0);
+		transform: scale(0);
 	}
 	&:checked + label::after {
 		border-color: $primary;
 		background-color: $primary;
 		z-index: 0;
-		-webkit-transform: scale(.64);
-		    -ms-transform: scale(.64);
-		        transform: scale(.64);
+    transform: scale(.64);
 	}
 	&:checked + label::before {
 		border-color: $primary;
@@ -488,8 +455,7 @@ select.form-control, textarea.form-control {
 	&.form-check-group {
 		padding: 0 0 8px 0;
 		margin-bottom: 16px;
-		-webkit-box-shadow: inset 0 -1px 0 0 rgba(1,1,1,0.1);
-		        box-shadow: inset 0 -1px 0 0 rgba(1,1,1,0.1);
+		box-shadow: inset 0 -1px 0 0 rgba(1,1,1,0.1);
 		[type="checkbox"] + label,
 		[type="radio"] + label {
 			position: static;
@@ -532,8 +498,7 @@ select.form-control, textarea.form-control {
   .dropdown-menu {
     background-color: #fff;
     border-radius: 0px;
-    -webkit-box-shadow: 0 2px 4px 3px rgba(0,0,0,0.1);
-            box-shadow: 0 2px 4px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px 3px rgba(0,0,0,0.1);
     margin: 0;
     display: none;
     min-width: 100px;
@@ -544,10 +509,7 @@ select.form-control, textarea.form-control {
     z-index: 999;
     will-change: width, height;
     list-style-type: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     width: 100%;
     &.show {
       display: block;
@@ -578,7 +540,8 @@ select.form-control, textarea.form-control {
           background-repeat: no-repeat;
           background-position: center center;
           float: right;
-          display: inline-block;
+          display: block;
+          height: 32px;
           width: 16px;
           opacity: .5;
         }
@@ -586,7 +549,7 @@ select.form-control, textarea.form-control {
       > a,
       > span {
         font-size: 14px;
-        color: #004080;
+        color: $gray-secondary;
         font-weight: 600;
         display: block;
         padding: 0 .5rem;
@@ -606,6 +569,10 @@ select.form-control, textarea.form-control {
     }
   }
   .select-dropdown {
+    color: $dark;
+    border-bottom: 1px solid $gray-secondary;
+    padding-right: 2rem; // TODO
+    margin-bottom: 0; // TODO
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -654,7 +621,17 @@ select.form-control, textarea.form-control {
       color: rgba(0, 0, 0, .46);
     }
   }
+  &.show {
+    .select-dropdown {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+    }
+    .caret {
+      color: $primary;
+    }
+  }
   & + label {
+    padding: 0 .75rem !important;
     position: absolute;
     top: -18px;
     font-size: .8rem;

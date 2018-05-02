@@ -1,4 +1,4 @@
-html {
+html, body {
   font-size: 16px;
   line-height: 1.5;
   @include media-breakpoint-up(sm) {
@@ -63,7 +63,7 @@ h6, .h6 {
 //
 
 .display-1 {
-  line-height: 1.071;
+  font-size: 3.111rem;
   @include media-breakpoint-up(sm) {
     font-size: 3.111rem;
     line-height: 1.428;
