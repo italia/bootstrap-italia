@@ -95,6 +95,145 @@ $primary-c12 : hsb($primary-h, $primary-s, $primary-b);
 //***********************************************************************
 //********************Accent colors variations***************************
 //***********************************************************************
-	// analoghi
-	// tinte e ombre
-	// toni
+// analoghi
+// tinte e ombre
+/***************************** 1 ****************************************/
+$analogue-1-a7 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b);
+//colori più chiari
+$analogue-1-a6 : hsb($analogue-1-h, $analogue-1-s - 25, $analogue-1-b + 4);
+$analogue-1-a5 : hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b + 7);
+$analogue-1-a4 : hsb($analogue-1-h, $analogue-1-s - 55, $analogue-1-b + 10);
+$analogue-1-a3 : hsb($analogue-1-h, $analogue-1-s - 70, $analogue-1-b + 13);
+$analogue-1-a2 : hsb($analogue-1-h, $analogue-1-s - 85, $analogue-1-b + 16);
+$analogue-1-a1 : hsb($analogue-1-h, $analogue-1-s - 90, $analogue-1-b + 19);
+//colori più scutri
+$analogue-1-a8 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 10);
+$analogue-1-a9 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 20);
+$analogue-1-a10 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 30);
+$analogue-1-a11 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 40);
+$analogue-1-a12 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 50);
+$analogue-1-a13 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b - 60);
+
+/***************************** 2 ****************************************/
+$analogue-2-a7 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b);
+//colori più chiari
+$analogue-2-a6 : hsb($analogue-2-h, $analogue-2-s - 25, $analogue-2-b + 4);
+$analogue-2-a5 : hsb($analogue-2-h, $analogue-2-s - 40, $analogue-2-b + 7);
+$analogue-2-a4 : hsb($analogue-2-h, $analogue-2-s - 55, $analogue-2-b + 10);
+$analogue-2-a3 : hsb($analogue-2-h, $analogue-2-s - 70, $analogue-2-b + 13);
+$analogue-2-a2 : hsb($analogue-2-h, $analogue-2-s - 80, $analogue-2-b + 16);
+$analogue-2-a1 : hsb($analogue-2-h, $analogue-2-s - 90, $analogue-2-b + 19);
+//colori più scutri
+$analogue-2-a8 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 10);
+$analogue-2-a9 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 20);
+$analogue-2-a10 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 30);
+$analogue-2-a11 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 40);
+$analogue-2-a12 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 50);
+$analogue-2-a13 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b - 60);
+
+// toni
+/***************************** 1 ****************************************/
+$analogue-1-b1 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b);
+$analogue-1-b2 : hsb($analogue-1-h, $analogue-1-s - 10, $analogue-1-b - 10);
+$analogue-1-b3 : hsb($analogue-1-h, $analogue-1-s - 20, $analogue-1-b - 20);
+$analogue-1-b4 : hsb($analogue-1-h, $analogue-1-s - 30, $analogue-1-b - 30);
+$analogue-1-b5 : hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b - 40);
+$analogue-1-b6 : hsb($analogue-1-h, $analogue-1-s - 50, $analogue-1-b - 50);
+$analogue-1-b7 : hsb($analogue-1-h, $analogue-1-s - 60, $analogue-1-b - 60);
+
+/***************************** 2 ****************************************/
+$analogue-2-b1 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b);
+$analogue-2-b2 : hsb($analogue-2-h, $analogue-2-s - 10, $analogue-2-b - 10); 
+$analogue-2-b3 : hsb($analogue-2-h, $analogue-2-s - 20, $analogue-2-b - 20);
+$analogue-2-b4 : hsb($analogue-2-h, $analogue-2-s - 30, $analogue-2-b - 30);
+$analogue-2-b5 : hsb($analogue-2-h, $analogue-2-s - 40, $analogue-2-b - 40);
+$analogue-2-b6 : hsb($analogue-2-h, $analogue-2-s - 50, $analogue-2-b - 50);
+$analogue-2-b7 : hsb($analogue-2-h, $analogue-2-s - 60, $analogue-2-b - 60);
+
+// complementari
+// tinte e ombre 
+/***************************** 1 ****************************************/
+$complementary-1-a7 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b);
+//colori più chiari
+$complementary-1-a6 : hsb($complementary-1-h, $complementary-1-s - 25, $complementary-1-b + 4);
+$complementary-1-a5 : hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b + 7);
+$complementary-1-a4 : hsb($complementary-1-h, $complementary-1-s - 55, $complementary-1-b + 10);
+$complementary-1-a3 : hsb($complementary-1-h, $complementary-1-s - 70, $complementary-1-b + 11);
+$complementary-1-a2 : hsb($complementary-1-h, $complementary-1-s - 85, $complementary-1-b + 12);
+$complementary-1-a1 : hsb($complementary-1-h, $complementary-1-s - 95, $complementary-1-b + 13);
+//colori più scutri
+$complementary-1-a8 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 10);
+$complementary-1-a9 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 20);
+$complementary-1-a10 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 30);
+$complementary-1-a11 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 40);
+$complementary-1-a12 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 50);
+$complementary-1-a13 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b - 60);
+
+/***************************** 2 ****************************************/
+$complementary-2-a7 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b);
+//colori più chiari
+$complementary-2-a6 : hsb($complementary-2-h, $complementary-2-s - 25, $complementary-2-b + 4);
+$complementary-2-a5 : hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b + 7);
+$complementary-2-a4 : hsb($complementary-2-h, $complementary-2-s - 55, $complementary-2-b + 10);
+$complementary-2-a3 : hsb($complementary-2-h, $complementary-2-s - 70, $complementary-2-b + 13);
+$complementary-2-a2 : hsb($complementary-2-h, $complementary-2-s - 85, $complementary-2-b + 16);
+$complementary-2-a1 : hsb($complementary-2-h, $complementary-2-s - 95, $complementary-2-b + 19);
+//colori più scutri
+$complementary-2-a8 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 10);
+$complementary-2-a9 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 20);
+$complementary-2-a10 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 30);
+$complementary-2-a11 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 40);
+$complementary-2-a12 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 50);
+$complementary-2-a13 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b - 60);
+
+/***************************** 3 ****************************************/
+$complementary-3-a7 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b);
+//colori più chiari
+$complementary-3-a6 : hsb($complementary-3-h, $complementary-3-s - 25, $complementary-3-b + 4);
+$complementary-3-a5 : hsb($complementary-3-h, $complementary-3-s - 40, $complementary-3-b + 7);
+$complementary-3-a4 : hsb($complementary-3-h, $complementary-3-s - 55, $complementary-3-b + 10);
+$complementary-3-a3 : hsb($complementary-3-h, $complementary-3-s - 70, $complementary-3-b + 13);
+$complementary-3-a2 : hsb($complementary-3-h, $complementary-3-s - 85, $complementary-3-b + 16);
+$complementary-3-a1 : hsb($complementary-3-h, $complementary-3-s - 95, $complementary-3-b + 19);
+//colori più scutri
+$complementary-3-a8 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 10);
+$complementary-3-a9 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 20);
+$complementary-3-a10 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 30);
+$complementary-3-a11 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 40);
+$complementary-3-a12 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 50);
+$complementary-3-a13 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b - 60);
+
+//-------------------------- toni -----------------------------------------
+/***************************** 1 ****************************************/
+$complementary-1-b1 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b);
+$complementary-1-b2 : hsb($complementary-1-h, $complementary-1-s - 10, $complementary-1-b - 10);
+$complementary-1-b3 : hsb($complementary-1-h, $complementary-1-s - 20, $complementary-1-b - 20);
+$complementary-1-b4 : hsb($complementary-1-h, $complementary-1-s - 30, $complementary-1-b - 30);
+$complementary-1-b5 : hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b - 40);
+$complementary-1-b6 : hsb($complementary-1-h, $complementary-1-s - 50, $complementary-1-b - 50);
+$complementary-1-b7 : hsb($complementary-1-h, $complementary-1-s - 60, $complementary-1-b - 60);
+
+/***************************** 2 ****************************************/
+$complementary-2-b1 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b);
+$complementary-2-b2 : hsb($complementary-2-h, $complementary-2-s - 10, $complementary-2-b - 10);
+$complementary-2-b3 : hsb($complementary-2-h, $complementary-2-s - 20, $complementary-2-b - 20);
+$complementary-2-b4 : hsb($complementary-2-h, $complementary-2-s - 30, $complementary-2-b - 30);
+$complementary-2-b5 : hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b - 40);
+$complementary-2-b6 : hsb($complementary-2-h, $complementary-2-s - 50, $complementary-2-b - 50);
+$complementary-2-b7 : hsb($complementary-2-h, $complementary-2-s - 60, $complementary-2-b - 60);
+
+/***************************** 3 ****************************************/
+$complementary-3-b1 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b);
+$complementary-3-b2 : hsb($complementary-3-h, $complementary-3-s - 10, $complementary-3-b - 10);
+$complementary-3-b3 : hsb($complementary-3-h, $complementary-3-s - 20, $complementary-3-b - 20);
+$complementary-3-b4 : hsb($complementary-3-h, $complementary-3-s - 30, $complementary-3-b - 30);
+$complementary-3-b5 : hsb($complementary-3-h, $complementary-3-s - 40, $complementary-3-b - 40);
+$complementary-3-b6 : hsb($complementary-3-h, $complementary-3-s - 50, $complementary-3-b - 50);
+$complementary-3-b7 : hsb($complementary-3-h, $complementary-3-s - 60, $complementary-3-b - 60);
+
+//***********************************************************************
+//********************Neutral color variations***************************
+//***********************************************************************
+
+// tinte e ombre
+/***************************** 1 ****************************************/
