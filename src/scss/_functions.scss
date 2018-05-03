@@ -1,5 +1,15 @@
 // Custom functions (not available in Bootstrap)
 @function hsb($h-hsb, $s-hsb, $b-hsb) {
+  // Chek hsb values for 0 and turn them into 1 to avoid breacking sass compiler
+  @if $h-hsb == 0 {
+    $h-hsb : 1 
+  }
+  @if $s-hsb == 0 {
+    $s-hsb : 1 
+  }
+  @if $b-hsb == 0 {
+    $b-hsb : 1 
+  }
   @if $b-hsb == 0 {
     @return hsla(0, 0, 0, $a)
   } @else {

@@ -1,4 +1,16 @@
+// primary color ---------------------------------
+.primary-bg{
+	background-color:$primary; 
+}
+.primary-color{
+		color:$primary; 
+}
+.primary-border-color-{
+	border-color:$primary; 
+}
+
 // primary colors tinte e ombre------------------
+
 $colorlist : 
 	$primary-a1
 	$primary-a2
@@ -11,8 +23,7 @@ $colorlist :
 	$primary-a9
 	$primary-a10
 	$primary-a11
-	$primary-a12
-	$primary-a13; 
+	$primary-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -75,7 +86,16 @@ $colorlist :
 		border-color:$color; 
 	}
 }
-
+// accent colors-----------------------------------------------------------
+.analogue-1-bg{
+	background-color:$analogue-1; 
+}
+.analogue-1-color{
+		color:$analogue-1; 
+}
+.analogue-1-border-color-{
+	border-color:$analogue-1; 
+}
 // accent colors tinte e ombre------------------
 // analog 1
 $colorlist : 
@@ -90,8 +110,7 @@ $colorlist :
 	$analogue-1-a9
 	$analogue-1-a10
 	$analogue-1-a11
-	$analogue-1-a12
-	$analogue-1-a13;
+	$analogue-1-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -106,6 +125,15 @@ $colorlist :
 	}
 }
 // analog 2
+.analogue-2-bg{
+	background-color:$analogue-2; 
+}
+.analogue-2-color{
+		color:$analogue-2; 
+}
+.analogue-2-border-color-{
+	border-color:$analogue-2; 
+}
 $colorlist : 
 	$analogue-2-a1
 	$analogue-2-a2
@@ -118,8 +146,7 @@ $colorlist :
 	$analogue-2-a9
 	$analogue-2-a10
 	$analogue-2-a11
-	$analogue-2-a12
-	$analogue-2-a13;
+	$analogue-2-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -135,6 +162,15 @@ $colorlist :
 }
 
 // complementary 1
+.complementary-1-bg{
+	background-color:$complementary-1; 
+}
+.complementary-1-color{
+		color:$complementary-2; 
+}
+.complementary-1-border-color-{
+	border-color:$complementary-1; 
+}
 $colorlist : 
 	$complementary-1-a1
 	$complementary-1-a2
@@ -147,8 +183,7 @@ $colorlist :
 	$complementary-1-a9
 	$complementary-1-a10
 	$complementary-1-a11
-	$complementary-1-a12
-	$complementary-1-a13;
+	$complementary-1-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -164,6 +199,15 @@ $colorlist :
 }
 
 // complementary 2
+.complementary-2-bg{
+	background-color:$complementary-2; 
+}
+.complementary-2-color{
+		color:$complementary-2; 
+}
+.complementary-2-border-color-{
+	border-color:$complementary-2; 
+}
 $colorlist : 
 	$complementary-2-a1
 	$complementary-2-a2
@@ -176,8 +220,7 @@ $colorlist :
 	$complementary-2-a9
 	$complementary-2-a10
 	$complementary-2-a11
-	$complementary-2-a12
-	$complementary-2-a13;
+	$complementary-2-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -193,6 +236,15 @@ $colorlist :
 }
 
 // complementary 3
+.complementary-3-bg{
+	background-color:$complementary-3; 
+}
+.complementary-3-color{
+		color:$complementary-3; 
+}
+.complementary-3-border-color-{
+	border-color:$complementary-3; 
+}
 $colorlist : 
 	$complementary-3-a1
 	$complementary-3-a2
@@ -205,8 +257,7 @@ $colorlist :
 	$complementary-3-a9
 	$complementary-3-a10
 	$complementary-3-a11
-	$complementary-3-a12
-	$complementary-3-a13;
+	$complementary-3-a12;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -223,6 +274,15 @@ $colorlist :
 
 // accent colors toni------------------
 // analog 1
+.analogue-1-bg{
+	background-color:$analogue-1; 
+}
+.analogue-1-color{
+		color:$analogue-1; 
+}
+.analogue-1-border-color-{
+	border-color:$analogue-1; 
+}
 $colorlist : 
 	$analogue-1-b1
 	$analogue-1-b2
@@ -246,6 +306,15 @@ $colorlist :
 }
 
 // analog 2
+.analogue-2-bg{
+	background-color:$analogue-2; 
+}
+.analogue-2-color{
+	color:$analogue-2;
+}
+.analogue-2-border-color-{
+	border-color:$analogue-2; 
+}
 $colorlist : 
 	$analogue-2-b1
 	$analogue-2-b2
@@ -333,6 +402,6 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-3-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color;
 	}
 }
