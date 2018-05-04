@@ -19,8 +19,10 @@
     "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages",
     "release": "node scripts/release",
     "bump-config": "node scripts/bump-config",
-    "release-next-minor": "npx release-it minor -n --src.commit --src.push --src.tag --no-github.release --no-npm.publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release-minor": "npm version minor -m \"Release %s\"",
+    "preversion": "npm test",
+    "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
+    "test": "echo \"No tests specified\""
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",

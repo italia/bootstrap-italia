@@ -96,7 +96,6 @@ jobs:
             npm run bump-config
             npm run documentation-deploy-to-gh-pages
 
-
   github-create-release:
     <<: *defaults
 
@@ -116,6 +115,22 @@ jobs:
           command: |
             sh ./scripts/create-release-attachment.sh
             npm run release
+
+  npm-publish:
+    <<: *defaults
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: .
+
+      - run:
+          name: NPM publish
+          command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            npm publish
 
 # Workflows enable multiple jobs in parallel
 workflows:
@@ -137,6 +152,11 @@ workflows:
           filters: *tag_filters
 
       - github-create-release:
+          requires:
+            - build
+          filters: *tag_filters
+
+      - npm-publish:
           requires:
             - build
           filters: *tag_filters
