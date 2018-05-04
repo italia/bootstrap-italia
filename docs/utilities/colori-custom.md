@@ -232,7 +232,7 @@ I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzar
 
 <br>
 
-### Complementari e tridiaci
+### Complementari e triadici
 I colori Complementari possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
 
 **Utilizzo delle classi:**
@@ -241,7 +241,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 `.complementary-(+ 1/2/3 )-color- + variante-colore` : per text color<br>
 `.complementary-(+ 1/2/3 )-border-color- + variante-colore` : per border color
 
-(es. `.complementary-1-bg-a5` per utilizzare come background il colore complementare **1** con variante **a5** )
+(es. `.complementary-1-bg-a5` per utilizzare come background il colore complementare **1** con variante **a4** )
 
 
 {% capture example %}
