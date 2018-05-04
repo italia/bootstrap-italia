@@ -4,19 +4,19 @@ $primary-h : 210;
 $primary-s : 100;
 $primary-b : 80;
 
-$color-primary : hsb($primary-h, $primary-s, $primary-b) !default; 
+$color-primary : hsb($primary-h, $primary-s, $primary-b) !default;  
 $white : hsb(255, 255, 255) !default;
 
 // ACCENT COLORS DEFINITIONS
 	// analoghi
 		$analogue-1-h : 243;
-		$analogue-1-s : 100;
-		$analogue-1-b : 83;
+		$analogue-1-s : 85;
+		$analogue-1-b : 100;
 		$analogue-1 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
 		$analogue-2-h : 178;
 		$analogue-2-s : 95;
 		$analogue-2-b : 85;
-		$analogue-2 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
+		$analogue-2 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default; 
 	// Complementari e triadici
 		$complementary-1-h : 351;
 		$complementary-1-s : 75;
@@ -36,16 +36,27 @@ $neutral-1-h : 210;
 $neutral-1-s : 70;
 $neutral-1-b : 30;
 $neutral-1 : hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
-$neutral-2-h : 225;
+$neutral-2-h : 210;
 $neutral-2-s : 5;
 $neutral-2-b : 95;
 $neutral-2 : hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
-$neutral-3-h : 240;
-$neutral-3-s : 1;
-$neutral-3-b : 100;
-$neutral-3 : hsb($neutral-3-h, $neutral-3-s, $neutral-3-b) !default;
 
 
+// Light Greys A
+$lightgrey-a1 : #E8F2FC;
+$lightgrey-a2 : #EDF5FC;
+$lightgrey-a3 : #F2F7FC;
+$lightgrey-a4 : #F5F9FC;
+
+// Light Greys B
+$lightgrey-b1 : #E6F0FA;
+$lightgrey-b2 : #EBF2FA;
+$lightgrey-b3 : #EDF4FA;
+$lightgrey-b4 : #F2F6FA;
+
+// Light Greys C
+$lightgrey-c1 : #F7F9FA;
+$lightgrey-c2 : #F5F6F7;
 
 //***********************************************************************
 //********************Primary color variations***************************
@@ -223,4 +234,32 @@ $complementary-3-b8 : hsb($complementary-3-h, $complementary-3-s - 70, $compleme
 //***********************************************************************
 
 // tinte e ombre
-/***************************** 1 ****************************************/
+/***************************** NEUTRAL 1 ****************************************/
+$neutral-1-a10 :  hsb($neutral-1-h, $neutral-1-s, $neutral-1-b);
+$neutral-1-a9 :   hsb($neutral-1-h, $neutral-1-s - 20, $neutral-1-b + 7);
+$neutral-1-a8 :   hsb($neutral-1-h, $neutral-1-s - 30, $neutral-1-b + 14);
+$neutral-1-a7 :   hsb($neutral-1-h, $neutral-1-s - 40, $neutral-1-b + 21);
+$neutral-1-a6 :   hsb($neutral-1-h, $neutral-1-s - 50, $neutral-1-b + 28);
+$neutral-1-a5 :   hsb($neutral-1-h, $neutral-1-s - 60, $neutral-1-b + 35);
+$neutral-1-a4 :   hsb($neutral-1-h, $neutral-1-s - 64, $neutral-1-b + 42);
+$neutral-1-a3 :   hsb($neutral-1-h, $neutral-1-s - 68, $neutral-1-b + 49);
+$neutral-1-a2 :   hsb($neutral-1-h, $neutral-1-s - 71, $neutral-1-b + 56);
+$neutral-1-a1 :   hsb($neutral-1-h, $neutral-1-s - 73, $neutral-1-b + 63);
+
+/***************************** NEUTRAL 2 ****************************************/
+$neutral-2-b1 :   hsb($neutral-2-h, $neutral-2-s, $neutral-2-b);
+$neutral-2-b2 :   hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 15);
+$neutral-2-b3 :   hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 30);
+$neutral-2-b4 :   hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 45);
+$neutral-2-b5 :   hsb($neutral-2-h, $neutral-2-s - 1, $neutral-2-b - 60);
+$neutral-2-b6 :   hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75);
+$neutral-2-b7 :   hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 90);
+
+/***************************** NEUTRAL 2 / 3 ****************************************/
+$neutral-2-a1 :   hsb($neutral-2-h, $neutral-2-s, $neutral-2-b);
+$neutral-2-a2 :   hsb($neutral-2-h, $neutral-2-s + 3, $neutral-2-b - 15);
+$neutral-2-a3 :   hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 30);
+$neutral-2-a4 :   hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 45);
+$neutral-2-a5 :   hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60); 
+$neutral-2-a6 :   hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75); 
+$neutral-2-a7 :   hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85);

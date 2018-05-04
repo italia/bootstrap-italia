@@ -411,3 +411,153 @@ $colorlist :
 		border-color:$color;
 	}
 }
+
+// neutral 1
+.neutral-1-bg{
+	background-color:$neutral-1; 
+}
+.neutral-1-color{
+	color:$neutral-1;
+}
+.neutral-1-border-color-{
+	border-color:$neutral-1; 
+}
+
+$colorlist : 
+	$neutral-1-a1
+	$neutral-1-a2
+	$neutral-1-a3
+	$neutral-1-a4
+	$neutral-1-a5
+	$neutral-1-a6
+	$neutral-1-a7
+	$neutral-1-a8
+	$neutral-1-a9
+	$neutral-1-a10;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i);
+	.neutral-1-bg-a#{$i}{
+		background-color:$color; 
+	}
+	.neutral-1-color-a#{$i}{
+		color:$color; 
+	}
+	.neutral-1-border-color-a#{$i}{
+		border-color:$color;
+	}
+}
+
+// neutral 2
+.neutral-2-bg{
+	background-color:$neutral-2; 
+}
+.neutral-2-color{
+	color:$neutral-2;
+}
+.neutral-2-border-color-{
+	border-color:$neutral-2;  
+}
+
+$colorlist : 
+	$neutral-2-b1
+	$neutral-2-b2
+	$neutral-2-b3
+	$neutral-2-b4
+	$neutral-2-b5
+	$neutral-2-b6
+	$neutral-2-b7;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i); 
+	.neutral-2-bg-b#{$i}{
+		background-color:$color; 
+	}
+	.neutral-2-color-b#{$i}{
+		color:$color; 
+	}
+	.neutral-2-border-color-b#{$i}{
+		border-color:$color;
+	}
+}
+
+$colorlist : 
+	$neutral-2-a1
+	$neutral-2-a2
+	$neutral-2-a3
+	$neutral-2-a4
+	$neutral-2-a5
+	$neutral-2-a6
+	$neutral-2-a7;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i); 
+	.neutral-2-bg-a#{$i}{
+		background-color:$color; 
+	}
+	.neutral-2-color-a#{$i}{
+		color:$color; 
+	}
+	.neutral-2-border-color-a#{$i}{
+		border-color:$color;
+	}
+}
+
+// light greys a
+$colorlist : 
+	$lightgrey-a1
+	$lightgrey-a2
+	$lightgrey-a3
+	$lightgrey-a4;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i); 
+	.lightgrey-bg-a#{$i}{
+		background-color:$color; 
+	}
+	.lightgrey-color-a#{$i}{
+		color:$color; 
+	}
+	.lightgrey-border-color-a#{$i}{
+		border-color:$color;
+	}
+}
+
+// light greys b
+$colorlist : 
+	$lightgrey-b1
+	$lightgrey-b2
+	$lightgrey-b3
+	$lightgrey-b4;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i); 
+	.lightgrey-bg-b#{$i}{
+		background-color:$color; 
+	}
+	.lightgrey-color-b#{$i}{
+		color:$color; 
+	}
+	.lightgrey-border-color-b#{$i}{
+		border-color:$color;
+	}
+}
+
+// light greys c
+$colorlist : 
+	$lightgrey-c1
+	$lightgrey-c2;
+
+@for $i from 1 through length($colorlist){
+	$color: nth($colorlist, $i); 
+	.lightgrey-bg-c#{$i}{
+		background-color:$color; 
+	}
+	.lightgrey-color-c#{$i}{
+		color:$color; 
+	}
+	.lightgrey-border-color-c#{$i}{
+		border-color:$color;
+	}
+}
+
