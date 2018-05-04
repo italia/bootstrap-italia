@@ -1,12 +1,12 @@
 // primary color ---------------------------------
 .primary-bg{
-	background-color:$primary; 
+	background-color:$color-primary; 
 }
 .primary-color{
-		color:$primary; 
+		color:$color-primary; 
 }
 .primary-border-color-{
-	border-color:$primary; 
+	border-color:$color-primary; 
 }
 
 // primary colors tinte e ombre------------------
@@ -45,7 +45,8 @@ $colorlist :
 	$primary-b4
 	$primary-b5
 	$primary-b6
-	$primary-b7;
+	$primary-b7
+	$primary-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -290,7 +291,8 @@ $colorlist :
 	$analogue-1-b4
 	$analogue-1-b5
 	$analogue-1-b6
-	$analogue-1-b7;
+	$analogue-1-b7
+	$analogue-1-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -322,7 +324,8 @@ $colorlist :
 	$analogue-2-b4
 	$analogue-2-b5
 	$analogue-2-b6
-	$analogue-2-b7;
+	$analogue-2-b7
+	$analogue-2-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -345,7 +348,8 @@ $colorlist :
 	$complementary-1-b4
 	$complementary-1-b5
 	$complementary-1-b6
-	$complementary-1-b7;
+	$complementary-1-b7
+	$complementary-1-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -368,7 +372,8 @@ $colorlist :
 	$complementary-2-b4
 	$complementary-2-b5
 	$complementary-2-b6
-	$complementary-2-b7;
+	$complementary-2-b7
+	$complementary-2-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);
@@ -391,7 +396,8 @@ $colorlist :
 	$complementary-3-b4
 	$complementary-3-b5
 	$complementary-3-b6
-	$complementary-3-b7;
+	$complementary-3-b7
+	$complementary-3-b8;
 
 @for $i from 1 through length($colorlist){
 	$color: nth($colorlist, $i);

@@ -4,7 +4,7 @@ $primary-h : 210;
 $primary-s : 100;
 $primary-b : 80;
 
-$primary : hsb($primary-h, $primary-s, $primary-b) !default;
+$color-primary : hsb($primary-h, $primary-s, $primary-b) !default; 
 $white : hsb(255, 255, 255) !default;
 
 // ACCENT COLORS DEFINITIONS
@@ -67,12 +67,13 @@ $primary-a1  : hsb($primary-h, $primary-s - 75, 100);
 
 //-------------------------Toni------------------------------------------
 $primary-b1 : hsb($primary-h, $primary-s, $primary-b);
-$primary-b2 : hsb($primary-h, $primary-s - ($primary-s * 10 / 100), $primary-b - ($primary-b * 10 / 100));
-$primary-b3 : hsb($primary-h, $primary-s - ($primary-s * 20 / 100), $primary-b - ($primary-b * 20 / 100));
-$primary-b4 : hsb($primary-h, $primary-s - ($primary-s * 30 / 100), $primary-b -  ($primary-b * 30 / 100));
-$primary-b5 : hsb($primary-h, $primary-s - ($primary-s * 40 / 100), $primary-b -  ($primary-b * 40 / 100));
-$primary-b6 : hsb($primary-h, $primary-s - ($primary-s * 50 / 100), $primary-b -  ($primary-b * 50 / 100));
-$primary-b7 : hsb($primary-h, $primary-s - ($primary-s * 60 / 100), $primary-b -  ($primary-b * 60 / 100));
+$primary-b2 : hsb($primary-h, $primary-s - 10, $primary-b - 10);
+$primary-b3 : hsb($primary-h, $primary-s - 20, $primary-b - 20);
+$primary-b4 : hsb($primary-h, $primary-s - 30, $primary-b - 30);
+$primary-b5 : hsb($primary-h, $primary-s - 40, $primary-b - 40);
+$primary-b6 : hsb($primary-h, $primary-s - 50, $primary-b - 50);
+$primary-b7 : hsb($primary-h, $primary-s - 60, $primary-b - 60);
+$primary-b8 : hsb($primary-h, $primary-s - 70, $primary-b - 70);
 
 //-------------------------Saturazione------------------------------------------
 $primary-c1 : hsb($primary-h, $primary-s - ($primary-s*90/100), $primary-b + ($primary-b * 20 / 100));
@@ -124,21 +125,23 @@ $analogue-2-a1  : hsb($analogue-2-h, $analogue-2-s - 75, 100);
 // toni
 /***************************** 1 ****************************************/
 $analogue-1-b1 : hsb($analogue-1-h, $analogue-1-s, $analogue-1-b);
-$analogue-1-b2 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 10 / 100), $analogue-1-b - ($analogue-1-b * 10 / 100));
-$analogue-1-b3 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 20 / 100), $analogue-1-b - ($analogue-1-b * 20 / 100));
-$analogue-1-b4 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 30 / 100), $analogue-1-b - ($analogue-1-b * 30 / 100));
-$analogue-1-b5 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 40 / 100), $analogue-1-b - ($analogue-1-b * 40 / 100));
-$analogue-1-b6 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 50 / 100), $analogue-1-b - ($analogue-1-b * 50 / 100));
-$analogue-1-b7 : hsb($analogue-1-h, $analogue-1-s - ($analogue-1-s* 60 / 100), $analogue-1-b - ($analogue-1-b * 60 / 100));
-
+$analogue-1-b2 : hsb($analogue-1-h, $analogue-1-s - 10, $analogue-1-b - 10);
+$analogue-1-b3 : hsb($analogue-1-h, $analogue-1-s - 20, $analogue-1-b - 20);
+$analogue-1-b4 : hsb($analogue-1-h, $analogue-1-s - 30, $analogue-1-b - 30);
+$analogue-1-b5 : hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b - 40);
+$analogue-1-b6 : hsb($analogue-1-h, $analogue-1-s - 50, $analogue-1-b - 50);
+$analogue-1-b7 : hsb($analogue-1-h, $analogue-1-s - 60, $analogue-1-b - 60);
+$analogue-1-b8 : hsb($analogue-1-h, $analogue-1-s - 70, $analogue-1-b - 70);
+ 
 /***************************** 2 ****************************************/
 $analogue-2-b1 : hsb($analogue-2-h, $analogue-2-s, $analogue-2-b);
-$analogue-2-b2 : hsb($analogue-2-h, $analogue-2-s - 10, $analogue-2-b - ($analogue-2-b*10/100));  
-$analogue-2-b3 : hsb($analogue-2-h, $analogue-2-s - 20, $analogue-2-b - ($analogue-2-b*20/100));
-$analogue-2-b4 : hsb($analogue-2-h, $analogue-2-s - 30, $analogue-2-b - ($analogue-2-b*30/100));
-$analogue-2-b5 : hsb($analogue-2-h, $analogue-2-s - 40, $analogue-2-b - ($analogue-2-b*40/100));
-$analogue-2-b6 : hsb($analogue-2-h, $analogue-2-s - 50, $analogue-2-b - ($analogue-2-b*50/100));
-$analogue-2-b7 : hsb($analogue-2-h, $analogue-2-s - 60, $analogue-2-b - ($analogue-2-b*60/100));
+$analogue-2-b2 : hsb($analogue-2-h, $analogue-2-s - 10, $analogue-2-b - 10);
+$analogue-2-b3 : hsb($analogue-2-h, $analogue-2-s - 20, $analogue-2-b - 20);
+$analogue-2-b4 : hsb($analogue-2-h, $analogue-2-s - 30, $analogue-2-b - 30);
+$analogue-2-b5 : hsb($analogue-2-h, $analogue-2-s - 40, $analogue-2-b - 40);
+$analogue-2-b6 : hsb($analogue-2-h, $analogue-2-s - 50, $analogue-2-b - 50);
+$analogue-2-b7 : hsb($analogue-2-h, $analogue-2-s - 60, $analogue-2-b - 60);
+$analogue-2-b8 : hsb($analogue-2-h, $analogue-2-s - 70, $analogue-2-b - 70);
 
 // complementari
 // tinte e ombre 
@@ -187,30 +190,33 @@ $complementary-3-a1  : hsb($complementary-3-h, $complementary-3-s - 75, 100);
 //-------------------------- toni -----------------------------------------
 /***************************** 1 ****************************************/
 $complementary-1-b1 : hsb($complementary-1-h, $complementary-1-s, $complementary-1-b);
-$complementary-1-b2 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 10 / 100), $complementary-1-b - ($complementary-1-b * 10 / 100)); 
-$complementary-1-b3 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 20 / 100), $complementary-1-b - ($complementary-1-b * 20 / 100));
-$complementary-1-b4 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 30 / 100), $complementary-1-b - ($complementary-1-b * 30 / 100));
-$complementary-1-b5 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 40 / 100), $complementary-1-b - ($complementary-1-b * 40 / 100));
-$complementary-1-b6 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 50 / 100), $complementary-1-b - ($complementary-1-b * 50 / 100));
-$complementary-1-b7 : hsb($complementary-1-h, $complementary-1-s - ($complementary-1-s * 60 / 100), $complementary-1-b - ($complementary-1-b * 60 / 100));
+$complementary-1-b2 : hsb($complementary-1-h, $complementary-1-s - 10, $complementary-1-b - 10);
+$complementary-1-b3 : hsb($complementary-1-h, $complementary-1-s - 20, $complementary-1-b - 20);
+$complementary-1-b4 : hsb($complementary-1-h, $complementary-1-s - 30, $complementary-1-b - 30);
+$complementary-1-b5 : hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b - 40);
+$complementary-1-b6 : hsb($complementary-1-h, $complementary-1-s - 50, $complementary-1-b - 50);
+$complementary-1-b7 : hsb($complementary-1-h, $complementary-1-s - 60, $complementary-1-b - 60);
+$complementary-1-b8 : hsb($complementary-1-h, $complementary-1-s - 70, $complementary-1-b - 70);
 
 /***************************** 2 ****************************************/
 $complementary-2-b1 : hsb($complementary-2-h, $complementary-2-s, $complementary-2-b);
-$complementary-2-b2 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 10 / 100), $complementary-2-b - ($complementary-2-b * 10 / 100));
-$complementary-2-b3 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 20 / 100), $complementary-2-b - ($complementary-2-b * 20 / 100));
-$complementary-2-b4 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 30 / 100), $complementary-2-b - ($complementary-2-b * 30 / 100));
-$complementary-2-b5 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 40 / 100), $complementary-2-b - ($complementary-2-b * 40 / 100));
-$complementary-2-b6 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 50 / 100), $complementary-2-b - ($complementary-2-b * 50 / 100));
-$complementary-2-b7 : hsb($complementary-2-h, $complementary-2-s - ($complementary-2-s * 60 / 100), $complementary-2-b - ($complementary-2-b * 60 / 100));
+$complementary-2-b2 : hsb($complementary-2-h, $complementary-2-s - 10, $complementary-2-b - 10);
+$complementary-2-b3 : hsb($complementary-2-h, $complementary-2-s - 20, $complementary-2-b - 20);
+$complementary-2-b4 : hsb($complementary-2-h, $complementary-2-s - 30, $complementary-2-b - 30);
+$complementary-2-b5 : hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b - 40);
+$complementary-2-b6 : hsb($complementary-2-h, $complementary-2-s - 50, $complementary-2-b - 50);
+$complementary-2-b7 : hsb($complementary-2-h, $complementary-2-s - 60, $complementary-2-b - 60);
+$complementary-2-b8 : hsb($complementary-2-h, $complementary-2-s - 70, $complementary-2-b - 70);
 
 /***************************** 3 ****************************************/
 $complementary-3-b1 : hsb($complementary-3-h, $complementary-3-s, $complementary-3-b);
-$complementary-3-b2 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 10 / 100), $complementary-3-b - ($complementary-3-b * 10 / 100));
-$complementary-3-b3 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 20 / 100), $complementary-3-b - ($complementary-3-b * 20 / 100));
-$complementary-3-b4 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 30 / 100), $complementary-3-b - ($complementary-3-b * 30 / 100));
-$complementary-3-b5 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 40 / 100), $complementary-3-b - ($complementary-3-b * 40 / 100));
-$complementary-3-b6 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 50 / 100), $complementary-3-b - ($complementary-3-b * 50 / 100)); 
-$complementary-3-b7 : hsb($complementary-3-h, $complementary-3-s - ($complementary-3-s * 60 / 100), $complementary-3-b - ($complementary-3-b * 60 / 100));
+$complementary-3-b2 : hsb($complementary-3-h, $complementary-3-s - 10, $complementary-3-b - 10);
+$complementary-3-b3 : hsb($complementary-3-h, $complementary-3-s - 20, $complementary-3-b - 20);
+$complementary-3-b4 : hsb($complementary-3-h, $complementary-3-s - 30, $complementary-3-b - 30);
+$complementary-3-b5 : hsb($complementary-3-h, $complementary-3-s - 40, $complementary-3-b - 40);
+$complementary-3-b6 : hsb($complementary-3-h, $complementary-3-s - 50, $complementary-3-b - 50);
+$complementary-3-b7 : hsb($complementary-3-h, $complementary-3-s - 60, $complementary-3-b - 60);
+$complementary-3-b8 : hsb($complementary-3-h, $complementary-3-s - 70, $complementary-3-b - 70); 
 
 //***********************************************************************
 //********************Neutral color variations***************************
