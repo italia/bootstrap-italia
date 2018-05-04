@@ -1,4 +1,52 @@
-.pagination .page-item .page-link {
-  border: none;
-  padding: 0.5rem 1rem;
+.pagination {
+	.page-item {
+		margin-right: 5px;
+
+		// disabled version
+		&.disabled {
+			.page-link, i[class^="it-"] {
+				color: #ADB7C0 !important; // substitute with color variable
+			}
+		}
+		
+		//active version
+		&.active {
+			.page-link {
+				border: 1px solid $italia;
+				color: $italia;
+			}
+		}
+
+		.page-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			border: none;
+			height: 2.6666666666666665rem; // 48px
+			min-width: 2.6666666666666665rem; // 48px
+			border-radius: 4px;
+			
+			font-size: 0.8888888888888888rem; // 16px
+			font-weight: bold;
+			color: #5C6F82; // substitute with color variable
+			background-color: transparent;
+
+			// icon
+			i[class^="it-"] {
+				font-size: 0.7rem;
+				color: #7FB2E5; // substitute with color variable
+			}
+
+			//hover state
+			&:hover {
+				color: $italia;
+				background-color: transparent;
+				// icon
+				i[class^="it-"] {
+					color: $italia;
+				}
+			}
+		}
+	}
 }
