@@ -3,10 +3,27 @@
 	background-color:$color-primary; 
 }
 .primary-color{
-		color:$color-primary; 
+	color:$color-primary; 
 }
-.primary-border-color-{
-	border-color:$color-primary; 
+.primary-border-color{
+	border-color:$color-primary !important;
+	&.border{
+		border-color:$color-primary !important;
+	}
+}
+
+// white
+.white-bg{
+	background-color:$white; 
+}
+.white-color{
+	color:$white; 
+}
+.white-border-color-{
+	border-color:$white !important;
+	&.border{
+		border-color:$white !important;
+	}
 }
 
 // primary colors tinte e ombre------------------
@@ -31,10 +48,13 @@ $colorlist :
 		background-color:$color; 
 	}
 	.primary-color-a#{$i}{
-		color:$color; 
+		color:$color;
 	}
 	.primary-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 // primary colors toni------------------
@@ -57,7 +77,10 @@ $colorlist :
 		color:$color; 
 	}
 	.primary-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		} 
 	}
 }
 // primary colors saturazione------------------
@@ -84,7 +107,10 @@ $colorlist :
 		color:$color; 
 	}
 	.primary-border-color-c#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		} 
 	}
 }
 // accent colors-----------------------------------------------------------
@@ -95,7 +121,10 @@ $colorlist :
 		color:$analogue-1; 
 }
 .analogue-1-border-color-{
-	border-color:$analogue-1; 
+	border-color:$analogue-1 !important;
+	&.border{
+		border-color:$analogue-1 !important;
+	}
 }
 // accent colors tinte e ombre------------------
 // analog 1
@@ -122,7 +151,10 @@ $colorlist :
 		color:$color; 
 	}
 	.analogue-1-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 // analog 2
@@ -133,7 +165,10 @@ $colorlist :
 		color:$analogue-2; 
 }
 .analogue-2-border-color-{
-	border-color:$analogue-2; 
+	border-color:$analogue-2 !important;
+	&.border{
+		border-color:$analogue-2 !important;
+	}
 }
 $colorlist : 
 	$analogue-2-a1
@@ -158,7 +193,10 @@ $colorlist :
 		color:$color; 
 	}
 	.analogue-2-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -170,7 +208,10 @@ $colorlist :
 		color:$complementary-2; 
 }
 .complementary-1-border-color-{
-	border-color:$complementary-1; 
+	border-color:$complementary-1 !important;
+	&.border{
+		border-color:$complementary-1 !important;
+	}
 }
 $colorlist : 
 	$complementary-1-a1
@@ -195,7 +236,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-1-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -207,7 +251,10 @@ $colorlist :
 		color:$complementary-2; 
 }
 .complementary-2-border-color-{
-	border-color:$complementary-2; 
+	border-color:$complementary-2 !important;
+	&.border{
+		border-color:$complementary-2 !important;
+	}
 }
 $colorlist : 
 	$complementary-2-a1
@@ -232,7 +279,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-2-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -244,7 +294,10 @@ $colorlist :
 		color:$complementary-3; 
 }
 .complementary-3-border-color-{
-	border-color:$complementary-3; 
+	border-color:$complementary-3 !important;
+	&.border{
+		border-color:$complementary-3 !important;
+	}
 }
 $colorlist : 
 	$complementary-3-a1
@@ -269,7 +322,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-3-border-color-a#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -282,7 +338,10 @@ $colorlist :
 		color:$analogue-1; 
 }
 .analogue-1-border-color-{
-	border-color:$analogue-1; 
+	border-color:$analogue-1 !important;
+	&.border{
+		border-color:$analogue-1 !important;
+	}
 }
 $colorlist : 
 	$analogue-1-b1
@@ -303,7 +362,10 @@ $colorlist :
 		color:$color; 
 	}
 	.analogue-1-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -315,7 +377,10 @@ $colorlist :
 	color:$analogue-2;
 }
 .analogue-2-border-color-{
-	border-color:$analogue-2; 
+	border-color:$analogue-2 !important;
+	&.border{
+		border-color:$analogue-2 !important;
+	}
 }
 $colorlist : 
 	$analogue-2-b1
@@ -336,7 +401,10 @@ $colorlist :
 		color:$color; 
 	}
 	.analogue-2-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -360,7 +428,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-1-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		} 
 	}
 }
 
@@ -384,7 +455,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-2-border-color-b#{$i}{
-		border-color:$color; 
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -408,7 +482,10 @@ $colorlist :
 		color:$color; 
 	}
 	.complementary-3-border-color-b#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -420,7 +497,10 @@ $colorlist :
 	color:$neutral-1;
 }
 .neutral-1-border-color-{
-	border-color:$neutral-1; 
+	border-color:$neutral-1 !important;
+	&.border{
+		border-color:$neutral-1 !important;
+	} 
 }
 
 $colorlist : 
@@ -444,7 +524,10 @@ $colorlist :
 		color:$color; 
 	}
 	.neutral-1-border-color-a#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -477,7 +560,10 @@ $colorlist :
 		color:$color; 
 	}
 	.neutral-2-border-color-b#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -499,7 +585,10 @@ $colorlist :
 		color:$color; 
 	}
 	.neutral-2-border-color-a#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -519,7 +608,10 @@ $colorlist :
 		color:$color; 
 	}
 	.lightgrey-border-color-a#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -539,7 +631,10 @@ $colorlist :
 		color:$color; 
 	}
 	.lightgrey-border-color-b#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
@@ -557,7 +652,10 @@ $colorlist :
 		color:$color; 
 	}
 	.lightgrey-border-color-c#{$i}{
-		border-color:$color;
+		border-color:$color !important;
+		&.border{
+			border-color:$color !important;
+		}
 	}
 }
 
