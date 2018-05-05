@@ -77,7 +77,6 @@
     - title: Bordi
     - title: Clearfix
     - title: Colori
-      status: wip
     - title: Colori Custom
     - title: Dimensionamento
     - title: Display
@@ -85,7 +84,7 @@
     - title: Flex
     - title: Float
     - title: Griglie
-      status: work in progress
+      status: wip
     - title: Immagini sostitutive
     - title: Icone
       status: wip
