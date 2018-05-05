@@ -14,7 +14,7 @@ toc: true
 Il colore è uno degli strumenti principali per la trasmissione delle informazioni, ma non dimenticare mai di affiancare all'uso del colore altri mezzi più espliciti. Leggi le [Linee Guida di design](http://design-italia.readthedocs.io/it/stable/doc/service-design/accessibilita.html#un-esempio-per-capire-uso-del-colore) per maggiori informazioni.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Bootstrap Italia eredita gli stessi meccanisimi per la gestione dei colori di Bootstrap  4, dove i colori del tema sono descritti attraverso una variabile Sass nominata `$theme-colors`.
+Bootstrap Italia eredita gli stessi meccanisimi per la gestione dei colori di Bootstrap {{ site.bootstrap_version }}, dove i colori del tema sono descritti attraverso una variabile Sass nominata `$theme-colors`.
 
 La principale novità introdotta da Bootstrap Italia è una serie di varianti della tonalità primaria _primary_ basate sullo spazio colore [HSB](https://it.wikipedia.org/wiki/Hue_Saturation_Brightness) (coincidente con il modello HSV).
 

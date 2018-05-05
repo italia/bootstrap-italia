@@ -105,9 +105,13 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
 </div>
 
 
-# Colori secondari
+## Colori secondari
 
-## Analoghi
+### Analoghi
+
+Ai colori monocromatici può essere affiancato un accent color, definito così perche si tratta di un colore molto luminoso, serve ad attirare l’attenzione.
+
+Devono essere usati in modo parsimonioso.
 
 <div class="primary-color-container">
 <div class="square-color analogue-1-bg">
@@ -133,7 +137,7 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
 
 ---
 
-## Complementari e triadici
+### Complementari e triadici
 
 <div class="primary-color-container">
 <div class="square-color complementary-1-bg">
@@ -322,7 +326,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 {% endcapture %}{% include example.html content=example %}
 
 
-# Colori neutrali
+## Colori neutrali
 
 <div class="primary-color-container">
 <div class="square-color neutral-1-bg">
@@ -393,7 +397,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-# Grigi chiari
+## Grigi chiari
 
 I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare la relativa classe
 

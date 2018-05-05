@@ -102,43 +102,6 @@ $theme-colors: map-merge((
   "900": $gray-900
 ), $theme-colors);
 
-
-
-
-// Color Variations
-
-// Addon: Primary Color Variations
-
-
-// HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV) è lo spazio colore
-// scelto per ottenere le varianti colore della tonalità primaria.
-// Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in quanto hue e, in gran parte anche
-// saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
-// componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
-
-/*
-$primary-h: hue($primary);
-$primary-s: saturation($primary);
-
-$primary-variants: (
-  "primary-b-1": hsb($primary-h, $primary-s, 10),
-  "primary-b-2": hsb($primary-h, $primary-s, 20),
-  "primary-b-3": hsb($primary-h, $primary-s, 30),
-  "primary-b-4": hsb($primary-h, $primary-s, 40),
-  "primary-b-5": hsb($primary-h, $primary-s, 50),
-  "primary-b-6": hsb($primary-h, $primary-s, 60),
-  "primary-b-7": hsb($primary-h, $primary-s, 70),
-  "primary-b-8": hsb($primary-h, $primary-s, 80),
-  "primary-b-9": hsb($primary-h, $primary-s, 90),
-  "primary-b-A": hsb($primary-h, $primary-s * .75, 84),
-  "primary-b-B": hsb($primary-h, $primary-s * .60, 87),
-  "primary-b-C": hsb($primary-h, $primary-s * .45, 90),
-  "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
-  "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
-  "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
-);
-*/
-
 // Shadows
 $enable-shadows: true;
 
