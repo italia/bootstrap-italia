@@ -1,11 +1,57 @@
+//mobile
+nav.pagination-wrapper {
+	display: flex;
+	flex-wrap: wrap; //temp
+	justify-content: center;
+
+	.dropdown {
+		margin-left: 2.5rem;
+	}
+
+	.form-group {
+		margin-top: 0;
+		margin-left: 2.5rem;
+		width: 4.5rem;
+		label {
+			font-size: 0.8888888888888888rem; // 16px
+			color: $neutral-2-b3;
+		}
+		&.active {
+			label {
+				font-size: 0.8rem;
+			}
+		}
+	}
+
+	//dropdown toggle
+	.btn.dropdown-toggle{
+		background-color: transparent;
+		color: $neutral-1-a7;
+		border: none;
+		border-bottom: 1px solid $gray-secondary;
+		border-radius: 0;
+		height: 2.5rem;
+		width: 100%;
+		box-shadow: none;
+		transition: all .3s;
+		font-weight: 700;
+		outline-width: 5px;
+		&:focus {
+			outline: $pagination-focus-outline;
+    		box-shadow: $pagination-focus-box-shadow;
+		}
+	}
+}
+
 .pagination {
+	flex-wrap: wrap; //temp
 	.page-item {
 		margin-right: 5px;
 
 		// disabled version
 		&.disabled {
 			.page-link, i[class^="it-"] {
-				color: #ADB7C0 !important; // substitute with color variable
+				color: $neutral-2-b2 !important;
 			}
 		}
 		
@@ -14,7 +60,13 @@
 			.page-link {
 				border: 1px solid $italia;
 				color: $italia;
+				pointer-events: none;
 			}
+		}
+
+		//nolink version
+		&.nolink {
+			pointer-events: none;
 		}
 
 		.page-link {
@@ -22,21 +74,26 @@
 			align-items: center;
 			justify-content: center;
 			
+			//border
 			border: none;
-			height: 2.6666666666666665rem; // 48px
-			min-width: 2.6666666666666665rem; // 48px
+			height: 2.5rem; // 40px
+			min-width: 2.5rem; // 40px
 			border-radius: 4px;
 			
+			//text
 			font-size: 0.8888888888888888rem; // 16px
 			font-weight: bold;
-			color: #5C6F82; // substitute with color variable
+			color: $neutral-1-a7;
 			background-color: transparent;
 
-			// icon
+			// icon & text prev/next
+			i[class^="it-"], &.text {
+				color: $primary-c5; 
+			}
 			i[class^="it-"] {
 				font-size: 0.7rem;
-				color: #7FB2E5; // substitute with color variable
 			}
+
 
 			//hover state
 			&:hover {
@@ -49,4 +106,40 @@
 			}
 		}
 	}
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+	.pagination {
+		.page-item {
+			.page-link {
+				height: 2.6666666666666665rem; // 48px
+				min-width: 2.6666666666666665rem; // 48px
+			}
+		}
+	}
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	nav.pagination-wrapper {
+		justify-content: flex-start;
+	}
+}
+
+//Hover states
+/*@media (min-width: $grid-breakpoints-hover) {
+	
+}*/
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	
 }
