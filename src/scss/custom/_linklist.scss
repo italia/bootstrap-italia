@@ -4,22 +4,55 @@
 		padding: 0;
 		list-style-type: none;
 		li{
-			color: $color-primary;
 			a{
 				font-size: $link-list-font-size;
 				line-height: $link-list-line-height;
 				display: block;
 				padding: 0 $link-list-h-pad;
+				position: relative;
+				span{
+					color: $color-primary; 
+					display: block;
+					margin-right:$link-list-h-pad;
+				}
+				// icone destre dentro link
+				&.right-icon{
+					i.right{
+						position: absolute;
+						top: 0;
+						right: $link-list-h-pad;
+					}
+				}
 				&.active{
-					color:$neutral-1-a10;
-					text-decoration: underline;
+					span{
+						color:$neutral-1-a10;
+						text-decoration: underline;
+					}
 				}
 				&.disabled{
-					color: $neutral-1-a4;
 					cursor: not-allowed;
+					span{
+						color: $neutral-1-a4;
+					}
+					i{
+						color: $neutral-1-a4;
+					}
+				}
+				// icone sinistre dentro link
+				&.left-icon{
+					display: flex;
+					i.left{
+						margin-right: $link-list-left-icon-space;
+					}
 				}
 				&.large{
 					font-size: $link-list-font-size-l;
+				}
+				// paragrafo dentro link
+				p{
+					font-size: $link-list-paragraph-size;
+					line-height: initial;
+					color: $neutral-1-a7;
 				}
 			}
 			h3{
@@ -32,6 +65,7 @@
 					padding: 0;
 				}
 			}
+
 		}
 		.divider{
 			display: block;
@@ -39,6 +73,10 @@
 			background: $neutral-1-a1;
 			margin: $link-list-divider-distance 0;
 		}
+	}
+	// multiline version
+	.multiline{
+
 	}
 }
 //small - tablet
@@ -66,12 +104,7 @@
 			
 			li{
 				a{
-					&:hover:not(.disabled){
-						color:$color-primary; 
-					}
-					&.disabled:hover{
-						text-decoration: none;
-					}
+					
 					&.large{
 						line-height: $link-list-line-height-l;
 					}
@@ -83,7 +116,29 @@
 
 //Hover states
 @media (min-width: $grid-breakpoints-hover) {
-	
+	.link-list-wrapper{
+		ul{
+			
+			li{
+				a{
+					&:hover:not(.disabled){
+						text-decoration: none;
+						span{
+							color:$color-primary;
+							text-decoration: underline;
+						}
+						p{
+							color:$color-primary;
+							text-decoration: none;
+						}
+					}
+					&.disabled:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 //Tablet horizontal / small desktop
