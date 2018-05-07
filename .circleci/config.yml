@@ -75,12 +75,17 @@ jobs:
           root: *working_directory
           paths:
             - dist
+            - docs/assets/dist
 
   github-update-pages:
     <<: *defaults
 
     steps:
       - checkout
+
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: .
 
       # Restore dependencies
       - restore_cache: *restore_cache
