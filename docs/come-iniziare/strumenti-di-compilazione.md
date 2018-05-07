@@ -143,19 +143,6 @@ Tale comando creerà un nuovo commit sul branch `gh-pages` del repository remoto
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
 
-## Creare una nuova release
-
-Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi manuali:
-
-* Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json` e `_config.yml`
-* Lanciare i comandi `npm run build` e `npm run documentation-build` per compilare libreria e documentazione
-* Lanciare il comando `npm i` per aggiornare il file `package.lock`
-* Commit e push delle modifiche, commentare con `version bump vx.x.x`
-* Tag del commit con numero di versione in formato `x.x.x`
-* Creare manualmente un file compresso `bootstrap-italia.zip` dei contenuti della cartella `/dist`
-* Scrivere le release notes su GitHub e allegare il suddetto file compresso
-* `npm publish` per aggiornare la versione su `npm`
-
 ---
 
 ###### Continua la lettura >

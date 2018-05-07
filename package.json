@@ -18,9 +18,11 @@
     "documentation-serve": "bundle exec jekyll serve",
     "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages",
     "release": "node scripts/release",
-    "bump-config": "node scripts/bump-config",
-    "release-minor": "npm version minor -m \"Release %s\"",
+    "bump-major": "npm version major -m \"Release %s\"",
+    "bump-minor": "npm version minor -m \"Release %s\"",
+    "bump-patch": "npm version patch -m \"Release %s\"",
     "preversion": "npm test",
+    "version": "node scripts/config-sync",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
     "test": "echo \"No tests specified\""
   },
