@@ -22,7 +22,7 @@
     "bump-minor": "npm version minor -m \"Release %s\"",
     "bump-patch": "npm version patch -m \"Release %s\"",
     "preversion": "npm test",
-    "version": "node scripts/config-sync",
+    "version": "node scripts/config-sync && git add _config.yml",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
     "test": "echo \"No tests specified\""
   },
