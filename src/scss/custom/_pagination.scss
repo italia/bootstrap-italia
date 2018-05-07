@@ -3,11 +3,26 @@ nav.pagination-wrapper {
 	display: flex;
 	flex-wrap: wrap; //temp
 	justify-content: center;
-
-	.dropdown {
-		margin-left: 2.5rem;
+	
+	//total number version
+	&.pagination-total {
+		display: inline-flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		ul {
+			margin-bottom: 0.5rem;
+		}
+		p {
+			text-align: center;
+			font-size: 0.8888888888888888rem; // 16px
+			font-weight: bold;
+			color: $neutral-1-a7;
+			margin-bottom: 1rem;
+		}
 	}
-
+		
+	//go to
 	.form-group {
 		margin-top: 0;
 		margin-left: 2.5rem;
@@ -22,7 +37,11 @@ nav.pagination-wrapper {
 			}
 		}
 	}
-
+	
+	//dropdown
+	.dropdown {
+		margin-left: 2.5rem;
+	}
 	//dropdown toggle
 	.btn.dropdown-toggle{
 		background-color: transparent;
@@ -39,6 +58,9 @@ nav.pagination-wrapper {
 		&:focus {
 			outline: $pagination-focus-outline;
     		box-shadow: $pagination-focus-box-shadow;
+		}
+		&:after {
+			display: none;
 		}
 	}
 }
@@ -67,6 +89,9 @@ nav.pagination-wrapper {
 		//nolink version
 		&.nolink {
 			pointer-events: none;
+			i[class^="it-"], &.text {
+				color: $neutral-2-b2 !important;
+			}
 		}
 
 		.page-link {
@@ -92,6 +117,10 @@ nav.pagination-wrapper {
 			}
 			i[class^="it-"] {
 				font-size: 0.7rem;
+			}
+
+			span.d-inline-block {
+				margin-right: 0.5rem;
 			}
 
 
