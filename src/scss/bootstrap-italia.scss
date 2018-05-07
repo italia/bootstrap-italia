@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
-//colors utilities
-@import "utilities/colors_vars";
-@import "utilities/colors";
-
-// funzioni e variabili
+// funzioni e variabili colore
 @import "functions";
+@import "utilities/colors_vars";
+
+//variables
 @import "variables"; 
+
+//classi colore
+@import "utilities/colors";
 
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
