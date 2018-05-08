@@ -42,7 +42,7 @@ I link della paginazione uno stato disabilitato usando la classe `.disabled` nel
 ##### Disabilitazione link
 
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
-In alternativa per la paginazione puoi sostituire il link disabilitato con uno `<span>` avente classe `page-link` e contenuto in un `<li>` con classe `nolink` (es.: `<li class="page-item nolink"><span class="page-link">1</span></li>`).
+In alternativa per la paginazione puoi sostituire il link disabilitato con uno `<span>` avente classe `.page-link` e contenuto in un `<li>` con classe `.nolink` (es.: `<li class="page-item nolink"><span class="page-link">1</span></li>`).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
@@ -73,11 +73,15 @@ In alternativa per la paginazione puoi sostituire il link disabilitato con uno `
 
 ## Allineamento
 
-Grazie alle [utilità di Flexbox]({{ site.baseurl }}/docs/utilities/flex/), si può allineare facilmente il blocco della paginazione.
+Grazie alle [utilità di Flexbox]({{ site.baseurl }}/docs/utilities/flex/), si può allineare facilmente il blocco della paginazione.<br>
+Sui dispositivi mobile la paginazione è centrata per default.
+
+### Navigazione centrata
+Per centrare la navigazione aggiungere la classe `justify-content-center` al tag `<nav>`.
 
 {% capture example %}
-<nav class="pagination-wrapper" aria-label="...">
-  <ul class="pagination justify-content-center">
+<nav class="pagination-wrapper justify-content-center" aria-label="Navigazione centrata">
+  <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
@@ -101,9 +105,12 @@ Grazie alle [utilità di Flexbox]({{ site.baseurl }}/docs/utilities/flex/), si p
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+### Navigazione allineata a destra
+Per allineare a destra la navigazione aggiungere la classe `justify-content-end` al tag `<nav>.`
+
 {% capture example %}
-<nav class="pagination-wrapper" aria-label="...">
-  <ul class="pagination justify-content-end">
+<nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
+  <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
@@ -174,7 +181,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
 {% endcapture %}{% include example.html content=example %}
 
 ## Funzioni aggiuntive
-La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numerio di pagine è elevato. È inoltre disponbile una versione semplificata ottimizzata per dispositivi mobile.
+La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numero di pagine è elevato. È inoltre disponbile una versione semplificata ottimizzata per dispositivi mobile.
 
 ### More
 Quando è presente un grande numero di pagine è consigliabile visualizzare unicamente le pagine più prossime a quella corrente, inserendo delle ellissi (...) fra queste e la prima ed ultima pagina. Non essendo collegate a nessuna pagina le ellissi vanno inserite in un tag `<span>`.
@@ -212,10 +219,10 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 {% endcapture %}{% include example.html content=example %}
 
 ### Page changer
-Per velocizzare la navigazione puoi inserire un menu "Page changer".
+Per velocizzare la navigazione è possibile inserire un menu "Page changer".
 
 {% capture example %}
-<nav class="pagination-wrapper" aria-label="Esempio di navigazione con changer">
+<nav class="pagination-wrapper" aria-label="Esempio di navigazione con page changer">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
@@ -260,7 +267,7 @@ Per velocizzare la navigazione puoi inserire un menu "Page changer".
 Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di pagina concreto.
 
 {% capture example %}
-<nav class="pagination-wrapper" aria-label="Esempio di navigazione con changer">
+<nav class="pagination-wrapper" aria-label="Esempio di navigazione con jump to page">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
@@ -291,17 +298,17 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
   <form>
     <div class="form-group">
       <input type="text" class="form-control" id="jumpToPage" maxlength="3">
-      <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="sr-only">Indica la pagina di destinazione</span></label>
+      <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="sr-only">Indica la pagina desiderata</span></label>
     </div>
   </form>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
 ### Simple mode
-La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile ma può anche essere utilizzata quando il numero di pagine è ridotto.
+La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile. Può essere utilizzata anche su tablet e desktop quando il numero di pagine è ridotto.
 
 {% capture example %}
-<nav class="pagination-wrapper" aria-label="Simple mode">
+<nav class="pagination-wrapper" aria-label="Esempio di navigazione simple mode">
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" arialabel="Previous" tabindex="-1">
@@ -310,12 +317,79 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
     </li>
     <li class="page-item nolink"><span class="page-link"><span class="sr-only">Pagina </span>1</span></li>
     <li class="page-item nolink"><span class="page-link" aria-hidden="true">/</span></li>
-    <li class="page-item nolink"><span class="page-link"><span class="sr-only">di </span>5</span></span></li>
+    <li class="page-item nolink"><span class="page-link"><span class="sr-only">di </span>5</span></li>
     <li class="page-item">
       <a class="page-link" href="#" arialabel="Next">
         <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
       </a>
     </li>
   </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+### Link testuali
+Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
+
+{% capture example %}
+<nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link text" href="#">Precedente</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="#">24</a></li>
+    <li class="page-item"><a class="page-link" href="#">25</a></li>
+    <li class="page-item active">
+      <span class="page-link">
+        <span class="d-inline-block d-sm-none">Pagina</span>
+        26
+        <span class="sr-only">corrente</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">27</a></li>
+    <li class="page-item"><a class="page-link" href="#">28</a></li>
+    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="#">50</a></li>
+    <li class="page-item">
+      <a class="page-link text" href="#">Successiva</a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+### Total number
+Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di pagine all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`. 
+
+{% capture example %}
+<nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#">
+        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item active">
+      <span class="page-link">
+        <span class="d-inline-block d-sm-none">Pagina</span>
+        24
+        <span class="sr-only">corrente</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">25</a></li>
+    <li class="page-item"><a class="page-link" href="#">26</a></li>
+    <li class="page-item"><a class="page-link" href="#">27</a></li>
+    <li class="page-item"><a class="page-link" href="#">28</a></li>
+    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="#">50</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">
+        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+      </a>
+    </li>
+  </ul>
+  <p><span class="sr-only">Pagina</span> 24 di 50</p>
 </nav>
 {% endcapture %}{% include example.html content=example %}

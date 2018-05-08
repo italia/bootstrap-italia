@@ -1,7 +1,7 @@
 //mobile
 nav.pagination-wrapper {
 	display: flex;
-	flex-wrap: wrap; //temp
+	flex-wrap: wrap;
 	justify-content: center;
 	
 	//total number version
@@ -53,7 +53,7 @@ nav.pagination-wrapper {
 		width: 100%;
 		box-shadow: none;
 		transition: all .3s;
-		font-weight: 700;
+		font-weight: 600;
 		outline-width: 5px;
 		&:focus {
 			outline: $pagination-focus-outline;
@@ -107,7 +107,7 @@ nav.pagination-wrapper {
 			
 			//text
 			font-size: 0.8888888888888888rem; // 16px
-			font-weight: bold;
+			font-weight: 600;
 			color: $neutral-1-a7;
 			background-color: transparent;
 
