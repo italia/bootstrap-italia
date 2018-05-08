@@ -18,7 +18,7 @@
 			left:0;
 			top:50%;
 			transform: translateY(-50%);
-			&:before{
+			&:before, &:after{
 				content:'\e80f';
 				font-family: "italia-icon-font";
 				font-size: $toggle-button-icon-size;
@@ -30,6 +30,11 @@
 				top: 50%;
 				transform: translateY(-50%) translateX(-50%) ;
 			}
+			&:after{
+				opacity: 0;
+				content: '\e80a';
+				font-size: 12px;
+			}
 		}
 		//active state
 		&.active{
@@ -38,8 +43,10 @@
 				left: auto;
 				background: $color-primary;
 				&:before{
-					content: '\e80a';
-					font-size: 12px;
+					opacity: 0;
+				}
+				&:after{
+					opacity: 0.5;
 				}
 			}
 		}
