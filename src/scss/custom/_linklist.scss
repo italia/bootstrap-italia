@@ -3,6 +3,10 @@
 	ul{
 		padding: 0;
 		list-style-type: none;
+		// sottolista
+		&.link-sublist{
+			padding-left: $link-list-h-pad;
+		}
 		li{
 			a{
 				font-size: $link-list-font-size;
@@ -10,6 +14,10 @@
 				display: block;
 				padding: 0 $link-list-h-pad;
 				position: relative;
+				// weight variation
+				&.medium{
+					font-weight: 600;
+				}
 				span{
 					color: $color-primary; 
 					display: block;
@@ -99,12 +107,35 @@
 				justify-content: space-between;
 			}
 		}
+		//checkboxes
+		.form-check{
+			&.form-check-group{
+				padding: 0 $link-list-h-pad;
+				box-shadow: none;
+				[type=checkbox] + label{
+					padding-left: 0;
+					font-size: $link-list-font-size;
+					line-height: $link-list-line-height;
+					height: inherit;
+					margin-bottom: 0;
+					&:after{
+						right:$link-list-h-pad;
+					}
+					&:before{
+						right: $link-list-checkbox-icon-right;
+					}
+				}
+				[type=checkbox][disabled] + label{
+					color: $neutral-1-a4;
+				}
+			}
+		}
 	}
 	// multiline version
 	
 }
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
 	.link-list-wrapper{
 		ul{
 			
