@@ -90,11 +90,18 @@
 			background: $neutral-1-a1;
 			margin: $link-list-divider-distance 0;
 		}
+		//toggles
+		.toggle-wrapper{
+			padding: 0 $link-list-h-pad;
+			label{
+				font-size: $link-list-font-size;
+				line-height: $link-list-line-height;
+				justify-content: space-between;
+			}
+		}
 	}
 	// multiline version
-	.multiline{
-
-	}
+	
 }
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {

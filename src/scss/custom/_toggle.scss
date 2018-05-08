@@ -1,6 +1,12 @@
 //mobile
 .toggle-wrapper{
 	// azzero i valori di default dei checkbox
+	input[type="checkbox"]{
+		visibility: inherit;
+		&:focus + label{
+			outline: focus-ring-color auto 5px; // da definire
+		}
+	}
 	input[type="checkbox"] + label{
 		padding-left: 0;
 		cursor: pointer;
@@ -9,6 +15,13 @@
 		line-height: auto;
 		display:flex;
 		align-items: center;
+		&.disabled{
+			color: $neutral-1-a4;
+			cursor: not-allowed;
+			.togglebar{
+				opacity: 0.5;
+			}
+		}
 	}
 	input[type="checkbox"] + label:before,input[type="checkbox"] + label:after{
 		display: none;
@@ -52,7 +65,6 @@
 			}
 		}		
 	}
-	//active state
 	//label
 	input[type="checkbox"]:checked + label{
 		.toggle-button{
@@ -65,6 +77,7 @@
 				opacity: 0.5;
 			}
 		}
+		
 	}
 }
 //small - tablet
