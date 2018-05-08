@@ -44,6 +44,7 @@ nav.pagination-wrapper {
 	}
 	//dropdown toggle
 	.btn.dropdown-toggle{
+		padding: 12px;
 		background-color: transparent;
 		color: $neutral-1-a7;
 		border: none;
@@ -62,11 +63,26 @@ nav.pagination-wrapper {
 		&:after {
 			display: none;
 		}
+		i.it-expand {
+			font-size: 0.8rem;
+			color: $primary-c5;
+			margin-left: 0.5rem;
+			&:before {
+				transition: transform 0.2s;
+			}
+		}
+		&[aria-expanded=true] {
+			i.it-expand {
+				&:before {
+					transform: scaleY(-1);
+				}
+			}
+		}
 	}
 }
 
 .pagination {
-	flex-wrap: wrap; //temp
+	flex-wrap: wrap;
 	.page-item {
 		margin-right: 5px;
 

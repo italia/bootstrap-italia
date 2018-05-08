@@ -251,7 +251,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">10/pag.</a>
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">10/pag. <i class="it-expand"></i></a>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
       <a class="dropdown-item active" href="#">10/pag.</a>
       <a class="dropdown-item" href="#">20/pag.</a>
