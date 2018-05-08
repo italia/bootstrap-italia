@@ -1,5 +1,18 @@
 //mobile
 .toggle-wrapper{
+	// azzero i valori di default dei checkbox
+	input[type="checkbox"] + label{
+		padding-left: 0;
+		cursor: pointer;
+		display: inline-block;
+		height: auto;
+		line-height: auto;
+		display:flex;
+		align-items: center;
+	}
+	input[type="checkbox"] + label:before,input[type="checkbox"] + label:after{
+		display: none;
+	}
 	.togglebar{
 		display: inline-block;
 		border-radius: $toggle-border-radius;
@@ -7,6 +20,7 @@
 		height: $toggle-height;
 		background: $neutral-2-b1;
 		position: relative;
+		margin-left:8px;
 		.toggle-button{
 			width:$toggle-button-dimension;
 			height: $toggle-button-dimension;
@@ -18,6 +32,7 @@
 			left:0;
 			top:50%;
 			transform: translateY(-50%);
+			transition: all 0.3s;
 			&:before, &:after{
 				content:'\e80f';
 				font-family: "italia-icon-font";
@@ -29,28 +44,28 @@
 				left: 50%;
 				top: 50%;
 				transform: translateY(-50%) translateX(-50%) ;
+				transition: all 0.3s;
 			}
 			&:after{
 				opacity: 0;
 				content: '\e80a';
-				font-size: 12px;
+			}
+		}		
+	}
+	//active state
+	//label
+	input[type="checkbox"]:checked + label{
+		.toggle-button{
+			left: calc(100% - #{$toggle-button-dimension});
+			background: $color-primary;
+			&:before{
+				opacity: 0;
+			}
+			&:after{
+				opacity: 0.5;
 			}
 		}
-		//active state
-		&.active{
-			.toggle-button{
-				right: 0;
-				left: auto;
-				background: $color-primary;
-				&:before{
-					opacity: 0;
-				}
-				&:after{
-					opacity: 0.5;
-				}
-			}
-		}
-	}	
+	}
 }
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
