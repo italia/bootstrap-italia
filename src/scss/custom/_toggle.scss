@@ -1,0 +1,69 @@
+//mobile
+.toggle-wrapper{
+	.togglebar{
+		display: inline-block;
+		border-radius: $toggle-border-radius;
+		width: $toggle-width;
+		height: $toggle-height;
+		background: $neutral-2-b1;
+		position: relative;
+		.toggle-button{
+			width:$toggle-button-dimension;
+			height: $toggle-button-dimension;
+			border:1px solid $white;
+			background: $neutral-1-a7;
+			display: block;
+			position: absolute;
+			border-radius: $toggle-button-border-radius;
+			left:0;
+			top:50%;
+			transform: translateY(-50%);
+			&:before{
+				content:'\e80f';
+				font-family: "italia-icon-font";
+				font-size: $toggle-button-icon-size;
+				color: $white;
+				opacity: 0.5;
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateY(-50%) translateX(-50%) ;
+			}
+		}
+		//active state
+		&.active{
+			.toggle-button{
+				right: 0;
+				left: auto;
+				background: $color-primary;
+				&:before{
+					content: '\e80a';
+					font-size: 12px;
+				}
+			}
+		}
+	}	
+}
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+}
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+//Hover states
+@media (min-width: $grid-breakpoints-hover) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	
+}

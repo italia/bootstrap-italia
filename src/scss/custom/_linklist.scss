@@ -21,6 +21,9 @@
 						position: absolute;
 						top: 0;
 						right: $link-list-h-pad;
+						&.secondary{
+							color: $neutral-2-b3;
+						}
 					}
 				}
 				&.active{
@@ -36,6 +39,9 @@
 					}
 					i{
 						color: $neutral-1-a4;
+						&.secondary{
+							color: $neutral-1-a4 !important;
+						}
 					}
 				}
 				// icone sinistre dentro link
@@ -54,6 +60,17 @@
 					line-height: initial;
 					color: $neutral-1-a7;
 				}
+				//avatar
+				&.avatar{
+					display: flex;
+					margin-bottom: $link-list-avatar-margin;
+					.avatar{
+						display: block;
+						border-radius: $link-list-avatar-radius;
+						margin-right: $link-list-left-icon-space;
+					}
+				}
+				
 			}
 			h3{
 				font-size: $link-list-heading-size;
