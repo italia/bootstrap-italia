@@ -1,16 +1,21 @@
-const yaml = require("js-yaml");
-const fs = require("fs");
+const replace = require("replace-in-file");
 
 const path = "_config.yml";
-const encoding = "utf8";
 // package.json is updated by `npm version major/minor/patch` or similar
 const version = require("../package.json").version;
 
+const options = {
+  // Single file
+  files: path,
+  // Replacement to make (string or regex)
+  from: /current_version:.+/gi,
+  to: `current_version:\t\t${version}`
+};
+
 try {
-  let doc = yaml.safeLoad(fs.readFileSync(path, encoding));
-  doc.current_version = version;
-  fs.writeFileSync(path, yaml.safeDump(doc), encoding);
-} catch (e) {
+  let changedFiles = replace.sync(options);
+  console.info("Modified files:", changedFiles.join(", "));
+} catch (error) {
   console.error(e);
   process.exit(1);
 }

@@ -63,7 +63,7 @@
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-wrapper": "^1.0.0",
-    "js-yaml": "^3.11.0"
+    "replace-in-file": "^3.4.0"
   },
   "dependencies": {
     "bootstrap": "^4.1.0",
