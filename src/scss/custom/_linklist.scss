@@ -67,10 +67,13 @@
 					span{
 						color: $neutral-1-a4;
 					}
-					i{
-						color: $neutral-1-a4;
-						&.secondary{
-							color: $neutral-1-a4 !important;
+					&.right-icon,&.left-icon{
+						i{
+							color: $neutral-1-a4;
+							&.secondary{
+								color: $neutral-1-a4;
+							}
+							
 						}
 					}
 				}

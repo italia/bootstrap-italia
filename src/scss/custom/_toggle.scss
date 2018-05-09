@@ -93,10 +93,6 @@
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
 
 }
-//Hover states
-@media (min-width: $grid-breakpoints-hover) {
-
-}
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {

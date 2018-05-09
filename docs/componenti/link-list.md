@@ -66,7 +66,7 @@ I link list possono avere un header (con o senza link) e/o divisori per separare
 L'header è costituito dall'elemento `<h3>` all'interno del tag `<li>`<br>
 Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`
 
-**Heding senza link**
+**Heading senza link**
 {% capture example %}
 <div class="link-list-wrapper">
    <ul class="link-list">
@@ -92,7 +92,7 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-**Heding con link**
+**Heading con link**
 {% capture example %}
 <div class="link-list-wrapper">
    <div class="link-list-wrapper">
@@ -342,7 +342,7 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 ### Collapsable
 Di seguito un esempio di navigazione annidiata collassabile.<br>
 Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
-**La documentazione è consultabile qui:**<br> <a href="https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example" target="_blank">https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example</a>
+**La documentazione è consultabile qui:**<br> <a href="{{ site.baseurl }}/docs/componenti/collapse/#accordion">{{ site.baseurl }}/docs/componenti/collapse/#accordion</a>
 
 {% capture example %}
 <div class="link-list-wrapper">
