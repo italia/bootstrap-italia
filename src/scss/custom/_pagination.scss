@@ -139,16 +139,6 @@ nav.pagination-wrapper {
 				margin-right: 0.5rem;
 			}
 
-
-			//hover state
-			&:hover {
-				color: $italia;
-				background-color: transparent;
-				// icon
-				i[class^="it-"] {
-					color: $italia;
-				}
-			}
 		}
 	}
 }
@@ -175,9 +165,25 @@ nav.pagination-wrapper {
 }
 
 //Hover states
-/*@media (min-width: $grid-breakpoints-hover) {
+@media (min-width: $grid-breakpoints-hover) {
 	
-}*/
+	.pagination {
+		.page-item {
+			.page-link {
+				//hover state
+				&:hover {
+					color: $italia;
+					background-color: transparent;
+					// icon
+					i[class^="it-"] {
+						color: $italia;
+					}
+				}
+			}
+		}
+	}
+
+}
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {

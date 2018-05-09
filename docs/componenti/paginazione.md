@@ -251,13 +251,13 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">10/pag. <i class="it-expand"></i></a>
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10<i class="it-expand"></i></a>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
-      <a class="dropdown-item active" href="#">10/pag.</a>
-      <a class="dropdown-item" href="#">20/pag.</a>
-      <a class="dropdown-item" href="#">30/pag.</a>
-      <a class="dropdown-item" href="#">40/pag.</a>
-      <a class="dropdown-item" href="#">50/pag.</a>
+      <a class="dropdown-item active" href="#">pag. 10</a>
+      <a class="dropdown-item" href="#">pag. 20</a>
+      <a class="dropdown-item" href="#">pag. 30</a>
+      <a class="dropdown-item" href="#">pag. 40</a>
+      <a class="dropdown-item" href="#">pag. 50</a>
     </div>
   </div>
 </nav>
@@ -329,12 +329,13 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 
 ### Link testuali
 Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
+Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr-only">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
 
 {% capture example %}
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link text" href="#">Precedente</a>
+      <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Precedente</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item nolink"><span class="page-link">...</span></li>
@@ -352,7 +353,7 @@ Le icone chevron utilizzate come link di navigazione possono essere sostituite d
     <li class="page-item nolink"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
-      <a class="page-link text" href="#">Successiva</a>
+      <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Successiva</a>
     </li>
   </ul>
 </nav>

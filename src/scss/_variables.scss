@@ -301,6 +301,9 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
+// Breakpoints for hover states
+$grid-breakpoints-hover : 1025px;
+
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
