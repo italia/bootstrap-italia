@@ -266,18 +266,20 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 Un link list può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
 
 {% capture example %}
-<div class="link-list-wrapper">
+ <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <div class="toggle-wrapper">
-        <input type="checkbox" name="toggle1" id="toggle1">
-        <label class="switch-light" for="toggle1"><span>Label per toggle</span><a class="togglebar"><span class="toggle-button"></span></a></label>
+      <div class="toggles">
+        <label for="toggle1">Label per toggle
+          <input type="checkbox" id="toggle1"><span class="lever"></span>
+        </label>
       </div>
     </li>
     <li>
-      <div class="toggle-wrapper">
-        <input type="checkbox" name="toggle2" id="toggle2" disabled>
-        <label class="switch-light disabled" for="toggle2"><span>Label per disabled toggle</span><a class="togglebar"><span class="toggle-button"></span></a></label>
+      <div class="toggles">
+        <label for="toggle2">Label per disabled toggle
+          <input type="checkbox" id="toggle2" disabled><span class="lever"></span>
+        </label>
       </div>
     </li>
   </ul>

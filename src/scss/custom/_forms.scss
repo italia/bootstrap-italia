@@ -254,7 +254,12 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
     opacity: 0;
     width: 0;
     height: 0;
-
+    &:focus + .lever {
+      @extend .focus--keyboard;
+    }
+    &:focus.focus--mouse + .lever {
+      @extend .focus--mouse;
+    }
     & + .lever {
       content: "";
       position: relative;
