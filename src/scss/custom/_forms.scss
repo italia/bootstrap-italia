@@ -221,7 +221,7 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 [type="radio"] {
 	position: absolute;
 	left: -9999px;
-	visibility: hidden;
+	//visibility: hidden;
   + label {
     position: relative;
     padding-left: 36px;
@@ -395,6 +395,14 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 		background-color: #E6E9F2;
 		border-color: #E6E9F2;
 	}
+  //focus
+  &:focus + label{
+    @extend .focus--keyboard;
+  }
+
+  &:focus.focus--mouse + label {
+    @extend .focus--mouse;
+  }
 }
 
 /* RADIO */
