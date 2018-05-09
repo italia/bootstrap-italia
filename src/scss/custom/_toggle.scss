@@ -4,7 +4,11 @@
 	input[type="checkbox"]{
 		visibility: inherit;
 		&:focus + label{
-			outline: focus-ring-color auto 5px; // da definire
+			@extend .focus--keyboard;
+		}
+
+		&:focus.focus--mouse + label{
+			@extend .focus--mouse;
 		}
 	}
 	input[type="checkbox"] + label{
@@ -16,7 +20,7 @@
 		display:flex;
 		align-items: center;
 		&.disabled{
-			color: $neutral-1-a4;
+			color: $neutral-1-a4; 
 			cursor: not-allowed;
 			.togglebar{
 				opacity: 0.5;

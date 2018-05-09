@@ -100,12 +100,15 @@
 		}
 		//toggles
 		.toggle-wrapper{
-			padding: 0 $link-list-h-pad;
-			label{
-				font-size: $link-list-font-size;
-				line-height: $link-list-line-height;
-				justify-content: space-between;
+			input[type=checkbox]{
+				+label{
+					padding: 0 $link-list-h-pad;
+					font-size: $link-list-font-size;
+					line-height: $link-list-line-height;
+					justify-content: space-between;
+				}
 			}
+			
 		}
 		//checkboxes
 		.form-check{
