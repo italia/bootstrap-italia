@@ -48,7 +48,7 @@
     #- title: Navbar
     #  status: to do
     - title: Offcanvas
-    - title: Paginazione
+    - title: Pager
       status: wip
     - title: Popover
     - title: Radio Button

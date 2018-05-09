@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Paginazione
+title: Pager
 description: Documentazione ed esempi del componente di paginazione utile per indicare una serie di contenuti correlati tra più pagine.
 group: componenti
 toc: true
@@ -16,18 +16,16 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione della pagina">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Pagina precedente">
-        <span class="it-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Pagina precedente</span>
+      <a class="page-link" href="#">
+        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Pagina successiva">
-        <span class="it-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Pagina successiva</span>
+      <a class="page-link" href="#">
+        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
       </a>
     </li>
   </ul>
@@ -36,36 +34,40 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
 
 ## Stato disabilitato e attivo
 
-I link della paginazione uno stato disabilitato usando la classe `.disabled` nel tag `<li>` per i collegamenti che appaiono non cliccabili e `.active` per indicare la pagina attiva corrente.
+I link della paginazione assumonono uno stato disabilitato usando la classe `.disabled` nel tag `<li>`.
+Per indicare la pagina attiva corrente utilizzare l'attributo `aria-current="page"` nel tag `<a>`, l'aspetto grafico cambierà di conseguenza.
 
 {% capture callout %}
 ##### Disabilitazione link
 
-La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
-In alternativa per la paginazione puoi sostituire il link disabilitato con uno `<span>` avente classe `.page-link` e contenuto in un `<li>` con classe `.nolink` (es.: `<li class="page-item nolink"><span class="page-link">1</span></li>`).
+La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"`,  e utilizzare Javascript per disabilitare le loro funzionalità.
+
+È inoltre consigliabile applicare `aria-hidden="true"` ai link disabilitati per evitare che vengano considerati nel conteggio degli elementi totali in lista fornito dagli screen reader.
+
+In alternativa per la paginazione si può sostituire il link disabilitato con uno `<span>` avente classe `.page-link` e contenuto in un `<li>` con classe `.nolink` (es.: `<li class="page-item"><span class="page-link">1</span></li>`).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <nav class="pagination-wrapper" aria-label="Esempio di paginazione">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        1
-        <span class="sr-only">corrente</span>
-      </span>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>1
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item nolink">
-      <span class="page-link">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">3</a>
+    </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
-      </span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -83,16 +85,14 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
 <nav class="pagination-wrapper justify-content-center" aria-label="Navigazione centrata">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        1
-        <span class="sr-only">corrente</span>
-      </span>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>1
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -112,16 +112,14 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
 <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        1
-        <span class="sr-only">corrente</span>
-      </span>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>1
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -146,9 +144,6 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item nolink d-none d-sm-flex">
-        <span class="page-link">...</span>
-    </li>
     <li class="page-item d-none d-sm-flex">
       <a class="page-link" href="#">9</a>
     </li>
@@ -156,20 +151,15 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
       <a class="page-link" href="#">10</a>
     </li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        11
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>12
+      </a>
     </li>
     <li class="page-item d-none d-sm-flex">
       <a class="page-link" href="#">12</a>
     </li>
     <li class="page-item d-none d-sm-flex">
       <a class="page-link" href="#">13</a>
-    </li>
-    <li class="page-item nolink d-none d-sm-flex">
-      <span class="page-link">...</span>
     </li>
     <li class="page-item">
       <a class="page-link" href="#">
@@ -190,29 +180,27 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con ellissi/more">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
-      </a>
+      <a class="page-link" href="#"><i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span></a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item">
+      <span class="page-link">...</span>
+    </li>
     <li class="page-item"><a class="page-link" href="#">24</a></li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        26
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>26
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">27</a></li>
     <li class="page-item"><a class="page-link" href="#">28</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item">
+      <span class="page-link">...</span>
+    </li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
-      </a>
+      <a class="page-link" href="#"><i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span></a>
     </li>
   </ul>
 </nav>
@@ -230,19 +218,17 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">24</a></li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        26
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>26
+      </a>  
     </li>
     <li class="page-item"><a class="page-link" href="#">27</a></li>
     <li class="page-item"><a class="page-link" href="#">28</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
@@ -275,19 +261,17 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">24</a></li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        26
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>26
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">27</a></li>
     <li class="page-item"><a class="page-link" href="#">28</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
@@ -309,17 +293,20 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 
 {% capture example %}
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione simple mode">
-  <ul class="pagination">
+  <ul class="pagination" aria-label="Pagina 1 di 5">
     <li class="page-item disabled">
-      <a class="page-link" href="#" arialabel="Previous" tabindex="-1">
+      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item nolink"><span class="page-link"><span class="sr-only">Pagina </span>1</span></li>
-    <li class="page-item nolink"><span class="page-link" aria-hidden="true">/</span></li>
-    <li class="page-item nolink"><span class="page-link"><span class="sr-only">di </span>5</span></li>
+    <li class="page-item"><span class="page-link">1</span></li>
+    <li class="page-item"><span class="page-link">/</span></li>
+    <li class="page-item"><span class="page-link">5</span></li>
+    <li class="page-item sr-only">
+      <a class="page-link" href="#" aria-current="page">Pagina 1 di 5</a>
+    </li>
     <li class="page-item">
-      <a class="page-link" href="#" arialabel="Next">
+      <a class="page-link" href="#">
         <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
       </a>
     </li>
@@ -338,19 +325,17 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr
       <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Precedente</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">24</a></li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        26
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>26
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">27</a></li>
     <li class="page-item"><a class="page-link" href="#">28</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Successiva</a>
@@ -371,19 +356,17 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item active">
-      <span class="page-link">
-        <span class="d-inline-block d-sm-none">Pagina</span>
-        24
-        <span class="sr-only">corrente</span>
-      </span>
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>24
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">25</a></li>
     <li class="page-item"><a class="page-link" href="#">26</a></li>
     <li class="page-item"><a class="page-link" href="#">27</a></li>
     <li class="page-item"><a class="page-link" href="#">28</a></li>
-    <li class="page-item nolink"><span class="page-link">...</span></li>
+    <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
