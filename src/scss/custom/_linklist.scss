@@ -14,6 +14,21 @@
 				display: block;
 				padding: 0 $link-list-h-pad;
 				position: relative;
+				// hover state
+				&:hover:not(.disabled){
+					text-decoration: none;
+					span{
+						color:$color-primary;
+						text-decoration: underline;
+					}
+					p{
+						color:$color-primary;
+						text-decoration: none;
+					}
+				}
+				&.disabled:hover{
+					text-decoration: none;
+				}
 				// weight variation
 				&.medium{
 					font-weight: 600;
@@ -174,33 +189,6 @@
 					
 					&.large{
 						line-height: $link-list-line-height-l;
-					}
-				}
-			}
-		}
-	}
-}
-
-//Hover states
-@media (min-width: $grid-breakpoints-hover) {
-	.link-list-wrapper{
-		ul{
-			
-			li{
-				a{
-					&:hover:not(.disabled){
-						text-decoration: none;
-						span{
-							color:$color-primary;
-							text-decoration: underline;
-						}
-						p{
-							color:$color-primary;
-							text-decoration: none;
-						}
-					}
-					&.disabled:hover{
-						text-decoration: none;
 					}
 				}
 			}
