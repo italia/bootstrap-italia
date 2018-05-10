@@ -1,7 +1,83 @@
 //mobile
 .navbar{
   background: $navigation-bg-color;
+
+  // navbar mobile
+  .navbar-collapsable{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    background: $navigation-sidebar-bg-color-mobile;
+    //opacity: 0; // -default status
+    pointer-events:none;
+    // menu vrapper
+    .menu-wrapper{
+      background: $navigation-bg-color;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left:$navigation-h-padding * 2;
+      pointer-events:all;
+      overflow-y:auto;
+      transform:translateX(100%);
+      //- transizione de definire
+      transition: all 0.3s;
+    }
+    &.collapsed{
+
+    }
+    /*lista menu*/
+    .navbar-nav{
+      margin-top:$navigation-links-margin-top;
+      padding: $navigation-h-padding 0;
+      li{
+        a{
+          color: $navigation-link-color;
+          font-weight: 400;
+          padding: $navigation-v-padding $navigation-h-padding;
+          &.active{
+            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+          }
+        }
+      }
+    }
+  }
+  //wrapper pulsante di chiusura menu
+  .close-div{
+    padding:$navigation-h-padding;
+    position: absolute; //deve diventare fixed quando aperto
+    left: 0 //deve diventare $navigation-h-padding * 2 quando aperto;
+    right: 0;
+    top: 0;
+    background:$navigation-bg-color; 
+    // pulsante di chiusura menu
+    .close-menu{
+      background: transparent;
+      color: $navigation-close-button-text-color;
+      text-align: center;
+      font-size: $navigation-close-button-text-size;
+      text-transform: uppercase;
+      padding: 0;
+      span{
+        display: block;
+        text-align: center;
+        font-size: $navigation-close-button-icon-size;
+        &:before{
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
+.custom-navbar-toggler{
+  background: none;
+  border:none;
+}
+
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) { 
   

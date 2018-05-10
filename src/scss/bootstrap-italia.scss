@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
 
-// funzioni e variabili
+// funzioni e variabili colore
 @import "functions";
-@import "variables"; 
-//colors utilities
 @import "utilities/colors_vars";
+
+//variables
+@import "variables"; 
+
+//classi colore
 @import "utilities/colors";
 
 @import "node_modules/bootstrap/scss/functions";
