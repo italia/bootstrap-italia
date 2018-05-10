@@ -113,7 +113,7 @@
       bottom: auto;
       z-index: auto;
       background: none;
-      display: block; 
+      display: block !important; //-sovrascrive l'inline style di jquery 
       transition: none;
       // menu vrapper
       .menu-wrapper{
