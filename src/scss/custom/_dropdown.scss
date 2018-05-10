@@ -1,4 +1,39 @@
+//hover test TEMP
+.dropdown.dropdown-hover:hover>.dropdown-menu {
+  display: block;
+}
+
+.btn-dropdown {
+  color: $italia;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  &:after {
+    content:'\e818';
+    font-family: "italia-icon-font";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    speak: none;
+    border: none;
+    display: inline-block;
+    vertical-align: 0em;
+    width: auto;
+    height: auto;
+    transition: transform 0.2s;
+  }
+  //expanded
+  &[aria-expanded=true] {
+    &:after {
+      transform: scaleY(-1);
+    }
+  }
+}
+
 .dropdown-menu {
+  margin-top: 18px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
   &.full-width {
     width: 100%;
     .dropdown-item {
@@ -11,6 +46,43 @@
       }
     }
   }
+
+  //notch
+  &:before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 24px; 
+    width: 18px; 
+    height: 18px;
+    border-radius: 4px;
+    background-color: $dropdown-bg;
+    transform: rotate(45deg);
+  }
+
+  //top position
+  &[x-placement='top-start'] {
+    margin-top: 0;
+    margin-bottom: 18px;
+    border-radius: 4px 4px 0 0;
+    //notch
+    &:before {
+      bottom: -6px;
+      top: auto;
+    }
+  }
+
+  //dark version
+  &.dark {
+    background-color: $neutral-1-a8;
+    //notch
+    &:before {
+      background-color: $neutral-1-a8;
+    }
+    .dropdown-header, .dropdown-item {
+      color: #fff;
+    }
+  }
 }
 .dropdown-item {
   font-size: 16px;
@@ -18,4 +90,3 @@
 .dropdown-header {
   font-size: 18px;
 }
-
