@@ -49,6 +49,7 @@ const Paths = {
     'src/js/plugins/forward.js',
     'src/js/plugins/offcanvas.js',
     'src/js/plugins/password.js',
+    'src/js/plugins/navbar.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',

@@ -1,7 +1,6 @@
 //mobile
 .navbar{
   background: $navigation-bg-color;
-
   // navbar mobile
   .navbar-collapsable{
     position: fixed;
@@ -10,9 +9,8 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    background: $navigation-sidebar-bg-color-mobile;
-    //opacity: 0; // -default status
-    pointer-events:none;
+    background: $navigation-sidebar-bg-color-mobile;    
+    display: none;
     // menu vrapper
     .menu-wrapper{
       background: $navigation-bg-color;
@@ -26,9 +24,6 @@
       transform:translateX(100%);
       //- transizione de definire
       transition: all 0.3s;
-    }
-    &.collapsed{
-
     }
     /*lista menu*/
     .navbar-nav{
@@ -45,15 +40,27 @@
         }
       }
     }
+    &.expanded{
+        .menu-wrapper{
+          transform:translateX(0);
+        }
+        .close-div{
+          transform:translateX(0);
+        }
+    }
   }
   //wrapper pulsante di chiusura menu
   .close-div{
+    transform:translateX(100%);
     padding:$navigation-h-padding;
-    position: absolute; //deve diventare fixed quando aperto
-    left: 0 //deve diventare $navigation-h-padding * 2 quando aperto;
+    position: fixed;
+    left: $navigation-h-padding * 2;
     right: 0;
     top: 0;
     background:$navigation-bg-color; 
+    z-index: 10;
+    //- transizione de definire
+      transition: all 0.3s;
     // pulsante di chiusura menu
     .close-menu{
       background: transparent;
@@ -76,6 +83,10 @@
 .custom-navbar-toggler{
   background: none;
   border:none;
+  span{
+    color: $navigation-toggle-button-icon-color;
+    font-size: $navigation-toggle-button-icon-size;
+  }
 }
 
 //small - tablet
@@ -90,7 +101,58 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  
+  .navbar{
+    background: $navigation-bg-color;
+    padding:0;
+    // navbar mobile
+    .navbar-collapsable{
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      z-index: auto;
+      background: none;
+      display: block; 
+      transition: none;
+      // menu vrapper
+      .menu-wrapper{
+        position: inherit;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        overflow-y:auto;
+        transform:none;
+        transition: none;
+      }
+      &.collapsed{
+
+      }
+      /*lista menu*/
+      .navbar-nav{
+        margin-top:0;
+        padding:0 $navigation-h-padding;
+        li{
+          a{
+            font-weight: 400;
+            padding:$navigation-v-padding $navigation-h-padding;
+            &.active{
+              border-left:0;
+              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+            }
+          }
+        }
+      }
+    }
+    //wrapper pulsante di chiusura menu
+    .close-div{
+      display: none;
+    }
+  }
+  .custom-navbar-toggler{
+    display: none;
+  }
 }
 
 //Desktop
