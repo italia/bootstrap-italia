@@ -11,9 +11,9 @@
   &:after {
     content:'\e818';
     font-family: "italia-icon-font";
+    font-size: 0.8rem;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.8rem;
     speak: none;
     border: none;
     display: inline-block;
@@ -47,6 +47,10 @@
     }
   }
 
+  .link-list {
+    margin-bottom: 0;
+  }
+
   //notch
   &:before {
     content: '';
@@ -75,6 +79,22 @@
   //dark version
   &.dark {
     background-color: $neutral-1-a8;
+    .link-list-wrapper ul {
+      span.divider {
+        background: #2E465E;
+      }
+      li {
+        a span, a:hover span, h3, i {
+          color: #fff;
+        }
+        a:not(.active):hover i {
+          color: $analogue-2-a4;
+        }
+        a.disabled span {
+          color: $neutral-1-a4;
+        }
+      }
+    }
     //notch
     &:before {
       background-color: $neutral-1-a8;

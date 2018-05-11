@@ -177,20 +177,20 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
     <ul class="link-list">
       <li>
         <a class="list-item left-icon" href="#">
+          <i class="it-info left" aria-hidden="true"></i>
           <span>Azione 1</span>
-          <i class="it-info left" aria-hidden="true"></i>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
+          <i class="it-info left" aria-hidden="true"></i>
           <span>Azione 2</span>
-          <i class="it-info left" aria-hidden="true"></i>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
-          <span>Azione 3</span>
           <i class="it-info left" aria-hidden="true"></i>
+          <span>Azione 3</span>
         </a>
       </li>
     </ul>
@@ -198,7 +198,52 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Varianti di colore
+### Versione dark
+
+Bla bla bla
+
+{% capture example %}
+<div class="dropdown-menu dark">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><h3>Header</h3></li>
+      <li>
+        <a class="list-item right-icon active" href="#">
+          <span>Azione 1 (attivo)</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 2</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 3</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li><span class="divider"></span></li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 4</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon disabled" href="#">
+          <span>Azione 5 (disabilitato)</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Varianti dei buttons
 
 Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/componenti/bottoni/#varianti-di-colore) già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
@@ -245,8 +290,6 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
     </div>
   </div>
 </div>
-
-
 {% endcapture %}{% include example.html content=example %}
 
 
