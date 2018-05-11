@@ -30,7 +30,7 @@
       margin-top:$navigation-links-margin-top;
       padding: $navigation-h-padding 0;
       li{
-        a{
+        > a.nav-link{
           color: $navigation-link-color;
           font-weight: 400;
           padding: $navigation-v-padding $navigation-h-padding;
@@ -79,6 +79,8 @@
       }
     }
   }
+  // Dropdown style tipo collapse
+
 }
 .custom-navbar-toggler{
   background: none;
@@ -122,7 +124,7 @@
         bottom: auto;
         right: auto;
         left: auto;
-        overflow-y:auto;
+        overflow-y:initial;
         transform:none;
         transition: none;
       }
@@ -134,7 +136,7 @@
         margin-top:0;
         padding:0 $navigation-h-padding;
         li{
-          a{
+          a.nav-link{
             font-weight: 400;
             padding:$navigation-v-padding $navigation-h-padding;
             &.active{
