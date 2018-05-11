@@ -37,12 +37,12 @@
   &.full-width {
     width: 100%;
     .dropdown-item {
-      display: inline-block;
-      width: auto;
-      &:hover,
-      &:focus {
-        background: none;
-        text-decoration: underline;
+    display: inline-block;
+    width: auto;
+    &:hover,
+    &:focus {
+      background: none;
+      text-decoration: underline;
       }
     }
   }
