@@ -30,10 +30,11 @@
       margin-top:$navigation-links-margin-top;
       padding: $navigation-h-padding 0;
       li{
-        > a.nav-link{
+        a.nav-link{
           color: $navigation-link-color;
           font-weight: 400;
           padding: $navigation-v-padding $navigation-h-padding;
+          position: relative;
           &.active{
             border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
           }
@@ -80,7 +81,58 @@
     }
   }
   // Dropdown style tipo collapse
-
+  .dropdown-menu{
+    background: transparent;
+    box-shadow: none;
+    .link-list-wrapper{
+      padding-left:$navigation-h-padding;
+      padding-right:$navigation-h-padding;
+      ul{
+        li{
+          a{
+            span{
+              color: $white;
+            }
+            h3{
+              color: $white;
+            }
+          }
+          h3{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-toggle{
+    display: flex;
+    justify-content: space-between;
+    &:after{
+      font-family: "italia-icon-font";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: $navigation-dropdown-icon-width;
+      margin-right: .2em;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+      content: '\e818';
+      vertical-align: auto;
+      border-top: none;
+      border-right: none;
+      border-bottom: 0;
+      border-left: none;
+      font-size: $navigation-dropdown-icon-size;
+      line-height:$navigation-dropdown-icon-line-height;
+    }
+    &[aria-expanded="true"]:after{
+      
+    }
+  }
 }
 .custom-navbar-toggler{
   background: none;
@@ -150,6 +202,61 @@
     //wrapper pulsante di chiusura menu
     .close-div{
       display: none;
+    }
+    // Dropdown style tipo collapse
+    .dropdown-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $zindex-dropdown;
+        display: none; // none by default, but block on "open" of the menu
+        float: left;
+        min-width: $dropdown-min-width;
+        padding: $dropdown-padding-y 0;
+        margin: $dropdown-spacer 0 0; // override default ul
+        font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+        color: $body-color;
+        text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+        list-style: none;
+        background-color: $dropdown-bg;
+        background-clip: padding-box;
+        border: $dropdown-border-width solid $dropdown-border-color;
+        @include border-radius($dropdown-border-radius);
+        @include box-shadow($dropdown-box-shadow);
+      .link-list-wrapper{
+        padding-left:0;
+        padding-right:0;
+        ul{
+          li{
+            a{
+              span{
+                color: $color-primary;
+              }
+              h3{
+                color: $color-primary;
+              }
+            }
+            h3{
+              color: $body-color;
+            }
+          }
+        }
+      }
+    }
+    .dropdown-toggle{
+      display: block;
+      justify-content: inherit;
+      &:after{
+        font-family: inherit;
+        font-size: inherit;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-right: $caret-width * .85;
+        vertical-align: $caret-width * .85;
+        content: "";
+        @include caret-down;
+      }
     }
   }
   .custom-navbar-toggler{

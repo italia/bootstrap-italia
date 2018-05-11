@@ -14,7 +14,8 @@ a,
 button,
 input,
 select,
-textarea {
+textarea,
+.btn{
   &:focus {
     @extend .focus--keyboard;
   }
@@ -22,4 +23,12 @@ textarea {
   &:focus.focus--mouse {
     @extend .focus--mouse;
   }
+}
+
+//-button overrides
+.btn.focus{
+  @extend .focus--keyboard;
+}
+.btn.focus.focus--mouse{
+  @extend .focus--keyboard;
 }
