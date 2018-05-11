@@ -26,7 +26,9 @@
 // Load Bootstrap variables and mixins
 
 @import "../../../../src/scss/functions"; // here to be available to "variables"
+@import "../../../../src/scss/utilities/colors_vars";
 @import "../../../../src/scss/variables";
+
 
 @import "node_modules/bootstrap/scss/functions";
 
@@ -50,6 +52,7 @@
 @import "colors";
 @import "clipboard-js";
 @import "brandhead";
+@import "custom-color";
 
 // Load docs dependencies
 @import "syntax";

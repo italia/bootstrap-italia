@@ -41,6 +41,8 @@
     - title: Hero
     - title: Input group
       status: wip
+    - title: Link list
+      status: wip
     - title: Modale
       status: wip
     #- title: Navigazione
@@ -48,7 +50,7 @@
     #- title: Navbar
     #  status: to do
     - title: Offcanvas
-    - title: Paginazione
+    - title: Pager
       status: wip
     - title: Popover
     - title: Radio Button
@@ -77,14 +79,14 @@
     - title: Bordi
     - title: Clearfix
     - title: Colori
-      status: wip
+    - title: Colori Custom
     - title: Dimensionamento
     - title: Display
     - title: Embed
     - title: Flex
     - title: Float
     - title: Griglie
-      status: work in progress
+      status: wip
     - title: Immagini sostitutive
     - title: Icone
       status: wip
