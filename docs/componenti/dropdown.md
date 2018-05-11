@@ -120,13 +120,13 @@ Le voci del menu che viene aperto al click sul bottone possono essere personaliz
 
 #### Menu voci attive
 
-Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**.
+Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**. Per questioni di accessibilità è consigliabile aggiungere `<span class="sr-only"> attivo</span>` in coda al testo degli elementi attivi.
 
 {% capture example %}
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item active" href="#"><span>Azione 1 (attivo)</span></a></li>
+        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="sr-only"> attivo</span></a></li>
         <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
         <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
@@ -136,14 +136,14 @@ Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare com
 
 #### Menu voci disabilitate
 
-Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare come **disabilitati**.
+Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare come **disabilitati**. Includere anche la proprietà `aria-disabled="true"` per comunicare lo stato disabilitato agli utenti dotati di screen reader.
 
 {% capture example %}
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item disabled" href="#"><span>Azione 2 (disabilitato)</span></a></li>
+        <li><a class="list-item disabled" href="#" aria-disabled="true"><span>Azione 2</span></a></li>
         <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
