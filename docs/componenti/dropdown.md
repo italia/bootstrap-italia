@@ -44,224 +44,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Dropdown link
-
-Lo stesso vale per elementi `<a>`:
-
-{% capture example %}
-<div class="dropdown">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Apri dropdown
-  </a>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <div class="link-list-wrapper">
-      <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Voci di menù attive
-
-Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-      <ul class="link-list">
-        <li><a class="list-item active" href="#"><span>Azione 1 (attivo)</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
-      </ul>
-    </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Voci di menù disabilitate
-
-Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare come **disabilitati**.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-      <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item disabled" href="#"><span>Azione 2 (disabilitato)</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
-      </ul>
-    </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Headers e separatori
-
-All'interno del menu dropdown possono essere inseriti header e separatori.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li>
-        <h3>Header</h3>
-      </li>
-      <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
-      <li>
-        <span class="divider"></span>
-      </li>
-      <li><a class="list-item" href="#"><span>Azione 4</span></a></li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Dropdown con link large
-
-Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Dropdown menu full width
-
-Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
-
-{% capture example %}
-<div class="dropdown-menu full-width">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 4</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 5</span></a></li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Testo con icona a destra
-
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona `<i>`.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 1</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 2</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 3</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Testo con icona a sinistra
-
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona `<i>`.
-
-{% capture example %}
-<div class="dropdown-menu">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li>
-        <a class="list-item left-icon" href="#">
-          <i class="it-info left" aria-hidden="true"></i>
-          <span>Azione 1</span>
-        </a>
-      </li>
-      <li>
-        <a class="list-item left-icon" href="#">
-          <i class="it-info left" aria-hidden="true"></i>
-          <span>Azione 2</span>
-        </a>
-      </li>
-      <li>
-        <a class="list-item left-icon" href="#">
-          <i class="it-info left" aria-hidden="true"></i>
-          <span>Azione 3</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Versione dark
-
-Bla bla bla
-
-{% capture example %}
-<div class="dropdown-menu dark">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li><h3>Header</h3></li>
-      <li>
-        <a class="list-item right-icon active" href="#">
-          <span>Azione 1 (attivo)</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 2</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 3</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li><span class="divider"></span></li>
-      <li>
-        <a class="list-item right-icon" href="#">
-          <span>Azione 4</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a class="list-item right-icon disabled" href="#">
-          <span>Azione 5 (disabilitato)</span>
-          <i class="it-info right" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Varianti dei buttons
+### Dropdown button varianti
 
 Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/componenti/bottoni/#varianti-di-colore) già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
@@ -310,9 +93,226 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Dropdown link
 
+Lo stesso vale per gli elementi `<a>`:
 
+{% capture example %}
+<div class="dropdown">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropdown
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
+### Dropdown menu
+
+Le voci del menu che viene aperto al click sul bottone possono essere personalizzate, così come il menù stesso.
+
+#### Menu voci attive
+
+Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item active" href="#"><span>Azione 1 (attivo)</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu voci disabilitate
+
+Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare come **disabilitati**.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item disabled" href="#"><span>Azione 2 (disabilitato)</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu headers e separatori
+
+All'interno del menu dropdown possono essere inseriti header e separatori.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li>
+        <h3>Header</h3>
+      </li>
+      <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+      <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+      <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      <li>
+        <span class="divider"></span>
+      </li>
+      <li><a class="list-item" href="#"><span>Azione 4</span></a></li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu con voci large
+
+Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu full width
+
+Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
+
+{% capture example %}
+<div class="dropdown-menu full-width">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 4</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 5</span></a></li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu icona a destra
+
+Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona `<i>`.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 1</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 2</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 3</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu icona a sinistra
+
+Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona `<i>`.
+
+{% capture example %}
+<div class="dropdown-menu">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li>
+        <a class="list-item left-icon" href="#">
+          <i class="it-info left" aria-hidden="true"></i>
+          <span>Azione 1</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-item left-icon" href="#">
+          <i class="it-info left" aria-hidden="true"></i>
+          <span>Azione 2</span>
+        </a>
+      </li>
+      <li>
+        <a class="list-item left-icon" href="#">
+          <i class="it-info left" aria-hidden="true"></i>
+          <span>Azione 3</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Menu dark
+
+Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativo dello stesso, con link ed elementi interni declinati di conseguenza.
+
+{% capture example %}
+<div class="dropdown-menu dark">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><h3>Header</h3></li>
+      <li>
+        <a class="list-item right-icon active" href="#">
+          <span>Azione 1 (attivo)</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 2</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 3</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li><span class="divider"></span></li>
+      <li>
+        <a class="list-item right-icon" href="#">
+          <span>Azione 4</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a class="list-item right-icon disabled" href="#">
+          <span>Azione 5 (disabilitato)</span>
+          <i class="it-info right" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 ## Informazioni aggiuntive
 
