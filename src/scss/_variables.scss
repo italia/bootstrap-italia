@@ -180,7 +180,19 @@ $dropdown-item-padding-x: 24px;
 $dropdown-item-padding-y: 12px;
 $dropdown-border-width: 0;
 $dropdown-border-color: transparent;
-$dropdown-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+$dropdown-box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
+// Dropdown custom
+$dropdown-custom-button-padding: 0 4px;
+$dropdown-custom-button-font-size: 1rem;
+$dropdown-custom-button-color: $italia;
+$dropdown-custom-button-background: transparent;
+$dropdown-custom-button-caret-font-size: 0.8rem;
+$dropdown-custom-button-caret-content: '\e818';
+$dropdown-menu-animation-speed: 0.3s;
+$dropdown-menu-vertical-shift: 16px;
+$dropdown-menu-radius: 4px;
+$dropdown-menu-notch-base-size: 6px;
+$dropdown-menu-notch-position-x: 24px;
 
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
@@ -201,6 +213,7 @@ $link-list-avatar-radius: 50px;
 $link-list-avatar-margin:8px;
 $link-list-checkbox-icon-right:35px;
 $link-list-toggle-margin:8px;
+
 
 
 

@@ -1,21 +1,44 @@
-//hover test TEMP
-.dropdown.dropdown-hover:hover>.dropdown-menu {
-  display: block;
+//menu on bottom animation
+@keyframes dropdownFadeIn {
+  0% {opacity: 0; margin-top: 0;}
+  100% {opacity: 1; margin-top: $dropdown-menu-vertical-shift;}
+}
+//menu on top animation
+@keyframes dropdownFadeInTop {
+  0% {opacity: 0; margin-top: 0;}
+  100% {opacity: 1; margin-top: -$dropdown-menu-vertical-shift;}
+}
+
+.dropdown, .btn-group {
+  //menu fade in
+  &.show {
+    .dropdown-menu {
+      //menu on bottom
+      &[x-placement='bottom-start'] {
+        animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
+      }
+      //menu on top
+      &[x-placement='top-start'] {
+        animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      }
+    }
+  }
 }
 
 .btn-dropdown {
-  color: $italia;
-  background-color: transparent;
+  color: $dropdown-custom-button-color;
+  padding: $dropdown-custom-button-padding;
+  background-color: $dropdown-custom-button-background;
+  font-size: $dropdown-custom-button-font-size;
   border-radius: 0;
-  padding: 0 4px;
-  font-size: 1rem;
   &:not(:disabled):not(.disabled):active {
     box-shadow: none;
   }
+  //button caret
   &:after {
-    content:'\e818';
+    content: $dropdown-custom-button-caret-content;
+    font-size: $dropdown-custom-button-caret-font-size;
     font-family: "italia-icon-font";
-    font-size: 0.8rem;
     font-style: normal;
     font-weight: normal;
     speak: none;
@@ -24,7 +47,7 @@
     vertical-align: 0em;
     width: auto;
     height: auto;
-    transition: transform 0.2s;
+    transition: transform $dropdown-menu-animation-speed;
   }
   //expanded
   &[aria-expanded=true] {
@@ -35,10 +58,8 @@
 }
 
 .dropdown-menu {
-  margin-top: 16px;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
-
+  border-radius: 0 0 $dropdown-menu-radius $dropdown-menu-radius;
+  //fullwidth menu
   &.full-width {
     width: 100%;
     .link-list li {
@@ -55,8 +76,9 @@
   //link list finetuning
   .link-list {
     margin-bottom: 0;
+    //header
     h3 {
-      line-height: 2.3em;
+      line-height: $link-list-line-height;
       margin-bottom: 0;
     }
   }
@@ -65,23 +87,21 @@
   &:before {
     content: '';
     position: absolute;
-    top: -6px;
-    left: 24px; 
-    width: 18px; 
-    height: 18px;
-    border-radius: 4px;
+    top: -$dropdown-menu-notch-base-size;
+    left: $dropdown-menu-notch-position-x; 
+    width: $dropdown-menu-notch-base-size*3; 
+    height: $dropdown-menu-notch-base-size*3;
+    border-radius: $dropdown-menu-radius;
     background-color: $dropdown-bg;
     transform: rotate(45deg);
   }
 
   //top position
   &[x-placement='top-start'] {
-    margin-top: 0;
-    margin-bottom: 16px;
-    border-radius: 4px 4px 0 0;
+    border-radius: $dropdown-menu-radius $dropdown-menu-radius 0 0;
     //notch
     &:before {
-      bottom: -6px;
+      bottom: -$dropdown-menu-notch-base-size;
       top: auto;
     }
   }
