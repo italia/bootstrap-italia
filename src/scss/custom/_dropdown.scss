@@ -7,7 +7,11 @@
   color: $italia;
   background-color: transparent;
   border-radius: 0;
-  padding: 0;
+  padding: 0 4px;
+  font-size: 1rem;
+  &:not(:disabled):not(.disabled):active {
+    box-shadow: none;
+  }
   &:after {
     content:'\e818';
     font-family: "italia-icon-font";
@@ -31,24 +35,30 @@
 }
 
 .dropdown-menu {
-  margin-top: 18px;
+  margin-top: 16px;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
+
   &.full-width {
     width: 100%;
-    .dropdown-item {
-    display: inline-block;
-    width: auto;
-    &:hover,
-    &:focus {
-      background: none;
-      text-decoration: underline;
+    .link-list li {
+      display: inline-block;
+      width: auto;
+      &:hover,
+      &:focus {
+        background: none;
+        text-decoration: underline;
       }
     }
   }
-
+  
+  //link list finetuning
   .link-list {
     margin-bottom: 0;
+    h3 {
+      line-height: 2.3em;
+      margin-bottom: 0;
+    }
   }
 
   //notch
@@ -67,7 +77,7 @@
   //top position
   &[x-placement='top-start'] {
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     border-radius: 4px 4px 0 0;
     //notch
     &:before {
@@ -84,10 +94,11 @@
         background: #2E465E;
       }
       li {
+        //link list colors and hovers
         a span, a:hover span, h3, i {
           color: #fff;
         }
-        a:not(.active):hover i {
+        a:not(.active):not(.disabled):hover i {
           color: $analogue-2-a4;
         }
         a.disabled span {
@@ -99,14 +110,5 @@
     &:before {
       background-color: $neutral-1-a8;
     }
-    .dropdown-header, .dropdown-item {
-      color: #fff;
-    }
   }
-}
-.dropdown-item {
-  font-size: 16px;
-}
-.dropdown-header {
-  font-size: 18px;
 }

@@ -49,7 +49,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 Lo stesso vale per elementi `<a>`:
 
 {% capture example %}
-<div class="dropdown show">
+<div class="dropdown">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
   </a>
@@ -131,6 +131,24 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
       <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
       <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
       <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Dropdown menu full width
+
+Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
+
+{% capture example %}
+<div class="dropdown-menu full-width">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 4</span></a></li>
+      <li><a class="list-item large" href="#"><span>Azione 5</span></a></li>
     </ul>
   </div>
 </div>

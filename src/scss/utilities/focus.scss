@@ -14,7 +14,8 @@ a,
 button,
 input,
 select,
-textarea {
+textarea,
+.btn {
   &:focus {
     @extend .focus--keyboard;
   }
