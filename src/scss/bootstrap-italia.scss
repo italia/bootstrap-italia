@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
-
-// funzioni e variabili
+// funzioni e variabili colore
 @import "functions";
-@import "variables"; 
-//colors utilities
 @import "utilities/colors_vars";
+
+//variables
+@import "variables"; 
+
+//classi colore
 @import "utilities/colors";
 
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
+
+//gestione dei focus
+@import "utilities/focus";
 
 // mixins
 @import "node_modules/bootstrap/scss/mixins";
@@ -77,3 +82,5 @@
 @import "custom/back-to-top";
 @import "custom/autocomplete";
 @import "custom/componente-base";
+@import "custom/linklist";
+
