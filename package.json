@@ -17,7 +17,7 @@
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
     "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",

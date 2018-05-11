@@ -41,6 +41,8 @@
     - title: Hero
     - title: Input group
       status: wip
+    - title: Link list
+      status: wip
     - title: Modale
       status: wip
     #- title: Navigazione
