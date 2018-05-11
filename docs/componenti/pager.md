@@ -237,13 +237,17 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10<i class="it-expand"></i></a>
+    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10</a>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
-      <a class="dropdown-item active" href="#">pag. 10</a>
-      <a class="dropdown-item" href="#">pag. 20</a>
-      <a class="dropdown-item" href="#">pag. 30</a>
-      <a class="dropdown-item" href="#">pag. 40</a>
-      <a class="dropdown-item" href="#">pag. 50</a>
+      <div class="link-list-wrapper">
+        <ul class="link-list">
+           <li><a class="list-item active" href="#" aria-current="page"><span>pag. 10</span></a></li>
+           <li><a class="list-item" href="#"><span>pag. 20</span></a></li>
+           <li><a class="list-item" href="#"><span>pag. 30</span></a></li>
+           <li><a class="list-item" href="#"><span>pag. 40</span></a></li>
+           <li><a class="list-item" href="#"><span>pag. 50</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

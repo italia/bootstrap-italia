@@ -198,7 +198,7 @@ $dropdown-menu-notch-position-x: 24px;
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
 
-//Linklist
+// Linklist
 $link-list-font-size:0.889em;
 $link-list-font-size-l:1em;
 $link-list-line-height:2.3em;
@@ -214,7 +214,25 @@ $link-list-avatar-margin:8px;
 $link-list-checkbox-icon-right:35px;
 $link-list-toggle-margin:8px;
 
-
+// Pager
+$pager-margin-bottom: 0.5rem;
+$pager-item-size-mobile: 2.5rem; // 40px
+$pager-item-size-tablet: 2.6666666666666665rem; // 48px
+$pager-item-border-radius: 4px;
+$pager-item-margin-right: 5px;
+$pager-item-current-color: $italia;
+$pager-item-current-border: 1px solid $italia;
+$pager-font-size: 0.8888888888888888rem; // 16px
+$pager-font-weight: 600;
+$pager-font-color: $neutral-1-a7;
+$pager-hover-color: $italia;
+$pager-icon-color: $primary-c5;
+$pager-icon-size: 0.7rem;
+$pager-disabled-color: $neutral-2-b2;
+$pager-jump-to-width: 4.5rem;
+$pager-jump-to-color: $neutral-2-b3;
+$pager-page-changer-padding: 12px;
+$pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
 
 // Grid breakpoints
