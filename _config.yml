@@ -46,7 +46,7 @@ slack:              'https://slack.developers.italia.it/'
 twitter:            'https://twitter.com/teamdigitaleIT'
 
 # Versions
-current_version:    x.x.x # This will be populated at build-time
+current_version:    0.7.0
 bootstrap_version:  4.1
 
 # Analytics
