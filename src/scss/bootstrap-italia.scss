@@ -6,7 +6,7 @@
 @import "utilities/colors_vars";
 
 //variables
-@import "variables"; 
+@import "variables";
 
 //classi colore
 @import "utilities/colors";
@@ -29,7 +29,7 @@
 @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/tables";
-@import "node_modules/bootstrap/scss/forms"; 
+@import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/dropdown";
@@ -52,7 +52,7 @@
 @import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/popover";
 @import "node_modules/bootstrap/scss/carousel";
-@import "node_modules/bootstrap/scss/utilities"; 
+@import "node_modules/bootstrap/scss/utilities";
 
 // Pickadate: temporaneamente disabilitato in quanto stile non definitivo
 // @import "node_modules/pickadate/lib/themes/default";
@@ -73,7 +73,7 @@
 @import "custom/forms";
 @import "custom/password";
 @import "custom/dropdown";
-@import "custom/pagination";
+@import "custom/pager";
 @import "custom/offcanvas";
 @import "custom/tab";
 @import "custom/cookiebar";
@@ -81,6 +81,7 @@
 @import "custom/forward";
 @import "custom/back-to-top";
 @import "custom/autocomplete";
-@import "custom/componente-base";
 @import "custom/linklist";
 
+// componente di esempio
+@import "custom/componente-base";
