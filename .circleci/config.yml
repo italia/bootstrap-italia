@@ -10,7 +10,7 @@ aliases:
     # fallback to using the latest cache if no exact match is found
     - v3-dependencies-
 
-  - &install
+  - &gem_install
     name: Ruby dependencies
     command: bundle install
 
@@ -58,7 +58,7 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache: *restore_cache
-      - run: *install
+      - run: *gem_install
       - run: *npm_install
       - save_cache: *save_cache
 
@@ -98,7 +98,7 @@ jobs:
 
       # Restore dependencies
       - restore_cache: *restore_cache
-      - run: *install
+      - run: *gem_install
 
       - run:
           name: Update GitHub Pages
