@@ -67,7 +67,7 @@ Gli elementi dropdown contenuti nelle navbar, vengono esteticamente renderizzate
       <ul class="navbar-nav">
         <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 disabilitato</span></a>
+        <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 disabilitato </span></a>
         </li>
         <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a>
         </li>
