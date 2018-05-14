@@ -16,6 +16,7 @@ exclude:
   - .github/
   - .idea/
   - src/
+  - vendor
   - node_modules/
   - AUTHORS
   - CODE_OF_CONDUCT.md
