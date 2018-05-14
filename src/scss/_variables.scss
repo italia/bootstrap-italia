@@ -178,7 +178,19 @@ $dropdown-item-padding-x: 24px;
 $dropdown-item-padding-y: 12px;
 $dropdown-border-width: 0;
 $dropdown-border-color: transparent;
-$dropdown-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+$dropdown-box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
+// Dropdown custom
+$dropdown-custom-button-padding: 0 4px;
+$dropdown-custom-button-font-size: 1rem;
+$dropdown-custom-button-color: $italia;
+$dropdown-custom-button-background: transparent;
+$dropdown-custom-button-caret-font-size: 0.8rem;
+$dropdown-custom-button-caret-content: '\e818';
+$dropdown-menu-animation-speed: 0.3s;
+$dropdown-menu-vertical-shift: 16px;
+$dropdown-menu-radius: 4px;
+$dropdown-menu-notch-base-size: 6px;
+$dropdown-menu-notch-position-x: 24px;
 
 //Navigation
 $navigation-bg-color: $color-primary;
@@ -203,7 +215,7 @@ $navigation-disabled-item-opacity:0.5;
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
 
-//Linklist
+// Linklist
 $link-list-font-size:0.889em;
 $link-list-font-size-l:1em;
 $link-list-line-height:2.3em;
@@ -219,6 +231,25 @@ $link-list-avatar-margin:8px;
 $link-list-checkbox-icon-right:35px;
 $link-list-toggle-margin:8px;
 
+// Pager
+$pager-margin-bottom: 0.5rem;
+$pager-item-size-mobile: 2.5rem; // 40px
+$pager-item-size-tablet: 2.6666666666666665rem; // 48px
+$pager-item-border-radius: 4px;
+$pager-item-margin-right: 5px;
+$pager-item-current-color: $italia;
+$pager-item-current-border: 1px solid $italia;
+$pager-font-size: 0.8888888888888888rem; // 16px
+$pager-font-weight: 600;
+$pager-font-color: $neutral-1-a7;
+$pager-hover-color: $italia;
+$pager-icon-color: $primary-c5;
+$pager-icon-size: 0.7rem;
+$pager-disabled-color: $neutral-2-b2;
+$pager-jump-to-width: 4.5rem;
+$pager-jump-to-color: $neutral-2-b3;
+$pager-page-changer-padding: 12px;
+$pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
 
 // Grid breakpoints

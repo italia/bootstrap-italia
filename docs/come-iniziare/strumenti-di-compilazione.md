@@ -122,13 +122,46 @@ La struttura delle cartelle della documentazione è la seguente:
 - `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
 - `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**, servono soltanto per documentare la libreria in queste pagine che stai leggendo.
 
-## Pubblicare la documentazione
+## Creare una nuova release
 
-Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d'appoggio `_gh_pages`. Per fare questo, è necessario portare tutto il contenuto di tale cartella sul branch `gh-pages` con il comando:
+Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-`npm run documentation-deploy-to-gh-pages`
+```sh
+$ npm run bump-patch
+```
 
-Tale comando creerà un nuovo commit sul branch `gh-pages` del repository remoto su cui si sta lavorando, lanciando così la pubblicazione immediata della documentazione su GitHub Pages e rendendola visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/).
+o `bump-minor` oppure `bump-major`, che produrrà:
+
+* Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
+* Commit delle modifiche
+* Tag del commit con numero di versione in formato `vx.x.x`
+
+```sh
+$ git push --follow-tags
+```
+
+che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
+
+### CI e CD
+
+Sul branch `master` è eseguita la CI con CircleCI, configurata per eseguire il Job `build`.
+
+Il push delle tag sul repository eseguirà il CD composto da:
+
+#### Job `build`
+Build del progetto con `npm run build` 
+
+#### Job `github-update-pages`
+Build della documentazione e deploy sul branch `gh-pages` con `npm run documentation-deploy-to-gh-pages`.
+
+Il comando produrrà l'aggiornamento su GitHub Pages, rendendo la documentazione visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/)
+
+#### Job `github-create-release`
+Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases/) ed upload degli asset `bootstrap-italia.zip`, prodotti nella cartella `/dist` dai precedenti step, e creazione di una release note (che potrà poi essere successivamente modificata) contenente il changelog con `npm run release`.
+
+#### Job `npm-publish`
+
+`npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
 
 [bootstrap-themes]: https://getbootstrap.com/docs/4.0/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
@@ -142,19 +175,6 @@ Tale comando creerà un nuovo commit sul branch `gh-pages` del repository remoto
 [jekyll-includes]: https://jekyllrb.com/docs/includes/
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
-
-## Creare una nuova release
-
-Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi manuali:
-
-* Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json` e `_config.yml`
-* Lanciare i comandi `npm run build` e `npm run documentation-build` per compilare libreria e documentazione
-* Lanciare il comando `npm i` per aggiornare il file `package.lock`
-* Commit e push delle modifiche, commentare con `version bump vx.x.x`
-* Tag del commit con numero di versione in formato `x.x.x`
-* Creare manualmente un file compresso `bootstrap-italia.zip` dei contenuti della cartella `/dist`
-* Scrivere le release notes su GitHub e allegare il suddetto file compresso
-* `npm publish` per aggiornare la versione su `npm`
 
 ---
 
