@@ -84,6 +84,9 @@
   .dropdown-menu{
     background: transparent;
     box-shadow: none;
+    &:before{
+      display: none;
+    }
     .link-list-wrapper{
       padding-left:$navigation-h-padding;
       padding-right:$navigation-h-padding;
@@ -213,7 +216,7 @@
         top: 100%;
         left: 0;
         z-index: $zindex-dropdown;
-        display: none; // none by default, but block on "open" of the menu
+        //display: none; // none by default, but block on "open" of the menu
         float: left;
         min-width: $dropdown-min-width;
         padding: $dropdown-padding-y 0;
@@ -227,6 +230,13 @@
         border: $dropdown-border-width solid $dropdown-border-color;
         @include border-radius($dropdown-border-radius);
         @include box-shadow($dropdown-box-shadow);
+        &.show{
+           animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
+           top:calc(100% - #{$dropdown-menu-vertical-shift});
+        }
+        &:before{
+          display: block;
+        }
       .link-list-wrapper{
         padding-left:0;
         padding-right:0;
