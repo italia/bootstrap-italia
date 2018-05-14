@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Modifica colori di background, testo e bordi con colori custom.">
+<meta name="author" content="Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.8.1">
+<meta name="robots" content="noindex">
+
+<title>Colori Custom · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805140918" rel="stylesheet">
+
+<!-- Icon Font CSS -->
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805140918" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805140918" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.webmanifest">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="Team per la Trasformazione Digitale">
+<meta name="twitter:title" content="Colori Custom">
+<meta name="twitter:description" content="Modifica colori di background, testo e bordi con colori custom.">
+<meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="/docs/utilities/colori-custom/">
+<meta property="og:title" content="Colori Custom">
+<meta property="og:description" content="Modifica colori di background, testo e bordi con colori custom.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+// Disabilita tracciamento se il cookie cookies_consent non esiste
+if (document.cookie.indexOf('cookies_consent=true') === -1) {
+  window['ga-disable-UA-114758441-1'] = true;
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114758441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114758441-1');
+</script>
+
+
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.developers.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="navbar-main navbar navbar-dark bd-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column pl-3 pl-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-sm btn-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item pr-2">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.7.4/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i>
+        </a>
+      </li>
+      <li class="nav-item pr-2">
+        <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="it-github"></i>
+        </a>
+      </li>
+    </ul>
+
+    
+    <form class="bd-search w-100">
+        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </form>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alert/">
+              Alert
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
+              Barre di Avanzamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
+              Breadcrumb
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/bottoni/">
+              Bottoni
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/checkbox/">
+              Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdown/">
+              Dropdown
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form/">
+              Form
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/hero/">
+              Hero
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/input-group/">
+              Input group
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/link-list/">
+              Link list
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/offcanvas/">
+              Offcanvas
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pager/">
+              Pager
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popover/">
+              Popover
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/radio-button/">
+              Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/select/">
+              Select
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltip/">
+              Tooltip
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
+              Cookiebar
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/forward/">
+              Forward
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
+              Back to top
+            </a><span class="badge badge-info">wip</span></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori/">
+              Colori
+            </a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/utilities/colori-custom/">
+              Colori Custom
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
+              Ombreggiature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/posizionamento/">
+              Posizionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/esempi/">
+        Esempi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#colori-primari">Colori Primari</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#varianti-monocromatiche-del-colore-base">Varianti monocromatiche del colore base</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#colori-secondari">Colori secondari</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#analoghi">Analoghi</a></li>
+<li class="toc-entry toc-h3"><a href="#complementari-e-triadici">Complementari e triadici</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#varianti-colori-secondari">Varianti colori secondari</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#analoghi-1">Analoghi</a></li>
+<li class="toc-entry toc-h3"><a href="#complementari-e-triadici-1">Complementari e triadici</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#colori-neutrali">Colori neutrali</a></li>
+<li class="toc-entry toc-h2"><a href="#varianti-colori-neutrali">Varianti colori neutrali</a></li>
+<li class="toc-entry toc-h2"><a href="#grigi-chiari">Grigi chiari</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Colori Custom</h1>
+          <p class="bd-lead">Modifica colori di background, testo e bordi con colori custom.</p>
+          <p>Definisci colori di background, bordi, colore di testo attraverso specifiche classi.</p>
+
+<h2 id="colori-primari">Colori Primari</h2>
+
+<div class="bd-example-border-utils">
+<p>I colori primari sono il Blu Italia e il bianco.<br />
+Il <strong class="primary-color">Blu Italia</strong> è il colore identificativo dell’intera brand identity e rappresenta la radice per creare altri colori
+della palette primaria.</p>
+<div class="primary-color-container">
+<div class="square-color primary-bg">
+<span class="white-color">#0066CC</span>
+</div>
+<div class="square-color white-bg shadow">
+<span>#FFFFFF</span>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<div class="bd-example">
+<div class="primary-bg p-3"><span class="white-color">Testo bianco su background colore primario</span></div>
+<div class="primary-border-color border p-3"><span class="primary-color">Testo colore primario su background con bordo primario</span></div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore primario<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-border-color border p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"primary-color"</span><span class="nt">&gt;</span>Testo colore primario su background con bordo primario<span class="nt">&lt;/span&gt;&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.primary-bg</code> : per background color <br />
+<code class="highlighter-rouge">.primary-color</code> : per text color<br />
+<code class="highlighter-rouge">.primary-border-color</code> : per border color<br /></p>
+
+<h3 id="varianti-monocromatiche-del-colore-base">Varianti monocromatiche del colore base</h3>
+<p>Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe</p>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.primary-bg- + variante-colore</code>  : per background color <br />
+<code class="highlighter-rouge">.primary-color- + variante-colore</code> : per text color<br />
+<code class="highlighter-rouge">.primary-border-color- + variante-colore</code>  : per border color</p>
+
+<p>(es. <code class="highlighter-rouge">.primary-bg-a5</code> per utilizzare come background il colore primario con variante <strong>a5</strong> )</p>
+
+<div class="bd-example">
+
+<div class="bd-example-border-utils">
+
+<div class="row">
+	<div class="col-xs-12 col-md-3">
+		<p>Tinte e ombre</p>
+		<div class="c-line primary-bg-a1">a1</div>
+		<div class="c-line primary-bg-a2">a2</div>
+		<div class="c-line primary-bg-a3">a3</div>
+		<div class="c-line primary-bg-a4">a4</div>
+		<div class="c-line white-color primary-bg-a5">a5</div>
+		<div class="c-line white-color primary-bg-a6">a6</div>
+		<div class="c-line white-color primary-bg-a7">a7</div>
+		<div class="c-line white-color primary-bg-a8">a8</div>
+		<div class="c-line white-color primary-bg-a9">a9</div>
+		<div class="c-line white-color primary-bg-a10">a10</div>
+		<div class="c-line white-color primary-bg-a11">a11</div>
+		<div class="c-line white-color primary-bg-a12">a12</div>
+	</div>
+	<div class="col-xs-12 col-md-3">
+		<p>Toni</p>
+		<div class="c-line primary-bg-b1 white-color">b1</div>
+		<div class="c-line primary-bg-b2 white-color">b2</div>
+		<div class="c-line primary-bg-b3 white-color">b3</div>
+		<div class="c-line primary-bg-b4 white-color">b4</div>
+		<div class="c-line primary-bg-b5 white-color">b5</div>
+		<div class="c-line primary-bg-b6 white-color">b6</div>
+		<div class="c-line primary-bg-b7 white-color">b7</div>
+	</div>
+	<div class="col-xs-12 col-md-3">
+		<p>Variazione di saturazione</p>
+		<div class="c-line primary-bg-c1">c1</div>
+		<div class="c-line primary-bg-c2">c2</div>
+		<div class="c-line primary-bg-c3">c3</div>
+		<div class="c-line primary-bg-c4">c4</div>
+		<div class="c-line primary-bg-c5">c5</div>
+		<div class="c-line primary-bg-c6">c6</div>
+		<div class="c-line primary-bg-c7">c7</div>
+		<div class="c-line primary-bg-c8">c8</div>
+		<div class="c-line primary-bg-c9">c9</div>
+		<div class="c-line white-color primary-bg-c10">c10</div>
+		<div class="c-line white-color primary-bg-c11">c11</div>
+		<div class="c-line white-color primary-bg-c12">c12</div>
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bd-example-border-utils"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Tinte e ombre<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a11"</span><span class="nt">&gt;</span>a11<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-a12"</span><span class="nt">&gt;</span>a12<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Toni<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b1 white-color"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b2 white-color"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b3 white-color"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b4 white-color"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b5 white-color"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b6 white-color"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-b7 white-color"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Variazione di saturazione<span class="nt">&lt;/p&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c1"</span><span class="nt">&gt;</span>c1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c2"</span><span class="nt">&gt;</span>c2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c3"</span><span class="nt">&gt;</span>c3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c4"</span><span class="nt">&gt;</span>c4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c5"</span><span class="nt">&gt;</span>c5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c6"</span><span class="nt">&gt;</span>c6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c7"</span><span class="nt">&gt;</span>c7<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c8"</span><span class="nt">&gt;</span>c8<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line primary-bg-c9"</span><span class="nt">&gt;</span>c9<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-c10"</span><span class="nt">&gt;</span>c10<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-c11"</span><span class="nt">&gt;</span>c11<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color primary-bg-c12"</span><span class="nt">&gt;</span>c12<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<h2 id="colori-secondari">Colori secondari</h2>
+
+<h3 id="analoghi">Analoghi</h3>
+
+<p>Ai colori monocromatici può essere affiancato un accent color, definito così perche si tratta di un colore molto luminoso, serve ad attirare l’attenzione.</p>
+
+<p>Devono essere usati in modo parsimonioso.</p>
+
+<div class="primary-color-container">
+<div class="square-color analogue-1-bg">
+<span class="white-color">#3126ff</span>
+</div>
+<div class="square-color analogue-2-bg">
+<span>#0bd9d2</span>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<p><br />
+<strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.analogue-(+ 1/2 +)-bg</code>  : per background color <br />
+<code class="highlighter-rouge">.analogue-(+ 1/2 +)-color</code> : per text color<br />
+<code class="highlighter-rouge">.analogue-(+ 1/2 +)-border-color</code>  : per border color</p>
+
+<div class="bd-example">
+<div class="analogue-1-bg p-3"><span class="white-color">Testo bianco su background colore analogo 1</span></div>
+<div class="analogue-2-bg p-3"><span class="analogue-1-color">Testo colore analogo 1 su background colore analogo 2</span></div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"analogue-1-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore analogo 1<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"analogue-2-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"analogue-1-color"</span><span class="nt">&gt;</span>Testo colore analogo 1 su background colore analogo 2<span class="nt">&lt;/span&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<hr />
+
+<h3 id="complementari-e-triadici">Complementari e triadici</h3>
+
+<div class="primary-color-container">
+<div class="square-color complementary-1-bg">
+<span class="white-color">#f73e5a</span>
+</div>
+<div class="square-color complementary-2-bg">
+<span class="white-color">#ff9900</span>
+</div>
+<div class="square-color complementary-3-bg">
+<span class="white-color">#00cf86</span>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<p><br />
+<strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.complementary-(+ 1/2/3 +)-bg</code>  : per background color <br />
+<code class="highlighter-rouge">.complementary-(+ 1/2/3 +)-color</code> : per text color<br />
+<code class="highlighter-rouge">.complementary-(+ 1/2/3 +)-border-color</code>  : per border color</p>
+
+<div class="bd-example">
+<div class="complementary-1-bg p-3"><span class="white-color">Testo bianco su background colore complementare 1</span></div>
+<div class="complementary-2-bg p-3"><span class="white-color">Testo bianco su background colore complementare 2</span></div>
+<div class="complementary-3-bg p-3"><span class="white-color">Testo bianco su background colore complementare 3</span></div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"complementary-1-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore complementare 1<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"complementary-2-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore complementare 2<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"complementary-3-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore complementare 3<span class="nt">&lt;/span&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<hr />
+
+<h2 id="varianti-colori-secondari">Varianti colori secondari</h2>
+
+<h3 id="analoghi-1">Analoghi</h3>
+<p>I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe</p>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.analogue-(+ 1/2 )-bg- + variante-colore</code> : per background color <br />
+<code class="highlighter-rouge">.analogue-(+ 1/2 )-color- + variante-colore</code> : per text color<br />
+<code class="highlighter-rouge">.analogue-(+ 1/2 )-border-color- + variante-colore</code> : per border color</p>
+
+<p>(es. <code class="highlighter-rouge">.analogue-1-bg-a5</code> per utilizzare come background il colore analogo <strong>1</strong> con variante <strong>a5</strong> )</p>
+
+<div class="bd-example">
+<div class="row">
+	<div class="col-md-3">
+		<div class="c-line analogue-1-bg-a1">a1 </div>
+		<div class="c-line analogue-1-bg-a2">a2 </div>
+		<div class="c-line analogue-1-bg-a3">a3 </div>
+		<div class="c-line white-color analogue-1-bg-a4">a4 </div>
+		<div class="c-line white-color analogue-1-bg-a5">a5 </div>
+		<div class="c-line white-color analogue-1-bg-a6">a6 </div>
+		<div class="c-line white-color analogue-1-bg-a7">a7 </div>
+		<div class="c-line white-color analogue-1-bg-a8">a8 </div>
+		<div class="c-line white-color analogue-1-bg-a9">a9 </div>
+		<div class="c-line white-color analogue-1-bg-a10">a10 </div>
+		<div class="c-line white-color analogue-1-bg-a11">a11 </div>
+		<div class="c-line white-color analogue-1-bg-a12">a12 </div>
+	</div>
+	<div class="col-md-3">
+		<div class="c-line white-color analogue-1-bg-b1">b1</div>
+		<div class="c-line white-color analogue-1-bg-b2">b2</div>
+		<div class="c-line white-color analogue-1-bg-b3">b3</div>
+		<div class="c-line white-color analogue-1-bg-b4">b4</div>
+		<div class="c-line white-color analogue-1-bg-b5">b5</div>
+		<div class="c-line white-color analogue-1-bg-b6">b6</div>
+		<div class="c-line white-color analogue-1-bg-b7">b7</div>
+		<div class="c-line white-color analogue-1-bg-b8">b8</div>
+	</div>
+	<div class="col-md-3">
+		<div class="c-line analogue-2-bg-a1">a1</div>
+		<div class="c-line analogue-2-bg-a2">a2</div>
+		<div class="c-line analogue-2-bg-a3">a3</div>
+		<div class="c-line analogue-2-bg-a4">a4</div>
+		<div class="c-line analogue-2-bg-a5">a5</div>
+		<div class="c-line analogue-2-bg-a6">a6</div>
+		<div class="c-line analogue-2-bg-a7">a7</div>
+		<div class="c-line analogue-2-bg-a8">a8</div>
+		<div class="c-line white-color analogue-2-bg-a9">a9</div>
+		<div class="c-line white-color analogue-2-bg-a10">a10</div>
+		<div class="c-line white-color analogue-2-bg-a11">a11</div>
+		<div class="c-line white-color analogue-2-bg-a12">a12</div>
+	</div>
+	<div class="col-md-3">
+		<div class="c-line white-color analogue-2-bg-b1">b1</div>
+		<div class="c-line white-color analogue-2-bg-b2">b2</div>
+		<div class="c-line white-color analogue-2-bg-b3">b3</div>
+		<div class="c-line white-color analogue-2-bg-b4">b4</div>
+		<div class="c-line white-color analogue-2-bg-b5">b5</div>
+		<div class="c-line white-color analogue-2-bg-b6">b6</div>
+		<div class="c-line white-color analogue-2-bg-b7">b7</div>
+		<div class="c-line white-color analogue-2-bg-b8">b8</div>
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-1-bg-a1"</span><span class="nt">&gt;</span>a1 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-1-bg-a2"</span><span class="nt">&gt;</span>a2 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-1-bg-a3"</span><span class="nt">&gt;</span>a3 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a4"</span><span class="nt">&gt;</span>a4 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a5"</span><span class="nt">&gt;</span>a5 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a6"</span><span class="nt">&gt;</span>a6 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a7"</span><span class="nt">&gt;</span>a7 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a8"</span><span class="nt">&gt;</span>a8 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a9"</span><span class="nt">&gt;</span>a9 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a10"</span><span class="nt">&gt;</span>a10 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a11"</span><span class="nt">&gt;</span>a11 <span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-a12"</span><span class="nt">&gt;</span>a12 <span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-1-bg-b8"</span><span class="nt">&gt;</span>b8<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line analogue-2-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-a11"</span><span class="nt">&gt;</span>a11<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-a12"</span><span class="nt">&gt;</span>a12<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color analogue-2-bg-b8"</span><span class="nt">&gt;</span>b8<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><br /></p>
+
+<h3 id="complementari-e-triadici-1">Complementari e triadici</h3>
+<p>I colori Complementari possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe</p>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.complementary-(+ 1/2/3 )-bg- + variante-colore</code> : per background color <br />
+<code class="highlighter-rouge">.complementary-(+ 1/2/3 )-color- + variante-colore</code> : per text color<br />
+<code class="highlighter-rouge">.complementary-(+ 1/2/3 )-border-color- + variante-colore</code> : per border color</p>
+
+<p>(es. <code class="highlighter-rouge">.complementary-1-bg-a5</code> per utilizzare come background il colore complementare <strong>1</strong> con variante <strong>a4</strong> )</p>
+
+<div class="bd-example">
+<div class="row">
+   <div class="col-md-2">
+      <div class="c-line complementary-1-bg-a1">a1</div>
+      <div class="c-line complementary-1-bg-a2">a2</div>
+      <div class="c-line complementary-1-bg-a3">a3</div>
+      <div class="c-line complementary-1-bg-a4">a4</div>
+      <div class="c-line white-color complementary-1-bg-a5">a5</div>
+      <div class="c-line white-color complementary-1-bg-a6">a6</div>
+      <div class="c-line white-color complementary-1-bg-a7">a7</div>
+      <div class="c-line white-color complementary-1-bg-a8">a8</div>
+      <div class="c-line white-color complementary-1-bg-a9">a9</div>
+      <div class="c-line white-color complementary-1-bg-a10">a10</div>
+      <div class="c-line white-color complementary-1-bg-a11">a11</div>
+      <div class="c-line white-color complementary-1-bg-a12">a12</div>
+   </div>
+   <div class="col-md-2">
+      <div class="c-line white-color complementary-1-bg-b1">b1</div>
+      <div class="c-line white-color complementary-1-bg-b2">b2</div>
+      <div class="c-line white-color complementary-1-bg-b3">b3</div>
+      <div class="c-line white-color complementary-1-bg-b4">b4</div>
+      <div class="c-line white-color complementary-1-bg-b5">b5</div>
+      <div class="c-line white-color complementary-1-bg-b6">b6</div>
+      <div class="c-line white-color complementary-1-bg-b7">b7</div>
+      <div class="c-line white-color complementary-1-bg-b8">b8</div>
+   </div>
+   <div class="col-md-2">
+      <div class="c-line complementary-2-bg-a1">a1</div>
+      <div class="c-line complementary-2-bg-a2">a2</div>
+      <div class="c-line complementary-2-bg-a3">a3</div>
+      <div class="c-line complementary-2-bg-a4">a4</div>
+      <div class="c-line white-color complementary-2-bg-a5">a5</div>
+      <div class="c-line white-color complementary-2-bg-a6">a6</div>
+      <div class="c-line white-color complementary-2-bg-a7">a7</div>
+      <div class="c-line white-color complementary-2-bg-a8">a8</div>
+      <div class="c-line white-color complementary-2-bg-a9">a9</div>
+      <div class="c-line white-color complementary-2-bg-a10">a10</div>
+      <div class="c-line white-color complementary-2-bg-a11">a11</div>
+      <div class="c-line white-color complementary-2-bg-a12">a12</div>
+   </div>
+   <div class="col-md-2">
+      <div class="c-line white-color complementary-2-bg-b1">b1</div>
+      <div class="c-line white-color complementary-2-bg-b2">b2</div>
+      <div class="c-line white-color complementary-2-bg-b3">b3</div>
+      <div class="c-line white-color complementary-2-bg-b4">b4</div>
+      <div class="c-line white-color complementary-2-bg-b5">b5</div>
+      <div class="c-line white-color complementary-2-bg-b6">b6</div>
+      <div class="c-line white-color complementary-2-bg-b7">b7</div>
+      <div class="c-line white-color complementary-2-bg-b8">b8</div>
+   </div>
+   <div class="col-md-2">
+      <div class="c-line complementary-3-bg-a1">a1</div>
+      <div class="c-line complementary-3-bg-a2">a2</div>
+      <div class="c-line complementary-3-bg-a3">a3</div>
+      <div class="c-line complementary-3-bg-a4">a4</div>
+      <div class="c-line complementary-3-bg-a5">a5</div>
+      <div class="c-line complementary-3-bg-a6">a6</div>
+      <div class="c-line white-color complementary-3-bg-a7">a7</div>
+      <div class="c-line white-color complementary-3-bg-a8">a8</div>
+      <div class="c-line white-color complementary-3-bg-a9">a9</div>
+      <div class="c-line white-color complementary-3-bg-a10">a10</div>
+      <div class="c-line white-color complementary-3-bg-a11">a11</div>
+      <div class="c-line white-color complementary-3-bg-a12">a12</div>
+   </div>
+   <div class="col-md-2">
+      <div class="c-line white-color complementary-3-bg-b1">b1</div>
+      <div class="c-line white-color complementary-3-bg-b2">b2</div>
+      <div class="c-line white-color complementary-3-bg-b3">b3</div>
+      <div class="c-line white-color complementary-3-bg-b4">b4</div>
+      <div class="c-line white-color complementary-3-bg-b5">b5</div>
+      <div class="c-line white-color complementary-3-bg-b6">b6</div>
+      <div class="c-line white-color complementary-3-bg-b7">b7</div>
+      <div class="c-line white-color complementary-3-bg-b8">b8</div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-1-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-1-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-1-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-1-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a11"</span><span class="nt">&gt;</span>a11<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-a12"</span><span class="nt">&gt;</span>a12<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-1-bg-b8"</span><span class="nt">&gt;</span>b8<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-2-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-2-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-2-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-2-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a11"</span><span class="nt">&gt;</span>a11<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-a12"</span><span class="nt">&gt;</span>a12<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-2-bg-b8"</span><span class="nt">&gt;</span>b8<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line complementary-3-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a11"</span><span class="nt">&gt;</span>a11<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-a12"</span><span class="nt">&gt;</span>a12<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color complementary-3-bg-b8"</span><span class="nt">&gt;</span>b8<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="colori-neutrali">Colori neutrali</h2>
+
+<div class="primary-color-container">
+<div class="square-color neutral-1-bg">
+<span class="white-color">#17324d</span>
+</div>
+<div class="square-color neutral-2-bg">
+<span>#e6ecf2</span>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<p><br />
+<strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.neutral-(+ 1/2 +)-bg</code>  : per background color <br />
+<code class="highlighter-rouge">.neutral-(+ 1/2 +)-color</code> : per text color<br />
+<code class="highlighter-rouge">.neutral-(+ 1/2 +)-border-color</code>  : per border color</p>
+
+<div class="bd-example">
+<div class="neutral-1-bg p-3"><span class="white-color">Testo bianco su background colore neutrale 1</span></div>
+<div class="neutral-2-bg p-3"><span>Testo su background colore neutrale 2</span></div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"neutral-1-bg p-3"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"white-color"</span><span class="nt">&gt;</span>Testo bianco su background colore neutrale 1<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"neutral-2-bg p-3"</span><span class="nt">&gt;&lt;span&gt;</span>Testo su background colore neutrale 2<span class="nt">&lt;/span&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="varianti-colori-neutrali">Varianti colori neutrali</h2>
+
+<p>I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe</p>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.neutral-(+ 1/2 +)-bg- + variante-colore</code> : per background color <br />
+<code class="highlighter-rouge">.neutral-(+ 1/2 +)-color- + variante-colore</code> : per text color<br />
+<code class="highlighter-rouge">.neutral-(+ 1/2 +)-border-color- + variante-colore</code> : per border color</p>
+
+<p>(es. <code class="highlighter-rouge">.neutral-1-bg-a5</code> per utilizzare come background il colore neutrale <strong>1</strong> con variante <strong>a5</strong> )</p>
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-md-3">
+    <div class="c-line neutral-1-bg-a1">a1</div>
+    <div class="c-line neutral-1-bg-a2">a2</div>
+    <div class="c-line neutral-1-bg-a3">a3</div>
+    <div class="c-line neutral-1-bg-a4">a4</div>
+    <div class="c-line neutral-1-bg-a5">a5</div>
+    <div class="c-line white-color neutral-1-bg-a6">a6</div>
+    <div class="c-line white-color neutral-1-bg-a7">a7</div>
+    <div class="c-line white-color neutral-1-bg-a8">a8</div>
+    <div class="c-line white-color neutral-1-bg-a9">a9</div>
+    <div class="c-line white-color neutral-1-bg-a10">a10</div>
+  </div>
+  <div class="col-md-3">
+    <div class="c-line neutral-2-bg-b1">b1</div>
+    <div class="c-line neutral-2-bg-b2">b2</div>
+    <div class="c-line neutral-2-bg-b3">b3</div>
+    <div class="c-line white-color neutral-2-bg-b4">b4</div>
+    <div class="c-line white-color neutral-2-bg-b5">b5</div>
+    <div class="c-line white-color neutral-2-bg-b6">b6</div>
+    <div class="c-line white-color neutral-2-bg-b7">b7</div>
+  </div>
+  <div class="col-md-3">
+    <div class="c-line neutral-2-bg-a1">a1</div>
+    <div class="c-line neutral-2-bg-a2">a2</div>
+    <div class="c-line neutral-2-bg-a3">a3</div>
+    <div class="c-line white-color neutral-2-bg-a4">a4</div>
+    <div class="c-line white-color neutral-2-bg-a5">a5</div>
+    <div class="c-line white-color neutral-2-bg-a6">a6</div>
+    <div class="c-line white-color neutral-2-bg-a7">a7</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-1-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-1-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-1-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-1-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-1-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-1-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-1-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-1-bg-a8"</span><span class="nt">&gt;</span>a8<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-1-bg-a9"</span><span class="nt">&gt;</span>a9<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-1-bg-a10"</span><span class="nt">&gt;</span>a10<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-b5"</span><span class="nt">&gt;</span>b5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-b6"</span><span class="nt">&gt;</span>b6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-b7"</span><span class="nt">&gt;</span>b7<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line neutral-2-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-a5"</span><span class="nt">&gt;</span>a5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-a6"</span><span class="nt">&gt;</span>a6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line white-color neutral-2-bg-a7"</span><span class="nt">&gt;</span>a7<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="grigi-chiari">Grigi chiari</h2>
+
+<p>I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare la relativa classe</p>
+
+<p><strong>Utilizzo delle classi:</strong></p>
+
+<p><code class="highlighter-rouge">.lightgrey-bg- + variante-colore</code> : per background color <br />
+<code class="highlighter-rouge">.lightgrey-color- + variante-colore</code> : per text color<br />
+<code class="highlighter-rouge">.lightgrey-border-color- + variante-colore</code> : per border color</p>
+
+<p>(es. <code class="highlighter-rouge">.lightgrey-1-bg-a4</code> per utilizzare come background il grigio chiaro <strong>1</strong> con variante <strong>a5</strong> )</p>
+
+<div class="bd-example">
+<div class="row">
+  <div class="col-md-2">
+    <div class="c-line lightgrey-bg-a1">a1</div>
+    <div class="c-line lightgrey-bg-a2">a2</div>
+    <div class="c-line lightgrey-bg-a3">a3</div>
+    <div class="c-line lightgrey-bg-a4">a4</div>
+  </div>
+  <div class="col-md-2">
+    <div class="c-line lightgrey-bg-b1">b1</div>
+    <div class="c-line lightgrey-bg-b2">b2</div>
+    <div class="c-line lightgrey-bg-b3">b3</div>
+    <div class="c-line lightgrey-bg-b4">b4</div>
+  </div>
+  <div class="col-md-2">
+    <div class="c-line lightgrey-bg-c1">c1</div>
+    <div class="c-line lightgrey-bg-c2">c2</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-a1"</span><span class="nt">&gt;</span>a1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-a2"</span><span class="nt">&gt;</span>a2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-a3"</span><span class="nt">&gt;</span>a3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-a4"</span><span class="nt">&gt;</span>a4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-b1"</span><span class="nt">&gt;</span>b1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-b2"</span><span class="nt">&gt;</span>b2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-b3"</span><span class="nt">&gt;</span>b3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-b4"</span><span class="nt">&gt;</span>b4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-c1"</span><span class="nt">&gt;</span>c1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-line lightgrey-bg-c2"</span><span class="nt">&gt;</span>c2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-6">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
+        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805140918"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805140918"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>

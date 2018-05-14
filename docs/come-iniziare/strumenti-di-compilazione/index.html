@@ -7,22 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Come compilare il codice sorgente e generare la documentazione che stai leggendo">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v3.8.0">
+<meta name="generator" content="Jekyll v3.8.1">
 <meta name="robots" content="noindex">
 
 <title>Strumenti di compilazione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805021908" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805140918" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805021908" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805140918" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805021908" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805140918" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.7.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/0.7.4/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -256,14 +256,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/input-group/">
               Input group
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/link-list/">
+              Link list
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/offcanvas/">
               Offcanvas
             </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/paginazione/">
-              Paginazione
+            <a href="/bootstrap-italia/docs/componenti/pager/">
+              Pager
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/popover/">
               Popover
@@ -321,7 +324,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/colori/">
               Colori
-            </a><span class="badge badge-info">wip</span></li><li>
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori-custom/">
+              Colori Custom
+            </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
               Dimensionamento
             </a></li><li>
@@ -339,7 +345,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/griglie/">
               Griglie
-            </a><span class="badge badge-info">work in progress</span></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
               Immagini sostitutive
             </a></li><li>
@@ -396,10 +402,20 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#script-di-compilazione-1">Script di compilazione</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#pubblicare-la-documentazione">Pubblicare la documentazione</a></li>
 <li class="toc-entry toc-h2"><a href="#creare-una-nuova-release">Creare una nuova release</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#ci-e-cd">CI e CD</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#job-build">Job build</a></li>
+<li class="toc-entry toc-h4"><a href="#job-github-update-pages">Job github-update-pages</a></li>
+<li class="toc-entry toc-h4"><a href="#job-github-create-release">Job github-create-release</a></li>
+<li class="toc-entry toc-h4"><a href="#job-npm-publish">Job npm-publish</a>
+<ul>
 <li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -531,28 +547,46 @@ Di seguito un paio di esempi pratici.</p>
   <li><code class="highlighter-rouge">docs/assets</code>: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. <strong>Non sono file compilati nella libreria finale Bootstrap Italia</strong>, servono soltanto per documentare la libreria in queste pagine che stai leggendo.</li>
 </ul>
 
-<h2 id="pubblicare-la-documentazione">Pubblicare la documentazione</h2>
-
-<p>Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d’appoggio <code class="highlighter-rouge">_gh_pages</code>. Per fare questo, è necessario portare tutto il contenuto di tale cartella sul branch <code class="highlighter-rouge">gh-pages</code> con il comando:</p>
-
-<p><code class="highlighter-rouge">npm run documentation-deploy-to-gh-pages</code></p>
-
-<p>Tale comando creerà un nuovo commit sul branch <code class="highlighter-rouge">gh-pages</code> del repository remoto su cui si sta lavorando, lanciando così la pubblicazione immediata della documentazione su GitHub Pages e rendendola visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a>.</p>
-
 <h2 id="creare-una-nuova-release">Creare una nuova release</h2>
 
-<p>Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi manuali:</p>
+<p>Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm run bump-patch
+</code></pre></div></div>
+
+<p>o <code class="highlighter-rouge">bump-minor</code> oppure <code class="highlighter-rouge">bump-major</code>, che produrrà:</p>
 
 <ul>
-  <li>Aggiornamento numero di versione in formato <a href="https://semver.org/">semver</a> su file <code class="highlighter-rouge">package.json</code> e <code class="highlighter-rouge">_config.yml</code></li>
-  <li>Lanciare i comandi <code class="highlighter-rouge">npm run build</code> e <code class="highlighter-rouge">npm run documentation-build</code> per compilare libreria e documentazione</li>
-  <li>Lanciare il comando <code class="highlighter-rouge">npm i</code> per aggiornare il file <code class="highlighter-rouge">package.lock</code></li>
-  <li>Commit e push delle modifiche, commentare con <code class="highlighter-rouge">version bump vx.x.x</code></li>
-  <li>Tag del commit con numero di versione in formato <code class="highlighter-rouge">x.x.x</code></li>
-  <li>Creare manualmente un file compresso <code class="highlighter-rouge">bootstrap-italia.zip</code> dei contenuti della cartella <code class="highlighter-rouge">/dist</code></li>
-  <li>Scrivere le release notes su GitHub e allegare il suddetto file compresso</li>
-  <li><code class="highlighter-rouge">npm publish</code> per aggiornare la versione su <code class="highlighter-rouge">npm</code></li>
+  <li>Aggiornamento numero di versione in formato <a href="https://semver.org/">semver</a> su file <code class="highlighter-rouge">package.json</code>, <code class="highlighter-rouge">package.lock</code> e <code class="highlighter-rouge">_config.yml</code></li>
+  <li>Commit delle modifiche</li>
+  <li>Tag del commit con numero di versione in formato <code class="highlighter-rouge">vx.x.x</code></li>
 </ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push <span class="nt">--follow-tags</span>
+</code></pre></div></div>
+
+<p>che produrrà il push della commit contenente l’avanzamento della versione ed il push della tag.</p>
+
+<h3 id="ci-e-cd">CI e CD</h3>
+
+<p>Sul branch <code class="highlighter-rouge">master</code> è eseguita la CI con CircleCI, configurata per eseguire il Job <code class="highlighter-rouge">build</code>.</p>
+
+<p>Il push delle tag sul repository eseguirà il CD composto da:</p>
+
+<h4 id="job-build">Job <code class="highlighter-rouge">build</code></h4>
+<p>Build del progetto con <code class="highlighter-rouge">npm run build</code></p>
+
+<h4 id="job-github-update-pages">Job <code class="highlighter-rouge">github-update-pages</code></h4>
+<p>Build della documentazione e deploy sul branch <code class="highlighter-rouge">gh-pages</code> con <code class="highlighter-rouge">npm run documentation-deploy-to-gh-pages</code>.</p>
+
+<p>Il comando produrrà l’aggiornamento su GitHub Pages, rendendo la documentazione visibile all’indirizzo <a href="https://italia.github.io/bootstrap-italia/">https://italia.github.io/bootstrap-italia/</a></p>
+
+<h4 id="job-github-create-release">Job <code class="highlighter-rouge">github-create-release</code></h4>
+<p>Aggiunta di una <a href="https://help.github.com/articles/about-releases/">GitHub release</a> ed upload degli asset <code class="highlighter-rouge">bootstrap-italia.zip</code>, prodotti nella cartella <code class="highlighter-rouge">/dist</code> dai precedenti step, e creazione di una release note (che potrà poi essere successivamente modificata) contenente il changelog con <code class="highlighter-rouge">npm run release</code>.</p>
+
+<h4 id="job-npm-publish">Job <code class="highlighter-rouge">npm-publish</code></h4>
+
+<p><code class="highlighter-rouge">npm publish</code> per aggiornare la versione del package su <a href="https://www.npmjs.com/package/bootstrap-italia">npm</a>.</p>
 
 <hr />
 
@@ -582,14 +616,14 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805021908"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805140918"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805021908"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805140918"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
