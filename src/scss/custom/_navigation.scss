@@ -117,7 +117,8 @@
       speak: none;
       display: inline-block;
       text-decoration: inherit;
-      width: $navigation-dropdown-icon-width;
+      width: auto;
+      height: auto;
       margin-right: .2em;
       text-align: center;
       font-variant: normal;
@@ -131,9 +132,11 @@
       border-left: none;
       font-size: $navigation-dropdown-icon-size;
       line-height:$navigation-dropdown-icon-line-height;
+      transform-origin: center;
+      transition: all 0.3s;
     }
     &[aria-expanded="true"]:after{
-      
+      transform: rotate(180deg)
     }
   }
 }
