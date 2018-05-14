@@ -127,7 +127,7 @@ La struttura delle cartelle della documentazione è la seguente:
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
 ```sh
-$ npm bump-patch
+$ npm run bump-patch
 ```
 
 o `bump-minor` oppure `bump-major`, che produrrà:
