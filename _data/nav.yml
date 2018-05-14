@@ -47,8 +47,8 @@
       status: wip
     #- title: Navigazione
     #  status: to do
-    #- title: Navbar
-    #  status: to do
+    - title: Navbar
+      status: wip
     - title: Offcanvas
     - title: Pager
       status: wip
