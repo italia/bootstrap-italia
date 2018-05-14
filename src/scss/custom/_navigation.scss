@@ -195,6 +195,10 @@
               border-left:0;
               border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
             }
+            &.disabled{
+              opacity:$navigation-disabled-item-opacity;
+              cursor: not-allowed;
+            }
           }
         }
       }
