@@ -103,6 +103,8 @@ jobs:
       - run:
           name: Update GitHub Pages
           command: |
+            git config --global user.email "$GIT_AUTHOR_EMAIL"
+            git config --global user.name "$GIT_AUTHOR_NAME"
             npm run documentation-deploy-to-gh-pages
 
   github-create-release:
