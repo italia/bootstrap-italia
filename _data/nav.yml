@@ -24,6 +24,7 @@
     - title: Badge
     - title: Barre di Avanzamento
     - title: Breadcrumb
+      status: wip
     - title: Bottoni
       status: wip
     #- title: Button group

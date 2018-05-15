@@ -5,32 +5,92 @@ description: Indica la posizione della pagina corrente all'interno di una gerarc
 group: componenti
 ---
 
-## Panoramica
+## Breadcrumb basic
 
-I separatori vengono aggiunti automaticamente in CSS tramite [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) e [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
+Nei separatori abbiamo la possibilà di scegliereil carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
 
 {% capture example %}
-<nav aria-label="breadcrumb">
+<nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb">
+ <nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
   </ol>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+## Breadcrumb with icon
+
+Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire il tag `<i class="(classeicona)">` prima del tag `<a>`  con la classe dell'icona che si intende visualizzare
+
+{% capture example %}
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+## Breadcrumb su sfondo scuro
+
+Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`
+
+{% capture example %}
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+
+<hr>
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+
+<hr>
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
 
 ## Accessibilità
 
