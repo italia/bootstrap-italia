@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Breadcrumb
-description: Indica la posizione della pagina corrente all'interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.
+description: Indica la posizione della pagina corrente all'interno di una gerarchia di navigazione.
 group: componenti
 ---
 
