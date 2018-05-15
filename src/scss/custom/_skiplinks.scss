@@ -1,12 +1,14 @@
 //mobile
 .skiplinks{
-	background-color: $teal;
+	background-color: $analogue-2-b1;
 	text-align: center;
 	a{
 		display: inline-block;
 		padding: $skiplink-padding-y $skiplink-padding-x;
 		display: block;
 		font-weight: 600;
+		color: $neutral-1-a7;
+		text-decoration: underline;
 	}
 	
 }
