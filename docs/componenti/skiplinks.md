@@ -21,5 +21,5 @@ Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
   <a class="sr-only sr-only-focusable" href="#footer">Skip to footer</a>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
+    
 
