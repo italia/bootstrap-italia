@@ -11,7 +11,7 @@ toc: true
 
 Navbar semplice con elenco di links.
 
-Nelle navbar il menu visibile su desktop, viene collassato e reso invisibie ed accessssibile attraverso il pulsante `<button class="custom-navbar-toggler">`
+Il menu visibile su desktop viene collassato e reso invisibile ed accessibile attraverso il pulsante `.custom-navbar-toggler`.
 
 La proprietà `data-target` definisce il menu che andrà visualizzato al click sul pulsante. La proprietà `data-target` è legata all'id dell'elemento da visualizzare.
 
@@ -50,9 +50,9 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
 
 Nelle navbar oltre alla sequenza di link è possibile inserire elementi dropdown.
 
-Per stilare correttamente il dropdown menù è necessario inserire nel tag `<li class="nav-item">` la classe aggiuntiva `dropdown`
+Per stilare correttamente il dropdown menù è necessario inserire nel tag `<li class="nav-item">` la classe aggiuntiva `dropdown`.
 
-Gli elementi dropdown contenuti nelle navbar, vengono esteticamente renderizzate come **collapse element** nella loro versione mobile
+Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg"><span></span>
@@ -108,7 +108,7 @@ Il megamenu all'interno del nav è una variazione del compenente dropdown.
 
 Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.megamenu` al tag `<nav class="navbar">`. Tutti i dropdown all'interno del Navigatore si trasformeranno in megamenu.
 
-Gli elementi megamenu contenuti nelle navbar, vengono esteticamente renderizzate come **collapse element** nella loro versione mobile
+Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg megamenu"><span></span>
@@ -162,11 +162,11 @@ Gli elementi megamenu contenuti nelle navbar, vengono esteticamente renderizzate
 
 ### Inline Menu
 
-La classe distintiva de wrapper esterno è `.ilnine-menu`.
+La classe distintiva del wrapper esterno è `.inline-menu`.
 
-Gli inline menù possono contonere linklists di ogni tipo, nell'esempio seguente è stata inserita una link list collassabile.
+Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una link list collassabile.
 
-Documentazione Link List : <a href="../link-list/">/docs/componenti/link-list/</a>
+Per maggiori informazioni, si può fare riferimento alla [documentazione dei Link List]({{ site.baseurl }}/docs/componenti/link-list/).
 
 {% capture example %}
 <nav class="inline-menu">
