@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.7.1",
+  "version": "0.7.7",
   "keywords": [
     "css",
     "sass",
@@ -16,8 +16,15 @@
     "build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
-    "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages -m 'Update documentation [ci skip]'",
+    "release": "node scripts/release",
+    "bump-major": "npm version major -m \"Release %s\"",
+    "bump-minor": "npm version minor -m \"Release %s\"",
+    "bump-patch": "npm version patch -m \"Release %s\"",
+    "preversion": "npm test",
+    "version": "node scripts/config-sync && git add _config.yml",
+    "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
+    "test": "echo \"No tests specified\""
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",
@@ -34,11 +41,13 @@
     "src/"
   ],
   "devDependencies": {
+    "@octokit/rest": "^15.2.6",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.24.1",
+    "conventional-changelog": "^1.1.24",
     "cross-spawn": "^6.0.5",
     "fancy-log": "^1.3.2",
     "gh-pages": "^1.1.0",
@@ -53,7 +62,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-wrapper": "^1.0.0"
+    "gulp-wrapper": "^1.0.0",
+    "replace-in-file": "^3.4.0"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",

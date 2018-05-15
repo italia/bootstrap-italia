@@ -16,7 +16,9 @@ Bootstrap Italia (versione attuale **{{ site.current_version}}**) è un tema bas
 
 Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS e un Javascript, scaricabili sottoforma di file compresso alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
-<a href="https://github.com/italia/bootstrap-italia/releases/download/{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
+<a href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
+
+Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager **npm**, puoi fare riferimento a [queste indicazioni]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 

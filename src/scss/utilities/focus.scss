@@ -1,0 +1,26 @@
+.focus--keyboard {
+  border-color: #ffaa55;
+  box-shadow: 0 0 6px 2px $color-primary;
+  outline: none;
+}
+
+.focus--mouse {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+.btn {
+  &:focus {
+    @extend .focus--keyboard;
+  }
+
+  &:focus.focus--mouse {
+    @extend .focus--mouse;
+  }
+}

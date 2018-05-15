@@ -221,7 +221,7 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 [type="radio"] {
 	position: absolute;
 	left: -9999px;
-	visibility: hidden;
+	//visibility: hidden;
   + label {
     position: relative;
     padding-left: 36px;
@@ -254,7 +254,12 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
     opacity: 0;
     width: 0;
     height: 0;
-
+    &:focus + .lever {
+      @extend .focus--keyboard;
+    }
+    &:focus.focus--mouse + .lever {
+      @extend .focus--mouse;
+    }
     & + .lever {
       content: "";
       position: relative;
@@ -395,6 +400,14 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 		background-color: #E6E9F2;
 		border-color: #E6E9F2;
 	}
+  //focus
+  &:focus + label{
+    @extend .focus--keyboard;
+  }
+
+  &:focus.focus--mouse + label {
+    @extend .focus--mouse;
+  }
 }
 
 /* RADIO */

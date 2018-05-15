@@ -1,138 +1,3 @@
-// Color system
-$white: rgb(255, 255, 255) !default;
-$gray-100: hsb(225, 0, 90) !default;
-$gray-200: hsb(225, 0, 80) !default;
-$gray-300: hsb(225, 0, 70) !default;
-$gray-400: hsb(225, 0, 60) !default;
-$gray-500: hsb(225, 0, 50) !default;
-$gray-600: hsb(225, 0, 40) !default;
-$gray-700: hsb(225, 0, 30) !default;
-$gray-800: hsb(225, 0, 20) !default;
-$gray-900: hsb(225, 0, 10) !default;
-
-$black: rgb(0, 0, 0) !default;
-
-$grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
-
-@function main($key: "80") {
-  @return map-get($mains, $key);
-}
-
-$italia:  hsb(210, 100, 80) !default;
-$indigo:  hsb(243, 70, 100) !default;
-$purple:  hsb(243, 40, 100) !default;
-$pink:    hsb(350, 30, 100) !default;
-$red:     hsb(351, 75, 97) !default;
-$orange:  hsb(36, 100, 100) !default;
-$yellow:  hsb(44, 55, 100) !default;
-$green:   hsb(159, 100, 80) !default;
-$teal:    hsb(178, 95, 85) !default;
-$cyan:    hsb(178, 100, 100) !default;
-$blue:    hsb(210, 100, 90) !default;
-$light:   hsb(255, 5, 95) !default;
-$dark:    hsb(210, 70, 30) !default; // #17324D
-
-$gray-secondary:        hsb(210, 29, 51) !default; // #5c6f82
-$gray-tertiary:         hsb(205, 35, 54) !default; // #5A768A
-$gray-quaternary:       hsb(238, 1, 100) !default;
-$gray-disabled:         hsb(225, 5, 95) !default;
-$gray-label-disabled:   hsb(222, 5, 79) !default;
-$gray-border-disabled:  hsb(224, 8, 95) !default;
-
-$colors: () !default;
-$colors: map-merge((
-  "italia": $italia,
-  "indigo": $indigo,
-  "purple": $purple,
-  "pink": $pink,
-  "red": $red,
-  "orange": $orange,
-  "yellow": $yellow,
-  "green": $green,
-  "teal": $teal,
-  "cyan": $cyan,
-  "white": $white,
-  "gray": $gray-600,
-  "gray-dark": $gray-800,
-  "blue": $blue,
-  "gray-secondary": $gray-secondary,
-  "gray-tertiary": $gray-tertiary,
-  "gray-quaternary": $gray-quaternary
-), $colors);
-
-// Main Palette
-$primary:     $blue !default;
-$secondary:   $gray-secondary !default;
-
-// Info Colors
-$success:     $green !default;
-$info:        $gray-400 !default;
-$warning:     $orange !default;
-$danger:      $red !default;
-
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $theme-colors);
-
-// Addon: Primary Color Variations
-
-// HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV) è lo spazio colore
-// scelto per ottenere le varianti colore della tonalità primaria.
-// Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in quanto hue e, in gran parte anche
-// saturation rimangono invariate) che, essendo aggiunti ai $theme-colors, saranno disponibili per tutti quei
-// componenti ed utilità che ne fanno uso (ad esempio ".bg-*" o ".text-").
-
-/*
-$primary-h: hue($primary);
-$primary-s: saturation($primary);
-
-$primary-variants: (
-  "primary-b-1": hsb($primary-h, $primary-s, 10),
-  "primary-b-2": hsb($primary-h, $primary-s, 20),
-  "primary-b-3": hsb($primary-h, $primary-s, 30),
-  "primary-b-4": hsb($primary-h, $primary-s, 40),
-  "primary-b-5": hsb($primary-h, $primary-s, 50),
-  "primary-b-6": hsb($primary-h, $primary-s, 60),
-  "primary-b-7": hsb($primary-h, $primary-s, 70),
-  "primary-b-8": hsb($primary-h, $primary-s, 80),
-  "primary-b-9": hsb($primary-h, $primary-s, 90),
-  "primary-b-A": hsb($primary-h, $primary-s * .75, 84),
-  "primary-b-B": hsb($primary-h, $primary-s * .60, 87),
-  "primary-b-C": hsb($primary-h, $primary-s * .45, 90),
-  "primary-b-D": hsb($primary-h, $primary-s * .30, 93),
-  "primary-b-E": hsb($primary-h, $primary-s * .15, 96),
-  "primary-b-F": hsb($primary-h, $primary-s * .05, 99)
-);
-*/
-
 // Shadows
 $enable-shadows: true;
 
@@ -318,11 +183,60 @@ $dropdown-item-padding-x: 24px;
 $dropdown-item-padding-y: 12px;
 $dropdown-border-width: 0;
 $dropdown-border-color: transparent;
-$dropdown-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+$dropdown-box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
+// Dropdown custom
+$dropdown-custom-button-padding: 0 4px;
+$dropdown-custom-button-font-size: 1rem;
+$dropdown-custom-button-color: $italia;
+$dropdown-custom-button-background: transparent;
+$dropdown-custom-button-caret-font-size: 0.8rem;
+$dropdown-custom-button-caret-content: '\e818';
+$dropdown-menu-animation-speed: 0.3s;
+$dropdown-menu-vertical-shift: 16px;
+$dropdown-menu-radius: 4px;
+$dropdown-menu-notch-base-size: 6px;
+$dropdown-menu-notch-position-x: 24px;
 
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
+
+
+// Linklist
+$link-list-font-size:0.889em;
+$link-list-font-size-l:1em;
+$link-list-line-height:2.3em;
+$link-list-line-height-l:2.70em;
+$link-list-heading-size:1em;
+$link-list-divider-height:1px;
+$link-list-divider-distance:8px;
+$link-list-h-pad:24px;
+$link-list-paragraph-size:0.778em;
+$link-list-left-icon-space:8px;
+$link-list-avatar-radius: 50px;
+$link-list-avatar-margin:8px;
+$link-list-checkbox-icon-right:35px;
+$link-list-toggle-margin:8px;
+
+// Pager
+$pager-margin-bottom: 0.5rem;
+$pager-item-size-mobile: 2.5rem; // 40px
+$pager-item-size-tablet: 2.6666666666666665rem; // 48px
+$pager-item-border-radius: 4px;
+$pager-item-margin-right: 5px;
+$pager-item-current-color: $italia;
+$pager-item-current-border: 1px solid $italia;
+$pager-font-size: 0.8888888888888888rem; // 16px
+$pager-font-weight: 600;
+$pager-font-color: $neutral-1-a7;
+$pager-hover-color: $italia;
+$pager-icon-color: $primary-c5;
+$pager-icon-size: 0.7rem;
+$pager-disabled-color: $neutral-2-b2;
+$pager-jump-to-width: 4.5rem;
+$pager-jump-to-color: $neutral-2-b3;
+$pager-page-changer-padding: 12px;
+$pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
 
 // Grid breakpoints

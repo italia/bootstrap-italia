@@ -162,8 +162,9 @@
   }
 
   > .dropdown-menu:first-child {
-    position: static;
+    position: relative;
     display: block;
+    top: 0;
   }
 
   > .form-group:last-child {
@@ -266,7 +267,7 @@
 }
 
 // Pagination
-.bd-example .pagination {
+nav.pagination-wrapper {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
