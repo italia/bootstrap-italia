@@ -1,0 +1,39 @@
+//mobile
+.skiplinks{
+	background-color: $analogue-2-b1;
+	text-align: center;
+	a{
+		display: inline-block;
+		padding: $skiplink-padding-y $skiplink-padding-x;
+		display: block;
+		font-weight: 600;
+		color: $neutral-1-a7;
+		text-decoration: underline;
+	}
+	
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+	
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	
+}
+
+//Hover states
+@media (min-width: $grid-breakpoints-hover) {
+	
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	
+}

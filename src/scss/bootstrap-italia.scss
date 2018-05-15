@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 
@@ -80,8 +81,10 @@
 @import "custom/autocomplete";
 @import "custom/linklist";
 @import "custom/navigation";
+@import "custom/skiplinks";
 // componente di esempio
 @import "custom/componente-base";
+
 
 //gestione dei focus
 @import "utilities/focus";

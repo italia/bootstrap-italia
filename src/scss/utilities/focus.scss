@@ -15,20 +15,14 @@ button,
 input,
 select,
 textarea,
-.btn{
-  &:focus {
+.btn {
+  &:focus,
+  &.focus {
     @extend .focus--keyboard;
   }
 
-  &:focus.focus--mouse {
+  &:focus.focus--mouse,
+  &.focus.focus--mouse {
     @extend .focus--mouse;
   }
-}
-
-//-button overrides
-.btn.focus{
-  @extend .focus--keyboard;
-}
-.btn.focus.focus--mouse{
-  @extend .focus--keyboard;
 }

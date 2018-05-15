@@ -104,9 +104,15 @@ $hero-padding: 1rem !default;
 $hero-bg: $gray-200 !default;
 
 // Breadcrumbs
+$breadcrumb-padding:24px;
 $breadcrumb-bg: transparent;
-$breadcrumb-item-padding: .75rem;
-$breadcrumb-divider-color: $text-color;
+$breadcrumb-link-font-weight: 600;
+$breadcrumb-link-color:$neutral-1-a7;
+$breadcrumb-link-x-padding:.5em;
+$breadcrumb-bg-dark:$neutral-1-a8;
+$breadcrumb-border-radius: 0;
+$breadcrumb-link-color-dark: $white;
+$breadcrumb-icon-color-dark:$analogue-2-b1;
 
 //Accordion
 $card-cap-bg: transparent !default;
@@ -169,6 +175,11 @@ $reset-padding: 0 !default;
 $alert-padding-y: 1rem;
 $alert-padding-x: 1rem;
 
+
+// Skiplinks
+$skiplink-padding-y: .5rem; 
+$skiplink-padding-x: .5rem;
+
 // Dropdown
 $dropdown-header-color: $dark;
 $dropdown-link-hover-bg: #E6ECF2;
@@ -216,6 +227,7 @@ $inline-menu-line-width:2px;
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
+
 
 // Linklist
 $link-list-font-size:0.889em;
@@ -267,6 +279,11 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
+// Hover states breackpoint
+// Define minimum dimension for over states activation
+//
+$grid-breakpoints-hover: 1025px;
+//
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.

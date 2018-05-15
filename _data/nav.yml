@@ -24,6 +24,7 @@
     - title: Badge
     - title: Barre di Avanzamento
     - title: Breadcrumb
+      status: wip
     - title: Bottoni
       status: wip
     #- title: Button group
@@ -56,6 +57,8 @@
     - title: Radio Button
     - title: Scrollspy
     - title: Select
+    - title: Skiplinks
+      status: wip
     - title: Tab
       status: wip
     - title: Tooltip
