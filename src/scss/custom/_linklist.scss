@@ -44,7 +44,7 @@
             position: absolute;
             top: 0;
             right: $link-list-h-pad;
-            transition: all 0.3s;
+            transition : transform $dropdown-menu-animation-speed;
             &.secondary{
               color: $neutral-2-b3;
             }
@@ -53,7 +53,7 @@
         // variazione icone a collapse aperto
         &.right-icon[aria-expanded="true"]{
           i.right{
-            transform:rotate(180deg)
+            transform: scaleY(-1);
           }
         }
         &.active{

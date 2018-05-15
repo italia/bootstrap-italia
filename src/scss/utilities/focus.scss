@@ -1,5 +1,5 @@
 .focus--keyboard {
-  border-color: #ffaa55;
+  border-color: $orange;
   box-shadow: 0 0 6px 2px $orange;
   outline: none;
 }
@@ -16,17 +16,13 @@ input,
 select,
 textarea,
 .btn {
-  &:focus {
+  &:focus,
+  &.focus {
     @extend .focus--keyboard;
   }
 
-  &:focus.focus--mouse {
+  &:focus.focus--mouse,
+  &.focus.focus--mouse {
     @extend .focus--mouse;
   }
-}
-
-a:focus{
-  border-color: #ffaa55;
-  box-shadow: 0 0 6px 2px $orange;
-  outline: none;
 }

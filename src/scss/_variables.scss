@@ -203,6 +203,27 @@ $dropdown-menu-radius: 4px;
 $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
 
+//Navigation
+$navigation-bg-color: $color-primary;
+$navigation-h-padding:24px;
+$navigation-v-padding:12px;
+$navigation-sidebar-bg-color-mobile: rgba(0,0,0,0.6);
+$navigation-close-button-text-color: $white;
+$navigation-close-button-text-size: 0.750em;
+$navigation-close-button-icon-size: 2em;
+$navigation-links-margin-top:102px;
+$navigation-link-color: $white;
+$navigation-link-active-bar-size:2px;
+$navigation-link-active-bar-color:$white;
+$navigation-toggle-button-icon-color:$white;
+$navigation-toggle-button-icon-size:1.625em;
+$navigation-dropdown-icon-size:0.8em;
+$navigation-dropdown-icon-line-height:2em;
+$navigation-dropdown-icon-width:1em;
+$navigation-disabled-item-opacity:0.5;
+//inline
+$inline-menu-line-width:2px;
+
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
