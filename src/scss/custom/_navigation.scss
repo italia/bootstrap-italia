@@ -270,15 +270,18 @@
       display: block;
       justify-content: inherit;
       &:after{
-        font-family: inherit;
-        font-size: inherit;
+        content: $dropdown-custom-button-caret-content;
+        font-size: $dropdown-custom-button-caret-font-size;
+        font-family: "italia-icon-font";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        border: none;
         display: inline-block;
-        width: 0;
-        height: 0;
-        margin-right: $caret-width * .85;
-        vertical-align: $caret-width * .85;
-        content: "";
-        @include caret-down;
+        vertical-align: 0em;
+        width: auto;
+        height: auto;
+        transition: transform $dropdown-menu-animation-speed;
       }
     }
     //--megamenu
