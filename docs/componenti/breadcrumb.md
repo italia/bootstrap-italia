@@ -7,7 +7,7 @@ group: componenti
 
 ## Breadcrumb basic
 
-Nei separatori abbiamo la possibilà di scegliereil carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
+Nella breadcrumb c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
 
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="breadcrumb">
@@ -35,7 +35,7 @@ Nei separatori abbiamo la possibilà di scegliereil carattere da usare come sepa
 
 ## Breadcrumb with icon
 
-Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire il tag `<i class="(classeicona)">` prima del tag `<a>`  con la classe dell'icona che si intende visualizzare
+Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire il tag `<i class="(classeicona)">` prima del tag `<a>` con la classe dell'icona che si intende visualizzare.
 
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="breadcrumb">
@@ -94,6 +94,6 @@ Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al t
 
 ## Accessibilità
 
-Dato che i breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="breadcrumb"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
+Dato che le breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="breadcrumb"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
 
 Per maggiorni informazioni, guarda le [linee guida WAI-ARIA per la creazione di breadcrumb](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
