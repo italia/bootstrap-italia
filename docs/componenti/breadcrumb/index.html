@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.">
+<meta name="description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.1">
 <meta name="robots" content="noindex">
@@ -13,16 +13,16 @@
 <title>Breadcrumb · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805141703" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805151523" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805141703" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805151523" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805141703" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805151523" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -39,13 +39,13 @@
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Breadcrumb">
-<meta name="twitter:description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.">
+<meta name="twitter:description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/componenti/breadcrumb/">
 <meta property="og:title" content="Breadcrumb">
-<meta property="og:description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.">
+<meta property="og:description" content="Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.7.7/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.8.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i>
         </a>
       </li>
@@ -225,7 +225,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
               Breadcrumb
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/bottoni/">
               Bottoni
             </a><span class="badge badge-info">wip</span></li><li>
@@ -262,6 +262,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/offcanvas/">
               Offcanvas
             </a></li><li>
@@ -280,6 +283,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/select/">
               Select
             </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/skiplinks/">
+              Skiplinks
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/tab/">
               Tab
             </a><span class="badge badge-info">wip</span></li><li>
@@ -387,57 +393,161 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Breadcrumb</h1>
-          <p class="bd-lead">Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione che aggiunge automaticamente i separatori tramite CSS.</p>
-          <h2 id="panoramica">Panoramica</h2>
+          <p class="bd-lead">Indica la posizione della pagina corrente all’interno di una gerarchia di navigazione.</p>
+          <h2 id="breadcrumb-basic">Breadcrumb basic</h2>
 
-<p>I separatori vengono aggiunti automaticamente in CSS tramite <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code class="highlighter-rouge">::before</code></a> e <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code class="highlighter-rouge">content</code></a>.</p>
+<p>Nella breadcrumb c’è la possibilità di scegliere il carattere da usare come separatore inserendolo all’interno del tag <code class="highlighter-rouge">&lt;span class="separator"&gt;</code></p>
 
 <div class="bd-example">
-<nav aria-label="breadcrumb">
+<nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
   </ol>
 </nav>
 
-<nav aria-label="breadcrumb">
+ <nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
   </ol>
 </nav>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ol&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 
-<span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="breadcrumb-with-icon">Breadcrumb with icon</h2>
+
+<p>Per aggiungere un icona all’elemento breadcrumb è sufficiente inserire il tag <code class="highlighter-rouge">&lt;i class="(classeicona)"&gt;</code> prima del tag <code class="highlighter-rouge">&lt;a&gt;</code> con la classe dell’icona che si intende visualizzare.</p>
+
+<div class="bd-example">
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="breadcrumb-su-sfondo-scuro">Breadcrumb su sfondo scuro</h2>
+
+<p>Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag <code class="highlighter-rouge">&lt;ol class="breadcrumb"&gt;</code> la classe <code class="highlighter-rouge">.dark</code></p>
+
+<div class="bd-example">
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+
+<hr />
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">/</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+
+<hr />
+<nav class="breadcrumb-container" aria-label="breadcrumb">
+  <ol class="breadcrumb dark">
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Home</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item"><i class="it-favorite"></i><a href="#">Subsection</a><span class="separator">&gt;</span>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><i class="it-favorite"></i><a href="#">Current section</a>
+    </li>
+  </ol>
+</nav>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb dark"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ol&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 
-<span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb dark"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span>/<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumb-container"</span> <span class="na">aria-label=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb dark"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Subsection<span class="nt">&lt;/a&gt;&lt;span</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"breadcrumb-item active"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite"</span><span class="nt">&gt;&lt;/i&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Current section<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ol&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
 
 <h2 id="accessibilità">Accessibilità</h2>
 
-<p>Dato che i breadcrumb forniscono una navigazione, è buona idea aggiungere un’etichetta significativa come <code class="highlighter-rouge">aria-label="breadcrumb"</code> per descrivere il tipo di navigazione fornito nell’elemento <code class="highlighter-rouge">&lt;nav&gt;</code>, nonché applicare <code class="highlighter-rouge">aria-current="page"</code> all’ultimo elemento del set per indicare che rappresenta la pagina corrente.</p>
+<p>Dato che le breadcrumb forniscono una navigazione, è buona idea aggiungere un’etichetta significativa come <code class="highlighter-rouge">aria-label="breadcrumb"</code> per descrivere il tipo di navigazione fornito nell’elemento <code class="highlighter-rouge">&lt;nav&gt;</code>, nonché applicare <code class="highlighter-rouge">aria-current="page"</code> all’ultimo elemento del set per indicare che rappresenta la pagina corrente.</p>
 
 <p>Per maggiorni informazioni, guarda le <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">linee guida WAI-ARIA per la creazione di breadcrumb</a>.</p>
 
@@ -461,14 +571,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805141703"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805151523"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805141703"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805151523"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
