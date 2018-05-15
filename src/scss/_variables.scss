@@ -104,9 +104,15 @@ $hero-padding: 1rem !default;
 $hero-bg: $gray-200 !default;
 
 // Breadcrumbs
+$breadcrumb-padding:24px;
 $breadcrumb-bg: transparent;
-$breadcrumb-item-padding: .75rem;
-$breadcrumb-divider-color: $text-color;
+$breadcrumb-link-font-weight: 600;
+$breadcrumb-link-color:$neutral-1-a7;
+$breadcrumb-link-x-padding:.5em;
+$breadcrumb-bg-dark:$neutral-1-a8;
+$breadcrumb-border-radius: 0;
+$breadcrumb-link-color-dark: $white;
+$breadcrumb-icon-color-dark:$analogue-2-b1;
 
 //Accordion
 $card-cap-bg: transparent !default;
