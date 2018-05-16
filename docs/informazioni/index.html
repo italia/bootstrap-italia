@@ -5,12 +5,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Classi per configurare la posizione di un elemento.">
+<meta name="description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.1">
 <meta name="robots" content="noindex">
 
-<title>Posizionamento · Bootstrap Italia</title>
+<title>Informazioni · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805161459" rel="stylesheet">
@@ -38,14 +38,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Posizionamento">
-<meta name="twitter:description" content="Classi per configurare la posizione di un elemento.">
+<meta name="twitter:title" content="Informazioni">
+<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="/docs/utilities/posizionamento/">
-<meta property="og:title" content="Posizionamento">
-<meta property="og:description" content="Classi per configurare la posizione di un elemento.">
+<meta property="og:url" content="/docs/informazioni/">
+<meta property="og:title" content="Informazioni">
+<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -310,7 +310,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
               Back to top
             </a><span class="badge badge-info">wip</span></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
         Utilities
       </a>
@@ -363,7 +363,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
               Ombreggiature
-            </a></li><li class="active bd-sidenav-active">
+            </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/posizionamento/">
               Posizionamento
             </a></li><li>
@@ -385,7 +385,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       </a>
 
       <ul class="nav bd-sidenav pl-2"></ul>
-    </div><div class="bd-toc-item">
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/informazioni/">
         Informazioni
       </a>
@@ -398,54 +398,37 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#valori-comuni">Valori comuni</a></li>
-<li class="toc-entry toc-h2"><a href="#posizione-fissa-in-alto">Posizione fissa in alto</a></li>
-<li class="toc-entry toc-h2"><a href="#posizione-fissa-in-basso">Posizione fissa in basso</a></li>
-<li class="toc-entry toc-h2"><a href="#sticky-top">Sticky top</a></li>
+<li class="toc-entry toc-h2"><a href="#che-cosè-bootstrap-italia">Che cos’è Bootstrap Italia</a></li>
+<li class="toc-entry toc-h2"><a href="#licenza-duso">Licenza d’uso</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#credito-allautore-originale">Credito all’autore originale</a></li>
+<li class="toc-entry toc-h3"><a href="#garanzie">Garanzie</a></li>
+</ul>
+</li>
 </ul>
           </div>
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Posizionamento</h1>
-          <p class="bd-lead">Classi per configurare la posizione di un elemento.</p>
-          <h2 id="valori-comuni">Valori comuni</h2>
+          <h1 class="bd-title" id="content">Informazioni</h1>
+          <p class="bd-lead"></p>
+          <h2 id="che-cosè-bootstrap-italia">Che cos’è Bootstrap Italia</h2>
 
-<p>Classi per il posizionamento, tra loro non sono presenti le varianti per gestire il responsive.</p>
+<p>Bootstrap Italia - versione attuale <strong>0.8.2</strong> - è una personalizzazione della libreria <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4.1.1</a> che tiene conto delle indicazioni in termini di design, usabilità ed accessibilità definite nelle <a href="https://design-italia.readthedocs.io/it/stable/index.html">linee guida di design per i servizi web della Pubblica Amministrazione</a>, ed implementate nella versione 2.0 del <a href="https://github.com/italia/design-ui-kit">Design UI Kit</a>.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-static"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-relative"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-absolute"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-fixed"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"position-sticky"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<h2 id="licenza-duso">Licenza d’uso</h2>
 
-<h2 id="posizione-fissa-in-alto">Posizione fissa in alto</h2>
+<p>Bootstrap Italia è distribuito con <strong>licenza BSD-3</strong> (consultabile nel file <a href="https://github.com/italia/bootstrap-italia/blob/master/LICENSE">LICENSE</a>), un modello ancora più permissivo della classica licenza <em>GPL</em>, in quanto consente di modificare e ridistribuire questo software secondo varie modalità, anche di tipo closed-source.</p>
 
-<p>Posiziona un elemento in alto al viewport. Attraverso l’utilizzo di ogni classe <code class="highlighter-rouge">fixed-*</code> l’elemento assumerà una posizione
-<em>fixed</em>, ancorandosi al viewport (cioè la finestra del browser) ed uscendo quindi dal normale flusso di posizionamento
-del documento.
-Assicurati quindi di comprendere appieno le implicazioni della <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed">posizione <code class="highlighter-rouge">fixed</code></a>
-nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi.</p>
+<h3 id="credito-allautore-originale">Credito all’autore originale</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fixed-top"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>Nonostante la licenza sia aperta a modifiche e derivazioni, la prima clausola imposta da ogni tipo di licenza BSD è tesa ad impedire che qualcuno si prenda meriti altrui.</p>
 
-<h2 id="posizione-fissa-in-basso">Posizione fissa in basso</h2>
+<p>Per questo, anche nel caso siano state apportate modifiche al codice, i termini prevedono che la nota di copyright originale (visibile nel file <a href="https://github.com/italia/bootstrap-italia/blob/master/AUTHORS">AUTHORS</a>), la lista delle condizioni e disclaimer riportati nel file <a href="https://github.com/italia/bootstrap-italia/blob/master/LICENSE">LICENSE</a> siano mantenuti per ogni lavoro derivato da Bootstrap Italia.</p>
 
-<p>Specularmente al paragrafo precedente, posiziona un elemento in basso al viewport.</p>
+<h3 id="garanzie">Garanzie</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fixed-bottom"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h2 id="sticky-top">Sticky top</h2>
-
-<p>Posiziona un elemento in alto al viewport, ma solo dopo che nella pagina avviene uno scroll verticale.
-La classe <code class="highlighter-rouge">.sticky-top</code> usa la proprietà <code class="highlighter-rouge">position: sticky</code> che non è sopportata da tutti i browser.</p>
-
-<p><strong>I browser IE11 e IE10 restituiranno <code class="highlighter-rouge">position: sticky</code> come <code class="highlighter-rouge">position: relative</code>.</strong> Per questo motivo lo stile è
-racchiuso all’interno di una query <code class="highlighter-rouge">@supports</code> limitandone così l’uso ai soli browser che ne sopportino la proprietà
-correttamente.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sticky-top"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
+<p>L’ultima clausola della licenza BSD-3 esclude esplicitamente ogni forma di garanzia: il software è fornito “così com’è”, e l’utente che scegliesse di utilizzarlo non ha alcun diritto di rivalsa in caso di problemi o danni causati dal programma.</p>
 
         </main>
       </div>
