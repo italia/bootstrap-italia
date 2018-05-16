@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduzione
-description: Cos'è Bootstrap Italia e come utilizzarlo nel tuo progetto
+description: Come usare Bootstrap Italia nel tuo progetto
 group: come-iniziare
 redirect_from:
   - /docs/
@@ -9,8 +9,6 @@ redirect_from:
   - /docs/come-iniziare/
 toc: true
 ---
-
-Bootstrap Italia (versione attuale **{{ site.current_version}}**) è un tema basato su [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/4.0/getting-started/introduction/). Esso personalizza lo stile e il codice per la creazione di interfacce utente di Boostrap, al fine di renderlo conforme allo [UI Kit](https://github.com/italia/design-ui-kit), che è l'implementazione di riferimento per la UI definita nelle [linee guida di design per i servizi web della PA](https://design-italia.readthedocs.io/it/stable/index.html).
 
 ## Come iniziare
 
