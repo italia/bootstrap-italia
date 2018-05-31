@@ -18,9 +18,10 @@ $grid-gutter-widths: (
 ) !default;
 
 // Text
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-serif: Lora, Georgia, serif !default;
+$font-family-sans-serif: "Titillium Web", Geneva, Tahoma, sans-serif !default;
 $font-family-monospace: "Roboto Mono", monospace !default;
-$font-family-base: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-base: $font-family-sans-serif;
 $text-color: $gray-700;
 $text-muted: $gray-tertiary;
 $letter-spacing-base: 0;
@@ -177,7 +178,7 @@ $alert-padding-x: 1rem;
 
 
 // Skiplinks
-$skiplink-padding-y: .5rem; 
+$skiplink-padding-y: .5rem;
 $skiplink-padding-x: .5rem;
 
 // Dropdown
