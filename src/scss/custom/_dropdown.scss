@@ -34,27 +34,23 @@
   &:not(:disabled):not(.disabled):active {
     box-shadow: none;
   }
-  //button caret
+}
+.btn-dropdown, .dropdown-toggle {
   &:after {
-    content: $dropdown-custom-button-caret-content;
-    font-size: $dropdown-custom-button-caret-font-size;
-    margin-left: $dropdown-custom-button-caret-distance;
-    font-family: "italia-icon-font";
-    font-style: normal;
-    font-weight: normal;
+    content: "";
     speak: none;
     border: none;
-    display: inline-block;
-    vertical-align: 0em;
+    display: inline;
+    margin: 0;
+    vertical-align: bottom;
     width: auto;
     height: auto;
+  }
+  .icon {
     transition: transform $dropdown-menu-animation-speed;
   }
-  //expanded
-  &[aria-expanded=true] {
-    &:after {
-      transform: scaleY(-1);
-    }
+  &[aria-expanded=true] .icon {
+    transform: scaleY(-1);
   }
 }
 
@@ -73,7 +69,7 @@
       }
     }
   }
-  
+
   //link list finetuning
   .link-list {
     margin-bottom: 0;
@@ -89,8 +85,8 @@
     content: '';
     position: absolute;
     top: -$dropdown-menu-notch-base-size;
-    left: $dropdown-menu-notch-position-x; 
-    width: $dropdown-menu-notch-base-size*3; 
+    left: $dropdown-menu-notch-position-x;
+    width: $dropdown-menu-notch-base-size*3;
     height: $dropdown-menu-notch-base-size*3;
     border-radius: $dropdown-menu-radius;
     background-color: $dropdown-bg;

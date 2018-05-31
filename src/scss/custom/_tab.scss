@@ -115,6 +115,14 @@
         font-size: 1.778rem;
       }
     }
+    .icon {
+      fill: $gray-secondary;
+    }
+    &.active {
+      .icon {
+        fill: $primary;
+      }
+    }
   }
   .nav-link.active, .nav-item.show .nav-link {
     border-bottom-color: $italia;
@@ -143,6 +151,7 @@
       background-color: $gray-primary;
       color: $cyan;
       border-bottom: 2px solid $cyan;
+
     }
 
     &.nav-tabs-vertical {

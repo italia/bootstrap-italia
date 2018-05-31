@@ -1,129 +1,120 @@
 //mobile
-.link-list-wrapper{
-  ul{
+.link-list-wrapper {
+  ul {
     padding: 0;
     list-style-type: none;
     // sottolista
-    &.link-sublist{
+    &.link-sublist {
       padding-left: $link-list-h-pad;
     }
-    li{
-      &.it-more{
-        a{
-          margin-top:$link-list-h-pad; 
-          span{
-            display: inline;
-            margin-right: 0;
-          }
-        }
-       
-      }
-      a{
+    li {
+      a {
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
         display: block;
         padding: 0 $link-list-h-pad;
         position: relative;
         // hover state
-        &:hover:not(.disabled){
+        &:hover:not(.disabled) {
           text-decoration: none;
-          span{
-            color:$color-primary;
+          span {
+            color: $color-primary;
             text-decoration: underline;
           }
-          p{
-            color:$color-primary;
+          p {
+            color: $color-primary;
             text-decoration: none;
           }
+          .icon {
+            fill: $color-primary;
+          }
         }
-        &.disabled:hover{
+        &.disabled:hover {
           text-decoration: none;
         }
         // weight variation
-        &.medium{
+        &.medium {
           font-weight: 600;
         }
-        span{
-          color: $color-primary; 
-          display: block;
-          margin-right:$link-list-h-pad;
+        span {
+          color: $color-primary;
+          display: inline-block;
+          margin-right: $link-list-h-pad;
         }
-        
+        .icon {
+          display: inline-block;
+          margin: 12px 8px;
+          &.icon-right {
+            position: absolute;
+            right: 0;
+          }
+        }
+
         // icone destre dentro link
-        &.right-icon{
-          i.right{
+        &.right-icon {
+          i.right {
             position: absolute;
             top: 0;
             right: $link-list-h-pad;
-            transition : transform $dropdown-menu-animation-speed;
-            &.secondary{
+            transition: transform $dropdown-menu-animation-speed;
+            &.secondary {
               color: $neutral-2-b3;
             }
           }
         }
         // variazione icone a collapse aperto
-        &.right-icon[aria-expanded="true"]{
-          i.right{
+        &.right-icon[aria-expanded="true"] {
+          i.right {
             transform: scaleY(-1);
           }
         }
-        &.active{
-          span{
-            color:$neutral-1-a10;
+        &.active {
+          span {
+            color: $neutral-1-a10;
             text-decoration: underline;
           }
           i{
             color:$neutral-1-a10;
           }
         }
-        &.disabled{
+        &.disabled {
           cursor: not-allowed;
-          span{
+          span {
             color: $neutral-1-a4;
           }
-          &.right-icon,&.left-icon{
-            i{
-              color: $neutral-1-a4;
-              &.secondary{
-                color: $neutral-1-a4;
-              }
-              
+          svg {
+            fill: $neutral-1-a4;
+            &.secondary {
+              fill: $neutral-1-a4;
             }
           }
         }
-        // icone sinistre dentro link
-        &.left-icon{
-          display: flex;
-          i.left{
-            margin-right: $link-list-left-icon-space;
-          }
-        }
-        &.large{
+        &.large {
           font-size: $link-list-font-size-l;
         }
         // paragrafo dentro link
-        p{
+        p {
           font-size: $link-list-paragraph-size;
           line-height: initial;
           color: $neutral-1-a7;
         }
         //avatar
-        &.avatar{
+        &.avatar {
           display: flex;
           margin-bottom: $link-list-avatar-margin;
-          .avatar{
+          .avatar {
             display: block;
             border-radius: $link-list-avatar-radius;
             margin-right: $link-list-left-icon-space;
           }
         }
-        
+
       }
-      h3{
+      h3 {
         font-size: $link-list-heading-size;
         color: $neutral-1-a10;
         padding: 0 $link-list-h-pad;
-        a{
+        a {
           line-height: inherit;
           font-size: 1em;
           padding: 0;
@@ -131,69 +122,66 @@
       }
 
     }
-    .divider{
+    .divider {
       display: block;
       height: $link-list-divider-height;
       background: $neutral-1-a1;
       margin: $link-list-divider-distance 0;
     }
     //toggles
-    .toggles{
-      label{
+    .toggles {
+      label {
         padding: 0 $link-list-h-pad;
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
         justify-content: space-between;
         height: auto;
         font-weight: inherit;
-        margin:0;
+        margin: 0;
       }
-      input[type=checkbox]+.lever{
-        margin:$link-list-toggle-margin 0 0;
-      }     
+      input[type=checkbox] + .lever {
+        margin: $link-list-toggle-margin 0 0;
+      }
     }
-    
 
     //checkboxes
-    .form-check{
-      &.form-check-group{
+    .form-check {
+      &.form-check-group {
         padding: 0 $link-list-h-pad;
         box-shadow: none;
-        [type=checkbox] + label{
+        [type=checkbox] + label {
           padding-left: 0;
           font-size: $link-list-font-size;
           line-height: $link-list-line-height;
           height: inherit;
           margin-bottom: 0;
-          &:after{
-            right:$link-list-h-pad;
+          &:after {
+            right: $link-list-h-pad;
           }
-          &:before{
+          &:before {
             right: $link-list-checkbox-icon-right;
           }
         }
-        [type=checkbox][disabled] + label{
+        [type=checkbox][disabled] + label {
           color: $neutral-1-a4;
         }
       }
     }
   }
 }
-
-
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
-  .link-list-wrapper{
-    ul{
-      
-      li{       
-        a{
-          &.large{
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  .link-list-wrapper {
+    ul {
+
+      li {
+        a {
+          &.large {
             font-size: $link-list-font-size-l;
             line-height: $link-list-line-height-l;
           }
         }
-        
+
       }
     }
   }
@@ -201,13 +189,13 @@
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  .link-list-wrapper{
-    ul{
-      
-      li{
-        a{
-          
-          &.large{
+  .link-list-wrapper {
+    ul {
+
+      li {
+        a {
+
+          &.large {
             line-height: $link-list-line-height-l;
           }
         }
@@ -218,10 +206,10 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  
+
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-  
+
 }

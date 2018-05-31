@@ -39,7 +39,10 @@ Per visualizzare il Back to top nella posizione corretta è necessario scrollare
 Aggiungendo la classe `.back-to-top-small` al link si ottiene un pulsante di dimensioni ridotte.
 
 {% capture example %}
-<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small"><i class="it-arrow-up"></i></a>
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small">
+  <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#arrow-up"></use></svg>
+</a>
+
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione con ombra

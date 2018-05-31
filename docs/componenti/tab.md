@@ -178,10 +178,30 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 
 {% capture example %}
   <ul class="nav nav-tabs nav-tabs-icon-lg" id="myTab2" role="tablist">
-    <li class="nav-item"><a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file"></i><span class="sr-only"> Tab titolo 1</span></a></li>
-    <li class="nav-item"><a class="nav-link" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false"><i class="it-ico-lg it-calendar"></i><span class="sr-only"> Tab titolo 2</span></a></li>
-    <li class="nav-item"><a class="nav-link" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false"><i class="it-ico-lg it-comment"></i><span class="sr-only"> Tab titolo 3</span></a></li>
-    <li class="nav-item"><a class="nav-link disabled" id="tab4a-tab" data-toggle="tab" href="#tab4a" role="tab" aria-controls="tab4a" aria-selected="false"  aria-disabled="true" tabindex="-1"><i class="it-ico-lg it-unlock"></i><span class="sr-only"> Tab titolo 4</span></a></li>
+    <li class="nav-item">
+      <a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true">
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#file"></use></svg>
+        <span class="sr-only"> Tab titolo 1</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false">
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#calendar"></use></svg>
+        <span class="sr-only"> Tab titolo 2</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false">
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#comment"></use></svg>
+        <span class="sr-only"> Tab titolo 3</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab4a-tab" data-toggle="tab" href="#tab4a" role="tab" aria-controls="tab4a" aria-selected="false"  aria-disabled="true" tabindex="-1">
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#unlock"></use></svg>
+        <span class="sr-only"> Tab titolo 4</span>
+      </a>
+    </li>
   </ul>
   <div class="tab-content" id="myTab2Content">
     <div class="tab-pane p-4 fade show active" id="tab1a" role="tabpanel" aria-labelledby="tab1a-tab"><p>Contenuto 1</p></div>
@@ -195,10 +215,26 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text" id="myTab3" role="tablist">
-  <li class="nav-item"><a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false"><i class="it-ico it-calendar d-block text-center"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false"><i class="it-ico it-comment d-block text-center"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1"><i class="it-ico it-unlock d-block text-center"></i> Tab 4</a></li>
+  <li class="nav-item">
+    <a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true">
+      <svg class="icon icon-sm icon-primary d-block mx-auto my-1"><use xlink:href="../../../dist/svg/sprite.svg#file"></use></svg> Tab 1
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false">
+     <svg class="icon icon-sm icon-primary d-block mx-auto my-1"><use xlink:href="../../../dist/svg/sprite.svg#calendar"></use></svg> Tab 2
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false">
+      <svg class="icon icon-sm icon-primary d-block mx-auto my-1"><use xlink:href="../../../dist/svg/sprite.svg#comment"></use></svg> Tab 3
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1">
+      <svg class="icon icon-sm icon-primary d-block mx-auto my-1"><use xlink:href="../../../dist/svg/sprite.svg#unlock"></use></svg> Tab 4
+    </a>
+  </li>
 </ul>
 <div class="tab-content" id="myTab3Content">
   <div class="tab-pane p-4 fade show active" id="tab1b" role="tabpanel" aria-labelledby="tab1c-tab"><p>Contenuto 1</p></div>

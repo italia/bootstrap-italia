@@ -3,7 +3,7 @@ nav.pagination-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   //total number version
   &.pagination-total {
     display: inline-flex;
@@ -21,7 +21,7 @@ nav.pagination-wrapper {
       text-align: center;
     }
   }
-    
+
   //jump to page
   .form-group {
     margin-left: $pager-item-size-mobile;
@@ -37,7 +37,7 @@ nav.pagination-wrapper {
       }
     }
   }
-  
+
   //page changer dropdown button
   .btn.dropdown-toggle{
     font-size: $pager-font-size;
@@ -64,12 +64,12 @@ nav.pagination-wrapper {
     &.disabled {
       a.page-link {
         color: $pager-disabled-color;
-        i[class^="it-"] {
-          color: $pager-disabled-color;
+        .icon {
+          fill: $pager-disabled-color;
         }
       }
     }
-    
+
     //text only
     span.page-link {
       pointer-events: none;
@@ -79,13 +79,13 @@ nav.pagination-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       //border
       height: $pager-item-size-mobile;
       min-width: $pager-item-size-mobile;
       border-radius: $pager-item-border-radius;
       border: none;
-      
+
       //text
       font-size: $pager-font-size;
       font-weight: $pager-font-weight;
@@ -100,11 +100,8 @@ nav.pagination-wrapper {
       }
 
       // icon & text prev/next
-      i[class^="it-"], &.text {
-        color: $pager-icon-color; 
-      }
-      i[class^="it-"] {
-        font-size: $pager-icon-size;
+      &.text {
+        color: $pager-icon-color;
       }
 
       span.d-inline-block {
@@ -116,8 +113,8 @@ nav.pagination-wrapper {
         color: $pager-hover-color;
         background-color: transparent;
         // icon
-        i[class^="it-"] {
-          color: $pager-hover-color;
+        .icon {
+          fill: $pager-hover-color;
         }
       }
 
@@ -127,7 +124,7 @@ nav.pagination-wrapper {
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-  
+
   //items size
   .pagination {
     .page-item {
@@ -137,7 +134,7 @@ nav.pagination-wrapper {
       }
     }
   }
-  
+
   //page changer toggle
   nav.pagination-wrapper {
     .btn.dropdown-toggle{

@@ -143,31 +143,31 @@ Ogni elemento link list può avere un icona (a destra o sinistra del testo) ed u
 
 **Icone**<br>
 Per aggiungere un icona bisogna aggiungere al tag `<a>` la classi:<br>
-`right-icon` : se si vuole posizionare l'icona a destra del testo<br>
-`left-icon` : se si vuole posizionare l'icona a sinistra del testo<br>
+`icon-right` : se si vuole posizionare l'icona a destra del testo<br>
+`icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
 
-All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo ad inserire il tag `<i>` con classi `.right` (per definirne la posizione) e classe `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
+All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
 
 {% capture example %}
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
     <li><a class="list-item active right-icon" href="#">
         <span>Link list 1 active</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="ml-2 icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item  right-icon" href="#">
         <span>Link list 1</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="ml-2 icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item disabled right-icon" href="#">
         <span>Link list 1 disabled</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="ml-2 icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
@@ -176,26 +176,37 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo a
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## List con controlli
+## Lista con controlli
 
 I link list con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
-Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript
+Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript.
+
+Per aggiungere un'icona è possibile aggiungere al tag `<a>` la classe `icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
 
 ### Primary Action
+
 **Icona sinistra**<br>
+
+All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg` necessario
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.left-icon`
 
-All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andremo ad inserire il tag `<i>` con classi `.left` (per definirne la posizione) e classe `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
+All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg` necessario con la classe `icon-left`.
 
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active</span></a>
-    </li>
-    <li><a class="list-item left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1</span></a>
-    </li>
-    <li><a class="list-item disabled left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled</span></a>
-    </li>
+    <li><a class="list-item active icon-left" href="#">
+        <svg class="icon icon-xs icon-primary"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
+        <span>Link list 1 active</span>
+    </a></li>
+    <li><a class="list-item icon-left" href="#">
+      <svg class="icon icon-xs icon-primary"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
+      <span>Link list 1</span>
+    </a></li>
+    <li><a class="list-item disabled icon-left" href="#">
+      <svg class="icon icon-xs icon-primary"><use xlink:href="/dist/svg/sprite.svg#chevron-right"></use></svg>
+      <span>Link list 1 disabled</span>
+    </a></li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -204,17 +215,23 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 **Icona destra**<br>
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.right-icon`
 
-All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo ad inserire il tag `<i>` con classi `.right` (per definirne la posizione) e classe `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
+All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg` necessario con la classe `right-icon`.
 
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#"><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
-    </li>
-    <li><a class="list-item left-icon right-icon " href="#"><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
-    </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#"><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
-    </li>
+    <li><a class="list-item active" href="#">
+      <svg class="icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#app"></use></svg>
+      <span>Link list 1 active</span>
+    </a></li>
+    <li><a class="list-item" href="#">
+      <svg class="icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#app"></use></svg>
+      <span>Link list 1</span>
+    </a></li>
+    <li><a class="list-item disabled" href="#">
+      <svg class="icon icon-xs icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#app"></use></svg>
+      <span>Link list 1 disabled</span>
+    </a></li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}

@@ -28,7 +28,7 @@
     text-decoration: none;
   }
   //caret
-  i {
+  .icon {
     margin: 0;
     position: relative;
     top: 6px;
@@ -54,7 +54,7 @@
     }
 
     //caret
-    i {
+    .icon {
       &:before {
         color: $neutral-1-a8;
       }

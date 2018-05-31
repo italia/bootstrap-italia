@@ -17,7 +17,8 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -25,7 +26,8 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -52,7 +54,8 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -66,7 +69,8 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
     </li>
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -86,7 +90,8 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -98,7 +103,8 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -113,7 +119,8 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -125,7 +132,8 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -141,7 +149,8 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
   <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item d-none d-sm-flex">
@@ -163,7 +172,8 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
     </li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -180,7 +190,10 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con ellissi/more">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#"><i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span></a>
+      <a class="page-link" href="#">
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
+      </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item">
@@ -200,7 +213,10 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
     </li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
-      <a class="page-link" href="#"><i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span></a>
+      <a class="page-link" href="#">
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
+      </a>
     </li>
   </ul>
 </nav>
@@ -214,7 +230,8 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -232,7 +249,8 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -261,7 +279,8 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -279,7 +298,8 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -298,7 +318,8 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
   <ul class="pagination" aria-label="Pagina 1 di 5">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><span class="page-link">1</span></li>
@@ -309,7 +330,8 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
     </li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -354,7 +376,8 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-left"></i><span class="sr-only">Pagina precedente</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-left"></use></svg>
+        <span class="sr-only">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -372,7 +395,8 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <i class="it-chevron-right"></i><span class="sr-only">Pagina successiva</span>
+        <span class="sr-only">Pagina successiva</span>
+        <svg class="icon icon-sm icon-primary"><use xlink:href="../../../dist/svg/sprite.svg#chevron-right"></use></svg>
       </a>
     </li>
   </ul>

@@ -31,6 +31,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 <div class="dropdown">
   <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
+    <svg class="icon icon-xs icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <div class="link-list-wrapper">
@@ -52,6 +53,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
 <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
+    <svg class="ml-2 icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
