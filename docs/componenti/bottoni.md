@@ -32,27 +32,48 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="py-1">
-<button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
-<button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
-<button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
+<div class="btn-example">
+  <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
+  <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
+  <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
 </div>{% endfor %}
+{% endcapture %}{% include example.html content=example %}
+
+#### Su sfondo scuro
+
+{% capture example %}
+<div class="bg-dark">
+{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
+<div class="btn-example">
+  <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
+  <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
+  <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
+</div>{% endif %}{% endfor %}
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
 
 ### Varianti di dimensione
 
-Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare rispettivamente le classi `.btn-lg` e `.btn-sm`.
+Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi `.btn-lg`, `.btn-sm` e `.btn-xs`.
 
+#### Large
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
 {% endcapture %}{% include example.html content=example %}
 
+#### Small
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
+{% endcapture %}{% include example.html content=example %}
+
+#### Mini
+{% capture example %}
+<button type="button" class="btn btn-primary btn-xs">Primary Mini</button>
+<button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
 {% endcapture %}{% include example.html content=example %}
 
 Aggiungendo la classe `.btn-block` si ottengono invece bottoni che prendono tutta l'ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.
@@ -68,7 +89,9 @@ Lo stato disabilitato è ottenuto aggiungendo l'attributo `disabled`:
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }}</button>{% endfor %}
+<div class="btn-example">
+<button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }}</button>
+</div>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
 
 Alcune note a questo proposito:
