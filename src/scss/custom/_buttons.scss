@@ -4,10 +4,17 @@
   white-space: initial;
 }
 
+.btn-xs,
 .btn-sm,
 .btn-lg {
   border-radius: $btn-border-radius;
   line-height: $input-btn-line-height;
+}
+
+.btn-xs {
+  padding: 8px 8px;
+  font-size: $btn-font-size-sm;
+  line-height: $input-btn-line-height-sm;
 }
 
 .btn-sm {
@@ -43,76 +50,52 @@
   }
 }
 
-/*
-.btn-secondary {
-  color: $primary;
-  background-color: $white;
-  box-shadow: $btn-box-shadow-secondary;
-  &.disabled,
-  &:disabled {
-    color: $gray-label-disabled;
-    box-shadow: $btn-box-shadow-disabled;
-  }
-  &.focus,
-  &:focus {
-    box-shadow: $btn-box-shadow-secondary, $btn-box-shadow-focus;
-  }
-  &:hover {
+.bg-dark {
+  .btn-primary {
+    @include button-variant($white, $primary, lighten($white, 7.5%), darken($primary, 10%), lighten($white, 10%), darken($primary, 12.5%));
     color: $primary;
-    background-color: $white;
-    box-shadow: $btn-box-shadow-secondary-hover;
+    @include hover {
+      color: darken($primary, 10%);
+    }
+    &.disabled,
+    &:disabled {
+      color: darken($primary, 10%);
+    }
   }
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    color: $primary;
-    background-color: $white;
-    box-shadow: $btn-box-shadow-secondary-hover;
+  .btn-outline-primary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: inset 0 0 0 2px $white;
+    &:hover {
+      box-shadow: inset 0 0 0 2px color-hover($white);
+    }
+    &:focus,
+    &.focus {
+      box-shadow: inset 0 0 0 2px $white, 0 0 0 $btn-focus-width rgba($white, .5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show>&.dropdown-toggle {
+      box-shadow: inset 0 0 0 2px $white;
+    }
   }
-}
-
-.btn.btn-tertiary {
-  &:disabled,
-  &.disabled {
-    color: $gray-label-disabled;
-    background-color: $gray-disabled;
-    border-color: $gray-border-disabled;
+  .btn-secondary {
+    @include button-variant($primary, $white, lighten($primary, 7.5%), darken($white, 10%), lighten($primary, 10%), darken($white, 12.5%));
+    color: $white;
   }
-}
-
-.btn-quaternary {
-  color: $gray-tertiary;
-  box-shadow: $btn-box-shadow-quaternary;
-  &.focus,
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(230, 233, 242, 0.5);
-  }
-  &.disabled,
-  &:disabled {
-    color: $gray-label-disabled;
-    box-shadow: $btn-box-shadow-disabled;
-    background-color: $white;
-  }
-}
-
-.btn-success {
-  &.disabled,
-  &:disabled {
-    opacity: 0.2;
-  }
-}
-
-.btn-warning {
-  color: $white;
-  &.disabled,
-  &:disabled {
-    opacity: 0.2;
+  .btn-outline-secondary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $btn-focus-width rgba($white, .5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show>&.dropdown-toggle {
+      box-shadow: none;
+    }
   }
 }
-
-.btn-danger {
-  &.disabled,
-  &:disabled {
-    opacity: 0.2;
-  }
-}
-*/
