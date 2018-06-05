@@ -385,11 +385,7 @@ const Select = (($) => {
       if (this._isMultiple) {
         this._customElement.append($(`
           <li class="${disabledClass}">
-            <span class="filtrable">
-              <input type="checkbox"${disabledClass}/>
-              <label></label>
-              ${option.html()}
-            </span>
+            <span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span>
           </li>
         `));
       } else {
