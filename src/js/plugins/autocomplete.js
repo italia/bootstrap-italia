@@ -58,11 +58,7 @@ $.fn.autocomplete = function (options) {
         $autocomplete.empty();
       }
 
-      if (q.length === 0) {
-        $('.autocomplete-clear').css('visibility', 'hidden');
-      } else {
-        $('.autocomplete-clear').css('visibility', 'visible');
-      }
+      $('.autocomplete-clear').toggle(q.length !== 0);
     });
 
     $autocomplete.on('click', 'li', function () {
