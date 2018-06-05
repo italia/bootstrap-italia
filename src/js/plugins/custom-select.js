@@ -1,11 +1,4 @@
 import $ from 'jquery'
-import Util from './util'
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): Select.js
- * --------------------------------------------------------------------------
- */
 
 const Select = (($) => {
 
@@ -41,7 +34,7 @@ const Select = (($) => {
 
   class Select {
 
-    constructor(element /*, config */) {
+    constructor(element) {
 
       this._elements = []
       this._element = element
@@ -219,7 +212,7 @@ const Select = (($) => {
       }
 
       $newSelect.on({
-        focus: function focus(/* e */) {
+        focus: function focus() {
           if ($('ul.select-dropdown').not(that._customElement[0]).is(':visible')) {
             $('input.select-dropdown').trigger('close');
           }
@@ -235,7 +228,7 @@ const Select = (($) => {
         click: function click(e) {
           e.stopPropagation();
         },
-        blur: function blur(/* e */) {
+        blur: function blur() {
           if (!that._isMultiple && !that._isSearchable) {
             $(this).trigger('close');
           }
@@ -314,7 +307,7 @@ const Select = (($) => {
         }
       });
 
-      $(window).on('click', function (/* e */) {
+      $(window).on('click', function () {
         (that._isMultiple || that._isSearchable) && (that._optionsHover || $newSelect.trigger('close'));
       });
 
@@ -336,7 +329,7 @@ const Select = (($) => {
         </span>
       `)
       this._customElement.append(element);
-      element.find('.search').on('keyup', function (/* e */) {
+      element.find('.search').on('keyup', function () {
 
         const $this = $(this);
         var ul = $this.closest('ul');
@@ -391,11 +384,19 @@ const Select = (($) => {
 
       if (this._isMultiple) {
         this._customElement.append($(`
-          <li class="${disabledClass}"><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>
+          <li class="${disabledClass}">
+            <span class="filtrable">
+              <input type="checkbox"${disabledClass}/>
+              <label></label>
+              ${option.html()}
+            </span>
+          </li>
         `));
       } else {
         this._customElement.append($(`
-          <li class="${disabledClass}${optgroupClass}"><span class="filtrable">${option.html()}</span></li>
+          <li class="${disabledClass}${optgroupClass}">
+            <span class="filtrable">${option.html()}</span>
+          </li>
         `));
       }
     }
@@ -440,7 +441,7 @@ const Select = (($) => {
 
     // static
 
-    static _jQueryInterface(/* config */) {
+    static _jQueryInterface() {
       return this.each(function () {
         var $this = $(this)
         var data = $this.data(DATA_KEY)
