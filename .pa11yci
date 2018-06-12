@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "hideElements": [
+      ".bd-callout",
+      ".bd-search",
+      ".highlight"
+    ]
+  }
+}

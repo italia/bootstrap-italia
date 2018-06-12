@@ -58,6 +58,24 @@ Per l'implementazione di funzionalità dinamiche che richiedano l'uso di `javasc
 
 Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella `node_modules/bootstrap/js/` e alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] e la [pagina relativa all'utilizzo di Javascript](https://getbootstrap.com/docs/4.0/getting-started/javascript/) sul sito Bootstrap {{ site.bootstrap_version }}. In generale, è bene usare attributi `data-` per collegare Javascript ai componenti, e non usare i nomi delle classi.
 
+### Test di accessibilità
+
+Bootstrap Italia utilizza [`pa11y-ci`](https://github.com/pa11y/pa11y-ci) per validare l'accessibilità dei propri componenti. Il file di configurazione esclude alcuni selettori che non sono parte della libreria ed è visibile al file `.pa11yci`.
+ 
+Dopo aver avviato il server locale attraverso `npm start`, è possibile utilizzare il seguente comando per validare tutte le pagine della documentazione:
+
+`npm run test-a11y`
+
+Per effettuare invece il test di un singolo componente, è sufficiente utilizzare il comando seguente:
+
+`npm run test-a11y-one [indirizzo della documentazione del componente]`
+
+#### Esempio
+
+Attraverso questo comando è possibile effettuare il test di accessibilità per il componente di esempio "[componente base]({{ site.baseurl }}/docs/come-iniziare/componente-base/)".
+
+`npm run test-a11y-one http://localhost:4000/docs/come-iniziare/componente-base/`
+
 ---
 
 ###### Continua la lettura >
