@@ -10,8 +10,9 @@
     > [class^="col-"] {
       padding-top: .75rem;
       padding-bottom: .75rem;
-      background-color: rgba(86, 61, 124, .15);
-      border: 1px solid rgba(86, 61, 124, .2);
+      background-color: rgba(0, 102, 204, .55);
+      border: 1px solid $primary;
+      color: $white;
     }
   }
 
@@ -33,8 +34,9 @@
 }
 
 .bd-highlight {
-  background-color: rgba($docs-blue, .15);
-  border: 1px solid rgba($docs-blue, .15);
+  background-color: rgba($docs-blue, .55);
+  border: 1px solid $docs-blue;
+  color: white;
 }
 
 // Grid mixins

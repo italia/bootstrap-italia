@@ -6,7 +6,6 @@
     - title: Strumenti di compilazione
     - title: Modificare Componenti
     - title: Componente base
-    # - title: Browsers e dispositivi
 
 - title: Contenuti
   pages:
@@ -30,6 +29,7 @@
     #- title: Button group
     #  status: to do
     - title: Card
+      status: wip
     - title: Carousel
     - title: Checkbox
     - title: Collapse

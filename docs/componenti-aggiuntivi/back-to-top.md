@@ -23,6 +23,6 @@ Per aggiungere un bottone che si abilita automaticamente allo scorrimento della 
 
 
 {% capture example %}
-<a href="#" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
+<a href="#" aria-hidden="true" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
 {% endcapture %}{% include example.html content=example %}
 

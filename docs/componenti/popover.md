@@ -7,7 +7,7 @@ toc: true
 ---
 
 {% capture callout %}
-##### Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
+##### Accessibilità: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
 
 Allo stesso modo di quanto avviene per i [tooltip]({{ site.baseurl }}/docs/componenti/tooltips/),
 il codice generato per i popover è accessibile.
@@ -52,7 +52,7 @@ $(function () {
 ## Esempio
 
 {% capture example %}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Clicca par attivare/disattivare il popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Popover di esempio">Clicca per attivare/disattivare il popover</button>
 {% endcapture %}{% include example.html content=example %}
 
 ### Le quattro direzioni
@@ -199,7 +199,7 @@ Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Pe
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>Dato un selettore, gli oggetti del popover saranno delegati agli obiettivi specificati. In pratica, questo viene usato per abilitare il contenuto HTML dinamico per aggiungere i popover. Guarda <a href="https://github.com/twbs/bootstrap/issues/4215">questo</a> e <a href="https://jsbin.com/zopod/1/edit">un esempio informativo</a>.</td>
+      <td>Dato un selettore, gli oggetti del popover saranno delegati agli obiettivi specificati. In pratica, questo viene usato per abilitare il contenuto HTML dinamico per aggiungere i popover.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -260,25 +260,25 @@ Inizializza i popover per una raccolta di elementi.
 
 #### `.popover('show')`
 
-Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (i.e. prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
+Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
 
 {% highlight js %}$('#element').popover('show'){% endhighlight %}
 
 #### `.popover('hide')`
 
-Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (i.e. prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
+Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
 {% highlight js %}$('#element').popover('hide'){% endhighlight %}
 
 #### `.popover('toggle')`
 
-Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (i.e. prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
+Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
 {% highlight js %}$('#element').popover('toggle'){% endhighlight %}
 
 #### `.popover('dispose')`
 
-Nascondi e distrugge il popover di un elemento. I popover che utilizzano la delega (che vengono creati utilizzando [the `selector` option](#options)) on posono essere distrutti individualmente su elementi trigger discendenti.
+Nasconde e distrugge il popover di un elemento.
 
 {% highlight js %}$('#element').popover('dispose'){% endhighlight %}
 
@@ -341,6 +341,6 @@ Aggiorna la posizione del popover di un elemento.
 
 {% highlight js %}
 $('#myPopover').on('hidden.bs.popover', function () {
-  // do something…
+  // azioni
 })
 {% endhighlight %}

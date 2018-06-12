@@ -23,7 +23,7 @@ Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamenta
     <label for="exampleInputNumber">Numero partecipanti</label>
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp1">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
     <label for="exampleInputEmail1">Indirizzo email</label>
     <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
   </div>
@@ -42,7 +42,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
   <div class="form-group">
     <i class="ico-prefix it-lock"></i>
-    <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="infoPassword" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword3" aria-labelledby="infoPassword" placeholder="Password">
     <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
@@ -388,17 +388,17 @@ Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al
     <div class="col-2"></div>
     <div class="col-5">
       <div class="form-check form-check-group">
-        <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked">
+        <input id="checkbox9" type="checkbox" aria-labelledby="checkbox9-help" checked="checked">
         <label for="checkbox9">Checkbox selezionato</label>
         <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input id="checkbox10" type="checkbox" aria-describedby="checkbox10-help">
+        <input id="checkbox10" type="checkbox" aria-labelledby="checkbox10-help">
         <label for="checkbox10">Checkbox non selezionato</label>
         <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input id="checkbox11" type="checkbox" aria-describedby="checkbox11-help" disabled="disabled">
+        <input id="checkbox11" type="checkbox" aria-labelledby="checkbox11-help" disabled="disabled">
         <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
         <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
@@ -427,17 +427,17 @@ Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al
     <div class="col-2"></div>
     <div class="col-5">
       <div class="form-check form-check-group">
-        <input checked name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help">
+        <input checked name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help">
         <label for="radio13">Opzione 1</label>
         <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio14" aria-describedby="radio14-help">
+        <input name="gruppo5" type="radio" id="radio14" aria-labelledby="radio14-help">
         <label for="radio14">Opzione 2</label>
         <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio15" aria-describedby="radio15-help" disabled="disabled">
+        <input name="gruppo5" type="radio" id="radio15" aria-labelledby="radio15-help" disabled="disabled">
         <label for="radio15" class="disabled">Opzione 3</label>
         <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
@@ -546,7 +546,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         <div class="toggles">
           <label for="toggleEsempio3d">
             Toggle acceso
-            <input type="checkbox" id="toggleEsempio3d" aria-describedby="toggle3d-help" checked>
+            <input type="checkbox" id="toggleEsempio3d" aria-labelledby="toggle3d-help" checked>
             <span class="lever"></span>
           </label>
         </div>
@@ -556,7 +556,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         <div class="toggles">
           <label for="toggleEsempio3e">
             Toggle spento
-            <input type="checkbox" id="toggleEsempio3e" aria-describedby="toggle3e-help">
+            <input type="checkbox" id="toggleEsempio3e" aria-labelledby="toggle3e-help">
             <span class="lever"></span>
           </label>
         </div>
@@ -566,7 +566,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         <div class="toggles">
           <label for="toggleEsempio3f">
             Toggle disabilitato
-            <input type="checkbox" id="toggleEsempio3f" aria-describedby="toggle3f-help" disabled>
+            <input type="checkbox" id="toggleEsempio3f" aria-labelledby="toggle3f-help" disabled>
             <span class="lever"></span>
           </label>
         </div>
@@ -739,14 +739,14 @@ Il testo di aiuto può essere creato usando `.form-text` (precedentemente noto c
 {% capture callout %}
 **Associazione del testo di aiuto con gli elementi del modulo form**
 
-Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
+Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-labelledby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Il testo di aiuto sotto gli input può essere abbinato a `.form-text`. Questa classe include `display: block` e aggiunge un margine superiore per una facile spaziatura dagli input sopra.
 
 {% capture example %}
 <div class="form-group">
-  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+  <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
   <label for="inputPassword5">Password</label>
   <small id="passwordHelpBlock" class="form-text text-muted">
     La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
@@ -759,7 +759,7 @@ Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un `
 {% capture example %}
 <form class="form-inline">
   <div class="form-group">
-    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-labelledby="passwordHelpInline">
     <label for="inputPassword6">Password</label>
     <small id="passwordHelpInline" class="text-muted">
       Deve essere lunga 8-20 caratteri.
@@ -869,7 +869,7 @@ Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attribu
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-labelledby="inputGroupPrepend" required>
         <div class="invalid-feedback">
           Per favore scegli un username.
         </div>

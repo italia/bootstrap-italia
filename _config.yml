@@ -34,6 +34,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-toc
 
+toc:
+  max_level: 3
+
 # Social
 title:              'Bootstrap Italia'
 description:        'Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA'

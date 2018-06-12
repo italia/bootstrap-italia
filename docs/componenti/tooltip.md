@@ -278,7 +278,7 @@ Attiva/Disattiva il tooltip di un elemento. **Ritorna al chiamante prima che il 
 
 #### `.tooltip('dispose')`
 
-Nascondi e distrugge il tooltip di un elemento. I tooltip che utilizzano la delega (che vengono creati utilizzando [l'opzione `selector`](#options)) non posono essere distrutti individualmente su elementi trigger discendenti.
+Nasconde e distrugge il tooltip di un elemento.
 
 {% highlight js %}$('#element').tooltip('dispose'){% endhighlight %}
 

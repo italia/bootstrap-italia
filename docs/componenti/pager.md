@@ -283,12 +283,10 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
       </a>
     </li>
   </ul>
-  <form>
-    <div class="form-group">
-      <input type="text" class="form-control" id="jumpToPage" maxlength="3">
-      <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="sr-only">Indica la pagina desiderata</span></label>
-    </div>
-  </form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="jumpToPage" maxlength="3">
+    <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="sr-only">Indica la pagina desiderata</span></label>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
