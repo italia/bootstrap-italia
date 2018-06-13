@@ -86,4 +86,4 @@ Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramit
 
 ## Altre personalizzazioni
 
-Per ulteriori personalizzazioni della barra di avanzamento si rimanda alla sezione [componente progress](https://getbootstrap.com/docs/4.0/components/progress/) del sito di Bootstrap.
+Per ulteriori personalizzazioni della barra di avanzamento si rimanda alla sezione [componente progress](https://getbootstrap.com/docs/4.1/components/progress/) del sito di Bootstrap.

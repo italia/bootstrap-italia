@@ -2,9 +2,11 @@
   "defaults": {
     "timeout": 10000,
     "hideElements": [
+      ".exclude-a11y-check",
       ".bd-callout",
       ".bd-search",
-      ".highlight"
+      ".highlight",
+      ".disabled"
     ]
   }
 }

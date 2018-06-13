@@ -305,7 +305,7 @@ Di seguito un esempio di link list contenente un `<input type="checkbox">` stand
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group" aria-describedby="">
+      <div class="form-check form-check-group disabled" aria-describedby="">
         <input type="checkbox" id="checkbox8" disabled>
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>

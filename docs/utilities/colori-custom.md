@@ -12,19 +12,22 @@ Definisci colori di background, bordi, colore di testo attraverso specifiche cla
 ## Colori Primari
 
 <div class="bd-example-border-utils">
-<p>I colori primari sono il Blu Italia e il bianco.<br>
-Il <strong class="primary-color">Blu Italia</strong> è il colore identificativo dell’intera brand identity e rappresenta la radice per creare altri colori
-della palette primaria.</p>
-<div class="primary-color-container">
-<div class="square-color primary-bg">
-<span class="white-color">#0066CC</span>
-</div>
-<div class="square-color white-bg shadow">
-<span>#FFFFFF</span>
-</div>
-<div class="clearfix"></div>
+  <p>
+  I colori primari sono il Blu Italia e il bianco.<br>
+  Il <strong class="primary-color">Blu Italia</strong> è il colore identificativo dell’intera brand identity e rappresenta la radice per creare altri colori della palette primaria.
+  </p>
+  <div class="primary-color-container">
+    <div class="square-color primary-bg">
+      <span class="white-color">#0066CC</span>
+    </div>
+    <div class="square-color white-bg shadow">
+      <span>#FFFFFF</span>
+    </div>
+    <div class="clearfix"></div>
+   </div>
 </div>
 
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="primary-bg p-3"><span class="white-color">Testo bianco su background colore primario</span></div>
 <div class="primary-border-color border p-3"><span class="primary-color">Testo colore primario su background con bordo primario</span></div>
@@ -37,10 +40,6 @@ della palette primaria.</p>
 `.primary-color` : per text color<br>
 `.primary-border-color` : per border color<br>
 
-
-
-
-
 ### Varianti monocromatiche del colore base
 Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
 
@@ -52,54 +51,51 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
 
 (es. `.primary-bg-a5` per utilizzare come background il colore primario con variante **a5** )
 
-
-
-
+<div class="exclude-a11y-check">
 {% capture example %}
-
 <div class="bd-example-border-utils">
-
-<div class="row">
-	<div class="col-xs-12 col-md-3">
-		<p>Tinte e ombre</p>
-		<div class="c-line primary-bg-a1">a1</div>
-		<div class="c-line primary-bg-a2">a2</div>
-		<div class="c-line primary-bg-a3">a3</div>
-		<div class="c-line primary-bg-a4">a4</div>
-		<div class="c-line white-color primary-bg-a5">a5</div>
-		<div class="c-line white-color primary-bg-a6">a6</div>
-		<div class="c-line white-color primary-bg-a7">a7</div>
-		<div class="c-line white-color primary-bg-a8">a8</div>
-		<div class="c-line white-color primary-bg-a9">a9</div>
-		<div class="c-line white-color primary-bg-a10">a10</div>
-		<div class="c-line white-color primary-bg-a11">a11</div>
-		<div class="c-line white-color primary-bg-a12">a12</div>
-	</div>
-	<div class="col-xs-12 col-md-3">
-		<p>Toni</p>
-		<div class="c-line primary-bg-b1 white-color">b1</div>
-		<div class="c-line primary-bg-b2 white-color">b2</div>
-		<div class="c-line primary-bg-b3 white-color">b3</div>
-		<div class="c-line primary-bg-b4 white-color">b4</div>
-		<div class="c-line primary-bg-b5 white-color">b5</div>
-		<div class="c-line primary-bg-b6 white-color">b6</div>
-		<div class="c-line primary-bg-b7 white-color">b7</div>
-	</div>
-	<div class="col-xs-12 col-md-3">
-		<p>Variazione di saturazione</p>
-		<div class="c-line primary-bg-c1">c1</div>
-		<div class="c-line primary-bg-c2">c2</div>
-		<div class="c-line primary-bg-c3">c3</div>
-		<div class="c-line primary-bg-c4">c4</div>
-		<div class="c-line primary-bg-c5">c5</div>
-		<div class="c-line primary-bg-c6">c6</div>
-		<div class="c-line primary-bg-c7">c7</div>
-		<div class="c-line primary-bg-c8">c8</div>
-		<div class="c-line primary-bg-c9">c9</div>
-		<div class="c-line white-color primary-bg-c10">c10</div>
-		<div class="c-line white-color primary-bg-c11">c11</div>
-		<div class="c-line white-color primary-bg-c12">c12</div>
-	</div>
+  <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <p>Tinte e ombre</p>
+      <div class="c-line primary-bg-a1">a1</div>
+      <div class="c-line primary-bg-a2">a2</div>
+      <div class="c-line primary-bg-a3">a3</div>
+      <div class="c-line primary-bg-a4">a4</div>
+      <div class="c-line white-color primary-bg-a5">a5</div>
+      <div class="c-line white-color primary-bg-a6">a6</div>
+      <div class="c-line white-color primary-bg-a7">a7</div>
+      <div class="c-line white-color primary-bg-a8">a8</div>
+      <div class="c-line white-color primary-bg-a9">a9</div>
+      <div class="c-line white-color primary-bg-a10">a10</div>
+      <div class="c-line white-color primary-bg-a11">a11</div>
+      <div class="c-line white-color primary-bg-a12">a12</div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <p>Toni</p>
+      <div class="c-line primary-bg-b1 white-color">b1</div>
+      <div class="c-line primary-bg-b2 white-color">b2</div>
+      <div class="c-line primary-bg-b3 white-color">b3</div>
+      <div class="c-line primary-bg-b4 white-color">b4</div>
+      <div class="c-line primary-bg-b5 white-color">b5</div>
+      <div class="c-line primary-bg-b6 white-color">b6</div>
+      <div class="c-line primary-bg-b7 white-color">b7</div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <p>Variazione di saturazione</p>
+      <div class="c-line primary-bg-c1">c1</div>
+      <div class="c-line primary-bg-c2">c2</div>
+      <div class="c-line primary-bg-c3">c3</div>
+      <div class="c-line primary-bg-c4">c4</div>
+      <div class="c-line primary-bg-c5">c5</div>
+      <div class="c-line primary-bg-c6">c6</div>
+      <div class="c-line primary-bg-c7">c7</div>
+      <div class="c-line primary-bg-c8">c8</div>
+      <div class="c-line primary-bg-c9">c9</div>
+      <div class="c-line white-color primary-bg-c10">c10</div>
+      <div class="c-line white-color primary-bg-c11">c11</div>
+      <div class="c-line white-color primary-bg-c12">c12</div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 </div>
@@ -114,13 +110,13 @@ Ai colori monocromatici può essere affiancato un accent color, definito così p
 Devono essere usati in modo parsimonioso.
 
 <div class="primary-color-container">
-<div class="square-color analogue-1-bg">
-<span class="white-color">#3126ff</span>
-</div>
-<div class="square-color analogue-2-bg">
-<span>#0bd9d2</span>
-</div>
-<div class="clearfix"></div>
+  <div class="square-color analogue-1-bg">
+    <span class="white-color">#3126ff</span>
+  </div>
+  <div class="square-color analogue-2-bg">
+    <span>#0bd9d2</span>
+  </div>
+  <div class="clearfix"></div>
 </div>
 
 <br>
@@ -130,26 +126,28 @@ Devono essere usati in modo parsimonioso.
 `.analogue-(+ 1/2 +)-color` : per text color<br>
 `.analogue-(+ 1/2 +)-border-color`  : per border color
 
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="analogue-1-bg p-3"><span class="white-color">Testo bianco su background colore analogo 1</span></div>
 <div class="analogue-2-bg p-3"><span class="analogue-1-color">Testo colore analogo 1 su background colore analogo 2</span></div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 ---
 
 ### Complementari e triadici
 
 <div class="primary-color-container">
-<div class="square-color complementary-1-bg">
-<span class="white-color">#f73e5a</span>
-</div>
-<div class="square-color complementary-2-bg">
-<span class="white-color">#ff9900</span>
-</div>
-<div class="square-color complementary-3-bg">
-<span class="white-color">#00cf86</span>
-</div>
-<div class="clearfix"></div>
+  <div class="square-color complementary-1-bg">
+    <span>#f73e5a</span>
+  </div>
+  <div class="square-color complementary-2-bg">
+    <span>#ff9900</span>
+  </div>
+  <div class="square-color complementary-3-bg">
+    <span>#00cf86</span>
+  </div>
+  <div class="clearfix"></div>
 </div>
 
 <br>
@@ -159,11 +157,13 @@ Devono essere usati in modo parsimonioso.
 `.complementary-(+ 1/2/3 +)-color` : per text color<br>
 `.complementary-(+ 1/2/3 +)-border-color`  : per border color
 
+<div class="exclude-a11y-check">
 {% capture example %}
-<div class="complementary-1-bg p-3"><span class="white-color">Testo bianco su background colore complementare 1</span></div>
-<div class="complementary-2-bg p-3"><span class="white-color">Testo bianco su background colore complementare 2</span></div>
-<div class="complementary-3-bg p-3"><span class="white-color">Testo bianco su background colore complementare 3</span></div>
+<div class="complementary-1-bg p-3"><span>Testo su background colore complementare 1</span></div>
+<div class="complementary-2-bg p-3"><span>Testo su background colore complementare 2</span></div>
+<div class="complementary-3-bg p-3"><span>Testo su background colore complementare 3</span></div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 ---
 
@@ -180,7 +180,7 @@ I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzar
 
 (es. `.analogue-1-bg-a5` per utilizzare come background il colore analogo **1** con variante **a5** )
 
-
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="row">
 	<div class="col-md-3">
@@ -233,8 +233,7 @@ I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzar
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-<br>
+</div>
 
 ### Complementari e triadici
 I colori Complementari possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
@@ -247,7 +246,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 
 (es. `.complementary-1-bg-a5` per utilizzare come background il colore complementare **1** con variante **a4** )
 
-
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="row">
    <div class="col-md-2">
@@ -324,7 +323,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
+</div>
 
 ## Colori neutrali
 
@@ -345,10 +344,12 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 `.neutral-(+ 1/2 +)-color` : per text color<br>
 `.neutral-(+ 1/2 +)-border-color`  : per border color
 
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="neutral-1-bg p-3"><span class="white-color">Testo bianco su background colore neutrale 1</span></div>
 <div class="neutral-2-bg p-3"><span>Testo su background colore neutrale 2</span></div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 ## Varianti colori neutrali
 
@@ -362,6 +363,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
 
 (es. `.neutral-1-bg-a5` per utilizzare come background il colore neutrale **1** con variante **a5** )
 
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="row">
   <div class="col-md-3">
@@ -396,6 +398,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+</div>
 
 ## Grigi chiari
 
@@ -409,6 +412,7 @@ I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare 
 
 (es. `.lightgrey-1-bg-a4` per utilizzare come background il grigio chiaro **1** con variante **a5** )
 
+<div class="exclude-a11y-check">
 {% capture example %}
 <div class="row">
   <div class="col-md-2">
@@ -429,3 +433,4 @@ I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare 
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+</div>

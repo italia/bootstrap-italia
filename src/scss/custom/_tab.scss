@@ -34,12 +34,12 @@
     margin-bottom: 0;
   }
   &.nav-dark {
-    background-color: $gray-secondary;
+    background-color: $gray-primary;
     .nav-link {
-      color: #C3CFDB; // TODO quando i colori dark saranno definiti, gestire questo colore come variabile
+      color: #C7D1D0; // TODO quando i colori dark saranno definiti, gestire questo colore come variabile
     }
     .nav-link.active, .nav-item.show .nav-link {
-      background-color: $gray-secondary;
+      background-color: $gray-primary;
       color: $cyan;
       border-bottom: 2px solid $cyan;
     }

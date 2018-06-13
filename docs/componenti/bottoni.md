@@ -31,25 +31,38 @@ In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi 
 Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:
 
 {% capture example %}
-{% for color in site.data.theme-colors %}
+<div class="py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
 <div class="btn-example">
   <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
   <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
   <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
-</div>{% endfor %}
+</div>{% endif %}{% endfor %}</div>
 {% endcapture %}{% include example.html content=example %}
+
+#### Note sullo stato disabilitato
+
+- I tag `<a>` non supportano l'attributo `disabled`, per cui è necessario usare la classe `.disabled` per farli apparire visivamente disabilitati, e in modo da disabilitare `pointer-events` su di essi sui browser che lo supportano.
+- I bottoni disabilitati includeranno l'attributo `aria-disabled="true"` per indicare lo stato dell'elemento alle tecnologie assistive.
+
+{% capture example %}
+<a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
+{% endcapture %}{% include example.html content=example %}
+
+{% capture callout %}
+##### Disabilitazione link
+
+La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Su sfondo scuro
 
 {% capture example %}
-<div class="bg-dark">
-{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
+<div class="bg-dark py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
 <div class="btn-example">
   <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
   <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
   <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
-</div>{% endif %}{% endfor %}
-</div>
+</div>{% endif %}{% endfor %}</div>
 {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
@@ -83,32 +96,6 @@ Aggiungendo la classe `.btn-block` si ottengono invece bottoni che prendono tutt
 <button type="button" class="btn btn-secondary btn-lg btn-block">Secondary Block</button>
 {% endcapture %}{% include example.html content=example %}
 
-## Stato Disabilitato
+## Approfondimento
 
-Lo stato disabilitato è ottenuto aggiungendo l'attributo `disabled`:
-
-{% capture example %}
-{% for color in site.data.theme-colors %}
-<div class="btn-example">
-<button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }}</button>
-</div>{% endfor %}
-{% endcapture %}{% include example.html content=example %}
-
-Alcune note a questo proposito:
-
-- I tag `<a>` non supportano l'attributo `disabled`, per cui è necessario usare la classe `.disabled` per farli apparire visivamente disabilitati, e in modo da disabilitare `pointer-events` su di essi sui browser che lo supportano.
-- I bottoni disabilitati includeranno l'attributo `aria-disabled="true"` per indicare lo stato dell'elemento alle tecnologie assistive.
-
-{% capture example %}
-<a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
-{% endcapture %}{% include example.html content=example %}
-
-{% capture callout %}
-##### Disabilitazione link
-
-La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-
-## Altri dettagli
-
-Per ulteriori informazioni sui bottoni si rimanda alla sezione [buttons](https://getbootstrap.com/docs/4.0/components/buttons/) del sito di Bootstrap.
+Per ulteriori informazioni sui bottoni si rimanda alla sezione [buttons](https://getbootstrap.com/docs/4.1/components/buttons/) del sito di Bootstrap.

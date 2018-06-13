@@ -19,64 +19,45 @@ Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, 
 {% capture example %}
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#">Link Attivo</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
   <li class="nav-item"><a class="nav-link disabled" href="#">Link Disabilitato</a></li>
 </ul>
 <ul class="nav nav-tabs nav-dark">
   <li class="nav-item"><a class="nav-link active" href="#">Link Attivo</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link3</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Link4</a></li>
   <li class="nav-item"><a class="nav-link disabled" href="#">Link Disabilitato</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
 L'esempio sopra riportato non ha molto senso senza un contenuto che cambi al di sotto di esso; per rendere tali interfacce navigabili è necessario utilizzare Javascript, come mostrato di seguito:
 
-<div class="bd-example">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab titolo 1</a></li>
-    <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab titolo 2</a></li>
-    <li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab titolo 3</a></li>
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane p-3 fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane p-3 fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
-    <div class="tab-pane p-3 fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div>
-
-{% highlight html %}
+{% capture example %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a></li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane p-3 fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">...</div>
-  <div class="tab-pane p-3 fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">...</div>
-  <div class="tab-pane p-3 fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">...</div>
+  <div class="tab-pane p-3 fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1a-tab">Contenuto 1</div>
+  <div class="tab-pane p-3 fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">Contenuto 2</div>
+  <div class="tab-pane p-3 fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">Contenuto 3</div>
 </div>
-{% endhighlight %}
+{% endcapture %}{% include example.html content=example %}
 
 Oppure al posto della label usare una icona.
 
 {% capture example %}
   <ul class="nav nav-tabs" id="myTab2" role="tablist">
-    <li class="nav-item"><a class="nav-link pl-4 pr-4 active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file d-block text-center"></i><span class="sr-only"> Tab titolo 1</span></a></li>
+    <li class="nav-item"><a class="nav-link pl-4 pr-4 active" id="tab1b-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file d-block text-center"></i><span class="sr-only"> Tab titolo 1</span></a></li>
     <li class="nav-item"><a class="nav-link pl-4 pr-4" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false"><i class="it-ico-lg it-calendar  d-block text-center"></i><span class="sr-only"> Tab titolo 2</span></a></li>
     <li class="nav-item"><a class="nav-link pl-4 pr-4" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false"><i class="it-ico-lg it-comment d-block text-center"></i><span class="sr-only"> Tab titolo 3</span></a></li>
   </ul>
   <div class="tab-content" id="myTab2Content">
-    <div class="tab-pane p-3 fade show active" id="tab1a" role="tabpanel" aria-labelledby="tab1a-tab"><p>Testo 1</p></div>
-    <div class="tab-pane p-3 fade" id="tab2a" role="tabpanel" aria-labelledby="tab2a-tab"><p>Testo 2</p></div>
-    <div class="tab-pane p-3 fade" id="tab3a" role="tabpanel" aria-labelledby="tab3a-tab"><p>Testo 3</p></div>
+    <div class="tab-pane p-3 fade show active" id="tab1a" role="tabpanel" aria-labelledby="tab1b-tab"><p>Contenuto 1</p></div>
+    <div class="tab-pane p-3 fade" id="tab2a" role="tabpanel" aria-labelledby="tab2a-tab"><p>Contenuto 2</p></div>
+    <div class="tab-pane p-3 fade" id="tab3a" role="tabpanel" aria-labelledby="tab3a-tab"><p>Contenuto 3</p></div>
   </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -84,20 +65,14 @@ Oppure con label e icona insieme
 
 {% capture example %}
 <ul class="nav nav-tabs" id="myTab3" role="tablist">
-  <li class="nav-item"><a class="nav-link active" id="tab1b-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab titolo 1</a></li>
+  <li class="nav-item"><a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab titolo 1</a></li>
   <li class="nav-item"><a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false"><i class="it-ico it-calendar d-block text-center"></i> Tab titolo 2</a></li>
   <li class="nav-item"><a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false"><i class="it-ico it-comment d-block text-center"></i> Tab titolo 3</a></li>
 </ul>
 <div class="tab-content" id="myTab3Content">
-  <div class="tab-pane p-3 fade show active" id="tab1b" role="tabpanel" aria-labelledby="tab1b-tab">
-    <p>Testo 1</p>
-  </div>
-  <div class="tab-pane p-3 fade" id="tab2b" role="tabpanel" aria-labelledby="tab2b-tab">
-    <p>Testo 2</p>
-  </div>
-  <div class="tab-pane p-3 fade" id="tab3b" role="tabpanel" aria-labelledby="tab3b-tab">
-    <p>Testo 3</p>
-  </div>
+  <div class="tab-pane p-3 fade show active" id="tab1b" role="tabpanel" aria-labelledby="tab1c-tab"><p>Contenuto 1</p></div>
+  <div class="tab-pane p-3 fade" id="tab2b" role="tabpanel" aria-labelledby="tab2b-tab"><p>Contenuto 2</p></div>
+  <div class="tab-pane p-3 fade" id="tab3b" role="tabpanel" aria-labelledby="tab3b-tab"><p>Contenuto 3</p></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -105,28 +80,7 @@ Allo stesso modo di quanto avviene con i normali `.nav`, a seconda delle tue nec
 
 Si può, alternativamente, usare un diverso elemento (nell'esempio seguente un semplice `<div>`) e racchiuderlo con `<nav>`:
 
-<div class="bd-example">
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active" id="nav-tab1-tab" data-toggle="tab" href="#nav-tab1" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</a>
-      <a class="nav-item nav-link" id="nav-tab2-tab" data-toggle="tab" href="#nav-tab2" role="tab" aria-controls="nav-tab2" aria-selected="false">Tab 2</a>
-      <a class="nav-item nav-link" id="nav-tab3-tab" data-toggle="tab" href="#nav-tab3" role="tab" aria-controls="nav-tab3" aria-selected="false">Tab 3</a>
-    </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane p-3 fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="tab-pane p-3 fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
-    <div class="tab-pane p-3 fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div>
-
-{% highlight html %}
+{% capture example %}
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-tab1-tab" data-toggle="tab" href="#nav-tab1" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</a>
@@ -135,95 +89,56 @@ Si può, alternativamente, usare un diverso elemento (nell'esempio seguente un s
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane p-3  fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">...</div>
-  <div class="tab-pane p-3 fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">...</div>
-  <div class="tab-pane p-3  fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">...</div>
+  <div class="tab-pane p-3  fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">Contenuto 1</div>
+  <div class="tab-pane p-3 fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">Contenuto 2</div>
+  <div class="tab-pane p-3  fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">Contenuto 3</div>
 </div>
-{% endhighlight %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Tab a bottoni
 
 I tab possono ereditare dalla navigazione l'utilizzo della classe `.nav-pills` per generare tab a bottoni:
 
-<div class="bd-example bd-example-tabs">
-  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-    <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#pills-tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
-    <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#pills-tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a></li>
-    <li class="nav-item"><a class="nav-link" id="tab3-tab" data-toggle="tab" href="#pills-tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a></li>
-  </ul>
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-tab1-tab">
-      <p>Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.</p>
-    </div>
-    <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab">
-      <p>Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</p>
-    </div>
-    <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-tab3-tab">
-      <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</p>
-    </div>
-  </div>
-</div>
-
-{% highlight html %}
+{% capture example %}
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-    <li class="nav-item"><a class="nav-link active" id="pills-tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="pills-tab1" aria-selected="true">Tab 1</a></li>
-    <li class="nav-item"><a class="nav-link" id="pills-tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="pills-tab2" aria-selected="false">Tab 2</a></li>
-    <li class="nav-item"><a class="nav-link" id="pills-tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="pills-tab3" aria-selected="false">Tab 3</a></li>
+    <li class="nav-item"><a class="nav-link active" id="pills-tab1a-tab" data-toggle="tab" href="#pills-tab1" role="tab" aria-controls="pills-tab1" aria-selected="true">Tab 1</a></li>
+    <li class="nav-item"><a class="nav-link" id="pills-tab2-tab" data-toggle="tab" href="#pills-tab2" role="tab" aria-controls="pills-tab2" aria-selected="false">Tab 2</a></li>
+    <li class="nav-item"><a class="nav-link" id="pills-tab3-tab" data-toggle="tab" href="#pills-tab3" role="tab" aria-controls="pills-tab3" aria-selected="false">Tab 3</a></li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-tab1-tab">...</div>
-  <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab">...</div>
-  <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-tab3-tab">...</div>
+  <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-tab1a-tab">Contenuto 1</div>
+  <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab">Contenuto 2</div>
+  <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-tab3-tab">Contenuto 3</div>
 </div>
-{% endhighlight %}
+{% endcapture %}{% include example.html content=example %}
 
 ### Allineamento Verticale
 
 Esempio:
 
-<div class="bd-example bd-example-tabs">
+{% capture example %}
+<div class="bd-example-tabs">
   <div class="row">
     <div class="col-3">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1" aria-selected="true">Tab 1</a>
-        <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2" aria-selected="false">Tab 2</a>
-        <a class="nav-link" id="v-pills-tab3-tab" data-toggle="pill" href="#v-pills-tab3" role="tab" aria-controls="v-pills-tab3" aria-selected="false">Tab 3</a>
-        <a class="nav-link" id="v-pills-tab4-tab" data-toggle="pill" href="#v-pills-tab4" role="tab" aria-controls="v-pills-tab4" aria-selected="false">Tab 4</a>
+        <a class="nav-link active" id="v-pills-home1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1" aria-selected="true">Tab 1</a>
+        <a class="nav-link" id="v-pills-home2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2" aria-selected="false">Tab 2</a>
+        <a class="nav-link" id="v-pills-home3-tab" data-toggle="pill" href="#v-pills-tab3" role="tab" aria-controls="v-pills-tab3" aria-selected="false">Tab 3</a>
+        <a class="nav-link" id="v-pills-home4-tab" data-toggle="pill" href="#v-pills-tab4" role="tab" aria-controls="v-pills-tab4" aria-selected="false">Tab 4</a>
       </div>
     </div>
     <div class="col-9">
       <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-tab1-tab">
-          <p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p>
-        </div>
-        <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
-          <p>Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</p>
-        </div>
-        <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">
-          <p>Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p>
-        </div>
-        <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-tab4-tab">
-          <p>Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.</p>
-        </div>
+        <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home1-tab">Contenuto 1</div>
+        <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-home2-tab">Contenuto 2</div>
+        <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-home3-tab">Contenuto 3</div>
+        <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-home4-tab">Contenuto 4</div>
       </div>
     </div>
   </div>
 </div>
-
-{% highlight html %}
-<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-  <a class="nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1" aria-selected="true">Tab 1</a>
-  <a class="nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2" aria-selected="false">Tab 2</a>
-  <a class="nav-link" id="v-pills-tab3-tab" data-toggle="pill" href="#v-pills-tab3" role="tab" aria-controls="v-pills-tab3" aria-selected="false">Tab 3</a>
-  <a class="nav-link" id="v-pills-tab4-tab" data-toggle="pill" href="#v-pills-tab4" role="tab" aria-controls="v-pills-tab4" aria-selected="false">Tab 4</a>
-</div>
-<div class="tab-content" id="v-pills-tabContent">
-  <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab1">...</div>
-  <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">...</div>
-  <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">...</div>
-  <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-tab4-tab">...</div>
-</div>
-{% endhighlight %}
+{% endcapture %}{% include example.html content=example %}
+    
 
 ## Attivazione Tab
 
@@ -235,25 +150,25 @@ Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente spe
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
+    <a class="nav-link active" id="data-ex-tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
+    <a class="nav-link" id="data-ex-tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
+    <a class="nav-link" id="data-ex-tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Tab 4</a>
+    <a class="nav-link" id="data-ex-tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Tab 4</a>
   </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">...</div>
-  <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">...</div>
-  <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">...</div>
-  <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">...</div>
+  <div class="tab-pane active" id="data-ex-tab1" role="tabpanel" aria-labelledby="data-ex-tab1-tab">...</div>
+  <div class="tab-pane" id="data-ex-tab2" role="tabpanel" aria-labelledby="data-ex-tab2-tab">...</div>
+  <div class="tab-pane" id="data-ex-tab3" role="tabpanel" aria-labelledby="data-ex-tab3-tab">...</div>
+  <div class="tab-pane" id="data-ex-tab4" role="tabpanel" aria-labelledby="data-ex-tab4-tab">...</div>
 </div>
 {% endhighlight %}
 
@@ -283,11 +198,11 @@ Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è
 
 {% highlight html %}
 <div class="tab-content">
-  <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">...</div>
+  <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="content-tab-tab">...</div>
   <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">...</div>
   <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">...</div>
   <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">...</div>
 </div>
 {% endhighlight %}
 
-Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/4.0/components/navs/#methods) sul sito di Bootstrap.
+Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/4.1/components/navs/#methods) sul sito di Bootstrap.

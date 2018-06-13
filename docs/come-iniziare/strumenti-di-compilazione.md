@@ -163,7 +163,7 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 `npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
 
-[bootstrap-themes]: https://getbootstrap.com/docs/4.0/getting-started/theming/
+[bootstrap-themes]: https://getbootstrap.com/docs/4.1/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
 [sass]: http://sass-lang.com/

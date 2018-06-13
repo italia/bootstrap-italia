@@ -183,4 +183,4 @@ delle [utilità di flexbox]({{ site.baseurl }}/docs/utilities/flex/).
 
 ## Informazioni aggiuntive su comportamenti dinamici con Javascript
 
-Per questa sezione puoi fare riferimento alla [documentazione di Bootstrap](https://getbootstrap.com/docs/4.0/components/list-group/#javascript-behavior).
+Per questa sezione puoi fare riferimento alla [documentazione di Bootstrap](https://getbootstrap.com/docs/4.1/components/list-group/#javascript-behavior).

@@ -159,7 +159,7 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <h3>Header</h3>
+        <h3 id="esempio-header-1">Esempio Header 1</h3>
       </li>
       <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
       <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
@@ -277,7 +277,9 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 <div class="dropdown-menu dark">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><h3>Header</h3></li>
+      <li>
+        <h3 id="esempio-header-2">Esempio Header 2</h3>
+      </li>
       <li>
         <a class="list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
@@ -316,4 +318,4 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 
 ## Informazioni aggiuntive
 
-Per consultare altri esempi, vedere l'utilizzo di una dropdown con interi form al suo interno, capire meglio come utilizzare attributi `data-` per l'attivazione o come estendere il funzionamento del plugin Javascript del dropdown di Bootstrap {{ site.bootstrap_version }} , si rimanda alla [documentazione](https://getbootstrap.com/docs/4.0/components/dropdowns/) sul sito di Bootstrap.
+Per consultare altri esempi, vedere l'utilizzo di una dropdown con interi form al suo interno, capire meglio come utilizzare attributi `data-` per l'attivazione o come estendere il funzionamento del plugin Javascript del dropdown di Bootstrap {{ site.bootstrap_version }} , si rimanda alla [documentazione](https://getbootstrap.com/docs/4.1/components/dropdowns/) sul sito di Bootstrap.
