@@ -13,16 +13,16 @@
 <title>Popover · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -398,37 +411,19 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h5"><a href="#accessibiltà-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</a></li>
 <li class="toc-entry toc-h2"><a href="#esempio-abilita-i-popover-ovunque">Esempio: Abilita i popover ovunque</a></li>
 <li class="toc-entry toc-h2"><a href="#esempio-usare-lopzione-container">Esempio: Usare l’opzione container</a></li>
 <li class="toc-entry toc-h2"><a href="#esempio">Esempio</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#le-quattro-direzioni">Le quattro direzioni</a></li>
-<li class="toc-entry toc-h3"><a href="#dismiss-al-click-successivo">Dismiss al click successivo</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#markup-specifico-richiesto-per-ignorare-il-click-successivo">Markup specifico richiesto per ignorare il click successivo</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#dismiss-al-click-successivo">Dismiss al click successivo</a></li>
 <li class="toc-entry toc-h3"><a href="#elementi-disabilitati">Elementi disabilitati</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#uso">Uso</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
-<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</a></li>
-<li class="toc-entry toc-h4"><a href="#popoveroptions">$().popover(options)</a></li>
-<li class="toc-entry toc-h4"><a href="#popovershow">.popover('show')</a></li>
-<li class="toc-entry toc-h4"><a href="#popoverhide">.popover('hide')</a></li>
-<li class="toc-entry toc-h4"><a href="#popovertoggle">.popover('toggle')</a></li>
-<li class="toc-entry toc-h4"><a href="#popoverdispose">.popover('dispose')</a></li>
-<li class="toc-entry toc-h4"><a href="#popoverenable">.popover('enable')</a></li>
-<li class="toc-entry toc-h4"><a href="#popoverdisable">.popover('disable')</a></li>
-<li class="toc-entry toc-h4"><a href="#popovertoggleenabled">.popover('toggleEnabled')</a></li>
-<li class="toc-entry toc-h4"><a href="#popoverupdate">.popover('update')</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
 <li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
 </ul>
 </li>
@@ -440,7 +435,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <h1 class="bd-title" id="content">Popover</h1>
           <p class="bd-lead">Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.</p>
           <div class="bd-callout bd-callout-accessibility">
-<h5 id="accessibiltà-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibiltà: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</h5>
+<h5 id="accessibilità-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibilità: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</h5>
 
 <p>Allo stesso modo di quanto avviene per i <a href="/bootstrap-italia/docs/componenti/tooltips/">tooltip</a>,
 il codice generato per i popover è accessibile.</p>
@@ -483,9 +478,9 @@ bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper
 <h2 id="esempio">Esempio</h2>
 
 <div class="bd-example">
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Clicca par attivare/disattivare il popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Popover di esempio">Clicca per attivare/disattivare il popover</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?"</span><span class="nt">&gt;</span>Clicca par attivare/disattivare il popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Popover di esempio"</span><span class="nt">&gt;</span>Clicca per attivare/disattivare il popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="le-quattro-direzioni">Le quattro direzioni</h3>
 
@@ -569,122 +564,11 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
 <p>Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-animation=""</code>.</p>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>animation</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Applica una transizione di dissolvenza CSS al popover</td>
-    </tr>
-    <tr>
-      <td>container</td>
-      <td>string | element | false</td>
-      <td>false</td>
-      <td>
-        <p>Aggiunge il popover a un elemento specifico. Esempio: <code>container: 'body'</code>. Questa opzione è particolarmente utile in quanto consente di posizionare il popover nel flusso del documento vicino all'elemento di attivazione - che impedirà al popover di fluttuare dall'elemento di attivazione durante il ridimensionamento della finestra.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>content</td>
-      <td>string | element | function</td>
-      <td>''</td>
-      <td>
-        <p>Il valore predefinito del contenuto se l'attributo <code>data-content</code> non è presente.</p>
-        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>delay</td>
-      <td>number | object</td>
-      <td>0</td>
-      <td>
-        <p>Il ritardo che mostra e nasconde il popover (ms) - non si applica al tipo di trigger manuale</p>
-        <p>Se viene fornito un numero, il ritardo viene applicato sia sul mostra che sul nascondi</p>
-        <p>La struttura dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td>html</td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>Inserisce l' HTML all'interno del popover. Se false, il metodo jQuery <code>text</code> verrà utilizzato per inserire contenuto nel DOM. Usa il testo se sei preoccupato per gli attacchi XSS.</td>
-    </tr>
-    <tr>
-      <td>placement</td>
-      <td>string | function</td>
-      <td>'right'</td>
-      <td>
-        <p>Come posizionare il popover - auto | top | bottom | left | right.<br />Quando è specificato <code>auto</code>, il popover verrà direzionato in modo dinamico.</p>
-        <p>Quando viene utilizzata una funzione per determinare il posizionamento, viene chiamato con il nodo DOM del popover come primo argomento e il nodo DOM dell'elemento di attivazione come secondo. Il contesto <code>this</code> è impostato sull'istanza del popover.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>selector</td>
-      <td>string | false</td>
-      <td>false</td>
-      <td>Dato un selettore, gli oggetti del popover saranno delegati agli obiettivi specificati. In pratica, questo viene usato per abilitare il contenuto HTML dinamico per aggiungere i popover. Guarda <a href="https://github.com/twbs/bootstrap/issues/4215">questo</a> e <a href="https://jsbin.com/zopod/1/edit">un esempio informativo</a>.</td>
-    </tr>
-    <tr>
-      <td>template</td>
-      <td>string</td>
-      <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
-      <td>
-        <p>Codice HTML di base da usare quando viene creato un popover.</p>
-        <p>Il <code>title</code> del popover verrà inserito nel <code>.popover-header</code>.</p>
-        <p>Il <code>content</code> del popover verrà inserito nel <code>.popover-body</code>.</p>
-        <p><code>.arrow</code> sarà la freccia del popover.</p>
-        <p>L'elemento contenitore più esterno dovrebbe avere la classe <code>.popover</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>string | element | function</td>
-      <td>''</td>
-      <td>
-        <p>Il valore predefinito del sel'attributo  <code>title</code> non è presente.</p>
-        <p>Data una funzione, verrà richiamato con la sua referenza <code>this</code> impostata sull'elemento a cui è collegato il popover.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>trigger</td>
-      <td>string</td>
-      <td>'click'</td>
-      <td>Come viene richiamato il popover - click | hover | focus | manual. Puoi passare più eventi; separati da uno spazio. `manual` non può essere combinato con nessun altreo evento.</td>
-    </tr>
-    <tr>
-      <td>offset</td>
-      <td>number | string</td>
-      <td>0</td>
-      <td>Offset del popover relativo al suo target. Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">documentazione sugli offset</a> di Popper.js.</td>
-    </tr>
-    <tr>
-      <td>fallbackPlacement</td>
-      <td>string | array</td>
-      <td>'flip'</td>
-      <td>Permette di specificare quale posizione Popper userà nel fallback. Per maggiori informazioni fare riferimento alla
-      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">documentazione sui comportamenti</a> di Popper.js</td>
-    </tr>
-    <tr>
-      <td>boundary</td>
-      <td>string | element</td>
-      <td>'scrollParent'</td>
-      <td>Limite del vincolo di overflow del popover. Accetta i valori di <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, o un riferimento HTMLElement (JavaScript only). Per maggiori informazioni fare riferimento alla <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a> di Popper.js.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Per ulteriori informazioni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.1/components/popovers/">popovers</a> del sito di Bootstrap.</p>
 
 <h3 id="metodi">Metodi</h3>
 
-<div class="bd-callout bd-callout-danger">
+<div class="bd-callout bd-callout-info">
 <h4 id="metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</h4>
 
 <p>Tutti i metodi API sono <strong>asincroni</strong> e avviano una <strong>transizione</strong>. Ritornano al chiamante non appena viene avviata la transizione ma <strong>prima che termini</strong>. Inoltre, una chiamata al metodo su un <strong>componente in transizione verrà ignorata</strong>.</p>
@@ -698,25 +582,25 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
 <h4 id="popovershow"><code class="highlighter-rouge">.popover('show')</code></h4>
 
-<p>Mostra il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.</p>
+<p>Mostra il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="popoverhide"><code class="highlighter-rouge">.popover('hide')</code></h4>
 
-<p>Nasconde il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente nascosto</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+<p>Nasconde il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente nascosto</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="popovertoggle"><code class="highlighter-rouge">.popover('toggle')</code></h4>
 
-<p>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto</strong> (i.e. prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code> o l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+<p>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code> o l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="popoverdispose"><code class="highlighter-rouge">.popover('dispose')</code></h4>
 
-<p>Nascondi e distrugge il popover di un elemento. I popover che utilizzano la delega (che vengono creati utilizzando <a href="#options">the <code class="highlighter-rouge">selector</code> option</a>) on posono essere distrutti individualmente su elementi trigger discendenti.</p>
+<p>Nasconde e distrugge il popover di un elemento.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'dispose'</span><span class="p">)</span></code></pre></figure>
 
@@ -778,7 +662,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 </table>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myPopover'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.popover'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something…</span>
+  <span class="c1">// azioni</span>
 <span class="p">})</span></code></pre></figure>
 
 
@@ -789,12 +673,12 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -802,14 +686,14 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

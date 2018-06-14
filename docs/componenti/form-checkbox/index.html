@@ -5,12 +5,12 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Per dare larghezza o altezza a un elemento in relazione al contenitore padre.">
+<meta name="description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.1">
 <meta name="robots" content="noindex">
 
-<title>Dimensionamento · Bootstrap Italia</title>
+<title>Form Checkbox · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
@@ -38,14 +38,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Dimensionamento">
-<meta name="twitter:description" content="Per dare larghezza o altezza a un elemento in relazione al contenitore padre.">
+<meta name="twitter:title" content="Form Checkbox">
+<meta name="twitter:description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/utilities/dimensionamento/">
-<meta property="og:title" content="Dimensionamento">
-<meta property="og:description" content="Per dare larghezza o altezza a un elemento in relazione al contenitore padre.">
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/form-checkbox/">
+<meta property="og:title" content="Form Checkbox">
+<meta property="og:description" content="Elementi e stili per la creazione di form accessibili e responsivi.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -206,7 +206,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/contenuti/figure/">
               Figure
             </a></li></ul>
-    </div><div class="bd-toc-item">
+    </div><div class="bd-toc-item active">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
         Componenti
       </a>
@@ -256,7 +256,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/form-select/">
               Form Select
-            </a><span class="badge badge-info">wip</span></li><li>
+            </a><span class="badge badge-info">wip</span></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
               Form Checkbox
             </a></li><li>
@@ -323,7 +323,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
               Back to top
             </a><span class="badge badge-info">wip</span></li></ul>
-    </div><div class="bd-toc-item active">
+    </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
         Utilities
       </a>
@@ -346,7 +346,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/colori-custom/">
               Colori Custom
-            </a></li><li class="active bd-sidenav-active">
+            </a></li><li>
             <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
               Dimensionamento
             </a></li><li>
@@ -411,65 +411,174 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#larghezza-fissa">Larghezza fissa</a></li>
-<li class="toc-entry toc-h2"><a href="#larghezza-massima">Larghezza massima</a></li>
+<li class="toc-entry toc-h2"><a href="#checkbox">Checkbox</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#inline">Inline</a></li>
+<li class="toc-entry toc-h3"><a href="#disabilitato">Disabilitato</a></li>
+<li class="toc-entry toc-h3"><a href="#gruppi">Gruppi</a></li>
+</ul>
+</li>
 </ul>
           </div>
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Dimensionamento</h1>
-          <p class="bd-lead">Per dare larghezza o altezza a un elemento in relazione al contenitore padre.</p>
-          <h2 id="larghezza-fissa">Larghezza fissa</h2>
+          <h1 class="bd-title" id="content">Form Checkbox</h1>
+          <p class="bd-lead">Elementi e stili per la creazione di form accessibili e responsivi.</p>
+          <h2 id="checkbox">Checkbox</h2>
 
-<p>Le grandezze di default presenti sono: <code class="highlighter-rouge">25%</code>, <code class="highlighter-rouge">50%</code>, <code class="highlighter-rouge">75%</code> e <code class="highlighter-rouge">100%</code>.</p>
+<p>Per utilizzare i checkbox personalizzati è necessario inserire la classe <code class="highlighter-rouge">.form-check</code> nell’elemento padre.</p>
 
 <div class="bd-example">
-<div class="border">
-  <div class="bg-primary text-white p-3 w-100">Width 100%</div>
-  <div class="bg-primary text-white p-3 w-75">Width 75%</div>
-  <div class="bg-primary text-white p-3 w-50">Width 50%</div>
-  <div class="bg-primary text-white p-3 w-25">Width 25%</div>
+<div>
+  <div class="form-check">
+    <input id="checkbox1" type="checkbox" />
+    <label for="checkbox1">Checkbox di esempio</label>
+  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white p-3 w-100"</span><span class="nt">&gt;</span>Width 100%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white p-3 w-75"</span><span class="nt">&gt;</span>Width 75%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white p-3 w-50"</span><span class="nt">&gt;</span>Width 50%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white p-3 w-25"</span><span class="nt">&gt;</span>Width 25%<span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>Checkbox di esempio<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<h3 id="inline">Inline</h3>
+
+<p>Per allineare orizzontalmente le <code class="highlighter-rouge">checkbox</code> basterà aggiungere la classe <code class="highlighter-rouge">.form-check-inline</code> a qualsiasi <code class="highlighter-rouge">.form-check</code>.</p>
+
 <div class="bd-example">
-<div class="border" style="height: 200px;">
-  <div class="bg-primary text-white text-center h-100 d-inline-block" style="width: 120px;">Height 100%</div>
-  <div class="bg-primary text-white text-center h-75 d-inline-block" style="width: 120px;">Height 75%</div>
-  <div class="bg-primary text-white text-center h-50 d-inline-block" style="width: 120px;">Height 50%</div>
-  <div class="bg-primary text-white text-center h-25 d-inline-block" style="width: 120px;">Height 25%</div>
+<div>
+  <div class="row">
+    <div class="form-check form-check-inline">
+      <input id="checkbox2" type="checkbox" />
+      <label for="checkbox2">Checkbox non selezionato</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input id="checkbox3" type="checkbox" checked="checked" />
+      <label for="checkbox3">Checkbox selezionato</label>
+    </div>
+  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"border"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white text-center h-100 d-inline-block"</span> <span class="na">style=</span><span class="s">"width: 120px;"</span><span class="nt">&gt;</span>Height 100%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white text-center h-75 d-inline-block"</span> <span class="na">style=</span><span class="s">"width: 120px;"</span><span class="nt">&gt;</span>Height 75%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white text-center h-50 d-inline-block"</span> <span class="na">style=</span><span class="s">"width: 120px;"</span><span class="nt">&gt;</span>Height 50%<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white text-center h-25 d-inline-block"</span> <span class="na">style=</span><span class="s">"width: 120px;"</span><span class="nt">&gt;</span>Height 25%<span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="larghezza-massima">Larghezza massima</h2>
+<h3 id="disabilitato">Disabilitato</h3>
 
-<p>Sono previste anche le classi <code class="highlighter-rouge">mw-100</code> e <code class="highlighter-rouge">mh-100</code> per i corrispettivi <code class="highlighter-rouge">max-width: 100%;</code> e <code class="highlighter-rouge">max-height: 100%;</code>.</p>
-
-<div class="bd-example">
-<img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"mw-100"</span> <span class="na">src=</span><span class="s">".../1000px100?text=Max-width%20%3D%20100%25"</span> <span class="na">alt=</span><span class="s">"Max-width 100%"</span><span class="nt">&gt;</span></code></pre></figure>
+<p>Affinchè i campi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> risultino disabilitati occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> all’input e la classe <code class="highlighter-rouge">.disabled</code> alla label relativa.</p>
 
 <div class="bd-example">
-<div style="height: 200px;">
-  <div class="bg-primary text-white mh-100" style="width: 100px; height: 200px;">Max-height 100%</div>
+<div>
+  <div class="form-check">
+    <input id="checkbox4" type="checkbox" disabled="" />
+    <label for="checkbox4" class="disabled">Checkbox disabilitato non selezionato</label>
+  </div>
+  <div class="form-check">
+    <input id="checkbox5" type="checkbox" disabled="" checked="checked" />
+    <label for="checkbox5" class="disabled">Checkbox disabilitato selezionato</label>
+  </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-primary text-white mh-100"</span> <span class="na">style=</span><span class="s">"width: 100px; height: 200px;"</span><span class="nt">&gt;</span>Max-height 100%<span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox5"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox5"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato selezionato<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="gruppi">Gruppi</h3>
+
+<p>Per poter raggruppare gli elementi <code class="highlighter-rouge">checkbox</code> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>. L’elemento grafico di spunta verrà allineato alla destra del contenuto testuale.</p>
+
+<div class="bd-example">
+<div>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input id="checkbox6" type="checkbox" checked="checked" />
+        <label for="checkbox6">Checkbox selezionato</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox7" type="checkbox" />
+        <label for="checkbox7">Checkbox non selezionato</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox8" type="checkbox" disabled="disabled" />
+        <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input id="checkbox9" type="checkbox" aria-labelledby="checkbox9-help" checked="checked" />
+        <label for="checkbox9">Checkbox selezionato</label>
+        <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox10" type="checkbox" aria-labelledby="checkbox10-help" />
+        <label for="checkbox10">Checkbox non selezionato</label>
+        <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input id="checkbox11" type="checkbox" aria-labelledby="checkbox11-help" disabled="disabled" />
+        <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
+        <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox6"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox6"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox7"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox7"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox8"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox8"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox9"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"checkbox9-help"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox9"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox9-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox10"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"checkbox10-help"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox10"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox10-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox11"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"checkbox11-help"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox11"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox11-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 

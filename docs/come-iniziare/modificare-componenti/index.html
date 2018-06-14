@@ -13,16 +13,16 @@
 <title>Modificare componenti · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -398,17 +411,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h4"><a href="#componenti-base">Componenti base</a></li>
-<li class="toc-entry toc-h4"><a href="#componenti-aggiuntivi">Componenti aggiuntivi</a></li>
 <li class="toc-entry toc-h2"><a href="#struttura-di-un-componente">Struttura di un componente</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#documentazione-del-componente">Documentazione del componente</a></li>
 <li class="toc-entry toc-h3"><a href="#personalizzazione-di-stile">Personalizzazione di stile</a></li>
-<li class="toc-entry toc-h3"><a href="#personalizzazione-di-comportamento">Personalizzazione di comportamento</a>
-<ul>
-<li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#personalizzazione-di-comportamento">Personalizzazione di comportamento</a></li>
+<li class="toc-entry toc-h3"><a href="#test-di-accessibilità">Test di accessibilità</a></li>
 </ul>
 </li>
 </ul>
@@ -418,13 +426,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Modificare componenti</h1>
           <p class="bd-lead">Come modificare i componenti e i moduli esistenti, e crearne di nuovi</p>
-          <p>Il tema Bootstrap Italia è generato secondo le direttive mostrate alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito ufficiale di Bootstrap 4.1.1.</p>
+          <p>Il tema Bootstrap Italia è generato secondo le direttive mostrate alla <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito ufficiale di Bootstrap 4.1.1.</p>
 
 <p>I componenti di Bootstrap Italia sono mostrati in due macro-aree: i <a href="/bootstrap-italia/docs/componenti/">Componenti <em>Base</em></a> e i <a href="/bootstrap-italia/docs/componenti-aggiuntivi/">Componenti <em>Aggiuntivi</em></a> (o <em>Plugin</em>).</p>
 
 <h4 id="componenti-base">Componenti base</h4>
 
-<p>I componenti <em>base</em> sono quelli già presenti nella libreria Bootstrap 4.1.1, che di conseguenza avranno una corrispondente voce in inglese anche nella <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">documentazione</a> di Bootstrap 4.1.1 stesso.</p>
+<p>I componenti <em>base</em> sono quelli già presenti nella libreria Bootstrap 4.1.1, che di conseguenza avranno una corrispondente voce in inglese anche nella <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">documentazione</a> di Bootstrap 4.1.1 stesso.</p>
 
 <p>Tali componenti, all’interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell’accessibilità e nelle funzionalità per rispondere alle <a href="https://design-italia.readthedocs.io/it/stable/index.html">Linee guida di design per i servizi web della PA</a>.</p>
 
@@ -442,7 +450,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Il codice presente in esse, attraverso alcune procedure di compilazione (si può vedere il comando <code class="highlighter-rouge">gulp build</code> nel file <code class="highlighter-rouge">gulpfile.js</code>), viene usato per <em>sovrascrivere</em> il codice già presente in Bootstrap 4.1.1 e ne esporta una versione personalizzata (un tema) nelle cartelle <code class="highlighter-rouge">dist/js</code> e <code class="highlighter-rouge">dist/css</code>.</p>
 
-<p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap 4.1.1.</p>
+<p>Informazioni aggiuntive si possono trovare alla <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">pagina relativa alla creazione di temi</a> sul sito Bootstrap 4.1.1.</p>
 
 <p>In breve, gli elementi su cui intervenire per la creazione o la modifica di componenti personalizzati possono essere:</p>
 
@@ -460,7 +468,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="personalizzazione-di-stile">Personalizzazione di stile</h3>
 
-<p>I componenti base ereditano ovviamente stili e funzionalità da <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4.1.1</a>, di cui si può trovare il codice sorgente all’interno di <code class="highlighter-rouge">node_modules/bootstrap/</code>. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all’interno di <code class="highlighter-rouge">node_modules</code> andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap 4.1.1 mette a disposizione.</p>
+<p>I componenti base ereditano ovviamente stili e funzionalità da <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap 4.1.1</a>, di cui si può trovare il codice sorgente all’interno di <code class="highlighter-rouge">node_modules/bootstrap/</code>. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all’interno di <code class="highlighter-rouge">node_modules</code> andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap 4.1.1 mette a disposizione.</p>
 
 <p>Per la personalizzazione dello stile di tali componenti, andranno infatti sovrascritte o aggiunte variabili nella cartella <code class="highlighter-rouge">src/scss/_variables.scss</code>; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella <code class="highlighter-rouge">src/scss/custom/</code>. Si può notare le modalità con cui il file <code class="highlighter-rouge">bootstrap-italia.scss</code> importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap 4.1.1.</p>
 
@@ -470,7 +478,25 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Per l’implementazione di funzionalità dinamiche che richiedano l’uso di <code class="highlighter-rouge">javascript</code>, si può invece fare riferimento alla cartella <code class="highlighter-rouge">src/js/plugins/</code>.</p>
 
-<p>Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella <code class="highlighter-rouge">node_modules/bootstrap/js/</code> e alla <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">pagina relativa alla creazione di temi</a> e la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">pagina relativa all’utilizzo di Javascript</a> sul sito Bootstrap 4.1.1. In generale, è bene usare attributi <code class="highlighter-rouge">data-</code> per collegare Javascript ai componenti, e non usare i nomi delle classi.</p>
+<p>Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella <code class="highlighter-rouge">node_modules/bootstrap/js/</code> e alla <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">pagina relativa alla creazione di temi</a> e la <a href="https://getbootstrap.com/docs/4.1/getting-started/javascript/">pagina relativa all’utilizzo di Javascript</a> sul sito Bootstrap 4.1.1. In generale, è bene usare attributi <code class="highlighter-rouge">data-</code> per collegare Javascript ai componenti, e non usare i nomi delle classi.</p>
+
+<h3 id="test-di-accessibilità">Test di accessibilità</h3>
+
+<p>Bootstrap Italia utilizza <a href="https://github.com/pa11y/pa11y-ci"><code class="highlighter-rouge">pa11y-ci</code></a> per validare l’accessibilità dei propri componenti. Il file di configurazione esclude alcuni selettori che non sono parte della libreria ed è visibile al file <code class="highlighter-rouge">.pa11yci</code>.</p>
+
+<p>Dopo aver avviato il server locale attraverso <code class="highlighter-rouge">npm start</code>, è possibile utilizzare il seguente comando per validare tutte le pagine della documentazione:</p>
+
+<p><code class="highlighter-rouge">npm run test-a11y</code></p>
+
+<p>Per effettuare invece il test di un singolo componente, è sufficiente utilizzare il comando seguente:</p>
+
+<p><code class="highlighter-rouge">npm run test-a11y-one [indirizzo della documentazione del componente]</code></p>
+
+<h4 id="esempio">Esempio</h4>
+
+<p>Attraverso questo comando è possibile effettuare il test di accessibilità per il componente di esempio “<a href="/bootstrap-italia/docs/come-iniziare/componente-base/">componente base</a>”.</p>
+
+<p><code class="highlighter-rouge">npm run test-a11y-one http://localhost:4000/docs/come-iniziare/componente-base/</code></p>
 
 <hr />
 
@@ -486,12 +512,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -499,14 +525,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

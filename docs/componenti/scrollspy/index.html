@@ -13,16 +13,16 @@
 <title>Scrollspy · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -399,55 +412,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#come-funziona">Come funziona</a></li>
-<li class="toc-entry toc-h2"><a href="#esempio-in-barra-di-navigazione">Esempio in barra di navigazione</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#capitolo-1">Capitolo 1</a></li>
-<li class="toc-entry toc-h4"><a href="#capitolo-2">Capitolo 2</a></li>
-<li class="toc-entry toc-h4"><a href="#capitolo-3---1">Capitolo 3 - 1</a></li>
-<li class="toc-entry toc-h4"><a href="#capitolo-3---2">Capitolo 3 - 2</a></li>
-<li class="toc-entry toc-h4"><a href="#capitolo-3---3">Capitolo 3 - 3</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#esempio-con-navigazione-annidata">Esempio con navigazione annidata</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#articolo-1">Articolo 1</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#articolo-1-1">Articolo 1-1</a></li>
-<li class="toc-entry toc-h5"><a href="#articolo-2-2">Articolo 2-2</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h4"><a href="#articolo-2">Articolo 2</a></li>
-<li class="toc-entry toc-h4"><a href="#articolo-3">Articolo 3</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#articolo-3-1">Articolo 3-1</a></li>
-<li class="toc-entry toc-h5"><a href="#articolo-3-2">Articolo 3-2</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#esempio-con-una-lista-elenco">Esempio con una lista elenco</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#articolo-1-1">Articolo 1</a></li>
-<li class="toc-entry toc-h4"><a href="#articolo-2-1">Articolo 2</a></li>
-<li class="toc-entry toc-h4"><a href="#articolo-3-1">Articolo 3</a></li>
-<li class="toc-entry toc-h4"><a href="#articolo-4">Articolo 4</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#esempio-in-barra-di-navigazione">Esempio in barra di navigazione</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio-con-navigazione-annidata">Esempio con navigazione annidata</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio-con-una-lista-elenco">Esempio con una lista elenco</a></li>
 <li class="toc-entry toc-h2"><a href="#uso">Uso</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#tramite-un-data-attributes">Tramite un data attributes</a></li>
-<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#id-target-richiesto">ID target richiesto</a></li>
-<li class="toc-entry toc-h4"><a href="#gli-elementi-target-non-visible-sono-ignorati">Gli elementi target non :visible sono ignorati</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#scrollspyrefresh">.scrollspy('refresh')</a></li>
-<li class="toc-entry toc-h4"><a href="#scrollspydispose">.scrollspy('dispose')</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
 <li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
 <li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
 </ul>
@@ -480,7 +452,7 @@ classe <code class="highlighter-rouge">.active</code> da un elemento a quello su
 successiva evidenziandola:</p>
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <nav id="navbar-example2" class="navbar bg-white border">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -516,7 +488,7 @@ successiva evidenziandola:</p>
   </div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"navbar-example2"</span> <span class="na">class=</span><span class="s">"navbar navbar-light bg-light"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"navbar-example2"</span> <span class="na">class=</span><span class="s">"navbar bg-white border"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Navbar<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
@@ -556,19 +528,19 @@ successiva evidenziandola:</p>
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
-      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column">
+      <nav id="navbar-example3" class="navbar bg-white border flex-column">
         <a class="navbar-brand" href="#">Navbar</a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#articolo-1">Articolo 1</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#articolo-1-1">Articolo 1-1</a>
-            <a class="nav-link ml-3 my-1" href="#articolo-1-2">Articolo 1-2</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 1-1</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 1-2</a>
           </nav>
           <a class="nav-link" href="#articolo-2">Articolo 2</a>
           <a class="nav-link" href="#articolo-3">Articolo 3</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#articolo-3-1">Articolo 3-1</a>
-            <a class="nav-link ml-3 my-1" href="#articolo-3-2">Articolo 3-2</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 3-1</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 3-2</a>
           </nav>
         </nav>
       </nav>
@@ -599,14 +571,14 @@ successiva evidenziandola:</p>
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav nav-pills flex-column"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#articolo-1"</span><span class="nt">&gt;</span>Articolo 1<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav nav-pills flex-column"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#articolo-1-1"</span><span class="nt">&gt;</span>Articolo 1-1<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#articolo-1-2"</span><span class="nt">&gt;</span>Articolo 1-2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Articolo 1-1<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Articolo 1-2<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/nav&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#articolo-2"</span><span class="nt">&gt;</span>Item2<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#articolo-3"</span><span class="nt">&gt;</span>Item3<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav nav-pills flex-column"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#articolo-3-1"</span><span class="nt">&gt;</span>Articolo 3-1<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#articolo-3-2"</span><span class="nt">&gt;</span>Articolo 3-2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Articolo 3-1<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ml-3 my-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Articolo 3-2<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/nav&gt;</span>
   <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
@@ -780,12 +752,12 @@ qualsiasi componente <code class="highlighter-rouge">.nav</code>.</p>
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -793,14 +765,14 @@ qualsiasi componente <code class="highlighter-rouge">.nav</code>.</p>
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -13,16 +13,16 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -400,17 +413,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#come-iniziare">Come iniziare</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#css">CSS</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#icon-font">Icon font</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#javascript">Javascript</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#versione-bundle">Versione “bundle”</a></li>
-<li class="toc-entry toc-h4"><a href="#versione-semplice">Versione semplice</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
+<li class="toc-entry toc-h3"><a href="#javascript">Javascript</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#pagina-html-di-esempio">Pagina HTML di esempio</a>
@@ -424,11 +428,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#doctype-html5">Doctype HTML5</a></li>
 <li class="toc-entry toc-h3"><a href="#meta-tag-responsive">Meta tag responsive</a></li>
 <li class="toc-entry toc-h3"><a href="#box-sizing">Box-sizing</a></li>
-<li class="toc-entry toc-h3"><a href="#reboot">Reboot</a>
-<ul>
-<li class="toc-entry toc-h6"><a href="#continua-la-lettura-">Continua la lettura ></a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#reboot">Reboot</a></li>
 </ul>
 </li>
 </ul>
@@ -442,7 +442,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS e un Javascript, scaricabili sottoforma di file compresso alla <a href="https://github.com/italia/bootstrap-italia/releases">pagina delle release di progetto</a>:</p>
 
-<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v0.9.1</a></p>
+<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v0.9.2</a></p>
 
 <p>Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager <strong>npm</strong>, puoi fare riferimento a <a href="/bootstrap-italia/docs/come-iniziare/introduzione#utilizzo-come-dipendenza">queste indicazioni</a>.</p>
 
@@ -479,15 +479,15 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.bundle.min.js</code></div>
       </th>
-      <td class="text-success">Incluso</td>
-      <td class="text-success">Incluso</td>
+      <td class="bg-success">Incluso</td>
+      <td class="bg-success">Incluso</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.min.js</code></div>
       </th>
-      <td class="bg-light text-muted">Non Incluso</td>
-      <td class="bg-light text-muted">Non Incluso</td>
+      <td>Non Incluso</td>
+      <td>Non Incluso</td>
     </tr>
   </tbody>
 </table>
@@ -534,7 +534,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="altri-esempi">Altri esempi</h3>
 
-<p>Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione <a href="/bootstrap-italia/docs/esempi/">esempi</a> di questo sito, che <a href="https://getbootstrap.com/docs/4.0/examples/">sul sito di Bootstrap</a>, con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente. Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella <a href="https://github.com/italia/bootstrap-italia/tree/master/docs/esempi">cartella <code class="highlighter-rouge">docs/esempi/</code></a>.</p>
+<p>Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione <a href="/bootstrap-italia/docs/esempi/">esempi</a> di questo sito, che <a href="https://getbootstrap.com/docs/4.1/examples/">sul sito di Bootstrap</a>, con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente. Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella <a href="https://github.com/italia/bootstrap-italia/tree/master/docs/esempi">cartella <code class="highlighter-rouge">docs/esempi/</code></a>.</p>
 
 <h2 id="utilizzo-come-dipendenza">Utilizzo come dipendenza</h2>
 
@@ -573,7 +573,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Si possono trovare dettagli aggiuntivi alla <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/#box-sizing">pagina corrispondente</a> sul sito ufficiale di Bootstrap.</p>
+<p>Si possono trovare dettagli aggiuntivi alla <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/#box-sizing">pagina corrispondente</a> sul sito ufficiale di Bootstrap.</p>
 
 <h3 id="reboot">Reboot</h3>
 
@@ -593,12 +593,12 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -606,14 +606,14 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -13,16 +13,16 @@
 <title>Link list · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -410,7 +423,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </li>
 <li class="toc-entry toc-h2"><a href="#sizing">Sizing</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#heading-">Heading </a></li>
+<li class="toc-entry toc-h3"><a href="#heading">Heading</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#multiline">Multiline</a></li>
@@ -443,17 +456,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-     <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a></li>
-     <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a></li>
-     <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 2"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2 <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -465,13 +478,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+      <a class="list-item" href="#"><span>Link list 1</span></a>
     </li>
     <li>
-      <a class="list-item active" href="#link 2"><span>Link list 2 active </span></a>
+      <a class="list-item active" href="#"><span>Link list 2 active</span></a>
     </li>
     <li>
-      <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+      <a class="list-item" href="#"><span>Link list 3</span></a>
     </li>
   </ul>
 </div>
@@ -479,13 +492,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item active"</span> <span class="na">href=</span><span class="s">"#link 2"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2 active <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2 active<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -498,13 +511,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+      <a class="list-item" href="#"><span>Link list 1</span></a>
     </li>
     <li>
-      <a class="list-item disabled" href="#"><span>Link list 2 disabled </span></a>
+      <a class="list-item disabled" href="#"><span>Link list 2 disabled</span></a>
     </li>
     <li>
-      <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+      <a class="list-item" href="#"><span>Link list 3</span></a>
     </li>
   </ul>
 </div>
@@ -512,13 +525,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2 disabled <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 2 disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -534,22 +547,22 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
 <div class="link-list-wrapper">
    <ul class="link-list">
       <li>
-         <h3>Heading senza link</h3>
+         <h3 id="heading-senza-link">Heading senza link</h3>
       </li>
       <li>
-        <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <a class="list-item" href="#"><span>Link list 1</span></a>
       </li>
       <li>
-        <a class="list-item" href="#link 2"><span>Link list </span></a>
+        <a class="list-item" href="#"><span>Link list</span></a>
       </li>
       <li>
-        <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+        <a class="list-item" href="#"><span>Link list 3</span></a>
       </li>
       <li>
         <span class="divider"></span>
       </li>
       <li>
-        <a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+        <a class="list-item" href="#"><span>Link list 4</span></a>
       </li>
    </ul>
 </div>
@@ -557,22 +570,22 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-         <span class="nt">&lt;h3&gt;</span>Heading senza link<span class="nt">&lt;/h3&gt;</span>
+         <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"heading-senza-link"</span><span class="nt">&gt;</span>Heading senza link<span class="nt">&lt;/h3&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 2"</span><span class="nt">&gt;&lt;span&gt;</span>Link list <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
    <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -583,17 +596,17 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
    <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3><a href="#linkheading">Heading con link</a></h3>
+          <h3 id="heading-con-link"><a href="#">Heading con link</a></h3>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 2"><span>Link list </span></a>
+        <li><a class="list-item" href="#"><span>Link list</span></a>
         </li>
-        <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 3</span></a>
         </li>
         <li><span class="divider"></span>
         </li>
-        <li><a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 4</span></a>
         </li>
       </ul>
     </div>
@@ -603,17 +616,17 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#linkheading"</span><span class="nt">&gt;</span>Heading con link<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+          <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"heading-con-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Heading con link<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 2"</span><span class="nt">&gt;&lt;span&gt;</span>Link list <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -626,17 +639,17 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <h3><a href="#linkheading"><span>Heading </span></a></h3>
+      <h3 id="heading">Heading</h3>
     </li>
-    <li><a class="list-item large" href="#link 1"><span>Link list 1 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item large" href="#link 2"><span>Link list </span></a>
+    <li><a class="list-item large" href="#"><span>Link list</span></a>
     </li>
-    <li><a class="list-item large" href="#link 3"><span>Link list 3 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 3</span></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item large" href="#link 3"><span>Link list 4 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 4</span></a>
     </li>
   </ul>
 </div>
@@ -644,17 +657,17 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#linkheading"</span><span class="nt">&gt;&lt;span&gt;</span>Heading <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Heading<span class="nt">&lt;/h3&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#link 2"</span><span class="nt">&gt;&lt;span&gt;</span>Link list <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#link 3"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 4<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -672,22 +685,22 @@ Per aggiungere un icona bisogna aggiungere al tag <code class="highlighter-rouge
 <div class="bd-example">
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
-    <li><a class="list-item active right-icon" href="#link 1">
+    <li><a class="list-item active right-icon" href="#">
         <span>Link list 1 active</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item  right-icon" href="#link 1">
-        <span>Link list 1 </span>
+    <li><a class="list-item  right-icon" href="#">
+        <span>Link list 1</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item disabled right-icon" href="#link 1">
-        <span>Link list 1 disabled </span>
+    <li><a class="list-item disabled right-icon" href="#">
+        <span>Link list 1 disabled</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
@@ -698,22 +711,22 @@ Per aggiungere un icona bisogna aggiungere al tag <code class="highlighter-rouge
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper multiline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item  right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item  right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span&gt;</span>Link list 1 disabled <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
@@ -736,22 +749,22 @@ Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code cla
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active </span></a>
+    <li><a class="list-item active left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 </span></a>
+    <li><a class="list-item left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled </span></a>
+    <li><a class="list-item disabled left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -765,22 +778,22 @@ Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code cla
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#link 1"><span>Link list 1 active </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item active left-icon right-icon " href="#"><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item left-icon right-icon " href="#link 1"><span>Link list 1 </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item left-icon right-icon " href="#"><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#link 1"><span>Link list 1 disabled </span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item disabled left-icon right-icon " href="#"><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 active <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 disabled <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -799,22 +812,22 @@ Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code cla
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#link 1"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 active </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item active left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item left-icon right-icon " href="#link 1"><i class="it-favorite  left" aria-hidden="true"> </i><span>Link list 1 </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item left-icon right-icon " href="#"><i class="it-favorite  left" aria-hidden="true"> </i><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#link 1"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 disabled </span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item disabled left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite  left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite  left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -828,22 +841,22 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle" /><span>Link list 1 active </span></a>
+    <li><a class="list-item active avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar" /><span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle" /><span>Link list 1 </span></a>
+    <li><a class="list-item avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar" /><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle" /><span>Link list 1 disabled </span></a>
+    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar" /><span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active avatar"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">title=</span><span class="s">"avatartitle"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 active <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active avatar"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">alt=</span><span class="s">"avatar"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item avatar"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">title=</span><span class="s">"avatartitle"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item avatar"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">alt=</span><span class="s">"avatar"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled avatar"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">title=</span><span class="s">"avatartitle"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 disabled <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled avatar"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"avatar"</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/40x40"</span> <span class="na">alt=</span><span class="s">"avatar"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -909,7 +922,7 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group" aria-describedby="">
+      <div class="form-check form-check-group disabled" aria-describedby="">
         <input type="checkbox" id="checkbox8" disabled="" />
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
@@ -932,7 +945,7 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group disabled"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox8"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox8"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -949,38 +962,38 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
       <ul class="link-sublist">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -993,33 +1006,33 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseOne">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseTwo">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseThree">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
@@ -1028,33 +1041,33 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#link 1"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
@@ -1069,12 +1082,12 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -1082,14 +1095,14 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

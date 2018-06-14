@@ -13,16 +13,16 @@
 <title>Form · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -398,65 +411,16 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#input">Input</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#input-text">Input text</a></li>
-<li class="toc-entry toc-h3"><a href="#input-password">Input password</a></li>
-<li class="toc-entry toc-h3"><a href="#input-file">Input file</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#input-autocomplete">Input autocomplete</a></li>
-<li class="toc-entry toc-h3"><a href="#textarea">Textarea</a></li>
-<li class="toc-entry toc-h3"><a href="#icone-aggiuntive">Icone aggiuntive</a></li>
-<li class="toc-entry toc-h3"><a href="#dimensione">Dimensione</a></li>
-<li class="toc-entry toc-h3"><a href="#readonly">Readonly</a></li>
-<li class="toc-entry toc-h3"><a href="#readonly-normalizzato">Readonly normalizzato</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#select">Select</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#select-classica">Select classica</a></li>
-<li class="toc-entry toc-h3"><a href="#select-multipla">Select multipla</a></li>
-<li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
-<li class="toc-entry toc-h3"><a href="#select-con-gruppi-di-opzioni">Select con gruppi di opzioni</a></li>
-<li class="toc-entry toc-h3"><a href="#dimensione-1">Dimensione</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#checkbox-e-radio">Checkbox e radio</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#inline">Inline</a></li>
-<li class="toc-entry toc-h3"><a href="#disabilitato">Disabilitato</a></li>
-<li class="toc-entry toc-h3"><a href="#gruppi">Gruppi</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#toggles">Toggles</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#disabilitato-1">Disabilitato</a></li>
-<li class="toc-entry toc-h3"><a href="#gruppi-1">Gruppi</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#layout">Layout</a>
+<li class="toc-entry toc-h2"><a href="#layout-dei-form">Layout dei Form</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#form-group">Form group</a></li>
-<li class="toc-entry toc-h3"><a href="#form-a-griglia">Form a griglia</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#dimensione-delle-colonne">Dimensione delle colonne</a></li>
-<li class="toc-entry toc-h4"><a href="#auto-dimensionamento">Auto-dimensionamento</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#alternative-alle-etichette-nascoste">Alternative alle etichette nascoste</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#form-a-griglia">Form a griglia</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#testo-di-aiuto">Testo di aiuto</a></li>
-<li class="toc-entry toc-h2"><a href="#form-disabilitato">Form disabilitato</a>
+<li class="toc-entry toc-h2"><a href="#disabilitazione-di-campi">Disabilitazione di campi</a>
 <ul>
-<li class="toc-entry toc-h5"><a href="#caveat-con-ancore">Caveat con ancore</a></li>
-<li class="toc-entry toc-h4"><a href="#compatibilità-cross-browser">Compatibilità Cross-browser</a></li>
+<li class="toc-entry toc-h3"><a href="#disabilitazione-di-un-intero-form">Disabilitazione di un intero form</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#validazione">Validazione</a>
@@ -472,1037 +436,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Form</h1>
           <p class="bd-lead">Elementi e stili per la creazione di form accessibili e responsivi.</p>
-          <h2 id="input">Input</h2>
-
-<p>Per il corretto funzionamento degli elementi di tipo <code class="highlighter-rouge">&lt;input&gt;</code>, è di fondamentale importanza l’utilizzo uno degli appositi attributi <code class="highlighter-rouge">type</code> (ad esempio, <code class="highlighter-rouge">email</code> per l’inserimento di indirizzi email o <code class="highlighter-rouge">number</code> per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell’email, l’utilizzo di metodo di input numerico e altro.</p>
-
-<h3 id="input-text">Input text</h3>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputText" />
-    <label for="exampleInputText">Nominativo</label>
-  </div>
-  <div class="form-group">
-    <input type="number" class="form-control" id="exampleInputNumber" />
-    <label for="exampleInputNumber">Numero partecipanti</label>
-  </div>
-  <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp1" />
-    <label for="exampleInputEmail1">Indirizzo email</label>
-    <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>Nominativo<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputNumber"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputNumber"</span><span class="nt">&gt;</span>Numero partecipanti<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputEmail1"</span> <span class="na">aria-describedby=</span><span class="s">"emailHelp1"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Indirizzo email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"emailHelp1"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Non condivideremo mai la tua email con nessun altro.<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="input-password">Input password</h3>
-
-<p>Per rendere più semplice l’inserimento della password, l’elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>) per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="password" class="form-control" id="exampleInputPassword" />
-    <label for="exampleInputPassword">Password</label>
-  </div>
-  <div class="form-group">
-    <i class="ico-prefix it-lock"></i>
-    <input type="password" class="form-control" id="exampleInputPassword3" aria-describedby="infoPassword" placeholder="Password" />
-    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control form-password" id="exampleInputPassword2" />
-    <label for="exampleInputPassword2">Password con strength meter</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-lock"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword3"</span> <span class="na">aria-describedby=</span><span class="s">"infoPassword"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"infoPassword"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>inserisci almeno 8 caratteri e una lettera maiuscola<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control form-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>Password con strength meter<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="input-file">Input file</h3>
-
-<p>È possibile personalizzare l’elemento <code class="highlighter-rouge">&lt;input type="file"&gt;</code> aggiungendo all’elemento identificato con <code class="highlighter-rouge">.form-group</code> la classe <code class="highlighter-rouge">.form-file</code>. Con l’aggiunta di questa classe, viene nascosto l’elemento <code class="highlighter-rouge">&lt;input&gt;</code> tramite <code class="highlighter-rouge">opacity</code> mentre la <code class="highlighter-rouge">&lt;label&gt;</code> si sovrappone coprendone l’area. Poi un finto pulsante viene generato e posizionato con <code class="highlighter-rouge">::before</code>.</p>
-
-<p>Per gli elementi che usano <code class="highlighter-rouge">.form-file</code> è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile" />
-    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
-  </div>
-  <div class="form-group form-file">
-    <input id="file" class="form-control" type="file" />
-    <label for="file">Esempio campo per l'upload di un singolo file</label>
-    <span class="form-file-name"></span>
-  </div>
-  <div class="form-group form-file">
-    <input id="fileM" class="form-control" type="file" multiple="multiple" />
-    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
-    <span class="form-file-name"></span>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control-file"</span> <span class="na">id=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>Esempio campo senza personalizzazione grafica<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file"</span><span class="nt">&gt;</span>Esempio campo per l'upload di un singolo file<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"fileM"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">multiple=</span><span class="s">"multiple"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileM"</span><span class="nt">&gt;</span>Esempio campo per l'upload multiplo di file<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h4 id="tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</h4>
-
-<p>La <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang">pseudo-classe <code class="highlighter-rouge">:lang ()</code></a> viene utilizzata per consentire la traduzione del testo “Sfoglia” in altri le lingue. Sovrascrivi o aggiungi voci alla variabile SASS <code class="highlighter-rouge">$custom-file-text</code> con il <a href="https://en.wikipedia.org/wiki/IETF_language_tag">tag lingua</a> pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è <code class="highlighter-rouge">en</code>):</p>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$custom-file-text</span><span class="p">:</span> <span class="p">(</span>
-  <span class="n">it</span><span class="o">:</span> <span class="s2">"Sfoglia"</span><span class="o">,</span>
-  <span class="n">en</span><span class="o">:</span> <span class="s2">"Browse"</span>
-<span class="p">);</span></code></pre></figure>
-
-<p>Di seguito un esempio in funzione per la traduzione in inglese:</p>
-
-<div class="bd-example">
-<div class="form-group form-file">
-  <input id="fileEn" class="form-control" type="file" lang="en" />
-  <label for="fileEn">Choose file...</label>
-  <span class="form-file-name"></span>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"fileEn"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileEn"</span><span class="nt">&gt;</span>Choose file...<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<p>È necessario impostare correttamente la lingua del documento (o dell’albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">l’attributo <code class="highlighter-rouge">lang</code></a> sull’elemento <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> o modificando il <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12"><code class="highlighter-rouge">Content-Language</code> HTTP header</a> ad esempio.</p>
-
-<h3 id="input-autocomplete">Input autocomplete</h3>
-
-<p>Per ottenere l’autocomplete bisogna aggiungere all’input la classe <code class="highlighter-rouge">.autocomplete</code> e l’attributo <code class="highlighter-rouge">.data-db</code> con il nome della variabile javascript che contiene l’array da filtrare oppure il nome della funzione che dinamicamente restituirà un array.</p>
-
-<script>
-  function functionRegioni() {
-    var regioni = [
-    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
-    "Tutte"
-    ];
-    return regioni
-  }
-  var regioni = [
-    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
-    "Tutte"
-  ];
-</script>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="search" id="autocomplete1" class="form-control autocomplete" data-db="regioni" />
-    <label for="autocomplete1">Regione</label>
-  </div>
-  <div class="form-group">
-    <input type="search" id="autocomplete2" class="form-control autocomplete" data-db="functionRegioni()" />
-    <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete1"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"regioni"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete1"</span><span class="nt">&gt;</span>Regione<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete2"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"functionRegioni()"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete2"</span><span class="nt">&gt;</span>Regione (con caricamento tramite funzione)<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="textarea">Textarea</h3>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleFormControlTextarea1"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlTextarea1"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="icone-aggiuntive">Icone aggiuntive</h3>
-
-<p>È possibile inserire un’icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo <code class="highlighter-rouge">&lt;input&gt;</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <input class="form-control" type="text" id="videoYoutube" />
-    <label for="videoYoutube">Link video di youtube</label>
-  </div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <select class="custom-select">
-      <option value="" disabled="" selected="">Seleziona un video</option>
-      <option value="1">Video 1</option>
-      <option value="2">Video 2</option>
-      <option value="3">Video 3</option>
-    </select>
-    <label>Elenco video</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"videoYoutube"</span><span class="nt">&gt;</span>Link video di youtube<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona un video<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Video 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Video 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Video 3<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="dimensione">Dimensione</h3>
-
-<p>È possibile modificare la dimensione dell’elemento utilizzando le classi <code class="highlighter-rouge">.form-control-lg</code> e <code class="highlighter-rouge">.form-control-sm</code>, che modificano la grandezza del carattere e la spaziatura interna.</p>
-
-<div class="bd-example">
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
-<input class="form-control" type="text" placeholder="Input predefinito" />
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-lg"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-lg"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Input predefinito"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">".form-control-sm"</span><span class="nt">&gt;</span></code></pre></figure>
-
-<h3 id="readonly">Readonly</h3>
-
-<p>Aggiungi l’attributo booleano <code class="highlighter-rouge">readonly</code> su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.</p>
-
-<div class="bd-example">
-<input class="form-control" type="text" placeholder="Contenuto in sola lettura" readonly="" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span></code></pre></figure>
-
-<h3 id="readonly-normalizzato">Readonly normalizzato</h3>
-
-<p>Se vuoi avere gli elementi <code class="highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="highlighter-rouge">.form-control-plaintext</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly="" />
-    <label for="staticEmail">Email</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control-plaintext"</span> <span class="na">id=</span><span class="s">"staticEmail"</span> <span class="na">value=</span><span class="s">"email@example.com"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"staticEmail"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h2 id="select">Select</h2>
-
-<p>Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag <code class="highlighter-rouge">&lt;select&gt;</code> la classe <code class="highlighter-rouge">.custom-select</code> e seguire le indicazioni riportate di seguito. Il componente <em>select</em> è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.</p>
-
-<p>Di seguito sono mostrate alcune di queste combinazioni.</p>
-
-<h3 id="select-classica">Select classica</h3>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select">
-      <option value="" disabled="" selected="">Seleziona una opzione</option>
-      <option value="1">Opzione 1</option>
-      <option value="2">Opzione 2</option>
-      <option value="3">Opzione 3</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una opzione<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="select-multipla">Select multipla</h3>
-
-<p>La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple="">
-      <option value="" disabled="" selected="">Seleziona una o più regioni</option>
-      
-      <option value="1">Abruzzo</option>
-      <option value="2">Basilicata</option>
-      <option value="3">Calabria</option>
-      <option value="4">Campania</option>
-      <option value="5">Emilia Romagna</option>
-      <option value="6">Friuli Venezia Giulia</option>
-      <option value="7">Lazio</option>
-      <option value="8">Liguria</option>
-      <option value="9">Lombardia</option>
-      <option value="10">Marche</option>
-      <option value="11">Molise</option>
-      <option value="12">Piemonte</option>
-      <option value="13">Puglia</option>
-      <option value="14">Sardegna</option>
-      <option value="15">Sicilia</option>
-      <option value="16">Toscana</option>
-      <option value="17">Trentino Alto Adige</option>
-      <option value="18">Umbria</option>
-      <option value="19">Valle d'Aosta</option>
-      <option value="20">Veneto</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una o più regioni<span class="nt">&lt;/option&gt;</span>
-      
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="select-con-ricerca">Select con ricerca</h3>
-
-<p>Esempio di <code class="highlighter-rouge">select</code> con ricerca:</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" searchable="Cerca una regione">
-      <option value="" disabled="" selected="">Seleziona una regione</option>
-      
-      <option value="1">Abruzzo</option>
-      <option value="2">Basilicata</option>
-      <option value="3">Calabria</option>
-      <option value="4">Campania</option>
-      <option value="5">Emilia Romagna</option>
-      <option value="6">Friuli Venezia Giulia</option>
-      <option value="7">Lazio</option>
-      <option value="8">Liguria</option>
-      <option value="9">Lombardia</option>
-      <option value="10">Marche</option>
-      <option value="11">Molise</option>
-      <option value="12">Piemonte</option>
-      <option value="13">Puglia</option>
-      <option value="14">Sardegna</option>
-      <option value="15">Sicilia</option>
-      <option value="16">Toscana</option>
-      <option value="17">Trentino Alto Adige</option>
-      <option value="18">Umbria</option>
-      <option value="19">Valle d'Aosta</option>
-      <option value="20">Veneto</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">searchable=</span><span class="s">"Cerca una regione"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una regione<span class="nt">&lt;/option&gt;</span>
-      
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="select-con-gruppi-di-opzioni">Select con gruppi di opzioni</h3>
-
-<p>Esempio di <code class="highlighter-rouge">select</code> con gruppi di opzioni:</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple="">
-        <optgroup label="Gruppo 1">
-            <option value="1">Opzione 1</option>
-            <option value="2">Opzione 2</option>
-        </optgroup>
-        <optgroup label="Gruppo 2">
-            <option value="3">Opzione 3</option>
-            <option value="4">Opzione 4</option>
-        </optgroup>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/optgroup&gt;</span>
-        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 2"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/optgroup&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="dimensione-1">Dimensione</h3>
-
-<div class="bd-example">
-<select class="custom-select form-control-lg">
-  <option>Select grande</option>
-</select>
-<select class="custom-select ">
-  <option>Select predefinita</option>
-</select>
-<select class="custom-select form-control-sm">
-  <option>Select piccola</option>
-</select>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select form-control-lg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Select grande<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select "</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Select predefinita<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select form-control-sm"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Select piccola<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span></code></pre></figure>
-
-<h2 id="checkbox-e-radio">Checkbox e radio</h2>
-
-<p>Lo stile degli input di tipo <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> è stato migliorato graficamente per rendere l’esperienza visiva e funzionale migliore. Per ottenere questo risultato è necessario inserire la classe <code class="highlighter-rouge">.form-check</code> nell’elemento padre. Mentre le <code class="highlighter-rouge">checkbox</code> servono a selezionare una o più opzioni in un elenco, i <code class="highlighter-rouge">radio</code> consentono di selezionare una sola opzione tra molte.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-check">
-    <input id="checkbox1" type="checkbox" />
-    <label for="checkbox1">Checkbox di esempio</label>
-  </div>
-  <div class="form-check">
-    <input name="gruppo1" type="radio" id="radio1" checked="" />
-    <label for="radio1">Radio di esempio 1</label>
-  </div>
-  <div class="form-check">
-    <input name="gruppo1" type="radio" id="radio2" />
-    <label for="radio2">Radio di esempio 2</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>Checkbox di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>Radio di esempio 1<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>Radio di esempio 2<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="inline">Inline</h3>
-
-<p>Per allineare orizzontalmente le <code class="highlighter-rouge">checkbox</code> o i <code class="highlighter-rouge">radio</code> basterà aggiungere la classe <code class="highlighter-rouge">.form-check-inline</code> a qualsiasi <code class="highlighter-rouge">.form-check</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="form-check form-check-inline">
-      <input id="checkbox2" type="checkbox" />
-      <label for="checkbox2">Checkbox non selezionato</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input id="checkbox3" type="checkbox" checked="checked" />
-      <label for="checkbox3">Checkbox selezionato</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-check form-check-inline">
-      <input name="gruppo2" type="radio" id="radio4" checked="" />
-      <label for="radio4">Opzione 1</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input name="gruppo2" type="radio" id="radio5" />
-      <label for="radio5">Opzione 2</label>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio4"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio4"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio5"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="disabilitato">Disabilitato</h3>
-
-<p>Affinchè i campi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> risultino disabilitati occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> all’input e la classe <code class="highlighter-rouge">.disabled</code> alla label relativa.</p>
-
-<div class="bd-example">
-<form>
-  <div class="form-check">
-    <input id="checkbox4" type="checkbox" disabled="" />
-    <label for="checkbox4" class="disabled">Checkbox disabilitato non selezionato</label>
-  </div>
-  <div class="form-check">
-    <input id="checkbox5" type="checkbox" disabled="" checked="checked" />
-    <label for="checkbox5" class="disabled">Checkbox disabilitato selezionato</label>
-  </div>
-  <div class="form-check">
-    <input name="gruppo3" type="radio" class="with-gap" id="radio7" checked="" disabled="" />
-    <label for="radio7" class="disabled">Opzione 1 selezionato</label>
-  </div>
-  <div class="form-check">
-    <input name="gruppo3" type="radio" class="with-gap" id="radio8" disabled="" />
-    <label for="radio8" class="disabled">Opzione 2 non selezionato</label>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox5"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox5"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato selezionato<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo3"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"with-gap"</span> <span class="na">id=</span><span class="s">"radio7"</span> <span class="na">checked</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio7"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 1 selezionato<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo3"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"with-gap"</span> <span class="na">id=</span><span class="s">"radio8"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio8"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 2 non selezionato<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="gruppi">Gruppi</h3>
-
-<p>Per poter raggruppare gli elementi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>. L’elemento grafico di spunta verrà allineato alla destra del contenuto testuale.</p>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <input id="checkbox6" type="checkbox" checked="checked" />
-        <label for="checkbox6">Checkbox selezionato</label>
-      </div>
-      <div class="form-check form-check-group">
-        <input id="checkbox7" type="checkbox" />
-        <label for="checkbox7">Checkbox non selezionato</label>
-      </div>
-      <div class="form-check form-check-group">
-        <input id="checkbox8" type="checkbox" disabled="disabled" />
-        <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
-      </div>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked" />
-        <label for="checkbox9">Checkbox selezionato</label>
-        <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <input id="checkbox10" type="checkbox" aria-describedby="checkbox10-help" />
-        <label for="checkbox10">Checkbox non selezionato</label>
-        <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <input id="checkbox11" type="checkbox" aria-describedby="checkbox11-help" disabled="disabled" />
-        <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
-        <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox6"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox6"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox7"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox7"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox8"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox8"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox9"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-describedby=</span><span class="s">"checkbox9-help"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox9"</span><span class="nt">&gt;</span>Checkbox selezionato<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox9-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox10"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-describedby=</span><span class="s">"checkbox10-help"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox10"</span><span class="nt">&gt;</span>Checkbox non selezionato<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox10-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox11"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-describedby=</span><span class="s">"checkbox11-help"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox11"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Checkbox disabilitato non selezionato<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"checkbox11-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <input name="gruppo4" type="radio" id="radio10" checked="" />
-        <label for="radio10">Opzione 1</label>
-      </div>
-      <div class="form-check form-check-group">
-        <input name="gruppo4" type="radio" id="radio11" />
-        <label for="radio11">Opzione 2</label>
-      </div>
-      <div class="form-check form-check-group">
-        <input name="gruppo4" type="radio" id="radio12" disabled="" />
-        <label for="radio12" class="disabled">Opzione 3</label>
-      </div>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <input checked="" name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help" />
-        <label for="radio13">Opzione 1</label>
-        <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio14" aria-describedby="radio14-help" />
-        <label for="radio14">Opzione 2</label>
-        <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio15" aria-describedby="radio15-help" disabled="disabled" />
-        <label for="radio15" class="disabled">Opzione 3</label>
-        <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio10"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio10"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio11"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio11"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio12"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio12"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio13"</span> <span class="na">aria-describedby=</span><span class="s">"radio13-help"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio13"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio13-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio14"</span> <span class="na">aria-describedby=</span><span class="s">"radio14-help"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio14"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio14-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio15"</span> <span class="na">aria-describedby=</span><span class="s">"radio15-help"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio15"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio15-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h2 id="toggles">Toggles</h2>
-
-<p>Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe <code class="highlighter-rouge">.toggles</code>, mentre la label conterrà sia la checkbox che uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.lever</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio1a">
-          Label dell'interruttore 1
-          <input type="checkbox" id="toggleEsempio1a" />
-          <span class="lever"></span>
-        </label>
-      </div>
-    </div>
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio1b">
-          Label dell'interruttore 2
-          <input type="checkbox" id="toggleEsempio1b" />
-          <span class="lever leverRight"></span>
-        </label>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio1a"</span><span class="nt">&gt;</span>
-          Label dell'interruttore 1
-          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio1a"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio1b"</span><span class="nt">&gt;</span>
-          Label dell'interruttore 2
-          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio1b"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever leverRight"</span><span class="nt">&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="disabilitato-1">Disabilitato</h3>
-
-<p>Affinchè l’interruttore risulti disabilitato occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al checkbox.</p>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio2a">
-          Label dell'interruttore 1
-          <input disabled="" type="checkbox" id="toggleEsempio2a" />
-          <span class="lever"></span>
-        </label>
-      </div>
-    </div>
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio2b">
-          Label dell'interruttore 2
-          <input disabled="" type="checkbox" id="toggleEsempio2b" checked="" />
-          <span class="lever leverRight"></span>
-        </label>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio2a"</span><span class="nt">&gt;</span>
-          Label dell'interruttore 1
-          <span class="nt">&lt;input</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio2a"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check col-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio2b"</span><span class="nt">&gt;</span>
-          Label dell'interruttore 2
-          <span class="nt">&lt;input</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio2b"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever leverRight"</span><span class="nt">&gt;&lt;/span&gt;</span>
-        <span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h3 id="gruppi-1">Gruppi</h3>
-
-<p>Per poter raggruppare gli elementi <strong>toggle</strong> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>.</p>
-
-<div class="bd-example">
-<form>
-  <div class="row">
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3a">
-            Toggle acceso
-            <input type="checkbox" id="toggleEsempio3a" checked="" />
-            <span class="lever"></span>
-          </label>
-        </div>
-      </div>
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3b">
-            Toggle spento
-            <input type="checkbox" id="toggleEsempio3b" />
-            <span class="lever"></span>
-          </label>
-        </div>
-      </div>
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3c">
-            Toggle disabilitato
-            <input type="checkbox" id="toggleEsempio3c" disabled="" />
-            <span class="lever"></span>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="col-2"></div>
-    <div class="col-5">
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3d">
-            Toggle acceso
-            <input type="checkbox" id="toggleEsempio3d" aria-describedby="toggle3d-help" checked="" />
-            <span class="lever"></span>
-          </label>
-        </div>
-        <small id="toggle3d-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3e">
-            Toggle spento
-            <input type="checkbox" id="toggleEsempio3e" aria-describedby="toggle3e-help" />
-            <span class="lever"></span>
-          </label>
-        </div>
-        <small id="toggle3e-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-      <div class="form-check form-check-group">
-        <div class="toggles">
-          <label for="toggleEsempio3f">
-            Toggle disabilitato
-            <input type="checkbox" id="toggleEsempio3f" aria-describedby="toggle3f-help" disabled="" />
-            <span class="lever"></span>
-          </label>
-        </div>
-        <small id="toggle3f-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3a"</span><span class="nt">&gt;</span>
-            Toggle acceso
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3a"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3b"</span><span class="nt">&gt;</span>
-            Toggle spento
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3b"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3c"</span><span class="nt">&gt;</span>
-            Toggle disabilitato
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3c"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3d"</span><span class="nt">&gt;</span>
-            Toggle acceso
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3d"</span> <span class="na">aria-describedby=</span><span class="s">"toggle3d-help"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"toggle3d-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3e"</span><span class="nt">&gt;</span>
-            Toggle spento
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3e"</span> <span class="na">aria-describedby=</span><span class="s">"toggle3e-help"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"toggle3e-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleEsempio3f"</span><span class="nt">&gt;</span>
-            Toggle disabilitato
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleEsempio3f"</span> <span class="na">aria-describedby=</span><span class="s">"toggle3f-help"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"toggle3f-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-<h2 id="layout">Layout</h2>
+          <h2 id="layout-dei-form">Layout dei Form</h2>
 
 <p>Di base quasi tutti gli elementi del form vengono applicati <code class="highlighter-rouge">display: block</code> e <code class="highlighter-rouge">width: 100%</code>. Nella visualizzazione predefinita gli elementi verranno impilati verticalmente. È possibile utilizzare classi aggiuntive per variare questo tipo di layout.</p>
 
@@ -1511,7 +445,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe <code class="highlighter-rouge">.form-group</code> per ogni singolo blocco, in questo modo l’elemento input, l’etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità predisposte per loro. Puoi usarlo con <code class="highlighter-rouge">&lt;fieldset&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code> o qualsiasi altro elemento.</p>
 
 <div class="bd-example">
-<form>
+<div>
   <div class="form-group">
     <input type="text" class="form-control" id="formGroupExampleInput" />
     <label for="formGroupExampleInput">Esempio di etichetta</label>
@@ -1520,9 +454,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <input type="text" class="form-control" id="formGroupExampleInput2" />
     <label for="formGroupExampleInput2">Altro esempio di etichetta</label>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>Esempio di etichetta<span class="nt">&lt;/label&gt;</span>
@@ -1531,14 +465,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>Altro esempio di etichetta<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="form-a-griglia">Form a griglia</h3>
 
 <p>Strutture più complesse possono essere costruite usando il sistema a griglia. Utilizzali per i layout dei moduli che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive.</p>
 
 <div class="bd-example">
-<form>
+<div>
   <div class="row">
     <div class="form-group col">
       <input type="text" class="form-control" id="formNome" />
@@ -1549,9 +483,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <label for="formCognome">Cognome</label>
     </div>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formNome"</span><span class="nt">&gt;</span>
@@ -1562,12 +496,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formCognome"</span><span class="nt">&gt;</span>Cognome<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Ecco l’esempio di una struttura più complessa creata con il sistema a griglie.</p>
 
 <div class="bd-example">
-<form>
+<div>
   <div class="row">
     <div class="form-group col-md-6">
       <input type="email" class="form-control" id="inputEmail4" />
@@ -1613,9 +547,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <label for="campofac">Campo facoltativo</label>
     </div>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail4"</span><span class="nt">&gt;</span>
@@ -1661,14 +595,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"campofac"</span><span class="nt">&gt;</span>Campo facoltativo<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h4 id="dimensione-delle-colonne">Dimensione delle colonne</h4>
 
 <p>Puoi scegliere di dare una dimensione a una colonna, ad esempio dandogli una classe <code class="highlighter-rouge">.col-7</code>, mentre le restanti <code class="highlighter-rouge">.col</code> si divideranno il resto dello spazio.</p>
 
 <div class="bd-example">
-<form>
+<div>
   <div class="form-row">
     <div class="form-group col-7">
       <input type="text" class="form-control" id="Citta" />
@@ -1683,9 +617,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <label for="CAP">CAP</label>
     </div>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-7"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"Citta"</span><span class="nt">&gt;</span>
@@ -1700,14 +634,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"CAP"</span><span class="nt">&gt;</span>CAP<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h4 id="auto-dimensionamento">Auto-dimensionamento</h4>
 
 <p>L’esempio seguente usa una delle utilità di flexbox per centrare verticalmente il contenuto e cambiando <code class="highlighter-rouge">.col</code> con <code class="highlighter-rouge">.col-auto</code> in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: <code class="highlighter-rouge">col-sm-3</code>).</p>
 
 <div class="bd-example">
-<form>
+<div>
   <div class="form-row align-items-center">
     <div class="col-auto">
       <label class="sr-only" for="inlineFormInput">Nome</label>
@@ -1734,9 +668,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <button type="submit" class="btn btn-primary">Invia</button>
     </div>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row align-items-center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-auto"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"inlineFormInput"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/label&gt;</span>
@@ -1763,7 +697,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Invia<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="alternative-alle-etichette-nascoste">Alternative alle etichette nascoste</h5>
@@ -1777,14 +711,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-callout bd-callout-warning">
 <p><strong>Associazione del testo di aiuto con gli elementi del modulo form</strong></p>
 
-<p>Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l’attributo <code class="highlighter-rouge">aria-describedby</code>. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l’utente avrà il focus sull’elemento.</p>
+<p>Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l’attributo <code class="highlighter-rouge">aria-labelledby</code>. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l’utente avrà il focus sull’elemento.</p>
 </div>
 
 <p>Il testo di aiuto sotto gli input può essere abbinato a <code class="highlighter-rouge">.form-text</code>. Questa classe include <code class="highlighter-rouge">display: block</code> e aggiunge un margine superiore per una facile spaziatura dagli input sopra.</p>
 
 <div class="bd-example">
 <div class="form-group">
-  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" />
+  <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" />
   <label for="inputPassword5">Password</label>
   <small id="passwordHelpBlock" class="form-text text-muted">
     La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
@@ -1792,7 +726,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword5"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">aria-describedby=</span><span class="s">"passwordHelpBlock"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword5"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">aria-labelledby=</span><span class="s">"passwordHelpBlock"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword5"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"passwordHelpBlock"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>
     La tua password deve essere lunga 8-20 caratteri, contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
@@ -1802,39 +736,42 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Il testo inline può usare qualsiasi tipico elemento HTML in linea (che sia un <code class="highlighter-rouge">&lt;small&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, o qualcos’altro) con nient’altro che una classe di utilità.</p>
 
 <div class="bd-example">
-<form class="form-inline">
+<div class="form-inline">
   <div class="form-group">
-    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
+    <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-labelledby="passwordHelpInline" />
     <label for="inputPassword6">Password</label>
     <small id="passwordHelpInline" class="text-muted">
       Deve essere lunga 8-20 caratteri.
     </small>
   </div>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-inline"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword6"</span> <span class="na">class=</span><span class="s">"form-control mx-sm-3"</span> <span class="na">aria-describedby=</span><span class="s">"passwordHelpInline"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"inputPassword6"</span> <span class="na">class=</span><span class="s">"form-control mx-sm-3"</span> <span class="na">aria-labelledby=</span><span class="s">"passwordHelpInline"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword6"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"passwordHelpInline"</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>
       Deve essere lunga 8-20 caratteri.
     <span class="nt">&lt;/small&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="form-disabilitato">Form disabilitato</h2>
+<h2 id="disabilitazione-di-campi">Disabilitazione di campi</h2>
 
 <p>Aggiungi l’attributo booleano <code class="highlighter-rouge">disabled</code> su un input per impedire le interazioni dell’utente e renderlo più chiaro.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"disabledInput"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled input here..."</span> <span class="na">disabled</span><span class="nt">&gt;</span></code></pre></figure>
 
+<h3 id="disabilitazione-di-un-intero-form">Disabilitazione di un intero form</h3>
+
 <p>Aggiungi l’attributo <code class="highlighter-rouge">disabled</code> al <code class="highlighter-rouge">&lt;fieldset&gt;</code> per disabilitare tutti gli elementi del form contenuti.</p>
 
 <div class="bd-example">
-<form>
-  <fieldset disabled="">
+<div>
+  <fieldset disabled="" aria-label="Form disabilitato">
+    <legend>Esempio di form disabilitato</legend>
     <div class="form-group">
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" />
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="input disabilitato" />
       <label for="disabledTextInput">Input </label>
     </div>
     <div class="form-group">
@@ -1846,7 +783,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </div>
     <div class="form-group">
       <select id="disabledSelect" class="form-control">
-        <option>Disabled select</option>
+        <option>select disabilitata</option>
       </select>
       <label for="disabledSelect">Select default disabilitata</label>
     </div>
@@ -1858,12 +795,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </div>
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </fieldset>
-</form>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;fieldset</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">disabled</span> <span class="na">aria-label=</span><span class="s">"Form disabilitato"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend&gt;</span>Esempio di form disabilitato<span class="nt">&lt;/legend&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"disabledTextInput"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Disabled input"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"disabledTextInput"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"input disabilitato"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"disabledTextInput"</span><span class="nt">&gt;</span>Input <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
@@ -1875,7 +813,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"disabledSelect"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Disabled select<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>select disabilitata<span class="nt">&lt;/option&gt;</span>
       <span class="nt">&lt;/select&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"disabledSelect"</span><span class="nt">&gt;</span>Select default disabilitata<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -1887,7 +825,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mt-3"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="caveat-con-ancore">Caveat con ancore</h5>
@@ -1919,7 +857,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <li>In alternativa esistono le classi <code class="highlighter-rouge">.is-invalid</code> e <code class="highlighter-rouge">.is-valid</code> che possono essere usate al posto delle pseudo-classi per una validazione lato server. Non richiedono la presenza della classe  <code class="highlighter-rouge">.was-validated</code> nel contenitore padre.</li>
   <li>A causa dei vincoli nel modo in cui i CSS funzionano, non possiamo (al momento) applicare gli stili a un <code class="highlighter-rouge">&lt;label&gt;</code> che precede un controllo del form nel DOM senza l’aiuto del codice JavaScript personalizzato.</li>
   <li>Tutti i browser moderni supportano le <a href="https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api">constraint validation API</a>, una serie di metodi JavaScript per la convalida dei controlli del modulo.</li>
-  <li>I messaggi di feedback possono utilizzare le <a href="#browser-defaults">impostazioni predefinite del browser</a> (diversi da un browser all’altro e non stilizzati tramite CSS) o gli stili di feedback personalizzati con HTML e CSS aggiuntivi.</li>
+  <li>I messaggi di feedback possono utilizzare le (diversi da un browser all’altro e non stilizzati tramite CSS) o gli stili di feedback personalizzati con HTML e CSS aggiuntivi.</li>
   <li>Puoi fornire messaggi di validazioni personalizzati con <code class="highlighter-rouge">setCustomValidity</code> in JavaScript.</li>
 </ul>
 
@@ -1951,7 +889,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="" />
+        <input type="text" class="form-control" id="validationCustomUsername" aria-labelledby="inputGroupPrepend" required="" />
         <div class="invalid-feedback">
           Per favore scegli un username.
         </div>
@@ -2033,7 +971,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span> <span class="na">id=</span><span class="s">"inputGroupPrepend"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"validationCustomUsername"</span> <span class="na">aria-describedby=</span><span class="s">"inputGroupPrepend"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"validationCustomUsername"</span> <span class="na">aria-labelledby=</span><span class="s">"inputGroupPrepend"</span> <span class="na">required</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span><span class="nt">&gt;</span>
           Per favore scegli un username.
         <span class="nt">&lt;/div&gt;</span>
@@ -2102,12 +1040,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -2115,14 +1053,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

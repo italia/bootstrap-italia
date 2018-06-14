@@ -13,16 +13,16 @@
 <title>Card · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -398,81 +411,26 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#panoramica">Panoramica</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</a></li>
-<li class="toc-entry toc-h4"><a href="#titolo-esempio-card">Titolo esempio Card</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#panoramica">Panoramica</a></li>
 <li class="toc-entry toc-h2"><a href="#struttura">Struttura</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#body">Body</a></li>
-<li class="toc-entry toc-h3"><a href="#titoli-testo-e-link">Titoli, testo e link</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#titolo-card">Titolo card</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#sottotitolo-card">Sottotitolo card</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#immagini">Immagini</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-1">Titolo card</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#testata-e-piè-di-pagina">Testata e piè di pagina</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-2">Titolo card</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#titoli-testo-e-link">Titoli, testo e link</a></li>
+<li class="toc-entry toc-h3"><a href="#immagini">Immagini</a></li>
+<li class="toc-entry toc-h3"><a href="#testata-e-piè-di-pagina">Testata e piè di pagina</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#esempi-componenti">Esempi componenti</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#gruppo-di-elenchi">Gruppo di elenchi</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#titolo-card-3">Titolo card</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#barra-di-navigazione">Barra di navigazione</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-4">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-5">Titolo card</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#gruppo-di-elenchi">Gruppo di elenchi</a></li>
+<li class="toc-entry toc-h3"><a href="#barra-di-navigazione">Barra di navigazione</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#card-layout">Card layout</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#gruppo-di-card">Gruppo di card</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-6">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-7">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-8">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-9">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-10">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-11">Titolo card</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#set-di-card">Set di card</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-12">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-13">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-14">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-15">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-16">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-17">Titolo card</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#colonne-di-card">Colonne di card</a>
-<ul>
-<li class="toc-entry toc-h5"><a href="#titolo-card-molto-lunga">Titolo card molto lunga</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-18">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-19">Titolo card</a></li>
-<li class="toc-entry toc-h5"><a href="#titolo-card-20">Titolo card</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#gruppo-di-card">Gruppo di card</a></li>
+<li class="toc-entry toc-h3"><a href="#set-di-card">Set di card</a></li>
+<li class="toc-entry toc-h3"><a href="#colonne-di-card">Colonne di card</a></li>
 </ul>
 </li>
 </ul>
@@ -494,7 +452,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Le card possono essere personalizzate nel colore del testo e di sfondo con le <a href="/bootstrap-italia/docs/utilities/colori/">utilità di colore</a> e nelle bordature con le relative <a href="/bootstrap-italia/docs/utilities/bordi/">utilità per i bordi</a>.</p>
 
-<div class="bd-callout bd-callout-warning">
+<div class="bd-callout bd-callout-accessibility">
 <h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
 
 <p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="highlighter-rouge">.sr-only</code>.</p>
@@ -1056,7 +1014,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
     </div>
   </div>
-  <div class="card bg-primary text-white text-center p-3">
+  <div class="card bg-dark text-white text-center p-3">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
       <footer class="blockquote-footer">
@@ -1121,7 +1079,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card bg-primary text-white text-center p-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card bg-dark text-white text-center p-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote mb-0"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
@@ -1179,12 +1137,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -1192,14 +1150,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

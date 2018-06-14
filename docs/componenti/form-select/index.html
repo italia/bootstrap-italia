@@ -13,16 +13,16 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201805311525" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -43,7 +43,7 @@
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/select/">
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/form-select/">
 <meta property="og:title" content="Select">
 <meta property="og:description" content="Componente Select">
 <meta property="og:type" content="website">
@@ -140,21 +140,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     
   </div>
 </header>
@@ -231,7 +232,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a></li><li>
+            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -250,6 +251,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/form/">
               Form
             </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
@@ -279,9 +295,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/scrollspy/">
               Scrollspy
-            </a></li><li class="active bd-sidenav-active">
-            <a href="/bootstrap-italia/docs/componenti/select/">
-              Select
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/skiplinks/">
               Skiplinks
@@ -416,196 +429,180 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <h3 id="select-classica">Select classica</h3>
 
 <div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select">
-      <option value="" disabled="" selected="">Seleziona una opzione</option>
-      <option value="1">Opzione 1</option>
-      <option value="2">Opzione 2</option>
-      <option value="3">Opzione 3</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
+<div class="form-group">
+  <select class="custom-select" id="select-example">
+    <option value="" disabled="" selected="">Seleziona una opzione</option>
+    <option value="1">Opzione 1</option>
+    <option value="2">Opzione 2</option>
+    <option value="3">Opzione 3</option>
+  </select>
+  <label for="select-example">Label di esempio</label>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una opzione<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">id=</span><span class="s">"select-example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una opzione<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"select-example"</span><span class="nt">&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="select-multipla">Select multipla</h3>
 
 <p>La personalizzazione attraverso Bootstrap Italia permette di selezionare più elementi in modo naturale, senza la necessità di tenere premute combinazioni da tastiera.</p>
 
 <div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple="">
-      <option value="" disabled="" selected="">Seleziona una o più regioni</option>
-      
-      <option value="1">Abruzzo</option>
-      <option value="2">Basilicata</option>
-      <option value="3">Calabria</option>
-      <option value="4">Campania</option>
-      <option value="5">Emilia Romagna</option>
-      <option value="6">Friuli Venezia Giulia</option>
-      <option value="7">Lazio</option>
-      <option value="8">Liguria</option>
-      <option value="9">Lombardia</option>
-      <option value="10">Marche</option>
-      <option value="11">Molise</option>
-      <option value="12">Piemonte</option>
-      <option value="13">Puglia</option>
-      <option value="14">Sardegna</option>
-      <option value="15">Sicilia</option>
-      <option value="16">Toscana</option>
-      <option value="17">Trentino Alto Adige</option>
-      <option value="18">Umbria</option>
-      <option value="19">Valle d'Aosta</option>
-      <option value="20">Veneto</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
+<div class="form-group">
+  <select class="custom-select" multiple="" id="select-multiple-example">
+    <option value="" disabled="" selected="">Seleziona una o più regioni</option>
+    
+    <option value="1">Abruzzo</option>
+    <option value="2">Basilicata</option>
+    <option value="3">Calabria</option>
+    <option value="4">Campania</option>
+    <option value="5">Emilia Romagna</option>
+    <option value="6">Friuli Venezia Giulia</option>
+    <option value="7">Lazio</option>
+    <option value="8">Liguria</option>
+    <option value="9">Lombardia</option>
+    <option value="10">Marche</option>
+    <option value="11">Molise</option>
+    <option value="12">Piemonte</option>
+    <option value="13">Puglia</option>
+    <option value="14">Sardegna</option>
+    <option value="15">Sicilia</option>
+    <option value="16">Toscana</option>
+    <option value="17">Trentino Alto Adige</option>
+    <option value="18">Umbria</option>
+    <option value="19">Valle d'Aosta</option>
+    <option value="20">Veneto</option>
+  </select>
+  <label for="select-multiple-example">Label di esempio</label>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una o più regioni<span class="nt">&lt;/option&gt;</span>
-      
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span> <span class="na">id=</span><span class="s">"select-multiple-example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una o più regioni<span class="nt">&lt;/option&gt;</span>
+    
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"select-multiple-example"</span><span class="nt">&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="select-con-ricerca">Select con ricerca</h3>
 
 <p>Esempio di <em>select</em> con ricerca:</p>
 
 <div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" searchable="Cerca una regione">
-      <option value="" disabled="" selected="">Seleziona una regione</option>
-      
-      <option value="1">Abruzzo</option>
-      <option value="2">Basilicata</option>
-      <option value="3">Calabria</option>
-      <option value="4">Campania</option>
-      <option value="5">Emilia Romagna</option>
-      <option value="6">Friuli Venezia Giulia</option>
-      <option value="7">Lazio</option>
-      <option value="8">Liguria</option>
-      <option value="9">Lombardia</option>
-      <option value="10">Marche</option>
-      <option value="11">Molise</option>
-      <option value="12">Piemonte</option>
-      <option value="13">Puglia</option>
-      <option value="14">Sardegna</option>
-      <option value="15">Sicilia</option>
-      <option value="16">Toscana</option>
-      <option value="17">Trentino Alto Adige</option>
-      <option value="18">Umbria</option>
-      <option value="19">Valle d'Aosta</option>
-      <option value="20">Veneto</option>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
+<div class="form-group">
+  <select class="custom-select" searchable="Cerca una regione" id="select-searchable-example">
+    <option value="" disabled="" selected="">Seleziona una regione</option>
+    
+    <option value="1">Abruzzo</option>
+    <option value="2">Basilicata</option>
+    <option value="3">Calabria</option>
+    <option value="4">Campania</option>
+    <option value="5">Emilia Romagna</option>
+    <option value="6">Friuli Venezia Giulia</option>
+    <option value="7">Lazio</option>
+    <option value="8">Liguria</option>
+    <option value="9">Lombardia</option>
+    <option value="10">Marche</option>
+    <option value="11">Molise</option>
+    <option value="12">Piemonte</option>
+    <option value="13">Puglia</option>
+    <option value="14">Sardegna</option>
+    <option value="15">Sicilia</option>
+    <option value="16">Toscana</option>
+    <option value="17">Trentino Alto Adige</option>
+    <option value="18">Umbria</option>
+    <option value="19">Valle d'Aosta</option>
+    <option value="20">Veneto</option>
+  </select>
+  <label for="select-searchable-example">Label di esempio</label>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">searchable=</span><span class="s">"Cerca una regione"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una regione<span class="nt">&lt;/option&gt;</span>
-      
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">searchable=</span><span class="s">"Cerca una regione"</span> <span class="na">id=</span><span class="s">"select-searchable-example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una regione<span class="nt">&lt;/option&gt;</span>
+    
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Abruzzo<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Basilicata<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Calabria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Campania<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">&gt;</span>Emilia Romagna<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"6"</span><span class="nt">&gt;</span>Friuli Venezia Giulia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"7"</span><span class="nt">&gt;</span>Lazio<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"8"</span><span class="nt">&gt;</span>Liguria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"9"</span><span class="nt">&gt;</span>Lombardia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"10"</span><span class="nt">&gt;</span>Marche<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"11"</span><span class="nt">&gt;</span>Molise<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"12"</span><span class="nt">&gt;</span>Piemonte<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"13"</span><span class="nt">&gt;</span>Puglia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"14"</span><span class="nt">&gt;</span>Sardegna<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"15"</span><span class="nt">&gt;</span>Sicilia<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"16"</span><span class="nt">&gt;</span>Toscana<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"17"</span><span class="nt">&gt;</span>Trentino Alto Adige<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"18"</span><span class="nt">&gt;</span>Umbria<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"19"</span><span class="nt">&gt;</span>Valle d'Aosta<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"20"</span><span class="nt">&gt;</span>Veneto<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"select-searchable-example"</span><span class="nt">&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="select-con-gruppi-di-opzioni">Select con gruppi di opzioni</h3>
 
 <p>Esempio di <em>select</em> con gruppi di opzioni:</p>
 
 <div class="bd-example">
-<form>
-  <div class="form-group">
-    <select class="custom-select" multiple="">
-        <optgroup label="Gruppo 1">
-            <option value="1">Opzione 1</option>
-            <option value="2">Opzione 2</option>
-        </optgroup>
-        <optgroup label="Gruppo 2">
-            <option value="3">Opzione 3</option>
-            <option value="4">Opzione 4</option>
-        </optgroup>
-    </select>
-    <label>Label di esempio</label>
-  </div>
-</form>
+<div class="form-group">
+  <select class="custom-select" multiple="" id="select-groups-example">
+      <optgroup label="Gruppo 1">
+          <option value="1">Opzione 1</option>
+          <option value="2">Opzione 2</option>
+      </optgroup>
+      <optgroup label="Gruppo 2">
+          <option value="3">Opzione 3</option>
+          <option value="4">Opzione 4</option>
+      </optgroup>
+  </select>
+  <label for="select-groups-example">Label di esempio</label>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/optgroup&gt;</span>
-        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 2"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/optgroup&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">multiple</span> <span class="na">id=</span><span class="s">"select-groups-example"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/optgroup&gt;</span>
+      <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/optgroup&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"select-groups-example"</span><span class="nt">&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
         </main>
@@ -615,12 +612,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
       </div>
-      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
         <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
       </div>
     </div>
   </div>
@@ -628,14 +625,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201805311525"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha256-Daf8GuI2eLKHJlOWLRR/zRy9Clqcj4TUSumbxYH9kGI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201805311525"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

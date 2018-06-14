@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="it">
+<head>
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Elementi e stili per la creazione di input accessibili e responsivi.">
+<meta name="author" content="Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.8.1">
+<meta name="robots" content="noindex">
+
+<title>Form Input · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201806141430" rel="stylesheet">
+
+<!-- Icon Font CSS -->
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201806141430" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201806141430" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.webmanifest">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:creator" content="Team per la Trasformazione Digitale">
+<meta name="twitter:title" content="Form Input">
+<meta name="twitter:description" content="Elementi e stili per la creazione di input accessibili e responsivi.">
+<meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/form-input/">
+<meta property="og:title" content="Form Input">
+<meta property="og:description" content="Elementi e stili per la creazione di input accessibili e responsivi.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+// Disabilita tracciamento se il cookie cookies_consent non esiste
+if (document.cookie.indexOf('cookies_consent=true') === -1) {
+  window['ga-disable-UA-114758441-1'] = true;
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114758441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114758441-1');
+</script>
+
+
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.developers.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="navbar-main navbar navbar-dark bd-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column pl-3 pl-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-sm btn-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item pr-2">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.2/bootstrap-italia.zip" aria-label="Download">
+          <i class="it-download"></i><span class="sr-only">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pr-2">
+        <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure
+            </a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alert/">
+              Alert
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
+              Barre di Avanzamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumb/">
+              Breadcrumb
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/bottoni/">
+              Bottoni
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/checkbox/">
+              Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdown/">
+              Dropdown
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form/">
+              Form
+            </a><span class="badge badge-info">wip</span></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/hero/">
+              Hero
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/input-group/">
+              Input group
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/link-list/">
+              Link list
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/offcanvas/">
+              Offcanvas
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pager/">
+              Pager
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popover/">
+              Popover
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/radio-button/">
+              Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/skiplinks/">
+              Skiplinks
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltip/">
+              Tooltip
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
+              Cookiebar
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/forward/">
+              Forward
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
+              Back to top
+            </a><span class="badge badge-info">wip</span></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori/">
+              Colori
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori-custom/">
+              Colori Custom
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
+              Ombreggiature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/posizionamento/">
+              Posizionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/esempi/">
+        Esempi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/informazioni/">
+        Informazioni
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#input">Input</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#input-text">Input text</a></li>
+<li class="toc-entry toc-h3"><a href="#input-password">Input password</a></li>
+<li class="toc-entry toc-h3"><a href="#input-file">Input file</a></li>
+<li class="toc-entry toc-h3"><a href="#input-autocomplete">Input autocomplete</a></li>
+<li class="toc-entry toc-h3"><a href="#textarea">Textarea</a></li>
+<li class="toc-entry toc-h3"><a href="#icone-aggiuntive">Icone aggiuntive</a></li>
+<li class="toc-entry toc-h3"><a href="#readonly">Readonly</a></li>
+<li class="toc-entry toc-h3"><a href="#readonly-normalizzato">Readonly normalizzato</a></li>
+</ul>
+</li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Form Input</h1>
+          <p class="bd-lead">Elementi e stili per la creazione di input accessibili e responsivi.</p>
+          <h2 id="input">Input</h2>
+
+<p>Per il corretto funzionamento degli elementi di tipo <code class="highlighter-rouge">&lt;input&gt;</code>, è di fondamentale importanza l’utilizzo uno degli appositi attributi <code class="highlighter-rouge">type</code> (ad esempio, <code class="highlighter-rouge">email</code> per l’inserimento di indirizzi email o <code class="highlighter-rouge">number</code> per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell’email, l’utilizzo di metodo di input numerico e altro.</p>
+
+<h3 id="input-text">Input text</h3>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="exampleInputText" />
+    <label for="exampleInputText">Nominativo</label>
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" id="exampleInputNumber" />
+    <label for="exampleInputNumber">Numero partecipanti</label>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1" />
+    <label for="exampleInputEmail1">Indirizzo email</label>
+    <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputText"</span><span class="nt">&gt;</span>Nominativo<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputNumber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputNumber"</span><span class="nt">&gt;</span>Numero partecipanti<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputEmail1"</span> <span class="na">aria-labelledby=</span><span class="s">"emailHelp1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Indirizzo email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"emailHelp1"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Non condivideremo mai la tua email con nessun altro.<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="input-password">Input password</h3>
+
+<p>Per rendere più semplice l’inserimento della password, l’elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>) per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>.</p>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <input type="password" class="form-control" id="exampleInputPassword" />
+    <label for="exampleInputPassword">Password</label>
+  </div>
+  <div class="form-group">
+    <i class="ico-prefix it-lock"></i>
+    <input type="password" class="form-control" id="exampleInputPassword3" aria-labelledby="infoPassword" placeholder="Password" />
+    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control form-password" id="exampleInputPassword2" />
+    <label for="exampleInputPassword2">Password con strength meter</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-lock"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword3"</span> <span class="na">aria-labelledby=</span><span class="s">"infoPassword"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"infoPassword"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>inserisci almeno 8 caratteri e una lettera maiuscola<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control form-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>Password con strength meter<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="input-file">Input file</h3>
+
+<p>È possibile personalizzare l’elemento <code class="highlighter-rouge">&lt;input type="file"&gt;</code> aggiungendo all’elemento identificato con <code class="highlighter-rouge">.form-group</code> la classe <code class="highlighter-rouge">.form-file</code>. Con l’aggiunta di questa classe, viene nascosto l’elemento <code class="highlighter-rouge">&lt;input&gt;</code> tramite <code class="highlighter-rouge">opacity</code> mentre la <code class="highlighter-rouge">&lt;label&gt;</code> si sovrappone coprendone l’area. Poi un finto pulsante viene generato e posizionato con <code class="highlighter-rouge">::before</code>.</p>
+
+<p>Per gli elementi che usano <code class="highlighter-rouge">.form-file</code> è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.</p>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <input type="file" class="form-control-file" id="exampleFormControlFile" />
+    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
+  </div>
+  <div class="form-group form-file">
+    <input id="file" class="form-control" type="file" />
+    <label for="file">Esempio campo per l'upload di un singolo file</label>
+    <span class="form-file-name"></span>
+  </div>
+  <div class="form-group form-file">
+    <input id="fileM" class="form-control" type="file" multiple="multiple" />
+    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
+    <span class="form-file-name"></span>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control-file"</span> <span class="na">id=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlFile"</span><span class="nt">&gt;</span>Esempio campo senza personalizzazione grafica<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file"</span><span class="nt">&gt;</span>Esempio campo per l'upload di un singolo file<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"fileM"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">multiple=</span><span class="s">"multiple"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileM"</span><span class="nt">&gt;</span>Esempio campo per l'upload multiplo di file<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="tradurre-o-personalizzare-le-stringhe-di-testo">Tradurre o personalizzare le stringhe di testo</h4>
+
+<p>La <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang">pseudo-classe <code class="highlighter-rouge">:lang ()</code></a> viene utilizzata per consentire la traduzione del testo “Sfoglia” in altri le lingue. Sovrascrivi o aggiungi voci alla variabile SASS <code class="highlighter-rouge">$custom-file-text</code> con il <a href="https://en.wikipedia.org/wiki/IETF_language_tag">tag lingua</a> pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è <code class="highlighter-rouge">en</code>):</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$custom-file-text</span><span class="p">:</span> <span class="p">(</span>
+  <span class="n">it</span><span class="o">:</span> <span class="s2">"Sfoglia"</span><span class="o">,</span>
+  <span class="n">en</span><span class="o">:</span> <span class="s2">"Browse"</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>Di seguito un esempio in funzione per la traduzione in inglese:</p>
+
+<div class="bd-example">
+<div class="form-group form-file">
+  <input id="fileEn" class="form-control" type="file" lang="en" />
+  <label for="fileEn">Choose file...</label>
+  <span class="form-file-name"></span>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group form-file"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"fileEn"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"fileEn"</span><span class="nt">&gt;</span>Choose file...<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-file-name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>È necessario impostare correttamente la lingua del documento (o dell’albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">l’attributo <code class="highlighter-rouge">lang</code></a> sull’elemento <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> o modificando il <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12"><code class="highlighter-rouge">Content-Language</code> HTTP header</a> ad esempio.</p>
+
+<h3 id="input-autocomplete">Input autocomplete</h3>
+
+<p>Per ottenere l’autocomplete bisogna aggiungere all’input la classe <code class="highlighter-rouge">.autocomplete</code> e l’attributo <code class="highlighter-rouge">.data-db</code> con il nome della variabile javascript che contiene l’array da filtrare oppure il nome della funzione che dinamicamente restituirà un array.</p>
+
+<script>
+  function functionRegioni() {
+    var regioni = [
+    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
+    "Tutte"
+    ];
+    return regioni
+  }
+  var regioni = [
+    "Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d'Aosta","Veneto",
+    "Tutte"
+  ];
+</script>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <input type="search" id="autocomplete1" class="form-control autocomplete" data-db="regioni" />
+    <label for="autocomplete1">Regione</label>
+  </div>
+  <div class="form-group">
+    <input type="search" id="autocomplete2" class="form-control autocomplete" data-db="functionRegioni()" />
+    <label for="autocomplete2">Regione (con caricamento tramite funzione)</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete1"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"regioni"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete1"</span><span class="nt">&gt;</span>Regione<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"autocomplete2"</span> <span class="na">class=</span><span class="s">"form-control autocomplete"</span> <span class="na">data-db=</span><span class="s">"functionRegioni()"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete2"</span><span class="nt">&gt;</span>Regione (con caricamento tramite funzione)<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="textarea">Textarea</h3>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleFormControlTextarea1"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleFormControlTextarea1"</span><span class="nt">&gt;</span>Example textarea<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="icone-aggiuntive">Icone aggiuntive</h3>
+
+<p>È possibile inserire un’icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo <code class="highlighter-rouge">&lt;input&gt;</code>.</p>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <i class="ico-prefix it-youtube"></i>
+    <input class="form-control" type="text" id="video-youtube" />
+    <label for="video-youtube">Link video di youtube</label>
+  </div>
+  <div class="form-group">
+    <i class="ico-prefix it-youtube"></i>
+    <select class="custom-select" id="video-youtube-select">
+      <option value="" disabled="" selected="">Seleziona un video</option>
+      <option value="1">Video 1</option>
+      <option value="2">Video 2</option>
+      <option value="3">Video 3</option>
+    </select>
+    <label for="video-youtube-select">Elenco video</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"video-youtube"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"video-youtube"</span><span class="nt">&gt;</span>Link video di youtube<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">id=</span><span class="s">"video-youtube-select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona un video<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Video 1<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Video 2<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Video 3<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"video-youtube-select"</span><span class="nt">&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="readonly">Readonly</h3>
+
+<p>Aggiungi l’attributo booleano <code class="highlighter-rouge">readonly</code> su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.</p>
+
+<div class="bd-example">
+<div class="form-group">
+  <input class="form-control form-control" type="text" id="input-text-read-only" placeholder="Contenuto in sola lettura" readonly="" />
+  <label for="input-text-read-only">Contenuto in sola lettura</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-text-read-only"</span> <span class="na">placeholder=</span><span class="s">"Contenuto in sola lettura"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-text-read-only"</span><span class="nt">&gt;</span>Contenuto in sola lettura<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="readonly-normalizzato">Readonly normalizzato</h3>
+
+<p>Se vuoi avere gli elementi <code class="highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="highlighter-rouge">.form-control-plaintext</code>.</p>
+
+<div class="bd-example">
+<div>
+  <div class="form-group">
+    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly="" />
+    <label for="staticEmail">Email</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control-plaintext"</span> <span class="na">id=</span><span class="s">"staticEmail"</span> <span class="na">value=</span><span class="s">"email@example.com"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"staticEmail"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-7">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
+        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201806141430"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201806141430"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>
