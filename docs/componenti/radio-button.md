@@ -7,7 +7,7 @@ toc: true
 
 ## Esempi
 
-Radio buttons classici
+Radio button classici
 
 {% capture example %}
 <div class="form-check">
@@ -26,7 +26,7 @@ Radio buttons classici
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Radio buttons inline
+Radio button inline
 
 {% capture example %}
   <div class="form-check form-check-inline">
@@ -64,7 +64,7 @@ Radio button disabilitati
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Gruppi di radio buttons
+## Gruppi di radio button
 
 {% capture example %}
 <div class="row">

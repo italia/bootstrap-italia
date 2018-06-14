@@ -7,7 +7,7 @@ redirect_from: "/docs/estensioni/"
 toc: true
 ---
 
-Bootstrap Italia raccomanda l'utilizzo delle seguenti icone: (TODO)
+Le icone riportate di seguito sono ereditate dal [web toolkit](https://italia.github.io/design-web-toolkit/components/detail/icons.html). Esse e sono in fase di revisione e saranno aggiornate al più presto.
 
 <div class="bd-example bd-example-images">
 {% for icona in site.data.icons %}

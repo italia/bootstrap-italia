@@ -95,7 +95,7 @@ const Select = (($) => {
       //wrapper.addClass($select.attr('class'));
 
       if (this._isSearchable) {
-        this._setSearchableOption();
+        this._setSearchableOption(uniqueID);
       }
 
       if (selectChildren && selectChildren.length) {
@@ -169,11 +169,15 @@ const Select = (($) => {
 
       var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
 
+      const $newLabel = $(`
+        <label class="sr-only" id="label-${uniqueID}">${sanitizedLabelHtml}</label>
+      `);
       const $newSelect = $(`
-        <input type="text" class="dropdown select-dropdown" data-toggle="dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}" />
+        <input type="text" class="dropdown select-dropdown" aria-labelledby="label-${uniqueID}" data-toggle="dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}" />
       `);
       $select.before($newSelect);
       $newSelect.before(dropdownIcon).addClass($select.attr('class').replace('custom-select', ''));
+      $newSelect.before($newLabel);
 
 
       $newSelect.after(this._customElement);
@@ -321,11 +325,12 @@ const Select = (($) => {
       }
     }
 
-    _setSearchableOption() {
+    _setSearchableOption(_uniqueID) {
       const $select = $(this._element)
       var element = $(`
         <span class="search-wrap">
-          <input type="text" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}">
+          <label class="sr-only" id="label-search-${_uniqueID}">Cerca</label>
+          <input type="text" aria-labelledby="label-search-${uniqueID}" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}">
         </span>
       `)
       this._customElement.append(element);
@@ -367,9 +372,7 @@ const Select = (($) => {
           `<li class="${disabledClass}">
                       <img alt="" src="${icon_url}" ${classString}>
                       <span class="filtrable">
-                        <input type="checkbox" ${disabledClass}/>
-                        <label></label>
-                        ${option.html()}
+                        <input type="checkbox" ${disabledClass} aria-label="${option.html()}"/>
                       </span>
                     </li>` :
           `<li class="${disabledClass} ${optgroupClass}">
@@ -385,7 +388,7 @@ const Select = (($) => {
       if (this._isMultiple) {
         this._customElement.append($(`
           <li class="${disabledClass}">
-            <span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span>
+            <span class="filtrable"><input type="checkbox"${disabledClass} aria-label="${option.html()}"/>${option.html()}</span>
           </li>
         `));
       } else {
