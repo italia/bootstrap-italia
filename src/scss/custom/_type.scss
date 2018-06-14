@@ -100,3 +100,11 @@ small,
     font-size: 0.7777rem;
   }
 }
+
+.blockquote-footer {
+  color: $blockquote-small-color;
+
+  .bg-dark & {
+    color: $blockquote-small-color-dark;
+  }
+}

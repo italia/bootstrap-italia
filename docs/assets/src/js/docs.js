@@ -60,7 +60,7 @@
     })
 
     // ClipboardJS - Docs copy code handling
-    var clipboard = new Clipboard('.btn-clipboard', {
+    var clipboard = new ClipboardJS('.btn-clipboard', {
       target: function (trigger) {
         return trigger.parentNode.nextElementSibling
       }

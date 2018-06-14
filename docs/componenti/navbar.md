@@ -28,17 +28,17 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
     </div>
     <div class="menu-wrapper">
       <ul class="navbar-nav">
-        <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a>
+        <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active</span><span class="sr-only">current</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 disabilitato</span></a>
+        <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 disabilitato</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 3</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
         </li>
       </ul>
     </div>
@@ -65,36 +65,36 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
     </div>
     <div class="menu-wrapper">
       <ul class="navbar-nav">
-        <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a>
+        <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active</span><span class="sr-only">current</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 disabilitato </span></a>
+        <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 disabilitato</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 3</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item </span></a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3>Heading</h3>
+                  <h3 id="heading">Heading</h3>
                 </li>
-                <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                <li><a class="list-item" href="#"><span>Link list 1</span></a>
                 </li>
-                <li><a class="list-item" href="#link 2"><span>Link list 2</span></a>
+                <li><a class="list-item" href="#"><span>Link list 2</span></a>
                 </li>
-                <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                <li><a class="list-item" href="#"><span>Link list 3</span></a>
                 </li>
                 <li><span class="divider"></span>
                 </li>
-                <li><a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+                <li><a class="list-item" href="#"><span>Link list 4</span></a>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#1"><span>link 5 </span></a>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 5</span></a>
         </li>
       </ul>
     </div>
@@ -121,34 +121,34 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
     </div>
     <div class="menu-wrapper">
       <ul class="navbar-nav">
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1 </span></a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3>Megamenu content 1 </h3>
+                  <h3 id="megamenu-content-1">Megamenu content 1</h3>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2 </span></a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3>Megamenu content 2 </h3>
+                  <h3 id="megamenu-content-2">Megamenu content 2</h3>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3 </span></a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3>Megamenu content 3 </h3>
+                  <h3 id="megamenu-content-3">Megamenu content 3</h3>
                 </li>
               </ul>
             </div>
@@ -172,33 +172,33 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
         <ul class="link-sublist collapse" id="collapseOne">
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
         <ul class="link-sublist collapse" id="collapseTwo">
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
         <ul class="link-sublist collapse" id="collapseThree">
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
-          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
         </ul>
       </li>

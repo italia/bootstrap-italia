@@ -126,9 +126,9 @@ La struttura delle cartelle della documentazione è la seguente:
 
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-```sh
+{% highlight sh %}
 $ npm run bump-patch
-```
+{% endhighlight %}
 
 o `bump-minor` oppure `bump-major`, che produrrà:
 
@@ -136,9 +136,9 @@ o `bump-minor` oppure `bump-major`, che produrrà:
 * Commit delle modifiche
 * Tag del commit con numero di versione in formato `vx.x.x`
 
-```sh
+{% highlight sh %}
 $ git push --follow-tags
-```
+{% endhighlight %}
 
 che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
 
@@ -163,7 +163,7 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 `npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
 
-[bootstrap-themes]: https://getbootstrap.com/docs/4.0/getting-started/theming/
+[bootstrap-themes]: https://getbootstrap.com/docs/4.1/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
 [sass]: http://sass-lang.com/
@@ -178,7 +178,7 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 ---
 
-###### Continua la lettura >
+##### Continua la lettura >
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
 continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).

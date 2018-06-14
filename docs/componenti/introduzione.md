@@ -10,4 +10,4 @@ redirect_from:
 
 Per questi componenti, Bootstrap Italia si occupa soltanto (salvo alcune eccezioni, corredate da annotazioni) di applicare stili e regole in linea con le [linee guida di design per i servizi web della PA](https://design-italia.readthedocs.io/it/stable/index.html).
 
-Per questo, nella maggior parte dei casi, rimangono valide le regole funzionali e la documentazione consultabile sul [sito Bootstrap](https://getbootstrap.com/docs/4.0/components/).
+Per questo, nella maggior parte dei casi, rimangono valide le regole funzionali e la documentazione consultabile sul [sito Bootstrap](https://getbootstrap.com/docs/4.1/components/).

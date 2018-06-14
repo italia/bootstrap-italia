@@ -19,20 +19,21 @@
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
         <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i>
+          <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i>
+          <i class="it-github"></i><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     {% if page.layout == "docs" %}
-    <form class="bd-search w-100">
-        <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
-    </form>
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
     {% endif %}
   </div>
 </header>

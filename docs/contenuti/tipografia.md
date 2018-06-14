@@ -129,7 +129,7 @@ grande.
 dare uno stile diverso per testi di intestazione secondaria.
 
 {% capture example %}
-<h3>Intestazione <small class="text-muted">con testo secondario</small></h3>
+<h4>Intestazione <small class="text-muted">con testo secondario</small></h4>
 {% endcapture %}{% include example.html content=example %}
 
 ## Paragrafi

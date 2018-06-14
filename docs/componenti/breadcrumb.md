@@ -91,9 +91,11 @@ Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al t
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-
-## Accessibilità
+{% capture callout %}
+##### Accessibilità
 
 Dato che le breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="breadcrumb"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
 
 Per maggiorni informazioni, guarda le [linee guida WAI-ARIA per la creazione di breadcrumb](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}

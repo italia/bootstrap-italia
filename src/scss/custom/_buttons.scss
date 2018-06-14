@@ -51,6 +51,9 @@
 }
 
 .bg-dark {
+  .btn-link {
+    color: $white;
+  }
   .btn-primary {
     @include button-variant($white, $primary, lighten($white, 7.5%), darken($primary, 10%), lighten($white, 10%), darken($primary, 12.5%));
     color: $primary;

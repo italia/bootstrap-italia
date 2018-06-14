@@ -38,7 +38,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 // Load docs components
-@import "variables";
+@import "colors";
 @import "nav";
 @import "masthead";
 @import "content";
@@ -49,7 +49,6 @@
 @import "callouts";
 @import "examples";
 @import "index";
-@import "colors";
 @import "clipboard-js";
 @import "brandhead";
 @import "custom-color";

@@ -82,6 +82,8 @@ $theme-color-interval: 8% !default;
 // Code
 $code-color: $dark;
 
+$yiq-contrasted-threshold:  120 !default;
+
 // Headings
 $headings-font-weight: 700;
 $headings-line-height: 1.2 !default;
@@ -176,6 +178,9 @@ $reset-padding: 0 !default;
 $alert-padding-y: 1rem;
 $alert-padding-x: 1rem;
 
+// Blockquote
+$blockquote-small-color: $gray-600;
+$blockquote-small-color-dark: $gray-400;
 
 // Skiplinks
 $skiplink-padding-y: .5rem;
@@ -258,7 +263,7 @@ $pager-font-size: 0.8888888888888888rem; // 16px
 $pager-font-weight: 600;
 $pager-font-color: $neutral-1-a7;
 $pager-hover-color: $italia;
-$pager-icon-color: $primary-c5;
+$pager-icon-color: $primary;
 $pager-icon-size: 0.7rem;
 $pager-disabled-color: $neutral-2-b2;
 $pager-jump-to-width: 4.5rem;

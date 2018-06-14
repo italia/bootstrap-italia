@@ -12,9 +12,9 @@ toc: true
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-     <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a></li>
-     <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a></li>
-     <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
+     <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -27,13 +27,13 @@ Per determinare l'elemento attivo è sufficiente aggiungere la classe `.active` 
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+      <a class="list-item" href="#"><span>Link list 1</span></a>
     </li>
     <li>
-      <a class="list-item active" href="#link 2"><span>Link list 2 active </span></a>
+      <a class="list-item active" href="#"><span>Link list 2 active</span></a>
     </li>
     <li>
-      <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+      <a class="list-item" href="#"><span>Link list 3</span></a>
     </li>
   </ul>
 </div>
@@ -47,13 +47,13 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+      <a class="list-item" href="#"><span>Link list 1</span></a>
     </li>
     <li>
-      <a class="list-item disabled" href="#"><span>Link list 2 disabled </span></a>
+      <a class="list-item disabled" href="#"><span>Link list 2 disabled</span></a>
     </li>
     <li>
-      <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+      <a class="list-item" href="#"><span>Link list 3</span></a>
     </li>
   </ul>
 </div>
@@ -71,22 +71,22 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 <div class="link-list-wrapper">
    <ul class="link-list">
       <li>
-         <h3>Heading senza link</h3>
+         <h3 id="heading-senza-link">Heading senza link</h3>
       </li>
       <li>
-        <a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <a class="list-item" href="#"><span>Link list 1</span></a>
       </li>
       <li>
-        <a class="list-item" href="#link 2"><span>Link list </span></a>
+        <a class="list-item" href="#"><span>Link list</span></a>
       </li>
       <li>
-        <a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+        <a class="list-item" href="#"><span>Link list 3</span></a>
       </li>
       <li>
         <span class="divider"></span>
       </li>
       <li>
-        <a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+        <a class="list-item" href="#"><span>Link list 4</span></a>
       </li>
    </ul>
 </div>
@@ -98,17 +98,17 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
    <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3><a href="#linkheading">Heading con link</a></h3>
+          <h3 id="heading-con-link"><a href="#">Heading con link</a></h3>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 2"><span>Link list </span></a>
+        <li><a class="list-item" href="#"><span>Link list</span></a>
         </li>
-        <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 3</span></a>
         </li>
         <li><span class="divider"></span>
         </li>
-        <li><a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 4</span></a>
         </li>
       </ul>
     </div>
@@ -122,17 +122,17 @@ Per ogni elemento link list è possibile definire una variante di dimensione mag
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <h3><a href="#linkheading"><span>Heading </span></a></h3>
+      <h3 id="heading">Heading</h3>
     </li>
-    <li><a class="list-item large" href="#link 1"><span>Link list 1 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item large" href="#link 2"><span>Link list </span></a>
+    <li><a class="list-item large" href="#"><span>Link list</span></a>
     </li>
-    <li><a class="list-item large" href="#link 3"><span>Link list 3 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 3</span></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item large" href="#link 3"><span>Link list 4 </span></a>
+    <li><a class="list-item large" href="#"><span>Link list 4</span></a>
     </li>
   </ul>
 </div>
@@ -151,22 +151,22 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo a
 {% capture example %}
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
-    <li><a class="list-item active right-icon" href="#link 1">
+    <li><a class="list-item active right-icon" href="#">
         <span>Link list 1 active</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item  right-icon" href="#link 1">
-        <span>Link list 1 </span>
+    <li><a class="list-item  right-icon" href="#">
+        <span>Link list 1</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item disabled right-icon" href="#link 1">
-        <span>Link list 1 disabled </span>
+    <li><a class="list-item disabled right-icon" href="#">
+        <span>Link list 1 disabled</span>
         <i class="it-chevron-right right" aria-hidden="true"> </i>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
@@ -190,11 +190,11 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active </span></a>
+    <li><a class="list-item active left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 </span></a>
+    <li><a class="list-item left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled left-icon" href="#link 1"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled </span></a>
+    <li><a class="list-item disabled left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>
@@ -209,11 +209,11 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo a
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#link 1"><span>Link list 1 active </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item active left-icon right-icon " href="#"><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item left-icon right-icon " href="#link 1"><span>Link list 1 </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item left-icon right-icon " href="#"><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#link 1"><span>Link list 1 disabled </span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item disabled left-icon right-icon " href="#"><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
@@ -233,11 +233,11 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#link 1"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 active </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item active left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item left-icon right-icon " href="#link 1"><i class="it-favorite  left" aria-hidden="true"> </i><span>Link list 1 </span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item left-icon right-icon " href="#"><i class="it-favorite  left" aria-hidden="true"> </i><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#link 1"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 disabled </span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item disabled left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
@@ -252,11 +252,11 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle"><span>Link list 1 active </span></a>
+    <li><a class="list-item active avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle"><span>Link list 1 </span></a>
+    <li><a class="list-item avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar"><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled avatar" href="#link 1"><img class="avatar" src="http://via.placeholder.com/40x40" title="avatartitle"><span>Link list 1 disabled </span></a>
+    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="http://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>
@@ -305,7 +305,7 @@ Di seguito un esempio di link list contenente un `<input type="checkbox">` stand
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group" aria-describedby="">
+      <div class="form-check form-check-group disabled" aria-describedby="">
         <input type="checkbox" id="checkbox8" disabled>
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
@@ -323,19 +323,19 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
     </li>
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
       <ul class="link-sublist" id="">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#link 1"><span>Link list 1 </span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
     </li>
   </ul>
 </div>
@@ -349,33 +349,33 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseOne">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseTwo">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1 </span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
       <ul class="link-sublist collapse" id="collapseThree">
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
-        <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+        <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
       </ul>
     </li>

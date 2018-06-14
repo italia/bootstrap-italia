@@ -3,13 +3,12 @@ layout: docs
 title: Sostituzione con immagine
 description: Sostituisce il testo con una immagine di sfondo tramite la classe apposita.
 group: utilities
-toc: true
 ---
 
 Utilizza la classe `.text-hide` o il relativo mixin per sostituire del testo in un elemento con una immagine di sfondo.
 
 {% highlight html %}
-<h1 class="text-hide">Testata personalizzata</h1>
+<p class="text-hide">Testata personalizzata</p>
 {% endhighlight %}
 
 {% highlight scss %}
@@ -23,5 +22,5 @@ Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO de
 un'immagine di sfondo invece del testo.
 
 {% capture example %}
-<h1 class="text-hide" style="background-image: url('{{ site.baseurl }}/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;">Bootstrap Italia</h1>
+<p class="text-hide" style="background-image: url('{{ site.baseurl }}/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;">Bootstrap Italia</p>
 {% endcapture %}{% include example.html content=example %}

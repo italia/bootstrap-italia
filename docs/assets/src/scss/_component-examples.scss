@@ -10,8 +10,9 @@
     > [class^="col-"] {
       padding-top: .75rem;
       padding-bottom: .75rem;
-      background-color: rgba(86, 61, 124, .15);
-      border: 1px solid rgba(86, 61, 124, .2);
+      background-color: rgba(0, 102, 204, .55);
+      border: 1px solid $primary;
+      color: $white;
     }
   }
 
@@ -33,8 +34,9 @@
 }
 
 .bd-highlight {
-  background-color: rgba($docs-blue, .15);
-  border: 1px solid rgba($docs-blue, .15);
+  background-color: rgba($docs-blue, .55);
+  border: 1px solid $docs-blue;
+  color: white;
 }
 
 // Grid mixins
@@ -369,45 +371,5 @@ nav.pagination-wrapper {
 .bd-example-border-utils-0 {
   [class^="border"] {
     border: 1px solid $border-color;
-  }
-}
-
-//
-// Code snippets
-//
-
-.highlight {
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background-color: #f7f7f9;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-
-  @include media-breakpoint-up(sm) {
-    padding: 1.5rem;
-  }
-}
-
-.bd-content .highlight {
-  margin-right: (-$grid-gutter-width / 2);
-  margin-left: (-$grid-gutter-width / 2);
-
-  @include media-breakpoint-up(sm) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-.highlight {
-  pre {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: transparent;
-    border: 0;
-  }
-  pre code {
-    font-size: inherit;
-    color: $gray-900; // Effectively the base text color
   }
 }

@@ -18,8 +18,8 @@ Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
 {% capture example %}
 <div class="skiplinks">
-  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-  <a class="sr-only sr-only-focusable" href="#footer">Skip to footer</a>
+  <a class="sr-only sr-only-focusable" href="#">Vai al contenuto principale</a>
+  <a class="sr-only sr-only-focusable" href="#">Vai al footer</a>
 </div>
 {% endcapture %}{% include example.html content=example %}
     

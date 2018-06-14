@@ -15,11 +15,11 @@ Posiziona un componente aggiuntivo o un bottone su uno o entrambi i lati di un i
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">@</span>
   </div>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-labelledby="basic-addon1">
 </div>
 
 <div class="input-group pb-3">
-  <input type="text" class="form-control" placeholder="Mail utente" aria-label="Mail utente" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Mail utente" aria-label="Mail utente" aria-labelledby="basic-addon2">
   <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">@esempio.it</span>
   </div>
@@ -30,7 +30,7 @@ Posiziona un componente aggiuntivo o un bottone su uno o entrambi i lati di un i
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon3">https://esempio.it/utente/</span>
     </div>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <input type="text" class="form-control" id="basic-url" aria-labelledby="basic-addon3">
   </div>
   <label for="basic-url">La tua URL</label>
 </div>
@@ -64,21 +64,21 @@ Aggiungi le relative classi di dimensionamento del form in `.input-group`, il co
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-sm">Testo piccolo</span>
   </div>
-  <input type="text" class="form-control" aria-label="Testo piccoloSmall" aria-describedby="inputGroup-sizing-sm">
+  <input type="text" class="form-control" aria-label="Testo piccoloSmall" aria-labelledby="inputGroup-sizing-sm">
 </div>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Testo predefinito</span>
   </div>
-  <input type="text" class="form-control" aria-label="Testo predefinito" aria-describedby="inputGroup-sizing-default">
+  <input type="text" class="form-control" aria-label="Testo predefinito" aria-labelledby="inputGroup-sizing-default">
 </div>
 
 <div class="input-group input-group-lg">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">Testo grande</span>
   </div>
-  <input type="text" class="form-control" aria-label="Testo grande" aria-describedby="inputGroup-sizing-sm">
+  <input type="text" class="form-control" aria-label="Testo grande" aria-labelledby="inputGroup-sizing-sm">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -149,11 +149,11 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
   <div class="input-group-prepend">
     <button class="btn btn-primary" type="button">Bottone</button>
   </div>
-  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-labelledby="basic-addon1">
 </div>
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-labelledby="basic-addon2">
   <div class="input-group-append">
     <button class="btn btn-primary" type="button">Bottone</button>
   </div>
@@ -164,11 +164,11 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
     <button class="btn btn-primary" type="button">Bottone</button>
     <button class="btn btn-primary" type="button">Bottone</button>
   </div>
-  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-labelledby="basic-addon1">
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Contenitore" aria-label="Contenitore" aria-labelledby="basic-addon2">
   <div class="input-group-append">
     <button class="btn btn-primary" type="button">Bottone</button>
     <button class="btn btn-primary" type="button">Bottone</button>
@@ -250,4 +250,4 @@ Sono supportati più add-on insieme e possono essere combinati anche con checkbo
 
 Gli screen reader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi gruppi di input, assicurarsi che qualsiasi etichetta o funzionalità aggiuntiva venga conformata alle tecnologie assistive.
 
-La tecnica esatta da usare (elementi `<label>` nascosti usando la classe `.sr-only`, o l'uso degli attributi `aria-label` e `aria-labelledby`, possibilmente in combinazione con `aria-describedby`) e quali informazioni aggiuntive dovranno essere trasmesse in base alla tipologia di widget dell'interfaccia che stai implementando. Gli esempi presenti in questa sezione forniscono alcuni approcci specifici.
+La tecnica esatta da usare (elementi `<label>` nascosti usando la classe `.sr-only`, o l'uso degli attributi `aria-label` e `aria-labelledby`, possibilmente in combinazione con `aria-labelledby`) e quali informazioni aggiuntive dovranno essere trasmesse in base alla tipologia di widget dell'interfaccia che stai implementando. Gli esempi presenti in questa sezione forniscono alcuni approcci specifici.
