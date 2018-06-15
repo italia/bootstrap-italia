@@ -330,7 +330,7 @@ const Select = (($) => {
       var element = $(`
         <span class="search-wrap">
           <label class="sr-only" id="label-search-${_uniqueID}">Cerca</label>
-          <input type="text" aria-labelledby="label-search-${uniqueID}" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}">
+          <input type="text" aria-labelledby="label-search-${_uniqueID}" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}">
         </span>
       `)
       this._customElement.append(element);
