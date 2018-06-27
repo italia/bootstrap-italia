@@ -31,7 +31,6 @@
     - title: Card
       status: wip
     - title: Carousel
-    - title: Checkbox
     - title: Collapse
       status: wip
     - title: Dropdown
@@ -61,7 +60,6 @@
     - title: Pager
       status: wip
     - title: Popover
-    - title: Radio Button
     - title: Scrollspy
     - title: Skiplinks
       status: wip
