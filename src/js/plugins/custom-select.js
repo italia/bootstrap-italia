@@ -148,7 +148,7 @@ const Select = (($) => {
             } else {
               that._customElement.find('li').removeClass('active');
               $this.toggleClass('active');
-              $newSelect.val($this.text());
+              $newSelect.val($this.text().trim());
             }
 
             that._activateOption(that._customElement, $this);
