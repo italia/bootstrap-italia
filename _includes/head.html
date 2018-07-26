@@ -44,7 +44,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ site.ga_property }}');
+  gtag('config', '{{ site.ga_property }}', { 'anonymize_ip': true });
 </script>
 {% endif %}
 

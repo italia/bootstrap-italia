@@ -32,7 +32,6 @@
       status: wip
     - title: Carousel
     - title: Collapse
-      status: wip
     - title: Dropdown
       status: wip
     - title: Elenchi
@@ -46,8 +45,8 @@
     - title: Form Radio Button
     - title: Form Toggles
     - title: Hero
-    - title: Input group
-      status: wip
+    #- title: Input group
+    #  status: to do
     - title: Link list
       status: wip
     - title: Modale

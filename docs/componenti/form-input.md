@@ -16,16 +16,20 @@ Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamenta
 <div>
   <div class="form-group">
     <input type="text" class="form-control" id="exampleInputText">
-    <label for="exampleInputText">Nominativo</label>
-  </div>
-  <div class="form-group">
-    <input type="number" class="form-control" id="exampleInputNumber">
-    <label for="exampleInputNumber">Numero partecipanti</label>
+    <label for="exampleInputText">Campo di tipo testuale</label>
   </div>
   <div class="form-group">
     <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
-    <label for="exampleInputEmail1">Indirizzo email</label>
+    <label for="exampleInputEmail1">Campo di tipo email</label>
     <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" id="exampleInputNumber">
+    <label for="exampleInputNumber">Campo di tipo numerico</label>
+  </div>
+  <div class="form-group">
+    <input type="tel" class="form-control" id="exampleInputTelephone">
+    <label for="exampleInputTelephone">Campo di tipo telefono</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -51,54 +55,6 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-### Input file
-
-È possibile personalizzare l'elemento `<input type="file">` aggiungendo all'elemento identificato con `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe, viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
-
-Per gli elementi che usano `.form-file` è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
-
-{% capture example %}
-<div>
-  <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile">
-    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
-  </div>
-  <div class="form-group form-file">
-    <input id="file" class="form-control" type="file">
-    <label for="file">Esempio campo per l'upload di un singolo file</label>
-    <span class="form-file-name"></span>
-  </div>
-  <div class="form-group form-file">
-    <input id="fileM" class="form-control" type="file" multiple="multiple">
-    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
-    <span class="form-file-name"></span>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Tradurre o personalizzare le stringhe di testo
-
-La [pseudo-classe `:lang ()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) viene utilizzata per consentire la traduzione del testo "Sfoglia" in altri le lingue. Sovrascrivi o aggiungi voci alla variabile SASS `$custom-file-text` con il [tag lingua](https://en.wikipedia.org/wiki/IETF_language_tag) pertinente per tradurre la stringa di testo nella lingua scelta. Ad esempio, ecco come si potrebbe aggiungere una traduzione in inglese (il codice della lingua è `en`):
-
-{% highlight scss %}
-$custom-file-text: (
-  it: "Sfoglia",
-  en: "Browse"
-);
-{% endhighlight %}
-
-Di seguito un esempio in funzione per la traduzione in inglese:
-
-{% capture example %}
-<div class="form-group form-file">
-  <input id="fileEn" class="form-control" type="file" lang="en">
-  <label for="fileEn">Choose file...</label>
-  <span class="form-file-name"></span>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-È necessario impostare correttamente la lingua del documento (o dell'albero secondario) in modo che venga visualizzato il testo corretto. Questo può essere fatto usando [l'attributo `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) sull'elemento `<html>` o modificando il [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) ad esempio.
 
 ### Input autocomplete
 
@@ -131,7 +87,42 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Textarea
+### Disabilitato
+
+Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
+
+{% capture example %}
+<div class="form-group">
+  <input class="form-control form-control" type="text" id="input-text-disabled" disabled>
+  <label for="input-text-disabled">Contenuto disabilitato</label>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Readonly
+
+Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
+
+{% capture example %}
+<div class="form-group">
+  <input class="form-control form-control" type="text" id="input-text-read-only" readonly>
+  <label for="input-text-read-only">Contenuto in sola lettura</label>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Readonly normalizzato
+
+Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext`.
+
+{% capture example %}
+<div>
+  <div class="form-group">
+    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly>
+    <label for="staticEmail">Email</label>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Textarea
 
 {% capture example %}
 <div>
@@ -142,7 +133,7 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Icone aggiuntive
+## Icone aggiuntive
 
 È possibile inserire un'icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo `<input>`.
 
@@ -164,30 +155,7 @@ Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplet
     <label for="video-youtube-select">Elenco video</label>
   </div>
 </div>
-{% endcapture %}{% include example.html content=example %}
 
-### Readonly
-
-Aggiungi l'attributo booleano `readonly` su un input per impedire la modifica del valore contenuto. Gli input di sola lettura appaiono più chiari (proprio come gli input disabilitati), ma mantengono il cursore standard.
-
-{% capture example %}
-<div class="form-group">
-  <input class="form-control form-control" type="text" id="input-text-read-only" placeholder="Contenuto in sola lettura" readonly>
-  <label for="input-text-read-only">Contenuto in sola lettura</label>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Readonly normalizzato
-
-Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext`.
-
-{% capture example %}
-<div>
-  <div class="form-group">
-    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly>
-    <label for="staticEmail">Email</label>
-  </div>
-</div>
 {% endcapture %}{% include example.html content=example %}
 
 {% comment %}
@@ -204,6 +172,32 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
   <div class="form-group">
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
     <label for="input-text-lg">.form-control-sm</label>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+
+### Input file
+
+È possibile personalizzare l'elemento `<input type="file">` aggiungendo all'elemento identificato con `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe, viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
+
+Per gli elementi che usano `.form-file` è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
+
+{% capture example %}
+<div>
+  <div class="form-group">
+    <input type="file" class="form-control-file" id="exampleFormControlFile">
+    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
+  </div>
+  <div class="form-group form-file">
+    <input id="file" class="form-control" type="file">
+    <label for="file">Esempio campo per l'upload di un singolo file</label>
+    <span class="form-file-name"></span>
+  </div>
+  <div class="form-group form-file">
+    <input id="fileM" class="form-control" type="file" multiple="multiple">
+    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
+    <span class="form-file-name"></span>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

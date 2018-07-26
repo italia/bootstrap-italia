@@ -1,34 +1,39 @@
-/* CLASSI FORM */
+$input-height: 2.5rem;
+$input-spacing-x: .75rem;
+$input-spacing-t: 1.5rem;
+$input-spacing-b: 1rem;
+
 .form-group {
   position: relative;
-  padding-bottom: .5rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 4px;
+  padding: $input-spacing-t 0 $input-spacing-b;
   input, button, select, optgroup, textarea {
     color: $dark;
   }
   label {
+    position: absolute;
     color: $gray-secondary;
     font-weight: 600;
+    line-height: $input-height;
     transition: .2s ease-out;
-    position: absolute;
-    top: .6rem;
+    top: $input-spacing-t;
     font-size: 1rem;
     cursor: text;
     display: block;
     width: 100%;
-    background-color: #fff;
-    padding: 0 .75rem;
+    padding: 0 $input-spacing-x;
     z-index: 6;
   }
-  .form-text {
-    margin-left: 0.75rem;
+  small.form-text {
+    position: absolute;
+    margin: 0;
+    padding: 0 $input-spacing-x;
     font-size: $small-font-size;
   }
   &.active {
     label {
-      transform: translateY(-140%);
-      font-size: .8rem;
+      transform: translateY(-75%);
+      font-size: $small-font-size;
     }
     label, .ico-prefix {
       color: $gray-secondary;
@@ -38,9 +43,26 @@
 .form-row .form-group {
 	padding-bottom: 0;
 }
+
+input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea, select {
+  border: none;
+  border-bottom: 1px solid $gray-secondary;
+  border-radius: 0;
+  outline: 0;
+  height: $input-height;
+  width: 100%;
+  box-shadow: none;
+  transition: all .3s;
+  font-weight: 700;
+}
+select,
+textarea {
+  border: 1px solid $gray-secondary;
+}
 input[type="file"] + label {
   background-color: transparent;
 }
+
 
 .input-group + label,
 .input-group ~ label,
@@ -49,34 +71,13 @@ input[type="file"] + label {
 .form-group select.form-control + label,
 .form-group input.form-control-file + label,
 .form-control-plaintext + label {
-  transform: translateY(-140%);
-  font-size: .8rem;
+  transform: translateY(-75%);
+  font-size: $small-font-size;
   background: transparent;
 }
-
-//.select-wrapper.form-control-sm, .select-wrapper.form-control-lg {
-//  padding: 0;
-//}
-
 :disabled .form-group label {
   top: 0;
 }
-
-input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea.form-control, select.form-control {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid $gray-secondary;
-  border-radius: 0;
-  outline: 0;
-  height: 2.5rem;
-  width: 100%;
-  box-shadow: none;
-  transition: all .3s;
-  font-weight: 700;
-}
-//select.form-control, textarea.form-control {
-//  height: inherit;
-//}
 .form-group.active .form-file-name {
   padding-bottom: 1.95rem
 }
@@ -153,7 +154,7 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
     color: $primary;
     content: "Sfoglia";
     display: block;
-    height: 2.5rem;
+    height: $input-height;
     line-height: 1.7;
     padding: 0.4rem 1rem 1.5rem;
     border: 1px solid $primary;
@@ -178,7 +179,6 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 .input-group-append {
   margin-left: 0px;
 }
-//.form-control-lg,
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,

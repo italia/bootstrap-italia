@@ -1,16 +1,32 @@
 ---
 layout: docs
 title: Select
-description: Componente Select
+description: Il classico "menu a tendina", in nuove varianti
 group: componenti
 toc: true
 ---
 
-Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag `<select>` la classe `.custom-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
+## Select classica
+
+Per ottenere un menù a tendina conforme alle linee guida e utilizzare il tag HTML `<select>` così com'è, è sufficiente aggiungere al tag `<select>` la classe `.form-control`:
+
+{% capture example %}
+<div class="form-group">
+  <select class="form-control" id="classicSelect">
+    <option value="" disabled selected>Seleziona una opzione</option>
+    <option value="1">Opzione 1</option>
+    <option value="2">Opzione 2</option>
+    <option value="3">Opzione 3</option>
+  </select>
+  <label for="disabledSelect">Label di esempio</label>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Select personalizzata
+    
+Se vuoi invece ottenere un componente `select` più avanzato, ricreato con altri elementi HTML per una maggiore flessibilità, è necessario aggiungere al tag `<select>` la classe `.custom-select` e seguire le indicazioni riportate di seguito. Il componente _select_ è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.
 
 Di seguito sono mostrate alcune di queste combinazioni.
-
-### Select classica
 
 {% capture example %}
 <div class="form-group">
