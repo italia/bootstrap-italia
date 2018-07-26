@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Componente Select">
+<meta name="description" content="Il classico “menu a tendina”, in nuove varianti">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.1">
 <meta name="robots" content="noindex">
@@ -13,16 +13,16 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201807101358" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201807261359" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201807101358" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201807261359" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201807101358" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201807261359" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -36,16 +36,16 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
+<meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Select">
-<meta name="twitter:description" content="Componente Select">
+<meta name="twitter:description" content="Il classico “menu a tendina”, in nuove varianti">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/form-select/">
 <meta property="og:title" content="Select">
-<meta property="og:description" content="Componente Select">
+<meta property="og:description" content="Il classico “menu a tendina”, in nuove varianti">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -68,7 +68,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-114758441-1');
+  gtag('config', 'UA-114758441-1', { 'anonymize_ip': true });
 </script>
 
 
@@ -140,7 +140,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.9.6/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.10.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
@@ -238,7 +238,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/collapse/">
               Collapse
-            </a><span class="badge badge-info">wip</span></li><li>
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/dropdown/">
               Dropdown
             </a><span class="badge badge-info">wip</span></li><li>
@@ -266,9 +266,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             <a href="/bootstrap-italia/docs/componenti/hero/">
               Hero
             </a></li><li>
-            <a href="/bootstrap-italia/docs/componenti/input-group/">
-              Input group
-            </a><span class="badge badge-info">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/link-list/">
               Link list
             </a><span class="badge badge-info">wip</span></li><li>
@@ -405,22 +402,51 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#select-classica">Select classica</a></li>
+<li class="toc-entry toc-h2"><a href="#select-classica">Select classica</a></li>
+<li class="toc-entry toc-h2"><a href="#select-personalizzata">Select personalizzata</a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#select-multipla">Select multipla</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-gruppi-di-opzioni">Select con gruppi di opzioni</a></li>
+</ul>
+</li>
 </ul>
           </div>
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Select</h1>
-          <p class="bd-lead">Componente Select</p>
-          <p>Per ottenere un menù a tendina conforme alle linee guida, è sufficiente aggiungere al tag <code class="highlighter-rouge">&lt;select&gt;</code> la classe <code class="highlighter-rouge">.custom-select</code> e seguire le indicazioni riportate di seguito. Il componente <em>select</em> è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.</p>
+          <p class="bd-lead">Il classico “menu a tendina”, in nuove varianti</p>
+          <h2 id="select-classica">Select classica</h2>
+
+<p>Per ottenere un menù a tendina conforme alle linee guida e utilizzare il tag HTML <code class="highlighter-rouge">&lt;select&gt;</code> così com’è, è sufficiente aggiungere al tag <code class="highlighter-rouge">&lt;select&gt;</code> la classe <code class="highlighter-rouge">.form-control</code>:</p>
+
+<div class="bd-example">
+<div class="form-group">
+  <select class="form-control" id="classicSelect">
+    <option value="" disabled="" selected="">Seleziona una opzione</option>
+    <option value="1">Opzione 1</option>
+    <option value="2">Opzione 2</option>
+    <option value="3">Opzione 3</option>
+  </select>
+  <label for="disabledSelect">Label di esempio</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"classicSelect"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona una opzione<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"disabledSelect"</span><span class="nt">&gt;</span>Label di esempio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="select-personalizzata">Select personalizzata</h2>
+
+<p>Se vuoi invece ottenere un componente <code class="highlighter-rouge">select</code> più avanzato, ricreato con altri elementi HTML per una maggiore flessibilità, è necessario aggiungere al tag <code class="highlighter-rouge">&lt;select&gt;</code> la classe <code class="highlighter-rouge">.custom-select</code> e seguire le indicazioni riportate di seguito. Il componente <em>select</em> è molto flessibile, in quanto permette selezioni multiple, ricerca contestuale, e raggruppamenti delle opzioni disponibili.</p>
 
 <p>Di seguito sono mostrate alcune di queste combinazioni.</p>
-
-<h3 id="select-classica">Select classica</h3>
 
 <div class="bd-example">
 <div class="form-group">
@@ -619,14 +645,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201807101358"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201807261359"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201807101358"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201807261359"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
