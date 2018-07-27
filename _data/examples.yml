@@ -7,8 +7,6 @@
       description: Un esempio di corretto utilizzo del componente Carousel.
     - name: Cookiebar
       description: Una barra di avviso sui cookie basata su un cookie nominato 'cookies_consent'.
-    - name: Form
-      description: Un esempio di form che mostra molti componenti disponibili.
     - name: Offcanvas
       description: Trasforma la tua barra di navigazione in un menu a comparsa.
     - name: Comuni

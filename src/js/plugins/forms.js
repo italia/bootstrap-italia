@@ -58,10 +58,10 @@ $(function () {
 
   const updateTextFields = ($input) => {
 
-    const $labelAndIcon  = $input.siblings('label, i');
-    const hasValue       = $input.val().length;
+    const $labelAndIcon = $input.siblings('label, i');
+    const hasValue = $input.val().length;
     const hasPlaceholder = $input.attr('placeholder');
-    const addOrRemove    = `${hasValue || hasPlaceholder ? 'add' : 'remove'}Class`;
+    const addOrRemove = `${hasValue || hasPlaceholder ? 'add' : 'remove'}Class`;
 
     $labelAndIcon[addOrRemove]('active');
 
@@ -80,7 +80,7 @@ $(function () {
         $input.removeClass('valid').removeClass('invalid');
       } else {
 
-        const valid  = $input.is(':valid');
+        const valid = $input.is(':valid');
         const length = Number($input.attr('length')) || 0;
 
         if (valid && (!length || length > value.length)) {
@@ -93,6 +93,16 @@ $(function () {
       }
     }
   };
+
+  $('body').find(inputSelector)
+    .removeClass('valid')
+    .removeClass('invalid')
+    .each((index, input) => {
+      const $this = $(input)
+      const noDefaultValue = !$this.val()
+      const noPlaceholder = !$this.attr('placeholder');
+      $this.siblings('label, i').toggleClass('active', !(noDefaultValue && noPlaceholder))
+    })
 
   $('.autocomplete').autocomplete();
 });
