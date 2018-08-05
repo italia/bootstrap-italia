@@ -1,0 +1,125 @@
+/* Imposta la Timeline */
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2% 1%;
+  background: #0066cc;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+}
+
+/* Imposta la Timeline */
+
+/* Il container intorno al contenuto */
+
+.containertime {
+  padding: 10px 45px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 19px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+/* Imposta lo stile dei punti sulla timeline */
+
+/* Imposta i container sulla sinistra */
+
+.timeleft {
+  left: 0;
+}
+
+/* Imposta i container sulla destra */
+
+.timeright {
+  left: 50%;
+}
+
+/* Imposta la direzione della freccia (destra) */
+
+.timeleft:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 35px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Imposta la direzione della freccia (sinistra) */
+
+.timeright {
+  &:before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 35px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  &:after {
+    left: -12px;
+  }
+}
+
+/* Aggiusta i container sul lato destro */
+
+/* Contenuto */
+
+.timecontent {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media all and (max-width: 600px) {
+  .timeline:after {
+    left: 31px;
+  }
+  .containertime {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    &:before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    &:after {
+      left: 15px;
+    }
+  }
+  .timeright {
+    left: 0%;
+  }
+}
