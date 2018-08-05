@@ -1,0 +1,89 @@
+/* Elemento Snackbar / Toast posizionato in basso al centro dello schermo */
+
+#snackbar {
+  visibility: hidden;
+  /* Nascosto di default. Visualizzato tramite click */
+  min-width: 250px;
+  /* Larghezza minima */
+  margin-left: -125px;
+  /* Divide la larghezza minima per due */
+  background-color: #003366;
+  /* Colore di sfondo */
+  color: #fff;
+  /* Colore del testo */
+  text-align: center;
+  /* Testo centrato */
+  border-radius: 8px;
+  /* Stondatura del toast */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Posizionamento */
+  z-index: 1;
+  /* Aggiunge un z-index se necessario */
+  left: 50%;
+  /* Centra la snackbar */
+  bottom: 30px;
+  /* Spazio dal fondo dello schermo */
+  &.show {
+    visibility: visible;
+    /* Visualizzazione */
+    /* Animazione: mezzo secondo per eseguire il fade-in. Dopo due secondi e mezzo, esegue il fade-out */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+}
+
+/* Visualizza la snackbar (ATTENZIONE: La classe viene aggiunta da JS). */
+
+/* Animazioni */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
