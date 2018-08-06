@@ -2,10 +2,9 @@
 
 .timeline {
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 2% 1%;
-  background: #0066cc;
+  padding: 16px 8px;
+  background: #06c;
   &:after {
     content: '';
     position: absolute;
@@ -18,7 +17,29 @@
   }
 }
 
-/* Imposta la Timeline */
+@media screen and (min-width: 576px) {
+  .timeline {
+    width: 576px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .timeline {
+    width: 992px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .timeline {
+    width: 1200px;
+  }
+}
 
 /* Il container intorno al contenuto */
 
@@ -34,64 +55,58 @@
     height: 25px;
     right: -13px;
     background-color: white;
-    border: 4px solid #FF9F55;
+    border: 4px solid #ff9f55;
     top: 19px;
     border-radius: 50%;
     z-index: 1;
   }
-}
-
-/* Imposta lo stile dei punti sulla timeline */
-
-/* Imposta i container sulla sinistra */
-
-.timeleft {
-  left: 0;
-}
-
-/* Imposta i container sulla destra */
-
-.timeright {
-  left: 50%;
-}
-
-/* Imposta la direzione della freccia (destra) */
-
-.timeleft:before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 35px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Imposta la direzione della freccia (sinistra) */
-
-.timeright {
-  &:before {
+  &:nth-child(odd) {
+    left: 0;
+  }
+  &:nth-child(even) {
+    left: 50%;
+  }
+  &:nth-child(odd):before {
     content: " ";
     height: 0;
     position: absolute;
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 35px;
+    right: 35px;
     border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
   }
-  &:after {
-    left: -12px;
+  &:nth-child(even) {
+    &:before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 35px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    &:after {
+      left: -12px;
+    }
   }
 }
 
-/* Aggiusta i container sul lato destro */
+/* Imposta lo stile dei punti sulla timeline */
+/* Imposta i container sulla sinistra */
 
+/* Imposta i container sulla destra */
+
+/* Imposta la direzione della freccia (destra) */
+
+/* Imposta la direzione della freccia (sinistra) */
+
+/* Aggiusta i container sul lato destro */
 /* Contenuto */
 
 .timecontent {
@@ -118,8 +133,8 @@
     &:after {
       left: 15px;
     }
-  }
-  .timeright {
-    left: 0%;
+    &:nth-child(even) {
+      left: 0%;
+    }
   }
 }
