@@ -41,6 +41,7 @@ const Paths = {
     'node_modules/bootstrap/js/src/scrollspy.js',
     'node_modules/bootstrap/js/src/tab.js',
     'src/js/plugins/autocomplete.js',
+    'src/js/plugins/jquery.easing.1.3.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
     'src/js/plugins/cookiebar.js',
