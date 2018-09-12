@@ -9,8 +9,10 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.6)
+    eventmachine (1.2.6-x64-mingw32)
     eventmachine (1.2.6-x86-mingw32)
     ffi (1.9.23)
+    ffi (1.9.23-x64-mingw32)
     ffi (1.9.23-x86-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -49,6 +51,8 @@ GEM
     mini_portile2 (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     pathutil (0.16.1)
@@ -68,6 +72,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES

@@ -22,6 +22,7 @@ const Paths = {
   VENDOR_JS: [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
+    './node_modules/stickybits/dist/stickybits.min.js',
     // './node_modules/pickadate/lib/compressed/picker.js',
     // './node_modules/pickadate/lib/compressed/picker.date.js',
     // './node_modules/pickadate/lib/compressed/picker.time.js'
