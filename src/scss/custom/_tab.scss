@@ -6,6 +6,9 @@
 
   &.auto {
     flex-wrap: nowrap;
+    .nav-link {
+      flex: 1;
+    }
     .nav-item {
       flex: 1;
       text-align: center;
@@ -49,7 +52,7 @@
     border: none;
     border-bottom: 2px solid transparent;
     padding: 0.778rem 1.444em;
-    flex: 1;
+    flex: 1 0 1;
 
     //vertical & center align
     display: flex;
@@ -147,21 +150,36 @@
 
     .nav-tab-add {
       position: absolute;
-      width: 1.389rem;
-      height: 1.389rem;
+      width: 1.444rem;
+      height: 1.444rem;
       top: 0.8rem;
       border: 1px solid $gray-border-disabled;
       border-radius: 50%;
       right: 0;
-      &:after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 14px;
-        left: 11px;
-        top: 4px;
-        background-color: $italia;
+      a {
+        width: 1.444rem;
+        height: 1.444rem;
+        display: block;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 14px;
+          left: 11px;
+          top: 5px;
+          background-color: $italia;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 14px;
+          height: 2px;
+          left: 5px;
+          top: 11px;
+          background-color: $italia;
+        }
       }
+      
     }
 
     .nav-link {
