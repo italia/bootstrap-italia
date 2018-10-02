@@ -368,7 +368,7 @@
   }
   .nav-item.megamenu{
     position: static;
-    > a{
+    > a.dropdown-toggle{
       position: relative;
       &:before{
         content: '';
@@ -382,11 +382,12 @@
         background-color: $dropdown-bg;
         transform: rotate(45deg);
         opacity: 0;
+        display: block;
         transition: opacity $dropdown-menu-animation-speed;
       }
     }
     &.show{
-      a{
+      a.dropdown-toggle{ 
         &:before{
           opacity: 1;
         }
