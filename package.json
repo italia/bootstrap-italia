@@ -32,7 +32,7 @@
   "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "browserslist": [
     "last 2 versions",
