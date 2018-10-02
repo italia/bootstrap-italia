@@ -164,6 +164,8 @@
     font-size: $navigation-toggle-button-icon-size;
   }
 }
+//reset icon on megamenu
+.nav-item.megamenu>a:before{display: none;}
 //-------------------INLINE MENU---------------------
 .inline-menu{
   .link-list-wrapper{
@@ -222,7 +224,7 @@
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  
+
 }
 
 //Tablet horizontal / small desktop
@@ -353,56 +355,61 @@
         transition: transform $dropdown-menu-animation-speed;
       }
     }
-    //--megamenu
-    &.megamenu{
-      .navbar-collapsable{
-        width: 100%;
-        .nav-item{
-          position: static;
-          > a{
-            position: relative;
-            &:before{
-              content: '';
-              position: absolute;
-              top: auto;
-              bottom: -$dropdown-menu-notch-base-size - 6;
-              left: $dropdown-menu-notch-position-x; 
-              width: $dropdown-menu-notch-base-size*3; 
-              height: $dropdown-menu-notch-base-size*3;
-              border-radius: $dropdown-menu-radius;
-              background-color: $dropdown-bg;
-              transform: rotate(45deg);
-              opacity: 0;
-              transition: opacity $dropdown-menu-animation-speed;
-            }
-          }
-          &.show{
-            a{
-              &:before{
-                opacity: 1;
-              }
-            }
-          }
-        }
-        .dropdown-menu{
-          min-width: auto;
-          left:$navigation-h-padding;
-          right: $navigation-h-padding;
-          //hide arrow
-          &:before{
-            display: none;
-          }
-          &.show{
-            animation: megamenuFadeIn forwards $dropdown-menu-animation-speed;
-          }
-        }
-      }
-    }
+    
   }
   .custom-navbar-toggler{
     display: none;
   }
+  //--megamenu
+  .has-megamenu{
+    .navbar-collapsable{
+      width: 100%;
+    }
+  }
+  .nav-item.megamenu{
+    position: static;
+    > a{
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: -$dropdown-menu-notch-base-size - 6;
+        left: $dropdown-menu-notch-position-x; 
+        width: $dropdown-menu-notch-base-size*3; 
+        height: $dropdown-menu-notch-base-size*3;
+        border-radius: $dropdown-menu-radius;
+        background-color: $dropdown-bg;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity $dropdown-menu-animation-speed;
+      }
+    }
+    &.show{
+      a{
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .megamenu{
+    .dropdown-menu{
+      min-width: auto;
+      left:$navigation-h-padding;
+      right: $navigation-h-padding;
+      //hide arrow
+      &:before{
+        display: none;
+      }
+      &.show{
+        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed;
+      }
+    }
+  }
 }
+
+    
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
