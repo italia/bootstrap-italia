@@ -106,12 +106,12 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
 
 Il megamenu all'interno del nav è una variazione del compenente dropdown.
 
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.megamenu` al tag `<nav class="navbar">`. Tutti i dropdown all'interno del Navigatore si trasformeranno in megamenu.
+Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. A i dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
 {% capture example %}
-<nav class="navbar navbar-expand-lg megamenu"><span></span>
+<nav class="navbar navbar-expand-lg has-megamenu"><span></span>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
@@ -121,7 +121,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
     </div>
     <div class="menu-wrapper">
       <ul class="navbar-nav">
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
@@ -132,7 +132,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
@@ -143,7 +143,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
