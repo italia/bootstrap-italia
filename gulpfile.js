@@ -8,7 +8,8 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
   replace = require('gulp-replace'),
-  wrapper = require('gulp-wrapper'),
+  header = require('gulp-header'),
+  footer = require('gulp-footer'),
   log = require('fancy-log'),
   touch = require('gulp-touch-cmd'),
   spawn = require('cross-spawn'),
@@ -65,11 +66,13 @@ const Paths = {
   JS_DOCUMENTATION_WATCH: 'docs/assets/src/js/**/**'
 };
 
-const bootstrapItaliaBanner = '/*!\n' +
-  ' * Bootstrap Italia v' + pkg.version + '\n' +
-  ' * Copyright 2018\n' +
-  ' * Licensed under the BSD 3-Clause "New" or "Revised" License (https://github.com/italia/bootstrap-italia/blob/master/LICENSE)\n' +
-  ' */\n';
+const bootstrapItaliaBanner = ['/**',
+  ' * <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''].join('\n');
 
 const jqueryCheck = 'if (typeof jQuery === \'undefined\') {\n' +
   '  throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\\'s JavaScript.\')\n' +
@@ -88,10 +91,7 @@ gulp.task('scss-min', () => {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(wrapper({
-      header: bootstrapItaliaBanner +
-      '\n'
-    }))
+    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
     .pipe(cleanCSS({
       level: 2
     }))
@@ -122,11 +122,12 @@ gulp.task('js-min', () => {
       ]
     }))
     .pipe(uglify())
-    .pipe(wrapper({
-      header: bootstrapItaliaBanner + '\n' +
+    .pipe(header(
+      bootstrapItaliaBanner + '\n' +
       jqueryCheck + '\n' +
-      jqueryVersionCheck + '\n+function () {\n', footer: '\n}();\n'
-    }))
+      jqueryVersionCheck + '\n+function () {\n', { pkg : pkg }
+    ))
+    .pipe(footer('\n}();\n'))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -154,10 +155,7 @@ gulp.task('js-bundle-min', () => {
       ]
     }))
     .pipe(uglify())
-    .pipe(wrapper({
-      header: bootstrapItaliaBanner +
-      '\n'
-    }))
+    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
     .pipe(rename({
       suffix: '.min'
     }))
