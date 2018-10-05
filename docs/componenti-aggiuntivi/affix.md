@@ -16,9 +16,6 @@ toc: true
 
 <style>
   /* Style override for Documentation purposes */
-  .bd-navbar {
-    /*position: static;*/
-  }
   @media screen and (min-width: 768px) {
     .affix-top {
       top: 129px;
@@ -29,8 +26,12 @@ toc: true
       top: 89px;
     }
   }
-
-  _:-ms-lang(x), .affix-top{ top: 0; } 
+  /* IE/Edge only hack
+  Header sticky doesnt' work on IE/Edge
+  so affix examples should stick to top of the window*/
+  _:-ms-lang(x), .affix-top {
+    top: 0;
+  }
 </style>
 
 Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spesso utilizzato per i menù di navigazione o per i bottoni condivisione dei social network, per ancorarli in una specifica area mentre il contenuto della pagina viene scrollato in alto o in basso.
@@ -155,7 +156,3 @@ Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagin
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-{% highlight js %}
-  stickybits('#h-affix-bottom');
-{% endhighlight %}
