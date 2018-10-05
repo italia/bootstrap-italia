@@ -1,0 +1,13 @@
+.affix-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.affix-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+.affix-parent {
+    position: relative;
+}

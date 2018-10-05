@@ -22,7 +22,6 @@ const Paths = {
   VENDOR_JS: [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
-    './node_modules/stickybits/dist/stickybits.min.js',
     // './node_modules/pickadate/lib/compressed/picker.js',
     // './node_modules/pickadate/lib/compressed/picker.date.js',
     // './node_modules/pickadate/lib/compressed/picker.time.js'
@@ -53,6 +52,7 @@ const Paths = {
     'src/js/plugins/offcanvas.js',
     'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
+    'src/js/plugins/i-sticky.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
