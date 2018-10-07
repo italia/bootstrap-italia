@@ -12,16 +12,16 @@
 <title>Back to top · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810021129" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810071532" rel="stylesheet">
 
 <!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201810021129" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201810071532" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810021129" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810071532" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -139,7 +139,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.10.4/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.11.0/bootstrap-italia.zip" aria-label="Download">
           <i class="it-download"></i><span class="sr-only">Download</span>
         </a>
       </li>
@@ -312,6 +312,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-info">wip</span></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
               Back to top
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/affix/">
+              Affix
             </a><span class="badge badge-info">wip</span></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
@@ -401,7 +404,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#esempio">Esempio</a></li>
+<li class="toc-entry toc-h2"><a href="#esempio">Esempio</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#versione-ridotta">Versione ridotta</a></li>
+<li class="toc-entry toc-h3"><a href="#versione-con-ombra">Versione con ombra</a></li>
+<li class="toc-entry toc-h3"><a href="#versione-per-sfondo-scuro">Versione per sfondo scuro</a></li>
+</ul>
+</li>
 </ul>
           </div>
         
@@ -409,26 +418,86 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Back to top</h1>
           <p class="bd-lead">Consente agli utenti di scorrere agevolmente verso la parte superiore della pagina</p>
-          <h3 id="esempio">Esempio</h3>
-
-<p>Per aggiungere un bottone che si abilita automaticamente allo scorrimento della pagina, e che aiuta l’utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo <code class="highlighter-rouge">data-attribute="return-to-top"</code> e con una classe <code class="highlighter-rouge">.return-to-top</code> chesi occupa del suo posizionamento in basso a destra nella pagina.</p>
+          <p>Per aggiungere un bottone che si abilita automaticamente allo scorrimento della pagina, e che aiuta l’utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo <code class="highlighter-rouge">data-attribute="back-to-top"</code> e con una classe <code class="highlighter-rouge">.back-to-top</code> che lo posiziona nella parte inferiore destra nella pagina.</p>
 
 <style>
   /* Style override for Documentation purposes */
-  .return-to-top {
+  .back-to-top:not(#example) {
     position: relative;
     bottom: unset;
     right: unset;
-    display: block !important;
+    visibility: visible;
     margin: 0 auto;
+    opacity: 1;
+    transform: scale(1);
   }
 </style>
 
-<div class="bd-example">
-<a href="#" aria-hidden="true" data-attribute="return-to-top" class="return-to-top"><i class="it-collapse"></i></a>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"return-to-top"</span> <span class="na">class=</span><span class="s">"return-to-top"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span></code></pre></figure>
+<h2 id="esempio">Esempio</h2>
 
+<p>Per visualizzare il Back to top nella posizione corretta è necessario scrollare questa pagina. L’esempio del codice sottostante sarà visibile solo a scroll avvenuto.</p>
+
+<div class="bd-example">
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example"><i class="it-collapse"></i></a>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top"</span> <span class="na">id=</span><span class="s">"example"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span></code></pre></figure>
+
+<p><strong>Per facilitare la visualizzazione delle varie versioni di Back to top disponibili i seguenti esempi saranno visualizzati in linea.</strong></p>
+
+<div class="bd-example">
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top"><i class="it-collapse"></i></a>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span></code></pre></figure>
+
+<h3 id="versione-ridotta">Versione ridotta</h3>
+<p>Aggiungendo la classe <code class="highlighter-rouge">.back-to-top-small</code> al link si ottiene un pulsante di dimensioni ridotte.</p>
+
+<div class="bd-example">
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small"><i class="it-collapse"></i></a>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top back-to-top-small"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span></code></pre></figure>
+
+<h3 id="versione-con-ombra">Versione con ombra</h3>
+<p>Aggiungendo la classe <code class="highlighter-rouge">.shadow</code> al link si aggiunge un’ombra al pulsante.</p>
+
+<div class="bd-example">
+<div class="d-flex align-items-center">
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top shadow"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small shadow"><i class="it-collapse"></i></a>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top shadow"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top back-to-top-small shadow"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="versione-per-sfondo-scuro">Versione per sfondo scuro</h3>
+<p>Aggiungendo la classe <code class="highlighter-rouge">.dark</code> al link si ottiente un pulsante utilizzabile su sfondo scuro.</p>
+
+<div class="bd-example">
+<div class="d-flex align-items-center p-4 neutral-1-bg-a8">
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top dark"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark"><i class="it-collapse"></i></a>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-center p-4 neutral-1-bg-a8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top dark"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top back-to-top-small dark"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="ombra-su-sfondo-scuro">Ombra su sfondo scuro</h4>
+<p>Aggiungendo le classi <code class="highlighter-rouge">.dark</code> e <code class="highlighter-rouge">.shadow</code> al link si ottiente un pulsante con ombra utilizzabile su sfondo scuro.</p>
+
+<div class="bd-example">
+<div class="d-flex align-items-center p-4 neutral-1-bg-a8">
+  <a href="#" aria-hidden="true" data-attribute="back-to-top " class="back-to-top dark shadow"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark shadow"><i class="it-collapse"></i></a>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-center p-4 neutral-1-bg-a8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top "</span> <span class="na">class=</span><span class="s">"back-to-top dark shadow"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">data-attribute=</span><span class="s">"back-to-top"</span> <span class="na">class=</span><span class="s">"back-to-top back-to-top-small dark shadow"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-collapse"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
         </main>
       </div>
@@ -450,14 +519,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810021129"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810071532"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810021129"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810071532"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
