@@ -206,7 +206,7 @@ Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare Tabs 
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row">
-    <div class="col-3">
+    <div class="col-4 col-md-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="nav-vertical-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="nav-vertical-tab1-tab" data-toggle="tab" href="#nav-vertical-tab1" role="tab" aria-controls="nav-vertical-tab1" aria-selected="true">Tab 1</a>
         <a class="nav-link" id="nav-vertical-tab2-tab" data-toggle="tab" href="#nav-vertical-tab2" role="tab" aria-controls="nav-vertical-tab2" aria-selected="false">Tab 2</a>
@@ -214,7 +214,7 @@ Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare Tabs 
         <a class="nav-link">...</a>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-8 col-md-9">
       <div class="tab-content" id="nav-vertical-tabContent">
         <div class="tab-pane p-3 fade show active" id="nav-vertical-tab1" role="tabpanel" aria-labelledby="nav-vertical-tab1-tab">Contenuto 1</div>
         <div class="tab-pane p-3 fade" id="nav-vertical-tab2" role="tabpanel" aria-labelledby="nav-vertical-tab2-tab">Contenuto 2</div>
@@ -232,7 +232,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row">
-    <div class="col-3">
+    <div class="col-4 col-md-3">
       <div class="nav nav-tabs nav-tabs-vertical nav-tabs-vertical-background" id="nav-vertical-tab-bg" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="nav-vertical-tab-bg1-tab" data-toggle="tab" href="#nav-vertical-tab-bg1" role="tab" aria-controls="nav-vertical-tab-bg1" aria-selected="true">Tab 1</a>
         <a class="nav-link" id="nav-vertical-tab-bg2-tab" data-toggle="tab" href="#nav-vertical-tab-bg2" role="tab" aria-controls="nav-vertical-tab-bg2" aria-selected="false">Tab 2</a>
@@ -240,7 +240,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
         <a class="nav-link">...</a>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-8 col-md-9">
       <div class="tab-content" id="nav-vertical-tab-bgContent">
         <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-bg1" role="tabpanel" aria-labelledby="nav-vertical-tab-bg1-tab">Contenuto 1</div>
         <div class="tab-pane p-3 fade" id="nav-vertical-tab-bg2" role="tabpanel" aria-labelledby="nav-vertical-tab-bg2-tab">Contenuto 2</div>
@@ -256,7 +256,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row">
-    <div class="col-3">
+    <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="nav-vertical-tab-ico" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="nav-vertical-tab-ico1-tab" data-toggle="tab" href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1" aria-selected="true">Tab 1 <i class="it-ico it-file"></i></a>
         <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab" href="#nav-vertical-tab-ico2" role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">Tab 2 <i class="it-ico it-calendar"></i></a>
@@ -264,7 +264,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
         <a class="nav-link">...</a>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-7 col-md-8 col-lg-9">
       <div class="tab-content" id="nav-vertical-tab-icoContent">
         <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-ico1" role="tabpanel" aria-labelledby="nav-vertical-tab-ico1-tab">Contenuto 1</div>
         <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico2" role="tabpanel" aria-labelledby="nav-vertical-tab-ico2-tab">Contenuto 2</div>
@@ -333,7 +333,7 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row flex-row-reverse">
-    <div class="col-3">
+    <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="pos-vr" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="pos-vr1-tab" data-toggle="tab" href="#pos-vr1" role="tab" aria-controls="pos-vr1" aria-selected="true"><i class="it-ico it-file"></i> Tab 1</a>
         <a class="nav-link" id="pos-vr2-tab" data-toggle="tab" href="#pos-vr2" role="tab" aria-controls="pos-vr2" aria-selected="false"><i class="it-ico it-calendar"></i> Tab 2</a>
@@ -341,7 +341,7 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
         <a class="nav-link">...</a>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-7 col-md-8 col-lg-9">
       <div class="tab-content" id="pos-vrContent">
         <div class="tab-pane p-3 fade show active" id="pos-vr1" role="tabpanel" aria-labelledby="pos-vr1-tab">Contenuto 1</div>
         <div class="tab-pane p-3 fade" id="pos-vr2" role="tabpanel" aria-labelledby="pos-vr2-tab">Contenuto 2</div>
@@ -381,31 +381,33 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row">
-    <div class="col-3">
+    <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical nav-dark">
         <a class="nav-link active" href="#">Tab 1 <i class="it-ico it-file"></i></a>
         <a class="nav-link" href="#" role="tab">Tab 2 <i class="it-ico it-calendar"></i></a>
         <a class="nav-link" href="#" role="tab">Tab 3 <i class="it-ico it-comment"></i></a>
-        <a class="nav-link disabled" href="#" role="tab">Tab 4 Disabilitata <i class="it-ico it-unlock"></i></a>
+        <a class="nav-link disabled" href="#" role="tab">Tab 4 <i class="it-ico it-unlock"></i></a>
       </div>
     </div>
-    <div class="col-9 p-4">
+    <div class="col-7 col-md-8 col-lg-9 p-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros sem, consectetur ut enim ac, viverra vulputate urna. In at facilisis nulla. Nulla facilisi. Morbi eget felis sapien. Suspendisse tempus rutrum sapien, vel tristique lectus dapibus feugiat. Ut hendrerit molestie risus non blandit. Vivamus nec scelerisque augue. Suspendisse sit amet erat odio. Nullam pretium fermentum massa, in imperdiet mi varius at. Fusce mauris nunc, mollis hendrerit est eu, auctor tristique mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
     </div>
   </div>
 </div>
 
+<hr>
+
 <div class="bd-example-tabs">
   <div class="row flex-row-reverse">
-    <div class="col-3">
+    <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical nav-dark">
         <a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a>
         <a class="nav-link" href="#" role="tab"><i class="it-ico it-calendar"></i> Tab 2</a>
         <a class="nav-link" href="#" role="tab"><i class="it-ico it-comment"></i> Tab 3</a>
-        <a class="nav-link disabled" href="#" role="tab"><i class="it-ico it-unlock"></i> Tab 4 Disabilitata</a>
+        <a class="nav-link disabled" href="#" role="tab"><i class="it-ico it-unlock"></i> Tab 4</a>
       </div>
     </div>
-    <div class="col-9 p-4">
+    <div class="col-7 col-md-8 col-lg-9 p-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros sem, consectetur ut enim ac, viverra vulputate urna. In at facilisis nulla. Nulla facilisi. Morbi eget felis sapien. Suspendisse tempus rutrum sapien, vel tristique lectus dapibus feugiat. Ut hendrerit molestie risus non blandit. Vivamus nec scelerisque augue. Suspendisse sit amet erat odio. Nullam pretium fermentum massa, in imperdiet mi varius at. Fusce mauris nunc, mollis hendrerit est eu, auctor tristique mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
     </div>
   </div>

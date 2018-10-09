@@ -3,9 +3,12 @@
   background-color: $white;
   border-bottom-color: $gray-border-disabled;
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
 
   &.auto {
-    flex-wrap: nowrap;
     .nav-link {
       flex: 1;
     }
@@ -24,6 +27,7 @@
       justify-content: space-between;
       border-bottom: none;
       border-right: 2px solid transparent;
+      white-space: normal;
       &:hover {
         border-bottom: none;
       }
@@ -53,6 +57,7 @@
     border-bottom: 2px solid transparent;
     padding: 0.778rem 1.444em;
     flex: 1 0 1;
+    white-space: nowrap;
 
     //vertical & center align
     display: flex;
@@ -127,7 +132,8 @@
 
   //card version
   &.nav-tabs-cards {
-
+    overflow-y: initial;
+    //overflow-x: scroll;
     .nav-link {
       transform: translateY(1px);
       border: 1px solid transparent;
@@ -179,7 +185,6 @@
           background-color: $italia;
         }
       }
-      
     }
 
     .nav-link {
@@ -254,16 +259,13 @@
   }
 }
 
-/*
-.it-ico-sm {
-  font-size: $h3-font-size;
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+  .nav-tabs {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    &.auto {
+      flex-wrap: nowrap;
+    }
+  }
 }
-
-.it-ico {
-  font-size: $h5-font-size;
-}
-
-.it-ico-lg {
-  font-size: $h4-font-size;
-}
-*/
