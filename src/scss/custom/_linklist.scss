@@ -8,6 +8,16 @@
       padding-left: $link-list-h-pad;
     }
     li{
+      &.it-more{
+        a{
+          margin-top:$link-list-h-pad; 
+          span{
+            display: inline;
+            margin-right: 0;
+          }
+        }
+       
+      }
       a{
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
@@ -38,13 +48,7 @@
           display: block;
           margin-right:$link-list-h-pad;
         }
-        &.it-more{
-          margin-top:$link-list-h-pad / 2; 
-          span{
-            display: inline;
-            margin-right: 0;
-          }
-        }
+        
         // icone destre dentro link
         &.right-icon{
           i.right{
@@ -172,30 +176,7 @@
     }
   }
 }
-// megamenu footer version
-.navbar{
-  .dropdown-menu{
-    .it-megamenu-footer{
-      background: $primary-a9;
-      padding: $link-list-megamenu-footer-link-padding 0;
-      .link-list-wrapper{
-        margin-bottom:0;
-        .link-list{
-          li{
-            a{
-              &.list-item{
-                span{
-                  display: inline;
-                  font-weight: 600;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) { 
@@ -234,57 +215,7 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  // megamenu footer version
-  .navbar{
-    .dropdown-menu{
-      .it-megamenu-footer{
-        background: $link-list-megamenu-footer-bg-color;
-        margin-top: $link-list-megamenu-footer-link-padding;
-        margin-bottom: -$link-list-footer-distance-bottom;
-        padding:0;
-        .link-list-wrapper{
-          .link-list{
-            li{
-              a{
-                &.list-item{
-                  padding-top: $link-list-megamenu-footer-link-padding;
-                  padding-bottom: $link-list-megamenu-footer-link-padding;
-                  span{
-                    display: inline;
-                    font-weight: 600;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // megamenu vertical cta list
-  .navbar{
-    .dropdown-menu{
-      .it-vertical{
-        background: $link-list-megamenu-footer-bg-color;
-        padding-top: $link-list-footer-distance-bottom;
-        margin-top: -$link-list-footer-distance-bottom;
-        margin-bottom: -$link-list-footer-distance-bottom;
-        margin-right:  ($grid-gutter-width / -2);
-        margin-left:  ($grid-gutter-width / -2);
-        .link-list{
-          li{
-            a{
-              display: flex;
-              justify-content: space-between;
-              span{
-                font-weight: bold;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  
 }
 
 //Desktop

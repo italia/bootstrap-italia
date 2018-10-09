@@ -210,17 +210,22 @@ $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
 
 //Navigation
-$navigation-bg-color: $color-primary;
+$navbar-bg-color: $color-primary;
+$navigation-bg-color: #FFF;
+$navigation-bg-color-desktop: $color-primary;
+
 $navigation-h-padding:24px;
 $navigation-v-padding:12px;
 $navigation-sidebar-bg-color-mobile: rgba(0,0,0,0.6);
-$navigation-close-button-text-color: $white;
+$navigation-close-button-text-color: $color-primary;
 $navigation-close-button-text-size: 0.750em;
 $navigation-close-button-icon-size: 2em;
 $navigation-links-margin-top:102px;
-$navigation-link-color: $white;
-$navigation-link-active-bar-size:2px;
-$navigation-link-active-bar-color:$white;
+$navigation-link-color: $color-primary;
+$navigation-link-color-desk: #FFF;
+$navigation-link-active-bar-size:3px;
+$navigation-link-active-bar-color:$color-primary;
+$navigation-link-active-bar-color-desk:$white;
 $navigation-toggle-button-icon-color:$white;
 $navigation-toggle-button-icon-size:1.625em;
 $navigation-dropdown-icon-size:0.8em;
@@ -250,6 +255,28 @@ $link-list-avatar-radius: 50px;
 $link-list-avatar-margin:8px;
 $link-list-checkbox-icon-right:35px;
 $link-list-toggle-margin:8px;
+
+// Megamenu
+$megamenu-padding-top-desktop:32px;
+$megamenu-column-gap:24px;
+$megamenu-link-small-line-width:65px;
+$megamenu-link-small-line-margin-bottom:8px;
+$megamenu-heading-line-height: 1.2em;
+$megamenu-heading-bottom-margin:.5rem;
+$megamenu-heading-text-size: 0.833em;
+$megamenu-heading-margin-top:5px;
+$megamenu-link-arrow-size: .8em;
+$megamenu-footer-bg-color:$lightgrey-c2;
+
+$megamenu-linklist-link-line-height: 1em;
+$megamenu-linklist-link-v-padding: .5em;
+
+$megamenu-liklist-vertical-margin-top:30px;
+$megamenu-liklist-vertical-margin-bottom:20px;
+$megamenu-linklist-vertical-link-padding: 36px;
+$megamenu-vertical-desription-font-size: 0.889em;
+
+
 
 // Linklist footer megamenu
 $link-list-megamenu-footer-bg-color:$neutral-2;

@@ -6,7 +6,7 @@
 }
 
 .navbar{
-  background: $navigation-bg-color;
+  background: $navigation-bg-color$navbar-bg-color;
   // navbar mobile
   .navbar-collapsable{
     position: fixed;
@@ -23,17 +23,23 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 0;
-      left:$navigation-h-padding * 2;
+      right: $navigation-h-padding * 2;
+      left:0;
       pointer-events:all;
       overflow-y:auto;
-      transform:translateX(100%);
+      transform:translateX(-100%);
       //- transizione de definire
       transition: all 0.3s;
       .navbar-nav{
         padding:$navigation-h-padding 0 0;
         .dropdown-menu{
           padding-bottom:0;
+          // link list variation
+          .link-list{
+            h3{
+              
+            }
+          }
         }
       }
     }
@@ -44,11 +50,12 @@
       li{
         a.nav-link{
           color: $navigation-link-color;
-          font-weight: 400;
+          font-weight: 600;
           padding: $navigation-v-padding $navigation-h-padding;
           position: relative;
           &.active{
             border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+            background: $primary-c1;
           }
         }
       }
@@ -64,11 +71,11 @@
   }
   //wrapper pulsante di chiusura menu
   .close-div{
-    transform:translateX(100%);
+    transform:translateX(-100%);
     padding:$navigation-h-padding;
     position: fixed;
-    left: $navigation-h-padding * 2;
-    right: 0;
+    left: 0;
+    right: $navigation-h-padding * 2;
     top: 0;
     background:$navigation-bg-color; 
     z-index: 10;
@@ -107,17 +114,17 @@
         li{
           a{
             span{
-              color: $white;
+              color: $navigation-link-color;
             }
             i{
-              color: $white;
+              color: $navigation-link-color;
             }
             h3{
-              color: $white;
+              color: $navigation-link-color;
             }
           }
           h3{
-            color: $white;
+            color: $navigation-link-color;
           }
         }
       }
@@ -230,7 +237,7 @@
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar{
-    background: $navigation-bg-color;
+    background: $navigation-bg-color-desktop;
     padding:0;
     // navbar mobile
     .navbar-collapsable{
@@ -254,6 +261,7 @@
         overflow-y:visible;
         transform:none;
         transition: none;
+        background: $navigation-bg-color-desktop;
         .navbar-nav{
           margin-top:0;
           padding:0 $navigation-h-padding;
@@ -273,9 +281,11 @@
           a.nav-link{
             font-weight: 400;
             padding:$navigation-v-padding $navigation-h-padding;
+            color: $navigation-link-color-desk;
             &.active{
               border-left:0;
-              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color-desk;
+              background: transparent;
             }
             &.disabled{
               opacity:$navigation-disabled-item-opacity;
@@ -361,7 +371,7 @@
     display: none;
   }
   //--megamenu
-  .has-megamenu{
+  .has-megamenu{ 
     .navbar-collapsable{
       width: 100%;
     }
