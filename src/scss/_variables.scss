@@ -9,6 +9,9 @@ $spacer: 16px !default;
 $grid-columns: 12 !default;
 $grid-gutter-width: 12px !default;
 
+// Vertical base space
+$v-gap: 8px !default;
+
 // Responsive gutter widths
 $grid-gutter-widths: (
   sm: 12px,
@@ -195,7 +198,8 @@ $dropdown-item-padding-x: 24px;
 $dropdown-item-padding-y: 12px;
 $dropdown-border-width: 0;
 $dropdown-border-color: transparent;
-$dropdown-box-shadow: 0 0 30px 5px rgba(0,0,0,.05);
+$dropdown-box-shadow: 0 20px 30px 5px rgba(0,0,0,.05);
+
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
 $dropdown-custom-button-font-size: 1rem;
@@ -256,11 +260,12 @@ $link-list-avatar-margin:8px;
 $link-list-checkbox-icon-right:35px;
 $link-list-toggle-margin:8px;
 
+ 
 // Megamenu
-$megamenu-padding-top-desktop:32px;
-$megamenu-column-gap:24px;
+$megamenu-padding-top-desktop:$v-gap * 4;
+$megamenu-column-gap:$v-gap * 3;
 $megamenu-link-small-line-width:65px;
-$megamenu-link-small-line-margin-bottom:8px;
+$megamenu-link-small-line-margin-bottom:$v-gap;
 $megamenu-heading-line-height: 1.2em;
 $megamenu-heading-bottom-margin:.5rem;
 $megamenu-heading-text-size: 0.833em;
@@ -268,11 +273,15 @@ $megamenu-heading-margin-top:5px;
 $megamenu-link-arrow-size: .8em;
 $megamenu-footer-bg-color:$lightgrey-c2;
 
+$megamenu-link-more-link-list-distance-mobile: $v-gap;
+
+
+
 $megamenu-linklist-link-line-height: 1em;
 $megamenu-linklist-link-v-padding: .5em;
 
-$megamenu-liklist-vertical-margin-top:30px;
-$megamenu-liklist-vertical-margin-bottom:20px;
+$megamenu-liklist-vertical-margin-top:25px;
+$megamenu-liklist-vertical-margin-bottom:16px;
 $megamenu-linklist-vertical-link-padding: 36px;
 $megamenu-vertical-desription-font-size: 0.889em;
 

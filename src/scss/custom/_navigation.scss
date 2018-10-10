@@ -7,6 +7,16 @@
 
 .navbar{
   background: $navigation-bg-color$navbar-bg-color;
+  // overlay div
+  .overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $navigation-sidebar-bg-color-mobile;    
+    display: none;
+  }
   // navbar mobile
   .navbar-collapsable{
     position: fixed;
@@ -15,7 +25,6 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    background: $navigation-sidebar-bg-color-mobile;    
     display: none;
     // menu vrapper
     .menu-wrapper{
@@ -29,9 +38,11 @@
       overflow-y:auto;
       transform:translateX(-100%);
       //- transizione de definire
-      transition: all 0.3s cubic-bezier(.1,.57,.4,.97);
+      transition: all 0.2s cubic-bezier(.29,.85,.5,.99);
+      
       .navbar-nav{
         padding:$navigation-h-padding 0 0;
+        overflow: hidden;
         .dropdown-menu{
           padding-bottom:0;
           // link list variation
@@ -45,7 +56,6 @@
     }
     /*lista menu*/
     .navbar-nav{
-      margin-top:$navigation-links-margin-top;
       padding: $navigation-h-padding 0;
       li{
         a.nav-link{
@@ -62,6 +72,7 @@
     &.expanded{
         .menu-wrapper{
           transform:translateX(0);
+          transition: all 0.3s cubic-bezier(.29,.85,.5,.99);
         }
         .close-div{
           transform:translateX(0);
@@ -71,23 +82,25 @@
   //wrapper pulsante di chiusura menu
   .close-div{
     transform:translateX(-100%);
-    padding:$navigation-h-padding;
+    padding:$navigation-h-padding 0;
     position: fixed;
     left: 0;
-    right: $navigation-h-padding * 2;
+    right: 0;
     top: 0;
-    background:$navigation-bg-color; 
     z-index: 10;
+    pointer-events: none;
     //- transizione de definire
     transition: all 0.3s cubic-bezier(.1,.57,.4,.97);
     // pulsante di chiusura menu
     .close-menu{
       background: transparent;
+      pointer-events: all;
       color: $navigation-close-button-text-color;
       text-align: center;
       font-size: $navigation-close-button-text-size;
       text-transform: uppercase;
       padding: 0;
+      float: right;
       span{
         display: block;
         text-align: center;
@@ -279,6 +292,7 @@
         .navbar-nav{
           margin-top:0;
           padding:0 $navigation-h-padding;
+          overflow: inherit;
           .dropdown-menu{
             padding-bottom:$link-list-footer-distance-bottom;
           }
@@ -407,7 +421,8 @@
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity $dropdown-menu-animation-speed;
+        transition: opacity $dropdown-menu-animation-speed/2 cubic-bezier(.1,.57,.36,.99);
+        
       }
     }
     &.show{
@@ -423,12 +438,13 @@
       min-width: auto;
       left:$navigation-h-padding;
       right: $navigation-h-padding;
+      animation-timing-function: cubic-bezier(.1,.57,.36,.99);
       //hide arrow
       &:before{
         display: none;
       }
       &.show{
-        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed;
+        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed/2;
       }
     }
   }
