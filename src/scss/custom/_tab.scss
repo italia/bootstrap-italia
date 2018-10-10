@@ -18,6 +18,16 @@
     }
   }
 
+  //tabs with icon and text
+  &.nav-tabs-icon-text {
+    //icons
+    .it-ico, .it-ico-lg  {
+      &:before {
+        margin-right: 0.889em;
+      }
+    }
+  }
+
   //vertical tabs
   &.nav-tabs-vertical {
     flex-direction: column;
@@ -58,6 +68,7 @@
     padding: 0.778rem 1.444em;
     flex: 1 0 1;
     white-space: nowrap;
+    line-height: 1em;
 
     //vertical & center align
     display: flex;
@@ -82,13 +93,11 @@
     .it-ico  {
       &:before {
         font-size: 1.333rem;
-        margin-right: 0.556rem;
       }
     }
     .it-ico-lg {
       &:before {
         font-size: 1.778rem;
-        margin-right: 0.556rem;
       }
     }
   }
@@ -132,75 +141,101 @@
 
   //card version
   &.nav-tabs-cards {
-    overflow-y: initial;
-    //overflow-x: scroll;
+
+    border-bottom: none;
+
+    //grey fullwidth bottom border for ul
+    .nav-item-filler {
+      flex-grow: 1;
+      border-bottom: 1px solid $gray-border-disabled;
+    }
     .nav-link {
-      transform: translateY(1px);
       border: 1px solid transparent;
+      border-bottom: 1px solid $gray-border-disabled;
     }
 
     .nav-link.active, .nav-item.show .nav-link {
       border: 1px solid $gray-border-disabled;
       border-bottom-color: #fff;
       border-radius: $border-radius $border-radius 0 0;
-      .nav-link-close {
-        cursor: pointer;
-      }
     }
   }
 
   &.nav-tabs-editable {
+
     .nav-item {
       position: relative;
+      &:last-of-type {
+        border-bottom: 1px solid $gray-border-disabled;
+      }
     }
 
+    //grey fullwidth bottom border for ul
+    .nav-item-filler {
+      width: 2em;
+    }
+
+    //add button
     .nav-tab-add {
-      position: absolute;
+      margin: -0.2em 1em 0;
+      position: relative;
       width: 1.444rem;
       height: 1.444rem;
       top: 0.8rem;
       border: 1px solid $gray-border-disabled;
       border-radius: 50%;
       right: 0;
-      a {
-        width: 1.444rem;
-        height: 1.444rem;
-        display: block;
-        &:after {
-          content: '';
-          position: absolute;
-          width: 2px;
-          height: 14px;
-          left: 11px;
-          top: 5px;
-          background-color: $italia;
-        }
-        &:before {
-          content: '';
-          position: absolute;
-          width: 14px;
-          height: 2px;
-          left: 5px;
-          top: 11px;
-          background-color: $italia;
-        }
+      //plus sign
+      &:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 0.778rem;
+        left: 0.611rem;
+        top: 0.278rem;
+        background-color: $italia;
       }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0.778rem;
+        height: 2px;
+        left: 0.278rem;
+        top: 0.611rem;
+        background-color: $italia;
+      }
+
     }
 
     .nav-link {
-      padding-right: 2.888em
+      padding-right: 2.888em;
     }
 
      //close button
     .nav-link-close {
+      cursor: pointer;
       position: absolute;
-      top: calc(50% - 0.75rem);
+      top: calc(50% - 0.9rem);
       right: 1.444em;
+      color: $neutral-1-a7;
+      transition: color 0.2s;
+      &.disabled {
+        color: $gray-300;
+        cursor: pointer;
+      }
+      &:hover {
+        color: darken($primary, 10%);
+      }
       .it-ico {
         font-size: 0.6rem;
         &:before {
           margin-right: 0;
         }
+      }
+    }
+    .nav-link.active, .nav-item.show .nav-link {
+      .nav-link-close {
+        color: $primary;
       }
     }
   }
@@ -237,6 +272,12 @@
         border-left: 2px solid transparent;
         &:hover {
           border-bottom: none;
+        }
+        //icons
+        .it-ico, .it-ico-lg  {
+          &:before {
+            margin-right: 0.889em;
+          }
         }
       }
       .nav-link.active, .nav-item.show .nav-link {

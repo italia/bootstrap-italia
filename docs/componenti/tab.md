@@ -64,14 +64,14 @@ Per ottenere icone più grandi è sufficiente aggiungere la classe `it-ico-lg` a
 
 ### Tab con testo e icona
 
-Icone e testi possono convivere all'interno delle Tab, l'allineamento verticale dei due elementi è automatico.
+Icone e testi possono convivere all'interno delle Tab, l'allineamento verticale dei due elementi è automatico. Per ottenere il corretto margine fra testo e icona nei tab a sviluppo orizzontale è necessario aggiungere la classe `nav-tabs-icon-text` al tag `<ul>`
 
 {% capture example %}
-<ul class="nav nav-tabs auto">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-file"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-calendar"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-comment"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-unlock"></i> Tab 4</a></li>
+<ul class="nav nav-tabs nav-tabs-icon-text auto">
+  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i> Tab 4</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -115,7 +115,7 @@ In assenza della classe `.auto` le tab vengono dimensionate in base al contenuto
 ### Tab con testo e icona
 
 {% capture example %}
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs nav-tabs-icon-text">
   <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
@@ -140,7 +140,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
   <div class="tab-pane p-4 fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">Contenuto 1</div>
   <div class="tab-pane p-4 fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">Contenuto 2</div>
   <div class="tab-pane p-4 fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">Contenuto 3</div>
-  <div class="tab-pane p-4 fade" id="tab4" role="tabpanel" aria-labelledby="tab3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+  <div class="tab-pane p-4 fade" id="tab4" role="tabpanel" aria-labelledby="tab3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -157,14 +157,14 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
     <div class="tab-pane p-4 fade show active" id="tab1a" role="tabpanel" aria-labelledby="tab1a-tab"><p>Contenuto 1</p></div>
     <div class="tab-pane p-4 fade" id="tab2a" role="tabpanel" aria-labelledby="tab2a-tab"><p>Contenuto 2</p></div>
     <div class="tab-pane p-4 fade" id="tab3a" role="tabpanel" aria-labelledby="tab3a-tab"><p>Contenuto 3</p></div>
-    <div class="tab-pane p-4 fade" id="tab4a" role="tabpanel" aria-labelledby="tab4a-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+    <div class="tab-pane p-4 fade" id="tab4a" role="tabpanel" aria-labelledby="tab4a-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
   </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Tab con testo e icona
 
 {% capture example %}
-<ul class="nav nav-tabs" id="myTab3" role="tablist">
+<ul class="nav nav-tabs nav-tabs-icon-text" id="myTab3" role="tablist">
   <li class="nav-item"><a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false"><i class="it-ico it-calendar d-block text-center"></i> Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false"><i class="it-ico it-comment d-block text-center"></i> Tab 3</a></li>
@@ -174,7 +174,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
   <div class="tab-pane p-4 fade show active" id="tab1b" role="tabpanel" aria-labelledby="tab1c-tab"><p>Contenuto 1</p></div>
   <div class="tab-pane p-4 fade" id="tab2b" role="tabpanel" aria-labelledby="tab2b-tab"><p>Contenuto 2</p></div>
   <div class="tab-pane p-4 fade" id="tab3b" role="tabpanel" aria-labelledby="tab3b-tab"><p>Contenuto 3</p></div>
-  <div class="tab-pane p-4 fade" id="tab4b" role="tabpanel" aria-labelledby="tab4b-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+  <div class="tab-pane p-4 fade" id="tab4b" role="tabpanel" aria-labelledby="tab4b-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -321,7 +321,7 @@ Per posizionare i Tab al di sotto del contenuto è necessario utilizzare un elem
     <div class="tab-pane p-4 fade show active" id="pos-hrtab1" role="tabpanel" aria-labelledby="pos-hr1-tab">Contenuto 1</div>
     <div class="tab-pane p-4 fade" id="pos-hrtab2" role="tabpanel" aria-labelledby="pos-hr2-tab">Contenuto 2</div>
     <div class="tab-pane p-4 fade" id="pos-hrtab3" role="tabpanel" aria-labelledby="pos-hr3-tab">Contenuto 3</div>
-    <div class="tab-pane p-4 fade" id="pos-hrtab4" role="tabpanel" aria-labelledby="pos-hr3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+    <div class="tab-pane p-4 fade" id="pos-hrtab4" role="tabpanel" aria-labelledby="pos-hr3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -368,7 +368,7 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
 ### Tab con testo e icona
 
 {% capture example %}
-<ul class="nav nav-tabs nav-dark">
+<ul class="nav nav-tabs nav-tabs-icon-text nav-dark">
   <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
@@ -422,44 +422,48 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
   <li class="nav-item"><a class="nav-link" id="card-simple2-tab" data-toggle="tab" href="#card-simpletab2" role="tab" aria-controls="card-simpletab2" aria-selected="false">Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" id="card-simple3-tab" data-toggle="tab" href="#card-simpletab3" role="tab" aria-controls="card-simpletab3" aria-selected="false">Tab 3</a></li>
   <li class="nav-item"><a class="nav-link disabled" id="card-simple4-tab" data-toggle="tab" href="#card-simpletab4" role="tab" aria-controls="card-simpletab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitata</a></li>
+  <li class="nav-item-filler"></li>
 </ul>
 <div class="tab-content" id="card-simpleContent">
   <div class="tab-pane p-4 fade show active" id="card-simpletab1" role="tabpanel" aria-labelledby="card-simple1-tab">Contenuto 1</div>
   <div class="tab-pane p-4 fade" id="card-simpletab2" role="tabpanel" aria-labelledby="card-simple2-tab">Contenuto 2</div>
   <div class="tab-pane p-4 fade" id="card-simpletab3" role="tabpanel" aria-labelledby="card-simple3-tab">Contenuto 3</div>
-  <div class="tab-pane p-4 fade" id="card-simpletab4" role="tabpanel" aria-labelledby="card-simple3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+  <div class="tab-pane p-4 fade" id="card-simpletab4" role="tabpanel" aria-labelledby="card-simple3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Tab tipo Card con pulsanti aggiungi/elimina
 
 {% capture example %}
-<ul class="nav nav-tabs nav-tabs-cards nav-tabs-editable" id="card-simple-btn" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="card-simple-btn1-tab" data-toggle="tab" href="#card-simple-btntab1" role="tab" aria-controls="card-simple-btntab1" aria-selected="true">Tab 1 </a>
-    <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 1</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="card-simple-btn2-tab" data-toggle="tab" href="#card-simple-btntab2" role="tab" aria-controls="card-simple-btntab2" aria-selected="false">Tab 2</a>
-    <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 2</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="card-simple-btn3-tab" data-toggle="tab" href="#card-simple-btntab3" role="tab" aria-controls="card-simple-btntab3" aria-selected="false">Tab 3</a>
-    <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 3</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" id="card-simple-btn4-tab" data-toggle="tab" href="#card-simple-btntab4" role="tab" aria-controls="card-simple-btntab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitata</a>
-    <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 4</span></a>
-  </li>
-  <li class="nav-tab-add">
-    <a href="#"><span class="sr-only"> Aggiungi un tab</span></a>
-  </li>
-</ul>
+<div class="nav-tabs-wrapper">
+  <ul class="nav nav-tabs nav-tabs-cards nav-tabs-editable" id="card-simple-btn" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="card-simple-btn1-tab" data-toggle="tab" href="#card-simple-btntab1" role="tab" aria-controls="card-simple-btntab1" aria-selected="true">Tab 1 </a>
+        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 1</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="card-simple-btn2-tab" data-toggle="tab" href="#card-simple-btntab2" role="tab" aria-controls="card-simple-btntab2" aria-selected="false">Tab 2</a>
+        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 2</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="card-simple-btn3-tab" data-toggle="tab" href="#card-simple-btntab3" role="tab" aria-controls="card-simple-btntab3" aria-selected="false">Tab 3</a>
+        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 3</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" id="card-simple-btn4-tab" data-toggle="tab" href="#card-simple-btntab4" role="tab" aria-controls="card-simple-btntab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitata</a>
+        <a href="#" class="nav-link-close disabled"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 4</span></a>
+      </li>
+      <li class="nav-item-filler"></li>
+      <li class="nav-item">
+        <a href="#" class="nav-tab-add"><span class="sr-only"> Aggiungi un tab</span></a>
+      </li>
+  </ul>
+</div>
 <div class="tab-content" id="card-simple-btnContent">
   <div class="tab-pane p-4 fade show active" id="card-simple-btntab1" role="tabpanel" aria-labelledby="card-simple-btn1-tab">Contenuto 1</div>
   <div class="tab-pane p-4 fade" id="card-simple-btntab2" role="tabpanel" aria-labelledby="card-simple-btn2-tab">Contenuto 2</div>
   <div class="tab-pane p-4 fade" id="card-simple-btntab3" role="tabpanel" aria-labelledby="card-simple-btn3-tab">Contenuto 3</div>
-  <div class="tab-pane p-4 fade" id="card-simple-btntab4" role="tabpanel" aria-labelledby="card-simple-btn3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disbilitata)</div>
+  <div class="tab-pane p-4 fade" id="card-simple-btntab4" role="tabpanel" aria-labelledby="card-simple-btn3-tab">Contenuto 4 (non raggiungibile, la tab relativa è disabilitata)</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
