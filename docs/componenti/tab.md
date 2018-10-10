@@ -328,7 +328,7 @@ Per posizionare i Tab al di sotto del contenuto è necessario utilizzare un elem
 
 ### Verticale a destra
 
-Per posizionare i Tab verticali a destra contenuto è necessario applicare la classe `.flex-row-reverse` all'elemento con classe `.row` che li contiene. 
+Per posizionare i Tab verticali a destra contenuto è necessario applicare la classe `.flex-row-reverse` all'elemento con classe `.row` che li contiene.
 
 {% capture example %}
 <div class="bd-example-tabs">
@@ -416,6 +416,8 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
 
 ## Tab tipo Card
 
+Aggiungere la classe `nav-tabs-cards` al tag `ul` per ottnere un design tipo card.
+
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-cards" id="card-simple" role="tablist">
   <li class="nav-item"><a class="nav-link active" id="card-simple1-tab" data-toggle="tab" href="#card-simpletab1" role="tab" aria-controls="card-simpletab1" aria-selected="true">Tab 1</a></li>
@@ -433,6 +435,8 @@ Per posizionare i Tab verticali a destra contenuto è necessario applicare la cl
 {% endcapture %}{% include example.html content=example %}
 
 ### Tab tipo Card con pulsanti aggiungi/elimina
+
+Aggiungere le classi `nav-tabs-editable` e `nav-tabs-cards` al tag `ul` per ottnere un design tipo card editabili. Includere l'hmtl degli ulteriori elementi di interfaccia come da esempio.
 
 {% capture example %}
 <div class="nav-tabs-wrapper">
