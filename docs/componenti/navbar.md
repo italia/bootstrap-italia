@@ -160,6 +160,85 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+### Navigation Themes
+
+Il nav ha due versioni, light e dark.
+
+Lo stile di default ha differenti caratteristiche colore nella versione desktop / mobile.
+
+**Desktop**  
+Stile di default: background di colore primario e links bianchi.  
+Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+
+**Mobile**  
+Stile di default: background bianco e testi e links di colore primario.
+
+**Temi nav**  
+Per cambiare il tema del Nav è sufficiente aggiungere le seguenti classi al tag <nav class="navbar">:
+
+**`.theme-dark-mobile`**: background di colore primario, testi e links bianco. (modifica unicamente la versione mobile del Nav).
+
+**`.theme-light-desktop`**: background bianco, testi e links di colore primario.
+Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
+
+Di seguito un esempio con le due classi applicate.
+
+{% capture example %}
+<nav class="navbar navbar-expand-lg theme-dark-mobile theme-light-desk">
+   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD"><span class="it-list"></span>
+   </button>
+   <div class="navbar-collapsable" id="navbarNavD">
+      <div class="overlay"></div>
+      <div class="close-div sr-only">
+         <button class="btn close-menu" type="button"><span class="it-close"></span>close
+         </button>
+      </div>
+      <div class="menu-wrapper">
+         <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item </span></a>
+               <div class="dropdown-menu">
+                  <div class="row">
+                     <div class="col-12 col-lg-undefined">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li>
+                                 <h3>Heading </h3>
+                              </li>
+                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#link 2"><span>Link list </span></a>
+                              </li>
+                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              </li>
+                              <li><span class="divider"></span>
+                              </li>
+                              <li><a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
 ### Inline Menu
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
