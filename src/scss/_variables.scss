@@ -236,6 +236,22 @@ $navigation-dropdown-icon-size:0.8em;
 $navigation-dropdown-icon-line-height:2em;
 $navigation-dropdown-icon-width:1em;
 $navigation-disabled-item-opacity:0.5;
+
+// navigation default theme
+$navigation-default-bg-color: $color-primary;
+$navigation-default-text-color: #FFF;
+$navigation-default-light-bg-color:$lightgrey-c2;
+$navigation-default-separator-color:$neutral-1-a2;
+$navigation-default-dropdown-text-color: $color-primary;
+$navigation-default-heading-color:#000;
+
+// navigation dark theme
+$navigation-dark-bg-color: $color-primary;
+$navigation-dark-text-color: #FFF;
+$navigation-dark-bg-color:$primary-b1;
+$navigation-dark-separator-color:$primary-c5;
+
+
 //inline
 $inline-menu-line-width:2px;
 
@@ -272,19 +288,13 @@ $megamenu-heading-text-size: 0.833em;
 $megamenu-heading-margin-top:5px;
 $megamenu-link-arrow-size: .8em;
 $megamenu-footer-bg-color:$lightgrey-c2;
-
 $megamenu-link-more-link-list-distance-mobile: $v-gap;
-
-
-
 $megamenu-linklist-link-line-height: 1em;
 $megamenu-linklist-link-v-padding: .5em;
-
 $megamenu-liklist-vertical-margin-top:25px;
 $megamenu-liklist-vertical-margin-bottom:16px;
 $megamenu-linklist-vertical-link-padding: 36px;
 $megamenu-vertical-desription-font-size: 0.889em;
-
 
 
 // Linklist footer megamenu

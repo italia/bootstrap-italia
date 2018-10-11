@@ -277,7 +277,9 @@
       background: none;
       display: block !important; //-sovrascrive l'inline style di jquery 
       transition: none;
-      
+      .overlay{
+        display: none !important;
+      }
       // menu vrapper
       .menu-wrapper{
         position: inherit;
