@@ -38,6 +38,7 @@
   &:after {
     content: $dropdown-custom-button-caret-content;
     font-size: $dropdown-custom-button-caret-font-size;
+    margin-left: $dropdown-custom-button-caret-distance;
     font-family: "italia-icon-font";
     font-style: normal;
     font-weight: normal;

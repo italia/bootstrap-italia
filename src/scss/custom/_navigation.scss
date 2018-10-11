@@ -186,6 +186,8 @@
       line-height:$navigation-dropdown-icon-line-height;
       transform-origin: center;
       transition: all 0.3s;
+      margin-left:$dropdown-custom-button-caret-distance;
+      transform: translateY(-1px);
     }
     &[aria-expanded="true"]:after{
       transform: scaleY(-1);
