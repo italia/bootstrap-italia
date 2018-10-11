@@ -147,6 +147,8 @@
            // color: $navigation-link-color;
            text-transform: uppercase;
            font-size: $megamenu-heading-text-size;
+           font-weight: $megamenu-heading-font-weight;
+           letter-spacing: $megamenu-heading-letter-spacing;
           }
           .divider{
             width: $megamenu-link-small-line-width;
