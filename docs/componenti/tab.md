@@ -412,15 +412,19 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
-      <div class="nav nav-tabs nav-tabs-vertical nav-dark">
-        <a class="nav-link active" href="#">Tab 1 <i class="it-ico it-file"></i></a>
-        <a class="nav-link" href="#" role="tab">Tab 2 <i class="it-ico it-calendar"></i></a>
-        <a class="nav-link" href="#" role="tab">Tab 3 <i class="it-ico it-comment"></i></a>
-        <a class="nav-link disabled" href="#" role="tab">Tab 4 <i class="it-ico it-unlock"></i></a>
+      <div class="nav nav-tabs nav-tabs-vertical nav-dark" id="nav-vertical-tab-ico-dark" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="nav-vertical-tab-dark1-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark1" role="tab" aria-controls="nav-vertical-tab-dark1" aria-selected="true">Tab 1 <i class="it-ico it-file"></i></a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark2" role="tab" aria-controls="nav-vertical-tab-ico-dark2" aria-selected="false">Tab 2 <i class="it-ico it-calendar"></i></a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark3" role="tab" aria-controls="nav-vertical-tab-ico-dark3" aria-selected="false">Tab 3 <i class="it-ico it-comment"></i></a>
+        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark4" role="tab" aria-controls="nav-vertical-tab-ico-dark4" aria-selected="false">Tab 4 <i class="it-ico it-unlock"></i></a>
       </div>
     </div>
     <div class="col-7 col-md-8 col-lg-9 p-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros sem, consectetur ut enim ac, viverra vulputate urna. In at facilisis nulla. Nulla facilisi. Morbi eget felis sapien. Suspendisse tempus rutrum sapien, vel tristique lectus dapibus feugiat. Ut hendrerit molestie risus non blandit. Vivamus nec scelerisque augue. Suspendisse sit amet erat odio. Nullam pretium fermentum massa, in imperdiet mi varius at. Fusce mauris nunc, mollis hendrerit est eu, auctor tristique mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+      <div class="tab-content" id="nav-vertical-tab-ico-darkContent">
+          <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-ico-dark1" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark1-tab">Contenuto 1</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark2" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark2-tab">Contenuto 2</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark3" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark3-tab">Contenuto 3</div>
+      </div>
     </div>
   </div>
 </div>
@@ -430,15 +434,19 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 <div class="bd-example-tabs">
   <div class="row flex-row-reverse">
     <div class="col-5 col-md-4 col-lg-3">
-      <div class="nav nav-tabs nav-tabs-vertical nav-dark">
-        <a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a>
-        <a class="nav-link" href="#" role="tab"><i class="it-ico it-calendar"></i> Tab 2</a>
-        <a class="nav-link" href="#" role="tab"><i class="it-ico it-comment"></i> Tab 3</a>
-        <a class="nav-link disabled" href="#" role="tab"><i class="it-ico it-unlock"></i> Tab 4</a>
+      <div class="nav nav-tabs nav-tabs-vertical nav-dark" id="nav-vertical-tab-ico-dark" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="nav-vertical-tab-dark1-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark1-rev" role="tab" aria-controls="nav-vertical-tab-dark1-rev" aria-selected="true"><i class="it-ico it-file"></i> Tab 1</a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark2-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark2-rev" aria-selected="false"><i class="it-ico it-calendar"></i> Tab 2</a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark3-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark3-rev" aria-selected="false"><i class="it-ico it-comment"></i> Tab 3</a>
+        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark4-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark4-rev" aria-selected="false"><i class="it-ico it-unlock"></i> Tab 4</a>
       </div>
     </div>
     <div class="col-7 col-md-8 col-lg-9 p-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eros sem, consectetur ut enim ac, viverra vulputate urna. In at facilisis nulla. Nulla facilisi. Morbi eget felis sapien. Suspendisse tempus rutrum sapien, vel tristique lectus dapibus feugiat. Ut hendrerit molestie risus non blandit. Vivamus nec scelerisque augue. Suspendisse sit amet erat odio. Nullam pretium fermentum massa, in imperdiet mi varius at. Fusce mauris nunc, mollis hendrerit est eu, auctor tristique mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+      <div class="tab-content" id="nav-vertical-tab-ico-darkContent">
+          <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-ico-dark1-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark1-tab-rev">Contenuto 1</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark2-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark2-tab-rev">Contenuto 2</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark3-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark3-tab-rev">Contenuto 3</div>
+      </div>
     </div>
   </div>
 </div>
