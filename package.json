@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "keywords": [
     "css",
     "sass",
@@ -11,6 +11,7 @@
     "web"
   ],
   "description": "Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
+  "homepage": "https://italia.github.io/bootstrap-italia/",
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
@@ -32,7 +33,7 @@
   "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "browserslist": [
     "last 2 versions",
@@ -58,13 +59,14 @@
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
+    "gulp-footer": "^2.0.1",
+    "gulp-header": "^2.0.5",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-wrapper": "^1.0.0",
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {

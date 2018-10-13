@@ -59,7 +59,7 @@ $(navlink).blur(function(event) {
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
-		}, 50) 
+		}, 50);
 	}
 });
 
@@ -75,6 +75,6 @@ $(closebutton).blur(function(event) {
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
-		}, 50)
+		}, 50);
 	}
 });
