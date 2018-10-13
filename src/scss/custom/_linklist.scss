@@ -8,6 +8,16 @@
       padding-left: $link-list-h-pad;
     }
     li{
+      &.it-more{
+        a{
+          margin-top:$link-list-h-pad; 
+          span{
+            display: inline;
+            margin-right: 0;
+          }
+        }
+       
+      }
       a{
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
@@ -38,6 +48,7 @@
           display: block;
           margin-right:$link-list-h-pad;
         }
+        
         // icone destre dentro link
         &.right-icon{
           i.right{
@@ -164,9 +175,9 @@
       }
     }
   }
-  // multiline version
-  
 }
+
+
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) { 
   .link-list-wrapper{

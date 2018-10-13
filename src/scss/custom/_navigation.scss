@@ -6,7 +6,17 @@
 }
 
 .navbar{
-  background: $navigation-bg-color;
+  background: $navigation-bg-color$navbar-bg-color;
+  // overlay div
+  .overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $navigation-sidebar-bg-color-mobile;    
+    display: none;
+  }
   // navbar mobile
   .navbar-collapsable{
     position: fixed;
@@ -15,7 +25,6 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    background: $navigation-sidebar-bg-color-mobile;    
     display: none;
     // menu vrapper
     .menu-wrapper{
@@ -23,22 +32,35 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 0;
-      left:$navigation-h-padding * 2;
+      right: $navigation-h-padding * 2;
+      left:0;
       pointer-events:all;
       overflow-y:auto;
-      transform:translateX(100%);
+      transform:translateX(-100%);
       //- transizione de definire
-      transition: all 0.3s;
+      transition: all 0.2s cubic-bezier(.29,.85,.5,.99);
+      
+      .navbar-nav{
+        padding:$navigation-h-padding 0 0;
+        overflow: hidden;
+        .dropdown-menu{
+          padding-bottom:0;
+          // link list variation
+          .link-list{
+            h3{
+
+            }
+          }
+        }
+      }
     }
     /*lista menu*/
     .navbar-nav{
-      margin-top:$navigation-links-margin-top;
       padding: $navigation-h-padding 0;
       li{
         a.nav-link{
           color: $navigation-link-color;
-          font-weight: 400;
+          font-weight: 600;
           padding: $navigation-v-padding $navigation-h-padding;
           position: relative;
           &.active{
@@ -50,6 +72,7 @@
     &.expanded{
         .menu-wrapper{
           transform:translateX(0);
+          transition: all 0.3s cubic-bezier(.29,.85,.5,.99);
         }
         .close-div{
           transform:translateX(0);
@@ -58,24 +81,26 @@
   }
   //wrapper pulsante di chiusura menu
   .close-div{
-    transform:translateX(100%);
-    padding:$navigation-h-padding;
+    transform:translateX(-100%);
+    padding:$navigation-h-padding 0;
     position: fixed;
-    left: $navigation-h-padding * 2;
+    left: 0;
     right: 0;
     top: 0;
-    background:$navigation-bg-color; 
     z-index: 10;
+    pointer-events: none;
     //- transizione de definire
-      transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(.1,.57,.4,.97);
     // pulsante di chiusura menu
     .close-menu{
       background: transparent;
+      pointer-events: all;
       color: $navigation-close-button-text-color;
       text-align: center;
       font-size: $navigation-close-button-text-size;
       text-transform: uppercase;
       padding: 0;
+      float: right;
       span{
         display: block;
         text-align: center;
@@ -90,24 +115,45 @@
   .dropdown-menu{
     background: transparent;
     box-shadow: none;
+    padding-top: 0;
     &:before{
       display: none;
     }
     .link-list-wrapper{
       padding-left:$navigation-h-padding;
       padding-right:$navigation-h-padding;
+      margin-bottom:$navigation-h-padding; 
       ul{
         li{
           a{
+            &.list-item.active{
+              color: $primary-b3;
+              text-decoration: underline;
+              span{
+                color: $primary-b3;
+              }
+            }
             span{
-              color: $white;
+              color: $navigation-link-color;
+            }
+            i{
+              color: $navigation-link-color;
             }
             h3{
-              color: $white;
+              //color: $navigation-link-color;
             }
           }
           h3{
-            color: $white;
+           // color: $navigation-link-color;
+           text-transform: uppercase;
+           font-size: $megamenu-heading-text-size;
+           font-weight: $megamenu-heading-font-weight;
+           letter-spacing: $megamenu-heading-letter-spacing;
+          }
+          .divider{
+            width: $megamenu-link-small-line-width;
+            background: $neutral-2;
+            margin-left: $navigation-h-padding;
           }
         }
       }
@@ -140,6 +186,8 @@
       line-height:$navigation-dropdown-icon-line-height;
       transform-origin: center;
       transition: all 0.3s;
+      margin-left:$dropdown-custom-button-caret-distance;
+      transform: translateY(-1px);
     }
     &[aria-expanded="true"]:after{
       transform: scaleY(-1);
@@ -154,6 +202,8 @@
     font-size: $navigation-toggle-button-icon-size;
   }
 }
+//reset icon on megamenu
+.nav-item.megamenu>a:before{display: none;}
 //-------------------INLINE MENU---------------------
 .inline-menu{
   .link-list-wrapper{
@@ -212,13 +262,13 @@
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  
+
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar{
-    background: $navigation-bg-color;
+    background: $navigation-bg-color-desktop;
     padding:0;
     // navbar mobile
     .navbar-collapsable{
@@ -231,6 +281,9 @@
       background: none;
       display: block !important; //-sovrascrive l'inline style di jquery 
       transition: none;
+      .overlay{
+        display: none !important;
+      }
       // menu vrapper
       .menu-wrapper{
         position: inherit;
@@ -241,6 +294,15 @@
         overflow-y:visible;
         transform:none;
         transition: none;
+        background: $navigation-bg-color-desktop;
+        .navbar-nav{
+          margin-top:0;
+          padding:0 $navigation-h-padding;
+          overflow: inherit;
+          .dropdown-menu{
+            padding-bottom:$link-list-footer-distance-bottom;
+          }
+        }
       }
       &.collapsed{
 
@@ -253,9 +315,11 @@
           a.nav-link{
             font-weight: 400;
             padding:$navigation-v-padding $navigation-h-padding;
+            color: $navigation-link-color-desk;
             &.active{
               border-left:0;
-              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color-desk;
+              background: transparent;
             }
             &.disabled{
               opacity:$navigation-disabled-item-opacity;
@@ -278,7 +342,7 @@
         //display: none; // none by default, but block on "open" of the menu
         float: left;
         min-width: $dropdown-min-width;
-        padding: $dropdown-padding-y 0;
+        padding: $dropdown-padding-y 0 0;
         margin: $dropdown-spacer 0 0; // override default ul
         font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
         color: $body-color;
@@ -299,10 +363,11 @@
       .link-list-wrapper{
         padding-left:0;
         padding-right:0;
+        margin-bottom:0;
         ul{
           li{
             a{
-              span{
+              span,i{
                 color: $color-primary;
               }
               h3{
@@ -334,56 +399,64 @@
         transition: transform $dropdown-menu-animation-speed;
       }
     }
-    //--megamenu
-    &.megamenu{
-      .navbar-collapsable{
-        width: 100%;
-        .nav-item{
-          position: static;
-          a{
-            position: relative;
-            &:before{
-              content: '';
-              position: absolute;
-              top: auto;
-              bottom: -$dropdown-menu-notch-base-size - 6;
-              left: $dropdown-menu-notch-position-x; 
-              width: $dropdown-menu-notch-base-size*3; 
-              height: $dropdown-menu-notch-base-size*3;
-              border-radius: $dropdown-menu-radius;
-              background-color: $dropdown-bg;
-              transform: rotate(45deg);
-              opacity: 0;
-              transition: opacity $dropdown-menu-animation-speed;
-            }
-          }
-          &.show{
-            a{
-              &:before{
-                opacity: 1;
-              }
-            }
-          }
-        }
-        .dropdown-menu{
-          min-width: auto;
-          left:$navigation-h-padding;
-          right: $navigation-h-padding;
-          //hide arrow
-          &:before{
-            display: none;
-          }
-          &.show{
-            animation: megamenuFadeIn forwards $dropdown-menu-animation-speed;
-          }
-        }
-      }
-    }
+    
   }
   .custom-navbar-toggler{
     display: none;
   }
+  //--megamenu
+  .has-megamenu{ 
+    .navbar-collapsable{
+      width: 100%;
+    }
+  }
+  .nav-item.megamenu{
+    position: static;
+    > a.dropdown-toggle{
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: -$dropdown-menu-notch-base-size - 6;
+        left: $dropdown-menu-notch-position-x; 
+        width: $dropdown-menu-notch-base-size*3; 
+        height: $dropdown-menu-notch-base-size*3;
+        border-radius: $dropdown-menu-radius;
+        background-color: $dropdown-bg;
+        transform: rotate(45deg);
+        opacity: 0;
+        display: block;
+        transition: opacity $dropdown-menu-animation-speed/2 cubic-bezier(.1,.57,.36,.99);
+        
+      }
+    }
+    &.show{
+      a.dropdown-toggle{ 
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .megamenu{
+    .dropdown-menu{
+      min-width: auto;
+      left:$navigation-h-padding;
+      right: $navigation-h-padding;
+      animation-timing-function: cubic-bezier(.1,.57,.36,.99);
+      //hide arrow
+      &:before{
+        display: none;
+      }
+      &.show{
+        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed/2;
+      }
+    }
+  }
 }
+
+    
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
