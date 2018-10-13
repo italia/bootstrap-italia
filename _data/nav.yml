@@ -50,13 +50,11 @@
     - title: Link list
       status: wip
     - title: Megamenu
-      status: wip
     - title: Modale
       status: wip
     #- title: Navigazione
     #  status: to do
     - title: Navbar
-      status: wip
     - title: Offcanvas
     - title: Pager
       status: wip

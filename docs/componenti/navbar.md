@@ -6,8 +6,7 @@ group: componenti
 toc: true
 ---
 
-## Top Navigation
-### Basic text menu
+## Navbar classica
 
 Navbar semplice con elenco di links.
 
@@ -46,7 +45,7 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Basic text with dropdown
+### Navbar classica con dropdown
 
 Nelle navbar oltre alla sequenza di link è possibile inserire elementi dropdown.
 
@@ -78,7 +77,7 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="heading">Heading</h3>
+                  <h3 id="heading" class="no_toc">Heading</h3>
                 </li>
                 <li><a class="list-item" href="#"><span>Link list 1</span></a>
                 </li>
@@ -102,13 +101,15 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Navigation with Megamenu (in progress)
+### Navbar con Megamenu
 
 Il megamenu all'interno del nav è una variazione del compenente dropdown.
 
 Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
+
+Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina dedicata al componente Megamenu]({{ site.baseurl }}/docs/componenti/megamenu/).
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu"><span></span>
@@ -126,7 +127,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-1">Megamenu content 1</h3>
+                  <h3 id="megamenu-content-1" class="no_toc">Megamenu content 1</h3>
                 </li>
               </ul>
             </div>
@@ -137,7 +138,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-2">Megamenu content 2</h3>
+                  <h3 id="megamenu-content-2" class="no_toc">Megamenu content 2</h3>
                 </li>
               </ul>
             </div>
@@ -148,7 +149,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-3">Megamenu content 3</h3>
+                  <h3 id="megamenu-content-3" class="no_toc">Megamenu content 3</h3>
                 </li>
               </ul>
             </div>
@@ -160,7 +161,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Navigation Themes
+## Versioni chiare e scure
 
 Il nav ha due versioni, light e dark.
 
@@ -174,7 +175,7 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
 Stile di default: background bianco e testi e links di colore primario.
 
 **Temi nav**  
-Per cambiare il tema del Nav è sufficiente aggiungere le seguenti classi al tag <nav class="navbar">:
+Per cambiare il tema del Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
 
 **`.theme-dark-mobile`**: background di colore primario, testi e links bianco. (modifica unicamente la versione mobile del Nav).
 
@@ -195,15 +196,15 @@ Di seguito un esempio con le due classi applicate.
       </div>
       <div class="menu-wrapper">
          <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a>
+            <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a>
+            <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
             </li>
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item </span></a>
@@ -213,17 +214,17 @@ Di seguito un esempio con le due classi applicate.
                         <div class="link-list-wrapper">
                            <ul class="link-list">
                               <li>
-                                 <h3>Heading </h3>
+                                 <h3 class="no_toc">Heading</h3>
                               </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list </span></a>
+                              <li><a class="list-item" href="#"><span>Link list </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                               <li><span class="divider"></span>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 4 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 4 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -231,7 +232,7 @@ Di seguito un esempio con le due classi applicate.
                   </div>
                </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#1"><span>link 4 </span></a>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
             </li>
          </ul>
       </div>
@@ -239,7 +240,7 @@ Di seguito un esempio con le due classi applicate.
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Inline Menu
+## Menu Inline
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
 

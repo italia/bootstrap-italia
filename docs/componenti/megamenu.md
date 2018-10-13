@@ -10,13 +10,14 @@ toc: true
 
 Megamenu contenente un elenco di links.
 
-Il megamenu all'interno del nav è una variazione del compenente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
+Il megamenu all'interno del nav è una variazione del compnente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
 
 Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
-### Basic  
+## Megamenu classico
+
 Il megamenu ha una stuttura colonnare, ogni colonna richiama al suo interno il componente **[linklist]({{ site.baseurl }}/docs/componenti/linklist/)** per comporre l'elenco di link desiderato
 
 {% capture example %}
@@ -38,23 +39,11 @@ Il megamenu ha una stuttura colonnare, ogni colonna richiama al suo interno il c
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -62,11 +51,23 @@ Il megamenu ha una stuttura colonnare, ogni colonna richiama al suo interno il c
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-4">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -80,13 +81,15 @@ Il megamenu ha una stuttura colonnare, ogni colonna richiama al suo interno il c
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Basic con "more" link.  
-Il megamenu può conmtenere un link relativo agli elenchi in esso contenuti.  
-Qualora i link mostrati nel megamenu non siano tutti quelli relativi alla voce primaria (perchè troppo numerosi), si può includere l'elemento  `<div class="it-external">` subito dopo il `<div class="row">` che contiene le linklist.  
-La struttura colonnare dell'elemento `<div class="it-external">` dev'essere la stessa di quella contenente le linklist.  
+### Classico con link "more" 
+ 
+Il megamenu può contenere un link relativo agli elenchi in esso contenuti.  
+
+Qualora i link mostrati nel megamenu non siano tutti quelli relativi alla voce primaria (perché troppo numerosi), si può includere l'elemento  `<div class="it-external">` subito dopo il `<div class="row">` che contiene le linklist.  
+La struttura colonnare dell'elemento `<div class="it-external">` dev'essere la stessa di quella contenente le linklist.
+
 All'interno dell'ultima colonna andremo ad inserire la linklist contenente il link che porterà ad una eventuale pagina in cui sarà mostrato tutto il contenuto di sezione.  
 Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more` al tag `<li>` che lo contiene.
-
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
@@ -107,23 +110,11 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -131,11 +122,23 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-4">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -162,7 +165,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li class="it-more"><a class="list-item medium" href="#link 1"><span>Link list 1 </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                 <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
                                  </li>
                               </ul>
                            </div>
@@ -177,15 +180,16 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Basic con Header.  
+### Classico con Intestazione
+
 Se ci fosse necessità di categorizzare i contenuti del megamenu, possiamo inserire un header all'interno delle link list.  
 Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag `<li>` all'inizio della lista relativa.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavE" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavE"><span class="it-list"></span>
+   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavEi" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavEi"><span class="it-list"></span>
    </button>
-   <div class="navbar-collapsable" id="navbarNavE">
+   <div class="navbar-collapsable" id="navbarNavEi">
       <div class="overlay"></div>
       <div class="close-div sr-only">
          <button class="btn close-menu" type="button"><span class="it-close"></span>close
@@ -201,28 +205,13 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
                         <div class="link-list-wrapper">
                            <ul class="link-list">
                               <li>
-                                 <h3>Heading </h3>
+                                 <h3 class="no_toc">Heading 1</h3>
                               </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3>Heading </h3>
-                              </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -231,13 +220,28 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
                         <div class="link-list-wrapper">
                            <ul class="link-list">
                               <li>
-                                 <h3>Heading </h3>
+                                 <h3 class="no_toc">Heading 2</h3>
                               </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-4">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li>
+                                 <h3 class="no_toc">Heading 3</h3>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -251,8 +255,10 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Basic con Header e More link.  
-Si possono combinare header e "more" link.  
+### Classico con Intestazione e link "more"
+ 
+Si possono combinare header e link "more".
+
 Nell'esempio di seguito, il link "more" è relativo alla sola colonna in cui è inserito.
 Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al tag `<li>` al fondo della lista relativa.
 
@@ -276,32 +282,15 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                         <div class="link-list-wrapper">
                            <ul class="link-list">
                               <li>
-                                 <h3>Heading </h3>
+                                 <h3 class="no_toc">Heading 1</h3>
                               </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
-                              <li class=" it-more"><a class="list-item medium" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3>Heading </h3>
-                              </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                              </li>
-                              <li class=" it-more"><a class="list-item medium" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
                               </li>
                            </ul>
                         </div>
@@ -310,15 +299,32 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                         <div class="link-list-wrapper">
                            <ul class="link-list">
                               <li>
-                                 <h3>Heading </h3>
+                                 <h3 class="no_toc">Heading 2</h3>
                               </li>
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
-                              <li class=" it-more"><a class="list-item medium" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-4">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li>
+                                 <h3 class="no_toc">Heading 3</h3>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
                               </li>
                            </ul>
                         </div>
@@ -332,11 +338,13 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Megamenu con call to action.  
+## Megamenu con call to action
+
 I megamenu possono contenere delle liste di call to action che possono essere posizionate in fondo o a sinistra del megamenu.
 
-**Call to action in posizione footer**  
-Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag con classe `.row` contenente l'elenco primario il tag `<div class="it-megamenu-footer">` dove andremo ad inserie in una struttura colonnare identica a quella contenente la lista principale, le liste contententi le call to action.
+### Call to action in basso
+ 
+Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag con classe `.row` contenente l'elenco primario il tag `<div class="it-megamenu-footer">` dove andremo ad inserie in una struttura colonnare identica a quella contenente la lista principale, le liste contenenti le call to action.
 
 Di seguito un esempio:
 
@@ -359,23 +367,11 @@ Di seguito un esempio:
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -383,11 +379,23 @@ Di seguito un esempio:
                      <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
                            <ul class="link-list">
-                              <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                               </li>
-                              <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-4">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
                            </ul>
                         </div>
@@ -398,7 +406,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#link 1"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -406,7 +414,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#link 1"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -414,7 +422,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#link 1"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -429,14 +437,11 @@ Di seguito un esempio:
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Megamenu con call to action.
+### Call to action a destra
 
-**Call to action a destra** 
 Per aggiungere un elenco di call to action posizionato a destra, inseriremo una linklist particolare all'interno dell'ultima colonna delle linklist primarie.
 
-**Struttura**  
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical">` all'interno della quale andremo ad inserire la nostra linklist contenete le call to action.
-
 
 Di seguito un esempio:
 
@@ -461,27 +466,13 @@ Di seguito un esempio:
                            <div class="col-12 col-lg-4">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
                                  </ul>
                               </div>
@@ -489,13 +480,27 @@ Di seguito un esempio:
                            <div class="col-12 col-lg-4">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-12 col-lg-4">
+                              <div class="link-list-wrapper">
+                                 <ul class="link-list">
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
                                  </ul>
                               </div>
@@ -507,13 +512,13 @@ Di seguito un esempio:
                            <div class="col-12 it-vertical">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
                                  </ul>
                               </div>
@@ -529,11 +534,10 @@ Di seguito un esempio:
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Megamenu con immagine e descrizione.
+## Megamenu con immagine e descrizione
 
 Possiamo inserire a destra del megamenu un immagine ed una descrizione riguardante la sezione.
 
-**Struttura**  
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical it-description">` all'interno della quale andremo ad inserire il blocco contenente immagine e testo.    
 Il tag  contenente immagine e descrizione sarà : `<div class="description-content">`
 
@@ -561,36 +565,17 @@ Di seguito un esempio:
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
                                     <li>
-                                       <h3>Heading </h3>
+                                        <h3 class="no_toc">Heading 1</h3>
                                     </li>
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li>
-                                       <h3>Heading </h3>
-                                    </li>
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
                                     </li>
                                  </ul>
                               </div>
@@ -599,17 +584,36 @@ Di seguito un esempio:
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
                                     <li>
-                                       <h3>Heading </h3>
+                                        <h3 class="no_toc">Heading 2</h3>
                                     </li>
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#link 3"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-12 col-lg-4">
+                              <div class="link-list-wrapper">
+                                 <ul class="link-list">
+                                    <li>
+                                        <h3 class="no_toc">Heading 3</h3>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                                    </li>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                                    </li>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
                                     </li>
                                  </ul>
                               </div>
@@ -635,16 +639,16 @@ Di seguito un esempio:
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Megamenu con struttura colonnare asimmetrica.
+## Megamenu con struttura colonnare asimmetrica
 
 Possiamo creare strutture colonnari asimmetriche per dar spazio a sottosezioni più popolate.  
 Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra ed una a destra.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>
+   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavCa" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavCa"><span class="it-list"></span>
    </button>
-   <div class="navbar-collapsable" id="navbarNavC">
+   <div class="navbar-collapsable" id="navbarNavCa">
       <div class="overlay"></div>
       <div class="close-div sr-only">
          <button class="btn close-menu" type="button"><span class="it-close"></span>close
@@ -659,18 +663,18 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                      <div class="col-12 col-lg-8">
                         <div class="row">
                            <div class="col-12">
-                              <h3 class="it-heading-megacolumn">Heading title left</h3>
+                              <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
                            </div>
                         </div>
                         <div class="row">
                            <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
                                  </ul>
                               </div>
@@ -678,11 +682,11 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                            <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
                                  </ul>
                               </div>
@@ -692,18 +696,18 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                      <div class="col-12 col-lg-4">
                         <div class="row">
                            <div class="col-12">
-                              <h3 class="it-heading-megacolumn">Heading title right</h3>
+                              <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
                            </div>
                         </div>
                         <div class="row">
                            <div class="col-12 col-lg-12">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
                                  </ul>
                               </div>
@@ -719,7 +723,7 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Megamenu con struttura colonnare asimmetrica e call to action a destra.
+### Call to action a destra
 
 Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destra contenete una lista di call to action.
 
@@ -744,18 +748,18 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                            <div class="col-12 col-lg-8">
                               <div class="row">
                                  <div class="col-12">
-                                    <h3 class="it-heading-megacolumn">Heading title left</h3>
+                                    <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
                                  </div>
                               </div>
                               <div class="row">
                                  <div class="col-12 col-lg-6">
                                     <div class="link-list-wrapper">
                                        <ul class="link-list">
-                                          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                           </li>
                                        </ul>
                                     </div>
@@ -763,11 +767,11 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                                  <div class="col-12 col-lg-6">
                                     <div class="link-list-wrapper">
                                        <ul class="link-list">
-                                          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                           </li>
                                        </ul>
                                     </div>
@@ -777,18 +781,18 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                            <div class="col-12 col-lg-4">
                               <div class="row">
                                  <div class="col-12">
-                                    <h3 class="it-heading-megacolumn">Heading title right</h3>
+                                    <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
                                  </div>
                               </div>
                               <div class="row">
                                  <div class="col-12 col-lg-12">
                                     <div class="link-list-wrapper">
                                        <ul class="link-list">
-                                          <li><a class="list-item" href="#link 1"><span>Link list 1 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 2"><span>Link list 2 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
                                           </li>
-                                          <li><a class="list-item" href="#link 3"><span>Link list 3 </span></a>
+                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                           </li>
                                        </ul>
                                     </div>
@@ -802,13 +806,13 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                            <div class="col-12 it-vertical">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#link 1"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 2"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
-                                    <li><a class="list-item" href="#link 3"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
                                     </li>
                                  </ul>
                               </div>

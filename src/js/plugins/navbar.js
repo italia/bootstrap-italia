@@ -20,7 +20,7 @@ $(overlay).click(function(){
 	var buttonrel  = $(this).closest('.navbar').find(".custom-navbar-toggler");
 	var fadelayer = $(target).find('.overlay');
 
-	$(buttonrel).attr('aria-expanded','false'); 
+	$(buttonrel).attr('aria-expanded','false');
 
 	$(target).removeClass('expanded');
 	$(fadelayer).fadeOut();
@@ -35,7 +35,7 @@ $(closebutton).click(function(event) {
 	var buttonrel  = $(this).closest('.navbar').find(".custom-navbar-toggler");
 	var fadelayer = $(target).find('.overlay');
 
-	$(buttonrel).attr('aria-expanded','false'); 
+	$(buttonrel).attr('aria-expanded','false');
 
 	$(target).removeClass('expanded');
 	$(fadelayer).fadeOut();
@@ -55,7 +55,7 @@ $(navlink).blur(function(event) {
 		setTimeout(function(){
 			var active = document.activeElement; // determino quale elemento ha il focus
 			var isMenu = $(active).closest('.navbar-collapsable').length; // controllo che l'elemento si trovi all'interno del navigatore
-			
+
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
@@ -71,7 +71,7 @@ $(closebutton).blur(function(event) {
 		setTimeout(function(){
 			var active = document.activeElement; // determino quale elemento ha il focus
 			var isMenu = $(active).closest('.navbar-collapsable').length; // controllo che l'elemento si trovi all'interno del navigatore
-			//console.log(document.isMenu)
+
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
