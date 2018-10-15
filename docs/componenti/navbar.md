@@ -6,8 +6,7 @@ group: componenti
 toc: true
 ---
 
-## Top Navigation
-### Basic text menu
+## Navbar classica
 
 Navbar semplice con elenco di links.
 
@@ -46,7 +45,7 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Basic text with dropdown
+### Navbar classica con dropdown
 
 Nelle navbar oltre alla sequenza di link è possibile inserire elementi dropdown.
 
@@ -78,7 +77,7 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="heading">Heading</h3>
+                  <h3 id="heading" class="no_toc">Heading</h3>
                 </li>
                 <li><a class="list-item" href="#"><span>Link list 1</span></a>
                 </li>
@@ -102,16 +101,18 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Navigation with Megamenu (in progress)
+### Navbar con Megamenu
 
 Il megamenu all'interno del nav è una variazione del compenente dropdown.
 
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.megamenu` al tag `<nav class="navbar">`. Tutti i dropdown all'interno del Navigatore si trasformeranno in megamenu.
+Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
+Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina dedicata al componente Megamenu]({{ site.baseurl }}/docs/componenti/megamenu/).
+
 {% capture example %}
-<nav class="navbar navbar-expand-lg megamenu"><span></span>
+<nav class="navbar navbar-expand-lg has-megamenu"><span></span>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
@@ -121,34 +122,34 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
     </div>
     <div class="menu-wrapper">
       <ul class="navbar-nav">
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 1</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-1">Megamenu content 1</h3>
+                  <h3 id="megamenu-content-1" class="no_toc">Megamenu content 1</h3>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 2</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-2">Megamenu content 2</h3>
+                  <h3 id="megamenu-content-2" class="no_toc">Megamenu content 2</h3>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3</span></a>
+        <li class="nav-item dropdown megamenu"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu 3</span></a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
               <ul class="link-list">
                 <li>
-                  <h3 id="megamenu-content-3">Megamenu content 3</h3>
+                  <h3 id="megamenu-content-3" class="no_toc">Megamenu content 3</h3>
                 </li>
               </ul>
             </div>
@@ -160,7 +161,86 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Inline Menu
+## Versioni chiare e scure
+
+Il nav ha due versioni, light e dark.
+
+Lo stile di default ha differenti caratteristiche colore nella versione desktop / mobile.
+
+**Desktop**  
+Stile di default: background di colore primario e links bianchi.  
+Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+
+**Mobile**  
+Stile di default: background bianco e testi e links di colore primario.
+
+**Temi nav**  
+Per cambiare il tema del Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
+
+**`.theme-dark-mobile`**: background di colore primario, testi e links bianco. (modifica unicamente la versione mobile del Nav).
+
+**`.theme-light-desktop`**: background bianco, testi e links di colore primario.
+Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
+
+Di seguito un esempio con le due classi applicate.
+
+{% capture example %}
+<nav class="navbar navbar-expand-lg theme-dark-mobile theme-light-desk">
+   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD"><span class="it-list"></span>
+   </button>
+   <div class="navbar-collapsable" id="navbarNavD">
+      <div class="overlay"></div>
+      <div class="close-div sr-only">
+         <button class="btn close-menu" type="button"><span class="it-close"></span>close
+         </button>
+      </div>
+      <div class="menu-wrapper">
+         <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item </span></a>
+               <div class="dropdown-menu">
+                  <div class="row">
+                     <div class="col-12 col-lg-undefined">
+                        <div class="link-list-wrapper">
+                           <ul class="link-list">
+                              <li>
+                                 <h3 class="no_toc">Heading</h3>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list </span></a>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                              </li>
+                              <li><span class="divider"></span>
+                              </li>
+                              <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+## Menu Inline
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
 

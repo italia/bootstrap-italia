@@ -1,29 +1,46 @@
 // open / close navbar actions
 var openbutton = $('.custom-navbar-toggler');
-var closebutton = $('.close-menu');
+var closebutton = $('.close-div ');
+var overlay = $('.overlay')
 
 //-open button action
 $(openbutton).click(function(event) {
 	/* Act on the event */
 	var target = $(this).attr('data-target');
-	
+	var fadelayer = $(target).find('.overlay');
 	$(this).attr('aria-expanded','true');
 
-	$(target).fadeIn(150, function(){
-		$(this).addClass('expanded');
-	});	
+	$(target).show();
+	$(fadelayer).fadeIn();
+	$(target).addClass('expanded');
+
 });
+$(overlay).click(function(){
+	var target = $(this).closest('.navbar-collapsable');
+	var buttonrel  = $(this).closest('.navbar').find(".custom-navbar-toggler");
+	var fadelayer = $(target).find('.overlay');
+
+	$(buttonrel).attr('aria-expanded','false');
+
+	$(target).removeClass('expanded');
+	$(fadelayer).fadeOut();
+	setTimeout(function(){
+	  $(target).hide();
+	}, 300);
+})
 
 //-close button action
 $(closebutton).click(function(event) {
 	var target = $(this).closest('.navbar-collapsable');
 	var buttonrel  = $(this).closest('.navbar').find(".custom-navbar-toggler");
+	var fadelayer = $(target).find('.overlay');
 
-	$(buttonrel).attr('aria-expanded','false'); 
+	$(buttonrel).attr('aria-expanded','false');
 
 	$(target).removeClass('expanded');
+	$(fadelayer).fadeOut();
 	setTimeout(function(){
-	  $(target).fadeOut();
+	  $(target).hide();
 	}, 300);
 
 })
@@ -38,7 +55,7 @@ $(navlink).blur(function(event) {
 		setTimeout(function(){
 			var active = document.activeElement; // determino quale elemento ha il focus
 			var isMenu = $(active).closest('.navbar-collapsable').length; // controllo che l'elemento si trovi all'interno del navigatore
-			
+
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
@@ -54,7 +71,7 @@ $(closebutton).blur(function(event) {
 		setTimeout(function(){
 			var active = document.activeElement; // determino quale elemento ha il focus
 			var isMenu = $(active).closest('.navbar-collapsable').length; // controllo che l'elemento si trovi all'interno del navigatore
-			//console.log(document.isMenu)
+
 			if(isMenu == 0){ // se l'elemento è fuori dal navigatore
 				$(closemenu).trigger('click') // simulo il click sul pulsante di chiusura del pannello
 			}
