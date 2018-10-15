@@ -327,6 +327,28 @@ $pager-jump-to-color: $neutral-2-b3;
 $pager-page-changer-padding: 12px;
 $pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
+// Sidebar
+$v-gap: 8px;
+$sidebar-heading-font-weight:600;
+$sidebar-heading-bottom-margin:.8rem;
+$sidebar-heading-text-size: 0.833em;
+$sidebar-heading-margin-top:5px;
+$sidebar-heading-letter-spacing:1px;
+$sidebar-linklist-link-line-height: 1em;
+$sidebar-linklist-link-v-padding: .8em;
+$sidebar-link-small-line-width: 65px;
+$sidebar-link-size:1em;
+$sidebar-dropdown-icon-size:0.8em;
+$sidebar-dropdown-line-selection-width:2px;
+$sidebar-dropdown-line-selection-color:$primary;
+$sidebar-submenu-font-size:0.889em;
+$sidebar-submenu-link-v-padding:.7em;
+$sidebar-border-color:$neutral-1-a2;
+
+//sidebar dark theme
+$sidebar-dark-bg-color:$neutral-1-a8;
+$sidebar-dark-text-color:#FFF;
+$sidebar-dark-separator-color: rgba(229,229,229,0.3);
 
 // Grid breakpoints
 //
