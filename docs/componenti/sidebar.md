@@ -10,9 +10,10 @@ toc: true
 ### Default
 
 La sidebar semplice può contenere:  
-**Header**  
-**Linklist primaria**  
-**Linklist secondaria**  
+
+* Header  
+* Linklist primaria  
+* Linklist secondaria  
 
 Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la **[linklist]({{ site.baseurl }}/docs/componenti/linklist/)**.
 
@@ -22,7 +23,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3>Header </h3>
+          <h3 class="no_toc">Header</h3>
         </li>
         <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
         </li>
@@ -60,7 +61,7 @@ La sidebar può contenere icone nella sua **[linklist]({{ site.baseurl }}/docs/c
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3>Header </h3>
+          <h3 class="no_toc">Header</h3>
         </li>
         <li><a class="list-item medium active left-icon" href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list active </span></a>
         </li>
@@ -98,7 +99,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3>Header </h3>
+          <h3 class="no_toc">Header</h3>
         </li>
         <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
         </li>
@@ -136,7 +137,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3>Header </h3>
+          <h3 class="no_toc">Header</h3>
         </li>
         <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
         </li>
@@ -164,14 +165,15 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Annidiata
+## Annidata
+
 ### Default
 
-La sidebar può contenere una **[linklist]({{ site.baseurl }}/docs/componenti/linklist/)** primaria annidiata.
+La sidebar può contenere una **[linklist]({{ site.baseurl }}/docs/componenti/linklist/)** primaria annidata.
 
 {% capture example %}
 <div class="sidebar-wrapper">
-  <h3>Header</h3>
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
@@ -228,11 +230,11 @@ La sidebar può contenere una **[linklist]({{ site.baseurl }}/docs/componenti/li
 
 ## Sidebar versione scura
 
-Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al div `<div class="sidebar-wrapper">` la classe `.theme-dark`
+Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al div `<div class="sidebar-wrapper">` la classe `.theme-dark`.
 
 {% capture example %}
 <div class="sidebar-wrapper theme-dark">
-  <h3>Header</h3>
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
