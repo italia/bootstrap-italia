@@ -32,7 +32,7 @@
     margin: 0;
     position: relative;
     top: 6px;
-    font-size: 0.722rem;
+    font-size: 0.9rem;
     &:before {
       margin: 0;
       color: $white;
@@ -72,7 +72,7 @@
     height: 56px;
     i {
       top: 12px;
-      font-size: 0.722rem;
+      font-size: 1.111rem;
     }
     //small version
     &.back-to-top-small {
@@ -80,8 +80,8 @@
       height: 40px;
       //caret
       i {
-        top: 4px;
-        font-size: 0.722rem;
+        top: 6px;
+        font-size: 0.9rem;
       }
     }
   }
