@@ -60,6 +60,7 @@
       status: wip
     - title: Popover
     - title: Scrollspy
+    - title: Sidebar
     - title: Skiplinks
       status: wip
     - title: Tab

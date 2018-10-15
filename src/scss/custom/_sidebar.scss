@@ -41,6 +41,10 @@
 						&[data-toggle="collapse"]{
 							&.active{
 								border-left:$sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
+								span,i{
+									color: $primary;
+									text-decoration: none;
+								}
 							}
 						}
 					}
@@ -67,7 +71,49 @@
 				margin-top: $v-gap*3;
 			}
 		}
-	} 
+	}
+	// linea destra
+	&.it-line-right-side{
+		border-right: 1px solid $sidebar-border-color;
+		.sidebar-linklist-wrapper{
+			.link-list-wrapper{
+				h3{}
+				ul{
+					li{
+						a{
+							&[data-toggle="collapse"]{
+								&.active{
+									border-right:$sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
+									border-left: none;
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// linea sinistra
+	&.it-line-left-side{
+		border-left: 1px solid $sidebar-border-color;
+		.sidebar-linklist-wrapper{
+			.link-list-wrapper{
+				h3{}
+				ul{
+					li{
+						a{
+							&[data-toggle="collapse"]{
+								&.active{
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 //small - tablet

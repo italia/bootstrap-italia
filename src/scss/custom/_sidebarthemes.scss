@@ -1,0 +1,108 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++DARK THEME+++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+.sidebar-wrapper{
+	&.theme-dark{
+		background: $sidebar-dark-bg-color;
+		h3{
+			color: $sidebar-dark-text-color;
+		}
+		.sidebar-linklist-wrapper{
+			.link-list-wrapper{
+				h3{
+					color: $sidebar-dark-text-color;
+				}
+				ul{
+					li{
+						a{
+							color: $sidebar-dark-text-color;
+							&.left-icon{
+								i.left{
+									color: $sidebar-dark-text-color;
+								}
+							}
+							span{
+								color: $sidebar-dark-text-color;
+							}
+							i.it-expand{
+								color: $sidebar-dark-text-color;
+							}
+							&[aria-expanded="true"]{
+								i{
+									color: $sidebar-dark-text-color;
+								}
+							}
+							&[data-toggle="collapse"]{
+								color: $sidebar-dark-text-color;
+								&.active{
+									border-left:$sidebar-dropdown-line-selection-width solid $sidebar-dark-text-color;
+									span,i{
+										color: $sidebar-dark-text-color;
+									}
+								}
+							}
+						}
+					}
+					&.link-sublist{
+						li{
+							a{
+								color: $sidebar-dark-text-color;
+								span{
+									color: $sidebar-dark-text-color;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.linklist-secondary{
+				&:before{
+					background: $sidebar-dark-separator-color;
+				}
+			}
+		}
+		// linea destra
+		&.it-line-right-side{
+			border-right-color: $sidebar-dark-separator-color;
+			.sidebar-linklist-wrapper{
+				.link-list-wrapper{
+					h3{}
+					ul{
+						li{
+							a{
+								&[data-toggle="collapse"]{
+									&.active{
+										border-left:none;
+										border-right-color:$sidebar-dark-text-color; 
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// linea sinistra
+		&.it-line-left-side{
+			border-left-color: $sidebar-dark-separator-color;
+			.sidebar-linklist-wrapper{
+				.link-list-wrapper{
+					h3{}
+					ul{
+						li{
+							a{
+								&[data-toggle="collapse"]{
+									&.active{
+										border-left-color: $sidebar-dark-text-color;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
