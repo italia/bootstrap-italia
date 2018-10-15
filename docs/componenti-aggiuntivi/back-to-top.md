@@ -26,20 +26,20 @@ Per aggiungere un bottone che si abilita automaticamente allo scorrimento della 
 Per visualizzare il Back to top nella posizione corretta è necessario scrollare questa pagina. L'esempio del codice sottostante sarà visibile solo a scroll avvenuto.
 
 {% capture example %}
-<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example"><i class="it-collapse"></i></a>
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top" id="example"><i class="it-arrow-up"></i></a>
 {% endcapture %}{% include example.html content=example %}
 
 **Per facilitare la visualizzazione delle varie versioni di Back to top disponibili i seguenti esempi saranno visualizzati in linea.**
 
 {% capture example %}
-<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top"><i class="it-collapse"></i></a>
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top"><i class="it-arrow-up"></i></a>
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione ridotta
 Aggiungendo la classe `.back-to-top-small` al link si ottiene un pulsante di dimensioni ridotte.
 
 {% capture example %}
-<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small"><i class="it-collapse"></i></a>
+<a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small"><i class="it-arrow-up"></i></a>
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione con ombra
@@ -47,8 +47,8 @@ Aggiungendo la classe `.shadow` al link si aggiunge un'ombra al pulsante.
 
 {% capture example %}
 <div class="d-flex align-items-center">
-  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top shadow"><i class="it-collapse"></i></a>
-  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small shadow"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top shadow"><i class="it-arrow-up"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small shadow"><i class="it-arrow-up"></i></a>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -57,8 +57,8 @@ Aggiungendo la classe `.dark` al link si ottiente un pulsante utilizzabile su sf
 
 {% capture example %}
 <div class="d-flex align-items-center p-4 neutral-1-bg-a8">
-  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top dark"><i class="it-collapse"></i></a>
-  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top dark"><i class="it-arrow-up"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark"><i class="it-arrow-up"></i></a>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -67,7 +67,7 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiente un pulsante con om
 
 {% capture example %}
 <div class="d-flex align-items-center p-4 neutral-1-bg-a8">
-  <a href="#" aria-hidden="true" data-attribute="back-to-top " class="back-to-top dark shadow"><i class="it-collapse"></i></a>
-  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark shadow"><i class="it-collapse"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top " class="back-to-top dark shadow"><i class="it-arrow-up"></i></a>
+  <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top back-to-top-small dark shadow"><i class="it-arrow-up"></i></a>
 </div>
 {% endcapture %}{% include example.html content=example %}
