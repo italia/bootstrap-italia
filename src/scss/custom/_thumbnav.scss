@@ -1,7 +1,7 @@
 .thumb-nav {
 
 	padding: 0;
-	margin: 0;
+	margin: 0 -8px;
 	display: flex;
 	justify-content: center;
 
@@ -10,11 +10,52 @@
 		flex-direction: column;
 		align-items: baseline;
 		li {
-			margin-right: 0;
-			margin-bottom: 16px;
-			flex-shrink: 1;
-			&:last-child {
-				margin-bottom: 0;
+			//flex-shrink: 1;
+		}
+	}
+
+	// fixed version
+	&.thumb-nav-fixed {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		li {
+			flex-basis: 240px;
+		}
+		&.thumb-nav-small {
+			li {
+				flex-basis: 120px;
+			}
+		}
+	}
+
+	// auto version
+	&.thumb-nav-auto {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		li {
+			.thumb-nav-resizer {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		&.thumb-nav-auto-2 {
+			li {
+				flex-basis: calc(50% - 16px);
+			}
+		}
+		&.thumb-nav-auto-3 {
+			li {
+				flex-basis: calc(33.3333% - 16px);
+			}
+		}
+		&.thumb-nav-auto-4 {
+			li {
+				flex-basis: calc(25% - 16px);
+			}
+		}
+		&.thumb-nav-auto-5 {
+			li {
+				flex-basis: calc(20% - 16px);
 			}
 		}
 	}
@@ -23,8 +64,8 @@
 
 	// no zoom
 	&.thumb-nav-nozoom {
-		a {
-			img:hover {
+		a:hover {
+			img {
 				transform: none;
 			}
 		}
@@ -32,16 +73,6 @@
 	// black & color layer
 	&.thumb-nav-black, &.thumb-nav-color {
 		a {
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				bottom: 0;
-				opacity: 0;
-				transition: $transition-fade;
-			}
 			&:hover {
 				&:after {
 					opacity: 1;
@@ -51,12 +82,12 @@
 	}
 	&.thumb-nav-black {
 		a:after {
-			background: rgba(0,0,0,0.5);
+			background: rgba(0,0,0,0.8);
 		}
 	}
 	&.thumb-nav-color {
 		a:after {
-			background: rgba($italia,0.5);
+			background: rgba($italia,0.8);
 		}
 	}
 	// invisible resizer image
@@ -100,10 +131,7 @@
 	li {
 		position: relative;
 		list-style-type: none;
-		margin-right: 16px;
-		&:last-child {
-			margin-right: 0;
-		}
+		margin: 8px;
 	}
 
 	// invisible resizer image
@@ -123,15 +151,38 @@
 		right: 0;
 		bottom: 0;
 		overflow: hidden;
+		// overlay
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity 0.4s cubic-bezier(.15,.7,.36,.99);
+		}
+		//active state
+		&.active {
+			pointer-events: none;
+			&:after {
+				opacity: 1;
+				background: rgba($italia,0.6);
+			}
+		}
 		img {
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
-			transition: $transition-base;
+			transition: transform 0.4s cubic-bezier(.15,.7,.36,.99);
 		}
 		&:hover {
 			img {
 				transform: scale(1.05);
+				transition-duration: 1s;
+			}
+			&:after {
+				transition-duration: 1s;
 			}
 		}
 	}
