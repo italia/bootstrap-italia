@@ -71,7 +71,6 @@ $(document).ready(
 									
 									var $btn = $('.it-bottom-navscroll .custom-navbar-toggler');
 									var $icon = $btn.find('span.it-list'); 
-									console.log($icon);
 									$btn.text(textContent);
 									$btn.prepend($icon);
 							}

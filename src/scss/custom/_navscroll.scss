@@ -190,6 +190,8 @@
 			&.affix-top{
 				position: sticky;
 				top: 0;
+				left: inherit;
+				right: inherit;
 			}
 		}
 		// top position
@@ -199,6 +201,8 @@
 			&.affix-top{
 				position: sticky;
 				top: 0;
+				left: inherit;
+				right: inherit;
 			}
 		}
 		// left line
