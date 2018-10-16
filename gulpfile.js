@@ -55,6 +55,7 @@ const Paths = {
     'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
     'src/js/plugins/i-sticky.js',
+    'src/js/plugins/navscroll.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
