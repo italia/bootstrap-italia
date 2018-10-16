@@ -1,0 +1,138 @@
+.thumb-nav {
+
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+
+	// vertical version
+	&.thumb-nav-vertical {
+		flex-direction: column;
+		align-items: baseline;
+		li {
+			margin-right: 0;
+			margin-bottom: 16px;
+			flex-shrink: 1;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	//hover variations------------
+
+	// no zoom
+	&.thumb-nav-nozoom {
+		a {
+			img:hover {
+				transform: none;
+			}
+		}
+	}
+	// black & color layer
+	&.thumb-nav-black, &.thumb-nav-color {
+		a {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				opacity: 0;
+				transition: $transition-fade;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&.thumb-nav-black {
+		a:after {
+			background: rgba(0,0,0,0.5);
+		}
+	}
+	&.thumb-nav-color {
+		a:after {
+			background: rgba($italia,0.5);
+		}
+	}
+	// invisible resizer image
+	&.thumb-nav-small {
+		.thumb-nav-resizer {
+			max-width: 120px;
+			max-height: 80px;
+		}
+	}
+
+	//overlay positions --------------
+	&.thumb-nav-bottom, &.thumb-nav-top {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90%;
+	}
+	&.thumb-nav-bottom {
+		bottom: 0;
+		margin-bottom: 16px;
+	}
+	&.thumb-nav-top {
+		top: 0;
+		margin-top: 16px;
+	}
+	&.thumb-nav-left, &.thumb-nav-right {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 90%;
+	}
+	&.thumb-nav-left {
+		left: 0;
+		margin-left: 16px;
+	}
+	&.thumb-nav-right {
+		right: 0;
+		margin-right: 16px;
+	}
+
+	li {
+		position: relative;
+		list-style-type: none;
+		margin-right: 16px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	// invisible resizer image
+	.thumb-nav-resizer {
+		width: 100%;
+		height: auto;
+		max-width: 240px;
+		max-height: 160px;
+		visibility: hidden;
+	}
+
+	// link and image
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			transition: $transition-base;
+		}
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
