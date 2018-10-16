@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Thumbnav
-description: Lorem ipsum dolor sit amet
+description: Componente di navigazione con immagini thumbnail
 group: componenti-aggiuntivi
 toc: true
 ---
@@ -17,7 +17,15 @@ toc: true
   }
 </style>
 
-Lorem ipsum dolor sit amet.
+Il componente Thumbnav consiste in una lista `<ul>` con classe `.thumb-nav` contenente tanti elementi `<li>` quante sono i link/thumbnail richiesti.
+
+Ogni elemento `<li>` deve contenere un _resizer_ come da esempio per mantenere le corrette proporzioni di 3:2 a prescindere dalle dimensioni dell'immagine utilizzata per la thumbnail. Il file SVG a cui punta il resizer è fornito con la distribuzione nella cartella "assets".
+
+Per indicare il link/thumbail attivo applicare la classe `.active` al relativo tag `<a>`.
+
+{% capture callout %}
+Per ragioni di accessibilità è importante indicare all'interno dell'attributo `alt=""` dell'immagine thumbnail l'azione associata al link relativo.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <ul class="thumb-nav">
@@ -126,7 +134,7 @@ Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay color
 
 ## Thumbnav verticale
 
-Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` la navigazione sarà sviluppata in verticale.
+Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` si ottiene una versione verticale della Thumbnav.
 
 {% capture example %}
 <ul class="thumb-nav thumb-nav-vertical">
@@ -145,7 +153,7 @@ Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` la naviga
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-## Posizionato in overlay
+## Posizione in overlay
 
 La Thumbnav può essere inserita in overlay all'interno di un contenitore come ad esempio una galleria immagini.
 Il contenitore dovrà utilizzare la classe di Bootstrap `.position-relative` per posizionare correttamente la Thumbnav al proprio interno.
@@ -203,7 +211,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 {% capture example %}
 <div class="test-gallery position-relative">
-  <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
+  <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
+  <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-left">
       <li>
         <img src="/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
@@ -225,7 +234,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 {% capture example %}
 <div class="test-gallery position-relative">
-  <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
+  <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
+  <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-right">
       <li>
         <img src="/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
@@ -245,7 +255,7 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 ## Griglia a larghezza fissa
 
-Applicando la classe `.thumb-nav-fixed` al Thumbnav le thumbnail avranno una larghezza fissa di 240px oppure di 120px se è stata utilizzata anche la classe `.thumb-nav-small`.
+Applicando la classe `.thumb-nav-fixed` alla Thumbnav le thumbnail avranno una larghezza fissa di 240px oppure di 120px se è stata utilizzata anche la classe `.thumb-nav-small`.
 
 {% capture example %}
 <ul class="thumb-nav thumb-nav-fixed">
@@ -272,18 +282,16 @@ Applicando la classe `.thumb-nav-fixed` al Thumbnav le thumbnail avranno una lar
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-Lore ipsum dolor sit amet
-
 ## Griglia a larghezza automatica
 
-Applicando la classe `.thumb-nav-auto` al Thumbnav le thumbnail occuperanno automaticamente l'intera larghezza del contenitore.
-E' necessario indicare il numero degli elementi presenti su ogni riga con una delle seguenti classi aggiuntive:
+Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno automaticamente l'intera larghezza del contenitore.
+È necessario indicare il numero degli elementi presenti su ogni riga con una delle seguenti classi aggiuntive:
 - `.thumb-nav-auto-2` per ottenere 2 thumb per riga
 - `.thumb-nav-auto-3` per ottenere 3 thumb per riga
 - `.thumb-nav-auto-4` per ottenere 4 thumb per riga
 - `.thumb-nav-auto-5` per ottenere 5 thumb per riga
 
-### Esempio: 3 thumbnail per riga 
+### Esempio: 3 thumbnail per riga
 
 {% capture example %}
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3">
