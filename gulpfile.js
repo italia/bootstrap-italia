@@ -55,6 +55,7 @@ const Paths = {
     'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
     'src/js/plugins/i-sticky.js',
+    'src/js/plugins/navscroll.js',
     'src/js/plugins/history-back.js',
     'src/js/' + pkg.name + '.js'
   ],

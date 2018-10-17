@@ -350,6 +350,28 @@ $sidebar-dark-bg-color:$neutral-1-a8;
 $sidebar-dark-text-color:#FFF;
 $sidebar-dark-separator-color: rgba(229,229,229,0.3);
 
+// Navscroll
+$navscroll-bg-color: #FFF;
+$navscroll-toggler-color: $primary;
+$navscroll-button-text-weight:600;
+$navscroll-top-box-shadow: 0 0px 30px 5px rgba(0,0,0,.05);
+$navscroll-bottom-box-shadow:0 0px 30px 5px rgba(0,0,0,.05);
+$navscroll-primary-font-weight:600;
+$navscroll-font-size:1em;
+$navscroll-selection-link-left:$sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
+$navscroll-secondary-active-color: $neutral-1-a10;
+$navscroll-links-padding:.8em;
+$navscroll-bg-color-desk: #FFF;
+$navscroll-line-color:$neutral-1-a2;
+$navscroll-backbutton-padding: $v-gap*2 $v-gap*3;
+$navscroll-backbutton-weight: 600;
+$navscroll-backbutton-margin-top:$v-gap*3;
+
+//navscroll dark theme mobile
+$navscroll-dark-bg-color:$neutral-1-a8;
+$navscroll-dark-text-color:#FFF;
+$navscroll-dark-separator-color: rgba(229,229,229,0.3);
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

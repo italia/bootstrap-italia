@@ -55,6 +55,7 @@
     #- title: Navigazione
     #  status: to do
     - title: Navbar
+    - title: Navscroll
     - title: Offcanvas
     - title: Pager
       status: wip

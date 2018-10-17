@@ -1,7 +1,8 @@
 // open / close navbar actions
 var openbutton = $('.custom-navbar-toggler');
 var closebutton = $('.close-div ');
-var overlay = $('.overlay')
+var overlay = $('.overlay');
+var backbutton = $('.it-back-button');
 
 //-open button action
 $(openbutton).click(function(event) {
@@ -9,7 +10,7 @@ $(openbutton).click(function(event) {
 	var target = $(this).attr('data-target');
 	var fadelayer = $(target).find('.overlay');
 	$(this).attr('aria-expanded','true');
-
+	$(backbutton).fadeIn();
 	$(target).show();
 	$(fadelayer).fadeIn();
 	$(target).addClass('expanded');
@@ -44,6 +45,8 @@ $(closebutton).click(function(event) {
 	}, 300);
 
 })
+
+
 
 //-- accessibilità via tab
 var navlink = $('.navbar-collapsable a');
