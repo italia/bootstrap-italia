@@ -208,6 +208,13 @@ gulp.task('icons-font', () => {
     .pipe(touch());
 });
 
+// Assets related tasks
+gulp.task('assets', () => {
+  return gulp.src(['src/assets/**'])
+    .pipe(gulp.dest(Paths.DIST + '/assets'))
+    .pipe(touch());
+});
+
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
@@ -236,7 +243,8 @@ gulp.task('build-library', gulp.series(
   'js-min',
   'js-bundle-min',
   'icons-css',
-  'icons-font'
+  'icons-font',
+  'assets'
 ));
 
 // Documentation
