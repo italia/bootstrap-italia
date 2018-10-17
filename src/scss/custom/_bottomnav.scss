@@ -40,7 +40,8 @@
 			text-align: center;
 		}
 	}
-	a {
+	a {	
+		display: block;
 		color: $neutral-1-a7;
 		&.active {
 			color: $primary;
