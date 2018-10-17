@@ -65,8 +65,8 @@
 			}
 		}
 	}
-	// black & color layer
-	&.thumb-nav-black, &.thumb-nav-color {
+	// black & primary layer
+	&.thumb-nav-black, &.thumb-nav-primary {
 		a {
 			&:hover {
 				&:after {
@@ -80,9 +80,9 @@
 			background: rgba(0,0,0,0.8);
 		}
 	}
-	&.thumb-nav-color {
+	&.thumb-nav-primary {
 		a:after {
-			background: rgba($italia,0.8);
+			background: rgba($primary,0.8);
 		}
 	}
 
@@ -162,7 +162,7 @@
 			pointer-events: none;
 			&:after {
 				opacity: 1;
-				background: rgba($italia,0.6);
+				background: rgba($primary,0.6);
 			}
 		}
 		// hover state

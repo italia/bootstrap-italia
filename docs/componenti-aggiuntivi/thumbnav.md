@@ -111,12 +111,12 @@ Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay nero 
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-### Hover con layer colorato
+### Hover con layer primary
 
-Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay colorato sull'immagine.
+Utilizzare la classe `.thumb-nav-primary` per ottenere un effetto di overlay di colore primary sull'immagine.
 
 {% capture example %}
-<ul class="thumb-nav thumb-nav-color">
+<ul class="thumb-nav thumb-nav-primary">
     <li>
       <img src="/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
       <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
