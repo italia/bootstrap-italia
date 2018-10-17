@@ -8,23 +8,23 @@ toc: true
 
 ## Layout della Navscroll
 
-Il componente Navscroll è una declinazione del `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper`.  
+Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper`.  
 Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine pagina.
 
-Per posizionare il menù in alto, è sufficiente aggiungere la classe `.it-top-navscroll` al tag `<nav>`.  
-Per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll` al tag `<nav>`.
+Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
 
-La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento.  
-Per la linea a sinistra  è sufficiente aggiungere la classe `.it-left-side` al tag `<nav>`.  
-Per la linea a destra  è sufficiente aggiungere la classe `.it-right-side` al tag `<nav>`.
+La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento, semplicemente aggiungendo al tag `<nav>` la classe `.it-left-side` per aggiungere una linea a sinistra, e `.it-right-side` per aggiungerla a destra.
 
 {% capture callout %}
-Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina:`href="#idElemento"`.
+Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
 Di seguito gli esempi, per visualizzare il comportamento potete guardare la pagina di esempio: **[Esempio Navscroll]({{ site.baseurl }}/docs/esempi/navscroll/){:target="_blank"}**.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 
-### Navscroll con linea a sinistra posizionata a fondo pagina su mobile.
+### Posizionamento a fondo pagina con linea a sinistra
+
+In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
+
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav"><span class="it-list"></span>1. Introduzione
@@ -83,7 +83,10 @@ Di seguito gli esempi, per visualizzare il comportamento potete guardare la pagi
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Navscroll con linea a destra posizionata a in izio pagina su mobile.
+### Posizionamento in testa alla pagina con linea a destra
+
+In questo esempio, la linea che limita la barra di navigazione è posizionata a destra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in alto nella pagina.
+
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
@@ -142,7 +145,7 @@ Di seguito gli esempi, per visualizzare il comportamento potete guardare la pagi
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Navscroll variante scura.
+### Variante scura
 
 Il nav ha due versioni, light e dark.
 
