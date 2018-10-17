@@ -8,7 +8,7 @@ toc: true
 
 BottomNav è un componente pensato per la navigazione su dispositivi mobile il cui aspetto ricalca quello di alcune popolari app.
 
-Il componente si ancora al fondo della pagina e ne occupa tutta la larghezza.
+Il componente, di altezza fissa, è ancorato la fondo della pagina e ne occupa tutta la larghezza.
 
 <style>
   /* Style override for Documentation purposes */
@@ -27,7 +27,7 @@ Il componente si ancora al fondo della pagina e ne occupa tutta la larghezza.
 
 ## Esempio
 
-È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quante sono i link richiesti.
+È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
 Ogni link `<a>` contiene un icona con classe `.it-ico` e una label contenuta in uno `<span>` con classe `.bottom-nav-label`.
 
