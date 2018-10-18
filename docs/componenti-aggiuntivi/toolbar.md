@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Toolbar
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: Elemento contenitore di link, bottoni o dropdown
 group: componenti-aggiuntivi
 toc: true
 ---
@@ -17,11 +17,17 @@ toc: true
   }
 </style>
 
-Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ullamcorper nisi mollis nec. Fusce id turpis euismod, blandit velit nec, malesuada augue e la classe `.forward`:
+L'elemento Toolbar è un contenitore di link, bottoni o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quanti sono le voci richieste.
+
+Al tag `<a>` dell'elemento attivo va applicta la classe `.active`.
+
+Gli elementi disabilitati avranno invece una classe `.disabled` e l'attributo HTML `disabled`.
+
+L'elemento si adatta automaticamente in larghezza la suo contenitore. È consigliabile utilizzare conteniori di dimensione ridotte, per veitare che gli elementi si disperdano in uno spazio troppo ampio.
 
 ## Toolbar grande
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+La versione di default è quella con icone grandi e label.
 
 {% capture example %}
 <nav class="toolbar">
@@ -62,7 +68,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Toolbar media
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una versione di dimensioni medie.
+
+In questo caso le label devono essere contenute in uno `<span>` con classe `.sr-only`, per rendere disponibile la descrizione agli screen reader.
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -70,37 +78,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <li>
       <a href="#" class="active">
         <i class="it-ico it-comment" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class="it-ico it-camera" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class="it-ico it-file" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
 	<li>
       <a href="#">
         <i class="it-ico it-unlock" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class="it-ico it-favorite" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled>
         <i class="it-ico it-download" aria-hidden="true"></i>
-		<span class="sr-only">Label</span>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
   </ul>
@@ -109,7 +117,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Toolbar piccola
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la versione più piccola.
+
+Anche in questo caso le label devono essere contenute in uno `<span>` con classe `.sr-only`, per rendere disponibile la descrizione agli screen reader.
 
 {% capture example %}
 <nav class="toolbar toolbar-small">
@@ -156,7 +166,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Divisori
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Per aggiungere degli elementi divisori fra le icone utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo l'attributo `aria-hidden="true"` per nasconderli agli screen reader.
 
 {% capture example %}
 <nav class="toolbar">
@@ -199,11 +209,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Badge
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+I Badge possono essere utilizzati per indicare contenuti non letti od alert.
 
 ### Toolbar grande con Badge
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.sr-only` riservato agli screen reader.
 
 {% capture example %}
 <nav class="toolbar">
@@ -248,7 +258,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ### Toolbar media con Badge
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nella versione media i Badge non contengono numeri ma possono essere usati come alert. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -299,7 +309,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ### Toolbar piccola con Badge
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
 {% capture example %}
 <nav class="toolbar toolbar-small">
@@ -350,11 +360,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Dropdown
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+All'interno della Toolbar è possivile implementare dei bottoni dropdown con relativo sottomenù.
 
 ### Toolbar grande con Dropdown
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar">
@@ -453,8 +461,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 {% endcapture %}{% include example.html content=example %}
 
 ### Toolbar media con Dropdown
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -571,8 +577,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 ### Toolbar piccola con Dropdown
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
 {% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
@@ -688,11 +692,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 ## Toolbar verticale
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Applicando uan classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi vengono visualizzati in colonna.
 
 ### Toolbar verticale grande
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-vertical">
@@ -746,8 +748,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 {% endcapture %}{% include example.html content=example %}
 
 ### Toolbar verticale media
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-medium toolbar-vertical">
@@ -807,8 +807,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 {% endcapture %}{% include example.html content=example %}
 
 ### Toolbar verticale piccola
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-small toolbar-vertical">
