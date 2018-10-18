@@ -10,7 +10,7 @@ toc: true
   /* Style override for Documentation purposes */
   .bd-example {
     max-width: 400px;
-    height: 240px;
+    height: 400px;
     margin: 0 5px 20px;
     padding: 0;
     position: relative;
@@ -20,6 +20,8 @@ toc: true
 Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ullamcorper nisi mollis nec. Fusce id turpis euismod, blandit velit nec, malesuada augue e la classe `.forward`:
 
 ## Toolbar grande
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar">
@@ -36,7 +38,6 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
         <span class="toolbar-label">Label</span>
       </a>
     </li>
-	<li class="toolbar-divider"></li>
 	<li>
       <a href="#">
         <i class="it-ico it-file" aria-hidden="true"></i>
@@ -60,6 +61,8 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 {% endcapture %}{% include example.html content=example %}
 
 ## Toolbar media
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -106,6 +109,8 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 
 ## Toolbar piccola
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 {% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
@@ -149,9 +154,56 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+## Divisori
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+{% capture example %}
+<nav class="toolbar">
+  <ul>
+    <li>
+      <a href="#" class="active">
+        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="it-ico it-camera" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+	<li class="toolbar-divider" aria-hidden="true"></li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-file" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+	<li class="toolbar-divider" aria-hidden="true"></li>
+    <li>
+      <a href="#" class="disabled" disabled>
+        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
 ## Badge
 
-### Toolbar grande
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Toolbar grande con Badge
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar">
@@ -194,7 +246,9 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar media
+### Toolbar media con Badge
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -243,7 +297,9 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar piccola
+### Toolbar piccola con Badge
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar toolbar-small">
@@ -292,9 +348,13 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Dropdwon
+## Dropdown
 
-### Toolbar grande
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Toolbar grande con Dropdown
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 {% capture example %}
 <nav class="toolbar">
@@ -392,7 +452,9 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar media
+### Toolbar media con Dropdown
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -507,7 +569,9 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar piccola
+### Toolbar piccola con Dropdown
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 {% capture example %}
 <nav class="toolbar toolbar-small">
@@ -618,6 +682,193 @@ Morbi porttitor commodo arcu vel bibendum. Aenean mollis faucibus magna, sed ull
         </div>
       </div>
 	</li>
+  </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+## Toolbar verticale
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+### Toolbar verticale grande
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+{% capture example %}
+<nav class="toolbar toolbar-vertical">
+  <ul>
+    <li>
+      <a href="#" class="active">
+        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="it-ico it-camera" aria-hidden="true">
+            <span class="toolbar-badge">88</span>
+          </i>
+          <span class="toolbar-label">Label <span class="sr-only"> - 88 elementi nuovi</span></span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
+          <div class="link-list-wrapper">
+            <ul class="link-list">
+              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+	</li>
+	<li class="toolbar-divider" aria-hidden="true"></li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-file" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="disabled" disabled>
+        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <span class="toolbar-label">Label</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+### Toolbar verticale media
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+{% capture example %}
+<nav class="toolbar toolbar-medium toolbar-vertical">
+  <ul>
+    <li>
+      <a href="#" class="active">
+        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="it-ico it-camera" aria-hidden="true">
+            <span class="toolbar-badge"></span>
+          </i>
+          <span class="sr-only">Label - 88 elementi nuovi</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
+          <div class="link-list-wrapper">
+            <ul class="link-list">
+              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+	</li>
+	<li class="toolbar-divider" aria-hidden="true"></li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-file" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-upload" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="disabled" disabled>
+        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+### Toolbar verticale piccola
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+{% capture example %}
+<nav class="toolbar toolbar-small toolbar-vertical">
+  <ul>
+    <li>
+      <a href="#" class="active">
+        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="it-ico it-camera" aria-hidden="true">
+            <span class="toolbar-badge"></span>
+          </i>
+          <span class="sr-only">Label - 88 elementi nuovi</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
+          <div class="link-list-wrapper">
+            <ul class="link-list">
+              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+	</li>
+	<li class="toolbar-divider" aria-hidden="true"></li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-file" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-upload" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+	<li>
+      <a href="#">
+        <i class="it-ico it-settings" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="disabled" disabled>
+        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <span class="sr-only">Label</span>
+      </a>
+    </li>
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %}
