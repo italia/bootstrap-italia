@@ -19,15 +19,13 @@ toc: true
 
 L'elemento Toolbar è un contenitore di link, bottoni o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.
 
-Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
+## Dimensioni
 
-Gli elementi disabilitati avranno invece una classe `.disabled` e l'attributo HTML `disabled`.
-
-L'elemento si adatta automaticamente in larghezza al suo contenitore. È consigliabile utilizzare contenitori di dimensione orizzontale (o verticale, nel caso del Toolbar verticale) ridotta, per evitare che gli elementi si disperdano in uno spazio troppo ampio.
+La Toolbar si adatta automaticamente in larghezza al suo contenitore. È consigliabile utilizzare contenitori di dimensione orizzontale (o verticale, nel caso del Toolbar verticale) ridotta, per evitare che gli elementi si disperdano in uno spazio troppo ampio.
 
 Per ottimizzare lo spazio disponibile l'elemento è fornito in tre versioni: grande, media e piccola.
 
-## Toolbar grande
+### Toolbar grande
 
 La versione predefinita dell'elemento è quella con icone grandi e label.
 
@@ -61,14 +59,14 @@ La versione predefinita dell'elemento è quella con icone grandi e label.
     <li>
       <a href="#" class="disabled" disabled>
         <i class="it-ico it-favorite" aria-hidden="true"></i>
-        <span class="toolbar-label">Label</span>
+        <span class="toolbar-label">Label<span class="sr-only"> elemento disabilitato</span></span>
       </a>
     </li>
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Toolbar media
+### Toolbar media
 
 Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una versione di dimensioni medie.
 
@@ -117,7 +115,7 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Toolbar piccola
+### Toolbar piccola
 
 Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la versione più piccola.
 
@@ -165,6 +163,14 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+## Stato degli elementi
+
+Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
+
+Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori accorgimenti relativi all'accessibilità a seconda della tipologia:
+- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag. Aggiungere uno span riservato agli screen reader all'interno della label. es.: `<span class="sr-only"> elemento disabilitato</span>`
+- **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.
 
 ## Divisori
 
@@ -371,7 +377,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
   <ul>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="it-ico it-comment" aria-hidden="true">
             <span class="toolbar-badge">1</span>
           </i>
@@ -426,7 +432,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	</li>
 	<li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
           <i class="it-ico it-unlock" aria-hidden="true"></i>
           <span class="toolbar-label">Label</span>
         </button>
@@ -541,7 +547,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	</li>
 	<li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton5-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
           <i class="it-ico it-favorite" aria-hidden="true"></i>
           <span class="sr-only">Label</span>
         </button>
@@ -656,7 +662,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	</li>
 	<li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
           <i class="it-ico it-favorite" aria-hidden="true"></i>
           <span class="sr-only">Label</span>
         </button>
