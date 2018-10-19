@@ -55,6 +55,7 @@ const Paths = {
     'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
     'src/js/plugins/i-sticky.js',
+    'src/js/plugins/navscroll.js',
     'src/js/plugins/history-back.js',
     'src/js/' + pkg.name + '.js'
   ],
@@ -208,6 +209,13 @@ gulp.task('icons-font', () => {
     .pipe(touch());
 });
 
+// Assets related tasks
+gulp.task('assets', () => {
+  return gulp.src(['src/assets/**'])
+    .pipe(gulp.dest(Paths.DIST + '/assets'))
+    .pipe(touch());
+});
+
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
@@ -236,7 +244,8 @@ gulp.task('build-library', gulp.series(
   'js-min',
   'js-bundle-min',
   'icons-css',
-  'icons-font'
+  'icons-font',
+  'assets'
 ));
 
 // Documentation
