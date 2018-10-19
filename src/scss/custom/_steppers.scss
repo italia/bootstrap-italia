@@ -63,6 +63,14 @@
 				&.success {
 					color: $white;
 				}
+				// steppers
+				&.steppers-index {
+					span {
+						&.active {
+							color: $analogue-2-a6;
+						}
+					}
+				}
 			}
 		}
 		.steppers-nav {
@@ -132,7 +140,7 @@
 				position: relative;
 				display: flex;
 				align-items: center;
-				&:last-child {
+				&:nth-last-child(2) {
 					border-right: 1px solid $gray-border-disabled;
 				}
 				// index

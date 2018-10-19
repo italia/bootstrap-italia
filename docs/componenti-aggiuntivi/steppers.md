@@ -32,6 +32,7 @@ toc: true
 		.bd-example {
 			overflow: hidden;
 			padding: 0;
+			margin-bottom: 6px;
 		}
 		.bd-example .steppers-content {
 			height: 300px;
@@ -92,7 +93,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Navigazione a bottoni
+## Navigazione degli step
 
 {% capture example %}
 <div class="steppers">
@@ -102,7 +103,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li>Label Step 3</li>
 		<li class="steppers-index">2/6</li>
 	</ul>
-	<div class="steppers-content">
+	<div class="steppers-content" aria-live="polite">
 		<!-- Esempio START -->
 		<p>Contenuto di esempio dello step corrente</p>
 		<!-- Esempio END -->
@@ -130,7 +131,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li>Label Step 3</li>
 		<li class="steppers-index">2/6</li>
 	</ul>
-	<div class="steppers-content">
+	<div class="steppers-content" aria-live="polite">
 		<!-- Esempio START -->
 		<p>Contenuto di esempio dello step corrente</p>
 		<!-- Esempio END -->
@@ -157,6 +158,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li class="success">Label Step 1 <i class="it-ico it-check steppers-success"></i></li>
 		<li class="active">Label Step 2</li>
 		<li>Label Step 3</li>
+		<li class="steppers-index">2/6</li>
 	</ul>
 </div>
 
@@ -166,6 +168,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li class="success"><i class="it-ico it-calendar" aria-hidden="true"></i>Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
 		<li class="active"><i class="it-ico it-copy" aria-hidden="true"></i>Label Step 2</li>
 		<li><i class="it-ico it-settings" aria-hidden="true"></i>Label Step 3</li>
+		<li class="steppers-index">2/6</li>
 	</ul>
 </div>
 
@@ -175,6 +178,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li class="success"><span class="steppers-number"><i class="it-ico it-check steppers-success"><span class="sr-only">Confermato Step 1</span></i></span>Label Step 1</li>
 		<li class="active"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2</li>
 		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+		<li class="steppers-index"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
 	</ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
