@@ -215,11 +215,11 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Badge
+## Toolbar con Badge
 
 I Badge possono essere utilizzati per indicare contenuti non letti o alert di vario tipo.
 
-### Toolbar grande con Badge
+### Grande con Badge
 
 Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.sr-only` riservato agli screen reader.
 
@@ -264,7 +264,7 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar media con Badge
+### Media con Badge
 
 Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
@@ -315,7 +315,7 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar piccola con Badge
+### Piccola con Badge
 
 Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
@@ -366,11 +366,11 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Dropdown
+## Toolbar con Dropdown
 
 All'interno della Toolbar è possibile implementare dei bottoni dropdown con relativo sottomenù.
 
-### Toolbar grande con Dropdown
+### Grande con Dropdown
 
 {% capture example %}
 <nav class="toolbar">
@@ -468,7 +468,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar media con Dropdown
+### Media con Dropdown
 
 {% capture example %}
 <nav class="toolbar toolbar-medium">
@@ -583,7 +583,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar piccola con Dropdown
+### Piccola con Dropdown
 
 {% capture example %}
 <nav class="toolbar toolbar-small">
@@ -700,9 +700,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 
 ## Toolbar verticale
 
-Applicando uan classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi vengono visualizzati in colonna.
+Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi vengono visualizzati in colonna.
 
-### Toolbar verticale grande
+### Grande verticale
 
 {% capture example %}
 <nav class="toolbar toolbar-vertical">
@@ -755,7 +755,7 @@ Applicando uan classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar verticale media
+### Media verticale
 
 {% capture example %}
 <nav class="toolbar toolbar-medium toolbar-vertical">
@@ -814,7 +814,7 @@ Applicando uan classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Toolbar verticale piccola
+### Piccola verticale 
 
 {% capture example %}
 <nav class="toolbar toolbar-small toolbar-vertical">
