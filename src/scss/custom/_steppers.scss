@@ -309,6 +309,9 @@
 			.steppers-nav {
 				button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
 					color: $white;
+					&:hover, &:focus, &:active {
+						color: $analogue-2-a6 !important;
+					}
 				}
 			}
 		}
