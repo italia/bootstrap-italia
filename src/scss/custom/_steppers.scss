@@ -4,7 +4,7 @@
 		padding: 0 24px;
 		height: 64px;
 		background: $white;
-		box-shadow: 0 8px 20px rgba(0,0,0,0.1); // TEMP
+		box-shadow: 0 8px 20px rgba(0,0,0,0.1); // TEMP - substitute with generic ellipsical shadow
 		display: flex;
 		align-items: center;
 		li {
@@ -13,7 +13,7 @@
 			list-style-type: none;
 			display: none;
 			// states
-			&.active, &.success {
+			&.active, &.confirmed {
 				color: $primary;
 				font-weight: 600;
 			}
@@ -59,7 +59,7 @@
 				&.active {
 					color: $analogue-2-a6;
 				}
-				&.success {
+				&.confirmed {
 					color: $white;
 				}
 				// steppers
@@ -90,7 +90,7 @@
 		display: flex;
 		height: 64px;
 		padding: 0 24px;
-		box-shadow: 0 -8px 20px rgba(0,0,0,0.1); // TEMP
+		box-shadow: 0 -8px 20px rgba(0,0,0,0.1); // TEMP - substitute with generic ellipsical shadow
 		background: $white;
 		align-items: center;
 		justify-content: space-between;

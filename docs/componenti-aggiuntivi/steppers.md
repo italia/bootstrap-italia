@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Steppers
-description: Gli Steppers esprimono il progresso di una procedura attraverso la numerazione dei passi (Steps) della stessa
+description: Gli Steppers esprimono il progresso di una procedura attraverso la numerazione dei passi (steps) della stessa
 group: componenti-aggiuntivi
 toc: true
 ---
@@ -47,7 +47,6 @@ toc: true
 	}
 }
 
-
 @media screen and (max-width: 991px) {
 	.bd-example {
 		overflow: hidden;
@@ -75,17 +74,17 @@ L'aspetto della modalità mobile degli Steppers è differente rispetto a quello 
 ### Solo testo
 
 Gli step dell'header possono avere tre classi aggiuntive:
-- `.success` individua uno step completato
-- `.active` individua lo step attivo che è l'unico visualizzato su mobile
-- `.steppers-index` indica un indice visibile solo su mobile che può contenere lo stato attuale di progresso indicato in forma testuale (ridurre finestra del browser per attivare gli Steppers mobile)
+- `.confirmed` individua uno step confermato
+- `.active` individua lo step attivo. Su mobile è l'unico visualizzato.
+- `.steppers-index` individua un indice visibile solo su mobile che può contenere lo stato attuale di progresso indicato in forma testuale (ridurre finestra del browser per attivare gli Steppers mobile)
 
 {% capture example %}
 <div class="steppers">
 	<ul class="steppers-header">
-		<li class="success">Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
-		<li class="active">Label Step 2</li>
+		<li class="confirmed">Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -97,10 +96,10 @@ Le label presenti negli steps dell'header possono essere anticipate da un'icona.
 {% capture example %}
 <div class="steppers">
 	<ul class="steppers-header">
-		<li class="success"><i class="it-ico it-calendar" aria-hidden="true"></i>Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
-		<li class="active"><i class="it-ico it-copy" aria-hidden="true"></i>Label Step 2</li>
+		<li class="confirmed"><i class="it-ico it-calendar" aria-hidden="true"></i>Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active"><i class="it-ico it-copy" aria-hidden="true"></i>Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li><i class="it-ico it-settings" aria-hidden="true"></i>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -114,10 +113,10 @@ Nel caso di uno step completato al posto del numero va inclusa un'icona di confe
 {% capture example %}
 <div class="steppers">
 	<ul class="steppers-header">
-		<li class="success"><span class="steppers-number"><i class="it-ico it-check steppers-success"><span class="sr-only">Confermato Step 1</span></i></span>Label Step 1</li>
-		<li class="active"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2</li>
+		<li class="confirmed"><span class="steppers-number"><i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></span>Label Step 1</li>
+		<li class="active"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
-		<li class="steppers-index"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
+		<li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
 	</ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -133,10 +132,10 @@ I bottoni avanti/indietro dovranno essere utilizzati per implementare la logica 
 {% capture example %}
 <div class="steppers">
 	<ul class="steppers-header">
-		<li class="success">Label Step 1 <i class="it-ico it-check steppers-success"></i></li>
-		<li class="active">Label Step 2</li>
+		<li class="confirmed">Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 	<div class="steppers-content" aria-live="polite">
 		<!-- Esempio START -->
@@ -252,10 +251,10 @@ Per ottenere una versione scura degli Stepper aggiungere la classe `.bg-dark` al
 {% capture example %}
 <div class="steppers bg-dark">
 	<ul class="steppers-header">
-		<li class="success">Label Step 1 <i class="it-ico it-check steppers-success"></i></li>
-		<li class="active">Label Step 2</li>
+		<li class="confirmed">Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 	<div class="steppers-content" aria-live="polite">
 		<!-- Esempio START -->
@@ -276,30 +275,30 @@ Per ottenere una versione scura degli Stepper aggiungere la classe `.bg-dark` al
 <!-- Solo testo -->
 <div class="steppers bg-dark">
 	<ul class="steppers-header">
-		<li class="success">Label Step 1 <i class="it-ico it-check steppers-success"></i></li>
-		<li class="active">Label Step 2</li>
+		<li class="confirmed">Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 </div>
 
 <!-- Testo e icone -->
 <div class="steppers bg-dark">
 	<ul class="steppers-header">
-		<li class="success"><i class="it-ico it-calendar" aria-hidden="true"></i>Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
-		<li class="active"><i class="it-ico it-copy" aria-hidden="true"></i>Label Step 2</li>
+		<li class="confirmed"><i class="it-ico it-calendar" aria-hidden="true"></i>Label Step 1 <i class="it-ico it-check steppers-success"><span class="sr-only">Confermato</span></i></li>
+		<li class="active"><i class="it-ico it-copy" aria-hidden="true"></i>Label Step 2 <span class="sr-only">Attivo</span></li>
 		<li><i class="it-ico it-settings" aria-hidden="true"></i>Label Step 3</li>
-		<li class="steppers-index">2/6</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
 	</ul>
 </div>
 
 <!-- Numeri -->
 <div class="steppers bg-dark">
 	<ul class="steppers-header">
-		<li class="success"><span class="steppers-number"><i class="it-ico it-check steppers-success"><span class="sr-only">Confermato Step 1</span></i></span>Label Step 1</li>
-		<li class="active"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2</li>
+		<li class="confirmed"><span class="steppers-number"><i class="it-ico it-check steppers-success"><span class="sr-only">Confermato Step 1</span></i></span>Label Step 1</li>
+		<li class="active"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Label Step 2</li>
 		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
-		<li class="steppers-index"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
+		<li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
 	</ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -341,9 +340,9 @@ Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un
 	<nav class="steppers-nav">
 		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
 		<ul class="steppers-dots">
-			<li class="done"><span class="sr-only">Step 1 di 6</span></li>
-			<li class="done"><span class="sr-only">Step 2 di 6</span></li>
-			<li class="done"><span class="sr-only">Step 3 di 6</span></li>
+			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
 			<li><span class="sr-only">Step 4 di 6</span></li>
 			<li><span class="sr-only">Step 5 di 6</span></li>
 			<li><span class="sr-only">Step 6 di 6</span></li>
