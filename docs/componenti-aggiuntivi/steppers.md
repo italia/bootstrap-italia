@@ -305,7 +305,7 @@ Per ottenere una versione scura degli Stepper aggiungere la classe `.bg-dark` al
 
 ### Varianti navigazione mobile su sfondo scuro
 
-Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
+Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
 
 #### Progress bar
 
