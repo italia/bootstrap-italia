@@ -22,8 +22,7 @@
     - title: Alert
     - title: Badge
     - title: Barre di Avanzamento
-    - title: Breadcrumb
-      status: wip
+    - title: Breadcrumbs
     - title: Bottoni
       status: wip
     #- title: Button group
@@ -33,7 +32,6 @@
     - title: Carousel
     - title: Collapse
     - title: Dropdown
-      status: wip
     - title: Elenchi
     - title: Form
       status: wip
@@ -76,10 +74,10 @@
     - title: Forward
       status: wip
     - title: Back to top
-      status: wip
     - title: Affix
       status: wip
     - title: Thumbnav
+    - title: BottomNav
     - title: Toolbar
     #- title: Datepicker
     #  status: wip

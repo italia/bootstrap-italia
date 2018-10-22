@@ -1,13 +1,14 @@
 ---
 layout: docs
-title: Breadcrumb
+title: Breadcrumbs
 description: Indica la posizione della pagina corrente all'interno di una gerarchia di navigazione.
 group: componenti
+toc: true
 ---
 
-## Breadcrumb basic
+Le breadcrumbs (in italiano, briciole di pane) mostrano la pagina corrente e danno la possibilità di risalire nella gerarchia delle pagine attraverso dei comodi link ai livelli superiori.
 
-Nella breadcrumb c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
+Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
 
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="breadcrumb">
@@ -33,7 +34,7 @@ Nella breadcrumb c'è la possibilità di scegliere il carattere da usare come se
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Breadcrumb with icon
+### Con icona
 
 Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire il tag `<i class="(classeicona)">` prima del tag `<a>` con la classe dell'icona che si intende visualizzare.
 
@@ -50,7 +51,7 @@ Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire il tag `
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Breadcrumb su sfondo scuro
+### Su sfondo scuro
 
 Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`
 
