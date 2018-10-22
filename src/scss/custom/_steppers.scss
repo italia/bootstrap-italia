@@ -12,7 +12,6 @@
 			color: $gray-secondary;
 			list-style-type: none;
 			display: none;
-			text-transform: uppercase;
 			// states
 			&.active, &.success {
 				color: $primary;
@@ -75,6 +74,14 @@
 		}
 		.steppers-nav {
 			background: none;
+			.progress-bar {
+				background: $analogue-2-a6;
+			}
+			.steppers-dots {
+				li.done {
+					background: $analogue-2-a6;
+				}
+			}
 		}
 	}
 
@@ -87,14 +94,36 @@
 		background: $white;
 		align-items: center;
 		justify-content: space-between;
-		.steppers-progress {
+		.steppers-progress, .steppers-dots {
 			width: 20%;
 			.progress {
 				height: 2px;
 			}
 		}
-		.steppers-btn-done {
-			display: none;
+		.steppers-progress{
+			.progress {
+				height: 2px;
+			}
+		}
+		.steppers-dots {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			li {
+				list-style-type: none;
+				padding: 0;
+				height: 4px;
+				width: 4px;
+				min-width: 4px;
+				background: $progress-bg;
+				margin-right: 8px;
+				border-radius: 50%;
+				&.done {
+					background: $progress-bar-bg;
+				}
+			}
 		}
 	}
 
@@ -133,6 +162,7 @@
 			}
 			// steps
 			li {
+				text-transform: uppercase;
 				padding: 1.778rem 1.111rem;
 				flex-grow: 1;
 				border-left: 1px solid $gray-border-disabled;
@@ -224,18 +254,18 @@
 			margin-top: 0.889rem;
 			align-items: center;
 			background: none;
-			.steppers-progress {
+			.steppers-progress, .steppers-dots {
 				display: none;
 			}
 			button {
 				.it-ico {
 					display: none;
 				}
-				&:not(.steppers-btn-done) {
+				&:not(.steppers-btn-confirm) {
 					margin-right: 0.889rem;
 				}
 			}
-			.steppers-btn-done {
+			.steppers-btn-confirm {
 				display: block;
 				margin-left: auto;
 			}
@@ -249,12 +279,12 @@
 
 }
 
-//mobile ONLY
+//mobile ONLY BUTTONS
 @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
 	.steppers {
 		// navigation
 		.steppers-nav {
-			button {
+			button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
 				font-size: 1rem;
 				background: transparent;
 				color: $primary;
@@ -277,11 +307,8 @@
 		&.bg-dark {
 			// navigation
 			.steppers-nav {
-				button {
+				button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
 					color: $white;
-				}
-				.progress-bar {
-					background: $analogue-2-a6;
 				}
 			}
 		}

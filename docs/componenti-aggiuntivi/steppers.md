@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Steppers
-description: Et et consectetur ipsum labore excepteur est proident excepteur ad velit
+description: Gli Steppers esprimono il progresso di una procedura attraverso la numerazione dei passi (Steps) della stessa
 group: componenti-aggiuntivi
 toc: true
 ---
@@ -18,6 +18,15 @@ toc: true
 	align-items: center;
 	color: #999;
   }
+
+  .bd-example .steppers-content p{
+	  margin-bottom: 0;
+  }
+
+  .bd-example .mobile-examples .steppers-content {
+	  height: 150px;
+  }
+
   .bd-example .steppers.bg-dark .steppers-content{
 	  color: #aaa;
 	  border-color: #aaa;
@@ -28,29 +37,47 @@ toc: true
 	  padding: 30px;
   }
 
-  @media screen and (max-width: 991px) {
-		.bd-example {
-			overflow: hidden;
-			padding: 0;
-			margin-bottom: 6px;
-		}
-		.bd-example .steppers-content {
-			height: 300px;
-			border: none;
-		}
-		.bd-example .steppers.bg-dark {
-			padding: 0;
-		}
+@media screen and (min-width: 992px) {
+	.bd-example .mobile-examples .steppers-progress {
+		display: block;
 	}
+
+	.bd-example .mobile-examples .steppers-dots {
+		display: flex;
+	}
+}
+
+
+@media screen and (max-width: 991px) {
+	.bd-example {
+		overflow: hidden;
+		padding: 0;
+		margin-bottom: 6px;
+	}
+	.bd-example .steppers-content {
+		height: 300px;
+		border: none;
+	}
+	.bd-example .steppers.bg-dark {
+		padding: 0;
+	}
+}
 </style>
 
-## Esempio
+## Header
 
-Et et consectetur ipsum labore excepteur est proident excepteur ad velit `.forward`:
+Il contenitore degli Stepper ha una classe `.steppers`. L'header o intestazione è contenuto in una lista `<ul>` all'interno della quale i singoli step sono rappresentati da elementi `<li>`.
+
+{% capture callout %}
+L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ### Solo testo
 
-Et et consectetur ipsum labore excepteur est proiden.
+Gli step dell'header possono avere tre classi aggiuntive:
+- `.success` individua uno step completato
+- `.active` individua lo step attivo che è l'unico visualizzato su mobile
+- `.steppers-index` indica un indice visibile solo su mobile che può contenere lo stato attuale di progresso indicato in forma testuale (ridurre finestra del browser per attivare gli Steppers mobile)
 
 {% capture example %}
 <div class="steppers">
@@ -65,7 +92,7 @@ Et et consectetur ipsum labore excepteur est proiden.
 
 ### Testo e icone
 
-Et et consectetur ipsum labore excepteur est proiden.
+Le label presenti negli steps dell'header possono essere anticipate da un'icona.
 
 {% capture example %}
 <div class="steppers">
@@ -80,7 +107,9 @@ Et et consectetur ipsum labore excepteur est proiden.
 
 ### Numeri
 
-Et et consectetur ipsum labore excepteur est proiden.
+Le label presenti negli steps dell'header possono essere anticipate dal numero relativo allo stesso.
+
+Nel caso di uno step completato al posto del numero va inclusa un'icona di conferma con un testo riservato agli screen reader.
 
 {% capture example %}
 <div class="steppers">
@@ -94,6 +123,12 @@ Et et consectetur ipsum labore excepteur est proiden.
 {% endcapture %}{% include example.html content=example %}
 
 ## Navigazione degli step
+
+Il passaggio da uno step all'altro attraverso i bottoni contenuti in `.steppers-nav` determina un cambiamento del contenuto presente in `.steppers-content`.
+
+Il contenitore `.steppers-content` ha un attributo ARIA `aria-live="polite"` per avvisare gli utilizzatori di screen reader dall'avvenuto cambiamento del contenuto.
+
+I bottoni avanti/indietro dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle webapp e sono dotati di classi `.steppers-btn-prev` e `.steppers-btn-next`.
 
 {% capture example %}
 <div class="steppers">
@@ -109,19 +144,110 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<!-- Esempio END -->
 	</div>
 	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Varianti navigazione per mobile
+
+La versione mobile degli Steppers non visualizza l'elenco completo degli step disponibili ma solo quello corrente. Per questa ragione è possibile aggiungere degli indicatori di progresso allo `.steppers-nav`.
+
+Questi indicatori verranno visualizzato solo su mobile ma nei seguenti esempi sono stati resi disponibili anche nella visualizzazione desktop. Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
+
+#### Progress bar
+
+La Progress bar è quella nativa di Bootstrap 4 ed è contenuta in un elemento `.steppers-progress` situato fra i bottoni "Indietro" ed "Avanti".
+
+{% capture example %}
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
 		<div class="steppers-progress">
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 			</div>
 		</div>
-		<button type="button" class="btn btn-primary btn-sm">Avanti<i class="it-ico it-chevron-right"></i></button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-done">Conferma</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Dots
+
+I Dots sono elementi `<li>` contenuti in una lista `.steppers-dots` situato fra i bottoni "Indietro" ed "Avanti".
+
+Per ragioni di accessibilità i `<li>` devono contenere uno `<span>` con classe `.sr-only `riservato agli screen reader con un testo che indichi il numero di step e lo stato.
+
+{% capture example %}
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<ul class="steppers-dots">
+			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
+			<li><span class="sr-only">Step 4 di 6</span></li>
+			<li><span class="sr-only">Step 5 di 6</span></li>
+			<li><span class="sr-only">Step 6 di 6</span></li>
+		</ul>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Bottone Salva
+
+Su mobile è possibile inserire un terzo bottone "Salva" di aspetto differente con classe `.steppers-btn-save` fra i bottoni "Indietro" ed "Avanti".
+
+{% capture example %}
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Bottone conferma
+
+Su mobile è possibile sostituire il bottone "Avanti" con un bottone "Conferma" di stile differente, conclasse `.steppers-btn-confirm`.
+
+{% capture example %}
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
 	</nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ## Versione su sfondo scuro
+
+Per ottenere una versione scura degli Stepper aggiungere la classe `.bg-dark` al contenitore principale.
 
 {% capture example %}
 <div class="steppers bg-dark">
@@ -137,19 +263,14 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<!-- Esempio END -->
 	</div>
 	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm"><i class="it-ico it-chevron-left"></i>Indietro</button>
-		<div class="steppers-progress">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-		<button type="button" class="btn btn-primary btn-sm">Avanti<i class="it-ico it-chevron-right"></i></button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-done">Conferma</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
 	</nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Vari tipi di header su sfondo scuro
+### Varianti header su sfondo scuro
 
 {% capture example %}
 <!-- Solo testo -->
@@ -180,5 +301,87 @@ Et et consectetur ipsum labore excepteur est proiden.
 		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
 		<li class="steppers-index"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
 	</ul>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Varianti navigazione mobile su sfondo scuro
+
+Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
+
+#### Progress bar
+
+{% capture example %}
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<div class="steppers-progress">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Dots
+
+{% capture example %}
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<ul class="steppers-dots">
+			<li class="done"><span class="sr-only">Step 1 di 6</span></li>
+			<li class="done"><span class="sr-only">Step 2 di 6</span></li>
+			<li class="done"><span class="sr-only">Step 3 di 6</span></li>
+			<li><span class="sr-only">Step 4 di 6</span></li>
+			<li><span class="sr-only">Step 5 di 6</span></li>
+			<li><span class="sr-only">Step 6 di 6</span></li>
+		</ul>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Bottone Salva
+
+{% capture example %}
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<i class="it-ico it-chevron-right"></i></button>
+	</nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Bottone conferma
+
+{% capture example %}
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><i class="it-ico it-chevron-left"></i>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+	</nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
