@@ -2,7 +2,7 @@
 	padding: 2.500rem 2.222rem;
 	border: 1px solid $neutral-1-a7;
 	position: relative;
-	max-width: 65ch;
+	max-width: 60ch;
 	margin: 1.75rem 0 1rem;
 	border-radius: 8px;
 
@@ -66,7 +66,7 @@
 		// text
 		p {
 			font-size: 0.778rem;
-			line-height: 1.5rem;
+			line-height: 1.333rem;
 			color: $neutral-1-a10;
 		}
 		// title
@@ -81,7 +81,7 @@
 				border-bottom: 2px solid $body-color;
 				padding-bottom: 0.1rem;
 				display: inline-block;
-   				margin-top: -0.222rem;
+   				margin-top: -0.111rem;
 			}
 		}
 	}
@@ -137,7 +137,7 @@
 	.callout-title {
 		font-weight: bold;
 		text-transform: uppercase;
-		font-size: 1.111rem;
+		font-size: 1rem;
 		margin-right: 2.222rem;
 		letter-spacing: 0.06rem;
 		color: $neutral-1-a7;
@@ -153,8 +153,7 @@
 			font-size: 1rem;
 			padding: 0 1.389rem;
 			background: $white;
-			top: -0.75em;
-
+			top: -0.78em;
 		}
 	}
 
@@ -183,6 +182,7 @@
 			justify-content: space-between;
 			border-top: 1px solid $gray-border-disabled;
 			padding: 1.333rem 0 0;
+			margin-top: 0;
 			// toggle restyle
 			.callout-more-toggle {
 				padding: 0;
@@ -217,6 +217,7 @@
 					height: 15px;
 					width: 15px;
 					margin-left: 0.444rem;
+					margin-top: 0.111rem;
 					border: 1px solid $primary;
 					border-radius: 50%;
 					display: inline-block;
@@ -257,6 +258,9 @@
 		}
 		.collapse-body {
 			padding: 0;
+			p:last-child {
+				margin-bottom: 1rem;
+			}
 		}
 	}
 
@@ -274,7 +278,12 @@ _:-ms-fullscreen, .callout {
 		&.callout-highlight {
 			padding: 0 0 0 2.222rem;
 		}
+		// More version
+		&.callout-more {
+			p {
+				font-size: 0.722rem;
+			}
+		}
+
 	}
-  }
-
-
+}
