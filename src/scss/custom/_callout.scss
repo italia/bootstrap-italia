@@ -9,17 +9,33 @@
 	// Highlights version
 	&.callout-highlight {
 		border: none;
-		border-left: 1px solid $gray-border-disabled;
+		border-left: 2px solid rgba($gray-border-disabled,0.3);
 		border-radius: 0;
 		padding: 0 2.222rem;
 		.callout-title {
 			margin-bottom: 1.556rem;
 		}
+		// color versions
+		&.success {
+			border-color: rgba($success,0.2);
+		}
+		&.warning {
+			border-color: rgba($warning,0.2);
+		}
+		&.danger {
+			border-color: rgba($danger,0.2);
+		}
+		&.important {
+			border-color: rgba($complementary-3-a9,0.2);
+		}
+		&.note {
+			border-color:rgba($primary-a9,0.2);
+		}
 	}
 
 	// More version
 	&.callout-more {
-		background: $lightgrey-c2;
+		background: #FAFAF7;
 		border: none;
 		border-radius: 0;
 		padding: 2.222rem 2.222rem;
@@ -45,10 +61,7 @@
 			height: 0;
 			border-style: solid;
 			border-width: 48px 0 0 48px;
-			border-color: transparent transparent transparent $neutral-1-a2;
-		}
-		.callout-title {
-			//margin-bottom: 1.556rem;
+			border-color: transparent transparent transparent #E4E4DB;
 		}
 		// text
 		p {
@@ -111,11 +124,11 @@
 		}
 	}
 	&.note {
-		border-color: $analogue-1-a7;
+		border-color: $primary-a9;
 		.callout-title {
-			color: $analogue-1-a7;
+			color: $primary-a9;
 			span {
-				border-color: $analogue-1-a7;
+				border-color: $primary-a9;
 			}
 		}
 	}
@@ -175,7 +188,7 @@
 				padding: 0;
 				border: none;
 				width: auto;
-				font-weight: 300;
+				font-weight: normal;
 				display: flex;
 				align-items: center;
 				color: $primary;
@@ -201,8 +214,8 @@
 				// plus sign
 				span {
 					position: relative;
-					height: 15px; // 0.889rem;
-					width: 15px; // 0.889rem;
+					height: 15px;
+					width: 15px;
 					margin-left: 0.444rem;
 					border: 1px solid $primary;
 					border-radius: 50%;
@@ -214,14 +227,14 @@
 					}
 					// plus h
 					&:before {
-						width: 9px; // 0.444rem;
+						width: 9px;
 						height: 1px;
 						top: 6px;
 						left: 2px;
 					}
 					// plus v
 					&:after {
-						height: 9px; // 0.444rem;
+						height: 9px;
 						width: 1px;
 						top: 0;
 						left: 6px;
@@ -239,6 +252,7 @@
 
 			.callout-more-download {
 				margin-left: auto;
+				font-weight: normal;
 			}
 		}
 		.collapse-body {
