@@ -1,81 +1,105 @@
 ---
 layout: docs
 title: Callout
-description: Componente per evidenziare parti di testo
+description: Componente per evidenziare contenuti testuali
 group: componenti-aggiuntivi
 toc: true
 ---
 
 <style>
-  /* Style override for Documentation purposes */
-@import url('https://fonts.googleapis.com/css?family=Lora');
+  	/* Style override for Documentation purposes */
+	@import url('https://fonts.googleapis.com/css?family=Lora');
 </style>
 
 I Callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento suggerimenti etc.
 
-Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile liberamente.
+Il font utilizzato è il Lora, <a href="https://fonts.google.com/specimen/Lora" target="_blank">scaricabile da Google Fonts</a> ed utilizzabile liberamente.
 
 ## Esempi
 
+Il Callout basico è costituito da un contenitore `<div>` con classe `.callout`, un titolo contenuto in un `<div>` con classe `.callout-title` e un testo contenuto in uno o più tag `<p>`.
+
+Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà `aria-hidden="true"`.
+
+{% capture callout %}
+Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="sr-only">Testo alternativo</span>`
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 <div class="callout">
-	<h4 class="callout-title">Titolo callout</h4>
+	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i><span class="sr-only">Confermato</span> Titolo callout</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+Al Callout può essere aggiunta una classe che determina il colore del bordo e del titolo. Le classi disponibili elencate qui di seguito.
+
 ### Callout Success
+
+Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 
 {% capture example %}
 <div class="callout success">
-	<h4 class="callout-title"><i class="it-ico it-check"></i>Usa</h4>
+	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i>Usa</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Callout Warning
 
+Aggiungere la classe `.warning` per indicare una procedura o testo che richiede l'attenzione dell'utente.
+
 {% capture example %}
 <div class="callout warning">
-	<div class="callout-title"><i class="it-ico it-warning"></i>Attenzione</div>
+	<div class="callout-title"><i class="it-ico it-warning" aria-hidden="true"></i>Attenzione</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Callout Danger
 
+Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa o non consentita.
+
 {% capture example %}
 <div class="callout danger">
-	<div class="callout-title"><i class="it-ico it-no"></i>Non usare</div>
+	<div class="callout-title"><i class="it-ico it-no" aria-hidden="true"></i>Non usare</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Callout Important
 
+Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
+
 {% capture example %}
 <div class="callout important">
-	<div class="callout-title"><i class="it-ico it-info"></i>Importante</div>
+	<div class="callout-title"><i class="it-ico it-info" aria-hidden="true"></i>Importante</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Callout Note
 
+Aggiungere la classe `.note` per caratterizzare il Callout come una nota.
+
 {% capture example %}
 <div class="callout note">
-	<div class="callout-title"><i class="it-ico it-file"></i>Note a riguardo</div>
+	<div class="callout-title"><i class="it-ico it-file" aria-hidden="true"></i>Note a riguardo</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ## Callout Highlights
 
+Aggiungendo la classe `.callout-highlight` si ottiene una differente versione del Callout, con bordo solo sul lato sinistro.
+
+Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la classe `.callout-big-text` allo stesso.
+
 {% capture example %}
 <div class="callout callout-highlight">
-	<h4 class="callout-title">Titolo callout</h4>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title">Titolo callout</div>
+	<p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
+	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -83,9 +107,9 @@ Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile libera
 
 {% capture example %}
 <div class="callout callout-highlight success">
-	<h4 class="callout-title"><i class="it-ico it-check"></i>Usa</h4>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i>Usa</div>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -93,9 +117,9 @@ Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile libera
 
 {% capture example %}
 <div class="callout callout-highlight warning">
-	<div class="callout-title"><i class="it-ico it-warning"></i>Attenzione</div>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title"><i class="it-ico it-warning" aria-hidden="true"></i>Attenzione</div>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -103,9 +127,9 @@ Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile libera
 
 {% capture example %}
 <div class="callout callout-highlight danger">
-	<div class="callout-title"><i class="it-ico it-no"></i>Non usare</div>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title"><i class="it-ico it-no" aria-hidden="true"></i>Non usare</div>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -113,9 +137,9 @@ Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile libera
 
 {% capture example %}
 <div class="callout callout-highlight important">
-	<div class="callout-title"><i class="it-ico it-info"></i>Importante</div>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title"><i class="it-ico it-info" aria-hidden="true"></i>Importante</div>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -123,30 +147,38 @@ Il font utilizzato è il Lora, scaricabile da Google font ed utilizzabile libera
 
 {% capture example %}
 <div class="callout callout-highlight note">
-	<div class="callout-title"><i class="it-ico it-file"></i>Note</div>
-	<p>Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
-	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<div class="callout-title"><i class="it-ico it-file" aria-hidden="true"></i>Note</div>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Highlight Approfondimento
+## Callout Approfondimento
+
+Il Callout di tipo Approfondimento, ottenibile aggiungendo la classe `.callout-more`, ha un aspetto radicalmente differente dagli altri stili disnponibili ed è indicato per testi più estesi.
+
+Come da esempio, è possibile aggiungere ulteriore testo all'interno di un <a href="../../componenti/collapse/">Collapse</a> standard presente al fondo del contenuto.
+
+Il bottone di controllo del Collapse può essere affiancato da un link per download di PDF o altri tipi di documento, con relativa icona.
 
 {% capture example %}
 <div class="callout callout-more note">
-	<div class="callout-title"><i class="it-ico it-zoom-in"></i><span>Approfondimento</span></div>
+	<div class="callout-title"><i class="it-ico it-zoom-in" aria-hidden="true"></i><span>Approfondimento</span></div>
 	<p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>
-	<p>Aliquam erat volutpat. Integer ut ultricies dui, non aliquam magna. Phasellus condimentum accumsan nunc, feugiat sollicitudin sem consectetur a. Etiam in purus leo. Donec feugiat, velit vitae consequat viverra, sem diam aliquam turpis, eget maximus dolor leo quis turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor. Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
+	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 	<div id="collapseDiv1" class="collapse-div" role="tablist">
 		<div class="collapse-header" id="heading1">
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
 			</button>
-			<a href="#" class="callout-more-download"><i class="it-ico it-pdf"></i>Download</a>
+			<a href="#" class="callout-more-download"><i class="it-ico it-pdf"><span class="sr-only">PDF </span></i>Download</a>
 		</div>
 		<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
 			<div class="collapse-body">
 				<p>Aenean tortor enim, suscipit eget commodo at, imperdiet quis diam. Vestibulum non accumsan felis, at ultrices lorem. Pellentesque ac diam a ipsum cursus interdum id nec odio. Vestibulum nec congue mauris. Aliquam et dui purus. Mauris in imperdiet risus, sed blandit tellus. Donec posuere accumsan lacinia. Mauris dignissim, sem vel volutpat rhoncus, neque mi ullamcorper ante, vitae volutpat ipsum quam id purus. Duis tincidunt sodales nisl eget ultricies. Sed condimentum mi eu ex venenatis, quis bibendum dui ultrices. Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
-				<p>Sed iaculis, orci ut congue accumsan, ligula purus gravida sapien, ac dictum tellus dolor vel urna. In condimentum odio nec libero interdum convallis. Aliquam vel placerat mauris. Nunc vel sagittis nulla, ut sollicitudin urna. Phasellus aliquet nisl vitae diam auctor eleifend. Donec eget consectetur mi. Aliquam porta ipsum eros, eu fringilla nisl sagittis et.</p>
+				<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
+	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 			</div>
 		</div>
 	</div>
