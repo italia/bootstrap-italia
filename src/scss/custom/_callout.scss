@@ -11,7 +11,7 @@
 		border: none;
 		border-left: 1px solid $gray-border-disabled;
 		border-radius: 0;
-		padding: 0 0 0 2.222rem;
+		padding: 0 2.222rem;
 		.callout-title {
 			margin-bottom: 1.556rem;
 		}
@@ -24,6 +24,7 @@
 		border-radius: 0;
 		padding: 2.222rem 2.222rem;
 		position: relative;
+		// top triangle
 		&:before {
 			content: '';
 			position: absolute;
@@ -49,11 +50,13 @@
 		.callout-title {
 			//margin-bottom: 1.556rem;
 		}
+		// text
 		p {
 			font-size: 0.778rem;
 			line-height: 1.5rem;
 			color: $neutral-1-a10;
 		}
+		// title
 		.callout-title {
 			display: flex;
 			align-items: flex-start;
@@ -158,6 +161,8 @@
 
 	//collapse
 	.collapse-div {
+		display: flex;
+		flex-direction: column-reverse;
 		border-bottom: none;
 		.collapse-header {
 			margin-top: 1.333rem;
@@ -165,6 +170,7 @@
 			justify-content: space-between;
 			border-top: 1px solid $gray-border-disabled;
 			padding: 1.333rem 0 0;
+			// toggle restyle
 			.callout-more-toggle {
 				padding: 0;
 				border: none;
@@ -195,8 +201,8 @@
 				// plus sign
 				span {
 					position: relative;
-					height: 0.889rem;
-					width: 0.889rem;
+					height: 15px; // 0.889rem;
+					width: 15px; // 0.889rem;
 					margin-left: 0.444rem;
 					border: 1px solid $primary;
 					border-radius: 50%;
@@ -205,23 +211,28 @@
 						content: '';
 						position: absolute;
 						background: $primary;
-						top: 50%;
-						left: 50%;
-						transform: translateX(-50%) translateY(-50%);
 					}
+					// plus h
 					&:before {
-						width: 0.444rem;
+						width: 9px; // 0.444rem;
 						height: 1px;
+						top: 6px;
+						left: 2px;
 					}
+					// plus v
 					&:after {
-						height: 0.444rem;
+						height: 9px; // 0.444rem;
 						width: 1px;
+						top: 0;
+						left: 6px;
+						transform: translateY(2px);
 						transition: transform 0.2s;
 					}
 				}
+				// expanded version
 				&[aria-expanded=true] {
 					span:after {
-						transform: translateX(-50%) translateY(-50%) rotate(90deg);
+						transform: translateY(2px) rotate(90deg);
 					}
 				}
 			}
@@ -231,8 +242,25 @@
 			}
 		}
 		.collapse-body {
-			padding: 2.222rem 0 0;
+			padding: 0;
 		}
 	}
 
 }
+
+//fix IE max width ch value (substitute with rem)
+_:-ms-fullscreen, .callout {
+	max-width: 32rem;
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	.callout {
+		// Highlights version
+		&.callout-highlight {
+			padding: 0 0 0 2.222rem;
+		}
+	}
+  }
+
+

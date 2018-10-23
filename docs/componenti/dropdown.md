@@ -24,7 +24,7 @@ Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle in
 
 ### Dropdown button
 
-Ogni singolo `.btn` può essere trasformato in un bottone per l'apertura di dropdown con del semplice markdown HTML. 
+Ogni singolo `.btn` può essere trasformato in un bottone per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
 
 {% capture example %}
