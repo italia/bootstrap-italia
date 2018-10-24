@@ -31,6 +31,7 @@ Il contenuto di una Section va inserito nel `<div>` con classe `.section-content
 {% capture example %}
 <div class="section">
 	<div class="section-content">
+		<!-- contenuto di esempio START -->
 		<div class="container">
 			<div class="row mb-3">
 				<div class="col-12">
@@ -43,6 +44,7 @@ Il contenuto di una Section va inserito nel `<div>` con classe `.section-content
 				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
+		<!-- contenuto di esempio END -->
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -58,6 +60,7 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 {% capture example %}
 <div class="section section-muted">
 	<div class="section-content">
+		<!-- contenuto di esempio START -->
 		<div class="container">
 			<div class="row mb-3">
 				<div class="col-12">
@@ -70,6 +73,7 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
+		<!-- contenuto di esempio END -->
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -82,8 +86,9 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% capture example %}
 <div class="section section-primary">
-	<div class="section-content white-color">
-		<div class="container">
+	<div class="section-conten">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
 			<div class="row mb-3">
 				<div class="col-12">
 					<h4>Morbi fermentum amet</h4>
@@ -95,6 +100,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
+		<!-- contenuto di esempio END -->
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -107,8 +113,9 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% capture example %}
 <div class="section section-neutral">
-	<div class="section-content white-color">
-		<div class="container">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
 			<div class="row mb-3">
 				<div class="col-12">
 					<h4>Morbi fermentum amet</h4>
@@ -120,6 +127,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
+		<!-- contenuto di esempio END -->
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -132,8 +140,9 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 {% capture example %}
 <div class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
-	<div class="section-content white-color">
-		<div class="container">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
 			<div class="row">
 				<div class="col-12">
 					<h4>Morbi fermentum amet</h4>
@@ -145,6 +154,7 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
+		<!-- contenuto di esempio END -->
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
