@@ -6,14 +6,7 @@ group: componenti-aggiuntivi
 toc: true
 ---
 
-<style>
-  	/* Style override for Documentation purposes */
-	@import url('https://fonts.googleapis.com/css?family=Lora');
-</style>
-
 I Callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento suggerimenti etc.
-
-Il font utilizzato è il Lora, <a href="https://fonts.google.com/specimen/Lora" target="_blank">scaricabile da Google Fonts</a> ed utilizzabile liberamente.
 
 ## Esempi
 
@@ -167,7 +160,7 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
 	<p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
-	<div id="collapseDiv1" class="collapse-div" role="tablist">
+	<div id="collapseDiv1" class="collapse-div">
 		<div class="collapse-header" id="heading1">
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
