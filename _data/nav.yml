@@ -76,9 +76,11 @@
     - title: Back to top
     - title: Affix
       status: wip
+    - title: Callout
+    - title: Thumbnav
     - title: BottomNav
     - title: ThumbNav
-    - title: Callout
+    - title: Toolbar
     #- title: Datepicker
     #  status: wip
 
