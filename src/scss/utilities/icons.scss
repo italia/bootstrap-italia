@@ -20,6 +20,13 @@
     }
   }
   &.icon-lg {
+    width: 48px;
+    height: 48px;
+    &.icon-padded {
+      padding: 12px;
+    }
+  }
+  &.icon-xl {
     width: 64px;
     height: 64px;
     &.icon-padded {

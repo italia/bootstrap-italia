@@ -24,12 +24,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-<<<<<<< HEAD
     z-index: 10;
-=======
-    z-index: 1074;
     background: $navigation-sidebar-bg-color-mobile;
->>>>>>> 015d7341... Using SVGs in place of icon fonts
     display: none;
     // menu vrapper
     .menu-wrapper{
@@ -92,10 +88,7 @@
     left: 0;
     right: 0;
     top: 0;
-<<<<<<< HEAD
-=======
     background:$navigation-bg-color;
->>>>>>> 015d7341... Using SVGs in place of icon fonts
     z-index: 10;
     pointer-events: none;
     //- transizione de definire
@@ -167,11 +160,6 @@
         }
       }
     }
-  }
-  .dropdown-toggle .icon {
-    position: absolute;
-    margin: 4px 24px;
-    right: 0;
   }
 }
 .custom-navbar-toggler{
@@ -364,20 +352,6 @@
     .dropdown-toggle{
       display: block;
       justify-content: inherit;
-      &:after{
-        content: $dropdown-custom-button-caret-content;
-        font-size: $dropdown-custom-button-caret-font-size;
-        font-family: "italia-icon-font";
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
-        border: none;
-        display: inline-block;
-        vertical-align: 0em;
-        width: auto;
-        height: auto;
-        transition: transform $dropdown-menu-animation-speed;
-      }
     }
   }
   .custom-navbar-toggler{

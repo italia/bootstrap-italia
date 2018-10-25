@@ -229,7 +229,10 @@ Di seguito un esempio con le due classi applicate.
             <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
             </li>
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Dropdown item </span></a>
+               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                <span>Dropdown item </span>
+                <svg class="ml-2 icon icon-xs icon-primary"><use xlink:href="/dist/svg/sprite.svg#expand"></use></svg>
+               </a>
                <div class="dropdown-menu">
                   <div class="row">
                      <div class="col-12 col-lg-undefined">

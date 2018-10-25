@@ -28,10 +28,8 @@
   //tabs with icon and text
   &.nav-tabs-icon-text {
     //icons
-    .it-ico, .it-ico-lg  {
-      &:before {
-        margin-right: 0.889rem;
-      }
+    .icon  {
+      margin-right: 0.889rem;
     }
   }
 
@@ -102,6 +100,9 @@
     &.disabled {
       color: $gray-300;
       cursor: default;
+      .icon {
+        fill: $gray-300;
+      }
     }
 
     //icons
@@ -140,18 +141,29 @@
     border-bottom: none;
     .nav-link {
       color: #C3CFDB;
+      .icon {
+        fill: #C3CFDB;
+      }
       &:hover {
         color: $cyan;
+        .icon {
+          fill: $cyan;
+        }
       }
       &.disabled {
         color: $neutral-1-a6;
+        & .icon {
+          fill: $neutral-1-a6;
+        }
       }
     }
     .nav-link.active, .nav-item.show .nav-link {
       background-color: $gray-primary;
       color: $cyan;
       border-bottom: 2px solid $cyan;
-
+      .icon {
+        fill: $cyan;
+      }
     }
 
     &.nav-tabs-vertical {
@@ -241,15 +253,24 @@
       cursor: pointer;
       position: absolute;
       top: calc(50% - 0.9rem);
-      right: 1.333em;
+      right: 0.889rem;
       color: $neutral-1-a7;
       transition: color 0.2s;
+      .icon {
+        fill: $neutral-1-a7;
+      }
       &.disabled {
         color: $gray-300;
         cursor: pointer;
+        .icon {
+          fill: $gray-300;
+        }
       }
       &:hover {
         color: darken($primary, 10%);
+        .icon {
+          fill: darken($primary, 10%);
+        }
       }
       .it-ico {
         font-size: 0.6rem;
@@ -261,6 +282,9 @@
     .nav-link.active, .nav-item.show .nav-link {
       .nav-link-close {
         color: $primary;
+        .icon {
+          fill: $primary;
+        }
       }
     }
   }
@@ -299,10 +323,8 @@
           border-bottom: none;
         }
         //icons
-        .it-ico, .it-ico-lg  {
-          &:before {
-            margin-right: 0.889rem;
-          }
+        .icon {
+          margin-right: 0.889rem;
         }
       }
       .nav-link.active, .nav-item.show .nav-link {

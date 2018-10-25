@@ -46,10 +46,10 @@
     width: auto;
     height: auto;
   }
-  .icon {
+  .icon-expand {
     transition: transform $dropdown-menu-animation-speed;
   }
-  &[aria-expanded=true] .icon {
+  &[aria-expanded=true] .icon-expand {
     transform: scaleY(-1);
   }
 }

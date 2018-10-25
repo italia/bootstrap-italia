@@ -28,6 +28,7 @@ Le icone di Bootstrap Italia utilizzano una SVG sprite.
 <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 <svg class="icon icon-lg"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
+<svg class="icon icon-xl"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -37,6 +38,7 @@ Le icone di Bootstrap Italia utilizzano una SVG sprite.
 <svg class="icon icon-sm icon-padded"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 <svg class="icon icon-padded"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 <svg class="icon icon-lg icon-padded"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
+<svg class="icon icon-xl icon-padded"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#app"></use></svg>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

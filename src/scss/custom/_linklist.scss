@@ -43,16 +43,22 @@
         }
         .icon {
           display: inline-block;
-          margin: 12px 8px;
+          margin: 8px 0;
           &.icon-right {
             position: absolute;
             right: 0;
+          }
+          &.right {
+            margin-left: 8px;
+          }
+          &.left {
+            margin-right: 8px;
           }
         }
 
         // icone destre dentro link
         &.right-icon {
-          i.right {
+          .icon.right {
             position: absolute;
             top: 0;
             right: $link-list-h-pad;
@@ -64,7 +70,7 @@
         }
         // variazione icone a collapse aperto
         &.right-icon[aria-expanded="true"] {
-          i.right {
+          .icon.right {
             transform: scaleY(-1);
           }
         }
@@ -73,7 +79,7 @@
             color: $neutral-1-a10;
             text-decoration: underline;
           }
-          i{
+          .icon{
             color:$neutral-1-a10;
           }
         }
@@ -173,7 +179,6 @@
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
   .link-list-wrapper {
     ul {
-
       li {
         a {
           &.large {
@@ -191,10 +196,8 @@
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .link-list-wrapper {
     ul {
-
       li {
         a {
-
           &.large {
             line-height: $link-list-line-height-l;
           }

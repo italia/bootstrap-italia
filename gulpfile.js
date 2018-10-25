@@ -198,7 +198,7 @@ gulp.task('documentation-js-min', () => {
 });
 
 gulp.task('svg-sprite', function () {
-  return gulp.src('src/svg/*.svg')
+  return gulp.src('src/svg/it-*.svg')
     .pipe(svgSprite({
       shape: {
         dimension: { // Set maximum dimensions
