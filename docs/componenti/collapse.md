@@ -223,11 +223,11 @@ Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento rich
 
 ## Sfondo primario
 
-Lorem ipsum...
+Applicando classi aggiuntive al wrapper `.collapse-div` è possibile utilizzare il colore primario come sfondo degli header.
 
 ### Header attivi
 
-Lorem ipsum...
+Aggiungere la classe `.collapse-background-active` al wrapper per ottenere header con sfondo di colore primario quando questi sono attivi e il contenuto relativo è visibile.
 
 {% capture example %}
 <div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
@@ -266,7 +266,7 @@ Lorem ipsum...
 
 ### Hover degli Header
 
-Lorem ipsum...
+Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header con sfondo di colore primario all'hover.
 
 {% capture example %}
 <div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
@@ -305,7 +305,7 @@ Lorem ipsum...
 
 ## Icona a sinistra
 
-Lorem ipsum...
+Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante in cui l'icona chevron che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
 
 {% capture example %}
 <div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">

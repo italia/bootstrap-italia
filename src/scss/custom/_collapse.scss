@@ -61,7 +61,7 @@ $arrow-size: $font-size-base/2;
     & > .collapse-header {
       *[data-toggle="collapse"] {
         &:after {
-          content: '+';
+          content: '-';
           float: left;
           margin: 0 1rem 0 0;
           font-size: 1.5rem;
@@ -71,7 +71,7 @@ $arrow-size: $font-size-base/2;
         }
         &[aria-expanded="false"] {
           &:after {
-            content: '-';
+            content: '+';
           }
         }
       }
@@ -124,7 +124,7 @@ $arrow-size: $font-size-base/2;
       transition: transform 0.3s;
     }
     &:hover {
-      background-color: $lightgrey-c2;
+      background: none;
       text-decoration: underline;
     }
   }
