@@ -231,7 +231,7 @@ Aggiungere la classe `.collapse-background-active` al wrapper per ottenere heade
 
 {% capture example %}
 <div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
-  <div class="collapse-header" id="heading1">
+  <div class="collapse-header" id="heading1-sc1">
     <button data-toggle="collapse" data-target="#collapse1-sc1" aria-expanded="true" aria-controls="collapse1-sc1">
       Collapsible Group Item #1
     </button>
@@ -270,7 +270,7 @@ Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header
 
 {% capture example %}
 <div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
-  <div class="collapse-header" id="heading1">
+  <div class="collapse-header" id="heading1-sc2">
     <button data-toggle="collapse" data-target="#collapse1-sc2" aria-expanded="true" aria-controls="collapse1-sc2">
       Collapsible Group Item #1
     </button>
@@ -309,7 +309,7 @@ Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante i
 
 {% capture example %}
 <div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">
-  <div class="collapse-header" id="heading1">
+  <div class="collapse-header" id="heading1-lft">
     <button data-toggle="collapse" data-target="#collapse1-lft" aria-expanded="true" aria-controls="collapse1-lft">
       Collapsible Group Item #1
     </button>
