@@ -1,7 +1,6 @@
-// work-in-progress
-
 $arrow-size: $font-size-base/2;
 
+// collapse toggle
 *[data-toggle="collapse"] {
   .collapse-icon::before {
     content: "";
@@ -20,14 +19,68 @@ $arrow-size: $font-size-base/2;
     }
   }
 }
+
+//collapse wrapper
 .collapse-div {
   border-bottom: 1px solid $gray-100;
   .collapse-div {
     border: 1px solid $gray-100;
     border-top: 0;
   }
+
+  //background active version
+  &.collapse-background-active {
+    & > .collapse-header {
+      *[data-toggle="collapse"][aria-expanded="true"] {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+        &:after {
+          color: $white;
+        }
+      }
+    }
+  }
+
+   //background hover version
+   &.collapse-background-hover {
+    & > .collapse-header {
+      *[data-toggle="collapse"]:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+        &:after {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  //left icon version
+  &.collapse-left-icon {
+    & > .collapse-header {
+      *[data-toggle="collapse"] {
+        &:after {
+          content: '-';
+          float: left;
+          margin: 0 1rem 0 0;
+          font-size: 1.5rem;
+          line-height: 1.2rem;
+          font-family: $font-family-sans-serif;
+          transform: none;
+        }
+        &[aria-expanded="false"] {
+          &:after {
+            content: '+';
+          }
+        }
+      }
+    }
+  }
+
 }
 
+//header
 .collapse-header {
   position: relative;
 
@@ -41,22 +94,12 @@ $arrow-size: $font-size-base/2;
     cursor: pointer;
     color: $gray-secondary;
     font-weight: 600;
+    //transition: background-color 0.1s;
     &[aria-expanded="false"] {
       color: $primary;
       &:after {
-        content: '\e818';
+        transform: scaleY(-1);
       }
-    }
-    &[aria-expanded="true"]:before {
-      height: 2px;
-      width: 56px;
-      border-radius: 2px;
-      background-color: $primary;
-      position: absolute;
-      top: 0;
-      display: block;
-      content: "";
-      left: 20px;
     }
     &[aria-expanded="false"]:hover:after,
     &[aria-expanded="true"]:hover:after {
@@ -69,25 +112,25 @@ $arrow-size: $font-size-base/2;
       font-weight: normal;
       float: right;
       text-decoration: inherit;
+      font-size: 0.722rem;
       width: 1em;
       margin-right: .2em;
-      margin-top: 5px;
+      margin-top: 0.389rem;
       text-align: center;
       font-variant: normal;
       text-transform: none;
       line-height: 1em;
+      color: $primary-c5;
+      transition: transform 0.3s;
     }
     &:hover {
-      background-color: #E6ECF2;
+      background: none;
       text-decoration: underline;
-    }
-    &:active {
-      background-color: $primary;
-      color: $white;
-      border-color: $primary;
     }
   }
 }
+
+// body
 .collapse-body {
   padding: 12px 24px 42px;
   .collapse-header button[aria-expanded="true"]:before {
