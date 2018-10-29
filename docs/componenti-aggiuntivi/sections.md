@@ -1,24 +1,10 @@
 ---
 layout: docs
-title: Section
+title: Sections
 description: Per creare sezioni di layout orizzontale con differenti sfondi
 group: componenti-aggiuntivi
 toc: true
 ---
-
-<style>
-	/* Style override for Documentation purposes */
-	.section-content .col-lg-6.col-xl-4 {
-		font-family: Lora, Georgia, serif;
-	}
-
-	@media screen and (max-width: 767px) {
-		.pr-5 {
-			padding-right: 0 !important;
-		}
-	}
-
-</style>
 
 Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizzare più elementi `<div>` con classe `.section`.
 
@@ -39,9 +25,9 @@ Il contenuto di una Section va inserito nel `<div>` con classe `.section-content
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
 		<!-- contenuto di esempio END -->
@@ -68,9 +54,9 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
 		<!-- contenuto di esempio END -->
@@ -95,9 +81,9 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
 		<!-- contenuto di esempio END -->
@@ -122,9 +108,9 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
 			</div>
 		</div>
 		<!-- contenuto di esempio END -->
@@ -149,9 +135,35 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-				<div class="col-12 col-lg-6 col-xl-4 pr-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Section con Card
+
+Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare il container `.card-deck` per garantire un corretto margine fra gli elementi `.card`.
+
+{% capture example %}
+<div class="section section-muted">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<h4 class="mb-4">Morbi fermentum amet</h4>
+		<div class="card-deck">
+			<div class="card shadow border-0 mg-md-4">
+				<div class="card-body">
+					<p class="card-text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+				</div>
+			</div>
+			<div class="card shadow border-0 mg-md-4">
+				<div class="card-body">
+					<p class="card-text">Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus. Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+				</div>
 			</div>
 		</div>
 		<!-- contenuto di esempio END -->
