@@ -12,16 +12,13 @@
 <title>Callout · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810261142" rel="stylesheet">
-
-<!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810291638" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810291638" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -139,13 +136,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.14.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i><span class="sr-only">Download</span>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.15.0/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i><span class="sr-only">GitHub</span>
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#github"></use></svg><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
@@ -339,6 +336,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/toolbar/">
               Toolbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+              Sections
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
@@ -471,12 +471,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout">
-	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i><span class="sr-only">Confermato</span> Titolo callout</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-check"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> Titolo callout<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> Titolo callout<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -488,12 +488,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout success">
-	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i>Usa</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout success"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-check"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-check-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -503,12 +503,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout warning">
-	<div class="callout-title"><i class="it-ico it-warning" aria-hidden="true"></i>Attenzione</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-help-circle"></use></svg>Attenzione</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout warning"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-warning"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Attenzione<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-help-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Attenzione<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -518,12 +518,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout danger">
-	<div class="callout-title"><i class="it-ico it-no" aria-hidden="true"></i>Non usare</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close-circle"></use></svg>Non usare</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout danger"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-no"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Non usare<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Non usare<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -533,12 +533,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout important">
-	<div class="callout-title"><i class="it-ico it-info" aria-hidden="true"></i>Importante</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout important"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-info"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Importante<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Importante<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -548,12 +548,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout note">
-	<div class="callout-title"><i class="it-ico it-file" aria-hidden="true"></i>Note a riguardo</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Note a riguardo</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout note"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-file"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Note a riguardo<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Note a riguardo<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -580,13 +580,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-highlight success">
-	<div class="callout-title"><i class="it-ico it-check" aria-hidden="true"></i>Usa</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Usa</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-highlight success"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-check"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -595,13 +595,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-highlight warning">
-	<div class="callout-title"><i class="it-ico it-warning" aria-hidden="true"></i>Attenzione</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Attenzione</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-highlight warning"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-warning"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Attenzione<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Attenzione<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -610,13 +610,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-highlight danger">
-	<div class="callout-title"><i class="it-ico it-no" aria-hidden="true"></i>Non usare</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Non usare</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-highlight danger"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-no"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Non usare<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Non usare<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -625,13 +625,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-highlight important">
-	<div class="callout-title"><i class="it-ico it-info" aria-hidden="true"></i>Importante</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-highlight important"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-info"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Importante<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Importante<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -640,13 +640,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-highlight note">
-	<div class="callout-title"><i class="it-ico it-file" aria-hidden="true"></i>Note</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Note</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-highlight note"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-file"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Note<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Note<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -661,7 +661,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout callout-more note">
-	<div class="callout-title"><i class="it-ico it-zoom-in" aria-hidden="true"></i><span>Approfondimento</span></div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-zoom-in"></use></svg><span>Approfondimento</span></div>
 	<p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
@@ -670,7 +670,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
 			</button>
-			<a href="#" class="callout-more-download"><i class="it-ico it-pdf"></i><span class="sr-only">PDF </span> Download</a>
+			<a href="#" class="callout-more-download"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
 		</div>
 		<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
 			<div class="collapse-body">
@@ -683,7 +683,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout callout-more note"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-zoom-in"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Approfondimento<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-zoom-in"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Approfondimento<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas at erat id <span class="nt">&lt;strong&gt;</span>sem interdum efficitur eu sed nunc.<span class="nt">&lt;/strong&gt;</span> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>vestibulum volutpat<span class="nt">&lt;/a&gt;</span>. Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur adipiscing elit.<span class="nt">&lt;/strong&gt;</span> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.<span class="nt">&lt;/p&gt;</span>
@@ -692,7 +692,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 			<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"callout-more-toggle"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse1"</span><span class="nt">&gt;</span>
 			Leggi tutto <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
 			<span class="nt">&lt;/button&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"callout-more-download"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-ico it-pdf"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>PDF <span class="nt">&lt;/span&gt;</span> Download<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"callout-more-download"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-download"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>PDF <span class="nt">&lt;/span&gt;</span> Download<span class="nt">&lt;/a&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>
 			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
@@ -725,14 +725,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810261142"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810291638"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810261142"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810291638"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

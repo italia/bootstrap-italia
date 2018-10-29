@@ -12,16 +12,13 @@
 <title>Form Input · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810261142" rel="stylesheet">
-
-<!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810291638" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810291638" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -139,13 +136,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.14.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i><span class="sr-only">Download</span>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.15.0/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i><span class="sr-only">GitHub</span>
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#github"></use></svg><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
@@ -339,6 +336,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/toolbar/">
               Toolbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+              Sections
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
@@ -441,7 +441,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#textarea">Textarea</a></li>
-<li class="toc-entry toc-h2"><a href="#icone-aggiuntive">Icone aggiuntive</a></li>
 </ul>
           </div>
         
@@ -507,9 +506,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <label for="exampleInputPassword">Password</label>
   </div>
   <div class="form-group">
-    <i class="ico-prefix it-lock"></i>
     <input type="password" class="form-control" id="exampleInputPassword3" aria-labelledby="infoPassword" placeholder="Password" />
-    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+    <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
     <input type="password" class="form-control form-password" id="exampleInputPassword2" />
@@ -523,9 +521,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-lock"</span><span class="nt">&gt;&lt;/i&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleInputPassword3"</span> <span class="na">aria-labelledby=</span><span class="s">"infoPassword"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"infoPassword"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>inserisci almeno 8 caratteri e una lettera maiuscola<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"infoPassword"</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Inserisci almeno 8 caratteri e una lettera maiuscola<span class="nt">&lt;/small&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control form-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>
@@ -640,48 +637,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="icone-aggiuntive">Icone aggiuntive</h2>
-
-<p>È possibile inserire un’icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo <code class="highlighter-rouge">&lt;input&gt;</code>.</p>
-
-<div class="bd-example">
-<div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <input class="form-control" type="text" id="video-youtube" />
-    <label for="video-youtube">Link video di youtube</label>
-  </div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <select class="custom-select" id="video-youtube-select">
-      <option value="" disabled="" selected="">Seleziona un video</option>
-      <option value="1">Video 1</option>
-      <option value="2">Video 2</option>
-      <option value="3">Video 3</option>
-    </select>
-    <label for="video-youtube-select">Elenco video</label>
-  </div>
-</div>
-
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"video-youtube"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"video-youtube"</span><span class="nt">&gt;</span>Link video di youtube<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ico-prefix it-youtube"</span><span class="nt">&gt;&lt;/i&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"custom-select"</span> <span class="na">id=</span><span class="s">"video-youtube-select"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Seleziona un video<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Video 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Video 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Video 3<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"video-youtube-select"</span><span class="nt">&gt;</span>Elenco video<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
 
         </main>
       </div>
@@ -703,14 +658,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810261142"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810291638"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810261142"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810291638"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="it">
+<head>
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Per creare sezioni di layout orizzontale con differenti sfondi">
+<meta name="author" content="Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.8.4">
+
+<title>Sections · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810291638" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810291638" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.webmanifest">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@teamdigitaleIT">
+<meta name="twitter:creator" content="Team per la Trasformazione Digitale">
+<meta name="twitter:title" content="Sections">
+<meta name="twitter:description" content="Per creare sezioni di layout orizzontale con differenti sfondi">
+<meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+<meta property="og:title" content="Sections">
+<meta property="og:description" content="Per creare sezioni di layout orizzontale con differenti sfondi">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+// Disabilita tracciamento se il cookie cookies_consent non esiste
+if (document.cookie.indexOf('cookies_consent=true') === -1) {
+  window['ga-disable-UA-114758441-1'] = true;
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114758441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114758441-1', { 'anonymize_ip': true });
+</script>
+
+
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.developers.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="navbar-main navbar navbar-dark bd-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column pl-3 pl-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-sm btn-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item pr-2">
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.15.0/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#download"></use></svg><span class="sr-only">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pr-2">
+        <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#github"></use></svg><span class="sr-only">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only"></label>
+      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+    </div>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alert/">
+              Alert
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
+              Barre di Avanzamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumbs/">
+              Breadcrumbs
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/bottoni/">
+              Bottoni
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdown/">
+              Dropdown
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form/">
+              Form
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/hero/">
+              Hero
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/link-list/">
+              Link list
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/megamenu/">
+              Megamenu
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navscroll/">
+              Navscroll
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/offcanvas/">
+              Offcanvas
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pager/">
+              Pager
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popover/">
+              Popover
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/sidebar/">
+              Sidebar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/skiplinks/">
+              Skiplinks
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltip/">
+              Tooltip
+            </a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
+              Cookiebar
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/forward/">
+              Forward
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
+              Back to top
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/affix/">
+              Affix
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/callout/">
+              Callout
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/thumbnav/">
+              Thumbnav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/bottomnav/">
+              BottomNav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/thumbnav/">
+              ThumbNav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/toolbar/">
+              Toolbar
+            </a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+              Sections
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori/">
+              Colori
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori-custom/">
+              Colori Custom
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone
+            </a><span class="badge badge-info">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
+              Ombreggiature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/posizionamento/">
+              Posizionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/history-back/">
+              History Back
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/esempi/">
+        Esempi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/informazioni/">
+        Informazioni
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#esempio">Esempio</a></li>
+<li class="toc-entry toc-h2"><a href="#colori-di-sfondo">Colori di sfondo</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sfondo-tenue">Sfondo Tenue</a></li>
+<li class="toc-entry toc-h3"><a href="#sfondo-primario">Sfondo Primario</a></li>
+<li class="toc-entry toc-h3"><a href="#sfondo-neutrale">Sfondo Neutrale</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#immagine-di-sfondo">Immagine di sfondo</a></li>
+<li class="toc-entry toc-h2"><a href="#section-con-card">Section con Card</a></li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Sections</h1>
+          <p class="bd-lead">Per creare sezioni di layout orizzontale con differenti sfondi</p>
+          <p>Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizzare più elementi <code class="highlighter-rouge">&lt;div&gt;</code> con classe <code class="highlighter-rouge">.section</code>.</p>
+
+<h2 id="esempio">Esempio</h2>
+
+<p>Il componente Section ha un padding verticale ed orizzontale predefinito ed uno sfondo trasparente.</p>
+
+<p>Il contenuto di una Section va inserito nel <code class="highlighter-rouge">&lt;div&gt;</code> con classe <code class="highlighter-rouge">.section-content</code>. Questo elemento occupa tutta la larghezza della Section (meno il padding) ma, nel caso ne venisse definita la <code class="highlighter-rouge">max-width</code> in CSS, verrà automaticamente centrato orizzontalmente all’interno della Section.</p>
+
+<div class="bd-example">
+<div class="section">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<h4>Morbi fermentum amet</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-content"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-3"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;h4&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5"</span><span class="nt">&gt;</span>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="colori-di-sfondo">Colori di sfondo</h2>
+
+<p>Il componente Section ha, per default, uno sfondo trasparente. Aggiungendo le classi sottoelencate è possbile aggiungere colori di sfondo.</p>
+
+<h3 id="sfondo-tenue">Sfondo Tenue</h3>
+
+<p>Al componente Section può essere applicato uno sfondo di colore tenue utilizzano la classe aggiuntiva <code class="highlighter-rouge">.section-muted</code>.</p>
+
+<div class="bd-example">
+<div class="section section-muted">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container">
+			<div class="row mb-3">
+				<div class="col-12">
+					<h4>Morbi fermentum amet</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section-muted"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-content"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-3"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;h4&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5"</span><span class="nt">&gt;</span>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="sfondo-primario">Sfondo Primario</h3>
+
+<p>Aggiungendo invece classe <code class="highlighter-rouge">.section-primary</code> si otterrà un sfondo del colore primario.</p>
+
+<p>Si consiglia di applicare la classe <code class="highlighter-rouge">.white-color</code> al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.</p>
+
+<div class="bd-example">
+<div class="section section-primary">
+	<div class="section-conten">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
+			<div class="row mb-3">
+				<div class="col-12">
+					<h4>Morbi fermentum amet</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section-primary"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-conten"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container white-color"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-3"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;h4&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5"</span><span class="nt">&gt;</span>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="sfondo-neutrale">Sfondo Neutrale</h3>
+
+<p>Infine, utilizzando la classe <code class="highlighter-rouge">.section-neutral</code> si otterrà un sfondo di colore corrispondente al primo dei colori neutrali.</p>
+
+<p>Si consiglia di applicare la classe <code class="highlighter-rouge">.white-color</code> al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.</p>
+
+<div class="bd-example">
+<div class="section section-neutral">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
+			<div class="row mb-3">
+				<div class="col-12">
+					<h4>Morbi fermentum amet</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section-neutral"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-content"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container white-color"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mb-3"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;h4&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5"</span><span class="nt">&gt;</span>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="immagine-di-sfondo">Immagine di sfondo</h2>
+
+<p>Aggiungendo la classe <code class="highlighter-rouge">.section-image</code> alla Section e indicando attraverso CSS in linea l’URL dell’immagine da utilizzare (es: <code class="highlighter-rouge">style="background-image: url('URL-IMMAGINE')"</code>) la Section utilizzerà l’immagine indicata come sfondo, adattandone automaticamente le dimensioni per coprire l’intera Section.</p>
+
+<p>A seconda della luminosità dell’immagine si consiglia di applicare la classe <code class="highlighter-rouge">.white-color</code> al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.</p>
+
+<div class="bd-example">
+<div class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<div class="container white-color">
+			<div class="row">
+				<div class="col-12">
+					<h4>Morbi fermentum amet</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
+				<div class="col-12 col-lg-6 col-xl-4 pr-0 pr-md-5">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section-image"</span> <span class="na">style=</span><span class="s">"background-image: url('https://picsum.photos/1280/720?image=811')"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-content"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container white-color"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;h4&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5 mb-3"</span><span class="nt">&gt;</span>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6 col-xl-4 pr-0 pr-md-5"</span><span class="nt">&gt;</span>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="section-con-card">Section con Card</h2>
+
+<p>Per aggiungere una serie di card all’interno di una Section si consiglia di utilizzare il container <code class="highlighter-rouge">.card-deck</code> per garantire un corretto margine fra gli elementi <code class="highlighter-rouge">.card</code>.</p>
+
+<div class="bd-example">
+<div class="section section-muted">
+	<div class="section-content">
+		<!-- contenuto di esempio START -->
+		<h4 class="mb-4">Morbi fermentum amet</h4>
+		<div class="card-deck">
+			<div class="card shadow border-0 mg-md-4">
+				<div class="card-body">
+					<p class="card-text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+				</div>
+			</div>
+			<div class="card shadow border-0 mg-md-4">
+				<div class="card-body">
+					<p class="card-text">Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus. Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+				</div>
+			</div>
+		</div>
+		<!-- contenuto di esempio END -->
+	</div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section-muted"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-content"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio START --&gt;</span>
+		<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"mb-4"</span><span class="nt">&gt;</span>Morbi fermentum amet<span class="nt">&lt;/h4&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card shadow border-0 mg-md-4"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. <span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card shadow border-0 mg-md-4"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus. Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.<span class="nt">&lt;/p&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="c">&lt;!-- contenuto di esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-7">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
+        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810291638"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810291638"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>

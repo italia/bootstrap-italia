@@ -12,16 +12,13 @@
 <title>Link list · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810261142" rel="stylesheet">
-
-<!-- Icon Font CSS -->
-<link href="/bootstrap-italia/dist/css/italia-icon-font.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201810291638" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810261142" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201810291638" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -139,13 +136,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.14.1/bootstrap-italia.zip" aria-label="Download">
-          <i class="it-download"></i><span class="sr-only">Download</span>
+        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.15.0/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
         <a title="GitHub" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="it-github"></i><span class="sr-only">GitHub</span>
+          <svg class="icon icon-xs icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#github"></use></svg><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
@@ -339,6 +336,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti-aggiuntivi/toolbar/">
               Toolbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+              Sections
             </a></li></ul>
     </div><div class="bd-toc-item">
       <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
@@ -447,7 +447,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#multiline">Multiline</a></li>
-<li class="toc-entry toc-h2"><a href="#list-con-controlli">List con controlli</a>
+<li class="toc-entry toc-h2"><a href="#lista-con-controlli">Lista con controlli</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#primary-action">Primary Action</a></li>
 <li class="toc-entry toc-h3"><a href="#secondary-action">Secondary Action</a></li>
@@ -697,31 +697,31 @@ Il separatore è costituito dal tag <code class="highlighter-rouge">&lt;span&gt;
 
 <p><strong>Icone</strong><br />
 Per aggiungere un icona bisogna aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classi:<br />
-<code class="highlighter-rouge">right-icon</code> : se si vuole posizionare l’icona a destra del testo<br />
-<code class="highlighter-rouge">left-icon</code> : se si vuole posizionare l’icona a sinistra del testo<br /></p>
+<code class="highlighter-rouge">icon-right</code> : se si vuole posizionare l’icona a destra del testo<br />
+<code class="highlighter-rouge">icon-left</code> : se si vuole posizionare l’icona a sinistra del testo<br /></p>
 
-<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.right</code> (per definirne la posizione) e classe <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, puoi inserire il tag <code class="highlighter-rouge">svg</code> necessario (per maggiori informazioni consulta la sezione <a href="/bootstrap-italia/docs/utilities/icone/">icone</a>).</p>
 
 <div class="bd-example">
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
     <li><a class="list-item active right-icon" href="#">
         <span>Link list 1 active</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item  right-icon" href="#">
+    <li><a class="list-item right-icon" href="#">
         <span>Link list 1</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item disabled right-icon" href="#">
         <span>Link list 1 disabled</span>
-        <i class="it-chevron-right right" aria-hidden="true"> </i>
+        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
@@ -733,21 +733,21 @@ Per aggiungere un icona bisogna aggiungere al tag <code class="highlighter-rouge
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item  right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/p&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -755,37 +755,54 @@ Per aggiungere un icona bisogna aggiungere al tag <code class="highlighter-rouge
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="list-con-controlli">List con controlli</h2>
+<h2 id="lista-con-controlli">Lista con controlli</h2>
 
 <p>I link list con controlli sono caratterizzati da icone a destra e sinistra del testo<br />
-Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript</p>
+Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript.</p>
+
+<p>Per aggiungere un’icona è possibile aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classe <code class="highlighter-rouge">icon-right</code> se si vuole posizionare l’icona a destra del testo, oppure la classe <code class="highlighter-rouge">icon-left</code> : se si vuole posizionare l’icona a sinistra del testo<br /></p>
 
 <h3 id="primary-action">Primary Action</h3>
-<p><strong>Icona sinistra</strong><br />
+
+<p><strong>Icona sinistra</strong><br /></p>
+
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, puoi inserire il tag <code class="highlighter-rouge">svg</code> necessario
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classe: <code class="highlighter-rouge">.left-icon</code></p>
 
-<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito prima dello <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.left</code> (per definirne la posizione) e classe <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, puoi inserire il tag <code class="highlighter-rouge">svg</code> necessario con la classe <code class="highlighter-rouge">icon-left</code>.</p>
 
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 active</span></a>
-    </li>
-    <li><a class="list-item left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1</span></a>
-    </li>
-    <li><a class="list-item disabled left-icon" href="#"><i class="it-chevron-right left" aria-hidden="true"> </i><span>Link list 1 disabled</span></a>
-    </li>
+    <li><a class="list-item active icon-left" href="#">
+        <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <span>Link list 1 active</span>
+    </a></li>
+    <li><a class="list-item icon-left" href="#">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <span>Link list 1</span>
+    </a></li>
+    <li><a class="list-item disabled icon-left" href="#">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <span>Link list 1 disabled</span>
+    </a></li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-chevron-right left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -793,28 +810,40 @@ Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code cla
 <p><strong>Icona destra</strong><br />
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classe: <code class="highlighter-rouge">.right-icon</code></p>
 
-<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.right</code> (per definirne la posizione) e classe <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, puoi inserire il tag <code class="highlighter-rouge">svg</code> necessario con la classe <code class="highlighter-rouge">right-icon</code>.</p>
 
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#"><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
-    </li>
-    <li><a class="list-item left-icon right-icon " href="#"><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
-    </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#"><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
-    </li>
+    <li><a class="list-item active" href="#">
+      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1 active</span>
+    </a></li>
+    <li><a class="list-item" href="#">
+      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1</span>
+    </a></li>
+    <li><a class="list-item disabled" href="#">
+      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1 disabled</span>
+    </a></li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary icon-right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -822,32 +851,44 @@ Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code cla
 <p><strong>Icona destra</strong><br />
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classe: <code class="highlighter-rouge">.right-icon</code></p>
 
-<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.right</code> (per definirne la posizione) e classe <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito dopo lo <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.right</code> (per definirne la posizione) e l’SVG con <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
 
 <p><strong>Icona sinistra</strong><br />
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag <code class="highlighter-rouge">&lt;a&gt;</code> la classe: <code class="highlighter-rouge">.left-icon</code></p>
 
-<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito prima dello <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.left</code> (per definirne la posizione) e classe <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
+<p>All’interno del tag <code class="highlighter-rouge">&lt;a&gt;</code> subito prima dello <code class="highlighter-rouge">&lt;span&gt;</code> contenente il testo, andremo ad inserire il tag <code class="highlighter-rouge">&lt;i&gt;</code> con classi <code class="highlighter-rouge">.left</code> (per definirne la posizione) e l’SVG con <code class="highlighter-rouge">.it-(classe icona)</code> per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)</p>
 
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 active</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item active left-icon" href="#">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item left-icon right-icon " href="#"><i class="it-favorite  left" aria-hidden="true"> </i><span>Link list 1</span><i class="it-app right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item left-icon" href="#">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled left-icon right-icon " href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Link list 1 disabled</span><i class="it-app  right secondary" aria-hidden="true"> </i></a>
+    <li><a class="list-item disabled left-icon right-icon" href="#">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1 active<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite  left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon "</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-app  right secondary"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled left-icon right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1 disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -982,9 +1023,12 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      </a>
     </li>
-    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
       <ul class="link-sublist">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -994,16 +1038,20 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span><i class="it-favorite right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
     </li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
@@ -1013,7 +1061,8 @@ Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag <code cl
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-favorite right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-link"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -1026,7 +1075,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 <div class="bd-example">
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+      <span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseOne">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -1036,7 +1087,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+      <span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseTwo">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -1046,7 +1099,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><i class="it-expand right" aria-hidden="true"> </i></a>
+    <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+      <span>Link list 1</span>
+      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseThree">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -1061,7 +1116,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
@@ -1071,7 +1128,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
@@ -1081,7 +1140,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"it-expand right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
@@ -1115,14 +1176,14 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810261142"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201810291638"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810261142"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201810291638"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
