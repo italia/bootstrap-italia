@@ -29,7 +29,7 @@ Il componente, di altezza fissa, è ancorato la fondo della pagina e ne occupa t
 
 È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
-Ogni link `<a>` contiene un icona con classe `.it-ico` e una label contenuta in uno `<span>` con classe `.bottom-nav-label`.
+Ogni link `<a>` contiene un icona con classe `.icon` e una label contenuta in uno `<span>` con classe `.bottom-nav-label`.
 
 Il link `<a>` attivo possiede una una classe `.active`.
 
@@ -38,19 +38,19 @@ Il link `<a>` attivo possiede una una classe `.active`.
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-camera" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
@@ -65,25 +65,25 @@ I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un e
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-camera" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
@@ -104,37 +104,34 @@ I badge sono nascosti agli screen reader. Per garantire l'accessibilità è nece
   <ul>
     <li>
       <a href="#">
-        <i class="it-ico it-comment" aria-hidden="true">
-          <span class="bottom-nav-badge">1</span>
-        </i>
+        <div class="badge-wrapper"><span class="bottom-nav-badge">1</span></div>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="sr-only"> - 1 da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-camera" aria-hidden="true">
-          <span class="bottom-nav-badge">2</span>
-        </i>
+        <div class="badge-wrapper"><span class="bottom-nav-badge">2</span></div>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini<span class="sr-only"> - 2 da vedere</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true">
-          <span class="bottom-nav-badge">88</span>
-        </i>
+        <div class="badge-wrapper"><span class="bottom-nav-badge">88</span></div>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="sr-only"> - 88 da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-settings" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>
@@ -155,35 +152,33 @@ Gli alert sono nascosti agli screen reader. Per garantire l'accessibilità è ne
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true">
-          <span class="bottom-nav-alert"></span>
-        </i>
+        <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="sr-only"> - nuovo contenuto disponibile</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-camera" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true">
-          <span class="bottom-nav-alert"></span>
-        </i>
+        <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="sr-only"> - nuovo contenuto disponibile</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <i class="it-ico it-settings" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>

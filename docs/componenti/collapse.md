@@ -221,6 +221,127 @@ Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento rich
 *Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript.*
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+## Sfondo primario
+
+Applicando classi aggiuntive al wrapper `.collapse-div` è possibile utilizzare il colore primario come sfondo degli header.
+
+### Header attivi
+
+Aggiungere la classe `.collapse-background-active` al wrapper per ottenere header con sfondo di colore primario quando questi sono attivi e il contenuto relativo è visibile.
+
+{% capture example %}
+<div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
+  <div class="collapse-header" id="heading1-sc1">
+    <button data-toggle="collapse" data-target="#collapse1-sc1" aria-expanded="true" aria-controls="collapse1-sc1">
+      Collapsible Group Item #1
+    </button>
+  </div>
+  <div id="collapse1-sc1" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc1">
+    <div class="collapse-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+    </div>
+  </div>
+  <div class="collapse-header" id="heading2-sc1">
+    <button data-toggle="collapse" data-target="#collapse2-sc1" aria-expanded="false" aria-controls="collapse2-sc1">
+      Collapsible Group Item #2
+    </button>
+  </div>
+  <div id="collapse2-sc1" class="collapse" role="tabpanel" aria-labelledby="heading2-sc1">
+    <div class="collapse-body">
+      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+  </div>
+  <div class="collapse-header" id="heading3-sc1">
+    <button data-toggle="collapse" data-target="#collapse3-sc1" aria-expanded="false" aria-controls="collapse3-sc1">
+      Collapsible Group Item #3
+    </button>
+  </div>
+  <div id="collapse3-sc1" class="collapse" role="tabpanel" aria-labelledby="heading3-sc1">
+    <div class="collapse-body">
+      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Hover degli Header
+
+Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header con sfondo di colore primario all'hover.
+
+{% capture example %}
+<div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
+  <div class="collapse-header" id="heading1-sc2">
+    <button data-toggle="collapse" data-target="#collapse1-sc2" aria-expanded="true" aria-controls="collapse1-sc2">
+      Collapsible Group Item #1
+    </button>
+  </div>
+  <div id="collapse1-sc2" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc2">
+    <div class="collapse-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+    </div>
+  </div>
+  <div class="collapse-header" id="heading2-sc2">
+    <button data-toggle="collapse" data-target="#collapse2-sc2" aria-expanded="false" aria-controls="collapse2-sc2">
+      Collapsible Group Item #2
+    </button>
+  </div>
+  <div id="collapse2-sc2" class="collapse" role="tabpanel" aria-labelledby="heading2-sc2">
+    <div class="collapse-body">
+      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+  </div>
+  <div class="collapse-header" id="heading3-sc2">
+    <button data-toggle="collapse" data-target="#collapse3-sc2" aria-expanded="false" aria-controls="collapse3-sc2">
+      Collapsible Group Item #3
+    </button>
+  </div>
+  <div id="collapse3-sc2" class="collapse" role="tabpanel" aria-labelledby="heading3-sc2">
+    <div class="collapse-body">
+      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Icona a sinistra
+
+Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante in cui l'icona chevron che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
+
+{% capture example %}
+<div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">
+  <div class="collapse-header" id="heading1-lft">
+    <button data-toggle="collapse" data-target="#collapse1-lft" aria-expanded="true" aria-controls="collapse1-lft">
+      Collapsible Group Item #1
+    </button>
+  </div>
+  <div id="collapse1-lft" class="collapse show" role="tabpanel" aria-labelledby="heading1-lft">
+    <div class="collapse-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+    </div>
+  </div>
+  <div class="collapse-header" id="heading2-lft">
+    <button data-toggle="collapse" data-target="#collapse2-lft" aria-expanded="false" aria-controls="collapse2-lft">
+      Collapsible Group Item #2
+    </button>
+  </div>
+  <div id="collapse2-lft" class="collapse" role="tabpanel" aria-labelledby="heading2-lft">
+    <div class="collapse-body">
+      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+  </div>
+  <div class="collapse-header" id="heading3-lft">
+    <button data-toggle="collapse" data-target="#collapse3-lft" aria-expanded="false" aria-controls="collapse3-lft">
+      Collapsible Group Item #3
+    </button>
+  </div>
+  <div id="collapse3-lft" class="collapse" role="tabpanel" aria-labelledby="heading3-lft">
+    <div class="collapse-body">
+      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Implementazione
 
 ### Tramite data attributes

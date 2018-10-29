@@ -28,11 +28,11 @@
     text-decoration: none;
   }
   //caret
-  i {
+  .icon {
     margin: 0;
     position: relative;
-    top: 6px;
-    font-size: 0.9rem;
+    transform: scale(.75);
+    top: 4px;
     &:before {
       margin: 0;
       color: $white;
@@ -54,7 +54,7 @@
     }
 
     //caret
-    i {
+    .icon {
       &:before {
         color: $neutral-1-a8;
       }
@@ -70,18 +70,18 @@
   .back-to-top {
     width: 56px;
     height: 56px;
-    i {
-      top: 12px;
-      font-size: 1.111rem;
+    .icon {
+      transform: scale(1);
+      top: 10px;
     }
     //small version
     &.back-to-top-small {
       width: 40px;
       height: 40px;
       //caret
-      i {
-        top: 6px;
-        font-size: 0.9rem;
+      .icon {
+        transform: scale(.75);
+        top: 4px;
       }
     }
   }

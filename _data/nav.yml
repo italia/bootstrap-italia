@@ -76,10 +76,13 @@
     - title: Back to top
     - title: Affix
       status: wip
+    - title: Callout
+    - title: Sections
+    - title: Steppers
     - title: Thumbnav
     - title: BottomNav
+    - title: ThumbNav
     - title: Toolbar
-    - title: Steppers
     #- title: Datepicker
     #  status: wip
 

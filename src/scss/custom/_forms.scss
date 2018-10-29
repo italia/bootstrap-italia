@@ -618,12 +618,13 @@ input[type="file"] + label {
       }
     }
   }
-  .caret {
-    color: #757575;
+  .icon {
+    fill: #757575;
     position: absolute;
     right: 12px;
     line-height: 16px;
     top: calc(50% - 8px);
+    transition: all $dropdown-menu-animation-speed;
     .disabled {
       color: rgba(0, 0, 0, .46);
     }
@@ -633,8 +634,9 @@ input[type="file"] + label {
       color: $primary;
       border-bottom: 1px solid $primary;
     }
-    .caret {
-      color: $primary;
+    .icon {
+      fill: $primary;
+      transform: scaleY(-1);
     }
   }
   & + label {
