@@ -1,0 +1,50 @@
+//mobile
+.section {
+	padding: #{map-get($grid-gutter-widths, sm)*4} #{map-get($grid-gutter-widths, sm)*2};
+
+	//section content
+	.section-content {
+		margin: 0 auto;
+	}
+
+	// color and image variants
+	&.section-muted {
+		background: $lightgrey-a3;
+	}
+	&.section-primary {
+		background: $primary;
+	}
+	&.section-neutral {
+		background: $neutral-1;
+	}
+	&.section-image {
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	.section {
+		padding: #{map-get($grid-gutter-widths, md)*4} #{map-get($grid-gutter-widths, md)*2};
+	}
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	.section {
+		padding: #{map-get($grid-gutter-widths, lg)*4};
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	.section {
+		padding: #{map-get($grid-gutter-widths, xl)*4};
+	}
+}

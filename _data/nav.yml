@@ -81,6 +81,7 @@
     - title: BottomNav
     - title: ThumbNav
     - title: Toolbar
+    - title: Sections
     #- title: Datepicker
     #  status: wip
 
