@@ -18,6 +18,7 @@ Le icone di Bootstrap Italia utilizzano una SVG sprite.
 <div class="bg-light">
 {% for icona in site.data.icons %}
 <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg>{% endfor %}
+<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
