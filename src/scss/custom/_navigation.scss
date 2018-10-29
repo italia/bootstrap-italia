@@ -14,7 +14,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: $navigation-sidebar-bg-color-mobile;    
+    background: $navigation-sidebar-bg-color-mobile;
     display: none;
   }
   // navbar mobile
@@ -25,6 +25,7 @@
     left: 0;
     bottom: 0;
     z-index: 10;
+    background: $navigation-sidebar-bg-color-mobile;
     display: none;
     // menu vrapper
     .menu-wrapper{
@@ -39,7 +40,7 @@
       transform:translateX(-100%);
       //- transizione de definire
       transition: all 0.2s cubic-bezier(.29,.85,.5,.99);
-      
+
       .navbar-nav{
         padding:$navigation-h-padding 0 0;
         overflow: hidden;
@@ -87,6 +88,7 @@
     left: 0;
     right: 0;
     top: 0;
+    background:$navigation-bg-color;
     z-index: 10;
     pointer-events: none;
     //- transizione de definire
@@ -122,7 +124,7 @@
     .link-list-wrapper{
       padding-left:$navigation-h-padding;
       padding-right:$navigation-h-padding;
-      margin-bottom:$navigation-h-padding; 
+      margin-bottom:$navigation-h-padding;
       ul{
         li{
           a{
@@ -159,40 +161,6 @@
       }
     }
   }
-  .dropdown-toggle{
-    display: flex;
-    justify-content: space-between;
-    &:after{
-      font-family: "italia-icon-font";
-      font-style: normal;
-      font-weight: normal;
-      speak: none;
-      display: inline-block;
-      text-decoration: inherit;
-      width: auto;
-      height: auto;
-      margin-right: .2em;
-      text-align: center;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1em;
-      content: '\e818';
-      vertical-align: auto;
-      border-top: none;
-      border-right: none;
-      border-bottom: 0;
-      border-left: none;
-      font-size: $navigation-dropdown-icon-size;
-      line-height:$navigation-dropdown-icon-line-height;
-      transform-origin: center;
-      transition: all 0.3s;
-      margin-left:$dropdown-custom-button-caret-distance;
-      transform: translateY(-1px);
-    }
-    &[aria-expanded="true"]:after{
-      transform: scaleY(-1);
-    }
-  }
 }
 .custom-navbar-toggler{
   background: none;
@@ -213,7 +181,7 @@
         a{
           position: relative;
           i{
-            color:$primary-a3; 
+            color:$primary-a3;
           }
           &:after{
             content: '';
@@ -237,7 +205,7 @@
           }
           &[aria-expanded = "true"]{
             &:after{
-              transform:scaleY(1); 
+              transform:scaleY(1);
             }
           }
         }
@@ -256,8 +224,8 @@
   }
 }
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
-  
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
 }
 
 //Tablet vertical
@@ -279,7 +247,7 @@
       bottom: auto;
       z-index: auto;
       background: none;
-      display: block !important; //-sovrascrive l'inline style di jquery 
+      display: block !important; //-sovrascrive l'inline style di jquery
       transition: none;
       .overlay{
         display: none !important;
@@ -384,28 +352,12 @@
     .dropdown-toggle{
       display: block;
       justify-content: inherit;
-      &:after{
-        content: $dropdown-custom-button-caret-content;
-        font-size: $dropdown-custom-button-caret-font-size;
-        font-family: "italia-icon-font";
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
-        border: none;
-        display: inline-block;
-        vertical-align: 0em;
-        width: auto;
-        height: auto;
-        transition: transform $dropdown-menu-animation-speed;
-      }
     }
-    
   }
   .custom-navbar-toggler{
     display: none;
   }
-  //--megamenu
-  .has-megamenu{ 
+  .has-megamenu{
     .navbar-collapsable{
       width: 100%;
     }
@@ -419,8 +371,8 @@
         position: absolute;
         top: auto;
         bottom: -$dropdown-menu-notch-base-size - 6;
-        left: $dropdown-menu-notch-position-x; 
-        width: $dropdown-menu-notch-base-size*3; 
+        left: $dropdown-menu-notch-position-x;
+        width: $dropdown-menu-notch-base-size*3;
         height: $dropdown-menu-notch-base-size*3;
         border-radius: $dropdown-menu-radius;
         background-color: $dropdown-bg;
@@ -428,11 +380,11 @@
         opacity: 0;
         display: block;
         transition: opacity $dropdown-menu-animation-speed/2 cubic-bezier(.1,.57,.36,.99);
-        
+
       }
     }
     &.show{
-      a.dropdown-toggle{ 
+      a.dropdown-toggle{
         &:before{
           opacity: 1;
         }
@@ -456,9 +408,9 @@
   }
 }
 
-    
+
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-  
+
 }

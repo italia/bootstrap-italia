@@ -45,9 +45,8 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <label for="exampleInputPassword">Password</label>
   </div>
   <div class="form-group">
-    <i class="ico-prefix it-lock"></i>
     <input type="password" class="form-control" id="exampleInputPassword3" aria-labelledby="infoPassword" placeholder="Password">
-    <small id="infoPassword" class="form-text text-muted">inserisci almeno 8 caratteri e una lettera maiuscola</small>
+    <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
     <input type="password" class="form-control form-password" id="exampleInputPassword2">
@@ -133,6 +132,7 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}
 ## Icone aggiuntive
 
 È possibile inserire un'icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo `<input>`.
@@ -158,7 +158,6 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 
 {% endcapture %}{% include example.html content=example %}
 
-{% comment %}
 ### Dimensione
 
 È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.

@@ -91,6 +91,9 @@
 		border-color: $success;
 		.callout-title {
 			color: $success;
+      .icon {
+        fill: $success;
+      }
 			span {
 				border-color: $success;
 			}
@@ -100,6 +103,9 @@
 		border-color: $warning;
 		.callout-title {
 			color: $warning;
+      .icon {
+        fill: $warning;
+      }
 			span {
 				border-color: $warning;
 			}
@@ -109,6 +115,9 @@
 		border-color: $danger;
 		.callout-title {
 			color: $danger;
+      .icon {
+        fill: $danger;
+      }
 			span {
 				border-color: $danger;
 			}
@@ -118,6 +127,9 @@
 		border-color: $complementary-3-a9;
 		.callout-title {
 			color: $complementary-3-a9;
+      .icon {
+        fill: $complementary-3-a9;
+      }
 			span {
 				border-color: $complementary-3-a9;
 			}
@@ -127,6 +139,9 @@
 		border-color: $primary-a9;
 		.callout-title {
 			color: $primary-a9;
+      .icon {
+        fill: $primary-a9;
+      }
 			span {
 				border-color: $primary-a9;
 			}
@@ -141,7 +156,8 @@
 		margin-right: 2.222rem;
 		letter-spacing: 0.06rem;
 		color: $neutral-1-a7;
-		i {
+		.icon {
+      fill: $neutral-1-a7;
 			margin-right: 0.444rem;
 		}
 	}

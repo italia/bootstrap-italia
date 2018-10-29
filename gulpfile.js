@@ -13,6 +13,7 @@ const gulp = require('gulp'),
   log = require('fancy-log'),
   touch = require('gulp-touch-cmd'),
   spawn = require('cross-spawn'),
+  svgSprite = require('gulp-svg-sprite'),
   browserSync = require('browser-sync').create(),
   pkg = require('./package.json');
 
@@ -23,6 +24,7 @@ const Paths = {
   VENDOR_JS: [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
+    './node_modules/svgxuse/svgxuse.js',
     // './node_modules/pickadate/lib/compressed/picker.js',
     // './node_modules/pickadate/lib/compressed/picker.date.js',
     // './node_modules/pickadate/lib/compressed/picker.time.js'
@@ -195,18 +197,23 @@ gulp.task('documentation-js-min', () => {
     .pipe(touch());
 });
 
-// Icon Font related tasks
-
-gulp.task('icons-css', () => {
-  return gulp.src(['src/icons/css/**'])
-    .pipe(gulp.dest(Paths.DIST + '/css'))
-    .pipe(touch());
-});
-
-gulp.task('icons-font', () => {
-  return gulp.src(['src/icons/font/**'])
-    .pipe(gulp.dest(Paths.DIST + '/font'))
-    .pipe(touch());
+gulp.task('svg-sprite', function () {
+  return gulp.src('src/svg/it-*.svg')
+    .pipe(svgSprite({
+      shape: {
+        dimension: { // Set maximum dimensions
+          maxWidth: 32,
+          maxHeight: 32
+        }
+      },
+      mode: {
+        defs: {
+          dest: '.',
+          sprite: 'sprite.svg'
+        }
+      }
+    }))
+    .pipe(gulp.dest(Paths.DIST + '/svg'))
 });
 
 // Assets related tasks
@@ -240,11 +247,10 @@ gulp.task('jekyll', done => {
 // Library
 
 gulp.task('build-library', gulp.series(
+  'svg-sprite',
   'scss-min',
   'js-min',
   'js-bundle-min',
-  'icons-css',
-  'icons-font',
   'assets'
 ));
 
