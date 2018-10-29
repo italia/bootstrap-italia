@@ -162,7 +162,7 @@ const Select = (($) => {
 
       $select.wrap(wrapper);
 
-      var dropdownIcon = $('<span class="caret it-expand"></span>');
+      var dropdownIcon = $('<svg class="caret icon icon-xs icon-primary"><svg viewBox="0 0 32 32" id="expand" xmlns="http://www.w3.org/2000/svg"><path d="M3.733 6.133L0 9.866l16 16 16-16-3.733-3.733L16 18.4 3.733 6.133z"/></svg>\n</svg>');
       if ($select.is(':disabled')) {
         dropdownIcon.addClass('disabled');
       }

@@ -38,27 +38,27 @@ Utilizzare la classe `.disabled` sul link dei tab da disabilitare, aggiungendo l
 
 ### Tab con icona
 
-Le label dei tab possono essere sostituite da icone, da inserire con tag `<i>` con classe `.it-ico` più classe che ne indica il tipo, avendo cura di includere all'interno del link un elemento `<span>` con classe `.sr-only` contenente la descrizione dedicata agli screen reader. La classe `.sr-only` impedisce la visualizzazione del testo sui browser visuali.
+Le label dei tab possono essere sostituite da icone con classi che ne indicano il tipo, avendo cura di includere all'interno del link un elemento `<span>` con classe `.sr-only` contenente la descrizione dedicata agli screen reader. La classe `.sr-only` impedisce la visualizzazione del testo sui browser visuali.
 
 {% capture example %}
 <ul class="nav nav-tabs auto">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i><span class="sr-only">Tab titolo 1</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i><span class="sr-only">Tab titolo 2</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i><span class="sr-only">Tab titolo 3</span></a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i><span class="sr-only">Tab titolo 4</span></a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg><span class="sr-only">Tab titolo 3</span></a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
 ### Tab con icona grande
 
-Per ottenere icone più grandi utilizzare la classe `.it-ico-lg` alle icone. Aggiungere la classe `.nav-tabs-icon-lg` al contenitore `.nav-tabs` per ottimizzare i margini fra tab.
+Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiungere la classe `.nav-tabs-icon-lg` al contenitore `.nav-tabs` per ottimizzare i margini fra tab.
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-lg auto">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico-lg it-file"></i><span class="sr-only">Tab titolo 1</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico-lg it-calendar"></i><span class="sr-only">Tab titolo 2</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico-lg it-comment"></i><span class="sr-only">Tab titolo 3</span></a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico-lg it-unlock"></i><span class="sr-only">Tab titolo 4</span></a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg><span class="sr-only">Tab titolo 3</span></a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -68,10 +68,10 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text auto">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i> Tab 4</a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg> Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg> Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg> Tab 4</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -94,10 +94,10 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 
 {% capture example %}
 <ul class="nav nav-tabs">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i><span class="sr-only">Tab titolo 1</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i><span class="sr-only">Tab titolo 2</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i><span class="sr-only">Tab titolo 3</span></a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i><span class="sr-only">Tab titolo 4</span></a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg><span class="sr-only">Tab titolo 3</span></a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -105,10 +105,10 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-lg">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico-lg it-file"></i><span class="sr-only">Tab titolo 1</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico-lg it-calendar"></i><span class="sr-only">Tab titolo 2</span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico-lg it-comment"></i><span class="sr-only">Tab titolo 3</span></a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico-lg it-unlock"></i><span class="sr-only">Tab titolo 4</span></a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg><span class="sr-only">Tab titolo 3</span></a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -116,10 +116,10 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i> Tab 4</a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg> Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg> Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg> Tab 4</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -142,13 +142,13 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
 {% capture example %}
 <div class="nav-tabs-hidescroll hidescroll-ico">
   <ul class="nav nav-tabs nav-tabs-icon-text">
-    <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-unlock"></i> Tab 4</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-app"></i> Tab 5</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-print"></i> Tab 6</a></li>
-    <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-settings"></i> Tab 7</a></li>
+    <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 2</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 3</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 4</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 5</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 6</a></li>
+    <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 7</a></li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -178,10 +178,30 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 
 {% capture example %}
   <ul class="nav nav-tabs nav-tabs-icon-lg" id="myTab2" role="tablist">
-    <li class="nav-item"><a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true"><i class="it-ico-lg it-file"></i><span class="sr-only"> Tab titolo 1</span></a></li>
-    <li class="nav-item"><a class="nav-link" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false"><i class="it-ico-lg it-calendar"></i><span class="sr-only"> Tab titolo 2</span></a></li>
-    <li class="nav-item"><a class="nav-link" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false"><i class="it-ico-lg it-comment"></i><span class="sr-only"> Tab titolo 3</span></a></li>
-    <li class="nav-item"><a class="nav-link disabled" id="tab4a-tab" data-toggle="tab" href="#tab4a" role="tab" aria-controls="tab4a" aria-selected="false"  aria-disabled="true" tabindex="-1"><i class="it-ico-lg it-unlock"></i><span class="sr-only"> Tab titolo 4</span></a></li>
+    <li class="nav-item">
+      <a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true">
+        <svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+        <span class="sr-only"> Tab titolo 1</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab2a-tab" data-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false">
+        <svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+        <span class="sr-only"> Tab titolo 2</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tab3a-tab" data-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false">
+        <svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+        <span class="sr-only"> Tab titolo 3</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab4a-tab" data-toggle="tab" href="#tab4a" role="tab" aria-controls="tab4a" aria-selected="false"  aria-disabled="true" tabindex="-1">
+        <svg class="icon icon-lg icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+        <span class="sr-only"> Tab titolo 4</span>
+      </a>
+    </li>
   </ul>
   <div class="tab-content" id="myTab2Content">
     <div class="tab-pane p-4 fade show active" id="tab1a" role="tabpanel" aria-labelledby="tab1a-tab"><p>Contenuto 1</p></div>
@@ -195,10 +215,26 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text" id="myTab3" role="tablist">
-  <li class="nav-item"><a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true"><i class="it-ico it-file d-block text-center"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false"><i class="it-ico it-calendar d-block text-center"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false"><i class="it-ico it-comment d-block text-center"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1"><i class="it-ico it-unlock d-block text-center"></i> Tab 4</a></li>
+  <li class="nav-item">
+    <a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="tab2b-tab" data-toggle="tab" href="#tab2b" role="tab" aria-controls="tab2b" aria-selected="false">
+     <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 2
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 3
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1">
+      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 4
+    </a>
+  </li>
 </ul>
 <div class="tab-content" id="myTab3Content">
   <div class="tab-pane p-4 fade show active" id="tab1b" role="tabpanel" aria-labelledby="tab1c-tab"><p>Contenuto 1</p></div>
@@ -288,9 +324,9 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="nav-vertical-tab-ico" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="nav-vertical-tab-ico1-tab" data-toggle="tab" href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1" aria-selected="true">Tab 1 <i class="it-ico it-file"></i></a>
-        <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab" href="#nav-vertical-tab-ico2" role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">Tab 2 <i class="it-ico it-calendar"></i></a>
-        <a class="nav-link" id="nav-vertical-tab-ico3-tab" data-toggle="tab" href="#nav-vertical-tab-ico3" role="tab" aria-controls="nav-vertical-tab-ico3" aria-selected="false">Tab 3 <i class="it-ico it-comment "></i></a>
+        <a class="nav-link active" id="nav-vertical-tab-ico1-tab" data-toggle="tab" href="#nav-vertical-tab-ico1" role="tab" aria-controls="nav-vertical-tab-ico1" aria-selected="true">Tab 1 <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link" id="nav-vertical-tab-ico2-tab" data-toggle="tab" href="#nav-vertical-tab-ico2" role="tab" aria-controls="nav-vertical-tab-ico2" aria-selected="false">Tab 2 <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link" id="nav-vertical-tab-ico3-tab" data-toggle="tab" href="#nav-vertical-tab-ico3" role="tab" aria-controls="nav-vertical-tab-ico3" aria-selected="false">Tab 3 <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
         <a class="nav-link">...</a>
       </div>
     </div>
@@ -314,9 +350,9 @@ Le label dei Tab possono essere sostituite da icone, avendo cura di includere al
   <div class="row">
     <div class="col-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="nav-vertical-tab-ico-only" role="tablist" aria-orientation="vertical">
-        <a class="nav-link justify-content-end active" id="nav-vertical-tab-ico-only1-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only1" role="tab" aria-controls="nav-vertical-tab-ico-only1" aria-selected="true"><span class="sr-only">Tab titolo 1</span> <i class="it-ico it-file"></i></a>
-        <a class="nav-link justify-content-end" id="nav-vertical-tab-ico-only2-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only2" role="tab" aria-controls="nav-vertical-tab-ico-only2" aria-selected="false"><span class="sr-only">Tab titolo 2</span> <i class="it-ico it-calendar"></i></a>
-        <a class="nav-link justify-content-end" id="nav-vertical-tab-ico-only3-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only3" role="tab" aria-controls="nav-vertical-tab-ico-only3" aria-selected="false"><span class="sr-only">Tab titolo 3</span> <i class="it-ico it-comment"></i></a>
+        <a class="nav-link justify-content-end active" id="nav-vertical-tab-ico-only1-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only1" role="tab" aria-controls="nav-vertical-tab-ico-only1" aria-selected="true"><span class="sr-only">Tab titolo 1</span> <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link justify-content-end" id="nav-vertical-tab-ico-only2-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only2" role="tab" aria-controls="nav-vertical-tab-ico-only2" aria-selected="false"><span class="sr-only">Tab titolo 2</span> <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg></a>
+        <a class="nav-link justify-content-end" id="nav-vertical-tab-ico-only3-tab" data-toggle="tab" href="#nav-vertical-tab-ico-only3" role="tab" aria-controls="nav-vertical-tab-ico-only3" aria-selected="false"><span class="sr-only">Tab titolo 3</span> <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg></a>
         <a class="nav-link justify-content-end">...</a>
       </div>
     </div>
@@ -365,9 +401,9 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
   <div class="row flex-row-reverse">
     <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical" id="pos-vr" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="pos-vr1-tab" data-toggle="tab" href="#pos-vr1" role="tab" aria-controls="pos-vr1" aria-selected="true"><i class="it-ico it-file"></i> Tab 1</a>
-        <a class="nav-link" id="pos-vr2-tab" data-toggle="tab" href="#pos-vr2" role="tab" aria-controls="pos-vr2" aria-selected="false"><i class="it-ico it-calendar"></i> Tab 2</a>
-        <a class="nav-link" id="pos-vr3-tab" data-toggle="tab" href="#pos-vr3" role="tab" aria-controls="pos-vr3" aria-selected="false"><i class="it-ico it-comment"></i> Tab 3</a>
+        <a class="nav-link active" id="pos-vr1-tab" data-toggle="tab" href="#pos-vr1" role="tab" aria-controls="pos-vr1" aria-selected="true"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a>
+        <a class="nav-link" id="pos-vr2-tab" data-toggle="tab" href="#pos-vr2" role="tab" aria-controls="pos-vr2" aria-selected="false"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 2</a>
+        <a class="nav-link" id="pos-vr3-tab" data-toggle="tab" href="#pos-vr3" role="tab" aria-controls="pos-vr3" aria-selected="false"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 3</a>
         <a class="nav-link">...</a>
       </div>
     </div>
@@ -399,10 +435,10 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text nav-dark">
-  <li class="nav-item"><a class="nav-link active" href="#"><i class="it-ico it-file"></i> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-calendar"></i> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><i class="it-ico it-comment"></i> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><i class="it-ico it-unlock"></i> Tab 4</a></li>
+  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg> Tab 4</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -413,10 +449,10 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
       <div class="nav nav-tabs nav-tabs-vertical nav-dark" id="nav-vertical-tab-ico-dark" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="nav-vertical-tab-dark1-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark1" role="tab" aria-controls="nav-vertical-tab-dark1" aria-selected="true">Tab 1 <i class="it-ico it-file"></i></a>
-        <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark2" role="tab" aria-controls="nav-vertical-tab-ico-dark2" aria-selected="false">Tab 2 <i class="it-ico it-calendar"></i></a>
-        <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark3" role="tab" aria-controls="nav-vertical-tab-ico-dark3" aria-selected="false">Tab 3 <i class="it-ico it-comment"></i></a>
-        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark4" role="tab" aria-controls="nav-vertical-tab-ico-dark4" aria-selected="false">Tab 4 <i class="it-ico it-unlock"></i></a>
+        <a class="nav-link active" id="nav-vertical-tab-dark1-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark1" role="tab" aria-controls="nav-vertical-tab-dark1" aria-selected="true">Tab 1 <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark2" role="tab" aria-controls="nav-vertical-tab-ico-dark2" aria-selected="false">Tab 2 <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark3" role="tab" aria-controls="nav-vertical-tab-ico-dark3" aria-selected="false">Tab 3 <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab" data-toggle="tab" href="#nav-vertical-tab-ico-dark4" role="tab" aria-controls="nav-vertical-tab-ico-dark4" aria-selected="false">Tab 4 <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
       </div>
     </div>
     <div class="col-7 col-md-8 col-lg-9 p-4">
@@ -481,19 +517,19 @@ Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ot
   <ul class="nav nav-tabs nav-tabs-cards nav-tabs-editable" id="card-simple-btn" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="card-simple-btn1-tab" data-toggle="tab" href="#card-simple-btntab1" role="tab" aria-controls="card-simple-btntab1" aria-selected="true">Tab 1 </a>
-        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 1</span></a>
+        <a href="#" class="nav-link-close"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only"> Chiudi tab 1</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="card-simple-btn2-tab" data-toggle="tab" href="#card-simple-btntab2" role="tab" aria-controls="card-simple-btntab2" aria-selected="false">Tab 2</a>
-        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 2</span></a>
+        <a href="#" class="nav-link-close"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only"> Chiudi tab 2</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="card-simple-btn3-tab" data-toggle="tab" href="#card-simple-btntab3" role="tab" aria-controls="card-simple-btntab3" aria-selected="false">Tab 3</a>
-        <a href="#" class="nav-link-close"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 3</span></a>
+        <a href="#" class="nav-link-close"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only"> Chiudi tab 3</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" id="card-simple-btn4-tab" data-toggle="tab" href="#card-simple-btntab4" role="tab" aria-controls="card-simple-btntab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitato</a>
-        <a href="#" class="nav-link-close disabled"><i class="it-ico it-close"></i><span class="sr-only"> Chiudi tab 4</span></a>
+        <a href="#" class="nav-link-close disabled"><svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only"> Chiudi tab 4</span></a>
       </li>
       <li class="nav-item-filler"></li>
       <li class="nav-item">

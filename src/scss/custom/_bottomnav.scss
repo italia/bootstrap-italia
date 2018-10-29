@@ -40,15 +40,24 @@
 			text-align: center;
 		}
 	}
-	a {	
+	a {
 		display: block;
 		color: $neutral-1-a7;
+    .icon {
+      fill: $neutral-1-a7;
+    }
 		&.active {
 			color: $primary;
+      .icon {
+        fill: $primary;
+      }
 		}
 		&:hover {
 			text-decoration: none;
 			color: $primary;
+      .icon {
+        fill: $primary;
+      }
 		}
 	}
 
@@ -64,6 +73,10 @@
 	}
 
 	// icon badges ------------------
+  .badge-wrapper {
+    position: relative;
+  }
+
 	.bottom-nav-badge, .bottom-nav-alert {
 		display: block;
 		position: absolute;
