@@ -212,7 +212,7 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		<div class="avatar avatar-dropdown">
 			<div class="dropdown">
 				<a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<span class="sr-only">Visualizza ltri utenti</span>
+					<span class="sr-only">Visualizza altri utenti</span>
 					<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
 				</a>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">

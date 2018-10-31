@@ -65,6 +65,7 @@ $avatar-base-size: 8px;
 		.list-item {
 			display: flex;
 			align-items: center;
+			padding: 0 16px;
 		}
 		.link-list {
 			span {
@@ -88,8 +89,13 @@ $avatar-base-size: 8px;
 			}
 		}
 		.dropdown-menu {
-			margin: -27px;
+			margin: -25px;
 			top: -6px !important;
+		}
+		&.size-sm {
+			.dropdown-menu {
+				margin: -27px;
+			}
 		}
 	}
 
