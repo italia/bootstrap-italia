@@ -107,6 +107,8 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
 
+#### Stacked Piccolo
+
 {% capture example %}
 <ul class="avatar-group stacked">
 	<li>
@@ -135,8 +137,115 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		</div>
 	</li>
 	<li>
-		<div class="avatar size-sm">
+		<div class="avatar avatar-dropdown size-sm">
+			<div class="dropdown">
+				<a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="sr-only">Visualizza ltri utenti</span>
+					<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<div class="link-list-wrapper">
+					<ul class="link-list">
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
+								<span>Mario Rossi</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar avatar-text size-sm complementary-3-bg"><p>A</p></div>
+								<span>Arianna Gallo</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar avatar-text size-sm complementary-3-bg"><p>S</p></div>
+								<span>Sara Ghione</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar size-sm"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+								<span>Antonio Esposito</span>
+							</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+{% endcapture %}{% include example.html content=example %}
+
+#### Stacked Medio
+
+{% capture example %}
+<ul class="avatar-group stacked">
+	<li>
+		<div class="avatar">
+			<img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Utente: Mario Rossi">
+		</div>
+	</li>
+	<li>
+		<div class="avatar">
+			<img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Utente: Mario Rossi">
+		</div>
+	</li>
+	<li>
+		<div class="avatar avatar-text complementary-2-bg">
+			<p>A</p>
+		</div>
+	</li>
+	<li>
+		<div class="avatar avatar-text complementary-3-bg">
+			<p>S</p>
+		</div>
+	</li>
+	<li>
+		<div class="avatar">
 			<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
+		</div>
+	</li>
+	<li>
+		<div class="avatar avatar-dropdown">
+			<div class="dropdown">
+				<a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="sr-only">Visualizza ltri utenti</span>
+					<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<div class="link-list-wrapper">
+					<ul class="link-list">
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
+								<span>Mario Rossi</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar avatar-text complementary-3-bg"><p>A</p></div>
+								<span>Arianna Gallo</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar avatar-text complementary-3-bg"><p>S</p></div>
+								<span>Sara Ghione</span>
+							</a>
+						</li>
+						<li>
+							<a class="list-item" href="#">
+								<div class="avatar"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+								<span>Antonio Esposito</span>
+							</a>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</li>
 </ul>
