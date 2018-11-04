@@ -30,15 +30,6 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
-
-#### Icon font
-
-Nel caso si desideri utilizzare le icone fornite nel pacchetto di release, sarà necessario includere anche il file CSS `italia-icon-font.css`, che a sua volta richiederà la presenza di una serie di file di font, visibili nella cartella `font`. In questo caso, il codice da inserire sarà:
-
-{% highlight html %}
-<link rel="stylesheet" href="./italia-icon-font.css">
-{% endhighlight %}
-
 ### Javascript
 
 All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery e popper.js. Vediamo nel dettaglio di cosa si tratta:
