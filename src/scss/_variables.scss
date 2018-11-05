@@ -397,13 +397,19 @@ $header-slim-theme-light-button-color:$primary;
 $header-slim-theme-light-button-hover-color:$primary-a6;
 //header-center
 $header-center-bg-color:$primary;
-$header-center-pad:31px;
+$header-center-max-height:176px;
+$header-center-max-height-mob:80px;
+$header-center-pad:47px;
+$header-center-pad-mob:16px;
 $header-center-text-color:#FFF;
 $header-center-h2-size:1.778em;
+$header-center-h2-size-mob:1.250em;
 $header-center-h2-weight:600;
 $header-center-h3-size:0.889em;
 $header-center-icon-size:82px;
+$header-center-icon-size-mob:48px;
 $header-center-icon-margin:$v-gap*2;
+$header-center-icon-margin-mob:$v-gap;
 $header-center-social-size:$v-gap*3;
 $header-center-social-distance:$v-gap*2;
 $header-center-search-size:$v-gap*6;
@@ -411,6 +417,9 @@ $header-center-search-radius:$v-gap*3;
 $header-center-search-icon-size:$v-gap*3;
 $header-center-search-distance:$v-gap*10;
 $header-center-text-size:0.889em;
+// header center theme light
+$header-center-theme-light-bg-color:#FFF;
+$header-center-theme-light-text-color:$primary; 
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
