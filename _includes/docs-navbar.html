@@ -1,4 +1,4 @@
-<header class="navbar-main navbar navbar-dark bd-navbar">
+<header class="navbar-main navbar navbar-dark bd-navbar px-3">
   <div class="container{% if page.layout == "docs" %}-fluid{% endif %}">
     <a class="navbar-brand py-2" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
       <div class="d-flex flex-row">
@@ -11,28 +11,28 @@
     </a>
 
     {% if page.layout == "docs" %}
-    <button class="btn btn-sm btn-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-sm btn-outline-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       menu
     </button>
     {% endif %}
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" aria-label="Download">
-          <svg class="icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#download"></use></svg><span class="sr-only">Download</span>
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
       <li class="nav-item pr-2">
-        <a title="GitHub" class="nav-link d-flex align-items-center" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#github"></use></svg><span class="sr-only">GitHub</span>
+        <a title="Repository GitHub di Bootstrap Italia" class="nav-link d-flex align-items-center" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
         </a>
       </li>
     </ul>
 
     {% if page.layout == "docs" %}
     <div class="bd-search w-100">
-      <label for="search-input" class="sr-only"></label>
-      <input type="search" class="form-control" id="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off">
+      <label for="search-input" class="sr-only">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
     </div>
     {% endif %}
   </div>
