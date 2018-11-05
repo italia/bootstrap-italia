@@ -52,7 +52,7 @@ La versione predefinita dell'elemento è quella con icone grandi e label.
     </li>
 	<li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
@@ -95,7 +95,7 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
     </li>
 	<li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
 		    <span class="sr-only">Label</span>
       </a>
     </li>
@@ -144,7 +144,7 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
     </li>
 	<li>
       <a href="#">
-        <svg class="icon icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
 		    <span class="sr-only">Label</span>
       </a>
     </li>
@@ -200,7 +200,7 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
     </li>
 	<li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
@@ -248,7 +248,7 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
     </li>
 	<li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
@@ -291,7 +291,7 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
     </li>
 	<li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
 		    <span class="sr-only">Label</span>
       </a>
     </li>
@@ -340,7 +340,7 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
     </li>
 	<li>
       <a href="#">
-        <svg class="icon icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+        <svg class="icon icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
 		    <span class="sr-only">Label</span>
       </a>
     </li>
@@ -425,7 +425,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	<li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
-          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
           <span class="toolbar-label">Label</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
@@ -521,7 +521,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	<li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
           <span class="sr-only">Label</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
@@ -634,7 +634,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 	<li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlock"></use></svg>
+          <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-unlocked"></use></svg>
           <span class="sr-only">Label</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
@@ -729,7 +729,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
 	<li>
       <a href="#">
-        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <i class="it-ico it-unlocked" aria-hidden="true"></i>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
@@ -782,7 +782,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
 	<li>
       <a href="#">
-        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <i class="it-ico it-unlocked" aria-hidden="true"></i>
         <span class="sr-only">Label</span>
       </a>
     </li>
@@ -841,7 +841,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
 	<li>
       <a href="#">
-        <i class="it-ico it-unlock" aria-hidden="true"></i>
+        <i class="it-ico it-unlocked" aria-hidden="true"></i>
         <span class="sr-only">Label</span>
       </a>
     </li>

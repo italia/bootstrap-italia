@@ -474,7 +474,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
         <a class="nav-link active" id="nav-vertical-tab-dark1-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark1-rev" role="tab" aria-controls="nav-vertical-tab-dark1-rev" aria-selected="true"><i class="it-ico it-file"></i> Tab 1</a>
         <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark2-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark2-rev" aria-selected="false"><i class="it-ico it-calendar"></i> Tab 2</a>
         <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark3-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark3-rev" aria-selected="false"><i class="it-ico it-comment"></i> Tab 3</a>
-        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark4-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark4-rev" aria-selected="false"><i class="it-ico it-unlock"></i> Tab 4</a>
+        <a class="nav-link disabled" id="nav-vertical-tab-ico-dark4-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark4-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark4-rev" aria-selected="false"><i class="it-ico it-unlocked"></i> Tab 4</a>
       </div>
     </div>
     <div class="col-7 col-md-8 col-lg-9 p-4">
