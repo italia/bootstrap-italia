@@ -1,0 +1,59 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++LIGHT THEME+++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+/*
+++++++++++++++++++++++++++++++LIGHT THEME+++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.it-header-slim-wrapper{
+	&.theme-light{
+		background:$header-slim-theme-light-bg-color;
+		.it-header-slim-wrapper-content{
+			a{
+				color:$header-slim-theme-light-text-color;
+				.icon{
+					fill: $header-slim-theme-light-text-color;
+				}
+				&.dropdown-toggle{
+					
+				}
+				&.it-opener{
+					
+					&[aria-expanded="true"]{
+						.icon{
+							fill:$header-slim-theme-light-text-color;
+						}
+					}
+				}
+			}
+			.navbar-brand{
+				color: $header-slim-theme-light-text-color;
+			}
+			.header-slim-right-zone{
+			}
+			
+		}
+	}
+}
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	.it-header-slim-wrapper{
+		&.theme-light{
+			.it-header-slim-wrapper-content{
+				span.nav-palce-mobile{
+					ul.link-list{
+						border-left-color:$header-slim-theme-light-ul-border;
+						border-right-color: $header-slim-theme-light-ul-border;
+						a{
+							&.active{
+								border-bottom:$header-slim-theme-light-a-active-border;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

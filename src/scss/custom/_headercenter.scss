@@ -1,0 +1,23 @@
+//mobile
+.it-header-center-wrapper{
+	
+}
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}

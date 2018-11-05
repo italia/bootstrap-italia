@@ -373,6 +373,23 @@ $navscroll-dark-bg-color:$neutral-1-a8;
 $navscroll-dark-text-color:#FFF;
 $navscroll-dark-separator-color: rgba(229,229,229,0.3);
 
+//HEADER
+//Header slim
+$header-slim-bg-color:$primary-a7;
+$header-slim-text-color: #FFF;
+$header-slim-brand-text-size: 0.875em;
+$header-slim-icon-size:18px;
+$header-slim-padding-desk:3px $v-gap*3;
+$header-slim-dropdown-distance:10px;
+$header-slim-links-padding:3px;
+$header-slim-brand-padding:10px;
+$header-slim-ul-border:1px solid rgba(255,255,255,0.3);
+$header-slim-a-active-border:2px solid #FFF;
+//header-slim-theme-light
+$header-slim-theme-light-bg-color:#FFF;
+$header-slim-theme-light-text-color: $primary-a7;
+$header-slim-theme-light-ul-border:1px solid rgba($primary-a7,0.3);
+$header-slim-theme-light-a-active-border:2px solid $primary-a7;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
