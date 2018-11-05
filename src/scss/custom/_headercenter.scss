@@ -3,42 +3,83 @@
 	background: $header-center-bg-color; 
 	.it-header-center-content-wrapper{
 		padding-top:$header-center-pad;
-		padding-bottom:$header-center-pad;
+		padding-bottom:$header-center-pad*2;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-basis: 100%;
-		a{
-			display: flex;
-			color: $header-center-text-color;
-			align-items: center;
-			h2{
-				font-size:$header-center-h2-size;
-				margin-bottom:0;
-				font-weight: $header-center-h2-weight;
-			}
-			h3{
-				font-size:$header-center-h3-size;
-				font-weight: normal;
-				margin-bottom:0;
-			}
-			&:hover{
-				text-decoration: none;
-			}
-			.icon{
-				fill: $header-center-text-color;
-				width: $header-center-icon-size;
-				height: $header-center-icon-size;
-				margin-right: $header-center-icon-margin;
+		.it-brand-wrapper{
+			a{
+				display: flex;
+				color: $header-center-text-color;
+				align-items: center;
+				h2{
+					font-size:$header-center-h2-size;
+					margin-bottom:0;
+					font-weight: $header-center-h2-weight;
+				}
+				h3{
+					font-size:$header-center-h3-size;
+					font-weight: normal;
+					margin-bottom:0;
+				}
+				&:hover{
+					text-decoration: none;
+				}
+				.icon{
+					fill: $header-center-text-color;
+					width: $header-center-icon-size; 
+					height: $header-center-icon-size;
+					margin-right: $header-center-icon-margin;
+				}
 			}
 		}
+		
 		//right zone
 		.it-right-zone{
 			color: $header-center-text-color;
-			ul{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
+			display: flex;
+			align-items: center;
+			.it-socials{
+				align-items: center;
+				font-size: $header-center-text-size;
+				ul{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					display: flex;
+					.icon{
+						fill:$header-center-text-color;
+						width: $header-center-social-size;
+						height: $header-center-social-size;
+						margin-left: $header-center-social-distance;
+					}
+				}
+			}
+		}
+		//-search
+		.it-search-wrapper{
+			display: flex;
+			align-items: center;
+			margin-left: $header-center-search-distance;
+			font-size: $header-center-text-size;
+			a{
+				&.rounded-icon{
+					width: $header-center-search-size;
+					height: $header-center-search-size;
+					border-radius:$header-center-search-radius;
+					display: block;
+					background: $header-center-text-color;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-left: $v-gap*2;
+					svg{
+						fill:$header-center-bg-color;
+						width: $header-center-search-icon-size;
+						height: $header-center-search-icon-size;
+					}
+				}
 			}
 		}
 	}
