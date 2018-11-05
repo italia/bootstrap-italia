@@ -51,22 +51,22 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-	<div class="avatar avatar-text size-xs">
+	<div class="avatar size-xs">
 		<p>M</p>
 	</div>
-	<div class="avatar avatar-text size-sm">
+	<div class="avatar avatar-primary size-sm">
 		<p>M</p>
 	</div>
-	<div class="avatar avatar-text ">
+	<div class="avatar avatar-secondary">
 		<p>MR</p>
 	</div>
-	<div class="avatar avatar-text size-lg">
+	<div class="avatar avatar-green size-lg">
 		<p>MR</p>
 	</div>
-	<div class="avatar avatar-text size-xl">
+	<div class="avatar avatar-orange size-xl">
 		<p>MR</p>
 	</div>
-	<div class="avatar avatar-text size-xxl">
+	<div class="avatar avatar-red size-xxl">
 		<p>MR</p>
 	</div>
 </div>
@@ -103,14 +103,84 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
 
+### Inline
+
+Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+
+#### Inline Small
+
+{% capture example %}
+<div class="link-list-wrapper">
+	<ul class="link-list avatar-group">
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Utente: Mario Rossi"></div>
+				<span>Mario Rossi</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar avatar-orange size-sm complementary-3-bg"><p>A</p></div>
+				<span>Arianna Gallo</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar avatar-red size-sm complementary-3-bg"><p>S</p></div>
+				<span>Sara Ghione</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar size-sm"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+				<span>Antonio Esposito</span>
+			</a>
+		</li>
+	</ul>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Inline Medium
+
+{% capture example %}
+<div class="link-list-wrapper">
+	<ul class="link-list avatar-group">
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
+				<span>Mario Rossi</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar avatar-green complementary-3-bg"><p>AG</p></div>
+				<span>Arianna Gallo</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar avatar-primary complementary-3-bg"><p>SG</p></div>
+				<span>Sara Ghione</span>
+			</a>
+		</li>
+		<li>
+			<a class="list-item" href="#">
+				<div class="avatar"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+				<span>Antonio Esposito</span>
+			</a>
+		</li>
+	</ul>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Stacked
 
 Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
 
-#### Stacked Piccolo
+#### Stacked Small
 
 {% capture example %}
-<ul class="avatar-group stacked">
+<ul class="avatar-group-stacked">
 	<li>
 		<div class="avatar size-sm">
 			<img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Utente: Mario Rossi">
@@ -122,12 +192,12 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		</div>
 	</li>
 	<li>
-		<div class="avatar avatar-text size-sm complementary-2-bg">
+		<div class="avatar avatar-orange size-sm">
 			<p>A</p>
 		</div>
 	</li>
 	<li>
-		<div class="avatar avatar-text size-sm complementary-3-bg">
+		<div class="avatar avatar-red size-sm">
 			<p>S</p>
 		</div>
 	</li>
@@ -140,37 +210,37 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		<div class="avatar avatar-dropdown size-sm">
 			<div class="dropdown">
 				<a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<span class="sr-only">Visualizza ltri utenti</span>
-					<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+					<span class="sr-only">Visualizza altri 4 utenti</span>
+					+4
 				</a>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 					<div class="link-list-wrapper">
-					<ul class="link-list">
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
-								<span>Mario Rossi</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar avatar-text size-sm complementary-3-bg"><p>A</p></div>
-								<span>Arianna Gallo</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar avatar-text size-sm complementary-3-bg"><p>S</p></div>
-								<span>Sara Ghione</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar size-sm"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
-								<span>Antonio Esposito</span>
-							</a>
-						</li>
-					</ul>
+						<ul class="link-list">
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
+									<span>Mario Rossi</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar avatar-green size-sm complementary-3-bg"><p>A</p></div>
+									<span>Arianna Gallo</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar avatar-primary size-sm complementary-3-bg"><p>S</p></div>
+									<span>Sara Ghione</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar size-sm"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+									<span>Antonio Esposito</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -179,10 +249,10 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-#### Stacked Medio
+#### Stacked Medium
 
 {% capture example %}
-<ul class="avatar-group stacked">
+<ul class="avatar-group-stacked">
 	<li>
 		<div class="avatar">
 			<img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Utente: Mario Rossi">
@@ -194,13 +264,13 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		</div>
 	</li>
 	<li>
-		<div class="avatar avatar-text complementary-2-bg">
-			<p>A</p>
+		<div class="avatar avatar-orange">
+			<p>AM</p>
 		</div>
 	</li>
 	<li>
-		<div class="avatar avatar-text complementary-3-bg">
-			<p>S</p>
+		<div class="avatar avatar-red">
+			<p>SP</p>
 		</div>
 	</li>
 	<li>
@@ -212,37 +282,37 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 		<div class="avatar avatar-dropdown">
 			<div class="dropdown">
 				<a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<span class="sr-only">Visualizza altri utenti</span>
-					<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+					<span class="sr-only">Visualizza altri 4 utenti</span>
+					+4
 				</a>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 					<div class="link-list-wrapper">
-					<ul class="link-list">
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
-								<span>Mario Rossi</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar avatar-text complementary-3-bg"><p>A</p></div>
-								<span>Arianna Gallo</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar avatar-text complementary-3-bg"><p>S</p></div>
-								<span>Sara Ghione</span>
-							</a>
-						</li>
-						<li>
-							<a class="list-item" href="#">
-								<div class="avatar"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
-								<span>Antonio Esposito</span>
-							</a>
-						</li>
-					</ul>
+						<ul class="link-list">
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Utente: Mario Rossi"></div>
+									<span>Mario Rossi</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar avatar-green"><p>AG</p></div>
+									<span>Arianna Gallo</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar avatar-primary"><p>SG</p></div>
+									<span>Sara Ghione</span>
+								</a>
+							</li>
+							<li>
+								<a class="list-item" href="#">
+									<div class="avatar"><svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-user"></use></svg></div>
+									<span>Antonio Esposito</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

@@ -10,6 +10,7 @@ $avatar-base-size: 8px;
 	justify-content: center;
 	align-items: center;
 	background: $neutral-1-a1; // default background
+	color: #5c6f82;
 	box-sizing: content-box;
 	// image
 	img {
@@ -34,12 +35,29 @@ $avatar-base-size: 8px;
 	.icon {
 		height: 16px; // default size equals to md
 		width: 16px;
-		//position: absolute;
 	}
 
-	//text variant
-	&.avatar-text {
+	//color variants
+	&.avatar-primary {
 		background: $primary;
+	}
+	&.avatar-secondary {
+		background: $secondary;
+	}
+	&.avatar-green {
+		background: $green;
+	}
+	&.avatar-orange {
+		background: $orange;
+	}
+	&.avatar-red {
+		background: $red;
+	}
+	&.avatar-primary,
+	&.avatar-secondary,
+	&.avatar-green,
+	&.avatar-orange,
+	&.avatar-red {
 		color: $white;
 	}
 
@@ -61,6 +79,8 @@ $avatar-base-size: 8px;
 			color: inherit;
 			padding: 0;
 			line-height: 0;
+			font-size: 11px;
+			//color: #5c6f82;
 		}
 		.list-item {
 			display: flex;
@@ -90,7 +110,7 @@ $avatar-base-size: 8px;
 		}
 		.dropdown-menu {
 			margin: -25px;
-			top: -6px !important;
+			//top: -6px-6px !important;
 		}
 		&.size-sm {
 			.dropdown-menu {
@@ -171,16 +191,52 @@ $avatar-base-size: 8px;
 }
 
 .avatar-group {
+	& > li {
+		margin-bottom: 16px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		// link
+		.list-item {
+			display: inline-flex;
+			align-items: center;
+			padding: 0;
+			line-height: 1em;
+			.avatar {
+				margin-right: 12px;
+				//reset color & font size for avatar
+				p {
+					font-size: 16px;
+				}
+				&.avatar-primary,
+				&.avatar-secondary,
+				&.avatar-green,
+				&.avatar-orange,
+				&.avatar-red {
+					p {
+						color: $white;
+						line-height: 0;
+					}
+				}
+			}
+			span {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.avatar-group-stacked {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 	margin: 0;
+	padding: 0;
+	flex-direction: row;
 	li {
 		list-style-type: none;
 		line-height: 0;
-	}
-	&.stacked {
-		li > .avatar {
+		& > .avatar {
 			margin-left: -6px;
 			border: 2px solid $white;
 		}
