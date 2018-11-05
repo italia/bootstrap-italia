@@ -6,7 +6,6 @@ $avatar-base-size: 8px;
 	border-radius: 50%;
 	width: $avatar-base-size*4; // default size equals to md
 	height: $avatar-base-size*4; // default size equals to md
-	position: relative;
 	justify-content: center;
 	align-items: center;
 	background: $neutral-1-a1; // default background
@@ -37,7 +36,7 @@ $avatar-base-size: 8px;
 		width: 16px;
 	}
 
-	//color variants
+	//color variants----------------------------------------- START
 	&.avatar-primary {
 		background: $primary;
 	}
@@ -60,10 +59,12 @@ $avatar-base-size: 8px;
 	&.avatar-red {
 		color: $white;
 	}
+	//color variants----------------------------------------- END
 
-	//dropdown variant
+	//dropdown variant--------------------------------------- START
 	&.avatar-dropdown {
 		overflow: visible;
+		position: relative;
 		.dropdown {
 			position: absolute;
 			top: 0;
@@ -80,7 +81,6 @@ $avatar-base-size: 8px;
 			padding: 0;
 			line-height: 0;
 			font-size: 11px;
-			//color: #5c6f82;
 		}
 		.list-item {
 			display: flex;
@@ -110,7 +110,6 @@ $avatar-base-size: 8px;
 		}
 		.dropdown-menu {
 			margin: -25px;
-			//top: -6px-6px !important;
 		}
 		&.size-sm {
 			.dropdown-menu {
@@ -118,6 +117,7 @@ $avatar-base-size: 8px;
 			}
 		}
 	}
+	//dropdown variant-------------------------------------- END
 
 	//size variants----------------------------------------- START
 	&.size-xs {
@@ -152,6 +152,12 @@ $avatar-base-size: 8px;
 			height: 16px;
 			width: 16px;
 		}
+		.avatar-presence, .avatar-status {
+			border-width: 1px;
+			.icon {
+				display: none;
+			}
+		}
 	}
 	&.size-lg {
 		width: $avatar-base-size*5;
@@ -162,6 +168,14 @@ $avatar-base-size: 8px;
 		.icon {
 			height: 20px;
 			width: 20px;
+		}
+		.avatar-presence, .avatar-status {
+			right: -2px;
+			width: 15px;
+			height: 15px;
+		}
+		.avatar-status {
+			top: $avatar-base-size/48
 		}
 	}
 	&.size-xl {
@@ -174,6 +188,17 @@ $avatar-base-size: 8px;
 			height: 40px;
 			width: 40px;
 		}
+		.avatar-presence, .avatar-status {
+			right: 6px;
+			width: 18px;
+			height: 18px;
+		}
+		.avatar-presence {
+			bottom: $avatar-base-size;
+		}
+		.avatar-status {
+			top: $avatar-base-size/4;
+		}
 	}
 	&.size-xxl {
 		width: $avatar-base-size*16;
@@ -185,11 +210,86 @@ $avatar-base-size: 8px;
 			height: 62px;
 			width: 62px;
 		}
+		.avatar-presence, .avatar-status {
+			right: 4px;
+			width: 24px;
+			height: 24px;
+			.icon {
+				width: 20px;
+				height: 20px;
+			}
+		}
+		.avatar-presence {
+			bottom: $avatar-base-size*2;
+		}
+		.avatar-status {
+			top: $avatar-base-size;
+		}
 	}
 	//size variants----------------------------------------- END
 
 }
 
+.avatar-wrapper {
+	position: relative;
+
+	.avatar-presence, .avatar-status {
+		position: absolute;
+		right: 0;
+		width: 10px;
+		height: 10px;
+		border: 2px solid $white;
+		background: $neutral-1-a3;
+		color: $white;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		//icon
+		.icon {
+			width: 18px;
+			height: 18px;
+			fill: $white;
+		}
+	}
+
+	.avatar-presence {
+		bottom: $avatar-base-size;
+		&.active {
+			background: $green;
+		}
+		&.busy {
+			background: $red;
+		}
+		&.hidden {
+			&:after {
+				content: '';
+				position: absolute;
+				width: calc(100% - 4px);
+				height: calc(100% - 4px);
+				background: $white;
+				transform: translateX(-50%) translateY(-50%);
+				top: 50%;
+				left: 50%;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.avatar-status {
+		top: 0;
+		&.approved {
+			background: $green;
+		}
+		&.declined {
+			background: $red;
+		}
+	}
+}
+
+
+
+// inline group -------------------------------------------- START
 .avatar-group {
 	& > li {
 		margin-bottom: 16px;
@@ -225,7 +325,9 @@ $avatar-base-size: 8px;
 		}
 	}
 }
+// inline group -------------------------------------------- END
 
+// stacked group ------------------------------------------- START
 .avatar-group-stacked {
 	display: flex;
 	justify-content: flex-start;
@@ -242,6 +344,7 @@ $avatar-base-size: 8px;
 		}
 	}
 }
+// stacked group ------------------------------------------- END
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
