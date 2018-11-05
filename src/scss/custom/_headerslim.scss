@@ -44,6 +44,14 @@
 			display: flex;
 			align-items: center;
 			align-self: flex-start;
+			button{
+				background: $header-slim-button-color;
+				padding-top: $header-slim-button-v-padding;
+				padding-bottom: $header-slim-button-v-padding;
+				&:hover{
+					background: $header-slim-button-hover-color;
+				}
+			}
 		}
 		span.nav-palce-mobile{
 			ul.link-list{

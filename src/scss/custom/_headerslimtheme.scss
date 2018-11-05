@@ -33,6 +33,12 @@
 				color: $header-slim-theme-light-text-color;
 			}
 			.header-slim-right-zone{
+				button{
+					background: $header-slim-theme-light-button-color;
+					&:hover{
+						background: $header-slim-theme-light-button-hover-color;
+					}
+				}
 			}
 			
 		}
