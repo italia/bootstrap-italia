@@ -86,6 +86,7 @@ $avatar-base-size: 8px;
 			display: flex;
 			align-items: center;
 			padding: 0 16px;
+			font-size: .889rem;
 		}
 		.link-list {
 			span {
@@ -238,12 +239,21 @@ $avatar-base-size: 8px;
 		justify-content: flex-start;
 		align-items: center;
 
+		.avatar {
+			flex-shrink: 0;
+		}
+
 		.extra-text {
+			line-height: 1.2em;
 			margin-left: 16px;
-			h2, h3, h4 {
-				font-weight: 700;
+			h3, h4 {
+				font-weight: 600;
 				margin: 0;
 				font-size: 1.111rem;
+				a {
+					display: inline-block;
+				}
+				
 			}
 			p, time {
 				margin: 0;
@@ -269,7 +279,6 @@ $avatar-base-size: 8px;
 		.icon {
 			width: 18px;
 			height: 18px;
-			fill: $white;
 		}
 	}
 
@@ -316,6 +325,7 @@ $avatar-base-size: 8px;
 .avatar-group {
 	& > li {
 		margin-bottom: 16px;
+		line-height: 1;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -344,6 +354,7 @@ $avatar-base-size: 8px;
 			}
 			span {
 				margin: 0;
+				font-size: .889rem;
 			}
 		}
 	}
