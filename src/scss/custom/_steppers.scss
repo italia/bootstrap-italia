@@ -12,10 +12,16 @@
 			color: $gray-secondary;
 			list-style-type: none;
 			display: none;
+			.icon {
+				fill: $gray-secondary;
+			}
 			// states
 			&.active, &.confirmed {
 				color: $primary;
 				font-weight: 600;
+				.icon {
+					fill: $primary;
+				}
 			}
 			&.active, &.steppers-index {
 				display: block;
@@ -35,12 +41,17 @@
 			}
 
 			// icons
-			.it-ico:not(.it-check) {
-				font-size: 1.333rem;
+			.icon {
+				//font-size: 1.333rem;
 				margin-right: 0.667rem;
+				width: 24px;
+				height: 24px;
 			}
 			// numbers
 			.steppers-number {
+				.icon {
+					margin: 0;
+				}
 				&:after {
 					content: '. ';
 				}
@@ -58,9 +69,15 @@
 				color: $neutral-1-a6;
 				&.active {
 					color: $analogue-2-a6;
+					.icon {
+						fill: $analogue-2-a6;
+					}
 				}
 				&.confirmed {
 					color: $white;
+					.icon {
+						fill: $white;
+					}
 				}
 				// steppers
 				&.steppers-index {
@@ -194,6 +211,11 @@
 						background: $primary;
 						border-color: $primary;
 					}
+					&.no-line {
+						&:after {
+							display: none;
+						}
+					}
 				}
 				// success icon
 				.steppers-success {
@@ -212,7 +234,7 @@
 						display: none;
 					}
 					// numbers check
-					.it-ico {
+					.icon {
 						&:before {
 							margin-right: 0;
 							margin-top: 0.333rem;
@@ -230,7 +252,6 @@
 					border-color: $neutral-1-a8;
 					// active
 					&.active {
-						text-decoration: underline;
 						&:after {
 							background: $analogue-2-a6;
 						}
@@ -258,7 +279,7 @@
 				display: none;
 			}
 			button {
-				.it-ico {
+				.icon {
 					display: none;
 				}
 				&:not(.steppers-btn-confirm) {
@@ -296,9 +317,11 @@
 					color: $primary !important;
 					box-shadow: $btn-focus-box-shadow !important;
 				}
-				.it-ico {
+				.icon {
 					margin: 0 0.333rem;
-					font-size: 0.889rem;
+					//font-size: 0.889rem;
+					height: 24px;
+					width: 24px;
 				}
 			}
 		}
@@ -309,6 +332,9 @@
 			.steppers-nav {
 				button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
 					color: $white;
+					.icon {
+						fill: $white;
+					}
 					&:hover, &:focus, &:active {
 						color: $analogue-2-a6 !important;
 					}
