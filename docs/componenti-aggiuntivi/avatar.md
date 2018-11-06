@@ -6,17 +6,32 @@ group: componenti-aggiuntivi
 toc: true
 ---
 
-L'elmento Avatar è la rappresentazione garfica di un utente e può includere un'immagine, un testo o un icona.
+L'elemento Avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Gli Avatar sono disponibili in sei diverse dimensioni:
+- **xs** con classe `size-xs`
+- **sm** con classe `size-sm`
+- **md** (dimensioni di default) `size-md`
+- **lg** con classe `size-lg`
+- **xl** con classe `size-xl`
+- **xxl** con classe `size-xxl`
+
+Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
+Per ottenere un elemento grafico non interattivo, utilizzare il tag `<div>`.
 
 {% capture callout %}
-Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso. Nel caso di un Avatr con immagine è consigliabile utilizzare l'attributo `alt=""` della stessa.
+Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
+
+Nel caso di Avatar con immagine è consigliabile utilizzare l'attributo `alt=""` della stessa.
+
+Un Avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="sr-only">Nome Utente</span>`.
+
+Per gli Avatar con icona inserire un testo alternativo: `<span class="sr-only">Testo icona</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Avatar con immagine
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+L'Avatar ridemsiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -43,7 +58,15 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 ## Avatar con testo
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+La versione con testo contiene le iniziali dell'utente (una sola nel caso delle dimensioni xs ed sm).
+Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:
+- Primario: aggiungendo la classe `avatar-primary`
+- Secondario: aggiungendo la classe `avatar-secondary`
+- Verde: aggiungendo la classe `avatar-green`
+- Arancione: aggiungendo la classe `avatar-orange`
+- Rosso: aggiungendo la classe `avatar-red`
+
+In questi casi il testo sarà di colore bianco.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -76,7 +99,7 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 ## Avatar con icona
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla <a href="/docs/utilities/icone/">libreria icone</a> e indicarne il colore con una delle classi disponibili.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -109,13 +132,15 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 ## Gruppi di Avatar
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Gli Avatar possono essere raggruppati in liste verticali ed orizzontali.
 
 ### Lista
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Utilizzando un componente <a href="/docs/componenti/link-list/">Link list</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
 
 #### Lista piccola
+
+Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 
 {% capture example %}
 <div class="link-list-wrapper">
@@ -156,6 +181,8 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 #### Lista media
 
+Lista verticale di Avatar di dimensione media con classe `.size-md`.
+
 {% capture example %}
 <div class="link-list-wrapper">
 	<ul class="link-list avatar-group">
@@ -193,11 +220,14 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Sovrapposto
+### Avatar Sovrapposti
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar-group-stacked` questi verranno visualizzati come una lista orizzontale in cui i singoli elementi sono parzialmente sovrapposti. In questo tipo di gruppoo è possibile inserire dei <a href="/docs/componenti/dropdown/">Dropdown</a> per racchiudere ulteriori elementi Avatar.
 
-#### Sovrapposto Piccolo
+#### Avatar Sovrapposti Piccoli
+
+
+Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 {% capture example %}
 <ul class="avatar-group-stacked">
@@ -278,7 +308,9 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-#### Sovrapposto Medio
+#### Avatar Sovrapposti Medi
+
+Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 
 {% capture example %}
 <ul class="avatar-group-stacked">
@@ -365,7 +397,14 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 ### Presenza utente
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si otterrà un indicatore dello stato di presenza dell'utente:
+- lo stato **attivo** si ottiene aggiungendo la classe `.active`
+- lo stato **non disponibile** si ottiene aggiungendo la classe `.busy`
+- lo stato **invisibile** si ottiene aggiungendo la classe `.hidden`
+
+{% capture callout %}
+Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="sr-only">Presenza: (stato presenza)</span>`
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
@@ -437,7 +476,14 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 
 ### Status utente
 
-Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con classe `.thumb-nav-`
+Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otterrà un indicatore dello stato dell'account utente:
+- lo stato **approvato** si ottiene aggiungendo la classe `.approved`
+- lo stato **respinto** si ottiene aggiungendo la classe `.declined`
+- lo stato **notifica** si ottiene aggiungendo la classe `.notify`
+
+{% capture callout %}
+Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="sr-only">Stato: (stato utenza)</span>`
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
@@ -509,6 +555,10 @@ Maecenas tristique accumsan leo, aliquam ullamcorper mi semper at `<ul>` con cla
 {% endcapture %}{% include example.html content=example %}
 
 ## Avatar con testo aggiuntivo
+
+Per ottenere una versione più completa dell'Avatar con nome esteso ed evetuale testo accessorio racchiudere l'Avatr all'interno di un contenitore `.avatar-wrapper` con classe `.avatar-extra-text` e aggiungere il testo esteso in un `<div>` con classe `.extra-text`. 
+
+Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può essere contenuto in un `<p>` o in un tag `<time>` nel caso di date/orari.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">

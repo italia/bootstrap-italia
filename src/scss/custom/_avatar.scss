@@ -231,38 +231,11 @@ $avatar-base-size: 8px;
 
 }
 
+//wrapper for status, presence and extra text -------------- START
 .avatar-wrapper {
 	position: relative;
 
-	&.avatar-extra-text {
-		display: inline-flex;
-		justify-content: flex-start;
-		align-items: center;
-
-		.avatar {
-			flex-shrink: 0;
-		}
-
-		.extra-text {
-			line-height: 1.2em;
-			margin-left: 16px;
-			h3, h4 {
-				font-weight: 600;
-				margin: 0;
-				font-size: 1.111rem;
-				a {
-					display: inline-block;
-				}
-				
-			}
-			p, time {
-				margin: 0;
-				text-transform: uppercase;
-				font-size: 0.778rem;
-			}
-		}
-	}
-
+	//presence and status - common properties
 	.avatar-presence, .avatar-status {
 		position: absolute;
 		right: 0;
@@ -282,6 +255,7 @@ $avatar-base-size: 8px;
 		}
 	}
 
+	//presence
 	.avatar-presence {
 		bottom: $avatar-base-size;
 		&.active {
@@ -305,6 +279,7 @@ $avatar-base-size: 8px;
 		}
 	}
 
+	//status
 	.avatar-status {
 		top: 0;
 		&.approved {
@@ -317,8 +292,39 @@ $avatar-base-size: 8px;
 			background: $primary-b1;
 		}
 	}
-}
 
+	//extra text version
+	&.avatar-extra-text {
+		display: inline-flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		.avatar {
+			flex-shrink: 0;
+		}
+
+		//text
+		.extra-text {
+			line-height: 1.2em;
+			margin-left: 16px;
+			h3, h4 {
+				font-weight: 600;
+				margin: 0;
+				font-size: 1.111rem;
+				a {
+					display: inline-block;
+				}
+			}
+			p, time {
+				margin: 0;
+				text-transform: uppercase;
+				font-size: 0.778rem;
+			}
+		}
+	}
+
+}
+//wrapper for status, presence and extra text -------------- START
 
 
 // inline group -------------------------------------------- START
