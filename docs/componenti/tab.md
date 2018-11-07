@@ -45,7 +45,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg><span class="sr-only">Tab titolo 3</span></a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
+  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg><span class="sr-only">Tab titolo 4</span></a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
