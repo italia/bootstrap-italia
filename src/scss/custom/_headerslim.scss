@@ -78,6 +78,7 @@
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-slim-wrapper{
+		height: $header-slim-height;
 		.it-header-slim-wrapper-content{
 			span.nav-palce-mobile{
 				flex-grow: 2;
@@ -102,6 +103,8 @@
 			}
 			a{
 				&.dropdown-toggle{
+					padding-top: $header-slim-lang-v-padding;
+					padding-bottom: $header-slim-lang-v-padding;
 					.icon{
 						margin-left: $v-gap;
 					}

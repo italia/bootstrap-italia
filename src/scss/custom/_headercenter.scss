@@ -1,10 +1,12 @@
 //mobile
 .it-header-center-wrapper{ 
 	background: $header-center-bg-color;
-	max-height: $header-center-max-height-mob;
+	height: $header-center-max-height-mob;
+	display: flex;
+	align-items: center;
 	.it-header-center-content-wrapper{
-		padding-top:$header-center-pad-mob;
-		padding-bottom:$header-center-pad-mob;
+		//padding-top:$header-center-pad-mob;
+		//padding-bottom:$header-center-pad-mob;
 		padding-left: $v-gap;
 		padding-right: $v-gap;
 		display: flex;
@@ -98,10 +100,19 @@
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-center-wrapper{
-		max-height: $header-center-max-height;
+		height: $header-center-max-height;
+		&.it-small-header{
+			height:$header-center-small-height;
+			.it-header-center-content-wrapper .it-brand-wrapper a h2{
+				font-size: $header-center-small-h2-size;
+			}
+			.it-header-center-content-wrapper .it-brand-wrapper a h3{
+				font-size: $header-center-small-h3-size;
+			}
+		}
 		.it-header-center-content-wrapper{
-			padding-top:$header-center-pad;
-			padding-bottom:$header-center-pad;
+			//padding-top:$header-center-pad;
+			//padding-bottom:$header-center-pad;
 			padding-left: 0;
 			padding-right: 0;
 			display: flex;

@@ -1,6 +1,6 @@
 //mobile
 .it-header-navbar-wrapper{
-	background: $header-center-bg-color;
+	
 	nav{
 		background: transparent;
 		.navbar-collapsable{
@@ -21,6 +21,7 @@
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-navbar-wrapper{
+		background: $header-center-bg-color;
 		nav{
 			.navbar-collapsable{
 				.menu-wrapper{

@@ -1,0 +1,49 @@
+//mobile
+.it-header-wrapper{
+	.it-nav-wrapper{
+		position: relative;
+		.it-header-navbar-wrapper{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top:-$header-nav-button-distance;
+			nav{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	.it-header-wrapper{
+		.it-nav-wrapper{
+			position: relative;
+			.it-header-navbar-wrapper{
+				position: inherit;
+				left: auto;
+				top: inherit;
+				margin-top:0;
+				nav{
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}

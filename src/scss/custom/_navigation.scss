@@ -25,7 +25,7 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    background: $navigation-sidebar-bg-color-mobile;
+    //background: $navigation-sidebar-bg-color-mobile;
     display: none;
     // menu vrapper
     .menu-wrapper{
@@ -64,6 +64,11 @@
           font-weight: 600;
           padding: $navigation-v-padding $navigation-h-padding;
           position: relative;
+          &.dropdown-toggle{
+            svg{
+              fill:$navbar-bg-color;
+            }
+          }
           &.active{
             border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
           }
@@ -168,6 +173,11 @@
   span{
     color: $navigation-toggle-button-icon-color;
     font-size: $navigation-toggle-button-icon-size;
+  }
+  svg{
+    fill:$navigation-toggle-button-icon-color;
+    width: $navigation-hamburger-size;
+    height: $navigation-hamburger-size;
   }
 }
 //reset icon on megamenu
@@ -284,6 +294,11 @@
             font-weight: 400;
             padding:$navigation-v-padding $navigation-h-padding;
             color: $navigation-link-color-desk;
+            &.dropdown-toggle{
+              svg{
+                fill:$navigation-bg-color;
+              }
+            }
             &.active{
               border-left:0;
               border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color-desk;
@@ -335,6 +350,7 @@
         ul{
           li{
             a{
+              
               span,i{
                 color: $color-primary;
               }
@@ -366,6 +382,7 @@
     position: static;
     > a.dropdown-toggle{
       position: relative;
+      
       &:before{
         content: '';
         position: absolute;
