@@ -221,7 +221,7 @@ $navigation-bg-color: #FFF;
 $navigation-bg-color-desktop: $color-primary;
 
 $navigation-h-padding:24px;
-$navigation-v-padding:12px;
+$navigation-v-padding:13px;
 $navigation-sidebar-bg-color-mobile: rgba(0,0,0,0.6);
 $navigation-close-button-text-color: $color-primary;
 $navigation-close-button-text-size: 0.750em;
@@ -376,25 +376,29 @@ $navscroll-dark-separator-color: rgba(229,229,229,0.3);
 
 //HEADER
 //Header slim
+$header-general-padding:$v-gap*3;
 $header-slim-bg-color:$primary-a7;
 $header-slim-text-color: #FFF;
-$header-slim-brand-text-size: 0.875em;
+$header-slim-brand-text-size: 0.778em;
 $header-slim-icon-size:18px;
 $header-slim-padding-desk:3px $v-gap*3;
-$header-slim-dropdown-distance:10px;
+$header-slim-dropdown-distance:13px;
+$header-slim-dropdown-distance-mob:9px;
 $header-slim-links-padding:5px;
 $header-slim-brand-padding:12px;
-$header-slim-ul-border:1px solid rgba(255,255,255,0.3);
+$header-slim-ul-border:1px solid rgba(255,255,255,0.2);
 $header-slim-a-active-border:2px solid #FFF;
 $header-slim-button-color:$primary-a9;
 $header-slim-button-hover-color:$primary-a8;
-$header-slim-button-v-padding:8px;
+$header-slim-button-v-padding:7.5px;
 $header-slim-lang-v-padding:12px;
+$header-slim-h-padding:18px;
+$header-slim-v-padding-mob:6.5px;
 
 //header-slim-theme-light
 $header-slim-theme-light-bg-color:#FFF;
 $header-slim-theme-light-text-color: $primary-a7;
-$header-slim-theme-light-ul-border:1px solid rgba($primary-a7,0.3);
+$header-slim-theme-light-ul-border:1px solid rgba($primary-a7,0.2);
 $header-slim-theme-light-a-active-border:2px solid $primary-a7;
 $header-slim-theme-light-button-color:$primary;
 $header-slim-theme-light-button-hover-color:$primary-a6;
@@ -423,11 +427,15 @@ $header-center-search-distance:$v-gap*10;
 $header-center-text-size:0.889em;
 $header-nav-button-distance:22px;
 $header-center-small-height:104px;
+$header-center-small-mob-height:64px;
 $header-center-small-h2-size:1.333em;
 $header-center-small-h3-size:0.778em;
 // header center theme light
 $header-center-theme-light-bg-color:#FFF;
 $header-center-theme-light-text-color:$primary-a6;
+
+$header-center-button-left:10px;
+$header-nav-icon-arrow-megamenu-distance:14px;
 
 // Grid breakpoints
 //

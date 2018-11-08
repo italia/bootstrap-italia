@@ -8,43 +8,66 @@ toc: true
 
 ## Header - Introduzione
 
-Navbar semplice con elenco di links.
+L'header può essere composta da 3 elementi  
+**Header slim**: Può contenere intestazione, cambio lingua, accesso ad area riservarta, link esterni  
+**Header centrale**: Contiene il brand e la sua descrizione, link ai social media, accesso al motore di ricerca  
+**Header Nav**: Contiene i link di navigazione (link semplici, dropdown e megamenu)
 
-Il menu visibile su desktop viene collassato e reso invisibile ed accessibile attraverso il pulsante `.custom-navbar-toggler`.
-
-La proprietà `data-target` definisce il menu che andrà visualizzato al click sul pulsante. La proprietà `data-target` è legata all'id dell'elemento da visualizzare.
-
-La classe `.navbar-collapsable` definsce le caratteristiche del menù principale nelle varie declinazioni Desktop / Tablet / mobile.
+### Header Slim
 
 {% capture example %}
-<nav class="navbar navbar-expand-lg"><span></span>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav">
-    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#list"></use></svg>
-  </button>
-  <div class="navbar-collapsable" id="navbarNav">
-    <div class="close-div">
-      <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#close"></use></svg>
-      </button>
-    </div>
-    <div class="menu-wrapper">
-      <ul class="navbar-nav">
-        <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active</span><span class="sr-only">current</span></a>
-        </li>
-        <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 disabilitato</span></a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#"><span>link 3</span></a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a>
-        </li>
-      </ul>
+<div class="it-header-slim-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+          <span class="nav-palce-mobile">
+            <nav>
+              <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <span>Ente appartenenza/Owner</span>
+                <svg class="icon">
+                  <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="link-list-wrapper collapse" id="menu1">
+                <ul class="link-list">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                </ul>
+              </div>
+            </nav>
+          </span>
+          <div class="header-slim-right-zone">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                <span>Ita</span>
+                <svg class="icon d-none d-lg-block">
+                  <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Ita</span></a></li>
+                        <li><a class="list-item" href="#"><span>Eng</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="it-access-top-wrapper">
+              <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Navbar classica con dropdown

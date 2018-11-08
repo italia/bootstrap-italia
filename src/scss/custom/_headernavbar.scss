@@ -22,12 +22,16 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-navbar-wrapper{
 		background: $header-center-bg-color;
+		.nav-item.megamenu>a.dropdown-toggle:before{
+			bottom:- $header-nav-icon-arrow-megamenu-distance;
+		}
 		nav{
 			.navbar-collapsable{
 				.menu-wrapper{
 					background: transparent;
 					.navbar-nav{
 						padding:0;
+						
 					}
 				}
 			}

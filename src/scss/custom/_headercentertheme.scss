@@ -82,6 +82,13 @@
 						ul{
 							.icon{
 							}
+							a{
+								&:hover{
+									svg{
+										fill:darken($header-center-theme-light-text-color,5%);
+									}
+								}
+							}
 						}
 					}
 				}
@@ -92,6 +99,9 @@
 						&.rounded-icon{
 							svg{
 								fill:$header-center-theme-light-bg-color;
+							}
+							&:hover{
+								background: darken($header-center-theme-light-text-color,5%);
 							}
 						}
 					}

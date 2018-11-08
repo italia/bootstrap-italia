@@ -9,6 +9,11 @@
 */
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-navbar-wrapper{
+		&.theme-light-desk{
+			.custom-navbar-toggler svg{
+				fill: $navigation-light-text-color;
+			}
+		} 
 		&.theme-dark-mobile{
 			.navbar{
 					// navbar mobile
@@ -177,6 +182,10 @@
 		&.theme-light-desk{
 			background: $navigation-light-bg-color;
 			box-shadow: $dropdown-box-shadow;
+			.navbar .navbar-collapsable .navbar-nav li a.nav-link.dropdown-toggle svg{
+				fill: $navigation-light-text-color;
+			}
+			
 			.navbar{
 				background:transparent;
 				// navbar mobile

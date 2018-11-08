@@ -2,14 +2,22 @@
 .it-header-wrapper{
 	.it-nav-wrapper{
 		position: relative;
+		// se ha un menu
+		.it-brand-wrapper{
+			padding-left:$v-gap*4;
+		}
 		.it-header-navbar-wrapper{
 			position: absolute;
 			left: 0;
 			top: 50%;
 			margin-top:-$header-nav-button-distance;
 			nav{
-				padding-left: 0;
-				padding-right: 0;
+				padding-left: $header-general-padding - ($grid-columns/2);
+				padding-right: $header-general-padding - ($grid-columns/2);
+				.custom-navbar-toggler{
+					padding:0;
+					transform:translateX(-2px);
+				}
 			}
 		}
 	}
@@ -28,6 +36,9 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-header-wrapper{
 		.it-nav-wrapper{
+			.it-brand-wrapper{
+				padding-left: 0;
+			}
 			position: relative;
 			.it-header-navbar-wrapper{
 				position: inherit;
@@ -35,8 +46,8 @@
 				top: inherit;
 				margin-top:0;
 				nav{
-					padding-left: 0;
-					padding-right: 0;
+					padding-left:$header-general-padding - ($grid-columns/2);
+					padding-right:$header-general-padding - ($grid-columns/2);
 				}
 			}
 		}
