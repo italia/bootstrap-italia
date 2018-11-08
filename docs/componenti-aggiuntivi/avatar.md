@@ -6,6 +6,13 @@ group: componenti-aggiuntivi
 toc: true
 ---
 
+<script>
+	//attiva tooltip
+	document.addEventListener("DOMContentLoaded", function() {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+
 L'elemento Avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.
 
 Gli Avatar sono disponibili in sei diverse dimensioni:
@@ -16,8 +23,8 @@ Gli Avatar sono disponibili in sei diverse dimensioni:
 - **xl** con classe `size-xl`
 - **xxl** con classe `size-xxl`
 
-Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 Per ottenere un elemento grafico non interattivo, utilizzare il tag `<div>`.
+Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
@@ -31,28 +38,28 @@ Per gli Avatar con icona inserire un testo alternativo: `<span class="sr-only">T
 
 ## Avatar con immagine
 
-L'Avatar ridemsiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
+L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
 	<div class="avatar size-xs">
 		<img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
 	</div>
-	<a class="avatar size-sm" href="#">
+	<div class="avatar size-sm">
 		<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luisa Neri">
-	</a>
+	</div>
 	<div class="avatar">
 		<img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Gioacchino Romani">
 	</div>
-	<a class="avatar size-lg" href="#">
+	<div class="avatar size-lg">
 		<img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
-	</a>
+	</div>
 	<div class="avatar size-xl">
 		<img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlo Poli">
 	</div>
-	<a class="avatar size-xxl" href="#">
+	<div class="avatar size-xxl">
 		<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
-	</a>
+	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -74,26 +81,26 @@ In questi casi il testo sarà di colore bianco.
 		<p aria-hidden="true">M</p>
 		<span class="sr-only">Mario Rossi</span>
 	</div>
-	<a class="avatar avatar-primary size-sm" href="#">
+	<div class="avatar avatar-primary size-sm">
 		<p aria-hidden="true">M</p>
 		<span class="sr-only">Mario Rossi</span>
-	</a>
+	</div>
 	<div class="avatar avatar-secondary">
 		<p aria-hidden="true">MR</p>
 		<span class="sr-only">Mario Rossi</span>
 	</div>
-	<a class="avatar avatar-green size-lg" href="#">
+	<div class="avatar avatar-green size-lg">
 		<p aria-hidden="true">MR</p>
 		<span class="sr-only">Mario Rossi</span>
-	</a>
+	</div>
 	<div class="avatar avatar-orange size-xl">
 		<p aria-hidden="true">MR</p>
 		<span class="sr-only">Mario Rossi</span>
 	</div>
-	<a class="avatar avatar-red size-xxl" href="#">
+	<div class="avatar avatar-red size-xxl">
 		<p aria-hidden="true">MR</p>
 		<span class="sr-only">Mario Rossi</span>
-	</a>
+	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -107,23 +114,63 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
 	</div>
-	<a class="avatar size-sm" href="#">
+	<div class="avatar size-sm">
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
-	</a>
+	</div>
 	<div class="avatar">
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
 	</div>
-	<a class="avatar size-lg" href="#">
+	<div class="avatar size-lg">
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
-	</a>
+	</div>
 	<div class="avatar size-xl">
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
 	</div>
-	<a class="avatar size-xxl" href="#">
+	<div class="avatar size-xxl">
+		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
+		<span class="sr-only">Cerca</span>
+	</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Avatar Link
+
+Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata Javascript.
+
+{% capture example %}
+<div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+	<a class="avatar size-xl" href="#">
+		<img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+	</a>
+	<a class="avatar avatar-red size-xl" href="#">
+		<p aria-hidden="true">MR</p>
+		<span class="sr-only">Mario Rossi</span>
+	</a>
+	<a class="avatar size-xl" href="#">
+		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
+		<span class="sr-only">Cerca</span>
+	</a>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Avatar Link con Tooltip
+
+E' possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
+
+{% capture example %}
+<div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+	<a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="left" title="<b>Anna Barbieri</b><br/><em>Amministratore</em>">
+		<img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+	</a>
+	<a class="avatar avatar-red size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="top" title="<b>Mario Rossi</b><br/><em>Editor</em>">
+		<p aria-hidden="true">MR</p>
+		<span class="sr-only">Mario Rossi</span>
+	</a>
+	<a class="avatar size-xl" href="#"  data-toggle="tooltip" data-html="true" data-placement="right" title="<b>Cerca</b><br/><em>Archivio notizie</em>">
 		<svg class="icon icon-secondary"><use xlink:href="/dist/svg/sprite.svg#it-search"></use></svg>
 		<span class="sr-only">Cerca</span>
 	</a>
@@ -226,31 +273,48 @@ Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar
 
 #### Avatar Sovrapposti Piccoli
 
-
 Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 {% capture example %}
 <ul class="avatar-group-stacked">
 	<li>
-		<div class="avatar size-sm">
+		<a class="avatar size-sm" href="#">
 			<img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Arianna Rossi">
-		</div>
+		</a>
 	</li>
 	<li>
-		<div class="avatar size-sm">
+		<a class="avatar size-sm" href="#">
 			<img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Giulio Neri">
-		</div>
+		</a>
 	</li>
 	<li>
-		<div class="avatar avatar-orange size-sm">
+		<a class="avatar avatar-primary size-sm" href="#">
 			<p aria-hidden="true">A</p>
 			<span class="sr-only">Andrea Gallo</span>
-		</div>
+		</a>
+	</li>
+	<li>
+		<a class="avatar avatar-secondary size-sm" href="#">
+			<p aria-hidden="true">S</p>
+			<span class="sr-only">Sara Ghione</span>
+		</a>
+	</li>
+	<li>
+		<a class="avatar avatar-green size-sm" href="#">
+			<p aria-hidden="true">T</p>
+			<span class="sr-only">Tommaso Sordi</span>
+		</a>
+	</li>
+	<li>
+		<a class="avatar avatar-orange size-sm" href="#">
+			<p aria-hidden="true">B</p>
+			<span class="sr-only">Barbara Tosi</span>
+		</a>
 	</li>
 	<li>
 		<a class="avatar avatar-red size-sm" href="#">
-			<p aria-hidden="true">S</p>
-			<span class="sr-only">Sara Ghione</span>
+			<p aria-hidden="true">R</p>
+			<span class="sr-only">Roberto Milano</span>
 		</a>
 	</li>
 	<li>
@@ -315,20 +379,20 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 {% capture example %}
 <ul class="avatar-group-stacked">
 	<li>
-		<div class="avatar size-md">
+		<a class="avatar size-md" href="#">
 			<img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Arianna Rossi">
-		</div>
+		</a>
 	</li>
 	<li>
-		<div class="avatar size-md">
+		<a class="avatar size-md" href="#">
 			<img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Giulio Neri">
-		</div>
+		</a>
 	</li>
 	<li>
-		<div class="avatar avatar-orange size-md">
+		<a class="avatar avatar-orange size-md" href="#">
 			<p aria-hidden="true">AM</p>
 			<span class="sr-only">Angelica Mola</span>
-		</div>
+		</a>
 	</li>
 	<li>
 		<a class="avatar avatar-red size-md" href="#">
@@ -561,7 +625,7 @@ Per ottenere una versione più completa dell'Avatar con nome esteso ed evetuale 
 Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può essere contenuto in un `<p>` o in un tag `<time>` nel caso di date/orari.
 
 {% capture example %}
-<div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+<div class="d-flex align-items-center justify-content-start justify-content-md-around flex-wrap flex-sm-nowrap">
 	<div class="avatar-wrapper avatar-extra-text">
 		<div class="avatar size-xl">
 			<img src="https://randomuser.me/api/portraits/men/33.jpg" alt="">

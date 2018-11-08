@@ -11,12 +11,14 @@ $avatar-base-size: 8px;
 	background: $neutral-1-a1; // default background
 	color: #5c6f82;
 	box-sizing: content-box;
+	transition: background-color 0.2s;
 	// image
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		transition: filter 0.2s;
 	}
 	// text
 	p {
@@ -28,7 +30,7 @@ $avatar-base-size: 8px;
 	}
 	 // text fix for ie11
 	 _:-ms-fullscreen, p {
-		transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
 	  }
 	// icon
 	.icon {
@@ -231,6 +233,41 @@ $avatar-base-size: 8px;
 
 }
 
+//hover & focus states
+a.avatar {
+	filter: brightness(100%);
+	//position: relative;
+	&:hover {
+		img {
+			filter: brightness(90%);
+		}
+		background: darken($neutral-1-a1,5%);
+		&.avatar-primary {
+			background: darken($primary,5%);
+		}
+		&.avatar-secondary {
+			background: darken($secondary,5%);
+		}
+		&.avatar-green {
+			background: darken($green,5%);
+		}
+		&.avatar-orange {
+			background: darken($orange,5%);
+		}
+		&.avatar-red {
+			background: darken($red,12%);
+		}
+	}
+}
+.avatar-dropdown {
+	&:hover, &:focus-within {
+		background: darken($neutral-1-a1,5%);
+	}
+	.btn-dropdown:focus {
+		box-shadow: none;
+	}
+}
+
 //wrapper for status, presence and extra text -------------- START
 .avatar-wrapper {
 	position: relative;
@@ -298,6 +335,7 @@ $avatar-base-size: 8px;
 		display: inline-flex;
 		justify-content: flex-start;
 		align-items: center;
+		margin-bottom: 16px;
 
 		.avatar {
 			flex-shrink: 0;
