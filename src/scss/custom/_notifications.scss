@@ -12,7 +12,7 @@
 	border-top: 4px solid $secondary;
 
 	//title
-	h2 {
+	h5 {
 		font-size: 0.938rem;
 		text-transform: uppercase;
 		color: $neutral-1;
@@ -20,6 +20,8 @@
 		margin: 0;
 		position: relative;
 		line-height: 1em;
+		font-weight: 700;
+		letter-spacing: 0.025em;
 	}
 	//text
 	p {
@@ -30,14 +32,14 @@
 	//icon version
 	&.with-icon {
 		border-top: 4px solid $secondary;
-		h2 {
+		h5 {
 			.icon {
 				position: absolute;
 				top: -8px;
 				left: -38px;
 			}
 		}
-		h2, p {
+		h5, p {
 			margin-left: 2rem;
 		}
 		//status variants
@@ -98,7 +100,7 @@
 	.notification {
 		padding: 1.333rem;
 		padding-right: 3.556rem;
-		h2 {
+		h5 {
 			font-size: 0.833rem;
 		}
 		p {
@@ -106,7 +108,7 @@
 			margin: 1.333rem 0 0 0;
 		}
 		&.with-icon {
-			h2, p {
+			h5, p {
 				margin-left: 1.778rem;
 			}
 		}
