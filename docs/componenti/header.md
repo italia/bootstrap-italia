@@ -1,21 +1,22 @@
 ---
 layout: docs
 title: Header
-description: Documentazione ed esempi per l'header di navigazione. Include il supporto per il branding, la navigazione e altro ancora, incluso il supporto per collapse plug-in.
+description: Documentazione ed esempi per la creazione di una testata di navigazione.
 group: componenti
 toc: true
 ---
 
-## Header - Introduzione
+L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
 
-L'header può essere composta da 3 elementi  
-**Header slim**: Può contenere intestazione, cambio lingua, accesso ad area riservarta, links.  
-**Header centrale**: Contiene il brand e la sua descrizione, link ai social media, accesso al motore di ricerca.  
-**Header Nav**: Contiene i link di navigazione (link semplici, dropdown e megamenu).
+* Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
+* Una parte centrale che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
+* Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
+  (<svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-burger"></use></svg>) per dispositivi mobili.
 
-### Header Slim
-L'header slim può contenere **intestazione**, **cambio lingua**, **accesso ad area riservarta**, **links**.  
-Il **cambio lingua** è gestito con il componente **dropdown**: [pagina dedicata al componente Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/). 
+## Slim header
+
+Lo "slim header" header mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.
+Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl }}/docs/componenti/dropdown/). 
 
 
 {% capture example %}
@@ -54,8 +55,8 @@ Il **cambio lingua** è gestito con il componente **dropdown**: [pagina dedicata
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Ita</span></a></li>
-                        <li><a class="list-item" href="#"><span>Eng</span></a></li>
+                        <li><a class="list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -73,9 +74,8 @@ Il **cambio lingua** è gestito con il componente **dropdown**: [pagina dedicata
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Versione chiara
 
-
-### Header Slim light version
 Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-slim-wrapper">`
 
 
@@ -105,7 +105,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           <div class="header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                <span>Ita</span>
+                <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
                   <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
                 </svg>
@@ -115,8 +115,8 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Ita</span></a></li>
-                        <li><a class="list-item" href="#"><span>Eng</span></a></li>
+                        <li><a class="list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -134,10 +134,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Header Centrale
 
-### Header Centrale
-**Header centrale**: Contiene il brand e la sua descrizione, link ai social media, accesso al motore di ricerca. 
-
+**Header centrale**, per mostrare il logo dell'ente e la sua descrizione, dei link aggiuntivi ai social media, l'accesso al motore di ricerca, se presente.  
 
 {% capture example %}
 <div class="it-header-center-wrapper">
@@ -199,8 +198,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Centrale versione piccola.
-Per utilizzare la versione più piccola dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
+### Versione stretta
+
+Per utilizzare la versione più stretta dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
 
 {% capture example %}
 <div class="it-header-center-wrapper it-small-header">
@@ -262,9 +262,9 @@ Per utilizzare la versione più piccola dell'header centrale è sufficiente aggi
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Centrale light version
-Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`
+### Versione chiara
 
+Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`
 
 {% capture example %}
 <div class="it-header-center-wrapper theme-light">
@@ -326,9 +326,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Nav
-**Header Nav**: Contiene i link di navigazione (link semplici, dropdown e megamenu).
+## Header Nav
 
+**Header Nav**, per elencare le voci di [navigazione]({{ site.baseurl }}/docs/componenti/navbar/), siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/componenti/megamenu/) a tutta larghezza.
 
 {% capture example %}
 <div class="it-header-navbar-wrapper">
@@ -433,25 +433,17 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Nav themes
-I'Header Nav ha due versioni, light e dark.
+### Versioni disponibili
 
-Lo stile di default ha differenti caratteristiche colore nella versione desktop / mobile.
+I'Header Nav ha due versioni, una chiara ("light") e una scura ("dark"). Lo stile di default ha differenti caratteristiche colore a seconda della versione desktop e mobile:
 
-**Desktop**  
-Stile di default: background di colore primario e links bianchi.  
-Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+* Su **Desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+* Su **Mobile** lo stile di default ha un **background bianco e testi e link di colore primario**.
 
-**Mobile**  
-Stile di default: background bianco e testi e links di colore primario.
+Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
 
-**Temi Header Nav**  
-Per cambiare il tema del Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
-
-**`.theme-dark-mobile`**: background di colore primario, testi e links bianco. (modifica unicamente la versione mobile del Nav).
-
-**`.theme-light-desktop`**: background bianco, testi e links di colore primario.
-Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
+* La classe **`.theme-dark-mobile`** modifica unicamente la versione mobile del Nav impostando il background di colore primario, testi e link bianchi.
+* La classe **`.theme-light-desktop`** imposta invece un background bianco, testi e links di colore primario. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
 
 #### Header Nav standard
 
@@ -558,7 +550,7 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Header Nav dark mobile
+#### Header Nav mobile scura
 
 {% capture example %}
 <div class="it-header-navbar-wrapper theme-dark-mobile">
@@ -663,7 +655,7 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Header Nav light desktop
+#### Header Nav desktop chiara
 
 {% capture example %}
 <div class="it-header-navbar-wrapper theme-light-desk">
@@ -768,7 +760,7 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Completa
+## Header Completa
 
 {% capture example %}
 <div class="it-header-wrapper">
@@ -797,7 +789,7 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
             <div class="header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                  <span>Ita</span>
+                  <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
                     <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
                   </svg>
@@ -807,8 +799,8 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item" href="#"><span>Ita</span></a></li>
-                          <li><a class="list-item" href="#"><span>Eng</span></a></li>
+                          <li><a class="list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
@@ -986,7 +978,8 @@ Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Header Completa light version
+### Versione chiara
+
 Nella versione light è consigliabile aggiungere la classe `it-shadow` al tag `<div class="it-header-wrapper">`.  
 Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto il componente.
 
@@ -1017,7 +1010,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
             <div class="header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                  <span>Ita</span>
+                  <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
                     <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
                   </svg>
@@ -1027,8 +1020,8 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item" href="#"><span>Ita</span></a></li>
-                          <li><a class="list-item" href="#"><span>Eng</span></a></li>
+                          <li><a class="list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
