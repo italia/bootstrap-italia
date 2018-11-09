@@ -373,6 +373,15 @@ $navscroll-dark-bg-color:$neutral-1-a8;
 $navscroll-dark-text-color:#FFF;
 $navscroll-dark-separator-color: rgba(229,229,229,0.3);
 
+//dialog
+$dialog-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+$modal-padding:$v-gap*3;
+$modal-heading-size: 0.938rem;
+$modal-heading-weight:600;
+$modal-heading-l-space:0.5px;
+$modal-heading-color:$neutral-1-a10;
+$modal-p-size:0.8888888888888888rem;
+$modal-p-l-height:1.3333333333333333rem;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

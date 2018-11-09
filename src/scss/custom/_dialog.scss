@@ -1,0 +1,62 @@
+.it-example-modal{
+	// -stile per documentazione
+	.modal{
+		position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+	}
+}
+.modal{
+	.modal-dialog{
+		.modal-content{
+			border: none;
+			box-shadow:$dialog-shadow;
+			.modal-header{
+				padding:$modal-padding;
+				padding-bottom: 0;
+				h5{
+					font-size: $modal-heading-size;
+					font-weight: $modal-heading-weight;
+					letter-spacing: $modal-heading-l-space;
+					text-transform: uppercase;
+					color:$modal-heading-color;
+				}
+			}
+			.modal-body{
+				padding:$modal-padding;
+				padding-bottom: 0;
+				p{
+					font-size:$modal-p-size;
+					margin-bottom:0;
+					line-height: $modal-p-l-height;
+				}
+			}
+			.modal-footer{
+				padding:$modal-padding;
+			}
+		}
+	}
+}
+
+  //small - tablet
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) { 
+	
+  }
+  
+  //Tablet vertical
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+  
+  }
+  
+  //Tablet horizontal / small desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	
+  } 
+  //Desktop
+  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	
+	}
