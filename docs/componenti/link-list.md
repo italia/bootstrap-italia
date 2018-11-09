@@ -153,21 +153,21 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
   <ul class="link-list">
     <li><a class="list-item active right-icon" href="#">
         <span>Link list 1 active</span>
-        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item right-icon" href="#">
         <span>Link list 1</span>
-        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item disabled right-icon" href="#">
         <span>Link list 1 disabled</span>
-        <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
@@ -196,15 +196,15 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active icon-left" href="#">
-        <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <span>Link list 1 active</span>
     </a></li>
     <li><a class="list-item icon-left" href="#">
-      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       <span>Link list 1</span>
     </a></li>
     <li><a class="list-item disabled icon-left" href="#">
-      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       <span>Link list 1 disabled</span>
     </a></li>
   </ul>
@@ -221,15 +221,15 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active" href="#">
-      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1 active</span>
     </a></li>
     <li><a class="list-item" href="#">
-      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1</span>
     </a></li>
     <li><a class="list-item disabled" href="#">
-      <svg class="icon icon-primary icon-right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary icon-right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1 disabled</span>
     </a></li>
   </ul>
@@ -251,15 +251,15 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active left-icon" href="#">
-      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1 active</span></a>
     </li>
     <li><a class="list-item left-icon" href="#">
-      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1</span></a>
     </li>
     <li><a class="list-item disabled left-icon right-icon" href="#">
-      <svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       <span>Link list 1 disabled</span></a>
     </li>
   </ul>
@@ -347,11 +347,11 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       </a>
     </li>
     <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
       <ul class="link-sublist" id="">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -362,7 +362,7 @@ Di seguito un esempio di navigazione annidiata espansa di default.
       </ul>
     </li>
     <li><a class="list-item large medium right-icon" href="#"><span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-link"></use></svg></a>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
     </li>
   </ul>
 </div>
@@ -378,7 +378,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
   <ul class="link-list">
     <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
       <span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseOne">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -390,7 +390,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     </li>
     <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
       <span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseTwo">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -402,7 +402,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     </li>
     <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
       <span>Link list 1</span>
-      <svg class="icon icon-primary right"><use xlink:href="/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseThree">
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
