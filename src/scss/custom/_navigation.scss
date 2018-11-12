@@ -68,7 +68,7 @@
             svg{
               fill:$navbar-bg-color;
               transition: all 0.3s;
-              
+
             }
             &[aria-expanded="true"]{
               .icon{
@@ -180,7 +180,8 @@
 .custom-navbar-toggler{
   background: none;
   border:none;
-  
+  cursor: pointer;
+
   span{
     color: $navigation-toggle-button-icon-color;
     font-size: $navigation-toggle-button-icon-size;
@@ -364,7 +365,7 @@
         ul{
           li{
             a{
-              
+
               span,i{
                 color: $color-primary;
               }
@@ -386,7 +387,7 @@
   }
   .custom-navbar-toggler{
     display: none;
-    
+
   }
   .has-megamenu{
     .navbar-collapsable{
@@ -397,7 +398,7 @@
     position: static;
     > a.dropdown-toggle{
       position: relative;
-      
+
       &:before{
         content: '';
         position: absolute;

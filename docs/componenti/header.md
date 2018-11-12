@@ -6,6 +6,12 @@ group: componenti
 toc: true
 ---
 
+<style>
+ .bd-example {
+   background-color: #F7F7F9;
+ }
+</style>
+
 L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
 
 * Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
