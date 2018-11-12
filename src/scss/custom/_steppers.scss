@@ -1,0 +1,345 @@
+//mobile
+.steppers {
+	.steppers-header {
+		padding: 0 24px;
+		height: 64px;
+		background: $white;
+		box-shadow: 0 8px 20px rgba(0,0,0,0.1); // TEMP - substitute with generic ellipsical shadow
+		display: flex;
+		align-items: center;
+		li {
+			font-size: 1.125rem;
+			color: $gray-secondary;
+			list-style-type: none;
+			display: none;
+			.icon {
+				fill: $gray-secondary;
+			}
+			// states
+			&.active, &.confirmed {
+				color: $primary;
+				font-weight: 600;
+				.icon {
+					fill: $primary;
+				}
+			}
+			&.active, &.steppers-index {
+				display: block;
+			}
+			// steppers
+			&.steppers-index {
+				margin-left: auto;
+				font-size: 0.875rem;
+				font-weight: 600;
+				span {
+					margin-left: 0.250rem;
+					&.active {
+						color: $primary;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			// icons
+			.icon {
+				//font-size: 1.333rem;
+				margin-right: 0.667rem;
+				width: 24px;
+				height: 24px;
+			}
+			// numbers
+			.steppers-number {
+				.icon {
+					margin: 0;
+				}
+				&:after {
+					content: '. ';
+				}
+			}
+		}
+	}
+
+	// dark version
+	&.bg-dark {
+		.steppers-header {
+			background: none;
+			// steps
+			li {
+				font-weight: 600;
+				color: $neutral-1-a6;
+				&.active {
+					color: $analogue-2-a6;
+					.icon {
+						fill: $analogue-2-a6;
+					}
+				}
+				&.confirmed {
+					color: $white;
+					.icon {
+						fill: $white;
+					}
+				}
+				// steppers
+				&.steppers-index {
+					span {
+						&.active {
+							color: $analogue-2-a6;
+						}
+					}
+				}
+			}
+		}
+		.steppers-nav {
+			background: none;
+			.progress-bar {
+				background: $analogue-2-a6;
+			}
+			.steppers-dots {
+				li.done {
+					background: $analogue-2-a6;
+				}
+			}
+		}
+	}
+
+	// navigation
+	.steppers-nav {
+		display: flex;
+		height: 64px;
+		padding: 0 24px;
+		box-shadow: 0 -8px 20px rgba(0,0,0,0.1); // TEMP - substitute with generic ellipsical shadow
+		background: $white;
+		align-items: center;
+		justify-content: space-between;
+		.steppers-progress, .steppers-dots {
+			width: 20%;
+			.progress {
+				height: 2px;
+			}
+		}
+		.steppers-progress{
+			.progress {
+				height: 2px;
+			}
+		}
+		.steppers-dots {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			li {
+				list-style-type: none;
+				padding: 0;
+				height: 4px;
+				width: 4px;
+				min-width: 4px;
+				background: $progress-bg;
+				margin-right: 8px;
+				border-radius: 50%;
+				&.done {
+					background: $progress-bar-bg;
+				}
+			}
+		}
+	}
+
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+	.steppers {
+		.steppers-header {
+			li {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+	.steppers {
+		// header
+		.steppers-header {
+			padding: 0;
+			box-shadow: none; // TEMP
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+			background: transparent;
+			// shadow
+			&:before {
+				display: none;
+			}
+			// steps
+			li {
+				text-transform: uppercase;
+				padding: 1.778rem 1.111rem;
+				flex-grow: 1;
+				border-left: 1px solid $gray-border-disabled;
+				display: block;
+				position: relative;
+				display: flex;
+				align-items: center;
+				&:nth-last-child(2) {
+					border-right: 1px solid $gray-border-disabled;
+				}
+				// index
+				&.steppers-index {
+					display: none;
+				}
+				// active
+				&.active {
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						width: calc(100% - 2.222rem);
+						height: 2px;
+						background: $primary;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+					.steppers-number {
+						color: $white;
+						background: $primary;
+						border-color: $primary;
+					}
+					&.no-line {
+						&:after {
+							display: none;
+						}
+					}
+				}
+				// success icon
+				.steppers-success {
+					margin-left: auto;
+				}
+				// numbers
+				.steppers-number {
+					display: inline-block;
+					width: 1.778rem;
+					height: 1.778rem;
+					border: 1px solid $gray-border-disabled;
+					border-radius: 50%;
+					text-align: center;
+					margin-right: 0.667rem;
+					&:after {
+						display: none;
+					}
+					// numbers check
+					.icon {
+						&:before {
+							margin-right: 0;
+							margin-top: 0.333rem;
+						}
+					}
+				}
+			}
+		}
+
+		// dark version
+		&.bg-dark {
+			.steppers-header {
+				// steps
+				li {
+					border-color: $neutral-1-a8;
+					// active
+					&.active {
+						&:after {
+							background: $analogue-2-a6;
+						}
+						.steppers-number {
+							background: $analogue-2-a6;
+							border-color: $analogue-2-a6;
+							color: $neutral-1-a10;
+						}
+					}
+					// numbers
+					.steppers-number {
+						border-color: $neutral-1-a6;
+					}
+				}
+			}
+		}
+
+		// navigation
+		.steppers-nav {
+			box-shadow: none; // TEMP
+			margin-top: 0.889rem;
+			align-items: center;
+			background: none;
+			.steppers-progress, .steppers-dots {
+				display: none;
+			}
+			button {
+				.icon {
+					display: none;
+				}
+				&:not(.steppers-btn-confirm) {
+					margin-right: 0.889rem;
+				}
+			}
+			.steppers-btn-confirm {
+				display: block;
+				margin-left: auto;
+			}
+		}
+
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}
+
+//mobile ONLY BUTTONS
+@media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+	.steppers {
+		// navigation
+		.steppers-nav {
+			button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
+				font-size: 1rem;
+				background: transparent;
+				color: $primary;
+				box-shadow: none;
+				padding-left: 0;
+				padding-right: 0;
+				&:hover, &:focus, &:active {
+					background: transparent !important;
+					color: $primary !important;
+					box-shadow: $btn-focus-box-shadow !important;
+				}
+				.icon {
+					margin: 0 0.333rem;
+					//font-size: 0.889rem;
+					height: 24px;
+					width: 24px;
+				}
+			}
+		}
+
+		// dark version
+		&.bg-dark {
+			// navigation
+			.steppers-nav {
+				button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
+					color: $white;
+					.icon {
+						fill: $white;
+					}
+					&:hover, &:focus, &:active {
+						color: $analogue-2-a6 !important;
+					}
+				}
+			}
+		}
+	}
+}

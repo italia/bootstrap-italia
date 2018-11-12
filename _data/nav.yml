@@ -77,11 +77,12 @@
     - title: Affix
       status: wip
     - title: Callout
+    - title: Sections
+    - title: Steppers
     - title: Thumbnav
     - title: BottomNav
     - title: ThumbNav
     - title: Toolbar
-    - title: Sections
     - title: Notifications
     - title: Avatar
     #- title: Datepicker
