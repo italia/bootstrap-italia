@@ -38,19 +38,19 @@ Il link `<a>` attivo possiede una una classe `.active`.
   <ul>
     <li>
       <a href="#" class="active">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
@@ -65,25 +65,25 @@ I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un e
   <ul>
     <li>
       <a href="#" class="active">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
@@ -105,33 +105,33 @@ I badge sono nascosti agli screen reader. Per garantire l'accessibilità è nece
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">1</span></div>
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="sr-only"> - 1 da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-badge">2</span></div>
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini<span class="sr-only"> - 2 da vedere</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">88</span></div>
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="sr-only"> - 88 da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-settings"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>
@@ -153,32 +153,32 @@ Gli alert sono nascosti agli screen reader. Per garantire l'accessibilità è ne
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="sr-only"> - nuovo contenuto disponibile</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="sr-only"> - nuovo contenuto disponibile</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-settings"></use></svg>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>

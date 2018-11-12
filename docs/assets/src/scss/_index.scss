@@ -1,11 +1,13 @@
 .main-content {
   color: #17324D;
 }
+
 .bottom-content {
-  position:relative;
-  background-color:$primary;
-  color:white;
+  position: relative;
+  background-color: $primary;
+  color: white;
 }
+
 .particles-js-canvas-el {
   position: absolute;
   top: 0;
@@ -14,7 +16,20 @@
   vertical-align: bottom;
   height: auto;
   width: 100vw;
-  background-attachment:fixed;
+  background-attachment: fixed;
   margin: 0 -1rem; // horizontal scroll reset
   z-index: 0
+}
+
+.main-content--panel {
+  padding: 32px;
+  background-color: #FFF;
+  @include media-breakpoint-up(sm) {
+    margin-top: -16px;
+    box-shadow: 0 10px 80px 0 rgba(90, 103, 114, 0.1);
+  }
+}
+
+.main-content--image {
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .5));
 }

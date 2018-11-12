@@ -3,7 +3,7 @@
 //
 
 .bd-navbar {
-  min-height: 5rem;
+  min-height: 10rem;
   background-color: $docs-blue;
 
   @include media-breakpoint-down(md) {
@@ -26,11 +26,14 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
-    @supports (position: sticky) {
-      position: sticky;
-      top: 0;
-      z-index: 1071; // over everything in bootstrap
+  &.bd-navbar--slim {
+    min-height: 5rem;
+    @include media-breakpoint-up(md) {
+      @supports (position: sticky) {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+      }
     }
   }
 
@@ -93,13 +96,14 @@
 }
 
 .bd-logo-title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: unset;
   margin-bottom: 0;
   @include media-breakpoint-up(sm) {
-    font-size: 24px;
+    font-size: 32px;
+    line-height: 1;
   }
 }
 

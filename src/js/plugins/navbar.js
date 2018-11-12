@@ -20,7 +20,6 @@ $(overlay).click(function(){
 	var target = $(this).closest('.navbar-collapsable');
 	var buttonrel  = $(this).closest('.navbar').find(".custom-navbar-toggler");
 	var fadelayer = $(target).find('.overlay');
-
 	$(buttonrel).attr('aria-expanded','false');
 
 	$(target).removeClass('expanded');
