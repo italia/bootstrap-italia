@@ -8,7 +8,7 @@
 
 Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
 
-Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
+Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
 **[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
 
@@ -38,7 +38,7 @@ dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-it
 Vorresti dare una mano su Bootstrap Italia? **Sei nel posto giusto!**
  
 Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle
-[linee guida di design per i servizi web della PA](https://design-italia.readthedocs.io/it/stable/index.html),
+[linee guida di design per i servizi web della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/),
 e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md).
 
 A questo punto, è necessario impostare il tuo ambiente locale per la compilazione dei file sorgente e la generazione
