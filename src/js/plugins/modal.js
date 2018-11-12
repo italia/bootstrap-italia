@@ -7,6 +7,7 @@ function radiomodalcheck(){
 	})
 }
 
+
 $(document).ready( 
 	function() {
 		radiomodalcheck()
