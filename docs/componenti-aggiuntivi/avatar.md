@@ -160,7 +160,7 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 
 ### Avatar Link con Tooltip
 
-E' possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
+E' possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="{ site.baseurl }}/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
