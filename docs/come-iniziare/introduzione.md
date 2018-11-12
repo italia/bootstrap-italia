@@ -95,7 +95,6 @@ In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
     
     <!-- CSS -->
     <link rel="stylesheet" href="./bootstrap-italia.min.css">
-    <link rel="stylesheet" href="./italia-icon-font.css"><!-- opzionale -->
   </head>
   <body>
     <h1>Hello, world!</h1>

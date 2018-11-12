@@ -42,6 +42,7 @@
     - title: Form Checkbox
     - title: Form Radio Button
     - title: Form Toggles
+    - title: Header
     - title: Hero
     #- title: Input group
     #  status: to do
@@ -63,7 +64,6 @@
     - title: Skiplinks
       status: wip
     - title: Tab
-      status: wip
     - title: Tooltip
 
 - title: Componenti Aggiuntivi
@@ -77,11 +77,14 @@
     - title: Affix
       status: wip
     - title: Callout
+    - title: Sections
+    - title: Steppers
     - title: Thumbnav
     - title: BottomNav
     - title: ThumbNav
     - title: Toolbar
-    - title: Sections
+    - title: Notifications
+    - title: Avatar
     #- title: Datepicker
     #  status: wip
 
