@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="it">
+<head>
+    
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Gli “Stepper” mostrano l’avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.">
+<meta name="author" content="Team per la Trasformazione Digitale">
+<meta name="generator" content="Jekyll v3.8.5">
+
+<title>Steppers · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811121623" rel="stylesheet">
+
+<!-- Documentation extras -->
+
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811121623" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/bootstrap-italia/docs/assets/img/favicons/manifest.webmanifest">
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
+<link rel="icon" href="/bootstrap-italia/favicon.ico">
+<meta name="msapplication-config" content="/bootstrap-italia/docs/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#0066CC">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@teamdigitaleIT">
+<meta name="twitter:creator" content="Team per la Trasformazione Digitale">
+<meta name="twitter:title" content="Steppers">
+<meta name="twitter:description" content="Gli “Stepper” mostrano l’avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.">
+<meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti-aggiuntivi/steppers/">
+<meta property="og:title" content="Steppers">
+<meta property="og:description" content="Gli “Stepper” mostrano l’avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+// Disabilita tracciamento se il cookie cookies_consent non esiste
+if (document.cookie.indexOf('cookies_consent=true') === -1) {
+  window['ga-disable-UA-114758441-1'] = true;
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114758441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114758441-1', { 'anonymize_ip': true });
+</script>
+
+
+
+  </head>
+  <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark py-1 px-3">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column pl-3 pl-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-sm btn-outline-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item pr-2">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.18.0/bootstrap-italia.zip" aria-label="Download">
+          <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pr-2">
+        <a title="Repository GitHub di Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+    </div>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav"><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+        Come iniziare
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+              Strumenti di compilazione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+              Modificare Componenti
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+              Componente base
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/contenuti/reboot/">
+        Contenuti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/contenuti/reboot/">
+              Reboot
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tipografia/">
+              Tipografia
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/codice/">
+              Codice
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/immagini/">
+              Immagini
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/tabelle/">
+              Tabelle
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/contenuti/figure/">
+              Figure
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti/introduzione/">
+        Componenti
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/alert/">
+              Alert
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/badge/">
+              Badge
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
+              Barre di Avanzamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/breadcrumbs/">
+              Breadcrumbs
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/bottoni/">
+              Bottoni
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/card/">
+              Card
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/carousel/">
+              Carousel
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/collapse/">
+              Collapse
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/dropdown/">
+              Dropdown
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/elenchi/">
+              Elenchi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form/">
+              Form
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-input/">
+              Form Input
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-select/">
+              Form Select
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
+              Form Checkbox
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-radio-button/">
+              Form Radio Button
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-toggles/">
+              Form Toggles
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/header/">
+              Header
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/hero/">
+              Hero
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/link-list/">
+              Link list
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/megamenu/">
+              Megamenu
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/modale/">
+              Modale
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navbar/">
+              Navbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/navscroll/">
+              Navscroll
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/offcanvas/">
+              Offcanvas
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/pager/">
+              Pager
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/popover/">
+              Popover
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/scrollspy/">
+              Scrollspy
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/sidebar/">
+              Sidebar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/skiplinks/">
+              Skiplinks
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tab/">
+              Tab
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/tooltip/">
+              Tooltip
+            </a></li></ul>
+    </div><div class="bd-toc-item active">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+        Componenti Aggiuntivi
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/cookiebar/">
+              Cookiebar
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/forward/">
+              Forward
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/back-to-top/">
+              Back to top
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/affix/">
+              Affix
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/callout/">
+              Callout
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/sections/">
+              Sections
+            </a></li><li class="active bd-sidenav-active">
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/steppers/">
+              Steppers
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/thumbnav/">
+              Thumbnav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/bottomnav/">
+              BottomNav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/thumbnav/">
+              ThumbNav
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/toolbar/">
+              Toolbar
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/notifications/">
+              Notifications
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti-aggiuntivi/avatar/">
+              Avatar
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/utilities/introduzione/">
+        Utilities
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"><li>
+            <a href="/bootstrap-italia/docs/utilities/introduzione/">
+              Introduzione
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/allineamento-verticale/">
+              Allineamento verticale
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/bordi/">
+              Bordi
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/clearfix/">
+              Clearfix
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori/">
+              Colori
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/colori-custom/">
+              Colori Custom
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/dimensionamento/">
+              Dimensionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/display/">
+              Display
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/embed/">
+              Embed
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/flex/">
+              Flex
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/float/">
+              Float
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/griglie/">
+              Griglie
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/immagini-sostitutive/">
+              Immagini sostitutive
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/icone/">
+              Icone
+            </a><span class="badge badge-secondary">wip</span></li><li>
+            <a href="/bootstrap-italia/docs/utilities/media-object/">
+              Media object
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/ombreggiature/">
+              Ombreggiature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/posizionamento/">
+              Posizionamento
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/screenreaders/">
+              Screenreaders
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/spaziature/">
+              Spaziature
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/testo/">
+              Testo
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/visibility/">
+              Visibility
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/utilities/history-back/">
+              History Back
+            </a></li></ul>
+    </div><div class="bd-toc-item">
+      <a class="bd-toc-link" href="/bootstrap-italia/docs/informazioni/">
+        Informazioni
+      </a>
+
+      <ul class="nav bd-sidenav pl-2"></ul>
+    </div></nav>
+
+        </div>
+
+        
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#intestazione">Intestazione</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#varianti-intestazione">Varianti intestazione</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#navigazione-degli-step">Navigazione degli step</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#varianti-navigazione-per-mobile">Varianti navigazione per mobile</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#versione-su-sfondo-scuro">Versione su sfondo scuro</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#varianti-intestazione-1">Varianti intestazione</a></li>
+<li class="toc-entry toc-h3"><a href="#varianti-navigazione-per-mobile-1">Varianti navigazione per mobile</a></li>
+</ul>
+</li>
+</ul>
+          </div>
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Steppers</h1>
+          <p class="bd-lead">Gli “Stepper” mostrano l’avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.</p>
+          <style>
+  /* Style override for Documentation purposes */
+
+  .bd-example .steppers-content {
+    height: 400px;
+    border: 2px dashed #eee;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+  }
+
+  .bd-example .steppers-content p{
+	  margin-bottom: 0;
+  }
+
+  .bd-example .mobile-examples .steppers-content {
+	  height: 150px;
+  }
+
+  .bd-example .steppers.bg-dark .steppers-content{
+	  color: #aaa;
+	  border-color: #aaa;
+	  background: #17324d;
+	  opacity: 0.5;
+  }
+  .bd-example .steppers.bg-dark {
+	  padding: 30px;
+  }
+
+@media screen and (min-width: 992px) {
+	.bd-example .mobile-examples .steppers-progress {
+		display: block;
+	}
+
+	.bd-example .mobile-examples .steppers-dots {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.bd-example {
+		overflow: hidden;
+		padding: 0;
+		margin-bottom: 6px;
+	}
+	.bd-example .steppers-content {
+		height: 300px;
+		border: none;
+	}
+	.bd-example .steppers.bg-dark {
+		padding: 0;
+	}
+}
+</style>
+
+<h2 id="intestazione">Intestazione</h2>
+
+<p>Il contenitore degli Stepper ha sempre una classe <code class="highlighter-rouge">.steppers</code>. La sua intestazione è contenuta in una lista <code class="highlighter-rouge">&lt;ul&gt;</code> all’interno della quale i singoli passi (o <em>step</em>) sono rappresentati da elementi <code class="highlighter-rouge">&lt;li&gt;</code>.</p>
+
+<div class="bd-callout bd-callout-info">
+<p>L’aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.</p>
+</div>
+
+<h3 id="varianti-intestazione">Varianti intestazione</h3>
+
+<h4 id="solo-testo">Solo testo</h4>
+
+<p>I passi visibili nell’intestazione possono essere corredati da tre classi aggiuntive:</p>
+<ul>
+  <li><code class="highlighter-rouge">.confirmed</code> per individuare uno step già confermato. È bene corredare tali step con un’icona che ne identifichi il completamento (vedi di seguito).</li>
+  <li><code class="highlighter-rouge">.active</code> per individuare lo step attualmente attivo; su dispositivi mobili è l’unico visualizzato.</li>
+  <li><code class="highlighter-rouge">.steppers-index</code> per individuare un indice, visibile solo su mobile, che può contenere lo stato attuale di progresso indicato in forma testuale</li>
+</ul>
+
+<p>È necessario ridurre finestra del browser per apprezzare il comportamente degli Stepper su dispositivi a dimensioni ridotte.</p>
+
+<div class="bd-example">
+<div class="steppers">
+	<ul class="steppers-header">
+		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="testo-e-icone">Testo e icone</h4>
+
+<p>Le label presenti negli step dell’intestazione possono essere anticipate da un’icona.</p>
+
+<div class="bd-example">
+<div class="steppers">
+	<ul class="steppers-header">
+		<li class="confirmed"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="ordine-degli-step">Ordine degli step</h4>
+
+<p>Le label presenti negli steps dell’header possono essere anticipate dal numero ordinale relativo allo stesso. Come mostrato nell’esempio, nel caso di uno step completato al posto del numero va inclusa un’icona di conferma con un testo riservato agli screen reader.</p>
+
+<p>È necessario aggiungere la classe <code class="highlighter-rouge">.no-line</code> al <code class="highlighter-rouge">&lt;li&gt;</code> attivo per nascondere il bordo inferiore azzurro, in questo caso ridondante.</p>
+
+<div class="bd-example">
+<div class="steppers">
+  <ul class="steppers-header">
+    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></span>Label Step 1</li>
+    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
+  </ul>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Label Step 1<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>1<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>3<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>4<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="navigazione-degli-step">Navigazione degli step</h2>
+
+<p>Il passaggio da uno step all’altro attraverso i bottoni contenuti in <code class="highlighter-rouge">.steppers-nav</code> determina un cambiamento del contenuto presente in <code class="highlighter-rouge">.steppers-content</code>. Il contenitore <code class="highlighter-rouge">.steppers-content</code> ha un attributo ARIA <code class="highlighter-rouge">aria-live="polite"</code> per avvisare gli utilizzatori di screen reader dall’avvenuto cambiamento del contenuto.</p>
+
+<p>I bottoni “Avanti” e “Indietro” dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle web app e sono dotati di classi <code class="highlighter-rouge">.steppers-btn-prev</code> e <code class="highlighter-rouge">.steppers-btn-next</code>.</p>
+
+<div class="bd-example">
+<div class="steppers">
+	<ul class="steppers-header">
+		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block"</span><span class="nt">&gt;</span>Conferma<span class="nt">&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="varianti-navigazione-per-mobile">Varianti navigazione per mobile</h3>
+
+<p>La versione mobile degli Steppers non visualizza l’elenco completo degli step disponibili, ma solo quello corrente. Per questa ragione è possibile aggiungere degli indicatori di progresso allo <code class="highlighter-rouge">.steppers-nav</code>.</p>
+
+<p>Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi sono stati resi disponibili anche nella visualizzazione desktop. Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell’aspetto finale.</p>
+
+<h4 id="progress-bar">Progress bar</h4>
+
+<p>La Progress bar è quella nativa di Bootstrap 4 ed è contenuta in un elemento <code class="highlighter-rouge">.steppers-progress</code> situato fra i bottoni “Indietro” ed “Avanti”.</p>
+
+<div class="bd-example">
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<div class="steppers-progress">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-progress"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 33%"</span> <span class="na">aria-valuenow=</span><span class="s">"33"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="pallini">Pallini</h4>
+
+<p>I pallini sono elementi <code class="highlighter-rouge">&lt;li&gt;</code> contenuti in una lista <code class="highlighter-rouge">.steppers-dots</code> situato fra i bottoni “Indietro” e “Avanti”.</p>
+
+<p>Per ragioni di accessibilità, i <code class="highlighter-rouge">&lt;li&gt;</code> devono contenere uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.sr-only </code>riservato agli screen reader con un testo indicante il numero di step e lo stato.</p>
+
+<div class="bd-example">
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<ul class="steppers-dots">
+			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
+			<li><span class="sr-only">Step 4 di 6</span></li>
+			<li><span class="sr-only">Step 5 di 6</span></li>
+			<li><span class="sr-only">Step 6 di 6</span></li>
+		</ul>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-dots"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 1 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 2 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 3 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 4 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 5 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 6 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;/ul&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="bottone-salva">Bottone Salva</h4>
+
+<p>Su dispositivi mobili è possibile inserire un terzo bottone “Salva” di aspetto differente con classe <code class="highlighter-rouge">.steppers-btn-save</code> fra i bottoni “Indietro” e “Avanti”.</p>
+
+<div class="bd-example">
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-save"</span><span class="nt">&gt;</span>Salva<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="bottone-conferma">Bottone conferma</h4>
+
+<p>Su dispositivi mobili è possibile sostituire il bottone “Avanti” con un bottone “Conferma” di stile differente, con la classe <code class="highlighter-rouge">.steppers-btn-confirm</code>.</p>
+
+<div class="bd-example">
+<div class="steppers mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-confirm"</span><span class="nt">&gt;</span>Conferma<span class="nt">&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="versione-su-sfondo-scuro">Versione su sfondo scuro</h2>
+
+<p>Per ottenere una versione scura degli Stepper è sufficiente aggiungere la classe <code class="highlighter-rouge">.bg-dark</code> al contenitore principale.</p>
+
+<div class="bd-example">
+<div class="steppers bg-dark">
+	<ul class="steppers-header">
+		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block"</span><span class="nt">&gt;</span>Conferma<span class="nt">&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="varianti-intestazione-1">Varianti intestazione</h3>
+
+<div class="bd-example">
+<!-- Solo testo -->
+<div class="steppers bg-dark">
+	<ul class="steppers-header">
+		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+</div>
+
+<!-- Testo e icone -->
+<div class="steppers bg-dark">
+	<ul class="steppers-header">
+		<li class="confirmed"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+		<li class="active"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
+		<li><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true">2/6</li>
+	</ul>
+</div>
+
+<!-- Numeri -->
+<div class="steppers bg-dark">
+	<ul class="steppers-header">
+		<li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato Step 1</span></span>Label Step 1</li>
+		<li class="active no-line"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Label Step 2</li>
+		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+		<li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
+	</ul>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Solo testo --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Testo e icone --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Numeri --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato Step 1<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Label Step 1<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Label Step 2<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+		<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>1<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>3<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>4<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+	<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="varianti-navigazione-per-mobile-1">Varianti navigazione per mobile</h3>
+
+<p>Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell’aspetto finale.</p>
+
+<h4 id="progress-bar-1">Progress bar</h4>
+
+<div class="bd-example">
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<div class="steppers-progress">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-progress"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 33%"</span> <span class="na">aria-valuenow=</span><span class="s">"33"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="pallini-1">Pallini</h4>
+
+<div class="bd-example">
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<ul class="steppers-dots">
+			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
+			<li><span class="sr-only">Step 4 di 6</span></li>
+			<li><span class="sr-only">Step 5 di 6</span></li>
+			<li><span class="sr-only">Step 6 di 6</span></li>
+		</ul>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-dots"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 1 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 2 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"done"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 3 di 6 - Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 4 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 5 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step 6 di 6<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+		<span class="nt">&lt;/ul&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="bottone-salva-1">Bottone Salva</h4>
+
+<div class="bd-example">
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-save"</span><span class="nt">&gt;</span>Salva<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-next"</span><span class="nt">&gt;</span>Avanti<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="bottone-conferma-1">Bottone conferma</h4>
+
+<div class="bd-example">
+<div class="steppers bg-dark mobile-examples">
+	<div class="steppers-content" aria-live="polite">
+		<!-- Esempio START -->
+		<p>Contenuto di esempio dello step corrente</p>
+		<!-- Esempio END -->
+	</div>
+	<nav class="steppers-nav">
+		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+	</nav>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark mobile-examples"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Esempio START --&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Contenuto di esempio dello step corrente<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Esempio END --&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"steppers-nav"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm steppers-btn-prev"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Indietro<span class="nt">&lt;/button&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm steppers-btn-confirm"</span><span class="nt">&gt;</span>Conferma<span class="nt">&lt;/button&gt;</span>
+	<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-md-7">
+        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+      </div>
+      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
+        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
+        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811121623"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811121623"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+  </body>
+</html>
