@@ -120,8 +120,11 @@
   // position: relative; // commented out due to a bug with the zoom plugin
   padding: 1rem;
   margin: 1rem (-$grid-gutter-width / 2) 0;
-  border: solid #f7f7f9;
-  border-width: .2rem 0 0;
+  border: solid #F3F3F5;
+  border-width: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 0;
   @include clearfix();
 
   @include media-breakpoint-up(sm) {
