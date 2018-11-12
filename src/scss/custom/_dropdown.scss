@@ -49,6 +49,12 @@
   .icon-expand {
     transition: transform $dropdown-menu-animation-speed;
   }
+  .icon.icon-xs{
+    transition: transform $dropdown-menu-animation-speed;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-1px);
+  }
   &[aria-expanded=true] .icon-expand {
     transform: scaleY(-1);
   }

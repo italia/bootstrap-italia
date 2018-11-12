@@ -20,7 +20,7 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 
 {% capture example %}
 <div class="callout">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -33,7 +33,7 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 
 {% capture example %}
 <div class="callout success">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -44,7 +44,7 @@ Aggiungere la classe `.warning` per indicare una procedura o testo che richiede 
 
 {% capture example %}
 <div class="callout warning">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-help-circle"></use></svg>Attenzione</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle"></use></svg>Attenzione</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -55,7 +55,7 @@ Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa
 
 {% capture example %}
 <div class="callout danger">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-close-circle"></use></svg>Non usare</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close-circle"></use></svg>Non usare</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -66,7 +66,7 @@ Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
 
 {% capture example %}
 <div class="callout important">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -77,7 +77,7 @@ Aggiungere la classe `.note` per caratterizzare il Callout come una nota.
 
 {% capture example %}
 <div class="callout note">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Note a riguardo</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Note a riguardo</div>
 	<p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -100,7 +100,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% capture example %}
 <div class="callout callout-highlight success">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Usa</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Usa</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -110,7 +110,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% capture example %}
 <div class="callout callout-highlight warning">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Attenzione</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Attenzione</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -120,7 +120,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% capture example %}
 <div class="callout callout-highlight danger">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Non usare</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Non usare</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -130,7 +130,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% capture example %}
 <div class="callout callout-highlight important">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Importante</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -140,7 +140,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% capture example %}
 <div class="callout callout-highlight note">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use></svg>Note</div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Note</div>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -156,7 +156,7 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
 
 {% capture example %}
 <div class="callout callout-more note">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-zoom-in"></use></svg><span>Approfondimento</span></div>
+	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-zoom-in"></use></svg><span>Approfondimento</span></div>
 	<p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>
 	<p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
 	<p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
@@ -165,7 +165,7 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
 			</button>
-			<a href="#" class="callout-more-download"><svg class="icon icon-primary"><use xlink:href="/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
+			<a href="#" class="callout-more-download"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
 		</div>
 		<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
 			<div class="collapse-body">

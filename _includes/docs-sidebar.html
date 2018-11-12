@@ -28,7 +28,7 @@
             <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
               {{ doc.title }}
             </a>
-            {%- if doc.status %}<span class="badge badge-info">{{ doc.status }}</span>{%- endif -%}
+            {%- if doc.status %}<span class="badge badge-secondary">{{ doc.status }}</span>{%- endif -%}
 
             {%- comment -%}
             {% unless doc.sections == nil %}
