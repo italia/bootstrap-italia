@@ -49,6 +49,7 @@ const Paths = {
     'src/js/plugins/cookiebar.js',
     'src/js/plugins/custom-select.js',
     'src/js/plugins/dropdown.js',
+    'src/js/plugins/modal.js',
     // 'src/js/plugins/date-picker.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
