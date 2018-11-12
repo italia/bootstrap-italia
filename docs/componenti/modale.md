@@ -704,47 +704,7 @@ Richiama una modale con id `myModal` con una singola riga di JavaScript:
 
 {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-### Opzioni
 
-Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per quanto riguarda i data attributes,
-aggiungi l'opzione a `data-` (come ad esempio in `data-backdrop=""`):
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>backdrop</td>
-      <td><code>'true'</code>, <code>'false'</code> o la stringa <code>'static'</code></td>
-      <td>true</td>
-      <td>Include un elemento modal-backdrop. In alternativa, specifica <code>static</code> per un backdrop che non chiude la modale al click.</td>
-    </tr>
-    <tr>
-      <td>keyboard</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Chiude la modale quando viene premuto il tasto escape</td>
-    </tr>
-    <tr>
-      <td>focus</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Mette il focus sulla modale quando viene inizializzata.</td>
-    </tr>
-    <tr>
-      <td>show</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Mostra la modale quando viene inizializzata.</td>
-    </tr>
-  </tbody>
-</table>
 
 ### Metodi
 
