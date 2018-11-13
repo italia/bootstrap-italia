@@ -12,13 +12,13 @@
 <title>Finestre modali · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811121623" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811131020" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811121623" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811131020" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.18.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.19.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -273,7 +273,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/modale/">
               Modale
-            </a><span class="badge badge-secondary">wip</span></li><li>
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/navbar/">
               Navbar
             </a></li><li>
@@ -440,24 +440,26 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h2"><a href="#esempi">Esempi</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#componenti-della-modale">Componenti della modale</a></li>
-<li class="toc-entry toc-h3"><a href="#bottone-di-chiusura">Bottone di chiusura</a></li>
-<li class="toc-entry toc-h3"><a href="#demo">Demo</a></li>
-<li class="toc-entry toc-h3"><a href="#scroll-di-contenuti-lunghi">Scroll di contenuti lunghi</a></li>
-<li class="toc-entry toc-h3"><a href="#centratura-verticale">Centratura verticale</a></li>
-<li class="toc-entry toc-h3"><a href="#tooltip-and-popover">Tooltip and popover</a></li>
-<li class="toc-entry toc-h3"><a href="#uso-della-griglia">Uso della griglia</a></li>
-<li class="toc-entry toc-h3"><a href="#contenuto-della-modale-variabile">Contenuto della modale variabile</a></li>
-<li class="toc-entry toc-h3"><a href="#rimuovere-lanimazione">Rimuovere l’animazione</a></li>
-<li class="toc-entry toc-h3"><a href="#altezza-variabile">Altezza variabile</a></li>
-<li class="toc-entry toc-h3"><a href="#incorporare-i-video-di-youtube">Incorporare i video di YouTube</a></li>
+<li class="toc-entry toc-h3"><a href="#modale-con-bottone-di-chiusura">Modale con bottone di chiusura</a></li>
+<li class="toc-entry toc-h3"><a href="#modale-con-icona">Modale con icona</a></li>
+<li class="toc-entry toc-h3"><a href="#modale-con-radiobuttons">Modale con radiobuttons</a></li>
+<li class="toc-entry toc-h3"><a href="#modale-con-link-list">Modale con Link List</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#dimensioni-opzionali">Dimensioni opzionali</a></li>
+<li class="toc-entry toc-h2"><a href="#demo">Demo</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#modale-semplice">Modale semplice</a></li>
+<li class="toc-entry toc-h3"><a href="#scroll-di-contenuti-lunghi">Scroll di contenuti lunghi</a></li>
+<li class="toc-entry toc-h3"><a href="#scroll-di-contenuti-allinterno-della-modale">Scroll di contenuti all’interno della modale</a></li>
+<li class="toc-entry toc-h3"><a href="#posizionamento">Posizionamento</a></li>
+<li class="toc-entry toc-h3"><a href="#rimuovere-lanimazione">Rimuovere l’animazione</a></li>
+<li class="toc-entry toc-h3"><a href="#dimensioni-opzionali">Dimensioni opzionali</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#uso">Uso</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#tramite-data-attributes">Tramite data attributes</a></li>
 <li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
-<li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
 <li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
 <li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
 </ul>
@@ -469,7 +471,20 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Finestre modali</h1>
           <p class="bd-lead">Usa il plugin Javascript di Bootstrap per aprire finestre modali per mostrare contenuti in evidenza, notifiche agli utenti, o contenuti personalizzati.</p>
-          <div class="bd-callout bd-callout-warning">
+          <style>
+  /* Style override for Documentation purposes */
+  .it-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+  }
+</style>
+
+<div class="bd-callout bd-callout-warning">
 <h4 id="accessibilità">Accessibilità</h4>
 
 <p>Assicurati di aggiungere sempre:</p>
@@ -503,86 +518,347 @@ non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un
 <h3 id="componenti-della-modale">Componenti della modale</h3>
 
 <p>In basso un esempio di una modale <em>statica</em>, dove <code class="highlighter-rouge">position</code> e <code class="highlighter-rouge">display</code> sono stati sovrascritti.
-Sono inclusi l’intestazione, il corpo (obbligatorio per il <code class="highlighter-rouge">padding</code>), e il footer della modale (opzionale). È
+Sono inclusi l’intestazione, il corpo, e il footer della modale. È
 richiesta l’inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.</p>
 
-<div class="bd-example bd-example-modal">
-  <div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Titolo della modale</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Il testo del corpo della modale va qui.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary">Salva le modifiche</button>
-        </div>
+<div class="it-example-modal">
+   <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">dialog header
+               </h5>
+            </div>
+            <div class="modal-body">
+               <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Action two</button>
+               <button class="btn btn-primary btn-sm" type="button">Action one</button>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Titolo della modale<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>dialog header
+               <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;p&gt;</span>Font Titillium 16px. Leading 24px. omnis iste natus error.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Action two<span class="nt">&lt;/button&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action one<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Il testo del corpo della modale va qui.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Salva le modifiche<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Chiudi<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="bottone-di-chiusura">Bottone di chiusura</h3>
+<h3 id="modale-con-bottone-di-chiusura">Modale con bottone di chiusura</h3>
 
 <p>Per chiudere la modale, si può utilizzare un bottone con classe <code class="highlighter-rouge">.close</code>.</p>
 
 <p><strong>Assicurati di inserire del testo per gli screen readers</strong>, utilizzando l’attributo <code class="highlighter-rouge">aria-label</code>.</p>
 
 <div class="bd-example">
-<button type="button" class="close" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
+<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+   <svg class="icon">
+      <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+   </svg>
 </button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+   <span class="nt">&lt;/svg&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<h3 id="demo">Demo</h3>
+<p>Esempio completo:</p>
 
-<p>Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto. Essa scivolerà verso il basso e si
-dissolverà dalla parte superiore della pagina.</p>
+<div class="bd-example">
+<div class="it-example-modal">
+   <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">This is a notification message
+               </h5>
+               <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon">
+                     <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="modal-body">
+               <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-primary btn-sm" type="button">Ok</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>This is a notification message
+               <span class="nt">&lt;/h5&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                  <span class="nt">&lt;/svg&gt;</span>
+               <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;p&gt;</span>In the various types of information modal dialog, only one button to close dialog is provided.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+<h3 id="modale-con-icona">Modale con icona</h3>
+
+<p>E’ possibie inserire un icona di alert (o altro tipo) affiancandola all’intestazione.
+Per formattare correttamente i contenuti della modale con icona, occorre aggoingere la classe <code class="highlighter-rouge">alert-modal</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
+
+<div class="bd-example">
+<div class="it-example-modal">
+  <div class="modal alert-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use>
+          </svg>
+          <h5 class="modal-title">This is a notification message more long than usual
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal alert-modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>This is a notification message more long than usual
+          <span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p&gt;</span>In the various types of information modal dialog, only one button to close dialog is provided.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="modale-con-radiobuttons">Modale con radiobuttons</h3>
+
+<p>All’interno della modale è possibile inserire elementi form.
+Di seguito una modale con un elenco di radio button.</p>
+
+<div class="bd-example">
+<div class="it-example-modal">
+   <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Choose an item
+               </h5>
+            </div>
+            <div class="modal-body">
+               <div class="form-check" aria-describedby="">
+                  <input name="gruppo1" type="radio" id="radio1" />
+                  <label for="radio1">Opzione 1</label>
+               </div>
+               <div class="form-check" aria-describedby="">
+                  <input name="gruppo1" type="radio" id="radio2" />
+                  <label for="radio2">Opzione 2</label>
+               </div>
+               <div class="form-check" aria-describedby="">
+                  <input name="gruppo1" type="radio" id="radio3" />
+                  <label for="radio3">Opzione 3</label>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+               <button class="btn btn-primary btn-sm" type="button" disabled="">Ok</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Choose an item
+               <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio3"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+               <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled=</span><span class="s">""</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="modale-con-link-list">Modale con Link List</h3>
+
+<p>All’interno della modale è possibile inserire delle <a href="/bootstrap-italia/docs/componenti/link-list/">Link-list</a>.<br />
+Per formattare correttamente il contenuto di questa modale, aggiungere la classe <code class="highlighter-rouge">it-dialog-link-list</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
+
+<div class="bd-example">
+<div class="it-example-modal">
+   <div class="modal it-dialog-link-list" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title"><span>1.</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+               </h5>
+            </div>
+            <div class="modal-body">
+               <div class="link-list-wrapper">
+                  <ul class="link-list">
+                     <li>
+                        <a class="list-item icon-left" href="#">
+                           <svg class="icon icon-primary">
+                              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                           </svg>
+                           <span>Link list 1</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="list-item icon-left" href="#">
+                           <svg class="icon icon-primary">
+                              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                           </svg>
+                           <span>Link list 1</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="list-item icon-left" href="#">
+                           <svg class="icon icon-primary">
+                              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                           </svg>
+                           <span>Link list 1</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal it-dialog-link-list"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;&lt;span&gt;</span>1.<span class="nt">&lt;/span&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+               <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;li&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;</span>
+                              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                           <span class="nt">&lt;/svg&gt;</span>
+                           <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+                        <span class="nt">&lt;/a&gt;</span>
+                     <span class="nt">&lt;/li&gt;</span>
+                     <span class="nt">&lt;li&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;</span>
+                              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                           <span class="nt">&lt;/svg&gt;</span>
+                           <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+                        <span class="nt">&lt;/a&gt;</span>
+                     <span class="nt">&lt;/li&gt;</span>
+                     <span class="nt">&lt;li&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item icon-left"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;</span>
+                              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                           <span class="nt">&lt;/svg&gt;</span>
+                           <span class="nt">&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;</span>
+                        <span class="nt">&lt;/a&gt;</span>
+                     <span class="nt">&lt;/li&gt;</span>
+                  <span class="nt">&lt;/ul&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="demo">Demo</h2>
+
+<h3 id="modale-semplice">Modale semplice</h3>
+
+<p>Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.</p>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLive">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLiveLabel">Titolo della modale</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title">dialog header
+        </h5>
       </div>
       <div class="modal-body">
-        <p>Woohoo, stai leggendo questo testo in una modale!</p>
+        <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Salva le modifiche</button>
+        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Close</button>
       </div>
     </div>
   </div>
@@ -600,21 +876,18 @@ dissolverà dalla parte superiore della pagina.</p>
 <span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"exampleModal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"exampleModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"exampleModal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"exampleModalLabel"</span><span class="nt">&gt;</span>Titolo della modale<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>dialog header
+        <span class="nt">&lt;/h5&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        ...
+        <span class="nt">&lt;p&gt;</span>Font Titillium 16px. Leading 24px. omnis iste natus error.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Chiudi<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Salva le modifiche<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -625,38 +898,23 @@ dissolverà dalla parte superiore della pagina.</p>
 <p>Quando le modali diventano troppo lunghe per il viewport o il dispositivo dell’utente, scorrono indipendentemente dalla
 pagina stessa.</p>
 
-<div id="exampleModalLong" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Titolo della modale</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <h5 class="modal-title">dialog header</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+          </svg>
         </button>
       </div>
       <div class="modal-body">
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Salva le modifiche</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button">Action 1</button>
       </div>
     </div>
   </div>
@@ -674,291 +932,259 @@ pagina stessa.</p>
 <span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"exampleModalLong"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"exampleModalLongTitle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"exampleModalLong"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"exampleModalLongTitle"</span><span class="nt">&gt;</span>Titolo della modale<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>dialog header<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        ...
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Chiudi<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Salva le modifiche<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action 1<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="centratura-verticale">Centratura verticale</h3>
+<h3 id="scroll-di-contenuti-allinterno-della-modale">Scroll di contenuti all’interno della modale</h3>
 
-<p>Aggiungi <code class="highlighter-rouge">.modal-dialog-centered</code> a <code class="highlighter-rouge">.modal-dialog</code> per centrare verticalmente la modale.</p>
+<p>Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo sempre visibile l’intestazione ed il footer della modale stessa aggiungendo la classe <code class="highlighter-rouge">.it-dialog-scrollable</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
 
-<div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Titolo della modale</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">dialog header
+            </h5>
+         </div>
+         <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary btn-sm" type="button">Action 1</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Salva le modifiche</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongFixed">
     Lancia la demo della modale
   </button>
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#exampleModalCenter"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#exampleModalLongFixed"</span><span class="nt">&gt;</span>
   Lancia la demo della modale
 <span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"exampleModalCenter"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"exampleModalCenterTitle"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"exampleModalLongTitle"</span><span class="nt">&gt;</span>Titolo della modale<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal it-dialog-scrollable fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"exampleModalLongFixed"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>dialog header
+            <span class="nt">&lt;/h5&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action 1<span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        ...
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Chiudi<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Salva le modifiche<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="tooltip-and-popover">Tooltip and popover</h3>
+<h3 id="posizionamento">Posizionamento</h3>
 
-<p><a href="/bootstrap-italia/docs/componenti/tooltips/">Tooltip</a> e <a href="/bootstrap-italia/docs/componenti/popovers/">popover</a> possono essere inseriti all’interno delle modali. Quando le modali vengono chiuse, ogni tooltip e popover all’interno vengono automaticamente chiusi.</p>
+<h4 id="centratura-verticale">Centratura verticale</h4>
 
-<div id="exampleModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalPopoversLabel">Titolo della modale</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<p>Aggiungi <code class="highlighter-rouge">.modal-dialog-centered</code> a <code class="highlighter-rouge">.modal-dialog</code> per centrare verticalmente la modale.</p>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modalCenter">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">This is a notification message
+            </h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+               <svg class="icon">
+                  <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Ok</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <h5>Popover in una modale</h5>
-        <p>Questo <a href="#" role="button" class="btn btn-secondary popover-test" title="Titolo del popover" data-content="Il contenuto del corpo del popover è impostato in questo attributo." data-container="#exampleModalPopovers">pulsante</a> attiva un popover al click.</p>
-        <hr />
-        <h5>Tooltip in una modal</h5>
-        <p><a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">Questo link</a> e <a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">questo link</a> attivano un tooltip al passaggio del mouse.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Salva le modifiche</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
 
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
-    Lancia la demo della modale
-  </button>
-</div>
+<p><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalCenter">
+  Lancia la demo della modale
+</button></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h5&gt;</span>Popover in una modale<span class="nt">&lt;/h5&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Questo <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary popover-test"</span> <span class="na">title=</span><span class="s">"Titolo del popover"</span> <span class="na">data-content=</span><span class="s">"Il contenuto del corpo del popover è impostato in questo attributo."</span><span class="nt">&gt;</span>pulsante<span class="nt">&lt;/a&gt;</span> attiva un popover al click.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;hr&gt;</span>
-  <span class="nt">&lt;h5&gt;</span>Tooltip in una modal<span class="nt">&lt;/h5&gt;</span>
-  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tooltip-test"</span> <span class="na">title=</span><span class="s">"Tooltip"</span><span class="nt">&gt;</span>Questo link<span class="nt">&lt;/a&gt;</span> e <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tooltip-test"</span> <span class="na">title=</span><span class="s">"Tooltip"</span><span class="nt">&gt;</span>questo link<span class="nt">&lt;/a&gt;</span> attivano un tooltip al passaggio del mouse.<span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#modalCenter"</span><span class="nt">&gt;</span>
+  Lancia la demo della modale
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modalCenter"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-centered"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>This is a notification message
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+               <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>In the various types of information modal dialog, only one button to close dialog is provided.<span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="uso-della-griglia">Uso della griglia</h3>
+<h4 id="allineamento-a-sinistra">Allineamento a sinistra</h4>
 
-<p>Utilizza la griglia di Bootstrap all’interno di una modale  annidando <code class="highlighter-rouge">.container-fluid</code> all’interno di <code class="highlighter-rouge">.modal-body</code>. Poi, usa le normali classi della griglia come faresti in qualsiasi altro posto.</p>
+<p>Per aprire la modale da sinistra a destra aggiungere le seguenti classi:
+Aggiungi <code class="highlighter-rouge">.it-dialog-scrollable</code> a <code class="highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
+Aggiungi <code class="highlighter-rouge">.modal-dialog-left</code> a <code class="highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
 
-<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="gridModalLabel">Le griglie nelle modali</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft">
+   <div class="modal-dialog modal-dialog-left" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">This is a notification message
+            </h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+               <svg class="icon">
+                  <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-primary btn-sm" type="button">Ok</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <div class="container-fluid bd-example-row">
-          <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
-            <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-sm-9">
-              Level 1: .col-sm-9
-              <div class="row">
-                <div class="col-8 col-sm-6">
-                  Level 2: .col-8 .col-sm-6
-                </div>
-                <div class="col-4 col-sm-6">
-                  Level 2: .col-4 .col-sm-6
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Salva le modifiche</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
 
-<div class="bd-example">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal">
-  Lncia la demo della modale
-</button>
-</div>
+<p><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalLeft">
+  Lancia la demo della modale
+</button></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 ml-auto"</span><span class="nt">&gt;</span>.col-md-4 .ml-auto<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-3 ml-auto"</span><span class="nt">&gt;</span>.col-md-3 .ml-auto<span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-2 ml-auto"</span><span class="nt">&gt;</span>.col-md-2 .ml-auto<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6 ml-auto"</span><span class="nt">&gt;</span>.col-md-6 .ml-auto<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
-        Level 1: .col-sm-9
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8 col-sm-6"</span><span class="nt">&gt;</span>
-            Level 2: .col-8 .col-sm-6
-          <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4 col-sm-6"</span><span class="nt">&gt;</span>
-            Level 2: .col-4 .col-sm-6
-          <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#modalLeft"</span><span class="nt">&gt;</span>
+  Lancia la demo della modale
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal it-dialog-scrollable fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modalLeft"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-left"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>This is a notification message
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+               <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="contenuto-della-modale-variabile">Contenuto della modale variabile</h3>
+<h4 id="allineamento-a-destra">Allineamento a destra</h4>
 
-<p>Hai un gruppo di pulsanti che attivano tutti la stessa modale con contenuti leggermente diversi? Usa <code class="highlighter-rouge">event.relatedTarget</code>
-e gli <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">attributi HTML <code class="highlighter-rouge">data-*</code></a> (possibilmente
-<a href="https://api.jquery.com/data/">tramite jQuery</a>) per variare il contenuto della modale in base al pulsante cliccato.</p>
+<p>Per aprire la modale da destra a sinistra aggiungere le seguenti classi:
+Aggiungi <code class="highlighter-rouge">.it-dialog-scrollable</code> a <code class="highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
+Aggiungi <code class="highlighter-rouge">.modal-dialog-right</code> a <code class="highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
 
-<p>In basso una demo seguita da un esempio in HTML e JavaScript. Per maggiori informazioni, <a href="#eventi">leggi la documentazione sugli
-eventi della modale</a> per dettagli su <code class="highlighter-rouge">relatedTarget</code>.</p>
-
-<div class="bd-example">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Mario">Apri la modale per Mario</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Paolo">Apri la modale per Paolo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="Luca">Apri la modale per Luca</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuovo messaggio</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright">
+   <div class="modal-dialog modal-dialog-right" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">This is a notification message
+            </h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+               <svg class="icon">
+                  <use xlink:href="/dist/svg/sprite.svg#it-close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-primary btn-sm" type="button">Ok</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Destinatario:</label>
-            <input type="text" class="form-control" id="recipient-name" />
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Messaggio:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-        <button type="button" class="btn btn-primary">Invia messaggio</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#exampleModal"</span> <span class="na">data-whatever=</span><span class="s">"Mario"</span><span class="nt">&gt;</span>Apri la modale per Mario<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#exampleModal"</span> <span class="na">data-whatever=</span><span class="s">"Paolo"</span><span class="nt">&gt;</span>Apri la modale per Paolo<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#exampleModal"</span> <span class="na">data-whatever=</span><span class="s">"Luca"</span><span class="nt">&gt;</span>Apri la modale per Luca<span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"exampleModal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"exampleModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span> <span class="na">id=</span><span class="s">"exampleModalLabel"</span><span class="nt">&gt;</span>Nuovo messaggio<span class="nt">&lt;/h5&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/button&gt;</span>
+<p><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalright">
+  Lancia la demo della modale
+</button></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#modalright"</span><span class="nt">&gt;</span>
+  Lancia la demo della modale
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal it-dialog-scrollable fade"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modalright"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-dialog-right"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>This is a notification message
+            <span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+               <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Ok<span class="nt">&lt;/button&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;form&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"recipient-name"</span> <span class="na">class=</span><span class="s">"col-form-label"</span><span class="nt">&gt;</span>Destinatario:<span class="nt">&lt;/label&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"recipient-name"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message-text"</span> <span class="na">class=</span><span class="s">"col-form-label"</span><span class="nt">&gt;</span>Messaggio:<span class="nt">&lt;/label&gt;</span>
-            <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"message-text"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/form&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Chiudi<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Invia messaggio<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#exampleModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span><span class="p">)</span> <span class="c1">// Pulsante che attiva la modale</span>
-  <span class="kd">var</span> <span class="nx">recipient</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">'whatever'</span><span class="p">)</span> <span class="c1">// Prende le informazioni dagli attributi data-*</span>
-  <span class="c1">// Se necessario, qui è possibile avviare una richiesta AJAX (e quindi eseguire l'aggiornamento in un callback).</span>
-  <span class="c1">// Aggiorna il contenuto della modale. Qui viene usato jQuery, ma tu potresti utilizzare una libreria data binding o altri metodi.</span>
-  <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
-  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.modal-title'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s1">'Nuovo messaggio a '</span> <span class="o">+</span> <span class="nx">destinatario</span><span class="p">)</span>
-  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.modal-body input'</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">recipient</span><span class="p">)</span>
-<span class="p">})</span></code></pre></figure>
 
 <h3 id="rimuovere-lanimazione">Rimuovere l’animazione</h3>
 
@@ -968,15 +1194,7 @@ eventi della modale</a> per dettagli su <code class="highlighter-rouge">relatedT
   ...
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="altezza-variabile">Altezza variabile</h3>
-
-<p>Se l’altezza della modale cambia quando è aperta, dovresti chiamare <code class="highlighter-rouge">$('#myModal').modal('handleUpdate')</code> per regolare nuovamente la posizione della modale nel caso appaia una barra di scorrimento.</p>
-
-<h3 id="incorporare-i-video-di-youtube">Incorporare i video di YouTube</h3>
-
-<p>Incorporare i video di YouTube nelle modali richiede codice JavaScript aggiuntivo non presente in Bootstrap per interrompere automaticamente la riproduzione e altro. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Vedi questo utile post di Stack Overflow</a> per maggiori informazioni.</p>
-
-<h2 id="dimensioni-opzionali">Dimensioni opzionali</h2>
+<h3 id="dimensioni-opzionali">Dimensioni opzionali</h3>
 
 <p>Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un <code class="highlighter-rouge">.modal-dialog</code>. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.</p>
 
@@ -986,23 +1204,29 @@ eventi della modale</a> per dettagli su <code class="highlighter-rouge">relatedT
 </div>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Large modal --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bd-example-modal-lg"</span><span class="nt">&gt;</span>Modale grande<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary "</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bd-example-modal-lg"</span><span class="nt">&gt;</span>Modale grande<span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade bd-example-modal-lg"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"myLargeModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-lg"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       ...
     <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+      ...
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="c">&lt;!-- Small modal --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bd-example-modal-sm"</span><span class="nt">&gt;</span>Modale piccola<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary "</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">".bd-example-modal-sm"</span><span class="nt">&gt;</span>Modale piccola<span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade bd-example-modal-sm"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"mySmallModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       ...
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        ...
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -1011,12 +1235,15 @@ eventi della modale</a> per dettagli su <code class="highlighter-rouge">relatedT
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="myLargeModalLabel">Modale grande</h4>
+        <h5 class="modal-title" id="myLargeModalLabel">Modale grande</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
         ...
       </div>
     </div>
@@ -1027,12 +1254,15 @@ eventi della modale</a> per dettagli su <code class="highlighter-rouge">relatedT
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="mySmallModalLabel">Modale piccola</h4>
+        <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
         ...
       </div>
     </div>
@@ -1057,48 +1287,6 @@ pulsante, insieme a <code class="highlighter-rouge">data-target="#foo"</code> o 
 <p>Richiama una modale con id <code class="highlighter-rouge">myModal</code> con una singola riga di JavaScript:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
-
-<h3 id="opzioni">Opzioni</h3>
-
-<p>Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per quanto riguarda i data attributes,
-aggiungi l’opzione a <code class="highlighter-rouge">data-</code> (come ad esempio in <code class="highlighter-rouge">data-backdrop=""</code>):</p>
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Tipo</th>
-      <th>Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>backdrop</td>
-      <td><code>'true'</code>, <code>'false'</code> o la stringa <code>'static'</code></td>
-      <td>true</td>
-      <td>Include un elemento modal-backdrop. In alternativa, specifica <code>static</code> per un backdrop che non chiude la modale al click.</td>
-    </tr>
-    <tr>
-      <td>keyboard</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Chiude la modale quando viene premuto il tasto escape</td>
-    </tr>
-    <tr>
-      <td>focus</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Mette il focus sulla modale quando viene inizializzata.</td>
-    </tr>
-    <tr>
-      <td>show</td>
-      <td><code>'true'</code> o <code>'false'</code></td>
-      <td>true</td>
-      <td>Mostra la modale quando viene inizializzata.</td>
-    </tr>
-  </tbody>
-</table>
 
 <h3 id="metodi">Metodi</h3>
 
@@ -1207,14 +1395,14 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="highli
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811121623"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811131020"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811121623"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811131020"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
