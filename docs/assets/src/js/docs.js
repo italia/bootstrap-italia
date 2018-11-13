@@ -29,6 +29,11 @@
       e.preventDefault()
     })
 
+    // Modal with radiobuttons example
+    $('.modal-body').find('input[type=radio]').click(function(){
+      $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled');
+    })
+
     // Modal relatedTarget demo
     $('#exampleModal').on('show.bs.modal', function (event) {
       var $button = $(event.relatedTarget)      // Button that triggered the modal
