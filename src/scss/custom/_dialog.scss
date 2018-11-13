@@ -1,16 +1,5 @@
-.it-example-modal{
 
-	// -stile per documentazione
-	.modal{
-		position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-    display: block;
-	}
-}
+
 .modal{
 	padding-right: 0 !important;
 	.modal-dialog{
@@ -78,7 +67,7 @@
 						text-transform: none;
 						font-weight: 700;
 						letter-spacing: inherit;
-						
+
 						span{
 							color: $primary-a6;
 							margin-right: $v-gap/2;
@@ -115,7 +104,7 @@
 				.modal-header{
 					padding-bottom: $modal-padding;
 					background: $modal-sticky-bg;
-					flex-shrink: 0; 
+					flex-shrink: 0;
 					h5{
 						span{
 						}
@@ -129,9 +118,9 @@
 						.link-list{
 							li{
 								a{
-									
+
 									svg{
-									
+
 									}
 								}
 							}
@@ -217,10 +206,10 @@
 }
 
   //small - tablet
-  @media (min-width: #{map-get($grid-breakpoints, sm)}) { 
-	
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
   }
-  
+
   //Tablet vertical
   @media (min-width: #{map-get($grid-breakpoints, md)}) {
 		.modal{
@@ -258,11 +247,11 @@
 				}
 			}
 		}
-	
 
-	
+
+
   }
-  
+
   //Tablet horizontal / small desktop
   @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 		//modal
@@ -270,12 +259,12 @@
 		//alert variation
 		.alert-modal{
 			.modal-dialog{
-				
+
 				.modal-content{
 					.modal-header{
-						
+
 						.icon{
-							
+
 						}
 					}
 					.modal-body{
@@ -291,19 +280,19 @@
 			.modal-dialog{
 				&.modal-dialog-right{
 					//margin-right: -17px;
-			
+
 				}
 			}
 			&.show{
 				.modal-dialog{
 					&.modal-dialog-right{
-					
+
 					}
 				}
 			}
 		}
-  } 
+  }
   //Desktop
   @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-	
+
 	}

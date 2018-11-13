@@ -6,6 +6,19 @@ group: componenti
 toc: true
 ---
 
+<style>
+  /* Style override for Documentation purposes */
+  .it-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+  }
+</style>
+
 {% capture callout %}
 #### Accessibilità
 
@@ -83,7 +96,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 </div>
 {% endhighlight %}
 
-### Bottone di chiusura
+### Modale con bottone di chiusura
 
 Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 
@@ -97,7 +110,7 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 </button>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio di modale con bottone close
+Esempio completo:
 
 {% capture example %}
 <div class="it-example-modal">
@@ -125,7 +138,8 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio di modale con icona alert
+### Modale con icona
+
 E' possibie inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
 Per formattare correttamente i contenuti della modale con icona, occorre aggoingere la classe `alert-modal` all'elemento `<div class="modal">`
 
@@ -153,7 +167,8 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggoing
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio di modale con radiobuttons
+### Modale con radiobuttons
+
 All'interno della modale è possibile inserire elementi form.
 Di seguito una modale con un elenco di radio button.
 
@@ -190,7 +205,8 @@ Di seguito una modale con un elenco di radio button.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio di modale con action list
+### Modale con Link List
+
 All'interno della modale è possibile inserire delle [Link-list]({{ site.baseurl }}/docs/componenti/link-list/).  
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
@@ -239,8 +255,9 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Demo
-#### Modale semplice
+## Demo
+
+### Modale semplice
 
 Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
 
@@ -291,8 +308,6 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
   </div>
 </div>
 {% endhighlight %}
-
-
 
 ### Scroll di contenuti lunghi
 
@@ -411,9 +426,9 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
 </div>
 {% endhighlight %}
 
+### Posizionamento
 
-## Posizionamento
-### Centratura verticale
+#### Centratura verticale
 
 Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente la modale.
 
@@ -473,7 +488,8 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
 </div>
 {% endhighlight %}
 
-### Allineamento a sinistra
+#### Allineamento a sinistra
+
 Per aprire la modale da sinistra a destra aggiungere le seguenti classi:
 Aggiungi `.it-dialog-scrollable` a `.modal` occupare tutta l'altezza disponibile.
 Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la modale.
@@ -534,7 +550,8 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
 </div>
 {% endhighlight %}
 
-### Allineamento a destra
+#### Allineamento a destra
+
 Per aprire la modale da destra a sinistra aggiungere le seguenti classi:
 Aggiungi `.it-dialog-scrollable` a `.modal` occupare tutta l'altezza disponibile.
 Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la modale.
@@ -595,8 +612,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
 </div>
 {% endhighlight %}
 
-
-## Rimuovere l'animazione
+### Rimuovere l'animazione
 
 Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe `.fade` dal codice della tua modale.
 
@@ -606,7 +622,7 @@ Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe
 </div>
 {% endhighlight %}
 
-## Dimensioni opzionali
+### Dimensioni opzionali
 
 Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un `.modal-dialog`. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.
 
