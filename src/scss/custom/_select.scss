@@ -23,10 +23,14 @@
 	color:$select-label-color;
 	font-weight: 600;
 }
+.it-select-wrapper.no-tick .dropdown.bootstrap-select .dropdown-menu li a.selected span.check-mark{
+	display: none;
+}
 .it-select-wrapper{
 	&.disabled{
 		opacity: 0.3;
 	}
+
 	.dropdown-menu{
 		padding:0;
 		margin: 0;
@@ -125,6 +129,10 @@
 	}
 	.dropdown{
 		&.bootstrap-select{
+			// no tick value for multi
+			&.show-tick.no-tick{
+
+			}
 			//search 
 			.bs-searchbox{
 				padding:($v-gap) $v-gap*3;
@@ -157,6 +165,52 @@
 			.dropdown-divider{
 				border:none;
 			}
+			// checkboxes
+			.form-check{
+				margin-top: 0;
+			}
+			.form-check [type=checkbox]+label, .form-check [type=radio]+label{
+				margin-bottom: 0;
+				font-weight: normal;
+				font-size:$select-dd-text-size;
+				height: $select-dd-check-height;
+				line-height: $select-dd-check-height;
+			}
+			// select deselect
+			.bs-actionsbox{
+				position: relative;
+				padding:0;
+				.btn-block{
+					display: block;
+					padding:($v-gap) $v-gap*3;
+					.btn{
+						padding: 0;
+						display: inline-block;
+						font-size:$select-dd-text-size;
+						color: $select-dd-link-color;
+						font-weight: normal;
+						width:auto;
+						margin-right: $v-gap*3;
+						&:active,&:focus{
+							box-shadow: none;
+						}
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+				&:after{
+					content: '';
+					display: block;
+					height: 1px;
+					width: $select-dd-small-separator-width;
+					background:$select-dd-small-separator-bg;
+					position: absolute;
+					bottom: - $v-gap;
+					left: $v-gap*3;
+				}
+			}
+			
 			// remove elements for pills
 			&.show-tick{
 				.filter-option{
@@ -183,9 +237,27 @@
 							height:$select-dd-icon-size;
 							flex-shrink: 0;
 						}
+						// remove select style
+						.form-check [type=checkbox]+label, .form-check [type=radio]+label{
+							font-size: $select-dd-pill-font-size;
+							padding: $v-gap/2 $v-gap;
+							border:1px solid $select-label-color;
+							color:  $select-label-color;
+							line-height: 1;
+							border-radius: $v-gap*3;
+							display: flex;
+							align-items: center;
+							margin-right: $select-dd-pill-distance;
+							height: auto;
+							font-weight:$select-dd-pill-font-w;
+							&:before,&:after{
+								display: none;
+							}
+						}
 					}
 				}
 			}
+			
 			.dropdown-menu{
 				top:calc(-100% - #{$v-gap}) !important;
 				padding:$v-gap 0;
