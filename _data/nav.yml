@@ -84,6 +84,7 @@
     - title: Toolbar
     - title: Notifications
     - title: Avatar
+    - title: Upload
     #- title: Datepicker
     #  status: wip
 
