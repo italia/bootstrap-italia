@@ -76,6 +76,12 @@
 			.filter-option-inner-inner{
 				display: flex;
 				align-items: center;
+				.select-pill{
+				
+					svg{
+					
+					}
+				}
 				.icon{
 					margin-right: $v-gap;
 					width: $select-dd-icon-size;
@@ -139,6 +145,47 @@
 				background: transparent;
 				margin: 0;
 			}
+			// groups
+			.dropdown-header{
+				.text{
+					font-size: $select-dd-header-size;
+					text-transform: uppercase;
+					color: $select-label-color;
+					font-weight: $select-dd-header-w;
+				}
+			}
+			.dropdown-divider{
+				border:none;
+			}
+			// remove elements for pills
+			&.show-tick{
+				.filter-option{
+					.filter-option-inner-inner{
+						//color: rgba(255,255,255,0);
+						.select-pill{
+							font-size: $select-dd-pill-font-size;
+							padding: $v-gap/2 $v-gap;
+							border:1px solid $select-label-color;
+							color:  $select-label-color;
+							line-height: 1;
+							border-radius: $v-gap*3;
+							display: flex;
+							align-items: center;
+							margin-right: $select-dd-pill-distance;
+							svg{
+								fill: $select-label-color;
+								margin-right: 0;
+							}
+						}
+						.icon{
+							margin-right: $v-gap;
+							width: $select-dd-icon-size;
+							height:$select-dd-icon-size;
+							flex-shrink: 0;
+						}
+					}
+				}
+			}
 			.dropdown-menu{
 				top:calc(-100% - #{$v-gap}) !important;
 				padding:$v-gap 0;
@@ -158,12 +205,40 @@
 								display: flex;
 							}
 						}
+						&.selected{
+							color:$select-dd-link-color-active;
+							text-decoration: underline;
+							span.select-pill-text{
+								text-decoration: underline;
+							}
+							span.check-mark{
+								color:$select-dd-link-color;
+							}
+						}
 						&:focus,&:active{
 							background: transparent;
 							outline: none;
 						}
+						span.check-mark{
+							top: $select-dd-icon-flag-top;
+							right: $v-gap*3;
+							&:after{
+								content: '';
+								display: block;
+								width: .5em;
+								height: 1em;
+								border-style: solid;
+								border-width: 0 .15em .15em 0;
+								transform: rotate(45deg);
+							}
+						}
 						span.text{
 							position: relative;
+							.select-pill{
+								.icon{
+									display: none;
+								}
+							}
 							.icon{
 								fill: $select-dd-link-color;
 								margin-right: $v-gap;
