@@ -38,11 +38,6 @@ $avatar-base-size: 8px;
 		width: 16px;
 	}
 
-	//avatar version
-	&.avatar-upload {
-		position: relative;
-	}
-
 	//color variants----------------------------------------- START
 	&.avatar-primary {
 		background: $primary;
@@ -368,7 +363,6 @@ a.avatar {
 
 }
 //wrapper for status, presence and extra text -------------- START
-
 
 // inline group -------------------------------------------- START
 .avatar-group {

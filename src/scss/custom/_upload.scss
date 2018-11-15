@@ -10,7 +10,7 @@
 	z-index: -1;
 }
 
-.upload {	
+.upload {
 	//button styling
 	&[type=file] + label {
 		max-width: 80%;
@@ -137,61 +137,85 @@
 		position: absolute;
 		bottom: -10px;
 		left: 36px;
-		width: 290px;
+		width: calc(100% - 45px);
 		height: 4px;
 		background-color: $lightgrey-a1;
 		box-shadow: none;
+		&.progress-image {
+			width: calc(100% - 60px);
+		}
 	}
 }
 
-.avatar-upload:hover {
-	.upload-avatar-wrapper {
-		opacity: 1;
-		//fade in speed
-		transition: opacity 0.25s;
-	}
-}
-
-.upload-avatar-wrapper {
-	bottom: -10%;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 60%;
-	background-color: rgba(0,0,0,0.6);
+.upload-avatar-container {
 	position: absolute;
-	//fade out speed
-	transition: opacity 0.15s;
-	opacity: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	.upload-avatar {
 		&[type=file] + label {
-			margin: 0;
-			padding-top: 10px;
-			color: $white;
-			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 0;
 			width: 100%;
 			height: 100%;
-			font-size: 12px;
-			display: flex;
-			justify-content: start;
-			align-items: center;
-			flex-direction: column;
-			cursor: pointer;
 			svg {
-				fill: $white;
-				width: 20px;
-				height: 20px;
-				display: block;
+				display: none;
 			}
-		}
-		&:focus:not(.focus--mouse) {
-			&[type=file] + label {
-				outline: auto 5px -webkit-focus-ring-color;
+			span {
+				display: none;
 			}
 		}
 	}
 }
 
+.avatar-upload-wrapper {
+	position: relative;
+	display: inline-block;
+	//avatar version
+	.avatar {
+		&.avatar-upload {
+			position: relative;
+		}
+	}
+	.avatar-upload-icon {
+		position: absolute;
+		bottom: 16px;
+		right: 4px;
+		width: 26px;
+		height: 26px;
+		background: $neutral-1-a1;
+		border-radius: 50%;
+		border: 2px solid $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		& > svg	{
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&.size-sm {
+		.avatar {
+			width: $avatar-base-size*10;
+			height: $avatar-base-size*10;
+		}
+		.avatar-upload-icon {
+			bottom: 6px;
+			right: 4px;
+			width: 18px;
+			height: 18px;
+			& > svg	{
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+
+}
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
@@ -216,5 +240,72 @@
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	.avatar-upload:hover {
+		.upload-avatar-container {
+			opacity: 1;
+			//fade in speed
+			transition: opacity 0.25s;
+		}
+	}
+
+	.upload-avatar-container {
+		bottom: -10%;
+		left: 0;
+		right: 0;
+		top: auto;
+		width: 100%;
+		height: 60%;
+		background-color: rgba(0,0,0,0.6);
+		//fade out speed
+		transition: opacity 0.15s;
+		opacity: 0;
+		.upload-avatar {
+			&[type=file] + label {
+				margin: 0;
+				padding-top: 10px;
+				color: $white;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				font-size: 12px;
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				flex-direction: column;
+				cursor: pointer;
+				span {
+					display: block;
+				}
+				svg {
+					display: block;
+					fill: $white;
+					width: 20px;
+					height: 20px;
+					display: block;
+				}
+			}
+			&:focus:not(.focus--mouse) {
+				&[type=file] + label {
+					outline: auto 5px -webkit-focus-ring-color;
+				}
+			}
+		}
+	}
+
+	.avatar-upload-wrapper {
+		//hide icon
+		.avatar-upload-icon {
+			display: none;
+		}
+		&.size-sm {
+			.upload-avatar {
+				&[type=file] + label {
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 
 }

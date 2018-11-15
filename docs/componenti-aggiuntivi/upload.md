@@ -125,7 +125,7 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 			<span class="sr-only">Annulla caricamento immagine nome-file-03.jpg</span>
 			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg>
 		</button>
-		<div class="progress">
+		<div class="progress progress-image">
 			<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
 	</li>
@@ -150,14 +150,45 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
 {% capture example %}
-<div class="avatar size-xxl avatar-upload">
-	<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
-	<div class="upload-avatar-wrapper">
-		<input type="file" name="upload3" id="upload3" class="upload-avatar"/>
-		<label for="upload3">
-			<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
-			<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
-		</label>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md-6 mb-4 mb-md-0">
+			<p><strong>Dimensione Standard</strong></p>
+			<div class="avatar-upload-wrapper">
+				<div class="avatar size-xxl avatar-upload">
+					<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
+					<div class="upload-avatar-container">
+						<input type="file" name="upload3" id="upload3" class="upload-avatar"/>
+						<label for="upload3">
+							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="avatar-upload-icon">
+					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-6">
+			<p><strong>Dimensione Piccola</strong></p>
+			<div class="avatar-upload-wrapper size-sm">
+				<div class="avatar size-xxl avatar-upload">
+					<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
+					<div class="upload-avatar-container">
+						<input type="file" name="upload4" id="upload4" class="upload-avatar"/>
+						<label for="upload4">
+							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+						</label>
+					</div>
+				</div>
+				<div class="avatar-upload-icon">
+					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
