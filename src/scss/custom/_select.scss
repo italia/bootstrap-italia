@@ -15,18 +15,27 @@
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	width: 100%;
 }
-.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle{
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show>.btn-light.dropdown-toggle {
 	background: transparent;
 	color: inherit;
 }
-.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
-	color:$select-label-color;
-	font-weight: 600;
+.bootstrap-select {
+  & > .dropdown-toggle.bs-placeholder {
+    &, &:active, &:focus, &:hover {
+      color:$select-label-color;
+      font-weight: 600;
+    }
+  }
 }
-.it-select-wrapper.no-tick .dropdown.bootstrap-select .dropdown-menu li a.selected span.check-mark{
-	display: none;
-}
-.it-select-wrapper{
+
+.bootstrap-select-wrapper{
+
+  &.no-tick .dropdown.bootstrap-select .dropdown-menu li a.selected span.check-mark {
+    display: none;
+  }
+
 	&.disabled{
 		opacity: 0.3;
 	}
@@ -81,9 +90,9 @@
 				display: flex;
 				align-items: center;
 				.select-pill{
-				
+
 					svg{
-					
+
 					}
 				}
 				.icon{
@@ -133,7 +142,7 @@
 			&.show-tick.no-tick{
 
 			}
-			//search 
+			//search
 			.bs-searchbox{
 				padding:($v-gap) $v-gap*3;
 				input[type=text]{
@@ -210,7 +219,7 @@
 					left: $v-gap*3;
 				}
 			}
-			
+
 			// remove elements for pills
 			&.show-tick{
 				.filter-option{
@@ -257,7 +266,7 @@
 					}
 				}
 			}
-			
+
 			.dropdown-menu{
 				top:calc(-100% - #{$v-gap}) !important;
 				padding:$v-gap 0;
@@ -320,7 +329,6 @@
 							}
 							.reset-label{
 								display: block;
-								position: relative;
 								height: 1px;
 								width: $select-dd-small-separator-width;
 								background:$select-dd-small-separator-bg;
@@ -343,27 +351,27 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 	}
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
- 
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
- 
+
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  
+
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-  
+
 }

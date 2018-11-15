@@ -38,7 +38,6 @@
     - title: Form Input
       status: wip
     - title: Form Select
-      status: wip
     - title: Form Checkbox
     - title: Form Radio Button
     - title: Form Toggles
@@ -58,8 +57,6 @@
     - title: Pager
       status: wip
     - title: Popover
-    - title: Select
-      status : wip
     - title: Scrollspy
     - title: Sidebar
     - title: Skiplinks
