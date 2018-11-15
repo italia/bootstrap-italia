@@ -1,17 +1,5 @@
 $( document ).ready(function() {
 	// change checkbox states in dropdown
-	$(function () {
-		$(".selectpicker").on("changed.bs.select", function(e, clickedIndex, newValue, oldValue) {
-		/*	var selectedD = $(this).find('option').eq(clickedIndex).attr("check-id");
-			var toChange = $('.dropdown-menu').find('input[data-id=' + selectedD +']');
-
-			if ($(toChange).prop('checked')){
-				$(toChange).prop('checked',false)
-			}else{
-				$(toChange).prop('checked',true)
-			}*/
-		});
-	});
 
 	$(function () {
 		$(".selectpicker").on("changed.bs.select", function(e){
@@ -22,5 +10,4 @@ $( document ).ready(function() {
 		});
 	});
 
-	console.log('new')
 });

@@ -58,6 +58,8 @@
     - title: Pager
       status: wip
     - title: Popover
+    - title: Select
+      status : wip
     - title: Scrollspy
     - title: Sidebar
     - title: Skiplinks
