@@ -1,6 +1,6 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="{% if page.title %}summary{% else %}summary_large_image{% endif %}">
-<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:site" content="{{ site.twitter_handle }}">
 <meta name="twitter:creator" content="{{ site.authors }}">
 <meta name="twitter:title" content="{{ page.title | default: site.title | smartify }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description | smartify }}">

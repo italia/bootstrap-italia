@@ -1,0 +1,30 @@
+.focus--keyboard {
+  border-color: $orange;
+  box-shadow: 0 0 6px 2px $orange;
+  outline: none;
+}
+
+.focus--mouse {
+  border-color: inherit;
+  box-shadow: none;
+  outline: none;
+}
+/*
+TODO rivedere, ha impatto sui btn.
+a,
+button,
+input,
+select,
+textarea,
+.btn {
+  &:focus,
+  &.focus {
+    @extend .focus--keyboard;
+  }
+
+  &:focus.focus--mouse,
+  &.focus.focus--mouse {
+    @extend .focus--mouse;
+  }
+}
+*/

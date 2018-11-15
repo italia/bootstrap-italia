@@ -17,69 +17,26 @@
     > a {
       pointer-events: auto;
     }
+  }
 
+  > h2[id] {
     &::before {
       display: block;
-      height: 6rem;
-      margin-top: -6rem;
-      visibility: hidden;
+      border-bottom: 1px solid #EDEDED;
+      height: 1rem;
       content: "";
+      margin-bottom: 1.5rem;
+      width: 4rem;
     }
-  }
-
-  > table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-
-    @include media-breakpoint-down(md) {
-      display: block;
-      overflow-x: auto;
-      -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
-
-      &.table-bordered {
-        border: 0;
-      }
-    }
-
-    // Cells
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
-          padding: $table-cell-padding;
-          vertical-align: top;
-          border: 1px solid $table-border-color;
-
-          > p:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-
-    // Prevent breaking of code (e.g., Grunt tasks list)
-    td:first-child > code {
-      white-space: nowrap;
-    }
-  }
-
-  > h2:not(:first-child) {
-    margin-top: 3rem;
-  }
-
-  > h3 {
-    margin-top: 1.5rem;
   }
 
   > ul li,
   > ol li {
     margin-bottom: .25rem;
+    max-width: 40rem;
   }
 
-  p {
+  > p {
     max-width: 40rem;
   }
 }

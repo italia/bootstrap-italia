@@ -29,6 +29,11 @@
       e.preventDefault()
     })
 
+    // Modal with radiobuttons example
+    $('.modal-body').find('input[type=radio]').click(function(){
+      $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled');
+    })
+
     // Modal relatedTarget demo
     $('#exampleModal').on('show.bs.modal', function (event) {
       var $button = $(event.relatedTarget)      // Button that triggered the modal
@@ -60,7 +65,7 @@
     })
 
     // ClipboardJS - Docs copy code handling
-    var clipboard = new Clipboard('.btn-clipboard', {
+    var clipboard = new ClipboardJS('.btn-clipboard', {
       target: function (trigger) {
         return trigger.parentNode.nextElementSibling
       }
@@ -97,7 +102,7 @@
 
   // ParticlesJS - Docs homepage particles
   if ($('#particles-js').length) {
-    const particlesJSON = {
+    var particlesJSON = {
       "particles": {
         "number":{"value":160,"density":{"enable":true,"value_area":800}},
         "color":{"value":"#FFF"},

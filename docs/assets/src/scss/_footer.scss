@@ -5,6 +5,11 @@
   @include media-breakpoint-up(sm) {
     text-align: left;
   }
+
+  .footer-social {
+    font-size: 0;
+  }
+
   .team-logo {
     &--icon {
       width: 72px

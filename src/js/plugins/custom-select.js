@@ -1,10 +1,4 @@
-import Util from './util'
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): Select.js
- * --------------------------------------------------------------------------
- */
+import $ from 'jquery'
 
 const Select = (($) => {
 
@@ -15,7 +9,7 @@ const Select = (($) => {
    */
 
   const NAME = 'custom-select'
-  const DATA_KEY = `bs.custom-select`
+  const DATA_KEY = 'bs.custom-select'
   const VERSION = 'v4.0.0'
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
@@ -40,7 +34,7 @@ const Select = (($) => {
 
   class Select {
 
-    constructor(element, config) {
+    constructor(element) {
 
       this._elements = []
       this._element = element
@@ -77,16 +71,16 @@ const Select = (($) => {
       const uniqueID = this._guid();
 
       var filterQuery = [],
-
        wrapper = $('<div class="select-wrapper"></div>'),
-
-      selectChildren = $select.children('option, optgroup'),
+       selectChildren = $select.children('option, optgroup'),
        valuesSelected = [];
 
       this._isMultiple = Boolean($select.attr('multiple'));
       this._isSearchable = Boolean($select.attr('searchable'));
 
-      this._customElement = $(`<ul id="select-options-${uniqueID}" class="dropdown-menu ${this._isMultiple ? 'multiple-select-dropdown' : ''}"></ul>`)
+      this._customElement = $(`
+        <ul id="select-options-${uniqueID}" class="dropdown-menu ${this._isMultiple ? 'multiple-select-dropdown' : ''}"></ul>
+      `)
 
       var label = $select.find('option:selected').html() || $select.find('option:first').html() || '';
 
@@ -98,24 +92,30 @@ const Select = (($) => {
 
       $select.data('select-id', uniqueID);
 
-      wrapper.addClass($select.attr('class'));
+      //wrapper.addClass($select.attr('class'));
 
       if (this._isSearchable) {
-        this._setSearchableOption();
+        this._setSearchableOption(uniqueID);
       }
 
       if (selectChildren && selectChildren.length) {
         selectChildren.each(function () {
-          if ($(this).is('option')) {
-            if (that._isMultiple) {
-              that._appendOptionWithIcon($select, $(this), 'multiple');
-            } else {
-              that._appendOptionWithIcon($select, $(this));
-            }
-          } else if ($(this).is('optgroup')) {
-            that._customElement.append($('<li class="optgroup"><span>' + $(this).attr('label') + '</span></li>'));
+          const $this = $(this);
 
-            $(this).children('option').each(function () {
+          if ($this.is('option')) {
+            if (that._isMultiple) {
+              that._appendOptionWithIcon($select, $this, 'multiple');
+            } else {
+              that._appendOptionWithIcon($select, $this);
+            }
+          } else if ($this.is('optgroup')) {
+            that._customElement.append($(`
+              <li class="optgroup">
+                <span>${$this.attr('label')}</span>
+              </li>
+            `));
+
+            $this.children('option').each(function () {
               that._appendOptionWithIcon($select, $(this), 'optgroup-option');
             });
           }
@@ -123,8 +123,9 @@ const Select = (($) => {
       }
 
       this._customElement.find('li:not(.optgroup)').each(function (i) {
-        $(this).click(function (e) {
-          if (!$(this).hasClass('disabled') && !$(this).hasClass('optgroup')) {
+        const $this = $(this);
+        $this.click(function (e) {
+          if (!$this.hasClass('disabled') && !$this.hasClass('optgroup')) {
             var selected = true;
 
             if (that._isMultiple) {
@@ -134,23 +135,23 @@ const Select = (($) => {
               var optgroup = $select.find('optgroup').length
               if (that._isSearchable) {
                 if (optgroup) {
-                  selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length - 1, $select)
+                  selected = that._toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length - 1, $select)
                 } else {
-                  selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - 1, $select)
+                  selected = that._toggleEntryFromArray(valuesSelected, $this.index() - 1, $select)
                 }
               } else if (optgroup) {
-                selected = that._toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length, $select)
+                selected = that._toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length, $select)
               } else {
-                selected = that._toggleEntryFromArray(valuesSelected, $(this).index(), $select)
+                selected = that._toggleEntryFromArray(valuesSelected, $this.index(), $select)
               }
               $newSelect.trigger('focus');
             } else {
               that._customElement.find('li').removeClass('active');
-              $(this).toggleClass('active');
-              $newSelect.val($(this).text());
+              $this.toggleClass('active');
+              $newSelect.val($this.text().trim());
             }
 
-            that._activateOption(that._customElement, $(this));
+            that._activateOption(that._customElement, $this);
             $select.find('option').eq(i).prop('selected', selected);
             $select.trigger('change');
           }
@@ -161,16 +162,23 @@ const Select = (($) => {
 
       $select.wrap(wrapper);
 
-      var dropdownIcon = $('<span class="caret it-expand"></span>');
+      var dropdownIcon = $('<svg class="caret icon icon-xs icon-primary"><svg viewBox="0 0 32 32" id="expand" xmlns="http://www.w3.org/2000/svg"><path d="M3.733 6.133L0 9.866l16 16 16-16-3.733-3.733L16 18.4 3.733 6.133z"/></svg>\n</svg>');
       if ($select.is(':disabled')) {
         dropdownIcon.addClass('disabled');
       }
 
       var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
 
-      var $newSelect = $('<input type="text" class="dropdown select-dropdown" data-toggle="dropdown" readonly="true" ' + ($select.is(':disabled') ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
+      const $newLabel = $(`
+        <label class="sr-only" id="label-${uniqueID}">${sanitizedLabelHtml}</label>
+      `);
+      const $newSelect = $(`
+        <input type="text" class="dropdown select-dropdown" aria-labelledby="label-${uniqueID}" data-toggle="dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}" />
+      `);
       $select.before($newSelect);
-      $newSelect.before(dropdownIcon);
+      $newSelect.before(dropdownIcon).addClass($select.attr('class').replace('custom-select', ''));
+      $newSelect.before($newLabel);
+
 
       $newSelect.after(this._customElement);
       if (!$select.is(':disabled')) {
@@ -208,7 +216,7 @@ const Select = (($) => {
       }
 
       $newSelect.on({
-        focus: function focus(e) {
+        focus: function focus() {
           if ($('ul.select-dropdown').not(that._customElement[0]).is(':visible')) {
             $('input.select-dropdown').trigger('close');
           }
@@ -224,24 +232,27 @@ const Select = (($) => {
         click: function click(e) {
           e.stopPropagation();
         },
-        blur: function blur(e) {
+        blur: function blur() {
           if (!that._isMultiple && !that._isSearchable) {
             $(this).trigger('close');
           }
           that._customElement.find('li.selected').removeClass('selected');
         },
         keydown: function keydown(e) {
-          if (e.which == 9) {
+          // TAB
+          if (e.which === 9) {
             $newSelect.trigger('close');
             return;
           }
 
-          if (e.which == 40 && !that._customElement.is(':visible')) {
+          // DOWN
+          if (e.which === 40 && !that._customElement.is(':visible')) {
             $newSelect.trigger('open');
             return;
           }
 
-          if (e.which == 13 && !that._customElement.is(':visible')) {
+          // Enter
+          if (e.which === 13 && !that._customElement.is(':visible')) {
             return;
           }
 
@@ -262,7 +273,8 @@ const Select = (($) => {
             }
           }
 
-          if (e.which == 13) {
+          // Enter
+          if (e.which === 13) {
             var activeOption = that._customElement.find('li.selected:not(.disabled)')[0];
             if (activeOption) {
               $(activeOption).trigger('click');
@@ -272,18 +284,21 @@ const Select = (($) => {
             }
           }
 
-          if (e.which == 40) {
+          // DOWN
+          if (e.which === 40) {
             newOption = (that._customElement.find('li.selected').length) ?
               that._customElement.find('li.selected').next('li:not(.disabled)')[0] :
               that._customElement.find('li:not(.disabled)')[0];
-            that._activateOption(this._customElement, newOption);
+            that._activateOption(that._customElement, newOption);
           }
 
-          if (e.which == 27) {
+          // Escape
+          if (e.which === 27) {
             $newSelect.trigger('close');
           }
 
-          if (e.which == 38) {
+          // UP
+          if (e.which === 38) {
             newOption = that._customElement.find('li.selected').prev('li:not(.disabled)')[0];
             if (newOption) {
               that._activateOption(that._customElement, newOption);
@@ -296,7 +311,7 @@ const Select = (($) => {
         }
       });
 
-      $(window).on('click', function (e) {
+      $(window).on('click', function () {
         (that._isMultiple || that._isSearchable) && (that._optionsHover || $newSelect.trigger('close'));
       });
 
@@ -310,25 +325,32 @@ const Select = (($) => {
       }
     }
 
-    _setSearchableOption() {
+    _setSearchableOption(_uniqueID) {
       const $select = $(this._element)
-      var element = $(`<span class="search-wrap"><input type="text" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}"></span>`)
+      var element = $(`
+        <span class="search-wrap">
+          <label class="sr-only" id="label-search-${_uniqueID}">Cerca</label>
+          <input type="text" aria-labelledby="label-search-${_uniqueID}" class="search select-dropdown-search" placeholder="${$select.attr('searchable')}">
+        </span>
+      `)
       this._customElement.append(element);
-      element.find('.search').on('keyup', function (e) {
+      element.find('.search').on('keyup', function () {
 
-        var ul = $(this).closest('ul');
-        var searchValue = $(this).val();
+        const $this = $(this);
+        var ul = $this.closest('ul');
+        var searchValue = $this.val();
 
         ul.find('li').find('span.filtrable').each(function () {
+          const $this = $(this);
           if (typeof this.outerText === 'string') {
             var liValue = this.outerText.toLowerCase()
 
             if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
-              $(this).hide();
-              $(this).parent().hide()
+              $this.hide();
+              $this.parent().hide()
             } else {
-              $(this).show();
-              $(this).parent().show()
+              $this.show();
+              $this.parent().show()
             }
           }
         })
@@ -344,15 +366,13 @@ const Select = (($) => {
       if (icon_url) {
         var classString = '';
         if (classes) {
-          classString = ' class="' + classes + '"';
+          classString = ` class="${classes}"`;
         }
         var listDOM = (this._isMultiple) ?
           `<li class="${disabledClass}">
                       <img alt="" src="${icon_url}" ${classString}>
                       <span class="filtrable">
-                        <input type="checkbox" ${disabledClass}/>
-                        <label></label>
-                        ${option.html()}
+                        <input type="checkbox" ${disabledClass} aria-label="${option.html()}"/>
                       </span>
                     </li>` :
           `<li class="${disabledClass} ${optgroupClass}">
@@ -366,9 +386,17 @@ const Select = (($) => {
       }
 
       if (this._isMultiple) {
-        this._customElement.append($('<li class="' + disabledClass + '"><span class="filtrable"><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+        this._customElement.append($(`
+          <li class="${disabledClass}">
+            <span class="filtrable"><input type="checkbox"${disabledClass} aria-label="${option.html()}"/>${option.html()}</span>
+          </li>
+        `));
       } else {
-        this._customElement.append($('<li class="' + disabledClass + optgroupClass + '"><span class="filtrable">' + option.html() + '</span></li>'));
+        this._customElement.append($(`
+          <li class="${disabledClass}${optgroupClass}">
+            <span class="filtrable">${option.html()}</span>
+          </li>
+        `));
       }
     }
 
@@ -390,7 +418,7 @@ const Select = (($) => {
       for (var i = 0, count = entriesArray.length; i < count; i++) {
         var text = select.find('option').eq(entriesArray[i]).text();
 
-        i === 0 ? value += text : value += ', ' + text;
+        i === 0 ? value += text : value += `, ${text}`;
       }
 
       if (value === '') {
@@ -407,12 +435,12 @@ const Select = (($) => {
         return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
       }
 
-      return (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+      return (`${S4()}${S4()}-${S4()}-4${S4().substr(0, 3)}-${S4()}-${S4()}${S4()}${S4()}`).toLowerCase();
     }
 
     // static
 
-    static _jQueryInterface(config) {
+    static _jQueryInterface() {
       return this.each(function () {
         var $this = $(this)
         var data = $this.data(DATA_KEY)
@@ -449,11 +477,11 @@ const Select = (($) => {
   $.fn[NAME].Constructor = Select
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Enter._jQueryInterface
+    return Select._jQueryInterface
   }
 
   return Select
 
-})(jQuery)
+})($)
 
 export default Select

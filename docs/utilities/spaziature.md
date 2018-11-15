@@ -78,13 +78,13 @@ Ecco alcuni esempi di utilizzo delle classi di spaziatura:
 Per centrare orizzontalmente un elemento con una larghezza fissa e `display: block` puoi utilizzare la classe `.mx-auto` che imposta i margini laterali ad `auto`.
 
 <div class="bd-example">
-  <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
+  <div class="mx-auto border bg-dark text-white text-center" style="width: 200px;">
     Elemento centrato
   </div>
 </div>
 
 {% highlight html %}
-<div class="mx-auto" style="width: 200px;">
+<div class="mx-auto border bg-dark text-white text-center" style="width: 200px;">
   Elemento centrato
 </div>
 {% endhighlight %}

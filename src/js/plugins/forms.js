@@ -1,15 +1,47 @@
 $(function () {
-  // Inizializzazione effetto active sulle label quando i loro input valorizzati
-  $('body').on('click', '.form-group input + label, .form-group textarea + label', function () {
-    $(this).closest('.form-group').addClass('active');
-  }).on('focusin', '.form-group input:not(.select-dropdown, .select-dropdown-search), .form-group textarea', function () {
-    $(this).closest('.form-group').addClass('active');
-  }).on('focusout', '.form-group input:not(.select-dropdown, .select-dropdown-search), .form-group textarea', function () {
-    $(this).closest('.form-group').removeClass('active');
-    $(this).siblings('label').toggleClass('active', $(this).val() !== '');
-  }).on('focusout', `.form-group input[type='file'], input[class$='picker']`, function () {
-    $(this).siblings('label').addClass('active');
-  }).on('change', 'input:file', function (e) {
+
+  const inputSelector = `${['text', 'password', 'email', 'url', 'tel', 'number', 'search']
+    .map((selector) => `input[type=${selector}]:enabled:not([readonly])`)
+    .join(', ')}, textarea`;
+
+  const inputFileSelector = `input[type="file"]`;
+
+
+  $(document).on('focus', inputSelector, (e) => {
+
+    const $this = $(e.target);
+    $this.siblings('label, i').addClass('active');
+  });
+
+  $(document).on('blur', inputSelector, (e) => {
+
+    const $this = $(e.target);
+    const noValue = !$this.val();
+    const noPlaceholder = $this.attr('placeholder') === undefined;
+
+    if (noValue && noPlaceholder) {
+
+      $this.siblings('label, i').removeClass('active');
+    }
+
+  });
+
+  $(document).on('change', inputSelector, (e) => {
+
+    const $this = $(e.target);
+    updateTextFields($this);
+    validateField($this);
+  });
+
+  $(document).on('blur', inputFileSelector, (e) => {
+
+    const $this = $(e.target);
+    $this.siblings('label').addClass('active');
+  });
+
+  $(document).on('change', inputFileSelector, (e) => {
+
+    const $this = $(e.target);
     var numFiles = e.currentTarget.files.length;
     var nomiFiles = '';
     var multi = '';
@@ -21,10 +53,56 @@ $(function () {
     if (numFiles > 1) {
       multi = numFiles + ' file da caricare: '
     }
-    $(this).siblings('.form-file-name').text(multi + nomiFiles);
+    $this.siblings('.form-file-name').text(multi + nomiFiles);
   });
 
-  $(`.form-group :input[value], input[class$='picker']`).siblings('label').addClass('active');
+  const updateTextFields = ($input) => {
+
+    const $labelAndIcon = $input.siblings('label, i');
+    const hasValue = $input.val().length;
+    const hasPlaceholder = $input.attr('placeholder');
+    const addOrRemove = `${hasValue || hasPlaceholder ? 'add' : 'remove'}Class`;
+
+    $labelAndIcon[addOrRemove]('active');
+
+  };
+
+  const validateField = ($input) => {
+
+    if ($input.hasClass('validate')) {
+
+      const value = $input.val();
+      const noValue = !value.length;
+      const isValid = !$input[0].validity.badInput;
+
+      if (noValue && isValid) {
+
+        $input.removeClass('valid').removeClass('invalid');
+      } else {
+
+        const valid = $input.is(':valid');
+        const length = Number($input.attr('length')) || 0;
+
+        if (valid && (!length || length > value.length)) {
+
+          $input.removeClass('invalid').addClass('valid');
+        } else {
+
+          $input.removeClass('valid').addClass('invalid');
+        }
+      }
+    }
+  };
+
+  $('body').find(inputSelector)
+    .removeClass('valid')
+    .removeClass('invalid')
+    .each((index, input) => {
+      const $this = $(input)
+      const noDefaultValue = !$this.val()
+      const noPlaceholder = !$this.attr('placeholder');
+      $this.siblings('label, i').toggleClass('active', !(noDefaultValue && noPlaceholder))
+    })
 
   $('.autocomplete').autocomplete();
 });

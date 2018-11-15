@@ -1,120 +1,169 @@
 ---
 layout: docs
 title: Strumenti di compilazione
-description: Come compilare il codice sorgente, generare la documentazione, ed altro.
+description: Come compilare il codice sorgente e generare la documentazione che stai leggendo
 group: come-iniziare
 toc: true
 ---
 
 {% capture callout %}
-#### Questa pagina serve a chi desidera personalizzare la libreria.
+**Questa pagina è destinata a chi desidera personalizzare la libreria.**
 
-Questa pagina si occupa di approfondire gli strumenti per ricompilare o personalizzare i file sorgente di Bootstrap Italia
-e creare la documentazione che stai leggendo in un ambiente di svluppo locale.
+Di seguito si possono trovare gli strumenti per:
 
-Le informazioni di seguito non sono indispensabili per utilizzare Bootstrap Italia nel tuo sito, in tal caso ti può essere
-utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
+- personalizzare e ricompilare i file sorgente di Bootstrap Italia
+- generare la documentazione che stai leggendo in un ambiente di sviluppo locale
+
+Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap Italia come libreria, ma sono caldamente consigliate per **ottimizzare le performance** in termini di tempi di caricamento. Se stai cercando informazioni su come usare Bootstrap Italia, ti può essere utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-## Setup strumenti
+## Compilare la libreria
 
-Il tema Bootstrap Italia (così come Bootstrap stesso) usa [script NPM](https://docs.npmjs.com/misc/scripts) per la
-compilazione dei file.
+Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Per rendere operativo il sistema di compilazione di Bootstrap Italia, è necessario:
 
-Il file [package.json]({{ site.repo }}/blob/master/package.json) include
-alcuni comodi scripts per la compilazione del codice e di questa documentazione.
+1. Clonare attraverso GIT o scaricare l'intero repository in una cartella sul proprio computer.
+2. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso `npm` o `yarn`.
+3. Verificare che i comandi siano disponibili provando a lanciare `node -v` e `npm -v`.
+4. Dalla cartella del progetto, lanciare il comando `npm install` per installare le dipendenze descritte nel file [package.json]({{ site.repo }}/blob/master/package.json).
 
-Per rendere funzionante il sistema di compilazione di Bootstrap Italia e poter lanciare la documentazione in ambiente locale,
-è necessario seguire i passi di seguito:
+### Script di compilazione
 
-1. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso NPM.
-2. Navigare alla root del progetto e lanciare il comando `npm install` per installare le dipendenze secondo quanto
-descritto nel file [package.json]({{ site.repo }}/blob/master/package.json).
-3. Installare [Ruby][install-ruby]*.
-4. Installare [Bundler][gembundler] con `gem install bundler`, con il quale sarai in grado di lanciare
-il comando `bundle install`. Questo comando installerà tutte le dipendenze Ruby come descritto nel file
-[Gemfile]({{ site.repo }}blob/master/Gemfile), come Jekyll e i suoi plugin.
+Il file [package.json]({{ site.repo }}/blob/master/package.json) include il seguente comando, che fa uso di  **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]** per la compilazione dei file sorgente di Bootstrap Italia:
 
-\* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Jekyll senza problemi. Gli step da
-seguire saranno:
-- Installazione di Ruby, che renderà disponibile il comando `gem install *`
-- Esecuzione di `gem install bundler`, che renderà disponibile il comando `bundle install`
+`npm run build`
+
+Tale comando crea una cartella `/dist`, dove vengono pubblicati i file compilati da utilizzare nelle proprie pagine HTML.
+
+Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che contiene tutti i file sorgente, e in particolare i file:
+
+- `/src/scss/bootstrap-italia.scss`
+- `/src/js/bootstrap-italia.js`
+
+## Ottimizzare la libreria
+
+È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli che non sono di interesse, attraverso le seguenti azioni:
+
+- commentare o rimuovere le linee relative allo stile del modulo da escludere nel file `src/scss/bootstrap-italia.scss`
+- commentare o rimuovere le linee relative agli script del modulo da escludere nel file `gulpfile.js`, nella lista `SOURCE_JS`
+- ricompilare la libreria con il comando `npm run build`
+
+Questo ricompilerà i file all'interno della cartella `dist`, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
+Di seguito un paio di esempi pratici.
+
+### Rimozione Datepicker
+
+Ad esempio, al momento il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)) è di default disabilitato in quanto non definitivo.
+ 
+Si può vedere come tale componente sia escluso dal processo di compilazione nei file:
+ 
+ `src/scss/bootstrap-italia.scss`:
+ 
+{% highlight html %}
+// @import "node_modules/pickadate/lib/themes/default";
+// @import "node_modules/pickadate/lib/themes/default.date";
+// @import "node_modules/pickadate/lib/themes/default.time";
+{% endhighlight %}
+
+`gulpfile.js`:
+
+{% highlight html %}
+// './node_modules/pickadate/lib/compressed/picker.js',
+// './node_modules/pickadate/lib/compressed/picker.date.js',
+// './node_modules/pickadate/lib/compressed/picker.time.js'
+(...)
+// './src/js/plugins/date-picker.js'
+{% endhighlight %}
+
+### Rimozione Cookiebar
+
+Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+
+`src/scss/bootstrap-italia.scss`:
+
+{% highlight html %}
+// @import "custom/cookiebar";
+{% endhighlight %}
+
+`gulpfile.js`:
+
+{% highlight html %}
+// './src/js/plugins/cookiebar.js',
+{% endhighlight %}
+
+In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.
+
+## Compilare la documentazione
+
+La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_gh_pages`.
+
+Per poter generare e testare la documentazione in ambiente locale, è necessario: 
+
+1. Installare [Ruby][install-ruby]*, che renderà disponibile il comando `gem install *`.
+2. Lanciare il comando `gem install bundler` per installare [Bundler][gembundler].
+3. Lanciare il comando `bundle install`. Questo comando, in modo simile a quanto avviene per `npm install` si occuperà di installare tutte le dipendenze Ruby come descritto nel file [Gemfile]({{ site.repo }}blob/master/Gemfile); in questo caso Jekyll e i suoi plugin.
+
+\* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Ruby e Jekyll senza problemi.
   
-Sono disponibili maggiori informazioni su Jekyll a [questa pagina][jekyll].
+Sono inoltre disponibili maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
-Una volta completati questi passi, sarà possibile lanciare gli script che seguono.
+### Script di compilazione
 
-### Utilizzare gli script NPM
-
-Il file [package.json]({{ site.repo }}/blob/master/package.json) include i seguenti comandi, che
-fanno uso di  **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]**:
-
-| Task | Description |
-| --- | --- |
-| `npm run-script build-code` | crea la cartella `/dist` dove sono pubblicati i file compilati da utilizzare nei progetti che fanno uso di Bootstrap Italia. |
-| `npm run-script build-docs` | crea la cartella `/docs/assets/dist` dove sono pubblicati i file compilati usati nella documentazione che stai leggendo. |
-| `npm run-script build` | esegue entrambe i precedenti comandi, compilando i file nelle cartelle `/dist` e `/docs/assets/dist`. |
-| `npm run-script watch` | Controlla le modifiche sui file soggetti a modifiche e ricompila i file `npm run docs-serve`. |
-| `npm start` | Pubblica i file della documenazione nella cartella `_gh_pages` e avvia Jekyll. |
-
-Esegui `npm run` per consultare tutti gli script disponibili.
-
-## Tema Bootstrap Italia
-
-Il tema è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][bootstrap-themes] sul sito Bootstrap.
-
-Le cartelle d'interesse sono:
-
-- `src` che contiene tutti i file sorgente.
-- `dist` che contiene i file di produzione da copiare ed utilizzare sul proprio HTML.
-
-<div class="alert alert-warning" role="alert">
-  TODO: definire meglio le inclusioni SASS e JS e le differenze nei compilati
-</div>
-
-### Codice sorgente
-
-Il codice sorgente è visibile a questo indirizzo.
-
-<a href="{{ site.repo }}tree/master/{{ site.download.source }}" class="btn btn-primary">Download source</a>
-
-## Documentazione
-
-La documentazione di Bootstrap Italia è gestita con [GitHub Pages](https://pages.github.com/) attraverso [Jekyll][jekyll];
-per questo è composta di file statici che risiedono sul branch `gh-pages`.
-
-Per poter testare la documentazione in ambiente locale, è sufficiente seguire le 
-
-1. Installare Jekyll seguendo le istruzioni nel paragrafo [tooling setup](#tooling-setup).
-2. Eseguire `npm start` (che a sua volta esegue il comando per lanciare il server locale `bundle exec jekyll build`)
-3. Navigare su `http://127.0.0.1:4000/bootstrap-italia/`.
+Il comando `npm start` avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l'esecuzione del comando `jekyll build --watch`. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:
+- ricompilare i file sorgente Javascript/SASS
+- ricompilare i file markdown della documentazione
+- rendere disponibile all'indirizzo `http://127.0.0.1:4000/` e ricaricare automaticamente la documentazione
 
 La struttura delle cartelle della documentazione è la seguente:
 
-- `_data`: assieme al file `config-yml` definiscono le variabili utilizzate nei vari template ([documentazione][jekyll-data])
+- `_data`: assieme al file `_config.yml` definiscono le variabili utilizzate nei vari template ([documentazione][jekyll-data])
 - `_includes`: contiene porzioni di codice HTML ([documentazione][jekyll-includes])
 - `_layouts`: definisce alcuni modelli di pagina ([documentazione][jekyll-themes])
 - `_plugins`: contiene funzioni che aumentano le funzionalità di Jekyll ([documentazione][jekyll-plugins])
 - `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
-- `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**.
+- `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**, servono soltanto per documentare la libreria in queste pagine che stai leggendo.
 
-Una volta lanciato il comando `npm start`, Jekyll pubblica il sito statico contenente la documentazione nella cartella `_gh_pages`.
+## Creare una nuova release
 
-### Pubblicare la documentazione
+Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-Per pubblicare la documentazione, prima di tutto è necessario generare i file statici nella cartella d'appoggio `_gh_pages`.
-Per fare questo, è sufficiente lanciare il comando:
+{% highlight sh %}
+$ npm run bump-patch
+{% endhighlight %}
 
-`bundle exec jekyll build`
+o `bump-minor` oppure `bump-major`, che produrrà:
 
-È necessario quindi portare tutto il contenuto di tale cartella sul branch `gh-pages` con il comando:
+* Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
+* Commit delle modifiche
+* Tag del commit con numero di versione in formato `vx.x.x`
 
-`npm run documentation-deploy-to-gh-pages`
+{% highlight sh %}
+$ git push --follow-tags
+{% endhighlight %}
 
-Tale comando creerà un nuovo commit sul branch `gh-pages`, lanciando così la pubblicazione immediata della documentazione
-su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/).
+che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
 
-[bootstrap-themes]: https://getbootstrap.com/docs/4.0/getting-started/theming/
+### CI e CD
+
+Sul branch `master` è eseguita la CI con CircleCI, configurata per eseguire il Job `build`.
+
+Il push delle tag sul repository eseguirà il CD composto da:
+
+#### Job `build`
+Build del progetto con `npm run build` 
+
+#### Job `github-update-pages`
+Build della documentazione e deploy sul branch `gh-pages` con `npm run documentation-deploy-to-gh-pages`.
+
+Il comando produrrà l'aggiornamento su GitHub Pages, rendendo la documentazione visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/)
+
+#### Job `github-create-release`
+Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases/) ed upload degli asset `bootstrap-italia.zip`, prodotti nella cartella `/dist` dai precedenti step, e creazione di una release note (che potrà poi essere successivamente modificata) contenente il changelog con `npm run release`.
+
+#### Job `npm-publish`
+
+`npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
+
+[bootstrap-themes]: https://getbootstrap.com/docs/4.1/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
 [sass]: http://sass-lang.com/
@@ -127,22 +176,9 @@ su GitHub Pages e visibile all'indirizzo [https://italia.github.io/bootstrap-ita
 [jekyll-themes]: https://jekyllrb.com/docs/themes/
 [jekyll-plugins]: https://jekyllrb.com/docs/plugins/
 
-### Creare una nuova release
-
-Per aggiornare il numero di versione e creare una nuova release, al momento è necessario effettuare i seguenti passi:
-
-* Aggiornamento numero di versione in formato semver x.x.x su file `package.json` e `_config.yml`
-* Lanciare i comandi `npm run build && npm run documentation-build`
-* Lanciare il comando `npm i` per aggiornare il file `package.lock`
-* Commit e push delle modifiche
-* Tag del commit con numero di versione in formato semver x.x.x
-* Creazione manuale di un file compresso `bootstrap-italia.zip` della cartella `/dist`
-* Scrivere le release notes su GitHub e allegare il suddetto file compresso
-* `npm publish` per aggiornare la versione su `npm`
-
 ---
 
-###### Continua la lettura >
+##### Continua la lettura >
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
 continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).

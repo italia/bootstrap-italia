@@ -1,14 +1,15 @@
-// ===== Scroll to Top ====
 $(window).on('scroll', function () {
-    if ($(this).scrollTop() >= 50) {
-        $('a[data-attribute*="return-to-top"]').fadeIn(200);
-    } else {
-        $('a[data-attribute*="return-to-top"]').fadeOut(200);
-    }
+  if ($('a[data-attribute*="back-to-top"]').length && $(this).scrollTop() >= 100) {
+    $('a[data-attribute*="back-to-top"]').addClass('back-to-top-show');
+  } else {
+    $('a[data-attribute*="back-to-top"]').removeClass('back-to-top-show');
+  }
 });
 
-$('a[data-attribute*="return-to-top"]').on('click', function() {
-    $('body,html').animate({
-        scrollTop : 0
-    }, 500);
+$('a[data-attribute*="back-to-top"]').on('click', function() {
+    $('body,html').animate(
+        {scrollTop : 0},
+        800,
+        'easeOutExpo'
+    );
 });

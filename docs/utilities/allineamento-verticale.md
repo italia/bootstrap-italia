@@ -13,12 +13,12 @@ Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bot
 Con elementi inline:
 
 {% capture example %}
-<span class="align-baseline p-1 bg-secondary">baseline</span>
-<span class="align-top p-1 bg-secondary">top</span>
-<span class="align-middle p-1 bg-secondary">middle</span>
-<span class="align-bottom p-1 bg-secondary">bottom</span>
-<span class="align-text-top p-1 bg-secondary">text-top</span>
-<span class="align-text-bottom p-1 bg-secondary">text-bottom</span>
+<span class="bg-primary text-white p-1 align-baseline">baseline</span>
+<span class="bg-primary text-white p-1 align-top">top</span>
+<span class="bg-primary text-white p-1 align-middle">middle</span>
+<span class="bg-primary text-white p-1 align-bottom">bottom</span>
+<span class="bg-primary text-white p-1 align-text-top">text-top</span>
+<span class="bg-primary text-white p-1 align-text-bottom">text-bottom</span>
 {% endcapture %}{% include example.html content=example %}
 
 Con le celle di tabella:

@@ -5,10 +5,7 @@
     - title: Introduzione
     - title: Strumenti di compilazione
     - title: Modificare Componenti
-    - title: Browsers e dispositivi
-    # - title: Accessibility # TODO che fare? Per ora rimossa perché fuori contesto - è onere delle l.g. definire questo argomento
-    # - title: Theming # TODO
-    # - title: Webpack # TODO
+    - title: Componente base
 
 - title: Contenuti
   pages:
@@ -25,39 +22,49 @@
     - title: Alert
     - title: Badge
     - title: Barre di Avanzamento
-    - title: Breadcrumb
+    - title: Breadcrumbs
     - title: Bottoni
       status: wip
-    - title: Button group
-      status: to do
+    #- title: Button group
+    #  status: to do
     - title: Card
+      status: wip
     - title: Carousel
-    - title: Checkbox
     - title: Collapse
-      status: wip
     - title: Dropdown
-      status: wip
     - title: Elenchi
     - title: Form
       status: wip
+    - title: Form Input
+      status: wip
+    - title: Form Select
+      status: wip
+    - title: Form Checkbox
+    - title: Form Radio Button
+    - title: Form Toggles
+    - title: Header
     - title: Hero
-    - title: Input group
+    #- title: Input group
+    #  status: to do
+    - title: Link list
       status: wip
+    - title: Megamenu
     - title: Modale
-      status: wip
-    - title: Navigazione
-      status: to do
+    #- title: Navigazione
+    #  status: to do
     - title: Navbar
-      status: to do
+    - title: Navscroll
     - title: Offcanvas
-    - title: Paginazione
+    - title: Pager
       status: wip
     - title: Popover
-    - title: Radio Button
-    - title: Scrollspy
     - title: Select
-    - title: Tab
+      status : wip
+    - title: Scrollspy
+    - title: Sidebar
+    - title: Skiplinks
       status: wip
+    - title: Tab
     - title: Tooltip
 
 - title: Componenti Aggiuntivi
@@ -68,9 +75,19 @@
     - title: Forward
       status: wip
     - title: Back to top
+    - title: Affix
       status: wip
-    - title: Datepicker
-      status: wip
+    - title: Callout
+    - title: Sections
+    - title: Steppers
+    - title: Thumbnav
+    - title: BottomNav
+    - title: ThumbNav
+    - title: Toolbar
+    - title: Notifications
+    - title: Avatar
+    #- title: Datepicker
+    #  status: wip
 
 - title: Utilities
   pages:
@@ -79,22 +96,26 @@
     - title: Bordi
     - title: Clearfix
     - title: Colori
-      status: wip
+    - title: Colori Custom
     - title: Dimensionamento
     - title: Display
     - title: Embed
     - title: Flex
     - title: Float
     - title: Griglie
-      status: work in progress
+      status: wip
     - title: Immagini sostitutive
     - title: Icone
       status: wip
     - title: Media object
-    - title: Position
+    - title: Ombreggiature
+    - title: Posizionamento
     - title: Screenreaders
     - title: Spaziature
     - title: Testo
     - title: Visibility
+    - title: History Back
 
-- title: Esempi
+#- title: Esempi
+
+- title: Informazioni

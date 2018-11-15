@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "hideElements": [
+      ".exclude-a11y-check",
+      ".highlight",
+      ".disabled"
+    ]
+  },
+  "comments": [
+    {
+      ".exclude-a11y-check": "esclude elementi esplicitamente",
+      ".highlight": "esclude esempi di codice",
+      ".disabled": "esclude elementi disabilitati"
+    }
+  ]
+}

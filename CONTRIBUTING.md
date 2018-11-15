@@ -18,13 +18,21 @@ richieste di nuove funzionalità e creazione di pull request, nel rispetto di qu
   
 - Rispettare le indicazioni che trovate di seguito per l'utilizzo di label, la segnalazione di bug, e la creazione di pull request.
 
+## Lavorazione di una issue
+
+Per prendere in carico una issue, è necessario effettuare il fork del repository sul proprio account, secondo normale flusso GitHub.
+
+Nel caso di contributor con accesso in scrittura al repository, è consigliabile creare un branch nominato in questo modo: `feature/##-descrizione-issue`, dove `##` è il numero di issue lavorata.
+
+Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/PULL_REQUEST_TEMPLATE.md).
+
 ## Issue e label
 
 Il repository di Bootstrap Italia usa alcune label per identificare le issue (criticità):
 
 - `accessibility` - Criticità riguardanti accessibilità.
 - `bug` - Segnalazione di malfunzionamenti nel codice o problemi tecnici con i tool di compilazione.
-- `design` - Criticità riguardanti il design dei componenti e la loro conformità alle [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://design-italia.readthedocs.io/it/stable/index.html).
+- `design` - Criticità riguardanti il design dei componenti e la loro conformità alle [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 - `docs` - Criticità riguardanti la documentazione dei componenti.
 - `duplicate` - Criticità o pull request duplicata.
 - `enhancement` - Criticità che possono riguardare nuovi componenti o nuove funzionalità.

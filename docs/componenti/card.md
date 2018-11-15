@@ -360,7 +360,7 @@ Le card possono essere organizzate in colonne simili a [Masonry](https://masonry
       <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
     </div>
   </div>
-  <div class="card bg-primary text-white text-center p-3">
+  <div class="card bg-dark text-white text-center p-3">
     <blockquote class="blockquote mb-0">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
       <footer class="blockquote-footer">

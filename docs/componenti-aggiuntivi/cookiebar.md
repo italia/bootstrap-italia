@@ -6,7 +6,7 @@ group: componenti-aggiuntivi
 toc: true
 ---
 
-## Perchè usarlo
+## Perché usarlo
 
 Come previsto dal Provvedimento dell'8 maggio 2014 sull'[individuazione delle modalità semplificate per l’informativa e l’acquisizione del consenso per l’uso dei cookie](http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884), è necessario inserire una barra informativa per i cookie (in gergo **Cookiebar**) qualora ci sia l'effettiva registrazione di dati personali.
 
@@ -16,7 +16,7 @@ Per maggiori informazioni si rimanda alla pagina [www.garanteprivacy.it/cookie](
 
 Bootstrap Italia ha predisposto un codice HTML da prendere e copiare all'interno delle proprie pagine web inserendolo appena dopo l'apertura del tag `body`.
 
-Esso può essere personalizzato nel testo, ma è importante lasciare inalterata la classe `cookiebar` perchè ad essa è collegata la funzione Javascript che gestisce la visualizzazione della Cookiebar.
+Esso può essere personalizzato nel testo, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione Javascript che gestisce la visualizzazione della Cookiebar.
 
 Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-accept="cookiebar"`.
 

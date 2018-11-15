@@ -1,0 +1,104 @@
+.btn {
+  padding: 12px 24px;
+  font-size: $btn-font-size;
+  white-space: initial;
+}
+
+.btn-xs,
+.btn-sm,
+.btn-lg {
+  border-radius: $btn-border-radius;
+  line-height: $input-btn-line-height;
+}
+
+.btn-xs {
+  padding: 8px 8px;
+  font-size: $btn-font-size-sm;
+  line-height: $input-btn-line-height-sm;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: $btn-font-size-sm;
+  line-height: $input-btn-line-height-sm;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: $btn-font-size-lg;
+  line-height: $input-btn-line-height-lg;
+}
+
+.btn-block {
+  @include border-radius(0);
+}
+
+.btn-primary {
+  &:disabled,
+  &.disabled {
+    color: $gray-label-disabled;
+    background-color: $gray-disabled;
+    border-color: $gray-border-disabled;
+  }
+}
+
+.btn-outline-secondary {
+  background: #FCFDFF;
+  box-shadow: inset 0 0 0 1px #E6E9F2;
+  &:hover {
+    box-shadow: inset 0 0 0 1px color-hover(#E6E9F2);
+  }
+}
+
+.bg-dark {
+  .btn-link {
+    color: $white;
+  }
+  .btn-primary {
+    @include button-variant($white, $primary, lighten($white, 7.5%), darken($primary, 10%), lighten($white, 10%), darken($primary, 12.5%));
+    color: $primary;
+    @include hover {
+      color: darken($primary, 10%);
+    }
+    &.disabled,
+    &:disabled {
+      color: darken($primary, 10%);
+    }
+  }
+  .btn-outline-primary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: inset 0 0 0 2px $white;
+    &:hover {
+      box-shadow: inset 0 0 0 2px color-hover($white);
+    }
+    &:focus,
+    &.focus {
+      box-shadow: inset 0 0 0 2px $white, 0 0 0 $btn-focus-width rgba($white, .5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show>&.dropdown-toggle {
+      box-shadow: inset 0 0 0 2px $white;
+    }
+  }
+  .btn-secondary {
+    @include button-variant($primary, $white, lighten($primary, 7.5%), darken($white, 10%), lighten($primary, 10%), darken($white, 12.5%));
+    color: $white;
+  }
+  .btn-outline-secondary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $btn-focus-width rgba($white, .5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show>&.dropdown-toggle {
+      box-shadow: none;
+    }
+  }
+}

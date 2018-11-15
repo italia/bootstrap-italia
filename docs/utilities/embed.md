@@ -21,7 +21,7 @@ relative. La classe `.embed-responsive-item` non è strettamente necessaria, ma 
 
 {% capture example %}
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" title="Video YouTube" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

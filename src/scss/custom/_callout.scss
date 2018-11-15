@@ -1,0 +1,305 @@
+.callout {
+	padding: 2.500rem 2.222rem;
+	border: 1px solid $neutral-1-a7;
+	position: relative;
+	max-width: 60ch;
+	margin: 1.75rem 0 1rem;
+	border-radius: 8px;
+
+	// Highlights version
+	&.callout-highlight {
+		border: none;
+		border-left: 2px solid rgba($gray-border-disabled,0.3);
+		border-radius: 0;
+		padding: 0 2.222rem;
+		.callout-title {
+			margin-bottom: 1.556rem;
+		}
+		// color versions
+		&.success {
+			border-color: rgba($success,0.2);
+		}
+		&.warning {
+			border-color: rgba($warning,0.2);
+		}
+		&.danger {
+			border-color: rgba($danger,0.2);
+		}
+		&.important {
+			border-color: rgba($complementary-3-a9,0.2);
+		}
+		&.note {
+			border-color:rgba($primary-a9,0.2);
+		}
+	}
+
+	// More version
+	&.callout-more {
+		background: #FAFAF7;
+		border: none;
+		border-radius: 0;
+		padding: 2.222rem 2.222rem;
+		position: relative;
+		// top triangle
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 48px 48px 0;
+			border-color: transparent $white transparent transparent;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 48px 0 0 48px;
+			border-color: transparent transparent transparent #E4E4DB;
+		}
+		// text
+		p {
+			font-size: 0.778rem;
+			line-height: 1.333rem;
+			color: $neutral-1-a10;
+		}
+		// title
+		.callout-title {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 2.222rem;
+			i {
+				font-size: 1.25rem;
+			}
+			span {
+				border-bottom: 2px solid $body-color;
+				padding-bottom: 0.1rem;
+				display: inline-block;
+   				margin-top: -0.111rem;
+			}
+		}
+	}
+
+	// color versions
+	&.success {
+		border-color: $success;
+		.callout-title {
+			color: $success;
+      .icon {
+        fill: $success;
+      }
+			span {
+				border-color: $success;
+			}
+		}
+	}
+	&.warning {
+		border-color: $warning;
+		.callout-title {
+			color: $warning;
+      .icon {
+        fill: $warning;
+      }
+			span {
+				border-color: $warning;
+			}
+		}
+	}
+	&.danger {
+		border-color: $danger;
+		.callout-title {
+			color: $danger;
+      .icon {
+        fill: $danger;
+      }
+			span {
+				border-color: $danger;
+			}
+		}
+	}
+	&.important {
+		border-color: $complementary-3-a9;
+		.callout-title {
+			color: $complementary-3-a9;
+      .icon {
+        fill: $complementary-3-a9;
+      }
+			span {
+				border-color: $complementary-3-a9;
+			}
+		}
+	}
+	&.note {
+		border-color: $primary-a9;
+		.callout-title {
+			color: $primary-a9;
+      .icon {
+        fill: $primary-a9;
+      }
+			span {
+				border-color: $primary-a9;
+			}
+		}
+	}
+
+	//title
+	.callout-title {
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1rem;
+		margin-right: 2.222rem;
+		letter-spacing: 0.06rem;
+		color: $neutral-1-a7;
+		.icon {
+      fill: $neutral-1-a7;
+			margin-right: 0.444rem;
+		}
+	}
+
+	// standard title
+	&:not(.callout-highlight):not(.callout-more) {
+		.callout-title {
+			position: absolute;
+			font-size: 1rem;
+			padding: 0 1.389rem;
+			background: $white;
+			top: -0.78em;
+		}
+	}
+
+	//text
+	p {
+		font-family: $font-family-serif;
+		font-size: 0.889rem;
+		color: $neutral-1-a7;
+		&:last-child {
+			margin: 0;
+		}
+		&.callout-big-text {
+			font-weight: bold;
+			font-size: 1.111rem;
+		}
+	}
+
+	//collapse
+	.collapse-div {
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: none;
+		.collapse-header {
+			margin-top: 1.333rem;
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid $gray-border-disabled;
+			padding: 1.333rem 0 0;
+			margin-top: 0;
+			// toggle restyle
+			.callout-more-toggle {
+				padding: 0;
+				border: none;
+				width: auto;
+				font-weight: normal;
+				display: flex;
+				align-items: center;
+				color: $primary;
+				&:hover, &:focus, &:active {
+					background: none;
+				}
+				&:hover {
+					color: $link-hover-color;
+					// plus sign
+					span {
+						border-color: $link-hover-color;
+						&:before, &:after {
+							background: $link-hover-color;;
+						}
+					}
+				}
+				&:active {
+					color: $primary;
+				}
+				&:before, &:after {
+					display: none;
+				}
+				// plus sign
+				span {
+					position: relative;
+					height: 15px;
+					width: 15px;
+					margin-left: 0.444rem;
+					margin-top: 0.111rem;
+					border: 1px solid $primary;
+					border-radius: 50%;
+					display: inline-block;
+					&:before, &:after {
+						content: '';
+						position: absolute;
+						background: $primary;
+					}
+					// plus h
+					&:before {
+						width: 9px;
+						height: 1px;
+						top: 6px;
+						left: 2px;
+					}
+					// plus v
+					&:after {
+						height: 9px;
+						width: 1px;
+						top: 0;
+						left: 6px;
+						transform: translateY(2px);
+						transition: transform 0.2s;
+					}
+				}
+				// expanded version
+				&[aria-expanded=true] {
+					span:after {
+						transform: translateY(2px) rotate(90deg);
+					}
+				}
+			}
+
+			.callout-more-download {
+				margin-left: auto;
+				font-weight: normal;
+			}
+		}
+		.collapse-body {
+			padding: 0;
+			p:last-child {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+}
+
+//fix IE max width ch value (substitute with rem)
+_:-ms-fullscreen, .callout {
+	max-width: 32rem;
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	.callout {
+		// Highlights version
+		&.callout-highlight {
+			padding: 0 0 0 2.222rem;
+		}
+		// More version
+		&.callout-more {
+			p {
+				font-size: 0.722rem;
+			}
+		}
+
+	}
+}

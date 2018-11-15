@@ -1,0 +1,96 @@
+/*back to top*/
+.back-to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: $primary;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border-radius: 50%;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  transition: $transition-base, transform 0.25s cubic-bezier(.75,-0.5,0,1.75), visibility 0.3s linear, opacity 0.3s ease-in-out;
+  z-index: 1;
+  transform: scale(0.7);
+  transform-origin: center center;
+  //fade in
+  &.back-to-top-show {
+    visibility: visible;
+    opacity: 1;
+    transition: $transition-base, transform 0.05s ease-out, visibility 0 linear 0, opacity 0.1s ease-in-out;
+    transform: scale(1);
+  }
+  &:hover {
+    background: darken($primary, 10%);
+    text-decoration: none;
+  }
+  //caret
+  .icon {
+    margin: 0;
+    position: relative;
+    transform: scale(.75);
+    top: 4px;
+    &:before {
+      margin: 0;
+      color: $white;
+    }
+  }
+
+  //shadow
+  &.shadow {
+    &:hover {
+      box-shadow: 0 0.3rem 0.75rem rgba(0,0,0,.3) !important;
+    }
+  }
+
+  //dark version
+  &.dark {
+    background: #fff;
+    &:hover {
+      background: $neutral-1-a1;
+    }
+
+    //caret
+    .icon {
+      &:before {
+        color: $neutral-1-a8;
+      }
+    }
+
+  }
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+  /*back to top*/
+  .back-to-top {
+    width: 56px;
+    height: 56px;
+    .icon {
+      transform: scale(1);
+      top: 10px;
+    }
+    //small version
+    &.back-to-top-small {
+      width: 40px;
+      height: 40px;
+      //caret
+      .icon {
+        transform: scale(.75);
+        top: 4px;
+      }
+    }
+  }
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+  .back-to-top {
+    bottom: 32px;
+    right: 32px;
+  }
+}

@@ -74,31 +74,31 @@ Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalto
 
 ## Le opzioni
 
-Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perchè la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
 Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th class="text-center">
+      <th scope="col"></th>
+      <th class="text-center" scope="col">
         Extra small<br>
         <small>&lt;576px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Small<br>
         <small>&ge;576px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Medium<br>
         <small>&ge;768px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Large<br>
         <small>&ge;992px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Extra large<br>
         <small>&ge;1200px</small>
       </th>
@@ -202,7 +202,7 @@ La disposizione automatica per le colonne della griglia di flexbox significa anc
       1 di 3
     </div>
     <div class="col-6">
-      2 di 3 (wider)
+      2 di 3 (larga 6/12)
     </div>
     <div class="col">
       3 di 3
@@ -213,7 +213,7 @@ La disposizione automatica per le colonne della griglia di flexbox significa anc
       1 di 3
     </div>
     <div class="col-5">
-      2 di 3 (wider)
+      2 di 3 (larga 5/12)
     </div>
     <div class="col">
       3 di 3
@@ -511,24 +511,24 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th class="text-center">
+      <th scope="col"></th>
+      <th class="text-center" scope="col">
         Extra small<br>
         <small>&lt;576px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Small<br>
         <small>&ge;576px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Medium<br>
         <small>&ge;768px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Large<br>
         <small>&ge;992px</small>
       </th>
-      <th class="text-center">
+      <th class="text-center" scope="col">
         Extra large<br>
         <small>&ge;1200px</small>
       </th>

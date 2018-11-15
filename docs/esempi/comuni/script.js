@@ -1,4 +1,0 @@
-
-$(function(){
-  $('.modal').modal('show')
-})

@@ -185,39 +185,6 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
 </table>
 {% endcapture %}{% include example.html content=example %}
 
-{% capture example %}
-<table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Cognome</th>
-      <th scope="col">Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mario</td>
-      <td>Verdi</td>
-      <td>mario.verdi</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Francesco</td>
-      <td>Bianchi</td>
-      <td>francesco.bianchi</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alessandro</td>
-      <td>Rossi</td>
-      <td>alessandro.rossi</td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}{% include example.html content=example %}
-
 ## Tabella con bordi
 
 Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su tutte le celle.
@@ -255,8 +222,12 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
 </table>
 {% endcapture %}{% include example.html content=example %}
 
+## Tabella senza bordi
+
+Aggiungi la classe `.table-borderless` per una tabella senza bordi.
+
 {% capture example %}
-<table class="table table-bordered table-dark">
+<table class="table table-borderless">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -325,78 +296,12 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
 </table>
 {% endcapture %}{% include example.html content=example %}
 
-{% capture example %}
-<table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Cognome</th>
-      <th scope="col">Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mario</td>
-      <td>Verdi</td>
-      <td>mario.verdi</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Francesco</td>
-      <td>Bianchi</td>
-      <td>francesco.bianchi</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alessandro</td>
-      <td>Rossi</td>
-      <td>alessandro.rossi</td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}{% include example.html content=example %}
-
 ## Tabella compatta
 
 Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell padding.
 
 {% capture example %}
 <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Cognome</th>
-      <th scope="col">Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mario</td>
-      <td>Verdi</td>
-      <td>mario.verdi</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Francesco</td>
-      <td>Bianchi</td>
-      <td>francesco.bianchi</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alessandro</td>
-      <td>Rossi</td>
-      <td>alessandro.rossi</td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}{% include example.html content=example %}
-
-{% capture example %}
-<table class="table table-sm table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -471,86 +376,6 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
 <tr>
   <td class="table-active">...</td>{% for color in site.data.theme-colors %}
   <td class="table-{{ color.name }}">...</td>{% endfor %}
-</tr>
-{% endhighlight %}
-
-Le consuete varianti di sfondo della tabella non sono disponibili con la tabella scura, tuttavia, è possibile utilizzare [text or background utilities]({{ site.baseurl }}/docs/utilities/colors/) per ottenere stili simili.
- 
-
-<div class="bd-example">
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="bg-primary">
-        <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-success">
-        <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-info">
-        <th scope="row">5</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-warning">
-        <th scope="row">7</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-      <tr class="bg-danger">
-        <th scope="row">9</th>
-        <td>Cell</td>
-        <td>Cell</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-{% highlight html %}
-<!-- On rows -->
-<tr class="bg-primary">...</tr>
-<tr class="bg-success">...</tr>
-<tr class="bg-warning">...</tr>
-<tr class="bg-danger">...</tr>
-<tr class="bg-info">...</tr>
-
-<!-- On cells (`td` or `th`) -->
-<tr>
-  <td class="bg-primary">...</td>
-  <td class="bg-success">...</td>
-  <td class="bg-warning">...</td>
-  <td class="bg-danger">...</td>
-  <td class="bg-info">...</td>
 </tr>
 {% endhighlight %}
 

@@ -25,7 +25,7 @@ Scorri l'area sottostante la barra di navigazione e guarda come la classe `.acti
 successiva evidenziandola:
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <nav id="navbar-example2" class="navbar bg-white border">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -62,7 +62,7 @@ successiva evidenziandola:
 </div>
 
 {% highlight html %}
-<nav id="navbar-example2" class="navbar navbar-light bg-light">
+<nav id="navbar-example2" class="navbar bg-white border">
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -103,19 +103,19 @@ Scrollspy funziona anche con `.nav` annidati. Se una sottovoce di menu di naviga
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
-      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column">
+      <nav id="navbar-example3" class="navbar bg-white border flex-column">
         <a class="navbar-brand" href="#">Navbar</a>
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#articolo-1">Articolo 1</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#articolo-1-1">Articolo 1-1</a>
-            <a class="nav-link ml-3 my-1" href="#articolo-1-2">Articolo 1-2</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 1-1</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 1-2</a>
           </nav>
           <a class="nav-link" href="#articolo-2">Articolo 2</a>
           <a class="nav-link" href="#articolo-3">Articolo 3</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#articolo-3-1">Articolo 3-1</a>
-            <a class="nav-link ml-3 my-1" href="#articolo-3-2">Articolo 3-2</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 3-1</a>
+            <a class="nav-link ml-3 my-1" href="#">Articolo 3-2</a>
           </nav>
         </nav>
       </nav>
@@ -147,14 +147,14 @@ Scrollspy funziona anche con `.nav` annidati. Se una sottovoce di menu di naviga
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#articolo-1">Articolo 1</a>
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link ml-3 my-1" href="#articolo-1-1">Articolo 1-1</a>
-      <a class="nav-link ml-3 my-1" href="#articolo-1-2">Articolo 1-2</a>
+      <a class="nav-link ml-3 my-1" href="#">Articolo 1-1</a>
+      <a class="nav-link ml-3 my-1" href="#">Articolo 1-2</a>
     </nav>
     <a class="nav-link" href="#articolo-2">Item2</a>
     <a class="nav-link" href="#articolo-3">Item3</a>
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link ml-3 my-1" href="#articolo-3-1">Articolo 3-1</a>
-      <a class="nav-link ml-3 my-1" href="#articolo-3-2">Articolo 3-2</a>
+      <a class="nav-link ml-3 my-1" href="#">Articolo 3-1</a>
+      <a class="nav-link ml-3 my-1" href="#">Articolo 3-2</a>
     </nav>
   </nav>
 </nav>

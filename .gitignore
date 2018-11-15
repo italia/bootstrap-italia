@@ -2,12 +2,12 @@
 _gh_pages
 
 # Ignore dist files
+dist
 docs/assets/dist
 
 # Ignore ruby files
 .ruby-version
 .bundle
-Gemfile.lock
 vendor/cache
 vendor/bundle
 
