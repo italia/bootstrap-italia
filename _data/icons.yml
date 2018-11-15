@@ -36,6 +36,7 @@
 - it-minus
 - it-more-actions
 - it-more-items
+- it-note
 - it-pa
 - it-password-invisible
 - it-password-visible
@@ -69,6 +70,8 @@
 - it-medium
 - it-twitter-square
 - it-twitter
+- it-warning
+- it-warning-circle
 - it-whatsapp-square
 - it-whatsapp
 - it-youtube
