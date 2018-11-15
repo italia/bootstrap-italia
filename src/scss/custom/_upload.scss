@@ -10,6 +10,7 @@
 	z-index: -1;
 }
 
+//input file
 .upload {
 	//button styling
 	&[type=file] + label {
@@ -38,6 +39,79 @@
 		& + label {
 			background-color: darken($primary, 10%);
 			outline: auto 5px -webkit-focus-ring-color;
+		}
+	}
+
+}
+
+//pictures wall version
+.upload-pictures-wall {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	//grid list element
+	& > li {
+		list-style-type: none;
+		margin-right: $v-gap;
+		margin-bottom: $v-gap;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	//input file
+	.upload {
+		//button styling
+		&[type=file] + label {
+			height: 128px;
+			width: 128px;
+			border-radius: 0;
+			padding: 0;
+			border: 2px dashed $primary-a1;
+			background-color: lighten($primary-a1,10%);
+			color: $primary-a2;
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			transition: border-color 0.2s;
+			svg {
+				display: block;
+				fill: $primary-a2;
+				margin: 0 auto;
+				width: 48px;
+				height: 48px;
+				flex-shrink: 0;
+			}
+			&:hover {
+				border: 2px dashed $primary-a3;
+			}
+		}
+		&:focus,&:active {
+			&[type=file] + label {
+				border: 2px dashed $primary-a3;
+			}
+		}
+	}
+	//image
+	.upload-image {
+		flex-shrink: 0;
+		width: 128px;
+		height: 128px;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	//drag and drop
+	.upload-dragdrop {
+		position: relative;
+		&.is-dragover {
+			.upload {
+				//button styling
+				&[type=file] + label {
+					border: 2px dashed $primary-a3;
+				}
+			}
 		}
 	}
 }
@@ -147,6 +221,7 @@
 	}
 }
 
+//avatar version -------------------------------- START
 .upload-avatar-container {
 	position: absolute;
 	left: 0;
@@ -214,12 +289,77 @@
 			}
 		}
 	}
+}
+//avatar version -------------------------------- END
 
+.upload-dragdrop {
+	display: inline-flex;
+	align-items: center;
+	&.is-dragover, &.is-loading {
+		.upload-dragdrop-image {
+			img {
+				transform: translateX(-50%) translateY(-50%) scale(0.8);
+			}
+		}
+	}
+	&.is-loading {
+
+	}
+}
+
+//drag and drop text
+.upload-dragdrop-text {
+	p {
+		margin: 0;
+		font-size: 0.889rem;
+		color: $secondary;
+		&.upload-dragdrop-weight {
+			color: $neutral-1-a4;
+			font-size: 0.778rem;
+			svg {
+				fill: $neutral-1-a4;
+			}
+		}
+	}
+	h5 {
+		margin: 0;
+		font-size: 1.333rem;
+		font-weight: 700;
+		color: $neutral-1;
+	}
+}
+
+//drag and drop version
+.upload-dragdrop-image {
+	width: 180px;
+	height: 180px;
+	position: relative;
+	margin-right: 36px;
+	/*&:hover {
+		img {
+			transform: translateX(-50%) translateY(-50%) scale(0.8);
+		}
+	}*/
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		transform-origin: center center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: transform 0.2s cubic-bezier(.57,.21,.69,1.25);
+		transform: translateX(-50%) translateY(-50%);
+	}
 }
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
 
+	//input file
 	.upload {
 		&[type=file] + label {
 			font-size: 0.889rem;
@@ -240,6 +380,8 @@
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+	//avatar version -------------------------------- START
 	.avatar-upload:hover {
 		.upload-avatar-container {
 			opacity: 1;
@@ -307,5 +449,6 @@
 			}
 		}
 	}
+	//avatar version -------------------------------- END
 
 }

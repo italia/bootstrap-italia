@@ -20,11 +20,13 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
 {% capture example %}
-<input type="file" name="upload11" id="upload1" class="upload" multiple="multiple" />
-<label for="upload1">
-	<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
-	<span>Upload</span>
-</label>
+<form method="post" action="" enctype="multipart/form-data">
+	<input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
+	<label for="upload1">
+		<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
+		<span>Upload</span>
+	</label>
+</form>
 <ul class="upload-file-list">
 	<li class="upload-file success">
 		<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
@@ -81,11 +83,13 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
 {% capture example %}
-<input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
-<label for="upload2">
-	<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
-	<span>Upload</span>
-</label>
+<form method="post" action="" enctype="multipart/form-data">
+	<input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
+	<label for="upload2">
+		<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
+		<span>Upload</span>
+	</label>
+</form>
 <ul class="upload-file-list upload-file-list-image">
 	<li class="upload-file success">
 		<div class="upload-image">
@@ -158,13 +162,13 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 			<div class="avatar-upload-wrapper">
 				<div class="avatar size-xxl avatar-upload">
 					<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
-					<div class="upload-avatar-container">
+					<form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
 						<input type="file" name="upload3" id="upload3" class="upload-avatar"/>
 						<label for="upload3">
 							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
 							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
 						</label>
-					</div>
+					</form>
 				</div>
 				<div class="avatar-upload-icon">
 					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
@@ -175,14 +179,14 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 			<p><strong>Dimensione Piccola</strong></p>
 			<div class="avatar-upload-wrapper size-sm">
 				<div class="avatar size-xxl avatar-upload">
-					<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
-					<div class="upload-avatar-container">
+					<img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Marisa Rossi">
+					<form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
 						<input type="file" name="upload4" id="upload4" class="upload-avatar"/>
 						<label for="upload4">
 							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
 							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
 						</label>
-					</div>
+					</form>
 				</div>
 				<div class="avatar-upload-icon">
 					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
@@ -192,3 +196,71 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 	</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Pictures wall upload
+
+È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
+
+{% capture example %}
+<ul class="upload-pictures-wall">
+	<li>
+		<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+			<input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
+			<label for="upload5">
+				<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+				<span>Add photo</span>
+			</label>
+		</form>
+	</li>
+</ul>
+
+<p class="mt-5"><strong>Esempio Immagini Caricate</strong></p>
+
+<ul class="upload-pictures-wall">
+	<li>
+		<div class="upload-image">
+			<img src="https://picsum.photos/128/128?image=1020" alt="">
+		</div>
+	</li>
+	<li>
+		<div class="upload-image">
+			<img src="https://picsum.photos/128/128?image=1038" alt="">
+		</div>
+	</li>
+	<li>
+		<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+			<input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
+			<label for="upload6">
+				<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
+				<span>Add photo</span>
+			</label>
+		</form>
+	</li>
+</ul>
+
+{% endcapture %}{% include example.html content=example %}
+
+## Drag and drop upload
+
+È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
+
+<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+	<div class="upload-dragdrop-image">
+		<img src="https://picsum.photos/180/180?image=1038" alt="">
+		<div class="upload-dragdrop-loading">
+			
+		</div>
+	</div>
+	<div class="upload-dragdrop-text">
+		<p class="upload-dragdrop-weight">
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+		</p>
+		<h5>Trascina il file per caricarlo</h5>
+		<p>oppure selezionalo dal desk</p>
+	</div>
+</form>
+
+
+
+
+
