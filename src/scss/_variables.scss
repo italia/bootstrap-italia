@@ -454,6 +454,28 @@ $header-center-theme-light-text-color:$primary-a6;
 $header-center-button-left:10px;
 $header-nav-icon-arrow-megamenu-distance:14px;
 
+// select
+$select-label-size:0.7777777777777778rem;
+$select-label-color:$neutral-1-a8;
+$select-label-weight:600;
+$select-button-border:1px solid $select-label-color;
+$select-button-padding:$v-gap;
+$select-button-text-size:1rem;
+$select-dd-shadow:$dialog-shadow;
+$select-dd-text-size:0.8888888888888888rem;
+$select-dd-link-color:$primary;
+$select-dd-link-color-active:$neutral-1-a10;
+$select-dd-small-separator-width:65px;
+$select-dd-small-separator-bg:$neutral-1-a1;
+$select-dd-icon-size:$v-gap*3;
+$select-dd-icon-flag-top:10px;
+$select-dd-pill-font-size:0.7777777777777778rem; 
+$select-dd-pill-distance:$v-gap;
+$select-dd-pill-font-w:700;
+$select-dd-header-size:0.8333333333333334rem;
+$select-dd-header-w:600;
+$select-dd-check-height:30px;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
