@@ -16,6 +16,7 @@
 				font-weight: $card-h5-fw;
 				color: $card-h5-color;
 				margin-bottom: $v-gap*2;
+				transition: all 0.3s;
 				&.big-heading{
 					font-size:$card-big-head-size;
 					line-height:$card-big-head-l-h;
@@ -147,6 +148,63 @@
 		}
 		a.read-more{
 			position: inherit;
+		}
+	}
+	// special card
+	&.special-card{
+		.img-responsive-wrapper{
+			overflow: visible;
+			position: relative;
+			width: $special-card-img-width;
+			margin-bottom: $card-padding;
+			&::before,&::after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			&:before{
+				background: $primary-a3;
+				left:$card-padding;
+				top:$card-padding;
+				opacity: 0.3;
+				transition: all 0.3s;
+			}
+			&:after{
+				background: $primary-a3;
+				left:$card-padding/2;
+				top:$card-padding/2;
+				transition: all 0.3s;
+			}
+			.img-responsive{
+				padding-bottom: 122.98%; /* image proportion 214 x 174 */
+				z-index: 1;
+				.img-wrapper{
+				}
+			}
+		}
+		.head-tags{
+			margin-bottom:$card-padding; 
+			span.data{
+				font-weight: normal;
+			}
+		}
+		&:hover{
+			text-decoration: none;
+			h5{
+				text-decoration: underline;
+				color: $primary-a6;
+			}
+			.img-responsive-wrapper{
+				&:before{
+					background: $primary-a6;
+					opacity: 0.3;
+				}
+				&:after{
+					background: $primary-a6;
+				}
+			}
 		}
 	}
 	// card big
