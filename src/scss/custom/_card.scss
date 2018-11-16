@@ -17,6 +17,16 @@
 				}
 			}
 		}
+		h6.card-subtitle{
+			font-weight: normal;
+			margin-bottom: $v-gap*2;
+			margin-top: -$v-gap*2;
+		}
+		a{
+			h5.card-title{
+				color: $card-link-color;
+			}
+		}
 		p{
 			font-family: $font-family-serif;
 			font-size: $card-p-size;
@@ -89,6 +99,13 @@
 			flex-shrink: 0;
 		}
 	}
+	// simple link
+	.simple-link{
+		font-weight: 600;
+		font-size: $card-firma-size;
+		margin-top: $card-simple-link-margin;
+		display: block;
+	}
 }
 // Contextual variation
 .row{
@@ -99,7 +116,7 @@
 		}
 		&:last-child{
 			> .card{
-					border-right: none;
+					border-right: 1px solid transparent;
 			}
 		}
 	}
@@ -121,6 +138,8 @@ a.read-more{
 		height:$card-link-icon-size ;
 	}
 }
+
+
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) { 

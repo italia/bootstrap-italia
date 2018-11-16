@@ -467,7 +467,7 @@ $card-border-color:$neutral-1-a2;
 $card-small-line-height:1px;
 $card-small-line-w:128px;
 $card-small-line-color:$neutral-1-a2;
-$card-small-line-margin:$v-gap*8;
+$card-small-line-margin:$v-gap*6;
 $card-category-size:0.7777777777777778rem;
 $card-category-l-spacing:0.1px;
 $card-category-m-bottom:$v-gap*2;
@@ -478,6 +478,7 @@ $card-link-color: $primary-a6;
 $card-link-icon-size:$v-gap*2;
 $card-cat-icon-block-margin: $v-gap*2;
 $card-cat-icon-size: $v-gap*5;
+$card-simple-link-margin: $v-gap*4;
 
 // Grid breakpoints
 //
