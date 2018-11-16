@@ -60,6 +60,7 @@ const Paths = {
     'src/js/plugins/navscroll.js',
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
+    'src/js/plugins/imgresponsive.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
