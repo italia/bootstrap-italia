@@ -70,6 +70,25 @@
 		position: absolute;
 		bottom: $v-gap*3;
 	}
+	.categoryicon-top{
+		margin-bottom: $card-cat-icon-block-margin;
+		display: flex;
+		align-items: center;
+		.text{
+			font-size: $card-category-size;
+			text-transform: uppercase;
+			letter-spacing: $card-category-l-spacing;
+			color: $card-p-color;
+			line-height: 1rem;
+		}
+		.icon{
+			width: $card-cat-icon-size;
+			height: $card-cat-icon-size;
+			fill:$card-link-color;
+			margin-right: $v-gap*1;
+			flex-shrink: 0;
+		}
+	}
 }
 // Contextual variation
 .row{
