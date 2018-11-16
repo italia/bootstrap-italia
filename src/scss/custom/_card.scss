@@ -1,0 +1,128 @@
+.card{
+	border:none;
+	padding: 0;
+	position: relative;
+	.card-body{
+		padding:$card-padding;
+		h5{
+			&.card-title{
+				font-size:$card-h5-size;
+				line-height: $card-h5-line-height;
+				font-weight: $card-h5-fw;
+				color: $card-h5-color;
+				margin-bottom: $v-gap*2;
+				&.big-heading{
+					font-size:$card-big-head-size;
+					line-height:$card-big-head-l-h;
+				}
+			}
+		}
+		p{
+			font-family: $font-family-serif;
+			font-size: $card-p-size;
+			line-height:$card-p-l-h; 
+			color: $card-p-color;
+		}
+		.firma{
+			font-style: italic;
+			font-family: $font-family-serif;
+			color: $card-p-color; 
+			font-weight: 700;
+			font-size: $card-firma-size;
+			margin-bottom: $v-gap*2;
+			display: block;
+		}
+		.category-top{
+			font-size: $card-category-size;
+			text-transform: uppercase;
+			color: $card-p-color;
+			margin-bottom: $card-category-m-bottom;
+			a.category{
+				color: $card-p-color;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			.category{
+				font-weight: bold;
+				letter-spacing: $card-category-l-spacing;
+			}
+			.data{
+				&:before{
+					content: '—';
+					display: inline-block;
+					margin: 0 $v-gap;
+				}
+			}
+		}
+	}
+	// line
+	&:after{
+		content: '';
+		height: $card-small-line-height ;
+		width: $card-small-line-w;
+		background: $card-small-line-color;
+		display: block;
+		margin-top: $card-small-line-margin;
+		margin-left: $card-padding;
+	}
+	a.read-more{
+		position: absolute;
+		bottom: $v-gap*3;
+	}
+}
+// Contextual variation
+.row{
+	[class*="col-"]{
+		//car variation inside cols
+		> .card{
+			min-height: 100%;
+		}
+		&:last-child{
+			> .card{
+					border-right: none;
+			}
+		}
+	}
+}
+
+// read more text
+a.read-more{
+	display: flex;
+	align-items: center;
+	color: $card-link-color;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: $card-category-l-spacing;
+	font-size: $card-category-size;
+	.icon{
+		margin-left: $v-gap;
+		fill:$card-link-color;
+		width:$card-link-icon-size ;
+		height:$card-link-icon-size ;
+	}
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
+  
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+  
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .card{
+		border:none;
+		border-right: 1px solid $card-border-color;
+		margin-right: $grid-gutter-width/2;
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+  
+}
