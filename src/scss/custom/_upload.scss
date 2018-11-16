@@ -102,18 +102,6 @@
 			height: 100%;
 		}
 	}
-	//drag and drop
-	.upload-dragdrop {
-		position: relative;
-		&.is-dragover {
-			.upload {
-				//button styling
-				&[type=file] + label {
-					border: 2px dashed $primary-a3;
-				}
-			}
-		}
-	}
 }
 
 //files list
@@ -292,18 +280,37 @@
 }
 //avatar version -------------------------------- END
 
+//drag/drop version ----------------------------- START
 .upload-dragdrop {
 	display: inline-flex;
 	align-items: center;
-	&.is-dragover, &.is-loading {
+	&.dragover, &.loading {
 		.upload-dragdrop-image {
 			img {
-				transform: translateX(-50%) translateY(-50%) scale(0.8);
+				transform: translateX(-50%) translateY(-50%) scale(0.85);
 			}
 		}
 	}
-	&.is-loading {
-
+	&.loading {
+		p:not(.upload-dragdrop-weight) {
+			font-style: italic;
+		}
+		.upload-dragdrop-loading {
+			opacity: 1;
+		}
+	}
+	&.loading, &.success {
+		.upload-dragdrop-text {
+			.upload-dragdrop-weight {
+					visibility: visible;
+			}
+		}
+	}
+	&.success {
+		.upload-dragdrop-success {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 }
 
@@ -316,6 +323,7 @@
 		&.upload-dragdrop-weight {
 			color: $neutral-1-a4;
 			font-size: 0.778rem;
+			visibility: hidden;
 			svg {
 				fill: $neutral-1-a4;
 			}
@@ -329,17 +337,49 @@
 	}
 }
 
-//drag and drop version
-.upload-dragdrop-image {
-	width: 180px;
-	height: 180px;
-	position: relative;
-	margin-right: 36px;
-	/*&:hover {
-		img {
-			transform: translateX(-50%) translateY(-50%) scale(0.8);
+.upload-dragdrop-input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	&[type=file] + label {
+		text-decoration: underline;
+		color: $primary;
+		cursor: pointer;
+	}
+}
+
+.upload-dragdrop-loading {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 0.2s;
+	.upload-progress {
+		transform: scale(0.71);
+		position: absolute;
+		top: -49px; //18
+		left: -49px;
+		.clProg {
+			font-weight: 700;
 		}
-	}*/
+	}
+}
+
+.upload-dragdrop-image {
+	width: 128px;
+	height: 128px;
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 16px;
 	img {
 		display: block;
 		width: 100%;
@@ -351,10 +391,31 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transition: transform 0.2s cubic-bezier(.57,.21,.69,1.25);
+		transition: transform 0.4s cubic-bezier(.33,1.07,.54,1);
 		transform: translateX(-50%) translateY(-50%);
 	}
+	.upload-dragdrop-success {
+		width: 36px;
+		height: 36px;
+		position: absolute;
+		top: calc(50% - 18px);
+		left: 20px;
+		background: $primary;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transform: scale(0.6);
+		transition: opacity 0.2s, transform 0.5s cubic-bezier(.75,-0.5,0,1.75);
+		svg {
+			fill: $white;
+			width: 30px;
+			height: 30px;
+		}
+	}
 }
+//drag/drop version ----------------------------- END
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
@@ -370,6 +431,24 @@
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+	//drag and drop version
+	.upload-dragdrop-image {
+		width: 180px;
+		height: 180px;
+		margin-right: 32px;
+		.upload-dragdrop-success {
+			left: 28px;
+		}
+	}
+
+	.upload-dragdrop-loading {
+		.upload-progress {
+			transform: scale(0.5);
+			top: -136px; //18
+			left: -136px;
+		}
+	}
 
 }
 

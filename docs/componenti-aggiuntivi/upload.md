@@ -11,6 +11,61 @@ toc: true
 
 </style>
 
+<script>
+	//attiva tooltip
+	document.addEventListener("DOMContentLoaded", function() {
+		$("#divProgress").circularloader({
+			backgroundColor: "#ffffff",//background colour of inner circle
+			fontColor: "#000000",//font color of progress text
+			fontSize: "40px",//font size of progress text
+			radius: 130,//radius of circle
+			progressBarBackground: "transparent",//background colour of circular progress Bar
+			progressBarColor: "#0073e6",//colour of circular progress bar
+			progressBarWidth: 96,//progress bar width
+			progressPercent: 75,//progress percentage out of 100
+		});
+
+	})
+
+	function changeState(state) {
+			$('#uploadChangeStateTarget').removeClass('dragover');
+			$('#uploadChangeStateTarget').removeClass('loading');
+			$('#uploadChangeStateTarget').removeClass('success');
+			$('#uploadChangeStateTarget').addClass(state);
+			if (state == "loading") {
+				$("#divProgress2").circularloader({
+					backgroundColor: "#ffffff",//background colour of inner circle
+					fontColor: "#000000",//font color of progress text
+					fontSize: "40px",//font size of progress text
+					radius: 130,//radius of circle
+					progressBarBackground: "transparent",//background colour of circular progress Bar
+					progressBarColor: "#0073e6",//colour of circular progress bar
+					progressBarWidth: 96,//progress bar width
+					progressPercent: 0,//progress percentage out of 100
+				});
+				setTimeout(function(){
+					$("#divProgress2").circularloader({
+						progressPercent: 33
+					});
+				}, 1000);
+				setTimeout(function(){
+					$("#divProgress2").circularloader({
+						progressPercent: 66
+					});
+				}, 2000);
+				setTimeout(function(){
+					$("#divProgress2").circularloader({
+						progressPercent: 99
+					});
+				}, 3000);
+				setTimeout(function(){
+						$('#uploadChangeStateTarget').removeClass('loading');
+						$('#uploadChangeStateTarget').addClass('success');
+				}, 3500);
+			}
+		}
+</script>
+
 Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tellus et quam tristique, vitae gravida odio vulputate. Aliquam sit amet velit ac neque iaculis laoreet. Nunc ac nisi consectetur, pharetra ante vitae, vestibulum mi. Etiam lorem nulla, viverra ut maximus non, tincidunt a erat. Aenean at dui purus. Mauris sit amet arcu quis enim rhoncus vulputate in et nisl. In ultricies pharetra scelerisque.
 
 ## Button upload with list
@@ -204,7 +259,7 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 {% capture example %}
 <ul class="upload-pictures-wall">
 	<li>
-		<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+		<form method="post" action="" enctype="multipart/form-data">
 			<input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
 			<label for="upload5">
 				<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
@@ -228,7 +283,7 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 		</div>
 	</li>
 	<li>
-		<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+		<form method="post" action="" enctype="multipart/form-data">
 			<input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
 			<label for="upload6">
 				<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
@@ -244,11 +299,15 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 
 È composto da un tag `<nav>` con classe `.bottom-nav` e contiene un elenco con tanti elementi quanti sono i link richiesti.
 
+{% capture example %}
+<p><strong>Default</strong></p>
+
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
 	<div class="upload-dragdrop-image">
-		<img src="https://picsum.photos/180/180?image=1038" alt="">
-		<div class="upload-dragdrop-loading">
-			
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<div class="upload-dragdrop-loading"></div>
+		<div class="upload-dragdrop-success">
+			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
 		</div>
 	</div>
 	<div class="upload-dragdrop-text">
@@ -256,11 +315,77 @@ Nulla sodales justo finibus nibh rhoncus varius ut ut diam. Quisque posuere tell
 			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5>Trascina il file per caricarlo</h5>
-		<p>oppure selezionalo dal desk</p>
+		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal desk</label></p>
 	</div>
 </form>
 
+<p class="mt-5"><strong>Loading</strong></p>
 
+<form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data">
+	<div class="upload-dragdrop-image">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<div class="upload-dragdrop-loading">
+			<div id="divProgress" class="upload-progress"></div>
+		</div>
+		<div class="upload-dragdrop-success">
+			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+		</div>
+	</div>
+	<div class="upload-dragdrop-text">
+		<p class="upload-dragdrop-weight">
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+		</p>
+		<h5>Nome file in caricamento</h5>
+		<p>Caricamento in corso...</p>
+	</div>
+</form>
 
+<p class="mt-5"><strong>Process completed</strong></p>
 
+<form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
+	<div class="upload-dragdrop-image">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<div class="upload-dragdrop-loading"></div>
+		<div class="upload-dragdrop-success">
+			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+		</div>
+	</div>
+	<div class="upload-dragdrop-text">
+		<p class="upload-dragdrop-weight">
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+		</p>
+		<h5>Nome file caricato</h5>
+		<p>Caricamento completato</p>
+	</div>
+</form>
+{% endcapture %}{% include example.html content=example %}
 
+### Animazione esempio
+
+{% capture example %}
+<p>
+	<button type="button" class="btn btn-primary" onClick="changeState('default')">Default</button>
+	<button type="button" class="btn btn-primary" onClick="changeState('dragover')">Drag over</button>
+	<button type="button" class="btn btn-primary" onClick="changeState('loading')">Loading</button>
+	<button type="button" class="btn btn-primary" onClick="changeState('success')">Success</button>
+</p>
+
+<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">
+	<div class="upload-dragdrop-image">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<div class="upload-dragdrop-loading">
+			<div id="divProgress2" class="upload-progress"></div>
+		</div>
+		<div class="upload-dragdrop-success">
+			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+		</div>
+	</div>
+	<div class="upload-dragdrop-text">
+		<p class="upload-dragdrop-weight">
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+		</p>
+		<h5>Trascina il file per caricarlo</h5>
+		<p>oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal desk</label></p>
+	</div>
+</form>
+{% endcapture %}{% include example.html content=example %}

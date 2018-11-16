@@ -61,6 +61,7 @@ const Paths = {
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
     'src/js/plugins/upload.js',
+    'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',

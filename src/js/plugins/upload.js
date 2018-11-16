@@ -1,5 +1,5 @@
 
-var $form = $('.upload-dragdrop');
+var $form = $('.upload-dragdrop:not(.success)');
 var droppedFiles = false;
 
 $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
@@ -8,14 +8,14 @@ $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e)
 })
 
 .on('dragover dragenter', function() {
-	$form.addClass('is-dragover');
+	$form.addClass('dragover');
 })
 
 .on('dragleave dragend drop', function() {
-	$form.removeClass('is-dragover');
+	$form.removeClass('dragover');
 })
 
 .on('drop', function(e) {
-	//UPLAOD LOGIC GOES HERE
-	//droppedFiles = e.originalEvent.dataTransfer.files;
+	//UPLOAD LOGIC GOES HERE
+	//ex: droppedFiles = e.originalEvent.dataTransfer.files;
 });
