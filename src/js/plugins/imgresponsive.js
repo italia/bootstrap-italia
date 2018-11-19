@@ -1,6 +1,4 @@
-
-
-$( document ).ready(function() {
+$(function () {
   var userAgent, ieReg, ie;
   userAgent = window.navigator.userAgent;
   ieReg = /msie|Trident.*rv[ :]*11\./gi;
