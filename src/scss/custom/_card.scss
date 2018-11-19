@@ -385,6 +385,9 @@ a.read-more{
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.card-wrapper{
 		padding-bottom: 0;
+		&.card-space{
+			padding-bottom: $card-padding/2;
+		}
 	}
   .card{
 		border:none;
@@ -393,7 +396,14 @@ a.read-more{
 		&.card-bg,&.card-img{
 			margin: 0;
 		}
-		
+		.card-body{
+			p{
+				font-size:$card-p-size-desk;
+			}
+			h5.card-title{
+				font-size:$card-h5-size-desk;
+			}
+		}
 	}
 }
 

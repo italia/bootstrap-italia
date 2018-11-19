@@ -8,407 +8,359 @@ toc: true
 
 ## Panoramica
 
-Le **card** sono contenitori flessibili ed estendibili. Costruiti con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti. Si possono personalizzare con intestazioni e piè di pagina, contenere altri componenti e contenuti, avere colori di sfondo contestuali e varie opzioni di visualizzazione. 
+Le **card** sono contenitori flessibili ed estendibili. Costruiti con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
 
-Non hanno `margin` di default, se ne avrai bisogno usa le [utilità di spaziatura]({{ site.baseurl }}/docs/utilities/spacing/).
+Di default le card si estendono completamente al 100% del loro elemento contenitore.
 
-Di default le card si estendono completamente al 100% del loro elemento contenitore. Se vuoi cambiarne la larghezza puoi incorporarle in delle [griglie]({{ site.baseurl }}/docs/utilities/griglie/), usare le [utilitià di dimensionamento]({{ site.baseurl }}/docs/utilities/dimensionamento/), o un CSS personalizzato (es.: `style="width: 18rem;"`).
-
-Puoi allineare tutto il contenuto di una card usando una delle classi delle [utilità di allineamento]({{ site.baseurl }}/docs/utilities/testo/#allineamento-del-testo) direttamente sul contenitore `.card`.
-
-Le card possono essere personalizzate nel colore del testo e di sfondo con le [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/) e nelle bordature con le relative [utilità per i bordi]({{ site.baseurl }}/docs/utilities/bordi/). 
-
-{% include callout-warning-color-assistive-technologies.md %}
+### Card semplice
+Negli esempi seguanti le card sono all'interno di una struttura colonnare di bootstrap.  
+L'inizio della card vera e propria è segnalata dal commento `start card`
+Esempio di card semplice con titolo e testo
 
 {% capture example %}
-<div class="card w-50">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Immagine testata Card">
-  <div class="card-body">
-    <h4 class="card-title">Titolo esempio Card</h4>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Struttura
-
-Le card supportano un'ampia varietà di contenuti come immagini, testo, gruppi di elenchi, link e altro ancora. 
-
-### Body
-
-Per il blocco principale di contenuto l'elemento di riferimento è contrassegnato dalla classe `.card-body`.
-
+#### Card semplice in contensto multicolonnare 
 {% capture example %}
-<div class="card">
-  <div class="card-body">
-    Questo è un testo all'interno del corpo di una "card-body".
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Titoli, testo e link
-
-All'interno del `.card-body` puoi inserire un titolo aggiungendo `.card-title` a un tag `<h*>`. Per un eventuale sottotitolo puoi aggiungere `.card-subtitle` a un tag `<h*>` successivo.
-
-Per il testo è prevista la classe `.card-text` da aggiungere a un tag `<p>` oppure abbinarlo ad un altro tag HTML standard.
-
-Allo stesso modo con la classe `.card-link` sui tag `<a>`per avere i link posizionati uno accanto all'altro.
+### Articolo semplice
+Esempio di card contenente categorizzazione e data, firma dell'articolo e link all'articolo.  
+Per inserire la categorizzazione e/o la data di pubblicazione, usare l'elemento `.category-top` ed inserire al suo interno gli elementi come da esempio.
+La categoria nell'esempio seguente è un link, ma potrebbe essere un testo semplice senza link, utilizzando il tag `<span>` invece del tag `<a>`
 
 {% capture example %}
-<div class="card w-50">
-  <div class="card-body">
-    <h4 class="card-title">Titolo card</h4>
-    <h5 class="card-subtitle mb-2 text-muted">Sottotitolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Altro link</a>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="category-top">
+            <a class="category" href="#">Category</a>
+            <span class="data">10/12/2018</span>
+          </div>
+          <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <span class="firma">di Federico De Paolis</span>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Immagini
-
-Puoi inserire delle immagini all'interno delle card: in alto, in basso, incorporato nel contenuto oppure come sfondo. Con `.card-img-top` inserito prima del `.card-body` posiziona l'immagine nella parte superiore della card. Se invece vuoi che sia posizionata in fondo l'immagine dovrà avere la classe `.card-img-bottom` e inserita dopo il body.
+### Card con icona
+Esempio di card contenente categorizzazione e icona.  
+Per inserire la categorizzazione con relativa icona, usare l'elemento `.categoryicon-top` ed inserire al suo interno gli elementi come da esempio.
 
 {% capture example %}
-<div class="card w-50">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-  <div class="card-body">
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="categoryicon-top">
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-file"></use>
+            </svg>
+            <span class="text">Category<br>Name</span>
+          </div>
+          <a href="#">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          </a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Per utilizzare l'immagine come sfondo della card questa dovrà avere la classe `.card-img` mentre al posto del `.card-body` dovrà esserci `.card-img-overlay`. Così facendo il contenuto si sovrapporrà all'immagine. Fate attenzione al contrasto tra sfondo e colore del testo affinchè risulti il contenuto leggibile ai fini dell'accessibilità.
+### Card con icona versione 2
+Esempio di card contenente intestazione (in questo casio numero di files presenti) e icona.  
+La struttura è uguale alla card precedente, per l'intestazione usare l'elemento `.categoryicon-top` ed inserire al suo interno gli elementi come da esempio.  
+Nell'esempio seguente sono stati inseriti un sottotitolo ed un link semplice che segue il paragrafo.  
+Per i sottotitoli utilizzare il tag `<h6>`, per i link semplici utilizzare la classe  `.simple-link`
 
 {% capture example %}
-<div class="card">
-  <img class="card-img" data-src="holder.js/100px270/?text=Immagine" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p class="card-text">Ultimo aggiornamento 3 minuti fa</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="categoryicon-top">
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-copy"></use>
+            </svg>
+            <span class="text">(2) Files</span>
+          </div>
+          <a href="#">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <h6 class="card-subtitle">Subtitle</h6>
+          </a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="simple-link" href="#">Link</a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Testata e piè di pagina
-
-Puoi aggiungere opzionalmente una testata `.card-header` e un piè di pagina `.card-footer` alla card.
+### Cards con background
+Le cards con background sono caratterizzate dalle classi:  
+**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile. 
+**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
 
 {% capture example %}
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
-  </div>
-  <div class="card-footer text-center text-muted">
-    2 giorni fa
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Esempi componenti
+### Cards con background grandi
+Le cards con background grandi sono caratterizzate dalle classi:  
+**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
+**`.card-big`:** utilizzata nel div (`card`) serve a al dimensionamento dei suoi contenuti.
 
-### Gruppo di elenchi
+Nell'esempio seguente è stata inserita un icona grande prima del titolo della card, il div contenente l'icona è di classe 
+`.top-icon`
 
-Puoi avere un elenco al posto o in aggiunta a `.card-body` inserendo il [componente elenco]({{ site.baseurl }}/docs/componenti/elenchi/).
-
+#### Esempio 1:
 {% capture example %}
-<div class="card w-50">
-  <div class="card-body">
-    <h4 class="card-title">Titolo card</h4>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Barra di navigazione
-
-Aggiungi nella testata (o all'interno) della card una [barra di navigazione]({{ site.baseurl }}/docs/componenti/navigazione/).
-
-{% capture example %}
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Attivo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabilitato</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big">
+        <div class="card-body">
+          <div class="top-icon">
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
+            </svg>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+
+L'esempio seguente contiene una icona custom (non svg ma css) ed una categorizzazione con icona svg.
+L'icona custom viene creata dal div `.flag-icon`.  
+La categorizzazione dal div con classe `.etichetta`.  
+Per creare un bordo di colore  primario a chiusura card, potete utilizzare la classe `.border-bottom-card` applicata al div `.card`
+
+#### Esempio 2:
 {% capture example %}
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Attivo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabilitato</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big border-bottom-card">
+        <div class="flag-icon"></div>
+        <div class="etichetta">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-settings"></use>
+          </svg>
+          <span>Sviluppo</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Card layout
-
-Oltre alla personalizzazione grafica del contenuto, ci sono anche altre opzioni per sistemare le card. Per il momento **queste opzioni di layout non sono ancora responsive**.
-
-### Gruppo di card
-
-Usa i gruppi di card per dare l'idea di un singolo elemento collegato con colonne di larghezza e altezza uguali. I gruppi di card usano `display: flex;` per ottenere il loro dimensionamento uniforme.
+### Card grande con background, tag, data e call to action
+Per inserire tags e/o data in testa alla card utilizzare l'elemento:`.head-tags`.  
+Per inserire il pulsante a fondo card, utilizzare l'elemento: `.it-card-footer`.
+Nell'esempio seguente sono state inseriti firma e pulsante nel footer della card.
+Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo spazio inferiore della card.
 
 {% capture example %}
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big no-after">
+        <div class="card-body">
+          <div class="head-tags">
+            <a class="card-tag" href="#">Tag</a>
+            <span class="data">10/10/2018</span>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="it-card-footer">
+            <span class="firma">di Federico De Paolis</span>
+            <button class="btn btn-outline-primary btn-sm">Action</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Quando si utilizzano gruppi di card con piè di pagina, il loro contenuto si allinea automaticamente.
+### Card con immagine
+La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.  
+L'elemento immagine  è `.img-responsive-wrapper`.  
+Le proporzioni ottimali dell'immagine per questa card sono 31:19, si consiglia in ogni caso un immagine orizzontale.  
+Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile croppando il resto dell'immagine e centrandola nell'elemento.
 
 {% capture example %}
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper">
+                <img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Set di card
-
-Per usare un gruppo di card uguali per larghezza e altezza, ma che non siano attaccate si applica la classe `card-deck` al contenitore padre.
+### Card speciali
+La card speciale è contraddistinta dalla classe `.special-card` applicata al tag `a.card`.  
+Tutta la card è un link al relativo contenuto.
+Le proporzioni ottimali dell'immagine per questa card sono 17:21.
 
 {% capture example %}
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <a class="card card-img no-after special-card" href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="head-tags"><span class="data">10/10/2018</span>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+        </div>
+      </a>
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
+    <!--end card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-Come con i gruppi di card anche in questo caso si allineano automaticamente.
-
-{% capture example %}
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Colonne di card
-
-Le card possono essere organizzate in colonne simili a [Masonry](https://masonry.desandro.com/) con la classe `.card-columns`. Le card sono costruite con proprietà CSS `column` invece che con flexbox per un allineamento più semplice. Le card sono ordinate da cima a fondo e da sinistra a destra.
-
-**Nota** L'altezza delle colonne con card può variare. Per evitare che le card spezzino le colonne  dobbiamo impostarle su `display: inline-block;` come `column-break-inside: avoid;`: non è ancora una soluzione a prova di proiettile.
-
-{% capture example %}
-<div class="card-columns">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card molto lunga</h5>
-      <p class="card-text">This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <div class="card p-3">
-    <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card Immagine">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card bg-dark text-white text-center p-3">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer class="blockquote-footer">
-        <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card text-center">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img" data-src="holder.js/100px260/" alt="Card image">
-  </div>
-  <div class="card p-3 text-right">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-Le colonne di card possono anche essere estese e personalizzate con un codice aggiuntivo. Di seguito viene mostrata un'estensione della classe `.card-columns` che utilizza lo stesso CSS che usiamo —CSS columns— per generare un insieme di livelli responsive per la modifica del numero di colonne.
-
-{% highlight scss %}
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
-}
-{% endhighlight %}
