@@ -36,15 +36,15 @@
 		p{
 			font-family: $font-family-serif;
 			font-size: $card-p-size;
-			line-height:$card-p-l-h; 
+			line-height:$card-p-l-h;
 			color: $card-p-color;
 		}
-		.firma{
+		.card-signature{
 			font-style: italic;
 			font-family: $font-family-serif;
-			color: $card-p-color; 
+			color: $card-p-color;
 			font-weight: 700;
-			font-size: $card-firma-size;
+			font-size: $card-signature-size;
 			margin-bottom: $v-gap*3;
 			display: block;
 		}
@@ -108,7 +108,7 @@
 	// simple link
 	.simple-link{
 		font-weight: 600;
-		font-size: $card-firma-size;
+		font-size: $card-signature-size;
 		margin-top: $card-simple-link-margin;
 		display: block;
 	}
@@ -187,7 +187,7 @@
 			}
 		}
 		.head-tags{
-			margin-bottom:$card-padding; 
+			margin-bottom:$card-padding;
 			span.data{
 				font-weight: normal;
 			}
@@ -221,7 +221,7 @@
 					fill: $primary-a6;
 				}
 			}
-			
+
 			h5.card-title{
 				font-size: $card-big-h5-size;
 				line-height: $card-big-h5-l-h;
@@ -273,7 +273,7 @@
 		padding:0 $v-gap*4;
 		border-radius: $tag-radius;
 		border:1px solid $primary-a6;
-		
+
 	}
 	// card footer
 	.it-card-footer{
@@ -281,12 +281,12 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-top: $card-padding*2;
-		.firma{
+		.card-signature{
 			font-style: italic;
 			font-family: $font-family-serif;
-			color: $card-p-color; 
+			color: $card-p-color;
 			font-weight: 700;
-			font-size: $card-firma-size;
+			font-size: $card-signature-size;
 			display: block;
 			margin-bottom: 0;
 		}
@@ -372,13 +372,13 @@ a.read-more{
 
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
-  
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  
+
 }
 
 //Tablet horizontal / small desktop
@@ -409,5 +409,5 @@ a.read-more{
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-  
+
 }

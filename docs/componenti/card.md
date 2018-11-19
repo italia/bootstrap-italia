@@ -6,14 +6,12 @@ group: componenti
 toc: true
 ---
 
-## Panoramica
-
-Le **card** sono contenitori flessibili ed estendibili. Costruiti con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
+Le **card** sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
 
 Di default le card si estendono completamente al 100% del loro elemento contenitore.
 
-### Card semplice
-Negli esempi seguanti le card sono all'interno di una struttura colonnare di bootstrap.  
+## Card semplice
+Negli esempi seguenti le card sono all'interno di una struttura colonnare di bootstrap.  
 L'inizio della card vera e propria è segnalata dal commento `start card`
 Esempio di card semplice con titolo e testo
 
@@ -34,7 +32,7 @@ Esempio di card semplice con titolo e testo
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Card semplice in contensto multicolonnare 
+#### Card semplice su più colonne
 {% capture example %}
 <div class="row">
   <div class="col-12 col-lg-4">
@@ -94,11 +92,11 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
           </div>
           <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <span class="firma">di Federico De Paolis</span>
+          <span class="card-signature">di Federico De Paolis</span>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -122,7 +120,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
         <div class="card-body">
           <div class="categoryicon-top">
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-file"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
             </svg>
             <span class="text">Category<br>Name</span>
           </div>
@@ -138,11 +136,15 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card con icona versione 2
-Esempio di card contenente intestazione (in questo casio numero di files presenti) e icona.  
-La struttura è uguale alla card precedente, per l'intestazione usare l'elemento `.categoryicon-top` ed inserire al suo interno gli elementi come da esempio.  
-Nell'esempio seguente sono stati inseriti un sottotitolo ed un link semplice che segue il paragrafo.  
-Per i sottotitoli utilizzare il tag `<h6>`, per i link semplici utilizzare la classe  `.simple-link`
+
+Un'altro esempio di card contenente intestazione (in questo caso numero di files
+presenti) e icona: la struttura è uguale alla card precedente, per l'intestazione
+è sufficiente usare l'elemento `.categoryicon-top` ed inserire al suo interno gli
+elementi come da esempio.
+
+Nell'esempio seguente sono stati inseriti un sottotitolo ed un link semplice che
+segue il paragrafo. Per i sottotitoli utilizzare il tag `<h6>`, per i link
+semplici utilizzare la classe `.simple-link`.
 
 {% capture example %}
 <div class="row">
@@ -153,7 +155,7 @@ Per i sottotitoli utilizzare il tag `<h6>`, per i link semplici utilizzare la cl
         <div class="card-body">
           <div class="categoryicon-top">
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-copy"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-copy"></use>
             </svg>
             <span class="text">(2) Files</span>
           </div>
@@ -171,9 +173,11 @@ Per i sottotitoli utilizzare il tag `<h6>`, per i link semplici utilizzare la cl
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Cards con background
-Le cards con background sono caratterizzate dalle classi:  
-**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile. 
+## Card con ombreggiatura
+
+Le card con ombreggiatura sono caratterizzate dalle classi:  
+
+**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile.    
 **`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
 
 {% capture example %}
@@ -188,7 +192,7 @@ Le cards con background sono caratterizzate dalle classi:
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -199,13 +203,15 @@ Le cards con background sono caratterizzate dalle classi:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Cards con background grandi
-Le cards con background grandi sono caratterizzate dalle classi:  
+### Card grande
+
+Le card con ombreggiatura grandi sono caratterizzate dalle classi:
+  
 **`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
 **`.card-big`:** utilizzata nel div (`card`) serve a al dimensionamento dei suoi contenuti.
 
-Nell'esempio seguente è stata inserita un icona grande prima del titolo della card, il div contenente l'icona è di classe 
-`.top-icon`
+Nell'esempio seguente è stata inserita un icona grande prima del titolo della card,
+il div contenente l'icona è di classe `.top-icon`.
 
 #### Esempio 1:
 {% capture example %}
@@ -217,7 +223,7 @@ Nell'esempio seguente è stata inserita un icona grande prima del titolo della c
         <div class="card-body">
           <div class="top-icon">
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-card"></use>
             </svg>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
@@ -225,7 +231,7 @@ Nell'esempio seguente è stata inserita un icona grande prima del titolo della c
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -236,8 +242,7 @@ Nell'esempio seguente è stata inserita un icona grande prima del titolo della c
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
-L'esempio seguente contiene una icona custom (non svg ma css) ed una categorizzazione con icona svg.
+L'esempio seguente contiene una icona custom (non SVG ma CSS) ed una categorizzazione con icona SVG.
 L'icona custom viene creata dal div `.flag-icon`.  
 La categorizzazione dal div con classe `.etichetta`.  
 Per creare un bordo di colore  primario a chiusura card, potete utilizzare la classe `.border-bottom-card` applicata al div `.card`
@@ -252,7 +257,7 @@ Per creare un bordo di colore  primario a chiusura card, potete utilizzare la cl
         <div class="flag-icon"></div>
         <div class="etichetta">
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-settings"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use>
           </svg>
           <span>Sviluppo</span>
         </div>
@@ -262,7 +267,7 @@ Per creare un bordo di colore  primario a chiusura card, potete utilizzare la cl
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -273,7 +278,8 @@ Per creare un bordo di colore  primario a chiusura card, potete utilizzare la cl
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card grande con background, tag, data e call to action
+### Card grande con tag, data e call to action
+
 Per inserire tags e/o data in testa alla card utilizzare l'elemento:`.head-tags`.  
 Per inserire il pulsante a fondo card, utilizzare l'elemento: `.it-card-footer`.
 Nell'esempio seguente sono state inseriti firma e pulsante nel footer della card.
@@ -293,7 +299,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="it-card-footer">
-            <span class="firma">di Federico De Paolis</span>
+            <span class="card-signature">di Federico De Paolis</span>
             <button class="btn btn-outline-primary btn-sm">Action</button>
           </div>
         </div>
@@ -304,11 +310,12 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card con immagine
+## Card con immagine
+
 La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.  
 L'elemento immagine  è `.img-responsive-wrapper`.  
 Le proporzioni ottimali dell'immagine per questa card sono 31:19, si consiglia in ogni caso un immagine orizzontale.  
-Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile croppando il resto dell'immagine e centrandola nell'elemento.
+Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile escludendo il resto dell'immagine e centrandola nell'elemento.
 
 {% capture example %}
 <div class="row">
@@ -327,7 +334,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg></a>
           </div>
         </div>
@@ -337,7 +344,8 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card speciali
+## Card speciali
+
 La card speciale è contraddistinta dalla classe `.special-card` applicata al tag `a.card`.  
 Tutta la card è un link al relativo contenuto.
 Le proporzioni ottimali dell'immagine per questa card sono 17:21.

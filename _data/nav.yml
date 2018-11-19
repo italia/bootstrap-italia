@@ -28,7 +28,6 @@
     #- title: Button group
     #  status: to do
     - title: Card
-      status: wip
     - title: Carousel
     - title: Collapse
     - title: Dropdown
