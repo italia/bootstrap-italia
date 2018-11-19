@@ -1,0 +1,110 @@
+
+
+.calendar-input-container {
+	z-index: 1;
+}
+.calendar-input-container > #btnTime {
+	
+}
+
+.calendar-input-container > #btnTime > i{
+
+}
+.calendar-input-container > button:focus{
+
+}
+
+#error_container {
+	color: #8b0000;
+	font-weight: bold;
+}
+div[aria-hidden="true"] {
+	display: none;
+}
+
+.off-screen {
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	position: absolute;
+	z-index: 0;
+}
+
+#error_container {
+	color: #8b0000;
+	font-weight: bold;
+}
+
+/*SPINNER*/
+
+.spinner-control input {
+	color: #333;
+	text-align: center;
+	width: 2rem;
+}
+
+.spinner-control > div .ui-spinner {
+	display: block;
+	text-align: center;
+}
+.spinner-control > div button {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #333;
+	display:inline;
+	height: 2rem;
+	text-align: center;
+	width: 2rem;
+}
+
+.spinner-control > div button:hover {
+	border: 1px solid #777;
+	cursor: pointer;
+}
+
+.spinner-control > div button > i {
+	font-size: 2rem;
+}
+
+// start override
+.it-timepicker-wrapper{
+	.calendar-input-container{
+		position: relative;
+		display: flex;
+		&:after{
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			background:$dp-label-color;
+			transform-origin: bottom;
+			transition: all 0.3s;
+		}
+		input.form-control{
+			border-bottom: none;
+			&::placeholder{
+				color: $dp-label-color;
+			}
+		}
+		.btn-time{
+			border: none;
+			background: transparent;
+			svg{
+				fill:$primary-a6;
+			}
+		}
+	}
+	.time-spinner{
+		position: relative;
+	}
+	.spinner-control{
+		position: absolute;
+		padding: $v-gap*3;
+		left: 0;
+		width: 100%;
+		background: #FFF;
+		box-shadow: $dp-shadow;
+	
+	}
+}

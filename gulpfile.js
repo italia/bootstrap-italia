@@ -62,6 +62,9 @@ const Paths = {
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/datepicker/locales/it.min.js',
+    'src/js/plugins/datepicker/datepicker.js',
+    'src/js/plugins/timepicker.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
