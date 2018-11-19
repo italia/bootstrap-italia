@@ -454,6 +454,72 @@ $header-center-theme-light-text-color:$primary-a6;
 $header-center-button-left:10px;
 $header-nav-icon-arrow-megamenu-distance:14px;
 
+//cards
+$card-padding:$v-gap*3;
+$card-h5-size:1.125rem;
+$card-h5-size-desk:1rem;
+$card-h5-line-height:1.4444444444444444rem;
+$card-h5-fw:700;
+$card-h5-color:$neutral-1-a10;
+$card-p-size: 0.875rem;
+$card-p-size-desk:0.7777777777777778rem;
+$card-p-l-h:1.2rem;
+$card-p-color:$neutral-1-a8;
+$card-border-color:$neutral-1-a2;
+$card-small-line-height:1px;
+$card-small-line-w:128px;
+$card-small-line-color:$neutral-1-a2;
+$card-small-line-margin:$v-gap*6;
+$card-category-size:0.7777777777777778rem;
+$card-category-l-spacing:0.9px;
+$card-category-m-bottom:$v-gap*2;
+$card-big-head-size:1.5555555555555556rem;
+$card-big-head-l-h:1.7777777777777777rem;
+$card-signature-size:0.8888888888888888rem;
+$card-link-color: $primary-a6;
+$card-link-icon-size:$v-gap*2;
+$card-cat-icon-block-margin: $v-gap*2;
+$card-cat-icon-size: $v-gap*5;
+$card-simple-link-margin: $v-gap*4;
+$card-shadow:0 0 80px 0 rgba(0,43,85,0.1);
+$card-shadow-bg:#FFF;
+$card-big-h5-size:1.3333333333333333rem;
+$card-big-h5-l-h:1.5555555555555556rem;
+$card-big-p-size:0.8888888888888888rem;
+$card-big-p-l-h:1.3333333333333333rem;
+$card-big-top-icon-size:$v-gap*10;
+$card-img-heading-size:1.1111111111111112rem;
+$card-img-heading-l-h:1.5555555555555556rem;
+$special-card-img-width:174px;
+// flag icon
+$flag-icon-color: $primary-a6;
+$flag-icon-h:$v-gap*6;
+$flag-icon-w:$v-gap*4;
+// tag
+$tag-radius:50px;
+
+// select
+$select-label-size:0.7777777777777778rem;
+$select-label-color:$neutral-1-a8;
+$select-label-weight:600;
+$select-button-border:1px solid $select-label-color;
+$select-button-padding:$v-gap;
+$select-button-text-size:1rem;
+$select-dd-shadow:$dialog-shadow;
+$select-dd-text-size:0.8888888888888888rem;
+$select-dd-link-color:$primary;
+$select-dd-link-color-active:$neutral-1-a10;
+$select-dd-small-separator-width:65px;
+$select-dd-small-separator-bg:$neutral-1-a1;
+$select-dd-icon-size:$v-gap*3;
+$select-dd-icon-flag-top:10px;
+$select-dd-pill-font-size:0.7777777777777778rem;
+$select-dd-pill-distance:$v-gap;
+$select-dd-pill-font-w:700;
+$select-dd-header-size:0.8333333333333334rem;
+$select-dd-header-w:600;
+$select-dd-check-height:30px;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

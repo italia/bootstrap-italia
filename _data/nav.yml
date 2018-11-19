@@ -28,7 +28,6 @@
     #- title: Button group
     #  status: to do
     - title: Card
-      status: wip
     - title: Carousel
     - title: Collapse
     - title: Dropdown
@@ -38,7 +37,6 @@
     - title: Form Input
       status: wip
     - title: Form Select
-      status: wip
     - title: Form Checkbox
     - title: Form Radio Button
     - title: Form Toggles

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+@import url('../../node_modules/bootstrap-select/dist/css/bootstrap-select.css');
 
 // funzioni e variabili colore
 @import "functions";
@@ -52,7 +53,6 @@
 @import "node_modules/bootstrap/scss/popover";
 @import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/utilities";
-
 // Pickadate: temporaneamente disabilitato in quanto stile non definitivo
 // @import "node_modules/pickadate/lib/themes/default";
 // @import "node_modules/pickadate/lib/themes/default.date";
@@ -99,6 +99,9 @@
 @import "custom/thumbnav";
 @import "custom/steppers";
 @import "custom/upload";
+@import "custom/card";
+@import "custom/imgresponsive";
+@import "custom/select";
 
 // header
 @import "custom/headerslim";
