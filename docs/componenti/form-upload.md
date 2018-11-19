@@ -323,7 +323,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 
 ## Upload Drag&drop
 
-Questa versione dell'upload permette all'utente di trascinare sull'icona che la caratterizza un file dal proprio desktop.
+Questa versione dell'upload permette all'utente di trascinare sull'icona che la caratterizza un file dal proprio dispositivo.
 
 In questo caso è l'interno form ad avere una classe specifica `upload-dragdrop` alla quale possono essere aggiunte due ulteriori classi per la gestione degli stati:
 - `.dragover` quando un file è trascinato sull'icona
@@ -360,7 +360,7 @@ $("#IDPROGRESS").circularloader({
 			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5>Trascina il file per caricarlo</h5>
-		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal desk</label></p>
+		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
 	</div>
 </form>
 
@@ -425,7 +425,7 @@ $("#IDPROGRESS").circularloader({
 			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5 id="simTitle">Trascina il file per caricarlo</h5>
-		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal desk</label></p>
+		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
 	</div>
 </form>
 {% endcapture %}{% include example.html content=example %}
