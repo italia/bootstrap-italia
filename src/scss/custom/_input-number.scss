@@ -1,0 +1,84 @@
+.input-number {
+	position: relative;
+	width: auto;
+
+	//reset style
+	input[type="number"] {
+		appearance: textfield;
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+		&::-ms-clear {
+			display: none;
+		}
+
+		color: $gray-secondary;
+		padding-right: 32px;
+		min-width: 86px;
+		width: auto;
+
+		&:focus {
+			color: $dark;
+		}
+	}
+
+	button {
+		position: absolute;
+		right: 0;
+		//opacity: 0;
+		transition: opacity 0.1s;
+		padding: 0;
+		border: none;
+		height: 20px;
+		width: 24px;
+		background: transparent;
+		&:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+		}
+		&:focus, &:hover {
+			&.add {
+				&:after {
+					border-color: transparent transparent $dark transparent;
+				}
+			}
+			&.sub {
+				&:after {
+					border-color: $dark transparent transparent transparent;
+				}
+			}
+		}
+
+		&.add {
+			top: -8px;
+			&:after {
+				border-width: 0 5px 6px 5px;
+				border-color: transparent transparent $gray-secondary transparent;
+			}
+		}
+		&.sub {
+			bottom: -8px;
+			&:after {
+				border-width: 6px 5px 0 5px;
+				border-color: $gray-secondary transparent transparent transparent;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&:hover {
+		button {
+			opacity: 1;
+		}
+	}
+
+}

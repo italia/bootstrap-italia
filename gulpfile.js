@@ -65,6 +65,7 @@ const Paths = {
     'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/input-number.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
