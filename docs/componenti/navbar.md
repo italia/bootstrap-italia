@@ -79,7 +79,7 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Dropdown item</span>
-            <svg class="ml-2 icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -135,7 +135,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 1</span>
-            <svg class="ml-2 icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -150,7 +150,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 2</span> 
-            <svg class="ml-2 icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -165,7 +165,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 3</span>
-            <svg class="ml-2 icon icon-xs icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -231,7 +231,7 @@ Di seguito un esempio con le due classi applicate.
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>Dropdown item </span>
-                <svg class="ml-2 icon icon-xs icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+                <svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
                </a>
                <div class="dropdown-menu">
                   <div class="row">
@@ -277,7 +277,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="ml-2 icon icon-xs icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -287,7 +287,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="ml-2 icon icon-xs icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseTwo">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -297,7 +297,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="ml-2 icon icon-xs icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseThree">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>

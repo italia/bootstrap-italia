@@ -99,9 +99,9 @@
     - title: Float
     - title: Griglie
       status: wip
+    - title: History Back
     - title: Immagini sostitutive
     - title: Icone
-      status: wip
     - title: Media object
     - title: Ombreggiature
     - title: Posizionamento
@@ -109,7 +109,6 @@
     - title: Spaziature
     - title: Testo
     - title: Visibility
-    - title: History Back
 
 #- title: Esempi
 

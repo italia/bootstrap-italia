@@ -240,12 +240,12 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 **Icona destra**<br>
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.right-icon`
 
-All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo ad inserire il tag `<i>` con classi `.right` (per definirne la posizione) e l'SVG con `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
+All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo ad inserire l'icona con classi `.right` (per definirne la posizione) e l'SVG con `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
 
 **Icona sinistra**<br>
 Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.left-icon`
 
-All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andremo ad inserire il tag `<i>` con classi `.left` (per definirne la posizione) e l'SVG con `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
+All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andremo ad inserire l'icona con classi `.left` (per definirne la posizione) e l'SVG con `.it-(classe icona)` per determinare quale icona inserire. (classi icone: <a href="../../utilities/icone/">/docs/utilities/icone/</a>)
 
 {% capture example %}
 <div class="link-list-wrapper">

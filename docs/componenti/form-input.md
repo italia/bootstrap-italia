@@ -133,30 +133,6 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 {% endcapture %}{% include example.html content=example %}
 
 {% comment %}
-## Icone aggiuntive
-
-È possibile inserire un'icona a lato dei campi input, select e textarea, semplicemente inserendola prima del campo `<input>`.
-
-{% capture example %}
-<div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <input class="form-control" type="text" id="video-youtube">
-    <label for="video-youtube">Link video di youtube</label>
-  </div>
-  <div class="form-group">
-    <i class="ico-prefix it-youtube"></i>
-    <select class="custom-select" id="video-youtube-select">
-      <option value="" disabled selected>Seleziona un video</option>
-      <option value="1">Video 1</option>
-      <option value="2">Video 2</option>
-      <option value="3">Video 3</option>
-    </select>
-    <label for="video-youtube-select">Elenco video</label>
-  </div>
-</div>
-
-{% endcapture %}{% include example.html content=example %}
 
 ### Dimensione
 
@@ -176,29 +152,5 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 {% endcapture %}{% include example.html content=example %}
 
 
-### Input file
-
-È possibile personalizzare l'elemento `<input type="file">` aggiungendo all'elemento identificato con `.form-group` la classe `.form-file`. Con l'aggiunta di questa classe, viene nascosto l'elemento `<input>` tramite `opacity` mentre la `<label>` si sovrappone coprendone l'area. Poi un finto pulsante viene generato e posizionato con `::before`. 
-
-Per gli elementi che usano `.form-file` è inoltre previsto uno script che permette di avere una visione di quanti e quali file sono stati scelti una volta selezionati.
-
-{% capture example %}
-<div>
-  <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile">
-    <label for="exampleFormControlFile">Esempio campo senza personalizzazione grafica</label>
-  </div>
-  <div class="form-group form-file">
-    <input id="file" class="form-control" type="file">
-    <label for="file">Esempio campo per l'upload di un singolo file</label>
-    <span class="form-file-name"></span>
-  </div>
-  <div class="form-group form-file">
-    <input id="fileM" class="form-control" type="file" multiple="multiple">
-    <label for="fileM">Esempio campo per l'upload multiplo di file</label>
-    <span class="form-file-name"></span>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
 
 {% endcomment %}

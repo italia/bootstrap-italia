@@ -448,9 +448,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-mail left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-settings left" aria-hidden="true"> </i><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -561,9 +561,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-mail left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-settings left" aria-hidden="true"> </i><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -674,9 +674,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><i class="it-favorite left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-mail left" aria-hidden="true"> </i><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><i class="it-settings left" aria-hidden="true"> </i><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -697,17 +697,16 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="it-ico it-camera" aria-hidden="true">
-            <span class="toolbar-badge">88</span>
-          </i>
-          <span class="toolbar-label">Label <span class="sr-only"> - 88 elementi nuovi</span></span>
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
+          <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+          <span class="toolbar-label">Label <span class="sr-only"> - 1 elemento nuovo</span></span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
           <div class="link-list-wrapper">
@@ -723,19 +722,19 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 	<li class="toolbar-divider" aria-hidden="true"></li>
 	<li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
 	<li>
       <a href="#">
-        <i class="it-ico it-unlocked" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled>
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="toolbar-label">Label</span>
       </a>
     </li>
@@ -750,16 +749,16 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
+        <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <span class="sr-only">Label - 1 elemento nuovo</span>
       </a>
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert.med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="it-ico it-camera" aria-hidden="true">
-            <span class="toolbar-badge"></span>
-          </i>
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+          <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
           <span class="sr-only">Label - 88 elementi nuovi</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-med">
@@ -772,29 +771,23 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
           </div>
         </div>
       </div>
-	</li>
-	<li class="toolbar-divider" aria-hidden="true"></li>
-	<li>
+    </li>
+    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
         <span class="sr-only">Label</span>
       </a>
     </li>
-	<li>
+    <li>
       <a href="#">
-        <i class="it-ico it-unlocked" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
-      </a>
-    </li>
-	<li>
-      <a href="#">
-        <i class="it-ico it-upload" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled>
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
+        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Label</span>
       </a>
     </li>
@@ -809,16 +802,16 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <i class="it-ico it-comment" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
+        <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+        <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <span class="sr-only">Label - 1 elemento nuovo</span>
       </a>
     </li>
     <li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="it-ico it-camera" aria-hidden="true">
-            <span class="toolbar-badge"></span>
-          </i>
+          <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+          <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
           <span class="sr-only">Label - 88 elementi nuovi</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-sml">
@@ -831,36 +824,30 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
           </div>
         </div>
       </div>
-	</li>
-	<li class="toolbar-divider" aria-hidden="true"></li>
-	<li>
+	  </li>
+	  <li class="toolbar-divider" aria-hidden="true"></li>
+    <li>
+        <a href="#">
+          <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+          <span class="sr-only">Label</span>
+        </a>
+      </li>
+    <li>
       <a href="#">
-        <i class="it-ico it-file" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
+        <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
-	<li>
+    <li>
       <a href="#">
-        <i class="it-ico it-unlocked" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
-      </a>
-    </li>
-	<li>
-      <a href="#">
-        <i class="it-ico it-upload" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
-      </a>
-    </li>
-	<li>
-      <a href="#">
-        <i class="it-ico it-settings" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
+        <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled>
-        <i class="it-ico it-favorite" aria-hidden="true"></i>
-        <span class="sr-only">Label</span>
+        <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		    <span class="sr-only">Label</span>
       </a>
     </li>
   </ul>

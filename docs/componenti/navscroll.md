@@ -35,7 +35,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><i class="it-chevron-left " aria-hidden="true"> </i><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -97,7 +97,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><i class="it-chevron-left " aria-hidden="true"> </i><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -168,7 +168,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><i class="it-chevron-left " aria-hidden="true"> </i><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
