@@ -3,17 +3,6 @@
 .calendar-input-container {
 	z-index: 1;
 }
-.calendar-input-container > #btnTime {
-	
-}
-
-.calendar-input-container > #btnTime > i{
-
-}
-.calendar-input-container > button:focus{
-
-}
-
 #error_container {
 	color: #8b0000;
 	font-weight: bold;
@@ -36,11 +25,6 @@ div[aria-hidden="true"] {
 
 /*SPINNER*/
 
-.spinner-control input {
-	color: #333;
-	text-align: center;
-	width: 2rem;
-}
 
 .spinner-control > div .ui-spinner {
 	display: block;
@@ -49,11 +33,6 @@ div[aria-hidden="true"] {
 .spinner-control > div button {
 	background-color: transparent;
 	border: 1px solid transparent;
-	color: #333;
-	display:inline;
-	height: 2rem;
-	text-align: center;
-	width: 2rem;
 }
 
 .spinner-control > div button:hover {
@@ -83,6 +62,7 @@ div[aria-hidden="true"] {
 		}
 		input.form-control{
 			border-bottom: none;
+			background: transparent;
 			&::placeholder{
 				color: $dp-label-color;
 			}
@@ -90,6 +70,7 @@ div[aria-hidden="true"] {
 		.btn-time{
 			border: none;
 			background: transparent;
+			margin-right: $v-gap*2;
 			svg{
 				fill:$primary-a6;
 			}
@@ -105,6 +86,44 @@ div[aria-hidden="true"] {
 		width: 100%;
 		background: #FFF;
 		box-shadow: $dp-shadow;
-	
+		border-top: $dp-border-bottom;
+		display: none;
+		margin-top: -2px;
+		.spinner{
+			float: left;
+			position: relative;
+			&:not(:last-child){
+				margin-right: $v-gap*3;
+			}
+			.button-wrapper{
+				position: absolute;
+				right: 0;
+				top: 0;
+				display: flex;
+				bottom: 0;
+				flex-direction: column;
+				button{
+					position: relative;
+					flex-basis: 50%;
+					svg{
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: -6px;
+						width: $v-gap*2.5;
+					}
+				}
+			}
+		}
+		input{
+			color: $dp-label-color;
+			max-width: $v-gap*10;
+			border: none;
+			border-bottom: $dp-border-bottom;
+			background: transparent;
+			border-radius: 0;
+			font-weight: 600;
+			box-shadow: none;
+		}
 	}
 }

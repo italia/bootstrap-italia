@@ -3,25 +3,44 @@ var keys, valMin, valMax, valNow, skipVal;
 
 $(document).ready(function () {
     $('.spinner-control button').attr('aria-hidden', 'true').attr('tabindex', '-1');
-    $('#btnTime').click(function(){
-        loadSpinner();
+    $('.btn-time').click(function(){
+        var spinner = $(this).closest('fieldset').next('.spinner-control');
+        var txt = $(this).closest('.calendar-input-container').find('.txtTime');
+        var spinnerh = $(spinner).find('.spinnerHour');
+        var spinnermin = $(spinner).find('.spinnerMin');
+        if($(spinner).attr('aria-hidden')=='true'){
+            loadSpinner(spinner,txt);
+        }else{
+
+            hideSpinner(spinner,txt,spinnerh,spinnermin);
+        }
+        
     });
 
     //Hour and Minute
-    $('#spinnerHour, #spinnerMin').each(function(e){
+    $('.spinnerHour, .spinnerMin').each(function(e){
         return spinbutton($(this).attr('id'),  $(this).attr('bb-skip'), e);
     });
 
-    $('#btnHourUp, #btnHourDown, #btnMinUp, #btnMinDown', '.spinner-control').click(function(){
+    $('.btnHourUp, .btnHourDown, .btnMinUp, .btnMinDown', '.spinner-control').click(function(){
         handleClick($(this).attr('id'));
     });
 
     
     $('.spinner-control *').on('keydown', function(e){
+
         if (e.which==13) {
-            var newTime = $('#spinnerHour').attr('value') + ':' + $('#spinnerMin').attr('value');
-            $('#txtTime').attr('value', newTime).focus();
+            var hour = $(this).closest('.time-spinner').find('.spinnerHour').attr('value');
+            var min = $(this).closest('.time-spinner').find('.spinnerMin').attr('value');
+
+         console.log(min)
+
+            var timetext = $(this).closest('.time-spinner').find('.txtTime')
+            var newTime = hour + ':' + min;
+            
+            $(timetext).attr('value', newTime).focus();
             $('.spinner-control').attr('aria-hidden', 'true');
+            $('.spinner-control').fadeOut();
             return false;
         } else if (e.which==27) {
             hideSpinner();
@@ -30,7 +49,7 @@ $(document).ready(function () {
     });
 
     //Direct Time Entry
-    $('#txtTime').on('keydown', function(e){
+    $('.txtTime').on('keydown', function(e){
         if (e.which==13) {
             return checkForm($(this));
         }
@@ -61,14 +80,18 @@ function setDigit(number, id) {
 
 
 
-function loadSpinner(){
-    $('.spinner-control').attr('aria-hidden', 'false');
-    $('.spinner-control input:first').focus();
+function loadSpinner(spinner){
+    $(spinner).attr('aria-hidden', 'false');
+    $(spinner).fadeIn();
+    $(spinner).find('input:first').focus();
 }
 
-function hideSpinner(){
-    $('.spinner-control').attr('aria-hidden', 'true');
-    $('#btnTime').focus();
+function hideSpinner(spinner,txt,spinnerh,spinnermin){
+    var newTime = $(spinnerh).attr('value') + ':' + $(spinnermin).attr('value');
+    $(txt).attr('value', newTime).focus();
+    $(spinner).fadeOut();
+    $(spinner).attr('aria-hidden', 'true');
+    $('.btnTime').focus();
 }
 
 function getValues(that, arrowBtn){
@@ -240,10 +263,26 @@ function handleClick($button) {
         }
         findInput= that.closest('.spinner').find('input');
     }
+    if (valNow < 10){
+        valNow = '0'+ valNow;
+       
+    }
     findInput.attr('value', setDigit(valNow, id));
     findInput.attr('aria-valuenow', setDigit(valNow, id));
 }
 
+
+// click out to close
+$(window).click(function() {
+    var spinner = $('.spinner-control[aria-hidden="false"]');
+    var spinnerh = $(spinner).find('.spinnerHour');
+    var spinnermin = $(spinner).find('.spinnerMin');
+    var txt = $(spinner).closest('.time-spinner').find('.txtTime');
+    hideSpinner(spinner,txt,spinnerh,spinnermin);
+});
+$('.spinner-control,.btn-time').click(function(event){
+    event.stopPropagation();
+});
 
 // TIME VALIDATION FOR DATA ENTRY
 function checkForm(that)
@@ -253,12 +292,12 @@ function checkForm(that)
     var newValue= $(that).val();
     var matches = newValue != "" ? newValue.match(timeTxt) : '';
     if (matches) {
-        $('#error_container').html("");
+        $('.error_container').html("");
         return true;
     } else {
         console.log(newValue);
         var errMsg="Invalid Due Date Time format";
-        $('#error_container').html(errMsg);
+        $('.error_container').html(errMsg);
         return false;
     }
 }

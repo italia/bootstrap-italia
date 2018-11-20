@@ -1,0 +1,51 @@
+// start override
+.theme-dark{
+	&.it-timepicker-wrapper{
+		.calendar-input-container{
+			
+			&:after{
+				content: '';
+				background:$dp-label-color;
+			}
+			input.form-control{
+				background: transparent;
+				&::placeholder{
+					color: $dp-label-color;
+				}
+			}
+			.btn-time{
+				background: transparent;
+				svg{
+					fill:$primary-a6;
+				}
+			}
+		}
+		.time-spinner{
+			
+		}
+		.spinner-control{
+			background:$primary-a6;
+			.spinner{
+			
+				&:not(:last-child){
+					
+				}
+				.button-wrapper{
+				
+					button{
+						
+						svg{
+							fill: #FFF;
+						}
+					}
+				}
+			}
+			input{
+				color: #FFF;
+				border-bottom: 1px solid #FFF;
+				background: transparent;
+			}
+		}
+	}
+	
+}
