@@ -61,6 +61,8 @@ const Paths = {
     'src/js/plugins/navscroll.js',
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
+    'src/js/plugins/upload.js',
+    'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/select.js',
     'src/js/' + pkg.name + '.js'

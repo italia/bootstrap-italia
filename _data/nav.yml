@@ -40,6 +40,7 @@
     - title: Form Checkbox
     - title: Form Radio Button
     - title: Form Toggles
+    - title: Form Upload
     - title: Header
     - title: Hero
     #- title: Input group
@@ -48,8 +49,6 @@
       status: wip
     - title: Megamenu
     - title: Modale
-    #- title: Navigazione
-    #  status: to do
     - title: Navbar
     - title: Navscroll
     - title: Offcanvas
