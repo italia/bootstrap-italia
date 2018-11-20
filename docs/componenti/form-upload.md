@@ -68,8 +68,6 @@ In questa pagina vengono presentate varianti grafiche e funzionali per questo ti
 
 ## Upload con lista di file
 
-### Modalità classica
-
 All'interno di un `<form>` inserire un campo input di tipo file con classe `.upload`, seguito da una label il cui attributo `for=""` deve corrispondere con il name e l'id del campo input.
 
 I file caricati sono elencati come elementi `<li>` di una lista `<ul>` con classe `.upload-file-list`.
@@ -85,65 +83,65 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
 
 {% capture example %}
 <form method="post" action="" enctype="multipart/form-data">
-	<input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
-	<label for="upload1">
-		<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
-		<span>Upload</span>
-	</label>
-	<ul class="upload-file-list">
-		<li class="upload-file success">
-			<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
-			<p>
-				<span class="sr-only">File caricato:</span>
-				nome-file-01.pdf <span class="upload-file-weight">68 MB</span>
-			</p>
-			<button disabled>
-				<span class="sr-only">Caricamento ultimato</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
-			</button>
-		</li>
-		<li class="upload-file success">
-			<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
-			<p>
-				<span class="sr-only">File caricato:</span>
-				nome-file-02-nome-file-lungo-per-ellissi.doc <span class="upload-file-weight">68 MB</span>
-			</p>
-			<button disabled>
-				<span class="sr-only">Caricamento ultimato</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
-			</button>
-		</li>
-		<li class="upload-file uploading">
-			<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
-			<p>
-				<span class="sr-only">Caricamento file:</span>
-				nome-file-03.png <span class="upload-file-weight"></span>
-			</p>
-			<button>
-				<span class="sr-only">Annulla caricamento file nome-file-03.png</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg>
-			</button>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</li>
-		<li class="upload-file error">
-			<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>
-			<p>
-				<span class="sr-only">Errore caricamento file:</span>
-				nome-file-04.jpg <span class="upload-file-weight"></span>
-			</p>
-			<button>
-				<span class="sr-only">Elimina file caricato nome-file-04.jpg</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg>
-			</button>
-		</li>
-	</ul>
+  <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
+  <label for="upload1">
+    <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-upload"></use></svg>
+    <span>Upload</span>
+  </label>
+  <ul class="upload-file-list">
+    <li class="upload-file success">
+      <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <p>
+        <span class="sr-only">File caricato:</span>
+        nome-file-01.pdf <span class="upload-file-weight">68 MB</span>
+      </p>
+      <button disabled>
+        <span class="sr-only">Caricamento ultimato</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      </button>
+    </li>
+    <li class="upload-file success">
+      <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <p>
+        <span class="sr-only">File caricato:</span>
+        nome-file-02-nome-file-lungo-per-ellissi.doc <span class="upload-file-weight">68 MB</span>
+      </p>
+      <button disabled>
+        <span class="sr-only">Caricamento ultimato</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      </button>
+    </li>
+    <li class="upload-file uploading">
+      <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <p>
+        <span class="sr-only">Caricamento file:</span>
+        nome-file-03.png <span class="upload-file-weight"></span>
+      </p>
+      <button>
+        <span class="sr-only">Annulla caricamento file nome-file-03.png</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+      </button>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </li>
+    <li class="upload-file error">
+      <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <p>
+        <span class="sr-only">Errore caricamento file:</span>
+        nome-file-04.jpg <span class="upload-file-weight"></span>
+      </p>
+      <button>
+        <span class="sr-only">Elimina file caricato nome-file-04.jpg</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+      </button>
+    </li>
+  </ul>
 </form>
 
 {% endcapture %}{% include example.html content=example %}
 
-### Immagini Thumbnail
+### Con anteprima delle immagini
 
 Alle icone SVG rappresentative dei file si sostituiscono le thumbnail delle immagini caricate.
 
@@ -153,68 +151,68 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
 
 {% capture example %}
 <form method="post" action="" enctype="multipart/form-data">
-	<input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
-	<label for="upload2">
-		<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-upload"></use></svg>
-		<span>Upload</span>
-	</label>
-	<ul class="upload-file-list upload-file-list-image">
-		<li class="upload-file success">
-			<div class="upload-image">
-				<img src="https://picsum.photos/40/40?image=1055" alt="">
-			</div>
-			<p>
-				<span class="sr-only">Immagine caricata:</span>
-				nome-file-01.jpg <span class="upload-file-weight">68 MB</span>
-			</p>
-			<button disabled>
-				<span class="sr-only">Caricamento ultimato</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
-			</button>
-		</li>
-		<li class="upload-file success">
-			<div class="upload-image">
-				<img src="https://picsum.photos/80/40?image=1056" alt="">
-			</div>
-			<p>
-				<span class="sr-only">Immagine caricata:</span>
-				nome-file-02-nome-file-lungo-per-ellissi.jpg <span class="upload-file-weight">68 MB</span>
-			</p>
-			<button disabled>
-				<span class="sr-only">Caricamento ultimato</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
-			</button>
-		</li>
-		<li class="upload-file uploading">
-			<div class="upload-image">
-				<img src="https://picsum.photos/40/40?image=1057" alt="">
-			</div>
-			<p>
-				<span class="sr-only">Caricamento immagine:</span>
-				nome-file-03.jpg <span class="upload-file-weight"></span>
-			</p>
-			<button>
-				<span class="sr-only">Annulla caricamento immagine nome-file-03.jpg</span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg>
-			</button>
-			<div class="progress progress-image">
-				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</li>
-		<li class="upload-file error">
-			<div class="upload-image">
-				<img src="https://picsum.photos/120/200?image=1058" alt="">
-			</div>
-			<p>
-				<span class="sr-only">Errore caricamento immagine:</span>
-				nome-file-04.jpg <span class="upload-file-weight"></span>
-			</p>
-			<button>
-				<span class="sr-only">Elimina immagine caricata nome-file-04.jpg </span>
-				<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-close"></use></svg>
-			</button>
-		</li>
-	</ul>
+  <input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
+  <label for="upload2">
+    <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-upload"></use></svg>
+    <span>Upload</span>
+  </label>
+  <ul class="upload-file-list upload-file-list-image">
+    <li class="upload-file success">
+      <div class="upload-image">
+        <img src="https://picsum.photos/40/40?image=1055" alt="imagealt">
+      </div>
+      <p>
+        <span class="sr-only">Immagine caricata:</span>
+        nome-file-01.jpg <span class="upload-file-weight">68 MB</span>
+      </p>
+      <button disabled>
+        <span class="sr-only">Caricamento ultimato</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      </button>
+    </li>
+    <li class="upload-file success">
+      <div class="upload-image">
+        <img src="https://picsum.photos/80/40?image=1056" alt="imagealt">
+      </div>
+      <p>
+        <span class="sr-only">Immagine caricata:</span>
+        nome-file-02-nome-file-lungo-per-ellissi.jpg <span class="upload-file-weight">68 MB</span>
+      </p>
+      <button disabled>
+        <span class="sr-only">Caricamento ultimato</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      </button>
+    </li>
+    <li class="upload-file uploading">
+      <div class="upload-image">
+        <img src="https://picsum.photos/40/40?image=1057" alt="imagealt">
+      </div>
+      <p>
+        <span class="sr-only">Caricamento immagine:</span>
+        nome-file-03.jpg <span class="upload-file-weight"></span>
+      </p>
+      <button>
+        <span class="sr-only">Annulla caricamento immagine nome-file-03.jpg</span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+      </button>
+      <div class="progress progress-image">
+        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </li>
+    <li class="upload-file error">
+      <div class="upload-image">
+        <img src="https://picsum.photos/120/200?image=1058" alt="imagealt">
+      </div>
+      <p>
+        <span class="sr-only">Errore caricamento immagine:</span>
+        nome-file-04.jpg <span class="upload-file-weight"></span>
+      </p>
+      <button>
+        <span class="sr-only">Elimina immagine caricata nome-file-04.jpg </span>
+        <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+      </button>
+    </li>
+  </ul>
 </form>
 {% endcapture %}{% include example.html content=example %}
 
@@ -231,46 +229,45 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
 **L'elemento ha design e comportamento differenti in versione mobile** si consiglia quindi di ridurre le dimensioni della finestra del browser per testare questa versione.
 
 {% capture example %}
-
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6 mb-4 mb-md-0">
-			<p><strong>Dimensione Standard</strong></p>
-			<div class="avatar-upload-wrapper">
-				<div class="avatar size-xxl avatar-upload">
-					<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
-					<form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
-						<input type="file" name="upload3" id="upload3" class="upload-avatar"/>
-						<label for="upload3">
-							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
-							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
-						</label>
-					</form>
-				</div>
-				<div class="avatar-upload-icon">
-					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
-				</div>
-			</div>
-		</div>
-		<div class="col-12 col-md-6">
-			<p><strong>Dimensione Piccola</strong></p>
-			<div class="avatar-upload-wrapper size-sm">
-				<div class="avatar size-xxl avatar-upload">
-					<img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Marisa Rossi">
-					<form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
-						<input type="file" name="upload4" id="upload4" class="upload-avatar"/>
-						<label for="upload4">
-							<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
-							<span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
-						</label>
-					</form>
-				</div>
-				<div class="avatar-upload-icon">
-					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-camera"></use></svg>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <p><strong>Dimensione Standard</strong></p>
+      <div class="avatar-upload-wrapper">
+        <div class="avatar size-xxl avatar-upload">
+          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
+          <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
+            <input type="file" name="upload3" id="upload3" class="upload-avatar"/>
+            <label for="upload3">
+              <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+              <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+            </label>
+          </form>
+        </div>
+        <div class="avatar-upload-icon">
+          <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><strong>Dimensione Piccola</strong></p>
+      <div class="avatar-upload-wrapper size-sm">
+        <div class="avatar size-xxl avatar-upload">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Marisa Rossi">
+          <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
+            <input type="file" name="upload4" id="upload4" class="upload-avatar"/>
+            <label for="upload4">
+              <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+              <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+            </label>
+          </form>
+        </div>
+        <div class="avatar-upload-icon">
+          <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -284,41 +281,40 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 
 {% capture example %}
 <form method="post" action="" enctype="multipart/form-data">
-	<ul class="upload-pictures-wall">
-		<li>
-				<input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
-				<label for="upload5">
-					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
-					<span>Add photo</span>
-				</label>
-		</li>
-	</ul>
+  <ul class="upload-pictures-wall">
+    <li>
+      <input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
+      <label for="upload5">
+        <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus"></use></svg>
+        <span>Add photo</span>
+      </label>
+    </li>
+  </ul>
 </form>
 
 <p class="mt-5"><strong>Esempio Immagini Caricate</strong></p>
 
 <form method="post" action="" enctype="multipart/form-data">
-	<ul class="upload-pictures-wall">
-		<li>
-			<div class="upload-image">
-				<img src="https://picsum.photos/128/128?image=1020" alt="">
-			</div>
-		</li>
-		<li>
-			<div class="upload-image">
-				<img src="https://picsum.photos/128/128?image=1038" alt="">
-			</div>
-		</li>
-		<li>
-				<input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
-				<label for="upload6">
-					<svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-plus"></use></svg>
-					<span>Add photo</span>
-				</label>
-		</li>
-	</ul>
+  <ul class="upload-pictures-wall">
+    <li>
+      <div class="upload-image">
+        <img src="https://picsum.photos/128/128?image=1020" alt="Alt text">
+      </div>
+    </li>
+    <li>
+      <div class="upload-image">
+        <img src="https://picsum.photos/128/128?image=1038" alt="imagealt">
+      </div>
+    </li>
+    <li>
+      <input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
+      <label for="upload6">
+        <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus"></use></svg>
+        <span>Add photo</span>
+      </label>
+    </li>
+  </ul>
 </form>
-
 {% endcapture %}{% include example.html content=example %}
 
 ## Upload Drag&drop
@@ -347,17 +343,17 @@ $("#IDPROGRESS").circularloader({
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
 	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
 		<div class="upload-dragdrop-loading">
 			<div id="divProgress0" class="upload-progress"></div>
 		</div>
 		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
 		</div>
 	</div>
 	<div class="upload-dragdrop-text">
 		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5>Trascina il file per caricarlo</h5>
 		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
@@ -368,17 +364,17 @@ $("#IDPROGRESS").circularloader({
 
 <form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data">
 	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
 		<div class="upload-dragdrop-loading">
 			<div id="divProgress1" class="upload-progress"></div>
 		</div>
 		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
 		</div>
 	</div>
 	<div class="upload-dragdrop-text">
 		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5>Nome file in caricamento</h5>
 		<p>Caricamento in corso...</p>
@@ -389,15 +385,15 @@ $("#IDPROGRESS").circularloader({
 
 <form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
 	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
 		<div class="upload-dragdrop-loading"></div>
 		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
 		</div>
 	</div>
 	<div class="upload-dragdrop-text">
 		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5>Nome file caricato</h5>
 		<p>Caricamento completato</p>
@@ -412,17 +408,17 @@ $("#IDPROGRESS").circularloader({
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">
 	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="" aria-hidden="true">
+		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
 		<div class="upload-dragdrop-loading">
 			<div id="divProgress2" class="upload-progress"></div>
 		</div>
 		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-check"></use></svg>
+			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
 		</div>
 	</div>
 	<div class="upload-dragdrop-text">
 		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
 		</p>
 		<h5 id="simTitle">Trascina il file per caricarlo</h5>
 		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
