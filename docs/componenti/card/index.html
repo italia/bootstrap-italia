@@ -12,13 +12,13 @@
 <title>Card · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811131706" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811201322" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811131706" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811201322" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.19.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.20.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -228,7 +228,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-secondary">wip</span></li><li class="active bd-sidenav-active">
             <a href="/bootstrap-italia/docs/componenti/card/">
               Card
-            </a><span class="badge badge-secondary">wip</span></li><li>
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/carousel/">
               Carousel
             </a></li><li>
@@ -249,7 +249,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a><span class="badge badge-secondary">wip</span></li><li>
             <a href="/bootstrap-italia/docs/componenti/form-select/">
               Form Select
-            </a><span class="badge badge-secondary">wip</span></li><li>
+            </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/form-checkbox/">
               Form Checkbox
             </a></li><li>
@@ -258,6 +258,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/form-toggles/">
               Form Toggles
+            </a></li><li>
+            <a href="/bootstrap-italia/docs/componenti/form-upload/">
+              Form Upload
             </a></li><li>
             <a href="/bootstrap-italia/docs/componenti/header/">
               Header
@@ -437,28 +440,20 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#panoramica">Panoramica</a></li>
-<li class="toc-entry toc-h2"><a href="#struttura">Struttura</a>
+<li class="toc-entry toc-h2"><a href="#card-semplice">Card semplice</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#body">Body</a></li>
-<li class="toc-entry toc-h3"><a href="#titoli-testo-e-link">Titoli, testo e link</a></li>
-<li class="toc-entry toc-h3"><a href="#immagini">Immagini</a></li>
-<li class="toc-entry toc-h3"><a href="#testata-e-piè-di-pagina">Testata e piè di pagina</a></li>
+<li class="toc-entry toc-h3"><a href="#articolo-semplice">Articolo semplice</a></li>
+<li class="toc-entry toc-h3"><a href="#card-con-icona">Card con icona</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#esempi-componenti">Esempi componenti</a>
+<li class="toc-entry toc-h2"><a href="#card-con-ombreggiatura">Card con ombreggiatura</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#gruppo-di-elenchi">Gruppo di elenchi</a></li>
-<li class="toc-entry toc-h3"><a href="#barra-di-navigazione">Barra di navigazione</a></li>
+<li class="toc-entry toc-h3"><a href="#card-grande">Card grande</a></li>
+<li class="toc-entry toc-h3"><a href="#card-grande-con-tag-data-e-call-to-action">Card grande con tag, data e call to action</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#card-layout">Card layout</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#gruppo-di-card">Gruppo di card</a></li>
-<li class="toc-entry toc-h3"><a href="#set-di-card">Set di card</a></li>
-<li class="toc-entry toc-h3"><a href="#colonne-di-card">Colonne di card</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#card-con-immagine">Card con immagine</a></li>
+<li class="toc-entry toc-h2"><a href="#card-speciali">Card speciali</a></li>
 </ul>
           </div>
         
@@ -466,694 +461,632 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Card</h1>
           <p class="bd-lead">Un contenitore di contenuti con molte opzioni e varianti.</p>
-          <h2 id="panoramica">Panoramica</h2>
+          <p>Le <strong>card</strong> sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.</p>
 
-<p>Le <strong>card</strong> sono contenitori flessibili ed estendibili. Costruiti con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti. Si possono personalizzare con intestazioni e piè di pagina, contenere altri componenti e contenuti, avere colori di sfondo contestuali e varie opzioni di visualizzazione.</p>
+<p>Di default le card si estendono completamente al 100% del loro elemento contenitore.</p>
 
-<p>Non hanno <code class="highlighter-rouge">margin</code> di default, se ne avrai bisogno usa le <a href="/bootstrap-italia/docs/utilities/spacing/">utilità di spaziatura</a>.</p>
-
-<p>Di default le card si estendono completamente al 100% del loro elemento contenitore. Se vuoi cambiarne la larghezza puoi incorporarle in delle <a href="/bootstrap-italia/docs/utilities/griglie/">griglie</a>, usare le <a href="/bootstrap-italia/docs/utilities/dimensionamento/">utilitià di dimensionamento</a>, o un CSS personalizzato (es.: <code class="highlighter-rouge">style="width: 18rem;"</code>).</p>
-
-<p>Puoi allineare tutto il contenuto di una card usando una delle classi delle <a href="/bootstrap-italia/docs/utilities/testo/#allineamento-del-testo">utilità di allineamento</a> direttamente sul contenitore <code class="highlighter-rouge">.card</code>.</p>
-
-<p>Le card possono essere personalizzate nel colore del testo e di sfondo con le <a href="/bootstrap-italia/docs/utilities/colori/">utilità di colore</a> e nelle bordature con le relative <a href="/bootstrap-italia/docs/utilities/bordi/">utilità per i bordi</a>.</p>
-
-<div class="bd-callout bd-callout-accessibility">
-<h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
-
-<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="highlighter-rouge">.sr-only</code>.</p>
-</div>
+<h2 id="card-semplice">Card semplice</h2>
+<p>Negli esempi seguenti le card sono all’interno di una struttura colonnare di bootstrap.<br />
+L’inizio della card vera e propria è segnalata dal commento <code class="highlighter-rouge">start card</code>
+Esempio di card semplice con titolo e testo</p>
 
 <div class="bd-example">
-<div class="card w-50">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Immagine testata Card" />
-  <div class="card-body">
-    <h4 class="card-title">Titolo esempio Card</h4>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card w-50"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Immagine testata Card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo esempio Card<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Vai avanti<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="struttura">Struttura</h2>
-
-<p>Le card supportano un’ampia varietà di contenuti come immagini, testo, gruppi di elenchi, link e altro ancora.</p>
-
-<h3 id="body">Body</h3>
-
-<p>Per il blocco principale di contenuto l’elemento di riferimento è contrassegnato dalla classe <code class="highlighter-rouge">.card-body</code>.</p>
-
+<h4 id="card-semplice-su-più-colonne">Card semplice su più colonne</h4>
 <div class="bd-example">
-<div class="card">
-  <div class="card-body">
-    Questo è un testo all'interno del corpo di una "card-body".
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    Questo è un testo all'interno del corpo di una "card-body".
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="titoli-testo-e-link">Titoli, testo e link</h3>
-
-<p>All’interno del <code class="highlighter-rouge">.card-body</code> puoi inserire un titolo aggiungendo <code class="highlighter-rouge">.card-title</code> a un tag <code class="highlighter-rouge">&lt;h*&gt;</code>. Per un eventuale sottotitolo puoi aggiungere <code class="highlighter-rouge">.card-subtitle</code> a un tag <code class="highlighter-rouge">&lt;h*&gt;</code> successivo.</p>
-
-<p>Per il testo è prevista la classe <code class="highlighter-rouge">.card-text</code> da aggiungere a un tag <code class="highlighter-rouge">&lt;p&gt;</code> oppure abbinarlo ad un altro tag HTML standard.</p>
-
-<p>Allo stesso modo con la classe <code class="highlighter-rouge">.card-link</code> sui tag <code class="highlighter-rouge">&lt;a&gt;</code>per avere i link posizionati uno accanto all’altro.</p>
+<h3 id="articolo-semplice">Articolo semplice</h3>
+<p>Esempio di card contenente categorizzazione e data, firma dell’articolo e link all’articolo.<br />
+Per inserire la categorizzazione e/o la data di pubblicazione, usare l’elemento <code class="highlighter-rouge">.category-top</code> ed inserire al suo interno gli elementi come da esempio.
+La categoria nell’esempio seguente è un link, ma potrebbe essere un testo semplice senza link, utilizzando il tag <code class="highlighter-rouge">&lt;span&gt;</code> invece del tag <code class="highlighter-rouge">&lt;a&gt;</code></p>
 
 <div class="bd-example">
-<div class="card w-50">
-  <div class="card-body">
-    <h4 class="card-title">Titolo card</h4>
-    <h5 class="card-subtitle mb-2 text-muted">Sottotitolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Altro link</a>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="category-top">
+            <a class="category" href="#">Category</a>
+            <span class="data">10/12/2018</span>
+          </div>
+          <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <span class="card-signature">di Federico De Paolis</span>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card w-50"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-subtitle mb-2 text-muted"</span><span class="nt">&gt;</span>Sottotitolo card<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link"</span><span class="nt">&gt;</span>Card link<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link"</span><span class="nt">&gt;</span>Altro link<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="immagini">Immagini</h3>
-
-<p>Puoi inserire delle immagini all’interno delle card: in alto, in basso, incorporato nel contenuto oppure come sfondo. Con <code class="highlighter-rouge">.card-img-top</code> inserito prima del <code class="highlighter-rouge">.card-body</code> posiziona l’immagine nella parte superiore della card. Se invece vuoi che sia posizionata in fondo l’immagine dovrà avere la classe <code class="highlighter-rouge">.card-img-bottom</code> e inserita dopo il body.</p>
+<h3 id="card-con-icona">Card con icona</h3>
+<p>Esempio di card contenente categorizzazione e icona.<br />
+Per inserire la categorizzazione con relativa icona, usare l’elemento <code class="highlighter-rouge">.categoryicon-top</code> ed inserire al suo interno gli elementi come da esempio.</p>
 
 <div class="bd-example">
-<div class="card w-50">
-  <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-  <div class="card-body">
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="categoryicon-top">
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use>
+            </svg>
+            <span class="text">Category<br />Name</span>
+          </div>
+          <a href="#">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          </a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card w-50"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"categoryicon-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;br&gt;</span>Name<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Per utilizzare l’immagine come sfondo della card questa dovrà avere la classe <code class="highlighter-rouge">.card-img</code> mentre al posto del <code class="highlighter-rouge">.card-body</code> dovrà esserci <code class="highlighter-rouge">.card-img-overlay</code>. Così facendo il contenuto si sovrapporrà all’immagine. Fate attenzione al contrasto tra sfondo e colore del testo affinchè risulti il contenuto leggibile ai fini dell’accessibilità.</p>
+<p>Un’altro esempio di card contenente intestazione (in questo caso numero di files
+presenti) e icona: la struttura è uguale alla card precedente, per l’intestazione
+è sufficiente usare l’elemento <code class="highlighter-rouge">.categoryicon-top</code> ed inserire al suo interno gli
+elementi come da esempio.</p>
+
+<p>Nell’esempio seguente sono stati inseriti un sottotitolo ed un link semplice che
+segue il paragrafo. Per i sottotitoli utilizzare il tag <code class="highlighter-rouge">&lt;h6&gt;</code>, per i link
+semplici utilizzare la classe <code class="highlighter-rouge">.simple-link</code>.</p>
 
 <div class="bd-example">
-<div class="card">
-  <img class="card-img" data-src="holder.js/100px270/?text=Immagine" alt="Card image" />
-  <div class="card-img-overlay">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p class="card-text">Ultimo aggiornamento 3 minuti fa</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <div class="categoryicon-top">
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-copy"></use>
+            </svg>
+            <span class="text">(2) Files</span>
+          </div>
+          <a href="#">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <h6 class="card-subtitle">Subtitle</h6>
+          </a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="simple-link" href="#">Link</a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img"</span> <span class="na">src=</span><span class="s">".../100px270/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card image"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-img-overlay"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"categoryicon-top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-copy"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>(2) Files<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"card-subtitle"</span><span class="nt">&gt;</span>Subtitle<span class="nt">&lt;/h6&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"simple-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="testata-e-piè-di-pagina">Testata e piè di pagina</h3>
+<h2 id="card-con-ombreggiatura">Card con ombreggiatura</h2>
 
-<p>Puoi aggiungere opzionalmente una testata <code class="highlighter-rouge">.card-header</code> e un piè di pagina <code class="highlighter-rouge">.card-footer</code> alla card.</p>
+<p>Le card con ombreggiatura sono caratterizzate dalle classi:</p>
+
+<p><strong><code class="highlighter-rouge">.card-space</code>:</strong> utilizzata nel div più esterno (<code class="highlighter-rouge">card-wrapper</code>) serve a distanziare le card nella loro versione mobile.  <br />
+<strong><code class="highlighter-rouge">.card-bg</code>:</strong> utilizzata nel div (<code class="highlighter-rouge">card</code>) serve a creare background e ombra della card.</p>
 
 <div class="bd-example">
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
-  </div>
-  <div class="card-footer text-center text-muted">
-    2 giorni fa
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
-    Featured
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Vai avanti<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer text-center text-muted"</span><span class="nt">&gt;</span>
-    2 giorni fa
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="esempi-componenti">Esempi componenti</h2>
+<h3 id="card-grande">Card grande</h3>
 
-<h3 id="gruppo-di-elenchi">Gruppo di elenchi</h3>
+<p>Le card con ombreggiatura grandi sono caratterizzate dalle classi:</p>
 
-<p>Puoi avere un elenco al posto o in aggiunta a <code class="highlighter-rouge">.card-body</code> inserendo il <a href="/bootstrap-italia/docs/componenti/elenchi/">componente elenco</a>.</p>
+<p><strong><code class="highlighter-rouge">.card-bg</code>:</strong> utilizzata nel div (<code class="highlighter-rouge">card</code>) serve a creare background e ombra della card.<br />
+<strong><code class="highlighter-rouge">.card-big</code>:</strong> utilizzata nel div (<code class="highlighter-rouge">card</code>) serve a al dimensionamento dei suoi contenuti.</p>
 
+<p>Nell’esempio seguente è stata inserita un icona grande prima del titolo della card,
+il div contenente l’icona è di classe <code class="highlighter-rouge">.top-icon</code>.</p>
+
+<h4 id="esempio-1">Esempio 1:</h4>
 <div class="bd-example">
-<div class="card w-50">
-  <div class="card-body">
-    <h4 class="card-title">Titolo card</h4>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card w-50"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group list-group-flush"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h3 id="barra-di-navigazione">Barra di navigazione</h3>
-
-<p>Aggiungi nella testata (o all’interno) della card una <a href="/bootstrap-italia/docs/componenti/navigazione/">barra di navigazione</a>.</p>
-
-<div class="bd-example">
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Attivo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabilitato</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big">
+        <div class="card-body">
+          <div class="top-icon">
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-card"></use>
+            </svg>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs card-header-tabs"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Disabilitato<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Vai avanti<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-8"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg card-big"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"top-icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-card"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<p>L’esempio seguente contiene una icona custom (non SVG ma CSS) ed una categorizzazione con icona SVG.
+L’icona custom viene creata dal div <code class="highlighter-rouge">.flag-icon</code>.<br />
+La categorizzazione dal div con classe <code class="highlighter-rouge">.etichetta</code>.<br />
+Per creare un bordo di colore  primario a chiusura card, potete utilizzare la classe <code class="highlighter-rouge">.border-bottom-card</code> applicata al div <code class="highlighter-rouge">.card</code></p>
+
+<h4 id="esempio-2">Esempio 2:</h4>
 <div class="bd-example">
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Attivo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabilitato</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Titolo card</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    <a href="#" class="btn btn-primary">Vai avanti</a>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big border-bottom-card">
+        <div class="flag-icon"></div>
+        <div class="etichetta">
+          <svg class="icon">
+            <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use>
+          </svg>
+          <span>Sviluppo</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills card-header-pills"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Disabilitato<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Vai avanti<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-8"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg card-big border-bottom-card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flag-icon"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"etichetta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Sviluppo<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;/svg&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="card-layout">Card layout</h2>
+<h3 id="card-grande-con-tag-data-e-call-to-action">Card grande con tag, data e call to action</h3>
 
-<p>Oltre alla personalizzazione grafica del contenuto, ci sono anche altre opzioni per sistemare le card. Per il momento <strong>queste opzioni di layout non sono ancora responsive</strong>.</p>
-
-<h3 id="gruppo-di-card">Gruppo di card</h3>
-
-<p>Usa i gruppi di card per dare l’idea di un singolo elemento collegato con colonne di larghezza e altezza uguali. I gruppi di card usano <code class="highlighter-rouge">display: flex;</code> per ottenere il loro dimensionamento uniforme.</p>
+<p>Per inserire tags e/o data in testa alla card utilizzare l’elemento:<code class="highlighter-rouge">.head-tags</code>.<br />
+Per inserire il pulsante a fondo card, utilizzare l’elemento: <code class="highlighter-rouge">.it-card-footer</code>.
+Nell’esempio seguente sono state inseriti firma e pulsante nel footer della card.
+Utilizzate la classe <code class="highlighter-rouge">.no-after</code> applicata al div <code class="highlighter-rouge">.card</code> se volete ridurre lo spazio inferiore della card.</p>
 
 <div class="bd-example">
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper card-space">
+      <div class="card card-bg card-big no-after">
+        <div class="card-body">
+          <div class="head-tags">
+            <a class="card-tag" href="#">Tag</a>
+            <span class="data">10/10/2018</span>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="it-card-footer">
+            <span class="card-signature">di Federico De Paolis</span>
+            <button class="btn btn-outline-primary btn-sm">Action</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg card-big no-after"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card-tag"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tag<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-footer"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary btn-sm"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Quando si utilizzano gruppi di card con piè di pagina, il loro contenuto si allinea automaticamente.</p>
+<h2 id="card-con-immagine">Card con immagine</h2>
+
+<p>La card con immagine è contraddistinta dalla classe <code class="highlighter-rouge">.card-img</code> applicata al div <code class="highlighter-rouge">.card</code>.<br />
+L’elemento immagine  è <code class="highlighter-rouge">.img-responsive-wrapper</code>.<br />
+Le proporzioni ottimali dell’immagine per questa card sono 31:19, si consiglia in ogni caso un immagine orizzontale.<br />
+Qualora le proporzioni non fossero esatte, l’immagine occuperà il massimo dell’altezza o della larghezza disponibile escludendo il resto dell’immagine e centrandola nell’elemento.</p>
 
 <div class="bd-example">
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper">
+                <img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt" />
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="set-di-card">Set di card</h3>
+<h2 id="card-speciali">Card speciali</h2>
 
-<p>Per usare un gruppo di card uguali per larghezza e altezza, ma che non siano attaccate si applica la classe <code class="highlighter-rouge">card-deck</code> al contenitore padre.</p>
-
-<div class="bd-example">
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px200/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px200/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px200/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px200/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<p>Come con i gruppi di card anche in questo caso si allineano automaticamente.</p>
+<p>La card speciale è contraddistinta dalla classe <code class="highlighter-rouge">.special-card</code> applicata al tag <code class="highlighter-rouge">a.card</code>.<br />
+Tutta la card è un link al relativo contenuto.
+Le proporzioni ottimali dell’immagine per questa card sono 17:21.</p>
 
 <div class="bd-example">
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <a class="card card-img no-after special-card" href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt" /></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="head-tags"><span class="data">10/10/2018</span>
+          </div>
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+        </div>
+      </a>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px180/?text=Immagine" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Ultimo aggiornamento 3 minuti fa</small>
-    </div>
+    <!--end card-->
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-deck"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start card--&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px180/?text=Immagine"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!--end card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h3 id="colonne-di-card">Colonne di card</h3>
-
-<p>Le card possono essere organizzate in colonne simili a <a href="https://masonry.desandro.com/">Masonry</a> con la classe <code class="highlighter-rouge">.card-columns</code>. Le card sono costruite con proprietà CSS <code class="highlighter-rouge">column</code> invece che con flexbox per un allineamento più semplice. Le card sono ordinate da cima a fondo e da sinistra a destra.</p>
-
-<p><strong>Nota</strong> L’altezza delle colonne con card può variare. Per evitare che le card spezzino le colonne  dobbiamo impostarle su <code class="highlighter-rouge">display: inline-block;</code> come <code class="highlighter-rouge">column-break-inside: avoid;</code>: non è ancora una soluzione a prova di proiettile.</p>
-
-<div class="bd-example">
-<div class="card-columns">
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card molto lunga</h5>
-      <p class="card-text">This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <div class="card p-3">
-    <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <img class="card-img-top" data-src="holder.js/100px160/" alt="Card Immagine" />
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card bg-dark text-white text-center p-3">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-      <footer class="blockquote-footer">
-        <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card text-center">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img" data-src="holder.js/100px260/" alt="Card image" />
-  </div>
-  <div class="card p-3 text-right">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">
-        <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </small>
-      </footer>
-    </blockquote>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Titolo card</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
-    </div>
-  </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-columns"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px160/"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card molto lunga<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This is a longer card Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card p-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote mb-0 card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>
-          Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
-        <span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/footer&gt;</span>
-    <span class="nt">&lt;/blockquote&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">src=</span><span class="s">".../100px160/"</span> <span class="na">alt=</span><span class="s">"Card Immagine"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card bg-dark text-white text-center p-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote mb-0"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;small&gt;</span>
-          Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
-        <span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/footer&gt;</span>
-    <span class="nt">&lt;/blockquote&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card text-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"card-img"</span> <span class="na">src=</span><span class="s">".../100px260/"</span> <span class="na">alt=</span><span class="s">"Card image"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card p-3 text-right"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote mb-0"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>
-          Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;</span>
-        <span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/footer&gt;</span>
-    <span class="nt">&lt;/blockquote&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Titolo card<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Ultimo aggiornamento 3 minuti fa<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<p>Le colonne di card possono anche essere estese e personalizzate con un codice aggiuntivo. Di seguito viene mostrata un’estensione della classe <code class="highlighter-rouge">.card-columns</code> che utilizza lo stesso CSS che usiamo —CSS columns— per generare un insieme di livelli responsive per la modifica del numero di colonne.</p>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.card-columns</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nl">column-count</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">@include</span> <span class="nd">media-breakpoint-only</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nl">column-count</span><span class="p">:</span> <span class="m">5</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
 
 
         </main>
@@ -1176,14 +1109,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811131706"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811201322"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811131706"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811201322"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
