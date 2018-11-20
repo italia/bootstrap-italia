@@ -64,22 +64,31 @@ div.datepicker-calendar table.datepicker-grid{
 }
 abbr[data-original-title], abbr[title]{
   text-decoration: none;
+  cursor: default;
 }
+
 .it-datepicker-wrapper{
   position: relative;
   // calendar
+  input[type="time"]{
+    color: $dp-label-color;
+  }
   .datepicker-calendar{
     box-shadow:$dp-shadow;
     border-radius: 0;
     border: none;
     width: 100%;
     border-top:2px solid $dp-label-color;
-    margin-top: -2px;
+    margin-top: -8px;
     color: $dp-label-color;
     padding: $v-gap*3;
+    &[aria-hidden=true]{
+      display: inherit;
+    }
     .datepicker-month-wrap{
       padding: 0;
       color: $dp-label-color;
+      margin-bottom: $v-gap*2;
       .datepicker-month{
         font-size: $dp-month-size;
         letter-spacing: $dp-month-l-spacing;
@@ -91,7 +100,8 @@ abbr[data-original-title], abbr[title]{
       svg{
         width: $dp-arrow-size;
         height: $dp-arrow-size;
-        fill:$dp-label-color; 
+        fill:$dp-label-color;
+        transform: translateY(-1px);
       }
       .datepicker-month-fast-next{
         float: right;
@@ -141,6 +151,7 @@ abbr[data-original-title], abbr[title]{
       background:$dp-label-color;
       transform-origin: bottom;
       transition: all 0.3s;
+      left: 0;
     }
     .it-date-datepicker{
       border-bottom: none;
@@ -154,15 +165,23 @@ abbr[data-original-title], abbr[title]{
       padding: 0;
       all: unset;
       margin-right: $v-gap*2;
+      position: relative;
+      height: 40px;
+      cursor: pointer;
       &:hover{
         all: unset;
         margin-right: $v-gap*2;
+        height: 40px;
+        .icon{
+          fill:$primary-a6;
+        }
       }
       .icon{
-        fill:$primary-a6;
+        fill:$dp-label-color;
         position: relative;
         top: 50%;
-        transform: translateY(-50%)
+        transform: translateY(-50%);
+        transition: all 0.3s;
       }
     }
   }

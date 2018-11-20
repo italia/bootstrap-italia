@@ -66,6 +66,7 @@
  *
  */
 
+
 (function () {
 	"use strict";
 	if (typeof Date.dp_locales === 'undefined') {
@@ -2153,7 +2154,8 @@
 	 */
 	Datepicker.prototype.hideObject = function($element) {
 		$element.attr('aria-hidden', true);
-		$element.hide();
+		$element.fadeOut(100);
+		
 	} // end hideObject()
 
 	/**
@@ -2164,7 +2166,7 @@
 	 */
 	Datepicker.prototype.showObject = function($element) {
 		$element.attr('aria-hidden', false);
-		$element.show();
+		$element.fadeIn(100);
 	} // end showObject()
 
 	/**
@@ -2237,7 +2239,7 @@
 
 		// show the dialog
 		this.$calendar.attr('aria-hidden', 'false');
-		this.$calendar.fadeIn();
+		this.$calendar.fadeIn(100);
 		$('.datepicker-calendar').trigger('ab.datepicker.opened', [self.id]);
 	} // end show()
 
@@ -2302,7 +2304,7 @@
 			// hide the dialog
 			this.$calendar.removeClass('above below');
 			this.$calendar.attr('aria-hidden', 'true');
-			this.$calendar.fadeOut();
+			this.$calendar.fadeOut(100);
 			$('.datepicker-calendar').trigger('ab.datepicker.closed', [self.id]);
 			// set focus on the focus target
 			if (!omitSettingFocus) {
@@ -2323,9 +2325,9 @@
 			$overlay = $('#datepicker-overlay');
 		}
 		if (on) {
-			$overlay.fadeIn(500);
+			$overlay.fadeIn(100);
 		} else {
-			$overlay.fadeOut(500);
+			$overlay.fadeOut(100);
 		}
 	} // end greyOut()
 

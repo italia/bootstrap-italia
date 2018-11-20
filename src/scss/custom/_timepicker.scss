@@ -18,9 +18,13 @@ div[aria-hidden="true"] {
 	z-index: 0;
 }
 
-#error_container {
+.error_container {
 	color: #8b0000;
 	font-weight: bold;
+	font-size: 12px;
+	position: absolute;
+	margin-top: -12px;
+
 }
 
 /*SPINNER*/
@@ -49,6 +53,11 @@ div[aria-hidden="true"] {
 	.calendar-input-container{
 		position: relative;
 		display: flex;
+		.form-group{
+			padding-bottom: 0;
+			width: 100%;
+			display: flex;
+		}
 		&:after{
 			content: '';
 			display: block;
@@ -59,10 +68,12 @@ div[aria-hidden="true"] {
 			background:$dp-label-color;
 			transform-origin: bottom;
 			transition: all 0.3s;
+			left: 0;
 		}
 		input.form-control{
 			border-bottom: none;
 			background: transparent;
+			color: $dp-label-color;
 			&::placeholder{
 				color: $dp-label-color;
 			}
@@ -70,9 +81,15 @@ div[aria-hidden="true"] {
 		.btn-time{
 			border: none;
 			background: transparent;
-			margin-right: $v-gap*2;
+			margin-right: $v-gap;
+			&:hover{
+				svg{
+					fill:$primary-a6;
+				}
+			}
 			svg{
-				fill:$primary-a6;
+				fill:$dp-label-color;
+				transition: all 0.3s;
 			}
 		}
 	}
@@ -124,6 +141,14 @@ div[aria-hidden="true"] {
 			border-radius: 0;
 			font-weight: 600;
 			box-shadow: none;
+		}
+		input[type='number'] {
+			-moz-appearance:textfield;
+		}
+		
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
 		}
 	}
 }

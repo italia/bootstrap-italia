@@ -31,6 +31,8 @@
       status: wip
     - title: Carousel
     - title: Collapse
+    - title: Datepicker
+      status: wip
     - title: Dropdown
     - title: Elenchi
     - title: Form

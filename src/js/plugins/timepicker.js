@@ -30,20 +30,19 @@ $(document).ready(function () {
     $('.spinner-control *').on('keydown', function(e){
 
         if (e.which==13) {
-            var hour = $(this).closest('.time-spinner').find('.spinnerHour').attr('value');
-            var min = $(this).closest('.time-spinner').find('.spinnerMin').attr('value');
+            var spinnerh = $(this).closest('.time-spinner').find('.spinnerHour').attr('value');
+            var spinnermin = $(this).closest('.time-spinner').find('.spinnerMin').attr('value');
 
-         console.log(min)
-
-            var timetext = $(this).closest('.time-spinner').find('.txtTime')
-            var newTime = hour + ':' + min;
+            var spinner = $(this).closest('.time-spinner');
+            var txt = $(this).closest('.time-spinner').find('.txtTime');
+            var newTime = spinnerh + ':' + spinnermin;
             
-            $(timetext).attr('value', newTime).focus();
+            $(txt).attr('value', newTime).focus();
             $('.spinner-control').attr('aria-hidden', 'true');
-            $('.spinner-control').fadeOut();
+            $('.spinner-control').fadeOut(100);
             return false;
         } else if (e.which==27) {
-            hideSpinner();
+            hideSpinner(spinner,txt,spinnerh,spinnermin);
             return false;
         }
     });
@@ -82,16 +81,17 @@ function setDigit(number, id) {
 
 function loadSpinner(spinner){
     $(spinner).attr('aria-hidden', 'false');
-    $(spinner).fadeIn();
+    $(spinner).fadeIn(100);
     $(spinner).find('input:first').focus();
 }
 
 function hideSpinner(spinner,txt,spinnerh,spinnermin){
     var newTime = $(spinnerh).attr('value') + ':' + $(spinnermin).attr('value');
-    $(txt).attr('value', newTime).focus();
-    $(spinner).fadeOut();
+    $(txt).val(newTime).focus();
+    $(spinner).fadeOut(100);
     $(spinner).attr('aria-hidden', 'true');
     $('.btnTime').focus();
+    checkForm(txt);
 }
 
 function getValues(that, arrowBtn){
@@ -278,7 +278,10 @@ $(window).click(function() {
     var spinnerh = $(spinner).find('.spinnerHour');
     var spinnermin = $(spinner).find('.spinnerMin');
     var txt = $(spinner).closest('.time-spinner').find('.txtTime');
-    hideSpinner(spinner,txt,spinnerh,spinnermin);
+    if($(spinner).length > 0){
+        hideSpinner(spinner,txt,spinnerh,spinnermin);
+    }
+    
 });
 $('.spinner-control,.btn-time').click(function(event){
     event.stopPropagation();
@@ -291,13 +294,22 @@ function checkForm(that)
     var timeTxt = /^\d{1,2}:\d{2}([AP]M)?$/i;
     var newValue= $(that).val();
     var matches = newValue != "" ? newValue.match(timeTxt) : '';
+    var error = $(that).closest('.time-spinner').find('.error_container');
+    
     if (matches) {
-        $('.error_container').html("");
+        $(error).html("");
         return true;
     } else {
-        console.log(newValue);
-        var errMsg="Invalid Due Date Time format";
-        $('.error_container').html(errMsg);
+        var errMsg="Formato data non valido";
+        $(error).html(errMsg);
+        //$(that).val('Formato data non valido')
         return false;
     }
 }
+
+$('.form-control.txtTime').blur(function(){
+    checkForm(this)
+})
+$("input.spinnerHour, input.spinnerMin").keypress(function (evt) {
+    return false;
+  });
