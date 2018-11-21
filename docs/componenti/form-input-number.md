@@ -1,0 +1,102 @@
+---
+layout: docs
+title: Form Input Number
+description: Campi numerici con bottoni per aumentare/decrescere il valore per i form
+group: componenti
+toc: true
+---
+
+## Esempio
+
+
+
+L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`.
+
+L'attributo `value=""` deve contenere un valore di default.
+
+La label va posizionata prima del wrapper e, per garantire l'accessibilità del campo, dovrà avere un attributo `for=""` corrispondente al nome e id del campo input.
+
+{% capture example %}
+
+<label for="inputNumber1" class="input-number-label">Input Number</label>
+<span class="input-number">
+	<input type="number" id="inputNumber1" name="inputNumber1" value="100">
+	<button class="add">
+		<span class="sr-only">Aumenta valore</span>
+	</button>
+	<button class="sub">
+		<span class="sr-only">Diminuisci valore</span>
+	</button>
+</span>
+{% endcapture %}{% include example.html content=example %}
+
+### Min, Max & Step
+
+Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui bottoni.
+
+{% capture example %}
+<label for="inputNumber2" class="input-number-label">Min, Max & Step</label>
+<span class="input-number">
+	<input type="number" id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500">
+	<button class="add">
+		<span class="sr-only">Aumenta valore</span>
+	</button>
+	<button class="sub">
+		<span class="sr-only">Diminuisci valore</span>
+	</button>
+</span>
+{% endcapture %}{% include example.html content=example %}
+
+### Valuta
+
+Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.currency` al wrapper `.input-number`.
+
+{% capture example %}
+<label for="inputNumber3" class="input-number-label">Currency</label>
+<span class="input-number currency">
+	<input type="number" id="inputNumber3" name="inputNumber3" value="3.50" min="0">
+	<button class="add">
+		<span class="sr-only">Aumenta valore</span>
+	</button>
+	<button class="sub">
+		<span class="sr-only">Diminuisci valore</span>
+	</button>
+</span>
+{% endcapture %}{% include example.html content=example %}
+
+### Percentuale
+
+Per anteporre il simbolo percentuale, aggiungere la classe `.currency` al wrapper `.input-number`.
+
+Si consiglia di impostare gli attributi `min=0` e `max="100"`.
+
+{% capture example %}
+<label for="inputNumber4" class="input-number-label">Percentage</label>
+<span class="input-number percentage">
+	<input type="number" id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="10">
+	<button class="add">
+		<span class="sr-only">Aumenta valore</span>
+	</button>
+	<button class="sub">
+		<span class="sr-only">Diminuisci valore</span>
+	</button>
+</span>
+{% endcapture %}{% include example.html content=example %}
+
+### Disabilitato
+
+Per disabilitare un Input number, aggiungere la classe `.disabled` al wrapper `.input-number`.
+Aggiungere anche l'attributo `disabled` al campo e ai bottoni.
+
+{% capture example %}
+<label for="inputNumber5" class="input-number-label">Disabled</label>
+<span class="input-number disabled">
+	<input type="number" id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled>
+	<button class="add" disabled>
+		<span class="sr-only">Aumenta valore</span>
+	</button>
+	<button class="sub" disabled>
+		<span class="sr-only">Diminuisci valore</span>
+	</button>
+</span>
+{% endcapture %}{% include example.html content=example %}

@@ -15,7 +15,7 @@
 
 		color: $gray-secondary;
 		padding-right: 32px;
-		padding-left: 10px;
+		padding-left: 12px;
 		min-width: 86px !important;
 		width: auto;
 
@@ -42,8 +42,14 @@
 		&:before {
 			content: '€';
 		}
+		input[type="number"] {
+			padding-left: 40px;
+		}
 	}
 	&.percentage {
+		input[type="number"] {
+			width: 116px !important;
+		}
 		&:before {
 			content: '%';
 		}
@@ -81,8 +87,7 @@
 	//add + sub buttons
 	button {
 		position: absolute;
-		right: 0;
-		opacity: 0;
+		right: 2px;
 		transition: opacity 0.1s;
 		padding: 0;
 		border: none;
@@ -111,19 +116,19 @@
 				}
 			}
 		}
-		&:focus {
+		&:focus:not(.focus--mouse) {
 			opacity: 1;
 		}
 
 		&.add {
-			top: -8px;
+			top: -6px;
 			&:after {
 				border-width: 0 5px 6px 5px;
 				border-color: transparent transparent $gray-secondary transparent;
 			}
 		}
 		&.sub {
-			bottom: -8px;
+			bottom: -6px;
 			&:after {
 				border-width: 6px 5px 0 5px;
 				border-color: $gray-secondary transparent transparent transparent;
@@ -134,10 +139,36 @@
 		}
 	}
 
-	&:hover {
+	
+
+}
+
+//label
+label {
+	&.input-number-label {
+		display: block;
+		color: $gray-secondary;
+		font-weight: 600;
+		line-height: 1em;
+		font-size: $small-font-size;
+		cursor: text;
+		display: block;
+		width: 100%;
+		padding: 0 $input-spacing-x;
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	.input-number {
+		//add + sub buttons
 		button {
-			opacity: 1;
+			opacity: 0;
+		}
+		&:hover {
+			button {
+				opacity: 1;
+			}
 		}
 	}
-
 }
