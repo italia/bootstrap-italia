@@ -25,7 +25,7 @@
 	}
 
 	//currency + percentage version
-	&.currency, &.percentage{
+	&.input-number-currency, &.input-number-percentage{
 		&:before {
 			position: absolute;
 			left: 14px;
@@ -38,7 +38,7 @@
 			min-width: 116px !important;
 		}
 	}
-	&.currency {
+	&.input-number-currency {
 		&:before {
 			content: '€';
 		}
@@ -46,7 +46,7 @@
 			padding-left: 40px;
 		}
 	}
-	&.percentage {
+	&.input-number-percentage {
 		input[type="number"] {
 			width: 116px !important;
 		}
@@ -71,12 +71,12 @@
 			&:hover {
 				cursor: not-allowed;
 			}
-			&.add {
+			&.input-number-add {
 				&:after {
 					border-color: transparent transparent $neutral-1-a4 transparent;
 				}
 			}
-			&.sub {
+			&.input-number-sub {
 				&:after {
 					border-color: $neutral-1-a4 transparent transparent transparent;
 				}
@@ -105,12 +105,12 @@
 				border-style: solid;
 		}
 		&:focus, &:hover {
-			&.add {
+			&.input-number-add {
 				&:after {
 					border-color: transparent transparent $dark transparent;
 				}
 			}
-			&.sub {
+			&.input-number-sub {
 				&:after {
 					border-color: $dark transparent transparent transparent;
 				}
@@ -120,14 +120,14 @@
 			opacity: 1;
 		}
 
-		&.add {
+		&.input-number-add {
 			top: -6px;
 			&:after {
 				border-width: 0 5px 6px 5px;
 				border-color: transparent transparent $gray-secondary transparent;
 			}
 		}
-		&.sub {
+		&.input-number-sub {
 			bottom: -6px;
 			&:after {
 				border-width: 6px 5px 0 5px;
@@ -139,7 +139,7 @@
 		}
 	}
 
-	
+
 
 }
 
