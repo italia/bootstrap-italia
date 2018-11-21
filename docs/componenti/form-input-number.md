@@ -39,10 +39,10 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 <span class="input-number">
 	<input type="number" id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500">
 	<button class="add">
-		<span class="sr-only">Aumenta valore</span>
+		<span class="sr-only">Aumenta valore di 500</span>
 	</button>
 	<button class="sub">
-		<span class="sr-only">Diminuisci valore</span>
+		<span class="sr-only">Diminuisci valore di 500</span>
 	</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
@@ -56,10 +56,10 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.currency` 
 <span class="input-number currency">
 	<input type="number" id="inputNumber3" name="inputNumber3" value="3.50" min="0">
 	<button class="add">
-		<span class="sr-only">Aumenta valore</span>
+		<span class="sr-only">Aumenta valore Euro</span>
 	</button>
 	<button class="sub">
-		<span class="sr-only">Diminuisci valore</span>
+		<span class="sr-only">Diminuisci valore Euro</span>
 	</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
@@ -75,10 +75,10 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 <span class="input-number percentage">
 	<input type="number" id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="10">
 	<button class="add">
-		<span class="sr-only">Aumenta valore</span>
+		<span class="sr-only">Aumenta del 10%</span>
 	</button>
 	<button class="sub">
-		<span class="sr-only">Diminuisci valore</span>
+		<span class="sr-only">Diminuisci del 10%</span>
 	</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
