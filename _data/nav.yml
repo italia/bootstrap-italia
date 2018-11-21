@@ -32,7 +32,6 @@
     - title: Carousel
     - title: Collapse
     - title: Datepicker
-      status: wip
     - title: Dropdown
     - title: Elenchi
     - title: Form
@@ -85,8 +84,6 @@
     - title: Toolbar
     - title: Notifications
     - title: Avatar
-    #- title: Datepicker
-    #  status: wip
 
 - title: Utilities
   pages:

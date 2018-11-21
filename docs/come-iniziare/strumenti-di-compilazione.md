@@ -50,33 +50,9 @@ Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che co
 Questo ricompilerà i file all'interno della cartella `dist`, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
 Di seguito un paio di esempi pratici.
 
-### Rimozione Datepicker
-
-Ad esempio, al momento il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)) è di default disabilitato in quanto non definitivo.
- 
-Si può vedere come tale componente sia escluso dal processo di compilazione nei file:
- 
- `src/scss/bootstrap-italia.scss`:
- 
-{% highlight html %}
-// @import "node_modules/pickadate/lib/themes/default";
-// @import "node_modules/pickadate/lib/themes/default.date";
-// @import "node_modules/pickadate/lib/themes/default.time";
-{% endhighlight %}
-
-`gulpfile.js`:
-
-{% highlight html %}
-// './node_modules/pickadate/lib/compressed/picker.js',
-// './node_modules/pickadate/lib/compressed/picker.date.js',
-// './node_modules/pickadate/lib/compressed/picker.time.js'
-(...)
-// './src/js/plugins/date-picker.js'
-{% endhighlight %}
-
 ### Rimozione Cookiebar
 
-Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+Se si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
 
 `src/scss/bootstrap-italia.scss`:
 

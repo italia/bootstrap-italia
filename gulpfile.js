@@ -27,9 +27,6 @@ const Paths = {
     './node_modules/svgxuse/svgxuse.js',
     './node_modules/bootstrap-select/js/bootstrap-select.js',
     './node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
-    // './node_modules/pickadate/lib/compressed/picker.js',
-    // './node_modules/pickadate/lib/compressed/picker.date.js',
-    // './node_modules/pickadate/lib/compressed/picker.time.js'
   ],
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_JS: [
@@ -50,7 +47,6 @@ const Paths = {
     'src/js/plugins/componente-base.js',
     'src/js/plugins/cookiebar.js',
     'src/js/plugins/dropdown.js',
-    // 'src/js/plugins/date-picker.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
     'src/js/plugins/forward.js',
@@ -62,7 +58,7 @@ const Paths = {
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
     'src/js/plugins/select.js',
-    'src/js/plugins/datepicker/locales/it.min.js',
+    'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/timepicker.js',
     'src/js/' + pkg.name + '.js'
