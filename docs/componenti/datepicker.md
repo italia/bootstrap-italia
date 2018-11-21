@@ -31,7 +31,7 @@ Clicca sull'icona per visualizzare il datepicker:
 
 {% capture example %}
 <div class="it-datepicker-wrapper d-lg-none">
-  <label for="datem">Date label</label>
+  <label class="pickerlabel" for="datem">Date label</label>
   <input class="form-control datepicker" id="datem" type="date" placeholder="" value="2010-01-01">
 </div>
 <div class="it-datepicker-wrapper d-none d-lg-block">
@@ -48,7 +48,7 @@ Clicca sull'icona per visualizzare il datepicker.
 
 {% capture example %}
 <div class="it-datepicker-wrapper d-lg-none">
-  <label for="date2m">Date label</label>
+  <label class="pickerlabel" for="date2m">Date label</label>
   <input class="form-control datepicker" id="date2m" type="date" placeholder="" value="2010-01-01">
 </div>
 <div class="it-datepicker-wrapper d-none d-lg-block theme-dark">
@@ -78,7 +78,7 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
 
 {% capture example %}
 <div class="it-timepicker-wrapper">
-  <label class="d-lg-none" for="appt">Label Timepicker</label>
+  <label class="d-lg-none pickerlabel" for="appt">Label Timepicker</label>
   <input class="form-control d-lg-none" type="time" id="appt" name="appt" min="0:00" max="24:00" value="00:00">
   <section class="time-spinner d-none d-lg-block">
     <div class="error_container" role="alert" aria-atomic="true"></div>
@@ -139,7 +139,7 @@ Clicca sull'icona per visualizzare il datepicker.
 
 {% capture example %}
 <div class="it-timepicker-wrapper theme-dark">
-  <label class="d-lg-none" for="appt">Label Timepicker</label>
+  <label class="d-lg-none pickerlabel" for="appt">Label Timepicker</label>
   <input class="form-control d-lg-none" type="time" id="appt" name="appt" min="0:00" max="24:00" value="00:00">
   <section class="time-spinner d-none d-lg-block">
     <div class="error_container" role="alert" aria-atomic="true"></div>

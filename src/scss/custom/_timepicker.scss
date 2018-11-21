@@ -49,6 +49,19 @@ div[aria-hidden="true"] {
 	.form-group label{
 		left: 0;
 	}
+	label.pickerlabel{
+		color: $gray-secondary;
+    font-weight: 600;
+    line-height: $input-height;
+    transition: .2s ease-out;
+    top: $input-spacing-t;
+    font-size:  $small-font-size;
+    cursor: text;
+    display: block;
+    width: 100%;
+    padding: 0 $input-spacing-x;
+    z-index: 6;
+	}
 	.calendar-input-container{
 		position: relative;
 		display: flex;
