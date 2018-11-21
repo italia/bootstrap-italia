@@ -33,7 +33,7 @@
                   {%- assign active = nil -%}
 
                   {%- if page.group == group_slug and page_slug == doc_slug -%}
-                  {%- assign active = 'active bd-sidenav-active' -%}
+                  {%- assign active = 'active' -%}
                   {%- endif -%}
                   <li>
                     <a class="list-item {% unless active == nil %} {{ active }}{% endunless %}" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
