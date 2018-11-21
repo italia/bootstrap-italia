@@ -44,12 +44,11 @@ div[aria-hidden="true"] {
 	cursor: pointer;
 }
 
-.spinner-control > div button > i {
-	font-size: 2rem;
-}
-
 // start override
 .it-timepicker-wrapper{
+	.form-group label{
+		left: 0;
+	}
 	.calendar-input-container{
 		position: relative;
 		display: flex;
