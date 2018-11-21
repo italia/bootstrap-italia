@@ -12,7 +12,7 @@ Per attivare lo scorrimento automatico del documento all'àncora indicata nell'a
 
 {% capture example %}
 <span class="input-number">
-	<input type="number" id="inputNumber1" name="inputNumber1" value="9" min="-9" max="33" step="4">
+	<input type="number" id="inputNumber1" name="inputNumber1" value="30">
 	<button class="add">
 		<span class="sr-only">Aumenta valore</span>
 	</button>
@@ -24,7 +24,7 @@ Per attivare lo scorrimento automatico del documento all'àncora indicata nell'a
 
 {% capture example %}
 <span class="input-number">
-	<input type="number" id="inputNumber2" name="inputNumber2" value="3" max="9">
+	<input type="number" id="inputNumber2" name="inputNumber2" value="6" min="-10" step="1000">
 	<button class="add">
 		<span class="sr-only">Aumenta valore</span>
 	</button>

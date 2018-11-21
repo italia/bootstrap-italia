@@ -15,6 +15,7 @@
 
 		color: $gray-secondary;
 		padding-right: 32px;
+		padding-left: 10px;
 		min-width: 86px;
 		width: auto;
 
@@ -26,7 +27,7 @@
 	button {
 		position: absolute;
 		right: 0;
-		//opacity: 0;
+		opacity: 0;
 		transition: opacity 0.1s;
 		padding: 0;
 		border: none;
