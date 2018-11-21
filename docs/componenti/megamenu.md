@@ -165,7 +165,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                 <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                                  </li>
                               </ul>
                            </div>
@@ -290,7 +290,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                               </li>
                               <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                               </li>
                            </ul>
                         </div>
@@ -307,7 +307,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                               </li>
                               <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                               </li>
                            </ul>
                         </div>
@@ -324,7 +324,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                               </li>
                               <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                               </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                               </li>
                            </ul>
                         </div>
@@ -406,7 +406,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -414,7 +414,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -422,7 +422,7 @@ Di seguito un esempio:
                         <div class="col-12 col-lg-4">
                            <div class="link-list-wrapper">
                               <ul class="link-list">
-                                 <li><a class="list-item" href="#"><i class="it-favorite" aria-hidden="true"> </i><span>Link list 1 </span></a>
+                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                                  </li>
                               </ul>
                            </div>
@@ -512,13 +512,13 @@ Di seguito un esempio:
                            <div class="col-12 it-vertical">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
                                  </ul>
                               </div>
@@ -575,7 +575,7 @@ Di seguito un esempio:
                                     </li>
                                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                                     </li>
                                  </ul>
                               </div>
@@ -594,7 +594,7 @@ Di seguito un esempio:
                                     </li>
                                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                                     </li>
                                  </ul>
                               </div>
@@ -613,7 +613,7 @@ Di seguito un esempio:
                                     </li>
                                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                                     </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><i class="it-arrow-right" aria-hidden="true"> </i></a>
+                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
                                     </li>
                                  </ul>
                               </div>
@@ -806,13 +806,13 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                            <div class="col-12 it-vertical">
                               <div class="link-list-wrapper">
                                  <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><i class="it-favorite" aria-hidden="true"> </i></a>
+                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
                                     </li>
                                  </ul>
                               </div>

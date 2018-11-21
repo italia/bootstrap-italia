@@ -1,0 +1,537 @@
+//mobile
+
+//input file/button
+.upload, .upload-avatar {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+//input file
+.upload {
+	//button styling
+	&[type=file] + label {
+		max-width: 80%;
+		font-size: 1rem;
+		font-weight: 700;
+		cursor: pointer;
+		display: inline-block;
+		overflow: hidden;
+		padding: 7px 24px;
+		border-radius: $border-radius;
+		color: $white;
+		background-color: $primary;
+		transition: background-color 0.15s;
+		&:hover {
+			background-color: darken($primary, 10%);
+		}
+		//icon
+		svg {
+			fill: $white;
+			margin-right: 10px;
+		}
+	}
+	//focus state
+	&:focus {
+		& + label {
+			background-color: darken($primary, 10%);
+			outline: auto 5px -webkit-focus-ring-color;
+		}
+	}
+
+}
+
+//pictures wall version
+.upload-pictures-wall {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	//grid list element
+	& > li {
+		list-style-type: none;
+		margin-right: $v-gap;
+		margin-bottom: $v-gap;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	//input file
+	.upload {
+		//button styling
+		&[type=file] + label {
+			height: 128px;
+			width: 128px;
+			border-radius: 0;
+			padding: 0;
+			border: 2px dashed $primary-a1;
+			background-color: lighten($primary-a1,10%);
+			color: $primary-a2;
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			transition: border-color 0.2s;
+			svg {
+				display: block;
+				fill: $primary-a2;
+				margin: 0 auto;
+				width: 48px;
+				height: 48px;
+				flex-shrink: 0;
+			}
+			&:hover {
+				border: 2px dashed $primary-a3;
+			}
+		}
+		&:focus,&:active {
+			&[type=file] + label {
+				border: 2px dashed $primary-a3;
+			}
+		}
+	}
+	//image
+	.upload-image {
+		flex-shrink: 0;
+		width: 128px;
+		height: 128px;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+//files list
+.upload-file-list {
+	margin-top: 5px;
+	padding: 0;
+	//image version
+	&.upload-file-list-image {
+		.progress {
+			left: 52px;
+		}
+	}
+	.upload-file {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		max-width: 375px;
+		margin-bottom: 16px;
+		position: relative;
+		//states
+		&.uploading {
+			svg {
+				fill: $neutral-1-a4;
+			}
+			p {
+				color: $neutral-1-a4;
+			}
+		}
+		&.success {
+			svg {
+				fill: $primary;
+			}
+			p {
+				color: $primary;
+				.upload-file-weight {
+					display: inline-block;
+				}
+			}
+		}
+		&.error {
+			svg {
+				fill: $danger;
+			}
+			p {
+				color: $danger;
+			}
+		}
+		//left icon
+		svg {
+			flex-shrink: 0;
+		}
+		//left image
+		.upload-image {
+			flex-shrink: 0;
+			width: 40px;
+			height: 40px;
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		//file name
+		p {
+			margin: 0;
+			font-size: 0.889rem;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-left: 12px;
+			overflow: hidden;
+			//
+			.upload-file-weight {
+				color: $neutral-1-a4;
+				font-size: 0.750em;
+				margin-left: 10px;
+				display: none;
+			}
+		}
+		//action button / upload ok
+		button {
+			background: transparent;
+			border: 0;
+			padding: 0px;
+			margin-left: auto;
+			&:hover {
+				cursor: pointer;
+				svg {
+					fill: $primary;
+				}
+			}
+		}
+	}
+	//file upload progress
+	.progress {
+		position: absolute;
+		bottom: -10px;
+		left: 36px;
+		width: calc(100% - 45px);
+		height: 4px;
+		background-color: $lightgrey-a1;
+		box-shadow: none;
+		&.progress-image {
+			width: calc(100% - 60px);
+		}
+	}
+}
+
+//avatar version -------------------------------- START
+.upload-avatar-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	.upload-avatar {
+		&[type=file] + label {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			svg {
+				display: none;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+.avatar-upload-wrapper {
+	position: relative;
+	display: inline-block;
+	//avatar version
+	.avatar {
+		&.avatar-upload {
+			position: relative;
+		}
+	}
+	.avatar-upload-icon {
+		position: absolute;
+		bottom: 16px;
+		right: 4px;
+		width: 26px;
+		height: 26px;
+		background: $neutral-1-a1;
+		border-radius: 50%;
+		border: 2px solid $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		& > svg	{
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&.size-sm {
+		.avatar {
+			width: $avatar-base-size*10;
+			height: $avatar-base-size*10;
+		}
+		.avatar-upload-icon {
+			bottom: 6px;
+			right: 4px;
+			width: 18px;
+			height: 18px;
+			& > svg	{
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+}
+//avatar version -------------------------------- END
+
+//drag/drop version ----------------------------- START
+.upload-dragdrop {
+	display: inline-flex;
+	align-items: center;
+	&.dragover, &.loading {
+		.upload-dragdrop-image {
+			img {
+				transform: translateX(-50%) translateY(-50%) scale(0.85);
+			}
+		}
+	}
+	&.loading {
+		p:not(.upload-dragdrop-weight) {
+			font-style: italic;
+		}
+		.upload-dragdrop-loading {
+			opacity: 1;
+		}
+	}
+	&.loading, &.success {
+		.upload-dragdrop-text {
+			.upload-dragdrop-weight {
+					visibility: visible;
+			}
+		}
+	}
+	&.success {
+		.upload-dragdrop-success {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+//drag and drop text
+.upload-dragdrop-text {
+	p {
+		margin: 0;
+		font-size: 0.889rem;
+		color: $secondary;
+		&.upload-dragdrop-weight {
+			color: $neutral-1-a4;
+			font-size: 0.778rem;
+			visibility: hidden;
+			svg {
+				fill: $neutral-1-a4;
+			}
+		}
+	}
+	h5 {
+		margin: 0;
+		font-size: 1.333rem;
+		font-weight: 700;
+		color: $neutral-1;
+	}
+}
+
+.upload-dragdrop-input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	&[type=file] + label {
+		text-decoration: underline;
+		color: $primary;
+		cursor: pointer;
+	}
+	&:focus {
+		&[type=file] + label {
+			outline: auto 5px -webkit-focus-ring-color;
+		}
+	}
+}
+
+.upload-dragdrop-loading {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 0.2s;
+	.upload-progress {
+		transform: scale(0.355);
+		position: absolute;
+		top: -162px;
+		left: -162px;
+		.clProg {
+			font-weight: 700;
+		}
+	}
+}
+
+.upload-dragdrop-image {
+	width: 128px;
+	height: 128px;
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 16px;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		transform-origin: center center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: transform 0.4s cubic-bezier(.33,1.07,.54,1);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.upload-dragdrop-success {
+		width: 36px;
+		height: 36px;
+		position: absolute;
+		top: calc(50% - 18px);
+		left: 20px;
+		background: $primary;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transform: scale(0.6);
+		transition: opacity 0.2s, transform 0.5s cubic-bezier(.75,-0.5,0,1.75);
+		svg {
+			fill: $white;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+//drag/drop version ----------------------------- END
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+	//input file
+	.upload {
+		&[type=file] + label {
+			font-size: 0.889rem;
+		}
+	}
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+	//drag and drop version
+	.upload-dragdrop-image {
+		width: 180px;
+		height: 180px;
+		margin-right: 32px;
+		.upload-dragdrop-success {
+			left: 28px;
+		}
+	}
+
+	.upload-dragdrop-loading {
+		.upload-progress {
+			transform: scale(0.5);
+			top: -136px;
+			left: -136px;
+		}
+	}
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+	//avatar version -------------------------------- START
+	.avatar-upload:hover, .avatar-upload:focus-within {
+		.upload-avatar-container {
+			opacity: 1;
+			//fade in speed
+			transition: opacity 0.25s;
+		}
+	}
+
+	.upload-avatar-container {
+		bottom: -10%;
+		left: 0;
+		right: 0;
+		top: auto;
+		width: 100%;
+		height: 60%;
+		background-color: rgba(0,0,0,0.6);
+		//fade out speed
+		transition: opacity 0.15s;
+		opacity: 0;
+		.upload-avatar {
+			&[type=file] + label {
+				margin: 0;
+				padding-top: 10px;
+				color: $white;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				font-size: 12px;
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				flex-direction: column;
+				cursor: pointer;
+				span {
+					display: block;
+				}
+				svg {
+					display: block;
+					fill: $white;
+					width: 20px;
+					height: 20px;
+					display: block;
+				}
+			}
+			&:focus:not(.focus--mouse) {
+				&[type=file] + label {
+					outline: auto 5px -webkit-focus-ring-color;
+				}
+			}
+		}
+	}
+
+	.avatar-upload-wrapper {
+		//hide icon
+		.avatar-upload-icon {
+			display: none;
+		}
+		&.size-sm {
+			.upload-avatar {
+				&[type=file] + label {
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	//avatar version -------------------------------- END
+
+}

@@ -28,7 +28,6 @@
     #- title: Button group
     #  status: to do
     - title: Card
-      status: wip
     - title: Carousel
     - title: Collapse
     - title: Datepicker
@@ -42,6 +41,7 @@
     - title: Form Checkbox
     - title: Form Radio Button
     - title: Form Toggles
+    - title: Form Upload
     - title: Header
     - title: Hero
     #- title: Input group
@@ -50,11 +50,8 @@
       status: wip
     - title: Megamenu
     - title: Modale
-    #- title: Navigazione
-    #  status: to do
     - title: Navbar
     - title: Navscroll
-    - title: Offcanvas
     - title: Pager
       status: wip
     - title: Popover
@@ -100,9 +97,9 @@
     - title: Float
     - title: Griglie
       status: wip
+    - title: History Back
     - title: Immagini sostitutive
     - title: Icone
-      status: wip
     - title: Media object
     - title: Ombreggiature
     - title: Posizionamento
@@ -110,7 +107,6 @@
     - title: Spaziature
     - title: Testo
     - title: Visibility
-    - title: History Back
 
 #- title: Esempi
 

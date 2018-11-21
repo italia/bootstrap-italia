@@ -674,7 +674,7 @@ Sposta le colonne sulla destra usando le classi `.offset-md-*`. Queste class aum
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario reimpostare gli offset. Guardalo in azione negli [esempi della griglia]({{ site.baseurl }}/docs/esempi/grid/).
+Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario reimpostare gli offset.
 
 <div class="bd-example-row">
 {% capture example %}

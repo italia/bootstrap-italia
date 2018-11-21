@@ -199,7 +199,7 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 
 #### Menu icona a destra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona `<i>`.
+Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
 
 {% capture example %}
 <div class="dropdown-menu">
@@ -230,7 +230,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 
 #### Menu icona a sinistra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona `<i>`.
+Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
 
 {% capture example %}
 <div class="dropdown-menu">

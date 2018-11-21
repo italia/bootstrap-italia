@@ -1,18 +1,8 @@
 - category: Esperimenti
   description: Di seguito sono riportati alcuni esempi per il corretto utilizzo dei componenti, secondo le linee guida di design.
   examples:
-    - name: Kitchen-Sink
-      description: Una lunghissima pagina di test che mostra tutti i principali componenti.
-    - name: Carousel
-      description: Un esempio di corretto utilizzo del componente Carousel.
     - name: Cookiebar
       description: Una barra di avviso sui cookie basata su un cookie nominato 'cookies_consent'.
-    - name: Offcanvas
-      description: Trasforma la tua barra di navigazione in un menu a comparsa.
-    - name: Comuni
-      description: Pagina di esempio per il sito di un comune.
-    - name: Navscroll
-      description: Pagina di esempio funzionamento Navscroll.
     - name: Notifications
       description: Pagina con vari esempi di Notifications.
 
