@@ -25,8 +25,6 @@ const Paths = {
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/svgxuse/svgxuse.js',
-    './node_modules/bootstrap-select/js/bootstrap-select.js',
-    './node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     // './node_modules/pickadate/lib/compressed/picker.js',
     // './node_modules/pickadate/lib/compressed/picker.date.js',
     // './node_modules/pickadate/lib/compressed/picker.time.js'
@@ -54,7 +52,6 @@ const Paths = {
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
     'src/js/plugins/forward.js',
-    'src/js/plugins/offcanvas.js',
     'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
     'src/js/plugins/i-sticky.js',
@@ -64,6 +61,8 @@ const Paths = {
     'src/js/plugins/upload.js',
     'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/plugins/imgresponsive.js',
+    './node_modules/bootstrap-select/js/bootstrap-select.js',
+    './node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/select.js',
     'src/js/plugins/input-number.js',
     'src/js/' + pkg.name + '.js'

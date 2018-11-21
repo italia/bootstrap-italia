@@ -19,12 +19,12 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
 {% capture example %}
 <nav class="navbar navbar-expand-lg"><span></span>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav">
-    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNav">
     <div class="close-div">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#close"></use></svg>
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
     <div class="menu-wrapper">
@@ -58,12 +58,12 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
 {% capture example %}
 <nav class="navbar navbar-expand-lg"><span></span>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavB">
-  <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#list"></use></svg>
+  <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="close-div">
       <button class="btn close-menu" type="button">
-      <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#close"></use></svg>
+      <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
     <div class="menu-wrapper">
@@ -79,7 +79,7 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Dropdown item</span>
-            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -122,12 +122,12 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu"><span></span>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC">
-  <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#list"></use></svg>
+  <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="close-div">
       <button class="btn close-menu" type="button">
-      <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#close"></use></svg>
+      <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
     <div class="menu-wrapper">
@@ -135,7 +135,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 1</span>
-            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -150,7 +150,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 2</span> 
-            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -165,7 +165,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
         <li class="nav-item dropdown megamenu">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
             <span>Megamenu 3</span>
-            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+            <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
           </a>
           <div class="dropdown-menu">
             <div class="link-list-wrapper">
@@ -208,7 +208,8 @@ Di seguito un esempio con le due classi applicate.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg theme-dark-mobile theme-light-desk">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD"><span class="it-list"></span>
+   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
+    <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
    </button>
    <div class="navbar-collapsable" id="navbarNavD">
       <div class="overlay"></div>
@@ -231,7 +232,7 @@ Di seguito un esempio con le due classi applicate.
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>Dropdown item </span>
-                <svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg>
+                <svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
                </a>
                <div class="dropdown-menu">
                   <div class="row">
@@ -277,7 +278,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -287,7 +288,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseTwo">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -297,7 +298,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseThree">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
