@@ -2,6 +2,34 @@
 	position: relative;
 	width: auto;
 
+	
+
+	&.currency, &.percentage{
+		&:before {
+			position: absolute;
+			left: 14px;
+			top: 0;
+			color: $gray-secondary;
+			font-weight: bold;
+		}
+		input[type="number"] {
+			padding-left: 40px;
+			min-width: 116px !important;
+		}
+	}
+
+	&.currency {
+		&:before {
+			content: '€';
+		}
+	}
+
+	&.percentage {
+		&:before {
+			content: '%';
+		}
+	}
+
 	//reset style
 	input[type="number"] {
 		appearance: textfield;
@@ -16,7 +44,7 @@
 		color: $gray-secondary;
 		padding-right: 32px;
 		padding-left: 10px;
-		min-width: 86px;
+		min-width: 86px !important;
 		width: auto;
 
 		&:focus {

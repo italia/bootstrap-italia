@@ -7,8 +7,14 @@ $(document).ready(function() {
 
 //resize function
 function inputNumberResize(target) {
-	var fieldLength = ($( target ).val().length * 2) + 'ch';
-	$(target).css('width', fieldLength);
+	if (!$(target).closest('.input-number').hasClass('percentage')) {
+		var fieldLength = ($( target ).val().length * 2) + 'ch';
+		$(target).css('width', fieldLength);
+	}
+	if ($(target).closest('.input-number').hasClass('currency')) {
+		var fieldLength = 'calc(40px + ' + ($( target ).val().length * 2) + 'ch)';
+		$(target).css('width', fieldLength);
+	}
 }
 
 //add & sub button
