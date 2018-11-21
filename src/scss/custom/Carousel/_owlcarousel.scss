@@ -7,18 +7,42 @@
 	// 3 col card
 	&.it-carousel-landscape-abstract-3{
 		margin: 0 auto;
+		.owl-stage{
+			left: - $crs-mob-live-padding;
+		}
 		// with shadow
 		.it-card-bg{
-			.owl-stage{
-				left: - $crs-mob-live-padding;
-			}
 			.card.card-bg{
 				margin-left: 0;
 				margin-right: 0;
 			}
+			.owl-stage-outer{
+				border-right: none;
+			}
+			.owl-stage{
+				
+			}
+			.owl-dots{
+				text-align: center;
+				margin-top: 0;
+				.owl-dot{
+					&.active{
+					}
+				}
+			}
+		}
+		.owl-dots{
+			text-align: left;
+			margin-top: $v-gap*2;
+			margin-left: $crs-dots-margin-left;
+			margin-right: $crs-dots-margin-left;
+			.owl-dot{
+				&.active{
+				}
+			}
 		}
 	}
-	// owl dots
+	// owl dots default
 	.owl-dots{
 		text-align: center;
 		.owl-dot{
@@ -54,10 +78,25 @@
 		// 3 col card
 		&.it-carousel-landscape-abstract-3{
 			max-width: #{map-get($container-max-widths,lg)};
+			.owl-stage-outer{
+				border-right: 1px solid #FFF;
+			}
+			.owl-stage{
+				left:inherit;
+			}
 			// with shadow
 			.it-card-bg{
-				.owl-stage{
-					left:inherit;
+				.owl-stage-outer{
+					border-right: none;
+				}
+			}
+			.owl-dots{
+				text-align: left;
+				margin-left:$crs-dots-margin-left-desk;
+				margin-right: $crs-dots-margin-left-desk;
+				.owl-dot{
+					&.active{
+					}
 				}
 			}
 		}
