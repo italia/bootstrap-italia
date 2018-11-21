@@ -57,7 +57,8 @@
 // @import "node_modules/pickadate/lib/themes/default";
 // @import "node_modules/pickadate/lib/themes/default.date";
 // @import "node_modules/pickadate/lib/themes/default.time";
-
+// OWL CAROUSEL
+@import "node_modules/owl.carousel/dist/assets/owl.carousel";
 // Customizzazioni e nuovi componenti
 @import "custom/type";
 @import "custom/grid";
@@ -101,6 +102,7 @@
 @import "custom/card";
 @import "custom/imgresponsive";
 @import "custom/select";
+@import "custom/Carousel/owlcarousel"; 
 
 // header
 @import "custom/headerslim";

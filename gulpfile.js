@@ -63,7 +63,9 @@ const Paths = {
     'src/js/plugins/imgresponsive.js',
     './node_modules/bootstrap-select/js/bootstrap-select.js',
     './node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
+    './node_modules/owl.carousel/dist/owl.carousel.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/carousel.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
