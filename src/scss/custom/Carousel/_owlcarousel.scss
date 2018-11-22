@@ -1,11 +1,24 @@
 //mobile
 .it-carousel-wrapper{
+	.it-header-block{
+	
+		h2{
+			font-size: $crs-heading-h-size;
+			border-bottom:1px solid $card-border-color;
+			padding-bottom: $v-gap;
+			margin-bottom: 0;
+			letter-spacing: unset;
+		}
+	}
 	.owl-stage-outer{
 		padding-top:$crs-margin-bottom; 
 		padding-bottom: $crs-margin-bottom/2;
 	}
 	// 3 col card
 	&.it-carousel-landscape-abstract-3{
+		.it-header-block{
+			padding: 0 $crs-heading-h-padding;
+		}
 		margin: 0 auto;
 		.owl-stage{
 			left: - $crs-mob-live-padding;
@@ -75,9 +88,13 @@
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
 	.it-carousel-wrapper{
+		
 		// 3 col card
 		&.it-carousel-landscape-abstract-3{
 			max-width: #{map-get($container-max-widths,lg)};
+			.it-header-block{
+				padding: 0 $crs-heading-h-padding/2;
+			}
 			.owl-stage-outer{
 				border-right: 1px solid #FFF;
 			}
@@ -101,6 +118,7 @@
 			}
 		}
 	}
+	
 }
 
 //Desktop
