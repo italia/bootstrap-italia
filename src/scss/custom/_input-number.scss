@@ -1,6 +1,14 @@
 .input-number {
 	position: relative;
-	width: auto;
+	width: 100%;
+
+	&.input-number-adaptive {
+		width: auto;
+		display: inline;
+		input[type="number"] {
+			width: auto;
+		}
+	}
 
 	//reset input style
 	input[type="number"] {
@@ -17,7 +25,7 @@
 		padding-right: 32px;
 		padding-left: 12px;
 		min-width: 86px !important;
-		width: auto;
+		width: 100%;
 
 		&:focus {
 			color: $dark;
@@ -32,6 +40,7 @@
 			top: 0;
 			color: $gray-secondary;
 			font-weight: bold;
+			font-size: 1rem;
 		}
 		input[type="number"] {
 			padding-left: 40px;
