@@ -6,14 +6,6 @@ group: componenti
 toc: true
 ---
 
-<style>
-  /* Style override for Documentation purposes */
-	.fullwidthExample {
-		border: 1px dashed #ddd;
-		padding: 10px;
-	}
-</style>
-
 L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`.
 
 L'attributo `value=""` deve contenere un valore di default.
@@ -26,19 +18,21 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
 
 {% capture example %}
 
-<label for="inputNumber" class="input-number-label">Input Number</label>
-<span class="input-number">
-	<input type="number" id="inputNumber" name="inputNumber" value="100">
-	<button class="input-number-add">
-		<span class="sr-only">Aumenta valore</span>
-	</button>
-	<button class="input-number-sub">
-		<span class="sr-only">Diminuisci valore</span>
-	</button>
-</span>
+<div class="w-100">
+  <label for="inputNumber" class="input-number-label">Input Number inserito in una colonna a tutta larghezza</label>
+  <span class="input-number">
+    <input type="number" id="inputNumber" name="inputNumber" value="100">
+    <button class="input-number-add">
+      <span class="sr-only">Aumenta valore</span>
+    </button>
+    <button class="input-number-sub">
+      <span class="sr-only">Diminuisci valore</span>
+    </button>
+  </span>
+</div>
 
-<div class="w-25 mt-5">
-	<label for="inputNumber1" class="input-number-label">Input Number</label>
+<div class="w-50 mt-5">
+	<label for="inputNumber1" class="input-number-label">Input Number inserito in una colonna di larghezza 50%</label>
 	<span class="input-number">
 		<input type="number" id="inputNumber1" name="inputNumber1" value="100">
 		<button class="input-number-add">
@@ -126,38 +120,19 @@ Aggiungere anche l'attributo `disabled` al campo e ai bottoni.
 
 È possibile far sì che il campo numerico si ridimensioni automaticamente a
 seconda del valore contenuto in esso. Per ottenere questo comportamento, è
-sufficiente aggiungere la classe `input-number-adaptive`
+sufficiente aggiungere la classe `input-number-adaptive`.
 
 {% capture example %}
-<div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6 col-lg-4 fullwidthExample">
-			<label for="inputNumber6" class="input-number-label">Adattivo</label>
-			<span class="input-number input-number-adaptive">
-				<input type="number" id="inputNumber6" name="inputNumber6" value="50" min="0" max="10000" step="1">
-				<button class="input-number-add">
-					<span class="sr-only">Aumenta valore</span>
-				</button>
-				<button class="input-number-sub">
-					<span class="sr-only">Diminuisci valore</span>
-				</button>
-			</span>
-		</div>
-		<div class="col-12 col-md-6 col-lg-4 fullwidthExample">
-			<label for="inputNumber7" class="input-number-label">Default (100%)</label>
-			<span class="input-number">
-				<input type="number" id="inputNumber7" name="inputNumber7" value="50" min="0" max="10000" step="1">
-				<button class="input-number-add">
-					<span class="sr-only">Aumenta valore</span>
-				</button>
-				<button class="input-number-sub">
-					<span class="sr-only">Diminuisci valore</span>
-				</button>
-			</span>
-		</div>
-	</div>
-
+<div class="w-100">
+  <label for="inputNumber6" class="input-number-label">Adattivo</label>
+  <span class="input-number input-number-adaptive">
+    <input type="number" id="inputNumber6" name="inputNumber6" value="99999" step="1">
+    <button class="input-number-add">
+      <span class="sr-only">Aumenta valore</span>
+    </button>
+    <button class="input-number-sub">
+      <span class="sr-only">Diminuisci valore</span>
+    </button>
+  </span>
 </div>
-
-
 {% endcapture %}{% include example.html content=example %}

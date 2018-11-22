@@ -33,7 +33,8 @@
 	}
 
 	//currency + percentage version
-	&.input-number-currency, &.input-number-percentage{
+	&.input-number-currency,
+  &.input-number-percentage{
 		&:before {
 			position: absolute;
 			left: 14px;
@@ -44,21 +45,14 @@
 		}
 		input[type="number"] {
 			padding-left: 40px;
-			min-width: 116px !important;
 		}
 	}
 	&.input-number-currency {
 		&:before {
 			content: '€';
 		}
-		input[type="number"] {
-			padding-left: 40px;
-		}
 	}
 	&.input-number-percentage {
-		input[type="number"] {
-			width: 116px !important;
-		}
 		&:before {
 			content: '%';
 		}
@@ -97,7 +91,7 @@
 	button {
 		position: absolute;
 		right: 2px;
-		transition: opacity 0.1s;
+		transition: opacity .1s;
 		padding: 0;
 		border: none;
 		height: 20px;
@@ -147,9 +141,6 @@
 			cursor: pointer;
 		}
 	}
-
-
-
 }
 
 //label
