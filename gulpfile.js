@@ -63,6 +63,7 @@ const Paths = {
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/timepicker.js',
+    'src/js/plugins/input-number.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
