@@ -28,7 +28,7 @@
   }
   // Text container ----------------------------
   .it-hero-text-wrapper{
-    padding:$hero-text-padding*2 $hero-text-padding+($v-gap*2);
+    padding:$hero-text-padding*2 $hero-text-padding+($v-gap*2)-6;
     background: transparent !important;
     position: relative;
     :last-child{
@@ -128,7 +128,7 @@
     }
       // Text container ----------------------------
     .it-hero-text-wrapper{
-      padding:$v-gap*6 40% $v-gap*6 $v-gap*5;
+      padding:$v-gap*6 40% $v-gap*6 ($v-gap*5)-6;
     }
     // Text container centered----------------------------
     &.it-text-centered{
@@ -162,7 +162,7 @@
     }
     // Text container ----------------------------
     .it-hero-text-wrapper{
-      padding:$hero-text-padding-desk 40% $hero-text-padding-desk+($v-gap*6) $v-gap*4;
+      padding:$hero-text-padding-desk 40% $hero-text-padding-desk+($v-gap*6) ($v-gap*4)-6;
       :last-child{
       
       }
