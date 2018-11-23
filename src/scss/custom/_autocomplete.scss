@@ -1,12 +1,14 @@
 //mobile
 
-.autocomplete {
-  padding: 0.375rem 0.75rem;
+//search field
+.autocomplete-search {
+  padding: 0.375rem $v-gap*6 0.375rem $v-gap*3;
   &::placeholder {
     color: $neutral-1-a4;
   }
 }
 
+//search icon
 .autocomplete-icon {
   position: absolute;
   right: $v-gap*2;
@@ -16,9 +18,9 @@
   }
 }
 
+//results list
 .autocomplete-list {
   position: absolute;
-  top: 4rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -29,52 +31,72 @@
   transition: opacity 0.3s;
   display: none;
 
+  &.autocomplete-list-show {
+    display: block;
+  }
+
   li {
     list-style-type: none;
     padding: 0;
   }
+  //single item
   a {
     padding: 12px $v-gap*3;
     display: block;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     color: $gray-primary;
+    line-height: 1.2;
+    font-size: 1rem;
+    //hover state
     &:hover {
       color: $primary;
       text-decoration: none;
       .icon {
         fill: $primary;
       }
-      .autocomplete-list-label {
-        text-decoration: underline;
+      .autocomplete-list-text {
+        //item text
+        span {
+          text-decoration: underline;
+        }
+        //item label
+        em {
+          color: $primary;
+        }
       }
-      & > em {
+      //search highlight
+      mark {
         color: $primary;
-        text-decoration: none;
       }
     }
+    //item icon + avatar
     .icon, .avatar {
       margin-right: $v-gap*2;
+      flex-shrink: 0;
     }
     .icon {
       fill: $gray-primary;
     }
-    .autocomplete-list-label {
-      font-size: 1.250rem;
-    }
-    & > em {
-      font-style: normal;
-      text-transform: uppercase;
-      font-size: 0.688rem;
-      color: $neutral-1-a4;
-      margin-left: $v-gap*2;
-      font-weight: bold;
-      letter-spacing: 0.1em;
-      display: inline-block;
-      margin-top: $v-gap;
+
+    //item text
+    .autocomplete-list-text {
+      margin-top: 2px;
+      //item label
+      em {
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 0.750rem;
+        color: $neutral-1-a4;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        display: block;
+        margin-top: $v-gap/2;
+      }
     }
   }
+  //search highlight
   mark {
     padding: 0;
     background: transparent;
@@ -82,21 +104,36 @@
   }
 }
 
+//big version
 .autocomplete-wrapper-big {
-  .autocomplete {
-    height: $v-gap*9;
-    font-size: 2.500rem;
+
+  //search field
+  .autocomplete-search {
+    height: $v-gap*7;
+    font-size: 1.5rem;
     font-weight: normal;
+    padding-left: 2.5rem;
+    padding-right: $v-gap*3;
   }
+  //search icon
   .autocomplete-icon {
     position: absolute;
     left: 0;
     right: auto;
-    top: 1.9rem;
+    top: 2.4rem;
     .icon {
       fill: $primary;
-      width: 40px;
-      height: 40px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  //results list
+  .autocomplete-list {
+    a {
+      font-size: 1.125rem;
+      .autocomplete-list-text {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -104,19 +141,53 @@
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
 
+  //results list
   .autocomplete-list {
     a {
-      font-size: 1.111rem;
-      span {
-        font-size: 0.611rem;
+      font-size: 0.889rem;
+      align-items: flex-start;
+      .autocomplete-list-text {
+        //item text
+        span {
+          margin-right: $v-gap;
+        }
+        //item label
+        em {
+          display: inline-block;
+          font-size: 0.667rem;
+          margin-top: 0;
+        }
       }
     }
   }
 
+  //big version
   .autocomplete-wrapper-big {
-    .autocomplete {
+    //search field
+    .autocomplete-search {
       height: $v-gap*9;
       font-size: 2.222rem;
+      padding-left: $v-gap*8;
+    }
+    //search icon
+    .autocomplete-icon {
+      top: 2.4rem;
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    //results list
+    .autocomplete-list {
+      a {
+        font-size: 1.111rem;
+         //item text
+        .autocomplete-list-text {
+          span {
+            margin-right: $v-gap*2;
+          }
+        }
+      }
     }
   }
 
@@ -138,8 +209,9 @@
 }
 
 
+//---------- OLD VERSION BELOW --------//
 
-/*.autocomplete-wrap {
+.autocomplete-wrap {
   position: absolute;
   left: 0;
   right: 0;
@@ -158,4 +230,19 @@
       background: rgb(238, 238, 238); // TODO use a variable
     }
   }
-}*/
+}
+
+
+.autocomplete-clear {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  right: .25rem;
+  top: .5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  svg {
+    fill: #a6a6a6;
+  }
+}
