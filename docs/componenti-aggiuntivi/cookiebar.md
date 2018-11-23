@@ -20,35 +20,44 @@ Esso può essere personalizzato nel testo, ma è importante lasciare inalterata 
 
 Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-accept="cookiebar"`.
 
+Il link "Preferenze" (opzionale) dovrà essere collegato alla pagina di gestione preferenze dei cookies.
+
 ### Codice HTML
 
 <style>
   /* Style override for Documentation purposes */
   .cookiebar {
     display: block !important;
+  }
+
+  .bd-example .cookiebar {
     position: relative !important;
   }
+
+  @media (min-width: 768px) {
+      .cookiebar {
+        display: flex !important;
+    }
+  }
+
+}
 </style>
 <div class="bd-example">
-    <div class="cookiebar bg-dark p-4" aria-hidden="true">
-        <p class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti.
-            <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
-        </p>
-        <p>
-            <button data-accept="cookiebar" class="btn btn-info mr-2">Accetto</button>
-            <a href="#" class="btn btn-outline-info">Privacy policy</a>
-        </p>
+    <div class="cookiebar">
+        <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+        <div class="cookiebar-buttons">
+            <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
+            <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+        </div>
     </div>
 </div>
 
 {% highlight html %}
-<div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
-    <p class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti.
-        <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
-    </p>
-    <p>
-        <button data-accept="cookiebar" class="btn btn-info mr-2">Accetto</button>
-        <a href="" class="btn btn-outline-info">Privacy policy</a>
-    </p>
+<div class="cookiebar">
+    <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+    <div class="cookiebar-buttons">
+        <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
+        <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+    </div>
 </div>
 {% endhighlight %}
