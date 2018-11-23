@@ -41,7 +41,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -57,7 +57,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -73,7 +73,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -89,7 +89,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -105,7 +105,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -121,7 +121,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -137,7 +137,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -179,7 +179,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -200,7 +200,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -221,7 +221,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -242,7 +242,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -271,7 +271,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/505x309.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
           </div>
         </div>
       </a>
@@ -289,7 +289,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -301,7 +301,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/505x309.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
           </div>
         </div>
       </a>
@@ -319,7 +319,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -331,7 +331,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/505x309.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
           </div>
         </div>
       </a>
@@ -349,7 +349,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -361,7 +361,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/505x309.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
           </div>
         </div>
       </a>
@@ -379,7 +379,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -409,7 +409,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -418,7 +418,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -430,7 +430,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -439,7 +439,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -451,7 +451,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -460,7 +460,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -472,7 +472,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -481,7 +481,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -493,7 +493,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -502,7 +502,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -531,7 +531,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <a class="card card-img no-after special-card" href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -548,7 +548,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <a class="card card-img no-after special-card" href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -565,7 +565,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <a class="card card-img no-after special-card" href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -582,7 +582,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <a class="card card-img no-after special-card" href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -599,7 +599,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
         <a class="card card-img no-after special-card" href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
             </div>
           </div>
           <div class="card-body">
@@ -635,7 +635,7 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/620x380.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -646,7 +646,7 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/620x380.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -657,7 +657,7 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/620x380.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -687,7 +687,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -698,7 +698,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -709,7 +709,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -720,7 +720,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -731,7 +731,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
@@ -742,7 +742,7 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
             </div>
           </div>
         </div>
