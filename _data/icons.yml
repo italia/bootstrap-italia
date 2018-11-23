@@ -10,6 +10,7 @@
 - it-check
 - it-chevron-left
 - it-chevron-right
+- it-clock
 - it-close-big
 - it-close-circle
 - it-close
@@ -22,6 +23,9 @@
 - it-expand
 - it-external-link
 - it-file
+- it-files
+- it-folder
+- it-hearing
 - it-help-circle
 - it-help
 - it-horn
@@ -40,6 +44,7 @@
 - it-pa
 - it-password-invisible
 - it-password-visible
+- it-pencil
 - it-pin
 - it-plus-circle
 - it-plus
