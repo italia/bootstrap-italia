@@ -479,7 +479,7 @@ $card-link-icon-size:$v-gap*2;
 $card-cat-icon-block-margin: $v-gap*2;
 $card-cat-icon-size: $v-gap*5;
 $card-simple-link-margin: $v-gap*4;
-$card-shadow:0 0 80px 0 rgba(0,43,85,0.1);
+$card-shadow:0 2px 20px 0 rgba(0,0,0,.1);
 $card-shadow-bg:#FFF;
 $card-big-h5-size:1.3333333333333333rem;
 $card-big-h5-l-h:1.5555555555555556rem;
@@ -539,6 +539,21 @@ $hero-negative-margin:80px;
 $hero-negative-margin-desk:80px;
 $hero-negative-bottom-padding:240px;
 $hero-negative-bottom-padding-mob:136px;
+
+// Carousel
+$crs-margin-bottom:$v-gap*3;
+$crs-mob-live-padding:$v-gap*2;
+$crs-dots-simension:$v-gap;
+$crs-dots-color:$primary-a7;
+$crs-dots-margin-left:38px;
+$crs-dots-margin-left-desk:$v-gap*2;
+$crs-heading-h-padding:$v-gap*3;
+$crs-heading-h-size:1.75rem;
+$crs-landcape-card-padding:$v-gap*6;
+$crs-landcape-bottom:5px;
+// Carousel ****************************************************************************
+
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

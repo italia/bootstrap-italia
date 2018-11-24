@@ -74,6 +74,7 @@
     "bootstrap": "^4.1.3",
     "bootstrap-select": "^1.13.3",
     "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.4",
     "pickadate": "^3.5.6",
     "popper.js": "^1.14.3",
     "svgxuse": "^1.2.6"
