@@ -1,0 +1,174 @@
+.input-number {
+	position: relative;
+	width: 100%;
+
+	&.input-number-adaptive {
+		width: auto;
+		display: inline;
+		input[type="number"] {
+			width: auto;
+		}
+	}
+
+	//reset input style
+	input[type="number"] {
+		appearance: textfield;
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+		&::-ms-clear {
+			display: none;
+		}
+
+		color: $gray-secondary;
+		padding-right: 32px;
+		padding-left: 12px;
+		min-width: 86px !important;
+		width: 100%;
+
+		&:focus {
+			color: $dark;
+		}
+	}
+
+	//currency + percentage version
+	&.input-number-currency,
+  &.input-number-percentage{
+		&:before {
+			position: absolute;
+			left: 14px;
+			top: 0;
+			color: $gray-secondary;
+			font-weight: bold;
+			font-size: 1rem;
+		}
+		input[type="number"] {
+			padding-left: 40px;
+		}
+	}
+	&.input-number-currency {
+		&:before {
+			content: '€';
+		}
+	}
+	&.input-number-percentage {
+		&:before {
+			content: '%';
+		}
+	}
+
+	//disabled version
+	&.disabled {
+		input[type="number"] {
+			background-color: transparent;
+			color: $neutral-1-a4;
+			border-bottom-color: $neutral-1-a4;
+			&:hover {
+				cursor: not-allowed;
+				color: $neutral-1-a4;
+			}
+		}
+		button {
+			pointer-events: none;
+			&:hover {
+				cursor: not-allowed;
+			}
+			&.input-number-add {
+				&:after {
+					border-color: transparent transparent $neutral-1-a4 transparent;
+				}
+			}
+			&.input-number-sub {
+				&:after {
+					border-color: $neutral-1-a4 transparent transparent transparent;
+				}
+			}
+		}
+	}
+
+	//add + sub buttons
+	button {
+		position: absolute;
+		right: 2px;
+		transition: opacity .1s;
+		padding: 0;
+		border: none;
+		height: 20px;
+		width: 24px;
+		background: transparent;
+		&:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+		}
+		&:focus, &:hover {
+			&.input-number-add {
+				&:after {
+					border-color: transparent transparent $dark transparent;
+				}
+			}
+			&.input-number-sub {
+				&:after {
+					border-color: $dark transparent transparent transparent;
+				}
+			}
+		}
+		&:focus:not(.focus--mouse) {
+			opacity: 1;
+		}
+
+		&.input-number-add {
+			top: -6px;
+			&:after {
+				border-width: 0 5px 6px 5px;
+				border-color: transparent transparent $gray-secondary transparent;
+			}
+		}
+		&.input-number-sub {
+			bottom: -6px;
+			&:after {
+				border-width: 6px 5px 0 5px;
+				border-color: $gray-secondary transparent transparent transparent;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//label
+label {
+	&.input-number-label {
+		display: block;
+		color: $gray-secondary;
+		font-weight: 600;
+		line-height: 1em;
+		font-size: $small-font-size;
+		cursor: text;
+		display: block;
+		width: 100%;
+		padding: 0 $input-spacing-x;
+	}
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	.input-number {
+		//add + sub buttons
+		button {
+			opacity: 0;
+		}
+		&:hover {
+			button {
+				opacity: 1;
+			}
+		}
+	}
+}

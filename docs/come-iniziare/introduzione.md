@@ -32,7 +32,7 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery e popper.js. Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery, popper.js e [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html) (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
 
 <table class="table table-bordered">
   <thead>
@@ -40,6 +40,7 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
       <th scope="col">JS files</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
+      <th scope="col">OwlCarousel</th>
     </tr>
   </thead>
   <tbody>
@@ -49,11 +50,13 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
       </th>
       <td class="bg-success">Incluso</td>
       <td class="bg-success">Incluso</td>
+      <td class="bg-success">Incluso</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.min.js</code></div>
       </th>
+      <td>Non Incluso</td>
       <td>Non Incluso</td>
       <td>Non Incluso</td>
     </tr>
@@ -64,7 +67,7 @@ In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà 
 
 #### Versione "bundle"
 
-Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
+Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
 {% highlight html %}
 <script src="./bootstrap-italia.bundle.min.js"></script>
@@ -72,11 +75,12 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 
 #### Versione semplice
 
-Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere tag `<script>` per jQuery (di cui è sufficiente la versione _slim_) e per Popper.js come mostrato di seguito:
+Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
 
 {% highlight html %}
 {{ site.cdn.jquery }}
 {{ site.cdn.popper }}
+{{ site.cdn.owlcarousel }}
 <script src="/bootstrap-italia.min.js"></script>
 {% endhighlight %}
 

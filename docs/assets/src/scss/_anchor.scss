@@ -2,6 +2,7 @@
   font-weight: 400;
   color: rgba($link-color, .5);
   transition: color .16s linear;
+  display: inline-block;
 
   &:hover {
     color: $link-color;

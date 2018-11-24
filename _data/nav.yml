@@ -29,6 +29,7 @@
     #  status: to do
     - title: Card
     - title: Carousel
+      status: wip
     - title: Collapse
     - title: Dropdown
     - title: Elenchi
@@ -43,6 +44,7 @@
     - title: Form Radio Button
     - title: Form Toggles
     - title: Form Upload
+    - title: Form Input Number
     - title: Header
     - title: Hero
     #- title: Input group
