@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1398px" height="414px" viewBox="0 0 1398 414" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -42.000000)">
+            <g id="logo-team-digitale" transform="translate(0.000000, 44.000000)" fill="#FFFFFF">
+                <path d="M403.1,409.1 L6,409.1 C2.7,409.1 0,406.4 0,403.1 L0,6 C0,2.7 2.7,0 6,0 L403.1,0 C406.4,0 409.1,2.7 409.1,6 L409.1,403.1 C409.1,406.4 406.4,409.1 403.1,409.1 Z M99.1,201 C114.122145,201 126.3,188.822145 126.3,173.8 C126.3,158.777855 114.122145,146.6 99.1,146.6 C84.0778548,146.6 71.9,158.777855 71.9,173.8 C71.9,188.822145 84.0778548,201 99.1,201 Z M164.9,316 L164.9,316.1 L240.1,316.1 C320.3,316.1 335.1,276.3 335.1,200.1 C335.1,125.8 318,92.6 240.1,92.6 L164.9,92.6 L164.9,316 Z M240.1,132 C284.1,132 288.4,151.1 288.4,200 C288.4,249.7 284.1,276.6 240.1,276.6 L210.2,276.6 L210.2,132 L240.1,132 Z" id="Combined-Shape"></path>
+            </g>
+            <path d="M470.5,44 L470.5,453.1" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square" fill-rule="nonzero"></path>
+            <text id="TEAM-PER-LA-TRASFORM" font-family="TitilliumWeb-SemiBold, Titillium Web" font-size="106" font-weight="500" fill="#FFFFFF">
+                <tspan x="531" y="120">TEAM PER LA</tspan>
+                <tspan x="531" y="281">TRASFORMAZIONE</tspan>
+                <tspan x="531" y="442">DIGITALE</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

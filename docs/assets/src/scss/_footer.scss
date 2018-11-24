@@ -7,20 +7,12 @@
   }
 
   .footer-social {
-    font-size: 0;
+    display: none; //TODO
+    a {
+      font-size: 0;
+    }
   }
 
-  .team-logo {
-    &--icon {
-      width: 72px
-    }
-    &--text {
-      font-size: 16px;
-      line-height: 1rem;
-      max-width: 160px;
-      text-transform: uppercase;
-    }
-  }
   .small-prints {
     color: #00FFF8;
     font-weight: 600;
