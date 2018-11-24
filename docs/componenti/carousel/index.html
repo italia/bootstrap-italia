@@ -12,13 +12,13 @@
 <title>Carousel · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811241140" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811241140" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.21.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.22.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -242,7 +242,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Card</span></a>
                   </li><li>
                     <a class="list-item  active" href="/bootstrap-italia/docs/componenti/carousel/">
-                      <span>Carousel</span></a>
+                      <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
                       <span>Collapse</span></a>
@@ -462,21 +462,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#come-funziona">Come funziona</a></li>
-<li class="toc-entry toc-h2"><a href="#esempio">Esempio</a>
+<li class="toc-entry toc-h2"><a href="#esempi-di-carousel-con-diversi-contenuti">Esempi di Carousel con diversi contenuti</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#solo-diapositive">Solo diapositive</a></li>
-<li class="toc-entry toc-h3"><a href="#con-i-controlli">Con i controlli</a></li>
-<li class="toc-entry toc-h3"><a href="#con-gli-indicatori">Con gli indicatori</a></li>
-<li class="toc-entry toc-h3"><a href="#con-le-didascalie">Con le didascalie</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#modo-duso">Modo d’uso</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#tramite-attributi-data">Tramite attributi data</a></li>
-<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
-<li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
-<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
-<li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
+<li class="toc-entry toc-h3"><a href="#titolo-e-card-semplici">Titolo e Card semplici</a></li>
+<li class="toc-entry toc-h3"><a href="#card-articolo">Card “articolo”</a></li>
+<li class="toc-entry toc-h3"><a href="#card-con-immagine-in-evidenza">Card con immagine in evidenza</a></li>
+<li class="toc-entry toc-h3"><a href="#card-con-immagine-in-alto">Card con immagine in alto</a></li>
+<li class="toc-entry toc-h3"><a href="#card-speciali">Card speciali</a></li>
+<li class="toc-entry toc-h3"><a href="#fullscreen-di-immagini">Fullscreen di immagini</a></li>
 </ul>
 </li>
 </ul>
@@ -488,389 +481,1407 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <p class="bd-lead">Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.</p>
           <h2 id="come-funziona">Come funziona</h2>
 
-<p>Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e un pò di JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo.</p>
+<p>Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e un pò di JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.</p>
 
-<p>Nei browsers dove l’ <a href="https://www.w3.org/TR/page-visibility/">API di visibilità della pagina</a> è supportata, il carousel eviterà di scorrere quando la pagina web non è visibile all’utente (come ad esempio quando la scheda del browser non è attiva, la finestra del browser è ridotta a icona, ecc.).</p>
+<p>Il plugin utilizzato è <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html">Owl Carousel</a>.</p>
 
-<p>Tieni presente che i carousel nidificati non sono supportati e che i carousel generalmente non sono conformi agli standard di accessibilità.</p>
+<p>Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.</p>
 
-<p>Infine, se stai costruendo il JavaScript dal sorgente, è <a href="/bootstrap-italia/docs/come-iniziare/javascript/#util">richiesto <code class="highlighter-rouge">util.js</code></a>.</p>
+<h2 id="esempi-di-carousel-con-diversi-contenuti">Esempi di Carousel con diversi contenuti</h2>
 
-<h2 id="esempio">Esempio</h2>
+<p>I wrapper più esterni <code class="highlighter-rouge">it-carousel-wrapper</code> e <code class="highlighter-rouge">it-carousel-all owl-carousel</code> ricevono le classi utili alla visualizzazione corretta dei contenuti.</p>
 
-<p>I carousel non normalizzano automaticamente le dimensioni della diapositiva. Pertanto, potrebbe essere necessario utilizzare utilità aggiuntive o stili personalizzati per ridimensionare il contenuto in modo appropriato. Mentre i carousel supportano i controlli e gli indicatori precedente/successivo, questi non sono esplicitamente richiesti. Aggiungi e personalizza come ritieni opportuno.</p>
+<h3 id="titolo-e-card-semplici">Titolo e Card semplici</h3>
 
-<p>Assicurati di impostare un id univoco su <code class="highlighter-rouge">.carousel</code> per i controlli opzionali, specialmente se stai usando più di un carousel nella pagina.</p>
+<p>Il seguente è un carousel con card semplici.</p>
 
-<h3 id="solo-diapositive">Solo diapositive</h3>
+<p><strong>Classi da applicare</strong>:</p>
 
-<p>Questo è un carousel con sole diapositive. Nota la presenza di <code class="highlighter-rouge">.d-block</code> e di <code class="highlighter-rouge">.img-fluid</code> sulle immagini del carousel per impedire l’allineamento dell’immagine predefinito del browser.</p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-three-cols</code> che attiva la visualizzazione a 3 colonne su desktop.</p>
+
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-card-bg</code> che indica che le card contenute in esso hanno background ed ombra.</p>
 
 <div class="bd-example">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="Prima diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Seconda diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Terza diapositiva" />
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+  <div class="it-header-block">
+    <div class="it-header-block-title">
+      <h2 class="no_toc">Titolo del Carousel</h2>
     </div>
   </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"carouselExampleSlidesOnly"</span> <span class="na">class=</span><span class="s">"carousel slide"</span> <span class="na">data-ride=</span><span class="s">"carousel"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-inner"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item active"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide"</span> <span class="na">alt=</span><span class="s">"Prima diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide"</span> <span class="na">alt=</span><span class="s">"Seconda diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"</span> <span class="na">alt=</span><span class="s">"Terza diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h3 id="con-i-controlli">Con i controlli</h3>
-
-<p>Aggiungere i controlli precedente e successivo:</p>
-
-<div class="bd-example">
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="Prima diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Seconda diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Terza diapositiva" />
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Precedente</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Successivo</span>
-  </a>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"carouselExampleControls"</span> <span class="na">class=</span><span class="s">"carousel slide"</span> <span class="na">data-ride=</span><span class="s">"carousel"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-inner"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item active"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide"</span> <span class="na">alt=</span><span class="s">"Prima diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide"</span> <span class="na">alt=</span><span class="s">"Seconda diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"</span> <span class="na">alt=</span><span class="s">"Terza diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"carousel-control-prev"</span> <span class="na">href=</span><span class="s">"#carouselExampleControls"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span class="s">"prev"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"carousel-control-prev-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Precedente<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"carousel-control-next"</span> <span class="na">href=</span><span class="s">"#carouselExampleControls"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span class="s">"next"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"carousel-control-next-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Successivo<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h3 id="con-gli-indicatori">Con gli indicatori</h3>
-
-<p>È possibile anche aggiungere gli indicatori al carousel, anche a fianco dei controlli.</p>
-
-<div class="bd-example">
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="Prima diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Seconda diapositiva" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Terza diapositiva" />
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Precedente</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Successivo</span>
-  </a>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"carouselExampleIndicators"</span> <span class="na">class=</span><span class="s">"carousel slide"</span> <span class="na">data-ride=</span><span class="s">"carousel"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"carousel-indicators"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carouselExampleIndicators"</span> <span class="na">data-slide-to=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carouselExampleIndicators"</span> <span class="na">data-slide-to=</span><span class="s">"1"</span><span class="nt">&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">"#carouselExampleIndicators"</span> <span class="na">data-slide-to=</span><span class="s">"2"</span><span class="nt">&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ol&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-inner"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item active"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide"</span> <span class="na">alt=</span><span class="s">"Prima diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide"</span> <span class="na">alt=</span><span class="s">"Seconda diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"d-block w-100"</span> <span class="na">src=</span><span class="s">".../800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide"</span> <span class="na">alt=</span><span class="s">"Terza diapositiva"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"carousel-control-prev"</span> <span class="na">href=</span><span class="s">"#carouselExampleIndicators"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span class="s">"prev"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"carousel-control-prev-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Precedente<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"carousel-control-next"</span> <span class="na">href=</span><span class="s">"#carouselExampleIndicators"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-slide=</span><span class="s">"next"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"carousel-control-next-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Successivo<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-warning">
-<h5 id="è-richiesto-un-elemento-attivo-iniziale">È richiesto un elemento attivo iniziale</h5>
-
-<p>È necessario aggiungere la classe <code class="highlighter-rouge">.active</code> ad una delle diapositive. Altrimenti il carousel non sarà visibile.</p>
-</div>
-
-<h3 id="con-le-didascalie">Con le didascalie</h3>
-
-<p>Aggiungi facilmente le didascalie alle diapositive con l’elemento <code class="highlighter-rouge">.carousel-caption</code> all’interno di ogni <code class="highlighter-rouge">.carousel-item</code>. Possono essere facilmente nascosti su finestre più piccole, come mostrato di seguito, con <a href="/bootstrap-italia/docs/utilities/display/">utilità di visualizzazione</a> opzionali. Vengono nascosti inizialmente con <code class="highlighter-rouge">.d-none</code> e riportarti su dispositivi di medie dimensioni con <code class="highlighter-rouge">.d-md-block</code>.</p>
-
-<div class="bd-example">
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="Prima diapositiva" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo prima diapositiva</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Seconda diapositiva" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo seconda diapositiva</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Terza diapositiva" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Titolo terza diapositiva</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+  <div class="it-carousel-all owl-carousel it-card-bg">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Precedente</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Successivo</span>
-    </a>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper card-space">
+        <div class="card card-bg">
+          <div class="card-body">
+            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-caption d-none d-md-block"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5&gt;</span>...<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-three-cols"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-header-block"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-header-block-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Titolo del Carousel<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel it-card-bg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="modo-duso">Modo d’uso</h2>
+<h3 id="card-articolo">Card “articolo”</h3>
 
-<h3 id="tramite-attributi-data">Tramite attributi data</h3>
+<p><strong>Classi da applicare</strong>:</p>
 
-<p>Usa gli attributi data per un semplice controllo della posizione del carousel. <code class="highlighter-rouge">data-slide</code> accetta le keyword <code class="highlighter-rouge">prev</code> o <code class="highlighter-rouge">next</code>, che cambiano la posizione della diapositiva rispetto alla sua posizione attuale. In alternativa, usa <code class="highlighter-rouge">data-slide-to</code> per passare un indice di diapositiva al carousel <code class="highlighter-rouge">data-slide-to="2"</code>, che sposta la posizione della diapositiva in un particolare indice che inizia con <code class="highlighter-rouge">0</code>.</p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-three-cols</code> che attiva la visualizzazione a 3 colonne su desktop.</p>
 
-<p>L’attributo <code class="highlighter-rouge">data-ride="carousel"</code> viene usato per indicare che l’animazione del carousel parte al caricamento della pagina. <strong>Non può essere utilizzato in combinazione con l’inizializzazione JavaScript (ridondante e non necessaria) dello stesso carosello.</strong></p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> : nessuna classe aggiuntiva necessaria.</p>
 
-<h3 id="tramite-javascript">Tramite JavaScript</h3>
-
-<p>Richiama il carousel manualmente con:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.carousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">()</span></code></pre></figure>
-
-<h3 id="opzioni">Opzioni</h3>
-
-<p>Le opzioni possono essere passate tramite attributi data o JavaScript. Per gli attributi data, aggiungi il nome dell’opzione a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-interval=""</code>.</p>
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>interval</td>
-      <td>number</td>
-      <td>5000</td>
-      <td>L'intervallo di tempo tra la successione automatica di un oggetto. Se falso, il carousel non si muoverà automaticamente.</td>      
-    </tr>
-    <tr>
-      <td>keyboard</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Se il carousel deve reagire agli eventi da tastiera.</td>
-    </tr>
-    <tr>
-      <td>pause</td>
-      <td>string | boolean</td>
-      <td>"hover"</td>
-      <td><p>Se impostato su <code>"hover"</code>, ferma lo scorrimento del carousel sul <code>mouseenter</code> e lo riprende sul <code>mouseleave</code>. Se impostato su <code>false</code>, il passaggio del mouse sul carousel non lo fermerà.</p>
-      <p>Sui dispositivi abilitati al touch, quando impostato su <code>"hover"</code>, lo scorrimento si fermerà su <code>touchend</code> (una volta che l'utente ha terminato di interagire con il carousel) per due intervalli, prima di riprendere automaticamente. Si noti che questo è in aggiunta al comportamento del mouse riportati sopra.</p></td>
-    </tr>
-    <tr>
-      <td>ride</td>
-      <td>string</td>
-      <td>false</td>
-      <td>Riproduce automaticamente il carousel dopo che l'utente ha eseguito manualmente il ciclo del primo elemento. Se "carousel", Riproduce automaticamente il carousel al caricamento.</td>
-    </tr>
-    <tr>
-      <td>wrap</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Se il carousel deve andare in ciclo continuo o fermarsi.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="metodi">Metodi</h3>
-
-<div class="bd-callout bd-callout-info">
-<h4 id="metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</h4>
-
-<p>Tutti i metodi API sono <strong>asincroni</strong> e avviano una <strong>transizione</strong>. Ritornano al chiamante non appena viene avviata la transizione ma <strong>prima che termini</strong>. Inoltre, una chiamata al metodo su un <strong>componente in transizione verrà ignorata</strong>.</p>
-
-<p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
+<div class="bd-example">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+  <div class="it-carousel-all owl-carousel">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <div class="category-top">
+              <!-- category heading--><a class="category" href="#">Category</a>
+              <!-- category data--><span class="data">10/12/2018</span>
+            </div>
+            <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="card-signature">di Federico De Paolis</span>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <div class="category-top">
+              <!-- category heading--><a class="category" href="#">Category</a>
+              <!-- category data--><span class="data">10/12/2018</span>
+            </div>
+            <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="card-signature">di Federico De Paolis</span>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <div class="category-top">
+              <!-- category heading--><a class="category" href="#">Category</a>
+              <!-- category data--><span class="data">10/12/2018</span>
+            </div>
+            <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="card-signature">di Federico De Paolis</span>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <div class="category-top">
+              <!-- category heading--><a class="category" href="#">Category</a>
+              <!-- category data--><span class="data">10/12/2018</span>
+            </div>
+            <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="card-signature">di Federico De Paolis</span>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-three-cols"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+              <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+              <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+              <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+              <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="carouseloptions"><code class="highlighter-rouge">.carousel(options)</code></h4>
+<h3 id="card-con-immagine-in-evidenza">Card con immagine in evidenza</h3>
 
-<p>Inizializza il carousel con l’opzione facoltativa <code class="highlighter-rouge">object</code> e inizia lo scorrimento tra gli elementi.</p>
+<p>Contiene un immagine associata ad una card “articolo”</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.carousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">({</span>
-  <span class="na">interval</span><span class="p">:</span> <span class="mi">2000</span>
-<span class="p">})</span></code></pre></figure>
+<p><strong>Classi da applicare</strong>:</p>
 
-<h4 id="carouselcycle"><code class="highlighter-rouge">.carousel('cycle')</code></h4>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract</code> che attiva la visualizzazione a 2 colonne in  Flex.</p>
 
-<p>Scorre gli elementi del carousel da sinistra a destra.</p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> : nessuna classe aggiuntiva necessaria.</p>
 
-<h4 id="carouselpause"><code class="highlighter-rouge">.carousel('pause')</code></h4>
+<div class="bd-example">
+ <div class="it-carousel-wrapper it-carousel-landscape-abstract">
+  <div class="it-carousel-all owl-carousel">
+    <div class="it-single-slide-wrapper">
+      <a href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt" /></div>
+          </div>
+        </div>
+      </a>
+      <div class="it-text-slider-wrapper-outside">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <div class="category-top">
+                <!-- category heading--><a class="category" href="#">Category</a>
+                <!-- category data--><span class="data">10/12/2018</span>
+              </div>
+              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="card-signature">di Federico De Paolis</span>
+              <a class="read-more" href="#">
+                <span class="text">Leggi di più</span>
+                <svg class="icon">
+                  <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <a href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt" /></div>
+          </div>
+        </div>
+      </a>
+      <div class="it-text-slider-wrapper-outside">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <div class="category-top">
+                <!-- category heading--><a class="category" href="#">Category</a>
+                <!-- category data--><span class="data">10/12/2018</span>
+              </div>
+              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="card-signature">di Federico De Paolis</span>
+              <a class="read-more" href="#">
+                <span class="text">Leggi di più</span>
+                <svg class="icon">
+                  <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <a href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt" /></div>
+          </div>
+        </div>
+      </a>
+      <div class="it-text-slider-wrapper-outside">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <div class="category-top">
+                <!-- category heading--><a class="category" href="#">Category</a>
+                <!-- category data--><span class="data">10/12/2018</span>
+              </div>
+              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="card-signature">di Federico De Paolis</span>
+              <a class="read-more" href="#">
+                <span class="text">Leggi di più</span>
+                <svg class="icon">
+                  <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <a href="#">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt" /></div>
+          </div>
+        </div>
+      </a>
+      <div class="it-text-slider-wrapper-outside">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <div class="category-top">
+                <!-- category heading--><a class="category" href="#">Category</a>
+                <!-- category data--><span class="data">10/12/2018</span>
+              </div>
+              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="card-signature">di Federico De Paolis</span>
+              <a class="read-more" href="#">
+                <span class="text">Leggi di più</span>
+                <svg class="icon">
+                  <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-text-slider-wrapper-outside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+                <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                <span class="nt">&lt;/svg&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-text-slider-wrapper-outside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+                <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                <span class="nt">&lt;/svg&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-text-slider-wrapper-outside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+                <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                <span class="nt">&lt;/svg&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-text-slider-wrapper-outside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- category heading--&gt;</span><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span>
+                <span class="c">&lt;!-- category data--&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2018<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title big-heading"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                <span class="nt">&lt;/svg&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Ferma lo scorrimentio degli elementi del carousel.</p>
+<h3 id="card-con-immagine-in-alto">Card con immagine in alto</h3>
 
-<h4 id="carouselnumber"><code class="highlighter-rouge">.carousel(number)</code></h4>
+<p>Contiene card con immagine in alto</p>
 
-<p>Fa scorrere il carosello su una particolare frame (Basato su 0, simile a un array). <strong>Ritorna al chiamante prima che l’elemento di destinazione sia stato mostrato</strong> (i.e. prima che l’evento <code class="highlighter-rouge">slid.bs.carousel</code> si verifichi).</p>
+<p><strong>Classi da applicare</strong>:</p>
 
-<h4 id="carouselprev"><code class="highlighter-rouge">.carousel('prev')</code></h4>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-three-cols</code> per la visualizzazione a 3 colonne.</p>
 
-<p>Scorre all’elemento precedente. <strong>Ritorna al chiamante prima che l’elemento precedente sia stato mostrato</strong> (i.e. prima che l’evento <code class="highlighter-rouge">slid.bs.carousel</code> si verifichi).</p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-img-card</code> che specifica il tipo di card contenuta.</p>
 
-<h4 id="carouselnext"><code class="highlighter-rouge">.carousel('next')</code></h4>
+<div class="bd-example">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+  <div class="it-carousel-all owl-carousel it-img-card">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+            <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-three-cols"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel it-img-card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+              <span class="nt">&lt;/svg&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Scorre all’elemento successivo. <strong>Ritorna al chiamante prima che l’elemento successivo sia stato mostrato</strong> (i.e. prima che l’evento <code class="highlighter-rouge">slid.bs.carousel</code> si verifichi).</p>
+<h3 id="card-speciali">Card speciali</h3>
 
-<h4 id="carouseldispose"><code class="highlighter-rouge">.carousel('dispose')</code></h4>
+<p>Contiene <a href="/bootstrap-italia/docs/componenti/card/#card-speciali">Card di tipo speciale</a>.</p>
 
-<p>Distrugge un elemento del carousel.</p>
+<p><strong>Classi da applicare</strong>:</p>
 
-<h3 id="eventi">Eventi</h3>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-three-cols</code> per la visualizzazione a 3 colonne.</p>
 
-<p>La classe del carousel di Bootstrap espone due eventi per l’aggancio alla funzionalità del carousel. Entrambi gli eventi hanno le seguenti proprietà aggiuntive:</p>
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> : viene aggiunta la classe <code class="highlighter-rouge">it-img-card</code> che specifica il tipo di card contenuta, <code class="highlighter-rouge">it-special-card</code> per indicare che la card contenuta è di tipo “special”.</p>
 
-<ul>
-  <li><code class="highlighter-rouge">direction</code>: La direzione nella quale il carousel sta scorrendo (<code class="highlighter-rouge">"sinistra"</code> o <code class="highlighter-rouge">"destra"</code>).</li>
-  <li><code class="highlighter-rouge">relatedTarget</code>: L’elemento DOM che viene inserito in posizione come elemento attivo.</li>
-  <li><code class="highlighter-rouge">from</code>: L’indice dell’elemento corrente</li>
-  <li><code class="highlighter-rouge">to</code>: L’indice dell’elemento successivo</li>
-</ul>
+<div class="bd-example">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+  <div class="it-carousel-all owl-carousel it-img-card it-special-card">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <a class="card card-img no-after special-card" href="#">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="head-tags"><span class="data">10/10/2018</span>
+            </div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <a class="card card-img no-after special-card" href="#">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="head-tags"><span class="data">10/10/2018</span>
+            </div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <a class="card card-img no-after special-card" href="#">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="head-tags"><span class="data">10/10/2018</span>
+            </div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <a class="card card-img no-after special-card" href="#">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="head-tags"><span class="data">10/10/2018</span>
+            </div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <a class="card card-img no-after special-card" href="#">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="head-tags"><span class="data">10/10/2018</span>
+            </div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-three-cols"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel it-img-card it-special-card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card card-img no-after special-card"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-tags"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/10/2018<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Tutti gli eventi del carousel sono attivati sul carousel stesso (i.e. su <code class="highlighter-rouge">&lt;div class="carousel"&gt;</code>).</p>
+<h3 id="fullscreen-di-immagini">Fullscreen di immagini</h3>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Tipo di Evento</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>slide.bs.carousel</td>
-      <td>Questo evento si attiva immediatamente quando viene richiamato il metodo dell'istanza della <code>diapositiva</code>.</td>
-    </tr>
-    <tr>
-      <td>slid.bs.carousel</td>
-      <td>Questo evento si attiva quando il carousel ha completato la transizione della diapositiva.</td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>Classi da applicare</strong>:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'slide.bs.carousel'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something…</span>
-<span class="p">})</span></code></pre></figure>
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> :<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-three-cols</code> per la formattazione colonnare.<br />
+viene aggiunta la classe  <code class="highlighter-rouge">it-full-carousel</code> per la visualizzazione a tutto schermo (orizzontale)</p>
+
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> :<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-img-card</code> che specifica il tipo di card<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-big-img</code> per indicare che l’immagine contenuta è di tipo grande.</p>
+
+<div class="bd-example">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel">
+  <div class="it-carousel-all owl-carousel it-img-card it-big-img">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel it-img-card it-big-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h4 id="fullscreen-di-immagini-di-dimensioni-standard">Fullscreen di immagini di dimensioni standard</h4>
+
+<p><strong>Classi da applicare</strong>:</p>
+
+<p>div <strong><code class="highlighter-rouge">it-carousel-wrapper</code></strong> :<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-carousel-landscape-abstract-3</code> per la formattazione colonnare.<br />
+viene aggiunta la classe  <code class="highlighter-rouge">it-full-carousel</code> per la visualizzazione a tutto schermo (orizzontale)</p>
+
+<p>div <strong><code class="highlighter-rouge">it-carousel-all owl-carousel</code></strong> :<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-img-card</code> che specifica il tipo di card<br />
+viene aggiunta la classe <code class="highlighter-rouge">it-standard-image</code> per indicare che l’immagine contenuta è di tipo standard.</p>
+
+<div class="bd-example">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-3 it-full-carousel">
+  <div class="it-carousel-all owl-carousel it-img-card it-standard-image">
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-single-slide-wrapper">
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-wrapper it-carousel-landscape-abstract-3 it-full-carousel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-carousel-all owl-carousel it-img-card it-standard-image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-single-slide-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-img no-after"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
         </main>
       </div>
     </div>
 
-    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
-  <div class="container">
-    <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-7">
-        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
-      </div>
-      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
-        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
-      </div>
-    </div>
+    <div class="cookiebar">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+  <div class="cookiebar-buttons">
+      <a href="https://designers.italia.it/privacy-policy/" class="cookiebar-btn">Privacy policy</span></a>
+      <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
   </div>
 </div>
-
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811221504"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811241140"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811221504"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811241140"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -12,13 +12,13 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811241140" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811241140" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.21.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.22.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -242,7 +242,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Card</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
-                      <span>Carousel</span></a>
+                      <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
                       <span>Collapse</span></a>
@@ -492,7 +492,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS e un Javascript, scaricabili sottoforma di file compresso alla <a href="https://github.com/italia/bootstrap-italia/releases">pagina delle release di progetto</a>:</p>
 
-<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v0.21.2/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v0.21.2</a></p>
+<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v0.22.0/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v0.22.0</a></p>
 
 <p>Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager <strong>npm</strong>, puoi fare riferimento a <a href="/bootstrap-italia/docs/come-iniziare/introduzione#utilizzo-come-dipendenza">queste indicazioni</a>.</p>
 
@@ -508,7 +508,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="javascript">Javascript</h3>
 
-<p>All’interno della cartella <code class="highlighter-rouge">js</code> saranno invece presenti due file, che si differenziano soltanto per l’inclusione <em>in linea</em> delle librerie jQuery e popper.js. Vediamo nel dettaglio di cosa si tratta:</p>
+<p>All’interno della cartella <code class="highlighter-rouge">js</code> saranno invece presenti due file, che si differenziano soltanto per l’inclusione <em>in linea</em> delle librerie jQuery, popper.js e <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html">Owl Carousel</a> (quest’ultimo necessario soltanto se presenti componenti di tipo <a href="/bootstrap-italia/docs/componenti/carousel">Carousel</a>). Vediamo nel dettaglio di cosa si tratta:</p>
 
 <table class="table table-bordered">
   <thead>
@@ -516,6 +516,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <th scope="col">JS files</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
+      <th scope="col">OwlCarousel</th>
     </tr>
   </thead>
   <tbody>
@@ -525,11 +526,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       </th>
       <td class="bg-success">Incluso</td>
       <td class="bg-success">Incluso</td>
+      <td class="bg-success">Incluso</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.min.js</code></div>
       </th>
+      <td>Non Incluso</td>
       <td>Non Incluso</td>
       <td>Non Incluso</td>
     </tr>
@@ -540,16 +543,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h4 id="versione-bundle">Versione “bundle”</h4>
 
-<p>Includendo la versione <code class="highlighter-rouge">*.bundle.*</code>, non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, in quanto già inclusi nel file <code class="highlighter-rouge">bootstrap-italia.bundle.min.js</code>.</p>
+<p>Includendo la versione <code class="highlighter-rouge">*.bundle.*</code>, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file <code class="highlighter-rouge">bootstrap-italia.bundle.min.js</code>.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./bootstrap-italia.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h4 id="versione-semplice">Versione semplice</h4>
 
-<p>Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere tag <code class="highlighter-rouge">&lt;script&gt;</code> per jQuery (di cui è sufficiente la versione <em>slim</em>) e per Popper.js come mostrato di seguito:</p>
+<p>Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag <code class="highlighter-rouge">&lt;script&gt;</code> come mostrato di seguito:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"</span> <span class="na">integrity=</span><span class="s">"sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0="</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/bootstrap-italia.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h2 id="pagina-html-di-esempio">Pagina HTML di esempio</h2>
@@ -633,30 +637,23 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
       </div>
     </div>
 
-    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
-  <div class="container">
-    <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-7">
-        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
-      </div>
-      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
-        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
-      </div>
-    </div>
+    <div class="cookiebar">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+  <div class="cookiebar-buttons">
+      <a href="https://designers.italia.it/privacy-policy/" class="cookiebar-btn">Privacy policy</span></a>
+      <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
   </div>
 </div>
-
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811221504"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811241140"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811221504"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811241140"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

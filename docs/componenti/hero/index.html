@@ -12,13 +12,13 @@
 <title>Hero · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811241140" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811221504" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811241140" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.21.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.22.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -242,7 +242,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Card</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
-                      <span>Carousel</span></a>
+                      <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
                       <span>Collapse</span></a>
@@ -459,48 +459,365 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         </div>
 
         
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#con-immagine">Con immagine</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#versione-small">Versione small</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#con-contenuti-testuali">Con contenuti testuali</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#con-contenuti-testuali-centrati">Con contenuti testuali centrati</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#con-testi-ed-immagine-di-sfondo">Con testi ed immagine di sfondo</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#con-overlay-di-colore-primario">Con overlay di colore primario</a></li>
+<li class="toc-entry toc-h3"><a href="#con-overlay-e-filtro-di-colore-primario">Con overlay e filtro di colore primario</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#con-immagine-e-margine-negativo-per-contenuti-sovrapposti">Con immagine e margine negativo per contenuti sovrapposti</a></li>
+</ul>
+          </div>
+        
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Hero</h1>
           <p class="bd-lead">Lo Hero (ciò che Bootstrap definisce “Jumbotron”) è un componente per la presentazione di contenuti in evidenza.</p>
-          <p>Il cosidetto <em>Hero</em> è un componente leggero e flessibile che può facoltativamente estendere l’intera finestra per mostrare i messaggi in evidenza sul tuo sito.</p>
+          <p>Il cosiddetto <em>Hero</em> è un componente leggero e flessibile che può facoltativamente estendere l’intera finestra per mostrare i messaggi in evidenza sul tuo sito.
+Di seguito una serie di esempi con la descrizione degli elementi e delle classi applicabili.</p>
+
+<p>Il componente Hero può contenere</p>
+<ul>
+  <li>Sub head</li>
+  <li>Heading (titolo)</li>
+  <li>Paragrafo</li>
+  <li>Call to action</li>
+  <li>Immagine di background</li>
+</ul>
+
+<div class="bd-callout bd-callout-info">
+<p>Il componente Hero è un componente full screen (orizzontalmente).
+Per le reale visualizzazione a schermo potete guardare la pagina di esempio: <strong><a href="/bootstrap-italia/docs/esempi/hero/" target="_blank">Esempi Hero</a></strong>.</p>
+</div>
+
+<h2 id="con-immagine">Con immagine</h2>
+<p>Il componente Hero, è contenuto all’interno del div <code class="highlighter-rouge">.it-hero-wrapper</code> a cui si andranno ad aggiungere le classi che ne varieranno l’aspetto.</p>
 
 <div class="bd-example">
-<div class="hero">
-  <h1 class="hero-heading display-4">Ciao, mondo!</h1>
-  <p class="lead">Questa è una semplice unità hero, un semplice per richiamare un'attenzione particolare al contenuto o alle informazioni in primo piano.</p>
-  <hr class="my-4" />
-  <p>Utilizza le classi di utilità per la tipografia e la spaziatura per l'ingombro del contenuto all'interno del contenitore più grande.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Per saperne di più</a>
-  </p>
+<div class="it-hero-wrapper">
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+      </div>
+   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"hero-heading display-4"</span><span class="nt">&gt;</span>Ciao, mondo!<span class="nt">&lt;/h1&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>Questa è una semplice unità hero, un semplice per richiamare un'attenzione particolare al contenuto o alle informazioni in primo piano.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"my-4"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Utilizza le classi di utilità per la tipografia e la spaziatura per l'ingombro del contenuto all'interno del contenitore più grande.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Per saperne di più<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Per rendere il hero a larghezza intera, e senza angoli arrotondati, aggiungi la classe <code class="highlighter-rouge">.hero-fluid</code> e aggiungi all’interno un elemento <code class="highlighter-rouge">.container</code> o <code class="highlighter-rouge">.container-fluid</code>.</p>
+<h3 id="versione-small">Versione small</h3>
+<p>Per ottenere il componente Hero nella sua versione più piccola:<br />
+aggiungere al div <code class="highlighter-rouge">.it-hero-wrapper</code> la classe <code class="highlighter-rouge">.it-hero-small-size</code>.</p>
 
 <div class="bd-example">
-<div class="hero hero-fluid">
+<div class="it-hero-wrapper it-hero-small-size">
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-hero-small-size"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="con-contenuti-testuali">Con contenuti testuali</h2>
+<p>Esempio di Hero con tutti i componenti testuali</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper">
   <div class="container">
-    <h1 class="hero-heading display-4">Hero fluido</h1>
-    <p class="lead">Questo è un hero modificato che occupa l'intero spazio orizzontale del suo contenitore.</p>
+    <div class="row">
+        <div class="col-12">
+          <div class="it-hero-text-wrapper bg-dark">
+              <span class="it-category">Category</span>
+              <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+              <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label button</a></div>
+          </div>
+        </div>
+    </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero hero-fluid"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"hero-heading display-4"</span><span class="nt">&gt;</span>Hero fluido<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>Questo è un hero modificato che occupa l'intero spazio orizzontale del suo contenitore.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label button<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="con-contenuti-testuali-centrati">Con contenuti testuali centrati</h3>
+<p>Per ottenere il componente Hero centrando i testi orizzontalmente: <br />
+aggiungere al div <code class="highlighter-rouge">.it-hero-wrapper</code> la classe <code class="highlighter-rouge">.it-text-centered</code>.</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper it-text-centered">
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="it-hero-text-wrapper bg-dark">
+               <span class="it-category">Category</span>
+               <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label button</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-text-centered"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label button<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="con-testi-ed-immagine-di-sfondo">Con testi ed immagine di sfondo</h2>
+<p>Per visualizzare i testi in overlay sulle immagini, viene creato un div scuro in opacità per migliorare la leggibilità del testo in caso di immagini dai toni chiari.
+aggiungere al div <code class="highlighter-rouge">.it-hero-wrapper</code> la classi:<br />
+<strong><code class="highlighter-rouge">.it-overlay</code></strong> : crea il div che si sovrappone all’immagine<br />
+<strong><code class="highlighter-rouge">.it-dark</code></strong> : definisce il colore di background del div in overlay.</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper it-dark it-overlay">
+  <!-- - img-->
+  <div class="img-responsive-wrapper">
+    <div class="img-responsive">
+        <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+    </div>
+  </div>
+  <!-- - texts-->
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+          <div class="it-hero-text-wrapper bg-dark">
+              <span class="it-category">Category</span>
+              <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+              <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label button</a></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-dark it-overlay"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- - img--&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- - texts--&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label button<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="con-overlay-di-colore-primario">Con overlay di colore primario</h3>
+<p>Per un div opaco di colore primario, aggiungere al div <code class="highlighter-rouge">.it-hero-wrapper</code> la classi:<br />
+<strong><code class="highlighter-rouge">.it-overlay</code></strong> : crea il div che si sovrappone all’immagine<br />
+<strong><code class="highlighter-rouge">.it-primary</code></strong> : definisce il colore di background del div in overlay.</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper it-primary it-overlay">
+   <!-- - img-->
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+      </div>
+   </div>
+   <!-- - texts-->
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="it-hero-text-wrapper bg-dark">
+               <span class="it-category">Category</span>
+               <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label button</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-primary it-overlay"</span><span class="nt">&gt;</span>
+   <span class="c">&lt;!-- - img--&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="c">&lt;!-- - texts--&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label button<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="con-overlay-e-filtro-di-colore-primario">Con overlay e filtro di colore primario</h3>
+<p>Per aggiungere un filtro di tipo “screen” aggiungere al div <code class="highlighter-rouge">.it-hero-wrapper</code> la classi:<br />
+<strong><code class="highlighter-rouge">.it-overlay</code></strong> : crea il div che si sovrappone all’immagine<br />
+<strong><code class="highlighter-rouge">.it-filter</code></strong> : definisce il filtro da applicare all’immagine.</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper it-filter it-overlay">
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-filter it-overlay"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="con-immagine-e-margine-negativo-per-contenuti-sovrapposti">Con immagine e margine negativo per contenuti sovrapposti</h2>
+<p>In alcuni casi, il contenuto che seguirà la card può sovrapporsi al componente Hero.
+Aggiungere al div  <code class="highlighter-rouge">.it-hero-wrapper</code> la classe <code class="highlighter-rouge">.it-bottom-overlapping-content</code> per far si che il contenuto seguente si sovrapponga al componente Hero (in questo caso il componente seguente è una card)</p>
+
+<div class="bd-example">
+<div class="it-hero-wrapper it-dark it-overlay it-bottom-overlapping-content">
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg" title="img title" alt="imagealt" /></div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <div class="it-hero-text-wrapper bg-dark">
+               <span class="it-category">Category</span>
+               <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label button</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-12">
+         <div class="card-wrapper card-space">
+            <div class="card card-bg">
+               <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                     <span class="text">Leggi di più</span>
+                     <svg class="icon">
+                        <use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-wrapper it-dark it-overlay it-bottom-overlapping-content"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-responsive"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"img-wrapper"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"</span> <span class="na">title=</span><span class="s">"img title"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"no_toc"</span><span class="nt">&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label button<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper card-space"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-bg"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
+                     <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+                     <span class="nt">&lt;/svg&gt;</span>
+                  <span class="nt">&lt;/a&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
@@ -508,30 +825,23 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       </div>
     </div>
 
-    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
-  <div class="container">
-    <div class="row d-flex align-items-center">
-      <div class="col-12 col-md-7">
-        <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
-      </div>
-      <div class="col-12 col-md-5 mt-2 mt-md-0 text-right">
-        <a class="btn btn-link" href="https://designers.italia.it/privacy-policy/" >Privacy policy</a>
-        <button class="btn btn-sm btn-primary mr-2" data-accept="cookiebar">Accetto</button>
-      </div>
-    </div>
+    <div class="cookiebar">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+  <div class="cookiebar-buttons">
+      <a href="https://designers.italia.it/privacy-policy/" class="cookiebar-btn">Privacy policy</span></a>
+      <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
   </div>
 </div>
-
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811221504"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811241140"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811221504"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811241140"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
