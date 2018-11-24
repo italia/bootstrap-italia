@@ -19,18 +19,15 @@ const gulp = require('gulp'),
 
 const DOCUMENTATION_DESTINATION = '_gh_pages';
 
-// Pickadate: temporaneamente disabilitato in quanto stile non definitivo
 const Paths = {
   VENDOR_JS: [
-    './node_modules/jquery/dist/jquery.js',
-    './node_modules/popper.js/dist/umd/popper.js',
-    './node_modules/svgxuse/svgxuse.js',
-    // './node_modules/pickadate/lib/compressed/picker.js',
-    // './node_modules/pickadate/lib/compressed/picker.date.js',
-    // './node_modules/pickadate/lib/compressed/picker.time.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/popper.js/dist/umd/popper.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js',
   ],
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_JS: [
+    'node_modules/svgxuse/svgxuse.js',
     'node_modules/bootstrap/js/src/util.js',
     'node_modules/bootstrap/js/src/alert.js',
     'node_modules/bootstrap/js/src/button.js',
@@ -48,7 +45,6 @@ const Paths = {
     'src/js/plugins/componente-base.js',
     'src/js/plugins/cookiebar.js',
     'src/js/plugins/dropdown.js',
-    // 'src/js/plugins/date-picker.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
     'src/js/plugins/forward.js',
@@ -61,12 +57,11 @@ const Paths = {
     'src/js/plugins/upload.js',
     'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/plugins/imgresponsive.js',
-    './node_modules/bootstrap-select/js/bootstrap-select.js',
-    './node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
-    './node_modules/owl.carousel/dist/owl.carousel.js',
-    'src/js/plugins/select.js',
-    'src/js/plugins/carousel.js',
     'src/js/plugins/input-number.js',
+    'src/js/plugins/carousel.js',
+    'node_modules/bootstrap-select/js/bootstrap-select.js',
+    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
+    'src/js/plugins/select.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',

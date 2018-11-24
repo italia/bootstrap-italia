@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
-@import url('../../node_modules/bootstrap-select/dist/css/bootstrap-select.css');
+@import url('../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css');
+@import url('../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
 
 // funzioni e variabili colore
 @import "functions";
@@ -57,8 +58,7 @@
 // @import "node_modules/pickadate/lib/themes/default";
 // @import "node_modules/pickadate/lib/themes/default.date";
 // @import "node_modules/pickadate/lib/themes/default.time";
-// OWL CAROUSEL
-@import "node_modules/owl.carousel/dist/assets/owl.carousel";
+
 // Customizzazioni e nuovi componenti
 @import "custom/type";
 @import "custom/grid";
@@ -102,7 +102,6 @@
 @import "custom/card";
 @import "custom/imgresponsive";
 @import "custom/select";
-@import "custom/carousel/owlcarousel";
 @import "custom/input-number";
 
 // header

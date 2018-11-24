@@ -12,25 +12,29 @@ Il carousel è una presentazione per scorrere una serie di contenuti, costruito 
 
 Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
 
-Il carousel può contonere vari tipi di componenti, solitamente cards o immagini.
+Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.
 
-## Esempi
+## Esempi di Carousel con diversi contenuti
 
 I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi utili alla visualizzazione corretta dei contenuti.
 
-### Carousel con card semplici
+### Titolo e Card semplici
 
 Il seguente è un carousel con card semplici.
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-3` che attiva la visualizzazione a 3 colonne su desktop.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
 
-
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+  <div class="it-header-block">
+    <div class="it-header-block-title">
+      <h2 class="no_toc">Titolo del Carousel</h2>
+    </div>
+  </div>
   <div class="it-carousel-all owl-carousel it-card-bg">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper card-space">
@@ -148,22 +152,16 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel con titolo e card "articolo"
+### Card "articolo"
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-3` che attiva la visualizzazione a 3 colonne su desktop.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 
 div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 
-
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3">
-  <div class="it-header-block">
-    <div class="it-header-block-title">
-      <h2>Carousel Title</h2>
-    </div>
-  </div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper">
@@ -253,7 +251,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel con "highlight card"
+### Card con immagine in evidenza
 
 Contiene un immagine associata ad una card "articolo"
 
@@ -391,18 +389,18 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel con card e immagine superiore
+### Card con immagine in alto
 
-Contiene card con immagine superiore
+Contiene card con immagine in alto
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-3` per la visualizzazione a 3 colonne.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` che specifica il tipo di card contenuta.
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel it-img-card">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper">
@@ -513,18 +511,18 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel con card speciali
+### Card speciali
 
-Contiene card con immagine superiore di tipo speciale.
+Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-speciali).
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-3` per la visualizzazione a 3 colonne.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` che specifica il tipo di card contenuta, `it-special-card` per indicare che la card contenuta è di tipo "special".
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel it-img-card it-special-card">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper">
@@ -615,12 +613,12 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel fullscreen con solo immagine.
+### Fullscreen di immagini
 
 **Classi da applicare**:
 
 div **`it-carousel-wrapper`** :  
-viene aggiunta la classe `it-carousel-landscape-abstract-3` per la formattazione colonnare.  
+viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la formattazione colonnare.  
 viene aggiunta la classe  `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 
 div **`it-carousel-all owl-carousel`** :  
@@ -628,7 +626,7 @@ viene aggiunta la classe `it-img-card` che specifica il tipo di card
 viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande.
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3 it-full-carousel">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel">
   <div class="it-carousel-all owl-carousel it-img-card it-big-img">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper">
@@ -667,7 +665,7 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Carousel fullscreen con immagini di dimensioni standard.
+#### Fullscreen di immagini di dimensioni standard
 
 **Classi da applicare**:
 
