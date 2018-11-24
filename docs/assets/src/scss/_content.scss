@@ -27,12 +27,8 @@
 
   > h2[id] {
     &::before {
-      display: block;
       border-bottom: 1px solid #EDEDED;
-      height: 1rem;
-      content: "";
       margin-bottom: 1.5rem;
-      width: 4rem;
     }
   }
 
