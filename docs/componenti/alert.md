@@ -69,11 +69,9 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 {% endcapture %}
 {% include example.html content=example %}
 
-## JavaScript behavior
+### Tramite JavaScript
 
-### Trigger
-
-Ablita la chiusura di un alert tramite JavaScript:
+Abilita la chiusura di un alert tramite JavaScript:
 
 {% highlight js %}
 $('.alert').alert()
