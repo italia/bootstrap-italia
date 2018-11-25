@@ -105,9 +105,7 @@ $display2-weight: 700;
 $display3-weight: 700;
 $display4-weight: 700;
 
-// Hero
-$hero-padding: 1rem !default;
-$hero-bg: $gray-200 !default;
+
 
 // Breadcrumbs
 $breadcrumb-padding:24px;
@@ -519,6 +517,28 @@ $select-dd-pill-font-w:700;
 $select-dd-header-size:0.8333333333333334rem;
 $select-dd-header-w:600;
 $select-dd-check-height:30px;
+
+//hero
+$hero-bg-color:$primary-a6;
+$hero-height-desk:620px;
+$hero-height-mob:380px;
+$hero-height-sm-desk:400px;
+$hero-height-sm-tab:300px;
+$hero-height-sm-mob:230px;
+$hero-text-padding: $v-gap*3;
+$hero-text-color:#FFF;
+$hero-cat-size:1rem;
+$hero-heading-size:2rem;
+$hero-heding-size-desk:2.6666666666666665rem;
+$hero-p-size:1rem;
+$hero-cat-spacing:$card-category-l-spacing;
+$hero-text-padding-desk:120px;
+$hero-dark-bg:rgba($neutral-1-a10,0.54);
+$hero-primary-bg:rgba($primary-a6,0.85);
+$hero-negative-margin:80px;
+$hero-negative-margin-desk:80px;
+$hero-negative-bottom-padding:240px;
+$hero-negative-bottom-padding-mob:136px;
 
 // Carousel
 $crs-margin-bottom:$v-gap*3;
