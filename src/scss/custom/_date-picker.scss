@@ -137,11 +137,23 @@ abbr[data-original-title], abbr[title] {
           display: none;
         }
       }
-      svg {
-        width: $dp-arrow-size;
-        height: $dp-arrow-size;
-        fill: $dp-label-color;
-        transform: translateY(-1px);
+      .icon-right {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 0 3px 6px;
+        border-color: transparent transparent transparent #000;
+        display: inline-block;
+        transform: translateY(-3px);
+      }
+      .icon-left {
+        width: 0; 
+        height: 0;
+        border-style: solid;
+        border-width: 3px 6px 3px 0;
+        border-color: transparent #000 transparent transparent;
+        display: inline-block;
+        transform: translateY(-3px);
       }
       .datepicker-month-fast-next {
         float: right;

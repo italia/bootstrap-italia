@@ -134,12 +134,29 @@ div[aria-hidden="true"] {
 				button{
 					position: relative;
 					flex-basis: 50%;
-					svg{
+					.icon-up{
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
-						left: -6px;
-						width: $v-gap*2.5;
+						width: 0;
+						height: 0;
+						left: 1px;
+						border-style: solid;
+						border-width: 0 5px 6px 5px;
+						border-color: transparent transparent #000000 transparent;
+						display: block;
+					}
+					.icon-down{
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 0;
+						height: 0;
+						left: 1px;
+						border-style: solid;
+						border-width: 6px 5px 0 5px;
+						border-color: #000000 transparent transparent transparent;
+						display: block;
 					}
 				}
 			}

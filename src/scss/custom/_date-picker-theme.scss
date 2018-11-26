@@ -78,6 +78,12 @@
 				svg{
 					fill:#FFF; 
 				}
+				.icon-right {
+					border-color: transparent transparent transparent #FFF;
+				}
+				.icon-left {
+					border-color: transparent #FFF transparent transparent;
+				}
 				.datepicker-month-fast-next{
 					
 					svg{

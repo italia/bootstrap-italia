@@ -98,7 +98,7 @@ function getValues(that, arrowBtn){
     var findInput= that;
     if (arrowBtn== true) {
         findInput= that.closest('.spinner').find('input');
-        if (that.find('svg').hasClass('fa-angle-up')) {
+        if (that.find('span').hasClass('fa-angle-up')) {
             findInput= that.closest('.spinner').find('input');
         }
     }
@@ -249,7 +249,7 @@ function handleClick($button) {
     var findInput= "";
     getValues(that, true);
 
-    if (that.find('svg').hasClass('fa-angle-up')) {
+    if (that.find('span').hasClass('fa-angle-up')) {
        // if valuemax isn't met, increment valnow
         if (valNow < valMax) {
             valNow++

@@ -34,8 +34,11 @@
 				
 					button{
 						
-						svg{
-							fill: #FFF;
+						.icon-up{
+							border-color: transparent transparent #FFF transparent;
+						}
+						.icon-down{
+							border-color: #FFF transparent transparent transparent;
 						}
 					}
 				}
