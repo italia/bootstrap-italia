@@ -1,21 +1,89 @@
 //mobile
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
+@keyframes spinnerAnim {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
 }
 
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-
+@keyframes spinnerAnimInner1 {
+	0% {transform: rotate(60deg);}
+	100% {transform: rotate(205deg);}
+}
+@keyframes spinnerAnimInner2 {
+	0% {transform: rotate(30deg);}
+	100% {	transform: rotate(-105deg);}
 }
 
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
 
-}
+.progress-spinner {
+  display:block;
+  width:$v-gap*6;
+  height:$v-gap*6;
+  border-radius:50%;
+  border:4px solid lighten($primary-a1,4);
+	&.progress-spinner-active {
+		animation: spinnerAnim 0.75s linear infinite;
+	}
+	&.progress-spinner-active:not(.progress-spinner-double) {
+		border-color: $primary;
+		border-bottom-color: lighten($primary-a1,4);
+	}
+	&.size-sm {
+		width:$v-gap*4;
+  	height:$v-gap*4;
+	}
 
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+	//double spinner
+	&.progress-spinner-double {
+		$size: 48px;
+		display: inline-block;
 
+		&.size-sm {
+			width:$v-gap*4;
+			height:$v-gap*4;
+			.progress-spinner-inner {
+				width: $v-gap*4;
+				height: $v-gap*2;
+				/*margin-left: -$v-gap/4;
+				&:nth-child(1) {
+					margin-top: -$v-gap/4;
+				}*/
+			}
+		}
+
+		&.progress-spinner-active {
+			.progress-spinner-inner {
+				opacity: 1;
+			}
+		}
+		.progress-spinner-inner {
+			width: $v-gap*6;
+			height: $v-gap*3;
+			overflow: hidden;
+			margin-left: -$v-gap/2;
+			opacity: 0;
+			transition: opacity 0.3s;
+			&:nth-child(1) {
+				margin-top: -$v-gap/2;
+			}
+			&:nth-child(2) {
+				transform: rotate(180deg);
+				&:after {
+					animation-name: spinnerAnimInner2;
+				}
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				transform: rotate(45deg);
+				border-radius: 50%;
+				border: 4px solid $primary;
+				border-right: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				width: 100%;
+				height: 200%;
+				animation: spinnerAnimInner1 0.75s cubic-bezier(.25, .1, .5, 1) infinite alternate;
+			}
+		}
+	}
 }
