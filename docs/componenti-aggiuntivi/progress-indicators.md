@@ -54,7 +54,7 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 ### Colori
 
-Per variare il colore della barar è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed appplicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
+Per variare il colore della barra è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed appplicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
 
 {% capture example %}
 <div class="progress progress-color">
@@ -69,4 +69,30 @@ Per variare il colore della barar è sufficiente aggiungere la classe `.progress
 <div class="progress progress-color">
 	<div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
+{% endcapture %}{% include example.html content=example %}
+
+### Bottone con Progress Bar
+
+La Progress Bar può essere integrata in un bottone Primario o Secondario utilizzando la struttura e le classi riportate nesi seguenti esempi:
+
+{% capture example %}
+<p>
+	<strong>Bottone primario</strong><br/>
+	<button type="button" class="btn btn-primary btn-progress disabled" disabled>
+	Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+	<span class="progress">
+		<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
+	</span>
+	</button>
+</p>
+
+<p class="mt-4">
+	<strong>Bottone secondario</strong><br/>
+	<button type="button" class="btn btn-secondary btn-progress disabled" disabled>
+	Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+	<span class="progress">
+		<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
+	</span>
+	</button>
+</p>
 {% endcapture %}{% include example.html content=example %}

@@ -43,6 +43,21 @@
 	font-weight: 500;
 }
 
+//button version
+.btn-progress {
+	.progress {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		border-radius: 0 0 $btn-border-radius $btn-border-radius;
+	}
+	.progress-bar {
+		height: 4px;
+	}
+}
+
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
 
