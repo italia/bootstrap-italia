@@ -551,8 +551,16 @@ $crs-heading-h-padding:$v-gap*3;
 $crs-heading-h-size:1.75rem;
 $crs-landcape-card-padding:$v-gap*6;
 $crs-landcape-bottom:5px;
-// Carousel ****************************************************************************
 
+// Gridlist **************
+$grid-item-df-proportion:65.21%;
+$grid-item-text-size:1rem;
+$grid-item-text-color:$neutral-1-a8;
+$grid-item-text-overlay-bg:$neutral-1-a10;
+$grid-list-default-gap: 2px;
+$grid-list-text-gap: $v-gap;
+$grid-item-sm-col:50%;
+$grid-item-lg-col:33.333333%;
 
 // Grid breakpoints
 //
