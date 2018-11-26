@@ -81,6 +81,7 @@
     - title: Toolbar
     - title: Notifications
     - title: Avatar
+    - title: Progress Indicators
     #- title: Datepicker
     #  status: wip
 
