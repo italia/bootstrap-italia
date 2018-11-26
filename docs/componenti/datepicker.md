@@ -102,14 +102,10 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
         <input class="spinnerHour form-control" id="spinnerh" aria-label="hour" type="number" value="00" role="spinbutton" maxlength="2" aria-valuenow="00" aria-valuemax="23" aria-valuemin="0" bb-skip="3">
         <div class="button-wrapper">
           <button class="button-hour btnHourUp" id="iduph" aria-label="Increase Hour">
-            <svg class="icon fa-angle-up">
-              <use xlink:href="/dist/svg/sprite.svg#it-collapse"></use>
-            </svg>
+            <span class="icon-up"></span>
           </button>
           <button class="button-hour btnHourDown" id="iddownh" aria-label="Decrease Hour">
-            <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
-            </svg>
+            <span class="icon-down"></span>
           </button>
         </div>
       </div>
@@ -117,14 +113,10 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
         <input class="spinnerMin form-control" id="spinnerm" aria-label="minute" type="number" value="00" role="spinbutton" aria-valuenow="00" maxlength="2" aria-valuemax="59" aria-valuemin="00" bb-skip="10">
         <div class="button-wrapper">
           <button class="btnMinUp button-minute" id="idupm" aria-label="Increase Minute">
-            <svg class="icon fa-angle-up">
-              <use xlink:href="/dist/svg/sprite.svg#it-collapse"></use>
-            </svg>
+            <span class="icon-up"></span>
           </button>
           <button class="btnMinDown button-minute" id="iddownm" aria-label="Decrease Minute">
-            <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
-            </svg>
+            <span class="icon-down"></span>
           </button>
         </div>
       </div>
@@ -163,14 +155,10 @@ Clicca sull'icona per visualizzare il datepicker.
         <input class="spinnerHour form-control" id="spinnerh2" aria-label="hour" type="number" value="00" role="spinbutton" maxlength="2" aria-valuenow="00" aria-valuemax="23" aria-valuemin="00" bb-skip="3">
         <div class="button-wrapper">
           <button class="button-hour btnHourUp" id="iduph2" aria-label="Increase Hour">
-            <svg class="icon fa-angle-up">
-              <use xlink:href="/dist/svg/sprite.svg#it-collapse"></use>
-            </svg>
+            <span class="icon-up"></span>
           </button>
           <button class="button-hour btnHourDown" id="iddownh2" aria-label="Decrease Hour">
-            <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
-            </svg>
+            <span class="icon-down"></span>
           </button>
         </div>
       </div>
@@ -178,14 +166,10 @@ Clicca sull'icona per visualizzare il datepicker.
         <input class="spinnerMin form-control" id="spinnerm2" aria-label="minute" type="number" value="00" role="spinbutton" aria-valuenow="00" maxlength="2" aria-valuemax="59" aria-valuemin="00" bb-skip="10">
         <div class="button-wrapper">
           <button class="btnMinUp button-minute" id="idupm2" aria-label="Increase Minute">
-            <svg class="icon fa-angle-up">
-              <use xlink:href="/dist/svg/sprite.svg#it-collapse"></use>
-            </svg>
+            <span class="icon-up"></span>
           </button>
           <button class="btnMinDown button-minute" id="iddownm2" aria-label="Decrease Minute">
-            <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-expand"></use>
-            </svg>
+            <span class="icon-down"></span>
           </button>
         </div>
       </div>
