@@ -23,7 +23,7 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
           </div>
         </div>
       </a>
@@ -35,13 +35,13 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">List item</span>
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -53,13 +53,13 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">List item</span>
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -85,7 +85,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -96,7 +96,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -107,7 +107,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -118,7 +118,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -129,7 +129,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -140,7 +140,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
         </a>
@@ -164,13 +164,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -181,13 +181,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -198,13 +198,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -215,13 +215,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -232,13 +232,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -249,13 +249,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -287,13 +287,13 @@ Di seguito l'esempio
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -306,13 +306,13 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">List item</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -323,13 +323,13 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">List item</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -340,13 +340,13 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/660x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">List item</span>
                 <svg class="icon">
-                  <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -374,13 +374,13 @@ Di seguito l'esempio
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x300.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -391,13 +391,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x500.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -408,13 +408,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x700.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x700/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -425,13 +425,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x600.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -442,13 +442,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x500.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -459,13 +459,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x400.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -476,13 +476,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x600.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -493,13 +493,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x500.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -510,13 +510,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x400.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -527,13 +527,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x600.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -544,13 +544,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x500.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -561,13 +561,13 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/400x400.png?text=I%20M%20A%20G%20E" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">List item</span>
             <svg class="icon">
-              <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
