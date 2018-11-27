@@ -469,7 +469,7 @@
 		theme: 'default',
 		modal: false,
 		inline: false,
-		gainFocusOnConstruction: true,
+		gainFocusOnConstruction: false,
 		min: null,
 		max: null
 	}
