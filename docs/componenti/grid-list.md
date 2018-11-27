@@ -1,19 +1,19 @@
 ---
 layout: docs
 title: Grid list
-description: La grid list è un componente flessibile e potente per la visualizzazione di immagini.
+description: La grid list è un componente flessibile per la visualizzazione di immagini
 group: componenti
 toc: true
 ---
 
-## Elemento grid singolo
+## Elemento singolo
 
 Di seguito gli esempi di elemento singolo della grid list:
-- Solo immagine
-- Immagine e didascalia
-- Didascalia su immagine
+- Immagine semplice
+- Immagine con didascalia in basso
+- Immagine con didascalia sovrapposta 
 
-Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.it-grid-item-overlay`** al div **`it-grid-item-wrapper`**
+Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`.it-grid-item-overlay`** al div **`it-grid-item-wrapper`**.
 
 {% capture example %}
 <div class="row">
@@ -39,7 +39,7 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
-          <span class="it-griditem-text">List item</span>
+          <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
             <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
@@ -57,7 +57,7 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
-          <span class="it-griditem-text">List item</span>
+          <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
             <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
@@ -71,7 +71,7 @@ Per utilizzare "Didascalia su immagine" è sufficiente aggiungere la classe **`.
 ## Tipi di griglia
 ### Standard
 
-La griglia utilizzata è una variante delle classi di boostrap (cambiano sostanzialmente i margini).  
+La griglia utilizzata è una variante delle classi di Bootstrap, dove cambiano sostanzialmente i margini.  
 Il div contenitore della griglia è **`.it-grid-list-wrapper`**.  
 Al posto della classe **`.row`** di bootstrap viene utilizzata la custom class **`.grid-row`**
 
@@ -168,7 +168,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -185,7 +185,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -202,7 +202,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -219,7 +219,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -236,7 +236,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -253,7 +253,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -265,9 +265,9 @@ Di seguito l'esempio
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Quilted
+### Proporzionale
 
-La griglia "Quilted" contiene elemneti griglia con immagine e testo in overlay.  
+La griglia "proporzionale" contiene elementi griglia con immagine e testo in overlay.  
 Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-quilted-grid`** al div **`.it-grid-list-wrapper`**.
 La griglia utilizza le stesse classi di bootstrap (**`.col`** ). 
 
@@ -291,7 +291,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -310,7 +310,7 @@ Di seguito l'esempio
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">List item</span>
+                <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
@@ -327,7 +327,7 @@ Di seguito l'esempio
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">List item</span>
+                <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
@@ -344,7 +344,7 @@ Di seguito l'esempio
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">List item</span>
+                <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
@@ -378,7 +378,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -395,7 +395,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -412,7 +412,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -429,7 +429,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -446,7 +446,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -463,7 +463,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -480,7 +480,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -497,7 +497,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -514,7 +514,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -531,7 +531,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -548,7 +548,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
@@ -565,7 +565,7 @@ Di seguito l'esempio
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">List item</span>
+            <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
