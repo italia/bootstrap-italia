@@ -151,7 +151,7 @@ Il testo corrispondente alla ricerca ("ite" nell'esempio) deve essere racchiuso 
 
 #### Esempio Autocomplete con dati
 
-Questo Autocomplete e collegaato, tramite l'attributo `data-db`, ad una variabile "regioni" nella quale sono presenti i nomi di tutte le regioni italiane. Cerca una regione italiana per verificarne il comportamento.
+Questo Autocomplete e collegato, tramite l'attributo `data-db`, ad una variabile "regioni" nella quale sono presenti i nomi di tutte le regioni italiane. Cerca una regione italiana per verificarne il comportamento.
 
 {% capture example %}
 <div class="form-group">
