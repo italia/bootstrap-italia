@@ -82,6 +82,7 @@
     - title: Toolbar
     - title: Notifications
     - title: Avatar
+    - title: Overlay Panel
     #- title: Datepicker
     #  status: wip
 
