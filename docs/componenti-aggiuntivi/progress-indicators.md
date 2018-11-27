@@ -1,14 +1,63 @@
 ---
 layout: docs
 title: Progress Indicators
-description: Consente all'utente di far scorrere automaticamente ad una parte specifica della pagina
+description: Indicatori di stato attivo e progresso di un'operazione
 group: componenti-aggiuntivi
 toc: true
 ---
 
+<script>
+	//attiva donuts
+	document.addEventListener("DOMContentLoaded", function() {
+		progressDonut($("#DonutProgress1"),0);
+		progressDonut($("#DonutProgress2"),75);
+	})
+</script>
+
+## Donuts
+
+L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso di un'operazione.
+
+Va inizializzato con il comando javascript:
+
+{% highlight js %}
+  progressDonut($("#ID_ELEMENTO"),0);
+{% endhighlight %}
+
+Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-donut` e il secondo con la percentuale di completamento.
+
+Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:
+
+{% highlight js %}
+  progressDonut($("#ID_ELEMENTO"),75);
+{% endhighlight %}
+
+Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
+
+{% capture example %}
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-sm-6">
+			<p><strong>Stato iniziale</strong></p>
+			<div class="progress-donut-wrapper">
+				<div id="DonutProgress1" class="progress-donut"></div>
+				<span class="sr-only"></span>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6">
+			<p><strong>Attivo</strong></p>
+			<div class="progress-donut-wrapper">
+				<div id="DonutProgress2" class="progress-donut"></div>
+				<span class="sr-only"></span>
+			</div>
+		</div>
+	</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Progress Bar
 
-I componenti di avanzamento progressivo sono costruiti con due elementi HTML, alcuni CSS per impostare la larghezza e alcuni attributi. Non è previsto l’utilizzo dell’elemento `<progress>` di HTML5.
+Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare la larghezza e alcuni attributi. Non è previsto l’utilizzo dell’elemento `<progress>` di HTML5.
 
 - Utilizziamo `.progress` come contenitore che indica il valore massimo della barra di avanzamento.
 - Utilizziamo `.progress-bar` come barra interna per indicare fin dove si è arrivati con l’avanzamento.
@@ -73,7 +122,7 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 
 ### Bottone con Progress Bar
 
-La Progress Bar può essere integrata in un bottone Primario o Secondario utilizzando la struttura e le classi riportate nesi seguenti esempi:
+La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiav `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
 
 {% capture example %}
 
@@ -102,6 +151,14 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario utiliz
 {% endcapture %}{% include example.html content=example %}
 
 ## Spinner
+
+L'elemento Spinner comunica lo stato attivo di un'operazione ma non il progresso percentauale della stessa. È utile quindi quando non è possibile determinare il tempo necessario a completare una procedura.
+
+Per ottenere una versione ridotta dello Spinenr aggiungere allo stesso la classe `.size-sm`.
+
+{% capture callout %}
+Notare l'inclusione di uno `<span>` riservato agli screen reader.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <div class="container">
@@ -135,6 +192,8 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario utiliz
 {% endcapture %}{% include example.html content=example %}
 
 ### Spinner doppio
+
+Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'animazione alternativa.
 
 {% capture example %}
 <div class="container">
