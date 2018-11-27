@@ -15,15 +15,27 @@
   </head>
 
   <body>
-    
-    <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
-      <p class="text-white">Questo sito utilizza cookie tecnici, analytics e di terze parti.
-        <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
-      </p>
-      <p>
-        <button class="btn btn-info mr-2" data-accept="cookiebar">Accetto</button>
-        <a href="" class="btn btn-outline-info">Privacy policy</a>
-      </p>
+
+    <style>
+      /* Style override for Documentation purposes */
+      .cookiebar {
+        display: block !important;
+      }
+
+      @media (min-width: 768px) {
+        .cookiebar {
+          display: flex !important;
+        }
+      }
+
+      }
+    </style>
+    <div class="cookiebar">
+      <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+      <div class="cookiebar-buttons">
+        <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
+        <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+      </div>
     </div>
 
 

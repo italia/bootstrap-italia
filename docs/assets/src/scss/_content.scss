@@ -12,7 +12,13 @@
   > h3[id],
   > h4[id] {
     pointer-events: none;
-
+    :before {
+      // These rules allow to anchor to be positioned under the sticky header
+      content: "";
+      display: block;
+      height: 96px; /* fixed header height*/
+      margin: -96px 0 0; /* negative fixed header height */
+    }
     > div,
     > a {
       pointer-events: auto;
@@ -21,12 +27,8 @@
 
   > h2[id] {
     &::before {
-      display: block;
       border-bottom: 1px solid #EDEDED;
-      height: 1rem;
-      content: "";
       margin-bottom: 1.5rem;
-      width: 4rem;
     }
   }
 
