@@ -1,10 +1,16 @@
 //mobile
 
 //search field
-.autocomplete-search {
+.autocomplete {
   padding: 0.375rem $v-gap*6 0.375rem $v-gap*3;
   &::placeholder {
     color: $neutral-1-a4;
+  }
+  &:disabled {
+    background-color: #cacacc;
+    &::placeholder {
+      color: $gray-secondary;
+    }
   }
 }
 
@@ -108,7 +114,7 @@
 .autocomplete-wrapper-big {
 
   //search field
-  .autocomplete-search {
+  .autocomplete {
     height: $v-gap*7;
     font-size: 1.5rem;
     font-weight: normal;
@@ -164,7 +170,7 @@
   //big version
   .autocomplete-wrapper-big {
     //search field
-    .autocomplete-search {
+    .autocomplete {
       height: $v-gap*9;
       font-size: 2.222rem;
       padding-left: $v-gap*8;
@@ -206,43 +212,4 @@
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
 
-}
-
-
-//---------- OLD VERSION BELOW --------//
-
-.autocomplete-wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: $white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .25); // TODO use a variable
-  z-index: 100;
-  max-height: 240px;
-  overflow-y: auto;
-  padding-left: 0;
-  list-style-type: none;
-  li {
-    cursor: pointer;
-    padding: 12px 16px;
-    font-size: 0.875rem;
-    &:hover {
-      background: rgb(238, 238, 238); // TODO use a variable
-    }
-  }
-}
-
-
-.autocomplete-clear {
-  visibility: hidden;
-  position: absolute;
-  z-index: 2;
-  right: .25rem;
-  top: .5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  svg {
-    fill: #a6a6a6;
-  }
 }
