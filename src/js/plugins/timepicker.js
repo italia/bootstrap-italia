@@ -11,7 +11,6 @@ $(document).ready(function () {
         if($(spinner).attr('aria-hidden')=='true'){
             loadSpinner(spinner,txt);
         }else{
-
             hideSpinner(spinner,txt,spinnerh,spinnermin);
         }
         
@@ -54,6 +53,7 @@ $(document).ready(function () {
         }
     });
 });
+
 
 function getKeys() {
     keys = {
@@ -143,7 +143,7 @@ function handleKeyDown(e, id) {
                 else {
                     valNow = valMax;
                 }
-
+                valNow = (valNow < 10 ? '0' : '') + valNow;
                 // update the control
                 that.attr('aria-valuenow', setDigit(valNow, id));
                 that.attr('value', setDigit(valNow), id);
@@ -162,7 +162,7 @@ function handleKeyDown(e, id) {
                 else {
                     valNow = setDigit(valMin, false);
                 }
-
+                valNow = (valNow < 10 ? '0' : '') + valNow;
                 // update the control
                 that.attr('aria-valuenow', setDigit(valNow, id));
                 that.attr('value', setDigit(valNow, id));
@@ -197,6 +197,7 @@ function handleKeyDown(e, id) {
             // if valuemin isn't met, increment valnow
             if (valNow < valMax) {
                 valNow++;
+                valNow = (valNow < 10 ? '0' : '') + valNow;
                 that.attr('value', setDigit(valNow, id));
                 that.attr('aria-valuenow', setDigit(valNow, id));
             }
@@ -208,6 +209,7 @@ function handleKeyDown(e, id) {
             // if valuemax isn't met, decrement valnow
             if (valNow > valMin) {
                 valNow--;
+                valNow = (valNow < 10 ? '0' : '') + valNow;
                 that.attr('value', setDigit(valNow, id));
                 that.attr('aria-valuenow', setDigit(valNow, id));
             }
