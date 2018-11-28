@@ -1,0 +1,181 @@
+//mobile
+.it-grid-item-wrapper {
+  position: relative;
+  // img default proportion
+  .img-responsive-wrapper {
+    border-radius: $border-radius;
+    .img-responsive {
+      padding-bottom: $grid-item-df-proportion;
+      .img-wrapper {
+
+      }
+    }
+  }
+  // text
+  .it-griditem-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: $v-gap*2 $v-gap;
+    align-items: center;
+    .it-griditem-text {
+      font-size: $grid-item-text-size-mob;
+      color: $grid-item-text-color;
+      font-weight: 600;
+    }
+    .icon {
+      flex-shrink: 0;
+      position: relative;
+      right: -$v-gap;
+      fill: $primary-a6;
+      width: $grid-item-icon-mob-size;
+      height: $grid-item-icon-mob-size;
+    }
+  }
+  // text overlay
+  &.it-grid-item-overlay {
+    .it-griditem-text-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($grid-item-text-overlay-bg, 0.85);
+      padding: $v-gap $v-gap*2;
+      .it-griditem-text {
+        color: #FFF;
+      }
+      .icon {
+        fill: #FFF;
+      }
+    }
+  }
+  // hover
+  a:hover {
+    .it-griditem-text {
+      text-decoration: underline;
+    }
+  }
+  // double
+  &.it-grid-item-double-w {
+    .img-responsive-wrapper {
+      .img-responsive {
+        padding-bottom: calc(#{$grid-item-df-double-proportion} - #{$grid-list-default-gap});
+      }
+    }
+  }
+}
+
+// grid default
+.it-grid-list-wrapper {
+  padding-left: $grid-list-default-gap*2;
+  padding-right: $grid-list-default-gap*2;
+  // grid changes
+  div[class^="col-"] {
+    padding: 0 $grid-list-default-gap $grid-list-default-gap*2 $grid-list-default-gap;
+  }
+  .grid-row {
+    display: flex;
+    margin-left: -$grid-list-default-gap;
+    margin-right: -$grid-list-default-gap;
+    flex-wrap: wrap;
+    // items in grid
+    .it-grid-item-wrapper {
+
+    }
+  }
+  // grid with label
+  &.it-image-label-grid {
+    padding-left: $grid-list-text-gap*2;
+    padding-right: $grid-list-text-gap*2;
+    // grid changes
+    div[class^="col-"] {
+      padding: 0 $grid-list-text-gap $grid-list-text-gap*2 $grid-list-text-gap;
+    }
+    .grid-row {
+      margin-left: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+      margin-right: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+
+      .it-grid-item-wrapper {
+
+      }
+    }
+  }
+  // masonry
+  &.it-masonry {
+    .card-columns {
+      margin-left: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+      margin-right: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+      column-gap: 0;
+      .it-grid-item-wrapper {
+        break-inside: avoid-column;
+        .img-responsive {
+          padding-bottom: initial;
+          height: auto;
+          .img-wrapper {
+            position: inherit;
+            left: initial;
+            right: initial;
+            width: initial;
+            height: initial;
+            img {
+              height: auto;
+              object-fit: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  // grid default
+
+  .it-grid-item-wrapper {
+    &.it-grid-item-overlay {
+      .it-griditem-text-wrapper {
+        padding: $v-gap*2 $v-gap*3;
+        .it-griditem-text {
+          font-size: $grid-item-text-size;
+        }
+        .icon {
+
+        }
+      }
+    }
+    // text
+    .it-griditem-text-wrapper {
+      .it-griditem-text {
+        font-size: $grid-item-text-size;
+      }
+      .icon {
+        width: $grid-item-icon-size-desk;
+        height: $grid-item-icon-size-desk;
+      }
+    }
+  }
+
+  .it-grid-list-wrapper {
+    .grid-row {
+      // items in grid
+      .it-grid-item-wrapper {
+
+      }
+    }
+  }
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}

@@ -42,12 +42,14 @@
     - title: Form Toggles
     - title: Form Upload
     - title: Form Input Number
+    - title: Grid list
     - title: Header
     - title: Hero
     #- title: Input group
     #  status: to do
     - title: Link list
       status: wip
+    - title: List
     - title: Megamenu
     - title: Modale
     - title: Navbar
