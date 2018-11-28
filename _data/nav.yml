@@ -67,23 +67,23 @@
 - title: Componenti Aggiuntivi
   pages:
     - title: Introduzione
-    - title: Cookiebar
-      status: wip
-    - title: Forward
-      status: wip
-    - title: Back to top
+    - title: Avatar
     - title: Affix
       status: wip
+    - title: Back to top
+    - title: Cookiebar
+      status: wip
     - title: Callout
+    - title: Forward
+      status: wip
+    - title: Notifications
+    - title: Progress Indicators
     - title: Sections
     - title: Steppers
     - title: Thumbnav
     - title: BottomNav
     - title: ThumbNav
     - title: Toolbar
-    - title: Notifications
-    - title: Avatar
-    - title: Progress Indicators
     #- title: Datepicker
     #  status: wip
 

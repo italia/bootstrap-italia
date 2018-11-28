@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Progress Indicators
-description: Indicatori di stato attivo e progresso di un'operazione
+description: Indicatori di stato attivo e di avanzamento di un'operazione
 group: componenti-aggiuntivi
 toc: true
 ---
@@ -16,7 +16,7 @@ toc: true
 
 ## Donuts
 
-L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso di un'operazione.
+L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso o l'avanzamento di un'operazione in corso.
 
 Va inizializzato con il comando javascript:
 
@@ -103,7 +103,7 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 ### Colori
 
-Per variare il colore della barra è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed appplicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
+Per variare il colore della barra è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed applicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
 
 {% capture example %}
 <div class="progress progress-color">
@@ -122,7 +122,7 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 
 ### Bottone con Progress Bar
 
-La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiav `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
+La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
 
 {% capture example %}
 
@@ -152,9 +152,9 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario con cl
 
 ## Spinner
 
-L'elemento Spinner comunica lo stato attivo di un'operazione ma non il progresso percentauale della stessa. È utile quindi quando non è possibile determinare il tempo necessario a completare una procedura.
+L'elemento Spinner comunica lo stato attivo di un'operazione ma non il progresso percentuale della stessa. È utile quindi quando non è possibile determinare il tempo necessario a completare una procedura.
 
-Per ottenere una versione ridotta dello Spinenr aggiungere allo stesso la classe `.size-sm`.
+Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe `.size-sm`.
 
 {% capture callout %}
 Notare l'inclusione di uno `<span>` riservato agli screen reader.
