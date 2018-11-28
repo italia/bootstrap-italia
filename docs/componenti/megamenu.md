@@ -624,7 +624,7 @@ Di seguito un esempio:
                         <div class="row">
                            <div class="col-12 it-vertical it-description">
                               <div class="description-content">
-                                 <img src="http://placehold.jp/12/ebebeb/808080/225x110.png?text=I%20M%20A%20G%20E" alt="placeholder" title="placeholder title">
+                                 <img src="https://via.placeholder.com/225x110/ebebeb/808080/?text=Immagine" alt="placeholder" title="placeholder title">
                                  <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                               </div>
                            </div>

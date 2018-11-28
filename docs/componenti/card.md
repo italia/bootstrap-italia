@@ -326,7 +326,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
               <div class="img-wrapper">
-                <img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt">
+                <img src="https://via.placeholder.com/310x190/ebebeb/808080/?text=Immagine" title="img title" alt="imagealt">
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
       <a class="card card-img no-after special-card" href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="http://placehold.jp/12/ebebeb/808080/310x190.png?text=I%20M%20A%20G%20E" title="img title" alt="imagealt"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/310x190/ebebeb/808080/?text=Immagine" title="img title" alt="imagealt"></div>
           </div>
         </div>
         <div class="card-body">

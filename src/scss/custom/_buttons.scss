@@ -33,14 +33,38 @@
   @include border-radius(0);
 }
 
+.btn-progress {
+  position: relative;
+}
+
 .btn-primary {
   &:disabled,
   &.disabled {
     color: $gray-label-disabled;
     background-color: $gray-disabled;
     border-color: $gray-border-disabled;
+    //progress bar button
+    &.btn-progress {
+      background-color: $primary-a3;
+      border-color: $primary-a3;
+      color: $white;
+      opacity: 1;
+    }
   }
 }
+
+.btn-secondary {
+  &:disabled,
+  &.disabled {
+    //progress bar button
+    &.btn-progress {
+      background-color: lighten($gray-secondary,10);
+      border-color: lighten($gray-secondary,10);
+      opacity: 1;
+    }
+  }
+}
+
 
 .btn-outline-secondary {
   background: #FCFDFF;
