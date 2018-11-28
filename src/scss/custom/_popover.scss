@@ -2,7 +2,7 @@
 .popover {
 	border: none;
 	border-radius: $border-radius;
-	box-shadow: $dropdown-box-shadow-vertical;
+	box-shadow: 0 0 30px 5px rgba(0,0,0,.1);
 
 	&.bs-popover-top {
 		margin-bottom: $v-gap*2;
