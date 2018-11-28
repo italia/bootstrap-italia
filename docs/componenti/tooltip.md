@@ -72,25 +72,51 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip in alto</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip a destra</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip in basso</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip a sinistra</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip con HTML</button>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-6">
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip in alto" style="width: 100%;">Tooltip in alto</button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" style="width: 100%;">Tooltip in basso</button>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-5"></div>
+        <div class="col-6">
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip a sinistra" style="width: 100%;">Tooltip a sinistra</button>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-1"></div>
+        <div class="col-6">
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip a destra" style="width: 100%;">Tooltip a destra</button>
+        </div>
+        <div class="col-5"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>" style="width: 100%;">Tooltip con HTML</button>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
   </div>
 </div>
 
 {% highlight html %}
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip in alto">
   Tooltip in alto
 </button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip a destra">
   Tooltip a destra
 </button>
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
   Tooltip in basso
 </button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip a sinistra">
   Tooltip a sinistra
 </button>
 {% endhighlight %}
@@ -98,7 +124,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 E con codice HTML personalizzato:
 
 {% highlight html %}
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>">
   Tooltip con HTML
 </button>
 {% endhighlight %}
