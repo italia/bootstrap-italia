@@ -7,23 +7,12 @@
 	&.overlay-hover {
 		.overlay-panel {
 			opacity: 0;
-			transition: opacity 0.3s;
+			transition: opacity 0.1s;
 		}
 		&:hover {
 			.overlay-panel {
 				opacity: 1
-			}
-		}
-	}
-	//slide version
-	&.overlay-slide {
-		.overlay-panel {
-			transform: translateY(100%);
-			transition: transform 0.3s cubic-bezier(.29,.85,.5,.99);
-		}
-		&:hover {
-			.overlay-panel {
-				transform: translateY(0%);
+				transition: opacity 0.2s;
 			}
 		}
 	}
