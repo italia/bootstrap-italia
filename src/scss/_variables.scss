@@ -566,6 +566,15 @@ $grid-item-lg-col:33.333333%;
 $grid-item-icon-mob-size:24px;
 $grid-item-icon-size-desk:32px;
 
+// list
+$list-font-size:1rem;
+$list-text-padding:$v-gap*2 0 $v-gap*2 0;
+$list-border-color: #E5E5E5;
+$list-metadata-color:#ADB7C0;
+$list-metadata-size: 12px;
+$list-metadata-space:0.5px;
+$list-sub-size:14px;
+$list-sub-color: $neutral-1-a8;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

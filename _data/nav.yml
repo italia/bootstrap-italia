@@ -49,6 +49,7 @@
     #  status: to do
     - title: Link list
       status: wip
+    - title: List
     - title: Megamenu
     - title: Modale
     - title: Navbar
