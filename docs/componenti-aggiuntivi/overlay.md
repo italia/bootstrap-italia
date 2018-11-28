@@ -83,7 +83,7 @@ Aggiungendo all'Overlay Panel la classe `.overlay-black` si ottiene un overlay d
 Per ottenere un Overlay Panel con icona centrata in verticale ed orizzontale aggiungere la classe `.overlay-icon`.
 
 {% capture callout %}
-Ricordarsi di aggiungere un testo alternativo per Srceen Reader che comunichi lo stesso messaggio dell'icona.
+Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo stesso messaggio dell'icona.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
@@ -115,7 +115,7 @@ Ricordarsi di aggiungere un testo alternativo per Srceen Reader che comunichi lo
 
 ## Overlay Hover
 
-Per ottenere un Overlay Panel visibile solo all'hover sull'immagine aggiungere la classe `.overlay-hover` al wrapper `<figure>`.
+Per ottenere un Overlay Panel visibile solo al mouse over sull'immagine aggiungere la classe `.overlay-hover` al wrapper `<figure>`.
 
 {% capture example %}
 <div class="container">
