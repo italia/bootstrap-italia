@@ -7,7 +7,7 @@ toc: true
 ---
 
 {% capture callout %}
-##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva
+##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
 bottoni, o elementi di form).
@@ -17,7 +17,7 @@ ciò aggiungerà interruzioni di tabulazioni potenzialmente dannose per gli uten
 Inoltre, la maggior parte delle tecnologie assistive in questa situazione non annuncia il tooltip come ci si potrebbe
 invece attendere.
 
-Infine, non fare affidamento esclusivamente sull'`hover` come innesco del tooltip, in quanto ciò renderà impossibile
+Infine, non fare affidamento esclusivamente sull'evento "mouse over" come innesco del tooltip, in quanto ciò renderà impossibile
 l'attivazione per gli utenti che usano la tastiera per navigare.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -163,7 +163,7 @@ Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hov
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
+Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
 Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/4.1/components/tooltips/) del sito di Bootstrap.
 
