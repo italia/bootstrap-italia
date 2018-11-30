@@ -257,6 +257,10 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 
 ### Modale Popconfirm
 
+La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe `popconfirm-modal` all'elemento `<div class="modal">`.
+
+Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l'intero elemento `<div class="modal-header">`.
+
 {% capture example %}
 <div class="it-example-modal">
   <div class="container">
