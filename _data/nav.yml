@@ -25,12 +25,9 @@
     - title: Breadcrumbs
     - title: Bottoni
       status: wip
-    #- title: Button group
-    #  status: to do
     - title: Card
     - title: Carousel
     - title: Collapse
-    - title: Datepicker
     - title: Dropdown
     - title: Elenchi
     - title: Form
@@ -40,14 +37,15 @@
     - title: Form Select
     - title: Form Checkbox
     - title: Form Radio Button
+    - title: Form Datepicker
     - title: Form Toggles
     - title: Form Upload
     - title: Form Input Number
+    #- title: Form Input Time
+    #  status: wip
     - title: Grid list
     - title: Header
     - title: Hero
-    #- title: Input group
-    #  status: to do
     - title: Link list
       status: wip
     - title: List
