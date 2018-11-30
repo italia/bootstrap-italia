@@ -562,6 +562,29 @@ $crs-heading-h-size:1.75rem;
 $crs-landcape-card-padding:$v-gap*6;
 $crs-landcape-bottom:5px;
 
+// Gridlist **************
+$grid-item-df-proportion:66.81222707423581%;
+$grid-item-df-double-proportion:33.4061135371179%;
+$grid-item-text-size:1rem;
+$grid-item-text-size-mob:0.8rem;
+$grid-item-text-color:$neutral-1-a8;
+$grid-item-text-overlay-bg:$neutral-1-a10;
+$grid-list-default-gap: 2px;
+$grid-list-text-gap: $v-gap;
+$grid-item-sm-col:50%;
+$grid-item-lg-col:33.333333%;
+$grid-item-icon-mob-size:24px;
+$grid-item-icon-size-desk:32px;
+
+// list
+$list-font-size:1rem;
+$list-text-padding:$v-gap*2 0 $v-gap*2 0;
+$list-border-color: #E5E5E5;
+$list-metadata-color:#ADB7C0;
+$list-metadata-size: 12px;
+$list-metadata-space:0.5px;
+$list-sub-size:14px;
+$list-sub-color: $neutral-1-a8;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

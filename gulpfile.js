@@ -56,6 +56,8 @@ const Paths = {
     'src/js/plugins/notifications.js',
     'src/js/plugins/upload.js',
     'src/js/plugins/CircularLoader-v1.3.js',
+    'src/js/plugins/progress-donut.js',
+    'src/js/plugins/list.js',
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
@@ -102,10 +104,11 @@ gulp.task('scss-min', () => {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
     .pipe(cleanCSS({
-      level: 2
+      level: 2,
+      specialComments: 0
     }))
+    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
     .pipe(rename({
       suffix: '.min'
     }))
