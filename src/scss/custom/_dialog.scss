@@ -93,6 +93,31 @@
 			}
 		}
 	}
+	//Popconfirm variation
+	&.popconfirm-modal{
+		.modal-dialog {
+			max-width: $modal-popconfirm-max-width;
+			margin-right: auto;
+			margin-left: auto;
+			.modal-content {
+				border-radius: $border-radius;
+			}
+			.modal-header {
+				padding-top: $v-gap*2;
+				margin-bottom: -$v-gap/2;
+			}
+			.modal-body {
+				padding-top: $v-gap*2;
+				p {
+					font-size: $modal-popconfirm-p-size-mobile;
+					margin-bottom: $v-gap*1.5;
+				}
+			}
+			.modal-footer{
+				padding-bottom: $v-gap*3;
+			}
+		}
+	}
 	// scrollable variation
 	&.it-dialog-scrollable{
 		.modal-dialog{
@@ -134,7 +159,7 @@
 			}
 		}
 	}
-	//left variaion
+	//left variation
 	.modal-dialog{
 		&.modal-dialog-left{
 			height: 100vh;
@@ -207,7 +232,18 @@
 
   //small - tablet
   @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
+		.modal{
+			//Popconfirm variation
+			&.popconfirm-modal{
+				.modal-dialog {
+					.modal-body {
+						p {
+							font-size: $modal-popconfirm-p-size;
+						}
+					}
+				}
+			}
+		}
   }
 
   //Tablet vertical

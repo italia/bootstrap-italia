@@ -255,6 +255,56 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Modale Popconfirm
+
+La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe `popconfirm-modal` all'elemento `<div class="modal">`.
+
+Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l'intero elemento `<div class="modal-header">`.
+
+{% capture example %}
+<div class="it-example-modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <p><strong>Basico</strong></p>
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog" id="">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                    <p>Font Titillium 14px. Leading 21px.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <p><strong>Con Header</strong></p>
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog" id="">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Popconfirm header</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Font Titillium 14px. Leading 21px.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Demo
 
 ### Modale semplice
