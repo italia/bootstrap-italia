@@ -12,13 +12,13 @@
 <title>Popover · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811281709" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812022033" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811281709" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812022033" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.24.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.25.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -473,11 +473,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#esempio-abilita-i-popover-ovunque">Esempio: Abilita i popover ovunque</a></li>
-<li class="toc-entry toc-h2"><a href="#esempio-usare-lopzione-container">Esempio: Usare l’opzione container</a></li>
-<li class="toc-entry toc-h2"><a href="#esempio">Esempio</a>
+<li class="toc-entry toc-h2"><a href="#abilitazione-generale">Abilitazione generale</a></li>
+<li class="toc-entry toc-h2"><a href="#abilitazione-con-opzione-container">Abilitazione con opzione container</a></li>
+<li class="toc-entry toc-h2"><a href="#esempi">Esempi</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#le-quattro-direzioni">Le quattro direzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#direzioni">Direzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#titolo-con-icona-e-link">Titolo con icona e link</a></li>
+<li class="toc-entry toc-h3"><a href="#modalità-hover">Modalità Hover</a></li>
 <li class="toc-entry toc-h3"><a href="#dismiss-al-click-successivo">Dismiss al click successivo</a></li>
 <li class="toc-entry toc-h3"><a href="#elementi-disabilitati">Elementi disabilitati</a></li>
 </ul>
@@ -496,20 +498,22 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Popover</h1>
           <p class="bd-lead">Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.</p>
-          <div class="bd-callout bd-callout-accessibility">
-<h5 id="accessibilità-i-popover-funzionano-sia-con-la-tastiera-che-per-gli-utenti-dotati-di-tecnologia-assistiva">Accessibilità: I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva</h5>
+          <p>I popover si basano sulla libreria di terze parti <a href="https://popper.js.org/">Popper.js</a>.
+Per fare in modo che i popover funzionino è necessario includere <code class="highlighter-rouge">popper.min.js</code> prima di
+bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper.js.
+I popovers richiedono il <a href="/bootstrap-italia/docs/componenti/tooltips/">plugin tooltip</a> come dipendenza.</p>
 
-<p>Allo stesso modo di quanto avviene per i <a href="/bootstrap-italia/docs/componenti/tooltips/">tooltip</a>,
-il codice generato per i popover è accessibile.</p>
+<div class="bd-callout bd-callout-accessibility">
+<h5 id="accessibilità">Accessibilità</h5>
+
+<p>I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
+Allo stesso modo di quanto avviene per i <a href="/bootstrap-italia/docs/componenti/tooltip/">Tooltip</a>,
+il codice generato per i Popover è accessibile.</p>
 </div>
 
 <p>Cose da sapere quando si utilizza il plugin popover:</p>
 
 <ul>
-  <li>I popover si basano sulla libreria di terze parti <a href="https://popper.js.org/">Popper.js</a>.
-Per fare in modo che i popover funzionino è necessario includere <code class="highlighter-rouge">popper.min.js</code> prima di
-bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper.js.</li>
-  <li>I popovers richiedono il <a href="/bootstrap-italia/docs/componenti/tooltips/">plugin tooltip</a> come dipendenza.</li>
   <li>I popover sono opt-in per ragioni di performance, quindi <strong>devi inizializzarli tu stesso</strong> con il codice che trovi di seguito.</li>
   <li>I <code class="highlighter-rouge">title</code> e i <code class="highlighter-rouge">content</code> con valori vuoti non mostreranno mai popover.</li>
   <li>Specifica <code class="highlighter-rouge">container: 'body'</code> per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).</li>
@@ -519,7 +523,7 @@ bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper
   <li>I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.</li>
 </ul>
 
-<h2 id="esempio-abilita-i-popover-ovunque">Esempio: Abilita i popover ovunque</h2>
+<h2 id="abilitazione-generale">Abilitazione generale</h2>
 
 <p>Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo <code class="highlighter-rouge">data-toggle</code>:</p>
 
@@ -527,7 +531,7 @@ bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper
   <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="popover"]'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="esempio-usare-lopzione-container">Esempio: Usare l’opzione <code class="highlighter-rouge">container</code></h2>
+<h2 id="abilitazione-con-opzione-container">Abilitazione con opzione <code class="highlighter-rouge">container</code></h2>
 
 <p>Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un <code class="highlighter-rouge">container</code> personalizzato in modo che l’HTML del popover appaia invece all’interno di quell’elemento.</p>
 
@@ -537,49 +541,100 @@ bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper
   <span class="p">})</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="esempio">Esempio</h2>
-
 <div class="bd-example">
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Popover di esempio">Clicca per attivare/disattivare il popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Popover di esempio"</span><span class="nt">&gt;</span>Clicca per attivare/disattivare il popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>Clicca per attivare/disattivare il popover<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<h3 id="le-quattro-direzioni">Le quattro direzioni</h3>
+<h2 id="esempi">Esempi</h2>
+
+<h3 id="direzioni">Direzioni</h3>
 
 <p>Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.</p>
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover in alto
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover a destra
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover in basso
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover a sinistra
-    </button>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-4">
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+            Popover in alto
+          </button>
+        </div>
+        <div class="col-12 col-md-4"></div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 col-md-4">
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+            Popover a destra
+          </button>
+        </div>
+        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-4 mt-4 mt-md-0">
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+            Popover a sinistra
+          </button>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 col-md-4"></div>
+        <div class="col-12 col-md-4">
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+            Popover in basso
+          </button>
+        </div>
+        <div class="col-12 col-md-4"></div>
+      </div>
+    </div>
   </div>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>
   Popover in alto
 <span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>
   Popover a destra
 <span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">data-content=</span><span class="s">"Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>
   Popover in basso
 <span class="nt">&lt;/button&gt;</span>
 
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>
   Popover a sinistra
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="titolo-con-icona-e-link">Titolo con icona e link</h3>
+
+<p>È possibile aggiungere un’icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l’attributo <code class="highlighter-rouge">data-html="true"</code> al bottone che apre il Popover.</p>
+
+<p>L’icona va inclusa come HTML nell’attributo <code class="highlighter-rouge">title=""</code> subito prima del vero e proprio titolo.</p>
+
+<p>Il link come HTML nell’attributo <code class="highlighter-rouge">data-content=""</code> dopo il contenuto testuale, con classe <code class="highlighter-rouge">.popover-inner-link</code>.</p>
+
+<div class="bd-example">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-help-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.&lt;a href='#' class='popover-inner-link'&gt;More info&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right'&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;">
+  Popover con icona e link
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-html=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-help-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Titolo con icona"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.&lt;a href='#' class='popover-inner-link'&gt;More info&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right'&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;"</span><span class="nt">&gt;</span>
+  Popover con icona e link
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h3 id="modalità-hover">Modalità Hover</h3>
+
+<p>Per aprire il Popover all’hover del mouse sull’elemento, aggiungere l’attributo <code class="highlighter-rouge">data-trigger="hover"</code> al tag dello stesso.</p>
+
+<div class="bd-example">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="Popover in Hover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+  Apertura in Hover
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"hover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-html=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"Popover in Hover"</span> <span class="na">data-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span><span class="nt">&gt;</span>
+  Apertura in Hover
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="dismiss-al-click-successivo">Dismiss al click successivo</h3>
@@ -624,7 +679,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
 <h3 id="opzioni">Opzioni</h3>
 
-<p>Le opzioni possono essere passate tramite attibuti data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-animation=""</code>.</p>
+<p>Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-animation=""</code>.</p>
 
 <p>Per ulteriori informazioni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.1/components/popovers/">popovers</a> del sito di Bootstrap.</p>
 
@@ -741,14 +796,14 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 </div>
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811281709"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812022033"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811281709"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812022033"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

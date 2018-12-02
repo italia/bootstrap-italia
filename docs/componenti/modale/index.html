@@ -12,13 +12,13 @@
 <title>Finestre modali · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201811281709" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812022033" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201811281709" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812022033" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.24.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.25.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -480,6 +480,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#modale-con-icona">Modale con icona</a></li>
 <li class="toc-entry toc-h3"><a href="#modale-con-radiobuttons">Modale con radiobuttons</a></li>
 <li class="toc-entry toc-h3"><a href="#modale-con-link-list">Modale con Link List</a></li>
+<li class="toc-entry toc-h3"><a href="#modale-popconfirm">Modale Popconfirm</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#demo">Demo</a>
@@ -875,6 +876,97 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="modale-popconfirm">Modale Popconfirm</h3>
+
+<p>La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe <code class="highlighter-rouge">popconfirm-modal</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code>.</p>
+
+<p>Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l’intero elemento <code class="highlighter-rouge">&lt;div class="modal-header"&gt;</code>.</p>
+
+<div class="bd-example">
+<div class="it-example-modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <p><strong>Basico</strong></p>
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                    <p>Font Titillium 14px. Leading 21px.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <p><strong>Con Header</strong></p>
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Popconfirm header</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Font Titillium 14px. Leading 21px.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Basico<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal popconfirm-modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>Font Titillium 14px. Leading 21px.<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action one<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Action two<span class="nt">&lt;/button&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Con Header<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal popconfirm-modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Popconfirm header<span class="nt">&lt;/h5&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>Font Titillium 14px. Leading 21px.<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action one<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Action two<span class="nt">&lt;/button&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="demo">Demo</h2>
@@ -1424,14 +1516,14 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="highli
 </div>
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201811281709"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812022033"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201811281709"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812022033"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
