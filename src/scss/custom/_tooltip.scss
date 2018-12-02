@@ -1,0 +1,44 @@
+//mobile
+.tooltip {
+	border-radius: $border-radius;
+	font-size: 0.750rem;
+	//hide arrow
+	.arrow {
+		display: none;
+	}
+	//text
+	.tooltip-inner {
+		padding: 7px $v-gap*2;
+		background-color: $gray-primary;
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
+	//padding
+	&.bs-tooltip-top, &.bs-tooltip-bottom {
+		padding: $v-gap 0;
+	}
+	&.bs-tooltip-left, &.bs-tooltip-right {
+		padding: 0 $v-gap;
+	}
+
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+	.tooltip {
+		font-size: 0.667rem;
+	}
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+	.tooltip {
+		font-size: 0.556rem;
+		//text
+		.tooltip-inner {
+			padding: 4.5px $v-gap;
+		}
+	}
+}
