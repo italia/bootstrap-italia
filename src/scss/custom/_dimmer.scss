@@ -1,0 +1,13 @@
+//mobile
+.dimmer {
+
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+	.dimmer {
+		
+	}
+
+}
