@@ -12,13 +12,13 @@
 <title>Tipografia · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812022033" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812030817" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812022033" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812030817" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.25.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.25.1/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -473,6 +473,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#famiglie-di-caratteri">Famiglie di Caratteri</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#titillium-web">Titillium Web</a></li>
+<li class="toc-entry toc-h3"><a href="#lora">Lora</a></li>
+<li class="toc-entry toc-h3"><a href="#roboto-mono">Roboto Mono</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#tipografia-responsive">Tipografia responsive</a></li>
 <li class="toc-entry toc-h2"><a href="#intestazioni">Intestazioni</a>
 <ul>
@@ -509,6 +516,60 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <p>Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
 link. Quando è necessario un maggiore controllo, fornisce delle
 <a href="/bootstrap-italia/docs/utilities/testo/">classi di utilità testuali</a>.</p>
+
+<h2 id="famiglie-di-caratteri">Famiglie di Caratteri</h2>
+
+<p>Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
+suggeriscono di usare le seguenti famiglie di caratteri:</p>
+
+<ul>
+  <li>il font senza grazie, o <em>sans serif</em>, <strong>Titillium Web</strong>.</li>
+  <li>il font graziato, o <em>serif</em>, <strong>Lora</strong>.</li>
+  <li>il font <em>monospace</em> con dimensioni di caratteri normalizzate <strong>Roboto Mono</strong>.</li>
+</ul>
+
+<h3 id="titillium-web">Titillium Web</h3>
+
+<p>È la famiglia di caratteri utilizzata per i contenuti web, per cui di norma non
+è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
+utilizzare la classe <code class="highlighter-rouge">text-sans-serif</code>.</p>
+
+<div class="bd-example">
+<p class="text-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-sans-serif">0123456789</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sans-serif"</span><span class="nt">&gt;</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sans-serif"</span><span class="nt">&gt;</span>abcdefghijklmnopqrstuvwxyz<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sans-serif"</span><span class="nt">&gt;</span>0123456789<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h3 id="lora">Lora</h3>
+
+<p>È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
+nato espressamente per la lettura su display.</p>
+
+<div class="bd-example">
+<p class="text-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-serif">0123456789</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-serif"</span><span class="nt">&gt;</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-serif"</span><span class="nt">&gt;</span>abcdefghijklmnopqrstuvwxyz<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-serif"</span><span class="nt">&gt;</span>0123456789<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<h3 id="roboto-mono">Roboto Mono</h3>
+
+<p>È un adatto ad essere utilizzato per la rappresentazione di numeri, codici, calcoli
+matematici, numeri in tabelle, esempi con linguaggi di programmazione.</p>
+
+<div class="bd-example">
+<p class="text-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-monospace">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-monospace">0123456789</p>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-monospace"</span><span class="nt">&gt;</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-monospace"</span><span class="nt">&gt;</span>abcdefghijklmnopqrstuvwxyz<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-monospace"</span><span class="nt">&gt;</span>0123456789<span class="nt">&lt;/p&gt;</span></code></pre></figure>
 
 <h2 id="tipografia-responsive">Tipografia responsive</h2>
 
@@ -897,14 +958,14 @@ con un <code class="highlighter-rouge">ellipsis</code>.</p>
 </div>
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812022033"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812030817"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812022033"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812030817"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
