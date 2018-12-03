@@ -24,6 +24,8 @@ Ogni elemento `<li>` deve contenere un _resizer_ come da esempio per mantenere l
 Per indicare il link/thumbail attivo applicare la classe `.active` al relativo tag `<a>`.
 
 {% capture callout %}
+##### Accessibilità
+
 Per ragioni di accessibilità è importante indicare all'interno dell'attributo `alt=""` dell'immagine thumbnail l'azione associata al link relativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

@@ -7,7 +7,7 @@ toc: true
 ---
 
 {% capture callout %}
-#### Accessibilità
+##### Accessibilità
 
 Il colore è uno degli strumenti principali per la trasmissione delle informazioni, ma non dimenticare mai di affiancare all'uso del colore altri mezzi più espliciti. Leggi la sezione sull'[uso del colore](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/doc/service-design/accessibilita.html#uso-del-colore) delle Linee Guida di design per maggiori informazioni.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

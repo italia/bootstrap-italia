@@ -96,6 +96,8 @@ I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un e
 Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona per visualizzare dei badge con indicazioni numeriche relative, ad esempio, al numero di messaggi non letti.
 
 {% capture callout %}
+##### Accessibilità
+
 I badge sono nascosti agli screen reader. Per garantire l'accessibilità è necessario aggiungere uno `<span>` con classe `.sr-only` all'interno della label che contenga un testo esplicativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -144,6 +146,8 @@ I badge sono nascosti agli screen reader. Per garantire l'accessibilità è nece
 Aggiungere uno `<span>` con classe `.bottom-nav-alert` all'interno dell'icona per identificare una sezione che richiede attenzione o presenta nuovi contenuti.
 
 {% capture callout %}
+##### Accessibilità
+
 Gli alert sono nascosti agli screen reader. Per garantire l'accessibilità è necessario aggiungere uno `<span>` con classe `.sr-only` all'interno della label che contenga un testo esplicativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

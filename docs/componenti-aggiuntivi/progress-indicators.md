@@ -64,6 +64,8 @@ Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare
 - La classe `.progress-bar` richiede uno stile inline, una classe di utility di dimensionamento o un CSS personalizzato per impostare la larghezza.
 
 {% capture callout %}
+##### Accessibilità
+
 Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attributi come role e aria.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -157,6 +159,8 @@ L'elemento Spinner comunica lo stato attivo di un'operazione ma non il progresso
 Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe `.size-sm`.
 
 {% capture callout %}
+##### Accessibilità
+
 Notare l'inclusione di uno `<span>` riservato agli screen reader.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
