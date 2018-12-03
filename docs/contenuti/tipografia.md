@@ -11,6 +11,49 @@ Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
 link. Quando è necessario un maggiore controllo, fornisce delle
 [classi di utilità testuali]({{ site.baseurl }}/docs/utilities/testo/).
 
+## Famiglie di Caratteri
+
+Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
+suggeriscono di usare le seguenti famiglie di caratteri:
+
+- il font senza grazie, o _sans serif_, **Titillium Web**.
+- il font graziato, o _serif_, **Lora**.
+- il font _monospace_ con dimensioni di caratteri normalizzate **Roboto Mono**.
+
+### Titillium Web
+
+È la famiglia di caratteri utilizzata per i contenuti web, per cui di norma non
+è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
+utilizzare la classe `text-sans-serif`.
+
+{% capture example %}
+<p class="text-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-sans-serif">0123456789</p>
+{% endcapture %}{% include example.html content=example %}
+
+### Lora
+
+È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
+nato espressamente per la lettura su display.
+
+{% capture example %}
+<p class="text-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-serif">0123456789</p>
+{% endcapture %}{% include example.html content=example %}
+
+### Roboto Mono
+
+È un adatto ad essere utilizzato per la rappresentazione di numeri, codici, calcoli
+matematici, numeri in tabelle, esempi con linguaggi di programmazione.
+
+{% capture example %}
+<p class="text-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="text-monospace">abcdefghijklmnopqrstuvwxyz</p>
+<p class="text-monospace">0123456789</p>
+{% endcapture %}{% include example.html content=example %}
+
 ## Tipografia responsive
 
 Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando
