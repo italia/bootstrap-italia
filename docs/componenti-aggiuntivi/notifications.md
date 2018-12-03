@@ -50,6 +50,8 @@ notificationShow('idNotification',6000);
 - il secondo parametro (opzionale) corrisponde alla durata di visualizzazione in millisecondi. Il valore di default, se non indicato, è di 7000ms ossia 7 secondi.
 
 {% capture callout %}
+##### Accessibilità
+
 Per ragioni di accessibilità è necessario:
 - che il titolo `<h5>` contenuto nella Notification abbia un ID univoco
 - che questo ID venga usato come valore della proprietà `aria-labelledby` nel `<div>` della Notification

@@ -27,6 +27,8 @@ Per ottenere un elemento grafico non interattivo, utilizzare il tag `<div>`.
 Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
+##### Accessibilità
+
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
 
 Nel caso di Avatar con immagine è consigliabile utilizzare l'attributo `alt=""` della stessa.
@@ -470,6 +472,8 @@ Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si ot
 - lo stato **invisibile** si ottiene aggiungendo la classe `.hidden`
 
 {% capture callout %}
+##### Accessibilità
+
 Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="sr-only">Presenza: (stato presenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -550,6 +554,8 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 - lo stato **notifica** si ottiene aggiungendo la classe `.notify`
 
 {% capture callout %}
+##### Accessibilità
+
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="sr-only">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

@@ -7,7 +7,7 @@ toc: true
 ---
 
 {% capture callout %}
-#### Accessibilità dei componenti di navigazione
+##### Accessibilità
 
 Per ogni componente che si occupi della navigazione di un sito web, assicurati di aggiungere l'attributo `role="navigation"` al contenitore della lista di link, oppure aggiungi un elemento `<nav>` che contenga l'intera navigazione. Non aggiungere l'attributo `role` al tag `<ul>` stesso, poiché questa pratica impedirà alle tecnologia assistive (come gli screen reader) di annunciare la lista stessa; aggiungilo al suo esterno.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

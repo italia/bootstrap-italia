@@ -15,6 +15,8 @@ Il Callout basico è costituito da un contenitore `<div>` con classe `.callout`,
 Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà `aria-hidden="true"`.
 
 {% capture callout %}
+##### Accessibilità
+
 Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="sr-only">Testo alternativo</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

@@ -1,34 +1,215 @@
-.autocomplete-clear {
-  visibility: hidden;
-  position: absolute;
-  z-index: 2;
-  right: .25rem;
-  top: .5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  svg {
-    fill: #a6a6a6;
+//mobile
+
+//search field
+.autocomplete {
+  padding: 0.375rem $v-gap*6 0.375rem $v-gap*3;
+  &::placeholder {
+    color: $neutral-1-a4;
+  }
+  &:disabled {
+    background-color: #cacacc;
+    &::placeholder {
+      color: $gray-secondary;
+    }
   }
 }
 
-.autocomplete-wrap {
+//search icon
+.autocomplete-icon {
+  position: absolute;
+  right: $v-gap*2;
+  top: 1.9rem;
+	.icon {
+    fill: $gray-secondary;
+  }
+}
+
+//results list
+.autocomplete-list {
   position: absolute;
   left: 0;
   right: 0;
-  background: $white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .25); // TODO use a variable
-  z-index: 100;
-  max-height: 240px;
-  overflow-y: auto;
-  padding-left: 0;
-  list-style-type: none;
+  width: 100%;
+  background-color: $white;
+  padding: $v-gap 0;
+  box-shadow: $dropdown-box-shadow;
+  border-top: 1px solid $gray-secondary;
+  transition: opacity 0.3s;
+  display: none;
+
+  &.autocomplete-list-show {
+    display: block;
+  }
+
   li {
-    cursor: pointer;
-    padding: 12px 16px;
-    font-size: 0.875rem;
+    list-style-type: none;
+    padding: 0;
+  }
+  //single item
+  a {
+    padding: 12px $v-gap*3;
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $gray-primary;
+    line-height: 1.2;
+    font-size: 1rem;
+    //hover state
     &:hover {
-      background: rgb(238, 238, 238); // TODO use a variable
+      color: $primary;
+      text-decoration: none;
+      .icon {
+        fill: $primary;
+      }
+      .autocomplete-list-text {
+        //item text
+        span {
+          text-decoration: underline;
+        }
+        //item label
+        em {
+          color: $primary;
+        }
+      }
+      //search highlight
+      mark {
+        color: $primary;
+      }
+    }
+    //item icon + avatar
+    .icon, .avatar {
+      margin-right: $v-gap*2;
+      flex-shrink: 0;
+    }
+    .icon {
+      fill: $gray-primary;
+    }
+
+    //item text
+    .autocomplete-list-text {
+      margin-top: 2px;
+      //item label
+      em {
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 0.750rem;
+        color: $neutral-1-a4;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        display: block;
+        margin-top: $v-gap/2;
+      }
     }
   }
+  //search highlight
+  mark {
+    padding: 0;
+    background: transparent;
+    font-weight: bold;
+  }
+}
+
+//big version
+.autocomplete-wrapper-big {
+
+  //search field
+  .autocomplete {
+    height: $v-gap*7;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-left: 2.5rem;
+    padding-right: $v-gap*3;
+  }
+  //search icon
+  .autocomplete-icon {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 2.4rem;
+    .icon {
+      fill: $primary;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  //results list
+  .autocomplete-list {
+    a {
+      font-size: 1.125rem;
+      .autocomplete-list-text {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+  //results list
+  .autocomplete-list {
+    a {
+      font-size: 0.889rem;
+      align-items: flex-start;
+      .autocomplete-list-text {
+        //item text
+        span {
+          margin-right: $v-gap;
+        }
+        //item label
+        em {
+          display: inline-block;
+          font-size: 0.667rem;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  //big version
+  .autocomplete-wrapper-big {
+    //search field
+    .autocomplete {
+      height: $v-gap*9;
+      font-size: 2.222rem;
+      padding-left: $v-gap*8;
+    }
+    //search icon
+    .autocomplete-icon {
+      top: 2.4rem;
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    //results list
+    .autocomplete-list {
+      a {
+        font-size: 1.111rem;
+         //item text
+        .autocomplete-list-text {
+          span {
+            margin-right: $v-gap*2;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
 }
