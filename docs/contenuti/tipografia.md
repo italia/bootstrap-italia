@@ -35,7 +35,8 @@ utilizzare la classe `text-sans-serif`.
 ### Lora
 
 È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
-nato espressamente per la lettura su display.
+nato espressamente per la lettura su display. Può essere utilizzato applicando
+la classe `text-serif`.
 
 {% capture example %}
 <p class="text-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
@@ -45,8 +46,9 @@ nato espressamente per la lettura su display.
 
 ### Roboto Mono
 
-È un adatto ad essere utilizzato per la rappresentazione di numeri, codici, calcoli
-matematici, numeri in tabelle, esempi con linguaggi di programmazione.
+È una famiglia di caratteri adatta ad essere utilizzata per la rappresentazione
+di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
+Per il suo utilizzo, è sufficiente usare la classe `text-monospace`.
 
 {% capture example %}
 <p class="text-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
