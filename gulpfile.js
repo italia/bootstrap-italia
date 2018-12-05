@@ -64,6 +64,7 @@ const Paths = {
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/rating.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
