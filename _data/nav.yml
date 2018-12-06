@@ -85,6 +85,7 @@
     - title: BottomNav
     - title: ThumbNav
     - title: Toolbar
+    - title: Chips
     #- title: Datepicker
     #  status: wip
 
