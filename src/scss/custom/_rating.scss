@@ -11,7 +11,9 @@
 	//star container
 	& > label {
 		float: right;
-		margin: 0 $v-gap/4 0 0;
+		//margin: 0 $v-gap/4 0 0;
+		margin: 0;
+		padding-right: $v-gap/4;
 		&:first-of-type {
 			margin-right: 0;
 		}
