@@ -80,7 +80,7 @@ $(function(){
 
 	//click su lista
 	$(listInput).click(function(){
-		var scopeEl = $(this).closest('.it-transfer-wrapper');ì
+		var scopeEl = $(this).closest('.it-transfer-wrapper');
 		checkList(scopeEl)
 
 	})
