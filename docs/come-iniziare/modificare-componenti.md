@@ -6,21 +6,7 @@ group: come-iniziare
 toc: true
 ---
 
-Il tema Bootstrap Italia è generato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] sul sito ufficiale di Bootstrap {{ site.bootstrap_version }}.
-
-I componenti di Bootstrap Italia sono mostrati in due macro-aree: i [Componenti _Base_]({{ site.baseurl }}/docs/componenti/) e i [Componenti _Aggiuntivi_]({{ site.baseurl }}/docs/componenti-aggiuntivi/) (o _Plugin_).
- 
-#### Componenti base
-
-I componenti _base_ sono quelli già presenti nella libreria Bootstrap {{ site.bootstrap_version }}, che di conseguenza avranno una corrispondente voce in inglese anche nella [documentazione][documentazione-bootstrap] di Bootstrap {{ site.bootstrap_version }} stesso.
-
-Tali componenti, all'interno di questo tema Bootstrap Italia, sono personalizzati nello stile, nell'accessibilità e nelle funzionalità per rispondere alle [Linee guida di design per i servizi web della PA][linee-guida].
-
-#### Componenti aggiuntivi
-
-I componenti _aggiuntivi_, al contrario, sono quei componenti che non sono presenti nativamente nella libreria Bootstrap {{ site.bootstrap_version }}.
-
-Sul web, essi possono anche essere identificati come _plugin_, ma qui si è preferito mantenere la denominazione "componente" per sottolinearne l'uniformità di contesto con i componenti di base, con i quali condividono struttura e utilizzo.
+Il tema Bootstrap Italia è stato creato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] sul sito ufficiale di Bootstrap {{ site.bootstrap_version }}.
 
 ## Struttura di un componente
 
@@ -40,7 +26,7 @@ In breve, gli elementi su cui intervenire per la creazione o la modifica di comp
 
 ### Documentazione del componente
 
-Ogni componente ha una pagina (o un paragrafo) nella documentazione alla cartella `/docs/componenti` o `/docs/componenti-aggiuntivi`. Tale documentazione è redatta in codice [`markdown`](https://it.wikipedia.org/wiki/Markdown) ed è comprensiva di una breve descrizione testuale, oltre ad eventuali varianti, comportamenti, esempi di codice `html` ed eventuali peculiarità in termini di codice Javascript.
+Ogni componente ha una pagina (o un paragrafo) nella documentazione alla cartella `/docs/componenti`. Tale documentazione è redatta in codice [`markdown`](https://it.wikipedia.org/wiki/Markdown) ed è comprensiva di una breve descrizione testuale, oltre ad eventuali varianti, comportamenti, esempi di codice `html` ed eventuali peculiarità in termini di codice Javascript.
 
 Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md` dedicato e la rispettiva voce al menù principale nel file `_data/nav.yml`.
 

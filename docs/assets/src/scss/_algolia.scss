@@ -1,13 +1,7 @@
-// stylelint-disable declaration-no-important
-
-// Docsearch overrides
-//
-// `!important` indicates overridden properties.
 .algolia-autocomplete {
   display: block !important;
   flex: 1;
 
-  // Menu container
   .ds-dropdown-menu {
     width: 100%;
     min-width: 0 !important;
@@ -49,7 +43,7 @@
     margin-top: 0 !important;
     font-size: .875rem !important;
     font-weight: 500 !important;
-    color: $docs-blue-bright !important;
+    color: $primary-bright !important;
     border-bottom: 0 !important;
   }
 
