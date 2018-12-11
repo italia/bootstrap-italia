@@ -1,10 +1,6 @@
-//
-// Main navbar
-//
-
 .bd-navbar {
   min-height: 10rem;
-  background-color: $docs-blue;
+  background-color: $primary;
 
   @include media-breakpoint-down(md) {
     padding-right: .5rem;
@@ -85,8 +81,8 @@
   }
 
   .form-control:focus {
-    border-color: $docs-blue-bright;
-    box-shadow: 0 0 0 3px rgba($docs-blue-bright, .25);
+    border-color: $primary-bright;
+    box-shadow: 0 0 0 3px rgba($primary-bright, .25);
   }
 }
 

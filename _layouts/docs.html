@@ -20,9 +20,7 @@
         </div>
 
         {% if page.toc %}
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-            {{ content | toc_only }}
-          </div>
+          {% include docs-toc.html %}
         {% endif %}
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">

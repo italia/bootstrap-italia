@@ -39,6 +39,7 @@
 
   &.autocomplete-list-show {
     display: block;
+    z-index: 10;
   }
 
   li {

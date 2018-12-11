@@ -50,33 +50,9 @@ Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che co
 Questo ricompilerà i file all'interno della cartella `dist`, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
 Di seguito un paio di esempi pratici.
 
-### Rimozione Datepicker
-
-Ad esempio, al momento il componente per la gestione del calendario ([Datepicker]({{ site.baseurl }}/docs/componenti-avanzati/datepicker/)) è di default disabilitato in quanto non definitivo.
- 
-Si può vedere come tale componente sia escluso dal processo di compilazione nei file:
- 
- `src/scss/bootstrap-italia.scss`:
- 
-{% highlight html %}
-// @import "node_modules/pickadate/lib/themes/default";
-// @import "node_modules/pickadate/lib/themes/default.date";
-// @import "node_modules/pickadate/lib/themes/default.time";
-{% endhighlight %}
-
-`gulpfile.js`:
-
-{% highlight html %}
-// './node_modules/pickadate/lib/compressed/picker.js',
-// './node_modules/pickadate/lib/compressed/picker.date.js',
-// './node_modules/pickadate/lib/compressed/picker.time.js'
-(...)
-// './src/js/plugins/date-picker.js'
-{% endhighlight %}
-
 ### Rimozione Cookiebar
 
-Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
 
 `src/scss/bootstrap-italia.scss`:
 
@@ -142,24 +118,24 @@ $ git push --follow-tags
 
 che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
 
-### CI e CD
+### Continuous integration e continuous delivery
 
 Sul branch `master` è eseguita la CI con CircleCI, configurata per eseguire il Job `build`.
 
 Il push delle tag sul repository eseguirà il CD composto da:
 
-#### Job `build`
+#### Job build
 Build del progetto con `npm run build` 
 
-#### Job `github-update-pages`
+#### Job github-update-pages
 Build della documentazione e deploy sul branch `gh-pages` con `npm run documentation-deploy-to-gh-pages`.
 
 Il comando produrrà l'aggiornamento su GitHub Pages, rendendo la documentazione visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/)
 
-#### Job `github-create-release`
+#### Job github-create-release
 Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases/) ed upload degli asset `bootstrap-italia.zip`, prodotti nella cartella `/dist` dai precedenti step, e creazione di una release note (che potrà poi essere successivamente modificata) contenente il changelog con `npm run release`.
 
-#### Job `npm-publish`
+#### Job npm-publish
 
 `npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
 
@@ -178,7 +154,7 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 ---
 
-##### Continua la lettura >
+###### Continua la lettura >
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
 continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).
