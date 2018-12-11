@@ -2,7 +2,6 @@
 layout: docs
 group: come-iniziare
 redirect_from:
-  - /docs/
   - /come-iniziare/
   - /docs/come-iniziare/
 toc: true
