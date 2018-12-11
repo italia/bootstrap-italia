@@ -3,13 +3,13 @@
 	display: inline-flex;
 	justify-content: space-evenly;
 	align-items: center;
-	background: #FCFDFF;
+	background: $chips-background;
 	border: 1px solid $gray-border-disabled;
 	border-radius: $v-gap*1.5;
 	height: $v-gap*3;
 	min-width: 100px;
 	padding: 0 $v-gap*2 2px $v-gap;
-	transition: background-color 0.1s;
+	transition: all 0.05s;
 	margin-right: $v-gap/2;
 	//label
 	.chip-label {
@@ -18,7 +18,7 @@
 		font-weight: 600;
 		color: $gray-secondary;
 		transform: translateY(-2px);
-		transition: color 0.1s;
+		transition: color 0.05s;
 	}
 	//close button
 	button {
@@ -42,14 +42,14 @@
 			position: absolute;
 			top: -6px;
 			left: 0;
-			transition: fill 0.1s;
+			transition: fill 0.05s;
 		}
 	}
 	//left icon
 	& > .icon {
 		fill: $primary;
 		transform: translateX(-5px) translateY(1px);
-		transition: fill 0.1s;
+		transition: fill 0.05s;
 	}
 	//avatar
 	.avatar {
@@ -108,24 +108,25 @@
 
 	//hover state--------------------------------
 	&:hover:not(.chip-disabled) {
-		background: lighten($neutral-1-a6,5);
-		transition: background-color 0.2s;
+		background: $chips-background-hover;
+		border-color: $chips-background-hover;
+		transition: background-color 0.1s;
 		//label
 		.chip-label {
 			color: $white;
-			transition: color 0.2s;
+			transition: color 0.1s;
 		}
 		//close button
 		button {
 			.icon {
 				fill: $white;
-				transition: fill 0.2s;
+				transition: fill 0.1s;
 			}
 		}
 		//left icon
 		& > .icon {
 			fill: $white;
-			transition: fill 0.2s;
+			transition: fill 0.1s;
 		}
 	}
 
