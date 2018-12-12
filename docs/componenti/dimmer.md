@@ -10,7 +10,6 @@ toc: true
   window.addEventListener('load', function() {
     $('.dimmer').css("display", "flex").hide().fadeIn(200);
     $('[id^=toggleDimmer]').on('click', function() {
-      console.log($(this).data('dimmer'));
       var dimmer = '#' + $(this).data('dimmer');
       $(this).is(':checked') ? dimmerShow(dimmer) : dimmerHide(dimmer);
     })
