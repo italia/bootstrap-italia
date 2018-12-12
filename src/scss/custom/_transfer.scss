@@ -1,0 +1,139 @@
+//mobile
+.it-transfer-wrapper{
+	border:$transfer-border;
+	border-radius: $border-radius;
+	.transfer-scroll{
+		height: $transfer-height;
+		overflow-x:hidden;
+		margin-bottom:$v-gap*3;
+	}
+	.form-check{
+		padding:0 $v-gap*3;
+		position: relative;
+	}
+	.transfer-header{
+		font-weight: bold;
+		background: #FFF;
+		&:after{
+			height: 1px;
+			background: $transfer-header-line-color;
+			width: $transfer-header-line-w;
+			content: '';
+			display: block;
+			margin-left: 62px;
+		}
+		.form-check{
+			padding: $v-gap*3  $v-gap*3 $v-gap;
+			margin-top: 0;
+			
+			[type=checkbox]+label{
+				display: flex;
+				justify-content: space-between;
+			} 
+			.descr{
+				display: block;
+				font-size: $transfer-descr-size;
+				color: $transfer-descr-color;
+				font-weight: normal;
+			}
+		}
+	}
+	// semi checked style
+	.form-check{
+		input.semi-checked:not(:checked)+label::before{
+			top: 13px;
+			left: 4px;
+			width: 12px;
+			height: 2px;
+			border-style: none;
+			border-width: 0;
+			border-color: transparent ;
+			transform: none;
+			backface-visibility: hidden;
+			opacity: 1;
+			background: #FFF;
+		}
+		input.semi-checked:not(:checked)+label::after{
+			border-color: $primary-a5;
+			background-color: $primary-a5;
+			z-index: 0;
+			}
+	}
+	
+}
+
+// buttons
+.it-transfer-buttons{
+	display: flex;
+	justify-content: center;
+	a{
+		display: flex;
+		width: $v-gap*5;
+		height: $v-gap*5;
+		border:$transfer-border;
+		border-radius: 100px;
+		align-items: center;
+		justify-content: center;
+		margin:$v-gap*3 $v-gap;
+		cursor: default;
+		pointer-events: none;
+		svg{
+			width: $v-gap*2;
+			height: $v-gap*2;
+			fill: $transfer-header-line-color;
+		}
+		&.transfer,&.backtransfer{
+			transform: rotate(90deg)
+		}
+		&.active{
+			border-color: $primary-a5;
+			cursor: pointer;
+			pointer-events: all;
+			svg{
+				fill: $primary-a5;
+			}
+		}
+	}
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) { 
+ 
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+		.it-transfer-buttons{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			a{
+				display: inline-flex;
+				width: $v-gap*5;
+				height: $v-gap*5;
+				border:$transfer-border;
+				border-radius: 100px;
+				align-items: center;
+				justify-content: center;
+				margin:$v-gap $v-gap;
+				align-self: center;
+				svg{
+					
+				}
+				&.transfer,&.backtransfer{
+					transform: none;
+				}
+			}
+		}
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+  
+}
