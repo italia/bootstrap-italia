@@ -1,14 +1,19 @@
 ---
 layout: docs
 title: Dimmer
-description: Focalizza l'attenxione su un contenuto
-group: componenti-aggiuntivi
+description: Un componente per focalizzare l'attenzione su un contenuto
+group: componenti
 toc: true
 ---
 
 <script>
   window.addEventListener('load', function() {
     $('.dimmer').css("display", "flex").hide().fadeIn(200);
+    $('[id^=toggleDimmer]').on('click', function() {
+      console.log($(this).data('dimmer'));
+      var dimmer = '#' + $(this).data('dimmer');
+      $(this).is(':checked') ? dimmerShow(dimmer) : dimmerHide(dimmer);
+    })
   });
 </script>
 
@@ -30,7 +35,13 @@ Il Dimmer si compone di un wrapper generale `.dimmer` e di un contenitore `.dimm
 
 Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'icona contenuta in un `<div>` con classe `.dimmer-icon`.
 
-<button onclick="dimmerShow('#dimmer1');">Attiva Dimmer</button> <button onclick="dimmerHide('#dimmer1');">Nascondi Dimmer</button>
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer1">
+    Attiva Dimmer 1
+    <input type="checkbox" id="toggleDimmer1" data-dimmer="dimmer1" checked>
+    <span class="lever"></span>
+  </label>
+</div>
 
 {% capture example %}
 <div class="row dimmable">
@@ -85,7 +96,13 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 
 Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una versione con sfondo di colore Primario.
 
-<button onclick="dimmerShow('#dimmer2');">Attiva Dimmer</button> <button onclick="dimmerHide('#dimmer2');">Nascondi Dimmer</button>
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer2">
+    Attiva Dimmer 2
+    <input type="checkbox" id="toggleDimmer2" data-dimmer="dimmer2" checked>
+    <span class="lever"></span>
+  </label>
+</div>
 
 {% capture example %}
 <div class="row dimmable">
@@ -138,9 +155,15 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 
 Un Dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.
 
-I bottoni vanno inseiriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo bottone aggiungere la classe `.single-button`.
+I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo bottone aggiungere la classe `.single-button`.
 
-<button onclick="dimmerShow('#dimmer3');">Attiva Dimmer</button> <button onclick="dimmerHide('#dimmer3');">Nascondi Dimmer</button>
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer3">
+    Attiva Dimmer 3
+    <input type="checkbox" id="toggleDimmer3" data-dimmer="dimmer3" checked>
+    <span class="lever"></span>
+  </label>
+</div>
 
 {% capture example %}
 <div class="row dimmable">
@@ -196,7 +219,13 @@ I bottoni vanno inseiriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
 
 Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una versione con sfondo di colore Primario.
 
-<button onclick="dimmerShow('#dimmer4');">Attiva Dimmer</button> <button onclick="dimmerHide('#dimmer4');">Nascondi Dimmer</button>
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer4">
+    Attiva Dimmer 4
+    <input type="checkbox" id="toggleDimmer4" data-dimmer="dimmer4" checked>
+    <span class="lever"></span>
+  </label>
+</div>
 
 {% capture example %}
 <div class="row dimmable">
