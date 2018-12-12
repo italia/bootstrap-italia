@@ -76,6 +76,7 @@
     - title: Cookiebar
     #- title: Datepicker
     #  status: wip
+    - title: Dimmer
     - title: Dropdown
     - title: Forward
     - title: Header
