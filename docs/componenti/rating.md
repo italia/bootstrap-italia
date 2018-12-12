@@ -2,7 +2,7 @@
 layout: docs
 title: Rating
 description: Per esprimere una valutazione su un contenuto
-group: componenti-aggiuntivi
+group: componenti
 toc: true
 ---
 
@@ -83,7 +83,7 @@ La label con il numero di stelle dev'essere contenuta in uno `<span>` semplice.
 </fieldset>
 {% endcapture %}{% include example.html content=example %}
 
-### Sola letura
+### Sola lettura
 
 Aggiungendo la classe `.rating-read-only` al `<fieldset>` si ottiene un Rating non modificabile di sola lettura.
 
