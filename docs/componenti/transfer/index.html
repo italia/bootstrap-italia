@@ -5,11 +5,11 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità">
+<meta name="description" content="Il transfer è un componente che consente la creazione di liste di checkbox.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.5">
 
-<title>Bottoni · Bootstrap Italia</title>
+<title>Transfer · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812121722" rel="stylesheet">
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Bottoni">
-<meta name="twitter:description" content="Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità">
+<meta name="twitter:title" content="Transfer">
+<meta name="twitter:description" content="Il transfer è un componente che consente la creazione di liste di checkbox.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/bottoni/">
-<meta property="og:title" content="Bottoni">
-<meta property="og:description" content="Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità">
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/transfer/">
+<meta property="og:title" content="Transfer">
+<meta property="og:description" content="Il transfer è un componente che consente la creazione di liste di checkbox.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -346,7 +346,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
                       <span>Barre di Avanzamento</span></a>
                   </li><li>
-                    <a class="list-item  active" href="/bootstrap-italia/docs/componenti/bottoni/">
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
                       <span>Bottoni</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
@@ -418,7 +418,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
                       <span>Tooltip</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/componenti/transfer/">
+                    <a class="list-item  active" href="/bootstrap-italia/docs/componenti/transfer/">
                       <span>Transfer</span></a>
                   </li></ul>
               
@@ -490,172 +490,374 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         </div>
 
         
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-  <div class="sidebar-wrapper">
-    <h3>Bottoni</h3>
-    <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#utilizzo">Utilizzo</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#varianti-di-colore">Varianti di colore</a></li>
-<li class="toc-entry toc-h3"><a href="#varianti-di-dimensione">Varianti di dimensione</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#approfondimento">Approfondimento</a></li>
-</ul>
-  </div>
-</div>
-
-        
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Bottoni</h1>
-          <p class="bd-lead">Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità</p>
-          <h2 id="utilizzo">Utilizzo</h2>
+          <h1 class="bd-title" id="content">Transfer</h1>
+          <p class="bd-lead">Il transfer è un componente che consente la creazione di liste di checkbox.</p>
+          <p>Il componente <em>Transfer</em> consente di trasferire gli elementi di una lista di checkbox ad un altro elenco di checkbox.</p>
 
-<p>Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe <code class="highlighter-rouge">.btn</code>, associandola a classi di tipo <code class="highlighter-rouge">.btn-</code> per applicarne le varianti di stile, dimensione, ecc.</p>
-
-<div class="bd-example">
-<button type="button" class="btn">Link</button>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p>Le classi <code class="highlighter-rouge">.btn</code> sono state pensate per essere utilizzate con l’elemento <code class="highlighter-rouge">&lt;button&gt;</code>. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo <code class="highlighter-rouge">&lt;a&gt;</code> o <code class="highlighter-rouge">&lt;input&gt;</code>, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.</p>
-
-<p>In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi <code class="highlighter-rouge">role="button"</code> per trasmettere il loro scopo alle tecnologie assistive.</p>
-
-<div class="bd-example">
-<a class="btn" href="#" role="button">Link</a>
-<button class="btn" type="submit">Button</button>
-<input class="btn" type="button" value="Input" />
-<input class="btn" type="submit" value="Submit" />
-<input class="btn" type="reset" value="Reset" />
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></figure>
-
-<h3 id="varianti-di-colore">Varianti di colore</h3>
-
-<p>Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:</p>
-
-<div class="bd-example">
-<div class="py-1">
-<div class="btn-example">
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-outline-primary">Primary outline</button>
-  <button type="button" class="btn btn-primary disabled">Primary disabled</button>
-</div>
-<div class="btn-example">
-  <button type="button" class="btn btn-secondary">Secondary</button>
-  <button type="button" class="btn btn-outline-secondary">Secondary outline</button>
-  <button type="button" class="btn btn-secondary disabled">Secondary disabled</button>
-</div></div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"py-1"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary outline<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span><span class="nt">&gt;</span>Primary disabled<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span><span class="nt">&gt;</span>Secondary outline<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span><span class="nt">&gt;</span>Secondary disabled<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;&lt;/div&gt;</span></code></pre></figure>
-
-<h4 id="note-sullo-stato-disabilitato">Note sullo stato disabilitato</h4>
-
+<p><strong>Il componente <em>Transfer</em> contiene</strong></p>
 <ul>
-  <li>I tag <code class="highlighter-rouge">&lt;a&gt;</code> non supportano l’attributo <code class="highlighter-rouge">disabled</code>, per cui è necessario usare la classe <code class="highlighter-rouge">.disabled</code> per farli apparire visivamente disabilitati, e in modo da disabilitare <code class="highlighter-rouge">pointer-events</code> su di essi sui browser che lo supportano.</li>
-  <li>I bottoni disabilitati includeranno l’attributo <code class="highlighter-rouge">aria-disabled="true"</code> per indicare lo stato dell’elemento alle tecnologie assistive.</li>
+  <li>Lista checkbox di destra</li>
+  <li>Pulsanti per il trasferimento dei contenuti da lista a lista</li>
+  <li>Lista checkbox di sinistra</li>
 </ul>
 
-<div class="bd-example">
-<a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
+<p><strong>Le liste di checkbox, sono composte da:</strong></p>
+<ul>
+  <li>Header: contiene un checkbox per la selezione / deselezione di tutti i campi sottostanti e la label che contiene il numero di elementi della lista</li>
+  <li>Lista checkbox</li>
+</ul>
+
+<p><strong>Pulsanti per il trasferimento dei contenuti:</strong></p>
+<ul>
+  <li><code class="highlighter-rouge">a.transfer</code>: Traferisce i campi selezionati a sinistra nella colonna destra</li>
+  <li><code class="highlighter-rouge">a.backtransfer</code>: Traferisce i campi selezionati a destra nella colonna sinistra</li>
+  <li><code class="highlighter-rouge">a.reset</code>: Ripristina lo stato iniziale delle liste</li>
+</ul>
+
+<div class="bd-callout bd-callout-info">
+<p>Per l’attivazione del relativo javascript è importante che il componente che contiene la struttura, abbia classe <code class="highlighter-rouge">.it-transfer-block</code><br />
+Nell’esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l’utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.</p>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link disabilitato<span class="nt">&lt;/a&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-warning">
-<h5 id="disabilitazione-link">Disabilitazione link</h5>
-
-<p>La classe <code class="highlighter-rouge">.disabled</code> usa <code class="highlighter-rouge">pointer-events: none</code> per provare a disabilitare l’attivazione dei comportamenti di default dei link <code class="highlighter-rouge">&lt;a&gt;</code>, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l’attributo <code class="highlighter-rouge">tabindex="-1"</code> e utilizzare Javascript per disabilitare le loro funzionalità.</p>
-</div>
-
-<h4 id="su-sfondo-scuro">Su sfondo scuro</h4>
-
-<div class="bd-example">
-<div class="bg-dark py-1">
-<div class="btn-example">
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-outline-primary">Primary outline</button>
-  <button type="button" class="btn btn-primary disabled">Primary disabled</button>
-</div>
-<div class="btn-example">
-  <button type="button" class="btn btn-secondary">Secondary</button>
-  <button type="button" class="btn btn-outline-secondary">Secondary outline</button>
-  <button type="button" class="btn btn-secondary disabled">Secondary disabled</button>
-</div></div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark py-1"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary outline<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span><span class="nt">&gt;</span>Primary disabled<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span><span class="nt">&gt;</span>Secondary outline<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span><span class="nt">&gt;</span>Secondary disabled<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;&lt;/div&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-accessibility">
-<h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
-
-<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="highlighter-rouge">.sr-only</code>.</p>
-</div>
-
-<h3 id="varianti-di-dimensione">Varianti di dimensione</h3>
-
-<p>Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi <code class="highlighter-rouge">.btn-lg</code>, <code class="highlighter-rouge">.btn-sm</code> e <code class="highlighter-rouge">.btn-xs</code>.</p>
-
-<h4 id="large">Large</h4>
-<div class="bd-example">
-<button type="button" class="btn btn-primary btn-lg">Primary Large</button>
-<button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span><span class="nt">&gt;</span>Primary Large<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span><span class="nt">&gt;</span>Secondary Large<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<h4 id="small">Small</h4>
-<div class="bd-example">
-<button type="button" class="btn btn-primary btn-sm">Primary Small</button>
-<button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>Primary Small<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Secondary Small<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<h4 id="mini">Mini</h4>
-<div class="bd-example">
-<button type="button" class="btn btn-primary btn-xs">Primary Mini</button>
-<button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs"</span><span class="nt">&gt;</span>Primary Mini<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-xs"</span><span class="nt">&gt;</span>Secondary Mini<span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-<p>Aggiungendo la classe <code class="highlighter-rouge">.btn-block</code> si ottengono invece bottoni che prendono tutta l’ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.</p>
 
 <div class="bd-example">
-<button type="button" class="btn btn-primary btn-lg btn-block">Primary Block</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Secondary Block</button>
+<div class="it-transfer-block">
+  <div class="row">
+    <div class="col-xs-12 col-md-5">
+      <div class="it-transfer-wrapper source">
+        <div class="transfer-header">
+          <div class="form-check" aria-describedby="">
+            <input type="checkbox" id="checkbox1" />
+            <label for="checkbox1">
+              <span>
+                <span class="num">
+                  6
+                </span>
+                <span> ITEMS</span>
+              </span>
+              <span class="descr">Source</span>
+            </label>
+          </div>
+        </div>
+        <div class="transfer-scroll">
+          <div class="transfer-group">
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">
+                <span>
+                  <span>List item 1</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox3" />
+              <label for="checkbox3">
+                <span>
+                  <span>List item 2</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox4" />
+              <label for="checkbox4">
+                <span>
+                  <span>List item 3</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox5" />
+              <label for="checkbox5">
+                <span>
+                  <span>List item 4</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox6" />
+              <label for="checkbox6">
+                <span>
+                  <span>List item 5</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox7" />
+              <label for="checkbox7">
+                <span>
+                  <span>List item 6</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <!-- transfer buttons-->
+      <div class="it-transfer-buttons">
+        <a class="transfer" href="#">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Label for aroow right</span>
+        <a class="backtransfer" href="#">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-arrow-left"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Label for aroow left</span>
+        <a class="reset" href="#">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+          </svg>
+        </a>
+        <span class="sr-only">Label for reset icon</span>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <div class="it-transfer-wrapper target">
+        <div class="transfer-header">
+          <div class="form-check" aria-describedby="">
+            <input type="checkbox" id="checkbox1b" />
+            <label for="checkbox1b">
+              <span>
+                <span class="num">
+                  6
+                </span>
+                <span> ITEMS</span>
+              </span>
+              <span class="descr">Target</span>
+            </label>
+          </div>
+        </div>
+        <div class="transfer-scroll">
+          <div class="transfer-group">
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox2b" />
+              <label for="checkbox2b">
+                <span>
+                  <span>List item 7</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox3b" />
+              <label for="checkbox3b">
+                <span>
+                  <span>List item 8</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox4b" />
+              <label for="checkbox4b">
+                <span>
+                  <span>List item 9</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox5b" />
+              <label for="checkbox5b">
+                <span>
+                  <span>List item 10</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox6b" />
+              <label for="checkbox6b">
+                <span>
+                  <span>List item 11</span>
+                </span>
+              </label>
+            </div>
+            <div class="form-check" aria-describedby="">
+              <input type="checkbox" id="checkbox7b" />
+              <label for="checkbox7b">
+                <span>
+                  <span>List item 12</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg btn-block"</span><span class="nt">&gt;</span>Primary Block<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg btn-block"</span><span class="nt">&gt;</span>Secondary Block<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-block"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-wrapper source"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-header"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"num"</span><span class="nt">&gt;</span>
+                  6
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;</span> ITEMS<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"descr"</span><span class="nt">&gt;</span>Source<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-scroll"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox2"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 1<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox3"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 2<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox4"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 3<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox5"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox5"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 4<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox6"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox6"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 5<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox7"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 6<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-2"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- transfer buttons--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-buttons"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"transfer"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for aroow right<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"backtransfer"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-arrow-left"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for aroow left<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"reset"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/dist/svg/sprite.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+          <span class="nt">&lt;/svg&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for reset icon<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-wrapper target"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-header"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox1b"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"num"</span><span class="nt">&gt;</span>
+                  6
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span&gt;</span> ITEMS<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"descr"</span><span class="nt">&gt;</span>Target<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-scroll"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transfer-group"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox2b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 7<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox3b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox3b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 8<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox4b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox4b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 9<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox5b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox5b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 10<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox6b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox6b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 11<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span> <span class="na">aria-describedby=</span><span class="s">""</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox7b"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox7b"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>List item 12<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="approfondimento">Approfondimento</h2>
-
-<p>Per ulteriori informazioni sui bottoni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.1/components/buttons/">buttons</a> del sito di Bootstrap.</p>
 
         </main>
       </div>

@@ -5,11 +5,11 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Blocca la posizione di un elemento rispetto al viewport">
+<meta name="description" content="Elementi compatti che rappresentano un input, attributo o azione">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.5">
 
-<title>Affix · Bootstrap Italia</title>
+<title>Chips · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812121722" rel="stylesheet">
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Affix">
-<meta name="twitter:description" content="Blocca la posizione di un elemento rispetto al viewport">
+<meta name="twitter:title" content="Chips">
+<meta name="twitter:description" content="Elementi compatti che rappresentano un input, attributo o azione">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/affix/">
-<meta property="og:title" content="Affix">
-<meta property="og:description" content="Blocca la posizione di un elemento rispetto al viewport">
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/componenti/chips/">
+<meta property="og:title" content="Chips">
+<meta property="og:description" content="Elementi compatti che rappresentano un input, attributo o azione">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -331,7 +331,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
                       <span>Introduzione</span></a>
                   </li><li>
-                    <a class="list-item  active" href="/bootstrap-italia/docs/componenti/affix/">
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
                       <span>Affix</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/alert/">
@@ -358,7 +358,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                       <span>Carousel</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
+                    <a class="list-item  active" href="/bootstrap-italia/docs/componenti/chips/">
                       <span>Chips</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
@@ -492,21 +492,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
   <div class="sidebar-wrapper">
-    <h3>Affix</h3>
+    <h3>Chips</h3>
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#affix-su-browser-edgeie">Affix su browser Edge/IE</a></li>
-<li class="toc-entry toc-h2"><a href="#vertical-affix">Vertical Affix</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#vertical-affix-top">Vertical Affix top</a></li>
-<li class="toc-entry toc-h3"><a href="#vertical-affix-bottom">Vertical Affix bottom</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#horizontal-affix">Horizontal Affix</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#horizontal-affix-top">Horizontal Affix top</a></li>
-<li class="toc-entry toc-h3"><a href="#horizontal-affix-bottom">Horizontal Affix bottom</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#chip-disabilitata">Chip Disabilitata</a></li>
+<li class="toc-entry toc-h2"><a href="#gruppi-di-chip">Gruppi di Chip</a></li>
 </ul>
   </div>
 </div>
@@ -514,223 +503,369 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Affix</h1>
-          <p class="bd-lead">Blocca la posizione di un elemento rispetto al viewport</p>
-          <script>
-  window.addEventListener('load', function() {
-    $('.affix-top, .affix-bottom').iSticky({
-      holderAutoHeight: true
-    });
-  });
-</script>
+          <h1 class="bd-title" id="content">Chips</h1>
+          <p class="bd-lead">Elementi compatti che rappresentano un input, attributo o azione</p>
+          <p>Una <em>“chip”</em> è composta da un tag <code class="highlighter-rouge">div</code> con classe <code class="highlighter-rouge">.chip</code>. Contiene una label e, opzionalmente, un bottone di chiusura/rimozione, un’icona o un avatar.</p>
 
-<style>
-  /* Style override for Documentation purposes */
-  @media screen and (min-width: 768px) {
-    .affix-top {
-      top: 129px;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .affix-top {
-      top: 89px;
-    }
-  }
-  /* IE/Edge only hack
-  Header sticky doesnt' work on IE/Edge
-  so affix examples should stick to top of the window*/
-  _:-ms-lang(x), .affix-top {
-    top: 0;
-  }
-</style>
+<p>La versione con sola label centra il testo al suo interno e richiede una classe aggiuntiva <code class="highlighter-rouge">.chip-simple</code>.</p>
 
-<p>Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spesso utilizzato per i menù di navigazione o per i bottoni condivisione dei social network, per ancorarli in una specifica area mentre il contenuto della pagina viene scrollato in alto o in basso.</p>
+<p>L’azione richiesta per l’eliminazione della chip andrà associata al <code class="highlighter-rouge">&lt;button&gt;</code>.</p>
 
-<p>È importante ricordare che un elemento Affix non dovrebbe nascondere il contenuto di una pagina, specialmente quando la dimensione del viewport è ridotta.</p>
-
-<h2 id="affix-su-browser-edgeie">Affix su browser Edge/IE</h2>
-
-<p>Gli Affix fanno uso della proprietà CSS <code class="highlighter-rouge">position:sticky</code>.</p>
-
-<p>Se si volesse ottenere un comportamento identico sui browser che non supportano questa prorietà come Edge ed IE, si può attivare il polyfill iSticky con il seguente codice javascript:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">'.affix-top, .affix-bottom'</span><span class="p">).</span><span class="nx">iSticky</span><span class="p">({</span>
-    <span class="na">holderAutoHeight</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">});</span></code></pre></figure>
-
-<h2 id="vertical-affix">Vertical Affix</h2>
-
-<p>Un elemento Affix posizionato al lato del contenuto di pagina può essere ancorato alla parte superiore od inferiore dello stesso.</p>
-
-<h3 id="vertical-affix-top">Vertical Affix top</h3>
-
-<p>Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe <code class="highlighter-rouge">.affix-parent</code> all’elemento che lo contiene e la classe <code class="highlighter-rouge">.affix-top</code> all’elemento stesso.</p>
+<p>Aggiungendo la classe <code class="highlighter-rouge">.chip-lg</code> al contenitore si ottiene una versione più grande della Chip.</p>
 
 <div class="bd-example">
-<div class="affix-example container">
-  <div class="row">
-    <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
-      </div>
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
-      </div>
-      <div class="primary-bg p-3 affix-top">
-        <p class="mb-0 white-color">Affix top</p>
-      </div>
+
+<div class="row">
+  <div class="col-12 col-md-6">
+    <h4>Versione Standard</h4>
+    <p class="mt-4 mb-2">Solo testo</p>
+    <div class="chip chip-simple">
+      <span class="chip-label">Label</span>
     </div>
-    <div class="col-6 col-md-9 p-2">
-      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nulla justo, ullamcorper et pharetra nec, sagittis id augue. Ut imperdiet dolor neque, at imperdiet lectus finibus in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis fringilla nisi sed magna congue ultricies. Nam faucibus lacinia auctor. Morbi eget ullamcorper erat. Donec auctor, nulla non pellentesque vestibulum, nisl nulla iaculis lectus, nec tincidunt elit purus eu leo. Phasellus quis justo consequat, commodo mi pretium, porta turpis.</p>
-      <p class="mb-0 d-none d-md-block">Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
+    <p class="mt-4 mb-2">Testo e chiusura</p>
+    <div class="chip">
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
+    </div>
+    <p class="mt-4 mb-2">Icona, testo e chiusura</p>
+    <div class="chip">
+      <svg class="icon icon-xs"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
+    </div>
+    <p class="mt-4 mb-2">Avatar, testo e chiusura</p>
+    <div class="chip">
+      <div class="avatar size-xs">
+        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
+      </div>
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
     </div>
   </div>
-  <div class="row p-2 d-none d-md-block">
-    <p>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
+  <div class="col-12 col-md-6">
+    <h4>Versione Grande</h4>
+    <p class="mt-4 mb-2">Solo testo grande</p>
+    <div class="chip chip-simple chip-lg">
+      <span class="chip-label">Label</span>
+    </div>
+    <p class="mt-4 mb-2">Testo e chiusura grande</p>
+    <div class="chip chip-lg">
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
+    </div>
+    <p class="mt-4 mb-2">Icona, testo e chiusura grande</p>
+    <div class="chip chip-lg">
+      <svg class="icon icon-xs"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
+    </div>
+    <p class="mt-4 mb-2">Avatar, testo e chiusura grande</p>
+    <div class="chip chip-lg">
+      <div class="avatar size-xs">
+        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
+      </div>
+      <span class="chip-label">Label</span>
+      <button>
+        <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">Elimina label</span>
+      </button>
+    </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"affix-example container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-3 p-2 affix-parent"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Dolor sit<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg p-3 affix-top"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Affix top<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>Versione Standard<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Solo testo<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-9 p-2"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nulla justo, ullamcorper et pharetra nec, sagittis id augue. Ut imperdiet dolor neque, at imperdiet lectus finibus in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis fringilla nisi sed magna congue ultricies. Nam faucibus lacinia auctor. Morbi eget ullamcorper erat. Donec auctor, nulla non pellentesque vestibulum, nisl nulla iaculis lectus, nec tincidunt elit purus eu leo. Phasellus quis justo consequat, commodo mi pretium, porta turpis.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 d-none d-md-block"</span><span class="nt">&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Testo e chiusura<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Icona, testo e chiusura<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Avatar, testo e chiusura<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row p-2 d-none d-md-block"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>Versione Grande<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Solo testo grande<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple chip-lg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Testo e chiusura grande<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Icona, testo e chiusura grande<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Avatar, testo e chiusura grande<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;button&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="vertical-affix-bottom">Vertical Affix bottom</h3>
+<h2 id="chip-disabilitata">Chip Disabilitata</h2>
 
-<p>Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe <code class="highlighter-rouge">.affix-parent</code> all’elemento che lo contiene e la classe <code class="highlighter-rouge">.affix-bottom</code> all’elemento stesso.</p>
+<p>Aggiungendo la classe <code class="highlighter-rouge">.chip-disabled</code> al contenitore e l’attributo <code class="highlighter-rouge">disabled</code> al <code class="highlighter-rouge">&lt;button&gt;</code> si ottiene una chip disabilitata.</p>
 
 <div class="bd-example">
-<div class="affix-example container">
-  <div class="row">
-    <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
-      </div>
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
-      </div>
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Lorem ipsum</p>
-      </div>
-      <div class="primary-bg-a3 p-3 mb-1">
-        <p class="mb-0 white-color">Dolor sit</p>
-      </div>
-      <div class="primary-bg p-3 affix-bottom">
-        <p class="mb-0 white-color">Affix bottom</p>
-      </div>
-    </div>
-    <div class="col-6 col-md-9 p-2">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie quis orci sit amet sodales. Sed imperdiet nisl suscipit risus pharetra, eget placerat nulla aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nulla justo, ullamcorper et pharetra nec, sagittis id augue. Ut imperdiet dolor neque, at imperdiet lectus finibus in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis fringilla nisi sed magna congue ultricies. Nam faucibus lacinia auctor. Morbi eget ullamcorper erat. Donec auctor, nulla non pellentesque vestibulum, nisl nulla iaculis lectus, nec tincidunt elit purus eu leo. Phasellus quis justo consequat, commodo mi pretium, porta turpis.</p>
-      <p class="d-none d-md-block">Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
-    </div>
+
+<div class="chip chip-simple chip-lg chip-disabled">
+  <span class="chip-label">Label</span>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+  <span class="chip-label">Label</span>
+  <button disabled="">
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+  <svg class="icon icon-xs"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button disabled="">
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
   </div>
-  <div class="row p-2 d-none d-md-block">
-    <p>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
-  </div>
+  <span class="chip-label">Label</span>
+  <button disabled="">
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"affix-example container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-3 p-2 affix-parent"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Dolor sit<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg-a3 p-3 mb-1"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Dolor sit<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg p-3 affix-bottom"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Affix bottom<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-9 p-2"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie quis orci sit amet sodales. Sed imperdiet nisl suscipit risus pharetra, eget placerat nulla aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nulla justo, ullamcorper et pharetra nec, sagittis id augue. Ut imperdiet dolor neque, at imperdiet lectus finibus in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis fringilla nisi sed magna congue ultricies. Nam faucibus lacinia auctor. Morbi eget ullamcorper erat. Donec auctor, nulla non pellentesque vestibulum, nisl nulla iaculis lectus, nec tincidunt elit purus eu leo. Phasellus quis justo consequat, commodo mi pretium, porta turpis.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-md-block"</span><span class="nt">&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple chip-lg chip-disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row p-2 d-none d-md-block"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="horizontal-affix">Horizontal Affix</h2>
+<h2 id="gruppi-di-chip">Gruppi di Chip</h2>
 
-<p>Un elemento Affix a sviluppo orizzontale può essere ancorato alla parte alta o bassa della una pagina.</p>
-
-<h3 id="horizontal-affix-top">Horizontal Affix top</h3>
-
-<p>Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è sufficiente applicare la classe <code class="highlighter-rouge">.affix-parent</code> all’elemento che lo contiene e la classe <code class="highlighter-rouge">.affix-top</code> all’elemento stesso.</p>
+<p>I gruppi di Chip vengono visualizzati in linea.</p>
 
 <div class="bd-example">
-<div class="affix-example container affix-parent">
-  <div class="primary-bg p-3 mb-1 text-center affix-top">
-    <p class="mb-0 white-color">Horizontal Affix top</p>
-  </div>
-  <div class="row p-5">
-    <p class="h3">Orci varius natoque penatibus et magnis</p>
-    <p>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
-    <p class="d-none d-md-block">Pellentesque faucibus scelerisque diam sit amet vulputate. Aliquam vitae justo tellus. Sed pharetra, nulla eu ullamcorper pharetra, enim sem posuere ante, eget faucibus quam nisl vitae augue. Sed fringilla augue at diam facilisis consectetur. Donec ut lorem aliquet, varius nulla et, lacinia nunc. Nullam sit amet risus posuere, egestas nisl ac, hendrerit ex. In eu fermentum felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus lacinia dictum dui, non condimentum nisi consectetur.</p>
-  </div>
+<div class="chip chip-simple">
+  <span class="chip-label">Label</span>
 </div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"affix-example container affix-parent"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg p-3 mb-1 text-center affix-top"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Horizontal Affix top<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row p-5"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>Orci varius natoque penatibus et magnis<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-md-block"</span><span class="nt">&gt;</span>Pellentesque faucibus scelerisque diam sit amet vulputate. Aliquam vitae justo tellus. Sed pharetra, nulla eu ullamcorper pharetra, enim sem posuere ante, eget faucibus quam nisl vitae augue. Sed fringilla augue at diam facilisis consectetur. Donec ut lorem aliquet, varius nulla et, lacinia nunc. Nullam sit amet risus posuere, egestas nisl ac, hendrerit ex. In eu fermentum felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus lacinia dictum dui, non condimentum nisi consectetur.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="horizontal-affix-bottom">Horizontal Affix bottom</h3>
+<div class="chip">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
 
-<p>Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagina è sufficiente applicare la classe <code class="highlighter-rouge">.affix-parent</code> all’elemento che lo contiene e la classe <code class="highlighter-rouge">.affix-bottom</code> all’elemento stesso.</p>
-<div class="bd-example">
-<div class="affix-example container affix-parent">
-  <div class="row p-5">
-    <p class="h3">Orci varius natoque penatibus et magnis</p>
-    <p>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.</p>
-    <p class="d-none d-md-block">Pellentesque faucibus scelerisque diam sit amet vulputate. Aliquam vitae justo tellus. Sed pharetra, nulla eu ullamcorper pharetra, enim sem posuere ante, eget faucibus quam nisl vitae augue. Sed fringilla augue at diam facilisis consectetur. Donec ut lorem aliquet, varius nulla et, lacinia nunc. Nullam sit amet risus posuere, egestas nisl ac, hendrerit ex. In eu fermentum felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus lacinia dictum dui, non condimentum nisi consectetur.</p>
+<div class="chip">
+  <svg class="icon icon-xs"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<div class="chip">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
   </div>
-  <div class="primary-bg p-3 text-center affix-bottom">
-    <p class="mb-0 white-color">Horizontal Affix bottom</p>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<hr />
+
+<div class="chip chip-lg chip-simple">
+  <span class="chip-label">Label</span>
+</div>
+
+<div class="chip chip-lg">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<div class="chip chip-lg">
+  <svg class="icon icon-xs"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
+</div>
+
+<div class="chip chip-lg">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
   </div>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use></svg>
+    <span class="sr-only">Elimina label</span>
+  </button>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"affix-example container affix-parent"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row p-5"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>Orci varius natoque penatibus et magnis<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Mauris placerat commodo tincidunt. Mauris finibus hendrerit molestie. Vestibulum gravida, lectus sed semper fringilla, libero felis vehicula quam, at efficitur nisl justo mattis orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla rutrum venenatis tellus, vel suscipit tellus faucibus at. Curabitur varius nisi a erat vulputate aliquet. Vivamus eu purus pretium, porta lacus id, mattis ligula. Phasellus eu aliquam nisi. Nunc dictum in nulla eget porttitor. Mauris dapibus vitae orci id posuere. Cras in mollis tortor. Sed felis turpis, auctor ullamcorper ipsum vel, porta tempor felis. Integer rutrum nulla nisi, quis facilisis ipsum hendrerit non. Aenean at fringilla ipsum. Mauris sodales fermentum magna volutpat imperdiet. Nullam condimentum orci purus, eget vulputate ipsum dapibus sit amet.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-md-block"</span><span class="nt">&gt;</span>Pellentesque faucibus scelerisque diam sit amet vulputate. Aliquam vitae justo tellus. Sed pharetra, nulla eu ullamcorper pharetra, enim sem posuere ante, eget faucibus quam nisl vitae augue. Sed fringilla augue at diam facilisis consectetur. Donec ut lorem aliquet, varius nulla et, lacinia nunc. Nullam sit amet risus posuere, egestas nisl ac, hendrerit ex. In eu fermentum felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus lacinia dictum dui, non condimentum nisi consectetur.<span class="nt">&lt;/p&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary-bg p-3 text-center affix-bottom"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0 white-color"</span><span class="nt">&gt;</span>Horizontal Affix bottom<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;hr/&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-simple"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
