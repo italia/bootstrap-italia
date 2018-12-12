@@ -23,13 +23,10 @@ $.fn.autocomplete = function (options) {
 
     if (Object.keys(data).length) {
 
-      $autocomplete = $('<ul class="autocomplete-wrap"></ul>');
+      $autocomplete = $('<ul class="autocomplete-list"></ul>');
 
-      $autocomplete.insertAfter($(this));
-    };
-
-    // add button clear
-    $input.after('<button class="autocomplete-clear" aria-label="Clear"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /><path d="M0 0h24v24H0z" fill="none" /></svg></button>');
+      $autocomplete.insertAfter($(this).next());
+    }
 
     // Listen if key was pressed
     $input.on('keyup', function (e) {
@@ -44,38 +41,30 @@ $.fn.autocomplete = function (options) {
 
         for (var item in data) {
 
+          //get these values form json (TODO)
+          var optionText = data[item]; // from page array
+          var optionAvatar = '<div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luisa Neri"></div>'
+          var optionIcon = '<svg class="icon icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-file"></use></svg>'
+          var optionLabel = 'label';
+          var optionLink = '#';
+
+          //mark query text
+          var markText = new RegExp(optionText, 'gi');
+          optionText = optionText.replace(q, '<mark>' + q + '</mark>');
+
           // check if item contains value that we're looking for
           if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-            var option = $('<li>' + data[item] + '</li>');
+            //show list
+            $(this).closest('.form-group').find('.autocomplete-list').addClass('autocomplete-list-show');
+            var option = $('<li><a href="' + optionLink + '" >' + optionIcon + '<span class="autocomplete-list-text"><span>' + optionText + '</span><em>' + optionLabel + '</em></span></a></li>');
 
             $autocomplete.append(option);
           }
         }
+      } else {
+        $(this).closest('.form-group').find('.autocomplete-list').removeClass('autocomplete-list-show');
       }
 
-      if (e.which === ENTER_CHAR_CODE) {
-        $autocomplete.children(":first").trigger('click');
-        $autocomplete.empty();
-      }
-
-      $('.autocomplete-clear').toggle(q.length !== 0);
-    });
-
-    $autocomplete.on('click', 'li', function () {
-
-      // Set input value after click
-      $input.val($(this).text());
-
-      // Clear autocomplete
-      $autocomplete.empty();
-    });
-
-    $('.autocomplete-clear').on('click', function (e) {
-      e.preventDefault();
-      $input.val('');
-      $(this).css('visibility', 'hidden');
-      $autocomplete.empty();
-      $(this).parent().find('label').removeClass('active');
     });
   });
 };

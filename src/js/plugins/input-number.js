@@ -6,12 +6,10 @@ $(function () {
 
     if($inputNumber.hasClass('input-number-adaptive')) {
       if (!$inputNumber.hasClass('input-number-percentage')) {
-        var fieldLength = ($target.val().length * 2) + 'ch';
-        $target.css('width', fieldLength);
+        $target.css('width', $target.val().length * 2 + 'ch');
       }
       if ($inputNumber.hasClass('input-number-currency')) {
-        var fieldLength = 'calc(40px + ' + ($target.val().length * 2) + 'ch)';
-        $target.css('width', fieldLength);
+        $target.css('width', 'calc(40px + ' + ($target.val().length * 2) + 'ch)');
       }
     }
   }
@@ -69,7 +67,6 @@ $(function () {
       //get min & max
       var inputTargetMax = parseFloat($inputTarget.attr('max'));
       var inputTargetMin = parseFloat($inputTarget.attr('min'));
-
       //limit min
       if (inputTargetMin && (inputTargetVal < inputTargetMin)) {
         inputTargetVal = inputTargetMin;
@@ -78,16 +75,10 @@ $(function () {
       if (inputTargetMax && (inputTargetVal > inputTargetMax)) {
         inputTargetVal = inputTargetMax;
       }
-
       $inputTarget.val(inputTargetVal);
     }
 
     //resize input
     inputNumberResize($inputTarget);
   });
-
-
-})
-
-
-
+});

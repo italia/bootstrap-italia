@@ -26,6 +26,6 @@
 }
 
 @function color-hover($color) {
-  @return desaturate( darken( $color, 10% ), 10%) // TODO
+  @return desaturate( darken( $color, 10% ), 10%);
 }
 

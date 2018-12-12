@@ -31,7 +31,7 @@ I componenti di avanzamento progressivo sono costruiti con due elementi HTML, al
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Sono utilizzate le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/utilities/sizing/) per poter settare i vari avanzamenti.
+Sono utilizzate le classi previste nelle [utility di dimensionamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/dimensionamento/) per poter settare i vari avanzamenti.
 
 {% capture example %}
 <div class="progress">
@@ -67,7 +67,7 @@ Può essere impostato un solo valore `height` su `.progress`, quindi se cambi qu
 
 ## Background
 
-Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramite le classi delle [utility background]({{ site.baseurl }}/docs/utilities/colors/#background-color)
+Puoi modificare il colore dello sfondo delle singole barre di avanzamento tramite le classi delle [utility background]({{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo)
 
 {% capture example %}
 <div class="progress">

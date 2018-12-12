@@ -11,3 +11,5 @@ function progressDonut(target,progress) {
 	});
 	$(target).next().html('Progresso ' + progress + '%');
 }
+
+// TODO togliere testi e colori da qui, sono fuori contesto

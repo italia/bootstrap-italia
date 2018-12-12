@@ -1,20 +1,25 @@
 .navbar.navbar-institutional {
   background-color: #0059b3;
+
   .navbar-brand {
     font-size: 14px;
     font-weight: 400;
   }
+
   .navbar-nav .nav-link {
     color: $white;
     font-size: 14px;
     font-weight: 300;
     padding: 0 .75rem;
   }
+
   .navbar-nav .nav-item {
     padding: .5rem 0;
-    &:hover  {
+
+    &:hover {
       box-shadow: 0 0.25rem 0 0 #FFF;
     }
+
     @include media-breakpoint-up(md) {
       &.nav-item-w-divider .nav-link {
         border-right: 1px solid rgba(255, 255, 255, .5);

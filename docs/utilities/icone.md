@@ -1,10 +1,10 @@
 ---
 layout: docs
+group: utilites
+toc: true
+
 title: Icone
 description: Informazioni e suggerimenti per l'utilizzo di icone con Bootstrap Italia.
-group: utilities
-redirect_from: "/docs/estensioni/"
-toc: true
 ---
 
 Le icone di Bootstrap Italia utilizzano una sprite SVG, che contiene al suo interno tutte le icone, referenziate attraverso il tag `<use>` attraverso un'àncora.
