@@ -1,16 +1,15 @@
 ---
 layout: docs
-title: Introduzione
-description: Come usare Bootstrap Italia nel tuo progetto
 group: come-iniziare
 redirect_from:
-  - /docs/
   - /come-iniziare/
   - /docs/come-iniziare/
 toc: true
+title: Introduzione
+description: Come usare Bootstrap Italia nel tuo progetto
 ---
 
-## Come iniziare
+## Caricare la libreria
 
 Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS e un Javascript, scaricabili sottoforma di file compresso alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
 
@@ -19,6 +18,9 @@ Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è suff
 Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager **npm**, puoi fare riferimento a [queste indicazioni]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
+
+La libreria è accessibile anche via CDN su jsDeliver: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia).   
+Di seguito le informazioni per l'utilizzo dei singoli file.
 
 ### CSS
 
@@ -29,6 +31,13 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 {% highlight html %}
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
+
+Utilizzando jsDeliver:
+
+{% highlight html %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/css/bootstrap-italia.min.css">
+{% endhighlight %}
+
 
 ### Javascript
 
@@ -73,6 +82,12 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 <script src="./bootstrap-italia.bundle.min.js"></script>
 {% endhighlight %}
 
+Utilizzando jsDeliver:
+
+{% highlight html %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
+{% endhighlight %}
+
 #### Versione semplice
 
 Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
@@ -81,7 +96,16 @@ Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel s
 {{ site.cdn.jquery }}
 {{ site.cdn.popper }}
 {{ site.cdn.owlcarousel }}
-<script src="/bootstrap-italia.min.js"></script>
+<script src="./bootstrap-italia.min.js"></script>
+{% endhighlight %}
+
+Utilizzando jsDeliver:
+
+{% highlight html %}
+{{ site.cdn.jquery }}
+{{ site.cdn.popper }}
+{{ site.cdn.owlcarousel }}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
 {% endhighlight %}
 
 
@@ -163,7 +187,7 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 
 ### Reboot
 
-Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia eredita da Bootstrap il cosiddetto "[Reboot]({{ site.baseurl }}/docs/contenuti/reboot/)", una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
+Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia eredita da Bootstrap il cosiddetto "[Reboot]({{ site.baseurl }}/docs/organizzare-i-contenuti/introduzione/#reboot)", una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
 
 ---
 

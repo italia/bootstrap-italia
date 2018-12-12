@@ -4,12 +4,12 @@ $(function () {
   ieReg = /msie|Trident.*rv[ :]*11\./gi;
   ie = ieReg.test(userAgent);
 
-  if(ie) {
-    $(".img-wrapper").each(function () {
+  if (ie) {
+    $('.img-wrapper').each(function () {
       var $container = $(this),
-          imgUrl = $container.find("img").prop("src");
+        imgUrl = $container.find('img').prop('src');
       if (imgUrl) {
-        $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("custom-object-fit");
+        $container.css('backgroundImage', 'url(' + imgUrl + ')').addClass('custom-object-fit');
       }
     });
   }

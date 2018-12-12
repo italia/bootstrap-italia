@@ -5,7 +5,6 @@
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
-
 // Dev notes
 //
 // Background information on nomenclature and architecture decisions here.
@@ -22,21 +21,16 @@
 //   and layout of the Bootstrap docs. They are not included in our builds.
 //
 // Happy Bootstrapping!
-
 // Load Bootstrap variables and mixins
-
-@import "../../../../src/scss/functions"; // here to be available to "variables"
+@import "../../../../src/scss/functions";
+// here to be available to "variables"
 @import "../../../../src/scss/utilities/colors_vars";
 @import "../../../../src/scss/variables";
-
-
-@import "node_modules/bootstrap/scss/functions";
-
-@import "../../../../src/scss/custom/mixins/buttons"; // here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
-
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
-
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../src/scss/custom/mixins/buttons";
+// here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
 // Load docs components
 @import "colors";
 @import "nav";
@@ -52,8 +46,6 @@
 @import "clipboard-js";
 @import "brandhead";
 @import "custom-color";
-
-// Load docs dependencies
 @import "syntax";
 @import "anchor";
 @import "algolia";

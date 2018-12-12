@@ -8,12 +8,12 @@ toc: true
 
 
 
-L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del [layout di navigazione]({{ site.baseurl }}/docs/componenti/navigazione), con l'aggiunta della classe `.nav-tabs`. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un'ulteriore classe: `.nav-dark`.
+L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del [layout di navigazione]({{ site.baseurl }}/docs/menu-di-navigazione/navigazione), con l'aggiunta della classe `.nav-tabs`. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un'ulteriore classe: `.nav-dark`.
 
 {% capture callout %}
 ##### Accessibilità
 
-Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https:// www. w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
+Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https://www.w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
 
 Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell'usabilità, il fatto che l'elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all'interno del menu a discesa chiuso) può causare confusione.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -231,7 +231,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" id="tab3b-tab" data-toggle="tab" href="#tab3b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1">
+    <a class="nav-link disabled" id="tab4b-tab" data-toggle="tab" href="#tab4b" role="tab" aria-controls="tab3b" aria-selected="false" aria-disabled="true" tabindex="-1">
       <svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 4
     </a>
   </li>
@@ -460,6 +460,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
           <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-ico-dark1" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark1-tab">Contenuto 1</div>
           <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark2" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark2-tab">Contenuto 2</div>
           <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark3" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark3-tab">Contenuto 3</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark4" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark4-tab">Contenuto 4</div>
       </div>
     </div>
   </div>
@@ -470,7 +471,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 <div class="bd-example-tabs">
   <div class="row flex-row-reverse">
     <div class="col-5 col-md-4 col-lg-3">
-      <div class="nav nav-tabs nav-tabs-vertical nav-dark" id="nav-vertical-tab-ico-dark" role="tablist" aria-orientation="vertical">
+      <div class="nav nav-tabs nav-tabs-vertical nav-dark" id="nav-vertical-tab-ico-dark-rev" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="nav-vertical-tab-dark1-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark1-rev" role="tab" aria-controls="nav-vertical-tab-dark1-rev" aria-selected="true"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a>
         <a class="nav-link" id="nav-vertical-tab-ico-dark2-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark2-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark2-rev" aria-selected="false"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 2</a>
         <a class="nav-link" id="nav-vertical-tab-ico-dark3-tab-rev" data-toggle="tab" href="#nav-vertical-tab-ico-dark3-rev" role="tab" aria-controls="nav-vertical-tab-ico-dark3-rev" aria-selected="false"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 3</a>
@@ -478,10 +479,11 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
       </div>
     </div>
     <div class="col-7 col-md-8 col-lg-9 p-4">
-      <div class="tab-content" id="nav-vertical-tab-ico-darkContent">
+      <div class="tab-content" id="nav-vertical-tab-ico-darkContent-rev">
           <div class="tab-pane p-3 fade show active" id="nav-vertical-tab-ico-dark1-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark1-tab-rev">Contenuto 1</div>
           <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark2-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark2-tab-rev">Contenuto 2</div>
           <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark3-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark3-tab-rev">Contenuto 3</div>
+          <div class="tab-pane p-3 fade" id="nav-vertical-tab-ico-dark4-rev" role="tabpanel" aria-labelledby="nav-vertical-tab-ico-dark4-tab-rev">Contenuto 4</div>
       </div>
     </div>
   </div>
@@ -504,7 +506,7 @@ Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottnere un design tipo ca
   <div class="tab-pane p-4 fade show active" id="card-simpletab1" role="tabpanel" aria-labelledby="card-simple1-tab">Contenuto 1</div>
   <div class="tab-pane p-4 fade" id="card-simpletab2" role="tabpanel" aria-labelledby="card-simple2-tab">Contenuto 2</div>
   <div class="tab-pane p-4 fade" id="card-simpletab3" role="tabpanel" aria-labelledby="card-simple3-tab">Contenuto 3</div>
-  <div class="tab-pane p-4 fade" id="card-simpletab4" role="tabpanel" aria-labelledby="card-simple3-tab">Contenuto 4 (non raggiungibile, il tab relativo è disabilitato)</div>
+  <div class="tab-pane p-4 fade" id="card-simpletab4" role="tabpanel" aria-labelledby="card-simple4-tab">Contenuto 4 (non raggiungibile, il tab relativo è disabilitato)</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

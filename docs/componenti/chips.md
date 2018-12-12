@@ -1,0 +1,206 @@
+---
+layout: docs
+title: Chips
+description: Elementi compatti che rappresentano un input, attributo o azione
+group: componenti
+toc: true
+---
+
+## Esempio
+
+Una chip è composta da un elemento `<div>` con classe `.chip`. Contiene una label e, opzionalmente, un bottone di chiusura/rimozione, un'icona o un avatar.
+
+La versione con sola label centra il testo al suo interno e richiede una classe aggiuntiva `.chip-simple`.
+
+L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
+
+Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più grande della Chip.
+
+{% capture example %}
+
+<div class="row">
+	<div class="col-12 col-md-6">
+		<h4>Versione Standard</h4>
+		<p class="mt-4 mb-2">Solo testo</p>
+		<div class="chip chip-simple">
+			<span class="chip-label">Label</span>
+		</div>
+		<p class="mt-4 mb-2">Testo e chiusura</p>
+		<div class="chip">
+			<span class="chip-label">Label</span>
+			<button>
+				<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+				<span class="sr-only">Elimina label</span>
+			</button>
+		</div>
+		<p class="mt-4 mb-2">Icona, testo e chiusura</p>
+		<div class="chip">
+			<svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+			<span class="chip-label">Label</span>
+			<button>
+				<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+				<span class="sr-only">Elimina label</span>
+			</button>
+		</div>
+		<p class="mt-4 mb-2">Avatar, testo e chiusura</p>
+		<div class="chip">
+			<div class="avatar size-xs">
+				<img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+			</div>
+			<span class="chip-label">Label</span>
+			<button>
+				<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+				<span class="sr-only">Elimina label</span>
+			</button>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4>Versione Large</h4>
+		<p class="mt-4 mb-2">Solo testo Large</p>
+			<div class="chip chip-simple chip-lg">
+				<span class="chip-label">Label</span>
+			</div>
+			<p class="mt-4 mb-2">Testo e chiusura Large</p>
+			<div class="chip chip-lg">
+				<span class="chip-label">Label</span>
+				<button>
+					<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+					<span class="sr-only">Elimina label</span>
+				</button>
+			</div>
+			<p class="mt-4 mb-2">Icona, testo e chiusura Large</p>
+			<div class="chip chip-lg">
+				<svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+				<span class="chip-label">Label</span>
+				<button>
+					<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+					<span class="sr-only">Elimina label</span>
+				</button>
+			</div>
+			<p class="mt-4 mb-2">Avatar, testo e chiusura Large</p>
+			<div class="chip chip-lg">
+				<div class="avatar size-xs">
+					<img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+				</div>
+				<span class="chip-label">Label</span>
+				<button>
+					<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+					<span class="sr-only">Elimina label</span>
+				</button>
+			</div>
+	</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Chip Disabilitata
+
+Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` al `<button>` si ottiene una chip disabilitata.
+
+{% capture example %}
+
+<div class="chip chip-simple chip-lg chip-disabled">
+	<span class="chip-label">Label</span>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+	<span class="chip-label">Label</span>
+	<button disabled>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+	<svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+	<span class="chip-label">Label</span>
+	<button disabled>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip chip-lg chip-disabled">
+	<div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+  </div>
+	<span class="chip-label">Label</span>
+	<button disabled>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Gruppi di Chip
+
+I gruppi di Chip vengono visualizzati in linea.
+
+{% capture example %}
+<div class="chip chip-simple">
+	<span class="chip-label">Label</span>
+</div>
+
+<div class="chip">
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip">
+	<svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip">
+	<div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+  </div>
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<hr/>
+
+<div class="chip chip-lg chip-simple">
+	<span class="chip-label">Label</span>
+</div>
+
+<div class="chip chip-lg">
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip chip-lg">
+	<svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+<div class="chip chip-lg">
+	<div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+  </div>
+	<span class="chip-label">Label</span>
+	<button>
+		<svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+		<span class="sr-only">Elimina label</span>
+	</button>
+</div>
+
+
+{% endcapture %}{% include example.html content=example %}

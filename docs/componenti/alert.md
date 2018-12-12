@@ -52,7 +52,6 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli head
 Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avviso. Ecco come:
 
 - Assicurati di aver caricato il plugin di alert o di aver compilato il codice Bootstrap JavaScript. 
-- Se stai costruendo il JavaScript dal sorgente, nella versione che compilerai assicurati di includere [`util.js`]({{ site.baseurl }}/docs/come-iniziare/javascript/#util).
 - Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.close`.
 - Sul pulsante di chiusura, aggiungi l'attributo `data-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
 - Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi `.fade` e `.show`.
