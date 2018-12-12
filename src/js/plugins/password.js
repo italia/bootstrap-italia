@@ -2,7 +2,7 @@
  * Original code by Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
  * @link https://github.com/elboletaire/password-strength-meter
  */
-;(function($) {
+;(function ($) {
   'use strict';
 
   var Password = function ($object, options) {
@@ -158,8 +158,7 @@
         if (repeated) {
           i += rLen - 1;
           repeated = false;
-        }
-        else {
+        } else {
           res += str.charAt(i);
         }
       }
@@ -201,18 +200,18 @@
 
       $object.after($insert);
 
-      $object.keyup(function() {
+      $object.keyup(function () {
         var score = calculateScore($object.val());
         $object.trigger('password.score', [score]);
         var perc = score < 0 ? 0 : score;
-        $colorbar.removeClass (function (index, className) {
-          return (className.match (/(^|\s)bg-\S+/g) || []).join(' ');
+        $colorbar.removeClass(function (index, className) {
+          return (className.match(/(^|\s)bg-\S+/g) || []).join(' ');
         });
-        $colorbar.addClass("bg-"+scoreColor(score));
+        $colorbar.addClass("bg-" + scoreColor(score));
         $colorbar.css({
           width: perc + '%'
         });
-        $colorbar.attr('aria-valuenow',perc);
+        $colorbar.attr('aria-valuenow', perc);
 
         if (options.showText) {
           var text = scoreText(score);
@@ -222,15 +221,14 @@
 
           if ($text.html() !== $('<div>').html(text).html()) {
             $text.html(text)
-            $text.removeClass (function (index, className) {
-              return (className.match (/(^|\s)text-\S+/g) || []).join(' ');
+            $text.removeClass(function (index, className) {
+              return (className.match(/(^|\s)text-\S+/g) || []).join(' ');
             });
-            $text.addClass("text-"+scoreColor(score));
+            $text.addClass("text-" + scoreColor(score));
             $object.trigger('password.text', [text, score]);
           }
         }
       });
-
 
 
       return this;
@@ -240,8 +238,8 @@
   }
 
   // Bind to jquery
-  $.fn.password = function(options) {
-    return this.each(function() {
+  $.fn.password = function (options) {
+    return this.each(function () {
       new Password($(this), options);
     });
   };
@@ -249,65 +247,54 @@
 
 
 // Gestione Password Caps Lock
-function msgCapsLock(obj){
-  $("small#capslock").remove();
-  $(obj).after('<small id="capslock" class="form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>');
+function showCapsLockMsg($input) {
+  $('.password-caps').remove();
+  $input.parents('.form-group').append('<small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>');
 }
+
 $(function () {
   var isShiftPressed = false;
   var isCapsOn = null;
-  $("input[type=password]").bind("keydown", function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.which;
-    if (keyCode == 16) {
-      isShiftPressed = true;
-    }
-  });
-  $("input[type=password]").bind("keyup", function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.which;
-    if (keyCode == 16) {
-      isShiftPressed = false;
-    }
-    if (keyCode == 20) {
-      if (isCapsOn == true) {
-        isCapsOn = false;
-        $("small#capslock").remove();
-      } else if (isCapsOn == false) {
-        isCapsOn = true;
-        $("input:focus").each(function(e) {
-          msgCapsLock($(this));
-        });
+
+  $('.input-password')
+    .on('keydown', function (e) {
+      var keyCode = e.keyCode ? e.keyCode : e.which;
+      if (keyCode == 16) {
+        isShiftPressed = true;
       }
-    }
-  });
-  $("input[type=password]").bind("keypress", function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.which;
-    // i keyCode dal 65 al 90 identificano i caratteri alfabetici maiuscoli da "A" a "Z"
-    if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
-      isCapsOn = true;
-      msgCapsLock($(this));
-    }
-  });
-});
+    })
+    .on('keyup', function (e) {
+      var keyCode = e.keyCode ? e.keyCode : e.which;
+      if (keyCode == 16) {
+        isShiftPressed = false;
+      }
+      if (keyCode == 20) {
+        if (isCapsOn) {
+          isCapsOn = false;
+          $('.password-caps').remove();
+        } else {
+          isCapsOn = true;
+          $('input:focus').each(function (e) {
+            showCapsLockMsg($(this));
+          });
+        }
+      }
+    })
+    .on('keypress', function (e) {
+      var keyCode = e.keyCode ? e.keyCode : e.which;
+      // i keyCode dal 65 al 90 identificano i caratteri alfabetici maiuscoli da "A" a "Z"
+      if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
+        isCapsOn = true;
+        showCapsLockMsg($(this));
+      }
+    });
 
-// Gestione Password Strength Meter
-$(function() {
-  $('.form-password').password();
-});
+  $('.input-password-strength-meter').password();
 
-// Gestione Visibilità Password
-$(function() {
-  $("input:password").each(function(e){
-    $(this).after('<span class="btn-eye eye-on" toggle="'+$(this).attr("id")+'"></span>');
-  });
-
-  $(".btn-eye").on("click", function() {
-    $(this).toggleClass("eye-off");
-    var input = $("#"+$(this).attr("toggle"));
-    input.focus();
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
-    }
-  });
+  $('.password-icon').on('click', function (e) {
+    $(this).find('[class^="password-icon"]').toggleClass('d-none');
+    var input = $(this).siblings('.input-password');
+    var inputType = (input.attr('type') === 'password') ? 'text' : 'password';
+    input.attr('type', inputType);
+  })
 });

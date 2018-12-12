@@ -335,7 +335,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ## Header Nav
 
-**Header Nav**, per elencare le voci di [navigazione]({{ site.baseurl }}/docs/componenti/navbar/), siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/componenti/megamenu/) a tutta larghezza.
+**Header Nav**, per elencare le voci di [navigazione]({{ site.baseurl }}/docs/menu-di-navigazione/navbar/), siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
 
 {% capture example %}
 <div class="it-header-navbar-wrapper">
@@ -356,10 +356,10 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
@@ -371,7 +371,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li>
-                          <h3 class="no_toc" id="heading">Heading</h3>
+                          <h3 class="no_toc" id="heading-es-1">Heading</h3>
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
                         <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
@@ -473,10 +473,10 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
@@ -488,7 +488,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li>
-                          <h3 class="no_toc" id="heading">Heading</h3>
+                          <h3 class="no_toc" id="heading-es-2">Heading</h3>
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
                         <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
@@ -578,10 +578,10 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
@@ -593,7 +593,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li>
-                          <h3 class="no_toc" id="heading">Heading</h3>
+                          <h3 class="no_toc" id="heading-es-3">Heading</h3>
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
                         <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
@@ -671,22 +671,22 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav2">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav3">
             <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
             </svg>
           </button>
-          <div class="navbar-collapsable" id="nav2" style="display: none;">
+          <div class="navbar-collapsable" id="nav3" style="display: none;">
             <div class="overlay" style="display: none;"></div>
             <div class="close-div sr-only">
               <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
@@ -698,7 +698,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li>
-                          <h3 class="no_toc" id="heading">Heading</h3>
+                          <h3 class="no_toc" id="heading-es-4">Heading</h3>
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
                         <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
@@ -779,13 +779,13 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
             <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
             <span class="nav-palce-mobile">
               <nav>
-                <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu4" role="button" aria-expanded="false" aria-controls="collapseExample">
                   <span>Ente appartenenza/Owner</span>
                   <svg class="icon">
                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
                   </svg>
                 </a>
-                <div class="link-list-wrapper collapse" id="menu1">
+                <div class="link-list-wrapper collapse" id="menu4">
                   <ul class="link-list">
                     <li><a href="#">Link 1</a></li>
                     <li><a class="active" href="#">Link 2 Active</a></li>
@@ -899,10 +899,10 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Dropdown item</span>
@@ -914,7 +914,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc" id="heading">Heading</h3>
+                              <h3 class="no_toc" id="heading-es-5">Heading</h3>
                             </li>
                             <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
                             <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
@@ -1000,13 +1000,13 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
             <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
             <span class="nav-palce-mobile">
               <nav>
-                <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu3" role="button" aria-expanded="false" aria-controls="collapseExample">
                   <span>Ente appartenenza/Owner</span>
                   <svg class="icon">
                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
                   </svg>
                 </a>
-                <div class="link-list-wrapper collapse" id="menu1">
+                <div class="link-list-wrapper collapse" id="menu3">
                   <ul class="link-list">
                     <li><a href="#">Link 1</a></li>
                     <li><a class="active" href="#">Link 2 Active</a></li>
@@ -1120,10 +1120,10 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#1"><span>link 1 active </span><span class="sr-only">current</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#1"><span>link 2 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#1"><span>link 3 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#1"><span>link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Dropdown item</span>

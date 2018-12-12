@@ -9,7 +9,7 @@ toc: true
 I popover si basano sulla libreria di terze parti [Popper.js](https://popper.js.org/).
 Per fare in modo che i popover funzionino è necessario includere `popper.min.js` prima di
 bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
-I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/componenti/tooltips/) come dipendenza.
+I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/componenti/tooltip/) come dipendenza.
 
 {% capture callout %}
 ##### Accessibilità

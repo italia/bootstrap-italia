@@ -1,8 +1,9 @@
 ---
 layout: docs
-title: Informazioni
 group: informazioni
 toc: true
+title: Informazioni
+redirect_from: "/informazioni/"
 ---
 
 ## Che cos'è Bootstrap Italia

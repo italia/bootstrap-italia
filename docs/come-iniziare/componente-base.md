@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Componente Base
 group: come-iniziare
 toc: true
+title: Componente Base
 ---
 
 Secondo quanto descritto alla [pagina che spiega come modificare componenti]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/), di seguito è possibile analizzare il comportamento di un componente _base_ di esempio:

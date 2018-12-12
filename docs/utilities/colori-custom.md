@@ -1,10 +1,10 @@
 ---
 layout: docs
+group: utilites
+toc: true
+
 title: Colori Custom
 description: Modifica colori di background, testo e bordi con colori custom.
-group: utilities
-redirect_from: "/docs/utilities/"
-toc: true
 ---
 
 Definisci colori di background, bordi, colore di testo attraverso specifiche classi.

@@ -22,7 +22,6 @@
 }
 
 .main-content--panel {
-  padding: 32px;
   background-color: #FFF;
   @include media-breakpoint-up(sm) {
     margin-top: -16px;
@@ -32,4 +31,23 @@
 
 .main-content--image {
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .5));
+}
+
+.cover-container,
+.cover-canvas {
+  position: relative;
+}
+.cover-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.cover-canvas {
+  width: 100%
+}
+
+.cover-progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
 }

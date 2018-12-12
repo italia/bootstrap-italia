@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "0.25.0",
+  "version": "0.26.2",
   "keywords": [
     "css",
     "sass",
@@ -27,7 +27,8 @@
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
     "test": "echo \"No tests specified\"",
     "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-exclude /docs/esempi/",
-    "test-a11y-one": "npx pa11y-ci"
+    "test-a11y-one": "npx pa11y-ci",
+    "html-proofer": "bundle exec htmlproofer ./_gh_pages --assume-extension --check-html --allow-hash-href --disable-external"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",
@@ -75,7 +76,6 @@
     "bootstrap-select": "^1.13.3",
     "jquery": "^3.3.1",
     "owl.carousel": "^2.3.4",
-    "pickadate": "^3.5.6",
     "popper.js": "^1.14.3",
     "svgxuse": "^1.2.6"
   }
