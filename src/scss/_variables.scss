@@ -578,6 +578,25 @@ $list-metadata-size: 12px;
 $list-metadata-space:0.5px;
 $list-sub-size:14px;
 $list-sub-color: $neutral-1-a8;
+
+// transfer
+$transfer-border:1px solid #E5E5E5;
+$transfer-descr-size:12px;
+$transfer-descr-color:#ADB7C0;
+$transfer-header-line-color:#E5E5E5;
+$transfer-header-line-w:65px;
+$transfer-height:240px;
+
+//Timeline
+$timeline-width:4px;
+$timeline-padding:($v-gap*3)-$grid-gutter-width/2;
+$timeline-border-color:linear-gradient(0deg, #0073E6 0%, #004080 100%);
+$timeline-pin-size:$v-gap*3;
+$timeline-pin-circle-size:48px;
+$timeline-pin-circle-border:$v-gap solid #FFF;
+$timeline-content-padding:18px 0 18px 40px;
+$timeline-content-padding-reverse:18px 40px 18px 18px;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
