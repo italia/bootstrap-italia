@@ -61,9 +61,12 @@ const Paths = {
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
+    'src/js/plugins/transfer.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/rating.js',
+    'src/js/plugins/dimmer.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
