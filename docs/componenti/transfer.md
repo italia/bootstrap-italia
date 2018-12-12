@@ -105,19 +105,19 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
       <div class="it-transfer-buttons">
         <a class="transfer" href="#">
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-arrow-right"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
           </svg>
         </a>
         <span class="sr-only">Label for aroow right</span>
         <a class="backtransfer" href="#">
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-arrow-left"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use>
           </svg>
         </a>
         <span class="sr-only">Label for aroow left</span>
         <a class="reset" href="#">
           <svg class="icon">
-            <use xlink:href="/dist/svg/sprite.svg#it-code-circle"></use>
+            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </a>
         <span class="sr-only">Label for reset icon</span>
