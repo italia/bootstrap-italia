@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltip
-description: Documentazione ed esempi per aggiungere tooltips personalizzati di Bootstrap con CSS e JavaScript utilizzando CSS3 per animazioni e attributi data per l'archiviazione di titoli locali.
+description: Documentazione ed esempi per aggiungere tooltip personalizzati di Bootstrap con CSS e JavaScript utilizzando CSS3 per animazioni e attributi data per l'archiviazione di titoli locali.
 group: componenti
 toc: true
 ---

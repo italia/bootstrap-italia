@@ -26,7 +26,7 @@ $.fn.autocomplete = function (options) {
       $autocomplete = $('<ul class="autocomplete-list"></ul>');
 
       $autocomplete.insertAfter($(this).next());
-    };
+    }
 
     // Listen if key was pressed
     $input.on('keyup', function (e) {
@@ -49,14 +49,14 @@ $.fn.autocomplete = function (options) {
           var optionLink = '#';
 
           //mark query text
-          var markText = new RegExp(optionText,'gi');
-          optionText = optionText.replace(q,'<mark>' + q + '</mark>');
+          var markText = new RegExp(optionText, 'gi');
+          optionText = optionText.replace(q, '<mark>' + q + '</mark>');
 
           // check if item contains value that we're looking for
           if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
             //show list
             $(this).closest('.form-group').find('.autocomplete-list').addClass('autocomplete-list-show');
-            var option = $('<li><a href="' + optionLink+ '" >' + optionIcon + '<span class="autocomplete-list-text"><span>' + optionText + '</span><em>' + optionLabel + '</em></span></a></li>');
+            var option = $('<li><a href="' + optionLink + '" >' + optionIcon + '<span class="autocomplete-list-text"><span>' + optionText + '</span><em>' + optionLabel + '</em></span></a></li>');
 
             $autocomplete.append(option);
           }

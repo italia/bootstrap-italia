@@ -1,12 +1,17 @@
-- category: Esperimenti
+- category: Componenti
   description: Di seguito sono riportati alcuni esempi per il corretto utilizzo dei componenti, secondo le linee guida di design.
   examples:
     - name: Cookiebar
-      description: Una barra di avviso sui cookie basata su un cookie nominato 'cookies_consent'.
+      description: Una barra di avviso sui cookie.
     - name: Notifications
       description: Pagina con vari esempi di Notifications.
+    - name: Navscroll
+      description: Pagina con esempio di Navscroll.
     - name: Hero
       description: Pagina con vari esempi di Hero.
 
+#- category: Template
+#  description: Questa area conterrà alcuni esempi di pagine complete.
+
 - category: Esempi di Bootstrap
-  description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.0/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
+  description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.1/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.

@@ -1,9 +1,10 @@
 ---
 layout: docs
+group: utilites
+toc: true
+
 title: Colori
 description: Una serie di classi di utilità per applicare colori a testi e sfondi.
-group: utilities
-toc: true
 ---
 
 {% capture callout %}

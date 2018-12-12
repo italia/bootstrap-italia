@@ -18,7 +18,6 @@ function notificationShow(notificationTarget,notificationTimeOut) {
 			$('#'+notificationTarget).fadeOut(100);
 		}, timeToFade);
 	}
-
 }
 
 //dismissable close button

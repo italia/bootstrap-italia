@@ -116,7 +116,7 @@
       top: 0;
       bottom: auto;
       right: 32px;
-      z-index: 10;
+      z-index: 6;
       background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
       border-radius: 50%;
       transform: translateX(50%) scalex(0.12) scaleY(1.25);
@@ -207,7 +207,7 @@
     width: 100%;
     top: auto;
     bottom: 32px;
-    z-index: 10;
+    z-index: 6;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
     border-radius: 50%;
     transform: translateY(50%) scalex(1.4) scaleY(0.12);
@@ -221,7 +221,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 7;
     background-color: $white;
     display: flex;
     justify-content: space-around;
