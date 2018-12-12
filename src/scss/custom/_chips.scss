@@ -1,0 +1,193 @@
+//mobile
+.chip {
+	display: inline-flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background: $chips-background;
+	border: 1px solid $gray-border-disabled;
+	border-radius: $v-gap*1.5;
+	height: $v-gap*3;
+	min-width: 100px;
+	padding: 0 $v-gap*2 2px $v-gap;
+	transition: all 0.05s;
+	margin-right: $v-gap/2;
+	//label
+	.chip-label {
+		font-size: 0.875rem;
+		height: $v-gap*2;
+		font-weight: 600;
+		color: $gray-secondary;
+		transform: translateY(-2px);
+		transition: color 0.05s;
+	}
+	//close button
+	button {
+		padding: 0;
+		background: transparent;
+		border: none;
+		margin-left: auto;
+		width: $v-gap;
+		height: $v-gap;
+		position: relative;
+		&:hover:not([disabled]) {
+			cursor: pointer;
+		}
+		&:hover[disabled] {
+			cursor: not-allowed;
+		}
+		.icon {
+			width: 22px;
+			height: 22px;
+			fill: $gray-secondary;
+			position: absolute;
+			top: -6px;
+			left: 0;
+			transition: fill 0.05s;
+		}
+	}
+	//left icon
+	& > .icon {
+		fill: $primary;
+		transform: translateX(-5px) translateY(1px);
+		transition: fill 0.05s;
+	}
+	//avatar
+	.avatar {
+		transform: translateX(-5px) translateY(1px);
+	}
+
+	//large version-------------------------------
+	&.chip-lg {
+		height: $v-gap*4;
+		min-width: 120px;
+		border-radius: $v-gap*2;
+		padding: 2px $v-gap*3 0 $v-gap*2;
+		margin-right: $v-gap;
+		//label
+		.chip-label {
+			font-size: 1rem;
+			height: 12px;
+			transform: translateY(-8px);
+		}
+		//close button
+		button {
+			.icon {
+				width: 28px;
+				height: 28px;
+				top: -12px;
+				left: 0;
+			}
+		}
+		//left icon
+		& > .icon {
+			height: 24px;
+			width: 24px;
+			margin-right: -8px;
+			fill: $primary;
+			transform: translateX(-13px) translateY(-1px);
+		}
+		//avatar
+		.avatar {
+			width: 24px;
+			height: 24px;
+			margin-right: -4px;
+			transform: translateX(-12px) translateY(-1px);
+		}
+
+		//label only version
+		&.chip-simple {
+			padding-right: $v-gap*2;
+		}
+
+	}
+
+	//label only version
+	&.chip-simple {
+		padding-right: $v-gap;
+	}
+
+	//hover state--------------------------------
+	&:hover:not(.chip-disabled) {
+		background: $chips-background-hover;
+		border-color: $chips-background-hover;
+		transition: background-color 0.1s;
+		//label
+		.chip-label {
+			color: $white;
+			transition: color 0.1s;
+		}
+		//close button
+		button {
+			.icon {
+				fill: $white;
+				transition: fill 0.1s;
+			}
+		}
+		//left icon
+		& > .icon {
+			fill: $white;
+			transition: fill 0.1s;
+		}
+	}
+
+	//disabled state--------------------------------
+	&.chip-disabled {
+		background: $white;
+		&:hover {
+			cursor: not-allowed;
+		}
+		//label
+		.chip-label  {
+			color: $neutral-1-a4;
+		}
+		//close button
+		button {
+			.icon {
+				fill: $neutral-1-a1;
+			}
+		}
+		//left icon
+		& > .icon {
+			fill: $neutral-1-a1;
+		}
+		.avatar {
+			img {
+				filter: grayscale(100%);
+			}
+		}
+	}
+
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+	.chip {
+		//label
+		.chip-label {
+			font-size: 0.778rem;
+		}
+
+		//large version-------------------------------
+		&.chip-lg {
+			//label
+			.chip-label {
+				font-size: 0.889rem;
+			}
+		}
+	}
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}
