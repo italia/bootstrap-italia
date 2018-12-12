@@ -68,7 +68,10 @@ const Paths = {
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
-  SOURCE_DOCUMENTATION_JS: 'docs/assets/src/js/docs.js',
+  SOURCE_DOCUMENTATION_JS: [
+    'docs/assets/src/js/cover-animation.js',
+    'docs/assets/src/js/docs.js'
+  ],
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
