@@ -7,7 +7,6 @@ toc: true
 ---
 
 Il componente input time, o timepicker, è un componente personalizzato per la selezione di un orario.
-Nella versione mobile è stato utilizzato l'elemento standard `<input type="time">` delegando al dispositivo le sue funzionalità.
 
 {% capture callout %}
 #### Note importanti
@@ -24,9 +23,7 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
 
 {% capture example %}
 <div class="it-timepicker-wrapper">
-  <label class="d-lg-none pickerlabel" for="appt">Label Timepicker</label>
-  <input class="form-control d-lg-none" type="time" id="appt" name="appt" min="0:00" max="24:00" value="00:00">
-  <section class="time-spinner d-none d-lg-block">
+  <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
       <div>
@@ -77,9 +74,7 @@ Clicca sull'icona per visualizzare il datepicker.
 
 {% capture example %}
 <div class="it-timepicker-wrapper theme-dark">
-  <label class="d-lg-none pickerlabel" for="appt">Label Timepicker</label>
-  <input class="form-control d-lg-none" type="time" id="appt" name="appt" min="0:00" max="24:00" value="00:00">
-  <section class="time-spinner d-none d-lg-block">
+  <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
       <div>
