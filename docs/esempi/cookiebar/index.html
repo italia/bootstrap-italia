@@ -1,48 +1,25 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../favicon.ico">
+---
+layout: base
+title: CookieBar
+---
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../../dist/css/bootstrap-italia.min.css" rel="stylesheet">
+<style>
+  .cookiebar {
+    display: block !important;
+  }
+  @media (min-width: 768px) {
+    .cookiebar {
+      display: flex !important;
+    }
+  }
+</style>
 
-    <title>Cookie Example</title>
+<div class="cookiebar">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+  <div class="cookiebar-buttons">
+    <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
+    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+  </div>
+</div>
 
-  </head>
-
-  <body>
-
-    <style>
-      /* Style override for Documentation purposes */
-      .cookiebar {
-        display: block !important;
-      }
-
-      @media (min-width: 768px) {
-        .cookiebar {
-          display: flex !important;
-        }
-      }
-
-      }
-    </style>
-    <div class="cookiebar">
-      <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
-      <div class="cookiebar-buttons">
-        <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
-        <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
-      </div>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>
-
-  </body>
-</html>
+<script src="../../../dist/js/bootstrap-italia.bundle.min.js"></script>

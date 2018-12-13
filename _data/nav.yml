@@ -44,8 +44,11 @@
     - title: Introduzione
     - title: BottomNav
     - title: Breadcrumbs
+    - title: Header
     - title: Megamenu
     #- title: Navigazione
+    #  status: to do
+    #- title: Navscroll
     #  status: to do
     - title: Navscroll
     - title: Scrollspy
@@ -80,7 +83,6 @@
     - title: Dimmer
     - title: Dropdown
     - title: Forward
-    - title: Header
     - title: Hero
     #- title: Input group
     #  status: to do

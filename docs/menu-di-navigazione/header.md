@@ -2,7 +2,7 @@
 layout: docs
 title: Header
 description: Documentazione ed esempi per la creazione di una testata di navigazione.
-group: componenti
+group: menu-di-navigazione
 toc: true
 ---
 
