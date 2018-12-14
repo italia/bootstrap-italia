@@ -36,7 +36,7 @@ Allo stesso modo di quanto avviene per il testo, le classi `bg-*` permettono di 
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="p-3 mb-2 bg-{{ color.name }} {% if color.name == "primary" or color.name == "secondary" %}text-white{% else %}text-dark{% endif %}">.bg-{{ color.name }}</div>{% endfor %}
+<div class="p-3 mb-2 bg-{{ color.name }} text-white">.bg-{{ color.name }}</div>{% endfor %}
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
 {% endcapture %}{% include example.html content=example %}
 

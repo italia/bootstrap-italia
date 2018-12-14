@@ -162,7 +162,7 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
    <label>Field label</label>
    <!-- start select-->
    <div class="dropdown bootstrap-select">
-      <select>
+      <select title="Select an option">
          <optgroup label="Group 1">
             <option>Opzione 1</option>
             <option>Opzione 2</option>

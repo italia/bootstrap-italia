@@ -23,7 +23,7 @@ La classe `.navbar-collapsable` definsce le caratteristiche del menù principale
   </button>
   <div class="navbar-collapsable" id="navbarNav">
     <div class="close-div">
-      <button class="btn close-menu" type="button">
+      <button class="btn close-menu" type="button"><span class="sr-only">Chiudi</span>
         <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
@@ -62,7 +62,7 @@ Gli elementi dropdown contenuti nelle navbar sono gestiti come elementi di tipo 
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="close-div">
-      <button class="btn close-menu" type="button">
+      <button class="btn close-menu" type="button"><span class="sr-only">Chiudi</span>
       <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
@@ -126,7 +126,7 @@ Per numerosi altri esempi di utilizzo del megamenu, fai riferimento alla [pagina
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="close-div">
-      <button class="btn close-menu" type="button">
+      <button class="btn close-menu" type="button"><span class="sr-only">Chiudi</span>
       <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </div>
@@ -208,61 +208,62 @@ Di seguito un esempio con le due classi applicate.
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg theme-dark-mobile theme-light-desk">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
     <svg class="icon icon-xs icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavD">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
-            </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                <span>Dropdown item </span>
-                <svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
-               </a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-undefined">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                              <li><span class="divider"></span>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 4 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
-            </li>
-         </ul>
-      </div>
-   </div>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavD">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button"><span class="sr-only">Chiudi</span>
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+            <span>Dropdown item </span>
+            <svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+          </a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-undefined">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                    <li><span class="divider"></span>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><span>link 4 </span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 

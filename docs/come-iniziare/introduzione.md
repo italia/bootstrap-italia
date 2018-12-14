@@ -57,9 +57,9 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-italia.bundle.min.js</code></div>
       </th>
-      <td class="bg-success">Incluso</td>
-      <td class="bg-success">Incluso</td>
-      <td class="bg-success">Incluso</td>
+      <td class="bg-success text-white">Incluso</td>
+      <td class="bg-success text-white">Incluso</td>
+      <td class="bg-success text-white">Incluso</td>
     </tr>
     <tr>
       <th scope="row">

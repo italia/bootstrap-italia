@@ -267,13 +267,6 @@ $('body').scrollspy({ target: '#navbar-example' })
 I link della barra di navigazione devono richiamare un ID target specifico. Per esempio a `<a href="#home">home</a>` deve corrispondere un elemento del DOM simile a `<div id="home"></div>`.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% capture callout %}
-
-#### Gli elementi target non `:visible` sono ignorati
-
-Gli elementi target non [`:visible` secondo jQuery](https://api.jquery.com/visible-selector/) verranno ignorati e i relativi elementi di navigazione non verranno mai evidenziati.
-{% endcapture %}{% include callout.html content=callout type="info" %}
-
 ### Metodi
 
 #### `.scrollspy('refresh')`

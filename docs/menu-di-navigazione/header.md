@@ -191,10 +191,8 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" href="#">
-                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
-                </svg>
+              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
+                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
               </a>
             </div>
           </div>
@@ -255,7 +253,7 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" href="#">
+              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
                 </svg>
@@ -319,7 +317,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" href="#">
+              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
                 </svg>
@@ -869,7 +867,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 </div>
                 <div class="it-search-wrapper">
                   <span class="d-none d-md-block">Cerca</span>
-                  <a class="search-link rounded-icon" href="#">
+                  <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                     <svg class="icon">
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
                     </svg>
@@ -1090,7 +1088,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </div>
                 <div class="it-search-wrapper">
                   <span class="d-none d-md-block">Cerca</span>
-                  <a class="search-link rounded-icon" href="#">
+                  <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                     <svg class="icon">
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
                     </svg>
