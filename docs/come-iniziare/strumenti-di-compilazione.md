@@ -52,7 +52,7 @@ Di seguito un paio di esempi pratici.
 
 ### Rimozione Cookiebar
 
-Se invece si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
 
 `src/scss/bootstrap-italia.scss`:
 

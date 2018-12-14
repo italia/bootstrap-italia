@@ -141,7 +141,7 @@ Esempio completo:
 ### Modale con icona
 
 E' possibie inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
-Per formattare correttamente i contenuti della modale con icona, occorre aggoingere la classe `alert-modal` all'elemento `<div class="modal">`
+Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe `alert-modal` all'elemento `<div class="modal">`
 
 {% capture example %}
 <div class="it-example-modal">

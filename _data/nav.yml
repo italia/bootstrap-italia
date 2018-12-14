@@ -69,8 +69,6 @@
     - title: Badge
     - title: Bottoni
       status: wip
-    #- title: Button group
-    #  status: to do
     - title: Card
     - title: Callout
     - title: Carousel
@@ -105,9 +103,13 @@
     - title: Introduzione
       status: wip
     - title: Form Checkbox
+    - title: Form Datepicker
+      status: wip
     - title: Form Input
       status: wip
     - title: Form Input Number
+      status: wip
+    - title: Form Input Time
     - title: Form Radio Button
     - title: Form Select
     - title: Form Toggles

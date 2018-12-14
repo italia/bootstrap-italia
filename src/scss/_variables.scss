@@ -521,6 +521,16 @@ $select-dd-header-size:0.8333333333333334rem;
 $select-dd-header-w:600;
 $select-dd-check-height:30px;
 
+//date picker
+$dp-label-color: $neutral-1-a8;
+$dp-border-bottom: 1px solid $dp-label-color;
+$dp-shadow:$dialog-shadow;
+$dp-arrow-size:$v-gap*2;
+$dp-month-size:0.8333333333333334rem;
+$dp-month-l-spacing:0.1px;
+$dp-grid-size:13px;
+$dp-current-size:$v-gap*4;
+
 //hero
 $hero-bg-color:$primary-a6;
 $hero-height-desk:620px;
