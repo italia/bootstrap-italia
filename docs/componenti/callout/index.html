@@ -12,13 +12,13 @@
 <title>Callout · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812121727" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812141259" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812121727" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812141259" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.27.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.27.2/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -292,6 +292,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/">
                       <span>Breadcrumbs</span></a>
                   </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/header/">
+                      <span>Header</span></a>
+                  </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/megamenu/">
                       <span>Megamenu</span></a>
                   </li><li>
@@ -343,9 +346,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
                       <span>Badge</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/componenti/barre-di-avanzamento/">
-                      <span>Barre di Avanzamento</span></a>
-                  </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
                       <span>Bottoni</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
@@ -356,7 +356,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Callout</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
-                      <span>Carousel</span></a>
+                      <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
                       <span>Chips</span></a>
@@ -375,9 +375,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/forward/">
                       <span>Forward</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/componenti/header/">
-                      <span>Header</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/hero/">
                       <span>Hero</span></a>
@@ -436,11 +433,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-checkbox/">
                       <span>Form Checkbox</span></a>
                   </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/form-datepicker/">
+                      <span>Form Datepicker</span><span class="badge badge-secondary text-white">wip</span></a>
+                  </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-input/">
                       <span>Form Input</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-input-number/">
-                      <span>Form Input Number</span></a>
+                      <span>Form Input Number</span><span class="badge badge-secondary text-white">wip</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/form-input-time/">
+                      <span>Form Input Time</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-radio-button/">
                       <span>Form Radio Button</span></a>
@@ -538,12 +541,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
+	<div class="callout-title"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> Titolo callout<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> Titolo callout<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -555,12 +558,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="callout success">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
+	<div class="callout-title"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout success"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
@@ -737,7 +740,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
 			</button>
-			<a href="#" class="callout-more-download"><svg class="icon icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
+			<a href="#" class="callout-more-download"><svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
 		</div>
 		<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
 			<div class="collapse-body">
@@ -759,7 +762,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 			<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"callout-more-toggle"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse1"</span><span class="nt">&gt;</span>
 			Leggi tutto <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
 			<span class="nt">&lt;/button&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"callout-more-download"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-download"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>PDF <span class="nt">&lt;/span&gt;</span> Download<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"callout-more-download"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-download"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>PDF <span class="nt">&lt;/span&gt;</span> Download<span class="nt">&lt;/a&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>
 			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
@@ -786,14 +789,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812121727"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812141259"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812121727"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812141259"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -808,7 +811,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201812121727"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201812141259"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
