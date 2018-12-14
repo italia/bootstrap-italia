@@ -64,13 +64,19 @@ const Paths = {
     'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
+    'src/js/plugins/transfer.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/select.js',
+    'src/js/plugins/rating.js',
+    'src/js/plugins/dimmer.js',
     'src/js/' + pkg.name + '.js'
   ],
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
-  SOURCE_DOCUMENTATION_JS: 'docs/assets/src/js/docs.js',
+  SOURCE_DOCUMENTATION_JS: [
+    'docs/assets/src/js/cover-animation.js',
+    'docs/assets/src/js/docs.js'
+  ],
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',

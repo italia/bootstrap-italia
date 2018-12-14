@@ -71,9 +71,9 @@ const Select = (($) => {
       const uniqueID = this._guid();
 
       var filterQuery = [],
-       wrapper = $('<div class="select-wrapper"></div>'),
-       selectChildren = $select.children('option, optgroup'),
-       valuesSelected = [];
+        wrapper = $('<div class="select-wrapper"></div>'),
+        selectChildren = $select.children('option, optgroup'),
+        valuesSelected = [];
 
       this._isMultiple = Boolean($select.attr('multiple'));
       this._isSearchable = Boolean($select.attr('searchable'));

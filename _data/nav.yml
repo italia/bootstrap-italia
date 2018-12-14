@@ -7,110 +7,120 @@
     - title: Modificare Componenti
     - title: Componente base
 
-- title: Contenuti
-  pages:
-    - title: Reboot
-    - title: Tipografia
-    - title: Codice
-    - title: Immagini
-    - title: Tabelle
-    - title: Figure
-
-- title: Componenti
-  pages:
-    - title: Introduzione
-    - title: Alert
-    - title: Badge
-    - title: Barre di Avanzamento
-    - title: Breadcrumbs
-    - title: Bottoni
-      status: wip
-    - title: Card
-    - title: Carousel
-    - title: Collapse
-    - title: Dropdown
-    - title: Elenchi
-    - title: Form
-      status: wip
-    - title: Form Input
-      status: wip
-    - title: Form Select
-    - title: Form Checkbox
-    - title: Form Radio Button
-    - title: Form Datepicker
-    - title: Form Toggles
-    - title: Form Upload
-    - title: Form Input Number
-    #- title: Form Input Time
-    #  status: wip
-    - title: Grid list
-    - title: Header
-    - title: Hero
-    - title: Link list
-      status: wip
-    - title: List
-    - title: Megamenu
-    - title: Modale
-    - title: Navbar
-    - title: Navscroll
-    - title: Pager
-      status: wip
-    - title: Popover
-    - title: Scrollspy
-    - title: Sidebar
-    - title: Skiplinks
-      status: wip
-    - title: Tab
-    - title: Tooltip
-
-- title: Componenti Aggiuntivi
-  pages:
-    - title: Introduzione
-    - title: Avatar
-    - title: Affix
-      status: wip
-    - title: Back to top
-    - title: Cookiebar
-      status: wip
-    - title: Callout
-    - title: Forward
-      status: wip
-    - title: Notifications
-    - title: Overlay
-    - title: Progress Indicators
-    - title: Sections
-    - title: Steppers
-    - title: Thumbnav
-    - title: BottomNav
-    - title: ThumbNav
-    - title: Toolbar
-
-- title: Utilities
+- title: Organizzare gli spazi
   pages:
     - title: Introduzione
     - title: Allineamento verticale
     - title: Bordi
     - title: Clearfix
-    - title: Colori
-    - title: Colori Custom
     - title: Dimensionamento
     - title: Display
-    - title: Embed
     - title: Flex
     - title: Float
     - title: Griglie
       status: wip
-    - title: History Back
-    - title: Immagini sostitutive
-    - title: Icone
-    - title: Media object
     - title: Ombreggiature
     - title: Posizionamento
-    - title: Screenreaders
     - title: Spaziature
-    - title: Testo
-    - title: Visibility
 
-#- title: Esempi
+- title: Organizzare i contenuti
+  pages:
+    - title: Introduzione
+    - title: Codice
+    - title: Embed
+    - title: Immagini
+    - title: Liste
+    - title: Liste di immagini
+    - title: Liste di link
+      status: wip
+    - title: Liste elenco
+    - title: Oggetto Media
+    - title: Tabelle
+    - title: Testo
+    - title: Tipografia
+
+- title: Menu di navigazione
+  pages:
+    - title: Introduzione
+    - title: BottomNav
+    - title: Breadcrumbs
+    - title: Header
+    - title: Megamenu
+    #- title: Navigazione
+    #  status: to do
+    #- title: Navscroll
+    #  status: to do
+    - title: Navscroll
+    - title: Scrollspy
+      status: wip
+    - title: Sidebar
+    - title: Skiplinks
+    - title: Thumbnav
+    - title: Toolbar
+    - title: Torna indietro
+    - title: Torna su
+
+- title: Componenti
+  pages:
+    - title: Introduzione
+    - title: Affix
+    - title: Alert
+    - title: Avatar
+    - title: Badge
+    - title: Bottoni
+      status: wip
+    - title: Card
+    - title: Callout
+    - title: Carousel
+      status: wip # Lacks a11y
+    - title: Chips
+    - title: Collapse
+    - title: Cookiebar
+    #- title: Datepicker
+    #  status: wip
+    - title: Dimmer
+    - title: Dropdown
+    - title: Forward
+    - title: Hero
+    #- title: Input group
+    #  status: to do
+    - title: Modale
+    - title: Notifiche
+    - title: Overlay
+    - title: Paginazione
+    - title: Popover
+    - title: Progress Indicators
+    - title: Rating
+    - title: Sections
+    - title: Steppers
+    - title: Tab
+    - title: Timeline
+    - title: Tooltip
+    - title: Transfer
+
+- title: Form
+  pages:
+    - title: Introduzione
+      status: wip
+    - title: Form Checkbox
+    - title: Form Datepicker
+      status: wip
+    - title: Form Input
+      status: wip
+    - title: Form Input Number
+      status: wip
+    - title: Form Input Time
+    - title: Form Radio Button
+    - title: Form Select
+    - title: Form Toggles
+    - title: Form Upload
+
+- title: Utilities
+  pages:
+    - title: Colori
+    - title: Colori Custom
+    - title: Icone
+
+- title: Esempi
 
 - title: Informazioni

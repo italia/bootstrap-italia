@@ -5,16 +5,19 @@ layout: default
   <div class="d-flex align-items-center justify-content-center main-content">
     <div class="container">
       <div class="row">
-        <div class="main-content--panel col-md-10 col-lg-8 mb-5">
-          <h1 class="my-3">Bootstrap Italia</h1>
-          <p class="mt-5">Bootstrap Italia è il modo più semplice per costruire interfacce <b>inclusive</b> e <b>coerenti</b>. È una libreria completamente <b>open-source</b> costruita sulle fondamenta di <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" aria-label="Repository GitHub di Bootstrap"><b>Bootstrap {{ site.bootstrap_version }}</b></a> per la creazione di applicazioni web responsive in modo facile e sicuro.</p>
-          <p>Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti nella versione ufficiale di Bootstrap, e le personalizza secondo le <a href="https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/" target="_blank" title="Linee guida di design per i siti web delle PA" rel="noopener noreferrer"><b>linee guida di design per i siti web delle Pubbliche Amministrazioni</b></a>.</p>
-          <div class="callout warning">
-            <div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle"></use></svg>Attenzione</div>
-            <p>La libreria è tuttora in fase di sviluppo e alcuni componenti potrebbero non essere ancora presenti o incompleti. È possibile vedere lo stato di ogni componente nel menu principale attraverso il tag <span class="badge badge-secondary">wip</span>.</p>
+        <div class="main-content--panel col-md-10 col-lg-8 mb-5 p-4">
+          <p class="mt-5 lead"><b>Bootstrap Italia</b> è il modo più semplice e sicuro per costruire interfacce <b>moderne</b>, <b>inclusive</b> e <b>semplici da mantenere</b>.</p>
+          <div class="cover-container my-4">
+            <div class="cover-progress d-flex align-items-center justify-content-center">
+              <div class="progress-spinner progress-spinner-active">
+                <span class="sr-only">Caricamento...</span>
+              </div>
+            </div>
+            <canvas class="cover-canvas" width="800" height="600"></canvas>
           </div>
+          <p>È una libreria completamente <b>open-source</b>, costruita sulle fondamenta di <a class="font-weight-bold" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" title="Repository GitHub di Bootstrap">Bootstrap {{ site.bootstrap_version }}</a>, di cui eredita tutte le funzionalità, componenti, griglie e classi di utilità, personalizzandole secondo le <a class="font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/" target="_blank" title="Linee guida di design per i siti web delle PA" rel="noopener noreferrer">Linee Guida di Design per i siti web della Pubblica Amministrazione</a>.</p>
+          <p><b>Bootstrap Italia</b> prende le regole e i componenti definiti nello <a class="font-weight-bold" href="https://designers.italia.it/kit/ui-kit/" target="_blank" title="User Interface Kit" rel="noopener noreferrer">UI Kit</a> e li trasforma in codice già pronto all'uso!</p>
           <div class="d-flex flex-column justify-content-center my-3">
-            <a class="mt-2 mx-auto btn btn-primary" href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip">Scarica Bootstrap Italia v{{ site.current_version }}<span class="sr-only">Download</span></a>
             <a class="mt-2 mx-auto btn btn-outline-primary" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/">Come iniziare</a>
           </div>
         </div>
@@ -24,11 +27,12 @@ layout: default
   <div class="container-fluid bottom-content" id="particles-js">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 my-5">
+        <div class="col my-5 bd-content">
           <h1 class="my-3">Collabora con noi!</h1>
           <p>Il <a class="text-white font-weight-bold" href="https://github.com/italia/bootstrap-italia/">codice</a> e la <a class="text-white font-weight-bold" href="https://github.com/italia/bootstrap-italia/projects">roadmap</a> di Bootstrap Italia sono pubblici e in continua evoluzione. All'interno del repository di Bootstrap Italia puoi trovare maggiori informazioni su <a class="text-white font-weight-bold" href="https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md">come contribuire</a> o <a class="text-white font-weight-bold" href="https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">come compilare il codice sorgente</a> per personalizzare la libreria, sistemare bug o creare nuovi componenti!</p>
+          <p>Dai un'occhiata alle <a class="text-white font-weight-bold" href="https://github.com/italia/bootstrap-italia/issues">issue aperte</a>, o <a class="text-white font-weight-bold" href="https://slack.developers.italia.it/">contattaci su Slack</a> di Developers Italia al canale <a class="text-white font-weight-bold" href="https://developersitalia.slack.com/messages/C7VPAUVB3/">#design-devel</a>.</p>
           <div class="d-flex flex-column flex-md-row lead mt-5 justify-content-center">
-            <a href="https://github.com/italia/bootstrap-italia/projects/" class="btn btn-outline-primary bg-white mt-2 mt-md-0 mx-auto text-center">consulta la roadmap di progetto</a></strong>
+            <a href="https://github.com/italia/bootstrap-italia/projects/" class="btn btn-outline-primary bg-white mt-2 mt-md-0 mx-auto text-center">Vedi la roadmap di progetto</a>
           </div>
         </div>
       </div>

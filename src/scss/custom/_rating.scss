@@ -1,0 +1,95 @@
+//mobile
+
+.rating {
+  border: none;
+	float: left;
+	//hide radio
+	& > input {
+		position: absolute;
+    left: -9999px;
+	}
+	//star container
+	& > label {
+		float: right;
+		//margin: 0 $v-gap/4 0 0;
+		margin: 0;
+		padding-right: $v-gap/4;
+		&:first-of-type {
+			margin-right: 0;
+		}
+		svg {
+			fill: #C3CFDB;
+			position: relative;
+			transform-origin: center center;
+			transition: transform 0.1s;
+		}
+		&:hover {
+			cursor: pointer;
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	// #stars label
+	& > legend {
+		display: inline-block;
+		color: $dark;
+		font-size: 0.875rem;
+		float: right;
+		width: auto;
+		margin: $v-gap/2 0 0 $v-gap*2;
+		font-weight: 500;
+	}
+
+	&.rating-read-only {
+		& > input, & > label {
+			pointer-events: none;
+		}
+	}
+
+}
+
+.rating > input:checked ~ label, // show primary color star when clicked
+.rating:not(:checked) > label:hover, // hover current star
+.rating:not(:checked) > label:hover ~ label {
+	svg {
+		fill: $primary;
+	}
+} // hover previous stars in list
+
+.rating > input:checked + label:hover, // hover current star when changing rating
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, // lighten current selection
+.rating > input:checked ~ label:hover ~ label { +
+	svg {
+		fill: $primary;
+	}
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+
+	.rating {
+		// #stars label
+		& > legend {
+			font-size: 0.778rem;
+		}
+	}
+
+}
+
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+
+}
+
+//Desktop
+@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+
+}

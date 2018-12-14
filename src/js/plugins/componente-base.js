@@ -16,7 +16,7 @@ const ComponenteBase = (($) => {
   const JQUERY_NO_CONFLICT = $.fn[NAME];
 
   const Event = {
-    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}` // 'click.bs.componente-base.data-api'
+    CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}` // 'click.bs.componente-base.data-api'
   };
 
   const Selector = {

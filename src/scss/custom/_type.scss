@@ -108,3 +108,14 @@ small,
     color: $blockquote-small-color-dark;
   }
 }
+
+// Font Familty
+.text-serif {
+  font-family: $font-family-serif;
+}
+.text-sans-serif {
+  font-family: $font-family-sans-serif;
+}
+.text-monospace {
+  font-family: $font-family-monospace;
+}

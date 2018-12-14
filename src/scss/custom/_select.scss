@@ -356,6 +356,19 @@
 	}
 }
 
+// disabilitazione via fieldset
+fieldset.disabled .bootstrap-select-wrapper {
+  opacity: 0.3;
+
+  button {
+    background: transparent;
+
+    &.btn-light {
+      box-shadow: none;
+    }
+  }
+}
+
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
 
