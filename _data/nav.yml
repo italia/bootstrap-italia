@@ -67,7 +67,6 @@
     - title: Alert
     - title: Avatar
     - title: Badge
-    - title: Barre di Avanzamento
     - title: Bottoni
       status: wip
     #- title: Button group
@@ -75,6 +74,7 @@
     - title: Card
     - title: Callout
     - title: Carousel
+      status: wip # Lacks a11y
     - title: Chips
     - title: Collapse
     - title: Cookiebar

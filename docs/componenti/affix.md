@@ -62,10 +62,10 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Lorem ipsum</p>
       </div>
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Dolor sit</p>
       </div>
       <div class="primary-bg p-3 affix-top">
@@ -93,16 +93,16 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Lorem ipsum</p>
       </div>
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Dolor sit</p>
       </div>
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Lorem ipsum</p>
       </div>
-      <div class="primary-bg-a3 p-3 mb-1">
+      <div class="neutral-1-bg-a7 p-3 mb-1">
         <p class="mb-0 white-color">Dolor sit</p>
       </div>
       <div class="primary-bg p-3 affix-bottom">

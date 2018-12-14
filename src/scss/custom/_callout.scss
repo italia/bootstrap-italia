@@ -146,6 +146,25 @@
 				border-color: $primary-a9;
 			}
 		}
+    .collapse-div .collapse-header .callout-more-toggle {
+      color: $primary-a9;
+      &:active, &:hover {
+        color: $primary-a9;
+      }
+      span {
+        border-color: $primary-a9;
+        &:before,
+        &:after {
+          background: $primary-a9;
+        }
+      }
+    }
+    a {
+      color: $primary-a9;
+    }
+    .icon {
+      fill: $primary-a9;
+    }
 	}
 
 	//title

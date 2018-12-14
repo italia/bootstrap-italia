@@ -22,7 +22,7 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 
 {% capture example %}
 <div class="callout">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
+	<div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -35,7 +35,7 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 
 {% capture example %}
 <div class="callout success">
-	<div class="callout-title"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
+	<div class="callout-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>Usa</div>
 	<p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -167,7 +167,7 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
 			<button class="callout-more-toggle" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 			Leggi tutto <span></span>
 			</button>
-			<a href="#" class="callout-more-download"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
+			<a href="#" class="callout-more-download"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
 		</div>
 		<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
 			<div class="collapse-body">

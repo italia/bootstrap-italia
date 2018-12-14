@@ -43,11 +43,16 @@ $teal:    hsb(178, 95, 85) !default;
 $cyan:    hsb(178, 100, 100) !default;
 $blue:    hsb(210, 100, 90) !default;
 $light:   hsb(255, 5, 95) !default;
-$dark:    hsb(210, 70, 30) !default; // #17324D
+$dark:    hsb(210, 70, 30) !default;
 
-$gray-primary:          hsb(210, 38.9, 44.3) !default; // #455b71
-$gray-secondary:        hsb(210, 29, 51) !default; // #5c6f82
-$gray-tertiary:         hsb(205, 35, 54) !default; // #5A768A
+$red-accessible:     hsb(351, 75, 85) !default;
+$orange-accessible:  hsb(36, 100, 65) !default;
+$yellow-accessible:  hsb(44, 100, 59) !default;
+$green-accessible:  hsb(159, 100, 53) !default;
+
+$gray-primary:          hsb(210, 38.9, 44.3) !default;
+$gray-secondary:        hsb(210, 29, 51) !default;
+$gray-tertiary:         hsb(205, 35, 54) !default;
 $gray-quaternary:       hsb(238, 1, 100) !default;
 $gray-disabled:         hsb(225, 5, 95) !default;
 $gray-label-disabled:   hsb(222, 5, 79) !default;
@@ -79,10 +84,10 @@ $primary:     $blue !default;
 $secondary:   $gray-secondary !default;
 
 // Info Colors
-$success:     $green !default;
+$success:     $green-accessible !default;
 $info:        $gray-400 !default;
-$warning:     $orange !default;
-$danger:      $red !default;
+$warning:     $orange-accessible !default;
+$danger:      $red-accessible !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
