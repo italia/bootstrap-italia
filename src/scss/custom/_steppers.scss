@@ -65,15 +65,19 @@
 			background: none;
 			// steps
 			li {
-				font-weight: 600;
-				color: $neutral-1-a6;
+				color: $neutral-1-a2;
+        .icon {
+          fill: $neutral-1-a2;
+        }
 				&.active {
+          font-weight: 600;
 					color: $analogue-2-a6;
 					.icon {
 						fill: $analogue-2-a6;
 					}
 				}
 				&.confirmed {
+          font-weight: 600;
 					color: $white;
 					.icon {
 						fill: $white;

@@ -74,6 +74,7 @@
     - title: Carousel
       status: wip # Lacks a11y
     - title: Chips
+      status: wip # Lacks a11y
     - title: Collapse
     - title: Cookiebar
     #- title: Datepicker
@@ -104,11 +105,10 @@
       status: wip
     - title: Form Checkbox
     - title: Form Datepicker
-      status: wip
+      status: wip # Lacks a11y
     - title: Form Input
       status: wip
     - title: Form Input Number
-      status: wip
     - title: Form Input Time
     - title: Form Radio Button
     - title: Form Select

@@ -237,13 +237,14 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
       <p><strong>Dimensione Standard</strong></p>
       <div class="avatar-upload-wrapper">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="imagealt">
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload3" id="upload3" class="upload-avatar"/>
             <label for="upload3">
               <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
             </label>
+            <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
@@ -255,13 +256,14 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
       <p><strong>Dimensione Piccola</strong></p>
       <div class="avatar-upload-wrapper size-sm">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Marisa Rossi">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="imagealt">
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload4" id="upload4" class="upload-avatar"/>
             <label for="upload4">
               <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
             </label>
+            <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
@@ -292,6 +294,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
       </label>
     </li>
   </ul>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Esempio Immagini Caricate</strong></p>
@@ -300,7 +303,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
   <ul class="upload-pictures-wall">
     <li>
       <div class="upload-image">
-        <img src="https://picsum.photos/128/128?image=1020" alt="Alt text">
+        <img src="https://picsum.photos/128/128?image=1020" alt="imagealt">
       </div>
     </li>
     <li>
@@ -316,6 +319,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
       </label>
     </li>
   </ul>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 {% endcapture %}{% include example.html content=example %}
 
@@ -360,6 +364,7 @@ $("#IDPROGRESS").circularloader({
 		<h5>Trascina il file per caricarlo</h5>
 		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Simula caricamento</strong></p>
@@ -381,6 +386,7 @@ $("#IDPROGRESS").circularloader({
 		<h5>Nome file in caricamento</h5>
 		<p>Caricamento in corso...</p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Process completed</strong></p>
@@ -400,6 +406,7 @@ $("#IDPROGRESS").circularloader({
 		<h5>Nome file caricato</h5>
 		<p>Caricamento completato</p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 {% endcapture %}{% include example.html content=example %}
 
@@ -425,5 +432,6 @@ $("#IDPROGRESS").circularloader({
 		<h5 id="simTitle">Trascina il file per caricarlo</h5>
 		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 {% endcapture %}{% include example.html content=example %}

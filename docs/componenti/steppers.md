@@ -16,10 +16,10 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #999;
+    color: #333;
   }
 
-  .bd-example .steppers-content p{
+  .bd-example .steppers-content p {
 	  margin-bottom: 0;
   }
 
@@ -28,7 +28,7 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
   }
 
   .bd-example .steppers.bg-dark .steppers-content{
-	  color: #aaa;
+	  color: #EEE;
 	  border-color: #aaa;
 	  background: #17324d;
 	  opacity: 0.5;
@@ -133,22 +133,22 @@ I bottoni "Avanti" e "Indietro" dovranno essere utilizzati per implementare la l
 
 {% capture example %}
 <div class="steppers">
-	<ul class="steppers-header">
-		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
-	</nav>
+  <ul class="steppers-header">
+    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -164,20 +164,20 @@ La Progress bar è quella nativa di Bootstrap 4 ed è contenuta in un elemento `
 
 {% capture example %}
 <div class="steppers mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<div class="steppers-progress">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <div class="steppers-progress">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -189,23 +189,23 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 {% capture example %}
 <div class="steppers mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<ul class="steppers-dots">
-			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
-			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
-			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
-			<li><span class="sr-only">Step 4 di 6</span></li>
-			<li><span class="sr-only">Step 5 di 6</span></li>
-			<li><span class="sr-only">Step 6 di 6</span></li>
-		</ul>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <ul class="steppers-dots">
+      <li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+      <li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+      <li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
+      <li><span class="sr-only">Step 4 di 6</span></li>
+      <li><span class="sr-only">Step 5 di 6</span></li>
+      <li><span class="sr-only">Step 6 di 6</span></li>
+    </ul>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -215,16 +215,16 @@ Su dispositivi mobili è possibile inserire un terzo bottone "Salva" di aspetto 
 
 {% capture example %}
 <div class="steppers mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -234,15 +234,15 @@ Su dispositivi mobili è possibile sostituire il bottone "Avanti" con un bottone
 
 {% capture example %}
 <div class="steppers mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -252,22 +252,22 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 
 {% capture example %}
 <div class="steppers bg-dark">
-	<ul class="steppers-header">
-		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
-	</nav>
+  <ul class="steppers-header">
+    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -276,32 +276,32 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 {% capture example %}
 <!-- Solo testo -->
 <div class="steppers bg-dark">
-	<ul class="steppers-header">
-		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
+  <ul class="steppers-header">
+    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
 </div>
 
 <!-- Testo e icone -->
 <div class="steppers bg-dark">
-	<ul class="steppers-header">
-		<li class="confirmed"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
+  <ul class="steppers-header">
+    <li class="confirmed"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
 </div>
 
 <!-- Numeri -->
 <div class="steppers bg-dark">
-	<ul class="steppers-header">
-		<li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato Step 1</span></span>Label Step 1</li>
-		<li class="active no-line"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Label Step 2</li>
-		<li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
-	</ul>
+  <ul class="steppers-header">
+    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato Step 1</span></span>Label Step 1</li>
+    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Label Step 2</li>
+    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
+  </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -313,20 +313,20 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 {% capture example %}
 <div class="steppers bg-dark mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<div class="steppers-progress">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <div class="steppers-progress">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -334,23 +334,23 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 {% capture example %}
 <div class="steppers bg-dark mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<ul class="steppers-dots">
-			<li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
-			<li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
-			<li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
-			<li><span class="sr-only">Step 4 di 6</span></li>
-			<li><span class="sr-only">Step 5 di 6</span></li>
-			<li><span class="sr-only">Step 6 di 6</span></li>
-		</ul>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <ul class="steppers-dots">
+      <li class="done"><span class="sr-only">Step 1 di 6 - Confermato</span></li>
+      <li class="done"><span class="sr-only">Step 2 di 6 - Confermato</span></li>
+      <li class="done"><span class="sr-only">Step 3 di 6 - Confermato</span></li>
+      <li><span class="sr-only">Step 4 di 6</span></li>
+      <li><span class="sr-only">Step 5 di 6</span></li>
+      <li><span class="sr-only">Step 6 di 6</span></li>
+    </ul>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -358,16 +358,16 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 {% capture example %}
 <div class="steppers bg-dark mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg></button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -375,14 +375,14 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 {% capture example %}
 <div class="steppers bg-dark mobile-examples">
-	<div class="steppers-content" aria-live="polite">
-		<!-- Esempio START -->
-		<p>Contenuto di esempio dello step corrente</p>
-		<!-- Esempio END -->
-	</div>
-	<nav class="steppers-nav">
-		<button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
-		<button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
-	</nav>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}

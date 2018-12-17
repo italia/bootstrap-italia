@@ -26,16 +26,17 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
   <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
+      <legend><span class="sr-only">Time</span></legend>
       <div>
         <div class="calendar-input-container">
           <div class="form-group">
-            <input class="form-control txtTime" id="txtTime" type="text" placeholder="hh:mm">
-            <button class="btn-time" id="btnTime" aria-label="Time picker - Scadenza">
+            <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm">
+            <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
               <svg class="icon">
                 <use xlink:href="/dist/svg/sprite.svg#it-clock"></use>
               </svg>
             </button>
-            <label for="txtTime">Label timepicker</label>
+            <label for="txtTime1">Label timepicker</label>
           </div>
         </div>
       </div>
@@ -77,16 +78,17 @@ Clicca sull'icona per visualizzare il datepicker.
   <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
+      <legend><span class="sr-only">Time</span></legend>
       <div>
         <div class="calendar-input-container">
           <div class="form-group">
-            <input class="form-control txtTime" id="txtTime" type="text" placeholder="hh:mm">
-            <button class="btn-time" id="btnTime" aria-label="Time picker - Scadenza">
+            <input class="form-control txtTime" id="txtTime2" type="text" placeholder="hh:mm">
+            <button class="btn-time" id="btnTime2" aria-label="Time picker - Scadenza">
               <svg class="icon">
                 <use xlink:href="/dist/svg/sprite.svg#it-clock"></use>
               </svg>
             </button>
-            <label for="txtTime">Label timepicker</label>
+            <label for="txtTime2">Label timepicker</label>
           </div>
         </div>
       </div>
