@@ -10,8 +10,12 @@
     - name: Hero
       description: Pagina con vari esempi di Hero.
 
-#- category: Template
-#  description: Questa area conterrà alcuni esempi di pagine complete.
+- category: Template
+  description: Questa area conterrà alcuni esempi di pagine complete.
+  examples:
+    - name: Template vuoto
+      description: Un esempio per l'impostazione di una pagina vuota generica.
+      status: WIP
 
 - category: Esempi di Bootstrap
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.2/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.

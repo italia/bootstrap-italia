@@ -16,7 +16,7 @@ redirect_from: "/esempi/"
         {% if forloop.first %}<div class="row">{% endif %}
           <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
             <a href="{{ site.baseurl }}/docs/esempi/{{ example.name | slugify }}/">
-              <h5 class="mb-1">{{ example.name }}</h5>
+              <h5 class="mb-1">{{ example.name }}&nbsp;{%- if example.status %}<span class="badge badge-secondary text-white">{{ example.status }}</span>{%- endif -%}</h5>
             </a>
             <p class="text-muted">{{ example.description }}</p>
           </div>
