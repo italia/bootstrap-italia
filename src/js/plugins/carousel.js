@@ -1,5 +1,5 @@
 $(function () {
-  var carouselTarget = $('.owl-carousel');
+  var carouselTarget = $('.owl-carousel.it-carousel-all');
   // parameters
   var cnav;
   var cloop;
