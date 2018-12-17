@@ -12,13 +12,13 @@
 <title>Upload · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812141259" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201812171054" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812141259" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201812171054" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.27.2/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.27.3/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -359,7 +359,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
-                      <span>Chips</span></a>
+                      <span>Chips</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
                       <span>Collapse</span></a>
@@ -440,7 +440,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Form Input</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-input-number/">
-                      <span>Form Input Number</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Form Input Number</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/form-input-time/">
                       <span>Form Input Time</span></a>
@@ -871,13 +871,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <p><strong>Dimensione Standard</strong></p>
       <div class="avatar-upload-wrapper">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero" />
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="imagealt" />
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload3" id="upload3" class="upload-avatar" />
             <label for="upload3">
               <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
             </label>
+            <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
@@ -889,13 +890,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <p><strong>Dimensione Piccola</strong></p>
       <div class="avatar-upload-wrapper size-sm">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Marisa Rossi" />
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="imagealt" />
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload4" id="upload4" class="upload-avatar" />
             <label for="upload4">
               <svg class="icon icon-sm" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
             </label>
+            <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
@@ -912,13 +914,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Dimensione Standard<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar-upload-wrapper"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xxl avatar-upload"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/women/24.jpg"</span> <span class="na">alt=</span><span class="s">"Giovanna Ferrero"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/21.jpg"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"upload-avatar-container"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">""</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"upload3"</span> <span class="na">id=</span><span class="s">"upload3"</span> <span class="na">class=</span><span class="s">"upload-avatar"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"upload3"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-camera"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;span&gt;</span>Aggiorna<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> foto dell'Avatar<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
           <span class="nt">&lt;/form&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar-upload-icon"</span><span class="nt">&gt;</span>
@@ -930,13 +933,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Dimensione Piccola<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar-upload-wrapper size-sm"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xxl avatar-upload"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/women/22.jpg"</span> <span class="na">alt=</span><span class="s">"Marisa Rossi"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/women/21.jpg"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"upload-avatar-container"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">""</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"upload4"</span> <span class="na">id=</span><span class="s">"upload4"</span> <span class="na">class=</span><span class="s">"upload-avatar"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"upload4"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-camera"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;span&gt;</span>Aggiorna<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> foto dell'Avatar<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
           <span class="nt">&lt;/form&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar-upload-icon"</span><span class="nt">&gt;</span>
@@ -966,6 +970,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       </label>
     </li>
   </ul>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Esempio Immagini Caricate</strong></p>
@@ -974,7 +979,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <ul class="upload-pictures-wall">
     <li>
       <div class="upload-image">
-        <img src="https://picsum.photos/128/128?image=1020" alt="Alt text" />
+        <img src="https://picsum.photos/128/128?image=1020" alt="imagealt" />
       </div>
     </li>
     <li>
@@ -990,6 +995,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       </label>
     </li>
   </ul>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">""</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
@@ -1002,6 +1008,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-5"</span><span class="nt">&gt;&lt;strong&gt;</span>Esempio Immagini Caricate<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
@@ -1010,7 +1017,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"upload-pictures-wall"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"upload-image"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://picsum.photos/128/128?image=1020"</span> <span class="na">alt=</span><span class="s">"Alt text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://picsum.photos/128/128?image=1020"</span> <span class="na">alt=</span><span class="s">"imagealt"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
@@ -1026,6 +1033,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
       <span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h2 id="upload-dragdrop">Upload Drag&amp;drop</h2>
@@ -1069,6 +1077,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<h5>Trascina il file per caricarlo</h5>
 		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Simula caricamento</strong></p>
@@ -1090,6 +1099,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<h5>Nome file in caricamento</h5>
 		<p>Caricamento in corso...</p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Process completed</strong></p>
@@ -1109,6 +1119,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<h5>Nome file caricato</h5>
 		<p>Caricamento completato</p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;strong&gt;</span>Default<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
@@ -1130,6 +1141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<span class="nt">&lt;h5&gt;</span>Trascina il file per caricarlo<span class="nt">&lt;/h5&gt;</span>
 		<span class="nt">&lt;p&gt;</span>oppure <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"upload7"</span> <span class="na">id=</span><span class="s">"upload7"</span> <span class="na">class=</span><span class="s">"upload-dragdrop-input"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"upload7"</span><span class="nt">&gt;</span>selezionalo dal dispositivo<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-5"</span><span class="nt">&gt;&lt;strong&gt;</span>Simula caricamento<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
@@ -1151,6 +1163,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<span class="nt">&lt;h5&gt;</span>Nome file in caricamento<span class="nt">&lt;/h5&gt;</span>
 		<span class="nt">&lt;p&gt;</span>Caricamento in corso...<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-5"</span><span class="nt">&gt;&lt;strong&gt;</span>Process completed<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
@@ -1170,6 +1183,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<span class="nt">&lt;h5&gt;</span>Nome file caricato<span class="nt">&lt;/h5&gt;</span>
 		<span class="nt">&lt;p&gt;</span>Caricamento completato<span class="nt">&lt;/p&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <h3 id="esempio-animato">Esempio animato</h3>
@@ -1194,6 +1208,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<h5 id="simTitle">Trascina il file per caricarlo</h5>
 		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
 	</div>
+	<input value="Submit" type="submit" class="d-none" />
 </form>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">onClick=</span><span class="s">"testAnimation()"</span><span class="nt">&gt;</span>Simula Upload<span class="nt">&lt;/button&gt;&lt;/p&gt;</span>
@@ -1215,6 +1230,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 		<span class="nt">&lt;h5</span> <span class="na">id=</span><span class="s">"simTitle"</span><span class="nt">&gt;</span>Trascina il file per caricarlo<span class="nt">&lt;/h5&gt;</span>
 		<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"simText"</span><span class="nt">&gt;</span>oppure <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"upload8"</span> <span class="na">id=</span><span class="s">"upload8"</span> <span class="na">class=</span><span class="s">"upload-dragdrop-input"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"upload8"</span><span class="nt">&gt;</span>selezionalo dal dispositivo<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">value=</span><span class="s">"Submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"d-none"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 
@@ -1232,14 +1248,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812141259"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201812171054"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812141259"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201812171054"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -1254,7 +1270,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201812141259"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201812171054"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
