@@ -12,6 +12,8 @@
   ],
   "description": "Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
+  "style": "dist/css/bootstrap-italia.min.css",
+  "main": "dist/js/bootstrap-italia.min.js",
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
