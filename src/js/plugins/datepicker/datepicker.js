@@ -236,7 +236,7 @@
 
 	var datepickerButton = [
 		'<a class="datepicker-button input-group-addon btn" role="button" aria-haspopup="true" tabindex="0" aria-labelledby="datepicker-bn-open-label-CALENDARID">',
-		'	<svg class="icon"><use xlink:href="/dist/svg/sprite.svg#it-calendar"></use></svg>',
+		'	<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-calendar</title><g id="Layer_42" data-name="Layer 42"><path d="M21,9V8a3,3,0,0,0-3-3h-.55V4a1,1,0,0,0-2,0V5h-7V4a1,1,0,1,0-2,0V5H6A3,3,0,0,0,3,8V18a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V9ZM15.46,5h2V6a1,1,0,1,1-2,0Zm-9,0h2V6a1,1,0,1,1-2,0ZM20,18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V10H20Z"/></g></svg>',
 		'</a>'
 	];
 	var datepickerCalendar = [
@@ -2155,7 +2155,7 @@
 	Datepicker.prototype.hideObject = function($element) {
 		$element.attr('aria-hidden', true);
 		$element.fadeOut(100);
-		
+
 	} // end hideObject()
 
 	/**
@@ -2354,7 +2354,7 @@
 			while(element) {
 				top = top + parseInt(element.offsetTop, 10);
 				left = left + parseInt(element.offsetLeft, 10);
-				element = element.offsetParent;	
+				element = element.offsetParent;
 			}
 		}
 		return {top: top, left: left};
