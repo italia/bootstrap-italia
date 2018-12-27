@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
-@import url('../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css');
-@import url('../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
+@import "node_modules/bootstrap-select/dist/css/bootstrap-select.min";
+@import "node_modules/owl.carousel/dist/assets/owl.carousel.min";
 
 // funzioni e variabili colore
 @import "functions";
@@ -118,7 +118,6 @@
 @import "custom/timeline";
 
 // datepicker
-@import "custom/datepicker.css";
 @import "custom/date-picker";
 @import "custom/date-picker-theme";
 @import "custom/timepicker";

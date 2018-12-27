@@ -66,11 +66,12 @@
     "gulp-header": "^2.0.5",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.11.0",
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {
