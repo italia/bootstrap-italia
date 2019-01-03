@@ -47,11 +47,10 @@
     "src/"
   ],
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
     "@octokit/rest": "^15.2.6",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-es2015-modules-strip": "^0.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.24.7",
     "conventional-changelog": "^1.1.24",
     "cross-spawn": "^6.0.5",
@@ -59,7 +58,7 @@
     "gh-pages": "^1.2.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-babel": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-footer": "^2.0.2",
@@ -75,7 +74,7 @@
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3",
+    "bootstrap": "=4.1.3",
     "bootstrap-select": "^1.13.3",
     "jquery": "^3.3.1",
     "owl.carousel": "^2.3.4",

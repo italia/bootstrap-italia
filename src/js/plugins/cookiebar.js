@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import Util from 'node_modules/bootstrap/js/src/util.js'
+import Util from '../../../node_modules/bootstrap/js/src/util.js'
 
 /**
  * --------------------------------------------------------------------------

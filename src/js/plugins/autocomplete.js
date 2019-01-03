@@ -19,7 +19,7 @@ $.fn.autocomplete = function (options) {
     var $autocomplete = void 0;
 
     // assign data from options
-    var data = eval($(this).attr("data-db"));
+    var data = $(this).attr("data-db");
 
     if (Object.keys(data).length) {
 

@@ -114,7 +114,7 @@ gulp.task('scss-min', () => {
       level: 2,
       specialComments: 0
     }))
-    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
+    .pipe(header(bootstrapItaliaBanner, {pkg: pkg}))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -131,21 +131,17 @@ gulp.task('js-min', () => {
     .pipe(babel({
       compact: true,
       presets: [
-        [ 'env', {
-          modules: false,
-          loose: true
-        }]
+        ['@babel/env', {modules: false, loose: true}]
       ],
       plugins: [
-        'transform-object-rest-spread',
-        'transform-es2015-modules-strip'
+        '@babel/plugin-proposal-object-rest-spread'
       ]
     }))
     .pipe(uglify())
     .pipe(header(
       bootstrapItaliaBanner + '\n' +
       jqueryCheck + '\n' +
-      jqueryVersionCheck + '\n+function () {\n', { pkg : pkg }
+      jqueryVersionCheck + '\n+function () {\n', {pkg: pkg}
     ))
     .pipe(footer('\n}();\n'))
     .pipe(rename({
@@ -164,18 +160,14 @@ gulp.task('js-bundle-min', () => {
     .pipe(babel({
       compact: true,
       presets: [
-        [ 'env', {
-          modules: false,
-          loose: true
-        }]
+        ['@babel/env', {modules: false, loose: true}]
       ],
       plugins: [
-        'transform-object-rest-spread',
-        'transform-es2015-modules-strip'
+        '@babel/plugin-proposal-object-rest-spread'
       ]
     }))
     .pipe(uglify())
-    .pipe(header(bootstrapItaliaBanner, { pkg : pkg }))
+    .pipe(header(bootstrapItaliaBanner, {pkg: pkg}))
     .pipe(rename({
       suffix: '.min'
     }))

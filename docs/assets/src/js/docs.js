@@ -117,4 +117,4 @@
     particlesJS('particles-js', particlesJSON);
   }
 
-}(jQuery, particlesJS))
+}($, particlesJS))

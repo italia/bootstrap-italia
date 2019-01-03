@@ -10,7 +10,7 @@ toc: true
 
 Megamenu contenente un elenco di links.
 
-Il megamenu all'interno del nav è una variazione del compnente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
+Il megamenu all'interno del nav è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
 
 Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
@@ -18,66 +18,68 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 
 ## Megamenu classico
 
-Il megamenu ha una stuttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** per comporre l'elenco di link desiderato
+Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** per comporre l'elenco di link desiderato
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavC">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavC">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -93,90 +95,92 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavD">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavD">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close  
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="it-external">
+              <div class="row">
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="it-external">
-                     <div class="row">
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li>
+                      </li>
+                    </ul>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -187,71 +191,73 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavEi" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavEi"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavEi">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 1</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 2</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 3</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavEi" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavEi">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavEi">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 1</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 2</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 3</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -264,77 +270,79 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavF" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavF"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavF">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 1</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 2</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li>
-                                 <h3 class="no_toc">Heading 3</h3>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                              <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavF" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavF">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavF">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 1</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 2</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <h3 class="no_toc">Heading 3</h3>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -344,96 +352,98 @@ I megamenu possono contenere delle liste di call to action che possono essere po
 
 ### Call to action in basso
  
-Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag con classe `.row` contenente l'elenco primario il tag `<div class="it-megamenu-footer">` dove andremo ad inserie in una struttura colonnare identica a quella contenente la lista principale, le liste contenenti le call to action.
+Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag con classe `.row` contenente l'elenco primario il tag `<div class="it-megamenu-footer">` dove andremo ad inserire in una struttura colonnare identica a quella contenente la lista principale, le liste contenenti le call to action.
 
 Di seguito un esempio:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavG" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavG"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavG">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                           <ul class="link-list">
-                              <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                              </li>
-                              <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavG" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavG">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavG">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="it-megamenu-footer">
+              <div class="row">
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="it-megamenu-footer">
-                     <div class="row">
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                           <div class="link-list-wrapper">
-                              <ul class="link-list">
-                                 <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      </li>
+                    </ul>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="link-list-wrapper">
+                    <ul class="link-list">
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -447,90 +457,92 @@ Di seguito un esempio:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavM" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavM"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavM">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row max-height-col">
-                     <div class="col-xs-12 col-lg-8">
-                        <div class="row margin-right-col">
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xs-12 col-lg-4">
-                        <div class="row max-height-col">
-                           <div class="col-12 it-vertical">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavM" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavM">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavM">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row max-height-col">
+              <div class="col-xs-12 col-lg-8">
+                <div class="row margin-right-col">
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+                <div class="row max-height-col">
+                  <div class="col-12 it-vertical">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -545,97 +557,99 @@ Di seguito un esempio:
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavQ" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavQ"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavQ">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu show">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu show">
-                  <div class="row max-height-col">
-                     <div class="col-xs-12 col-lg-8">
-                        <div class="row margin-right-col">
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li>
-                                        <h3 class="no_toc">Heading 1</h3>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li>
-                                        <h3 class="no_toc">Heading 2</h3>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li>
-                                        <h3 class="no_toc">Heading 3</h3>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                    <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xs-12 col-lg-4">
-                        <div class="row">
-                           <div class="col-12 it-vertical it-description">
-                              <div class="description-content">
-                                 <img src="https://via.placeholder.com/225x110/ebebeb/808080/?text=Immagine" alt="placeholder" title="placeholder title">
-                                 <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavQ" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavQ">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavQ">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu show">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu show">
+            <div class="row max-height-col">
+              <div class="col-xs-12 col-lg-8">
+                <div class="row margin-right-col">
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li>
+                          <h3 class="no_toc">Heading 1</h3>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li>
+                          <h3 class="no_toc">Heading 2</h3>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li>
+                          <h3 class="no_toc">Heading 3</h3>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+                <div class="row">
+                  <div class="col-12 it-vertical it-description">
+                    <div class="description-content">
+                      <img src="https://via.placeholder.com/225x110/ebebeb/808080/?text=Immagine" alt="placeholder" title="placeholder title">
+                      <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -646,80 +660,82 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavCa" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavCa"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavCa">
-      <div class="overlay"></div>
-      <div class="close-div sr-only">
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu">
-                  <div class="row">
-                     <div class="col-12 col-lg-8">
-                        <div class="row">
-                           <div class="col-12">
-                              <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-12 col-lg-6">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-6">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-12 col-lg-4">
-                        <div class="row">
-                           <div class="col-12">
-                              <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="col-12 col-lg-12">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavCa" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavCa">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavCa">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-lg-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
@@ -729,101 +745,103 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
 
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu">
-   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavE" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavE"><span class="it-list"></span>
-   </button>
-   <div class="navbar-collapsable" id="navbarNavE">
-      <div class="overlay"></div>
-      <div class="close-div sr-only"> 
-         <button class="btn close-menu" type="button"><span class="it-close"></span>close
-         </button>
-      </div>
-      <div class="menu-wrapper">
-         <ul class="navbar-nav">
-            <li class="nav-item dropdown megamenu show">
-               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
-               <div class="dropdown-menu show">
-                  <div class="row max-height-col">
-                     <div class="col-xs-12 col-lg-8">
-                        <div class="row margin-right-col max-height-col">
-                           <div class="col-12 col-lg-8">
-                              <div class="row">
-                                 <div class="col-12">
-                                    <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-12 col-lg-6">
-                                    <div class="link-list-wrapper">
-                                       <ul class="link-list">
-                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <div class="col-12 col-lg-6">
-                                    <div class="link-list-wrapper">
-                                       <ul class="link-list">
-                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-12 col-lg-4">
-                              <div class="row">
-                                 <div class="col-12">
-                                    <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-12 col-lg-12">
-                                    <div class="link-list-wrapper">
-                                       <ul class="link-list">
-                                          <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                                          </li>
-                                          <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavE" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavE">
+    <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+  </button>
+  <div class="navbar-collapsable" id="navbarNavE">
+    <div class="overlay"></div>
+    <div class="close-div sr-only">
+      <button class="btn close-menu" type="button">
+        <svg class="icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+      </button>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu show">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
+          <div class="dropdown-menu show">
+            <div class="row max-height-col">
+              <div class="col-xs-12 col-lg-8">
+                <div class="row margin-right-col max-height-col">
+                  <div class="col-12 col-lg-8">
+                    <div class="row">
+                      <div class="col-12">
+                        <h3 class="it-heading-megacolumn no_toc">Heading title left</h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            </li>
+                          </ul>
                         </div>
-                     </div>
-                     <div class="col-xs-12 col-lg-4">
-                        <div class="row max-height-col">
-                           <div class="col-12 it-vertical">
-                              <div class="link-list-wrapper">
-                                 <ul class="link-list">
-                                    <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                    <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            </li>
+                          </ul>
                         </div>
-                     </div>
+                      </div>
+                    </div>
                   </div>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="row">
+                      <div class="col-12">
+                        <h3 class="it-heading-megacolumn no_toc">Heading title right</h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-lg-12">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            </li>
+                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+                <div class="row max-height-col">
+                  <div class="col-12 it-vertical">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
