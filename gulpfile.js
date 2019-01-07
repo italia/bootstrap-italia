@@ -27,18 +27,9 @@ const Paths = {
   ],
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_JS: [
-    'node_modules/svgxuse/svgxuse.js',
-    'node_modules/bootstrap/js/src/util.js',
-    'node_modules/bootstrap/js/src/alert.js',
-    'node_modules/bootstrap/js/src/button.js',
-    'node_modules/bootstrap/js/src/carousel.js',
-    'node_modules/bootstrap/js/src/collapse.js',
-    'node_modules/bootstrap/js/src/dropdown.js',
-    'node_modules/bootstrap/js/src/modal.js',
-    'node_modules/bootstrap/js/src/tooltip.js',
-    'node_modules/bootstrap/js/src/popover.js',
-    'node_modules/bootstrap/js/src/scrollspy.js',
-    'node_modules/bootstrap/js/src/tab.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/bootstrap-select/js/bootstrap-select.js',
+    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/jquery.easing.1.3.js',
     'src/js/plugins/back-to-top.js',
@@ -65,8 +56,6 @@ const Paths = {
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
-    'node_modules/bootstrap-select/js/bootstrap-select.js',
-    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/select.js',
     'src/js/plugins/rating.js',
     'src/js/plugins/dimmer.js',
@@ -131,7 +120,11 @@ gulp.task('js-min', () => {
     .pipe(babel({
       compact: true,
       presets: [
-        ['@babel/env', {modules: false, loose: true}]
+        ['@babel/env', {
+          modules: false,
+          loose: true,
+          exclude: ['transform-typeof-symbol']
+        }]
       ],
       plugins: [
         '@babel/plugin-proposal-object-rest-spread'
