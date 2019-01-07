@@ -138,7 +138,7 @@
 		}
 		//label
 		.chip-label  {
-			color: $neutral-1-a4;
+			color: $neutral-1-a4; // Exempt from color contrast requirements: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
 		}
 		//close button
 		button {

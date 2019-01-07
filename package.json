@@ -74,11 +74,11 @@
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {
-    "bootstrap": "=4.1.3",
-    "bootstrap-select": "^1.13.3",
+    "bootstrap": "4.2.1",
+    "bootstrap-select": "^1.13.5",
     "jquery": "^3.3.1",
     "owl.carousel": "^2.3.4",
-    "popper.js": "^1.14.3",
+    "popper.js": "^1.14.6",
     "svgxuse": "^1.2.6"
   }
 }

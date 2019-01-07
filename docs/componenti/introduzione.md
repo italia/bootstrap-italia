@@ -14,7 +14,7 @@ Alcuni di essi sono presenti nella libreria Bootstrap {{ site.bootstrap_version 
 
 Oltri ai _componenti base_, sono presenti componenti che non sono presenti nativamente nella libreria Bootstrap {{ site.bootstrap_version }}, definiti anche _"plugin"_.
 
-[documentazione-bootstrap]: https://getbootstrap.com/docs/4.1/getting-started/introduction/
+[documentazione-bootstrap]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/
 [linee-guida]: https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/
 
 
