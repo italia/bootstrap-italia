@@ -1,13 +1,5 @@
-import $ from 'jquery'
-import Util from '../../../node_modules/bootstrap/js/src/util.js'
+const Cookiebar = (($, Util) => {
 
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0): cookiebar.js
- * --------------------------------------------------------------------------
- */
-
-const Cookiebar = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -224,7 +216,7 @@ const Cookiebar = (($) => {
   }
 
   return Cookiebar
-})($)
+})($, bootstrap.Util)
 
 export default Cookiebar
 
