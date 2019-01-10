@@ -12,7 +12,6 @@ const Cookiebar = (($, Util) => {
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
-  const TRANSITION_DURATION = 0 // TODO
   const COOKIE_NAME = "cookies_consent"
   const COOKIE_VALUE = "true"
   const COOKIE_EXPIRE = 30

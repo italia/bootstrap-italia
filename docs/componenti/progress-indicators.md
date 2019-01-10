@@ -9,8 +9,8 @@ description: Indicatori di stato attivo e di avanzamento di un'operazione
 <script>
 	//attiva donuts
 	document.addEventListener("DOMContentLoaded", function() {
-		progressDonut($("#DonutProgress1"),0);
-		progressDonut($("#DonutProgress2"),75);
+		progressDonut.generate("#donut-one", 0);
+		progressDonut.generate("#donut-two", 42);		
 	})
 </script>
 
@@ -21,7 +21,7 @@ L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il pro
 Va inizializzato con il comando javascript:
 
 {% highlight js %}
-  progressDonut($("#ID_ELEMENTO"),0);
+  progressDonut.generate("#ID_ELEMENTO", 0);
 {% endhighlight %}
 
 Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-donut` e il secondo con la percentuale di completamento.
@@ -29,29 +29,29 @@ Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-do
 Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:
 
 {% highlight js %}
-  progressDonut($("#ID_ELEMENTO"),75);
+  progressDonut.update("#ID_ELEMENTO", 75);
 {% endhighlight %}
 
 Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
 
 {% capture example %}
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-sm-6">
-			<p><strong>Stato iniziale</strong></p>
-			<div class="progress-donut-wrapper">
-				<div id="DonutProgress1" class="progress-donut"></div>
-				<span class="sr-only"></span>
-			</div>
-		</div>
-		<div class="col-12 col-sm-6">
-			<p><strong>Attivo</strong></p>
-			<div class="progress-donut-wrapper">
-				<div id="DonutProgress2" class="progress-donut"></div>
-				<span class="sr-only"></span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <p><strong>Stato iniziale</strong></p>
+      <div class="progress-donut-wrapper">
+        <div id="donut-one" class="progress-donut"></div>
+        <span class="sr-only"></span>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <p><strong>Attivo</strong></p>
+      <div class="progress-donut-wrapper">
+        <div id="donut-two" class="progress-donut"></div>
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -73,7 +73,7 @@ Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attri
 
 {% capture example %}
 <div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -85,10 +85,10 @@ Non dimenticare il testo esplicativo dedicato agli Screen Reader all'interno di 
 
 {% capture example %}
 <div class="progress-bar-wrapper">
-	<div class="progress-bar-label"><span class="sr-only">Progresso </span>35%</div>
-	<div class="progress">
-		<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-	</div>
+  <div class="progress-bar-label"><span class="sr-only">Progresso </span>35%</div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -98,8 +98,8 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 {% capture example %}
 <div class="progress progress-indeterminate">
-	<span class="sr-only">In elaborazione...</span>
-	<div class="progress-bar" role="progressbar"></div>
+  <span class="sr-only">In elaborazione...</span>
+  <div class="progress-bar" role="progressbar"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -109,16 +109,16 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 
 {% capture example %}
 <div class="progress progress-color">
-	<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -127,28 +127,27 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
 
 {% capture example %}
-
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-sm-6">
-			<p><strong>Bottone primario</strong></p>
-			<button type="button" class="btn btn-primary btn-progress disabled" disabled>
-			Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
-			<span class="progress">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <p><strong>Bottone primario</strong></p>
+      <button type="button" class="btn btn-primary btn-progress disabled" disabled>
+        Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+        <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>
-			</button>
-		</div>
-		<div class="col-12 col-sm-6">
-			<p><strong>Bottone secondario</strong></p>
-			<button type="button" class="btn btn-secondary btn-progress disabled" disabled>
-			Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
-			<span class="progress">
+      </button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <p><strong>Bottone secondario</strong></p>
+      <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
+        Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+        <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>
-			</button>
-		</div>
-	</div>
+      </button>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -160,32 +159,32 @@ Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe
 
 {% capture example %}
 <div class="container">
-	<div class="row">
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner standard</strong></p>
-			<div class="progress-spinner">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner Attivo</strong></p>
-			<div class="progress-spinner progress-spinner-active">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Small</strong></p>
-			<div class="progress-spinner size-sm">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Small attivo</strong></p>
-			<div class="progress-spinner progress-spinner-active size-sm">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner standard</strong></p>
+      <div class="progress-spinner">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner Attivo</strong></p>
+      <div class="progress-spinner progress-spinner-active">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Small</strong></p>
+      <div class="progress-spinner size-sm">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Small attivo</strong></p>
+      <div class="progress-spinner progress-spinner-active size-sm">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -195,39 +194,39 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
 
 {% capture example %}
 <div class="container">
-	<div class="row">
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner doppio</strong></p>
-			<div class="progress-spinner progress-spinner-double">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Doppio attivo</strong></p>
-			<div class="progress-spinner progress-spinner-double progress-spinner-active">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Doppio small</strong></p>
-			<div class="progress-spinner progress-spinner-double size-sm">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Doppio small attivo</strong></p>
-			<div class="progress-spinner progress-spinner-double size-sm progress-spinner-active">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner doppio</strong></p>
+      <div class="progress-spinner progress-spinner-double">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Doppio attivo</strong></p>
+      <div class="progress-spinner progress-spinner-double progress-spinner-active">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Doppio small</strong></p>
+      <div class="progress-spinner progress-spinner-double size-sm">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Doppio small attivo</strong></p>
+      <div class="progress-spinner progress-spinner-double size-sm progress-spinner-active">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

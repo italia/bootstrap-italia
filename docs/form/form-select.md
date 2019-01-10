@@ -108,6 +108,8 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+<!-- Commenting for now due to a bootstrap-select issue with SVG sprite on Chrome
+
 ### Select con icona
 
 Per inserire un icona che affianchi una option è sufficiente inserire all'interno dell'attributo "**data-content**" il seguente html:  
@@ -121,7 +123,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
    <!-- start select-->
    <div class="dropdown bootstrap-select">
       <select title="Select an option" data-live-search="true" data-live-search-placeholder="Search here...">
-         <option class="icon-option-li" data-content="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Lorem ipsum dolor sit amet" value="Value 1"></option>
+         <option class="icon-option-li" data-content="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg>" value="Value 1"></option>
          <option class="icon-option-li" data-content="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Duis vestibulum eleifend libero" value="Value 2"></option>
          <option class="icon-option-li" data-content="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Phasellus pretium orci sed odio tempus" value="Value 3"></option>
          <option class="icon-option-li" data-content="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Vestibulum bibendum ex vel augue porttitor sodales" value="Value 4"></option>
@@ -130,6 +132,8 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+-->
 
 ### Select Multipla
 

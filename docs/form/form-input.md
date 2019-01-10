@@ -106,44 +106,33 @@ Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Input autocomplete
+## Input con risultato ricerca o autocompletamento
 
-Per ottenere l'autocomplete bisogna aggiungere all'input la classe `.autocomplete`
-e l'attributo `data-db` con il nome della variabile javascript che contiene il
-JSON da filtrare oppure il nome della funzione che dinamicamente restituirà un
-array.
+Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-autocomplete` con un JSON da filtrare.
 
-L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`,
-nascosta agli screen reader dall'attributo `aria-hidden="true"`.
+L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`, nascosta agli screen reader dall'attributo `aria-hidden="true"`.
 
 {% capture callout %}
 ##### Accessibilità
 
-La descrizione accessibile del campo è ottenuta con una label nascosta visivamente
-dalla classe `.sr-only`.
+La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.sr-only`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-L'elenco dei risultati generati dalla ricerca è una lista `<ul>` con classe
-`.autocomplete-list`, mentre i singoli risultati sono contenuti negli elementi
-`<li>` della lista e si compongono di:
+L'elenco dei risultati generati dalla ricerca è una lista `<ul>` con classe `.autocomplete-list`, mentre i singoli risultati sono contenuti negli elementi `<li>` della lista e si compongono di:
 
 - **Avatar** o **Icona**: nel caso in cui non sia presente un'icona adeguata,
   utilizzare come icona di default `#it-file` per indicare una pagina generica.
 - **Testo**: elemento `<span>` contenuto in `.autocomplete-list-text`
 - **Label**: elemento `<em>` contenuto nel testo
 
-Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiuso
-in un tag `<mark>`.
+Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiuso in un tag `<mark>`.
 
 {% capture example %}
-<script>
-  var autocompleteOneData = [null];
-</script>
 <div class="form-group">
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
-    data-db="autocompleteOneData">
+    data-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
   </span>
@@ -209,14 +198,11 @@ in un tag `<mark>`.
 Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
 {% capture example %}
-<script>
-  var autocompleteTwoData = [null];
-</script>
 <div class="form-group autocomplete-wrapper-big">
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
-    data-db="autocompleteTwoData">
+    data-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
   </span>
@@ -262,22 +248,23 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Autocomplete con dati
+### Autocompletamento con dati
 
-Questo Autocomplete è collegato, tramite l'attributo `data-db`, ad una variabile "regioni" nella quale sono presenti i nomi di tutte le regioni italiane. Cerca una regione italiana per verificarne il comportamento.
+Questo autocompletamento è collegato, tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
+
+- nel campo `text` i nomi di tutte le regioni italiane
+- nel campo `link` un link associato a ciascuna di esse
+
+Questi sono i minimi dati necessari per il corretto funzionamento dell'autocomplete.
+
+Cerca una regione italiana per verificarne il comportamento.
 
 {% capture example %}
-<script>
-  var autocompleteRegioniData = [
-    {% for regione in site.data.regioni %}"{{ regione }}",{% endfor %}
-    "Tutte"
-  ];
-</script>
 <div class="form-group">
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
-    data-db="autocompleteRegioniData">
+    data-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
   </span>
@@ -285,7 +272,27 @@ Questo Autocomplete è collegato, tramite l'attributo `data-db`, ad una variabil
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+Questo Autocomplete è collegato, sempre tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 
+- nel campo `text` i nomi di alcune nazioni
+- nel campo `link` un link associato a ciascuna di esse
+- nel campo `icon` l'icona identificativa del risultato trovato
+- nel campo `label` la label aggiuntiva
+
+Cerca ad esempio _"Italia"_ per verificarne il comportamento.
+
+{% capture example %}
+<div class="form-group">
+  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+    id="autocomplete-test"
+    name="autocomplete-test"
+    data-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>
+  <span class="autocomplete-icon" aria-hidden="true">
+    <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+  </span>
+  <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 
 ## Textarea
