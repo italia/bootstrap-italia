@@ -266,6 +266,8 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+<!-- To be reviewed
+
 ### List con avatar
 **Avatar**<br>
 Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.avatar`
@@ -284,6 +286,8 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+-->
 
 ### List con switch
 Un link list può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`

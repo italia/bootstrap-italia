@@ -47,13 +47,7 @@
     - title: Header
     - title: Megamenu
       status: wip # Mobile
-    #- title: Navigazione
-    #  status: to do
-    #- title: Navscroll
-    #  status: to do
     - title: Navscroll
-    - title: Scrollspy
-      status: wip
     - title: Sidebar
     - title: Skiplinks
     - title: Thumbnav

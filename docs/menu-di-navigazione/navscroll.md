@@ -17,8 +17,9 @@ La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento
 
 {% capture callout %}
 Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
-Di seguito gli esempi, per visualizzare il comportamento potete guardare la pagina di esempio: **[Esempio Navscroll]({{ site.baseurl }}/docs/esempi/navscroll/){:target="_blank"}**.
 {% endcapture %}{% include callout.html content=callout type="info" %}
+
+**[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="_blank"}**
 
 
 ### Posizionamento a fondo pagina con linea a sinistra
@@ -212,6 +213,53 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
         </ul>
       </div>
     </div>
+  </div>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+## Menu Inline
+
+La classe distintiva del wrapper esterno è `.inline-menu`.
+
+Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una link list collassabile.
+
+Per maggiori informazioni, si può fare riferimento alla [documentazione dei Link List]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
+
+{% capture example %}
+<nav class="inline-menu">
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+        <ul class="link-sublist collapse" id="collapseOne">
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+        </ul>
+      </li>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+        <ul class="link-sublist collapse" id="collapseTwo">
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+        </ul>
+      </li>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+        <ul class="link-sublist collapse" id="collapseThree">
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
