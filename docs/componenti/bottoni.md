@@ -98,4 +98,4 @@ Aggiungendo la classe `.btn-block` si ottengono invece bottoni che prendono tutt
 
 ## Approfondimento
 
-Per ulteriori informazioni sui bottoni si rimanda alla sezione [buttons](https://getbootstrap.com/docs/4.1/components/buttons/) del sito di Bootstrap.
+Per ulteriori informazioni sui bottoni si rimanda alla sezione [buttons](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/buttons/) del sito di Bootstrap.

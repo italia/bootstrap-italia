@@ -42,4 +42,4 @@ Gli elementi `<html>` e `<body>` stessi impostano attraverso Reboot alcuni compo
 
 Reboot si occupa uniformare e semplificare comportamenti tra diversi browser e dispositivi anche inizializzando alcune regole su tabelle, form, attributi, ecc.
 
-Per maggiori informazioni si rimanda alla [pagina descrittiva di Reboot](https://getbootstrap.com/docs/4.1/content/reboot/) sul sito di Bootstrap (in inglese).
+Per maggiori informazioni si rimanda alla [pagina descrittiva di Reboot](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/content/reboot/) sul sito di Bootstrap (in inglese).

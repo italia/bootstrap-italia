@@ -184,7 +184,7 @@ Abilita i popover tramite JavaScript:
 
 Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
-Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstrap.com/docs/4.1/components/popovers/) del sito di Bootstrap.
+Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/popovers/) del sito di Bootstrap.
 
 ### Metodi
 

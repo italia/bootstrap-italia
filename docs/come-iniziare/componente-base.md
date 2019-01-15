@@ -31,4 +31,4 @@ Il file `src/js/plugins/componente-base.js` abilita all'evento `click` un tracci
 $.fn.componenteBase.Constructor.VERSION
 {% endhighlight %}
 
-È possibile trovare maggiori informazioni sull'argomento alla [pagina sull'utilizzo di Javascript](https://getbootstrap.com/docs/4.1/getting-started/javascript/) al sito di Bootstrap {{ site.bootstrap_version }}.
+È possibile trovare maggiori informazioni sull'argomento alla [pagina sull'utilizzo di Javascript](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/) al sito di Bootstrap {{ site.bootstrap_version }}.

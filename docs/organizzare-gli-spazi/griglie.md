@@ -1,77 +1,59 @@
 ---
 layout: docs
-title: La griglia
-description: Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.
+title: Le Griglie
+description: Nella definizione del layout di una interfaccia utente, la griglia è una suddivisione dello spazio tramite precise spaziature verticali ed orizzontali.
 group: organizzare-gli-spazi
 toc: true
 ---
 
+Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap per costruire layout di tutte le forme e dimensioni grazie a un sistema a dodici colonne.
+
 ## Come funziona
 
-Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti.
-È costruito con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-ed è completamente responsive.
+Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti, costruito su [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) e completamente responsive.
 
 {% capture callout %}
-**Se sei poco pratico di flexbox**, puoi iniziare da [questa pratica guida su flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
-(in inglese) per informazioni di carattere generale, terminologia, linee guida, e frammenti di codice, oppure giocando con
-[questo simpatico tutorial](http://flexboxfroggy.com/#it).
+#### Approfondimento
+
+Se sei poco pratico di flexbox, puoi iniziare da questi link per trovare informazioni di carattere generale, specifiche e frammenti di codice.
+
+* [guida su flexbox su MSDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox){:target="_blank"} (in inglese)
+* [guida su flexbox su CSS tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background){:target="_blank"} (in inglese)
+* [un simpatico quiz per verificare le tue conoscenze](http://flexboxfroggy.com/#it)
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-Di seguito si può trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
+Di seguito puoi trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
 
 <div class="bd-example-row">
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      Una di tre colonne
-    </div>
-    <div class="col-sm">
-      Una di tre colonne
-    </div>
-    <div class="col-sm">
-      Una di tre colonne
-    </div>
+    <div class="col-sm"> Una di tre colonne </div>
+    <div class="col-sm"> Una di tre colonne </div>
+    <div class="col-sm">Una di tre colonne</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le
-classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l'utilizzo dell'elemento genitore `.container`.
+L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l'utilizzo dell'elemento genitore `.container`.
 
 Analizzandolo nel dettaglio, ecco come funziona:
 
-- I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza `.container`
-per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e
-dimensioni dei device.
-- Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio
-tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto
-nelle colonne viene allineato sul lato sinistro.
-- In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere
-figlie dirette delle righe.
-- Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne
-di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo
-breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori
-informazioni.
-- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga.
-Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
-- Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro
-elemento genitore.
-- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il
-`margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
-- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint:
-tutti i breakpoint (extra small), small, medium, large, and extra large.
-- I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel
-breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large,
-ma non al primo breakpoint `xs`).
-- È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
-
+* I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza `.container` per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e dimensioni dei device.
+* Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
+* In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
+* Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori informazioni.
+* Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
+* Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
+* Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
+* Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.
+* I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
+* È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
 
 Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
-## Le opzioni
+### Le opzioni
 
 Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
@@ -151,23 +133,13 @@ Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositiv
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      1 di 2
-    </div>
-    <div class="col">
-      2 di 2
-    </div>
+    <div class="col">1 di 2</div>
+    <div class="col">2 di 2</div>
   </div>
   <div class="row">
-    <div class="col">
-      1 di 3
-    </div>
-    <div class="col">
-      2 di 3
-    </div>
-    <div class="col">
-      3 di 3
-    </div>
+    <div class="col">1 di 3</div>
+    <div class="col">2 di 3</div>
+    <div class="col">3 di 3</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -197,26 +169,14 @@ La disposizione automatica per le colonne della griglia di flexbox significa anc
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      1 di 3
-    </div>
-    <div class="col-6">
-      2 di 3 (larga 6/12)
-    </div>
-    <div class="col">
-      3 di 3
-    </div>
+    <div class="col">1 di 3</div>
+    <div class="col-6">2 di 3 (larga 6/12)</div>
+    <div class="col">3 di 3</div>
   </div>
   <div class="row">
-    <div class="col">
-      1 di 3
-    </div>
-    <div class="col-5">
-      2 di 3 (larga 5/12)
-    </div>
-    <div class="col">
-      3 di 3
-    </div>
+    <div class="col">1 di 3</div>
+    <div class="col-5">2 di 3 (larga 5/12)</div>
+    <div class="col">3 di 3</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -230,26 +190,14 @@ Puoi usare la classe `col-{breakpoint}-auto` per ridimensionare le colonne in ba
 {% capture example %}
 <div class="container">
   <div class="row justify-content-md-center">
-    <div class="col col-lg-2">
-      1 di 3
-    </div>
-    <div class="col-md-auto">
-      Contenuto a larghezza variabile
-    </div>
-    <div class="col col-lg-2">
-      3 di 3
-    </div>
+    <div class="col col-lg-2">1 di 3</div>
+    <div class="col-md-auto">Contenuto a larghezza variabile</div>
+    <div class="col col-lg-2">3 di 3</div>
   </div>
   <div class="row">
-    <div class="col">
-      1 di 3
-    </div>
-    <div class="col-md-auto">
-      Contenuto a larghezza variabile
-    </div>
-    <div class="col col-lg-2">
-      3 di 3
-    </div>
+    <div class="col">1 di 3</div>
+    <div class="col-md-auto">Contenuto a larghezza variabile</div>
+    <div class="col col-lg-2">3 di 3</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -349,55 +297,31 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 {% capture example %}
 <div class="container">
   <div class="row align-items-start">
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
   </div>
   <div class="row align-items-center">
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
   </div>
   <div class="row align-items-end">
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
-    <div class="col">
-      Una di tre colonne
-    </div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
+    <div class="col">Una di tre colonne</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-<div class="bd-example-row bd-example-row-flex-cols">
+<div class="bd-example-row bd-example-bg bd-example-row-flex-cols">
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col align-self-start">
-      Una di tre colonne
-    </div>
-    <div class="col align-self-center">
-      Una di tre colonne
-    </div>
-    <div class="col align-self-end">
-      Una di tre colonne
-    </div>
+    <div class="col align-self-start">Una di tre colonne</div>
+    <div class="col align-self-center">Una di tre colonne</div>
+    <div class="col align-self-end">Una di tre colonne</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -405,48 +329,28 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 
 ### Allineamento orizzontale
 
-<div class="bd-example-row">
+<div class="bd-example-row bd-example-bg">
 {% capture example %}
 <div class="container">
   <div class="row justify-content-start">
-    <div class="col-4">
-      Una di due colonne
-    </div>
-    <div class="col-4">
-      Una di due colonne
-    </div>
+    <div class="col-4">Una di due colonne</div>
+    <div class="col-4">Una di due colonne</div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-4">
-      Una di due colonne
-    </div>
-    <div class="col-4">
-      Una di due colonne
-    </div>
+    <div class="col-4">Una di due colonne</div>
+    <div class="col-4">Una di due colonne</div>
   </div>
   <div class="row justify-content-end">
-    <div class="col-4">
-      Una di due colonne
-    </div>
-    <div class="col-4">
-      Una di due colonne
-    </div>
+    <div class="col-4">Una di due colonne</div>
+    <div class="col-4">Una di due colonne</div>
   </div>
   <div class="row justify-content-around">
-    <div class="col-4">
-      Una di due colonne
-    </div>
-    <div class="col-4">
-      Una di due colonne
-    </div>
+    <div class="col-4">Una di due colonne</div>
+    <div class="col-4">Una di due colonne</div>
   </div>
   <div class="row justify-content-between">
-    <div class="col-4">
-      Una di due colonne
-    </div>
-    <div class="col-4">
-      Una di due colonne
-    </div>
+    <div class="col-4">Una di due colonne</div>
+    <div class="col-4">Una di due colonne</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -455,12 +359,10 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 ### Senza gutter
 
 I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.no-gutters`.
-Questo rimuove i margini negativi `margin` dalla classe `.row` e il `padding` orizzonatale da tutte le colonne figlie dirette.
+Questo rimuove i margini negativi `margin` dalla classe `.row` e il `padding` orizzontale da tutte le colonne figlie dirette.
 
-Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le
-prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
-Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le
-[utilità di spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
+Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le [utilità di spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
 
 **Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
 
@@ -501,9 +403,7 @@ $grid-gutter-widths: (
 ) !default;
 {% endhighlight %}
 
-Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione
-dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla
-classe `.row`, la classe `.variable-gutters`.
+Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe `.row`, la classe `.variable-gutters`.
 
 In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:
 
@@ -578,10 +478,8 @@ Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggi
 <div class="row">
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
-
   <!-- Forza le prossime colonne per passare a una nuova riga -->
   <div class="w-100"></div>
-
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 </div>
@@ -595,10 +493,8 @@ Puoi anche applicare questa interruzione a specifici breakpoint con le [utilità
 <div class="row">
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
-
   <!-- Forza le prossime colonne per passare alla nuova riga al breakpoint md e superiori -->
   <div class="w-100 d-none d-md-block"></div>
-
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 </div>
@@ -615,35 +511,23 @@ Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      Primo, ma non ordinato
-    </div>
-    <div class="col order-12">
-      Secondo, ma ultimo
-    </div>
-    <div class="col order-1">
-      Terzo ma primo
-    </div>
+    <div class="col">Prima, ma non ordinata</div>
+    <div class="col order-12">Seconda, ma ultima</div>
+    <div class="col order-1">Terza ma prima</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-Esiste anche una classe reposnsive `.order-first` che cambia velocemente l'ordine di un elemento applicando `order: -1`. Questa classe può anche essere mescolata con le classi numerate `.order-*` se necessario.
+Esiste anche una classe responsive `.order-first` che cambia velocemente l'ordine di un elemento applicando `order: -1`. Questa classe può anche essere mescolata con le classi numerate `.order-*` se necessario.
 
 <div class="bd-example-row">
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col order-last">
-      Prima, ma non ordinata
-    </div>
-    <div class="col">
-      Seconda, ma non ordinata
-    </div>
-    <div class="col order-first">
-      Terza ma prima
-    </div>
+    <div class="col order-last">Prima, ma non ordinata</div>
+    <div class="col">Seconda, ma non ordinata</div>
+    <div class="col order-first">Terza ma prima</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -720,12 +604,8 @@ Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` 
   <div class="col-sm-9">
     Level 1: .col-sm-9
     <div class="row">
-      <div class="col-8 col-sm-6">
-        Level 2: .col-8 .col-sm-6
-      </div>
-      <div class="col-4 col-sm-6">
-        Level 2: .col-4 .col-sm-6
-      </div>
+      <div class="col-8 col-sm-6">Level 2: .col-8 .col-sm-6</div>
+      <div class="col-4 col-sm-6">Level 2: .col-4 .col-sm-6</div>
     </div>
   </div>
 </div>

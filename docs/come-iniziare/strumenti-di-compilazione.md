@@ -52,7 +52,7 @@ Di seguito un paio di esempi pratici.
 
 ### Rimozione Cookiebar
 
-Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti-avanzati/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
 
 `src/scss/bootstrap-italia.scss`:
 
@@ -139,7 +139,7 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 `npm publish` per aggiornare la versione del package su [npm](https://www.npmjs.com/package/bootstrap-italia).
 
-[bootstrap-themes]: https://getbootstrap.com/docs/4.1/getting-started/theming/
+[bootstrap-themes]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/theming/
 [autoprefixer]: https://github.com/postcss/autoprefixer
 [uglify]: https://github.com/mishoo/UglifyJS2
 [sass]: http://sass-lang.com/

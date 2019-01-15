@@ -18,7 +18,6 @@
     - title: Flex
     - title: Float
     - title: Griglie
-      status: wip
     - title: Ombreggiature
     - title: Posizionamento
     - title: Spaziature
@@ -32,8 +31,6 @@
     - title: Liste
     - title: Liste di immagini
     - title: Liste di link
-      status: wip
-    - title: Liste elenco
     - title: Oggetto Media
     - title: Tabelle
     - title: Testo
@@ -46,7 +43,7 @@
     - title: Breadcrumbs
     - title: Header
     - title: Megamenu
-      status: wip # Mobile
+      status: wip # Review Mobile
     - title: Navscroll
     - title: Sidebar
     - title: Skiplinks
@@ -63,7 +60,6 @@
     - title: Avatar
     - title: Badge
     - title: Bottoni
-      status: wip
     - title: Card
     - title: Callout
     - title: Carousel
@@ -72,14 +68,10 @@
       status: wip # Lacks a11y
     - title: Collapse
     - title: Cookiebar
-    #- title: Datepicker
-    #  status: wip
     - title: Dimmer
     - title: Dropdown
     - title: Forward
     - title: Hero
-    #- title: Input group
-    #  status: to do
     - title: Modale
     - title: Notifiche
     - title: Overlay
@@ -97,12 +89,12 @@
 - title: Form
   pages:
     - title: Introduzione
-      status: wip
+      status: wip # Review entire page
     - title: Form Checkbox
     - title: Form Datepicker
       status: wip # Lacks a11y
     - title: Form Input
-      status: wip
+      status: wip # Review entire page
     - title: Form Input Number
     - title: Form Input Time
     - title: Form Radio Button

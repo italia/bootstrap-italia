@@ -165,7 +165,7 @@ Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hov
 
 Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
-Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/4.1/components/tooltips/) del sito di Bootstrap.
+Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/tooltips/) del sito di Bootstrap.
 
 ### Metodi
 

@@ -30,7 +30,7 @@
     "test": "echo \"No tests specified\"",
     "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-exclude /docs/esempi/",
     "test-a11y-one": "npx pa11y-ci",
-    "html-proofer": "bundle exec htmlproofer ./_gh_pages --assume-extension --check-html --allow-hash-href --disable-external"
+    "html-proofer": "bundle exec htmlproofer ./_gh_pages --assume-extension --check-html --allow-hash-href"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",

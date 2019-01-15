@@ -333,7 +333,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ## Header Nav
 
-**Header Nav**, per elencare le voci di [navigazione]({{ site.baseurl }}/docs/menu-di-navigazione/navbar/), siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
+**Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
 
 {% capture example %}
 <div class="it-header-navbar-wrapper">
