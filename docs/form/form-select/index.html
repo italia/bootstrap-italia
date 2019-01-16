@@ -12,13 +12,13 @@
 <title>Form Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901091818" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901160844" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901091818" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901160844" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.29.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.29.3/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -218,7 +218,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Float</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">
-                      <span>Griglie</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Griglie</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/ombreggiature/">
                       <span>Ombreggiature</span></a>
@@ -257,10 +257,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Liste di immagini</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                      <span>Liste di link</span><span class="badge badge-secondary text-white">wip</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-elenco/">
-                      <span>Liste elenco</span></a>
+                      <span>Liste di link</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
                       <span>Oggetto Media</span></a>
@@ -300,9 +297,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
                       <span>Navscroll</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/scrollspy/">
-                      <span>Scrollspy</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/sidebar/">
                       <span>Sidebar</span></a>
@@ -347,7 +341,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Badge</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                      <span>Bottoni</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Bottoni</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                       <span>Card</span></a>
@@ -501,7 +495,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#select-disabilitata">Select disabilitata</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-reset">Select con reset</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
-<li class="toc-entry toc-h3"><a href="#select-con-icona">Select con icona</a></li>
 <li class="toc-entry toc-h3"><a href="#select-multipla">Select Multipla</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-gruppi">Select con gruppi</a></li>
 <li class="toc-entry toc-h3"><a href="#select-multipla-con-gruppi-e-checkboxes">Select multipla con gruppi e checkboxes</a></li>
@@ -677,34 +670,36 @@ Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag 
    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="select-con-icona">Select con icona</h3>
+<!-- Commenting for now due to a bootstrap-select issue with SVG sprite on Chrome
 
-<p>Per inserire un icona che affianchi una option è sufficiente inserire all’interno dell’attributo “<strong>data-content</strong>” il seguente html:<br />
- <code class="highlighter-rouge">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#CLASSE-ICONA'&gt;&lt;/use&gt;&lt;/svg&gt; Label option"</code></p>
+### Select con icona
 
-<p>Al tag <code class="highlighter-rouge">&lt;option&gt;</code> aggiungeremo la classe <code class="highlighter-rouge">".icon-option-li"</code> per dare uno stile corretto al suo contenuto.</p>
+Per inserire un icona che affianchi una option è sufficiente inserire all'interno dell'attributo "**data-content**" il seguente html:  
+ `"<svg class='icon'><use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#CLASSE-ICONA'></use></svg> Label option"`
+
+Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile corretto al suo contenuto.
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
    <label>Field Label</label>
    <!-- start select-->
-   <div class="dropdown bootstrap-select">
+<div class="dropdown bootstrap-select">
       <select title="Select an option" data-live-search="true" data-live-search-placeholder="Search here...">
-         <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Lorem ipsum dolor sit amet" value="Value 1"></option>
+         <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt;" value="Value 1"></option>
          <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Duis vestibulum eleifend libero" value="Value 2"></option>
          <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Phasellus pretium orci sed odio tempus" value="Value 3"></option>
          <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Vestibulum bibendum ex vel augue porttitor sodales" value="Value 4"></option>
          <option class="icon-option-li" data-content="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Praesent quis elementum turpis" value="Value 5"></option>
       </select>
    </div>
-</div>
-</div>
+<p>&lt;/div&gt;
+&lt;/div&gt;</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;label&gt;</span>Field Label<span class="nt">&lt;/label&gt;</span>
    <span class="c">&lt;!-- start select--&gt;</span>
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown bootstrap-select"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Select an option"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Search here..."</span><span class="nt">&gt;</span>
-         <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Lorem ipsum dolor sit amet"</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;&lt;/option&gt;</span>
+         <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt;"</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;&lt;/option&gt;</span>
          <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Duis vestibulum eleifend libero"</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;&lt;/option&gt;</span>
          <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Phasellus pretium orci sed odio tempus"</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;&lt;/option&gt;</span>
          <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Vestibulum bibendum ex vel augue porttitor sodales"</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;&lt;/option&gt;</span>
@@ -712,6 +707,8 @@ Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag 
       <span class="nt">&lt;/select&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>–&gt;</p>
 
 <h3 id="select-multipla">Select Multipla</h3>
 
@@ -846,14 +843,14 @@ Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag 
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901091818"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901160844"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901091818"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901160844"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -868,7 +865,7 @@ Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901091818"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901160844"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({

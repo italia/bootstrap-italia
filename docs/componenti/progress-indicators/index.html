@@ -12,13 +12,13 @@
 <title>Progress Indicators · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901091818" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901160844" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901091818" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901160844" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.29.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.29.3/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -218,7 +218,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Float</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">
-                      <span>Griglie</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Griglie</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/ombreggiature/">
                       <span>Ombreggiature</span></a>
@@ -257,10 +257,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Liste di immagini</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                      <span>Liste di link</span><span class="badge badge-secondary text-white">wip</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-elenco/">
-                      <span>Liste elenco</span></a>
+                      <span>Liste di link</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
                       <span>Oggetto Media</span></a>
@@ -300,9 +297,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
                       <span>Navscroll</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/scrollspy/">
-                      <span>Scrollspy</span><span class="badge badge-secondary text-white">wip</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/sidebar/">
                       <span>Sidebar</span></a>
@@ -347,7 +341,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Badge</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                      <span>Bottoni</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Bottoni</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                       <span>Card</span></a>
@@ -524,8 +518,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <script>
 	//attiva donuts
 	document.addEventListener("DOMContentLoaded", function() {
-		progressDonut($("#DonutProgress1"),0);
-		progressDonut($("#DonutProgress2"),75);
+		progressDonut.generate("#donut-one", 0);
+		progressDonut.generate("#donut-two", 42);		
 	})
 </script>
 
@@ -535,53 +529,53 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Va inizializzato con il comando javascript:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">progressDonut</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#ID_ELEMENTO"</span><span class="p">),</span><span class="mi">0</span><span class="p">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">progressDonut</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s2">"#ID_ELEMENTO"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span></code></pre></figure>
 
 <p>Dove il primo parametro corrisponde con l’id univoco dell’elemento <code class="highlighter-rouge">.progress-donut</code> e il secondo con la percentuale di completamento.</p>
 
 <p>Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">progressDonut</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#ID_ELEMENTO"</span><span class="p">),</span><span class="mi">75</span><span class="p">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">progressDonut</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s2">"#ID_ELEMENTO"</span><span class="p">,</span> <span class="mi">75</span><span class="p">);</span></code></pre></figure>
 
 <p>Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.</p>
 
 <div class="bd-example">
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-sm-6">
-			<p><strong>Stato iniziale</strong></p>
-			<div class="progress-donut-wrapper">
-				<div id="DonutProgress1" class="progress-donut"></div>
-				<span class="sr-only"></span>
-			</div>
-		</div>
-		<div class="col-12 col-sm-6">
-			<p><strong>Attivo</strong></p>
-			<div class="progress-donut-wrapper">
-				<div id="DonutProgress2" class="progress-donut"></div>
-				<span class="sr-only"></span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <p><strong>Stato iniziale</strong></p>
+      <div class="progress-donut-wrapper">
+        <div id="donut-one" class="progress-donut"></div>
+        <span class="sr-only"></span>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <p><strong>Attivo</strong></p>
+      <div class="progress-donut-wrapper">
+        <div id="donut-two" class="progress-donut"></div>
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Stato iniziale<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-donut-wrapper"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"DonutProgress1"</span> <span class="na">class=</span><span class="s">"progress-donut"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-donut-wrapper"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"DonutProgress2"</span> <span class="na">class=</span><span class="s">"progress-donut"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Stato iniziale<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-donut-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"donut-one"</span> <span class="na">class=</span><span class="s">"progress-donut"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-donut-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"donut-two"</span> <span class="na">class=</span><span class="s">"progress-donut"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="progress-bar">Progress Bar</h2>
@@ -604,11 +598,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="etichette">Etichette</h3>
@@ -619,17 +613,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="progress-bar-wrapper">
-	<div class="progress-bar-label"><span class="sr-only">Progresso </span>35%</div>
-	<div class="progress">
-		<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-	</div>
+  <div class="progress-bar-label"><span class="sr-only">Progresso </span>35%</div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar-wrapper"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar-label"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Progresso <span class="nt">&lt;/span&gt;</span>35%<span class="nt">&lt;/div&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar-label"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Progresso <span class="nt">&lt;/span&gt;</span>35%<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="progresso-indeterminato">Progresso Indeterminato</h3>
@@ -638,13 +632,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="progress progress-indeterminate">
-	<span class="sr-only">In elaborazione...</span>
-	<div class="progress-bar" role="progressbar"></div>
+  <span class="sr-only">In elaborazione...</span>
+  <div class="progress-bar" role="progressbar"></div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress progress-indeterminate"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>In elaborazione...<span class="nt">&lt;/span&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>In elaborazione...<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="colori">Colori</h3>
@@ -653,29 +647,29 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="progress progress-color">
-	<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="progress progress-color">
-	<div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress progress-color"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-success"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 25%"</span> <span class="na">aria-valuenow=</span><span class="s">"25"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-success"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 25%"</span> <span class="na">aria-valuenow=</span><span class="s">"25"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress progress-color"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-info"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 33%"</span> <span class="na">aria-valuenow=</span><span class="s">"33"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-info"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 33%"</span> <span class="na">aria-valuenow=</span><span class="s">"33"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress progress-color"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-warning"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-warning"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress progress-color"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-danger"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 66%"</span> <span class="na">aria-valuenow=</span><span class="s">"66"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar bg-danger"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 66%"</span> <span class="na">aria-valuenow=</span><span class="s">"66"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="bottone-con-progress-bar">Bottone con Progress Bar</h3>
@@ -683,51 +677,50 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva <code class="highlighter-rouge">.btn-progress</code> utilizzando la struttura e le classi riportate nei seguenti esempi:</p>
 
 <div class="bd-example">
-
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-sm-6">
-			<p><strong>Bottone primario</strong></p>
-			<button type="button" class="btn btn-primary btn-progress disabled" disabled="">
-			Label bottone <svg class="icon icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
-			<span class="progress">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <p><strong>Bottone primario</strong></p>
+      <button type="button" class="btn btn-primary btn-progress disabled" disabled="">
+        Label bottone <svg class="icon icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+        <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>
-			</button>
-		</div>
-		<div class="col-12 col-sm-6">
-			<p><strong>Bottone secondario</strong></p>
-			<button type="button" class="btn btn-secondary btn-progress disabled" disabled="">
-			Label bottone <svg class="icon icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
-			<span class="progress">
+      </button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <p><strong>Bottone secondario</strong></p>
+      <button type="button" class="btn btn-secondary btn-progress disabled" disabled="">
+        Label bottone <svg class="icon icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg>
+        <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>
-			</button>
-		</div>
-	</div>
+      </button>
+    </div>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Bottone primario<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-progress disabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-			Label bottone <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-			<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Bottone primario<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-progress disabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        Label bottone <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
 				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/span&gt;</span>
 			<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/button&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Bottone secondario<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-progress disabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-			Label bottone <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-			<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-sm-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Bottone secondario<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-progress disabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        Label bottone <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
 				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">style=</span><span class="s">"width: 50%"</span> <span class="na">aria-valuenow=</span><span class="s">"50"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/span&gt;</span>
 			<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/button&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="spinner">Spinner</h2>
@@ -738,61 +731,61 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="container">
-	<div class="row">
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner standard</strong></p>
-			<div class="progress-spinner">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner Attivo</strong></p>
-			<div class="progress-spinner progress-spinner-active">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Small</strong></p>
-			<div class="progress-spinner size-sm">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Small attivo</strong></p>
-			<div class="progress-spinner progress-spinner-active size-sm">
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner standard</strong></p>
+      <div class="progress-spinner">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner Attivo</strong></p>
+      <div class="progress-spinner progress-spinner-active">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Small</strong></p>
+      <div class="progress-spinner size-sm">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Small attivo</strong></p>
+      <div class="progress-spinner progress-spinner-active size-sm">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner standard<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner Attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-active"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Small<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner size-sm"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Small attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-active size-sm"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner standard<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner Attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Small<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner size-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Small attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-active size-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="spinner-doppio">Spinner doppio</h3>
@@ -801,77 +794,77 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-example">
 <div class="container">
-	<div class="row">
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Spinner doppio</strong></p>
-			<div class="progress-spinner progress-spinner-double">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3">
-			<p class="mb-3"><strong>Doppio attivo</strong></p>
-			<div class="progress-spinner progress-spinner-double progress-spinner-active">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Doppio small</strong></p>
-			<div class="progress-spinner progress-spinner-double size-sm">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-		<div class="col-6 col-lg-3 mt-3 mt-lg-0">
-			<p class="mb-3"><strong>Doppio small attivo</strong></p>
-			<div class="progress-spinner progress-spinner-double size-sm progress-spinner-active">
-				<div class="progress-spinner-inner"></div>
-				<div class="progress-spinner-inner"></div>
-				<span class="sr-only">Caricamento...</span>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Spinner doppio</strong></p>
+      <div class="progress-spinner progress-spinner-double">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3">
+      <p class="mb-3"><strong>Doppio attivo</strong></p>
+      <div class="progress-spinner progress-spinner-double progress-spinner-active">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Doppio small</strong></p>
+      <div class="progress-spinner progress-spinner-double size-sm">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mt-3 mt-lg-0">
+      <p class="mb-3"><strong>Doppio small attivo</strong></p>
+      <div class="progress-spinner progress-spinner-double size-sm progress-spinner-active">
+        <div class="progress-spinner-inner"></div>
+        <div class="progress-spinner-inner"></div>
+        <span class="sr-only">Caricamento...</span>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner doppio<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double progress-spinner-active"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio small<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double size-sm"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio small attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double size-sm progress-spinner-active"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-				<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/div&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Spinner doppio<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double progress-spinner-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio small<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double size-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-lg-3 mt-3 mt-lg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;&lt;strong&gt;</span>Doppio small attivo<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner progress-spinner-double size-sm progress-spinner-active"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-spinner-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Caricamento...<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
@@ -889,14 +882,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901091818"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901160844"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901091818"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901160844"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -911,7 +904,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901091818"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901160844"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
