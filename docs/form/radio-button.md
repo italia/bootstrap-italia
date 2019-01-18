@@ -2,7 +2,8 @@
 layout: docs
 group: form
 toc: true
-title: Form Radio Button
+
+title: Radio Button
 description: Elementi e stili per la creazione di radio button accessibili.
 ---
 

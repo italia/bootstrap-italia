@@ -1,9 +1,10 @@
 ---
 layout: docs
+group: form
+toc: true
+
 title: Transfer
 description: Il transfer è un componente che consente la creazione di liste di checkbox.
-group: componenti
-toc: false
 ---
 
 Il componente _Transfer_ consente di trasferire gli elementi di una lista di checkbox ad un altro elenco di checkbox.

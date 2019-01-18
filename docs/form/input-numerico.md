@@ -2,7 +2,8 @@
 layout: docs
 group: form
 toc: true
-title: Form Input Number
+
+title: Input Numerico
 description: Campi input con bottoni per incrementare/decrementare valori numerici
 ---
 

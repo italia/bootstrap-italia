@@ -2,6 +2,7 @@
 layout: docs
 group: form
 toc: true
+
 title: Upload
 description: Elementi dei form dedicati al caricamento file
 ---
@@ -140,7 +141,6 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
     </li>
   </ul>
 </form>
-
 {% endcapture %}{% include example.html content=example %}
 
 ### Con anteprima delle immagini
@@ -348,65 +348,65 @@ $("#IDPROGRESS").circularloader({
 <p><strong>Default</strong></p>
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
-	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
-		<div class="upload-dragdrop-loading">
-			<div id="divProgress0" class="upload-progress"></div>
-		</div>
-		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-		</div>
-	</div>
-	<div class="upload-dragdrop-text">
-		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
-		</p>
-		<h5>Trascina il file per caricarlo</h5>
-		<p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
-	</div>
-	<input value="Submit" type="submit" class="d-none" />
+  <div class="upload-dragdrop-image">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <div class="upload-dragdrop-loading">
+      <div id="divProgress0" class="upload-progress"></div>
+    </div>
+    <div class="upload-dragdrop-success">
+      <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+    </div>
+  </div>
+  <div class="upload-dragdrop-text">
+    <p class="upload-dragdrop-weight">
+      <svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+    </p>
+    <h5>Trascina il file per caricarlo</h5>
+    <p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
+  </div>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Simula caricamento</strong></p>
 
 <form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data">
-	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
-		<div class="upload-dragdrop-loading">
-			<div id="divProgress1" class="upload-progress"></div>
-		</div>
-		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-		</div>
-	</div>
-	<div class="upload-dragdrop-text">
-		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
-		</p>
-		<h5>Nome file in caricamento</h5>
-		<p>Caricamento in corso...</p>
-	</div>
-	<input value="Submit" type="submit" class="d-none" />
+  <div class="upload-dragdrop-image">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <div class="upload-dragdrop-loading">
+      <div id="divProgress1" class="upload-progress"></div>
+    </div>
+    <div class="upload-dragdrop-success">
+      <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+    </div>
+  </div>
+  <div class="upload-dragdrop-text">
+    <p class="upload-dragdrop-weight">
+      <svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+    </p>
+    <h5>Nome file in caricamento</h5>
+    <p>Caricamento in corso...</p>
+  </div>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 
 <p class="mt-5"><strong>Process completed</strong></p>
 
 <form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
-	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
-		<div class="upload-dragdrop-loading"></div>
-		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-		</div>
-	</div>
-	<div class="upload-dragdrop-text">
-		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
-		</p>
-		<h5>Nome file caricato</h5>
-		<p>Caricamento completato</p>
-	</div>
-	<input value="Submit" type="submit" class="d-none" />
+  <div class="upload-dragdrop-image">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <div class="upload-dragdrop-loading"></div>
+    <div class="upload-dragdrop-success">
+      <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+    </div>
+  </div>
+  <div class="upload-dragdrop-text">
+    <p class="upload-dragdrop-weight">
+      <svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+    </p>
+    <h5>Nome file caricato</h5>
+    <p>Caricamento completato</p>
+  </div>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 {% endcapture %}{% include example.html content=example %}
 
@@ -416,22 +416,22 @@ $("#IDPROGRESS").circularloader({
 <p><button type="button" class="btn btn-primary" onClick="testAnimation()">Simula Upload</button></p>
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">
-	<div class="upload-dragdrop-image">
-		<img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
-		<div class="upload-dragdrop-loading">
-			<div id="divProgress2" class="upload-progress"></div>
-		</div>
-		<div class="upload-dragdrop-success">
-			<svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-		</div>
-	</div>
-	<div class="upload-dragdrop-text">
-		<p class="upload-dragdrop-weight">
-			<svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
-		</p>
-		<h5 id="simTitle">Trascina il file per caricarlo</h5>
-		<p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
-	</div>
-	<input value="Submit" type="submit" class="d-none" />
+  <div class="upload-dragdrop-image">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <div class="upload-dragdrop-loading">
+      <div id="divProgress2" class="upload-progress"></div>
+    </div>
+    <div class="upload-dragdrop-success">
+      <svg class="icon" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+    </div>
+  </div>
+  <div class="upload-dragdrop-text">
+    <p class="upload-dragdrop-weight">
+      <svg class="icon icon-xs" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+    </p>
+    <h5 id="simTitle">Trascina il file per caricarlo</h5>
+    <p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
+  </div>
+  <input value="Submit" type="submit" class="d-none" />
 </form>
 {% endcapture %}{% include example.html content=example %}

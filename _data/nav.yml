@@ -41,9 +41,9 @@
     - title: Introduzione
     - title: BottomNav
     - title: Breadcrumbs
-    - title: Header
+    - title: Header # TODO Rewiew mobile version
     - title: Megamenu
-      status: wip # Review Mobile
+      status: wip # TODO Review mobile version
     - title: Navscroll
     - title: Sidebar
     - title: Skiplinks
@@ -62,10 +62,8 @@
     - title: Bottoni
     - title: Card
     - title: Callout
-    - title: Carousel
-      status: wip # Lacks a11y
-    - title: Chips
-      status: wip # Lacks a11y
+    - title: Carousel # TODO Not passing a11y check fully
+    - title: Chips # TODO Not passing a11y check fully
     - title: Collapse
     - title: Cookiebar
     - title: Dimmer
@@ -84,23 +82,20 @@
     - title: Tab
     - title: Timeline
     - title: Tooltip
-    - title: Transfer
 
 - title: Form
   pages:
     - title: Introduzione
-      status: wip # Review entire page
-    - title: Form Checkbox
-    - title: Form Datepicker
-      status: wip # Lacks a11y
-    - title: Form Input
-      status: wip # Review entire page
-    - title: Form Input Number
-    - title: Form Input Time
-    - title: Form Radio Button
-    - title: Form Select
-    - title: Form Toggles
-    - title: Form Upload
+    - title: Input
+    - title: Input Numerico
+    - title: Input Calendario # TODO Not passing a11y check fully
+    # - title: Input Ora # TODO Not working properly yet
+    - title: Upload
+    - title: Radio Button
+    - title: Select
+    - title: Checkbox
+    - title: Toggles
+    - title: Transfer
 
 - title: Utilities
   pages:

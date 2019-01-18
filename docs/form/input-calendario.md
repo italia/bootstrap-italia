@@ -1,9 +1,10 @@
 ---
 layout: docs
-title: Datepicker
-description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 group: form
 toc: true
+
+title: Input Calendario
+description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 ---
 
 Il datepicker utilizza un plugin Javascript di terze parti, "Accessible Bootstrap Date Picker". Per maggiori informazioni è possibile consultarne la [documentazione completa](http://eureka2.github.io/ab-datepicker/#).
@@ -15,7 +16,8 @@ Per inizializzare il plugin, utilizzare il seguente script:
 {% highlight js %}
 $(document).ready(function() {
     $('.it-date-datepicker').datepicker({
-      inputFormat: ["gg/mm/aaaa"],
+      inputFormat: ["dd/MM/yyyy"],
+      outputFormat: 'dd/MM/yyyy',
     });
 });
 {% endhighlight %}
@@ -27,7 +29,7 @@ Clicca sull'icona per visualizzare il datepicker.
 {% capture example %}
 <div class="it-datepicker-wrapper">
   <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="" title="format : ">
+    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
     <label for="date1">Date label</label>
   </div>
 </div>
@@ -42,7 +44,7 @@ Clicca sull'icona per visualizzare il datepicker.
 {% capture example %}
 <div class="it-datepicker-wrapper theme-dark">
   <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="" title="format : ">
+    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
     <label for="date2">Date label</label>
   </div>
 </div>
@@ -51,7 +53,8 @@ Clicca sull'icona per visualizzare il datepicker.
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     $('.it-date-datepicker').datepicker({
-      inputFormat: ["gg/mm/aaaa"],
+      inputFormat: ["dd/MM/yyyy"],
+      outputFormat: 'dd/MM/yyyy',
     });
   })
 </script>

@@ -7,11 +7,11 @@
 
   var Password = function ($object, options) {
     var defaults = {
-      shortPass: 'password troppo debole',
-      badPass: 'password debole',
-      goodPass: 'password sicura',
-      strongPass: 'password molto sicura',
-      enterPass: 'inserisci almeno 8 caratteri e una lettera maiuscola',
+      shortPass: 'Password molto debole',
+      badPass: 'Password debole',
+      goodPass: 'Password sicura',
+      strongPass: 'Password molto sicura',
+      enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola',
       showText: true,
       minimumLength: 4
     };
@@ -175,7 +175,7 @@
       var shown = true;
       var $text = options.showText;
 
-      var $graybar = $('<div>').addClass('progress rounded-0 position-relative psw-meter');
+      var $graybar = $('<div>').addClass('password-meter progress rounded-0 position-absolute');
       $graybar.append(`<div class="row position-absolute w-100 m-0">
         <div class="col-3 border-left border-right border-white"></div>
         <div class="col-3 border-left border-right border-white"></div>
@@ -189,12 +189,12 @@
         'aria-valuemin': "0",
         'aria-valuemax': "100"
       });
-      var $insert = $('<div>').addClass('psw-wrapper').append(
+      var $insert = $('<div>').append(
         $graybar.append($colorbar)
       );
 
       if (options.showText) {
-        $text = $('<span>').addClass('psw-text').html(options.enterPass);
+        $text = $('<small>').addClass('form-text text-muted').html(options.enterPass);
         $insert.prepend($text);
       }
 

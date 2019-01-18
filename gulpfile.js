@@ -52,7 +52,7 @@ const Paths = {
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
-    'src/js/plugins/timepicker.js',
+    //'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',

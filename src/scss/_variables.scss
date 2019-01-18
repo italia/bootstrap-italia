@@ -50,14 +50,19 @@ $btn-font-weight: 600 !default;
 $btn-font-size: 16px !default;
 $btn-font-size-sm: 14px !default;
 $btn-font-size-lg: 18px !default;
+
+// Input
 $input-btn-line-height: 1.5 !default;
 $input-btn-line-height-sm: 1.428 !default;
 $input-btn-line-height-lg: 1.556 !default;
-//$btn-box-shadow-focus: 0 0 0 0.2rem rgba(0, 115, 230, 0.25);
-//$btn-box-shadow-secondary: inset 0 0 0 1px $primary;
-//$btn-box-shadow-secondary-hover: inset 0 0 0 1px $primary;
-//$btn-box-shadow-quaternary: inset 0 0 0 1px $gray-disabled;
-//$btn-box-shadow-disabled: inset 0 0 0 1px $gray-border-disabled;
+$input-disabled-bg: $gray-disabled;
+$input-spacing-x: .5rem;
+$input-spacing-y: .375rem;
+$input-border-width: 0;
+$input-border-radius: 0;
+$input-group-addon-bg: $white;
+$input-height: 2.5rem;
+$form-group-spacing-y: 1rem;
 
 // progress
 $progress-height: 16px;
@@ -126,19 +131,16 @@ $card-body-spacer: 1rem !default;
 
 // Tables
 $table-cell-padding: 1em !default;
-$table-border-color: #d6dce3 !default; // TODO use a variable
+$table-border-color: #d6dce3 !default;
 $table-cell-text-align: left !default;
-$table-accent-bg: #f6f7f9 !default; // TODO use a variable
-$table-hover-bg: #e5f1fa !default; // TODO use a variable
+$table-accent-bg: #f6f7f9 !default;
+$table-hover-bg: #e5f1fa !default;
 
 // Tooltips
 $tooltip-max-width: 32em !default;
-$tooltip-bg: #004a4d !default; // TODO use a variable
 $tooltip-opacity: 1 !default;
 $tooltip-padding-y: 1rem !default;
 $tooltip-padding-x: 1rem !default;
-
-$tooltip-arrow-color: $tooltip-bg !default;
 
 //Modals
 $modal-backdrop-opacity: .8 !default;
@@ -159,14 +161,13 @@ $carousel-control-icon-width: 32px !default;
 
 // Inputs
 $input-border: $gray-200;
+$input-label-color: $neutral-1-a8;
 $input-color-placeholder: $gray-500;
 $input-focus-border-color: $gray-secondary;
 
 //List group
 $list-group-item-padding-y: 1rem !default;
 $list-group-action-color: $primary !default;
-$list-group-action-hover-color: #00264d !default; // TODO use a variable
-$list-group-hover-bg: #d9e6f2 !default; // TODO use a variable
 $list-group-disabled-cursor: default !default;
 
 //Reset
@@ -325,7 +326,6 @@ $pager-page-changer-padding: 12px;
 $pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
 // Sidebar
-$v-gap: 8px;
 $sidebar-heading-font-weight: 600;
 $sidebar-heading-bottom-margin: .8rem;
 $sidebar-heading-text-size: 0.833em;

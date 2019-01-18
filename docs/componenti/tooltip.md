@@ -1,10 +1,12 @@
 ---
 layout: docs
 title: Tooltip
-description: Documentazione ed esempi per aggiungere tooltip personalizzati di Bootstrap con CSS e JavaScript utilizzando CSS3 per animazioni e attributi data per l'archiviazione di titoli locali.
+description: Documentazione ed esempi per aggiungere tooltip personalizzati
 group: componenti
 toc: true
 ---
+
+I Toolip di Bootstrap con CSS e JavaScript utilizzano CSS3 per animazioni e attributi `data` per l'archiviazione di titoli locali.
 
 {% capture callout %}
 ##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
@@ -34,7 +36,7 @@ bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 - Quando attivati da collegamenti ipertestuali che si estendono su più righe, i tooltip verranno centrati. Usa `white-space: nowrap;`sui tuoi `<a>` per evitare questo comportamento.
 - I tooltip devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
 
-## Esempio: Abilita i tooltip ovunque
+## Abilitazione di tooltip
 
 Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
 
@@ -44,12 +46,13 @@ $(function () {
 })
 {% endhighlight %}
 
-## Esempi
+### Altri esempi
 
 Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 
-<div class="bd-example tooltip-demo">
-  <p class="muted">
+{% capture example %}
+<div class="tooltip-demo">
+  <p class="text-serif muted">
     Ecco un <a href="#" data-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
     per tratteggiarvi l’accompagnamento<br/>
     degli oggetti di sfondo che pur vivono.<br/>
@@ -63,14 +66,16 @@ Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
     <a href="#" data-toggle="tooltip" title="Terzo tooltip">Il mondo può rifarsi senza me</a>,<br/>
     E intanto gli altri mi denigreranno
   </p>
-  <p>
+  <small>
     <em>La città nuova, Alda Merini</em>
-  </p>
+  </small>
 </div>
+{% endcapture %}{% include example.html content=example %}
 
 Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei tooltip: sopra, destra, sotto, e sinistra.
 
-<div class="bd-example tooltip-demo">
+{% capture example %}
+<div class="tooltip-demo">
   <div class="bd-example-tooltips">
     <div class="container">
       <div class="row mt-3">
@@ -105,21 +110,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
     </div>
   </div>
 </div>
-
-{% highlight html %}
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip in alto">
-  Tooltip in alto
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip a destra">
-  Tooltip a destra
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-  Tooltip in basso
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip a sinistra">
-  Tooltip a sinistra
-</button>
-{% endhighlight %}
+{% endcapture %}{% include example.html content=example %}
 
 E con codice HTML personalizzato:
 
