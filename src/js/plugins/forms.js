@@ -1,11 +1,10 @@
 $(function () {
 
   const inputSelector = `${['text', 'password', 'email', 'url', 'tel', 'number', 'search']
-    .map((selector) => `input[type=${selector}]:enabled:not([readonly])`)
+    .map((selector) => `input[type=${selector}]`)
     .join(', ')}, textarea`;
 
   const inputFileSelector = `input[type="file"]`;
-
 
   $(document).on('focus', inputSelector, (e) => {
     const $this = $(e.target);
@@ -30,7 +29,6 @@ $(function () {
   });
 
   $(document).on('blur', inputFileSelector, (e) => {
-
     const $this = $(e.target);
     $this.siblings('label').addClass('active');
   });
@@ -83,9 +81,13 @@ $(function () {
     .removeClass('invalid')
     .each((index, input) => {
       const $this = $(input);
-      const noDefaultValue = !$this.val();
-      const noPlaceholder = !$this.attr('placeholder');
-      $this.siblings('label, i').toggleClass('active', !(noDefaultValue && noPlaceholder))
+      const hasDefaultValue = !!$this.val();
+      const hasPlaceholder = !!$this.attr('placeholder');
+      if (hasDefaultValue || hasPlaceholder) {
+        $this.siblings('label, i')
+          .css('transition', 'none')
+          .addClass('active')
+      }
     });
 
   $('.autocomplete').autocomplete();

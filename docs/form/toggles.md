@@ -2,8 +2,9 @@
 layout: docs
 group: form
 toc: true
-title: Form
-description: Elementi e stili per la creazione di form accessibili e responsivi.
+
+title: Toggles
+description: Campi di tipo "interruttore"
 ---
 
 ## Toggles

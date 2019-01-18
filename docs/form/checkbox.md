@@ -2,7 +2,8 @@
 layout: docs
 group: form
 toc: true
-title: Form Checkbox
+
+title: Checkbox
 description: Elementi e stili per la creazione di checkbox accessibili.
 ---
 

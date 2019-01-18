@@ -1,9 +1,10 @@
 ---
 layout: docs
-title: Form Input Time
-description: Campi input con bottoni per agevolare la selezione di un'orario
 group: form
 toc: true
+
+title: Input Ora
+description: Campi input con bottoni per agevolare la selezione di un orario
 ---
 
 Il componente input time, o timepicker, è un componente personalizzato per la selezione di un orario.

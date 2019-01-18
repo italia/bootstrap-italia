@@ -9,22 +9,3 @@
   box-shadow: none;
   outline: none;
 }
-/*
-TODO rivedere, ha impatto sui btn.
-a,
-button,
-input,
-select,
-textarea,
-.btn {
-  &:focus,
-  &.focus {
-    @extend .focus--keyboard;
-  }
-
-  &:focus.focus--mouse,
-  &.focus.focus--mouse {
-    @extend .focus--mouse;
-  }
-}
-*/

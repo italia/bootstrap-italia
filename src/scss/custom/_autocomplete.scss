@@ -3,11 +3,14 @@
 //search field
 .autocomplete {
   padding: 0.375rem $v-gap*6 0.375rem $v-gap*3;
+
   &::placeholder {
     color: $neutral-1-a4;
   }
+
   &:disabled {
     background-color: #cacacc;
+
     &::placeholder {
       color: $gray-secondary;
     }
@@ -17,9 +20,10 @@
 //search icon
 .autocomplete-icon {
   position: absolute;
-  right: $v-gap*2;
-  top: 1.9rem;
-	.icon {
+  right: 1rem;
+  top: 1.5rem;
+
+  .icon {
     fill: $gray-secondary;
   }
 }
@@ -46,6 +50,7 @@
     list-style-type: none;
     padding: 0;
   }
+
   //single item
   a {
     padding: 12px $v-gap*3;
@@ -60,29 +65,35 @@
     &:hover {
       color: $primary;
       text-decoration: none;
+
       .icon {
         fill: $primary;
       }
+
       .autocomplete-list-text {
         //item text
         span {
           text-decoration: underline;
         }
+
         //item label
         em {
           color: $primary;
         }
       }
+
       //search highlight
       mark {
         color: $primary;
       }
     }
+
     //item icon + avatar
     .icon, .avatar {
       margin-right: $v-gap*2;
       flex-shrink: 0;
     }
+
     .icon {
       fill: $gray-primary;
     }
@@ -103,6 +114,7 @@
       }
     }
   }
+
   //search highlight
   mark {
     padding: 0;
@@ -122,22 +134,26 @@
     padding-left: 2.5rem;
     padding-right: $v-gap*3;
   }
+
   //search icon
   .autocomplete-icon {
     position: absolute;
     left: 0;
     right: auto;
     top: 2.4rem;
+
     .icon {
       fill: $primary;
       width: 24px;
       height: 24px;
     }
   }
+
   //results list
   .autocomplete-list {
     a {
       font-size: 1.125rem;
+
       .autocomplete-list-text {
         margin-top: 0;
       }
@@ -153,11 +169,13 @@
     a {
       font-size: 0.889rem;
       align-items: flex-start;
+
       .autocomplete-list-text {
         //item text
         span {
           margin-right: $v-gap;
         }
+
         //item label
         em {
           display: inline-block;
@@ -176,19 +194,22 @@
       font-size: 2.222rem;
       padding-left: $v-gap*8;
     }
+
     //search icon
     .autocomplete-icon {
-      top: 2.4rem;
+      top: 2rem;
+
       .icon {
         width: 40px;
         height: 40px;
       }
     }
+
     //results list
     .autocomplete-list {
       a {
         font-size: 1.111rem;
-         //item text
+        //item text
         .autocomplete-list-text {
           span {
             margin-right: $v-gap*2;

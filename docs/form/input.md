@@ -2,7 +2,8 @@
 layout: docs
 group: form
 toc: true
-title: Form Input
+
+title: Input
 description: Elementi e stili per la creazione di input accessibili e responsivi.
 ---
 
@@ -14,11 +15,11 @@ description: Elementi e stili per la creazione di input accessibili e responsivi
   }
 </style>
 
-## Input
+## Esempi di campi di input
 
 Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico e altro.
 
-### Input text
+Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
 {% capture example %}
 <div>
@@ -29,7 +30,6 @@ Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamenta
   <div class="form-group">
     <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
     <label for="exampleInputEmail1">Campo di tipo email</label>
-    <small id="emailHelp1" class="form-text text-muted">Non condivideremo mai la tua email con nessun altro.</small>
   </div>
   <div class="form-group">
     <input type="number" class="form-control" id="exampleInputNumber">
@@ -38,6 +38,53 @@ Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamenta
   <div class="form-group">
     <input type="tel" class="form-control" id="exampleInputTelephone">
     <label for="exampleInputTelephone">Campo di tipo telefono</label>
+  </div>
+  <div class="form-group">
+    <input type="time" class="form-control" id="exampleInputTime" min="9:00" max="18:00">
+    <label for="exampleInputTime">Campo di tipo ora</label>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Utilizzo di placeholder e label
+
+Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
+ 
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Etichetta di esempio</label>
+    <input type="text" class="form-control" id="formGroupExampleInput">
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+ 
+Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
+
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Etichetta di esempio</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`. Può essere esteso usando le classi di utilità come `.text-muted`.
+
+
+{% capture callout %}
+**Associazione del testo di aiuto con gli elementi del modulo form**
+
+Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-labelledby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
+    <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio">
+    <small class="form-text text-muted">Ulteriore testo informativo</small>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -49,24 +96,21 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 {% capture example %}
 <div>
   <div class="form-group">
-    <input type="password" class="form-control input-password" id="exampleInputPassword">
-    <label for="exampleInputPassword">Password</label>
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control input-password" id="exampleInputPassword2" aria-labelledby="infoPassword" placeholder="Password">
-    <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control input-password input-password-strength-meter" id="exampleInputPassword3">
-    <label for="exampleInputPassword3">Password con strength meter</label>
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control input-password input-password-strength-meter" id="exampleInputPassword4">
+    <input type="password" class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
     </span>
-    <label for="exampleInputPassword4">Password con strength meter</label>
+    <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
+    <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control input-password input-password-strength-meter" id="exampleInputPassword3">
+    <span class="password-icon" aria-hidden="true">
+      <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
+      <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
+    </span>
+    <label for="exampleInputPassword3">Password con strength meter</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -77,7 +121,7 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 
 {% capture example %}
 <div class="form-group">
-  <input class="form-control form-control" type="text" id="input-text-disabled" disabled>
+  <input class="form-control" type="text" id="input-text-disabled" disabled>
   <label for="input-text-disabled">Contenuto disabilitato</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -88,20 +132,20 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 
 {% capture example %}
 <div class="form-group">
-  <input class="form-control form-control" type="text" id="input-text-read-only" readonly>
+  <input class="form-control" type="text" id="input-text-read-only" readonly>
   <label for="input-text-read-only">Contenuto in sola lettura</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 #### Readonly normalizzato
 
-Se vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext`.
+Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext` anziché `.form-control`.
 
 {% capture example %}
 <div>
   <div class="form-group">
-    <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" readonly>
-    <label for="staticEmail">Email</label>
+    <input class="form-control-plaintext" type="text" id="input-text-read-only-2" readonly>
+    <label for="input-text-read-only-2">Contenuto in sola lettura</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -294,14 +338,17 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Area di testo
 
-## Textarea
+Per permettere agli utenti di inserire del testo (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo `<textarea>` ridimensionabile.
+
+Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo stesso comportamento dinamico dei campi di input.
 
 {% capture example %}
 <div>
   <div class="form-group">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
