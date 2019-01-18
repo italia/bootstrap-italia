@@ -5,20 +5,20 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell’anno">
+<meta name="description" content="Elementi e stili per la creazione di radio button accessibili.">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.5">
 
-<title>Datepicker · Bootstrap Italia</title>
+<title>Radio Button · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901160844" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901181350" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901160844" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901181350" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="Datepicker">
-<meta name="twitter:description" content="Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell’anno">
+<meta name="twitter:title" content="Radio Button">
+<meta name="twitter:description" content="Elementi e stili per la creazione di radio button accessibili.">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/form/form-datepicker/">
-<meta property="og:title" content="Datepicker">
-<meta property="og:description" content="Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell’anno">
+<meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/form/radio-button/">
+<meta property="og:title" content="Radio Button">
+<meta property="og:description" content="Elementi e stili per la creazione di radio button accessibili.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.29.3/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.30.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -350,10 +350,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                       <span>Callout</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
-                      <span>Carousel</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Carousel</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
-                      <span>Chips</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Chips</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
                       <span>Collapse</span></a>
@@ -408,9 +408,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
                       <span>Tooltip</span></a>
-                  </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/componenti/transfer/">
-                      <span>Transfer</span></a>
                   </li></ul>
               
             </li><li>
@@ -422,34 +419,34 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
               </a>
               <ul class="link-sublist collapse show" id="collapse-6"><li>
                     <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
-                      <span>Introduzione</span><span class="badge badge-secondary text-white">wip</span></a>
+                      <span>Introduzione</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-checkbox/">
-                      <span>Form Checkbox</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input/">
+                      <span>Input</span></a>
                   </li><li>
-                    <a class="list-item  active" href="/bootstrap-italia/docs/form/form-datepicker/">
-                      <span>Form Datepicker</span><span class="badge badge-secondary text-white">wip</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input-numerico/">
+                      <span>Input Numerico</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-input/">
-                      <span>Form Input</span><span class="badge badge-secondary text-white">wip</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input-calendario/">
+                      <span>Input Calendario</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-input-number/">
-                      <span>Form Input Number</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
+                      <span>Upload</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-input-time/">
-                      <span>Form Input Time</span></a>
+                    <a class="list-item  active" href="/bootstrap-italia/docs/form/radio-button/">
+                      <span>Radio Button</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-radio-button/">
-                      <span>Form Radio Button</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/select/">
+                      <span>Select</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-select/">
-                      <span>Form Select</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/checkbox/">
+                      <span>Checkbox</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-toggles/">
-                      <span>Form Toggles</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/toggles/">
+                      <span>Toggles</span></a>
                   </li><li>
-                    <a class="list-item " href="/bootstrap-italia/docs/form/form-upload/">
-                      <span>Form Upload</span></a>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/transfer/">
+                      <span>Transfer</span></a>
                   </li></ul>
               
             </li><li>
@@ -489,14 +486,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
           <div class="d-none d-xl-block col-xl-2 bd-toc">
   <div class="sidebar-wrapper">
-    <h3>Datepicker</h3>
+    <h3>Radio Button</h3>
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#abilitazione-del-datepicker">Abilitazione del Datepicker</a></li>
-<li class="toc-entry toc-h2"><a href="#esempi">Esempi</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#versione-scura">Versione scura</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#inline">Inline</a></li>
+<li class="toc-entry toc-h3"><a href="#disabilitato">Disabilitato</a></li>
+<li class="toc-entry toc-h3"><a href="#gruppi">Gruppi</a></li>
 </ul>
   </div>
 </div>
@@ -504,67 +498,169 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
-          <h1 class="bd-title" id="content">Datepicker</h1>
-          <p class="bd-lead">Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell’anno</p>
-          <p>Il datepicker utilizza un plugin Javascript di terze parti, “Accessible Bootstrap Date Picker”. Per maggiori informazioni è possibile consultarne la <a href="http://eureka2.github.io/ab-datepicker/#">documentazione completa</a>.</p>
-
-<h2 id="abilitazione-del-datepicker">Abilitazione del Datepicker</h2>
-
-<p>Per inizializzare il plugin, utilizzare il seguente script:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'.it-date-datepicker'</span><span class="p">).</span><span class="nx">datepicker</span><span class="p">({</span>
-      <span class="na">inputFormat</span><span class="p">:</span> <span class="p">[</span><span class="s2">"gg/mm/aaaa"</span><span class="p">],</span>
-    <span class="p">});</span>
-<span class="p">});</span></code></pre></figure>
-
-<h2 id="esempi">Esempi</h2>
-
-<p>Clicca sull’icona per visualizzare il datepicker.</p>
+          <h1 class="bd-title" id="content">Radio Button</h1>
+          <p class="bd-lead">Elementi e stili per la creazione di radio button accessibili.</p>
+          <p>Per utilizzare i radio button personalizzati è necessario inserire la classe <code class="highlighter-rouge">.form-check</code> nell’elemento padre.</p>
 
 <div class="bd-example">
-<div class="it-datepicker-wrapper">
-  <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="" title="format : " />
-    <label for="date1">Date label</label>
+<div>
+  <div class="form-check">
+    <input name="gruppo1" type="radio" id="radio1" checked="" />
+    <label for="radio1">Radio di esempio 1</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo1" type="radio" id="radio2" />
+    <label for="radio2">Radio di esempio 2</label>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-datepicker-wrapper"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control it-date-datepicker"</span> <span class="na">id=</span><span class="s">"date1"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"format : "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"date1"</span><span class="nt">&gt;</span>Date label<span class="nt">&lt;/label&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>Radio di esempio 1<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>Radio di esempio 2<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="versione-scura">Versione scura</h3>
+<h3 id="inline">Inline</h3>
 
-<p>Per utilizzare il Datepicker in versione scura, aggiungere la classe <code class="highlighter-rouge">.theme-dark</code> al div <code class="highlighter-rouge">.it-datepicker-wrapper</code>.</p>
-
-<p>Clicca sull’icona per visualizzare il datepicker.</p>
+<p>Per allineare orizzontalmente le <code class="highlighter-rouge">checkbox</code> o i <code class="highlighter-rouge">radio</code> basterà aggiungere la classe <code class="highlighter-rouge">.form-check-inline</code> a qualsiasi <code class="highlighter-rouge">.form-check</code>.</p>
 
 <div class="bd-example">
-<div class="it-datepicker-wrapper theme-dark">
-  <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="" title="format : " />
-    <label for="date2">Date label</label>
+<div>
+  <div class="row">
+    <div class="form-check form-check-inline">
+      <input name="gruppo2" type="radio" id="radio4" checked="" />
+      <label for="radio4">Opzione 1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input name="gruppo2" type="radio" id="radio5" />
+      <label for="radio5">Opzione 2</label>
+    </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-datepicker-wrapper theme-dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control it-date-datepicker"</span> <span class="na">id=</span><span class="s">"date2"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"format : "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"date2"</span><span class="nt">&gt;</span>Date label<span class="nt">&lt;/label&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio4"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio4"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-inline"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio5"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    $('.it-date-datepicker').datepicker({
-      inputFormat: ["gg/mm/aaaa"],
-    });
-  })
-</script>
+<h3 id="disabilitato">Disabilitato</h3>
+
+<p>Affinchè i campi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> risultino disabilitati occorrerà aggiungere l’attributo <code class="highlighter-rouge">disabled</code> all’input e la classe <code class="highlighter-rouge">.disabled</code> alla label relativa.</p>
+
+<div class="bd-example">
+<div>
+  <div class="form-check">
+    <input name="gruppo3" type="radio" class="with-gap" id="radio7" checked="" disabled="" />
+    <label for="radio7" class="disabled">Opzione 1 selezionato</label>
+  </div>
+  <div class="form-check">
+    <input name="gruppo3" type="radio" class="with-gap" id="radio8" disabled="" />
+    <label for="radio8" class="disabled">Opzione 2 non selezionato</label>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo3"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"with-gap"</span> <span class="na">id=</span><span class="s">"radio7"</span> <span class="na">checked</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio7"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 1 selezionato<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo3"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"with-gap"</span> <span class="na">id=</span><span class="s">"radio8"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio8"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 2 non selezionato<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="gruppi">Gruppi</h3>
+
+<p>Per poter raggruppare gli elementi <code class="highlighter-rouge">checkbox</code> e <code class="highlighter-rouge">radio</code> occorrerà aggiungere al <code class="highlighter-rouge">.form-check</code> la classe <code class="highlighter-rouge">.form-check-group</code>. L’elemento grafico di spunta verrà allineato alla destra del contenuto testuale.</p>
+
+<div class="bd-example">
+<div>
+  <div class="row">
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio10" checked="" />
+        <label for="radio10">Opzione 1</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio11" />
+        <label for="radio11">Opzione 2</label>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo4" type="radio" id="radio12" disabled="" />
+        <label for="radio12" class="disabled">Opzione 3</label>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="form-check form-check-group">
+        <input checked="" name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help" />
+        <label for="radio13">Opzione 1</label>
+        <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo5" type="radio" id="radio14" aria-labelledby="radio14-help" />
+        <label for="radio14">Opzione 2</label>
+        <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+      <div class="form-check form-check-group">
+        <input name="gruppo5" type="radio" id="radio15" aria-labelledby="radio15-help" disabled="disabled" />
+        <label for="radio15" class="disabled">Opzione 3</label>
+        <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio10"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio10"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio11"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio11"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo4"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio12"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio12"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio13"</span> <span class="na">aria-labelledby=</span><span class="s">"radio13-help"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio13"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio13-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio14"</span> <span class="na">aria-labelledby=</span><span class="s">"radio14-help"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio14"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio14-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check form-check-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"gruppo5"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio15"</span> <span class="na">aria-labelledby=</span><span class="s">"radio15-help"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio15"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">id=</span><span class="s">"radio15-help"</span> <span class="na">class=</span><span class="s">"form-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 
         </main>
@@ -581,14 +677,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901160844"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901181350"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901160844"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901181350"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -603,7 +699,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901160844"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901181350"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
