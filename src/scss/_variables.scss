@@ -202,7 +202,7 @@ $dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, .05);
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
 $dropdown-custom-button-font-size: 1rem;
-$dropdown-custom-button-color: $italia;
+$dropdown-custom-button-color: $primary;
 $dropdown-custom-button-background: transparent;
 $dropdown-custom-button-caret-font-size: 0.55rem;
 $dropdown-custom-button-caret-distance: $v-gap;
@@ -311,12 +311,12 @@ $pager-item-size-mobile: 2.5rem; // 40px
 $pager-item-size-tablet: 2.6666666666666665rem; // 48px
 $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
-$pager-item-current-color: $italia;
-$pager-item-current-border: 1px solid $italia;
+$pager-item-current-color: $primary;
+$pager-item-current-border: 1px solid $primary;
 $pager-font-size: 0.8888888888888888rem; // 16px
 $pager-font-weight: 600;
 $pager-font-color: $neutral-1-a7;
-$pager-hover-color: $italia;
+$pager-hover-color: $primary;
 $pager-icon-color: $primary;
 $pager-icon-size: 0.7rem;
 $pager-disabled-color: $neutral-2-b2;
