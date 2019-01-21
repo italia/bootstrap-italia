@@ -4,6 +4,7 @@ group: come-iniziare
 redirect_from:
   - /come-iniziare/
   - /docs/come-iniziare/
+  - /docs/
 toc: true
 title: Introduzione
 description: Come usare Bootstrap Italia nel tuo progetto
