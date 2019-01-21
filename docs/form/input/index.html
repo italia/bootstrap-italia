@@ -12,13 +12,13 @@
 <title>Input · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901211256" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901211340" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901211256" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901211340" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -136,7 +136,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.30.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.30.2/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -491,6 +491,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h2"><a href="#esempi-di-campi-di-input">Esempi di campi di input</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#utilizzo-di-placeholder-e-label">Utilizzo di placeholder e label</a></li>
+<li class="toc-entry toc-h3"><a href="#input-con-icona-o-bottoni">Input con icona o bottoni</a></li>
 <li class="toc-entry toc-h3"><a href="#input-password">Input password</a></li>
 <li class="toc-entry toc-h3"><a href="#disabilitato">Disabilitato</a></li>
 <li class="toc-entry toc-h3"><a href="#readonly">Readonly</a></li>
@@ -578,35 +579,27 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Si può includere un’etichetta che si riposiziona automaticamente quando l’utente utilizza il campo di testo.</p>
 
 <div class="bd-example">
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" />
-  </div>
+<div class="form-group">
+  <label for="formGroupExampleInput">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" />
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Si può abbinare all’etichetta un <em>placeholder</em> (testo di esempio) per ulteriore chiarezza.</p>
 
 <div class="bd-example">
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio" />
-  </div>
+<div class="form-group">
+  <label for="formGroupExampleInput2">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio" />
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput2"</span> <span class="na">placeholder=</span><span class="s">"Testo di esempio"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInput2"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput2"</span> <span class="na">placeholder=</span><span class="s">"Testo di esempio"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento <code class="highlighter-rouge">&lt;small&gt;</code> con classe <code class="highlighter-rouge">.form-text</code> all’interno di <code class="highlighter-rouge">.form-group</code>. Può essere esteso usando le classi di utilità come <code class="highlighter-rouge">.text-muted</code>.</p>
@@ -618,20 +611,85 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 
 <div class="bd-example">
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio" />
-    <small class="form-text text-muted">Ulteriore testo informativo</small>
+<div class="form-group">
+  <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio" />
+  <small class="form-text text-muted">Ulteriore testo informativo</small>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInputWithHelp"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInputWithHelp"</span> <span class="na">placeholder=</span><span class="s">"Testo di esempio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Ulteriore testo informativo<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="input-con-icona-o-bottoni">Input con icona o bottoni</h3>
+
+<div class="bd-example">
+<div class="form-group">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><svg class="icon icon-sm"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+    </div>
+    <label for="input-group-1">Con Etichetta</label>
+    <input type="text" class="form-control" id="input-group-1" name="input-group-1" />
+    <div class="input-group-append">
+      <button class="btn" type="button" id="button-1">Invio</button>
+    </div>
   </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+    </div>
+    <label for="input-group-2">Con Etichetta e placeholder</label>
+    <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum" />
+    <div class="input-group-append">
+      <button class="btn" type="button" id="button-2">Invio</button>
+    </div>
+  </div>
+  <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+      </div>
+      <label for="input-group-3">Con Etichetta e bottone "primary"</label>
+      <input type="text" class="form-control" id="input-group-3" name="input-group-3" />
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" id="button-3">Invio</button>
+      </div>
+    </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formGroupExampleInputWithHelp"</span><span class="nt">&gt;</span>Etichetta di esempio<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInputWithHelp"</span> <span class="na">placeholder=</span><span class="s">"Testo di esempio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"form-text text-muted"</span><span class="nt">&gt;</span>Ulteriore testo informativo<span class="nt">&lt;/small&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-pencil"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-group-1"</span><span class="nt">&gt;</span>Con Etichetta<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"input-group-1"</span> <span class="na">name=</span><span class="s">"input-group-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"button-1"</span><span class="nt">&gt;</span>Invio<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-danger"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-pencil"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-group-2"</span><span class="nt">&gt;</span>Con Etichetta e placeholder<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"input-group-2"</span> <span class="na">name=</span><span class="s">"input-group-2"</span> <span class="na">placeholder=</span><span class="s">"Lorem Ipsum"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"button-2"</span><span class="nt">&gt;</span>Invio<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-pencil"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-group-3"</span><span class="nt">&gt;</span>Con Etichetta e bottone "primary"<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"input-group-3"</span> <span class="na">name=</span><span class="s">"input-group-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"button-3"</span><span class="nt">&gt;</span>Invio<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="input-password">Input password</h3>
@@ -1076,14 +1134,14 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901211256"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901211340"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901211256"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901211340"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -1098,7 +1156,7 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901211256"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901211340"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
