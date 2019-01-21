@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="it">
-  <head>
+<head>
     
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
+<meta name="description" content="Alcuni esempi di utilizzo della libreria">
 <meta name="author" content="Team per la Trasformazione Digitale">
 <meta name="generator" content="Jekyll v3.8.5">
 
 <title>Esempi · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901181350" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201901211138" rel="stylesheet">
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901181350" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201901211138" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -33,13 +35,13 @@
 <meta name="twitter:site" content="@teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
 <meta name="twitter:title" content="Esempi">
-<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
+<meta name="twitter:description" content="Alcuni esempi di utilizzo della libreria">
 <meta name="twitter:image" content="/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://italia.github.io/bootstrap-italia/docs/esempi/">
 <meta property="og:title" content="Esempi">
-<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA">
+<meta property="og:description" content="Alcuni esempi di utilizzo della libreria">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
 <meta property="og:image:secure_url" content="/bootstrap-italia/docs/assets/img/favicons/social-card.png">
@@ -68,7 +70,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 
   </head>
-  <body onload="initCoverAnimation()">
+  <body>
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -108,8 +110,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   </div>
 </nav>
 
-    <header class="navbar-main navbar navbar-dark bd-navbar px-3 ">
-  <div class="container">
+    <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
+  <div class="container-fluid">
     <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
       <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
   
@@ -127,10 +129,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </a>
 
     
+    <button class="btn btn-sm btn-outline-secondary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.30.0/bootstrap-italia.zip" aria-label="Download">
+        <a title="Download Bootstrap Italia" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v0.30.1/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -142,105 +148,412 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </ul>
 
     
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+    </div>
+    
   </div>
 </header>
 
 
-    <div class="container my-5">
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <nav class="collapse bd-links" id="bd-docs-nav"><div class="sidebar-wrapper">
+    <h3 class="no_toc">Documentazione</h3>
+    <div class="sidebar-linklist-wrapper">
+      <div class="link-list-wrapper">
+        <ul class="link-list"><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-1" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1">
+                <span>Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-1"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+                      <span>Strumenti di compilazione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+                      <span>Modificare Componenti</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+                      <span>Componente base</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2">
+                <span>Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-2"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/allineamento-verticale/">
+                      <span>Allineamento verticale</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/bordi/">
+                      <span>Bordi</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/clearfix/">
+                      <span>Clearfix</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/dimensionamento/">
+                      <span>Dimensionamento</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">
+                      <span>Display</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/flex/">
+                      <span>Flex</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/float/">
+                      <span>Float</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">
+                      <span>Griglie</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/ombreggiature/">
+                      <span>Ombreggiature</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
+                      <span>Posizionamento</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
+                      <span>Spaziature</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-3" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-3">
+                <span>Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-3"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
+                      <span>Codice</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/embed/">
+                      <span>Embed</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
+                      <span>Immagini</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/">
+                      <span>Liste</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
+                      <span>Liste di immagini</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
+                      <span>Liste di link</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
+                      <span>Oggetto Media</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
+                      <span>Tabelle</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/testo/">
+                      <span>Testo</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tipografia/">
+                      <span>Tipografia</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-4" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-4">
+                <span>Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-4"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/bottomnav/">
+                      <span>BottomNav</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/">
+                      <span>Breadcrumbs</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/header/">
+                      <span>Header</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/megamenu/">
+                      <span>Megamenu</span><span class="badge badge-secondary text-white">wip</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
+                      <span>Navscroll</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/sidebar/">
+                      <span>Sidebar</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/skiplinks/">
+                      <span>Skiplinks</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/thumbnav/">
+                      <span>Thumbnav</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/toolbar/">
+                      <span>Toolbar</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-indietro/">
+                      <span>Torna indietro</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-su/">
+                      <span>Torna su</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-5" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-5">
+                <span>Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-5"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
+                      <span>Affix</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/alert/">
+                      <span>Alert</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/avatar/">
+                      <span>Avatar</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
+                      <span>Badge</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
+                      <span>Bottoni</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
+                      <span>Card</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
+                      <span>Callout</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
+                      <span>Carousel</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
+                      <span>Chips</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
+                      <span>Collapse</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/cookiebar/">
+                      <span>Cookiebar</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/dimmer/">
+                      <span>Dimmer</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/dropdown/">
+                      <span>Dropdown</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/forward/">
+                      <span>Forward</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/hero/">
+                      <span>Hero</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/modale/">
+                      <span>Modale</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/notifiche/">
+                      <span>Notifiche</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/overlay/">
+                      <span>Overlay</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/paginazione/">
+                      <span>Paginazione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/popover/">
+                      <span>Popover</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/progress-indicators/">
+                      <span>Progress Indicators</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/rating/">
+                      <span>Rating</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/sections/">
+                      <span>Sections</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
+                      <span>Steppers</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
+                      <span>Tab</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/timeline/">
+                      <span>Timeline</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
+                      <span>Tooltip</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-6" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-6">
+                <span>Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-6"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
+                      <span>Introduzione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input/">
+                      <span>Input</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input-numerico/">
+                      <span>Input Numerico</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/input-calendario/">
+                      <span>Input Calendario</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
+                      <span>Upload</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/radio-button/">
+                      <span>Radio Button</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/select/">
+                      <span>Select</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/checkbox/">
+                      <span>Checkbox</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/toggles/">
+                      <span>Toggles</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/form/transfer/">
+                      <span>Transfer</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+              <!-- One:usare ID -->
+              <a class="list-item large medium right-icon " href="#collapse-7" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-7">
+                <span>Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+              </a>
+              <ul class="link-sublist collapse " id="collapse-7"><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
+                      <span>Colori</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/utilities/colori-custom/">
+                      <span>Colori Custom</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/utilities/icone/">
+                      <span>Icone</span></a>
+                  </li></ul>
+              
+            </li><li>
+              
+                <a class="list-item active" href="/bootstrap-italia/docs/esempi/"><span>Esempi</span></a>
+              
+            </li><li>
+              
+                <a class="list-item active" href="/bootstrap-italia/docs/informazioni/"><span>Informazioni</span></a>
+              
+            </li></ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Esempi</h1>
+          <p class="bd-lead">Alcuni esempi di utilizzo della libreria</p>
+          <div class="container my-5">
   <main class="bd-content" role="main">
-    <h1 class="bd-title" id="content">Esempi</h1>
-    <p class="bd-lead"></p>
     
       <h2>Componenti</h2>
       <p>Di seguito sono riportati alcuni esempi per il corretto utilizzo dei componenti, secondo le linee guida di design.</p>
       
         <div class="row">
-          <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-            <a href="/bootstrap-italia/docs/esempi/cookiebar/">
-              <h5 class="mb-1">Cookiebar</h5>
-            </a>
+          <div class="col-sm-6 mb-3">
+            <a href="/bootstrap-italia/docs/esempi/cookiebar/" class="d-inline-block text-uppercase font-weight-bold">
+              Cookiebar
+              <svg class="icon icon-primary icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg></a>
             <p class="text-muted">Una barra di avviso sui cookie.</p>
           </div>
         
       
         
-          <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-            <a href="/bootstrap-italia/docs/esempi/notifications/">
-              <h5 class="mb-1">Notifications</h5>
-            </a>
+          <div class="col-sm-6 mb-3">
+            <a href="/bootstrap-italia/docs/esempi/notifications/" class="d-inline-block text-uppercase font-weight-bold">
+              Notifications
+              <svg class="icon icon-primary icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg></a>
             <p class="text-muted">Pagina con vari esempi di Notifications.</p>
           </div>
         
       
         
-          <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-            <a href="/bootstrap-italia/docs/esempi/navscroll/">
-              <h5 class="mb-1">Navscroll</h5>
-            </a>
+          <div class="col-sm-6 mb-3">
+            <a href="/bootstrap-italia/docs/esempi/navscroll/" class="d-inline-block text-uppercase font-weight-bold">
+              Navscroll
+              <svg class="icon icon-primary icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg></a>
             <p class="text-muted">Pagina con esempio di Navscroll.</p>
           </div>
         
       
         
-          <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-            <a href="/bootstrap-italia/docs/esempi/hero/">
-              <h5 class="mb-1">Hero</h5>
-            </a>
+          <div class="col-sm-6 mb-3">
+            <a href="/bootstrap-italia/docs/esempi/hero/" class="d-inline-block text-uppercase font-weight-bold">
+              Hero
+              <svg class="icon icon-primary icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg></a>
             <p class="text-muted">Pagina con vari esempi di Hero.</p>
           </div>
         </div>
       
     
-      <h2>Esempi di bootstrap</h2>
+      <h2>Template</h2>
+      <p>Questa area conterrà alcuni esempi di template.</p>
+      
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <a href="/bootstrap-italia/docs/esempi/template-vuoto/" class="d-inline-block text-uppercase font-weight-bold">
+              Template vuoto
+              <svg class="icon icon-primary icon-sm"><use xlink:href="/dist/svg/sprite.svg#it-chevron-right"></use></svg><span class="badge badge-warning badge-pill mx-2 text-white">work in progress</span></a>
+            <p class="text-muted">Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia.</p>
+          </div>
+        </div>
+      
+    
+      <h2>Esempi di bootstrap 4</h2>
       <p>La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.2/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.</p>
       
     
   </main>
 </div>
 
-
-    <footer class="bd-footer text-muted">
-  <div class="container">
-    <div class="py-4">
-      <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="px-2 py-3">
-            <a href="https://www.agid.gov.it/" target="_blank">
-              <img src="/bootstrap-italia/docs/assets/img/icons/logo-agid.svg" alt="Agenzia per l'Italia Digitale" height="36" style="max-width: 100%" />
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 d-flex">
-          <div class="px-2 py-2">
-            <a href="https://teamdigitale.governo.it/" target="_blank">
-              <img src="/bootstrap-italia/docs/assets/img/icons/logo-team-digitale-full.svg" alt="Team per la Trasformazione Digitale" height="48" />
-            </a>
-          </div>
-        </div>
-        <div class="footer-social col-12 col-md-4 text-white text-right pt-2">
-          <span class="d-none d-sm-inline">Seguici su Designers Italia: <br/></span>
-          <a class="p-2 text-white" href="https://designers.italia.it/" title="Sito di Designers Italia" target="_blank"><svg class="icon icon-sm icon-light align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-designers-italia"></use></svg><span class="sr-only">Sito di Designers Italia</span></a>
-          <a class="p-2 text-white" href="https://twitter.com/DesignersITA" title="Designers Italia - Twitter" target="_blank"><svg class="icon icon-sm icon-light align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-twitter"></use></svg><span class="sr-only">Designers Italia - Twitter</span></a>
-          <a class="p-2 text-white" href="https://medium.com/designers-italia" title="Designers Italia - Medium" target="_blank"><svg class="icon icon-sm icon-light align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-medium"></use></svg><span class="sr-only">Designers Italia - Medium</span></a>
-          <a class="p-2 text-white" href="https://behance.net/italia" title="Designers Italia - Behance" target="_blank"><svg class="icon icon-sm icon-light align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-behance"></use></svg><span class="sr-only">Designers Italia - Behance</span></a>
-        </div>
+        </main>
       </div>
     </div>
-    <div class="row py-4 border-white border-top">
-      <ul class="col list-inline small">
-        <li class="list-inline-item px-1">
-          <a href="https://developers.italia.it//it/privacy-policy/" class="small-prints font-weight-bold">Privacy Policy</a>
-        </li>
-        <li class="list-inline-item px-1">
-          <a href="https://developers.italia.it//it/note-legali/" class="small-prints font-weight-bold">Note Legali</a>
-        </li>
-        <li class="list-inline-item px-1">
-          <a href="/bootstrap-italia/docs/informazioni/" class="small-prints font-weight-bold">Informazioni</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
 
     <div class="cookiebar">
   <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
@@ -252,14 +565,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901181350"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201901211138"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901181350"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201901211138"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -274,6 +587,21 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901181350"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201901211138"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
   </body>
 </html>
