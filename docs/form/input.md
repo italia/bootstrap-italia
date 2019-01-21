@@ -51,22 +51,18 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
 Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
  
 {% capture example %}
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInput">
-  </div>
+<div class="form-group">
+  <label for="formGroupExampleInput">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInput">
 </div>
 {% endcapture %}{% include example.html content=example %}
  
 Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
 
 {% capture example %}
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
-  </div>
+<div class="form-group">
+  <label for="formGroupExampleInput2">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -80,12 +76,47 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
-<div>
-  <div class="form-group">
-    <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
-    <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio">
-    <small class="form-text text-muted">Ulteriore testo informativo</small>
+<div class="form-group">
+  <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
+  <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio">
+  <small class="form-text text-muted">Ulteriore testo informativo</small>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Input con icona o bottoni
+
+{% capture example %}
+<div class="form-group">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+    </div>
+    <label for="input-group-1">Con Etichetta</label>
+    <input type="text" class="form-control" id="input-group-1" name="input-group-1">
+    <div class="input-group-append">
+      <button class="btn" type="button" id="button-1">Invio</button>
+    </div>
   </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+    </div>
+    <label for="input-group-2">Con Etichetta e placeholder</label>
+    <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
+    <div class="input-group-append">
+      <button class="btn" type="button" id="button-2">Invio</button>
+    </div>
+  </div>
+  <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+      </div>
+      <label for="input-group-3">Con Etichetta e bottone "primary"</label>
+      <input type="text" class="form-control" id="input-group-3" name="input-group-3">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" id="button-3">Invio</button>
+      </div>
+    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

@@ -143,17 +143,30 @@ textarea {
 
 
 // Input group
-.input-group-text {
-  padding: $input-spacing-y $input-spacing-x;
-  border-bottom: 1px solid $gray-secondary;
-}
+.input-group {
+  padding: $form-group-spacing-y 0;
+  label {
+    left: 2rem;
+  }
+  .input-group-text {
+    padding: $input-spacing-y $input-spacing-x;
+    border-bottom: 1px solid $gray-secondary;
+  }
 
-.input-group-prepend {
-  margin-right: 0;
-}
+  .input-group-prepend {
+    margin-right: 0;
+  }
 
-.input-group-append {
-  margin-left: 0;
+  .input-group-append {
+    margin-left: 0;
+    .btn {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: 1px solid #5c6f82;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
 }
 
 .input-group-lg {
