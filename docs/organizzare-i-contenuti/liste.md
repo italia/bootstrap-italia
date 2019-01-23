@@ -13,7 +13,7 @@ description: La lista è un componente flessibile per la visualizzazione di list
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-right-zone"><span class="text">Label 1</span>
         </div>
       </a>
@@ -44,7 +44,7 @@ L'elemento **`.avatar`** precede l'elemento  **`.it-right-zone`** che contiene i
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
         <div class="it-right-zone"><span class="text">Label 1</span>
         </div>
@@ -75,7 +75,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-rounded-icon">
           <svg class="icon">
             <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-folder"></use>
@@ -118,7 +118,7 @@ L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento  
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone"><span class="text">Label 1</span>
         </div>
@@ -154,10 +154,10 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento  **`.te
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 1</span>
-          <svg class="">
+          <svg class="icon">
             <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
           </svg>
         </div>
@@ -195,7 +195,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento  **`.te
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <svg class="icon">
@@ -236,7 +236,7 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento  
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <span class="it-multiple">
@@ -351,7 +351,7 @@ L'elemento **`.metadata`**, segue l'elemento  **`.text`**.
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
         <div class="it-right-zone"><span class="text">Label 1</span><span class="metadata">metadata</span>
         </div>
@@ -433,7 +433,7 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
-      <a href="#" class="">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 1<em>Font Titillium 14px. Leading 20px.</em></span>
           <span class="it-multiple">
