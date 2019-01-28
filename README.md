@@ -53,4 +53,4 @@ A questo punto, è necessario impostare il tuo ambiente locale per la compilazio
 della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/)
 è possibile avere tutte le informazioni necessarie a questo scopo.
 
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE) [![Join the chat at https://gitter.im/bootstrap-Italia/community](https://badges.gitter.im/bootstrap-Italia/community.svg)](https://gitter.im/bootstrap-Italia/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
