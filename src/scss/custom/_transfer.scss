@@ -6,11 +6,11 @@
   .transfer-scroll {
     height: $transfer-height;
     overflow-x: hidden;
-    margin-bottom: $v-gap*3;
+    margin-bottom: $v-gap * 3;
   }
 
   .form-check {
-    padding: 0 $v-gap*3;
+    padding: 0 $v-gap * 3;
     position: relative;
   }
 
@@ -27,10 +27,10 @@
     }
 
     .form-check {
-      padding: $v-gap*3 $v-gap*3 $v-gap;
+      padding: $v-gap * 3 $v-gap * 3 $v-gap;
       margin-top: 0;
 
-      [type=checkbox] + label {
+      [type='checkbox'] + label {
         display: flex;
         justify-content: space-between;
       }
@@ -57,7 +57,7 @@
       transform: none;
       backface-visibility: hidden;
       opacity: 1;
-      background: #FFF;
+      background: #fff;
     }
 
     input.semi-checked:not(:checked) + label::after {
@@ -66,7 +66,6 @@
       z-index: 0;
     }
   }
-
 }
 
 // buttons
@@ -76,24 +75,25 @@
 
   a {
     display: flex;
-    width: $v-gap*5;
-    height: $v-gap*5;
+    width: $v-gap * 5;
+    height: $v-gap * 5;
     border: $transfer-border;
     border-radius: 100px;
     align-items: center;
     justify-content: center;
-    margin: $v-gap*3 $v-gap;
+    margin: $v-gap * 3 $v-gap;
     cursor: default;
     pointer-events: none;
 
     svg {
-      width: $v-gap*2;
-      height: $v-gap*2;
+      width: $v-gap * 2;
+      height: $v-gap * 2;
       fill: $transfer-header-line-color;
     }
 
-    &.transfer, &.backtransfer {
-      transform: rotate(90deg)
+    &.transfer,
+    &.backtransfer {
+      transform: rotate(90deg);
     }
 
     &.active {
@@ -110,7 +110,6 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
@@ -123,8 +122,8 @@
 
     a {
       display: inline-flex;
-      width: $v-gap*5;
-      height: $v-gap*5;
+      width: $v-gap * 5;
+      height: $v-gap * 5;
       border: $transfer-border;
       border-radius: 100px;
       align-items: center;
@@ -133,10 +132,10 @@
       align-self: center;
 
       svg {
-
       }
 
-      &.transfer, &.backtransfer {
+      &.transfer,
+      &.backtransfer {
         transform: none;
       }
     }
@@ -145,10 +144,8 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }

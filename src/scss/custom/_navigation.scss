@@ -46,7 +46,7 @@
       overflow-y: auto;
       transform: translateX(-100%);
       //- transizione de definire
-      transition: all 0.2s cubic-bezier(.29, .85, .5, .99);
+      transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
 
       .navbar-nav {
         padding: $navigation-h-padding 0 0;
@@ -57,7 +57,6 @@
           // link list variation
           .link-list {
             h3 {
-
             }
           }
         }
@@ -79,10 +78,9 @@
             svg {
               fill: $navbar-bg-color;
               transition: all 0.3s;
-
             }
 
-            &[aria-expanded="true"] {
+            &[aria-expanded='true'] {
               .icon {
                 transform: scaleY(-1);
               }
@@ -90,7 +88,8 @@
           }
 
           &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+            border-left: $navigation-link-active-bar-size solid
+              $navigation-link-active-bar-color;
           }
 
           &:hover:not(.active) {
@@ -103,7 +102,7 @@
     &.expanded {
       .menu-wrapper {
         transform: translateX(0);
-        transition: all 0.3s cubic-bezier(.29, .85, .5, .99);
+        transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
       }
 
       .close-div {
@@ -124,7 +123,7 @@
     z-index: 10;
     pointer-events: none;
     //- transizione de definire
-    transition: all 0.3s cubic-bezier(.1, .57, .4, .97);
+    transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
     // pulsante di chiusura menu
     .close-menu {
       background: transparent;
@@ -266,7 +265,7 @@
             }
           }
 
-          &[aria-expanded = "true"] {
+          &[aria-expanded='true'] {
             &:after {
               transform: scaleY(1);
             }
@@ -278,7 +277,11 @@
         content: '';
         display: block;
         width: $inline-menu-line-width;
-        background: linear-gradient(to bottom, rgba($neutral-2-a1, 1) 0%, rgba($neutral-2-a1, .3) 100%);
+        background: linear-gradient(
+          to bottom,
+          rgba($neutral-2-a1, 1) 0%,
+          rgba($neutral-2-a1, 0.3) 100%
+        );
         position: absolute;
         right: 0;
         top: 0;
@@ -290,12 +293,10 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
 }
 
 //Tablet horizontal / small desktop
@@ -343,7 +344,6 @@
       }
 
       &.collapsed {
-
       }
 
       /*lista menu*/
@@ -365,7 +365,8 @@
 
             &.active {
               border-left: 0;
-              border-bottom: $navigation-link-active-bar-size solid $navigation-link-active-bar-color-desk;
+              border-bottom: $navigation-link-active-bar-size solid
+                $navigation-link-active-bar-color-desk;
               background: transparent;
             }
 
@@ -423,8 +424,8 @@
         ul {
           li {
             a {
-
-              span, i {
+              span,
+              i {
                 color: $color-primary;
               }
 
@@ -448,7 +449,6 @@
   }
   .custom-navbar-toggler {
     display: none;
-
   }
   .has-megamenu {
     .navbar-collapsable {
@@ -467,15 +467,15 @@
         top: auto;
         bottom: -$dropdown-menu-notch-base-size - 6;
         left: $dropdown-menu-notch-position-x;
-        width: $dropdown-menu-notch-base-size*3;
-        height: $dropdown-menu-notch-base-size*3;
+        width: $dropdown-menu-notch-base-size * 3;
+        height: $dropdown-menu-notch-base-size * 3;
         border-radius: $dropdown-menu-radius;
         background-color: $dropdown-bg;
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity $dropdown-menu-animation-speed/2 cubic-bezier(.1, .57, .36, .99);
-
+        transition: opacity $dropdown-menu-animation-speed/2
+          cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
@@ -492,7 +492,7 @@
       min-width: auto;
       left: $navigation-h-padding;
       right: $navigation-h-padding;
-      animation-timing-function: cubic-bezier(.1, .57, .36, .99);
+      animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
       //hide arrow
       &:before {
         display: none;
@@ -505,8 +505,6 @@
   }
 }
 
-
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }

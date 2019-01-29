@@ -1,10 +1,10 @@
-input[type="file"] + label {
+input[type='file'] + label {
   background-color: transparent;
 }
 
 /* INPUT FILE */
 .form-file {
-  input[type="file"] {
+  input[type='file'] {
     filter: alpha(opacity=0);
     margin: 0;
     max-width: 100%;
@@ -18,7 +18,7 @@ input[type="file"] + label {
     left: 0;
     line-height: 1.7;
     overflow: hidden;
-    padding: 0.5rem .6rem 2rem;
+    padding: 0.5rem 0.6rem 2rem;
     max-height: 2rem;
     pointer-events: none;
     position: absolute;
@@ -31,7 +31,7 @@ input[type="file"] + label {
       border-color: $primary;
       bottom: -1px;
       color: $primary;
-      content: "Sfoglia";
+      content: 'Sfoglia';
       display: block;
       height: $input-height;
       line-height: 1.7;

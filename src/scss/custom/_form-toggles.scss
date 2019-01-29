@@ -12,7 +12,7 @@
   line-height: 32px;
   font-weight: bold;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     opacity: 0;
     width: 0;
     height: 0;
@@ -23,11 +23,11 @@
       @extend .focus--mouse;
     }
     & + .lever {
-      content: "";
+      content: '';
       position: relative;
       width: 46px;
       height: 16px;
-      background-color: #E6E9F2;
+      background-color: #e6e9f2;
       border-radius: 10px;
       margin-right: 10px;
       transition: background 0.3s ease;
@@ -36,8 +36,9 @@
       float: right;
       margin-top: 8px;
 
-      &:before, &:after {
-        content: "";
+      &:before,
+      &:after {
+        content: '';
         position: absolute;
         display: inline-block;
         width: 26px;
@@ -46,11 +47,11 @@
         left: 0;
         top: -5px;
         left: -3px;
-        transition: left 0.3s ease, background .1s ease, transform .1s ease;
+        transition: left 0.3s ease, background 0.1s ease, transform 0.1s ease;
       }
 
       &:before {
-        background-color: transparentize($primary, .85);
+        background-color: transparentize($primary, 0.85);
       }
 
       &:after {
@@ -64,9 +65,10 @@
     }
 
     &:checked + .lever {
-      background-color: #E6E9F2;
+      background-color: #e6e9f2;
 
-      &:before, &:after {
+      &:before,
+      &:after {
         left: 23px;
       }
 
@@ -81,14 +83,14 @@
 
     &[disabled] + .lever {
       cursor: default;
-      background-color: #E6E9F2;
+      background-color: #e6e9f2;
       &:after {
-        background-color: #E6E9F2;
+        background-color: #e6e9f2;
       }
     }
 
     &[disabled]:checked + .lever:after {
-      background-color: #E6E9F2;
+      background-color: #e6e9f2;
     }
   }
 }

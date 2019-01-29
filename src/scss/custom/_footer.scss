@@ -27,10 +27,10 @@ $bg-footer: darken($primary, 20%);
   }
 
   .it-brand-wrapper {
-    padding: $v-gap*4 0;
+    padding: $v-gap * 4 0;
 
     .it-brand-text {
-      padding-right: $v-gap*3;
+      padding-right: $v-gap * 3;
     }
 
     a {
@@ -67,9 +67,8 @@ $bg-footer: darken($primary, 20%);
   }
 
   section {
-    padding: 0 $v-gap*2;
+    padding: 0 $v-gap * 2;
   }
-
 }
 
 .it-footer-small-prints {
@@ -79,7 +78,7 @@ $bg-footer: darken($primary, 20%);
     padding: 1.5rem 1rem;
 
     li {
-      padding: .5rem 0;
+      padding: 0.5rem 0;
       &:first-child {
         padding-top: 0;
       }
@@ -89,7 +88,8 @@ $bg-footer: darken($primary, 20%);
     }
   }
 
-  a, a:hover:not(.disabled) {
+  a,
+  a:hover:not(.disabled) {
     color: $white;
     font-size: 15px;
   }
@@ -97,15 +97,12 @@ $bg-footer: darken($primary, 20%);
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .it-footer-small-prints {
-
     ul.it-footer-small-prints-list {
-
       li {
         padding: 0 1rem;
 
@@ -116,12 +113,10 @@ $bg-footer: darken($primary, 20%);
           padding-right: 0;
         }
       }
-
     }
   }
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
 }

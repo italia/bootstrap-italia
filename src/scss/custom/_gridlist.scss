@@ -7,7 +7,6 @@
     .img-responsive {
       padding-bottom: $grid-item-df-proportion;
       .img-wrapper {
-
       }
     }
   }
@@ -15,7 +14,7 @@
   .it-griditem-text-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: $v-gap*2 $v-gap;
+    padding: $v-gap * 2 $v-gap;
     align-items: center;
     .it-griditem-text {
       font-size: $grid-item-text-size-mob;
@@ -39,12 +38,12 @@
       right: 0;
       bottom: 0;
       background: rgba($grid-item-text-overlay-bg, 0.85);
-      padding: $v-gap $v-gap*2;
+      padding: $v-gap $v-gap * 2;
       .it-griditem-text {
-        color: #FFF;
+        color: #fff;
       }
       .icon {
-        fill: #FFF;
+        fill: #fff;
       }
     }
   }
@@ -58,7 +57,9 @@
   &.it-grid-item-double-w {
     .img-responsive-wrapper {
       .img-responsive {
-        padding-bottom: calc(#{$grid-item-df-double-proportion} - #{$grid-list-default-gap});
+        padding-bottom: calc(
+          #{$grid-item-df-double-proportion} - #{$grid-list-default-gap}
+        );
       }
     }
   }
@@ -66,11 +67,12 @@
 
 // grid default
 .it-grid-list-wrapper {
-  padding-left: $grid-list-default-gap*2;
-  padding-right: $grid-list-default-gap*2;
+  padding-left: $grid-list-default-gap * 2;
+  padding-right: $grid-list-default-gap * 2;
   // grid changes
-  div[class^="col-"] {
-    padding: 0 $grid-list-default-gap $grid-list-default-gap*2 $grid-list-default-gap;
+  div[class^='col-'] {
+    padding: 0 $grid-list-default-gap $grid-list-default-gap * 2
+      $grid-list-default-gap;
   }
   .grid-row {
     display: flex;
@@ -79,31 +81,29 @@
     flex-wrap: wrap;
     // items in grid
     .it-grid-item-wrapper {
-
     }
   }
   // grid with label
   &.it-image-label-grid {
-    padding-left: $grid-list-text-gap*2;
-    padding-right: $grid-list-text-gap*2;
+    padding-left: $grid-list-text-gap * 2;
+    padding-right: $grid-list-text-gap * 2;
     // grid changes
-    div[class^="col-"] {
-      padding: 0 $grid-list-text-gap $grid-list-text-gap*2 $grid-list-text-gap;
+    div[class^='col-'] {
+      padding: 0 $grid-list-text-gap $grid-list-text-gap * 2 $grid-list-text-gap;
     }
     .grid-row {
-      margin-left: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
-      margin-right: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+      margin-left: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
 
       .it-grid-item-wrapper {
-
       }
     }
   }
   // masonry
   &.it-masonry {
     .card-columns {
-      margin-left: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
-      margin-right: -(($grid-list-text-gap*2)+($grid-list-default-gap*2));
+      margin-left: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
       column-gap: 0;
       .it-grid-item-wrapper {
         break-inside: avoid-column;
@@ -129,12 +129,10 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
 }
 
 //Tablet horizontal / small desktop
@@ -144,12 +142,11 @@
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {
-        padding: $v-gap*2 $v-gap*3;
+        padding: $v-gap * 2 $v-gap * 3;
         .it-griditem-text {
           font-size: $grid-item-text-size;
         }
         .icon {
-
         }
       }
     }
@@ -169,7 +166,6 @@
     .grid-row {
       // items in grid
       .it-grid-item-wrapper {
-
       }
     }
   }
@@ -177,5 +173,4 @@
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }
