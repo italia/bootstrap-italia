@@ -166,14 +166,14 @@ E' possibile associare un Tooltip con maggiori informazioni relative all'utente 
 
 {% capture example %}
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="left" title="<b>Anna Barbieri</b><br/><em>Amministratore</em>">
+  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="left" title="<strong>Anna Barbieri</strong><br/><em>Amministratore</em>">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
   </a>
-  <a class="avatar avatar-red size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="top" title="<b>Mario Rossi</b><br/><em>Editor</em>">
+  <a class="avatar avatar-red size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
     <p aria-hidden="true">MR</p>
     <span class="sr-only">Mario Rossi</span>
   </a>
-  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="right" title="<b>Cerca</b><br/><em>Archivio notizie</em>">
+  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="right" title="<strong>Cerca</strong><br/><em>Archivio notizie</em>">
     <svg class="icon icon-secondary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
     <span class="sr-only">Cerca</span>
   </a>

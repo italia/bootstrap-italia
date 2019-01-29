@@ -103,7 +103,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
       <div class="row mt-5">
         <div class="col-3"></div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>" style="width: 100%;">Tooltip con HTML</button>
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>" style="width: 100%;">Tooltip con HTML</button>
         </div>
         <div class="col-3"></div>
       </div>
@@ -115,7 +115,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 E con codice HTML personalizzato:
 
 {% highlight html %}
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>">
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
   Tooltip con HTML
 </button>
 {% endhighlight %}

@@ -226,18 +226,24 @@ gulp.task('assets', () => {
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
-  let jekyllExecutable = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-  const jekyll = spawn(jekyllExecutable, ['build',
-    '--watch',
-    '--incremental',
-    '--drafts',
-    '--config', '_config.yml'
-  ]);
+
+  const jekyll = process.platform === "win32" ?
+    spawn('jekyll.bat', ['build',
+      '--watch',
+      '--incremental',
+      '--drafts',
+      '--config', '_config.yml'
+    ]) :
+    spawn('bundle', ['exec', 'jekyll', 'build',
+      '--watch',
+      '--incremental',
+      '--drafts',
+      '--config', '_config.yml'
+    ]);
 
   const jekyllOutput = (buffer) => {
     log('Jekyll: ' + buffer.toString());
-    // TODO: trovare un modo migliore per verificare quando Jekyll ha completato
-    if (buffer.toString().indexOf('done') > -1) done()
+    if (buffer.toString().indexOf('done') > -1) done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
   };
 
   jekyll.stdout.on('data', jekyllOutput);
