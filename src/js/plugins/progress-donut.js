@@ -1,25 +1,24 @@
-const progressDonut = (function () {
-
+const progressDonut = (function($) {
   //background colour of inner circle
-  const backgroundColor = "#fff";
+  const backgroundColor = '#fff'
 
   //font color of progress text
-  const fontColor = "#000";
+  const fontColor = '#000'
 
   //font size of progress text
-  const fontSize = 40;
+  const fontSize = 40
 
   //radius of circle
-  const donutRadius = 130;
+  const donutRadius = 130
 
   //progress bar width
-  const donutWidth = 96;
+  const donutWidth = 96
 
   //background colour of circular progress Bar
-  const donutBackground = "transparent";
+  const donutBackground = 'transparent'
 
   //colour of circular progress bar
-  const donutForeground = "#0073e6";
+  const donutForeground = '#0073e6'
 
   /**
    * generate a progress donut
@@ -36,23 +35,25 @@ const progressDonut = (function () {
       progressBarColor: donutForeground,
       progressBarWidth: donutWidth,
       progressPercent: progress,
-    });
-    $(target).next().html('Progresso ' + progress + '%');
-  };
+    })
+    $(target)
+      .next()
+      .html('Progresso ' + progress + '%')
+  }
 
   /**
    * update progress donut percentage
    * @param {string} target - The element
    * @param {string} progress - percentage out of 100, start with 0
    */
-  var update = function (target, progress) {
+  var update = function(target, progress) {
     $(target).circularloader({
-      progressPercent: progress
-    });
+      progressPercent: progress,
+    })
   }
 
   return {
     generate: generate,
-    update: update
+    update: update,
   }
-})();
+})($)

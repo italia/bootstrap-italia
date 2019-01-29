@@ -17,21 +17,25 @@ const gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   pkg = require('./package.json');
 
-const DOCUMENTATION_DESTINATION = '_gh_pages';
+const DOCUMENTATION_DESTINATION = '_site';
 
 const Paths = {
   VENDOR_JS: [
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/jquery.easing/jquery.easing.js',
     'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/owl.carousel/dist/owl.carousel.js',
-  ],
-  SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
-  SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js',
+  ],
+  SOURCE_JS: [
+    'src/js/plugins/circular-loader/CircularLoader-v1.3.js',
+    'src/js/plugins/password-strength-meter/password-strength-meter.js',
+    'src/js/plugins/datepicker/locales/it.js',
+    'src/js/plugins/datepicker/datepicker.js',
+    'src/js/plugins/i-sticky/i-sticky.js',
     'src/js/plugins/autocomplete.js',
-    'src/js/plugins/jquery.easing.1.3.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
     'src/js/plugins/cookiebar.js',
@@ -39,19 +43,14 @@ const Paths = {
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
     'src/js/plugins/forward.js',
-    'src/js/plugins/password.js',
     'src/js/plugins/navbar.js',
-    'src/js/plugins/i-sticky.js',
     'src/js/plugins/navscroll.js',
     'src/js/plugins/history-back.js',
     'src/js/plugins/notifications.js',
     'src/js/plugins/upload.js',
-    'src/js/plugins/CircularLoader-v1.3.js',
     'src/js/plugins/progress-donut.js',
     'src/js/plugins/list.js',
     'src/js/plugins/imgresponsive.js',
-    'src/js/plugins/datepicker/locales/it.js',
-    'src/js/plugins/datepicker/datepicker.js',
     //'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
@@ -61,6 +60,8 @@ const Paths = {
     'src/js/plugins/dimmer.js',
     'src/js/' + pkg.name + '.js'
   ],
+
+  SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
   SOURCE_DOCUMENTATION_JS: [
     'docs/assets/src/js/cover-animation.js',

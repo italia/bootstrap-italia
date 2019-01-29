@@ -7,7 +7,7 @@ kramdown:
 permalink:      pretty
 
 source:         "."
-destination:    ./_gh_pages
+destination:    ./_site
 baseurl:        ""
 url:            "http://localhost:4000"
 encoding:       UTF-8

@@ -19,7 +19,7 @@
     "build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
-    "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _gh_pages -m 'Update documentation [ci skip]'",
+    "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _site -m 'Update documentation [ci skip]'",
     "release": "node scripts/release",
     "bump-major": "npm version major -m \"Release %s\"",
     "bump-minor": "npm version minor -m \"Release %s\"",
@@ -27,10 +27,9 @@
     "preversion": "npm test",
     "version": "node scripts/config-sync && git add _config.yml",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
-    "test": "echo \"No tests specified\"",
+    "test": "bundle exec htmlproofer ./_site --assume-extension --check-html --allow-hash-href",
     "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-exclude /docs/esempi/",
-    "test-a11y-one": "npx pa11y-ci",
-    "html-proofer": "bundle exec htmlproofer ./_gh_pages --assume-extension --check-html --allow-hash-href"
+    "test-a11y-one": "npx pa11y-ci"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",
@@ -71,12 +70,14 @@
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
     "node-sass": "^4.11.0",
+    "prettier": "1.16.1",
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {
     "bootstrap": "4.2.1",
     "bootstrap-select": "^1.13.5",
     "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.6",
     "svgxuse": "^1.2.6"

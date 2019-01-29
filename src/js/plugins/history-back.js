@@ -1,4 +1,6 @@
-$('.go-back').on('click', function () {
-  javascript:window.history.go(-1);
-  return false;
-});
+$(function() {
+  $('.go-back').on('click', function() {
+    window.history.back()
+    return false
+  })
+})
