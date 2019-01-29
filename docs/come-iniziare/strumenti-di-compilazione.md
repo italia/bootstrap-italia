@@ -70,7 +70,7 @@ In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché
 
 ## Compilare la documentazione
 
-La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_gh_pages`.
+La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`.
 
 Per poter generare e testare la documentazione in ambiente locale, è necessario: 
 

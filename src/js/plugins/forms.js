@@ -1,17 +1,17 @@
 $(function() {
-  const inputSelector = `${[
-    'text',
-    'password',
-    'email',
-    'url',
-    'tel',
-    'number',
-    'search'
-  ]
-    .map(selector => `input[type=${selector}]`)
-    .join(', ')}, textarea`;
+  const inputSelector = $(
+    'input[type="text"],' +
+    'input[type="password"]' +
+    'input[type="email"]' +
+    'input[type="email"]' +
+    'input[type="url"]' +
+    'input[type="tel"]' +
+    'input[type="number"]' +
+    'input[type="search"]' +
+    'textarea'
+  );
 
-  const inputFileSelector = `input[type="file"]`;
+  const inputFileSelector = 'input[type="file"]';
 
   $(document).on('focus', inputSelector, e => {
     const $this = $(e.target);
@@ -21,7 +21,7 @@ $(function() {
   $(document).on('blur', inputSelector, e => {
     const $this = $(e.target);
     const noValue = !$this.val();
-    const noPlaceholder = !$this.attr('placeholder'); //! gestice sia undefined che '' che null
+    const noPlaceholder = !$this.attr('placeholder');
 
     if (noValue && noPlaceholder) {
       $this.siblings('label, i').removeClass('active');
@@ -59,9 +59,8 @@ $(function() {
   const updateTextFields = $input => {
     const $labelAndIcon = $input.siblings('label, i');
     const hasValue = $input.val().length;
-    const hasPlaceholder = !!$input.attr('placeholder'); //!! gestice sia undefined che '' che null
-    const addOrRemove = `${hasValue || hasPlaceholder ? 'add' : 'remove'}Class`;
-    $labelAndIcon[addOrRemove]('active');
+    const hasPlaceholder = !!$input.attr('placeholder');
+    $labelAndIcon.toggleClass('active', hasValue || hasPlaceholder);
   };
 
   const validateField = $input => {
@@ -99,5 +98,4 @@ $(function() {
       }
     });
 
-  $('.autocomplete').autocomplete();
 });

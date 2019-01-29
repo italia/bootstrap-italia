@@ -19,7 +19,7 @@ $(openbutton).on('click', function (event) {
 
 $(overlay).on('click', function () {
   var target = $(this).closest('.navbar-collapsable');
-  var buttonrel = $(this).closest('.navbar').find(".custom-navbar-toggler");
+  var buttonrel = $(this).closest('.navbar').find('.custom-navbar-toggler');
   var fadelayer = $(target).find('.overlay');
   $(buttonrel).attr('aria-expanded', 'false');
 
@@ -33,7 +33,7 @@ $(overlay).on('click', function () {
 //-close button action
 $(closebutton).on('click', function (event) {
   var target = $(this).closest('.navbar-collapsable');
-  var buttonrel = $(this).closest('.navbar').find(".custom-navbar-toggler");
+  var buttonrel = $(this).closest('.navbar').find('.custom-navbar-toggler');
   var fadelayer = $(target).find('.overlay');
 
   $(buttonrel).attr('aria-expanded', 'false');

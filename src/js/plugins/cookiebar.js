@@ -1,5 +1,4 @@
 const Cookiebar = (($, Util) => {
-
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -12,25 +11,25 @@ const Cookiebar = (($, Util) => {
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
-  const COOKIE_NAME = "cookies_consent"
-  const COOKIE_VALUE = "true"
+  const COOKIE_NAME = 'cookies_consent'
+  const COOKIE_VALUE = 'true'
   const COOKIE_EXPIRE = 30
 
   const Selector = {
     COOKIE_BAR: '.cookiebar',
-    ACCEPT: '[data-accept="cookiebar"]'
+    ACCEPT: '[data-accept="cookiebar"]',
   }
 
   const Event = {
     CLOSE: `close${EVENT_KEY}`,
     CLOSED: `closed${EVENT_KEY}`,
     LOAD_DATA_API: `load${EVENT_KEY}${DATA_API_KEY}`,
-    CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+    CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
   }
 
   const ClassName = {
     COOKIE_BAR: 'cookiebar',
-    SHOW: 'show'
+    SHOW: 'show',
   }
 
   /**
@@ -80,10 +79,12 @@ const Cookiebar = (($, Util) => {
     // Private
 
     _setCookieEU() {
-      var exdate = new Date();
-      exdate.setDate(exdate.getDate() + COOKIE_EXPIRE);
-      var c_value = escape(COOKIE_VALUE) + ((COOKIE_EXPIRE == null) ? "" : "; expires=" + exdate.toUTCString());
-      document.cookie = COOKIE_NAME + "=" + c_value + "; path=/";
+      var exdate = new Date()
+      exdate.setDate(exdate.getDate() + COOKIE_EXPIRE)
+      var c_value =
+        escape(COOKIE_VALUE) +
+        (COOKIE_EXPIRE == null ? '' : '; expires=' + exdate.toUTCString())
+      document.cookie = COOKIE_NAME + '=' + c_value + '; path=/'
     }
 
     _getRootElement(element) {
@@ -127,7 +128,7 @@ const Cookiebar = (($, Util) => {
     // Static
 
     static _jQueryInterface(config) {
-      return this.each(function () {
+      return this.each(function() {
         const $element = $(this)
         let data = $element.data(DATA_KEY)
 
@@ -146,7 +147,7 @@ const Cookiebar = (($, Util) => {
     }
 
     static _handleAccept(cookiebarInstance) {
-      return function (event) {
+      return function(event) {
         if (event) {
           event.preventDefault()
         }
@@ -156,7 +157,7 @@ const Cookiebar = (($, Util) => {
     }
 
     static _handleConsent(cookiebarInstance) {
-      return function (event) {
+      return function(event) {
         if (event) {
           event.preventDefault()
         }
@@ -166,13 +167,16 @@ const Cookiebar = (($, Util) => {
     }
 
     static _getCookieEU() {
-      var i, x, y, ARRcookies = document.cookie.split(";");
+      var i,
+        x,
+        y,
+        ARRcookies = document.cookie.split(';')
       for (i = 0; i < ARRcookies.length; i++) {
-        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
-        x = x.replace(/^\s+|\s+$/g, "");
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf('='))
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf('=') + 1)
+        x = x.replace(/^\s+|\s+$/g, '')
         if (x == COOKIE_NAME) {
-          return unescape(y);
+          return unescape(y)
         }
       }
     }
@@ -192,9 +196,9 @@ const Cookiebar = (($, Util) => {
 
   $(window).on(Event.LOAD_DATA_API, () => {
     const cookiebars = $.makeArray($(Selector.COOKIE_BAR))
-    var consent = Cookiebar._getCookieEU();
+    var consent = Cookiebar._getCookieEU()
     if (!consent) {
-      for (let i = cookiebars.length; i--;) {
+      for (let i = cookiebars.length; i--; ) {
         const $cookiebar = $(cookiebars[i])
         Cookiebar._jQueryInterface.call($cookiebar, 'show')
       }
@@ -209,7 +213,7 @@ const Cookiebar = (($, Util) => {
 
   $.fn[NAME] = Cookiebar._jQueryInterface
   $.fn[NAME].Constructor = Cookiebar
-  $.fn[NAME].noConflict = function () {
+  $.fn[NAME].noConflict = function() {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Cookiebar._jQueryInterface
   }
@@ -218,4 +222,3 @@ const Cookiebar = (($, Util) => {
 })($, bootstrap.Util)
 
 export default Cookiebar
-
