@@ -59,7 +59,11 @@ $(function() {
     const $labelAndIcon = $input.siblings('label, i')
     const hasValue = $input.val().length
     const hasPlaceholder = !!$input.attr('placeholder')
-    $labelAndIcon.toggleClass('active', hasValue || hasPlaceholder)
+    if (hasValue || hasPlaceholder) {
+      $labelAndIcon.addClass('active')
+    } else {
+      $labelAndIcon.removeClass('active')
+    }
   }
 
   const validateField = $input => {
