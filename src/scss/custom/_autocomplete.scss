@@ -2,7 +2,7 @@
 
 //search field
 .autocomplete {
-  padding: 0.375rem $v-gap*6 0.375rem $v-gap*3;
+  padding: 0.375rem $v-gap * 6 0.375rem $v-gap * 3;
 
   &::placeholder {
     color: $neutral-1-a4;
@@ -53,7 +53,7 @@
 
   //single item
   a {
-    padding: 12px $v-gap*3;
+    padding: 12px $v-gap * 3;
     display: block;
     display: flex;
     justify-content: flex-start;
@@ -89,8 +89,9 @@
     }
 
     //item icon + avatar
-    .icon, .avatar {
-      margin-right: $v-gap*2;
+    .icon,
+    .avatar {
+      margin-right: $v-gap * 2;
       flex-shrink: 0;
     }
 
@@ -105,7 +106,7 @@
       em {
         font-style: normal;
         text-transform: uppercase;
-        font-size: 0.750rem;
+        font-size: 0.75rem;
         color: $neutral-1-a8;
         font-weight: 600;
         letter-spacing: 0.1em;
@@ -125,14 +126,13 @@
 
 //big version
 .autocomplete-wrapper-big {
-
   //search field
   .autocomplete {
-    height: $v-gap*7;
+    height: $v-gap * 7;
     font-size: 1.5rem;
     font-weight: normal;
     padding-left: 2.5rem;
-    padding-right: $v-gap*3;
+    padding-right: $v-gap * 3;
   }
 
   //search icon
@@ -163,7 +163,6 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
   //results list
   .autocomplete-list {
     a {
@@ -190,9 +189,9 @@
   .autocomplete-wrapper-big {
     //search field
     .autocomplete {
-      height: $v-gap*9;
+      height: $v-gap * 9;
       font-size: 2.222rem;
-      padding-left: $v-gap*8;
+      padding-left: $v-gap * 8;
     }
 
     //search icon
@@ -212,26 +211,22 @@
         //item text
         .autocomplete-list-text {
           span {
-            margin-right: $v-gap*2;
+            margin-right: $v-gap * 2;
           }
         }
       }
     }
   }
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }

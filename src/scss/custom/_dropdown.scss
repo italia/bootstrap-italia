@@ -1,15 +1,28 @@
 //menu on bottom animation
 @keyframes dropdownFadeIn {
-  0% {opacity: 0; margin-top: 0;}
-  100% {opacity: 1; margin-top: $dropdown-menu-vertical-shift;}
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: $dropdown-menu-vertical-shift;
+  }
 }
 //menu on top animation
 @keyframes dropdownFadeInTop {
-  0% {opacity: 0; margin-top: 0;}
-  100% {opacity: 1; margin-top: -$dropdown-menu-vertical-shift;}
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -$dropdown-menu-vertical-shift;
+  }
 }
 
-.dropdown, .btn-group {
+.dropdown,
+.btn-group {
   //menu fade in
   &.show {
     .dropdown-menu {
@@ -35,9 +48,10 @@
     box-shadow: none;
   }
 }
-.btn-dropdown, .dropdown-toggle {
+.btn-dropdown,
+.dropdown-toggle {
   &:after {
-    content: "";
+    content: '';
     speak: none;
     border: none;
     display: inline;
@@ -49,13 +63,13 @@
   .icon-expand {
     transition: transform $dropdown-menu-animation-speed;
   }
-  .icon.icon-xs{
+  .icon.icon-xs {
     transition: transform $dropdown-menu-animation-speed;
     width: 18px;
     height: 18px;
     transform: translateY(-1px);
   }
-  &[aria-expanded=true] .icon-expand {
+  &[aria-expanded='true'] .icon-expand {
     transform: scaleY(-1);
   }
 }
@@ -92,8 +106,8 @@
     position: absolute;
     top: -$dropdown-menu-notch-base-size;
     left: $dropdown-menu-notch-position-x;
-    width: $dropdown-menu-notch-base-size*3;
-    height: $dropdown-menu-notch-base-size*3;
+    width: $dropdown-menu-notch-base-size * 3;
+    height: $dropdown-menu-notch-base-size * 3;
     border-radius: $dropdown-menu-radius;
     background-color: $dropdown-bg;
     transform: rotate(45deg);
@@ -114,11 +128,14 @@
     background-color: $neutral-1-a8;
     .link-list-wrapper ul {
       span.divider {
-        background: #2E465E;
+        background: #2e465e;
       }
       li {
         //link list colors and hovers
-        a span, a:hover span, h3, i {
+        a span,
+        a:hover span,
+        h3,
+        i {
           color: #fff;
         }
         a:not(.active):not(.disabled):hover i {

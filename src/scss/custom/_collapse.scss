@@ -1,9 +1,9 @@
 $arrow-size: $font-size-base/2;
 
 // collapse toggle
-*[data-toggle="collapse"] {
+*[data-toggle='collapse'] {
   .collapse-icon::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 0;
     height: 0;
@@ -31,7 +31,7 @@ $arrow-size: $font-size-base/2;
   //background active version
   &.collapse-background-active {
     & > .collapse-header {
-      *[data-toggle="collapse"][aria-expanded="true"] {
+      *[data-toggle='collapse'][aria-expanded='true'] {
         background-color: $primary;
         color: $white;
         border-color: $primary;
@@ -42,10 +42,10 @@ $arrow-size: $font-size-base/2;
     }
   }
 
-   //background hover version
-   &.collapse-background-hover {
+  //background hover version
+  &.collapse-background-hover {
     & > .collapse-header {
-      *[data-toggle="collapse"]:hover {
+      *[data-toggle='collapse']:hover {
         background-color: $primary;
         color: $white;
         border-color: $primary;
@@ -59,7 +59,7 @@ $arrow-size: $font-size-base/2;
   //left icon version
   &.collapse-left-icon {
     & > .collapse-header {
-      *[data-toggle="collapse"] {
+      *[data-toggle='collapse'] {
         &:after {
           content: '-';
           float: left;
@@ -69,7 +69,7 @@ $arrow-size: $font-size-base/2;
           font-family: $font-family-sans-serif;
           transform: none;
         }
-        &[aria-expanded="false"] {
+        &[aria-expanded='false'] {
           &:after {
             content: '+';
           }
@@ -77,14 +77,13 @@ $arrow-size: $font-size-base/2;
       }
     }
   }
-
 }
 
 //header
 .collapse-header {
   position: relative;
 
-  *[data-toggle="collapse"] {
+  *[data-toggle='collapse'] {
     width: 100%;
     text-align: left;
     border: 0;
@@ -95,21 +94,21 @@ $arrow-size: $font-size-base/2;
     color: $gray-secondary;
     font-weight: 600;
     //transition: background-color 0.1s;
-    &[aria-expanded="false"] {
+    &[aria-expanded='false'] {
       color: $primary;
       &:after {
         transform: scaleY(-1);
       }
     }
-    &[aria-expanded="false"]:hover:after,
-    &[aria-expanded="true"]:hover:after {
+    &[aria-expanded='false']:hover:after,
+    &[aria-expanded='true']:hover:after {
       text-decoration: none;
     }
     &:after {
       content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPml0LWNvbGxhcHNlPC90aXRsZT48ZyBpZD0iTGl2ZWxsb18xMyIgZGF0YS1uYW1lPSJMaXZlbGxvIDEzIj48cGF0aCBmaWxsPSIjN0ZCMkU1IiBkPSJNMTIsMTAuMjUsMTYuNzcsMTVhLjc1Ljc1LDAsMCwwLDEuMDYsMCwuNzQuNzQsMCwwLDAsMC0xLjA2TDEzLjA2LDkuMTlhMS41MSwxLjUxLDAsMCwwLTIuMTIsMEw2LjE3LDE0YS43NC43NCwwLDAsMCwwLDEuMDYuNzUuNzUsMCwwLDAsMS4wNiwwWiIvPjwvZz48L3N2Zz4K');
       float: right;
       width: 1.5rem;
-      line-height: .1rem;
+      line-height: 0.1rem;
       color: $primary-c5;
       transition: transform 0.3s;
     }
@@ -123,7 +122,7 @@ $arrow-size: $font-size-base/2;
 // body
 .collapse-body {
   padding: 12px 24px 42px;
-  .collapse-header button[aria-expanded="true"]:before {
+  .collapse-header button[aria-expanded='true']:before {
     height: 0;
     width: 0;
   }

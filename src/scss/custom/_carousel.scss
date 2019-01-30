@@ -20,7 +20,7 @@
     padding-bottom: 0;
   }
   .card-wrapper {
-    padding-bottom: $v-gap*2;
+    padding-bottom: $v-gap * 2;
   }
   // Landscape abstract
   &.it-carousel-landscape-abstract {
@@ -33,7 +33,6 @@
       .img-responsive-wrapper {
         .img-responsive {
           .img-wrapper {
-
           }
         }
       }
@@ -78,7 +77,7 @@
     }
     margin: 0 auto;
     .owl-stage {
-      left: - ($crs-mob-live-padding + ($v-gap*3));
+      left: -($crs-mob-live-padding + ($v-gap * 3));
     }
     &.it-full-carousel {
       .owl-stage {
@@ -91,7 +90,7 @@
     // with img
     .it-img-card {
       .owl-stage {
-        left: - $v-gap*2;
+        left: -$v-gap * 2;
       }
     }
     .card.card-img {
@@ -108,7 +107,7 @@
         border-right: none;
       }
       .owl-stage {
-        left: - $crs-mob-live-padding;
+        left: -$crs-mob-live-padding;
       }
       .owl-dots {
         text-align: center;
@@ -121,7 +120,7 @@
     }
     .owl-dots {
       text-align: center;
-      margin-top: $v-gap*2;
+      margin-top: $v-gap * 2;
       margin-left: $crs-dots-margin-left;
       margin-right: $crs-dots-margin-left;
       .owl-dot {
@@ -135,7 +134,7 @@
       }
       .it-img-card {
         .owl-stage {
-          left: - $v-gap*2;
+          left: -$v-gap * 2;
         }
       }
     }
@@ -161,7 +160,6 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
@@ -169,13 +167,13 @@
   .it-carousel-wrapper {
     &.it-carousel-landscape-abstract {
       .owl-stage-outer {
-        border-right: 3px solid #FFF;
+        border-right: 3px solid #fff;
       }
     }
     &.it-carousel-landscape-abstract-3 {
       .it-img-card {
         .owl-stage {
-          left: - $v-gap*2;
+          left: -$v-gap * 2;
         }
       }
       &.it-full-carousel {
@@ -194,7 +192,7 @@
   .it-carousel-wrapper {
     // Landscape abstract
     &.it-carousel-landscape-abstract {
-      max-width: #{map-get($container-max-widths,lg)};
+      max-width: #{map-get($container-max-widths, lg)};
       .owl-stage {
         display: flex;
         .owl-item {
@@ -218,7 +216,6 @@
               width: 100%;
               height: 100%;
               .img-wrapper {
-
               }
             }
           }
@@ -232,8 +229,8 @@
               display: none;
             }
             .card-body {
-              padding-left: $v-gap*6;
-              padding-bottom: $v-gap*6;
+              padding-left: $v-gap * 6;
+              padding-bottom: $v-gap * 6;
               .card-signature {
                 float: left;
                 width: 60%;
@@ -254,7 +251,7 @@
       .owl-dots {
         position: absolute;
         left: 50%;
-        margin-left: $v-gap*5;
+        margin-left: $v-gap * 5;
         right: 0;
         bottom: $crs-landcape-bottom;
         text-align: left;
@@ -262,7 +259,7 @@
     }
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
-      max-width: #{map-get($container-max-widths,lg)};
+      max-width: #{map-get($container-max-widths, lg)};
       &.it-full-carousel {
         max-width: unset;
       }
@@ -270,7 +267,7 @@
         padding: 0 $crs-heading-h-padding/2;
       }
       .owl-stage-outer {
-        border-right: 1px solid #FFF;
+        border-right: 1px solid #fff;
       }
       .owl-stage {
         left: inherit;
@@ -295,7 +292,6 @@
       }
     }
   }
-
 }
 
 //Desktop
@@ -303,17 +299,14 @@
   .it-carousel-wrapper {
     // Landscape abstract
     &.it-carousel-landscape-abstract {
-      max-width: #{map-get($container-max-widths,xl)};
+      max-width: #{map-get($container-max-widths, xl)};
     }
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
-      max-width: #{map-get($container-max-widths,xl)};
+      max-width: #{map-get($container-max-widths, xl)};
       &.it-full-carousel {
         max-width: unset;
       }
     }
   }
 }
-
-
-

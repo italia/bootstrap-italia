@@ -1,7 +1,8 @@
 //mobile
 
 //input file/button
-.upload, .upload-avatar {
+.upload,
+.upload-avatar {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -13,7 +14,7 @@
 //input file
 .upload {
   //button styling
-  &[type=file] + label {
+  &[type='file'] + label {
     max-width: 80%;
     font-size: 1rem;
     font-weight: 700;
@@ -44,7 +45,6 @@
       outline: auto 5px -webkit-focus-ring-color;
     }
   }
-
 }
 
 //pictures wall version
@@ -66,7 +66,7 @@
   //input file
   .upload {
     //button styling
-    &[type=file] + label {
+    &[type='file'] + label {
       height: 128px;
       width: 128px;
       border-radius: 0;
@@ -93,8 +93,9 @@
       }
     }
 
-    &:focus, &:active {
-      &[type=file] + label {
+    &:focus,
+    &:active {
+      &[type='file'] + label {
         border: 2px dashed $primary-a3;
       }
     }
@@ -196,7 +197,7 @@
       //
       .upload-file-weight {
         color: $neutral-1-a7;
-        font-size: 0.750em;
+        font-size: 0.75em;
         margin-left: 10px;
         display: none;
       }
@@ -244,7 +245,7 @@
   height: 100%;
 
   .upload-avatar {
-    &[type=file] + label {
+    &[type='file'] + label {
       position: absolute;
       left: 0;
       top: 0;
@@ -294,8 +295,8 @@
 
   &.size-sm {
     .avatar {
-      width: $avatar-base-size*10;
-      height: $avatar-base-size*10;
+      width: $avatar-base-size * 10;
+      height: $avatar-base-size * 10;
     }
 
     .avatar-upload-icon {
@@ -319,7 +320,8 @@
   display: inline-flex;
   align-items: center;
 
-  &.dragover, &.loading {
+  &.dragover,
+  &.loading {
     .upload-dragdrop-image {
       img {
         transform: translateX(-50%) translateY(-50%) scale(0.85);
@@ -337,7 +339,8 @@
     }
   }
 
-  &.loading, &.success {
+  &.loading,
+  &.success {
     .upload-dragdrop-text {
       .upload-dragdrop-weight {
         visibility: visible;
@@ -387,14 +390,14 @@
   position: absolute;
   z-index: -1;
 
-  &[type=file] + label {
+  &[type='file'] + label {
     text-decoration: underline;
     color: $primary;
     cursor: pointer;
   }
 
   &:focus {
-    &[type=file] + label {
+    &[type='file'] + label {
       outline: auto 5px -webkit-focus-ring-color;
     }
   }
@@ -442,7 +445,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transition: transform 0.4s cubic-bezier(.33, 1.07, .54, 1);
+    transition: transform 0.4s cubic-bezier(0.33, 1.07, 0.54, 1);
     transform: translateX(-50%) translateY(-50%);
   }
 
@@ -459,7 +462,7 @@
     align-items: center;
     opacity: 0;
     transform: scale(0.6);
-    transition: opacity 0.2s, transform 0.5s cubic-bezier(.75, -0.5, 0, 1.75);
+    transition: opacity 0.2s, transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
 
     svg {
       fill: $white;
@@ -473,19 +476,16 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
   //input file
   .upload {
-    &[type=file] + label {
+    &[type='file'] + label {
       font-size: 0.889rem;
     }
   }
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
   //drag and drop version
   .upload-dragdrop-image {
     width: 180px;
@@ -504,19 +504,17 @@
       left: -136px;
     }
   }
-
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
   //avatar version -------------------------------- START
-  .avatar-upload:hover, .avatar-upload:focus-within {
+  .avatar-upload:hover,
+  .avatar-upload:focus-within {
     .upload-avatar-container {
       opacity: 1;
       //fade in speed
@@ -537,7 +535,7 @@
     opacity: 0;
 
     .upload-avatar {
-      &[type=file] + label {
+      &[type='file'] + label {
         margin: 0;
         padding-top: 10px;
         color: $white;
@@ -565,7 +563,7 @@
       }
 
       &:focus:not(.focus--mouse) {
-        &[type=file] + label {
+        &[type='file'] + label {
           outline: auto 5px -webkit-focus-ring-color;
         }
       }
@@ -580,7 +578,7 @@
 
     &.size-sm {
       .upload-avatar {
-        &[type=file] + label {
+        &[type='file'] + label {
           span {
             display: none;
           }
@@ -589,5 +587,4 @@
     }
   }
   //avatar version -------------------------------- END
-
 }

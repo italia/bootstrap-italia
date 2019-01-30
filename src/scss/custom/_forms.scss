@@ -2,7 +2,9 @@
   position: relative;
   padding: $form-group-spacing-y 0;
 
-  input, optgroup, textarea {
+  input,
+  optgroup,
+  textarea {
     color: $dark;
   }
 
@@ -12,7 +14,7 @@
     color: $input-label-color;
     font-weight: 600;
     line-height: calc(#{$input-height} - 1px);
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
     top: 1rem;
     font-size: 1rem;
     cursor: text;
@@ -34,7 +36,7 @@
     font-size: $small-font-size;
   }
 
-  input[type="time"] ~ label {
+  input[type='time'] ~ label {
     transform: translateY(-75%);
     font-size: $small-font-size;
   }
@@ -44,16 +46,16 @@
   font-weight: normal;
 }
 
-input[type="date"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
+input[type='date'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
 textarea {
   border: none;
   border-bottom: 1px solid $gray-secondary;
@@ -63,7 +65,7 @@ textarea {
   height: $input-height;
   width: 100%;
   box-shadow: none;
-  transition: .2s ease-out;
+  transition: 0.2s ease-out;
   font-weight: 700;
 }
 
@@ -73,7 +75,8 @@ textarea {
 }
 
 .form-control {
-  &:disabled, &[readonly] {
+  &:disabled,
+  &[readonly] {
     cursor: not-allowed;
 
     & + label {
@@ -84,7 +87,7 @@ textarea {
 }
 
 .form-group.active .form-file-name {
-  padding-bottom: 1.95rem
+  padding-bottom: 1.95rem;
 }
 
 .form-control-plaintext {
@@ -126,21 +129,19 @@ textarea {
   }
 }
 
-
 .warning-feedback {
   display: none;
   width: 100%;
-  margin-top: .25rem;
-  font-size: .777rem;
+  margin-top: 0.25rem;
+  font-size: 0.777rem;
   color: $warning;
 }
 
 .valid-feedback,
 .invalid-feedback,
 .warning-feedback {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
-
 
 // Input group
 .input-group {
@@ -190,10 +191,10 @@ textarea {
 
 .form-check {
   padding-left: 0;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 
-  [type="checkbox"],
-  [type="radio"] {
+  [type='checkbox'],
+  [type='radio'] {
     position: absolute;
     left: -9999px;
 
@@ -209,13 +210,13 @@ textarea {
     }
   }
 
-  [type="checkbox"] {
+  [type='checkbox'] {
     + label::after,
     + label::before {
       content: '';
       left: 0;
       position: absolute;
-      transition: .2s ease-out;
+      transition: 0.2s ease-out;
       z-index: 1;
       border-style: solid;
       border-width: 2px;
@@ -225,7 +226,7 @@ textarea {
       top: 0;
       width: 17px;
       height: 17px;
-      border: 1px solid #E6E9F2;
+      border: 1px solid #e6e9f2;
       border-radius: 1px;
       margin: 2px 5px;
       transform: rotateZ(37deg);
@@ -251,7 +252,7 @@ textarea {
       transform: rotate(40deg);
       backface-visibility: hidden;
       transform-origin: 100% 100%;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     &:checked + label::after {
@@ -262,7 +263,7 @@ textarea {
 
     &:not(:checked) + label::after {
       background-color: transparent;
-      border-color: #5C6F82;
+      border-color: #5c6f82;
       z-index: 0;
     }
 
@@ -279,13 +280,13 @@ textarea {
     }
 
     &:disabled:not(:checked) + label::after {
-      border-color: #E6E9F2;
-      background-color: #FFF;
+      border-color: #e6e9f2;
+      background-color: #fff;
     }
 
     &:disabled:checked + label::after {
-      background-color: #E6E9F2;
-      border-color: #E6E9F2;
+      background-color: #e6e9f2;
+      border-color: #e6e9f2;
     }
 
     //focus
@@ -298,9 +299,9 @@ textarea {
     }
   }
 
-  [type="radio"] {
+  [type='radio'] {
     + label {
-      transition: .2s ease-out;
+      transition: 0.2s ease-out;
 
       &::after,
       &::before {
@@ -315,14 +316,14 @@ textarea {
         border-radius: 50%;
         border-style: solid;
         border-width: 2px;
-        transition: .2s ease-out;
+        transition: 0.2s ease-out;
       }
     }
 
     &:not(:checked) + label {
       &::after,
       &::before {
-        border-color: #5C6F82;
+        border-color: #5c6f82;
       }
 
       &:after {
@@ -336,7 +337,7 @@ textarea {
         border-color: $primary;
         background-color: $primary;
         z-index: 0;
-        transform: scale(.64);
+        transform: scale(0.64);
       }
 
       &::before {
@@ -352,18 +353,18 @@ textarea {
       :not(:checked) + label {
         &::after,
         &::before {
-          border-color: #E6E9F2;
+          border-color: #e6e9f2;
         }
       }
 
       :checked + label {
         &::after {
-          border-color: #E6E9F2;
-          background-color: #E6E9F2;
+          border-color: #e6e9f2;
+          background-color: #e6e9f2;
         }
 
         &::before {
-          border-color: #E6E9F2;
+          border-color: #e6e9f2;
         }
       }
     }
@@ -375,8 +376,8 @@ textarea {
     margin-bottom: 16px;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
-    [type="checkbox"] + label,
-    [type="radio"] + label {
+    [type='checkbox'] + label,
+    [type='radio'] + label {
       position: static;
       padding-left: 8px;
       padding-right: 52px;
@@ -388,16 +389,16 @@ textarea {
       }
     }
 
-    [type="checkbox"]:checked + label::before {
+    [type='checkbox']:checked + label::before {
       right: 26px;
     }
 
-    [type="radio"]:checked + label::before {
+    [type='radio']:checked + label::before {
       right: 15px;
     }
 
     .form-text {
-      opacity: .6;
+      opacity: 0.6;
       margin: 0;
       padding-left: 8px;
       padding-right: 52px;

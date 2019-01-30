@@ -66,8 +66,8 @@
       margin-top: $sidebar-heading-margin-top;
       letter-spacing: $sidebar-heading-letter-spacing;
       text-transform: uppercase;
-      padding-left: $v-gap*3;
-      padding-right: $v-gap*3;
+      padding-left: $v-gap * 3;
+      padding-right: $v-gap * 3;
     }
     .custom-navbar-toggler {
       display: flex;
@@ -80,11 +80,10 @@
         margin-right: $v-gap;
       }
       span.text {
-
       }
     }
     .menu-wrapper {
-      padding: $v-gap*10 0 $v-gap*3;
+      padding: $v-gap * 10 0 $v-gap * 3;
       right: 0;
     }
   }
@@ -110,12 +109,10 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
 }
 
 //Tablet horizontal / small desktop
@@ -170,17 +167,16 @@
         margin-top: $sidebar-heading-margin-top;
         letter-spacing: $sidebar-heading-letter-spacing;
         text-transform: uppercase;
-        padding-left: $v-gap*3;
-        padding-right: $v-gap*3;
+        padding-left: $v-gap * 3;
+        padding-right: $v-gap * 3;
       }
       .custom-navbar-toggler {
         display: none;
         span {
-
         }
       }
       .menu-wrapper {
-        padding: $v-gap*2 0 $v-gap*3;
+        padding: $v-gap * 2 0 $v-gap * 3;
         background: $navscroll-bg-color-desk;
       }
     }
@@ -215,10 +211,8 @@
       border-right: 1px solid $navscroll-line-color;
     }
   }
-
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }

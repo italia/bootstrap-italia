@@ -7,14 +7,14 @@ a.datepicker-button {
   &.default {
     &:hover,
     &:focus {
-      background-color: #DDD;
+      background-color: #ddd;
     }
   }
 }
 
 .datepicker-calendar {
   margin: 0 10px 10px 0;
-  font-size: .9em;
+  font-size: 0.9em;
   padding: 2px;
   position: absolute;
   width: 261px;
@@ -83,7 +83,7 @@ a.datepicker-button {
       font-family: 'Glyphicons Halflings';
       font-size: 0.6em;
       display: inline-block;
-      content: "\e252";
+      content: '\e252';
     }
 
     &:hover,
@@ -176,7 +176,7 @@ a.datepicker-button {
   ***************************/
 
   &.default {
-    background-color: #FFF;
+    background-color: #fff;
 
     button.datepicker-close:focus,
     button.datepicker-close:hover,
@@ -190,7 +190,7 @@ a.datepicker-button {
     .datepicker-month-prev.enabled:hover,
     .datepicker-month:focus,
     .datepicker-month:hover {
-      background-color: #EEE;
+      background-color: #eee;
       border-color: #999;
       border: none;
       margin: 0;
@@ -258,14 +258,14 @@ a.datepicker-button {
 
         &.empty {
           border: none;
-          color: #CCC;
+          color: #ccc;
 
           &:hover {
             background: transparent;
 
             span {
               background: $primary-a6;
-              color: #FFF;
+              color: #fff;
             }
           }
         }
@@ -278,7 +278,7 @@ a.datepicker-button {
         &.selectable.focus {
           span {
             background: $primary-a6;
-            color: #FFF;
+            color: #fff;
           }
         }
       }
@@ -289,7 +289,7 @@ a.datepicker-button {
     }
 
     button.datepicker-close {
-      background-color: #DDD;
+      background-color: #ddd;
       border-color: #999;
       color: #000;
     }
@@ -310,7 +310,8 @@ a.datepicker-button {
   z-index: 40;
 }
 
-abbr[data-original-title], abbr[title] {
+abbr[data-original-title],
+abbr[title] {
   text-decoration: none;
   cursor: default;
 }
@@ -325,7 +326,7 @@ abbr[data-original-title], abbr[title] {
   }
 
   // calendar
-  input[type="time"] {
+  input[type='time'] {
     color: $dp-label-color;
   }
 
@@ -333,7 +334,7 @@ abbr[data-original-title], abbr[title] {
     color: $gray-secondary;
     font-weight: 600;
     line-height: $input-height;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
     top: 1rem;
     font-size: $small-font-size;
     cursor: text;
@@ -351,16 +352,16 @@ abbr[data-original-title], abbr[title] {
     border-top: 2px solid $dp-label-color;
     margin-top: -8px;
     color: $dp-label-color;
-    padding: $v-gap*3;
+    padding: $v-gap * 3;
 
-    &[aria-hidden=true] {
+    &[aria-hidden='true'] {
       display: inherit;
     }
 
     .datepicker-month-wrap {
       padding: 0;
       color: $dp-label-color;
-      margin-bottom: $v-gap*2;
+      margin-bottom: $v-gap * 2;
 
       .datepicker-month {
         font-size: $dp-month-size;
@@ -395,7 +396,7 @@ abbr[data-original-title], abbr[title] {
       .datepicker-month-fast-next {
         float: right;
         display: inline-block;
-        min-width: $v-gap*4;
+        min-width: $v-gap * 4;
 
         svg {
           &:first-child {
@@ -411,7 +412,7 @@ abbr[data-original-title], abbr[title] {
       .datepicker-month-fast-prev {
         float: left;
         display: inline-block;
-        min-width: $v-gap*4;
+        min-width: $v-gap * 4;
 
         svg {
           &:last-child {
@@ -431,7 +432,6 @@ abbr[data-original-title], abbr[title] {
     }
 
     tr.datepicker-weekdays {
-
     }
   }
 
@@ -465,14 +465,14 @@ abbr[data-original-title], abbr[title] {
     .datepicker-button {
       padding: 0;
       all: unset;
-      margin-right: $v-gap*2;
+      margin-right: $v-gap * 2;
       position: relative;
       height: 40px;
       cursor: pointer;
 
       &:hover {
         all: unset;
-        margin-right: $v-gap*2;
+        margin-right: $v-gap * 2;
         height: 40px;
 
         .icon {
@@ -489,7 +489,6 @@ abbr[data-original-title], abbr[title] {
       }
     }
   }
-
 }
 
 .it-datepicker-wrapper.theme-dark {
@@ -513,7 +512,7 @@ abbr[data-original-title], abbr[title] {
     table.datepicker-grid {
       td {
         background: transparent;
-        color: #FFF;
+        color: #fff;
 
         &:hover {
           background: transparent;
@@ -528,7 +527,7 @@ abbr[data-original-title], abbr[title] {
 
           span {
             background: rgba(255, 255, 255, 0.1);
-            color: #FFF;
+            color: #fff;
           }
         }
 
@@ -541,7 +540,7 @@ abbr[data-original-title], abbr[title] {
           background: transparent;
 
           span {
-            background: #FFF;
+            background: #fff;
             color: $primary-a6;
           }
         }
@@ -570,22 +569,22 @@ abbr[data-original-title], abbr[title] {
 
   .datepicker-calendar {
     border-top: 2px solid $dp-label-color;
-    color: #FFF;
+    color: #fff;
     background-color: $primary-a6;
 
     .datepicker-month-wrap {
-      color: #FFF;
+      color: #fff;
 
       svg {
-        fill: #FFF;
+        fill: #fff;
       }
 
       .icon-right {
-        border-color: transparent transparent transparent #FFF;
+        border-color: transparent transparent transparent #fff;
       }
 
       .icon-left {
-        border-color: transparent #FFF transparent transparent;
+        border-color: transparent #fff transparent transparent;
       }
 
       .datepicker-month-next {

@@ -21,7 +21,6 @@
   font-weight: $alert-link-font-weight;
 }
 
-
 // Dismissible alerts
 //
 // Expand the right padding and account for the close button's positioning.
@@ -34,20 +33,28 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: .8rem $alert-padding-x;
+    padding: 0.8rem $alert-padding-x;
     color: inherit;
   }
 }
-
 
 // Alternate styles
 //
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $color, $value in $theme-colors {
-  @if ($color == "danger" or $color == "warning" or $color == "success" or $color == "info") {
+  @if (
+    $color ==
+      'danger' or
+      $color ==
+      'warning' or
+      $color ==
+      'success' or
+      $color ==
+      'info'
+  ) {
     .alert-#{$color} {
-      background-position: 1em .8em;
+      background-position: 1em 0.8em;
       background-repeat: no-repeat;
       border-left: 8px solid #{$value};
     }
