@@ -9,7 +9,8 @@
   flex-wrap: nowrap;
 
   //reset icon right margin
-  .it-ico, .it-ico-lg  {
+  .it-ico,
+  .it-ico-lg {
     &:before {
       margin-right: 0;
     }
@@ -28,7 +29,7 @@
   //tabs with icon and text
   &.nav-tabs-icon-text {
     //icons
-    .icon  {
+    .icon {
       margin-right: 0.889rem;
     }
   }
@@ -55,18 +56,21 @@
       }
 
       &.justify-content-end {
-        .it-ico:before, .it-ico-lg:before {
+        .it-ico:before,
+        .it-ico-lg:before {
           margin-right: 0;
         }
       }
     }
-    .nav-link.active, .nav-item.show .nav-link {
+    .nav-link.active,
+    .nav-item.show .nav-link {
       border-bottom: none;
       border-right-color: $italia;
     }
     &.nav-tabs-vertical-background {
-      .nav-link.active, .nav-item.show .nav-link {
-        background-color:$neutral-2;
+      .nav-link.active,
+      .nav-item.show .nav-link {
+        background-color: $neutral-2;
       }
     }
   }
@@ -106,7 +110,7 @@
     }
 
     //icons
-    .it-ico  {
+    .it-ico {
       &:before {
         font-size: 1.333rem;
       }
@@ -125,7 +129,8 @@
       }
     }
   }
-  .nav-link.active, .nav-item.show .nav-link {
+  .nav-link.active,
+  .nav-item.show .nav-link {
     border-bottom-color: $italia;
     color: $italia;
     cursor: inherit;
@@ -157,7 +162,8 @@
         }
       }
     }
-    .nav-link.active, .nav-item.show .nav-link {
+    .nav-link.active,
+    .nav-item.show .nav-link {
       background-color: $gray-primary;
       color: $cyan;
       border-bottom: 2px solid $cyan;
@@ -167,17 +173,16 @@
     }
 
     &.nav-tabs-vertical {
-      .nav-link.active, .nav-item.show .nav-link {
+      .nav-link.active,
+      .nav-item.show .nav-link {
         border-right-color: $cyan;
         border-bottom: none;
       }
     }
-
   }
 
   //card version
   &.nav-tabs-cards {
-
     border-bottom: none;
 
     //grey fullwidth bottom border for ul
@@ -190,7 +195,8 @@
       border-bottom: 1px solid $gray-border-disabled;
     }
 
-    .nav-link.active, .nav-item.show .nav-link {
+    .nav-link.active,
+    .nav-item.show .nav-link {
       border: 1px solid $gray-border-disabled;
       border-bottom-color: #fff;
       border-radius: $border-radius $border-radius 0 0;
@@ -199,7 +205,6 @@
 
   //editable version
   &.nav-tabs-editable {
-
     .nav-item {
       position: relative;
       &:last-of-type {
@@ -241,14 +246,13 @@
         top: 0.611rem;
         background-color: $italia;
       }
-
     }
 
     .nav-link {
       padding-right: 2.888em;
     }
 
-     //close button
+    //close button
     .nav-link-close {
       cursor: pointer;
       position: absolute;
@@ -279,7 +283,8 @@
         }
       }
     }
-    .nav-link.active, .nav-item.show .nav-link {
+    .nav-link.active,
+    .nav-item.show .nav-link {
       .nav-link-close {
         color: $primary;
         .icon {
@@ -288,7 +293,6 @@
       }
     }
   }
-
 }
 
 // ----------- tabs position ----------------
@@ -302,7 +306,8 @@
       border-bottom: none;
       border-top: 2px solid transparent;
     }
-    .nav-link.active, .nav-item.show .nav-link {
+    .nav-link.active,
+    .nav-item.show .nav-link {
       border-top-color: $italia;
     }
   }
@@ -327,7 +332,8 @@
           margin-right: 0.889rem;
         }
       }
-      .nav-link.active, .nav-item.show .nav-link {
+      .nav-link.active,
+      .nav-item.show .nav-link {
         border-left-color: $italia;
       }
     }
@@ -339,7 +345,8 @@
   .nav-tabs {
     &.nav-dark {
       &.nav-tabs-vertical {
-        .nav-link.active, .nav-item.show .nav-link {
+        .nav-link.active,
+        .nav-item.show .nav-link {
           border-left-color: $cyan;
         }
       }
@@ -376,12 +383,12 @@
   .nav-tabs-hidescroll {
     height: auto;
     overflow: initial;
-    &.hidescroll-ico, &.hidescroll-ico-lg {
+    &.hidescroll-ico,
+    &.hidescroll-ico-lg {
       height: auto;
     }
     .nav-tabs {
       padding-bottom: 0;
     }
   }
-
 }

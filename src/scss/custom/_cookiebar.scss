@@ -7,7 +7,7 @@
   width: 100%;
   z-index: $zindex-cookiebar;
   background-color: $neutral-1-a8;
-  padding: $v-gap*3 $v-gap*4;
+  padding: $v-gap * 3 $v-gap * 4;
 
   &.cookiebar-top {
     bottom: auto;
@@ -20,7 +20,7 @@
 
   p {
     font-size: 1rem;
-    line-height: 1.250em;
+    line-height: 1.25em;
     color: $white;
     margin-bottom: 0;
     br {
@@ -30,9 +30,9 @@
 
   .cookiebar-buttons {
     text-align: right;
-    margin-top: $v-gap*4;
+    margin-top: $v-gap * 4;
     padding: 0;
-    line-height: 1.250em;
+    line-height: 1.25em;
   }
 
   .cookiebar-btn {
@@ -51,13 +51,12 @@
       cursor: pointer;
     }
     &:last-child {
-      margin-left: $v-gap*4;
+      margin-left: $v-gap * 4;
     }
     &:not(.cookiebar-confirm) {
       color: $neutral-2-a1;
     }
   }
-
 }
 
 //small - tablet
@@ -75,14 +74,14 @@
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .cookiebar {
-    padding: $v-gap*4 $v-gap*6;
+    padding: $v-gap * 4 $v-gap * 6;
     &.show {
       display: flex;
       justify-content: space-between;
     }
     p {
       width: 60%;
-      margin-right: $v-gap*3;
+      margin-right: $v-gap * 3;
       br {
         display: block;
       }
@@ -92,14 +91,13 @@
       margin-top: 0;
       width: 40%;
     }
-
   }
 }
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .cookiebar {
-    max-width: $v-gap*104;
+    max-width: $v-gap * 104;
     left: 50%;
     right: auto;
     transform: translateX(-50%);

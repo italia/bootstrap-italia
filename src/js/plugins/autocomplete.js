@@ -68,6 +68,5 @@ $(function() {
     })
   }
 
-  $('.autocomplete').autocomplete();
+  $('.autocomplete').autocomplete()
 })
-

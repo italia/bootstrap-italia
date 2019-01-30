@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   font-size: 16px;
   line-height: 1.5;
   @include media-breakpoint-up(sm) {
@@ -11,7 +12,8 @@ html, body {
 // Intestazioni
 //
 
-h1, .h1 {
+h1,
+.h1 {
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
     font-size: 2.666rem;
@@ -20,7 +22,8 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   line-height: 1.25;
   @include media-breakpoint-up(sm) {
     font-size: 2.222rem;
@@ -29,7 +32,8 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   line-height: 1.1428;
   @include media-breakpoint-up(sm) {
     font-size: 1.777rem;
@@ -37,7 +41,8 @@ h3, .h3 {
   }
 }
 
-h4, .h4 {
+h4,
+.h4 {
   line-height: 1.1666;
   @include media-breakpoint-up(sm) {
     font-size: 1.555rem;
@@ -46,14 +51,16 @@ h4, .h4 {
   }
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-weight: 400;
   @include media-breakpoint-up(sm) {
     font-size: 1.333rem;
   }
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-weight: 600;
   line-height: 1.5;
 }
@@ -70,7 +77,8 @@ h6, .h6 {
   }
 }
 
-blockquote, .blockquote {
+blockquote,
+.blockquote {
   font-family: $font-family-serif;
   margin: 1.5rem 0;
 }
@@ -80,13 +88,14 @@ caption {
   line-height: 1.4285;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 
 small,
 .small {
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   font-weight: $font-weight-normal;
   @include media-breakpoint-up(sm) {
     font-size: 0.8888rem;
@@ -94,7 +103,7 @@ small,
 }
 
 .x-small {
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: $font-weight-normal;
   @include media-breakpoint-up(sm) {
     font-size: 0.7777rem;

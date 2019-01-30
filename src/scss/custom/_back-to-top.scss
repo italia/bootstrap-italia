@@ -12,7 +12,9 @@
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  transition: $transition-base, transform 0.25s cubic-bezier(.75,-0.5,0,1.75), visibility 0.3s linear, opacity 0.3s ease-in-out;
+  transition: $transition-base,
+    transform 0.25s cubic-bezier(0.75, -0.5, 0, 1.75), visibility 0.3s linear,
+    opacity 0.3s ease-in-out;
   z-index: 1;
   transform: scale(0.7);
   transform-origin: center center;
@@ -20,7 +22,8 @@
   &.back-to-top-show {
     visibility: visible;
     opacity: 1;
-    transition: $transition-base, transform 0.05s ease-out, visibility 0 linear 0, opacity 0.1s ease-in-out;
+    transition: $transition-base, transform 0.05s ease-out,
+      visibility 0 linear 0, opacity 0.1s ease-in-out;
     transform: scale(1);
   }
   &:hover {
@@ -31,9 +34,9 @@
   .icon {
     margin: 0;
     position: relative;
-    transform: scale(.75);
+    transform: scale(0.75);
     top: 4px;
-    &:before {
+    &:before  {
       margin: 0;
       color: $white;
     }
@@ -42,7 +45,7 @@
   //shadow
   &.shadow {
     &:hover {
-      box-shadow: 0 0.3rem 0.75rem rgba(0,0,0,.3) !important;
+      box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.3) !important;
     }
   }
 
@@ -55,13 +58,11 @@
 
     //caret
     .icon {
-      &:before {
+      &:before  {
         color: $neutral-1-a8;
       }
     }
-
   }
-
 }
 
 //Tablet vertical
@@ -80,7 +81,7 @@
       height: 40px;
       //caret
       .icon {
-        transform: scale(.75);
+        transform: scale(0.75);
         top: 4px;
       }
     }

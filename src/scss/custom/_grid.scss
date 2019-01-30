@@ -1,9 +1,12 @@
-@mixin make-variable-gutters($gutter-widths: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+@mixin make-variable-gutters(
+  $gutter-widths: $grid-gutter-widths,
+  $breakpoints: $grid-breakpoints
+) {
   margin-right: ($grid-gutter-width / -2);
   margin-left: ($grid-gutter-width / -2);
 
   > .col,
-  > [class*="col-"] {
+  > [class*='col-'] {
     padding-right: ($grid-gutter-width / 2);
     padding-left: ($grid-gutter-width / 2);
   }
@@ -14,7 +17,7 @@
       margin-left: ($grid-gutter-width / -2);
 
       > .col,
-      > [class*="col-"] {
+      > [class*='col-'] {
         padding-right: ($grid-gutter-width / 2);
         padding-left: ($grid-gutter-width / 2);
       }

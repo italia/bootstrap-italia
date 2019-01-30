@@ -16,7 +16,7 @@ nav.pagination-wrapper {
     p {
       font-size: $pager-font-size;
       color: $pager-font-color;
-      margin-bottom: $pager-margin-bottom*2;
+      margin-bottom: $pager-margin-bottom * 2;
       font-weight: $pager-font-weight;
       text-align: center;
     }
@@ -39,7 +39,7 @@ nav.pagination-wrapper {
   }
 
   //page changer dropdown button
-  .btn.dropdown-toggle{
+  .btn.dropdown-toggle {
     font-size: $pager-font-size;
     color: $pager-font-color;
     font-weight: $pager-font-weight;
@@ -117,14 +117,12 @@ nav.pagination-wrapper {
           fill: $pager-hover-color;
         }
       }
-
     }
   }
 }
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
   //items size
   .pagination {
     .page-item {
@@ -137,11 +135,10 @@ nav.pagination-wrapper {
 
   //page changer toggle
   nav.pagination-wrapper {
-    .btn.dropdown-toggle{
+    .btn.dropdown-toggle {
       height: $pager-item-size-tablet;
     }
   }
-
 }
 
 //Tablet vertical

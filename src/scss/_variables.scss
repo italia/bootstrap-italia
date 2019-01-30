@@ -17,13 +17,13 @@ $grid-gutter-widths: (
   sm: 12px,
   md: 20px,
   lg: 20px,
-  xl: 28px
+  xl: 28px,
 ) !default;
 
 // Text
 $font-family-serif: Lora, Georgia, serif !default;
-$font-family-sans-serif: "Titillium Web", Geneva, Tahoma, sans-serif !default;
-$font-family-monospace: "Roboto Mono", monospace !default;
+$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
+$font-family-monospace: 'Roboto Mono', monospace !default;
 $font-family-base: $font-family-sans-serif;
 $text-color: $gray-700;
 $text-muted: $gray-tertiary;
@@ -56,8 +56,8 @@ $input-btn-line-height: 1.5 !default;
 $input-btn-line-height-sm: 1.428 !default;
 $input-btn-line-height-lg: 1.556 !default;
 $input-disabled-bg: $gray-disabled;
-$input-spacing-x: .5rem;
-$input-spacing-y: .375rem;
+$input-spacing-x: 0.5rem;
+$input-spacing-y: 0.375rem;
 $input-border-width: 0;
 $input-border-radius: 0;
 $input-group-addon-bg: $white;
@@ -110,13 +110,12 @@ $display2-weight: 700;
 $display3-weight: 700;
 $display4-weight: 700;
 
-
 // Breadcrumbs
 $breadcrumb-padding: 24px;
 $breadcrumb-bg: transparent;
 $breadcrumb-link-font-weight: 600;
 $breadcrumb-link-color: $neutral-1-a7;
-$breadcrumb-link-x-padding: .5em;
+$breadcrumb-link-x-padding: 0.5em;
 $breadcrumb-bg-dark: $neutral-1-a8;
 $breadcrumb-border-radius: 0;
 $breadcrumb-link-color-dark: $white;
@@ -143,7 +142,7 @@ $tooltip-padding-y: 1rem !default;
 $tooltip-padding-x: 1rem !default;
 
 //Modals
-$modal-backdrop-opacity: .8 !default;
+$modal-backdrop-opacity: 0.8 !default;
 $modal-max-width: 32rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
 $modal-footer-border-width: 0 !default;
@@ -184,20 +183,20 @@ $blockquote-small-color: $gray-600;
 $blockquote-small-color-dark: $gray-400;
 
 // Skiplinks
-$skiplink-padding-y: .5rem;
-$skiplink-padding-x: .5rem;
+$skiplink-padding-y: 0.5rem;
+$skiplink-padding-x: 0.5rem;
 
 // Dropdown
 $dropdown-header-color: $dark;
-$dropdown-link-hover-bg: #E6ECF2;
+$dropdown-link-hover-bg: #e6ecf2;
 $dropdown-link-color: $dark;
 $dropdown-link-hover-color: $dark;
 $dropdown-item-padding-x: 24px;
 $dropdown-item-padding-y: 12px;
 $dropdown-border-width: 0;
 $dropdown-border-color: transparent;
-$dropdown-box-shadow: 0 20px 30px 5px rgba(0, 0, 0, .05);
-$dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, .05);
+$dropdown-box-shadow: 0 20px 30px 5px rgba(0, 0, 0, 0.05);
+$dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, 0.05);
 
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
@@ -214,18 +213,18 @@ $dropdown-menu-notch-position-x: 24px;
 
 //Navigation
 $navbar-bg-color: $color-primary;
-$navigation-bg-color: #FFF;
+$navigation-bg-color: #fff;
 $navigation-bg-color-desktop: $color-primary;
 
 $navigation-h-padding: 24px;
 $navigation-v-padding: 13px;
 $navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
 $navigation-close-button-text-color: $color-primary;
-$navigation-close-button-text-size: 0.750em;
+$navigation-close-button-text-size: 0.75em;
 $navigation-close-button-icon-size: 2em;
 $navigation-links-margin-top: 102px;
 $navigation-link-color: $color-primary;
-$navigation-link-color-desk: #FFF;
+$navigation-link-color-desk: #fff;
 $navigation-link-active-bar-size: 3px;
 $navigation-link-active-bar-color: $color-primary;
 $navigation-link-active-bar-color-desk: $white;
@@ -237,16 +236,15 @@ $navigation-dropdown-icon-width: 1em;
 $navigation-disabled-item-opacity: 0.5;
 $navigation-hamburger-size: 24px;
 
-
 // navigation dark theme (mobile)
 $navigation-dark-bg-color: $color-primary;
-$navigation-dark-text-color: #FFF;
+$navigation-dark-text-color: #fff;
 $navigation-dark-bg-color: $primary-b1;
 $navigation-dark-separator-color: $primary-c5;
 //$navigation-dark-megamenu-separator-color:
 
 // navigation light theme (desktop)
-$navigation-light-bg-color: #FFF;
+$navigation-light-bg-color: #fff;
 $navigation-light-text-color: $color-primary;
 $navigation-light-megamenu-footer-bg-color: $primary-a7;
 $navigation-light-separator-color: $neutral-1-a2;
@@ -260,12 +258,11 @@ $inline-menu-line-width: 2px;
 $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
 
-
 // Linklist
 $link-list-font-size: 0.889em;
 $link-list-font-size-l: 1em;
 $link-list-line-height: 2.3em;
-$link-list-line-height-l: 2.70em;
+$link-list-line-height-l: 2.7em;
 $link-list-heading-size: 1em;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
@@ -277,7 +274,6 @@ $link-list-avatar-margin: 8px;
 $link-list-checkbox-icon-right: 35px;
 $link-list-toggle-margin: 8px;
 
-
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
 $megamenu-column-gap: $v-gap * 3;
@@ -285,25 +281,24 @@ $megamenu-link-small-line-width: 65px;
 $megamenu-link-small-line-margin-bottom: $v-gap;
 $megamenu-heading-line-height: 1.2em;
 $megamenu-heading-font-weight: 600;
-$megamenu-heading-bottom-margin: .5rem;
+$megamenu-heading-bottom-margin: 0.5rem;
 $megamenu-heading-text-size: 0.833em;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
-$megamenu-link-arrow-size: .8em;
+$megamenu-link-arrow-size: 0.8em;
 $megamenu-footer-bg-color: $lightgrey-c2;
 $megamenu-link-more-link-list-distance-mobile: $v-gap;
 $megamenu-linklist-link-line-height: 1em;
-$megamenu-linklist-link-v-padding: .5em;
+$megamenu-linklist-link-v-padding: 0.5em;
 $megamenu-liklist-vertical-margin-top: 25px;
 $megamenu-liklist-vertical-margin-bottom: 16px;
 $megamenu-linklist-vertical-link-padding: 36px;
 $megamenu-vertical-desription-font-size: 0.889em;
 
-
 // Linklist footer megamenu
 $link-list-megamenu-footer-bg-color: $neutral-2;
 $link-list-megamenu-footer-link-padding: 16px;
-$link-list-footer-distance-bottom: .5rem;
+$link-list-footer-distance-bottom: 0.5rem;
 
 // Pager
 $pager-margin-bottom: 0.5rem;
@@ -327,53 +322,54 @@ $pager-page-changer-border-bottom: 1px solid $gray-secondary;
 
 // Sidebar
 $sidebar-heading-font-weight: 600;
-$sidebar-heading-bottom-margin: .8rem;
+$sidebar-heading-bottom-margin: 0.8rem;
 $sidebar-heading-text-size: 0.833em;
 $sidebar-heading-margin-top: 5px;
 $sidebar-heading-letter-spacing: 1px;
 $sidebar-linklist-link-line-height: 1em;
-$sidebar-linklist-link-v-padding: .8em;
+$sidebar-linklist-link-v-padding: 0.8em;
 $sidebar-link-small-line-width: 65px;
 $sidebar-link-size: 1em;
 $sidebar-dropdown-icon-size: 0.8em;
 $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary;
 $sidebar-submenu-font-size: 0.889em;
-$sidebar-submenu-link-v-padding: .7em;
+$sidebar-submenu-link-v-padding: 0.7em;
 $sidebar-border-color: $neutral-1-a2;
 
 //sidebar dark theme
 $sidebar-dark-bg-color: $neutral-1-a8;
-$sidebar-dark-text-color: #FFF;
+$sidebar-dark-text-color: #fff;
 $sidebar-dark-separator-color: rgba(229, 229, 229, 0.3);
 
 // Navscroll
-$navscroll-bg-color: #FFF;
+$navscroll-bg-color: #fff;
 $navscroll-toggler-color: $primary;
 $navscroll-button-text-weight: 600;
-$navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, .05);
-$navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, .05);
+$navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
+$navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
 $navscroll-primary-font-weight: 600;
 $navscroll-font-size: 1em;
-$navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
+$navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid
+  $sidebar-dropdown-line-selection-color;
 $navscroll-secondary-active-color: $neutral-1-a10;
-$navscroll-links-padding: .8em;
-$navscroll-bg-color-desk: #FFF;
+$navscroll-links-padding: 0.8em;
+$navscroll-bg-color-desk: #fff;
 $navscroll-line-color: $neutral-1-a2;
-$navscroll-backbutton-padding: $v-gap*2 $v-gap*3;
+$navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;
 $navscroll-backbutton-weight: 600;
-$navscroll-backbutton-margin-top: $v-gap*3;
+$navscroll-backbutton-margin-top: $v-gap * 3;
 
 //navscroll dark theme mobile
 $navscroll-dark-bg-color: $neutral-1-a8;
-$navscroll-dark-text-color: #FFF;
+$navscroll-dark-text-color: #fff;
 $navscroll-dark-separator-color: rgba(229, 229, 229, 0.3);
 
 //dialog
 $dialog-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-$modal-padding: $v-gap*3;
-$modal-margin: $v-gap*6;
-$modal-padding-close: $v-gap*2;
+$modal-padding: $v-gap * 3;
+$modal-margin: $v-gap * 6;
+$modal-padding-close: $v-gap * 2;
 $modal-heading-size: 0.8333333333333334rem;
 $modal-heading-weight: 600;
 $modal-heading-l-space: 0.5px;
@@ -381,10 +377,10 @@ $modal-heading-color: $neutral-1-a10;
 $modal-p-size: 0.8888888888888888rem;
 $modal-p-l-height: 1.3333333333333333rem;
 $modal-icon-color: $primary-a6;
-$modal-icon-distance: $v-gap*2;
-$modal-alert-p-distance: 32px + $v-gap*2;
+$modal-icon-distance: $v-gap * 2;
+$modal-alert-p-distance: 32px + $v-gap * 2;
 $modal-heading-border: 1px solid rgba(0, 0, 0, 0.05);
-$modal-sticky-bg: #FFF;
+$modal-sticky-bg: #fff;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
 $modal-popconfirm-p-size: 0.778rem;
@@ -392,18 +388,18 @@ $modal-popconfirm-max-width: 300px;
 
 //HEADER
 //Header slim
-$header-general-padding: $v-gap*3;
+$header-general-padding: $v-gap * 3;
 $header-slim-bg-color: $primary-a7;
-$header-slim-text-color: #FFF;
+$header-slim-text-color: #fff;
 $header-slim-brand-text-size: 0.778em;
 $header-slim-icon-size: 18px;
-$header-slim-padding-desk: 3px $v-gap*3;
+$header-slim-padding-desk: 3px $v-gap * 3;
 $header-slim-dropdown-distance: 14px;
 $header-slim-dropdown-distance-mob: 9px;
 $header-slim-links-padding: 5px;
 $header-slim-brand-padding: 12px;
 $header-slim-ul-border: 1px solid rgba(255, 255, 255, 0.2);
-$header-slim-a-active-border: 2px solid #FFF;
+$header-slim-a-active-border: 2px solid #fff;
 $header-slim-button-color: $primary-a9;
 $header-slim-button-hover-color: $primary-a8;
 $header-slim-button-v-padding: 7.5px;
@@ -412,7 +408,7 @@ $header-slim-h-padding: 18px;
 $header-slim-v-padding-mob: 6.5px;
 
 //header-slim-theme-light
-$header-slim-theme-light-bg-color: #FFF;
+$header-slim-theme-light-bg-color: #fff;
 $header-slim-theme-light-text-color: $primary-a7;
 $header-slim-theme-light-ul-border: 1px solid rgba($primary-a7, 0.2);
 $header-slim-theme-light-a-active-border: 2px solid $primary-a7;
@@ -425,21 +421,21 @@ $header-center-max-height: 176px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-text-color: #FFF;
+$header-center-text-color: #fff;
 $header-center-h2-size: 1.778em;
-$header-center-h2-size-mob: 1.250em;
+$header-center-h2-size-mob: 1.25em;
 $header-center-h2-weight: 600;
 $header-center-h3-size: 0.889em;
 $header-center-icon-size: 82px;
 $header-center-icon-size-mob: 48px;
-$header-center-icon-margin: $v-gap*2;
+$header-center-icon-margin: $v-gap * 2;
 $header-center-icon-margin-mob: $v-gap;
-$header-center-social-size: $v-gap*3;
-$header-center-social-distance: $v-gap*2;
-$header-center-search-size: $v-gap*6;
-$header-center-search-radius: $v-gap*3;
-$header-center-search-icon-size: $v-gap*3;
-$header-center-search-distance: $v-gap*10;
+$header-center-social-size: $v-gap * 3;
+$header-center-social-distance: $v-gap * 2;
+$header-center-search-size: $v-gap * 6;
+$header-center-search-radius: $v-gap * 3;
+$header-center-search-icon-size: $v-gap * 3;
+$header-center-search-distance: $v-gap * 10;
 $header-center-text-size: 0.889em;
 $header-nav-button-distance: 22px;
 $header-center-small-height: 104px;
@@ -447,14 +443,14 @@ $header-center-small-mob-height: 64px;
 $header-center-small-h2-size: 1.333em;
 $header-center-small-h3-size: 0.778em;
 // header center theme light
-$header-center-theme-light-bg-color: #FFF;
+$header-center-theme-light-bg-color: #fff;
 $header-center-theme-light-text-color: $primary-a6;
 
 $header-center-button-left: 10px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
 
 //cards
-$card-padding: $v-gap*3;
+$card-padding: $v-gap * 3;
 $card-h5-size: 1.125rem;
 $card-h5-size-desk: 1rem;
 $card-h5-line-height: 1.4444444444444444rem;
@@ -468,32 +464,32 @@ $card-border-color: $neutral-1-a2;
 $card-small-line-height: 1px;
 $card-small-line-w: 128px;
 $card-small-line-color: $neutral-1-a2;
-$card-small-line-margin: $v-gap*6;
+$card-small-line-margin: $v-gap * 6;
 $card-category-size: 0.7777777777777778rem;
 $card-category-l-spacing: 0.9px;
-$card-category-m-bottom: $v-gap*2;
+$card-category-m-bottom: $v-gap * 2;
 $card-big-head-size: 1.5555555555555556rem;
 $card-big-head-l-h: 1.7777777777777777rem;
 $card-signature-size: 0.8888888888888888rem;
 $card-link-color: $primary-a6;
-$card-link-icon-size: $v-gap*2;
-$card-cat-icon-block-margin: $v-gap*2;
-$card-cat-icon-size: $v-gap*5;
-$card-simple-link-margin: $v-gap*4;
-$card-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
-$card-shadow-bg: #FFF;
+$card-link-icon-size: $v-gap * 2;
+$card-cat-icon-block-margin: $v-gap * 2;
+$card-cat-icon-size: $v-gap * 5;
+$card-simple-link-margin: $v-gap * 4;
+$card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+$card-shadow-bg: #fff;
 $card-big-h5-size: 1.3333333333333333rem;
 $card-big-h5-l-h: 1.5555555555555556rem;
 $card-big-p-size: 0.8888888888888888rem;
 $card-big-p-l-h: 1.3333333333333333rem;
-$card-big-top-icon-size: $v-gap*10;
+$card-big-top-icon-size: $v-gap * 10;
 $card-img-heading-size: 1.1111111111111112rem;
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
 $flag-icon-color: $primary-a6;
-$flag-icon-h: $v-gap*6;
-$flag-icon-w: $v-gap*4;
+$flag-icon-h: $v-gap * 6;
+$flag-icon-w: $v-gap * 4;
 // tag
 $tag-radius: 50px;
 
@@ -510,7 +506,7 @@ $select-dd-link-color: $primary;
 $select-dd-link-color-active: $neutral-1-a10;
 $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $neutral-1-a1;
-$select-dd-icon-size: $v-gap*3;
+$select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
 $select-dd-pill-font-size: 0.7777777777777778rem;
 $select-dd-pill-distance: $v-gap;
@@ -523,11 +519,11 @@ $select-dd-check-height: 30px;
 $dp-label-color: $neutral-1-a8;
 $dp-border-bottom: 1px solid $dp-label-color;
 $dp-shadow: $dialog-shadow;
-$dp-arrow-size: $v-gap*2;
+$dp-arrow-size: $v-gap * 2;
 $dp-month-size: 0.8333333333333334rem;
 $dp-month-l-spacing: 0.1px;
 $dp-grid-size: 13px;
-$dp-current-size: $v-gap*4;
+$dp-current-size: $v-gap * 4;
 
 //hero
 $hero-bg-color: $primary-a6;
@@ -536,8 +532,8 @@ $hero-height-mob: 380px;
 $hero-height-sm-desk: 400px;
 $hero-height-sm-tab: 300px;
 $hero-height-sm-mob: 230px;
-$hero-text-padding: $v-gap*3;
-$hero-text-color: #FFF;
+$hero-text-padding: $v-gap * 3;
+$hero-text-color: #fff;
 $hero-cat-size: 1rem;
 $hero-heading-size: 2rem;
 $hero-heding-size-desk: 2.6666666666666665rem;
@@ -552,15 +548,15 @@ $hero-negative-bottom-padding: 240px;
 $hero-negative-bottom-padding-mob: 136px;
 
 // Carousel
-$crs-margin-bottom: $v-gap*3;
-$crs-mob-live-padding: $v-gap*2;
+$crs-margin-bottom: $v-gap * 3;
+$crs-mob-live-padding: $v-gap * 2;
 $crs-dots-simension: $v-gap;
 $crs-dots-color: $primary-a7;
 $crs-dots-margin-left: 38px;
-$crs-dots-margin-left-desk: $v-gap*2;
-$crs-heading-h-padding: $v-gap*3;
+$crs-dots-margin-left-desk: $v-gap * 2;
+$crs-heading-h-padding: $v-gap * 3;
 $crs-heading-h-size: 1.75rem;
-$crs-landcape-card-padding: $v-gap*6;
+$crs-landcape-card-padding: $v-gap * 6;
 $crs-landcape-bottom: 5px;
 
 // Gridlist **************
@@ -579,7 +575,7 @@ $grid-item-icon-size-desk: 32px;
 
 // list
 $list-font-size: 1rem;
-$list-text-padding: $v-gap*2 0 $v-gap*2 0;
+$list-text-padding: $v-gap * 2 0 $v-gap * 2 0;
 $list-border-color: $neutral-1-a3;
 $list-metadata-color: $neutral-1-a7;
 $list-metadata-size: 12px;
@@ -588,8 +584,8 @@ $list-sub-size: 14px;
 $list-sub-color: $neutral-1-a8;
 
 //chips
-$chips-background: #FCFDFF;
-$chips-background-hover: #8B98A6;
+$chips-background: #fcfdff;
+$chips-background-hover: #8b98a6;
 
 // transfer
 $transfer-border: 1px solid $neutral-1-a3;
@@ -601,11 +597,11 @@ $transfer-height: 240px;
 
 //Timeline
 $timeline-width: 4px;
-$timeline-padding: ($v-gap*3)-$grid-gutter-width/2;
+$timeline-padding: ($v-gap * 3)-$grid-gutter-width/2;
 $timeline-border-color: linear-gradient(0deg, $primary 0%, #004080 100%);
-$timeline-pin-size: $v-gap*3;
+$timeline-pin-size: $v-gap * 3;
 $timeline-pin-circle-size: 48px;
-$timeline-pin-circle-border: $v-gap solid #FFF;
+$timeline-pin-circle-border: $v-gap solid #fff;
 $timeline-content-padding: 18px 0 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
 
@@ -619,7 +615,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 ) !default;
 
 // Hover states breackpoint
@@ -635,5 +631,5 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
 ) !default;

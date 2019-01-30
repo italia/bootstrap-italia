@@ -69,7 +69,7 @@
           }
         }
         // variazione icone a collapse aperto
-        &.right-icon[aria-expanded="true"] {
+        &.right-icon[aria-expanded='true'] {
           .icon.right {
             transform: scaleY(-1);
           }
@@ -79,8 +79,8 @@
             color: $neutral-1-a10;
             text-decoration: underline;
           }
-          .icon{
-            color:$neutral-1-a10;
+          .icon {
+            color: $neutral-1-a10;
           }
         }
         &.disabled {
@@ -114,7 +114,6 @@
             margin-right: $link-list-left-icon-space;
           }
         }
-
       }
       h3 {
         font-size: $link-list-heading-size;
@@ -126,7 +125,6 @@
           padding: 0;
         }
       }
-
     }
     .divider {
       display: block;
@@ -145,7 +143,7 @@
         font-weight: inherit;
         margin: 0;
       }
-      input[type=checkbox] + .lever {
+      input[type='checkbox'] + .lever {
         margin: $link-list-toggle-margin 0 0;
       }
     }
@@ -155,7 +153,7 @@
       &.form-check-group {
         padding: 0 $link-list-h-pad;
         box-shadow: none;
-        [type=checkbox] + label {
+        [type='checkbox'] + label {
           padding-left: 0;
           font-size: $link-list-font-size;
           line-height: $link-list-line-height;
@@ -168,7 +166,7 @@
             right: $link-list-checkbox-icon-right;
           }
         }
-        [type=checkbox][disabled] + label {
+        [type='checkbox'][disabled] + label {
           color: $neutral-1-a4;
         }
       }
@@ -186,7 +184,6 @@
             line-height: $link-list-line-height-l;
           }
         }
-
       }
     }
   }
@@ -209,10 +206,8 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
 }
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }

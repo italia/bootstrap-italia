@@ -4,7 +4,7 @@
     position: relative;
     // se ha un menu
     .it-brand-wrapper {
-      padding-left: $v-gap*4;
+      padding-left: $v-gap * 4;
     }
     .it-header-navbar-wrapper {
       position: absolute;
@@ -17,7 +17,7 @@
         .custom-navbar-toggler {
           padding: 0;
           transform: translateX(-2px);
-          cursor: pointer
+          cursor: pointer;
         }
       }
     }
@@ -26,12 +26,10 @@
 
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-
 }
 
 //Tablet horizontal / small desktop
@@ -53,7 +51,11 @@
         }
       }
     }
-    .navbar .navbar-collapsable .menu-wrapper .nav-item.megamenu .dropdown-menu {
+    .navbar
+      .navbar-collapsable
+      .menu-wrapper
+      .nav-item.megamenu
+      .dropdown-menu {
       left: 0;
       right: 0;
     }
@@ -62,5 +64,4 @@
 
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-
 }
