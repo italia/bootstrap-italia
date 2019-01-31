@@ -48,7 +48,7 @@
 
 .bootstrap-select-wrapper {
   position: relative;
-  padding-top: 1rem;
+  padding-top: 0;
 
   &.no-tick
     .dropdown.bootstrap-select
@@ -101,7 +101,7 @@
     font-weight: $select-label-weight;
     padding: 0 $input-spacing-x;
     line-height: calc(2.5rem - 1px);
-    top: 1rem;
+    top: 0;
     transform: translateY(-75%);
   }
 

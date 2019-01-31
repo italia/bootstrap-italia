@@ -97,6 +97,8 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
       <button class="btn" type="button" id="button-1">Invio</button>
     </div>
   </div>
+</div>
+<div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
@@ -107,6 +109,8 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
       <button class="btn" type="button" id="button-2">Invio</button>
     </div>
   </div>
+</div>
+<div class="form-group">
   <div class="input-group">
       <div class="input-group-prepend">
         <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>

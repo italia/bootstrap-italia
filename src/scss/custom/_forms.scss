@@ -1,6 +1,10 @@
+label {
+  color: $input-label-color;
+}
+
 .form-group {
   position: relative;
-  padding: $form-group-spacing-y 0;
+  margin-bottom: $form-group-margin-bottom;
 
   input,
   optgroup,
@@ -11,15 +15,14 @@
   label {
     background-color: transparent;
     position: absolute;
-    color: $input-label-color;
     font-weight: 600;
     line-height: calc(#{$input-height} - 1px);
     transition: 0.2s ease-out;
-    top: 1rem;
+    top: 0;
     font-size: 1rem;
     cursor: text;
     display: block;
-    width: calc(100% - #{$input-spacing-x});
+    width: auto; //calc(100% - #{$input-spacing-x});
     padding: 0 $input-spacing-x;
     z-index: 6;
 
@@ -145,9 +148,8 @@ textarea {
 
 // Input group
 .input-group {
-  padding: $form-group-spacing-y 0;
   label {
-    left: 2rem;
+    left: 2.25rem;
   }
   .input-group-text {
     padding: $input-spacing-y $input-spacing-x;
@@ -180,14 +182,6 @@ textarea {
     border-radius: 0;
   }
 }
-
-// Checkbox and Radio Buttons
-/*.form-row .form-check,
-.form-group .form-check,
-.row .form-check {
-  padding-left: 0;
-  margin-top: .5rem;
-}*/
 
 .form-check {
   padding-left: 0;

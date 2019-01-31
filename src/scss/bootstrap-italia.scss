@@ -69,8 +69,12 @@
 @import 'custom/buttons';
 @import 'custom/forms';
 @import 'custom/form-input-file';
+@import 'custom/form-input-number';
+@import 'custom/form-input-upload';
 @import 'custom/form-toggles';
-@import 'custom/password';
+@import 'custom/form-password';
+@import 'custom/form-select';
+@import 'custom/form-transfer';
 @import 'custom/dropdown';
 @import 'custom/pager';
 @import 'custom/tab';
@@ -97,11 +101,8 @@
 @import 'custom/avatar';
 @import 'custom/thumbnav';
 @import 'custom/steppers';
-@import 'custom/upload';
 @import 'custom/card';
 @import 'custom/imgresponsive';
-@import 'custom/select';
-@import 'custom/input-number';
 @import 'custom/overlay-panel';
 @import 'custom/progress-donuts';
 @import 'custom/progress-bars';
@@ -113,11 +114,10 @@
 @import 'custom/chips';
 @import 'custom/rating';
 @import 'custom/dimmer';
-@import 'custom/transfer';
 @import 'custom/timeline';
 
 // datepicker
-@import 'custom/datepicker';
+@import 'custom/form-datepicker';
 
 // timepicker
 // @import "custom/timepicker";
