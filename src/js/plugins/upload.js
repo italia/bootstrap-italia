@@ -33,5 +33,3 @@ $(function() {
         })
     })
 })
-
-// TODO togliere colori da qui, sono fuori contesto

@@ -11,7 +11,7 @@ toc: true
     $('.dimmer').css("display", "flex").hide().fadeIn(200);
     $('[id^=toggleDimmer]').on('click', function() {
       var dimmer = '#' + $(this).data('dimmer');
-      $(this).is(':checked') ? dimmerShow(dimmer) : dimmerHide(dimmer);
+      $(this).is(':checked') ? $(dimmer).dimmerShow() : $(dimmer).dimmerHide();
     })
   });
 </script>
@@ -22,10 +22,10 @@ L'elemento contenitore deve avere la classe `.dimmable` mentre il Dimmer avrà u
 
 {% highlight js %}
   // mostra Dimmer
-  dimmerShow('#ID_ELEMENTO');
+  $('#ID_ELEMENTO').dimmerShow();
 
   // nascondi Dimmer
-  dimmerHide('#ID_ELEMENTO');
+  $('#ID_ELEMENTO').dimmerHide();
 {% endhighlight %}
 
 ## Esempio

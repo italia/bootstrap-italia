@@ -1,4 +1,6 @@
 $(function() {
+  var backbutton = $('.it-back-button')
+
   $('.it-bottom-navscroll ul li a[href^="#"]').on('click', function(e) {
     e.preventDefault()
 
