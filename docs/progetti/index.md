@@ -9,7 +9,7 @@ toc: true
 <div class="container my-5">
   <main class="bd-content" role="main">
     {% for entry in site.data.progetti %}
-      <h3 class="mt-2">{{ entry.category | capitalize }}</h3>
+      <h3 class="mt-2" id="{{ entry.category | slugify }}">{{ entry.category | capitalize }}</h3>
       <p>{{ entry.description }}</p>
       {% for example in entry.examples %}
         {% comment %} manipulating URLs to handle both internal and external refs {% endcomment %} 
