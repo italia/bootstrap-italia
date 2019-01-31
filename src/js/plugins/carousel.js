@@ -245,6 +245,13 @@ $(function() {
             margin: xlmargin,
           },
         },
+        onInitialized: function(event) {
+          $(event.target)
+            .find('.owl-dot')
+            .each(function(index) {
+              $(this).attr('aria-labelledby', 'owl-dot-' + index)
+            })
+        },
       })
     }
   })

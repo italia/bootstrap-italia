@@ -16,7 +16,8 @@
     font-size: 0.875rem;
     height: $v-gap * 2;
     font-weight: 600;
-    color: $gray-secondary;
+    color: $chips-label-color;
+    margin-bottom: 0;
     transform: translateY(-2px);
     transition: color 0.05s;
   }
@@ -137,7 +138,7 @@
     }
     //label
     .chip-label {
-      color: $neutral-1-a4; // Exempt from color contrast requirements: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+      color: $chips-label-color-disabled; // Exempt from color contrast requirements: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
     }
     //close button
     button {

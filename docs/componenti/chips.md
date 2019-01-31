@@ -101,8 +101,8 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 </div>
 
 <div class="chip chip-lg chip-disabled">
-  <span class="chip-label">Label disabilitata</span>
-  <button disabled>
+  <label class="chip-label" for="chip-01">Label disabilitata</label>
+  <button id="chip-01" disabled>
     <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
@@ -110,8 +110,8 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 <div class="chip chip-lg chip-disabled">
   <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
-  <span class="chip-label">Label disabilitata</span>
-  <button disabled>
+  <label class="chip-label" for="chip-02">Label disabilitata</label>
+  <button id="chip-02" disabled>
     <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
@@ -121,8 +121,8 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
   </div>
-  <span class="chip-label">Label disabilitata</span>
-  <button disabled>
+  <label class="chip-label" for="chip-03">Label disabilitata</label>
+  <button id="chip-03" disabled>
     <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
