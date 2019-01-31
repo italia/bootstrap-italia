@@ -1,21 +1,27 @@
-- category: Componenti
-  description: Di seguito sono riportati alcuni esempi per il corretto utilizzo dei componenti, secondo le linee guida di design.
+- category: Esempi di componenti singoli
+  description: Di seguito sono riportati esempi per il corretto utilizzo di alcuni componenti.
   examples:
     - name: Cookiebar
+      url: cookiebar
       description: Una barra di avviso sui cookie.
     - name: Notifications
+      url: notifications
       description: Pagina con vari esempi di Notifications.
     - name: Navscroll
+      url: navscroll
       description: Pagina con esempio di Navscroll.
     - name: Hero
+      url: hero
       description: Pagina con vari esempi di Hero.
 
-- category: Template
-  description: Questa area conterrà alcuni esempi di template.
+- category: Esempi di template completi
+  description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
   examples:
     - name: Template vuoto
+      url: template-vuoto
       description: "Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia."
       status: work in progress
 
-- category: Esempi di Bootstrap 4
+- category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.2/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
+

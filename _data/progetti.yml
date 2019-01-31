@@ -1,0 +1,14 @@
+- category: Showcase
+  description: Di seguito sono riportati alcuni progetti che sono risultato delle esperienze d'uso con le più recenti indicazioni di design e con Bootstrap Italia.
+  examples:
+    - name: Comune di Cagliari
+      url: "https://italia.github.io/design-comuni-prototipi/esempi/comune-di-cagliari/pagine-statiche/index.html"
+      description: Un prototipo per il nuovo sito del Comune di Cagliari, costruito per fare ricerca e test con gli utenti, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> in formato scaricabile.
+    - name: Docs Italia
+      url: "https://docs.italia.it"
+      description: Docs Italia, il progetto per la pubblicazione e la consultazione dei documenti pubblici digitali, è stato costruito su una versione preliminare di Bootstrap Italia.
+      status: work in progress
+    - name: Tema WordPress
+      url: "https://github.com/italia/design-wordpress-theme/"
+      description: Un tema WordPress open-source creato dalla community degli sviluppatori. Questo tema necessita di aiuto per essere reso conforme al nuovo <a href="https://medium.com/team-per-la-trasformazione-digitale/modello-standard-sito-web-comuni-design-prototipo-mobile-first-open-source-organizzazione-contenuti-38b330e695a1">modello per i siti del Comuni italiani</a>, se vuoi contruibire contattaci o crea una Pull Request sul repository!
+      status: work in progress
