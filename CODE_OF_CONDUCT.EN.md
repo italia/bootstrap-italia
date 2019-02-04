@@ -35,8 +35,6 @@ The following behaviors are considered harassment and are unacceptable within ou
 *   Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
 *   Posting or displaying sexually explicit or violent material.
 *   Personal insults, particularly those related to gender, sexual orientation, race, religion, or disability.
-*   Inappropriate photography or recording.
-*   Inappropriate physical contact. You should have someone’s consent before touching them.
 *   Unwelcome sexual attention. This includes, sexualized comments or jokes; inappropriate touching, groping, and unwelcomed sexual advances.
 *   Deliberate intimidation, stalking or following (online or in person).
 *   Advocating for, or encouraging, any of the above behavior.
@@ -48,7 +46,7 @@ Unacceptable behavior from any community member, including sponsors and those wi
 
 Anyone asked to stop unacceptable behavior is expected to comply immediately.
 
-If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning (and without refund in the case of a paid event).
+If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning.
 
 ## 6. Reporting Guidelines
 
