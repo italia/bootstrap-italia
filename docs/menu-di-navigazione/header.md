@@ -33,7 +33,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
           <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
-          <span class="nav-mobile">
+          <div class="nav-mobile">
             <nav>
               <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1">
                 <span>Ente appartenenza/Owner</span>
@@ -48,7 +48,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
                 </ul>
               </div>
             </nav>
-          </span>
+          </div>
           <div class="header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -93,7 +93,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
           <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
-          <span class="nav-mobile">
+          <div class="nav-mobile">
             <nav>
               <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu2" role="button" aria-expanded="false" aria-controls="menu2">
                 <span>Ente appartenenza/Owner</span>
@@ -108,7 +108,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 </ul>
               </div>
             </nav>
-          </span>
+          </div>
           <div class="header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -775,7 +775,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
             <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
-            <span class="nav-mobile">
+            <div class="nav-mobile">
               <nav>
                 <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu4" role="button" aria-expanded="false" aria-controls="menu4">
                   <span>Ente appartenenza/Owner</span>
@@ -790,7 +790,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   </ul>
                 </div>
               </nav>
-            </span>
+            </div>
             <div class="header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -996,7 +996,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
             <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
-            <span class="nav-mobile">
+            <div class="nav-mobile">
               <nav>
                 <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu3" role="button" aria-expanded="false" aria-controls="menu3">
                   <span>Ente appartenenza/Owner</span>
@@ -1011,7 +1011,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                   </ul>
                 </div>
               </nav>
-            </span>
+            </div>
             <div class="header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
