@@ -419,7 +419,7 @@ Elimina la possibilità di un elemento di essere richiudibile.
 
 ### Eventi
 
-La classe `.collapse` di Bootstrap espone alcuni eventi agganciare comporamenti alla funzionalità di apertura/chiusura attraverso Javascript.
+La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso Javascript.
 
 <table class="table table-bordered table-striped">
   <thead>
