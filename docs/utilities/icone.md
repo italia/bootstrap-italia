@@ -67,7 +67,22 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 ### Lista delle icone disponibili
 
 {% capture example %}
-<div class="row">{% for icona in site.data.icons %}
+<div class="row">
+  {% for icona in site.data.icons.regular %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
+  </div>{% endfor %}
+</div>
+<h4 class="mt-4">Social</h4>
+<div class="row">
+  {% for icona in site.data.icons.social %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
+  </div>{% endfor %}
+</div>
+<h4 class="mt-4">Extra</h4>
+<div class="row">
+  {% for icona in site.data.icons.extra %}
   <div class="col-12 col-md-6 col-lg-4">
     <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
   </div>{% endfor %}

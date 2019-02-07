@@ -1,84 +1,98 @@
-- it-arrow-down
-- it-arrow-left
-- it-arrow-right
-- it-arrow-up
-- it-burger
-- it-calendar
-- it-camera
-- it-card
-- it-check-circle
-- it-check
-- it-chevron-left
-- it-chevron-right
-- it-clock
-- it-close-big
-- it-close-circle
-- it-close
-- it-code-circle
-- it-collapse
-- it-comment
-- it-copy
-- it-designers-italia
-- it-download
-- it-error
-- it-expand
-- it-external-link
-- it-file
-- it-files
-- it-folder
-- it-hearing
-- it-help-circle
-- it-help
-- it-horn
-- it-info-circle
-- it-key
-- it-less-circle
-- it-link
-- it-list
-- it-lock
-- it-locked
-- it-mail
-- it-minus
-- it-more-actions
-- it-more-items
-- it-note
-- it-pa
-- it-password-invisible
-- it-password-visible
-- it-pencil
-- it-pin
-- it-plus-circle
-- it-plus
-- it-presentation
-- it-print
-- it-search
-- it-settings
-- it-share
-- it-star-full
-- it-star-outline
-- it-team-digitale
-- it-tool
-- it-unlocked
-- it-upload
-- it-user
-- it-video
-- it-zoom-in
-- it-zoom-out
-- it-behance
-- it-facebook-square
-- it-facebook
-- it-flickr-square
-- it-flickr
-- it-github
-- it-instagram
-- it-linkedin-square
-- it-linkedin
-- it-medium-square
-- it-medium
-- it-twitter-square
-- it-twitter
-- it-warning
-- it-warning-circle
-- it-whatsapp-square
-- it-whatsapp
-- it-youtube
+regular:
+  - it-arrow-down
+  - it-arrow-down-circle
+  - it-arrow-down-triangle
+  - it-arrow-left
+  - it-arrow-left-circle
+  - it-arrow-left-triangle
+  - it-arrow-right
+  - it-arrow-right-circle
+  - it-arrow-right-triangle
+  - it-arrow-up
+  - it-arrow-up-circle
+  - it-arrow-up-triangle
+  - it-burger
+  - it-calendar
+  - it-camera
+  - it-card
+  - it-check-circle
+  - it-check
+  - it-chevron-left
+  - it-chevron-right
+  - it-clip
+  - it-clock
+  - it-close-big
+  - it-close-circle
+  - it-close
+  - it-code-circle
+  - it-collapse
+  - it-comment
+  - it-copy
+  - it-download
+  - it-error
+  - it-exchange-circle
+  - it-expand
+  - it-external-link
+  - it-file
+  - it-files
+  - it-folder
+  - it-hearing
+  - it-help-circle
+  - it-help
+  - it-horn
+  - it-info-circle
+  - it-key
+  - it-less-circle
+  - it-link
+  - it-list
+  - it-lock
+  - it-locked
+  - it-mail
+  - it-minus
+  - it-more-actions
+  - it-more-items
+  - it-note
+  - it-pa
+  - it-password-invisible
+  - it-password-visible
+  - it-pencil
+  - it-pin
+  - it-plus-circle
+  - it-plus
+  - it-presentation
+  - it-print
+  - it-search
+  - it-settings
+  - it-share
+  - it-star-full
+  - it-star-outline
+  - it-telephone
+  - it-tool
+  - it-unlocked
+  - it-upload
+  - it-user
+  - it-video
+  - it-warning
+  - it-warning-circle
+  - it-zoom-in
+  - it-zoom-out
+social:
+  - it-behance
+  - it-facebook-square
+  - it-facebook
+  - it-flickr-square
+  - it-flickr
+  - it-github
+  - it-instagram
+  - it-linkedin-square
+  - it-linkedin
+  - it-medium-square
+  - it-medium
+  - it-twitter-square
+  - it-twitter
+  - it-whatsapp-square
+  - it-whatsapp
+  - it-youtube
+extra:
+  - it-designers-italia
+  - it-team-digitale
