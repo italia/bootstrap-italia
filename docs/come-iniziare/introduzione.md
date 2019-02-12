@@ -20,7 +20,7 @@ Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attrave
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
-La libreria è accessibile anche via CDN su jsDeliver: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia).   
+La libreria è accessibile anche via CDN su jsDelivr: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia).   
 Di seguito le informazioni per l'utilizzo dei singoli file.
 
 ### CSS
@@ -33,7 +33,7 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
-Utilizzando jsDeliver:
+Utilizzando jsDelivr:
 
 {% highlight html %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/css/bootstrap-italia.min.css">
@@ -83,7 +83,7 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 <script src="./bootstrap-italia.bundle.min.js"></script>
 {% endhighlight %}
 
-Utilizzando jsDeliver:
+Utilizzando jsDelivr:
 
 {% highlight html %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
@@ -100,13 +100,13 @@ Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel s
 <script src="./bootstrap-italia.min.js"></script>
 {% endhighlight %}
 
-Utilizzando jsDeliver:
+Utilizzando jsDelivr:
 
 {% highlight html %}
 {{ site.cdn.jquery }}
 {{ site.cdn.popper }}
 {{ site.cdn.owlcarousel }}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.min.js"></script>
 {% endhighlight %}
 
 
