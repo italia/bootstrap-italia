@@ -224,6 +224,13 @@ gulp.task('assets', () => {
     .pipe(touch());
 });
 
+// Fonts
+gulp.task('fonts', () => {
+  return gulp.src(['src/fonts/**'])
+    .pipe(gulp.dest(Paths.DIST + '/fonts'))
+    .pipe(touch());
+});
+
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
@@ -258,6 +265,7 @@ gulp.task('build-library', gulp.series(
   'scss-min',
   'js-min',
   'js-bundle-min',
+  'fonts',
   'assets'
 ));
 

@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 @import 'node_modules/bootstrap-select/sass/bootstrap-select';
 
 @import 'node_modules/owl.carousel/src/scss/core';
@@ -16,6 +13,11 @@
 
 //classi colore
 @import 'utilities/colors';
+
+//classi font
+@import 'utilities/font-lora';
+@import 'utilities/font-roboto-mono';
+@import 'utilities/font-titillium';
 
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
