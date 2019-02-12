@@ -281,9 +281,13 @@ gulp.task('build-documentation', gulp.series(
 gulp.task('sync', () => {
   browserSync.init({
     files: [DOCUMENTATION_DESTINATION + '/**'],
+    startPath: '/bootstrap-italia',
     port: 4000,
     server: {
-      baseDir: DOCUMENTATION_DESTINATION
+      baseDir: DOCUMENTATION_DESTINATION,
+      routes: {
+        "/bootstrap-italia": DOCUMENTATION_DESTINATION
+      }
     }
   });
 
