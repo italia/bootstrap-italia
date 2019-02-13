@@ -34,7 +34,13 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
-È necessario anche includere i file relativi ai font referenziati nel CSS, all'interno di una cartella `/bootstrap-italia/dist/fonts/`, mantenendo i path utilizzati nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). (questa procedura è in fase di revisione e potrebbe subire piccole modifiche per semplificare il flusso di lavoro).
+È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
+
+{% highlight html %}
+<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
+{% endhighlight %}
+
+Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
 
 ### Javascript
 

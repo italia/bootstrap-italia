@@ -35,6 +35,7 @@ const Paths = {
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/i-sticky/i-sticky.js',
+    'src/js/plugins/fonts-loader.js',
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
