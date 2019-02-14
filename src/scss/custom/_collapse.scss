@@ -30,7 +30,7 @@ $arrow-size: $font-size-base/2;
 
   //background active version
   &.collapse-background-active {
-    & > .collapse-header {
+    & .collapse-header {
       *[data-toggle='collapse'][aria-expanded='true'] {
         background-color: $primary;
         color: $white;
@@ -44,7 +44,7 @@ $arrow-size: $font-size-base/2;
 
   //background hover version
   &.collapse-background-hover {
-    & > .collapse-header {
+    & .collapse-header {
       *[data-toggle='collapse']:hover {
         background-color: $primary;
         color: $white;
