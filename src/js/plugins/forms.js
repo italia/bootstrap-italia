@@ -16,6 +16,15 @@ $(function () {
     .on('focus', inputSelector, e => {
       const $this = $(e.target)
       $this.siblings('label, i').addClass('active')
+	  const labelsForInput = $this.siblings('label');
+		if (labelsForInput && labelsForInput.length > 0){
+			if ($(labelsForInput[0]).data('bti')){
+				$(labelsForInput[0]).css('width', '');
+				$(labelsForInput[0]).css('text-overflow', '');
+				$(labelsForInput[0]).css('white-space', '');
+				$(labelsForInput[0]).css('overflow', '');
+			}
+		}
     })
     .on('blur', inputSelector, e => {
       const $this = $(e.target)
@@ -23,8 +32,20 @@ $(function () {
       const noPlaceholder = !$this.attr('placeholder')
 
       if (noValue && noPlaceholder) {
-        $this.siblings('label, i').removeClass('active')
-      }
+        $this.siblings('label, i').removeClass('active');
+		const labelsForInput = $this.siblings('label');
+		if (labelsForInput && labelsForInput.length > 0){
+			if ($(labelsForInput[0]).data('bti')){
+				if (labelsForInput[0].offsetWidth > ($this[0].offsetWidth - 20)){
+					console.log('resize');
+					$(labelsForInput[0]).css('width', $this[0].offsetWidth);
+					$(labelsForInput[0]).css('text-overflow', 'ellipsis');
+					$(labelsForInput[0]).css('white-space', 'nowrap');
+					$(labelsForInput[0]).css('overflow', 'hidden');
+				}
+			}
+		}
+	}
     })
     .on('change', inputSelector, e => {
       const $this = $(e.target)
@@ -93,7 +114,24 @@ $(function () {
         $this
           .siblings('label, i')
           .css('transition', 'none')
-          .addClass('active')
-      }
+          .addClass('active');
+	  }
+	  
+	  if (!hasDefaultValue && !hasPlaceholder) {
+        $this.siblings('label, i').removeClass('active');
+		const labelsForInput = $this.siblings('label');
+		if (labelsForInput && labelsForInput.length > 0){
+			if ($(labelsForInput[0]).data('bti')){
+				console.log(labelsForInput[0].offsetWidth + " " + $this[0].offsetWidth);
+				if (labelsForInput[0].offsetWidth > ($this[0].offsetWidth - 20)){
+					console.log('resize');
+					$(labelsForInput[0]).css('width', $this[0].offsetWidth);
+					$(labelsForInput[0]).css('text-overflow', 'ellipsis');
+					$(labelsForInput[0]).css('white-space', 'nowrap');
+					$(labelsForInput[0]).css('overflow', 'hidden');
+				}
+			}
+		}
+	  }
     })
 })

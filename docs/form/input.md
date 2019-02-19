@@ -84,7 +84,8 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 {% endcapture %}{% include example.html content=example %}
 
 ### Input con icona o bottoni
-
+E' possibile evitare una sovrapposizione tra etichetta e bottone nel caso di dimensioni
+ridotte dello schermo inserendo il data attribute "bti". In tale caso si avrà un text ellipsis automatico.
 {% capture example %}
 <div class="form-group">
   <div class="input-group">
