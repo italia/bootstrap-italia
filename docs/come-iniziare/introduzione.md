@@ -20,10 +20,11 @@ Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attrave
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
-La libreria è accessibile anche via CDN su jsDeliver: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia).   
+La libreria è accessibile anche via CDN su jsDelivr: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia), che è sconsigliato utilizzare in ambienti di produzione.
+
 Di seguito le informazioni per l'utilizzo dei singoli file.
 
-### CSS
+### CSS e Fonts
 
 Una volta scaricato e decompresso il file, all'interno della cartella `css` sarà presente un file CSS minificato (`bootstrap-italia.min.css`) con la sua [sourcemap](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) (opzionale).
 
@@ -33,12 +34,13 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
-Utilizzando jsDeliver:
+È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
 
 {% highlight html %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/css/bootstrap-italia.min.css">
+<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
 {% endhighlight %}
 
+Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
 
 ### Javascript
 
@@ -83,12 +85,6 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 <script src="./bootstrap-italia.bundle.min.js"></script>
 {% endhighlight %}
 
-Utilizzando jsDeliver:
-
-{% highlight html %}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
-{% endhighlight %}
-
 #### Versione semplice
 
 Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
@@ -98,15 +94,6 @@ Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel s
 {{ site.cdn.popper }}
 {{ site.cdn.owlcarousel }}
 <script src="./bootstrap-italia.min.js"></script>
-{% endhighlight %}
-
-Utilizzando jsDeliver:
-
-{% highlight html %}
-{{ site.cdn.jquery }}
-{{ site.cdn.popper }}
-{{ site.cdn.owlcarousel }}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@{{ site.current_version }}/dist/js/bootstrap-italia.bundle.min.js"></script>
 {% endhighlight %}
 
 

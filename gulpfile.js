@@ -35,6 +35,7 @@ const Paths = {
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/i-sticky/i-sticky.js',
+    'src/js/plugins/fonts-loader.js',
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
@@ -224,6 +225,13 @@ gulp.task('assets', () => {
     .pipe(touch());
 });
 
+// Fonts
+gulp.task('fonts', () => {
+  return gulp.src(['src/fonts/**'])
+    .pipe(gulp.dest(Paths.DIST + '/fonts'))
+    .pipe(touch());
+});
+
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
@@ -258,6 +266,7 @@ gulp.task('build-library', gulp.series(
   'scss-min',
   'js-min',
   'js-bundle-min',
+  'fonts',
   'assets'
 ));
 
@@ -273,9 +282,13 @@ gulp.task('build-documentation', gulp.series(
 gulp.task('sync', () => {
   browserSync.init({
     files: [DOCUMENTATION_DESTINATION + '/**'],
+    startPath: '/bootstrap-italia',
     port: 4000,
     server: {
-      baseDir: DOCUMENTATION_DESTINATION
+      baseDir: DOCUMENTATION_DESTINATION,
+      routes: {
+        "/bootstrap-italia": DOCUMENTATION_DESTINATION
+      }
     }
   });
 

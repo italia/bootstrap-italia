@@ -54,4 +54,31 @@ A questo punto, è necessario impostare il tuo ambiente locale per la compilazio
 della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/)
 è possibile avere tutte le informazioni necessarie a questo scopo.
 
+## Licenze software dei componenti di terze parti
+
+### Componenti distribuiti con Bootstrap Italia
+
+Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che hanno una propria licenza diversa da CC0.
+
+- [jQuery](https://jquery.com/) © jQuery Foundation, licenza MIT
+- [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, licenza MIT
+- [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., licenza MIT
+- [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, licenza MIT
+- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), licenza MIT
+- [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, licenza BSD
+
+### Principali dipendenze per la fase di compilazione e sviluppo
+
+- Generatore di siti statici per ruby [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, licenza MIT
+- Tool per il testing della correttezza formale dell'HTML[html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
+- Tool per il reload automatico del browser [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
+- Gestione del versionamento [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
+- Build system per le librerie Javascript e CSS [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, licenza MIT
+- Transpiler per moduli Javascript [Babel](https://babeljs.io/), © Sebastian McKenzie, licenza MIT
+- Code formatter per Javascript [Prettier](https://prettier.io/), © James Long and contributors, licenza MIT
+- Compilazione SASS [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, licenza MIT
+- GitHub REST API client per JavaScript [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
+
+La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICENSE:
+
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)

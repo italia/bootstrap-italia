@@ -30,12 +30,12 @@ $arrow-size: $font-size-base/2;
 
   //background active version
   &.collapse-background-active {
-    & > .collapse-header {
+    .collapse-header {
       *[data-toggle='collapse'][aria-expanded='true'] {
         background-color: $primary;
         color: $white;
         border-color: $primary;
-        &:after {
+        &:before {
           color: $white;
         }
       }
@@ -44,12 +44,12 @@ $arrow-size: $font-size-base/2;
 
   //background hover version
   &.collapse-background-hover {
-    & > .collapse-header {
+    .collapse-header {
       *[data-toggle='collapse']:hover {
         background-color: $primary;
         color: $white;
         border-color: $primary;
-        &:after {
+        &:before {
           color: $white;
         }
       }
@@ -58,9 +58,9 @@ $arrow-size: $font-size-base/2;
 
   //left icon version
   &.collapse-left-icon {
-    & > .collapse-header {
+    .collapse-header {
       *[data-toggle='collapse'] {
-        &:after {
+        &:before {
           content: '-';
           float: left;
           margin: 0 1rem 0 0;
@@ -70,7 +70,7 @@ $arrow-size: $font-size-base/2;
           transform: none;
         }
         &[aria-expanded='false'] {
-          &:after {
+          &:before {
             content: '+';
           }
         }
@@ -96,15 +96,15 @@ $arrow-size: $font-size-base/2;
     //transition: background-color 0.1s;
     &[aria-expanded='false'] {
       color: $primary;
-      &:after {
+      &:before {
         transform: scaleY(-1);
       }
     }
-    &[aria-expanded='false']:hover:after,
-    &[aria-expanded='true']:hover:after {
+    &[aria-expanded='false']:hover:before,
+    &[aria-expanded='true']:hover:before {
       text-decoration: none;
     }
-    &:after {
+    &:before {
       content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRpdGxlPml0LWNvbGxhcHNlPC90aXRsZT48ZyBpZD0iTGl2ZWxsb18xMyIgZGF0YS1uYW1lPSJMaXZlbGxvIDEzIj48cGF0aCBmaWxsPSIjN0ZCMkU1IiBkPSJNMTIsMTAuMjUsMTYuNzcsMTVhLjc1Ljc1LDAsMCwwLDEuMDYsMCwuNzQuNzQsMCwwLDAsMC0xLjA2TDEzLjA2LDkuMTlhMS41MSwxLjUxLDAsMCwwLTIuMTIsMEw2LjE3LDE0YS43NC43NCwwLDAsMCwwLDEuMDYuNzUuNzUsMCwwLDAsMS4wNiwwWiIvPjwvZz48L3N2Zz4K');
       float: right;
       width: 1.5rem;

@@ -21,8 +21,7 @@
 .autocomplete-icon {
   position: absolute;
   right: 1rem;
-  top: 0.6rem;
-
+  top: 0.5rem;
   .icon {
     fill: $gray-secondary;
   }
@@ -138,9 +137,9 @@
   //search icon
   .autocomplete-icon {
     position: absolute;
-    left: 0;
+    left: .5rem;
     right: auto;
-    top: 2.4rem;
+    top: 1rem;
 
     .icon {
       fill: $primary;
@@ -196,8 +195,6 @@
 
     //search icon
     .autocomplete-icon {
-      top: 2rem;
-
       .icon {
         width: 40px;
         height: 40px;
