@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   const inputSelector =
     'input[type="text"],' +
     'input[type="password"],' +
@@ -12,10 +12,25 @@ $(function () {
 
   const inputFileSelector = 'input[type="file"]'
 
+  const handleLabelWidth = $input => {
+    const labelsForInput = $input.siblings('label:not(.active)')
+    if (labelsForInput && labelsForInput.length) {
+      let labelWidth =
+        labelsForInput[0].offsetWidth > $input[0].offsetWidth - 20
+          ? $input[0].offsetWidth
+          : 'auto'
+      $(labelsForInput[0]).css('width', labelWidth)
+    }
+  }
+
   $(document)
     .on('focus', inputSelector, e => {
       const $this = $(e.target)
       $this.siblings('label, i').addClass('active')
+      const labelsForInput = $this.siblings('label')
+      if (labelsForInput && labelsForInput.length) {
+        $(labelsForInput[0]).css('width', 'auto')
+      }
     })
     .on('blur', inputSelector, e => {
       const $this = $(e.target)
@@ -24,6 +39,7 @@ $(function () {
 
       if (noValue && noPlaceholder) {
         $this.siblings('label, i').removeClass('active')
+        handleLabelWidth($this)
       }
     })
     .on('change', inputSelector, e => {
@@ -95,5 +111,17 @@ $(function () {
           .css('transition', 'none')
           .addClass('active')
       }
+
+      if (!hasDefaultValue && !hasPlaceholder) {
+        $this.siblings('label, i').removeClass('active')
+        handleLabelWidth($this)
+      }
     })
+
+  $(window).resize(function() {
+    $(inputSelector).each((index, input) => {
+      let $this = $(input)
+      handleLabelWidth($this)
+    })
+  })
 })

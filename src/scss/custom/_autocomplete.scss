@@ -20,9 +20,10 @@
 //search icon
 .autocomplete-icon {
   position: absolute;
-  right: 1rem;
+  right: 0;
   top: 0.5rem;
-
+  padding: 0 $spacer/2;
+  background-color: $white;
   .icon {
     fill: $gray-secondary;
   }
@@ -131,7 +132,7 @@
     height: $v-gap * 7;
     font-size: 1.5rem;
     font-weight: normal;
-    padding-left: 2.5rem;
+    padding-left: $spacer * 4;
     padding-right: $v-gap * 3;
   }
 
