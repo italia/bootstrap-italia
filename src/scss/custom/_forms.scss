@@ -23,7 +23,11 @@ label {
     font-size: 1rem;
     cursor: text;
     display: block;
-    width: auto; //calc(100% - #{$input-spacing-x});
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 6;
 
