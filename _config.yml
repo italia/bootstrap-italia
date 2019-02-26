@@ -8,8 +8,8 @@ permalink:      pretty
 
 source:         "."
 destination:    "./_site"
-baseurl:        "/bootstrap-italia"
-url:            "http://localhost:4000/bootstrap-italia"
+baseurl:        ""
+url:            "http://localhost:4000"
 encoding:       UTF-8
 exclude:
   - .git/
@@ -54,18 +54,15 @@ twitter_handle:     '@teamdigitaleIT'
 
 # Versions
 current_version:		1.0.5
-bootstrap_version:  4.2.1
-bootstrap_minor:    4.2
+bootstrap_version:  4.3.1
+bootstrap_minor:    4.3
 
 # Analytics
 ga_property:        'UA-114758441-1'
 
 # CDN links
 cdn:
-  bootstrap_css:    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha256-NJWeQ+bs82iAeoT5Ktmqbi3NXwxcHlfaVejzJI2dklU=" crossorigin="anonymous" />'
-  bootstrap_js:     '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha256-C8oQVJ33cKtnkARnmeWp6SDChkU+u7KvsNMFUzkkUzk=" crossorigin="anonymous"></script>'
-  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>'
-  jquery_slim:      '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>'
-  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4=" crossorigin="anonymous"></script>'
-  owlcarousel:      '<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>'
+  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>'
+  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>'
+  owlcarousel:      '<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>'
 
