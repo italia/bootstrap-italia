@@ -2,103 +2,150 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-(function ($, particlesJS) {
+(function () {
   'use strict'
 
-  $(function () {
+  function makeArray(list) {
+    return [].slice.call(list)
+  }
 
-    $('[data-toggle="tooltip"]').tooltip()
-
-    // Tooltip and popover demos
-    $('.tooltip-demo').tooltip({
-      selector: '[data-toggle="tooltip"]',
-      container: 'body'
+  makeArray(document.querySelectorAll('.toast'))
+  .forEach(function (toastNode) {
+    var toast = new bootstrap.Toast(toastNode, {
+      autohide: false
     })
 
-    $('[data-toggle="popover"]').popover()
+    toast.show()
+  })
 
-    // Demos within modals
-    $('.tooltip-test').tooltip()
-    $('.popover-test').popover()
-
-    // Indeterminate checkbox example
-    $('.bd-example-indeterminate [type="checkbox"]').prop('indeterminate', true)
-
-    // Disable empty links in docs examples
-    $('.bd-content [href="#"]').click(function (e) {
-      e.preventDefault()
+  // Tooltip and popover demos
+  makeArray(document.querySelectorAll('.tooltip-demo'))
+    .forEach(function (tooltip) {
+      new bootstrap.Tooltip(tooltip, {
+        selector: '[data-toggle="tooltip"]'
+      })
     })
 
-    // Modal with radiobuttons example
-    $('.modal-body').find('input[type=radio]').click(function(){
-      $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled');
+  makeArray(document.querySelectorAll('[data-toggle="popover"]'))
+    .forEach(function (popover) {
+      new bootstrap.Popover(popover)
     })
 
-    // Modal relatedTarget demo
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var $button = $(event.relatedTarget)      // Button that triggered the modal
-      var recipient = $button.data('whatever')  // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      var $modal = $(this)
-      $modal.find('.modal-title').text('New message to ' + recipient)
-      $modal.find('.modal-body input').val(recipient)
+  // Demos within modals
+  makeArray(document.querySelectorAll('.tooltip-test'))
+    .forEach(function (tooltip) {
+      new bootstrap.Tooltip(tooltip)
     })
 
-    // Activate animated progress bar
-    $('.bd-toggle-animated-progress').on('click', function () {
-      $(this).siblings('.progress').find('.progress-bar-striped').toggleClass('progress-bar-animated')
+  makeArray(document.querySelectorAll('.popover-test'))
+    .forEach(function (popover) {
+      new bootstrap.Popover(popover)
     })
 
-    // Insert copy to clipboard button before .highlight
-    $('.highlight').each(function () {
-      var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
-      $(this).before(btnHtml)
-      $('.btn-clipboard')
-        .tooltip()
-        .on('mouseleave', function () {
-          // explicitly hide tooltip, since after clicking it remains
-          // focused (as it's a button), so tooltip would otherwise
-          // remain visible until focus is moved away
-          $(this).tooltip('hide')
-        })
+  // Indeterminate checkbox example
+  makeArray(document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]'))
+    .forEach(function (checkbox) {
+      checkbox.indeterminate = true
     })
 
-    // ClipboardJS - Docs copy code handling
-    var clipboard = new ClipboardJS('.btn-clipboard', {
-      target: function (trigger) {
-        return trigger.parentNode.nextElementSibling
-      }
-    })
-    clipboard.on('success', function (e) {
-      $(e.trigger)
-        .attr('title', 'Copied!')
-        .tooltip('_fixTitle')
-        .tooltip('show')
-        .attr('title', 'Copy to clipboard')
-        .tooltip('_fixTitle')
-
-      e.clearSelection()
-    })
-    clipboard.on('error', function (e) {
-      var modifierKey = /Mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-      var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
-
-      $(e.trigger)
-        .attr('title', fallbackMsg)
-        .tooltip('_fixTitle')
-        .tooltip('show')
-        .attr('title', 'Copy to clipboard')
-        .tooltip('_fixTitle')
+  // Disable empty links in docs examples
+  makeArray(document.querySelectorAll('.bd-content [href="#"]'))
+    .forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault()
+      })
     })
 
-    // AnchorJS - Shows Anchors
-    anchors.options = {
-      icon: '#'
+  // Modal relatedTarget demo
+  var exampleModal = document.getElementById('exampleModal')
+  if (exampleModal) {
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget // Button that triggered the modal
+      var recipient = button.getAttribute('data-whatever') // Extract info from data-* attributes
+
+      // Update the modal's content.
+      var modalTitle = exampleModal.querySelector('.modal-title')
+      var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+      modalTitle.innerHTML = 'New message to ' + recipient
+      modalBodyInput.value = recipient
+    })
+  }
+
+  // Activate animated progress bar
+  makeArray(document.querySelectorAll('.bd-toggle-animated-progress > .progress-bar-striped'))
+    .forEach(function (progressBar) {
+      progressBar.addEventListener('click', function () {
+        if (progressBar.classList.contains('progress-bar-animated')) {
+          progressBar.classList.remove('progress-bar-animated')
+        } else {
+          progressBar.classList.add('progress-bar-animated')
+        }
+      })
+    })
+
+  anchors.options = {
+    icon: '#'
+  }
+  anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
+
+  // Wrap inner
+  makeArray(document.querySelectorAll('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5'))
+    .forEach(function (hEl) {
+      hEl.innerHTML = '<span class="bd-content-title">' + hEl.innerHTML + '</span>'
+    })
+
+}())
+
+
+$(function () {
+
+  // Modal with radiobuttons example
+  $('.modal-body').find('input[type=radio]').click(function(){
+    $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled');
+  })
+
+  // Insert copy to clipboard button before .highlight
+  $('.highlight').each(function () {
+    var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
+    $(this).before(btnHtml)
+    $('.btn-clipboard')
+      .tooltip()
+      .on('mouseleave', function () {
+        // explicitly hide tooltip, since after clicking it remains
+        // focused (as it's a button), so tooltip would otherwise
+        // remain visible until focus is moved away
+        $(this).tooltip('hide')
+      })
+  })
+
+  // ClipboardJS - Docs copy code handling
+  var clipboard = new ClipboardJS('.btn-clipboard', {
+    target: function (trigger) {
+      return trigger.parentNode.nextElementSibling
     }
-    anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
-    $('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5').wrapInner('<div></div>')
-  });
+  })
+  clipboard.on('success', function (e) {
+    $(e.trigger)
+      .attr('title', 'Copied!')
+      .tooltip('_fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('_fixTitle')
+
+    e.clearSelection()
+  })
+  clipboard.on('error', function (e) {
+    var modifierKey = /Mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
+    var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
+
+    $(e.trigger)
+      .attr('title', fallbackMsg)
+      .tooltip('_fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('_fixTitle')
+  })
 
   // ParticlesJS - Docs homepage particles
   if ($('#particles-js').length) {
@@ -117,4 +164,4 @@
     particlesJS('particles-js', particlesJSON);
   }
 
-}($, particlesJS))
+});
