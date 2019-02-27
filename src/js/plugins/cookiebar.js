@@ -1,4 +1,4 @@
-const Cookiebar = (($, Util) => {
+const Cookiebar = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -87,8 +87,23 @@ const Cookiebar = (($, Util) => {
       document.cookie = COOKIE_NAME + '=' + c_value + '; path=/'
     }
 
+    _getSelectorFromElement(element) {
+      var selector = element.getAttribute('data-target');
+
+      if (!selector || selector === '#') {
+        var hrefAttr = element.getAttribute('href');
+        selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
+      }
+
+      try {
+        return document.querySelector(selector) ? selector : null;
+      } catch (err) {
+        return null;
+      }
+    }
+
     _getRootElement(element) {
-      const selector = Util.getSelectorFromElement(element)
+      const selector = this._getSelectorFromElement(element)
       let parent = false
 
       if (selector) {
@@ -219,6 +234,6 @@ const Cookiebar = (($, Util) => {
   }
 
   return Cookiebar
-})($, bootstrap.Util)
+})($)
 
 export default Cookiebar
