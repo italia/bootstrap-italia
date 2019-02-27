@@ -11,21 +11,18 @@ Il plugin Javascript per costruire la select nelle sue varianti è basato su una
 
 ### Select classica
 
-La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dal div `.dropdown.bootstrap-select` che conterrà la select. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
+La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione">
-      <option class="bs-title-option" value=""></option>
-      <option value="Value 1">Opzione 1</option>
-      <option value="Value 2">Opzione 2</option>
-      <option value="Value 3">Opzione 3</option>
-      <option value="Value 4">Opzione 4</option>
-      <option value="Value 5">Opzione 5</option>
-    </select>
-  </div>
+  <select title="Scegli una opzione">
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -33,7 +30,6 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 
 {% capture example %}
 <select title="Scegli una opzione">
-  <option value=""></option>
   <option value="Value 1">Opzione 1</option>
   <option value="Value 2">Opzione 2</option>
   <option value="Value 3">Opzione 3</option>
@@ -44,14 +40,12 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 
 ### Select disabilitata
 
-Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` per stilare l'aspetto.
-Aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
+Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` e aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 
 {% capture example %}
 <div class="bootstrap-select-wrapper disabled">
   <label>Etichetta</label>
   <select disabled title="Scegli una opzione">
-    <option class="bs-title-option" value=""></option>
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -132,14 +126,12 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
-      <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
-      <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
-      <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
-      <option value="4" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 4</span></span>"></option>
-    </select>
-  </div>
+  <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
+    <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
+    <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
+    <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
+    <option value="4" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 4</span></span>"></option>
+  </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
