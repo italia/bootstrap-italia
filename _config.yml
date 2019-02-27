@@ -53,7 +53,7 @@ twitter:            'https://twitter.com/teamdigitaleIT'
 twitter_handle:     '@teamdigitaleIT'
 
 # Versions
-current_version:		1.1.0
+current_version:		1.2.0
 bootstrap_version:  4.3.1
 bootstrap_minor:    4.3
 
