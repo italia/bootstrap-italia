@@ -12,14 +12,14 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201902261626" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201902271125" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201902261626" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201902271125" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -515,42 +515,35 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-classica">Select classica</h3>
 
-<p>La select è composta dal un wrapper esterno <code class="highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dal div <code class="highlighter-rouge">.dropdown.bootstrap-select</code> che conterrà la select. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
+<p>La select è composta dal un wrapper esterno <code class="highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione">
-      <option class="bs-title-option" value=""></option>
-      <option value="Value 1">Opzione 1</option>
-      <option value="Value 2">Opzione 2</option>
-      <option value="Value 3">Opzione 3</option>
-      <option value="Value 4">Opzione 4</option>
-      <option value="Value 5">Opzione 5</option>
-    </select>
-  </div>
+  <select title="Scegli una opzione">
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown bootstrap-select"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"bs-title-option"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 5"</span><span class="nt">&gt;</span>Opzione 5<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 5"</span><span class="nt">&gt;</span>Opzione 5<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Non utilizzando questa struttura di elementi, la select viene mostrata come prevede il sistema operativo, senza modifiche:</p>
 
 <div class="bd-example">
 <select title="Scegli una opzione">
-  <option value=""></option>
   <option value="Value 1">Opzione 1</option>
   <option value="Value 2">Opzione 2</option>
   <option value="Value 3">Opzione 3</option>
@@ -559,7 +552,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </select>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
@@ -569,14 +561,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-disabilitata">Select disabilitata</h3>
 
-<p>Per disabilitare una select, aggiungere la classe <code class="highlighter-rouge">.disabled</code> a <code class="highlighter-rouge">.bootstrap-select-wrapper</code> per stilare l’aspetto.
-Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag <code class="highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
+<p>Per disabilitare una select, aggiungere la classe <code class="highlighter-rouge">.disabled</code> a <code class="highlighter-rouge">.bootstrap-select-wrapper</code> e aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag <code class="highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper disabled">
   <label>Etichetta</label>
   <select disabled="" title="Scegli una opzione">
-    <option class="bs-title-option" value=""></option>
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -588,7 +578,6 @@ Aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper disabled"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;select</span> <span class="na">disabled</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"bs-title-option"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
@@ -698,26 +687,22 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
-      <option value="1" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"></option>
-      <option value="2" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"></option>
-      <option value="3" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"></option>
-      <option value="4" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 4&lt;/span&gt;&lt;/span&gt;"></option>
-    </select>
-  </div>
+  <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
+    <option value="1" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"></option>
+    <option value="2" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"></option>
+    <option value="3" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"></option>
+    <option value="4" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 4&lt;/span&gt;&lt;/span&gt;"></option>
+  </select>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown bootstrap-select"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">multiple=</span><span class="s">"true"</span> <span class="na">data-multiple-separator=</span><span class="s">""</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 4&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">multiple=</span><span class="s">"true"</span> <span class="na">data-multiple-separator=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 4&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="select-con-gruppi">Select con gruppi</h3>
@@ -809,14 +794,14 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201902261626"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201902271125"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201902261626"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201902271125"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -831,7 +816,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201902261626"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201902271125"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
