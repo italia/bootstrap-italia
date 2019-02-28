@@ -23,12 +23,12 @@ const Paths = {
   VENDOR_JS: [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/bootstrap-select/js/bootstrap-select.js',
-    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
   ],
   SOURCE_JS: [
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/bootstrap-select/js/bootstrap-select.js',
+    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'src/js/plugins/circular-loader/CircularLoader-v1.3.js',
     'src/js/plugins/password-strength-meter/password-strength-meter.js',
     'src/js/plugins/datepicker/locales/it.js',
