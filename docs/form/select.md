@@ -7,7 +7,7 @@ title: Select
 description: Il classico “menu a tendina”, in nuove varianti.
 ---
 
-Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
+Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin. Dal momento che il plugin viene attivato sul document.ready del documento viene messa a disposizione una funzione $.setOptionsToSelect(data) che permette il ricarico delle opzioni della select, ad esempio nel caso vengano caricate successivamente. Il parametro di $.setOptionsToSelect(data) ossia "data" deve essere un vettore di oggetti con proprietà "value" e "text".
 
 ### Select classica
 
@@ -58,8 +58,8 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 
 ### Select con reset
 
-Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:  
-`"Label del tasto reset <span class='reset-label'></span>"`  
+Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:
+`"Label del tasto reset <span class='reset-label'></span>"`
 
 All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
 
@@ -120,7 +120,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 Per attivare la multiselezione, aggiungere gli attributi `multiple="true"` e `data-multiple-separator=""` alla select.
 
-Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.   
+Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
 `"<span class='select-pill'><span class='select-pill-text'>label option</span></span>"`
 
 {% capture example %}
