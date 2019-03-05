@@ -58,8 +58,8 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 
 ### Select con reset
 
-Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:  
-`"Label del tasto reset <span class='reset-label'></span>"`  
+Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:
+`"Label del tasto reset <span class='reset-label'></span>"`
 
 All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
 
@@ -120,7 +120,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 Per attivare la multiselezione, aggiungere gli attributi `multiple="true"` e `data-multiple-separator=""` alla select.
 
-Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.   
+Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
 `"<span class='select-pill'><span class='select-pill-text'>label option</span></span>"`
 
 {% capture example %}
@@ -181,5 +181,22 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Modifica dinamica del campi della select
 
+Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione `$.setOptionsToSelect(_parametro)` che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev'essere chiamata dall'elemento con classe `.bootstrap-select-wrapper`, e con parametro in input `_parametro` un oggetto Javascript con proprietà "value" e "text" come segue:
+
+```
+$(document).ready(function() {
+    $('.bootstrap-select-wrapper.my-select-wrapper').setOptionsToSelect([{
+      text: 'push Label 1',
+      value: 'pushValue 1'
+    },{
+      text: 'push Label 2',
+      value: 'pushValue 2'
+    },{
+      text: 'push Label 3',
+      value: 'pushValue 3'
+    }]);
+  });
+```
 
