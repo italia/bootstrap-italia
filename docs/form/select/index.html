@@ -12,14 +12,14 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201902281507" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201903080915" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201902281507" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201903080915" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png">
@@ -139,7 +139,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.2.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.2.2/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -502,6 +502,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#select-multipla">Select Multipla</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-gruppi">Select con gruppi</a></li>
 <li class="toc-entry toc-h3"><a href="#select-multipla-con-gruppi-e-checkboxes">Select multipla con gruppi e checkboxes</a></li>
+<li class="toc-entry toc-h3"><a href="#modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</a></li>
 </ul>
   </div>
 </div>
@@ -588,7 +589,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-con-reset">Select con reset</h3>
 
-<p>Per creare l’opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all’interno dell’attributo “<strong>data-content</strong>” il seguente html:<br />
+<p>Per creare l’opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all’interno dell’attributo “<strong>data-content</strong>” il seguente html:
 <code class="highlighter-rouge">"Label del tasto reset &lt;span class='reset-label'&gt;&lt;/span&gt;"</code></p>
 
 <p>All’interno dell’attributo <code class="highlighter-rouge">title</code> dell’opzione inseriremo il titolo di default della select, in questo caso <code class="highlighter-rouge">"Scegli una opzione"</code>.</p>
@@ -681,7 +682,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <p>Per attivare la multiselezione, aggiungere gli attributi <code class="highlighter-rouge">multiple="true"</code> e <code class="highlighter-rouge">data-multiple-separator=""</code> alla select.</p>
 
-<p>Nelle option inseriremo per l’attributo <code class="highlighter-rouge">data-content</code> il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate. <br />
+<p>Nelle option inseriremo per l’attributo <code class="highlighter-rouge">data-content</code> il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
 <code class="highlighter-rouge">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;label option&lt;/span&gt;&lt;/span&gt;"</code></p>
 
 <div class="bd-example">
@@ -777,6 +778,24 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<h3 id="modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</h3>
+
+<p>Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione <code class="highlighter-rouge">$.setOptionsToSelect(_parametro)</code> che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev’essere chiamata dall’elemento con classe <code class="highlighter-rouge">.bootstrap-select-wrapper</code>, e con parametro in input <code class="highlighter-rouge">_parametro</code> un oggetto Javascript con proprietà “value” e “text” come segue:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(document).ready(function() {
+    $('.bootstrap-select-wrapper.my-select-wrapper').setOptionsToSelect([{
+      text: 'push Label 1',
+      value: 'pushValue 1'
+    },{
+      text: 'push Label 2',
+      value: 'pushValue 2'
+    },{
+      text: 'push Label 3',
+      value: 'pushValue 3'
+    }]);
+  });
+</code></pre></div></div>
+
 
         </main>
       </div>
@@ -794,14 +813,14 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201902281507"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201903080915"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201902281507"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201903080915"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -816,7 +835,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201902281507"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201903080915"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
