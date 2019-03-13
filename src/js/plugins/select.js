@@ -32,7 +32,19 @@ $(function() {
     $(selectElement)
       .selectpicker('refresh')
       .on('changed.bs.select', onSelectChange)
+     .find('.bs-title-option').html('TITLEOPTION');
+      
+      var buttonElement = $(this).find('button');
+      var widgetHTML =  $(buttonElement).html();       
+    	widgetHTML = widgetHTML.replace(/<div>/g, '<span>')
+    	 .replace(/<div/g, '<span')
+       .replace(/<\/div/g, '</span')
+       .replace(/<\/div>/g, '</span>');
 
+       $(buttonElement).html(widgetHTML)
+	.find('*').css('display','block');
+  
+       $(this).find('.dropdown-menu').attr('aria-expanded', 'false');
     return this
   }
 
