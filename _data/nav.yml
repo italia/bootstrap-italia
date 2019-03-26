@@ -42,8 +42,7 @@
     - title: BottomNav
     - title: Breadcrumbs
     - title: Header # TODO Rewiew mobile version
-    - title: Megamenu
-      status: wip # TODO Review mobile version
+    - title: Megamenu # TODO Review mobile version
     - title: Navscroll
     - title: Sidebar
     - title: Skiplinks
@@ -62,8 +61,8 @@
     - title: Bottoni
     - title: Card
     - title: Callout
-    - title: Carousel # TODO Not passing a11y check fully
-    - title: Chips # TODO Not passing a11y check fully
+    - title: Carousel
+    - title: Chips
     - title: Collapse
     - title: Cookiebar
     - title: Dimmer
@@ -81,6 +80,7 @@
     - title: Steppers
     - title: Tab
     - title: Timeline
+    # - title: Toasts # TODO To be merged with our "Notifiche"?
     - title: Tooltip
 
 - title: Form
@@ -88,7 +88,7 @@
     - title: Introduzione
     - title: Input
     - title: Input Numerico
-    - title: Input Calendario # TODO Not passing a11y check fully
+    - title: Input Calendario
     # - title: Input Ora # TODO Not working properly yet
     - title: Upload
     - title: Radio Button

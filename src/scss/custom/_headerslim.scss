@@ -60,7 +60,7 @@
       }
     }
 
-    span.nav-mobile {
+    .nav-mobile {
       ul.link-list {
         margin-top: $v-gap * 2;
         margin-bottom: $v-gap * 3;
@@ -95,7 +95,7 @@
       .dropdown-menu {
         top: -$header-slim-dropdown-distance !important;
       }
-      span.nav-mobile {
+      .nav-mobile {
         flex-grow: 2;
         ul.link-list {
           margin: 0;

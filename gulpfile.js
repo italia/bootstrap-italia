@@ -22,19 +22,21 @@ const DOCUMENTATION_DESTINATION = '_site';
 const Paths = {
   VENDOR_JS: [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery.easing/jquery.easing.js',
     'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/bootstrap-select/js/bootstrap-select.js',
-    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
   ],
   SOURCE_JS: [
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/bootstrap-select/js/bootstrap-select.js',
+    'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
+    'node_modules/svgxuse/svgxuse.js',
     'src/js/plugins/circular-loader/CircularLoader-v1.3.js',
     'src/js/plugins/password-strength-meter/password-strength-meter.js',
     'src/js/plugins/datepicker/locales/it.js',
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/i-sticky/i-sticky.js',
+    'src/js/plugins/ie.js',
+    'src/js/plugins/fonts-loader.js',
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
@@ -224,11 +226,18 @@ gulp.task('assets', () => {
     .pipe(touch());
 });
 
+// Fonts
+gulp.task('fonts', () => {
+  return gulp.src(['src/fonts/**'])
+    .pipe(gulp.dest(Paths.DIST + '/fonts'))
+    .pipe(touch());
+});
+
 // Main Jekyll task
 
 gulp.task('jekyll', done => {
 
-  const jekyll = process.platform === "win32" ?
+  const jekyll = process.platform === 'win32' ?
     spawn('jekyll.bat', ['build',
       '--watch',
       '--incremental',
@@ -258,6 +267,7 @@ gulp.task('build-library', gulp.series(
   'scss-min',
   'js-min',
   'js-bundle-min',
+  'fonts',
   'assets'
 ));
 
@@ -275,7 +285,7 @@ gulp.task('sync', () => {
     files: [DOCUMENTATION_DESTINATION + '/**'],
     port: 4000,
     server: {
-      baseDir: DOCUMENTATION_DESTINATION
+      baseDir: DOCUMENTATION_DESTINATION,
     }
   });
 

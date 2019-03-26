@@ -1,5 +1,9 @@
 $(function() {
+  var openbutton = $('.custom-navbar-toggler')
+  var closebutton = $('.close-div')
+  var overlay = $('.overlay')
   var backbutton = $('.it-back-button')
+  var navlink = $('.navbar-collapsable a')
 
   $('.it-bottom-navscroll ul li a[href^="#"]').on('click', function(e) {
     e.preventDefault()

@@ -9,7 +9,7 @@ description: Informazioni e suggerimenti per l'utilizzo di icone con Bootstrap I
 
 Le icone di Bootstrap Italia utilizzano una sprite SVG, che contiene al suo interno tutte le icone, referenziate attraverso il tag `<use>` attraverso un'àncora.
 
-Per l'utilizzo delle icone è necessario aggiungere la sprite presente nella cartella `dist/svg` e utilizzarla come descritto di seguito, modificandone il path nell'attributo `xlink:href`.
+Per l'utilizzo delle icone è necessario aggiungere la sprite presente nella libreria alla cartella `dist/svg` e utilizzarla come descritto di seguito, modificandone il path nell'attributo `xlink:href`, a seconda di dove viene copiata la sprite SVG nel proprio ambiente.
 
 ## Esempi
 
@@ -67,7 +67,22 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 ### Lista delle icone disponibili
 
 {% capture example %}
-<div class="row">{% for icona in site.data.icons %}
+<div class="row">
+  {% for icona in site.data.icons.regular %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
+  </div>{% endfor %}
+</div>
+<h4 class="mt-4">Social</h4>
+<div class="row">
+  {% for icona in site.data.icons.social %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
+  </div>{% endfor %}
+</div>
+<h4 class="mt-4">Extra</h4>
+<div class="row">
+  {% for icona in site.data.icons.extra %}
   <div class="col-12 col-md-6 col-lg-4">
     <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#{{icona}}"></use></svg> {{icona}}
   </div>{% endfor %}

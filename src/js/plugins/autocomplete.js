@@ -15,7 +15,7 @@ $(function() {
       let $autocomplete = null
       let data = $input.data('autocomplete')
 
-      if (Object.keys(data).length) {
+      if (data && Object.keys(data).length) {
         $autocomplete = $('<ul class="autocomplete-list"></ul>')
         $autocomplete.insertAfter($(this).next())
 

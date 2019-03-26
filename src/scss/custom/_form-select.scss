@@ -430,6 +430,10 @@
               }
             }
           }
+
+          &.disabled a {
+            color: $gray-disabled;
+          }
         }
       }
     }

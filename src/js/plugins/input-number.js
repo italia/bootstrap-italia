@@ -2,13 +2,17 @@ $(function() {
   //resize function
   function inputNumberResize($target) {
     var $inputNumber = $target.closest('.input-number')
-
     if ($inputNumber.hasClass('input-number-adaptive')) {
+      // width = padding (12px + 32px) + number of characters
       if (!$inputNumber.hasClass('input-number-percentage')) {
-        $target.css('width', $target.val().length * 2 + 'ch')
+        $target.css('width', 'calc(44px + ' + $target.val().length + 'ch)')
+        if (isIe())
+          $target.css('width', 'calc(44px + (1.5 * ' + $target.val().length + 'ch))')
       }
       if ($inputNumber.hasClass('input-number-currency')) {
-        $target.css('width', 'calc(40px + ' + $target.val().length * 2 + 'ch)')
+        $target.css('width', 'calc(40px + 44px + ' + $target.val().length + 'ch)')
+        if (isIe())
+          $target.css('width', 'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))')
       }
     }
   }
