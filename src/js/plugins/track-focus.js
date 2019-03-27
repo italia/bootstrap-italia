@@ -7,10 +7,14 @@ $(function() {
     })
     .on('focusin', function(e) {
       if (usingMouse) {
-        e.target && e.target.classList.add('focus--mouse')
+	if (e.target){
+		$(e.target).addClass('focus--mouse');
+	}
       }
     })
     .on('focusout', function(e) {
-      e.target && e.target.classList.remove('focus--mouse')
+      if (e.target){
+	   $(e.target).removeClass('focus--mouse');
+      }
     })
 })
