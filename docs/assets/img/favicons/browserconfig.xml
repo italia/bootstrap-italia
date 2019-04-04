@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="{{ site.baseurl }}/docs/assets/img/favicons/mstile-150x150.png"/>
+            <square150x150logo src="/bootstrap-italia/docs/assets/img/favicons/mstile-150x150.png"/>
             <TileColor>#0066CC</TileColor>
         </tile>
     </msapplication>
