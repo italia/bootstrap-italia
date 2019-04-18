@@ -14,7 +14,7 @@
   order: 2;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
 
   .section-nav {
     padding-left: 0;
@@ -32,7 +32,7 @@
 
       a {
         display: block;
-        padding: .125rem 1.5rem;
+        padding: 0.125rem 1.5rem;
         color: #77757a;
 
         &:hover {
@@ -49,21 +49,20 @@
 //
 .bd-sidebar {
   order: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   .bd-links {
     padding: 0;
 
     .link-list-wrapper {
       ul.link-list > li > a {
-        font-size: .889rem;
+        font-size: 0.889rem;
       }
     }
 
     @include media-breakpoint-up(md) {
       @supports (position: sticky) {
         max-height: calc(100vh - 5rem);
-        overflow-y: auto;
       }
     }
 
@@ -76,7 +75,7 @@
   .nav {
     > li > a {
       display: inline-block;
-      padding: .25rem .5rem .25rem 1.5rem;
+      padding: 0.25rem 0.5rem 0.25rem 1.5rem;
       font-size: 16px;
       color: $gray-800;
 
@@ -102,15 +101,10 @@
       overflow-y: auto;
     }
     padding: 1.5rem 0;
-    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   @include media-breakpoint-up(xl) {
     flex: 0 1 320px;
   }
 }
-
-
-
-
-
