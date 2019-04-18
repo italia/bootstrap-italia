@@ -298,39 +298,3 @@ title: NavScroll
     </div>
   </div>
 </div>
-
-<!-- Notification per tornare alla pagina principale -->
-<div
-  class="notification dismissable with-icon"
-  role="alert"
-  id="notification-esempi"
-  aria-labelledby="notification-esempi-title"
->
-  <h5 id="notification-esempi-title">
-    <svg class="icon">
-      <use
-        xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"
-      ></use></svg
-    >Esempio di utilizzo del componente NavScroll
-  </h5>
-  <p>
-    <a href="{{ site.baseurl }}/docs/esempi/"
-      >Torna alla pagina principale degli esempi</a
-    >
-  </p>
-  <button type="button" class="btn notification-close">
-    <svg class="icon">
-      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
-    </svg>
-    <span class="sr-only">Chiudi notifica: Titolo notification</span>
-  </button>
-</div>
-
-<script>
-  $(document).ready(function() {
-    $('.affix-top, .affix-bottom').iSticky({
-      holderAutoHeight: true,
-    })
-    notificationShow('notification-esempi')
-  })
-</script>

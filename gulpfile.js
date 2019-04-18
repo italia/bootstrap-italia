@@ -30,6 +30,7 @@ const Paths = {
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'node_modules/svgxuse/svgxuse.js',
+    'src/js/plugins/polyfills/array.from.js',
     'src/js/plugins/circular-loader/CircularLoader-v1.3.js',
     'src/js/plugins/password-strength-meter/password-strength-meter.js',
     'src/js/plugins/datepicker/locales/it.js',
@@ -335,7 +336,9 @@ gulp.task('sync', () => {
     },
   })
 
-  gulp.watch([Paths.SCSS_WATCH, Paths.JS_WATCH], gulp.series('build-library'))
+  gulp.watch(
+    [Paths.SCSS_WATCH, Paths.JS_WATCH],
+    gulp.series('build-library'))
 
   gulp.watch(
     [Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH],
@@ -350,4 +353,4 @@ gulp.task('build', gulp.series('build-library', 'build-documentation'))
 // Main serve task
 // Cambiato ordine di esecuzione task - @redbaron76
 // sync utilizza nuovo build onSave anzichè quello vecchio
-gulp.task('serve', gulp.series('jekyll', 'sync', 'build'))
+gulp.task('serve', gulp.series('build', 'jekyll', 'sync'))
