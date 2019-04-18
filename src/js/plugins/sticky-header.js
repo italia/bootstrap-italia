@@ -3,22 +3,20 @@
  * @ Fabio Fumis
  */
 ;(function() {
-  function isHidden(el) {
-    const style = window.getComputedStyle(el)
-    return style.display === 'none'
-  }
-
   const elSticky = document.querySelector('.it-header-sticky')
 
   if (!!elSticky) {
+    function isHidden(el) {
+      const style = window.getComputedStyle(el)
+      return style.display === 'none'
+    }
+
     const elToggler = document.querySelector('.custom-navbar-toggler')
     const isDesktop = isHidden(elToggler)
 
     let isSticky = false
 
     const initSticky = isDesktop => {
-      console.log('isDesktop', isDesktop)
-
       const elSlim = document.querySelector('.it-header-slim-wrapper')
       const elCenter = document.querySelector('.it-header-center-wrapper')
       const elNavbar = document.querySelector('.it-header-navbar-wrapper')
@@ -42,8 +40,6 @@
 
             const clonedBrand = elBrand.cloneNode(true)
             const clonedSearch = elSearch.cloneNode(true)
-
-            console.log('cloned', clonedBrand, clonedSearch)
 
             target
               .insertBefore(clonedBrand, target.childNodes[0])
