@@ -4,7 +4,7 @@
 
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 
-
+{%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
@@ -25,6 +25,7 @@
   ];
 </script>
 <script src="{{ site.baseurl }}/docs/assets/dist/js/cover-animation.min.js?{{ buildTime }}"></script>
+{%- endif -%}
 
 {%- if page.layout == "docs" -%}
 {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
@@ -42,5 +43,30 @@
     },
     debug: false // Set debug to true if you want to inspect the dropdown
   });
+</script>
+{%- endif -%}
+
+{%- if page.layout == "base" -%}
+<!-- Notification per tornare alla pagina principale -->
+<div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
+  <h5 id="notification-esempi-title">
+    <svg class="icon">
+      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Esempio di utilizzo
+  </h5>
+  <p>
+    <a href="{{ site.baseurl }}/docs/esempi/">Torna alla pagina principale degli esempi</a>
+  </p>
+  <button type="button" class="btn notification-close">
+    <svg class="icon">
+      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+    </svg>
+    <span class="sr-only">Chiudi notifica: Titolo notification</span>
+  </button>
+</div>
+
+<script>
+  $(document).ready(function() {
+    notificationShow('notification-esempi')
+  })
 </script>
 {%- endif -%}

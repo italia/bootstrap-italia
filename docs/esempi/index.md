@@ -2,7 +2,7 @@
 layout: docs
 group: esempi
 title: Esempi
-redirect_from: "/esempi/"
+redirect_from: '/esempi/'
 toc: true
 ---
 

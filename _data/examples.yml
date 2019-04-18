@@ -13,18 +13,20 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
+    - name: Sticky Header
+      url: sticky-header
+      description: Header con effetto sticky on scroll.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
   examples:
     - name: Bootstrap Italia playground
-      url: "https://github.com/italia/bootstrap-italia-playground/"
+      url: 'https://github.com/italia/bootstrap-italia-playground/'
       description: Il modo più semplice per iniziare a giocare con Bootstrap Italia. Un semplice HTML che mostra come includere tutti i file necessari.
     - name: Template vuoto
       url: template-vuoto
-      description: "Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia."
+      description: 'Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia.'
       status: work in progress
 
 - category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.3/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
-
