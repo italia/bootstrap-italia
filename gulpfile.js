@@ -348,5 +348,6 @@ gulp.task('sync', () => {
 gulp.task('build', gulp.series('build-library', 'build-documentation'))
 
 // Main serve task
-
-gulp.task('serve', gulp.series('build', 'jekyll', 'sync'))
+// Cambiato ordine di esecuzione task - @redbaron76
+// sync utilizza nuovo build onSave anzichè quello vecchio
+gulp.task('serve', gulp.series('jekyll', 'sync', 'build'))
