@@ -29,7 +29,7 @@ Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attrave
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di **Bootstrap {{ site.bootstrap_version }}**, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
-La libreria è accessibile anche via CDN su jsDelivr [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia), di cui però è sconsigliato l'utilizzo in ambienti di produzione.
+La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/package/npm/bootstrap-italia) o [unpkg](https://unpkg.com/bootstrap-italia/), di cui però è sconsigliato l'utilizzo in ambienti di produzione.
 
 Di seguito le informazioni per l'utilizzo dei singoli file.
 
