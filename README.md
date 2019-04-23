@@ -13,7 +13,7 @@ We are using BrowserStack for interactive cross browser testing. They are sponso
 
 # Bootstrap Italia
 
-Bootstrap Italia è un tema basato su [Bootstrap 4.2](https://getbootstrap.com/docs/4.2/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
+Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/docs/) per la creazione di applicazioni responsive, mobile-first per il web.
 
 Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
@@ -28,6 +28,7 @@ oppure
 - [Come iniziare](#come-iniziare)
 - [Segnalazione bug e richieste](#segnalazione-bug-e-richieste-di-aiuto)
 - [Come contribuire](#come-contribuire)
+- [Licenze software dei componenti di terze parti](#licenze-software-dei-componenti-di-terze-parti)
 
 ## Come iniziare
 
