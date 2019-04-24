@@ -27,6 +27,10 @@
       url: template-vuoto
       description: 'Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia.'
       status: work in progress
+    - name: Template vuoto Comuni
+      url: template-vuoto-comuni
+      description: 'Un esempio di impostazione per una pagina generica relativa al progetto "Comuni".'
+      status: work in progress
 
 - category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.3/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.

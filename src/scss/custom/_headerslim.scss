@@ -6,7 +6,7 @@
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;
-    //align-items: center;
+    align-items: center;
     .dropdown-menu {
       top: -$header-slim-dropdown-distance-mob !important;
     }
