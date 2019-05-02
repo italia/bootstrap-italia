@@ -1,14 +1,40 @@
 - category: Showcase
   description: Di seguito sono riportati alcuni progetti che sono risultato delle esperienze d'uso con le più recenti indicazioni di design e con Bootstrap Italia.
   examples:
-    - name: Comune di Cagliari
+    - name: Sito di presentazione della app IO
+      url: "https://io.italia.it/"
+      description: Un sito realizzato in poche ore, anche grazie all'utilizzo di Bootstrap Italia, che presenta il progetto per la realizzazione dell'app del cittadino IO.
+    - name: Prototipo del Comune di Cagliari
       url: "https://italia.github.io/design-comuni-prototipi/esempi/comune-di-cagliari/pagine-statiche/index.html"
       description: Un prototipo per il nuovo sito del Comune di Cagliari, costruito per fare ricerca e test con gli utenti, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> in formato scaricabile.
     - name: Docs Italia
       url: "https://docs.italia.it"
       description: Docs Italia, il progetto per la pubblicazione e la consultazione dei documenti pubblici digitali, è stato costruito su una versione preliminare di Bootstrap Italia.
       status: work in progress
+- category: Temi
+  description: Di seguito sono riportati alcuni progetti che semplificano la creazione di progetti con Bootstrap Italia e diversi CMS o framework per il web. Sono tutti in piena evoluzione e necessitano dell'aiuto di tutti per essere completati, resi pienamente conformi ed esenti da problemi. Se vuoi contruibire contattaci o crea una Pull Request sul repository!
+  examples:
     - name: Tema WordPress
       url: "https://github.com/italia/design-wordpress-theme/"
-      description: Un tema WordPress open-source creato dalla community degli sviluppatori. Questo tema necessita di aiuto per essere reso conforme al nuovo <a href="https://medium.com/team-per-la-trasformazione-digitale/modello-standard-sito-web-comuni-design-prototipo-mobile-first-open-source-organizzazione-contenuti-38b330e695a1">modello per i siti del Comuni italiani</a>, se vuoi contruibire contattaci o crea una Pull Request sul repository!
+      description: Un tema open-source per il CMS <a href="https://it.wordpress.org/">WordPress</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Jekyll
+      url: "https://github.com/italia/design-jekyll-theme/"
+      description: Un tema open-source per il generatore di siti statici <a href="https://jekyllrb.com/">Jekyll</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Django
+      url: "https://github.com/italia/design-django-theme/"
+      description: Un tema open-source per il framework web Python <a href="https://www.djangoproject.com/">Django</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Laravel
+      url: "https://github.com/italia/design-laravel-theme/"
+      description: Un tema open-source per il framework web PHP <a href="https://laravel.com/">Laravel</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Hugo
+      url: "https://github.com/francescozaia/hugo-theme-bootstrap-italia/"
+      description: Un tema open-source per il generatore di siti statici <a href="https://gohugo.io/">Hugo</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Symfony
+      url: "https://github.com/ComuneFI/BootstrapitaliaBundle/"
+      description: Un tema open-source per il framework web PHP <a href="https://symfony.com/">Symfony</a>, creato dalla community degli sviluppatori.
       status: work in progress
