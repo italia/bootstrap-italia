@@ -12,14 +12,14 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201904181333" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201905021751" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201904181333" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201905021751" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -500,9 +500,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h2"><a href="#caricare-la-libreria">Caricare la libreria</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
+<li class="toc-entry toc-h3"><a href="#javascript">Javascript</a></li>
 <li class="toc-entry toc-h3"><a href="#fonts">Fonts</a></li>
 <li class="toc-entry toc-h3"><a href="#icone">Icone</a></li>
-<li class="toc-entry toc-h3"><a href="#javascript">Javascript</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#pagina-html-di-esempio">Pagina HTML di esempio</a>
@@ -558,19 +558,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./bootstrap-italia.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<h3 id="fonts">Fonts</h3>
-<p>È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei <a href="https://github.com/italia/bootstrap-italia/releases/tag/v1.2.6">file sorgente della libreria</a>. Il path di base della cartella dei font può essere impostato utilizzando la variabile globale <strong>prima</strong> del caricamento della libreria Javascript di Bootstrap Italia:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">__PUBLIC_PATH__</span> <span class="o">=</span> <span class="s1">'/bootstrap-italia/dist/fonts'</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
-
-<p>Se tale variabile non è valorizzata, i font saranno cercati all’interno di una cartella <code class="highlighter-rouge">/bootstrap-italia/dist/fonts/</code>.</p>
-
-<h3 id="icone">Icone</h3>
-
-<p>Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG <code class="highlighter-rouge">/bootstrap-italia/dist/svg/</code>, le cui singole SVG sorgenti sono presenti nel repository.</p>
-
-<p>Per informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/utilities/icone/">documentazione sull’utilizzo delle icone</a>.</p>
-
 <h3 id="javascript">Javascript</h3>
 
 <p>All’interno della cartella <code class="highlighter-rouge">js</code> saranno invece presenti due file, che si differenziano soltanto per l’inclusione <em>in linea</em> delle librerie <em>jQuery</em>, <em>popper.js</em> e <em>Owl Carousel</em> (quest’ultimo necessario soltanto se presenti componenti di tipo <a href="/bootstrap-italia/docs/componenti/carousel">Carousel</a>). Vediamo nel dettaglio di cosa si tratta:</p>
@@ -605,6 +592,19 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </table>
 
 <p>In questo caso, dopo aver copiato i file all’interno del vostro progetto, sarà sufficiente inserire una versione dei tag <code class="highlighter-rouge">&lt;script&gt;</code> di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag <code class="highlighter-rouge">&lt;/body&gt;</code>. Si potrà quindi <strong>scegliere</strong> se includere la versione <code class="highlighter-rouge">*.bundle.*</code> o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).</p>
+
+<h3 id="fonts">Fonts</h3>
+<p>È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei <a href="https://github.com/italia/bootstrap-italia/releases/tag/v1.2.6">file sorgente della libreria</a>. Il path di base della cartella dei font può essere impostato utilizzando la variabile globale <strong>prima</strong> del caricamento della libreria Javascript di Bootstrap Italia:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">__PUBLIC_PATH__</span> <span class="o">=</span> <span class="s1">'/bootstrap-italia/dist/fonts'</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>Se tale variabile non è valorizzata, i font saranno cercati all’interno di una cartella <code class="highlighter-rouge">/bootstrap-italia/dist/fonts/</code>.</p>
+
+<h3 id="icone">Icone</h3>
+
+<p>Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG <code class="highlighter-rouge">/bootstrap-italia/dist/svg/</code>, le cui singole SVG sorgenti sono presenti nel repository.</p>
+
+<p>Per informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/utilities/icone/">documentazione sull’utilizzo delle icone</a>.</p>
 
 <h4 id="versione-bundle">Versione “bundle”</h4>
 
@@ -646,7 +646,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="altri-esempi">Altri esempi</h3>
 
-<p>Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione <a href="/bootstrap-italia/docs/esempi/">esempi</a> di questo sito, che <a href="https://getbootstrap.com/docs/4.3/examples/">sul sito di Bootstrap</a>, con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente. Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella <a href="https://github.com/italia/bootstrap-italia/tree/master/docs/esempi">cartella <code class="highlighter-rouge">docs/esempi/</code></a>.</p>
+<p>Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione <a href="/bootstrap-italia/docs/esempi/">esempi</a> e <a href="/bootstrap-italia/docs/progetti/">progetti</a> di questo sito, che <a href="https://getbootstrap.com/docs/4.3/examples/">sul sito di Bootstrap</a>, con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente.</p>
+
+<p>Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella <a href="https://github.com/italia/bootstrap-italia/tree/master/docs/esempi">cartella <code class="highlighter-rouge">docs/esempi/</code></a>.</p>
+
+<p>Tra i <a href="/bootstrap-italia/docs/progetti/">progetti</a> si possono trovare molti riferimenti a progetti terzi che fanno uso di Bootstrap Italia, come i temi per alcuni CMS, generatori di siti statici e framework per il web.</p>
 
 <h2 id="utilizzo-come-dipendenza">Utilizzo come dipendenza</h2>
 
@@ -714,11 +718,11 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201904181333"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201905021751"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201904181333"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201905021751"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -733,7 +737,7 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201904181333"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201905021751"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
