@@ -48,7 +48,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@octokit/rest": "^15.2.6",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "conventional-changelog": "^1.1.24",
     "cross-spawn": "^6.0.5",
     "fancy-log": "^1.3.2",
@@ -67,14 +67,14 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-touch-cmd": "0.0.1",
     "gulp-uglify": "^3.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "prettier": "1.16.1",
     "replace-in-file": "^3.4.0"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
     "bootstrap-select": "1.13.5",
-    "jquery": "3.3.1",
+    "jquery": "^3.4.1",
     "owl.carousel": "2.3.4",
     "popper.js": "1.14.7",
     "svgxuse": "1.2.6"
