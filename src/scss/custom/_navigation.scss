@@ -356,6 +356,7 @@
             font-weight: 400;
             padding: $navigation-v-padding $navigation-h-padding;
             color: $navigation-link-color-desk;
+            border-bottom: $navigation-link-active-bar-size solid transparent;
 
             &.dropdown-toggle {
               svg {
@@ -365,8 +366,7 @@
 
             &.active {
               border-left: 0;
-              border-bottom: $navigation-link-active-bar-size solid
-                $navigation-link-active-bar-color-desk;
+              border-color: $navigation-link-active-bar-color-desk;
               background: transparent;
             }
 

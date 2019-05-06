@@ -38,45 +38,93 @@
 }
 
 .btn-icon {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   .rounded-icon {
-    background-color: $white;
-    width: 24px;
-    height: 24px;
+    width: 1.5em;
+    height: 1.5em;
+
+    .icon {
+      margin-right: 0;
+    }
+
     @include border-radius(12px);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    svg.icon {
-      width: 1.2em;
-      height: 1.2em;
+    background-color: $white;
 
-      &.icon-primary {
-        fill: $primary !important;
-      }
+    &.rounded-primary {
+      background-color: $primary;
+    }
+
+    &.rounded-secondary {
+      background-color: $secondary;
+    }
+
+    &.rounded-info {
+      background-color: $info;
+    }
+
+    &.rounded-success {
+      background-color: $success;
+    }
+
+    &.rounded-warning {
+      background-color: $warning;
+    }
+
+    &.rounded-danger {
+      background-color: $danger;
     }
 
     & + * {
-      margin-left: 8px;
+      margin-left: 0.5em;
     }
   }
 
   .icon {
     border: none;
 
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-      vertical-align: sub;
-      width: 1.2em;
-      height: 1.2em;
+    width: 1.5em !important;
+    height: 1.5em !important;
 
-      & + * {
-        margin-left: 4px;
-      }
+    fill: $primary !important;
+
+    &.icon-white {
+      fill: $white !important;
+    }
+
+    &.icon-primary {
+      fill: $primary !important;
+    }
+
+    &.icon-secondary {
+      fill: $secondary !important;
+    }
+
+    &.icon-info {
+      fill: $info !important;
+    }
+
+    &.icon-success {
+      fill: $success !important;
+    }
+
+    &.icon-warning {
+      fill: $warning !important;
+    }
+
+    &.icon-danger {
+      fill: $danger !important;
+    }
+
+    & + * {
+      margin-left: 0.25em;
     }
   }
 }
@@ -99,6 +147,10 @@
 
   padding-top: 12px !important;
   padding-bottom: 12px !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
 
   // Tablet vertical
   @media (min-width: #{map-get($grid-breakpoints, sm)}) {

@@ -54,6 +54,16 @@
         }
       }
     }
+    .btn-full {
+      &.btn-info,
+      &.btn-danger,
+      &.btn-success,
+      &.btn-warning,
+      &.btn-secondary,
+      &.btn-primary {
+        color: $white !important;
+      }
+    }
   }
 }
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {

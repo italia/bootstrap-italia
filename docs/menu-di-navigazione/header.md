@@ -15,18 +15,18 @@ toc: true
 
 L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
 
-* Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
-* Una parte centrale che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
-* Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
+- Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
+- Una parte centrale che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
+- Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
   (<svg class="icon icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 ## Slim header
 
 Lo "slim header" header mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.
-Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl }}/docs/componenti/dropdown/). 
-
+Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl }}/docs/componenti/dropdown/).
 
 {% capture example %}
+
 <div class="it-header-slim-wrapper">
   <div class="container">
     <div class="row">
@@ -81,12 +81,80 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+#### Right action con bottone full responsive
+
+Per trasformare il bottone di _action_ situato nella `header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
+
+Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-slim-wrapper-content">
+            <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
+            <div class="header-slim-right-zone">
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>ITA</span>
+                  <svg class="icon d-none d-lg-block">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-expand"
+                    ></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li>
+                            <a class="list-item" href="#"><span>ITA</span></a>
+                          </li>
+                          <li>
+                            <a class="list-item" href="#"><span>ENG</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary btn-icon btn-full">
+                <span class="rounded-icon">
+                  <svg class="icon icon-primary">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-user"
+                    ></use>
+                  </svg>
+                </span>
+                <span class="d-none d-lg-block">Accedi all'area personale</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Versione chiara
 
 Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-slim-wrapper">`
 
-
 {% capture example %}
+
 <div class="it-header-slim-wrapper theme-light">
   <div class="container">
     <div class="row">
@@ -143,9 +211,10 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ## Header Centrale
 
-**Header centrale**, per mostrare il logo dell'ente e la sua descrizione, dei link aggiuntivi ai social media, l'accesso al motore di ricerca, se presente.  
+**Header centrale**, per mostrare il logo dell'ente e la sua descrizione, dei link aggiuntivi ai social media, l'accesso al motore di ricerca, se presente.
 
 {% capture example %}
+
 <div class="it-header-center-wrapper">
   <div class="container">
     <div class="row">
@@ -208,6 +277,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 Per utilizzare la versione più stretta dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
 
 {% capture example %}
+
 <div class="it-header-center-wrapper it-small-header">
   <div class="container">
     <div class="row">
@@ -272,6 +342,7 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
 Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`
 
 {% capture example %}
+
 <div class="it-header-center-wrapper theme-light">
   <div class="container">
     <div class="row">
@@ -336,6 +407,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 **Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
 
 {% capture example %}
+
 <div class="it-header-navbar-wrapper">
   <div class="container">
     <div class="row">
@@ -442,17 +514,18 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 I'Header Nav ha due versioni, una chiara ("light") e una scura ("dark"). Lo stile di default ha differenti caratteristiche colore a seconda della versione desktop e mobile:
 
-* Su **Desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
-* Su **Mobile** lo stile di default ha un **background bianco e testi e link di colore primario**.
+- Su **Desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+- Su **Mobile** lo stile di default ha un **background bianco e testi e link di colore primario**.
 
 Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
 
-* La classe **`.theme-dark-mobile`** modifica unicamente la versione mobile del Nav impostando il background di colore primario, testi e link bianchi.
-* La classe **`.theme-light-desktop`** imposta invece un background bianco, testi e links di colore primario. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
+- La classe **`.theme-dark-mobile`** modifica unicamente la versione mobile del Nav impostando il background di colore primario, testi e link bianchi.
+- La classe **`.theme-light-desktop`** imposta invece un background bianco, testi e links di colore primario. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
 
 #### Header Nav standard
 
 {% capture example %}
+
 <div class="it-header-navbar-wrapper">
   <div class="container">
     <div class="row">
@@ -558,6 +631,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 #### Header Nav mobile scura
 
 {% capture example %}
+
 <div class="it-header-navbar-wrapper theme-dark-mobile">
   <div class="container">
     <div class="row">
@@ -663,6 +737,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 #### Header Nav desktop chiara
 
 {% capture example %}
+
 <div class="it-header-navbar-wrapper theme-light-desk">
   <div class="container">
     <div class="row">
@@ -768,6 +843,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 ## Header Completa
 
 {% capture example %}
+
 <div class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container">
@@ -989,6 +1065,7 @@ Nella versione light è consigliabile aggiungere la classe `it-shadow` al tag `<
 Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto il componente.
 
 {% capture example %}
+
 <div class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
     <div class="container">
@@ -1209,7 +1286,8 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
 Affinché la testata rimanga parzialmente visibile anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
 
 {% highlight html %}
+
 <div class="it-header-wrapper it-header-sticky"> ... </div>
 {% endhighlight %}
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-header/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo. 
+È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-header/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
