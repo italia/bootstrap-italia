@@ -352,6 +352,17 @@
         padding: 0 $navigation-h-padding;
 
         li {
+          // Desktop - compatta e allinea in basso link singoli in caso di label lunghe
+          @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+            &.nav-item {
+              display: flex;
+              .nav-link {
+                display: flex;
+                align-self: flex-end;
+              }
+            }
+          }
+
           a.nav-link {
             font-weight: 400;
             padding: $navigation-v-padding $navigation-h-padding;

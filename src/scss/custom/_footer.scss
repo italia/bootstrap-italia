@@ -69,6 +69,11 @@ $bg-footer: darken($primary, 20%);
   section {
     padding: 0 $v-gap * 2;
   }
+
+  label {
+    color: $white;
+    font-weight: 600;
+  }
 }
 
 .it-footer-small-prints {
@@ -92,6 +97,15 @@ $bg-footer: darken($primary, 20%);
   a:hover:not(.disabled) {
     color: $white;
     font-size: 15px;
+  }
+}
+
+.form-newsletter {
+  input[type='email'] {
+    font-size: 1em;
+    & ~ * {
+      margin-top: 1em;
+    }
   }
 }
 

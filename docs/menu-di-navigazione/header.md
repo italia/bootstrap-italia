@@ -840,6 +840,91 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+#### Navigazione secondaria
+
+Al menù di navigazione principale può essere aggiunto anche un menù di navigazione secondario includendo a `.menu-wrapper` una seconda lista **ul** con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
+
+{% capture example %}
+
+<div class="it-header-navbar-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg has-megamenu">
+          <button
+            class="custom-navbar-toggler"
+            type="button"
+            aria-controls="nav10"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            data-target="#nav10"
+          >
+            <svg class="icon">
+              <use
+                xlink:href="{{
+                  site.baseurl
+                }}/dist/svg/sprite.svg#it-burger"
+              ></use>
+            </svg>
+          </button>
+          <div class="navbar-collapsable" id="nav10">
+            <div class="overlay"></div>
+            <div class="close-div sr-only">
+              <button class="btn close-menu" type="button">
+                <span class="it-close"></span>close
+              </button>
+            </div>
+            <div class="menu-wrapper">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link active" href="#"
+                    ><span>link 1 active</span
+                    ><span class="sr-only">current</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span>link 2</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span>link 3</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span>link 4</span></a>
+                </li>
+              </ul>
+              <ul class="navbar-nav navbar-secondary">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span>link 5</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><span>link 6</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><span>link 7</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><span
+                      >link 8</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Header Completa
 
 {% capture example %}
