@@ -16,14 +16,15 @@
 
     let isSticky = false
 
-    const initSticky = isDesktop => {
-      const elSlim = document.querySelector('.it-header-slim-wrapper')
-      const elCenter = document.querySelector('.it-header-center-wrapper')
-      const elNavbar = document.querySelector('.it-header-navbar-wrapper')
+    const elSlim = document.querySelector('.it-header-slim-wrapper')
+    const elCenter = document.querySelector('.it-header-center-wrapper')
+    const elNavbar = document.querySelector('.it-header-navbar-wrapper')
 
-      const navbarHeight = elNavbar.offsetHeight
-      const slimHeight = (elSlim && elSlim.offsetHeight) || 0
-      let navOffsetTop = slimHeight
+    const navbarHeight = elNavbar.offsetHeight
+    const slimHeight = (elSlim && elSlim.offsetHeight) || 0
+    let navOffsetTop = slimHeight
+
+    const initSticky = (isDesktop, isResized = false) => {
 
       if (isDesktop && navbarHeight) {
         const centerHeight = elCenter.offsetHeight
@@ -55,7 +56,7 @@
         }
       }
 
-      window.onscroll = () => {
+      const runCheckSticky = () => {
         if (window.pageYOffset >= navOffsetTop && !isSticky) {
           isSticky = true
           elSticky.classList.add('is-sticky')
@@ -66,11 +67,17 @@
           toggleClonedElement(isDesktop, false)
         }
       }
+
+      window.onscroll = () => {
+        runCheckSticky()
+      }
+
+      if (isResized) runCheckSticky()
     }
 
     window.onresize = () => {
       const stillDesktop = isHidden(elToggler)
-      initSticky(stillDesktop)
+      initSticky(stillDesktop, true)
     }
 
     initSticky(isDesktop)

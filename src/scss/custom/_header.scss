@@ -41,7 +41,7 @@
         }
 
         .it-header-navbar-wrapper {
-          padding-top: $header-general-padding;
+          // padding-top: $header-general-padding;
 
           .menu-wrapper {
             display: flex;
@@ -51,7 +51,8 @@
 
             .it-brand-wrapper {
               align-self: center;
-              padding-bottom: 10px;
+              // padding-bottom: 10px;
+
               &.cloned {
                 .it-brand-text {
                   display: none;
@@ -64,8 +65,8 @@
                   }
                   .icon {
                     fill: $header-center-text-color;
-                    width: $header-center-icon-size;
-                    height: $header-center-icon-size;
+                    width: $header-center-icon-size / 2;
+                    height: $header-center-icon-size / 2;
                     margin-right: $header-center-icon-margin;
                     flex-shrink: 0;
                   }
@@ -99,6 +100,18 @@
                     fill: $header-center-bg-color;
                     width: $header-center-search-icon-size;
                     height: $header-center-search-icon-size;
+                  }
+                }
+              }
+
+              &.cloned {
+                a {
+                  width: 35px;
+                  height: 35px;
+
+                  svg {
+                    width: 20px;
+                    height: 20px;
                   }
                 }
               }
