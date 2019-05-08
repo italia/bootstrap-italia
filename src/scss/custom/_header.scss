@@ -30,6 +30,7 @@
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 999;
 
       .it-header-slim-wrapper {
         display: none;
@@ -41,8 +42,6 @@
         }
 
         .it-header-navbar-wrapper {
-          // padding-top: $header-general-padding;
-
           .menu-wrapper {
             display: flex;
             flex-direction: row;

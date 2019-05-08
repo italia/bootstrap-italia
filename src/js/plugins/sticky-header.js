@@ -25,13 +25,12 @@
     let navOffsetTop = slimHeight
 
     const initSticky = (isDesktop, isResized = false) => {
-
       if (isDesktop && navbarHeight) {
         const centerHeight = elCenter.offsetHeight
         navOffsetTop = slimHeight + centerHeight
       }
 
-      const toggleClonedElement = (isDesktop, toAdd = true) => {
+      const toggleClonedElement = (isDesktop, toAdd = true, callback) => {
         if (isDesktop) {
           const target = document.querySelector('.menu-wrapper')
 
@@ -52,20 +51,38 @@
               Array.from(clonedItems).forEach(item => {
                 item.parentElement.removeChild(item)
               })
+
+            if (typeof callback === 'function') {
+              callback()
+            }
           }
         }
       }
 
       const runCheckSticky = () => {
-        if (window.pageYOffset >= navOffsetTop && !isSticky) {
+        const navFromTop = elNavbar.getBoundingClientRect().top
+
+        // if (window.pageYOffset >= navOffsetTop && !isSticky) {
+        if (navFromTop <= 0 && !isSticky) {
           isSticky = true
           elSticky.classList.add('is-sticky')
           toggleClonedElement(isDesktop, true)
-        } else if (window.pageYOffset < navOffsetTop && isSticky) {
+        } else if (window.scrollY === 0 && navFromTop === 0 && isSticky) {
           isSticky = false
           elSticky.classList.remove('is-sticky')
-          toggleClonedElement(isDesktop, false)
+          toggleClonedElement(isDesktop, false, () => {
+            window.scrollTo(0, navOffsetTop - 1)
+          })
         }
+
+        console.log(
+          window.scrollY,
+          navFromTop,
+          navOffsetTop,
+          elNavbar.offsetHeight,
+          navbarHeight,
+          isSticky
+        )
       }
 
       window.onscroll = () => {
