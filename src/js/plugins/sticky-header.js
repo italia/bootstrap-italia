@@ -15,16 +15,19 @@
     const isDesktop = isHidden(elToggler)
 
     let isSticky = false
-
-    const elSlim = document.querySelector('.it-header-slim-wrapper')
-    const elCenter = document.querySelector('.it-header-center-wrapper')
-    const elNavbar = document.querySelector('.it-header-navbar-wrapper')
-
-    const navbarHeight = elNavbar.offsetHeight
-    const slimHeight = (elSlim && elSlim.offsetHeight) || 0
-    let navOffsetTop = slimHeight
+    let scrollToGap = 0
 
     const initSticky = (isDesktop, isResized = false) => {
+      // console.log('isDesktop', isDesktop, 'isResized', isResized)
+
+      const elSlim = document.querySelector('.it-header-slim-wrapper')
+      const elCenter = document.querySelector('.it-header-center-wrapper')
+      const elNavbar = document.querySelector('.it-header-navbar-wrapper')
+
+      const navbarHeight = elNavbar.offsetHeight
+      const slimHeight = (elSlim && elSlim.offsetHeight) || 0
+      let navOffsetTop = slimHeight
+
       if (isDesktop && navbarHeight) {
         const centerHeight = elCenter.offsetHeight
         navOffsetTop = slimHeight + centerHeight
@@ -57,39 +60,65 @@
             }
           }
         }
+
+        // Add/remove padding to container
+        if (toAdd) {
+          elSticky.nextElementSibling.style.paddingTop =
+            navOffsetTop +
+            elNavbar.offsetHeight +
+            (!isDesktop ? navbarHeight - scrollToGap : 0) -
+            5 +
+            'px'
+        } else {
+          elSticky.nextElementSibling.style.paddingTop = 0 + 'px'
+        }
+      }
+
+      const toggleOff = () => {
+        isSticky = false
+        elSticky.classList.remove('is-sticky')
+
+        toggleClonedElement(isDesktop, false, () => {
+          const gap = scrollToGap > 0 ? scrollToGap : 0
+          // console.log('GAP', gap)
+          window.scrollTo(0, navOffsetTop - gap - 5)
+        })
       }
 
       const runCheckSticky = () => {
-        const navFromTop = elNavbar.getBoundingClientRect().top
+        const nbh = elNavbar.offsetHeight
 
-        // if (window.pageYOffset >= navOffsetTop && !isSticky) {
-        if (navFromTop <= 0 && !isSticky) {
+        if (window.scrollY + scrollToGap >= navOffsetTop && !isSticky) {
+          // console.log('ADD Sticky')
           isSticky = true
           elSticky.classList.add('is-sticky')
           toggleClonedElement(isDesktop, true)
-        } else if (window.scrollY === 0 && navFromTop === 0 && isSticky) {
-          isSticky = false
-          elSticky.classList.remove('is-sticky')
-          toggleClonedElement(isDesktop, false, () => {
-            window.scrollTo(0, navOffsetTop - 1)
-          })
+
+          if (nbh !== elNavbar.offsetHeight)
+            scrollToGap = elNavbar.offsetHeight - nbh
+        } else if (window.scrollY + scrollToGap < navOffsetTop && isSticky) {
+          // console.log('REMOVE Sticky')
+          toggleOff()
         }
 
-        console.log(
+        /* console.log(
           window.scrollY,
-          navFromTop,
           navOffsetTop,
           elNavbar.offsetHeight,
           navbarHeight,
-          isSticky
-        )
+          isSticky,
+          nbh
+        ) */
       }
 
       window.onscroll = () => {
         runCheckSticky()
       }
 
-      if (isResized) runCheckSticky()
+      if (isResized && isSticky) {
+        window.scrollTo(0, 0)
+        toggleOff()
+      }
     }
 
     window.onresize = () => {
