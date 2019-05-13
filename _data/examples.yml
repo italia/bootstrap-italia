@@ -27,8 +27,8 @@
       url: template-vuoto
       description: 'Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia.'
       status: work in progress
-    - name: Template vuoto Comuni
-      url: template-vuoto-comuni
+    - name: Template Comuni Vuoto
+      url: template-comuni-vuoto
       description: 'Un esempio di impostazione per una pagina generica relativa al progetto "Comuni".'
       status: work in progress
 

@@ -34,6 +34,9 @@
             padding: 0;
 
             &.navbar-secondary {
+              display: flex;
+              justify-content: flex-end;
+
               a {
                 font-size: 0.85em;
                 line-height: 1.6;
