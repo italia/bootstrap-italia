@@ -58,7 +58,6 @@
           }
         }
 
-        // Add/remove padding to container
         if (toAdd) {
           elSticky.nextElementSibling.style.paddingTop =
             navbarHeight +

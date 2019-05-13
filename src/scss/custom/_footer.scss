@@ -71,7 +71,6 @@ $bg-footer: darken($primary, 20%);
   }
 
   label {
-    color: $white;
     font-weight: 600;
   }
 }
@@ -105,6 +104,18 @@ $bg-footer: darken($primary, 20%);
     font-size: 1em;
     & ~ * {
       margin-top: 1em;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    button {
+      display: inline-block;
+      width: auto;
     }
   }
 }

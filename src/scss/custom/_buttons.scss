@@ -90,37 +90,37 @@
   .icon {
     border: none;
 
-    width: 1.5em !important;
-    height: 1.5em !important;
+    width: 1.5em;
+    height: 1.5em;
 
-    fill: $primary !important;
+    fill: $primary;
 
     &.icon-white {
-      fill: $white !important;
+      fill: $white;
     }
 
     &.icon-primary {
-      fill: $primary !important;
+      fill: $primary;
     }
 
     &.icon-secondary {
-      fill: $secondary !important;
+      fill: $secondary;
     }
 
     &.icon-info {
-      fill: $info !important;
+      fill: $info;
     }
 
     &.icon-success {
-      fill: $success !important;
+      fill: $success;
     }
 
     &.icon-warning {
-      fill: $warning !important;
+      fill: $warning;
     }
 
     &.icon-danger {
-      fill: $danger !important;
+      fill: $danger;
     }
 
     & + * {
@@ -145,16 +145,13 @@
   padding-left: 8px;
   padding-right: 8px;
 
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
-
   &:hover {
     text-decoration: none !important;
   }
 
   // Tablet vertical
   @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-    padding: 15px !important;
+    padding: 16px;
   }
 
   // Desktop
