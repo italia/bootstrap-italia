@@ -37,6 +37,136 @@
   position: relative;
 }
 
+.btn-icon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .rounded-icon {
+    width: 1.5em;
+    height: 1.5em;
+
+    .icon {
+      margin-right: 0;
+    }
+
+    @include border-radius(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $white;
+
+    &.rounded-primary {
+      background-color: $primary;
+    }
+
+    &.rounded-secondary {
+      background-color: $secondary;
+    }
+
+    &.rounded-info {
+      background-color: $info;
+    }
+
+    &.rounded-success {
+      background-color: $success;
+    }
+
+    &.rounded-warning {
+      background-color: $warning;
+    }
+
+    &.rounded-danger {
+      background-color: $danger;
+    }
+
+    & + * {
+      margin-left: 0.5em;
+    }
+  }
+
+  .icon {
+    border: none;
+
+    width: 1.5em;
+    height: 1.5em;
+
+    fill: $primary;
+
+    &.icon-white {
+      fill: $white;
+    }
+
+    &.icon-primary {
+      fill: $primary;
+    }
+
+    &.icon-secondary {
+      fill: $secondary;
+    }
+
+    &.icon-info {
+      fill: $info;
+    }
+
+    &.icon-success {
+      fill: $success;
+    }
+
+    &.icon-warning {
+      fill: $warning;
+    }
+
+    &.icon-danger {
+      fill: $danger;
+    }
+
+    & + * {
+      margin-left: 0.25em;
+    }
+  }
+}
+
+.btn-full {
+  border: none;
+  box-shadow: none;
+  line-height: 1.555;
+  @include border-radius(0);
+
+  width: inherit;
+  height: 100%;
+
+  margin-top: -$header-slim-button-v-padding;
+  margin-bottom: -$header-slim-button-v-padding;
+  margin-right: -$header-slim-button-v-padding;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  // Tablet vertical
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    padding: 16px;
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    padding: 12px 24px !important;
+    margin: 0;
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .btn-primary {
   &:disabled,
   &.disabled {

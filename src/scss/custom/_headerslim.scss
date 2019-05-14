@@ -6,7 +6,7 @@
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;
-    //align-items: center;
+    align-items: center;
     .dropdown-menu {
       top: -$header-slim-dropdown-distance-mob !important;
     }
@@ -16,7 +16,6 @@
         text-decoration: underline;
       }
       .icon {
-        fill: $header-slim-text-color;
         width: $header-slim-icon-size;
         height: $header-slim-icon-size;
         transition: all 0.3s;
