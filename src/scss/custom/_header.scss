@@ -35,6 +35,7 @@
       }
 
       @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+        .it-header-slim-wrapper,
         .it-header-center-wrapper {
           display: none;
         }

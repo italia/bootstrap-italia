@@ -31,3 +31,38 @@
     @include make-variable-gutters();
   }
 }
+
+.row {
+  &.row-border {
+    border-top: 1px solid $gray-border;
+
+    & > * {
+      padding-top: 1rem;
+      border-top: 1px solid $gray-border;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    // Desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      margin-top: 2rem;
+
+      & > * {
+        padding: 3vw 5vw;
+        border-top: none;
+        border-left: 1px solid $gray-border;
+
+        &:first-child {
+          border: none;
+          padding-left: 0;
+        }
+      }
+    }
+
+    // Large Desktop
+    @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+    }
+  }
+}
