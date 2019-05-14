@@ -12,14 +12,14 @@
 <title>Bottoni · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201905021751" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201905141240" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201905021751" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201905141240" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.2.6/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.2.7/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -500,6 +500,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h2"><a href="#utilizzo">Utilizzo</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#varianti-di-colore">Varianti di colore</a></li>
+<li class="toc-entry toc-h3"><a href="#bottoni-con-icona">Bottoni con icona</a></li>
 <li class="toc-entry toc-h3"><a href="#varianti-di-dimensione">Varianti di dimensione</a></li>
 </ul>
 </li>
@@ -544,6 +545,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:</p>
 
 <div class="bd-example">
+
 <div class="py-1">
 <div class="btn-example">
   <button type="button" class="btn btn-primary">Primary</button>
@@ -589,6 +591,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <h4 id="su-sfondo-scuro">Su sfondo scuro</h4>
 
 <div class="bd-example">
+
 <div class="bg-dark py-1">
 <div class="btn-example">
   <button type="button" class="btn btn-primary">Primary</button>
@@ -619,11 +622,164 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="highlighter-rouge">.sr-only</code>.</p>
 </div>
 
+<h3 id="bottoni-con-icona">Bottoni con icona</h3>
+
+<p>E’ possibile aggiungere un’icona personalizzata al bottone con la classe <code class="highlighter-rouge">.btn-icon</code> in aggiunta alla classe <code class="highlighter-rouge">.btn</code> e alle relative varianti cromatiche e di dimensione.</p>
+
+<div class="bd-example">
+<button class="btn btn-success btn-lg btn-icon">
+<svg class="icon icon-white">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-full"></use>
+</svg>
+<span>Icon Button Lg</span>
+</button>
+
+<button class="btn btn-primary btn-icon">
+<svg class="icon icon-white">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-full"></use>
+</svg>
+<span>Icon Button</span>
+</button>
+
+<button class="btn btn-danger btn-sm btn-icon">
+<svg class="icon icon-secondary">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-full"></use>
+</svg>
+<span>Icon Button Sm</span>
+</button>
+
+<button class="btn btn-info btn-xs btn-icon">
+<svg class="icon icon-danger">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-full"></use>
+</svg>
+<span>Icon Button Xs</span>
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-white"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span>
+      <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-full"</span>
+    <span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;span&gt;</span>Icon Button Lg<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-white"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span>
+      <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-full"</span>
+    <span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;span&gt;</span>Icon Button<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger btn-sm btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-secondary"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span>
+      <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-full"</span>
+    <span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;span&gt;</span>Icon Button Sm<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-info btn-xs btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-danger"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span>
+      <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-full"</span>
+    <span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;span&gt;</span>Icon Button Xs<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<div class="bd-callout bd-callout-warning">
+<h4 id="allineamento-e-spaziatura-dellicona">Allineamento e spaziatura dell’icona</h4>
+
+<p>Nel caso si utilizzi un’icona all’interno di un elemento con classe <code class="highlighter-rouge">.btn</code>, è necessario inserire il <strong>testo</strong> del bottone/link all’interno di un tag <code class="highlighter-rouge">&lt;span/&gt;</code> al fine di garantire un perfetto allineamento ed una corretta spaziatura tra l’icona e lo stesso testo.</p>
+</div>
+
+<h4 id="icona-cerchiata">Icona cerchiata</h4>
+
+<p>Inoltre è possibile applicare un contorno cerchiato dell’icona utilizzando un contenitore con classe <code class="highlighter-rouge">.rounded-icon</code> da inserire all’interno della classe <code class="highlighter-rouge">.btn</code> con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori <code class="highlighter-rouge">.rounded-*</code> e <code class="highlighter-rouge">.icon.icon-*</code>.</p>
+
+<div class="bd-example">
+<button class="btn btn-success btn-lg btn-icon">
+<span class="rounded-icon">
+<svg class="icon icon-success">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
+</svg>
+</span>
+<span>Round Icon Lg</span>
+</button>
+
+<button class="btn btn-primary btn-icon">
+<span class="rounded-icon">
+<svg class="icon icon-primary">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
+</svg>
+</span>
+<span>Round Icon</span>
+</button>
+
+<button class="btn btn-danger btn-sm btn-icon">
+<span class="rounded-icon rounded-secondary">
+<svg class="icon icon-white">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
+</svg>
+</span>
+<span>Round Icon Sm</span>
+</button>
+
+<button class="btn btn-secondary btn-xs btn-icon">
+<span class="rounded-icon rounded-danger">
+<svg class="icon icon-white">
+<use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-user"></use>
+</svg>
+</span>
+<span>Round Icon Xs</span>
+</button>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rounded-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-success"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-user"</span><span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Round Icon Lg<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rounded-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-primary"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-user"</span><span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Round Icon<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger btn-sm btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rounded-icon rounded-secondary"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-white"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-user"</span><span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Round Icon Sm<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-xs btn-icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rounded-icon rounded-danger"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-white"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-user"</span><span class="nt">&gt;&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Round Icon Xs<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
 <h3 id="varianti-di-dimensione">Varianti di dimensione</h3>
 
 <p>Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi <code class="highlighter-rouge">.btn-lg</code>, <code class="highlighter-rouge">.btn-sm</code> e <code class="highlighter-rouge">.btn-xs</code>.</p>
 
 <h4 id="large">Large</h4>
+
 <div class="bd-example">
 <button type="button" class="btn btn-primary btn-lg">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
@@ -632,6 +788,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span><span class="nt">&gt;</span>Secondary Large<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h4 id="small">Small</h4>
+
 <div class="bd-example">
 <button type="button" class="btn btn-primary btn-sm">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
@@ -640,6 +797,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Secondary Small<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h4 id="mini">Mini</h4>
+
 <div class="bd-example">
 <button type="button" class="btn btn-primary btn-xs">Primary Mini</button>
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
@@ -676,11 +834,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201905021751"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201905141240"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201905021751"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201905141240"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -695,7 +853,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201905021751"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201905141240"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
