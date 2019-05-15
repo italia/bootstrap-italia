@@ -27,6 +27,14 @@
         text-decoration: underline;
         display: flex;
         align-items: center;
+        &[aria-expanded='true'] {
+          .icon {
+            transform: scaleY(-1);
+          }
+        }
+        svg {
+          fill: $header-slim-text-color;
+        }
       }
       &.it-opener {
         font-size: $header-slim-brand-text-size;
