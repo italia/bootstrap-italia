@@ -8,7 +8,7 @@
   if (!!elSticky) {
     function isHidden(el) {
       const style = window.getComputedStyle(el)
-      return style.display === 'none'
+      return style.display === 'none' || style.visibility === 'hidden'
     }
 
     const elToggler = document.querySelector('.custom-navbar-toggler')
@@ -38,13 +38,15 @@
             const elBrand = document.querySelector('.it-brand-wrapper')
             const elSearch = document.querySelector('.it-search-wrapper')
 
-            const clonedBrand = elBrand.cloneNode(true)
-            const clonedSearch = elSearch.cloneNode(true)
+            const clonedBrand = elBrand ? elBrand.cloneNode(true) : null
+            const clonedSearch = elSearch ? elSearch.cloneNode(true) : null
 
-            target
-              .insertBefore(clonedBrand, target.childNodes[0])
-              .classList.add('cloned')
-            target.appendChild(clonedSearch).classList.add('cloned')
+            if (clonedBrand)
+              target
+                .insertBefore(clonedBrand, target.childNodes[0])
+                .classList.add('cloned')
+            if (clonedSearch)
+              target.appendChild(clonedSearch).classList.add('cloned')
           } else {
             const clonedItems = document.getElementsByClassName('cloned')
             clonedItems &&
