@@ -37,6 +37,7 @@ const Paths = {
     'src/js/plugins/datepicker/datepicker.js',
     'src/js/plugins/i-sticky/i-sticky.js',
     'src/js/plugins/sticky-header.js',
+    'src/js/plugins/sticky-wrapper.js',
     'src/js/plugins/ie.js',
     'src/js/plugins/fonts-loader.js',
     'src/js/plugins/autocomplete.js',
@@ -336,9 +337,7 @@ gulp.task('sync', () => {
     },
   })
 
-  gulp.watch(
-    [Paths.SCSS_WATCH, Paths.JS_WATCH],
-    gulp.series('build-library'))
+  gulp.watch([Paths.SCSS_WATCH, Paths.JS_WATCH], gulp.series('build-library'))
 
   gulp.watch(
     [Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH],

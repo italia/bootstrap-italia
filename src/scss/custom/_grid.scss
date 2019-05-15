@@ -33,7 +33,7 @@
 }
 
 .row {
-  &.row-border {
+  &.row-top-border {
     border-top: 1px solid $gray-border;
 
     & > * {
@@ -47,11 +47,14 @@
 
     // Desktop
     @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-      margin-top: 2rem;
+      margin-top: 1rem;
 
-      & > * {
-        padding: 3vw 5vw;
+      &.row-top-border > * {
+        padding: 4vw 5vw;
         border-top: none;
+      }
+
+      &.row-column-border > * {
         border-left: 1px solid $gray-border;
 
         &:first-child {
@@ -63,6 +66,19 @@
 
     // Large Desktop
     @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+      margin-top: 2rem;
     }
+  }
+}
+
+// Sticky wrapper feature
+.sticky-wrapper {
+  &.is-sticky {
+    position: fixed;
+
+    top: auto;
+    bottom: 0;
+
+    background-color: lime;
   }
 }

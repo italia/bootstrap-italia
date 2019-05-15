@@ -64,7 +64,7 @@
           elSticky.nextElementSibling.style.paddingTop =
             navbarHeight +
             (isDesktop
-              ? navOffsetTop - navbarHeight - scrollToGap
+              ? navOffsetTop - scrollToGap
               : navbarHeight - scrollToGap) +
             'px'
         } else {
@@ -94,9 +94,7 @@
         }
       }
 
-      window.onscroll = () => {
-        runCheckSticky()
-      }
+      window.addEventListener('scroll', runCheckSticky)
 
       if (isResized && isSticky) {
         window.scrollTo(0, 0)
@@ -104,10 +102,12 @@
       }
     }
 
-    window.onresize = () => {
+    const onResize = () => {
       const stillDesktop = isHidden(elToggler)
       initSticky(stillDesktop, true)
     }
+
+    window.addEventListener('resize', onResize)
 
     initSticky(isDesktop)
   }
