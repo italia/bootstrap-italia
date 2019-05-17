@@ -21,6 +21,9 @@
         transition: all 0.3s;
         transform-origin: center;
       }
+      svg {
+        fill: $header-slim-text-color;
+      }
       &.dropdown-toggle {
         text-transform: uppercase;
         font-size: $header-slim-brand-text-size;
@@ -31,9 +34,6 @@
           .icon {
             transform: scaleY(-1);
           }
-        }
-        svg {
-          fill: $header-slim-text-color;
         }
       }
       &.it-opener {
