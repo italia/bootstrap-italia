@@ -198,7 +198,9 @@
         'aria-valuemin': '0',
         'aria-valuemax': '100',
       })
-      var $insert = $('<div>').append($graybar.append($colorbar))
+      var $insert = $('<div>').attr({
+        class: 'password-strength-meter',
+      }).append($graybar.append($colorbar))
 
       if (options.showText) {
         $text = $('<small>')
