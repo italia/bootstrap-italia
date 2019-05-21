@@ -20,6 +20,10 @@
     margin-bottom: 0;
     transform: translateY(-2px);
     transition: color 0.05s;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
   //close button
   button {
@@ -153,6 +157,120 @@
     .avatar {
       img {
         filter: grayscale(100%);
+      }
+    }
+  }
+
+  &.chip-primary {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+
+    & > .chip-label {
+      color: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-secondary {
+    background-color: transparent;
+    border-color: $secondary;
+    color: $primary;
+
+    & > .chip-label {
+      color: $secondary;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-success {
+    background-color: transparent;
+    border-color: $success;
+    color: $success;
+
+    & > .chip-label {
+      color: $success;
+    }
+
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-danger {
+    background-color: transparent;
+    border-color: $danger;
+    color: $danger;
+
+    & > .chip-label {
+      color: $danger;
+    }
+
+    &:hover {
+      background-color: $danger;
+      border-color: $danger;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-info {
+    background-color: transparent;
+    border-color: $info;
+    color: $info;
+
+    & > .chip-label {
+      color: $info;
+    }
+
+    &:hover {
+      background-color: $info;
+      border-color: $info;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-warning {
+    background-color: transparent;
+    border-color: $warning;
+    color: $warning;
+
+    & > .chip-label {
+      color: $warning;
+    }
+
+    &:hover {
+      background-color: $warning;
+      border-color: $warning;
+
+      & > .chip-label {
+        color: $white;
       }
     }
   }

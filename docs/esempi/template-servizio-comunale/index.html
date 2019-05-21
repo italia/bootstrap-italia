@@ -218,7 +218,7 @@ title: Template Servizio Comunale
 
 <div class="container my-4">
   <div class="row">
-    <div class="col">
+    <div class="col px-lg-4">
       <nav class="breadcrumb-container" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
@@ -238,12 +238,77 @@ title: Template Servizio Comunale
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-md-8 col-lg-8 px-lg-4 py-lg-2">
       <h1>Iscrizione agli asili nido</h1>
       <p>
         Come iscrivere i propri figli agli asili nido comunali, strutture
         convenzionate, sezioni sperimentali e micronido a domicilio.
       </p>
+      <div class="alert alert-warning my-lg-5">
+        Servizio in attesa di pubblicazione del nuovo avviso
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 offset-lg-1">
+      <a
+        href="#"
+        title="Vedi azioni"
+        data-target="#actionModal"
+        data-toggle="modal"
+        class=""
+        ><svg class="icon">
+          <use xlink:href="/dist/svg/sprite.svg#it-more-items"></use>
+        </svg>
+        <small>Vedi azioni</small>
+      </a>
+      <div
+        class="modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="actionModal"
+        id="actionModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">dialog header</h5>
+            </div>
+            <div class="modal-body">
+              <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-outline-primary btn-sm"
+                type="button"
+                data-dismiss="modal"
+              >
+                Action two
+              </button>
+              <button class="btn btn-primary btn-sm" type="button">
+                Action one
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 mb-4">
+        <h6><small>Argomenti</small></h6>
+        <a href="#"
+          ><div class="chip chip-simple chip-primary">
+            <span class="chip-label">Famiglia</span>
+          </div></a
+        >
+        <a href="#"
+          ><div class="chip chip-simple chip-primary">
+            <span class="chip-label">Servizi e supporto all'educazione</span>
+          </div></a
+        >
+        <a href="#"
+          ><div class="chip chip-simple chip-primary">
+            <span class="chip-label">Bambini e ragazzi</span>
+          </div></a
+        >
+      </div>
     </div>
   </div>
   <div class="row row-top-border row-column-border">
@@ -275,81 +340,58 @@ title: Template Servizio Comunale
             >
             <div class="menu-wrapper">
               <div class="link-list-wrapper">
-                <h3 class="no_toc">header</h3>
+                <h3 class="no_toc">Indice della pagina</h3>
                 <ul class="link-list">
                   <li class="nav-item active">
-                    <a class="nav-link active" href="#"
-                      ><span>1. Introduzione </span></a
+                    <a class="nav-link active" href="#art-1"
+                      ><span>Cos'è</span></a
                     >
-                    <ul class="link-list">
-                      <li class="nav-link active">
-                        <a class="nav-link active" href="#"
-                          ><span>1.1 Nested Item (active) </span></a
-                        >
-                        <ul class="tertiary link-list">
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>1.1.1 Nested Item </span></a
-                            >
-                          </li>
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>1.1.2 Nested Item </span></a
-                            >
-                          </li>
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>1.1.3 Nested Item </span></a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="nav-link">
-                        <a class="nav-link" href="#"
-                          ><span>1.2 Nested Item </span></a
-                        >
-                      </li>
-                      <li class="nav-link">
-                        <a class="nav-link" href="#"
-                          ><span>1.3 Nested Item </span></a
-                        >
-                      </li>
-                    </ul>
-                    <a class="nav-link" href="#"><span>2. List item </span></a>
-                    <ul class="link-list">
-                      <li class="nav-link">
-                        <a class="nav-link" href="#"
-                          ><span>2.1 Nested Item </span></a
-                        >
-                        <ul class="tertiary link-list">
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>2.1.1 Nested Item </span></a
-                            >
-                          </li>
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>2.1.2 Nested Item </span></a
-                            >
-                          </li>
-                          <li class="nav-link">
-                            <a class="nav-link" href="#"
-                              ><span>2.1.3 Nested Item </span></a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="nav-link">
-                        <a class="nav-link" href="#"
-                          ><span>2.2 Nested Item </span></a
-                        >
-                      </li>
-                      <li class="nav-link">
-                        <a class="nav-link" href="#"
-                          ><span>2.3 Nested Item </span></a
-                        >
-                      </li>
-                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-2"
+                      ><span>A chi si rivolge</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-3"
+                      ><span>Accedi al servizio</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-4"
+                      ><span>Cosa serve</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-5"
+                      ><span>Costi e vincoli</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-6"
+                      ><span>Tempi e scadenze</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-7"
+                      ><span>Casi particolari</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-8"><span>Contatti</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-9"><span>Documenti</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-10"
+                      ><span>Ulteriori informazioni</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#art-11"
+                      ><span>Contenuti correlati</span></a
+                    >
                   </li>
                 </ul>
               </div>
@@ -359,70 +401,186 @@ title: Template Servizio Comunale
       </div>
     </aside>
     <section class="col-lg-8">
-      <article>
-        <h4>Che cos'è?</h4>
+      <article id="art-1">
+        <h4>Cos'è?</h4>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
+          Il nido d'infanzia è un servizio socio-educativo che deve offrire al
+          bambino un percorso di socializzazione, attraverso esperienze
+          cognitivo affettive significative, e alla famiglia un sostegno per la
+          conciliazione dei tempi lavorativi e per lo svolgimento delle funzioni
+          educative, soprattutto quando è impedita da difficoltà o problemi che
+          possono affievolire il suo compito.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
-        </p>
-        <h5>Sub title</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi non
-          perferendis dolorem sed, amet eveniet id odio, et, ullam reiciendis
-          quod quae cupiditate deserunt architecto vel maxime mollitia?
-          Exercitationem, sequi!
-        </p>
-      </article>
-      <article>
-        <h4>Che cos'è?</h4>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
+          Il servizio è organizzato in sezioni suddivise per gruppi di età:
+          lattanti (3/17 mesi) e divezzi (18/36 mesi).
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
+          Viene svolto presso i nidi comunali e presso strutture private
+          convenzionate e in contesto domiciliare. Gli ambienti sono organizzati
+          e allestiti per poter rispondere in modo adeguato alle esigenze dei
+          bambini: spazi sezione (attrezzati seconda delle diverse età), spazi
+          per l'accoglienza bambini, spazi per il gioco, per il riposo cucina,
+          servizi igienici. In tutti i nidi sono inoltre previsti spazi per il
+          gioco all'aperto.
         </p>
-        <h5>Sub title</h5>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi non
-          perferendis dolorem sed, amet eveniet id odio, et, ullam reiciendis
-          quod quae cupiditate deserunt architecto vel maxime mollitia?
-          Exercitationem, sequi!
+          Sono aperti dal lunedì al venerdì, da settembre a luglio secondo un
+          calendario definito anticipatamente per ogni anno educativo.
         </p>
       </article>
-      <article>
-        <h4>Che cos'è?</h4>
+      <article id="art-2">
+        <h4>A chi si rivolge</h4>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
+          È rivolto a tutti i bambini di età compresa tra 3 mesi a 3 anni non
+          compiuti al 31 dicembre dell'anno educativo di riferimento. I limiti
+          di età possono essere eccezionalmente superati in caso di minore in
+          grave situazione di handicap.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          doloribus praesentium sed similique nemo fugiat perferendis ea
-          accusamus ex! Dicta, culpa similique. Possimus perferendis quis
-          adipisci esse numquam ex consequuntur?
+          Al servizio possono accedere tutti i cittadini residenti nel Comune di
+          Cagliari. Per i figli di dipendenti dell’Amministrazione Comunale si
+          deroga al requisito della residenza. Possono accedere anche i bambini
+          non residenti dietro pagamento della quota massima, solo qualora vi
+          siano ancora posti disponibili presso la struttura prescelta. Gli
+          stranieri devono essere in possesso di permesso di soggiorno.
         </p>
-        <h5>Sub title</h5>
+      </article>
+      <article id="art-3">
+        <h4>Accedi al servizio</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi non
-          perferendis dolorem sed, amet eveniet id odio, et, ullam reiciendis
-          quod quae cupiditate deserunt architecto vel maxime mollitia?
-          Exercitationem, sequi!
+          L'apertura delle nuove iscrizioni avviene con avviso pubblico,
+          consultabile nel portale istituzionale, a partire dal mese di maggio.
+          L'avviso e gli allegati vengono resi disponibili in formato cartaceo
+          anche presso l'Ufficio Asili Nido, gli asili nido comunali siti in Via
+          Crespellani - Via Watt - Via Schiavazzi e l'Ufficio per le Relazioni
+          con il Pubblico (URP).
+        </p>
+        <p>
+          La richiesta di nuova iscrizione dovrà essere presentata con le
+          modalità e la scadenza indicate nell'avviso.
+        </p>
+        <p>
+          A seguito delle verifiche delle domande verranno approvati due
+          distinti elenchi degli aventi diritto (lattanti e divezzi ).
+          L'inserimento nei rispettivi elenchi terrà conto dell'età dei bambini
+          non al momento della presentazione della domanda ma alla data di
+          iscrizione. Le graduatorie verranno pubblicate nel portale
+          istituzionale; le stesse potranno essere visionate anche presso
+          l'Ufficio Asili Nido. Si potrà fare ricorso entro 15 giorni dalla data
+          di pubblicazione. In assenza di ricorsi, le graduatorie diventano
+          definitive.
+        </p>
+        <p>
+          L'ammissione all'asilo nido viene comunicata per iscritto ai genitori
+          del bambino che sono tenuti ad accettare entro la data indicata. La
+          comunicazione di ammissione ha luogo di norma prima del mese di
+          settembre, oppure ogni qualvolta si determini la disponibilità di un
+          posto.
+        </p>
+        <p>
+          I bambini che frequentano l’anno scolastico in corso sono riammessi di
+          diritto nell’anno scolastico successivo previa richiesta di rinnovo,
+          da effettuarsi su appositi moduli predisposti dall’Ufficio Asili Nido,
+          da inoltrare alle strutture di riferimento prima dell’apertura delle
+          nuove iscrizioni.
+        </p>
+      </article>
+      <article id="art-4">
+        <h5>Accesso agli uffici</h5>
+        <p>
+          È possibile ricevere informazioni aggiuntive sul servizio presso gli
+          asili nido comunali siti in Via Crespellani - Via Watt - Via
+          Schiavazzi, l’URP oppure al seguente ufficio:
+        </p>
+        <div class="card card-teaser shadow p-4 my-5">
+          <svg class="icon">
+            <use xlink:href="/dist/svg/sprite.svg#it-pa"></use>
+          </svg>
+          <div class="card-body">
+            <h5 class="card-title">
+              Ufficio Asili Nido
+            </h5>
+            <div class="card-text">
+              <p>Viale San Vincenzo, 4</p>
+              <p class="mt-3">Mattina: 9.00 - 12.00 dal lunedì al venerdì</p>
+              <p>Pomeriggio: 15.30 - 17.30 martedì e mercoledì</p>
+              <p class="mt-3">
+                T +39 070 6776402 - 6776440 - 6776421 - 6776400
+              </p>
+              <p>F +39 070 6776480</p>
+              <p><a href="mailto:asili@comune.it">asili@comune.it</a></p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article id="art-5">
+        <h4>Cosa serve</h4>
+        <div class="callout">
+          <div class="callout-title">
+            <svg class="icon">
+              <use xlink:href="/dist/svg/sprite.svg#it-info-circle"></use>
+            </svg>
+          </div>
+          <ul>
+            <li>Domanda compilata sulla base del modulo prestampato</li>
+            <li>
+              Indicatore della Situazione Economica Equivalente (ISEE) relativo
+              alle Prestazioni agevolate rivolte a minorenni o a famiglie con
+              minorenni riferito all'anno di iscrizione.
+            </li>
+            <li>
+              Eventuale certificazione che comprovi un particolare stato di
+              necessità come:
+              <ul>
+                <li>
+                  familiari con handicap oltre il 65% (genitore o fratellini del
+                  minore per il quale è stato chiesto il nido);
+                </li>
+                <li>
+                  situazione lavorativa di particolare disagio dei genitori
+                  (sede di lavoro oltre i 25 Km calcolati dal centro della città
+                  - sede municipio; orario di lavoro: turnista solo se
+                  articolato su tre turni);
+                </li>
+              </ul>
+            </li>
+            <li>
+              Copia del documento di identità del genitore che presenta
+              l'istanza, in corso di validità.
+            </li>
+            <li>
+              Copia del permesso di soggiorno in corso di validità, nel caso di
+              cittadino extracomunitario.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article id="art-6" class="mt-5">
+        <h4>Costi e vincoli</h4>
+        <p>
+          Alla conferma dell'accettazione del posto, i genitori sono tenuti al
+          versamento di una retta mensile calcolata in base al reddito posseduto
+          (indicatore ISEE) e avrà validità per tutto il periodo dell'anno
+          educativo in corso. In caso di mancata comunicazione dell'indicatore
+          ISEE l'importo sarà quello della fascia massima di reddito, senza
+          alcuna variazione in caso di presentazione oltre il termine stabilito
+          (entro 15 giorni dalla scadenza del bando).
+        </p>
+      </article>
+      <article id="art-7">
+        <h4>Tempi e scadenze</h4>
+        <p>
+          La pubblicazione dell'avviso riguardante le nuove iscrizioni per
+          l'anno scolastico 2019/2020 è prevista per il mese di aprile 2019.
+        </p>
+      </article>
+      <article id="art-8">
+        <h4>Casi particolari</h4>
+        <p>
+          Per i minori portatori di disagio psico – fisico, i limiti di età
+          possono essere eccezionalmente superati in caso di minore in grave
+          situazione di handicap.
         </p>
       </article>
     </section>

@@ -291,6 +291,35 @@
       margin-bottom: 0;
     }
   }
+
+  &.card-teaser {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $card-border-color;
+
+    &:after {
+      content: none;
+    }
+
+    .card-body {
+      padding: 0;
+
+      .card-title {
+        margin: 0;
+      }
+
+      .card-text,
+      .card-text > p {
+        font-family: $font-family-sans-serif;
+        font-size: $card-signature-size;
+        margin: 0;
+      }
+    }
+
+    .icon + .card-body {
+      margin-left: 1em;
+    }
+  }
 }
 // flag
 .flag-icon {
