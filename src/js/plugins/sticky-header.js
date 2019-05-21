@@ -17,6 +17,8 @@
     let isSticky = false
     let scrollToGap = 0
 
+    let runCheckSticky = undefined
+
     const initSticky = (isDesktop, isResized = false) => {
       const elSlim = document.querySelector('.it-header-slim-wrapper')
       const elCenter = document.querySelector('.it-header-center-wrapper')
@@ -84,7 +86,7 @@
         toggleClonedElement(isDesktop, false)
       }
 
-      const runCheckSticky = () => {
+      runCheckSticky = () => {
         const nbh = navbarHeight
         if (window.scrollY + scrollToGap >= navOffsetTop && !isSticky) {
           toggleOn()
@@ -103,8 +105,11 @@
     }
 
     const onResize = () => {
-      const stillDesktop = isHidden(elToggler)
-      initSticky(stillDesktop, true)
+      if (runCheckSticky) {
+        window.removeEventListener('scroll', runCheckSticky)
+        const stillDesktop = isHidden(elToggler)
+        initSticky(stillDesktop, true)
+      }
     }
 
     window.addEventListener('resize', onResize)

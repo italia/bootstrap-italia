@@ -97,6 +97,7 @@
       z-index: 1;
       left: 0;
       right: 0;
+      width: auto !important;
 
       .navbar {
         padding-top: 4vw;
@@ -110,6 +111,7 @@
           z-index: auto;
           left: auto;
           right: auto;
+          width: auto;
 
           .navbar {
             border: none;

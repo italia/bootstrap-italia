@@ -13,19 +13,31 @@
   const elToggler = document.querySelector('.custom-navbar-toggler')
   const isDesktop = isHidden(elToggler)
 
+  let runCheckOnScroll = undefined
+
   if (elWrappers && elWrappers.length) {
     let isSticky = false
 
     const initSticky = isDesktop => {
+      const getPadding = (parent, size) => {
+        return isDesktop
+          ? parseInt(
+              (window.getComputedStyle
+                ? getComputedStyle(parent, null)
+                : parent.currentStyle)[size]
+            )
+          : 0
+      }
+
       // Get header height
       const elNavigation = isDesktop
         ? document.querySelector('.it-header-navbar-wrapper')
         : document.querySelector('.it-header-center-wrapper')
-      const navHeight = elNavigation ? elNavigation.offsetHeight : 0
-      // Set monitoring offset top
-      let navOffsetTop = navHeight || 0
 
-      const runCheckOnScroll = () => {
+      runCheckOnScroll = () => {
+        // Set monitoring offset top
+        const navOffsetTop = elNavigation ? elNavigation.offsetHeight : 0
+        // Check the sticky status
         const runCheckSticky = elSticky => {
           const elHeight = elSticky.offsetHeight
           // Get parent params
@@ -33,22 +45,8 @@
           parent.style.position = 'relative'
           const parentWidth = parent.offsetWidth || 0
           const parentHeight = parent.offsetHeight
-          const parentPaddingTop = isDesktop
-            ? parseInt(
-                (window.getComputedStyle
-                  ? getComputedStyle(parent, null)
-                  : parent.currentStyle
-                ).paddingTop
-              )
-            : 0
-          const parentPaddingWidth = isDesktop
-            ? parseInt(
-                (window.getComputedStyle
-                  ? getComputedStyle(parent, null)
-                  : parent.currentStyle
-                ).paddingRight
-              )
-            : 0
+          const parentPaddingTop = getPadding(parent, 'paddingTop')
+          const parentPaddingWidth = getPadding(parent, 'paddingRight')
           // Get distance of a element from top
           const distanceToTop = parent.getBoundingClientRect().top || 0
 
@@ -72,7 +70,7 @@
               Math.abs(distanceToTop) +
                 elHeight +
                 parentPaddingTop +
-                navHeight >
+                navOffsetTop >
                 parentHeight
             ) {
               elSticky.classList.add('at-bottom')
@@ -91,8 +89,11 @@
     }
 
     const onResize = () => {
-      const stillDesktop = isHidden(elToggler)
-      initSticky(stillDesktop)
+      if (runCheckOnScroll) {
+        window.removeEventListener('scroll', runCheckOnScroll)
+        const stillDesktop = isHidden(elToggler)
+        initSticky(stillDesktop)
+      }
     }
 
     window.addEventListener('resize', onResize)
