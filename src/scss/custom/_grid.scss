@@ -145,4 +145,18 @@
       }
     }
   }
+
+  &.navbar-wrapper {
+    .navbar {
+      // reset position when in sticky mode
+      &.it-top-navscroll,
+      &.it-bottom-navscroll {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+      }
+    }
+  }
 }
