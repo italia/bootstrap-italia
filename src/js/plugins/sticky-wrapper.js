@@ -29,6 +29,18 @@
           : 0
       }
 
+      const getPosition = (isNavBottom, gap, position) => {
+        if (!isDesktop && isNavBottom && position === 'bottom') {
+          return '0px'
+        } else if (!isDesktop && isNavBottom && position === 'top') {
+          return 'auto'
+        } else if (position === 'bottom') {
+          return ''
+        } else {
+          return gap + 'px'
+        }
+      }
+
       // Get header height
       const elNavigation = isDesktop
         ? document.querySelector('.it-header-navbar-wrapper')
@@ -39,6 +51,9 @@
         const navOffsetTop = elNavigation ? elNavigation.offsetHeight : 0
         // Check the sticky status
         const runCheckSticky = elSticky => {
+          // Check is set on bottom
+          const navBottom = elSticky.outerHTML.includes('it-bottom-navscroll')
+
           const elHeight = elSticky.offsetHeight
           // Get parent params
           const parent = elSticky.parentNode
@@ -49,17 +64,20 @@
           const parentPaddingWidth = getPadding(parent, 'paddingRight')
           // Get distance of a element from top
           const distanceToTop = parent.getBoundingClientRect().top || 0
+          const gap = navOffsetTop + parentPaddingTop
 
           // Check if it's sticky
           if (!isSticky && distanceToTop <= navOffsetTop) {
             isSticky = true
             elSticky.classList.add('is-sticky')
-            elSticky.style.top = navOffsetTop + parentPaddingTop + 'px'
+            elSticky.style.top = getPosition(navBottom, gap, 'top')
+            elSticky.style.bottom = getPosition(navBottom, gap, 'bottom')
             elSticky.style.width = parentWidth - parentPaddingWidth + 'px'
           } else if (isSticky && distanceToTop > navOffsetTop) {
             isSticky = false
             elSticky.classList.remove('is-sticky')
             elSticky.style.top = ''
+            elSticky.style.bottom = ''
             elSticky.style.width = ''
           }
 

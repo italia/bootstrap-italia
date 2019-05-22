@@ -88,7 +88,7 @@
       right: 0;
     }
   }
-  // bottom position
+  /* // bottom position
   &.it-bottom-navscroll {
     box-shadow: $navscroll-bottom-box-shadow;
     position: fixed;
@@ -105,7 +105,7 @@
     left: 0;
     right: 0;
     bottom: auto;
-  }
+  } */
 }
 
 //small - tablet
@@ -183,25 +183,25 @@
     }
     // bottom position
     &.it-bottom-navscroll {
-      box-shadow: none;
-      position: inherit;
-      &.affix-top {
+      // box-shadow: none;
+      // position: inherit;
+      /* &.affix-top {
         position: sticky;
         top: 0;
         left: inherit;
         right: inherit;
-      }
+      } */
     }
     // top position
     &.it-top-navscroll {
-      box-shadow: none;
-      position: inherit;
-      &.affix-top {
+      // box-shadow: none;
+      // position: inherit;
+      /* &.affix-top {
         position: sticky;
         top: 0;
         left: inherit;
         right: inherit;
-      }
+      } */
     }
     // left line
     &.it-left-side {

@@ -103,35 +103,44 @@
         padding-top: 4vw;
         padding-bottom: 4vw;
         border-bottom: 1px solid $gray-border;
+
+        &.it-bottom-navscroll {
+          border-top: 1px solid $gray-border;
+          border-bottom: none;
+        }
       }
+    }
 
-      // Desktop
-      @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-        &.navbar-wrapper {
-          z-index: auto;
-          left: auto;
-          right: auto;
-          width: auto;
+    // Desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      &.navbar-wrapper {
+        z-index: auto;
+        left: auto;
+        right: auto;
+        width: auto;
 
-          .navbar {
-            border: none;
-            background-color: transparent;
+        .navbar {
+          border: none;
+          background-color: transparent;
+          padding: 0;
+
+          .menu-wrapper {
             padding: 0;
 
-            .menu-wrapper {
-              padding: 0;
-
-              .nav-link {
-                padding-right: 0;
-              }
+            .nav-link {
+              padding-right: 0;
             }
           }
 
-          &.at-bottom {
-            position: absolute;
-            top: auto !important;
-            bottom: 0;
+          &.it-bottom-navscroll {
+            border: none;
           }
+        }
+
+        &.at-bottom {
+          position: absolute;
+          top: auto !important;
+          bottom: 0;
         }
       }
     }

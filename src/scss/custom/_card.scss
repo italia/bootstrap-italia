@@ -1,6 +1,28 @@
 .card-wrapper {
   padding-bottom: $v-gap * 3;
   display: flex;
+
+  &.card-teaser-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &.card-teaser-wrapper-equal {
+      align-items: stretch;
+    }
+
+    .card-teaser {
+      flex: 0 0 100%;
+    }
+
+    //Desktop
+    @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+      .card-teaser {
+        flex: 0 0 50%;
+      }
+    }
+  }
 }
 .card {
   border: none;
@@ -294,7 +316,9 @@
 
   &.card-teaser {
     display: flex;
+    width: auto;
     flex-direction: row;
+    align-items: flex-start;
     border: 1px solid $card-border-color;
 
     &:after {
@@ -303,6 +327,7 @@
 
     .card-body {
       padding: 0;
+      flex: auto;
 
       .card-title {
         margin: 0;
@@ -316,8 +341,40 @@
       }
     }
 
-    .icon + .card-body {
-      margin-left: 1em;
+    .icon {
+      min-width: 32px;
+
+      & + .card-body {
+        margin-left: 1em;
+      }
+    }
+
+    .avatar {
+      &.size-xs {
+        min-width: $avatar-base-size * 2;
+      }
+
+      &.size-sm {
+        min-width: $avatar-base-size * 3;
+      }
+
+      &.size-md {
+        min-width: $avatar-base-size * 4;
+      }
+
+      &.size-lg {
+        min-width: $avatar-base-size * 5;
+      }
+
+      &.size-xl {
+        min-width: $avatar-base-size * 10;
+      }
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.card-teaser-#{$color} {
+      border-left: 8px solid $value;
     }
   }
 }
