@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-expand</title><g><path d="M12,13.75,7.23,9A.75.75,0,0,0,6.17,9a.74.74,0,0,0,0,1.06l4.77,4.78a1.51,1.51,0,0,0,2.12,0L17.83,10a.74.74,0,0,0,0-1.06.75.75,0,0,0-1.06,0Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Expand</title>
+  <g>
+    <path d="M12,18,6.4,12.4l.7-.8L12,16.5l4.9-4.9.7.8Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

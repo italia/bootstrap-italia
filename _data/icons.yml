@@ -15,15 +15,15 @@ regular:
   - it-calendar
   - it-camera
   - it-card
-  - it-check-circle
   - it-check
+  - it-check-circle
   - it-chevron-left
   - it-chevron-right
   - it-clip
   - it-clock
+  - it-close
   - it-close-big
   - it-close-circle
-  - it-close
   - it-code-circle
   - it-collapse
   - it-comment
@@ -37,18 +37,17 @@ regular:
   - it-files
   - it-folder
   - it-hearing
-  - it-help-circle
   - it-help
+  - it-help-circle
   - it-horn
   - it-info-circle
   - it-key
-  - it-less-circle
   - it-link
   - it-list
-  - it-lock
   - it-locked
   - it-mail
   - it-minus
+  - it-minus-circle
   - it-more-actions
   - it-more-items
   - it-note
@@ -57,8 +56,8 @@ regular:
   - it-password-visible
   - it-pencil
   - it-pin
-  - it-plus-circle
   - it-plus
+  - it-plus-circle
   - it-presentation
   - it-print
   - it-search
@@ -78,20 +77,20 @@ regular:
   - it-zoom-out
 social:
   - it-behance
-  - it-facebook-square
   - it-facebook
-  - it-flickr-square
+  - it-facebook-square
   - it-flickr
+  - it-flickr-square
   - it-github
   - it-instagram
-  - it-linkedin-square
   - it-linkedin
-  - it-medium-square
+  - it-linkedin-square
   - it-medium
-  - it-twitter-square
+  - it-medium-square
   - it-twitter
-  - it-whatsapp-square
+  - it-twitter-square
   - it-whatsapp
+  - it-whatsapp-square
   - it-youtube
 extra:
   - it-designers-italia

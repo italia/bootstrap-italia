@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <title>it-arrow-right-triangle</title>
-    <g>
-        <path d="M15.66,12.48,10.67,9a.5.5,0,0,0-.79.41v7a.5.5,0,0,0,.79.41l5-3.51A.51.51,0,0,0,15.66,12.48Z"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Arrow Right</title>
+  <g>
+    <path d="M12,14.8V9.2a1,1,0,0,1,1.7-.7L17.2,12l-3.5,3.5A1,1,0,0,1,12,14.8Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
 </svg>

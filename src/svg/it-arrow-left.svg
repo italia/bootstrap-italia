@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-arrow-left</title><g><path d="M3.48,13.53,10,20.07a.74.74,0,0,0,1.06,0,.75.75,0,0,0,0-1.06L5.29,13.22h15a.75.75,0,0,0,0-1.5h-15l5.79-5.79A.75.75,0,1,0,10,4.87L3.48,11.41A1.49,1.49,0,0,0,3.48,13.53Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Arrow left</title>
+  <g>
+    <path d="M21,11.5H5.5l5.3-5.4-.7-.7L3.6,12l6.5,6.6.7-.7L5.5,12.5H21ZM5,12Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

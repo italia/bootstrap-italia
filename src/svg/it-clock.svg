@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-  <title>it-clock</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Clock</title>
   <g>
     <path
-          d="M12,3a9,9,0,0,1,6.36,15.36A9,9,0,0,1,5.64,5.62,8.93,8.93,0,0,1,12,3m0-1a10,10,0,1,0,7.07,2.93A9.93,9.93,0,0,0,12,2Z"/>
-    <path
-          d="M16.94,16.53l-4.45-4.44V5.44a.49.49,0,0,0-1,0v7.05h0l4.73,4.73a.49.49,0,1,0,.7-.7Z"/>
+      d="M11.5,5h1v7.5H7v-1h4.5ZM22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Zm-1,0a9,9,0,1,0-9,9A9,9,0,0,0,21,12Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
   </g>
 </svg>

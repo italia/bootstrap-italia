@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <title>it-telephone</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Telephone</title>
   <g>
     <path d="M5,3h.18"/>
     <path d="M20,11.56s0,0,0,0h0A7.59,7.59,0,0,0,12.48,4h-.06a.49.49,0,0,0-.49.48.5.5,0,0,0,.49.51h0A6.61,6.61,0,0,1,19,11.62a.51.51,0,0,0,.54.46.49.49,0,0,0,.45-.46h0S20,11.58,20,11.56Z"/>

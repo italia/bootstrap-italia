@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-list</title><g><rect x="7" y="17.99" width="15.01" height="1.5" rx="0.75"/><circle cx="3" cy="18.74" r="1"/><rect x="7.02" y="4.48" width="15.01" height="1.5" rx="0.75"/><circle cx="3.02" cy="5.23" r="1"/><rect x="7.02" y="11.24" width="15.01" height="1.5" rx="0.75"/><circle cx="3.02" cy="11.99" r="1"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>List</title>
+  <g>
+    <path
+      d="M4,12a.9.9,0,0,1-1,1,1,1,0,0,1,0-2A.9.9,0,0,1,4,12ZM3,4.5a.9.9,0,0,0-1,1,.9.9,0,0,0,1,1,.9.9,0,0,0,1-1A.9.9,0,0,0,3,4.5Zm0,13a1,1,0,0,0,0,2,1,1,0,0,0,0-2ZM6,5V6H22V5Zm0,7.5H22v-1H6ZM6,19H22V18H6Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>
