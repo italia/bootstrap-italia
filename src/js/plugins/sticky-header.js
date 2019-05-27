@@ -66,11 +66,7 @@
           elSticky.nextElementSibling.style.paddingTop =
             navbarHeight +
             (isDesktop
-<<<<<<< HEAD
               ? navOffsetTop - scrollToGap
-=======
-              ? navOffsetTop - navbarHeight - scrollToGap
->>>>>>> 668cb5c038784c5123490905bd0f0f7d7889b44e
               : navbarHeight - scrollToGap) +
             'px'
         } else {
