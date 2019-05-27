@@ -1046,12 +1046,12 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav10">
+              <button class="custom-navbar-toggler" type="button" aria-controls="nav02" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav02">
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav10" style="display: none;">
+              <div class="navbar-collapsable" id="nav02" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
                 <div class="close-div sr-only">
                   <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
@@ -1268,12 +1268,12 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav100" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav100">
+              <button class="custom-navbar-toggler" type="button" aria-controls="nav03" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav03">
                 <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav100" style="display: none;">
+              <div class="navbar-collapsable" id="nav03" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
                 <div class="close-div sr-only">
                   <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>

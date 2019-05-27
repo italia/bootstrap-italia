@@ -12,7 +12,7 @@ $(function() {
 
     $('html, body').animate(
       {
-        scrollTop: $(hash).offset().top - 150,
+        scrollTop: $(hash).offset().top,
       },
       600,
       function() {
@@ -60,7 +60,7 @@ $(function() {
             .eq(i)
             .find('span')
             .text()
-          var $btn = $('.it-bottom-navscroll .custom-navbar-toggler')
+          var $btn = $('.it-navscroll-wrapper .custom-navbar-toggler')
           var $icon = $btn.find('span.it-list')
           $btn.text(textContent)
           $btn.prepend($icon)

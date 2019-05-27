@@ -21,12 +21,20 @@
         transition: all 0.3s;
         transform-origin: center;
       }
+      svg {
+        fill: $header-slim-text-color;
+      }
       &.dropdown-toggle {
         text-transform: uppercase;
         font-size: $header-slim-brand-text-size;
         text-decoration: underline;
         display: flex;
         align-items: center;
+        &[aria-expanded='true'] {
+          .icon {
+            transform: scaleY(-1);
+          }
+        }
       }
       &.it-opener {
         font-size: $header-slim-brand-text-size;
