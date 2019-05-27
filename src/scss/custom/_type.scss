@@ -17,7 +17,7 @@ h1,
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
     font-size: 2.666rem;
-    letter-spacing: -1.3px;
+    letter-spacing: -1.2px;
     line-height: 1.25;
   }
 }
@@ -28,7 +28,6 @@ h2,
   @include media-breakpoint-up(sm) {
     font-size: 2.222rem;
     line-height: 1.2;
-    letter-spacing: -2px;
   }
 }
 
