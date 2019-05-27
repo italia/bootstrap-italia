@@ -90,6 +90,9 @@ $colors: map-merge(
 $primary: $blue !default;
 $secondary: $gray-secondary !default;
 
+// Border Color
+$border_color: $gray-border;
+
 // Info Colors
 $success: $green-accessible !default;
 $info: $gray-400 !default;

@@ -66,7 +66,7 @@
           const distanceToTop = parent.getBoundingClientRect().top || 0
           const gap = navOffsetTop + parentPaddingTop
 
-          // Check if it's sticky
+          // Check if the element is actually in a sticky position
           if (!isSticky && distanceToTop <= navOffsetTop) {
             isSticky = true
             elSticky.classList.add('is-sticky')
