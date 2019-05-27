@@ -96,31 +96,31 @@
     fill: $primary;
 
     &.icon-white {
-      fill: $white;
+      fill: $white !important;
     }
 
     &.icon-primary {
-      fill: $primary;
+      fill: $primary !important;
     }
 
     &.icon-secondary {
-      fill: $secondary;
+      fill: $secondary !important;
     }
 
     &.icon-info {
-      fill: $info;
+      fill: $info !important;
     }
 
     &.icon-success {
-      fill: $success;
+      fill: $success !important;
     }
 
     &.icon-warning {
-      fill: $warning;
+      fill: $warning !important;
     }
 
     &.icon-danger {
-      fill: $danger;
+      fill: $danger !important;
     }
 
     & + * {
