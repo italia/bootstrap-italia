@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-warning-circle</title><g><path d="M12,3a9,9,0,0,1,6.36,15.36A9,9,0,0,1,5.64,5.62,8.93,8.93,0,0,1,12,3m0-1a10,10,0,1,0,7.07,2.93A9.93,9.93,0,0,0,12,2Z"/><rect x="11.25" y="5.01" width="1.5" height="10"/><circle cx="12" cy="18" r="1"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Warning Circle</title>
+  <g>
+    <path
+      d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Zm-.5-6.8V5.7h1.2v8.5Zm-.1,2.3h1.2v1.8H11.4Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

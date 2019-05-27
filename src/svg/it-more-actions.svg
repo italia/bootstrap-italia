@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-more-actions</title><g><circle cx="4.5" cy="11.99" r="1.5"/><circle cx="12.02" cy="11.99" r="1.5"/><circle cx="19.53" cy="11.99" r="1.5"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>More Actions</title>
+  <g>
+    <path
+      d="M6,10a2,2,0,1,0,2,2A2,2,0,0,0,6,10Zm0,3a1,1,0,0,1,0-2,1,1,0,0,1,0,2Zm6-3a2,2,0,1,0,2,2A2,2,0,0,0,12,10Zm0,3a1,1,0,1,1,1-1A.9.9,0,0,1,12,13Zm6-3a2,2,0,1,0,2,2A2,2,0,0,0,18,10Zm0,3a1,1,0,1,1,1-1A.9.9,0,0,1,18,13Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

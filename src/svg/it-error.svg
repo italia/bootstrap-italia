@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-error</title><g><rect x="11.25" y="6.98" width="1.5" height="7"/><circle cx="12" cy="16.01" r="1.01"/><path d="M15.31,4,20,8.69v6.62L15.31,20H8.69L4,15.31V8.69L8.69,4h6.62m.42-1H8.27L3,8.27v7.46L8.27,21h7.46L21,15.73V8.27L15.73,3Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Error</title>
+  <g>
+    <path
+      d="M11.5,14.2V5.7h1.2v8.5Zm-.1,4.1h1.2V16.5H11.4ZM22,7.9v8.3L16.1,22H7.9L2,16.2V7.9L7.9,2h8.2Zm-1,.4L15.7,3H8.3L3,8.3v7.5L8.3,21h7.4L21,15.8Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

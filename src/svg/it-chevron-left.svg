@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-chevron-left</title><g><path d="M10.25,12,15,7.23a.75.75,0,0,0,0-1.06.74.74,0,0,0-1.06,0L9.19,10.94a1.51,1.51,0,0,0,0,2.12L14,17.83a.74.74,0,0,0,1.06,0,.75.75,0,0,0,0-1.06Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Chevron Left</title>
+  <g>
+    <path d="M11.6,17.6,6,12l5.6-5.6.8.7L7.5,12l4.9,4.9Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

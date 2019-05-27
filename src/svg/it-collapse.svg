@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-collapse</title><g><path d="M12,10.25,16.77,15a.75.75,0,0,0,1.06,0,.74.74,0,0,0,0-1.06L13.06,9.19a1.51,1.51,0,0,0-2.12,0L6.17,14a.74.74,0,0,0,0,1.06.75.75,0,0,0,1.06,0Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Collapse</title>
+  <g>
+    <path d="M16.9,12.4,12,7.5,7.1,12.4l-.7-.8L12,6l5.6,5.6Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>
