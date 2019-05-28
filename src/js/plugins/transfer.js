@@ -8,6 +8,35 @@ $(function() {
   var inverseButton = $('.it-transfer-block').find('a.backtransfer')
   var resetButton = $('.it-transfer-block').find('a.reset')
 
+  // stato iniziale
+  var elemLeft = $('.source .transfer-group .form-check')
+  var elemRight = $('.target .transfer-group .form-check')
+  var elemLeftNum = elemLeft.length
+  var elemRightNum = elemRight.length
+  var leftStart = ''
+  var rightStart = ''
+
+  $(elemLeft).each(function(el) {
+    leftStart = leftStart + this
+  })
+  $(elemRight).each(function(el) {
+    rightStart = rightStart + this
+  })
+
+  function disableElement($el) {
+    $el
+      .removeClass('active')
+      .attr('disabled', 'disabled')
+      .attr('aria-disabled', 'true')
+  }
+
+  function enableElement($el) {
+    $el
+      .addClass('active')
+      .removeAttr('disabled')
+      .removeAttr('aria-disabled')
+  }
+
   function checkListHeader(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
     var listToCheckControl = $(scopeElControl).find(
@@ -27,26 +56,20 @@ $(function() {
         .prop('checked', false)
       // controllo quale pulsante centrale disattivare
       if (scopeElControl.hasClass('source')) {
-        addButton.removeClass('active')
+        disableElement(addButton)
       } else {
-        inverseButton.removeClass('active')
+        disableElement(inverseButton)
       }
     } else {
       $(listToCheck).prop('checked', true)
       // controllo quale pulsante centrale attivare
       if (scopeElControl.hasClass('source')) {
-        addButton.addClass('active')
+        enableElement(addButton)
       } else {
-        inverseButton.addClass('active')
+        enableElement(inverseButton)
       }
     }
   }
-
-  // click su header
-  $(headerInput).click(function() {
-    var scopeEl = $(this).closest('.it-transfer-wrapper')
-    checkListHeader(scopeEl)
-  })
 
   function checkList(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
@@ -65,9 +88,9 @@ $(function() {
       inputHeader.removeClass('semi-checked').prop('checked', false)
       // controllo quale pulsante centrale disattivare
       if (scopeElControl.hasClass('source')) {
-        addButton.removeClass('active')
+        disableElement(addButton)
       } else {
-        inverseButton.removeClass('active')
+        disableElement(inverseButton)
       }
     } else if (listToCheckControl.length == listToCheck.length) {
       inputHeader.removeClass('semi-checked').prop('checked', true)
@@ -76,18 +99,12 @@ $(function() {
       // controllo quale pulsante centrale disattivare
       inputHeader.addClass('semi-checked').prop('checked', false)
       if (scopeElControl.hasClass('source')) {
-        addButton.addClass('active')
+        enableElement(addButton)
       } else {
-        inverseButton.addClass('active')
+        enableElement(inverseButton)
       }
     }
   }
-
-  //click su lista
-  $(listInput).click(function() {
-    var scopeEl = $(this).closest('.it-transfer-wrapper')
-    checkList(scopeEl)
-  })
 
   function addItems(sourceControl, targetControl) {
     var sourceItems = sourceControl.find('.transfer-group input:checked')
@@ -130,60 +147,6 @@ $(function() {
     sourceHeadInput.removeClass('semi-checked').prop('checked', false)
   }
 
-  //spostamento da sinistra a destra
-  $(addButton).click(function(event) {
-    var source = $(this)
-      .closest('.it-transfer-block')
-      .find('.source')
-    var target = $(this)
-      .closest('.it-transfer-block')
-      .find('.target')
-    resetButton = $(this)
-      .closest('.it-transfer-block')
-      .find('a.reset')
-
-    // attivo il pulsante di reset
-    resetButton.addClass('active')
-    $(this).removeClass('active')
-
-    addItems(source, target)
-    event.preventDefault()
-  })
-
-  //spostamento da destra a sinistra
-  $(inverseButton).click(function(event) {
-    var target = $(this)
-      .closest('.it-transfer-block')
-      .find('.source')
-    var source = $(this)
-      .closest('.it-transfer-block')
-      .find('.target')
-    resetButton = $(this)
-      .closest('.it-transfer-block')
-      .find('a.reset')
-    $(this).removeClass('active')
-
-    // attivo il pulsante di reset
-    resetButton.addClass('active')
-
-    addItems(source, target)
-    event.preventDefault()
-  })
-
-  // stato iniziale
-  var elemLeft = $('.source .transfer-group .form-check')
-  var elemRight = $('.target .transfer-group .form-check')
-  var elemLeftNum = elemLeft.length
-  var elemRightNum = elemRight.length
-  var leftStart = ''
-  var rightStart = ''
-  $(elemLeft).each(function(el) {
-    leftStart = leftStart + this
-  })
-  $(elemRight).each(function(el) {
-    rightStart = rightStart + this
-  })
-
   function resetAll(contextControl) {
     var left = contextControl.find('.source .transfer-group')
     var right = contextControl.find('.target .transfer-group')
@@ -212,13 +175,69 @@ $(function() {
     $(allElement).prop('checked', false)
   }
 
-  $(resetButton).click(function(event) {
+  // click su header
+  $(headerInput).on('click', function() {
+    var scopeEl = $(this).closest('.it-transfer-wrapper')
+    checkListHeader(scopeEl)
+  })
+
+  //click su lista
+  $(listInput).on('click', function() {
+    var scopeEl = $(this).closest('.it-transfer-wrapper')
+    checkList(scopeEl)
+  })
+
+  //spostamento da sinistra a destra
+  $(addButton).on('click', function(event) {
+    var source = $(this)
+      .closest('.it-transfer-block')
+      .find('.source')
+    var target = $(this)
+      .closest('.it-transfer-block')
+      .find('.target')
+    resetButton = $(this)
+      .closest('.it-transfer-block')
+      .find('a.reset')
+
+    // attivo il pulsante di reset
+    enableElement(resetButton)
+
+    // disattivo il pulsante corrente
+    disableElement($(this))
+
+    addItems(source, target)
+    event.preventDefault()
+  })
+
+  //spostamento da destra a sinistra
+  $(inverseButton).on('click', function(event) {
+    var target = $(this)
+      .closest('.it-transfer-block')
+      .find('.source')
+    var source = $(this)
+      .closest('.it-transfer-block')
+      .find('.target')
+    resetButton = $(this)
+      .closest('.it-transfer-block')
+      .find('a.reset')
+
+    // attivo il pulsante di reset
+    enableElement(resetButton)
+
+    // disattivo il pulsante corrente
+    disableElement($(this))
+
+    addItems(source, target)
+    event.preventDefault()
+  })
+
+  $(resetButton).on('click', function(event) {
     var context = $(this).closest('.it-transfer-block')
     var addButton = context.find('a.transfer')
-    var reverseutton = context.find('a.backtransfer')
-    addButton.removeClass('active')
-    reverseutton.removeClass('active')
-    $(this).removeClass('active')
+    var reverseButton = context.find('a.backtransfer')
+    disableElement(addButton)
+    disableElement(reverseButton)
+    disableElement($(this))
 
     resetAll(context)
     event.preventDefault()
