@@ -1,10 +1,8 @@
-[![CircleCI](https://circleci.com/gh/italia/bootstrap-italia/tree/master.svg?style=svg)](https://circleci.com/gh/italia/bootstrap-italia/tree/master)
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
-[![Chat on Gitter](https://img.shields.io/gitter/room/italia/bootstrap-italia.svg)](https://gitter.im/bootstrap-Italia)
 
-# Bootstrap Italia
+# Bootstrap Italia [![Versione](https://img.shields.io/github/release/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/releases) [![CircleCI](https://circleci.com/gh/italia/bootstrap-italia/tree/master.svg?style=svg)](https://circleci.com/gh/italia/bootstrap-italia/tree/master)
 
 *Read this in other languages: [English](README.EN.md).*
 
