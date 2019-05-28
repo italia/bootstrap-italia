@@ -34,6 +34,7 @@
     z-index: 1;
     //background: $navigation-sidebar-bg-color-mobile;
     display: none;
+    width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
     .menu-wrapper {
       background: $navigation-bg-color;

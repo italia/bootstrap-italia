@@ -72,7 +72,8 @@
             elSticky.classList.add('is-sticky')
             elSticky.style.top = getPosition(navBottom, gap, 'top')
             elSticky.style.bottom = getPosition(navBottom, gap, 'bottom')
-            elSticky.style.width = parentWidth - parentPaddingWidth + 'px'
+            if (isDesktop)
+              elSticky.style.width = parentWidth - parentPaddingWidth + 'px'
           } else if (isSticky && distanceToTop > navOffsetTop) {
             isSticky = false
             elSticky.classList.remove('is-sticky')

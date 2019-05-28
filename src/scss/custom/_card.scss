@@ -19,16 +19,45 @@
     //Desktop
     @media (min-width: #{map-get($grid-breakpoints, xl)}) {
       .card-teaser {
-        flex: 0 0 50%;
+        flex: 0 0 49%;
+      }
+
+      &.card-teaser-block-2 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 49%;
+        }
+      }
+
+      &.card-teaser-block-3 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 32%;
+        }
+      }
+
+      &.card-teaser-block-4 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 24%;
+        }
       }
     }
   }
 }
+
 .card {
   border: none;
   padding: 0;
   position: relative;
   width: 100%;
+
   .card-body {
     padding: $card-padding;
     h5 {
@@ -323,6 +352,31 @@
 
     &:after {
       content: none;
+    }
+
+    &.card-column {
+      flex-direction: column;
+    }
+
+    .card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding: 1em;
+      width: 100%;
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+
+      @for $i from 1 through 6 {
+        h#{$i} {
+          line-height: 1.5;
+          margin-bottom: 0;
+        }
+      }
     }
 
     .card-body {

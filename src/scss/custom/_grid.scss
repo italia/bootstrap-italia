@@ -34,12 +34,12 @@
 
 .row {
   &.row-column-border {
-    border-top: 1px solid $gray-border;
+    border-top: 1px solid $border-color;
 
     & > [class^='col-'] {
       padding-top: 2rem;
       padding-bottom: 2rem;
-      border-top: 1px solid $gray-border;
+      border-top: 1px solid $border-color;
 
       &:first-child {
         border: none;
@@ -55,15 +55,29 @@
         }
       }
     }
+  }
 
-    // Desktop
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  &.row-column-menu-left {
+    & > [class^='col-']:first-child {
+      padding: 1rem 0;
+    }
+  }
+
+  &.row-column-menu-right {
+    & > [class^='col-']:last-child {
+      padding: 1rem 0;
+    }
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    &.row-column-border {
       margin-top: 1rem;
 
       & > [class^='col-'] {
         padding: 3rem 3rem;
         border-top: none;
-        border-left: 1px solid $gray-border;
+        border-left: 1px solid $border-color;
 
         &:first-child {
           border: none;
@@ -78,8 +92,22 @@
       }
     }
 
-    // Large Desktop
-    @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+    &.row-column-menu-left {
+      & > [class^='col-']:first-child {
+        padding: 0;
+      }
+    }
+
+    &.row-column-menu-right {
+      & > [class^='col-']:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+  // Large Desktop
+  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+    &.row-column-border {
       margin-top: 2rem;
     }
   }
@@ -94,15 +122,15 @@
       z-index: 1;
       left: 0;
       right: 0;
-      width: auto !important;
+      width: auto;
 
       .navbar {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $gray-border;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $border-color;
 
         &.it-bottom-navscroll {
-          border-top: 1px solid $gray-border;
+          border-top: 1px solid $border-color;
           border-bottom: none;
         }
       }
@@ -114,7 +142,7 @@
         z-index: auto;
         left: auto;
         right: auto;
-        width: auto;
+        width: unset;
 
         .navbar {
           border: none;
