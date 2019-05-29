@@ -35,12 +35,9 @@
   }
 }
 
+// Force color when icon-color class is explicitly used
 @each $color, $value in $theme-colors {
   .icon-#{$color} {
-    fill: $value;
+    fill: $value !important;
   }
-}
-
-.icon-white {
-  fill: $white;
 }
