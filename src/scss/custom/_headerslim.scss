@@ -20,8 +20,7 @@
         height: $header-slim-icon-size;
         transition: all 0.3s;
         transform-origin: center;
-      }
-      svg {
+        // set default text color to icon
         fill: $header-slim-text-color;
       }
       &.dropdown-toggle {
