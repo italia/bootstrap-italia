@@ -3,6 +3,9 @@
   height: 96px;
   position: relative;
 
+  a {
+    text-decoration: none;
+  }
   // toolbar vertical ----------------- START
   &.toolbar-vertical {
     height: 100%;

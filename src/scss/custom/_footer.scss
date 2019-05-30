@@ -37,6 +37,7 @@ $bg-footer: darken($primary, 20%);
       display: flex;
       color: $header-center-text-color;
       align-items: center;
+      text-decoration: none;
 
       h2 {
         font-size: $header-center-h2-size-mob;
@@ -96,6 +97,7 @@ $bg-footer: darken($primary, 20%);
   a:hover:not(.disabled) {
     color: $white;
     font-size: 15px;
+    text-decoration: none;
   }
 }
 
