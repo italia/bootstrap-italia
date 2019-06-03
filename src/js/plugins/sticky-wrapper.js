@@ -1,19 +1,18 @@
-/**
- * sticky-wrapper js lib
- * @ Fabio Fumis
- */
 ;(function() {
   const elWrappers = document.getElementsByClassName('sticky-wrapper')
-
-  function isHidden(el) {
-    const style = window.getComputedStyle(el)
-    return style.display === 'none' || style.visibility === 'hidden'
-  }
-
   const elToggler = document.querySelector('.custom-navbar-toggler')
   const isDesktop = isHidden(elToggler)
 
   let runCheckOnScroll = undefined
+
+  function isHidden(el) {
+    let _ret = false
+    if (el) {
+      const style = window.getComputedStyle(el)
+      _ret = style.display === 'none' || style.visibility === 'hidden'
+    }
+    return _ret
+  }
 
   if (elWrappers && elWrappers.length) {
     let isSticky = false

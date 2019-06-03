@@ -14,6 +14,9 @@
 
     .card-teaser {
       flex: 0 0 100%;
+      border: 1px solid $gray-border-disabled;
+      border-radius: $v-gap * 1.5;
+      margin: $v-gap * 2 0;
 
       &.border {
         border-color: $border-color;

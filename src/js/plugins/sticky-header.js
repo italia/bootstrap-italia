@@ -7,8 +7,12 @@
 
   if (!!elSticky) {
     function isHidden(el) {
-      const style = window.getComputedStyle(el)
-      return style.display === 'none' || style.visibility === 'hidden'
+      let _ret = false
+      if (el) {
+        const style = window.getComputedStyle(el)
+        _ret = style.display === 'none' || style.visibility === 'hidden'
+      }
+      return _ret
     }
 
     const elToggler = document.querySelector('.custom-navbar-toggler')
