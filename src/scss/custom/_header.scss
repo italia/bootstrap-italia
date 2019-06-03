@@ -31,18 +31,20 @@
         position: fixed;
         top: 0;
         width: 100%;
+        //- livello +1 del it-navscroll-*
         z-index: 1;
       }
 
       @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+        .it-header-slim-wrapper,
         .it-header-center-wrapper {
           display: none;
         }
 
         .it-header-navbar-wrapper {
           position: fixed;
-          top: 0;
           width: 100%;
+          top: 0;
 
           .menu-wrapper {
             display: flex;
@@ -119,11 +121,29 @@
 
             .navbar-nav {
               flex: 1;
+
+              // hide navbar-secondary if header is sticky
+              &.navbar-secondary {
+                display: none;
+              }
             }
           }
         }
       }
     }
+
+    //- Disable sticky functionality when sticky header is running (in mobile)
+    /* @media (max-width: #{map-get($grid-breakpoints, sm) - 1}) {
+      & ~ * {
+        .is-sticky {
+          &.sticky-wrapper {
+            top: auto !important;
+            position: relative !important;
+            z-index: auto !important;
+          }
+        }
+      }
+    } */
   }
 }
 

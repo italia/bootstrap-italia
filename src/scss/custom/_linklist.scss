@@ -206,6 +206,29 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .link-list-wrapper {
+    // classe modificatore per menu laterale
+    &.menu-link-list {
+      position: relative;
+
+      h3,
+      h4 {
+        position: relative;
+        padding: 1rem;
+        margin-top: 0;
+        border-bottom: 4px solid $border-color;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 40px;
+          height: 4px;
+          background-color: $warning;
+        }
+      }
+    }
+  }
 }
 
 //Desktop

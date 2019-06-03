@@ -7,8 +7,12 @@
 
   if (!!elSticky) {
     function isHidden(el) {
-      const style = window.getComputedStyle(el)
-      return style.display === 'none' || style.visibility === 'hidden'
+      let _ret = false
+      if (el) {
+        const style = window.getComputedStyle(el)
+        _ret = style.display === 'none' || style.visibility === 'hidden'
+      }
+      return _ret
     }
 
     const elToggler = document.querySelector('.custom-navbar-toggler')
@@ -16,6 +20,8 @@
 
     let isSticky = false
     let scrollToGap = 0
+
+    let runCheckSticky = undefined
 
     const initSticky = (isDesktop, isResized = false) => {
       const elSlim = document.querySelector('.it-header-slim-wrapper')
@@ -64,7 +70,7 @@
           elSticky.nextElementSibling.style.paddingTop =
             navbarHeight +
             (isDesktop
-              ? navOffsetTop - navbarHeight - scrollToGap
+              ? navOffsetTop - scrollToGap
               : navbarHeight - scrollToGap) +
             'px'
         } else {
@@ -84,7 +90,7 @@
         toggleClonedElement(isDesktop, false)
       }
 
-      const runCheckSticky = () => {
+      runCheckSticky = () => {
         const nbh = navbarHeight
         if (window.scrollY + scrollToGap >= navOffsetTop && !isSticky) {
           toggleOn()
@@ -94,9 +100,7 @@
         }
       }
 
-      window.onscroll = () => {
-        runCheckSticky()
-      }
+      window.addEventListener('scroll', runCheckSticky)
 
       if (isResized && isSticky) {
         window.scrollTo(0, 0)
@@ -104,10 +108,15 @@
       }
     }
 
-    window.onresize = () => {
-      const stillDesktop = isHidden(elToggler)
-      initSticky(stillDesktop, true)
+    const onResize = () => {
+      if (runCheckSticky) {
+        window.removeEventListener('scroll', runCheckSticky)
+        const stillDesktop = isHidden(elToggler)
+        initSticky(stillDesktop, true)
+      }
     }
+
+    window.addEventListener('resize', onResize)
 
     initSticky(isDesktop)
   }

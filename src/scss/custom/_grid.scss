@@ -31,3 +31,161 @@
     @include make-variable-gutters();
   }
 }
+
+.row {
+  &.row-column-border {
+    border-top: 1px solid $border-color;
+
+    & > [class^='col-'] {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-top: 1px solid $border-color;
+
+      &:first-child {
+        border: none;
+      }
+
+      .navbar {
+        padding: 0;
+
+        .menu-wrapper {
+          .nav-link {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.row-column-menu-left {
+    & > [class^='col-']:first-child {
+      padding: 1rem 0;
+    }
+  }
+
+  &.row-column-menu-right {
+    & > [class^='col-']:last-child {
+      padding: 1rem 0;
+    }
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    &.row-column-border {
+      margin-top: 1rem;
+
+      & > [class^='col-'] {
+        padding: 3rem 3rem;
+        border-top: none;
+        border-left: 1px solid $border-color;
+
+        &:first-child {
+          border: none;
+          padding-left: 0;
+        }
+
+        .navbar {
+          .menu-wrapper {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &.row-column-menu-left {
+      & > [class^='col-']:first-child {
+        padding: 0;
+      }
+    }
+
+    &.row-column-menu-right {
+      & > [class^='col-']:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+  // Large Desktop
+  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+    &.row-column-border {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// Sticky wrapper feature
+.sticky-wrapper {
+  &.is-sticky {
+    position: fixed;
+
+    &.navbar-wrapper {
+      z-index: 1;
+      left: 0;
+      right: 0;
+      width: auto;
+
+      .navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        // border-bottom: 1px solid $border-color;
+
+        // &.it-bottom-navscroll {
+        border-top: 1px solid $border-color;
+        // border-bottom: none;
+        // }
+      }
+
+      &.sticky-expanded {
+        z-index: auto;
+      }
+    }
+
+    // Desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      &.navbar-wrapper {
+        z-index: auto;
+        left: auto;
+        right: auto;
+        width: unset;
+
+        .navbar {
+          border: none;
+          background-color: transparent;
+          padding: 0;
+
+          .menu-wrapper {
+            padding: 0;
+
+            .nav-link {
+              padding-right: 0;
+            }
+          }
+
+          &.it-bottom-navscroll {
+            border: none;
+          }
+        }
+
+        &.at-bottom {
+          position: absolute;
+          top: auto !important;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.navbar-wrapper {
+    .navbar {
+      // reset position when in sticky mode
+      &.it-top-navscroll,
+      &.it-bottom-navscroll {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+      }
+    }
+  }
+}

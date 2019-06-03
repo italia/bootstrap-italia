@@ -30,6 +30,9 @@
     - name: Template Comuni Vuoto
       url: template-comuni-vuoto
       description: 'Un esempio di impostazione per una pagina generica relativa al progetto "Comuni".'
+    - name: Template Servizio Comunale
+      url: template-servizio-comunale
+      description: 'Una sottopagina di esempio per un servizio comunale'
       status: work in progress
 
 - category: Esempi dal sito ufficiale di Bootstrap 4

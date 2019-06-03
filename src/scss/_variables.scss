@@ -113,7 +113,8 @@ $display3-weight: 700;
 $display4-weight: 700;
 
 // Breadcrumbs
-$breadcrumb-padding: 24px;
+// $breadcrumb-padding: 24px;
+$breadcrumb-padding: 0.5em;
 $breadcrumb-bg: transparent;
 $breadcrumb-link-font-weight: 600;
 $breadcrumb-link-color: $neutral-1-a7;
@@ -450,6 +451,10 @@ $header-center-theme-light-text-color: $primary-a6;
 
 $header-center-button-left: 10px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
+
+// Anchors vertical offset:
+$anchor-v-offset-lg: 72px;
+$anchor-v-offset: $header-center-max-height-mob + 16px;
 
 //cards
 $card-padding: $v-gap * 3;

@@ -1,12 +1,70 @@
 .card-wrapper {
   padding-bottom: $v-gap * 3;
   display: flex;
+
+  &.card-teaser-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &.card-teaser-wrapper-equal {
+      align-items: stretch;
+    }
+
+    .card-teaser {
+      flex: 0 0 100%;
+      border: 1px solid $gray-border-disabled;
+      border-radius: $v-gap * 1.5;
+      margin: $v-gap * 2 0;
+
+      &.border {
+        border-color: $border-color;
+      }
+    }
+
+    //Desktop
+    @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+      .card-teaser {
+        flex: 0 0 49%;
+      }
+
+      &.card-teaser-block-2 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 49%;
+        }
+      }
+
+      &.card-teaser-block-3 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 32%;
+        }
+      }
+
+      &.card-teaser-block-4 {
+        width: 100%;
+        justify-content: space-between;
+
+        .card-teaser {
+          flex: 0 0 24%;
+        }
+      }
+    }
+  }
 }
+
 .card {
   border: none;
   padding: 0;
   position: relative;
   width: 100%;
+
   .card-body {
     padding: $card-padding;
     h5 {
@@ -291,6 +349,95 @@
       margin-bottom: 0;
     }
   }
+
+  &.card-teaser {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    // border: 1px solid $card-border-color;
+
+    &:after {
+      content: none;
+    }
+
+    &.card-column {
+      flex-direction: column;
+    }
+
+    .card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding: 1em;
+      width: 100%;
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+
+      @for $i from 1 through 6 {
+        h#{$i} {
+          line-height: 1.5;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 0;
+      flex: auto;
+
+      .card-title {
+        margin: 0;
+      }
+
+      .card-text,
+      .card-text > p {
+        font-family: $font-family-sans-serif;
+        font-size: $card-signature-size;
+        margin: 0;
+      }
+    }
+
+    .icon {
+      min-width: 32px;
+
+      & + .card-body {
+        margin-left: 1em;
+      }
+    }
+
+    .avatar {
+      &.size-xs {
+        min-width: $avatar-base-size * 2;
+      }
+
+      &.size-sm {
+        min-width: $avatar-base-size * 3;
+      }
+
+      &.size-md {
+        min-width: $avatar-base-size * 4;
+      }
+
+      &.size-lg {
+        min-width: $avatar-base-size * 5;
+      }
+
+      &.size-xl {
+        min-width: $avatar-base-size * 10;
+      }
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.card-teaser-#{$color} {
+      border-left: 8px solid $value;
+    }
+  }
 }
 // flag
 .flag-icon {
@@ -362,7 +509,7 @@ a.read-more {
     &:last-child {
       > .card-wrapper {
         > .card {
-          border-right: 1px solid transparent;
+          // border-right: 1px solid transparent;
         }
       }
     }
@@ -387,7 +534,7 @@ a.read-more {
   }
   .card {
     border: none;
-    border-right: 1px solid $card-border-color;
+    // border-right: 1px solid $card-border-color;
     margin-right: -$grid-gutter-width/2;
     &.card-bg,
     &.card-img {

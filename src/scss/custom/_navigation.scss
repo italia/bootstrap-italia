@@ -31,9 +31,10 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 1;
     //background: $navigation-sidebar-bg-color-mobile;
     display: none;
+    width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
     .menu-wrapper {
       background: $navigation-bg-color;
@@ -359,7 +360,6 @@
               .nav-link {
                 display: flex;
                 align-self: flex-end;
-                align-items: center;
               }
             }
           }

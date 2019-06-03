@@ -57,6 +57,7 @@ $gray-primary: hsb(210, 38.9, 44.3) !default;
 $gray-secondary: hsb(210, 29, 51) !default;
 $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
+$gray-border: hsb(240, 1, 70) !default;
 $gray-disabled: hsb(225, 5, 95) !default;
 $gray-label-disabled: hsb(222, 5, 79) !default;
 $gray-border-disabled: hsb(224, 8, 95) !default;
@@ -88,6 +89,9 @@ $colors: map-merge(
 // Main Palette
 $primary: $blue !default;
 $secondary: $gray-secondary !default;
+
+// Border Color
+$border-color: $gray-border;
 
 // Info Colors
 $success: $green-accessible !default;

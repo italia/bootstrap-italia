@@ -854,10 +854,10 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
           <button
             class="custom-navbar-toggler"
             type="button"
-            aria-controls="nav01"
+            aria-controls="nav10"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            data-target="#nav01"
+            data-target="#nav10"
           >
             <svg class="icon">
               <use
@@ -867,7 +867,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
               ></use>
             </svg>
           </button>
-          <div class="navbar-collapsable" id="nav01">
+          <div class="navbar-collapsable" id="nav10">
             <div class="overlay"></div>
             <div class="close-div sr-only">
               <button class="btn close-menu" type="button">
