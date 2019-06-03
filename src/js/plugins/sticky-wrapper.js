@@ -52,7 +52,9 @@
         // Check the sticky status
         const runCheckSticky = elSticky => {
           // Check is set on bottom
-          const navBottom = elSticky.outerHTML.includes('it-bottom-navscroll')
+          // Force position of navscroll to bottom
+          // const navBottom = elSticky.outerHTML.includes('it-bottom-navscroll')
+          const navBottom = true
 
           const elHeight = elSticky.offsetHeight
           // Get parent params

@@ -127,12 +127,16 @@
       .navbar {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid $border-color;
+        // border-bottom: 1px solid $border-color;
 
-        &.it-bottom-navscroll {
-          border-top: 1px solid $border-color;
-          border-bottom: none;
-        }
+        // &.it-bottom-navscroll {
+        border-top: 1px solid $border-color;
+        // border-bottom: none;
+        // }
+      }
+
+      &.sticky-expanded {
+        z-index: auto;
       }
     }
 
