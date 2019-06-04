@@ -153,9 +153,6 @@ textarea {
 
 // Input group
 .input-group {
-  label {
-    left: 2.25rem;
-  }
   .input-group-text {
     padding: $input-spacing-y $input-spacing-x;
     border-bottom: 1px solid $gray-secondary;
@@ -163,6 +160,11 @@ textarea {
 
   .input-group-prepend {
     margin-right: 0;
+
+    & ~ label {
+      left: 2.25rem;
+      max-width: calc(100% - 2.25rem);
+    }
   }
 
   .input-group-append {
