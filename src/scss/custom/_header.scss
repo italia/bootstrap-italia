@@ -130,20 +130,15 @@
           }
         }
       }
-    }
 
-    //- Disable sticky functionality when sticky header is running (in mobile)
-    /* @media (max-width: #{map-get($grid-breakpoints, sm) - 1}) {
+      // Fix stack context issue
       & ~ * {
-        .is-sticky {
-          &.sticky-wrapper {
-            top: auto !important;
-            position: relative !important;
-            z-index: auto !important;
-          }
+        // fix plugin z-index value (in conflict with sticky header)
+        .owl-carousel {
+          z-index: auto;
         }
       }
-    } */
+    }
   }
 }
 
