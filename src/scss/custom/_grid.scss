@@ -107,17 +107,25 @@
 
   // Wrapper full width even if in a container
   &.row-full-width {
-    max-width: calc(100vw - 8px);
-    margin: 0 calc(-50vw + 50% + 8px); // removes y-scrollbar
+    max-width: calc(100vw);
+    margin: 0 calc(-50vw + 50%);
 
     & > * {
       width: 100%;
 
       img {
         width: 100%;
-        min-height: 30vh;
+        min-height: 480px;
         object-fit: cover;
       }
+    }
+  }
+
+  // Tablet desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    &.row-full-width {
+      max-width: calc(100vw - 8px);
+      margin: 0 calc(-50vw + 50% + 8px); // removes y-scrollbar
     }
   }
 

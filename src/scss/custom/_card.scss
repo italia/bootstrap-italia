@@ -23,6 +23,43 @@
       }
     }
 
+    .card-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+
+      .card-body {
+        width: 66%;
+        max-width: 75%;
+      }
+
+      .card-image {
+        height: inherit;
+        width: 34%;
+        min-width: 25%;
+        background-color: $secondary;
+
+        border-radius: 0 $v-gap * 1.5 $v-gap * 1.5 0;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-date {
+          background-color: $white;
+          border-radius: $v-gap;
+          padding: 0.5em 1em;
+        }
+      }
+    }
+
     //Desktop
     @media (min-width: #{map-get($grid-breakpoints, xl)}) {
       .card-teaser {
@@ -79,6 +116,17 @@
           font-size: $card-big-head-size;
           line-height: $card-big-head-l-h;
         }
+
+        &.card-title-icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+
+          .icon {
+            margin-right: 0.5em;
+          }
+        }
       }
     }
     h6.card-subtitle {
@@ -91,7 +139,7 @@
         color: $card-link-color;
       }
     }
-    p {
+    p.card-text {
       font-family: $font-family-serif;
       font-size: $card-p-size;
       line-height: $card-p-l-h;
@@ -140,6 +188,11 @@
     margin-top: $card-small-line-margin;
     margin-left: $card-padding;
   }
+
+  &.no-after {
+    content: none;
+  }
+
   a.read-more {
     position: absolute;
     bottom: $v-gap * 4;
@@ -285,7 +338,7 @@
         font-size: $card-big-h5-size;
         line-height: $card-big-h5-l-h;
       }
-      p {
+      p.card-text {
         font-size: $card-big-p-size;
         line-height: $card-big-p-l-h;
       }
@@ -542,7 +595,7 @@ a.read-more {
       margin: 0;
     }
     .card-body {
-      p {
+      p.card-text {
         font-size: $card-p-size-desk;
       }
       h5.card-title {
