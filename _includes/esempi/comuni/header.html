@@ -7,19 +7,12 @@
             <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
             <div class="header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a aria-expanded="false" class="nav-link dropdown-toggle"
+                   data-toggle="dropdown" href="#">
                   <span>ITA</span>
                   <svg class="icon icon-white d-none d-lg-block">
                     <use
-                      xlink:href="{{
-                        site.baseurl
-                      }}/dist/svg/sprite.svg#it-expand"
-                    ></use>
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -39,18 +32,12 @@
                   </div>
                 </div>
               </div>
-              <a
-                href="#"
-                class="btn btn-primary btn-icon btn-full"
-                title="Accedi all'area personale"
-              >
-                <span class="rounded-icon">
+              <a class="btn btn-primary btn-icon btn-full" href="#"
+                 title="Accedi all'area personale">
+                                <span class="rounded-icon">
                   <svg class="icon icon-primary">
                     <use
-                      xlink:href="{{
-                        site.baseurl
-                      }}/dist/svg/sprite.svg#it-user"
-                    ></use>
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-user"></use>
                   </svg>
                 </span>
                 <span class="d-none d-lg-block">Accedi all'area personale</span>
@@ -72,10 +59,7 @@
                 <a href="#">
                   <svg class="icon">
                     <use
-                      xlink:href="{{
-                        site.baseurl
-                      }}/dist/svg/sprite.svg#it-code-circle"
-                    ></use>
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                   </svg>
                   <div class="it-brand-text">
                     <h2 class="no_toc">Nome del Comune</h2>
@@ -90,35 +74,26 @@
                   <span>Seguici su</span>
                   <ul>
                     <li>
-                      <a href="#" aria-label="Facebook" target="_blank">
+                      <a aria-label="Facebook" href="#" target="_blank">
                         <svg class="icon">
                           <use
-                            xlink:href="{{
-                              site.baseurl
-                            }}/dist/svg/sprite.svg#it-facebook"
-                          ></use>
+                            xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#" aria-label="Github" target="_blank">
+                      <a aria-label="Github" href="#" target="_blank">
                         <svg class="icon">
                           <use
-                            xlink:href="{{
-                              site.baseurl
-                            }}/dist/svg/sprite.svg#it-github"
-                          ></use>
+                            xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" aria-label="Twitter">
+                      <a aria-label="Twitter" href="#" target="_blank">
                         <svg class="icon">
                           <use
-                            xlink:href="{{
-                              site.baseurl
-                            }}/dist/svg/sprite.svg#it-twitter"
-                          ></use>
+                            xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -126,17 +101,11 @@
                 </div>
                 <div class="it-search-wrapper">
                   <span class="d-none d-md-block">Cerca</span>
-                  <a
-                    class="search-link rounded-icon"
-                    href="#"
-                    aria-label="Cerca"
-                  >
+                  <a aria-label="Cerca" class="search-link rounded-icon"
+                     href="#">
                     <svg class="icon">
                       <use
-                        xlink:href="{{
-                          site.baseurl
-                        }}/dist/svg/sprite.svg#it-search"
-                      ></use>
+                        xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
                     </svg>
                   </a>
                 </div>
@@ -151,20 +120,12 @@
         <div class="row">
           <div class="col-12">
             <nav class="navbar navbar-expand-lg has-megamenu">
-              <button
-                class="custom-navbar-toggler"
-                type="button"
-                aria-controls="nav10"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                data-target="#nav10"
-              >
+              <button aria-controls="nav10" aria-expanded="false"
+                      aria-label="Toggle navigation" class="custom-navbar-toggler"
+                      data-target="#nav10" type="button">
                 <svg class="icon">
                   <use
-                    xlink:href="{{
-                      site.baseurl
-                    }}/dist/svg/sprite.svg#it-burger"
-                  ></use>
+                    xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
                 </svg>
               </button>
               <div class="navbar-collapsable" id="nav10">
@@ -176,40 +137,49 @@
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"
-                        ><span>Amministrazione</span></a
-                      >
+                    <li class="nav-item {% if section == 'amministrazione' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="#">
+                        <span>Amministrazione</span>
+                        {% if section == 'amministrazione' %}<span class="sr-only">menu selezionato</span>{%endif%}
+                      </a>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link active" href="#"
-                        ><span>Servizi</span
-                        ><span class="sr-only">selezionato</span></a
-                      >
+                    <li class="nav-item {% if section == 'servizi' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'servizi' %}active{%endif%}" href="#">
+                        <span>Servizi</span>
+                        {% if section == 'servizi' %}<span class="sr-only">menu selezionato</span>{%endif%}
+                      </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><span>Novità</span></a>
+                    <li class="nav-item {% if section == 'novità' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'novità' %}active{%endif%}" href="#">
+                        <span>Novità</span>
+                        {% if section == 'novità' %}<span class="sr-only">menu selezionato</span>{%endif%}
+                      </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><span>Documenti</span></a>
+                    <li class="nav-item {% if section == 'documenti' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'documenti' %}active{%endif%}" href="#">
+                        <span>Documenti</span>
+                        {% if section == 'documenti' %}<span class="sr-only">menu selezionato</span>{%endif%}
+                      </a>
                     </li>
                   </ul>
                   <ul class="navbar-nav navbar-secondary">
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 1</a>
+                      <a class="nav-link" href="#">
+                        Argomento in evidenza 1</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 2</a>
+                      <a class="nav-link" href="#">
+                        Argomento in evidenza 2</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 3</a>
+                      <a class="nav-link" href="#">
+                        Argomento in evidenza 3</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"
-                        ><span class="font-weight-bold"
-                          >Tutti gli argomenti...</span
-                        ></a
-                      >
+                    <li class="nav-item {% if section == 'argomenti' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="#">
+                        <span class="font-weight-bold">Tutti gli argomenti...</span>
+                        {% if section == 'argomenti' %}<span class="sr-only">menu selezionato</span>{%endif%}
+                      </a>
                     </li>
                   </ul>
                 </div>

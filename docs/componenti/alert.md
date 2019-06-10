@@ -11,11 +11,11 @@ toc: true
 Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando il [plugin _alerts_ di jQuery](#chiusura).
 
 {% capture example %}
-{% for color in site.data.theme-colors %}
-{% if color.name == "danger" or color.name == "warning" or color.name == "success" or color.name == "info" %}
-<div class="alert alert-{{ color.name }}" role="alert">
-  Questo è un alert di <em>{{ color.name }}</em>!
-</div>{% endif %}{% endfor %}
+{% assign colors = "info,success,warning,danger" | split: ','%}
+{% for color in colors %}
+<div class="alert alert-{{color}}" role="alert">
+  Questo è un alert di tipo "<b>{{ color }}</b>".
+</div>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
 

@@ -12,6 +12,7 @@
     }
     a {
       color: $header-slim-text-color;
+      text-decoration: none;
       &:hover:not(.active) {
         text-decoration: underline;
       }
