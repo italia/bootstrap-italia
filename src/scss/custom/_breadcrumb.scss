@@ -29,6 +29,7 @@
     // dark version
     &.dark {
       background: $breadcrumb-bg-dark;
+      color: $breadcrumb-link-color-dark;
       .breadcrumb-item {
         a {
           color: $breadcrumb-link-color-dark;
@@ -38,6 +39,9 @@
         }
         i {
           color: $breadcrumb-icon-color-dark;
+        }
+        &.active {
+          color: $breadcrumb-link-color-dark;
         }
       }
     }

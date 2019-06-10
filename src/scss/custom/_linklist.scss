@@ -14,6 +14,7 @@
         display: block;
         padding: 0 $link-list-h-pad;
         position: relative;
+        text-decoration: none;
         // hover state
         &:hover:not(.disabled) {
           text-decoration: none;

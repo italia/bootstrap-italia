@@ -225,6 +225,21 @@ stile, peso e colore del testo. Per questo, si può fare riferimento alla
 documentazione delle [utilità di testo]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/)
 e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 
+### Link
+
+{% capture callout %}
+##### Accessibilità
+
+È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale. 
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso di link già in evidenza (menu principali, liste di link, link in grassetto, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`.
+
+{% capture example %}
+<p>Esempio di <a href="#">link normale</a>.</p>
+<p>Esempio di <a href="#" class="text-decoration-none font-weight-bold">link in grassetto senza sottolineatura</a>.</p>
+{% endcapture %}{% include example.html content=example %}
+
 ## Abbreviazioni
 
 Implementazione stilizzata dell'elemento HTML `<abbr>` per abbreviazioni e
