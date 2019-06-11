@@ -36,112 +36,7 @@ title: Template Evento Comunale
         </p>
       </div>
       <div class="col-lg-3 offset-lg-1">
-        <div class="dropdown d-inline">
-          <button
-            class="btn btn-dropdown dropdown-toggle"
-            type="button"
-            id="shareActions"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-share"></use>
-            </svg>
-            <small>Condividi</small>
-          </button>
-          <div class="dropdown-menu shadow-lg" aria-labelledby="shareActions">
-            <div class="link-list-wrapper">
-              <ul class="link-list">
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
-                    </svg>
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
-                    </svg>
-                    <span>Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-linkedin"></use>
-                    </svg>
-                    <span>Linkedin</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-whatsapp"></use>
-                    </svg>
-                    <span>Whatsapp</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="dropdown d-inline">
-          <button
-            class="btn btn-dropdown dropdown-toggle"
-            type="button"
-            id="viewActions"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-items"></use>
-            </svg>
-            <small>Vedi azioni</small>
-          </button>
-          <div class="dropdown-menu shadow-lg" aria-labelledby="viewActions">
-            <div class="link-list-wrapper">
-              <ul class="link-list">
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use>
-                    </svg>
-                    <span>Scarica</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-print"></use>
-                    </svg>
-                    <span>Stampa</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-hearing"></use>
-                    </svg>
-                    <span>Ascolta</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use>
-                    </svg>
-                    <span>Invia</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {% include esempi/azioni_condividi.html %}
         <div class="mt-4 mb-4">
           <h6><small>Argomenti</small></h6>
           <a href="#"
@@ -165,7 +60,7 @@ title: Template Evento Comunale
     </div>
     <div class="row row-full-width my-3">
       <figure class="figure">
-        <img src="https://via.placeholder.com/800x200/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+        <img src="https://picsum.photos/800/400" class="figure-img img-fluid" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
         <figcaption class="figure-caption text-center pt-3">Una didascalia per l'immagine sopra.</figcaption>
       </figure>
     </div>
@@ -496,8 +391,8 @@ title: Template Evento Comunale
         </article>
         <article id="appuntamenti" class="anchor-offset mt-5">
           <h4>Appuntamenti</h4>
-          <div class="card-wrapper card-teaser-wrapper">
-            <div class="card card-teaser card-flex shadow">
+          <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            <div class="card card-teaser card-flex rounded border shadow">
               <div class="card-body p-4">
                 <h5 class="card-title card-title-icon">
                   <svg class="icon">
@@ -514,14 +409,15 @@ title: Template Evento Comunale
                   </div>
                 </div>
               </div>
-              <div class="card-image">
-                <div class="card-date text-center border shadow">
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
                   <div class="font-weight-bold">30</div>
                   <div class="font-weight-semibold">Apr</div>
                 </div>
+                <img src="https://picsum.photos/200/300"/>
               </div>
             </div>
-            <div class="card card-teaser card-flex shadow">
+            <div class="card card-teaser card-flex rounded border shadow">
               <div class="card-body p-4">
                 <h5 class="card-title card-title-icon">
                   <svg class="icon">
@@ -538,14 +434,15 @@ title: Template Evento Comunale
                   </div>
                 </div>
               </div>
-              <div class="card-image">
-                <div class="card-date text-center border shadow">
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
                   <div class="font-weight-bold">30</div>
                   <div class="font-weight-semibold">Apr</div>
                 </div>
+                <img src="https://picsum.photos/200/300"/>
               </div>
             </div>
-            <div class="card card-teaser card-flex shadow">
+            <div class="card card-teaser card-flex rounded border shadow">
               <div class="card-body p-4">
                 <h5 class="card-title card-title-icon">
                   <svg class="icon">
@@ -562,11 +459,12 @@ title: Template Evento Comunale
                   </div>
                 </div>
               </div>
-              <div class="card-image">
-                <div class="card-date text-center border shadow">
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
                   <div class="font-weight-bold">30</div>
                   <div class="font-weight-semibold">Apr</div>
                 </div>
+                <img src="https://picsum.photos/200/300"/>
               </div>
             </div>
           </div>
@@ -704,98 +602,7 @@ title: Template Evento Comunale
       </section>
     </div>
   </div>
-  <section id="contenuti-correlati">
-    <div class="section section-muted section-inset-shadow">
-      <div class="section-content">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3 class="text-center">Contenuti correlati</h3>
-            </div>
-          </div>
-          <div class="row mt-lg-4">
-            <div class="col">
-              <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Amministrazione
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Area servizi civici</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Servizi
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Pagamento retta scolastica</span></a></li>
-                        <li><a class="list-item" href="#"><span>Servizio di trasporto scolastico</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Documenti
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Attestazione ISEE</span></a></li>
-                        <li><a class="list-item" href="#"><span>Carta dei servizi educativi all'infanzia</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Notizie
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include esempi/correlati.html %}  
 </main>
 
 {% include esempi/footer.html %}

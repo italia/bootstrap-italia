@@ -14,8 +14,6 @@
 
     .card-teaser {
       flex: 0 0 100%;
-      border: 1px solid $gray-border-disabled;
-      border-radius: $v-gap * 1.5;
       margin: $v-gap * 2 0;
 
       &.border {
@@ -27,35 +25,50 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: stretch;
       position: relative;
 
       .card-body {
-        width: 66%;
-        max-width: 75%;
+        flex: 0.55;
       }
 
       .card-image {
-        height: inherit;
-        width: 34%;
-        min-width: 25%;
-        background-color: $secondary;
-
-        border-radius: 0 $v-gap * 1.5 $v-gap * 1.5 0;
-
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        flex: 0.45;
+        position: relative;
+        background-color: $gray-border;
 
         display: flex;
         justify-content: center;
         align-items: center;
 
+        &.card-image-rounded {
+          border-radius: 0 $border-radius $border-radius 0;
+
+          img {
+            border-radius: 0 $border-radius $border-radius 0;
+          }
+        }
+
         .card-date {
           background-color: $white;
-          border-radius: $v-gap;
           padding: 0.5em 1em;
+          z-index: 1;
+
+          & > *:first-child {
+            font-size: 120%;
+          }
+
+          & > *:last-child {
+            font-size: 80%;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          z-index: auto;
         }
       }
     }

@@ -18,7 +18,8 @@ title: Template Servizio Comunale
               <a href="#">Servizi</a><span class="separator">/</span>
             </li>
             <li class="breadcrumb-item" aria-current="page">
-              <a href="#">Domande e iscrizioni</a><span class="separator">/</span>
+              <a href="#">Domande e iscrizioni</a
+              ><span class="separator">/</span>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               <a href="#">Iscrizione agli asili nido</a>
@@ -39,112 +40,7 @@ title: Template Servizio Comunale
         </div>
       </div>
       <div class="col-lg-3 offset-lg-1">
-        <div class="dropdown d-inline">
-          <button
-            class="btn btn-dropdown dropdown-toggle"
-            type="button"
-            id="shareActions"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-share"></use>
-            </svg>
-            <small>Condividi</small>
-          </button>
-          <div class="dropdown-menu shadow-lg" aria-labelledby="shareActions">
-            <div class="link-list-wrapper">
-              <ul class="link-list">
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
-                    </svg>
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
-                    </svg>
-                    <span>Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-linkedin"></use>
-                    </svg>
-                    <span>Linkedin</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-whatsapp"></use>
-                    </svg>
-                    <span>Whatsapp</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="dropdown d-inline">
-          <button
-            class="btn btn-dropdown dropdown-toggle"
-            type="button"
-            id="viewActions"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-items"></use>
-            </svg>
-            <small>Vedi azioni</small>
-          </button>
-          <div class="dropdown-menu shadow-lg" aria-labelledby="viewActions">
-            <div class="link-list-wrapper">
-              <ul class="link-list">
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use>
-                    </svg>
-                    <span>Scarica</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-print"></use>
-                    </svg>
-                    <span>Stampa</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-hearing"></use>
-                    </svg>
-                    <span>Ascolta</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="list-item" href="#">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use>
-                    </svg>
-                    <span>Invia</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {% include esempi/azioni_condividi.html %}
         <div class="mt-4 mb-4">
           <h6><small>Argomenti</small></h6>
           <a href="#"
@@ -190,7 +86,11 @@ title: Template Servizio Comunale
               </div>
               <a class="it-back-button" href="#">
                 <svg class="icon icon-sm icon-primary align-top">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use>
+                  <use
+                    xlink:href="{{
+                      site.baseurl
+                    }}/dist/svg/sprite.svg#it-chevron-left"
+                  ></use>
                 </svg>
                 <span>Torna indietro</span></a
               >
@@ -351,7 +251,9 @@ title: Template Servizio Comunale
           </p>
           <div class="card card-teaser shadow p-4 my-5 rounded border">
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+              <use
+                xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+              ></use>
             </svg>
             <div class="card-body">
               <h5 class="card-title">
@@ -375,40 +277,57 @@ title: Template Servizio Comunale
           <div class="callout">
             <div class="callout-title">
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
+                <use
+                  xlink:href="{{
+                    site.baseurl
+                  }}/dist/svg/sprite.svg#it-info-circle"
+                ></use>
               </svg>
             </div>
             <ul>
-              <li><p>Domanda compilata sulla base del modulo prestampato</p></li>
               <li>
-                <p>Indicatore della Situazione Economica Equivalente (ISEE)
-                relativo alle Prestazioni agevolate rivolte a minorenni o a
-                famiglie con minorenni riferito all'anno di iscrizione.</p>
+                <p>Domanda compilata sulla base del modulo prestampato</p>
               </li>
               <li>
-                <p>Eventuale certificazione che comprovi un particolare stato di
-                necessità come:</p>
+                <p>
+                  Indicatore della Situazione Economica Equivalente (ISEE)
+                  relativo alle Prestazioni agevolate rivolte a minorenni o a
+                  famiglie con minorenni riferito all'anno di iscrizione.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Eventuale certificazione che comprovi un particolare stato di
+                  necessità come:
+                </p>
                 <ul>
                   <li>
-                    <p>familiari con handicap oltre il 65% (genitore o fratellini
-                    del minore per il quale è stato chiesto il nido);</p>
+                    <p>
+                      familiari con handicap oltre il 65% (genitore o fratellini
+                      del minore per il quale è stato chiesto il nido);
+                    </p>
                   </li>
                   <li>
                     <p>
-                    situazione lavorativa di particolare disagio dei genitori
-                    (sede di lavoro oltre i 25 Km calcolati dal centro della
-                    città - sede municipio; orario di lavoro: turnista solo se
-                    articolato su tre turni);</p>
+                      situazione lavorativa di particolare disagio dei genitori
+                      (sede di lavoro oltre i 25 Km calcolati dal centro della
+                      città - sede municipio; orario di lavoro: turnista solo se
+                      articolato su tre turni);
+                    </p>
                   </li>
                 </ul>
               </li>
               <li>
-                <p>Copia del documento di identità del genitore che presenta
-                l'istanza, in corso di validità.</p>
+                <p>
+                  Copia del documento di identità del genitore che presenta
+                  l'istanza, in corso di validità.
+                </p>
               </li>
               <li>
-                <p>Copia del permesso di soggiorno in corso di validità, nel caso
-                di cittadino extracomunitario.</p>
+                <p>
+                  Copia del permesso di soggiorno in corso di validità, nel caso
+                  di cittadino extracomunitario.
+                </p>
               </li>
             </ul>
           </div>
@@ -463,21 +382,30 @@ title: Template Servizio Comunale
                 </div>
               </div>
               <div class="avatar size-xl">
-                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlo Poli">
+                <img
+                  src="https://randomuser.me/api/portraits/men/33.jpg"
+                  alt="Carlo Poli"
+                />
               </div>
             </div>
           </div>
         </article>
         <article id="documenti" class="anchor-offset mt-5">
           <h4>Documenti</h4>
-          <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-2">
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-2"
+          >
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="#">Avviso pubblico di iscrizione - Anno educativo 2018/2019</a>
+                  <a href="#"
+                    >Avviso pubblico di iscrizione - Anno educativo 2018/2019</a
+                  >
                 </h5>
                 <div class="card-text">
                   <p>Avviso e documenti allegati</p>
@@ -486,20 +414,27 @@ title: Template Servizio Comunale
             </div>
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="#">Guida informativa - Anno 2018/2019 </a>
                 </h5>
                 <div class="card-text">
-                  <p>Modalità di iscrizione, elenco asili, calendario scolastico e modalità di pagamento rette</p>
+                  <p>
+                    Modalità di iscrizione, elenco asili, calendario scolastico
+                    e modalità di pagamento rette
+                  </p>
                 </div>
               </div>
             </div>
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">
@@ -517,11 +452,21 @@ title: Template Servizio Comunale
           <div class="callout">
             <div class="callout-title">
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
+                <use
+                  xlink:href="{{
+                    site.baseurl
+                  }}/dist/svg/sprite.svg#it-info-circle"
+                ></use>
               </svg>
             </div>
-            <p>La pubblicazione dell'avviso riguardante le nuove iscrizioni per l'anno scolastico 2019/2020 è prevista per il mese di aprile 2019.</p>
-            <p>Contatta il Comune per avere ulteriori informazioni attraverso il servizio di assistenza telefonica.</p>
+            <p>
+              La pubblicazione dell'avviso riguardante le nuove iscrizioni per
+              l'anno scolastico 2019/2020 è prevista per il mese di aprile 2019.
+            </p>
+            <p>
+              Contatta il Comune per avere ulteriori informazioni attraverso il
+              servizio di assistenza telefonica.
+            </p>
             <h6>Numero Verde: 800 800 800</h6>
             <h6><a href="#">Ufficio Relazioni con il Pubblico</a></h6>
           </div>
@@ -534,98 +479,7 @@ title: Template Servizio Comunale
       </section>
     </div>
   </div>
-  <section id="contenuti-correlati">
-    <div class="section section-muted section-inset-shadow">
-      <div class="section-content">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3 class="text-center">Contenuti correlati</h3>
-            </div>
-          </div>
-          <div class="row mt-lg-4">
-            <div class="col">
-              <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Amministrazione
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Area servizi civici</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Servizi
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Pagamento retta scolastica</span></a></li>
-                        <li><a class="list-item" href="#"><span>Servizio di trasporto scolastico</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Documenti
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Attestazione ISEE</span></a></li>
-                        <li><a class="list-item" href="#"><span>Carta dei servizi educativi all'infanzia</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-teaser card-column shadow my-3 rounded">
-                  <div class="card-header">
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
-                    </svg>
-                    <h5 class="card-title">
-                      Notizie
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="link-list-wrapper mt-3">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                        <li><a class="list-item" href="#"><span>Lorem ipsum dolor sit amet</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include esempi/correlati.html %}
 </main>
 
 {% include esempi/footer.html %}
