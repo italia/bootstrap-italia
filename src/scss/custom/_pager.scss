@@ -4,6 +4,10 @@ nav.pagination-wrapper {
   flex-wrap: wrap;
   justify-content: center;
 
+  a {
+    text-decoration: none;
+  }
+
   //total number version
   &.pagination-total {
     display: inline-flex;

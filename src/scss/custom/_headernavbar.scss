@@ -22,6 +22,9 @@
       bottom: -$header-nav-icon-arrow-megamenu-distance;
     }
     nav {
+      a {
+        text-decoration: none;
+      }
       .navbar-collapsable {
         .menu-wrapper {
           background: transparent;

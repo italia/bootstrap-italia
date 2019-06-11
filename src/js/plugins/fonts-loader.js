@@ -190,4 +190,4 @@ styleNode.innerHTML = `
 }
 `
 
-document.body.appendChild(styleNode)
+document.getElementsByTagName('head')[0].appendChild(styleNode);
