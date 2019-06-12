@@ -41,6 +41,5 @@
       url: template-pagina-notizia
       description: 'Una sottopagina di esempio per una notizia'
       status: work in progress
-
 - category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.3/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
