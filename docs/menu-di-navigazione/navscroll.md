@@ -19,6 +19,8 @@ La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento
 Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
+Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
+
 **[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="_blank"}**
 
 
