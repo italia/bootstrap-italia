@@ -127,6 +127,10 @@
     .filter-option {
       position: relative;
 
+      .filter-option-inner {
+        display: flex;
+      }
+
       .filter-option-inner-inner {
         display: flex;
         align-items: center;
