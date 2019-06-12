@@ -33,6 +33,9 @@
     - name: Template Servizio Comunale
       url: template-servizio-comunale
       description: 'Una sottopagina di esempio per un servizio comunale'
+    - name: Template Evento Comunale
+      url: template-evento-comunale
+      description: 'Una sottopagina di esempio per un evento comunale'
       status: work in progress
 
 - category: Esempi dal sito ufficiale di Bootstrap 4

@@ -37,7 +37,8 @@ $(function() {
   // navscroll item on scroll
   $(window)
     .on('scroll', function() {
-      var scrollDistance = $(window).scrollTop()
+      var sectionsContainerTop = $('.it-page-sections-container').length ? $(".it-page-sections-container").offset().top : 0
+      var scrollDistance = $(window).scrollTop() - sectionsContainerTop
       // Assign active class to nav links while scolling
       $('.it-page-section').each(function(i) {
         if ($(this).position().top <= scrollDistance) {

@@ -1,0 +1,65 @@
+.point-list-wrapper {
+  .point-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .point-list-aside {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+
+        top: 50%;
+        right: -5px;
+        transform: translateY(-5px);
+        border-radius: 50%;
+        background-color: $primary;
+      }
+
+      color: $primary;
+      border-right: 1px solid $primary;
+
+      .point-date {
+        flex: 1;
+        font-size: 2.75rem;
+        line-height: 1.1;
+      }
+
+      .point-month {
+        flex: 1;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      @each $color, $value in $theme-colors {
+        &.point-list-#{$color} {
+          color: $value;
+          border-right: 1px solid $value;
+
+          &:after {
+            background-color: $value;
+          }
+        }
+      }
+    }
+
+    .point-list-content {
+      flex: 1;
+      margin-left: 2em;
+      align-self: center;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}
