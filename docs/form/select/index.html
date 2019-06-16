@@ -12,14 +12,14 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201906041237" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201906160611" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201906041237" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201906160611" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -87,29 +87,29 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="navbar-toggler-icon"></span>
   </button>
   <div>
-    <a class="navbar-brand" href="http://www.agid.gov.it/">AgID</a>
+    <a class="navbar-brand text-decoration-none" href="http://www.agid.gov.it/">AgID</a>
     <span class="navbar-brand text-white"> + </span>
-    <a class="navbar-brand" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
+    <a class="navbar-brand text-decoration-none" href="https://teamdigitale.governo.it/">Team <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarsTop">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item nav-item-w-divider">
-        <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+        <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+        <a class="nav-link text-decoration-none" href="https://developers.italia.it/">Developers</a>
       </li>
       <li class="nav-item nav-item-w-divider">
-        <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+        <a class="nav-link text-decoration-none" href="http://designers.italia.it/">Designers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+        <a class="nav-link text-decoration-none" href="https://forum.italia.it/">Forum</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://docs.italia.it/">Docs</a>
+        <a class="nav-link text-decoration-none" href="https://docs.italia.it/">Docs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+        <a class="nav-link text-decoration-none" href="https://github.com/italia/">GitHub</a>
       </li>
     </ul>
   </div>
@@ -117,7 +117,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
   <div class="container-fluid">
-    <a class="navbar-brand py-2" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+    <a class="navbar-brand py-2 text-decoration-none" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
       <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
   
    height="48"
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.2.11/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -503,7 +503,6 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
 <li class="toc-entry toc-h3"><a href="#select-multipla">Select Multipla</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-gruppi">Select con gruppi</a></li>
-<li class="toc-entry toc-h3"><a href="#select-multipla-con-gruppi-e-checkboxes">Select multipla con gruppi e checkboxes</a></li>
 <li class="toc-entry toc-h3"><a href="#modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</a></li>
 </ul>
   </div>
@@ -626,7 +625,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
+  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -637,7 +636,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Search here..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Cerca opzioni"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Duis vestibulum eleifend libero<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Phasellus pretium orci sed odio tempus<span class="nt">&lt;/option&gt;</span>
@@ -741,45 +740,6 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="select-multipla-con-gruppi-e-checkboxes">Select multipla con gruppi e checkboxes</h3>
-
-<p>Per la creazione di questo tipo di select:</p>
-
-<p>Aggiungere la classe <code class="highlighter-rouge">.no-tick</code> al div <code class="highlighter-rouge">.bootstrap-select-wrapper</code> per disabilitare la “spunta” sulla destra della option.</p>
-
-<p>Se si vogliono aggiungere i pulsanti per la selezione / deselezione di tutte le opzioni disponibili, aggiungere alla select l’attributo <code class="highlighter-rouge">data-actions-box="true"</code></p>
-
-<p>Per inserire il componente <a href="/bootstrap-italia/docs/form/checkbox/">Checkbox</a> inseriamo all’interno delle opzioni l’attributo <code class="highlighter-rouge">data-content</code> l’html del componente checkbox.</p>
-
-<div class="bd-example">
-<div class="bootstrap-select-wrapper no-tick">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
-    <optgroup label="Gruppo 1">
-      <option value="1" data-content="&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox1' &gt;&lt;label for='checkbox1'&gt;Label di esempio 1&lt;/label&gt;&lt;/span&gt;" check-id="checkbox1"></option>
-      <option value="2" data-content="&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox2' &gt;&lt;label for='checkbox2'&gt;Label di esempio 2&lt;/label&gt;&lt;/span&gt;" check-id="checkbox2"></option>
-    </optgroup>
-    <optgroup label="Gruppo 2">
-      <option value="3" data-content="&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox3' &gt;&lt;label for='checkbox3'&gt;Label di esempio 3&lt;/label&gt;&lt;/span&gt;" check-id="checkbox3"></option>
-      <option value="4" data-content="&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox4' &gt;&lt;label for='checkbox4'&gt;Label di esempio 4&lt;/label&gt;&lt;/span&gt;" check-id="checkbox4"></option>
-    </optgroup>
-  </select>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper no-tick"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">multiple=</span><span class="s">"true"</span> <span class="na">data-multiple-separator=</span><span class="s">""</span> <span class="na">data-actions-box=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox1' &gt;&lt;label for='checkbox1'&gt;Label di esempio 1&lt;/label&gt;&lt;/span&gt;"</span> <span class="na">check-id=</span><span class="s">"checkbox1"</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox2' &gt;&lt;label for='checkbox2'&gt;Label di esempio 2&lt;/label&gt;&lt;/span&gt;"</span> <span class="na">check-id=</span><span class="s">"checkbox2"</span><span class="nt">&gt;&lt;/option&gt;</span>
-    <span class="nt">&lt;/optgroup&gt;</span>
-    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 2"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox3' &gt;&lt;label for='checkbox3'&gt;Label di esempio 3&lt;/label&gt;&lt;/span&gt;"</span> <span class="na">check-id=</span><span class="s">"checkbox3"</span><span class="nt">&gt;&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='form-check' aria-describedby=''&gt;&lt;input type='checkbox' data-id='checkbox4' &gt;&lt;label for='checkbox4'&gt;Label di esempio 4&lt;/label&gt;&lt;/span&gt;"</span> <span class="na">check-id=</span><span class="s">"checkbox4"</span><span class="nt">&gt;&lt;/option&gt;</span>
-    <span class="nt">&lt;/optgroup&gt;</span>
-  <span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
 <h3 id="modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</h3>
 
 <p>Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione <code class="highlighter-rouge">$.setOptionsToSelect(_parametro)</code> che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev’essere chiamata dall’elemento con classe <code class="highlighter-rouge">.bootstrap-select-wrapper</code>, e con parametro in input <code class="highlighter-rouge">_parametro</code> un oggetto Javascript con proprietà “value” e “text” come segue:</p>
@@ -815,11 +775,11 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201906041237"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201906160611"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201906041237"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201906160611"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -834,7 +794,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201906041237"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201906160611"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
