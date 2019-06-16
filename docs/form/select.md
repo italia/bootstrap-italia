@@ -83,7 +83,7 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
+  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -155,6 +155,8 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}
+{% TODO questo esempio è stato temporaneamente rimosso perché potenzialmente a rischio di XSS %}
 ### Select multipla con gruppi e checkboxes
 
 Per la creazione di questo tipo di select:
@@ -180,6 +182,8 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
   </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+{% endcomment %}
 
 ### Modifica dinamica del campi della select
 
