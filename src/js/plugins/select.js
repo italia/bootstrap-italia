@@ -54,18 +54,21 @@ $(function() {
     .find('button.dropdown-toggle')
     .removeAttr('role')
     // Replace any <div>s elements with <span>s as <div>s are not allowed in a button element
+  $selectWrapper
     .find('div.filter-option')
     .replaceWith(function() {
       return $('<span />')
         .addClass('filter-option')
         .append($(this).contents())
     })
+  $selectWrapper
     .find('div.filter-option-inner')
     .replaceWith(function() {
       return $('<span />')
         .addClass('filter-option-inner')
         .append($(this).contents())
     })
+  $selectWrapper
     .find('div.filter-option-inner-inner')
     .replaceWith(function() {
       return $('<span />')
@@ -77,6 +80,7 @@ $(function() {
   $selectWrapper
     .find('.dropdown-menu')
     .attr('aria-expanded', 'false')
+  $selectWrapper
     // Enter a title in the input search
     .find('.bs-searchbox input')
     .attr('title', 'Cerca')
