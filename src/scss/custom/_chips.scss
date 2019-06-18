@@ -67,7 +67,7 @@
     min-width: 120px;
     border-radius: $v-gap * 2;
     padding: 2px $v-gap * 3 0 $v-gap * 2;
-    margin-right: $v-gap;
+    margin: $v-gap/2 $v-gap $v-gap/2 auto;
     //label
     .chip-label {
       font-size: 1rem;
@@ -108,6 +108,7 @@
   //label only version
   &.chip-simple {
     padding-right: $v-gap;
+    margin: $v-gap/2 auto;
   }
 
   //hover state--------------------------------

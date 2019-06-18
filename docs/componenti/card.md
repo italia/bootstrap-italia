@@ -312,21 +312,71 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 
 ## Card con immagine
 
-La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.  
-L'elemento immagine  è `.img-responsive-wrapper`.  
-Le proporzioni ottimali dell'immagine per questa card sono 31:19, si consiglia in ogni caso un immagine orizzontale.  
+La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.
+
+L'elemento immagine  è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un immagine orizzontale.  
 Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile escludendo il resto dell'immagine e centrandola nell'elemento.
+
+È anche possibile aggiungere un piccolo box con l'indicazione della data, per card di tipo _evento_.
 
 {% capture example %}
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
+      <div class="card card-img no-after">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive">
+            <figure class="img-wrapper">
+              <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+            </figure>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+          <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-6">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card card-img no-after">
+        <div class="img-responsive-wrapper">
+          <div class="img-responsive img-responsive-panoramic">
+            <figure class="img-wrapper">
+              <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+            </figure>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+          <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-6">
+      <!--start card-->
+      <div class="card-wrapper">
         <div class="card card-img no-after">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper">
-                <img src="https://via.placeholder.com/310x190/ebebeb/808080/?text=Immagine" title="img title" alt="imagealt">
+              <figure class="img-wrapper">
+                <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              </figure>
+              <div class="card-calendar d-flex flex-column justify-content-center">
+                <span class="card-date">31</span>
+                <span class="card-day">dicembre</span>
               </div>
             </div>
           </div>
@@ -339,8 +389,34 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           </div>
         </div>
       </div>
-    <!--end card-->
-  </div>
+      <!--end card-->
+    </div>
+    <div class="col-12 col-lg-6">
+      <!--start card-->
+      <div class="card-wrapper">
+        <div class="card card-img no-after">
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive img-responsive-panoramic">
+              <figure class="img-wrapper">
+                <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              </figure>
+              <div class="card-calendar d-flex flex-column justify-content-center">
+                <span class="card-date">31</span>
+                <span class="card-day">novembre</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+              <svg class="icon">
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <!--end card-->
+    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -358,7 +434,9 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
       <a class="card card-img no-after special-card" href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/310x190/ebebeb/808080/?text=Immagine" title="img title" alt="imagealt"></div>
+            <figure class="img-wrapper">
+              <img src="https://via.placeholder.com/174x214/F9F9FE/0066CC/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+            </figure>
           </div>
         </div>
         <div class="card-body">
@@ -400,7 +478,7 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
   <!--start card-->
   <div class="card card-teaser rounded shadow">
     <svg class="icon">
-      <use xlink:href="/dist/svg/sprite.svg#it-clip"></use>
+      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
     </svg>
     <div class="card-body">
       <h5 class="card-title">
