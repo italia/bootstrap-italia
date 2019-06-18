@@ -152,7 +152,7 @@
         color: $card-link-color;
       }
     }
-    p.card-text {
+    .card-text {
       font-family: $font-family-serif;
       font-size: $card-p-size;
       line-height: $card-p-l-h;
@@ -351,7 +351,7 @@
         font-size: $card-big-h5-size;
         line-height: $card-big-h5-l-h;
       }
-      p.card-text {
+      .card-text {
         font-size: $card-big-p-size;
         line-height: $card-big-p-l-h;
       }
@@ -417,12 +417,11 @@
   }
 
   &.card-teaser {
-    // display: flex;
     display: inline-flex;
     width: auto;
     flex-direction: row;
     align-items: flex-start;
-    // border: 1px solid $card-border-color;
+    padding: 24px;
 
     &:after {
       content: none;
@@ -608,7 +607,7 @@ a.read-more {
       margin: 0;
     }
     .card-body {
-      p.card-text {
+      .card-text {
         font-size: $card-p-size-desk;
       }
       h5.card-title {
