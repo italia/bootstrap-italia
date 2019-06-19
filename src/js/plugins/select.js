@@ -44,7 +44,7 @@ $(function() {
   // Fixes for W3C and WCAG 2.0 compliance:
   var $selectWrapper = $('.bootstrap-select-wrapper')
 
-  // Enter generic and non-visible texts for empty options
+  // Enter generic and non-visible text for empty options
   $selectWrapper
     .find('select option.bs-title-option')
     .text('Nessuna opzione')
@@ -52,7 +52,7 @@ $(function() {
     .find('select option[data-content]')
     .text('Annulla');
 
-  // Remove the wrong role="combobox" from the dropdown button
+  // Remove the role="combobox" from the dropdown button
   $selectWrapper
     .find('button.dropdown-toggle')
     .removeAttr('role')
@@ -80,7 +80,7 @@ $(function() {
         .append($(this).contents())
     })
 
-  // Add title and WAI-ARIA attribute in the input search
+  // Add title and WAI-ARIA attribute for the input search
   $selectWrapper
     .find('.bs-searchbox input')
     .attr('title', 'Cerca')
