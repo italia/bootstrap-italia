@@ -80,8 +80,9 @@ $(function() {
         .append($(this).contents())
     })
 
-  // Add WAI-ARIA attribute in the input search
+  // Add title and WAI-ARIA attribute in the input search
   $selectWrapper
     .find('.bs-searchbox input')
+    .attr('title', 'Cerca')
     .attr('aria-expanded', 'false')
 })
