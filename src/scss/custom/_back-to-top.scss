@@ -36,7 +36,7 @@
     position: relative;
     transform: scale(0.75);
     top: 4px;
-    &:before  {
+    &:before {
       margin: 0;
       color: $white;
     }
@@ -58,7 +58,7 @@
 
     //caret
     .icon {
-      &:before  {
+      &:before {
         color: $neutral-1-a8;
       }
     }
