@@ -57,4 +57,4 @@ function App() {
 export default App;
 ```
 
-In questo semplice e veloce esempio in _React_, il bottone con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il **.primary** default blu.
+In questo semplice e veloce esempio in _React_ e **create-react-app**, il bottone con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il **.primary** default blu.
