@@ -12,7 +12,9 @@ Un esempio fra tutti è il valore del colore **\$primary** che in **Bootstrap It
 
 Ci si può trovare però nella condizione di dover utilizzare **Bootstrap Italia** e voler personalizzare ulteriormente i valori delle variabili, impostando nuovi valori per le proprie necessità.
 
-_**N.B.** L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria._
+#### Note sull'utilizzo
+
+_L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un **link** nella parte **<head>...</head>** del codice HTML ma va importata fisicamente in una applicazione pre-processata attraverso un tool di bundling come Gulp, Webpack, ecc. che ne gestisca la compilazione._
 
 #### Passi da seguire per sovrascrivere le variabili
 
@@ -36,3 +38,23 @@ $font-family-sans-serif: 'Custom-font', Arial, Verdana, sans-serif;
 ```
 
 Al termine della compilazione, nei file _\*.js_ **importare custom-bootstrap.scss** laddove serva utilizzare la libreria **Bootstrap-Italia**.
+
+```
+import React from "react";
+import "./scss/custom-bootstrap.scss";
+import "./App.css";
+
+function App() {
+  return (
+    <div className="App">
+      <button className="btn btn-primary">
+        Button
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In questo semplice e veloce esempio in _React_, il bottone con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il **.primary** default blu.
