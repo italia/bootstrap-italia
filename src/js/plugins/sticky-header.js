@@ -7,12 +7,12 @@
 
   if (!!elSticky) {
     function isHidden(el) {
-      let _ret = false
+      let hidden = false
       if (el) {
         const style = window.getComputedStyle(el)
-        _ret = style.display === 'none' || style.visibility === 'hidden'
+        hidden = style.display === 'none' || style.visibility === 'hidden'
       }
-      return _ret
+      return hidden
     }
 
     const elToggler = document.querySelector('.custom-navbar-toggler')
@@ -23,7 +23,7 @@
 
     let runCheckSticky = undefined
 
-    const initSticky = (isDesktop, isResized = false) => {
+    const initSticky = isDesktop => {
       const elSlim = document.querySelector('.it-header-slim-wrapper')
       const elCenter = document.querySelector('.it-header-center-wrapper')
       const elNavbar = document.querySelector('.it-header-navbar-wrapper')
@@ -101,22 +101,7 @@
       }
 
       window.addEventListener('scroll', runCheckSticky)
-
-      if (isResized && isSticky) {
-        window.scrollTo(0, 0)
-        toggleOff()
-      }
     }
-
-    const onResize = () => {
-      if (runCheckSticky) {
-        window.removeEventListener('scroll', runCheckSticky)
-        const stillDesktop = isHidden(elToggler)
-        initSticky(stillDesktop, true)
-      }
-    }
-
-    window.addEventListener('resize', onResize)
 
     initSticky(isDesktop)
   }
