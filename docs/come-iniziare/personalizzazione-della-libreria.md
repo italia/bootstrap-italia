@@ -14,7 +14,7 @@ Ci si può trovare però nella condizione di dover utilizzare **Bootstrap Italia
 
 #### Note sull'utilizzo
 
-_L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un **link** nella parte **<head>...</head>** del codice HTML ma va importata fisicamente in una applicazione pre-processata attraverso un tool di bundling come Gulp, Webpack, ecc. che ne gestisca la compilazione._
+_L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un **link** nella parte **<head>...</head>** del codice HTML ma va importata esplicitamente in una applicazione pre-processata attraverso un tool di bundling come Gulp, Webpack, ecc. che ne gestisca la compilazione._
 
 #### Passi da seguire per sovrascrivere le variabili
 
