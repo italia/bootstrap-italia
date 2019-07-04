@@ -12,14 +12,14 @@
 <title>Toolbar · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201906171403" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201907041454" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201906171403" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201907041454" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.2/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -182,6 +182,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
                       <span>Strumenti di compilazione</span></a>
+                  </li><li>
+                    <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/personalizzazione-della-libreria/">
+                      <span>Personalizzazione della libreria</span></a>
                   </li><li>
                     <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
                       <span>Modificare Componenti</span></a>
@@ -1197,7 +1200,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <ul>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-comment"></use></svg>
           <span class="toolbar-label">messaggi<span class="sr-only">da leggere</span></span>
@@ -1215,7 +1218,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-camera"></use></svg>
           <span class="toolbar-label">immagini<span class="sr-only">da visualizzare</span></span>
@@ -1233,7 +1236,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use></svg>
           <span class="toolbar-label">documenti</span>
         </button>
@@ -1250,7 +1253,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-locked"></use></svg>
           <span class="toolbar-label">privacy</span>
         </button>
@@ -1267,7 +1270,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"></use></svg>
           <span class="toolbar-label">altro</span>
         </button>
@@ -1289,7 +1292,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;ul&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-comment"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>messaggi<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>da leggere<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
@@ -1307,7 +1310,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-camera"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>da visualizzare<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
@@ -1325,7 +1328,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>documenti<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
@@ -1342,7 +1345,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-locked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>privacy<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
@@ -1359,7 +1362,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>altro<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
@@ -1385,7 +1388,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">messaggi</span>
-        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="sr-only">ci sono 42 nuovi messaggi da esaminare</span>
@@ -1406,7 +1409,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">immagini</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="sr-only">ci sono 42 nuove immagini da visualizzare</span>
@@ -1427,7 +1430,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">documenti</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
@@ -1444,7 +1447,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">privacy</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-locked"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
@@ -1461,7 +1464,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">preferiti</span>
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
@@ -1478,7 +1481,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
@@ -1500,7 +1503,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>messaggi<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle active"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle active"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>ci sono 42 nuovi messaggi da esaminare<span class="nt">&lt;/span&gt;</span>
@@ -1521,7 +1524,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>ci sono 42 nuove immagini da visualizzare<span class="nt">&lt;/span&gt;</span>
@@ -1542,7 +1545,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>documenti<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton3-med"</span><span class="nt">&gt;</span>
@@ -1559,7 +1562,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>privacy<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-locked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton4-med"</span><span class="nt">&gt;</span>
@@ -1576,7 +1579,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>preferiti<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton5-med"</span><span class="nt">&gt;</span>
@@ -1593,7 +1596,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>altro<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton6-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton6-med"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton6-med"</span><span class="nt">&gt;</span>
@@ -1618,7 +1621,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">messaggi</span>
-        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="sr-only">ci sono 42 nuovi messaggi da esaminare</span>
@@ -1639,7 +1642,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">immagini</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="sr-only">ci sono 42 nuove immagini da visualizzare</span>
@@ -1660,7 +1663,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <li>
       <div class="dropdown">
         <span class="sr-only">documenti</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-file"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
@@ -1677,7 +1680,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<li>
       <div class="dropdown">
         <span class="sr-only">privacy</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-locked"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
@@ -1694,7 +1697,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<li>
       <div class="dropdown">
         <span class="sr-only">preferiti</span>
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
@@ -1711,7 +1714,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<li>
       <div class="dropdown">
         <span class="sr-only">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
@@ -1733,7 +1736,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>messaggi<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle active"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle active"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>ci sono 42 nuovi messaggi da esaminare<span class="nt">&lt;/span&gt;</span>
@@ -1754,7 +1757,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton2-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>ci sono 42 nuove immagini da visualizzare<span class="nt">&lt;/span&gt;</span>
@@ -1775,7 +1778,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>documenti<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton3-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton3-sml"</span><span class="nt">&gt;</span>
@@ -1792,7 +1795,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>privacy<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton4-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-locked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton4-sml"</span><span class="nt">&gt;</span>
@@ -1809,7 +1812,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>preferiti<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle disabled"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton5-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton5-sml"</span><span class="nt">&gt;</span>
@@ -1826,7 +1829,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 	<span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>altro<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton6-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle toolbar-more"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton6-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-more-actions"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton6-sml"</span><span class="nt">&gt;</span>
@@ -1861,7 +1864,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
           <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-comment"></use></svg>
           <span class="toolbar-label">immagini<span class="sr-only">da visualizzare</span></span>
@@ -1910,7 +1913,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-big"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-big"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-comment"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>da visualizzare<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
@@ -1965,7 +1968,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <span class="sr-only">immagini</span>
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
@@ -2020,7 +2023,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-vert"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton-vert"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -2078,7 +2081,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <span class="sr-only">immagini</span>
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
@@ -2139,7 +2142,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton1-vert-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton1-vert-sml"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">title=</span><span class="s">"Azione"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"badge-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-badge"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -2203,11 +2206,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201906171403"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201907041454"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201906171403"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201907041454"></script>
 
 
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -2222,7 +2225,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201906171403"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201907041454"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
