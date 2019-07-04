@@ -101,6 +101,8 @@
       }
 
       window.addEventListener('scroll', runCheckSticky)
+
+      runCheckSticky()
     }
 
     initSticky(isDesktop)
