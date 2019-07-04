@@ -172,6 +172,14 @@
         }
       }
     }
+
+    &.link-list-no-pad {
+      li {
+        a {
+          padding: 0;
+        }
+      }
+    }
   }
 }
 //small - tablet

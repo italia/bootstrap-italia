@@ -1,0 +1,148 @@
+---
+layout: base
+title: Template Lista Argomenti
+---
+
+{% assign section = "servizi" %} {% include esempi/comuni/header.html %}
+
+<main>
+  <div class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-2">
+        <nav class="breadcrumb-container" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Lista Argomenti</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 px-lg-2 py-lg-2">
+        <div class="row">
+          <div class="col">
+            <h1>Argomenti</h1>
+            <p>
+              Gli argomenti rispondono a un'esigenza di organizzazione dei
+              contenuti del sito istituzionale per temi e rappresentano le
+              principali categorie di contenuti, informazioni e documenti
+              specifici.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col py-5">
+            <div class="input-search-wrapper">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  id="input-1"
+                  type="text"
+                  placeholder="Cerca argomenti"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-primary btn-icon"
+                    type="button"
+                    id="button-search"
+                  >
+                    <svg class="icon icon-white">
+                      <use xlink:href="/dist/svg/sprite.svg#it-search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col pb-5">
+            <h6><small>Filtri</small></h6>
+            <button type="button" class="btn btn-primary btn-sm">Tutto</button>
+            <button type="button" class="btn btn-outline-primary btn-sm">
+              ...
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-2">
+        <h6 class="text-uppercase">Più consultati</h6>
+        <div class="link-list-wrapper mt-3">
+          <ul class="link-list link-list-no-pad">
+            <li>
+              <a class="list-item" href="#"><span>Muoversi</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>La città che cambia</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Cultura</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="in-evidenza">
+    <div class="section section-muted section-inset-shadow">
+      <div class="section-content">
+        <div class="container">
+          <div class="px-3">
+            <div class="row">
+              <div class="col">
+                <h3>In evidenza</h3>
+              </div>
+            </div>
+            <div class="row mt-lg-4">
+              <div class="col">
+                <div class="img-masonry">
+                  <img
+                    src="https://picsum.photos/300/490"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/190"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/300"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/180"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/200"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/280"
+                    alt="img"
+                    class="rounded"
+                  />
+                  <img
+                    src="https://picsum.photos/300/400"
+                    alt="img"
+                    class="rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include esempi/comuni/footer.html %}
