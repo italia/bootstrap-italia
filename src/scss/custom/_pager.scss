@@ -26,14 +26,6 @@ nav.pagination-wrapper {
     }
   }
 
-  &.pagination-center {
-    justify-content: center !important;
-  }
-
-  &.pagination-right {
-    justify-content: flex-end !important;
-  }
-
   //jump to page
   .form-group {
     margin-left: $pager-item-size-mobile;
