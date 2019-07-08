@@ -68,13 +68,17 @@
           const gap = navOffsetTop + parentPaddingTop
 
           // Check if the element is actually in a sticky position
-          if (!isSticky && distanceToTop <= navOffsetTop) {
+          // if (!isSticky && distanceToTop <= navOffsetTop) {
+          if (distanceToTop <= navOffsetTop) {
             isSticky = true
             elSticky.classList.add('is-sticky')
             elSticky.style.top = getPosition(navBottom, gap, 'top')
             elSticky.style.bottom = getPosition(navBottom, gap, 'bottom')
-            if (isDesktop)
+            if (isDesktop) {
               elSticky.style.width = parentWidth - parentPaddingWidth + 'px'
+            } else {
+              elSticky.style.width = ''
+            }
           } else if (isSticky && distanceToTop > navOffsetTop) {
             isSticky = false
             elSticky.classList.remove('is-sticky')
@@ -106,6 +110,8 @@
       }
 
       window.addEventListener('scroll', runCheckOnScroll)
+
+      runCheckOnScroll()
     }
 
     const onResize = () => {

@@ -27,20 +27,3 @@
     }
   }
 }
-
-// Masonry layout
-
-.img-masonry {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 1140px;
-  max-height: 65vh;
-
-  img {
-    width: 31%;
-    margin: 1%;
-    height: auto;
-  }
-}
