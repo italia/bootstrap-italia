@@ -54,6 +54,9 @@
       url: template-novita-notizia
       description: 'Una sottopagina di esempio per una notizia'
       status: work in progress
+    - name: Template Lista Argomenti
+      url: template-lista-argomenti
+      description: 'Una pagina per la lista degli argomenti'
     - name: Template "Documenti"
       url: template-documenti
       description: 'La subhome del menu "Documenti"'
