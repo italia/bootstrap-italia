@@ -119,11 +119,11 @@ small,
 
 // Font Family
 .text-serif {
-  font-family: $font-family-serif;
+  font-family: $font-family-serif !important;
 }
 .text-sans-serif {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif !important;
 }
 .text-monospace {
-  font-family: $font-family-monospace;
+  font-family: $font-family-monospace !important;
 }

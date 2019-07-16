@@ -57,6 +57,10 @@
     - name: Template Lista Argomenti
       url: template-lista-argomenti
       description: 'Una pagina per la lista degli argomenti'
+    - name: Template Singolo Argomento
+      url: template-singolo-argomento
+      description: 'Una pagina per il singolo argomento'
+      status: work in progress
     - name: Template "Documenti"
       url: template-documenti
       description: 'La subhome del menu "Documenti"'
