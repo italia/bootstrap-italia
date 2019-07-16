@@ -2,6 +2,18 @@
   padding-bottom: $v-gap * 3;
   display: flex;
 
+  &.card-column {
+    flex-direction: column;
+
+    .card {
+      height: auto !important;
+
+      & + .card {
+        margin-top: 1rem;
+      }
+    }
+  }
+
   &.card-teaser-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -18,6 +30,10 @@
 
       &.border {
         border-color: $border-color;
+      }
+
+      &.card-teaser-image {
+        padding: 0 !important;
       }
     }
 
@@ -105,6 +121,22 @@
           flex: 0 0 24%;
         }
       }
+
+      &.card-teaser-start {
+        justify-content: flex-start !important;
+
+        .card-teaser + .card-teaser {
+          margin-left: 1.35rem;
+        }
+      }
+
+      &.card-teaser-end {
+        justify-content: flex-end !important;
+
+        .card-teaser + .card-teaser {
+          margin-left: 1.35rem;
+        }
+      }
     }
   }
 }
@@ -114,6 +146,19 @@
   padding: 0;
   position: relative;
   width: 100%;
+
+  @each $color, $value in $theme-colors {
+    &.card-bg-#{$color} {
+      background-color: $value;
+
+      .card-body {
+        .card-title,
+        .card-text {
+          color: $white;
+        }
+      }
+    }
+  }
 
   .card-body {
     padding: $card-padding;
@@ -249,8 +294,10 @@
   }
   // cards with img top
   &.card-img {
-    margin-left: $card-padding/3;
-    margin-right: $card-padding/3;
+    // Why the margin?
+    // margin-left: $card-padding/3;
+    // margin-right: $card-padding/3;
+
     &:after {
       //display: none;
     }
@@ -280,13 +327,13 @@
     width: 80px;
     border-radius: 4px;
     background-color: #fff;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 32px;
     top: 10%;
     color: #455a64;
     text-align: center;
-    font-size: .889em;
+    font-size: 0.889em;
     font-weight: 600;
     line-height: 1.3;
     text-transform: capitalize;
@@ -622,6 +669,9 @@ a.read-more {
     padding-bottom: 0;
     &.card-space {
       padding-bottom: $card-padding/2;
+    }
+    &.card-offset {
+      margin-top: 90px;
     }
   }
   .card {
