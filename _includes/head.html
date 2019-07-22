@@ -46,5 +46,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
+{% else %}
+<!-- Noindex -->
+<meta name="robots" content="noindex, nofollow">
 {% endif %}
 
