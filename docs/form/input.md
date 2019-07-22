@@ -28,7 +28,7 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
     <label for="exampleInputText">Campo di tipo testuale</label>
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
+    <input type="email" class="form-control" id="exampleInputEmail1">
     <label for="exampleInputEmail1">Campo di tipo email</label>
   </div>
   <div class="form-group">
