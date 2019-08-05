@@ -28,12 +28,12 @@
       const elCenter = document.querySelector('.it-header-center-wrapper')
       const elNavbar = document.querySelector('.it-header-navbar-wrapper')
 
-      const navbarHeight = elNavbar.offsetHeight
+      const navbarHeight = (elNavbar && elNavbar.offsetHeight) || 0
       const slimHeight = (elSlim && elSlim.offsetHeight) || 0
       let navOffsetTop = slimHeight
 
       if (isDesktop && navbarHeight) {
-        navOffsetTop = slimHeight + elCenter.offsetHeight
+        navOffsetTop = slimHeight + elCenter ? elCenter.offsetHeight : 0
       }
 
       const toggleClonedElement = (isDesktop, toAdd = true, callback) => {
