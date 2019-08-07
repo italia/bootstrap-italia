@@ -13,9 +13,6 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
-    - name: Sticky Header
-      url: sticky-header
-      description: Header con effetto sticky on scroll.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
