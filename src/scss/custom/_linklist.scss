@@ -115,6 +115,31 @@
             margin-right: $link-list-left-icon-space;
           }
         }
+
+        &.list-item {
+          &.icon-left {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            padding-left: 0;
+
+            .icon + * {
+              margin-top: $v-gap / 2;
+              margin-left: $v-gap;
+            }
+          }
+
+          &.active {
+            color: $primary-b3;
+            text-decoration: underline;
+
+            span {
+              color: $primary-b3;
+            }
+          }
+        }
       }
       h3 {
         font-size: $link-list-heading-size;

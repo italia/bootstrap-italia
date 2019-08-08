@@ -133,6 +133,14 @@
     flex-direction: column;
     justify-content: space-between;
 
+    // Tablet portrait
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &.row-border {
     @for $i from 1 through 6 {
       h#{$i} {
         border-bottom: 1px solid $border-color;
@@ -141,11 +149,7 @@
       }
     }
 
-    // Tablet portrait
     @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-      flex-direction: row;
-      align-items: flex-start;
-
       border-bottom: 1px solid $border-color;
       padding-bottom: 1rem;
       margin-bottom: 1rem;
@@ -158,6 +162,11 @@
         }
       }
     }
+  }
+
+  // Create row wrapper for sliding calendar
+  &.row-calendar {
+    display: block;
   }
 }
 

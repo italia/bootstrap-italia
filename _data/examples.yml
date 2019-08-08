@@ -13,9 +13,6 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
-    - name: Sticky Header
-      url: sticky-header
-      description: Header con effetto sticky on scroll.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
@@ -68,6 +65,10 @@
     - name: Template Risultato Ricerca
       url: template-risultato-ricerca
       description: 'Una pagina che mostra i risultati della ricerca'
+      status: work in progress
+    - name: Template Home Page
+      url: template-home-page
+      description: 'Un esempio di Home Page'
       status: work in progress
 - category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.3/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
