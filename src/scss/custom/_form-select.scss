@@ -35,6 +35,10 @@
 }
 
 .bootstrap-select {
+  &.form-control {
+    box-shadow: none;
+  }
+
   & > .dropdown-toggle.bs-placeholder {
     &,
     &:active,
