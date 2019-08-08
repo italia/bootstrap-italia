@@ -1375,4 +1375,4 @@ Affinché la testata rimanga parzialmente visibile anche allo scorrere della pag
 <div class="it-header-wrapper it-header-sticky"> ... </div>
 {% endhighlight %}
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-header/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+È disponibile una <a href="{{ site.baseurl }}/docs/esempi/template-comuni-vuoto/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.

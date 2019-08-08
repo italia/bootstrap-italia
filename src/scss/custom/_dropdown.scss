@@ -76,6 +76,7 @@
 
 .dropdown-menu {
   border-radius: 0 0 $dropdown-menu-radius $dropdown-menu-radius;
+  z-index: 8;
   //fullwidth menu
   &.full-width {
     width: 100%;
@@ -143,6 +144,9 @@
         }
         a.disabled span {
           color: $neutral-1-a4;
+        }
+        a.active span {
+          color: $analogue-2-a4;
         }
       }
     }
