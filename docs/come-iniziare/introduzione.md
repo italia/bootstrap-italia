@@ -12,19 +12,28 @@ description: Come usare Bootstrap Italia nel tuo progetto
 
 ## Caricare la libreria
 
-Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS e un Javascript, scaricabili sottoforma di file compresso alla [pagina delle release di progetto](https://github.com/italia/bootstrap-italia/releases): 
+Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui: 
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
+{% capture callout %}
+
+##### Importante!
+
+È sempre consigliabile utilizzare la **versione più recente della libreria e mantenerla aggiornata** sui propri progetti.
+
+Non usare semplicemente la versione 1.0.0! La versione più recente tra le [release di progetto](https://github.com/italia/bootstrap-italia/releases) contiene anche tutti i miglioramenti e le correzioni disponibili fino ad oggi.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager **npm**, puoi fare riferimento a [queste indicazioni]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
 
-Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di Bootstrap {{ site.bootstrap_version }}, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
+Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di **Bootstrap {{ site.bootstrap_version }}**, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
-La libreria è accessibile anche via CDN su jsDelivr: [![Boostrap Italia](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge)](https://www.jsdelivr.com/package/npm/bootstrap-italia), che è sconsigliato utilizzare in ambienti di produzione.
+La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/package/npm/bootstrap-italia) o [unpkg](https://unpkg.com/bootstrap-italia/), di cui però è sconsigliato l'utilizzo in ambienti di produzione.
 
 Di seguito le informazioni per l'utilizzo dei singoli file.
 
-### CSS e Fonts
+### CSS
 
 Una volta scaricato e decompresso il file, all'interno della cartella `css` sarà presente un file CSS minificato (`bootstrap-italia.min.css`) con la sua [sourcemap](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) (opzionale).
 
@@ -34,17 +43,9 @@ Per includere questo file all'interno del tuo progetto sarà quindi sufficiente 
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
-È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
-
-{% highlight html %}
-<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
-{% endhighlight %}
-
-Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
-
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie jQuery, popper.js e [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html) (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie *jQuery*, *popper.js* e *Owl Carousel* (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
 
 <table class="table table-bordered">
   <thead>
@@ -76,6 +77,22 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
 </table>
 
 In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
+
+
+### Fonts
+È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
+
+{% highlight html %}
+<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
+{% endhighlight %}
+
+Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
+
+### Icone
+
+Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG `/bootstrap-italia/dist/svg/`, le cui singole SVG sorgenti sono presenti nel repository.
+
+Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo delle icone]({{ site.baseurl }}/docs/utilities/icone/).
 
 #### Versione "bundle"
 
@@ -124,7 +141,11 @@ Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalit�
 
 ### Altri esempi
 
-Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione [esempi]({{ site.baseurl }}/docs/esempi/) di questo sito, che [sul sito di Bootstrap](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/examples/), con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente. Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella [cartella `docs/esempi/`](https://github.com/italia/bootstrap-italia/tree/master/docs/esempi).
+Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione [esempi]({{ site.baseurl }}/docs/esempi/) e [progetti]({{ site.baseurl }}/docs/progetti/) di questo sito, che [sul sito di Bootstrap](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/examples/), con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente.
+
+Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella [cartella `docs/esempi/`](https://github.com/italia/bootstrap-italia/tree/master/docs/esempi).
+
+Tra i [progetti]({{ site.baseurl }}/docs/progetti/) si possono trovare molti riferimenti a progetti terzi che fanno uso di Bootstrap Italia, come i temi per alcuni CMS, generatori di siti statici e framework per il web.
 
 ## Utilizzo come dipendenza
 

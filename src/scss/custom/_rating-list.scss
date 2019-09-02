@@ -1,0 +1,128 @@
+.rating-list-wrapper {
+  .rating-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .rating-list-aside {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      color: $primary;
+      border-right: 1px solid $primary;
+
+      .rating-value {
+        display: flex;
+        flex: 1.2;
+        font-size: 2.75rem;
+        line-height: 1;
+        align-items: flex-end;
+      }
+
+      .rating-total {
+        display: flex;
+        flex: 0.8;
+        font-size: 1rem;
+        line-height: 1;
+        text-transform: lowercase;
+        align-items: flex-start;
+      }
+
+      @each $color, $value in $theme-colors {
+        &.rating-list-#{$color} {
+          color: $value;
+          border-right: 1px solid $value;
+        }
+      }
+    }
+
+    .rating-list-content {
+      flex: 1;
+      align-self: center;
+
+      .rating-list-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .rating-list-stars {
+          flex: 0.3;
+
+          & > .rating {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            float: none !important;
+            height: 0.7em;
+
+            .icon {
+              width: 0.7em;
+              height: 0.7em;
+            }
+          }
+        }
+
+        .rating-list-progress {
+          flex: 0.65;
+          display: flex;
+          height: 0.7em * 5;
+
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+
+          & > .progress {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // Tablet portrait
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+      .rating-list-content {
+        .rating-list-row {
+          .rating-list-stars {
+            flex: 0.2;
+
+            & > .rating {
+              height: 1em;
+
+              .icon {
+                width: 1em;
+                height: 1em;
+              }
+            }
+          }
+
+          .rating-list-progress {
+            flex: 0.75;
+            height: 1em * 5;
+          }
+        }
+      }
+    }
+
+    // Tablet portrait
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      .rating-list-content {
+        .rating-list-row {
+          .rating-list-stars {
+            flex: 0.25;
+          }
+
+          .rating-list-progress {
+            flex: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

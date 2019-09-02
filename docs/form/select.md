@@ -11,21 +11,18 @@ Il plugin Javascript per costruire la select nelle sue varianti è basato su una
 
 ### Select classica
 
-La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dal div `.dropdown.bootstrap-select` che conterrà la select. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
+La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione">
-      <option class="bs-title-option" value=""></option>
-      <option value="Value 1">Opzione 1</option>
-      <option value="Value 2">Opzione 2</option>
-      <option value="Value 3">Opzione 3</option>
-      <option value="Value 4">Opzione 4</option>
-      <option value="Value 5">Opzione 5</option>
-    </select>
-  </div>
+  <select title="Scegli una opzione">
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -33,7 +30,6 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 
 {% capture example %}
 <select title="Scegli una opzione">
-  <option value=""></option>
   <option value="Value 1">Opzione 1</option>
   <option value="Value 2">Opzione 2</option>
   <option value="Value 3">Opzione 3</option>
@@ -44,14 +40,12 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 
 ### Select disabilitata
 
-Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` per stilare l'aspetto.
-Aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
+Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` e aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 
 {% capture example %}
 <div class="bootstrap-select-wrapper disabled">
   <label>Etichetta</label>
   <select disabled title="Scegli una opzione">
-    <option class="bs-title-option" value=""></option>
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -64,8 +58,8 @@ Aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funziona
 
 ### Select con reset
 
-Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:  
-`"Label del tasto reset <span class='reset-label'></span>"`  
+Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:
+`"Label del tasto reset <span class='reset-label'></span>"`
 
 All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
 
@@ -89,7 +83,7 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
+  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -126,20 +120,18 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 Per attivare la multiselezione, aggiungere gli attributi `multiple="true"` e `data-multiple-separator=""` alla select.
 
-Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.   
+Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
 `"<span class='select-pill'><span class='select-pill-text'>label option</span></span>"`
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <div class="dropdown bootstrap-select">
-    <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
-      <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
-      <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
-      <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
-      <option value="4" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 4</span></span>"></option>
-    </select>
-  </div>
+  <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
+    <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
+    <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
+    <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
+    <option value="4" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 4</span></span>"></option>
+  </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -163,6 +155,8 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}
+{% TODO questo esempio è stato temporaneamente rimosso perché potenzialmente a rischio di XSS %}
 ### Select multipla con gruppi e checkboxes
 
 Per la creazione di questo tipo di select:
@@ -189,5 +183,24 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% endcomment %}
 
+### Modifica dinamica del campi della select
+
+Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione `$.setOptionsToSelect(_parametro)` che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev'essere chiamata dall'elemento con classe `.bootstrap-select-wrapper`, e con parametro in input `_parametro` un oggetto Javascript con proprietà "value" e "text" come segue:
+
+{% highlight js %}
+$(document).ready(function() {
+    $('.bootstrap-select-wrapper.my-select-wrapper').setOptionsToSelect([{
+      text: 'push Label 1',
+      value: 'pushValue 1'
+    },{
+      text: 'push Label 2',
+      value: 'pushValue 2'
+    },{
+      text: 'push Label 3',
+      value: 'pushValue 3'
+    }]);
+  });
+{% endhighlight %}
 

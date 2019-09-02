@@ -2,6 +2,7 @@
   padding: 12px 24px;
   font-size: $btn-font-size;
   white-space: initial;
+  text-decoration: none;
 }
 
 .btn-xs,
@@ -35,6 +36,88 @@
 
 .btn-progress {
   position: relative;
+}
+
+.btn-icon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .rounded-icon {
+    width: 1.5em;
+    height: 1.5em;
+
+    .icon {
+      margin-right: 0;
+    }
+
+    @include border-radius(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $white;
+
+    @each $color, $value in $theme-colors {
+      &.rounded-#{$color} {
+        background-color: $value;
+      }
+    }
+
+    & + * {
+      margin-left: 0.5em;
+    }
+  }
+
+  .icon {
+    border: none;
+
+    width: 1.2em;
+    height: 1.2em;
+
+    & + * {
+      margin-left: 0.25em;
+    }
+  }
+}
+
+.btn-full {
+  border: none;
+  box-shadow: none;
+  line-height: 1.555;
+  @include border-radius(0);
+
+  width: inherit;
+  height: 100%;
+
+  margin-top: -$header-slim-button-v-padding;
+  margin-bottom: -$header-slim-button-v-padding;
+  margin-right: -$header-slim-button-v-padding;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  // Tablet vertical
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    padding: 16px;
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    padding: 12px 24px !important;
+    margin: 0;
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .btn-primary {

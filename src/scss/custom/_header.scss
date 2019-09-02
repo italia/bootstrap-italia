@@ -7,6 +7,8 @@
       padding-left: $v-gap * 4;
     }
     .it-header-navbar-wrapper {
+      transition: padding-top 0.3s ease;
+
       position: absolute;
       left: 0;
       top: 50%;
@@ -18,6 +20,121 @@
           padding: 0;
           transform: translateX(-2px);
           cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.it-header-sticky {
+    &.is-sticky {
+      .it-nav-wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10; //livello +10 del it-navscroll
+      }
+
+      @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+        .it-header-slim-wrapper,
+        .it-header-center-wrapper {
+          display: none;
+        }
+
+        .it-header-navbar-wrapper {
+          position: fixed;
+          width: 100%;
+          top: 0;
+
+          .menu-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .it-brand-wrapper {
+              align-self: center;
+
+              &.cloned {
+                .it-brand-text {
+                  display: none;
+                }
+
+                a {
+                  color: $header-center-text-color;
+                  &:hover {
+                    text-decoration: none;
+                  }
+                  .icon {
+                    fill: $header-center-text-color;
+                    width: $header-center-icon-size / 2;
+                    height: $header-center-icon-size / 2;
+                    margin-right: $header-center-icon-margin;
+                    flex-shrink: 0;
+                  }
+                }
+              }
+            }
+
+            .it-search-wrapper {
+              display: flex;
+              align-items: center;
+              align-self: center;
+              margin-left: $header-center-search-distance / 3;
+              font-size: $header-center-text-size;
+              color: $header-center-text-color;
+              a {
+                &.rounded-icon {
+                  width: $header-center-search-size;
+                  height: $header-center-search-size;
+                  border-radius: $header-center-search-radius;
+                  display: block;
+                  background: $header-center-text-color;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-left: $v-gap * 2;
+                  transition: all 0.3s;
+                  &:hover {
+                    background: darken($header-center-text-color, 5%);
+                  }
+                  svg {
+                    fill: $header-center-bg-color;
+                    width: $header-center-search-icon-size;
+                    height: $header-center-search-icon-size;
+                  }
+                }
+              }
+
+              &.cloned {
+                a {
+                  width: 35px;
+                  height: 35px;
+
+                  svg {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+
+            .navbar-nav {
+              flex: 1;
+
+              // hide navbar-secondary if header is sticky
+              &.navbar-secondary {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      // Fix stack context issue
+      & ~ * {
+        // fix plugin z-index value (in conflict with sticky header)
+        .owl-carousel {
+          z-index: auto;
         }
       }
     }

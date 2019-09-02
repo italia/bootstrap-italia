@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-check</title><path d="M19.78,7.8a.74.74,0,0,0-1.06,0l-7.6,7.6L7.76,12A.75.75,0,0,0,6.7,13.1l3.36,3.36a1.51,1.51,0,0,0,2.12,0l7.6-7.6A.75.75,0,0,0,19.78,7.8Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Check</title>
+  <g>
+    <path d="M9.6,16.9,4,11.4l.8-.7,4.8,4.8,8.5-8.4.7.7Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

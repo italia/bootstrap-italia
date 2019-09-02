@@ -1,0 +1,425 @@
+---
+layout: base
+title: Template Amministrazione
+---
+{%- assign section = "amministrazione" -%}
+{%- include esempi/comuni/header.html -%}
+<main>
+  <section id="briciole" class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-container">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li aria-current="page" class="breadcrumb-item active">
+              Amministrazione
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <section id="intro" class="container px-4 my-4">
+    <div class="row">
+      <div class="col-lg-8 px-lg-4 py-lg-2">
+        <h1>Amministrazione</h1>
+        <p>
+          Tutte le informazioni sulla Giunta e sul Consiglio comunale, uffici,
+          aree di competenza e personale, luoghi e servizi per il cittadino.
+        </p>
+        <div class="form-group mt-5">
+          <form>
+            <input id="ricerca-amministrazione" type="search">
+            <label for="ricerca-amministrazione">Cerca contenuti in
+              "Amministrazione"</label>
+            <span aria-hidden="true" class="autocomplete-icon">
+              <button type="submit" class="border-0">
+                <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+              </button>
+            </span>
+          </form>
+        </div>
+        <div id="filtri-ricerca-amministrazione">
+          <h6 class="small">Filtri</h6>
+          <div class="chip chip-lg">
+            <span class="chip-label">Tutto</span>
+            <button>
+              <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+              <span class="sr-only">Elimina label</span>
+            </button>
+          </div>
+          <div class="ml-2 d-inline">
+            <button class="btn btn-icon btn-outline-primary btn-sm align-top">
+              <svg class="icon icon-primary">
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus"></use>
+              </svg>
+              <span>Aggiungi filtro</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1 pt-5 pt-lg-2">
+        <div class="link-list-wrapper">
+          <ul class="link-list">
+            <li>
+              <h3 id="heading-senza-link">Tutta l'Amministrazione</h3>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Organi politici</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Aree amministrative</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Uffici</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Politici</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Funzionari amministrativi</span></a>
+            </li>
+            <li>
+              <a class="list-item" href="#"><span>Enti e fondazioni</span></a>
+            </li>
+            <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+              <span>Luoghi</span>
+              <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+              <ul class="link-sublist collapse" id="collapseOne">
+                <li><a class="list-item" href="#">Area storica e archeologica</a></li>
+                <li><a class="list-item" href="#">Area culturale</a></li>
+                <li><a class="list-item" href="#">Cinema</a></li>
+                <li><a class="list-item" href="#">Museo</a></li>
+                <li><a class="list-item" href="#">Parchi verdi</a></li>
+                <li><a class="list-item" href="#">Edifici di culto</a></li>
+                <li><a class="list-item" href="#">Ville e palazzi</a></li>
+                <li><a class="list-item" href="#">Monumenti</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="in-evidenza">
+    <div class="bg-100 py-5">
+      <div class="container px-4">
+        <div class="row">
+          <div class="col">
+            <h3 class="mb-4 text-primary">In evidenza</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+                  </svg>
+                  <span>Luoghi</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon invisible"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-user"></use>
+                  </svg>
+                  <span>Funzionari amministrativi</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon invisible"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+                  </svg>
+                  <span>Uffici</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon invisible"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+                  </svg>
+                  <span>Luoghi</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon invisible"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-user"></use>
+                  </svg>
+                  <span>Politici</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <article class="card-wrapper card-space">
+              <div class="card card-bg card-big rounded shadow">
+                <div class="flag-icon invisible"></div>
+                <div class="etichetta">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+                  </svg>
+                  <span>Luoghi</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!--end card-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="py-5">
+      <div class="container px-4">
+        <div class="row">
+          <div class="col">
+            <h3 class="mb-4 text-primary">Tutta l'Amministrazione</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Organi politici</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Aree Amministrative</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Uffici</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Politici</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Funzionari Amministrativi</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Enti e fondazioni</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Luoghi</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5">
+      <div class="container px-4">
+        <div class="row">
+          <div class="col">
+            <h3 class="mb-4 text-primary">Argomenti</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Cultura</span></span></a>
+            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Muoversi</span></span></a>
+            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Argomento di esempio</span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{%- include esempi/comuni/footer.html -%}

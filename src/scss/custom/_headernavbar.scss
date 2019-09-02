@@ -22,11 +22,29 @@
       bottom: -$header-nav-icon-arrow-megamenu-distance;
     }
     nav {
+      a {
+        text-decoration: none;
+      }
       .navbar-collapsable {
         .menu-wrapper {
           background: transparent;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
           .navbar-nav {
             padding: 0;
+
+            &.navbar-secondary {
+              display: flex;
+              justify-content: flex-end;
+
+              a {
+                font-size: 0.85em;
+                line-height: 1.6;
+              }
+            }
           }
         }
       }

@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-facebook</title><g><path d="M13.55,22V12.89h3.07l.46-3.56H13.55V7.05c0-1,.29-1.73,1.77-1.73h1.87V2.14A25.14,25.14,0,0,0,14.45,2C11.73,2,9.87,3.66,9.87,6.7V9.32H6.81v3.57H9.87V22Z"/></g></svg>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <title>Logo Facebook</title>
+  <g stroke="none" stroke-width="1">
+    <g>
+      <rect x="0" y="0" width="24" height="24" fill="none"></rect>
+    </g>
+    <path
+      d="M13.55,22 L13.55,12.89 L16.62,12.89 L17.08,9.33 L13.55,9.33 L13.55,7.05 C13.55,6.05 13.84,5.32 15.32,5.32 L17.19,5.32 L17.19,2.14 C16.2798958,2.0434941 15.3652008,1.99675786 14.45,2 C11.73,2 9.87,3.66 9.87,6.7 L9.87,9.32 L6.81,9.32 L6.81,12.89 L9.87,12.89 L9.87,22 L13.55,22 Z"
+    ></path>
+  </g>
+</svg>

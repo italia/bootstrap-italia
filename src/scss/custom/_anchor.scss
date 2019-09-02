@@ -1,0 +1,11 @@
+// Allows to give anchors an offset to be positioned below the sticky header
+.anchor-offset:before {
+  content: "";
+  display: block;
+  height: $anchor-v-offset;
+  margin-top: -$anchor-v-offset;
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    height: $anchor-v-offset-lg;
+    margin-top: -$anchor-v-offset-lg;
+  }
+}

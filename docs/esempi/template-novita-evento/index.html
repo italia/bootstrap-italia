@@ -1,0 +1,584 @@
+---
+layout: base
+title: Template Evento Comunale
+---
+
+{% assign section = "novità" %}
+
+{% include esempi/comuni/header.html %}
+
+<main>
+  <div class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-4">
+        <nav class="breadcrumb-container" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Novità</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="#">Eventi</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="#">Sagra di San Francesco</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 px-lg-4 py-lg-2">
+        <h1>Sagra di San Francesco</h1>
+        <h4 class="py-2">dal 01 maggio 2019 al 04 maggio 2019</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        {% include esempi/azioni_condividi.html %}
+        <div class="mt-4 mb-4">
+          <h6><small>Argomenti</small></h6>
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Cultura</span>
+            </div></a>
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Vivere la città</span>
+            </div></a>
+        </div>
+        <div class="mt-5">
+          <a href="#" class="btn btn-outline-primary btn-icon">
+            <svg class="icon icon-primary">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
+            </svg>
+            <span>Vai al calendario eventi</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row row-full-width my-3">
+      <figure class="figure">
+        <img src="https://picsum.photos/800/400" class="figure-img img-fluid" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+        <figcaption class="figure-caption text-center pt-3">Una didascalia per l'immagine sopra.</figcaption>
+      </figure>
+    </div>
+    <div class="row border-top row-column-border row-column-menu-left">
+      <aside class="col-lg-4">
+        <div class="sticky-wrapper navbar-wrapper">
+          <nav
+            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
+          >
+            <button
+              class="custom-navbar-toggler"
+              type="button"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              data-target="#navbarNav"
+            >
+              <span class="it-list"></span>Indice della pagina
+            </button>
+            <div class="navbar-collapsable" id="navbarNav">
+              <div class="overlay"></div>
+              <div class="close-div sr-only">
+                <button class="btn close-menu" type="button">
+                  <span class="it-close"></span>Chiudi
+                </button>
+              </div>
+              <a class="it-back-button" href="#">
+                <svg class="icon icon-sm icon-primary align-top">
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use>
+                </svg>
+                <span>Torna indietro</span></a
+              >
+              <div class="menu-wrapper">
+                <div class="link-list-wrapper menu-link-list">
+                  <h3 class="no_toc">Indice della pagina</h3>
+                  <ul class="link-list">
+                    <li class="nav-item active">
+                      <a class="nav-link active" href="#cos-e"
+                        ><span>Cos'è</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#luogo"
+                        ><span>Luogo</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#date-e-orari"
+                        ><span>Date e orari</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#costi"
+                        ><span>Costi</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#documenti"
+                        ><span>Documenti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contatti"
+                        ><span>Contatti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#appuntamenti"
+                        ><span>Appuntamenti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ulteriori-informazioni"
+                        ><span>Ulteriori informazioni</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <section class="col-lg-8 it-page-sections-container">
+        <article id="cos-e" class="it-page-section anchor-offset">
+          <h4>Cos'è?</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+            <div class="it-header-block">
+              <div class="it-header-block-title">
+                <h4 class="no_toc">Galleria immagini</h4>
+              </div>
+            </div>
+            <div class="it-carousel-all owl-carousel it-card-bg">
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+              <div class="it-single-slide-wrapper">
+                <figure>
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="embed-responsive embed-responsive-16by9 my-4">
+            <iframe class="embed-responsive-item" title="Video YouTube" src="https://www.youtube.com/embed/0rIBULTnWuQ" allowfullscreen></iframe>
+          </div>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="pt-3 pb-5">
+            <h6 class="text-serif font-weight-bold">Parteciperanno:</h6>
+            <a href="#">
+              <div class="chip chip-simple chip-primary">
+                <span class="chip-label">Mario Rossi</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="chip chip-simple chip-primary">
+                <span class="chip-label">Alessandro Bianchi</span>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article id="luogo" class="it-page-section anchor-offset">
+          <h4>Luogo</h4>
+          <div class="card-wrapper card-teaser-wrapper">
+            <div class="card card-teaser shadow mt-3 rounded">
+              <svg class="icon">
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pin"></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">Roma</h5>
+                <div class="card-text">
+                  <p>Via Roma, 0 - 00100 Roma</p>
+                  <p class="mt-3">Ulteriori dettagli</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrapper map-column mt-4 mb-5">
+            <img src="https://via.placeholder.com/320x180/ebebeb/808080/?text=Map" alt="Sagra di San Francesco" class="img-fluid" style="object-fit:cover;width:100%;" />
+          </div>
+        </article>
+        <article id="date-e-orari" class="it-page-section anchor-offset">
+          <h4>Date e orari</h4>
+          <div class="point-list-wrapper my-4">
+            <div class="point-list">
+              <div class="point-list-aside point-list-warning">
+                <div class="point-date text-monospace">01</div>
+                <div class="point-month text-monospace">mag</div>
+              </div>
+              <div class="point-list-content">
+                <div class="card card-teaser shadow rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      09:00  - Inizio evento
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="point-list">
+              <div class="point-list-aside point-list-warning">
+                <div class="point-date text-monospace">04</div>
+                <div class="point-month text-monospace">mag</div>
+              </div>
+              <div class="point-list-content">
+                <div class="card card-teaser shadow rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      18:00  - Fine evento
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="mt-3">
+            <a href="#" class="btn btn-outline-primary btn-icon">
+              <svg class="icon icon-primary">
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus-circle"></use>
+              </svg>
+              <span>Aggiungi al calendario</span>
+            </a>
+          </div>
+        </article>
+        <article id="costi" class="it-page-section anchor-offset mt-5">
+          <h4>Costi</h4>
+          <div class="card no-after border-left mt-3">
+            <div class="card-body">
+              <div class="category-top">
+                Tribuna 1 e 4
+              </div>
+              <h5 class="card-title big-heading">&euro; 30</h5>
+              <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="card no-after border-left mt-3">
+            <div class="card-body">
+              <div class="category-top">
+                Tribuna 3
+              </div>
+              <h5 class="card-title big-heading">&euro; 30</h5>
+              <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="card no-after border-left mt-3">
+            <div class="card-body">
+              <div class="category-top">
+                Tribuna 5
+              </div>
+              <h5 class="card-title big-heading">&euro; 25</h5>
+              <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="card no-after border-left mt-3">
+            <div class="card-body">
+              <div class="category-top">
+                Tribuna 2
+              </div>
+              <h5 class="card-title big-heading">&euro; 15</h5>
+              <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </article>
+        <article id="documenti" class="it-page-section anchor-offset mt-5">
+          <h4>Documenti</h4>
+          <div class="card card-teaser shadow mt-3 rounded">
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Locandina della Sagra</a>
+              </h5>
+            </div>
+          </div>
+        </article>
+        <article id="contatti" class="it-page-section anchor-offset mt-5">
+          <h4>Contatti</h4>
+          <div class="card card-teaser shadow mt-3 rounded">
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-telephone"></use>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">Esempio di contatto</h5>
+              <div class="card-text">
+                <p>Via Roma, 0 - 00100 Roma</p>
+                <p class="mt-3">Telefono +39 000 000000</p>
+                <p><a href="#">www.esempio.it</a></p>
+                <p><a href="#">email@esempio.it</a></p>
+              </div>
+            </div>
+          </div>
+          <h5 class="mt-4">Con il supporto di:</h5>
+          <div class="card card-teaser shadow mt-3 rounded">
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">
+                Ufficio delle Attività Produttive
+              </h5>
+              <div class="card-text">
+                <p>Via Roma, 0 - 00100 Roma</p>
+                <p class="mt-3">Telefono +39 000 000000</p>
+                <p><a href="#">email@esempio.it</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="appuntamenti" class="it-page-section anchor-offset mt-5">
+          <h4>Appuntamenti</h4>
+          <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            <div class="card card-teaser card-flex rounded shadow">
+              <div class="card-body p-4">
+                <h5 class="card-title card-title-icon">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
+                  </svg>
+                  <span class="text-uppercase">Eventi</span>
+                </h5>
+                <div class="card-text">
+                  <p class="text-uppercase">Roma</p>
+                  <div class="pt-4 pb-3">
+                    <a href="">
+                      <h6 class="font-weight-semibold">Cinema in piazza</h6>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
+                  <div class="font-weight-bold">30</div>
+                  <div class="font-weight-semibold">Apr</div>
+                </div>
+                <img src="https://picsum.photos/200/300" alt="Immagine di esempio" />
+              </div>
+            </div>
+            <div class="card card-teaser card-flex rounded shadow">
+              <div class="card-body p-4">
+                <h5 class="card-title card-title-icon">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
+                  </svg>
+                  <span class="text-uppercase">Eventi</span>
+                </h5>
+                <div class="card-text">
+                  <p class="text-uppercase">Roma</p>
+                  <div class="pt-4 pb-3">
+                    <a href="">
+                      <h6 class="font-weight-semibold">Festa dei gatti</h6>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
+                  <div class="font-weight-bold">30</div>
+                  <div class="font-weight-semibold">Apr</div>
+                </div>
+                <img src="https://picsum.photos/200/300" alt="Immagine di esempio" />
+              </div>
+            </div>
+            <div class="card card-teaser card-flex rounded shadow">
+              <div class="card-body p-4">
+                <h5 class="card-title card-title-icon">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use>
+                  </svg>
+                  <span class="text-uppercase">Eventi</span>
+                </h5>
+                <div class="card-text">
+                  <p class="text-uppercase">Roma</p>
+                  <div class="pt-4 pb-3">
+                    <a href="#">
+                      <h6 class="font-weight-semibold">Sagra della porchetta</h6>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-image card-image-rounded">
+                <div class="card-date text-center rounded shadow">
+                  <div class="font-weight-bold">30</div>
+                  <div class="font-weight-semibold">Apr</div>
+                </div>
+                <img src="https://picsum.photos/200/300" alt="Immagine di esempio" />
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="ulteriori-informazioni" class="it-page-section anchor-offset mt-5">
+          <h4 class="mb-3">Ulteriori informazioni</h4>
+          <strong>Patrocinato da:</strong>
+          <div class="link-list-wrapper">
+            <ul class="link-list">
+              <li><a class="list-item px-0" href="#"><span>Regione del Lazio</span></a></li>
+            </ul>
+          </div>
+          <strong>Sponsor:</strong>
+          <div class="link-list-wrapper">
+            <ul class="link-list">
+              <li><a class="list-item px-0" href="#"><span>Provincia di Roma</span></a></li>
+              <li><a class="list-item px-0" href="#"><span>Aeroporto di Roma</span></a></li>
+              <li><a class="list-item px-0" href="#"><span>Autorità Portuale di Roma</span></a></li>
+            </ul>
+          </div>
+          <div class="mt-5">
+            <strong>Recensione:</strong>
+            <div class="rating-list-wrapper my-4">
+              <div class="rating-list">
+                <div class="rating-list-aside rating-list-warning">
+                  <div class="rating-value font-weight-semibold">4</div>
+                  <div class="rating-total font-weight-semibold">su 5</div>
+                </div>
+                <div class="rating-list-content">
+                  <div class="rating-list-row">
+                    <div class="rating-list-stars">
+                      <div class="rating rating-read-only">
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                      </div>
+                      <div class="rating rating-read-only">
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                      </div>
+                      <div class="rating rating-read-only">
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                      </div>
+                      <div class="rating rating-read-only">
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                      </div>
+                      <div class="rating rating-read-only">
+                        <svg class="icon icon-warning"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                      </div>
+                    </div>
+                    <div class="rating-list-progress">
+                      <div class="progress progress-color">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-color">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-color">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-color">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress progress-color">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mt-5">
+              <fieldset class="rating">
+                <legend class="sr-only">Valuta</legend>
+                <input type="radio" id="star5a" name="ratingA" value="5" />
+                <label class = "full" for="star5a">
+                  <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                  <span class="sr-only">Valuta 5 stelle su 5</span>
+                </label>
+                <input type="radio" id="star4a" name="ratingA" value="4"/>
+                <label class = "full" for="star4a">
+                  <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                  <span class="sr-only">Valuta 4 stelle su 5</span>
+                </label>
+                <input type="radio" id="star3a" name="ratingA" value="3" />
+                <label class = "full" for="star3a">
+                  <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                  <span class="sr-only">Valuta 3 stelle su 5</span>
+                </label>
+                <input type="radio" id="star2a" name="ratingA" value="2" />
+                <label class = "full" for="star2a">
+                  <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                  <span class="sr-only">Valuta 2 stelle su 5</span>
+                </label>
+                <input type="radio" id="star1a" name="ratingA" value="1" />
+                <label class = "full" for="star1a">
+                  <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
+                  <span class="sr-only">Valuta 1 stelle su 5</span>
+                </label>
+              </fieldset>
+              <div class="ml-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">
+                  <span>Invia valutazione</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="callout">
+              <div class="callout-title">
+                <svg class="icon">
+                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
+                </svg>
+              </div>
+              <p>Per ulteriori informazioni contattare <a href="">email@esempio.it</a></p>
+              <h6><a href="#">Ufficio della Sagra</a></h6>
+            </div>
+          </div>
+        </article>
+        <article id="ultimo-aggiornamento" class="it-page-section anchor-offset mt-5">
+          <p class="text-serif">Ultimo aggiornamento</p>
+          <h6><strong>01/01/1970, 00:00</strong></h6>
+          <small><a href="#">Consulta versioni precedenti</a></small>
+        </article>
+      </section>
+    </div>
+  </div>
+  {% include esempi/correlati.html %}
+</main>
+
+{% include esempi/comuni/footer.html %}

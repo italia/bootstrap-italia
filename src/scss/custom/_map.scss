@@ -1,0 +1,15 @@
+.map-wrapper {
+  min-height: 280px;
+
+  &.map-column {
+    margin: 0 -24px;
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    &.map-column {
+      margin-left: -3rem;
+      margin-right: 0;
+    }
+  }
+}

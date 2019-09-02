@@ -1,5 +1,9 @@
 $(function() {
+  var openbutton = $('.custom-navbar-toggler')
+  var closebutton = $('.close-div')
+  var overlay = $('.overlay')
   var backbutton = $('.it-back-button')
+  var navlink = $('.navbar-collapsable a')
 
   $('.it-bottom-navscroll ul li a[href^="#"]').on('click', function(e) {
     e.preventDefault()
@@ -8,7 +12,7 @@ $(function() {
 
     $('html, body').animate(
       {
-        scrollTop: $(hash).offset().top - 150,
+        scrollTop: $(hash).offset().top,
       },
       600,
       function() {
@@ -33,7 +37,8 @@ $(function() {
   // navscroll item on scroll
   $(window)
     .on('scroll', function() {
-      var scrollDistance = $(window).scrollTop()
+      var sectionsContainerTop = $('.it-page-sections-container').length ? $(".it-page-sections-container").offset().top : 0
+      var scrollDistance = $(window).scrollTop() - sectionsContainerTop
       // Assign active class to nav links while scolling
       $('.it-page-section').each(function(i) {
         if ($(this).position().top <= scrollDistance) {
@@ -56,7 +61,7 @@ $(function() {
             .eq(i)
             .find('span')
             .text()
-          var $btn = $('.it-bottom-navscroll .custom-navbar-toggler')
+          var $btn = $('.it-navscroll-wrapper .custom-navbar-toggler')
           var $icon = $btn.find('span.it-list')
           $btn.text(textContent)
           $btn.prepend($icon)

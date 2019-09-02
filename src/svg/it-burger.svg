@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-burger</title><g><rect x="2.06" y="17.96" width="19.92" height="1.5" rx="0.75"/><rect x="2.06" y="4.57" width="19.92" height="1.5" rx="0.75"/><rect x="2.06" y="11.27" width="19.92" height="1.5" rx="0.75"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Navigation Burger</title>
+  <g>
+    <path d="M22,5V6H2V5ZM2,12.5H22v-1H2ZM2,19H22V18H2Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

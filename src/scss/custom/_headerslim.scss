@@ -6,21 +6,23 @@
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;
-    //align-items: center;
+    align-items: center;
     .dropdown-menu {
       top: -$header-slim-dropdown-distance-mob !important;
     }
     a {
       color: $header-slim-text-color;
+      text-decoration: none;
       &:hover:not(.active) {
         text-decoration: underline;
       }
       .icon {
-        fill: $header-slim-text-color;
         width: $header-slim-icon-size;
         height: $header-slim-icon-size;
         transition: all 0.3s;
         transform-origin: center;
+        // set default text color to icon
+        fill: $header-slim-text-color;
       }
       &.dropdown-toggle {
         text-transform: uppercase;
@@ -28,6 +30,11 @@
         text-decoration: underline;
         display: flex;
         align-items: center;
+        &[aria-expanded='true'] {
+          .icon {
+            transform: scaleY(-1);
+          }
+        }
       }
       &.it-opener {
         font-size: $header-slim-brand-text-size;

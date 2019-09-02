@@ -37,6 +37,7 @@ $bg-footer: darken($primary, 20%);
       display: flex;
       color: $header-center-text-color;
       align-items: center;
+      text-decoration: none;
 
       h2 {
         font-size: $header-center-h2-size-mob;
@@ -69,6 +70,10 @@ $bg-footer: darken($primary, 20%);
   section {
     padding: 0 $v-gap * 2;
   }
+
+  label {
+    font-weight: 600;
+  }
 }
 
 .it-footer-small-prints {
@@ -92,6 +97,28 @@ $bg-footer: darken($primary, 20%);
   a:hover:not(.disabled) {
     color: $white;
     font-size: 15px;
+    text-decoration: none;
+  }
+}
+
+.form-newsletter {
+  input[type='email'] {
+    font-size: 1em;
+    & ~ * {
+      margin-top: 1em;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    button {
+      display: inline-block;
+      width: auto;
+    }
   }
 }
 

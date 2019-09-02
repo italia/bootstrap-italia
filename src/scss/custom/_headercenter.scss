@@ -25,6 +25,7 @@
         display: flex;
         color: $header-center-text-color;
         align-items: center;
+        text-decoration: none;
         h2 {
           font-size: $header-center-h2-size-mob;
           margin-bottom: 0;
@@ -120,6 +121,7 @@
     height: $header-center-max-height;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 6px;
     &.it-small-header {
       height: $header-center-small-height;
       .it-header-center-content-wrapper .it-brand-wrapper a h2 {

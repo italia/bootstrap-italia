@@ -15,27 +15,16 @@ title: CookieBar
 </style>
 
 <div class="cookiebar">
-  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
+  <p>
+    Questo sito utilizza cookie tecnici, analytics e di terze parti.
+    <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.
+  </p>
   <div class="cookiebar-buttons">
-    <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
-    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+    <a href="#" class="cookiebar-btn"
+      >Preferenze<span class="sr-only">cookies</span></a
+    >
+    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">
+      Accetto<span class="sr-only"> i cookies</span>
+    </button>
   </div>
 </div>
-
-<script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js"></script>
-
-<!-- Notification per tornare alla pagina principale -->
-<div class="notification dismissable top-fix with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
-  <h5 id="notification-esempi-title"><svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Esempio di utilizzo del componente Cookiebar</h5>
-  <p><a href="{{ site.baseurl }}/docs/esempi/">Torna alla pagina principale degli esempi</a></p>
-  <button type="button" class="btn notification-close">
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-    <span class="sr-only">Chiudi notifica: Titolo notification</span>
-  </button>
-</div>
-
-<script>
-  $(document).ready(function() {
-    notificationShow('notification-esempi');
-  });
-</script>

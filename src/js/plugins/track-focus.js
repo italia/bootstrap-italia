@@ -6,9 +6,15 @@ $(function() {
       usingMouse = e.type === 'mousedown'
     })
     .on('focusin', function(e) {
-      if (usingMouse) e.target.classList.add('focus--mouse')
+      if (usingMouse) {
+	if (e.target){
+		$(e.target).addClass('focus--mouse');
+	}
+      }
     })
     .on('focusout', function(e) {
-      e.target.classList.remove('focus--mouse')
+      if (e.target){
+	   $(e.target).removeClass('focus--mouse');
+      }
     })
 })

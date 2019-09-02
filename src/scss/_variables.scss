@@ -36,6 +36,9 @@ $headings-line-height: 1.2 !default;
 $paragraph-margin-bottom: 1rem !default;
 $small-font-size: 0.777rem !default;
 
+// Links
+$link-decoration: underline;
+
 // Navbar
 $navbar-brand-font-size: 1rem !default;
 $navbar-toggler-border-radius: 0 !default;
@@ -53,8 +56,8 @@ $btn-font-size-lg: 18px !default;
 
 // Input
 $input-btn-line-height: 1.5 !default;
-$input-btn-line-height-sm: 1.428 !default;
-$input-btn-line-height-lg: 1.556 !default;
+$input-btn-line-height-sm: 1.45 !default;
+$input-btn-line-height-lg: 1.6 !default;
 $input-disabled-bg: $gray-disabled;
 $input-spacing-x: 0.5rem;
 $input-spacing-y: 0.375rem;
@@ -113,7 +116,8 @@ $display3-weight: 700;
 $display4-weight: 700;
 
 // Breadcrumbs
-$breadcrumb-padding: 24px;
+// $breadcrumb-padding: 24px;
+$breadcrumb-padding: 0.5em;
 $breadcrumb-bg: transparent;
 $breadcrumb-link-font-weight: 600;
 $breadcrumb-link-color: $neutral-1-a7;
@@ -419,7 +423,7 @@ $header-slim-theme-light-button-hover-color: $primary-a6;
 $header-slim-height: 48px;
 //header-center
 $header-center-bg-color: $primary-a6;
-$header-center-max-height: 176px;
+$header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
@@ -450,6 +454,10 @@ $header-center-theme-light-text-color: $primary-a6;
 
 $header-center-button-left: 10px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
+
+// Anchors vertical offset:
+$anchor-v-offset-lg: 72px;
+$anchor-v-offset: $header-center-max-height-mob + 16px;
 
 //cards
 $card-padding: $v-gap * 3;
@@ -633,7 +641,7 @@ $grid-breakpoints-hover: 1025px;
 //
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
+  md: 668px,
   lg: 960px,
-  xl: 1140px,
+  xl: 1184px,
 ) !default;

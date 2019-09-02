@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-flikr</title><g><circle cx="6.73" cy="12" r="4.73"/><circle cx="17.27" cy="12" r="4.73"/></g></svg>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <title>Logo Flickr</title>
+  <g stroke="none" stroke-width="1">
+    <g>
+      <rect x="0" y="0" width="24" height="24"
+            fill="none"></rect>
+    </g>
+    <circle cx="6.73" cy="12" r="4.73"></circle>
+    <circle cx="17.27" cy="12" r="4.73"></circle>
+  </g>
+</svg>

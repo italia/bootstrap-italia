@@ -1,0 +1,365 @@
+---
+layout: base
+title: Template Servizio Comunale
+---
+
+{% assign section = "servizi" %}
+
+{% include esempi/comuni/header.html %}
+
+<main>
+  <div class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-4">
+        <nav class="breadcrumb-container" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Servizi</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="#">Categoria Servizio</a
+              ><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Titolo del Servizio
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 px-lg-4 py-lg-2">
+        <h1>Titolo del Servizio</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+        <div class="alert alert-warning my-md-4 my-lg-4">
+          Avviso riguardante il servizio
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        {% include esempi/azioni_condividi.html %}
+        <div class="mt-4 mb-4">
+          <h6><small>Argomenti</small></h6>
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Famiglia</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Servizi e supporto all'educazione</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Bambini e ragazzi</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row border-top row-column-border row-column-menu-left">
+      <aside class="col-lg-4">
+        <div class="sticky-wrapper navbar-wrapper">
+          <nav
+            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
+          >
+            <button
+              class="custom-navbar-toggler"
+              type="button"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              data-target="#navbarNav"
+            >
+              <span class="it-list"></span>Indice della pagina
+            </button>
+            <div class="navbar-collapsable" id="navbarNav">
+              <div class="overlay"></div>
+              <div class="close-div sr-only">
+                <button class="btn close-menu" type="button">
+                  <span class="it-close"></span>Chiudi
+                </button>
+              </div>
+              <a class="it-back-button" href="#">
+                <svg class="icon icon-sm icon-primary align-top">
+                  <use
+                    xlink:href="{{
+                      site.baseurl
+                    }}/dist/svg/sprite.svg#it-chevron-left"
+                  ></use>
+                </svg>
+                <span>Torna indietro</span></a
+              >
+              <div class="menu-wrapper">
+                <div class="link-list-wrapper menu-link-list">
+                  <h3 class="no_toc">Indice della pagina</h3>
+                  <ul class="link-list">
+                    <li class="nav-item active">
+                      <a class="nav-link active" href="#cos-e"
+                        ><span>Cos'è</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#a-chi-si-rivolge"
+                        ><span>A chi si rivolge</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#accedi-al-servizio"
+                        ><span>Accedi al servizio</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cosa-serve"
+                        ><span>Cosa serve</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#costi-e-vincoli"
+                        ><span>Costi e vincoli</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tempi-e-scadenze"
+                        ><span>Tempi e scadenze</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#casi-particolari"
+                        ><span>Casi particolari</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contatti"
+                        ><span>Contatti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#documenti"
+                        ><span>Documenti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ulteriori-informazioni"
+                        ><span>Ulteriori informazioni</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <section class="col-lg-8 it-page-sections-container">
+        <article id="cos-e" class="it-page-section anchor-offset">
+          <h4>Cos'è?</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="a-chi-si-rivolge" class="it-page-section anchor-offset">
+          <h4>A chi si rivolge</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="accedi-al-servizio" class="it-page-section anchor-offset">
+          <h4>Accedi al servizio</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article>
+          <h5>Accesso agli uffici</h5>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="card card-teaser shadow p-4 my-5 rounded">
+            <svg class="icon">
+              <use
+                xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+              ></use>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">
+                Ufficio di riferimento
+              </h5>
+              <div class="card-text">
+                <p>Via Roma, 0 - 00100 Roma</p>
+                <p class="mt-3">Mattina: 9.00 - 12.00 dal lunedì al venerdì</p>
+                <p>Pomeriggio: 15.30 - 17.30 martedì e mercoledì</p>
+                <p class="mt-3">
+                  T +39 06 000000 - 111111 - 222222 - 333333
+                </p>
+                <p>F +39 06 000111</p>
+                <p><a href="mailto:asili@comune.it">email@esempio.it</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="cosa-serve" class="it-page-section anchor-offset">
+          <h4>Cosa serve</h4>
+          <div class="callout">
+            <div class="callout-title">
+              <svg class="icon">
+                <use
+                  xlink:href="{{
+                    site.baseurl
+                  }}/dist/svg/sprite.svg#it-info-circle"
+                ></use>
+              </svg>
+            </div>
+            <ul>
+              <li>
+                <p>Documento uno</p>
+              </li>
+              <li>
+                <p>Documento due</p>
+              </li>
+              <li>
+                <p>Informazioni</p>
+                <ul>
+                  <li>
+                    <p>Informazioni uno</p>
+                  </li>
+                  <li>
+                    <p>Informazioni due</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>Documento tre</p>
+              </li>
+              <li>
+                <p>Richiesta uno</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article id="costi-e-vincoli" class="it-page-section anchor-offset mt-5">
+          <h4>Costi e vincoli</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="tempi-e-scadenze" class="it-page-section anchor-offset">
+          <h4>Tempi e scadenze</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="casi-particolari" class="it-page-section anchor-offset">
+          <h4>Casi particolari</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="contatti" class="it-page-section anchor-offset">
+          <h4>Contatti</h4>
+          <div class="card-wrapper card-teaser-wrapper">
+            <div class="card card-teaser shadow p-4">
+              <div class="card-body">
+                <h5 class="card-title">Ufficio di riferimento</h5>
+                <div class="card-text">
+                  <p>Via Roma, 0 - 00100 Roma</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-teaser shadow p-4">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Area di riferimento
+                </h5>
+                <div class="card-text">
+                  <p>Via Roma, 0</p>
+                </div>
+              </div>
+              <div class="avatar size-xl">
+                <img
+                  src="https://randomuser.me/api/portraits/men/33.jpg"
+                  alt="Carlo Poli"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="documenti" class="it-page-section anchor-offset mt-5">
+          <h4>Documenti</h4>
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-2"
+          >
+            <div class="card card-teaser shadow p-4">
+              <svg class="icon">
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#"
+                    >Avviso pubblico di iscrizione</a
+                  >
+                </h5>
+                <div class="card-text">
+                  <p>Avviso e documenti allegati</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-teaser shadow p-4">
+              <svg class="icon">
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#">Guida informativa</a>
+                </h5>
+                <div class="card-text">
+                  <p>
+                    Modalità di iscrizione, esempi, ecc.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-teaser shadow p-4">
+              <svg class="icon">
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#">Costi</a>
+                </h5>
+                <div class="card-text">
+                  <p>Quanto costa il servizio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="ulteriori-informazioni" class="it-page-section anchor-offset mt-5">
+          <h4>Ulteriori informazioni</h4>
+          <div class="callout">
+            <div class="callout-title">
+              <svg class="icon">
+                <use
+                  xlink:href="{{
+                    site.baseurl
+                  }}/dist/svg/sprite.svg#it-info-circle"
+                ></use>
+              </svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h6>Numero Verde: 800 800 800</h6>
+            <h6><a href="#">Ufficio Relazioni con il Pubblico</a></h6>
+          </div>
+        </article>
+        <article id="ultimo-aggiornamento" class="anchor-offset mt-5">
+          <p class="text-serif">Ultimo aggiornamento</p>
+          <h6><strong>01/01/1970, 00:00</strong></h6>
+          <small><a href="#">Consulta versioni precedenti</a></small>
+        </article>
+      </section>
+    </div>
+  </div>
+  {% include esempi/correlati.html %}
+</main>
+
+{% include esempi/comuni/footer.html %}

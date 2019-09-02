@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-chevron-right</title><g><path d="M13.75,12,9,16.77a.75.75,0,0,0,0,1.06.74.74,0,0,0,1.06,0l4.78-4.77a1.51,1.51,0,0,0,0-2.12L10,6.17A.74.74,0,0,0,9,6.17.75.75,0,0,0,9,7.23Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Chevron Right</title>
+  <polygon points="9.8 17.2 9 16.5 13.9 11.6 9 6.7 9.8 6 15.4 11.6"/>
+</svg>

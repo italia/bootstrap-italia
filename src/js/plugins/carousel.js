@@ -145,6 +145,108 @@ $(function() {
       }
     }
 
+    if (
+      $(this)
+        .closest('.it-carousel-wrapper')
+        .hasClass('it-calendar-wrapper')
+    ) {
+      cnav = true
+      cloop = false
+      cmargin = 0
+      citems = 4
+      cnavText = []
+      cnavSpeed = 300 //arrow click
+      csmartSpeed = 500 // bullet click
+      cdotsSpeed = 200
+      ccontrolsAriaHidden = true
+      cmouseDrag = true
+      ctouchDrag = true
+      cdots = false
+      cslideBy = 'page'
+      cstagePadding = cstagePadding
+      // mobile params
+      mobnav = false
+      mobdots = true
+      mobitems = 1
+      mobstagePadding = 40
+      mobmargin = 0
+      // 768 params
+      tabnav = false
+      tabdots = true
+      tabitems = 2
+      tabstagePadding = 40
+      tabmargin = 0
+      // 992 params
+      desknav = false
+      deskdots = true
+      deskitems = 4
+      deskstagePadding = 0
+      deskmargin = 0
+      // xl params
+      xlnav = false
+      xldots = true
+      xlitems = 4
+      xlstagePadding = 0
+      xlmargin = 0
+
+      // carousel 4 col with shadow
+      if ($(this).hasClass('it-card-bg')) {
+        mobstagePadding = 40
+        mobmargin = 0
+        tabstagePadding = 40
+        tabmargin = 0
+        deskstagePadding = 0
+        deskmargin = 0
+        xlstagePadding = 0
+        xlmargin = 0
+      }
+
+      // carousel 4 img card
+      if ($(this).hasClass('it-img-card')) {
+        mobstagePadding = 40
+        mobmargin = 0
+        tabstagePadding = 40
+        tabmargin = 0
+        deskstagePadding = 0
+        deskmargin = 0
+        xlstagePadding = 0
+        xlmargin = 0
+      }
+      // carousel img big
+      if ($(this).hasClass('it-img-card') && $(this).hasClass('it-big-img')) {
+        cloop = true
+        mobstagePadding = 0
+        mobmargin = 0
+        tabstagePadding = 160
+        tabmargin = 0
+        tabitems = 1
+        deskstagePadding = 320
+        deskmargin = 0
+        deskitems = 1
+        xlstagePadding = 320
+        xlmargin = 0
+        xlitems = 1
+      }
+      // standard img
+      if (
+        $(this).hasClass('it-img-card') &&
+        $(this).hasClass('it-standard-image')
+      ) {
+        cloop = true
+        mobstagePadding = 40
+        mobmargin = 0
+        mobitems = 1
+        tabstagePadding = 48
+        tabmargin = tabitems = 2
+        deskstagePadding = 68
+        deskmargin = 0
+        deskitems = 4
+        xlstagePadding = 48
+        xlmargin = 0
+        xlitems = 4
+      }
+    }
+
     // Landscape abstract --------------------------------------------------------------------------
     if (
       $(this)

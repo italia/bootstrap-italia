@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>it-star-full</title><g><polygon points="12 3.07 14.9 8.95 21.39 9.89 16.69 14.47 17.8 20.93 12 17.88 6.2 20.93 7.31 14.47 2.62 9.89 9.1 8.95 12 3.07"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Star Full</title>
+  <g>
+    <path
+      d="M12,1.7,9.5,9.2H1.6L8,13.9,5.6,21.5,12,16.8l6.4,4.7L16,13.9l6.4-4.7H14.5L12,1.7Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

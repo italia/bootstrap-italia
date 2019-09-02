@@ -1,0 +1,223 @@
+---
+layout: base
+title: Template Pagina Notizia
+---
+
+{% assign section = "novità" %} {% include esempi/comuni/header.html %}
+
+<main>
+  <div class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-4">
+        <nav class="breadcrumb-container" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Novità</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="#">Notizie</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="#">Osservatorio sul turismo</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 px-lg-4 py-lg-2">
+        <h1>Osservatorio sul turismo: Roma capitale della barca a vela nel mondo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="row mt-5 mb-4">
+          <div class="col-6">
+            <small>Data:</small>
+            <p class="font-weight-semibold text-monospace">03 dicembre 2019</p>
+          </div>
+          <div class="col-6">
+            <small>Tempo di lettura:</small>
+            <p class="font-weight-semibold">3 min</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        {% include esempi/azioni_condividi.html %}
+        <div class="mt-4 mb-4">
+          <h6><small>Argomenti</small></h6>
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Cultura</span>
+            </div></a
+          >
+          <a href="#"
+            ><div class="chip chip-simple chip-primary">
+              <span class="chip-label">Muoversi</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row row-full-width my-3">
+      <figure class="figure">
+        <img
+          src="https://picsum.photos/800/400"
+          class="figure-img img-fluid"
+          alt="Un'immagine generica segnaposto con angoli arrotondati in una figura."
+        />
+        <figcaption class="figure-caption text-center pt-3">
+          Una didascalia per l'immagine sopra.
+        </figcaption>
+      </figure>
+    </div>
+    <div class="row border-top row-column-border row-column-menu-left">
+      <aside class="col-lg-4">
+        <div class="sticky-wrapper navbar-wrapper">
+          <nav
+            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
+          >
+            <button
+              class="custom-navbar-toggler"
+              type="button"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              data-target="#navbarNav"
+            >
+              <span class="it-list"></span>Indice della pagina
+            </button>
+            <div class="navbar-collapsable" id="navbarNav">
+              <div class="overlay"></div>
+              <div class="close-div sr-only">
+                <button class="btn close-menu" type="button">
+                  <span class="it-close"></span>Chiudi
+                </button>
+              </div>
+              <a class="it-back-button" href="#">
+                <svg class="icon icon-sm icon-primary align-top">
+                  <use
+                    xlink:href="{{
+                      site.baseurl
+                    }}/dist/svg/sprite.svg#it-chevron-left"
+                  ></use>
+                </svg>
+                <span>Torna indietro</span></a
+              >
+              <div class="menu-wrapper">
+                <div class="link-list-wrapper menu-link-list">
+                  <h3 class="no_toc">Indice della pagina</h3>
+                  <ul class="link-list">
+                    <li class="nav-item active">
+                      <a class="nav-link active" href="#descrizione"
+                        ><span>Descrizione</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#documenti"
+                        ><span>Documenti</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#luoghi"
+                        ><span>Luoghi</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#ulteriori-informazioni"
+                        ><span>Ulteriori informazioni</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <section class="col-lg-8 it-page-sections-container">
+        <article id="descrizione" class="it-page-section anchor-offset">
+          <h4>Descrizione</h4>
+          <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article id="documenti" class="it-page-section anchor-offset mt-5">
+          <h4>Documenti</h4>
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal"
+          >
+            <div class="card card-teaser shadow p-4 mt-3 rounded border">
+              <svg class="icon">
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#">Lo speciale di National Geographic sulle regate</a>
+                </h5>
+              </div>
+            </div>
+            <div class="card card-teaser shadow p-4 mt-3 rounded border">
+              <svg class="icon">
+                <use
+                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
+                ></use>
+              </svg>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#">Le rotte del mare</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="luoghi" class="it-page-section anchor-offset mt-5">
+          <h4>Luoghi</h4>
+          <div class="row">
+            <div class="col-12 col-sm-8">
+              <h6><small>Questa pagina è gestita da</small></h6>
+              <div class="card card-teaser border rounded shadow p-4">
+                <div class="card-body pr-3">
+                  <h5 class="card-title">
+                    Assessorato al Turismo
+                  </h5>
+                  <div class="card-text">
+                    <p>Via Roma 0</p>
+                    <p>00100 Roma</p>
+                  </div>
+                </div>
+                <div class="avatar size-xl">
+                  <img src="https://picsum.photos/200/200" alt="Immagine" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <h6><small>Persone</small></h6>
+              <a href="#"
+              ><div class="chip chip-simple chip-primary">
+                <span class="chip-label">Mario Rossi</span>
+              </div></a
+              >
+              <a href="#"
+              ><div class="chip chip-simple chip-primary">
+                <span class="chip-label">Alessandro Bianchi</span>
+              </div></a
+              >
+            </div>
+          </div>
+        </article>
+        <article id="ulteriori-informazioni" class="it-page-section anchor-offset mt-5">
+          <h4 class="mb-3">Ulteriori informazioni</h4>
+
+        </article>
+        <article id="ultimo-aggiornamento" class="anchor-offset mt-5">
+          <p class="text-serif">Ultimo aggiornamento</p>
+          <h6><strong>01/01/1970, 00:00</strong></h6>
+          <small><a href="#">Consulta versioni precedenti</a></small>
+        </article>
+      </section>
+    </div>
+  </div>
+</main>
+
+{% include esempi/comuni/footer.html %}

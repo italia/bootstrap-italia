@@ -62,8 +62,10 @@
 @import 'custom/modal';
 @import 'custom/collapse';
 @import 'custom/carousel';
+@import 'custom/calendar';
 @import 'custom/alert';
 @import 'custom/buttons';
+@import 'custom/font';
 @import 'custom/forms';
 @import 'custom/form-input-file';
 @import 'custom/form-input-number';
@@ -112,6 +114,11 @@
 @import 'custom/rating';
 @import 'custom/dimmer';
 @import 'custom/timeline';
+@import 'custom/anchor';
+@import 'custom/map';
+@import 'custom/point-list';
+@import 'custom/rating-list';
+@import 'custom/badge';
 
 // datepicker
 @import 'custom/form-datepicker';

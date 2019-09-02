@@ -1,44 +1,34 @@
 version: 2
 
-aliases:
-  - &working_directory
-    ~/repo
-
-  - &restore_cache
+defaults: &defaults
+  working_directory: &working_directory ~/repo
+  restore_cache: &restore_cache
     keys:
-    - v4-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
-    # fallback to using the latest cache if no exact match is found
-    - v4-dependencies-
-
-  - &gem_install
+      - v5-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
+      # fallback to using the latest cache if no exact match is found
+      - v5-dependencies-
+  ruby: &ruby
     name: Ruby dependencies
     command: bundle install
-
-  - &npm_install
+  node: &node
     name: npm dependencies
     command: npm install
-
-  - &save_cache
+  save_cache: &save_cache
     paths:
       - vendor/bundle
       - node_modules
-    key: v4-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
-
-  - &tag_filters
+    key: v5-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
+  tag_filters: &tag_filters
     branches:
       ignore: /.*/
     tags:
       only: /^v?[0-9]+(\.[0-9]+)*/
-
-defaults: &defaults
   docker:
     - image: circleci/ruby:2.6.0-node
       environment:
         BUNDLER_VERSION: 2.0.1
         BUNDLE_PATH: vendor/bundle
         JEKYLL_ENV: production
-
-  working_directory: *working_directory
 
 jobs:
   build:
@@ -65,8 +55,8 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache: *restore_cache
-      - run: *gem_install
-      - run: *npm_install
+      - run: *ruby
+      - run: *node
       - save_cache: *save_cache
 
       - run:
@@ -122,7 +112,7 @@ jobs:
             npm --version
             docker --version
 
-      - run: *gem_install
+      - run: *ruby
 
       - run:
           name: Update GitHub Pages
@@ -143,7 +133,7 @@ jobs:
 
       # Restore dependencies
       - restore_cache: *restore_cache
-      - run: *npm_install
+      - run: *node
 
       - run:
           name: Create GitHub Release
