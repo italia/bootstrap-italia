@@ -55,7 +55,7 @@ const Paths = {
     'src/js/plugins/progress-donut.js',
     'src/js/plugins/list.js',
     'src/js/plugins/imgresponsive.js',
-    //'src/js/plugins/timepicker.js',
+    'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
@@ -84,7 +84,7 @@ const bootstrapItaliaBanner = [
   ' * ' + pkg.description,
   ' * @version v' + pkg.version,
   ' * @link ' + pkg.homepage,
-  ' * @license ' +pkg.license,
+  ' * @license ' + pkg.license,
   ' */',
   '',
 ].join('\n')
@@ -104,94 +104,101 @@ const jqueryVersionCheck =
 // Library related tasks
 
 gulp.task('scss-min', () => {
-  return gulp
-    .src(Paths.SOURCE_SCSS)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(
-      cleanCSS({
-        level: 2,
-        specialComments: 0,
-      })
-    )
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
-    .pipe(
-      rename({
-        suffix: '.min',
-      })
-    )
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(Paths.DIST + '/css'))
-    .pipe(touch())
+  return (
+    gulp
+      .src(Paths.SOURCE_SCSS)
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(
+        cleanCSS({
+          level: 2,
+          specialComments: 0,
+        })
+      )
+      // .pipe(gap.prependText(bootstrapItaliaBanner))
+      .pipe(
+        rename({
+          suffix: '.min',
+        })
+      )
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(Paths.DIST + '/css'))
+      .pipe(touch())
+  )
 })
 
 gulp.task('js-min', () => {
-  return gulp
-    .src(Paths.SOURCE_JS)
-    .pipe(concat(pkg.name + '.js'))
-    .pipe(sourcemaps.init())
-    .pipe(replace(/^(export|import).*/gm, ''))
-    .pipe(
-      babel({
-        compact: true,
-        presets: [
-          [
-            '@babel/env',
-            {
-              modules: false,
-              loose: true,
-              exclude: ['transform-typeof-symbol'],
-            },
+  return (
+    gulp
+      .src(Paths.SOURCE_JS)
+      .pipe(concat(pkg.name + '.js'))
+      .pipe(sourcemaps.init())
+      .pipe(replace(/^(export|import).*/gm, ''))
+      .pipe(
+        babel({
+          compact: true,
+          presets: [
+            [
+              '@babel/env',
+              {
+                modules: false,
+                loose: true,
+                exclude: ['transform-typeof-symbol'],
+              },
+            ],
           ],
-        ],
-        plugins: ['@babel/plugin-proposal-object-rest-spread'],
-      })
-    )
-    .pipe(uglify())
-    .pipe(gap.prependText(
-      bootstrapItaliaBanner +
-        '\n' +
-        jqueryCheck +
-        '\n' +
-        jqueryVersionCheck +
-        '\n+function () {\n',
-      { pkg: pkg }
-    ))
-    .pipe(gap.appendText('\n}();\n'))
-    .pipe(
-      rename({
-        suffix: '.min',
-      })
-    )
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(Paths.DIST + '/js'))
-    .pipe(touch())
+          plugins: ['@babel/plugin-proposal-object-rest-spread'],
+        })
+      )
+      .pipe(uglify())
+      /* .pipe(
+      gap.prependText(
+        bootstrapItaliaBanner +
+          '\n' +
+          jqueryCheck +
+          '\n' +
+          jqueryVersionCheck +
+          '\n+function () {\n'
+      )
+    ) */
+      // .pipe(gap.appendText('\n}();\n'))
+      .pipe(
+        rename({
+          suffix: '.min',
+        })
+      )
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(Paths.DIST + '/js'))
+      .pipe(touch())
+  )
 })
 
 gulp.task('js-bundle-min', () => {
-  return gulp
-    .src(Paths.VENDOR_JS.concat(Paths.SOURCE_JS))
-    .pipe(concat(pkg.name + '.bundle.js'))
-    .pipe(sourcemaps.init())
-    .pipe(replace(/^(export|import).*/gm, ''))
-    .pipe(
-      babel({
-        compact: true,
-        presets: [['@babel/env', { modules: false, loose: true }]],
-        plugins: ['@babel/plugin-proposal-object-rest-spread'],
-      })
-    )
-    .pipe(uglify())
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
-    .pipe(
-      rename({
-        suffix: '.min',
-      })
-    )
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(Paths.DIST + '/js'))
-    .pipe(touch())
+  return (
+    gulp
+      .src(Paths.VENDOR_JS.concat(Paths.SOURCE_JS))
+      .pipe(concat(pkg.name + '.bundle.js'))
+      .pipe(sourcemaps.init())
+      .pipe(replace(/^(export|import).*/gm, ''))
+      .pipe(
+        babel({
+          compact: true,
+          presets: [['@babel/env', { modules: false, loose: true }]],
+          plugins: ['@babel/plugin-proposal-object-rest-spread'],
+        })
+      )
+      .pipe(uglify())
+      // .pipe(gap.prependText(bootstrapItaliaBanner))
+      .pipe(
+        rename({
+          suffix: '.min',
+        })
+      )
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(Paths.DIST + '/js'))
+      .pipe(touch())
+  )
 })
 
 // Documentation related tasks
@@ -220,7 +227,9 @@ gulp.task('documentation-scss-min', () => {
 gulp.task('documentation-js-min', () => {
   return gulp
     .src(Paths.SOURCE_DOCUMENTATION_JS)
+    .pipe(sourcemaps.init())
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(
       rename({
         suffix: '.min',

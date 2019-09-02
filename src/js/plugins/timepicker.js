@@ -2,7 +2,8 @@
 var keys, valMin, valMax, valNow, skipVal
 
 // regular expression to match required time format
-var timeRegEx = /^\d{1,2}:\d{2}([AP]M)?$/i
+// var timeRegEx = /^\d{1,2}:\d{2}([AP]M)?$/i
+var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
 $(document).ready(function() {
   // "private" functions
@@ -36,15 +37,13 @@ $(document).ready(function() {
       .focus()
   }
 
-  function hideSpinner(spinner, txt, spinnerh, spinnermin) {
+  function hideSpinner(spinner, $input, spinnerh, spinnermin, index) {
     var newTime = $(spinnerh).attr('value') + ':' + $(spinnermin).attr('value')
-    $(txt)
-      .val(newTime)
-      .focus()
+    $input.val(newTime).focus()
     $(spinner).fadeOut(100)
     $(spinner).attr('aria-hidden', 'true')
     $('.btnTime').focus()
-    checkForm(txt)
+    checkForm($input, index)
   }
 
   function getValues(that, arrowBtn) {
@@ -217,119 +216,117 @@ $(document).ready(function() {
     findInput.attr('aria-valuenow', setDigit(valNow, id))
   }
 
+  // save default labels
+  var defLabels = {}
+
   // TIME VALIDATION FOR DATA ENTRY
-  function checkForm(that) {
-    var newValue = $(that).val()
+  function checkForm($input, index) {
+    var newValue = $input.val()
+    var $label = $input.siblings('label')
+
     var matches = newValue != '' ? newValue.match(timeRegEx) : ''
-    var error = $(that)
-      .closest('.time-spinner')
-      .find('.error_container')
-    var $closerTimeSpinner = $(that)
-      .closest('.time-spinner')
-      .find('.spinner-control')
 
     if (matches) {
-      $(error).html('')
-      //$closerTimeSpinner.find('.spinner-hour input').val(timeRegEx.split(':')[0]);
-      //$closerTimeSpinner.find('.spinner-min input').val(timeRegEx.split(':')[1]);
-      return true
+      $label.removeClass('error-label').html(defLabels[index])
     } else {
-      var errMsg = 'Formato data non valido'
-      $(error).html(errMsg)
-      //$(that).val('Formato data non valido')
-      return false
+      $label.addClass('error-label').html('Formato ora non valido (hh:mm)')
     }
   }
 
-  $('.spinner-control button')
-    .attr('aria-hidden', 'true')
-    .attr('tabindex', '-1')
+  // Loop each input field
+  $('.it-timepicker-wrapper').each(function(index) {
+    // wrapper el
+    var $el = $(this)
+    // get input field
+    var $input = $el.find('.txtTime')
 
-  $('.btn-time').click(function() {
-    var spinner = $(this)
-      .closest('fieldset')
-      .next('.spinner-control')
-    var txt = $(this)
-      .closest('.calendar-input-container')
-      .find('.txtTime')
-    var spinnerh = $(spinner).find('.spinnerHour')
-    var spinnermin = $(spinner).find('.spinnerMin')
-    if ($(spinner).attr('aria-hidden') == 'true') {
-      loadSpinner(spinner, txt)
-    } else {
-      hideSpinner(spinner, txt, spinnerh, spinnermin)
-    }
-  })
+    defLabels[index] = $input.siblings('label').text()
 
-  //Hour and Minute
-  $('.spinnerHour, .spinnerMin').each(function(e) {
-    return spinbutton($(this).attr('id'), $(this).attr('bb-skip'), e)
-  })
+    $el
+      .find('.spinner-control button')
+      .attr('aria-hidden', 'true')
+      .attr('tabindex', '-1')
 
-  $(
-    '.btnHourUp, .btnHourDown, .btnMinUp, .btnMinDown',
-    '.spinner-control'
-  ).click(function() {
-    handleClick($(this).attr('id'))
-  })
+    $el.find('.btn-time').click(function() {
+      var spinner = $el.find('fieldset').next('.spinner-control')
+      var spinnerh = $(spinner).find('.spinnerHour')
+      var spinnermin = $(spinner).find('.spinnerMin')
+      if ($(spinner).attr('aria-hidden') == 'true') {
+        loadSpinner(spinner)
+      } else {
+        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
+      }
+    })
 
-  $('.spinner-control *').on('keydown', function(e) {
-    if (e.which == 13) {
-      var spinnerh = $(this)
-        .closest('.time-spinner')
-        .find('.spinnerHour')
-        .attr('value')
-      var spinnermin = $(this)
-        .closest('.time-spinner')
-        .find('.spinnerMin')
-        .attr('value')
+    //Hour and Minute
+    $el.find('.spinnerHour, .spinnerMin').each(function(e) {
+      return spinbutton($(this).attr('id'), $(this).attr('bb-skip'), e)
+    })
 
-      var spinner = $(this).closest('.time-spinner')
-      var txt = $(this)
-        .closest('.time-spinner')
-        .find('.txtTime')
-      var newTime = spinnerh + ':' + spinnermin
+    $el
+      .find(
+        '.btnHourUp, .btnHourDown, .btnMinUp, .btnMinDown',
+        '.spinner-control'
+      )
+      .click(function() {
+        handleClick($(this).attr('id'))
+      })
 
-      $(txt)
-        .attr('value', newTime)
-        .focus()
-      $('.spinner-control').attr('aria-hidden', 'true')
-      $('.spinner-control').fadeOut(100)
-      return false
-    } else if (e.which == 27) {
-      hideSpinner(spinner, txt, spinnerh, spinnermin)
-      return false
-    }
-  })
+    $el.find('.spinner-control *').on('keydown', function(e) {
+      if (e.which == 13) {
+        var spinnerh = $(this)
+          .closest('.time-spinner')
+          .find('.spinnerHour')
+          .attr('value')
+        var spinnermin = $(this)
+          .closest('.time-spinner')
+          .find('.spinnerMin')
+          .attr('value')
 
-  //Direct Time Entry
-  $('.txtTime').on('keydown', function(event) {
-    if (e.which == 13) {
-      return checkForm($(this))
-    }
-  })
+        var spinner = $(this).closest('.time-spinner')
+        var txt = $(this)
+          .closest('.time-spinner')
+          .find('.txtTime')
+        var newTime = spinnerh + ':' + spinnermin
 
-  $('.spinner-control, .btn-time').on('click', function(event) {
-    event.stopPropagation()
-  })
+        $input.val(newTime).focus()
+        $('.spinner-control').attr('aria-hidden', 'true')
+        $('.spinner-control').fadeOut(100)
+        return false
+      } else if (e.which == 27) {
+        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
+        return false
+      }
+    })
 
-  $('.form-control.txtTime').on('blur', function() {
-    checkForm(this)
-  })
-  $('input.spinnerHour, input.spinnerMin').on('keypress', function(event) {
-    return false
-  })
+    //Direct Time Entry
+    $input.on('keydown', function(e) {
+      if (e.which == 13) {
+        return checkForm($input, index)
+      }
+    })
 
-  // click out to close
-  $(window).click(function() {
-    var spinner = $('.spinner-control[aria-hidden="false"]')
-    var spinnerh = $(spinner).find('.spinnerHour')
-    var spinnermin = $(spinner).find('.spinnerMin')
-    var txt = $(spinner)
-      .closest('.time-spinner')
-      .find('.txtTime')
-    if ($(spinner).length > 0) {
-      hideSpinner(spinner, txt, spinnerh, spinnermin)
-    }
+    $el.find('.spinner-control, .btn-time').on('click', function(event) {
+      event.stopPropagation()
+    })
+
+    $input.on('blur', function() {
+      checkForm($input, index)
+    })
+
+    $el
+      .find('input.spinnerHour, input.spinnerMin')
+      .on('keypress', function(event) {
+        return false
+      })
+
+    $(window).click(function() {
+      var spinner = $el.find('.spinner-control[aria-hidden="false"]')
+      var spinnerh = $(spinner).find('.spinnerHour')
+      var spinnermin = $(spinner).find('.spinnerMin')
+      if ($(spinner).length > 0) {
+        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
+      }
+    })
   })
 })
