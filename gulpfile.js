@@ -115,7 +115,7 @@ gulp.task('scss-min', () => {
         specialComments: 0,
       })
     )
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
