@@ -84,7 +84,7 @@ const bootstrapItaliaBanner = [
   ' * ' + pkg.description,
   ' * @version v' + pkg.version,
   ' * @link ' + pkg.homepage,
-  ' * @license ' +pkg.license,
+  ' * @license ' + pkg.license,
   ' */',
   '',
 ].join('\n')
@@ -115,7 +115,7 @@ gulp.task('scss-min', () => {
         specialComments: 0,
       })
     )
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
@@ -149,15 +149,16 @@ gulp.task('js-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(gap.prependText(
-      bootstrapItaliaBanner +
-        '\n' +
-        jqueryCheck +
-        '\n' +
-        jqueryVersionCheck +
-        '\n+function () {\n',
-      { pkg: pkg }
-    ))
+    .pipe(
+      gap.prependText(
+        bootstrapItaliaBanner +
+          '\n' +
+          jqueryCheck +
+          '\n' +
+          jqueryVersionCheck +
+          '\n+function () {\n'
+      )
+    )
     .pipe(gap.appendText('\n}();\n'))
     .pipe(
       rename({
@@ -183,7 +184,7 @@ gulp.task('js-bundle-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
