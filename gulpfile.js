@@ -115,7 +115,7 @@ gulp.task('scss-min', () => {
         specialComments: 0,
       })
     )
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
@@ -155,8 +155,7 @@ gulp.task('js-min', () => {
         jqueryCheck +
         '\n' +
         jqueryVersionCheck +
-        '\n+function () {\n',
-      { pkg: pkg }
+        '\n+function () {\n'
     ))
     .pipe(gap.appendText('\n}();\n'))
     .pipe(
@@ -183,7 +182,7 @@ gulp.task('js-bundle-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
