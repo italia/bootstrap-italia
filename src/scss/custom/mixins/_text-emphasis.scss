@@ -3,6 +3,9 @@
     @if $color == $warning {
       // exception for a11y
       color: darken($color, 18%) !important;
+    } @else if $color == $white {
+      // exception for white
+      color: $white !important;
     } @else {
       color: darken($color, 15%) !important;
     }

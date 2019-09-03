@@ -1,0 +1,693 @@
+---
+layout: base
+title: Template Singolo Argomento
+---
+
+{% assign section = "novità" %} {% include esempi/comuni/header.html %}
+
+<main>
+  <div class="it-hero-wrapper it-wrapped-container">
+    <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+        <div class="img-wrapper">
+          <img
+            src="https://picsum.photos/800/400"
+            title="img title"
+            alt="imagealt"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 px-lg-5">
+          <div
+            class="it-hero-card it-hero-bottom-overlapping px-2 px-lg-5 py-2 py-lg-5 rounded shadow"
+          >
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <nav class="breadcrumb-container" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="#">Home</a><span class="separator">/</span>
+                      </li>
+                      <li class="breadcrumb-item" aria-current="page">
+                        <a href="#">Argomenti</a
+                        ><span class="separator">/</span>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        <a href="#">Cantieri in città</a>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1>Cantieri in città</h1>
+                  <p>
+                    Informazioni sui principali cantieri stradali aperti o in
+                    programmazione in città che comportano modifiche alla
+                    circolazione stradale.
+                  </p>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                  <div class="card-wrapper card-column">
+                    <div
+                      class="card card-teaser card-teaser-info rounded shadow"
+                    >
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Area Lavori pubblici
+                        </h5>
+                        <div class="card-text">
+                          <p>Via Roma, 0</p>
+                        </div>
+                      </div>
+                      <div class="avatar size-xl">
+                        <img
+                          src="https://picsum.photos/200/200"
+                          alt="Immagine"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="card card-teaser card-teaser-info rounded shadow"
+                    >
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Area Governo del territorio
+                        </h5>
+                        <div class="card-text">
+                          <p>Via Roma, 0</p>
+                        </div>
+                      </div>
+                      <div class="avatar size-xl">
+                        <img
+                          src="https://picsum.photos/200/200"
+                          alt="Immagine"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="in-evidenza">
+    <div class="section section-muted section-inset-shadow pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col mt-sm-5">
+            <h3>In evidenza</h3>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper">
+              <div class="card card-img no-after rounded shadow">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive img-responsive-panoramic">
+                    <figure class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/400/200"
+                        title="img title"
+                        alt="imagealt"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-calendar"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Notizie</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h4 class="card-title">
+                    Una città in costante rinnovamento
+                  </h4>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-outline-success"
+                      >Cantieri in città</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper card-column">
+              <div class="card no-after rounded shadow">
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-calendar"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Notizie</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h4 class="card-title">
+                    Dissuasori mobili nel centro
+                  </h4>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                </div>
+              </div>
+              <div class="card no-after rounded shadow">
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-calendar"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Notizie</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h4 class="card-title">
+                    Lavori stradali, riqualifiche e servizi
+                  </h4>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper card-column">
+              <div class="card card-teaser card-bg-primary no-after rounded">
+                <div class="avatar size-lg mr-3">
+                  <img src="https://picsum.photos/200/200" alt="Immagine" />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Come partecipare ad un bando
+                  </h5>
+                  <p class="card-text text-sans-serif">
+                    Tutte le informazioni e i documenti necessari per
+                    partecipare.
+                  </p>
+                </div>
+              </div>
+              <div class="card no-after rounded shadow">
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-note"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Bandi</a>
+                  </div>
+                  <h5 class="card-title">
+                    Come partecipare ad un bando
+                  </h5>
+                  <p class="card-text text-sans-serif">
+                    Tutte le informazioni e i documenti necessari per
+                    partecipare.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="amministrazione">
+    <div class="section py-5">
+      <div class="container">
+        <div class="row row-title">
+          <h3>Amministrazione</h3>
+          <div>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Tutto
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Giunta e consiglio
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Aree di competenza
+            </button>
+          </div>
+        </div>
+        <div class="py-4">
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3"
+          >
+            <div
+              class="card card-teaser card-teaser-image card-flex rounded shadow"
+            >
+              <div class="card-image-wrapper">
+                <div class="card-body p-4">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-pa"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Giunta e consiglio</a>
+                  </div>
+                  <h5 class="card-title">
+                    Gabriele Bianchi
+                  </h5>
+                  <p class="card-text">
+                    Assessore lavori pubblici e casa
+                  </p>
+                </div>
+                <div class="card-image card-image-rounded">
+                  <img
+                    src="https://picsum.photos/150/200"
+                    alt="Immagine di esempio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Aree di competenza</a>
+                </div>
+                <h5 class="card-title">
+                  Area edilizia e trasporto pubblico locale
+                </h5>
+                <p class="card-text">
+                  Dirigente Arch. M. Alessandra Verdi
+                </p>
+              </div>
+            </div>
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Aree di competenza</a>
+                </div>
+                <h5 class="card-title">
+                  Area lavori pubblici
+                </h5>
+                <p class="card-text">
+                  Dirigente Ing. Mauro Brambilla
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-title pt-5">
+          <h3>Servizi</h3>
+          <div>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Tutto
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Sostegno
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Segnalazioni
+            </button>
+          </div>
+        </div>
+        <div class="py-4">
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 card-teaser-start"
+          >
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Sostegno</a>
+                </div>
+                <h5 class="card-title">
+                  Mappa dei cantieri
+                </h5>
+                <p class="card-text">
+                  Tutte le informazioni utili sui principali cantieri attivi in
+                  città
+                </p>
+              </div>
+            </div>
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Segnalazioni</a>
+                </div>
+                <h5 class="card-title">
+                  Richiesta risarcimento danni al Comune
+                </h5>
+                <p class="card-text">
+                  Cosa fare in caso di sinistro causato da una buca sulla strada
+                  comunale
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="novita">
+    <div class="section section-muted section-inset-shadow py-5">
+      <div class="container">
+        <div class="row row-title">
+          <h3>Novità</h3>
+          <div>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Tutto
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Notizie
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Eventi
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Comunicati stampa
+            </button>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper">
+              <div class="card card-img no-after rounded shadow">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive img-responsive-panoramic">
+                    <figure class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/400/200"
+                        title="img title"
+                        alt="imagealt"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-calendar"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Notizie</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h4 class="card-title">
+                    Una città in costante rinnovamento
+                  </h4>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-outline-success"
+                      >Cantieri in città</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper">
+              <div class="card card-img no-after rounded shadow">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive img-responsive-panoramic">
+                    <figure class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/400/200"
+                        title="img title"
+                        alt="imagealt"
+                      />
+                    </figure>
+                    <div
+                      class="card-calendar d-flex flex-column justify-content-center"
+                    >
+                      <span class="card-date">2-3</span>
+                      <span class="card-day">maggio</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-calendar"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Eventi</a>
+                    <span class="data">dal 2 al 3 mag 2018</span>
+                  </div>
+                  <h4 class="card-title">
+                    Tramvia, dibattito aperto a tutti i cittadini
+                  </h4>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                  <div>
+                    <span class="badge badge-pill badge-outline-success"
+                      >Cantieri in città</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="card-wrapper card-column">
+              <div class="card no-after rounded shadow">
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-note"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Notizie</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h5 class="card-title">
+                    Tramvia, chiusure notturne in via Valfonda
+                  </h5>
+                  <p class="card-text text-sans-serif">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                </div>
+              </div>
+              <div class="card no-after rounded shadow">
+                <div class="card-body">
+                  <div class="category-top">
+                    <svg class="icon">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-note"
+                      ></use>
+                    </svg>
+                    <a class="category" href="#">Comunicati stampa</a>
+                    <span class="data">18 mag 2018</span>
+                  </div>
+                  <h5 class="card-title">
+                    Lavori stradali, riqualifiche e servizi
+                  </h5>
+                  <p class="card-text text-sans-serif">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Incidunt labore sed nihil! Praesentium nulla consectetur in
+                    quae illo dolorum recusandae hic quidem odit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-lg-4">
+          <div class="col">
+            <nav
+              class="pagination-wrapper justify-content-center"
+              aria-label="Esempio di navigazione della pagina"
+            >
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <svg class="icon icon-primary">
+                      <use
+                        xlink:href="/dist/svg/sprite.svg#it-chevron-left"
+                      ></use>
+                    </svg>
+                    <span class="sr-only">Pagina precedente</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-current="page">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <span class="sr-only">Pagina successiva</span>
+                    <svg class="icon icon-primary">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-chevron-right"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="documenti">
+    <div class="section py-5">
+      <div class="container">
+        <div class="row row-title">
+          <h3>Documenti</h3>
+          <div>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Tutto
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Progetti e attività
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              Bandi
+            </button>
+          </div>
+        </div>
+        <div class="py-4">
+          <div
+            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3"
+          >
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-note"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Bandi</a>
+                </div>
+                <h5 class="card-title">
+                  Bandi edilizia e strade
+                </h5>
+                <p class="card-text">
+                  Tutte le informazioni utili sui principali bandi disponibili
+                </p>
+              </div>
+            </div>
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-note"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Bandi</a>
+                </div>
+                <h5 class="card-title">
+                  Bando verde pubblico
+                </h5>
+                <p class="card-text">
+                  Tutte le informazioni utili sui principali bandi attivi in
+                  città
+                </p>
+              </div>
+            </div>
+            <div class="card card-teaser rounded shadow">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-note"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Progetti e attività</a>
+                </div>
+                <h5 class="card-title">
+                  Piano lavori 2019
+                </h5>
+                <p class="card-text">
+                  Tutte le informazioni e le ultime novità sul piano lavori
+                  previsto per il 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include esempi/comuni/footer.html %}

@@ -69,6 +69,10 @@
     }
   }
 
+  &.row-card {
+    background-color: $white;
+  }
+
   // Desktop
   @media (min-width: #{map-get($grid-breakpoints, lg)}) {
     &.row-column-border {
@@ -124,19 +128,45 @@
     }
   }
 
-  // Tablet desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-    &.row-full-width {
-      max-width: calc(100vw - 8px);
-      margin: 0 calc(-50vw + 50% + 8px); // removes y-scrollbar
+  &.row-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // Tablet portrait
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+      flex-direction: row;
+      align-items: flex-start;
     }
   }
 
-  // Large Desktop
-  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
-    &.row-column-border {
-      margin-top: 2rem;
+  &.row-border {
+    @for $i from 1 through 6 {
+      h#{$i} {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
     }
+
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+
+      @for $i from 1 through 6 {
+        h#{$i} {
+          border: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  // Create row wrapper for sliding calendar
+  &.row-calendar {
+    display: block;
   }
 }
 

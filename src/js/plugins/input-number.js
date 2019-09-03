@@ -7,12 +7,21 @@ $(function() {
       if (!$inputNumber.hasClass('input-number-percentage')) {
         $target.css('width', 'calc(44px + ' + $target.val().length + 'ch)')
         if (isIe())
-          $target.css('width', 'calc(44px + (1.5 * ' + $target.val().length + 'ch))')
+          $target.css(
+            'width',
+            'calc(44px + (1.5 * ' + $target.val().length + 'ch))'
+          )
       }
       if ($inputNumber.hasClass('input-number-currency')) {
-        $target.css('width', 'calc(40px + 44px + ' + $target.val().length + 'ch)')
+        $target.css(
+          'width',
+          'calc(40px + 44px + ' + $target.val().length + 'ch)'
+        )
         if (isIe())
-          $target.css('width', 'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))')
+          $target.css(
+            'width',
+            'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))'
+          )
       }
     }
   }
@@ -91,5 +100,12 @@ $(function() {
 
     //resize input
     inputNumberResize($inputTarget)
+  })
+
+  // Fixing IE11 numeric behavior
+  $('input[type=number]').on('keyup', function(e) {
+    var value = e && e.target.value
+    var regexp = /[^0-9,.]/g
+    this.value = value.replace(regexp, '')
   })
 })

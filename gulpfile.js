@@ -8,8 +8,7 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
   replace = require('gulp-replace'),
-  header = require('gulp-header'),
-  footer = require('gulp-footer'),
+  gap = require('gulp-append-prepend'),
   log = require('fancy-log'),
   touch = require('gulp-touch-cmd'),
   spawn = require('cross-spawn'),
@@ -82,10 +81,10 @@ const Paths = {
 
 const bootstrapItaliaBanner = [
   '/**',
-  ' * <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @link <%= pkg.homepage %>',
-  ' * @license <%= pkg.license %>',
+  ' * ' + pkg.description,
+  ' * @version v' + pkg.version,
+  ' * @link ' + pkg.homepage,
+  ' * @license ' +pkg.license,
   ' */',
   '',
 ].join('\n')
@@ -116,7 +115,7 @@ gulp.task('scss-min', () => {
         specialComments: 0,
       })
     )
-    .pipe(header(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
     .pipe(
       rename({
         suffix: '.min',
@@ -150,18 +149,16 @@ gulp.task('js-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(
-      header(
-        bootstrapItaliaBanner +
-          '\n' +
-          jqueryCheck +
-          '\n' +
-          jqueryVersionCheck +
-          '\n+function () {\n',
-        { pkg: pkg }
-      )
-    )
-    .pipe(footer('\n}();\n'))
+    .pipe(gap.prependText(
+      bootstrapItaliaBanner +
+        '\n' +
+        jqueryCheck +
+        '\n' +
+        jqueryVersionCheck +
+        '\n+function () {\n',
+      { pkg: pkg }
+    ))
+    .pipe(gap.appendText('\n}();\n'))
     .pipe(
       rename({
         suffix: '.min',
@@ -186,7 +183,7 @@ gulp.task('js-bundle-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(header(bootstrapItaliaBanner, { pkg: pkg }))
+    .pipe(gap.prependText(bootstrapItaliaBanner, { pkg: pkg }))
     .pipe(
       rename({
         suffix: '.min',

@@ -29,7 +29,7 @@ label {
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 0 $input-spacing-x;
-    z-index: 6;
+    // z-index: 6;
 
     &.active {
       transform: translateY(-75%);
@@ -165,6 +165,10 @@ textarea {
       left: 2.25rem;
       max-width: calc(100% - 2.25rem);
     }
+
+    .btn {
+      border-radius: 4px 0 0 4px;
+    }
   }
 
   .input-group-append {
@@ -173,7 +177,7 @@ textarea {
       padding-top: 0;
       padding-bottom: 0;
       border-bottom: 1px solid #5c6f82;
-      border-radius: 0;
+      border-radius: 0 4px 4px 0;
       box-shadow: none;
     }
   }

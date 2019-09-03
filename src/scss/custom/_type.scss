@@ -25,6 +25,7 @@ h1,
 h2,
 .h2 {
   line-height: 1.25;
+  letter-spacing: normal;
   @include media-breakpoint-up(sm) {
     font-size: 2.222rem;
     line-height: 1.2;
@@ -34,6 +35,7 @@ h2,
 h3,
 .h3 {
   line-height: 1.1428;
+  letter-spacing: normal;
   @include media-breakpoint-up(sm) {
     font-size: 1.777rem;
     line-height: 1.25;
@@ -43,6 +45,7 @@ h3,
 h4,
 .h4 {
   line-height: 1.1666;
+  letter-spacing: normal;
   @include media-breakpoint-up(sm) {
     font-size: 1.555rem;
     line-height: 1.428;
@@ -53,6 +56,7 @@ h4,
 h5,
 .h5 {
   font-weight: 400;
+  letter-spacing: normal;
   @include media-breakpoint-up(sm) {
     font-size: 1.333rem;
   }
@@ -62,6 +66,7 @@ h6,
 .h6 {
   font-weight: 600;
   line-height: 1.5;
+  letter-spacing: normal;
 }
 
 //
@@ -119,11 +124,11 @@ small,
 
 // Font Family
 .text-serif {
-  font-family: $font-family-serif;
+  font-family: $font-family-serif !important;
 }
 .text-sans-serif {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif !important;
 }
 .text-monospace {
-  font-family: $font-family-monospace;
+  font-family: $font-family-monospace !important;
 }

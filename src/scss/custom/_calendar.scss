@@ -1,0 +1,75 @@
+.it-calendar-wrapper {
+  .it-header-block-title {
+    background-color: $primary;
+    color: $white;
+    padding: 0.5em 0;
+
+    border-radius: 4px 4px 0 0;
+  }
+
+  .card-wrapper {
+    padding: 0;
+  }
+
+  .owl-stage-outer {
+    padding-top: 0;
+    margin-bottom: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .owl-item {
+    .card-bg {
+      box-shadow: none;
+    }
+
+    &.active {
+      & + .active {
+        .card-bg {
+          border-bottom-left-radius: 0;
+          box-shadow: inset 1rem 0 1rem -1rem rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  .card {
+    .card-title,
+    .card-text {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 16px;
+    }
+
+    .card-body {
+      .card-title {
+        font-family: $font-family-sans-serif;
+        font-size: 3em;
+        font-weight: 300;
+        padding-top: 16px;
+
+        span {
+          font-size: 0.3em;
+          display: block;
+          padding-top: 1em;
+          padding-left: 1em;
+          font-family: $font-family-monospace;
+        }
+      }
+    }
+
+    .card-text {
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-family: $font-family-sans-serif;
+        font-size: $link-list-font-size-l;
+
+        &:hover {
+          text-decoration: underline;
+          color: $link-color;
+        }
+      }
+    }
+  }
+}

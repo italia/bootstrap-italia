@@ -1,0 +1,540 @@
+---
+layout: base
+title: Template Singolo Argomento
+---
+
+{% assign section = "novità" %} {% include esempi/comuni/header.html %}
+
+<main>
+  <div class="container px-4 my-4">
+    <div class="row">
+      <div class="col px-lg-2">
+        <nav class="breadcrumb-container" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a><span class="separator">/</span>
+            </li>
+            <li class="breadcrumb-item active">
+              <a href="#">Risultato della ricerca</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col py-3 py-lg-5">
+            <h1>Pagamenti della TARI</h1>
+          </div>
+        </div>
+        <div class="d-block d-lg-none d-xl-none">
+          <div class="row pb-3">
+            <div class="col-6"><small>Trovati 295 risultati</small></div>
+            <div class="col-6">
+              <div class="float-right">
+                <a
+                  href="#categoryCollapse"
+                  role="button"
+                  class="font-weight-bold text-uppercase"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="categoryCollapse"
+                >
+                  Filtri
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row border-top">
+      <aside class="col-lg-3 py-lg-5">
+        <div class="collapse d-lg-block d-xl-block" id="categoryCollapse">
+          <div class="pt-4 pt-lg-0">
+            <h6 class="text-uppercase">Categorie</h6>
+            <div class="form-check mt-4">
+              <div>
+                <input id="checkbox1" type="checkbox" />
+                <label for="checkbox1">Amministrazione</label>
+              </div>
+              <div>
+                <input id="checkbox2" type="checkbox" />
+                <label for="checkbox2">Servizi</label>
+              </div>
+              <div>
+                <input id="checkbox3" type="checkbox" />
+                <label for="checkbox3">Novità</label>
+              </div>
+              <div>
+                <input id="checkbox4" type="checkbox" />
+                <label for="checkbox4">Documenti</label>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 pt-lg-5">
+            <h6 class="text-uppercase">Argomenti</h6>
+            <div class="form-check mt-4">
+              <div>
+                <input id="checkbox5" type="checkbox" />
+                <label for="checkbox5">Agevolazioni per la casa</label>
+              </div>
+              <div>
+                <input id="checkbox6" type="checkbox" />
+                <label for="checkbox6">Animali</label>
+              </div>
+              <div>
+                <input id="checkbox7" type="checkbox" />
+                <label for="checkbox7">Anziani</label>
+              </div>
+              <div>
+                <input id="checkbox8" type="checkbox" />
+                <label for="checkbox8">Assistenza e inclusione</label>
+              </div>
+              <div>
+                <input id="checkbox9" type="checkbox" />
+                <label for="checkbox9">Associazioni</label>
+              </div>
+              <div>
+                <input id="checkbox10" type="checkbox" />
+                <label for="checkbox10">Bambini e ragazzi</label>
+              </div>
+              <div>
+                <input id="checkbox11" type="checkbox" />
+                <label for="checkbox11">Cantieri e progetti</label>
+              </div>
+              <div>
+                <input id="checkbox12" type="checkbox" />
+                <label for="checkbox12">Comune</label>
+              </div>
+              <div>
+                <input id="checkbox13" type="checkbox" />
+                <label for="checkbox13">Comunicare con il Comune</label>
+              </div>
+              <div>
+                <input id="checkbox14" type="checkbox" />
+                <label for="checkbox14">Corsi e tempo libero</label>
+              </div>
+              <div class="collapse" id="collapseList">
+                <div>
+                  <input id="checkbox15" type="checkbox" />
+                  <label for="checkbox15">Costruire e ristrutturare</label>
+                </div>
+                <div>
+                  <input id="checkbox16" type="checkbox" />
+                  <label for="checkbox16">Cultura</label>
+                </div>
+                <div>
+                  <input id="checkbox17" type="checkbox" />
+                  <label for="checkbox17">Edilizia</label>
+                </div>
+                <div>
+                  <input id="checkbox18" type="checkbox" />
+                  <label for="checkbox18">Famiglia</label>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <a
+                class="font-weight-bold"
+                data-toggle="collapse"
+                href="#collapseList"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseList"
+                >Mostra tutto</a
+              >
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="col-lg-9 py-lg-5">
+        <div class="d-none d-lg-block d-xl-block">
+          <div class="row pb-3 px-4 border-bottom">
+            <div class="col-6"><small>Trovati 295 risultati</small></div>
+            <div class="col-6">
+              <div class="float-right">
+                <label for="filter-field"><small class="mr-3">Ordina per</small></label>
+                <select name="filter" id="filter-field">
+                  <option value="0">Rilevanza</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-teaser">
+              <div class="card-body">
+                <div class="category-top">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
+                    ></use>
+                  </svg>
+                  <a class="category" href="#">Servizi</a>
+                </div>
+                <h4 class="card-title">
+                  <a href="#">Scadenza TARI 2018: istruzioni per pagamento</a>
+                </h4>
+                <p class="card-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-lg-4">
+          <div class="col">
+            <nav
+              class="pagination-wrapper justify-content-center"
+              aria-label="Esempio di navigazione della pagina"
+            >
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <svg class="icon icon-primary">
+                      <use
+                        xlink:href="/dist/svg/sprite.svg#it-chevron-left"
+                      ></use>
+                    </svg>
+                    <span class="sr-only">Pagina precedente</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-current="page">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <span class="sr-only">Pagina successiva</span>
+                    <svg class="icon icon-primary">
+                      <use
+                        xlink:href="/dist/svg/sprite.svg#it-chevron-right"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+{% include esempi/comuni/footer.html %}

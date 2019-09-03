@@ -98,25 +98,27 @@ $(function() {
     }
   }
 
-  $('body')
-    .find(inputSelector)
-    .removeClass('valid invalid')
-    .each((index, input) => {
-      const $this = $(input)
-      const hasDefaultValue = !!$this.val()
-      const hasPlaceholder = !!$this.attr('placeholder')
-      if (hasDefaultValue || hasPlaceholder) {
-        $this
-          .siblings('label, i')
-          .css('transition', 'none')
-          .addClass('active')
-      }
+  const handleLabelPosition = () => {
+    $('body')
+      .find(inputSelector)
+      .removeClass('valid invalid')
+      .each((index, input) => {
+        const $this = $(input)
+        const hasDefaultValue = !!$this.val()
+        const hasPlaceholder = !!$this.attr('placeholder')
+        if (hasDefaultValue || hasPlaceholder) {
+          $this
+            .siblings('label, i')
+            .css('transition', 'none')
+            .addClass('active')
+        }
 
-      if (!hasDefaultValue && !hasPlaceholder) {
-        $this.siblings('label, i').removeClass('active')
-        handleLabelWidth($this)
-      }
-    })
+        if (!hasDefaultValue && !hasPlaceholder) {
+          $this.siblings('label, i').removeClass('active')
+          handleLabelWidth($this)
+        }
+      })
+  }
 
   $(window).resize(function() {
     $(inputSelector).each((index, input) => {
@@ -124,4 +126,9 @@ $(function() {
       handleLabelWidth($this)
     })
   })
+
+  handleLabelPosition()
+
+  $(document).on('changed.bs.form-control', handleLabelPosition)
+
 })

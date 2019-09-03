@@ -13,9 +13,6 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
-    - name: Sticky Header
-      url: sticky-header
-      description: Header con effetto sticky on scroll.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
@@ -25,21 +22,53 @@
       description: Il modo più semplice per iniziare a giocare con Bootstrap Italia. Un semplice HTML che mostra come includere tutti i file necessari.
     - name: Template vuoto
       url: template-vuoto
-      description: 'Un esempio di impostazione per una pagina generica: un buon punto di partenza per iniziare con Bootstrap Italia.'
+      description: Un esempio di impostazione per una pagina generica, punto di partenza per iniziare con Bootstrap Italia.
       status: work in progress
     - name: Template Comuni Vuoto
       url: template-comuni-vuoto
-      description: 'Un esempio di impostazione per una pagina generica relativa al progetto "Comuni".'
+      description: Un esempio di impostazione per una pagina generica relativa al progetto "Comuni"
+    - name: Template "Amministrazione"
+      url: template-amministrazione
+      description: 'La subhome del menu "Amministrazione"'
+      status: work in progress
+    - name: Template "Servizi"
+      url: template-servizi
+      description: 'La subhome del menu "Servizi"'
+      status: work in progress
     - name: Template Servizio Comunale
-      url: template-servizio-comunale
+      url: template-servizi-servizio
       description: 'Una sottopagina di esempio per un servizio comunale'
+      status: work in progress
+    - name: Template "Novità"
+      url: template-novita
+      description: 'La subhome del menu "Novità"'
+      status: work in progress
     - name: Template Evento Comunale
-      url: template-evento-comunale
+      url: template-novita-evento
       description: 'Una sottopagina di esempio per un evento comunale'
       status: work in progress
     - name: Template Pagina Notizia
-      url: template-pagina-notizia
+      url: template-novita-notizia
       description: 'Una sottopagina di esempio per una notizia'
+      status: work in progress
+    - name: Template Lista Argomenti
+      url: template-lista-argomenti
+      description: 'Una pagina per la lista degli argomenti'
+    - name: Template Singolo Argomento
+      url: template-singolo-argomento
+      description: 'Una pagina per il singolo argomento'
+      status: work in progress
+    - name: Template "Documenti"
+      url: template-documenti
+      description: 'La subhome del menu "Documenti"'
+      status: work in progress
+    - name: Template Risultato Ricerca
+      url: template-risultato-ricerca
+      description: 'Una pagina che mostra i risultati della ricerca'
+      status: work in progress
+    - name: Template Home Page
+      url: template-home-page
+      description: 'Un esempio di Home Page'
       status: work in progress
 - category: Esempi dal sito ufficiale di Bootstrap 4
   description: La documentazione di Bootstrap 4 contiene <a href="https://getbootstrap.com/docs/4.3/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.

@@ -121,6 +121,7 @@
     height: $header-center-max-height;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 6px;
     &.it-small-header {
       height: $header-center-small-height;
       .it-header-center-content-wrapper .it-brand-wrapper a h2 {

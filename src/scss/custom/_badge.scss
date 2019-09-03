@@ -1,0 +1,9 @@
+.badge {
+  @each $color, $value in $theme-colors {
+    &.badge-outline-#{$color} {
+      color: $value;
+      border: 1px solid $value;
+      background-color: transparent !important;
+    }
+  }
+}
