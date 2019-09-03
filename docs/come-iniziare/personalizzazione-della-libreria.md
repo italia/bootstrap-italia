@@ -32,9 +32,17 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 {% highlight scss %}
 // file: custom-bootstrap.scss
 
-// override variabile
-$primary: #ff0000;
-$font-family-sans-serif: 'Custom-font', Arial, Verdana, sans-serif;
+// modifica completa del template
+// override del colore $primary della palette (formato HSB)
+$primary-h: 315;
+$primary-s: 43;
+$primary-b: 76;
+
+// override di una variabile colore (formato HEX)
+\$primary: #ff0000;
+
+// override font family
+\$font-family-sans-serif: 'Custom-font', Arial, Verdana, sans-serif;
 
 // import libreria
 @import "../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss";
@@ -49,6 +57,7 @@ import "./App.css";
 
 function App() {
 return (
+
 <div className="App">
 <button className="btn btn-primary">
 Button
