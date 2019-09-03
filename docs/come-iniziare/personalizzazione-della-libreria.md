@@ -32,17 +32,19 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 {% highlight scss %}
 // file: custom-bootstrap.scss
 
-// modifica completa del template
-// override del colore $primary della palette (formato HSB)
+// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+
+// Per l'override del colore $primary della palette in formato HSB:
 $primary-h: 315;
 $primary-s: 43;
 $primary-b: 76;
+// Nota: per convertire il codice esadecimale di un colore formato HSB
+// è possibile utilizzare ad esempio il sito https://rgb.to/.
 
-// override di una variabile colore (formato HEX)
-\$primary: #ff0000;
-
-// override font family
-\$font-family-sans-serif: 'Custom-font', Arial, Verdana, sans-serif;
+// Per l'override della famiglia di caratteri
+$font-family-serif:      "Custom Font", Georgia, serif;
+$font-family-sans-serif: "Custom Font", Arial, Helvetica, sans-serif;
+$font-family-monospace:  "Custom Font", "Courier New", Courier, monospace;
 
 // import libreria
 @import "../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss";
@@ -56,14 +58,11 @@ import "./scss/custom-bootstrap.scss";
 import "./App.css";
 
 function App() {
-return (
-
-<div className="App">
-<button className="btn btn-primary">
-Button
-</button>
-</div>
-);
+  return (
+    <div className="App">
+      <button className="btn btn-primary">Bottone di esempio</button>
+    </div>
+  );
 }
 
 export default App;
