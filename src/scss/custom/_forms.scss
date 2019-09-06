@@ -357,14 +357,14 @@ textarea {
         cursor: not-allowed;
       }
 
-      :not(:checked) + label {
+      &:not(:checked) + label {
         &::after,
         &::before {
           border-color: #e6e9f2;
         }
       }
 
-      :checked + label {
+      &:checked + label {
         &::after {
           border-color: #e6e9f2;
           background-color: #e6e9f2;
