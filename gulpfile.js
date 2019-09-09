@@ -80,7 +80,7 @@ const Paths = {
 }
 
 const bootstrapItaliaBanner = [
-  '/**',
+  '/*!',
   ' * ' + pkg.description,
   ' * @version v' + pkg.version,
   ' * @link ' + pkg.homepage,
@@ -106,16 +106,16 @@ const jqueryVersionCheck =
 gulp.task('scss-min', () => {
   return gulp
     .src(Paths.SOURCE_SCSS)
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(
       cleanCSS({
         level: 2,
-        specialComments: 0,
+        specialComments: 'all',
       })
     )
-    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
