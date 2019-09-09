@@ -12,92 +12,412 @@ title: Template Area Personale
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
             <h4 class="text-center">Bentornato Mario!</h4>
-            <ul class="nav nav-tabs auto no-border no-background mt-3">
-              <li class="nav-item">
-                <a class="nav-link text-primary active" href="#"
-                  >I miei servizi</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-primary" href="#">Le mie pratiche</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-primary" href="#">Notifiche</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-primary" href="#">Altra tab</a>
-              </li>
-            </ul>
+            <div class="nav-tabs-hidescroll mt-4 mt-md-5">
+              <ul
+                class="nav nav-tabs auto no-border no-background"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary active"
+                    id="tab1-tab"
+                    data-toggle="tab"
+                    href="#tab1"
+                    role="tab"
+                    aria-controls="tab1"
+                    aria-selected="true"
+                    >I miei servizi</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab2-tab"
+                    data-toggle="tab"
+                    href="#tab2"
+                    role="tab"
+                    aria-controls="tab2"
+                    aria-selected="false"
+                    >Le mie pratiche</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab3-tab"
+                    data-toggle="tab"
+                    href="#tab3"
+                    role="tab"
+                    aria-controls="tab3"
+                    aria-selected="false"
+                    >Notifiche</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab4-tab"
+                    data-toggle="tab"
+                    href="#tab4"
+                    role="tab"
+                    aria-controls="tab4"
+                    aria-selected="false"
+                    >Altra tab</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="row pt-5">
-          <h2>I miei servizi</h2>
-        </div>
-        <div class="py-4">
-          <div class="row">
-            <div class="col-12 col-lg-6">
-              <!--start card-->
-              <div class="card-wrapper card-space">
-                <div class="card card-bg card-big">
-                  <div class="card-body">
-                    <div class="top-icon">
-                      <svg class="icon">
-                        <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
-                      </svg>
+
+        <div class="row">
+          <div class="col">
+            <div class="tab-content mt-5 mt-md-3" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="tab1"
+                role="tabpanel"
+                aria-labelledby="tab1-tab"
+              >
+                <div class="row pt-md-5">
+                  <div class="col">
+                    <h2>I miei servizi</h2>
+                  </div>
+                </div>
+                <div class="py-4">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="{{
+                                    site.baseurl
+                                  }}/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
                     </div>
-                    <h5 class="card-title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor…
-                    </h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                    <a class="read-more" href="#">
-                      <span class="text">Leggi di più</span>
-                      <svg class="icon">
-                        <use
-                          xlink:href="/dist/svg/sprite.svg#it-arrow-right"
-                        ></use>
-                      </svg>
-                    </a>
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
                   </div>
                 </div>
               </div>
-              <!--end card-->
-            </div>
-            <div class="col-12 col-lg-6">
-              <!--start card-->
-              <div class="card-wrapper card-space">
-                <div class="card card-bg card-big">
-                  <div class="card-body">
-                    <div class="top-icon">
-                      <svg class="icon">
-                        <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
-                      </svg>
+              <div
+                class="tab-pane fade"
+                id="tab2"
+                role="tabpanel"
+                aria-labelledby="tab2-tab"
+              >
+                <div class="row pt-md-5">
+                  <div class="col">
+                    <h2>Le mie pratiche</h2>
+                  </div>
+                </div>
+                <div class="py-4">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="{{
+                                    site.baseurl
+                                  }}/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
                     </div>
-                    <h5 class="card-title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor…
-                    </h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                    <a class="read-more" href="#">
-                      <span class="text">Leggi di più</span>
-                      <svg class="icon">
-                        <use
-                          xlink:href="/dist/svg/sprite.svg#it-arrow-right"
-                        ></use>
-                      </svg>
-                    </a>
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
                   </div>
                 </div>
               </div>
-              <!--end card-->
+              <div
+                class="tab-pane fade"
+                id="tab3"
+                role="tabpanel"
+                aria-labelledby="tab3-tab"
+              >
+                <div class="row pt-md-5">
+                  <div class="col">
+                    <h2>Notifiche</h2>
+                  </div>
+                </div>
+                <div class="py-4">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="{{
+                                    site.baseurl
+                                  }}/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="tab4"
+                role="tabpanel"
+                aria-labelledby="tab4-tab"
+              >
+                <div class="row pt-md-5">
+                  <div class="col">
+                    <h2>Altra tab</h2>
+                  </div>
+                </div>
+                <div class="py-4">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="{{
+                                    site.baseurl
+                                  }}/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <!--start card-->
+                      <div class="card-wrapper card-space">
+                        <div class="card card-bg card-big">
+                          <div class="card-body">
+                            <div class="top-icon">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-card"
+                                ></use>
+                              </svg>
+                            </div>
+                            <h5 class="card-title">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor…
+                            </h5>
+                            <p class="card-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua.
+                            </p>
+                            <a class="read-more" href="#">
+                              <span class="text">Leggi di più</span>
+                              <svg class="icon">
+                                <use
+                                  xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                                ></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end card-->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

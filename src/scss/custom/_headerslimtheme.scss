@@ -89,7 +89,16 @@
 // Wrapper for logged-in user in header slim wrapper
 // Cloned by sticky-header
 .it-user-wrapper {
-  align-self: stretch;
+  // align-self: stretch;
+
+  .dropdown-menu.show {
+    transform: translate3d(-120px, 42px, 0) !important;
+
+    &::before {
+      right: 12px;
+      left: auto !important;
+    }
+  }
 
   &.cloned {
     margin-left: 1em;
@@ -100,8 +109,30 @@
   }
 }
 
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(-132px, 50px, 0) !important;
+
+      &::before {
+        right: 12px;
+        left: auto !important;
+      }
+    }
+  }
+}
+
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(0, 55px, 0) !important;
+
+      &::before {
+        right: auto;
+        left: 27px !important;
+      }
+    }
+
     &.dropdown {
       .icon {
         margin-left: 4px;

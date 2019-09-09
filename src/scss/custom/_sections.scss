@@ -74,6 +74,15 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .section {
     padding: #{map-get($grid-gutter-widths, lg) * 4};
+
+    &.section-background-header {
+      &.section-user-header {
+        &::before {
+          content: '';
+          min-height: 550px;
+        }
+      }
+    }
   }
 }
 
