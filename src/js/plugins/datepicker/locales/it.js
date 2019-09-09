@@ -11,7 +11,7 @@
         nextButtonLabel: 'Vai al mese successivo',
         closeButtonTitle: 'Chiudere',
         closeButtonLabel: 'Chiudere il calendario',
-        prevMonthButtonLabel: 'Vai al precedente esercizio',
+        prevMonthButtonLabel: "Vai all'anno precedente",
         prevYearButtonLabel: "Vai a vent'anni precedenti",
         nextMonthButtonLabel: 'Vai al prossimo anno',
         nextYearButtonLabel: 'Vai ai prossimi 20 anni',
