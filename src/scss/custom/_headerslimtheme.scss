@@ -85,3 +85,27 @@
     }
   }
 }
+
+// Wrapper for logged-in user in header slim wrapper
+// Cloned by sticky-header
+.it-user-wrapper {
+  align-self: stretch;
+
+  &.cloned {
+    margin-left: 1em;
+  }
+
+  .link-list-wrapper > ul > li > a {
+    line-height: 3em;
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .it-user-wrapper {
+    &.dropdown {
+      .icon {
+        margin-left: 4px;
+      }
+    }
+  }
+}

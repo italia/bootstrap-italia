@@ -43,9 +43,11 @@
           if (toAdd) {
             const elBrand = document.querySelector('.it-brand-wrapper')
             const elSearch = document.querySelector('.it-search-wrapper')
+            const elUser = document.querySelector('.it-user-wrapper')
 
             const clonedBrand = elBrand ? elBrand.cloneNode(true) : null
             const clonedSearch = elSearch ? elSearch.cloneNode(true) : null
+            const clonedUser = elUser ? elUser.cloneNode(true) : null
 
             if (clonedBrand)
               target
@@ -53,6 +55,8 @@
                 .classList.add('cloned')
             if (clonedSearch)
               target.appendChild(clonedSearch).classList.add('cloned')
+            if (clonedUser)
+              target.appendChild(clonedUser).classList.add('cloned')
           } else {
             const clonedItems = document.getElementsByClassName('cloned')
             clonedItems &&

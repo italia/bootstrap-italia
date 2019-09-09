@@ -1,0 +1,109 @@
+---
+layout: base
+title: Template Area Personale
+---
+
+{% assign section = "servizi" %} {% include esempi/comuni/header_logged.html %}
+
+<main>
+  <section id="area-riservata">
+    <div class="section section-background-header section-user-header py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <h4 class="text-center">Bentornato Mario!</h4>
+            <ul class="nav nav-tabs auto no-border no-background mt-3">
+              <li class="nav-item">
+                <a class="nav-link text-primary active" href="#"
+                  >I miei servizi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Le mie pratiche</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Notifiche</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Altra tab</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <h2>I miei servizi</h2>
+        </div>
+        <div class="py-4">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <!--start card-->
+              <div class="card-wrapper card-space">
+                <div class="card card-bg card-big">
+                  <div class="card-body">
+                    <div class="top-icon">
+                      <svg class="icon">
+                        <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
+                      </svg>
+                    </div>
+                    <h5 class="card-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor…
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <a class="read-more" href="#">
+                      <span class="text">Leggi di più</span>
+                      <svg class="icon">
+                        <use
+                          xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--end card-->
+            </div>
+            <div class="col-12 col-lg-6">
+              <!--start card-->
+              <div class="card-wrapper card-space">
+                <div class="card card-bg card-big">
+                  <div class="card-body">
+                    <div class="top-icon">
+                      <svg class="icon">
+                        <use xlink:href="/dist/svg/sprite.svg#it-card"></use>
+                      </svg>
+                    </div>
+                    <h5 class="card-title">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor…
+                    </h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <a class="read-more" href="#">
+                      <span class="text">Leggi di più</span>
+                      <svg class="icon">
+                        <use
+                          xlink:href="/dist/svg/sprite.svg#it-arrow-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--end card-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include esempi/comuni/footer.html %}

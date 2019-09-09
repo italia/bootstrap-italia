@@ -45,6 +45,14 @@
       background-position: top center;
       background-color: $primary-a7;
     }
+
+    &.section-user-header {
+      &::before {
+        content: '';
+        min-height: 450px;
+        background-color: $primary-a1;
+      }
+    }
   }
 }
 
