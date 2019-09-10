@@ -190,30 +190,35 @@ $(document).ready(function() {
     return true
   }
 
-  function handleClick($button) {
-    var that = $('#' + $button)
-    var id = that.attr('id')
+  function handleClick($button, $el) {
+    var $input = $el.find('.txtTime')
+    var id = $button.attr('id')
     var findInput = ''
-    getValues(that, true)
+    getValues($button, true)
 
-    if (that.find('span').hasClass('icon-up')) {
+    if ($button.find('span').hasClass('icon-up')) {
       // if valuemax isn't met, increment valnow
       if (valNow < valMax) {
         valNow++
       }
-      findInput = that.closest('.spinner').find('input')
+      findInput = $button.closest('.spinner').find('input')
     } else {
       // if valuemax isn't met, decrement valnow
       if (valNow > valMin) {
         valNow--
       }
-      findInput = that.closest('.spinner').find('input')
+      findInput = $button.closest('.spinner').find('input')
     }
     if (valNow < 10) {
       valNow = '0' + valNow
     }
     findInput.attr('value', setDigit(valNow, id))
     findInput.attr('aria-valuenow', setDigit(valNow, id))
+
+    // Set input value with time on change picker
+    var newTime =
+      $el.find('.spinnerHour').val() + ':' + $el.find('.spinnerMin').val()
+    $input.val(newTime)
   }
 
   // save default labels
@@ -269,11 +274,12 @@ $(document).ready(function() {
         '.spinner-control'
       )
       .click(function() {
-        handleClick($(this).attr('id'))
+        handleClick($(this), $el)
       })
 
-    $el.find('.spinner-control *').on('keydown', function(e) {
-      if (e.which == 13) {
+    $el.find('.spinner-control *').on('keyup', function(e) {
+      var key = e.which || e.keyCode
+      if (key === 13) {
         var spinnerh = $(this)
           .closest('.time-spinner')
           .find('.spinnerHour')
@@ -284,24 +290,37 @@ $(document).ready(function() {
           .attr('value')
 
         var spinner = $(this).closest('.time-spinner')
-        var txt = $(this)
-          .closest('.time-spinner')
-          .find('.txtTime')
         var newTime = spinnerh + ':' + spinnermin
 
         $input.val(newTime).focus()
         $('.spinner-control').attr('aria-hidden', 'true')
         $('.spinner-control').fadeOut(100)
         return false
-      } else if (e.which == 27) {
+      } else if (key === 27) {
         hideSpinner(spinner, $input, spinnerh, spinnermin, index)
         return false
       }
     })
 
     //Direct Time Entry
-    $input.on('keydown', function(e) {
-      if (e.which == 13) {
+    $input.on('keyup', function(e) {
+      var key = e.which || e.keyCode
+      var val = $input.val()
+
+      var $sHour = $el.find('.spinnerHour')
+      var $sMin = $el.find('.spinnerMin')
+
+      if (val.includes(':')) {
+        var id = $sMin.attr('id')
+        $sMin.attr('aria-valuenow', setDigit(val.split(':')[1], id))
+        $sMin.attr('value', setDigit(val.split(':')[1], id))
+      } else {
+        var id = $sHour.attr('id')
+        $sHour.attr('aria-valuenow', setDigit(val, id))
+        $sHour.attr('value', setDigit(val, id))
+      }
+
+      if (key === 13) {
         return checkForm($input, index)
       }
     })
@@ -311,7 +330,9 @@ $(document).ready(function() {
     })
 
     $input.on('blur', function() {
-      checkForm($input, index)
+      if ($input.val()) {
+        checkForm($input, index)
+      }
     })
 
     $el

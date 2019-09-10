@@ -12,7 +12,7 @@
   }
 
   @if $b-hsb < 1 {
-    @return hsla(0, 0, 0, $a);
+    @return hsl(0, 0, 0);
   } @else {
     $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
     $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
