@@ -52,6 +52,21 @@
         min-height: 450px;
         background-color: $primary-a1;
       }
+
+      .user-settings {
+        font-size: 12px;
+
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          span {
+            margin-left: 4px;
+          }
+        }
+      }
     }
   }
 }
@@ -81,6 +96,9 @@
           content: '';
           min-height: 550px;
         }
+        .user-settings {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -90,5 +108,16 @@
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   .section {
     padding: #{map-get($grid-gutter-widths, xl) * 4};
+
+    &.section-background-header {
+      &.section-user-header {
+        .user-settings {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
