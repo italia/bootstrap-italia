@@ -89,8 +89,6 @@
 // Wrapper for logged-in user in header slim wrapper
 // Cloned by sticky-header
 .it-user-wrapper {
-  // align-self: stretch;
-
   .dropdown-menu.show {
     transform: translate3d(-120px, 42px, 0) !important;
 
@@ -102,6 +100,7 @@
 
   &.cloned {
     margin-left: 1em;
+    align-self: center;
   }
 
   .link-list-wrapper > ul > li > a {
@@ -125,7 +124,7 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-user-wrapper {
     .dropdown-menu.show {
-      transform: translate3d(0, 55px, 0) !important;
+      transform: translate3d(0, 56px, 0) !important;
 
       &::before {
         right: auto;
@@ -136,6 +135,16 @@
     &.dropdown {
       .icon {
         margin-left: 4px;
+      }
+    }
+
+    &.cloned {
+      .btn-full {
+        height: 56px;
+      }
+
+      .dropdown-menu.show {
+        transform: translate3d(0, 9px, 0) !important;
       }
     }
   }
