@@ -136,15 +136,11 @@
       .icon {
         margin-left: 4px;
       }
-    }
 
-    &.cloned {
-      .btn-full {
-        height: 56px;
-      }
-
-      .dropdown-menu.show {
-        transform: translate3d(0, 9px, 0) !important;
+      &.cloned {
+        .btn-full {
+          height: 56px;
+        }
       }
     }
   }

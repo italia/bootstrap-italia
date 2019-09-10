@@ -56,7 +56,10 @@
             if (clonedSearch)
               target.appendChild(clonedSearch).classList.add('cloned')
             if (clonedUser)
-              target.appendChild(clonedUser).classList.add('cloned')
+              target
+                .appendChild(clonedUser)
+                .classList.add('cloned')
+                .remove('show')
           } else {
             const clonedItems = document.getElementsByClassName('cloned')
             clonedItems &&
