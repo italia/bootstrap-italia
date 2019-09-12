@@ -12,14 +12,14 @@
 <title>Personalizzazione della libreria · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201909061442" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?201909121307" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201909061442" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?201909121307" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -500,6 +500,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <div class="sidebar-wrapper">
     <h3>Personalizzazione della libreria</h3>
     <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#sovrascrivere-le-variabili-colore">Sovrascrivere le variabili colore</a></li>
 </ul>
   </div>
 </div>
@@ -509,38 +510,45 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Personalizzazione della libreria</h1>
           <p class="bd-lead">Come personalizzare e sovrascrivere le variabili di default della libreria (es. colori, font-family, misure, ecc.)</p>
-          <p><strong>Bootstrap Italia</strong> eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all’occorenza.</p>
+          <p><strong>Bootstrap Italia</strong> eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all’occorenza.<br />
+Un esempio fra tutti è il valore del colore <code class="highlighter-rouge">$primary</code> che in <strong>Bootstrap Italia</strong> è rappresentato dal colore blu <code class="highlighter-rouge">#0066CC</code>, tipico della libreria.</p>
 
-<p>Un esempio fra tutti è il valore del colore <strong>$primary</strong> che in <strong>Bootstrap Italia</strong> è rappresentato dal colore <strong>blu</strong>, tipico della libreria.</p>
+<p>L’utilizzo del blu <code class="highlighter-rouge">#0066CC</code> dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di <strong>Bootstrap Italia</strong>, impostando nuovi valori per le proprie necessità.</p>
 
-<p>Ci si può trovare però nella condizione di dover utilizzare <strong>Bootstrap Italia</strong> e voler personalizzare ulteriormente i valori delle variabili, impostando nuovi valori per le proprie necessità.</p>
+<p>L’impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita <strong>prima</strong> della compilazione della libreria. Pertanto non è possibile usare una versione modificata di <strong>Bootstrap Italia</strong> semplicemente caricandola con un <code class="highlighter-rouge">link</code> nella parte <code class="highlighter-rouge">&lt;head&gt;...&lt;/head&gt;</code> del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.</p>
 
-<div class="bd-callout bd-callout-info">
-<h5 id="note-sullutilizzo">Note sull’utilizzo</h5>
-
-<p>L’impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita <strong>prima</strong> della compilazione della libreria. Pertanto non è possibile usare una versione modificata di <strong>Bootstrap Italia</strong> semplicemente caricandola con un <code class="highlighter-rouge">link</code> nella parte <code class="highlighter-rouge">&lt;head&gt;...&lt;/head&gt;</code> del codice HTML ma va importata esplicitamente in una applicazione pre-processata attraverso un tool di bundling come Gulp, Webpack, ecc. che ne gestisca la compilazione.</p>
-
-</div>
-
-<h4 id="passi-da-seguire-per-sovrascrivere-le-variabili">Passi da seguire per sovrascrivere le variabili</h4>
+<h3 id="sovrascrivere-le-variabili-colore">Sovrascrivere le variabili colore</h3>
 
 <ol>
   <li>Installare <strong>Bootstrap Italia</strong> con <code class="highlighter-rouge">yarn/npm: yarn add bootstrap-italia --save</code></li>
   <li>Installare <strong>node-sass</strong>: <code class="highlighter-rouge">yarn add node-sass</code></li>
-  <li>Creare all’interno del progetto -&gt; <strong>/src</strong> una cartella <strong>scss</strong></li>
-  <li>Dentro alla cartella <strong>/src/scss</strong> creare un file del tipo <strong>custom-bootstrap.scss</strong></li>
-  <li>Impostare le variabili di default da modificare con dei valori <strong>custom</strong></li>
+  <li>Creare all’interno del progetto una cartella <strong>scss</strong></li>
+  <li>Dentro alla cartella <strong>scss</strong> creare un file di tipo <strong>bootstrap-italia-custom.scss</strong></li>
+  <li>Impostare le variabili di default da modificare con dei valori <strong>personalizzati</strong> (la maggior parte delle variabili usate da Bootstrap Italia sono visibili <a href="https://github.com/italia/bootstrap-italia/blob/master/src/scss/">qui</a>)</li>
   <li>Importare la libreria <strong>bootstrap-italia.scss</strong> da <strong>node_modules</strong> alla fine del file</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// file: custom-bootstrap.scss</span>
+<div class="bd-callout bd-callout-info">
+<h5 id="bootstrap-italia-playground">Bootstrap Italia Playground</h5>
+
+<div class="text-center">
+<img class="rounded" src="/bootstrap-italia/docs/assets/img/bootstrap-italia-playground.png" width="400" alt="Esempio di pagina personalizzata con Bootstrap Italia Playground" /> 
+</div>
+
+<p>Il <strong>modo più semplice per creare una versione personalizzata di Bootstrap Italia</strong>, è seguire i passi indicati nel repository di esempio <strong><a href="https://github.com/italia/bootstrap-italia-playground">Bootstrap Italia Playground</a></strong>.</p>
+
+</div>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// file: bootstrap-italia-custom.scss</span>
 
 <span class="c1">// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS</span>
 
 <span class="c1">// Per l'override del colore $primary della palette in formato HSB:</span>
-<span class="nv">$primary-h</span><span class="p">:</span> <span class="m">315</span><span class="p">;</span>
-<span class="nv">$primary-s</span><span class="p">:</span> <span class="m">43</span><span class="p">;</span>
-<span class="nv">$primary-b</span><span class="p">:</span> <span class="m">76</span><span class="p">;</span>
+
+<span class="c1">// Per ottenere il colore #FF3333 (https://rgb.to/ff3333)</span>
+<span class="nv">$primary-h</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="nv">$primary-s</span><span class="p">:</span> <span class="m">80</span><span class="p">;</span>
+<span class="nv">$primary-b</span><span class="p">:</span> <span class="m">100</span><span class="p">;</span>
 <span class="c1">// Nota: per convertire il codice esadecimale di un colore formato HSB</span>
 <span class="c1">// è possibile utilizzare ad esempio il sito https://rgb.to/.</span>
 
@@ -552,10 +560,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <span class="c1">// import libreria</span>
 <span class="k">@import</span> <span class="s2">"../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss"</span><span class="p">;</span></code></pre></figure>
 
-<p>Al termine della compilazione, nei file <em>*.js</em> <strong>importare custom-bootstrap.scss</strong> laddove serva utilizzare la libreria <strong>Bootstrap-Italia</strong>.</p>
+<p>Ad esempio, per una applicazione costruita con ReactJS attraverso <code class="highlighter-rouge">create-react-app</code>, è possibile <strong>importare bootstrap-italia-custom.scss</strong> laddove serva utilizzare la libreria <strong>Bootstrap-Italia</strong>.</p>
 
 <figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="s2">"react"</span><span class="p">;</span>
-<span class="k">import</span> <span class="s2">"./scss/custom-bootstrap.scss"</span><span class="p">;</span>
+<span class="k">import</span> <span class="s2">"./scss/bootstrap-italia-custom.scss"</span><span class="p">;</span>
 <span class="k">import</span> <span class="s2">"./App.css"</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
@@ -568,7 +576,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span></code></pre></figure>
 
-<p>In questo semplice e veloce esempio in <em>React</em> e <strong>create-react-app</strong>, il bottone con classe <strong>.btn-primary</strong> avrà lo sfondo di colore <strong>rosso</strong> anzichè il <strong>.primary</strong> default blu.</p>
+<p>In questo semplice e veloce esempio, il bottone con classe <strong>.btn-primary</strong> avrà lo sfondo di colore <strong>rosso</strong> anzichè il default blu.</p>
 
         </main>
       </div>
@@ -586,14 +594,16 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201909061442"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?201909121307"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201909061442"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?201909121307"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/1.0.2/tweenjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/1.0.2/easeljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js"></script>
 
-<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
   var manifest = [
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-1.png", id:"cover-1"},
@@ -605,7 +615,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201909061442"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?201909121307"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
 <script>
   docsearch({
