@@ -148,6 +148,15 @@ gulp.task('js-min', () => {
         plugins: ['@babel/plugin-proposal-object-rest-spread'],
       })
     )
+    .pipe(uglify())
+    .pipe(gap.prependText(
+      bootstrapItaliaBanner +
+      '\n' +
+      jqueryCheck +
+      '\n' +
+      jqueryVersionCheck +
+      '\n+function () {\n'
+    ))
     .pipe(gap.appendText('\n}();\n'))
     .pipe(
       rename({
