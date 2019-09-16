@@ -49,7 +49,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               </div>
             </nav>
           </div>
-          <div class="header-slim-right-zone">
+          <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>Ita</span>
@@ -83,7 +83,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
 
 #### Right action con bottone full responsive
 
-Per trasformare il bottone di _action_ situato nella `header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
+Per trasformare il bottone di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 
@@ -95,7 +95,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
             <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -177,7 +177,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               </div>
             </nav>
           </div>
-          <div class="header-slim-right-zone">
+          <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>ITA</span>
@@ -952,7 +952,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 </div>
               </nav>
             </div>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>
@@ -1174,7 +1174,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </div>
               </nav>
             </div>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>

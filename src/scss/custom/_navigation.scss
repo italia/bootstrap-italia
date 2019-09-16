@@ -248,7 +248,7 @@
             content: '';
             display: block;
             width: $inline-menu-line-width;
-            background: $color-primary;
+            background: $primary;
             position: absolute;
             right: 0;
             top: 0;
@@ -261,7 +261,7 @@
 
           &.active {
             span {
-              color: $color-primary;
+              color: $primary;
               text-decoration: none;
             }
           }
@@ -438,12 +438,9 @@
           li {
             a {
               span,
-              i {
-                color: $color-primary;
-              }
-
+              i,
               h3 {
-                color: $color-primary;
+                color: $primary;
               }
             }
 
