@@ -77,7 +77,7 @@ $progress-border-radius: 0;
 $zindex-zoom: 1080;
 $zindex-growl: 1090;
 $zindex-cookiebar: 1100;
-$zoom-overlay-bg: #fff;
+$zoom-overlay-bg: $white;
 
 // Border Radius - using ixels instead or rems as it has to be consistent across devices
 $border-radius: 4px !default;
@@ -207,7 +207,7 @@ $dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, 0.05);
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
 $dropdown-custom-button-font-size: 1rem;
-$dropdown-custom-button-color: $italia;
+$dropdown-custom-button-color: $primary;
 $dropdown-custom-button-background: transparent;
 $dropdown-custom-button-caret-font-size: 0.55rem;
 $dropdown-custom-button-caret-distance: $v-gap;
@@ -218,21 +218,21 @@ $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
 
 //Navigation
-$navbar-bg-color: $color-primary;
-$navigation-bg-color: #fff;
-$navigation-bg-color-desktop: $color-primary;
+$navbar-bg-color: $primary;
+$navigation-bg-color: $white;
+$navigation-bg-color-desktop: $primary;
 
 $navigation-h-padding: 24px;
 $navigation-v-padding: 13px;
 $navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
-$navigation-close-button-text-color: $color-primary;
+$navigation-close-button-text-color: $primary;
 $navigation-close-button-text-size: 0.75em;
 $navigation-close-button-icon-size: 2em;
 $navigation-links-margin-top: 102px;
-$navigation-link-color: $color-primary;
-$navigation-link-color-desk: #fff;
+$navigation-link-color: $primary;
+$navigation-link-color-desk: $white;
 $navigation-link-active-bar-size: 3px;
-$navigation-link-active-bar-color: $color-primary;
+$navigation-link-active-bar-color: $primary;
 $navigation-link-active-bar-color-desk: $white;
 $navigation-toggle-button-icon-color: $white;
 $navigation-toggle-button-icon-size: 1.625em;
@@ -243,18 +243,17 @@ $navigation-disabled-item-opacity: 0.5;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $color-primary;
-$navigation-dark-text-color: #fff;
+$navigation-dark-bg-color: $primary;
+$navigation-dark-text-color: $white;
 $navigation-dark-bg-color: $primary-b1;
 $navigation-dark-separator-color: $primary-c5;
 //$navigation-dark-megamenu-separator-color:
 
 // navigation light theme (desktop)
-$navigation-light-bg-color: #fff;
-$navigation-light-text-color: $color-primary;
+$navigation-light-bg-color: $white;
+$navigation-light-text-color: $primary;
 $navigation-light-megamenu-footer-bg-color: $primary-a7;
 $navigation-light-separator-color: $neutral-1-a2;
-$navigation-light-heading-color: #000;
 $navigation-light-megamenu-separator-color: $primary-c5;
 
 //inline
@@ -312,12 +311,12 @@ $pager-item-size-mobile: 2.5rem; // 40px
 $pager-item-size-tablet: 2.6666666666666665rem; // 48px
 $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
-$pager-item-current-color: $italia;
-$pager-item-current-border: 1px solid $italia;
+$pager-item-current-color: $primary;
+$pager-item-current-border: 1px solid $primary;
 $pager-font-size: 0.8888888888888888rem; // 16px
 $pager-font-weight: 600;
 $pager-font-color: $neutral-1-a7;
-$pager-hover-color: $italia;
+$pager-hover-color: $primary;
 $pager-icon-color: $primary;
 $pager-icon-size: 0.7rem;
 $pager-disabled-color: $neutral-2-b2;
@@ -345,11 +344,11 @@ $sidebar-border-color: $neutral-1-a2;
 
 //sidebar dark theme
 $sidebar-dark-bg-color: $neutral-1-a8;
-$sidebar-dark-text-color: #fff;
+$sidebar-dark-text-color: $white;
 $sidebar-dark-separator-color: rgba(229, 229, 229, 0.3);
 
 // Navscroll
-$navscroll-bg-color: #fff;
+$navscroll-bg-color: $white;
 $navscroll-toggler-color: $primary;
 $navscroll-button-text-weight: 600;
 $navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
@@ -360,7 +359,7 @@ $navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid
   $sidebar-dropdown-line-selection-color;
 $navscroll-secondary-active-color: $neutral-1-a10;
 $navscroll-links-padding: 0.8em;
-$navscroll-bg-color-desk: #fff;
+$navscroll-bg-color-desk: $white;
 $navscroll-line-color: $neutral-1-a2;
 $navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;
 $navscroll-backbutton-weight: 600;
@@ -368,7 +367,7 @@ $navscroll-backbutton-margin-top: $v-gap * 3;
 
 //navscroll dark theme mobile
 $navscroll-dark-bg-color: $neutral-1-a8;
-$navscroll-dark-text-color: #fff;
+$navscroll-dark-text-color: $white;
 $navscroll-dark-separator-color: rgba(229, 229, 229, 0.3);
 
 //dialog
@@ -386,17 +385,21 @@ $modal-icon-color: $primary-a6;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
 $modal-heading-border: 1px solid rgba(0, 0, 0, 0.05);
-$modal-sticky-bg: #fff;
+$modal-sticky-bg: $white;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
 $modal-popconfirm-p-size: 0.778rem;
 $modal-popconfirm-max-width: 300px;
 
-//HEADER
-//Header slim
+// ##### HEADER #####
+
+// Header Slim
 $header-general-padding: $v-gap * 3;
+$header-slim-height: 48px;
 $header-slim-bg-color: $primary-a7;
-$header-slim-text-color: #fff;
+$header-slim-text-color: $white;
+$header-slim-button-color: $primary-a9;
+$header-slim-button-hover-color: $primary-a8;
 $header-slim-brand-text-size: 0.778em;
 $header-slim-icon-size: 18px;
 $header-slim-padding-desk: 3px $v-gap * 3;
@@ -404,30 +407,24 @@ $header-slim-dropdown-distance: 14px;
 $header-slim-dropdown-distance-mob: 9px;
 $header-slim-links-padding: 5px;
 $header-slim-brand-padding: 12px;
-$header-slim-ul-border: 1px solid rgba(255, 255, 255, 0.2);
-$header-slim-a-active-border: 2px solid #fff;
-$header-slim-button-color: $primary-a9;
-$header-slim-button-hover-color: $primary-a8;
 $header-slim-button-v-padding: 7.5px;
 $header-slim-lang-v-padding: 12px;
 $header-slim-h-padding: 18px;
 $header-slim-v-padding-mob: 6.5px;
-
-//header-slim-theme-light
-$header-slim-theme-light-bg-color: #fff;
+// Header Slim theme light
+$header-slim-theme-light-bg-color: $white;
 $header-slim-theme-light-text-color: $primary-a7;
-$header-slim-theme-light-ul-border: 1px solid rgba($primary-a7, 0.2);
-$header-slim-theme-light-a-active-border: 2px solid $primary-a7;
 $header-slim-theme-light-button-color: $primary;
 $header-slim-theme-light-button-hover-color: $primary-a6;
-$header-slim-height: 48px;
-//header-center
-$header-center-bg-color: $primary-a6;
+
+// Header Center
+// "!default"s here allows customising $header-center background and text colours as it's the most recognizable element.
+$header-center-bg-color: $primary-a6 !default;
+$header-center-text-color: $white !default;
 $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-text-color: #fff;
 $header-center-h2-size: 1.778em;
 $header-center-h2-size-mob: 1.25em;
 $header-center-h2-weight: 600;
@@ -443,17 +440,16 @@ $header-center-search-radius: $v-gap * 3;
 $header-center-search-icon-size: $v-gap * 3;
 $header-center-search-distance: $v-gap * 10;
 $header-center-text-size: 0.889em;
+$header-center-button-left: 10px;
 $header-nav-button-distance: 22px;
+$header-nav-icon-arrow-megamenu-distance: 14px;
 $header-center-small-height: 104px;
 $header-center-small-mob-height: 64px;
 $header-center-small-h2-size: 1.333em;
 $header-center-small-h3-size: 0.778em;
-// header center theme light
-$header-center-theme-light-bg-color: #fff;
-$header-center-theme-light-text-color: $primary-a6;
-
-$header-center-button-left: 10px;
-$header-nav-icon-arrow-megamenu-distance: 14px;
+// Header Center theme light
+$header-center-theme-light-bg-color: $white !default;
+$header-center-theme-light-text-color: $primary-a6 !default;
 
 // Anchors vertical offset:
 $anchor-v-offset-lg: 72px;
@@ -487,7 +483,7 @@ $card-cat-icon-block-margin: $v-gap * 2;
 $card-cat-icon-size: $v-gap * 5;
 $card-simple-link-margin: $v-gap * 4;
 $card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-$card-shadow-bg: #fff;
+$card-shadow-bg: $white;
 $card-big-h5-size: 1.3333333333333333rem;
 $card-big-h5-l-h: 1.5555555555555556rem;
 $card-big-p-size: 0.8888888888888888rem;
@@ -543,7 +539,7 @@ $hero-height-sm-desk: 400px;
 $hero-height-sm-tab: 300px;
 $hero-height-sm-mob: 230px;
 $hero-text-padding: $v-gap * 3;
-$hero-text-color: #fff;
+$hero-text-color: $white;
 $hero-cat-size: 1rem;
 $hero-heading-size: 2rem;
 $hero-heding-size-desk: 2.6666666666666665rem;
@@ -613,7 +609,7 @@ $timeline-padding: ($v-gap * 3)-$grid-gutter-width/2;
 $timeline-border-color: linear-gradient(0deg, $primary 0%, #004080 100%);
 $timeline-pin-size: $v-gap * 3;
 $timeline-pin-circle-size: 48px;
-$timeline-pin-circle-border: $v-gap solid #fff;
+$timeline-pin-circle-border: $v-gap solid $white;
 $timeline-content-padding: 18px 0 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
 
