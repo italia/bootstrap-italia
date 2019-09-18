@@ -1,14 +1,14 @@
 // primary color ---------------------------------
 .primary-bg {
-  background-color: $color-primary;
+  background-color: $primary;
 }
 .primary-color {
-  color: $color-primary;
+  color: $primary;
 }
 .primary-border-color {
-  border-color: $color-primary !important;
+  border-color: $primary !important;
   &.border {
-    border-color: $color-primary !important;
+    border-color: $primary !important;
   }
 }
 

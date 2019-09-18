@@ -69,7 +69,7 @@
     .nav-link.active,
     .nav-item.show .nav-link {
       border-bottom: none;
-      border-right-color: $italia;
+      border-right-color: $primary;
     }
     &.nav-tabs-vertical-background {
       .nav-link.active,
@@ -97,7 +97,7 @@
     justify-content: center;
 
     &:hover {
-      color: $italia;
+      color: $primary;
       border-bottom-color: transparent;
     }
 
@@ -135,8 +135,8 @@
   }
   .nav-link.active,
   .nav-item.show .nav-link {
-    border-bottom-color: $italia;
-    color: $italia;
+    border-bottom-color: $primary;
+    color: $primary;
     cursor: inherit;
   }
   .nav-item {
@@ -239,7 +239,7 @@
         height: 0.778rem;
         left: 0.611rem;
         top: 0.278rem;
-        background-color: $italia;
+        background-color: $primary;
       }
       &:before {
         content: '';
@@ -248,7 +248,7 @@
         height: 2px;
         left: 0.278rem;
         top: 0.611rem;
-        background-color: $italia;
+        background-color: $primary;
       }
     }
 
@@ -312,7 +312,7 @@
     }
     .nav-link.active,
     .nav-item.show .nav-link {
-      border-top-color: $italia;
+      border-top-color: $primary;
     }
   }
 }
@@ -338,7 +338,7 @@
       }
       .nav-link.active,
       .nav-item.show .nav-link {
-        border-left-color: $italia;
+        border-left-color: $primary;
       }
     }
   }

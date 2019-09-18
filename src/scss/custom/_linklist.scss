@@ -19,15 +19,15 @@
         &:hover:not(.disabled) {
           text-decoration: none;
           span {
-            color: $color-primary;
+            color: $primary;
             text-decoration: underline;
           }
           p {
-            color: $color-primary;
+            color: $primary;
             text-decoration: none;
           }
           .icon {
-            fill: $color-primary;
+            fill: $primary;
           }
         }
         &.disabled:hover {
@@ -38,7 +38,7 @@
           font-weight: 600;
         }
         span {
-          color: $color-primary;
+          color: $primary;
           display: inline-block;
           margin-right: $link-list-h-pad;
         }
