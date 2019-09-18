@@ -118,16 +118,31 @@
 
         &.list-item {
           &.icon-left {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
+            // display: flex;
+            // flex-direction: row;
+            // align-items: flex-start;
+            // justify-content: flex-start;
 
-            padding-left: 0;
+            // padding-left: 0;
 
-            .icon + * {
+            // .icon + * {
+            //   margin-top: $v-gap / 2;
+            //   margin-left: $v-gap;
+            // }
+
+            /* position: absolute;
+            left: 0; */
+
+            position: relative;
+            padding-left: $v-gap * 4;
+
+            span {
               margin-top: $v-gap / 2;
-              margin-left: $v-gap;
+            }
+
+            .icon {
+              position: absolute;
+              left: 0;
             }
           }
 
