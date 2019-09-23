@@ -118,16 +118,16 @@
 
         &.list-item {
           &.icon-left {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
+            position: relative;
+            padding-left: $v-gap * 4;
 
-            padding-left: 0;
-
-            .icon + * {
+            span {
               margin-top: $v-gap / 2;
-              margin-left: $v-gap;
+            }
+
+            .icon {
+              position: absolute;
+              left: 0;
             }
           }
 

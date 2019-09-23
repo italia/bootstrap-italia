@@ -1,0 +1,133 @@
+---
+layout: base
+title: Template Area Personale
+---
+
+{% assign section = "servizi" %} {% include esempi/comuni/header_logged.html %}
+
+<main>
+  <section id="area-riservata">
+    <div class="section section-background-header section-user-header py-5">
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2 position-static">
+            <h4 class="text-center">Bentornato Mario!</h4>
+            <div class="row mr-xl-2 user-settings">
+              <div class="col-12 col-sm-6 offset-sm-3 col-md-12 offset-md-0">
+                <div class="d-flex justify-content-center">
+                  <div class="pr-4">
+                    <a href="#">
+                      <span>Profilo</span>
+                      <svg class="icon icon-primary icon-xs right">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-settings"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="pl-4">
+                    <a href="#">
+                      <span>Logout</span>
+                      <svg class="icon icon-primary icon-xs right">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-arrow-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-tabs-hidescroll mt-4 mt-md-5">
+              <ul
+                class="nav nav-tabs auto no-border no-background"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary active"
+                    id="tab1-tab"
+                    data-toggle="tab"
+                    href="#tab1"
+                    role="tab"
+                    aria-controls="tab1"
+                    aria-selected="true"
+                    >Le mie pratiche</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab2-tab"
+                    data-toggle="tab"
+                    href="#tab2"
+                    role="tab"
+                    aria-controls="tab2"
+                    aria-selected="false"
+                    >Pagamenti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab3-tab"
+                    data-toggle="tab"
+                    href="#tab3"
+                    role="tab"
+                    aria-controls="tab3"
+                    aria-selected="false"
+                    >Documenti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab4-tab"
+                    data-toggle="tab"
+                    href="#tab4"
+                    role="tab"
+                    aria-controls="tab4"
+                    aria-selected="false"
+                    >Messaggi</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab5-tab"
+                    data-toggle="tab"
+                    href="#tab5"
+                    role="tab"
+                    aria-controls="tab5"
+                    aria-selected="false"
+                    >Scadenze</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <!-- prettier-ignore -->
+            <div class="tab-content mt-5 mt-md-3" id="myTabContent">
+              {% include esempi/comuni/area-personale/pratiche.html %}
+              {% include esempi/comuni/area-personale/pagamenti.html %}
+              {% include esempi/comuni/area-personale/documenti.html %}
+              {% include esempi/comuni/area-personale/messaggi.html %}
+              {% include esempi/comuni/area-personale/scadenze.html %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include esempi/comuni/footer.html %}

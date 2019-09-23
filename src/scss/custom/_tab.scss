@@ -30,6 +30,19 @@
     }
   }
 
+  &.no-border {
+    border: none !important;
+  }
+
+  &.no-background {
+    background-color: transparent;
+    .nav-item {
+      .nav-link.active {
+        background-color: transparent;
+      }
+    }
+  }
+
   //tabs with icon and text
   &.nav-tabs-icon-text {
     //icons
@@ -192,11 +205,11 @@
     //grey fullwidth bottom border for ul
     .nav-item-filler {
       flex-grow: 1;
-      border-bottom: 1px solid $gray-border-disabled;
+      // border-bottom: 1px solid $gray-border-disabled;
     }
     .nav-link {
       border: 1px solid transparent;
-      border-bottom: 1px solid $gray-border-disabled;
+      // border-bottom: 1px solid $gray-border-disabled;
     }
 
     .nav-link.active,
@@ -212,7 +225,7 @@
     .nav-item {
       position: relative;
       &:last-of-type {
-        border-bottom: 1px solid $gray-border-disabled;
+        // border-bottom: 1px solid $gray-border-disabled;
       }
     }
 
