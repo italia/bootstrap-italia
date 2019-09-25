@@ -49,14 +49,14 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
 ### Utilizzo di placeholder e label
 
 Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
- 
+
 {% capture example %}
 <div class="form-group">
   <label for="formGroupExampleInput">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput">
 </div>
 {% endcapture %}{% include example.html content=example %}
- 
+
 Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
 
 {% capture example %}
@@ -128,6 +128,50 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter)) per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`.
 
+È possibile personalizzare la componente `strength meter` usando gli attributi data.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data-short-pass</code></td>
+      <td>Testo per il punteggio di forza della password minimo</td>
+      <td>Password molto debole</td>
+    </tr>
+    <tr>
+      <td><code>data-bad-pass</code></td>
+      <td>Testo per punteggio di forza della password basso</td>
+      <td>Password debole</td>
+    </tr>
+    <tr>
+      <td><code>data-good-pass</code></td>
+      <td>Testo per punteggio di forza della password buono</td>
+      <td>Password sicura</td>
+    </tr>
+    <tr>
+      <td><code>data-strong-pass</code></td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+      <td>Password molto sicura</td>
+    </tr>
+    <tr>
+      <td><code>data-enter-pass</code></td>
+      <td>Testo di aiuto</td>
+      <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
+    </tr>
+    <tr>
+      <td><code>data-minimum-length</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
 {% capture example %}
 <div>
   <div class="form-group">
@@ -140,7 +184,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
-    <input type="password" class="form-control input-password input-password-strength-meter" id="exampleInputPassword3">
+    <input type="password" class="form-control input-password input-password-strength-meter" data-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
