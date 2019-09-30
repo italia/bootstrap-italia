@@ -32,7 +32,6 @@
     left: 0;
     bottom: 0;
     z-index: 1;
-    //background: $navigation-sidebar-bg-color-mobile;
     display: none;
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
@@ -46,7 +45,6 @@
       pointer-events: all;
       overflow-y: auto;
       transform: translateX(-100%);
-      //- transizione de definire
       transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
 
       .navbar-nav {
@@ -123,7 +121,6 @@
     background: $navigation-bg-color;
     z-index: 10;
     pointer-events: none;
-    //- transizione de definire
     transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
     // pulsante di chiusura menu
     .close-menu {
@@ -163,44 +160,35 @@
       padding-right: $navigation-h-padding;
       margin-bottom: $navigation-h-padding;
 
-      ul {
-        li {
-          a {
-            &.list-item.active {
-              color: $primary-b3;
-              text-decoration: underline;
-
-              span {
-                color: $primary-b3;
-              }
-            }
+      ul li {
+        a {
+          &.list-item.active {
+            color: $primary-b3;
+            text-decoration: underline;
 
             span {
-              color: $navigation-link-color;
-            }
-
-            i {
-              color: $navigation-link-color;
-            }
-
-            h3 {
-              //color: $navigation-link-color;
+              color: $primary-b3;
             }
           }
 
-          h3 {
-            // color: $navigation-link-color;
-            text-transform: uppercase;
-            font-size: $megamenu-heading-text-size;
-            font-weight: $megamenu-heading-font-weight;
-            letter-spacing: $megamenu-heading-letter-spacing;
+          span {
+            color: $navigation-link-color;
           }
 
-          .divider {
-            width: $megamenu-link-small-line-width;
-            background: $neutral-2;
-            margin-left: $navigation-h-padding;
+          i {
+            color: $navigation-link-color;
           }
+        }
+
+        h3 {
+          text-transform: uppercase;
+          font-size: $megamenu-heading-text-size;
+          font-weight: $megamenu-heading-font-weight;
+          letter-spacing: $megamenu-heading-letter-spacing;
+        }
+
+        .divider {
+          background: $neutral-2;
         }
       }
     }
@@ -248,7 +236,7 @@
             content: '';
             display: block;
             width: $inline-menu-line-width;
-            background: $color-primary;
+            background: $primary;
             position: absolute;
             right: 0;
             top: 0;
@@ -261,7 +249,7 @@
 
           &.active {
             span {
-              color: $color-primary;
+              color: $primary;
               text-decoration: none;
             }
           }
@@ -342,9 +330,6 @@
             padding-bottom: $link-list-footer-distance-bottom;
           }
         }
-      }
-
-      &.collapsed {
       }
 
       /*lista menu*/
@@ -434,22 +419,17 @@
         padding-right: 0;
         margin-bottom: 0;
 
-        ul {
-          li {
-            a {
-              span,
-              i {
-                color: $color-primary;
-              }
-
-              h3 {
-                color: $color-primary;
-              }
-            }
-
+        ul li {
+          a {
+            span,
+            i,
             h3 {
-              color: $body-color;
+              color: $primary;
             }
+          }
+
+          h3 {
+            color: $body-color;
           }
         }
       }

@@ -77,6 +77,11 @@
     function calculateScore(password) {
       var score = 0
 
+      // empty password
+      if (password.trim().length === 0) {
+        return -2
+      }
+
       // password < options.minimumLength
       if (password.length < options.minimumLength) {
         return -1
@@ -253,9 +258,9 @@
   }
 
   // Bind to jquery
-  $.fn.password = function(options) {
+  $.fn.password = function() {
     return this.each(function() {
-      new Password($(this), options)
+      new Password($(this), $(this).data())
     })
   }
 })(jQuery)

@@ -12,6 +12,12 @@
       align-items: center;
       padding: 0.5rem 1rem;
 
+      color: $primary;
+
+      border-right-width: 1px;
+      border-right-style: solid;
+      border-color: $primary;
+
       &:after {
         content: '';
         position: absolute;
@@ -24,9 +30,6 @@
         border-radius: 50%;
         background-color: $primary;
       }
-
-      color: $primary;
-      border-right: 1px solid $primary;
 
       .point-date {
         flex: 1;
@@ -43,7 +46,7 @@
       @each $color, $value in $theme-colors {
         &.point-list-#{$color} {
           color: $value;
-          border-right: 1px solid $value;
+          border-color: $value;
 
           &:after {
             background-color: $value;
@@ -61,5 +64,88 @@
         width: 100%;
       }
     }
+
+    &.point-list-step {
+      .point-list-aside {
+        min-width: 54px;
+        padding: 0.3rem 1rem 0.3rem 0;
+
+        .point-date {
+          flex: 0;
+          font-size: 1.6rem;
+          line-height: 1;
+
+          // keep width in case of icon
+          min-width: 32px;
+        }
+
+        .point-month {
+          flex: 0;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .point-list-content {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  //small - tablet
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  }
+
+  //Tablet vertical
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+  }
+
+  //Tablet horizontal / small desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    &.point-list-step-wrapper {
+      display: flex;
+      flex-direction: row;
+
+      .point-list-step {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .point-list-aside {
+          padding: $v-gap * 2 0;
+          min-height: 65px;
+          width: 100%;
+
+          border-right-width: 0;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+
+          .point-month {
+            margin-left: $v-gap;
+            margin-bottom: -2px;
+          }
+
+          &:after {
+            top: 100%;
+            right: 50%;
+            transform: translate(2px, -4px);
+          }
+        }
+
+        .point-list-content {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //Desktop
+  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   }
 }

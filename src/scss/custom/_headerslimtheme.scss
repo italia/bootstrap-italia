@@ -1,19 +1,11 @@
-/*
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++LIGHT THEME+++++++++++++++++++++++++++++++++++++++++++++++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*/
-
-/*
-++++++++++++++++++++++++++++++LIGHT THEME+++++++++++++++++++++++++++++++++++++++++++++++++
-*/
-
 .it-header-slim-wrapper {
   &.theme-light {
     background: $header-slim-theme-light-bg-color;
-    border-bottom: $header-slim-theme-light-ul-border;
+    border-bottom: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+
     .it-header-slim-wrapper-content {
-      .header-slim-right-zone {
+      .it-header-slim-right-zone,
+      .header-slim-right-zone { // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
         .dropdown-menu:before {
           background: $header-slim-theme-light-text-color;
         }
@@ -24,9 +16,13 @@
             color: $header-slim-theme-light-bg-color;
           }
         }
+        button {
+          background: $header-slim-theme-light-button-color;
+          &:hover {
+            background: $header-slim-theme-light-button-hover-color;
+          }
+        }
       }
-    }
-    .it-header-slim-wrapper-content {
       a {
         color: $header-slim-theme-light-text-color;
         .icon {
@@ -44,14 +40,6 @@
       }
       .navbar-brand {
         color: $header-slim-theme-light-text-color;
-      }
-      .header-slim-right-zone {
-        button {
-          background: $header-slim-theme-light-button-color;
-          &:hover {
-            background: $header-slim-theme-light-button-hover-color;
-          }
-        }
       }
     }
     .btn-full {
@@ -72,14 +60,74 @@
       .it-header-slim-wrapper-content {
         .nav-mobile {
           ul.link-list {
-            border-left: $header-slim-theme-light-ul-border;
-            border-right: $header-slim-theme-light-ul-border;
+            border-left: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+            border-right: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
             a {
               &.active {
-                border-bottom: $header-slim-theme-light-a-active-border;
+                border-bottom: 2px solid $header-slim-theme-light-text-color;
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// Wrapper for logged-in user in header slim wrapper
+// Cloned by sticky-header
+.it-user-wrapper {
+  .dropdown-menu.show {
+    transform: translate3d(-120px, 42px, 0) !important;
+
+    &::before {
+      right: 12px;
+      left: auto !important;
+    }
+  }
+
+  &.cloned {
+    margin-left: 1em;
+    align-self: center;
+  }
+
+  .link-list-wrapper > ul > li > a {
+    line-height: 3em;
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(-132px, 50px, 0) !important;
+
+      &::before {
+        right: 12px;
+        left: auto !important;
+      }
+    }
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(0, 56px, 0) !important;
+
+      &::before {
+        right: auto;
+        left: 27px !important;
+      }
+    }
+
+    &.dropdown {
+      .icon {
+        margin-left: 4px;
+      }
+
+      &.cloned {
+        .btn-full {
+          height: 56px;
         }
       }
     }
