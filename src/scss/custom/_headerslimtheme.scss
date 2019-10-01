@@ -62,8 +62,9 @@
           ul.link-list {
             border-left: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
             border-right: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
-            a {
+            a.list-item {
               &.active {
+                color: $primary;
                 border-bottom: 2px solid $header-slim-theme-light-text-color;
               }
             }
