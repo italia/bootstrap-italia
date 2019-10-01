@@ -215,6 +215,15 @@ textarea {
       font-size: 1rem;
       user-select: none;
     }
+
+    //focus
+    &:focus + label {
+      @extend :focus;
+    }
+
+    &:focus.focus--mouse + label {
+      @extend .focus--mouse;
+    }
   }
 
   [type='checkbox'] {
@@ -294,15 +303,6 @@ textarea {
     &:disabled:checked + label::after {
       background-color: #e6e9f2;
       border-color: #e6e9f2;
-    }
-
-    //focus
-    &:focus + label {
-      @extend .focus--keyboard;
-    }
-
-    &:focus.focus--mouse + label {
-      @extend .focus--mouse;
     }
   }
 
