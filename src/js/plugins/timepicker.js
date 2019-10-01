@@ -1,224 +1,37 @@
-//GLOBAL VARIABLES
-var keys, valMin, valMax, valNow, skipVal
-
-// regular expression to match required time format
-// var timeRegEx = /^\d{1,2}:\d{2}([AP]M)?$/i
+// key numbers
+var numbers = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
 var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
 $(document).ready(function() {
-  // "private" functions
-  function getKeys() {
-    keys = {
-      pageup: 33,
-      pagedown: 34,
-      end: 35,
-      home: 36,
-      left: 37,
-      up: 38,
-      right: 39,
-      down: 40,
-    }
-    return keys
+  function allowKey(key) {
+    return [8, 9, 13].includes(key)
   }
 
-  function setDigit(number, id) {
-    if (id == 'spinnerMin' || id == 'btnMinUp' || id == 'btnMinDown') {
-      return (number < 10 ? '0' : '') + number
-    } else {
-      return number
-    }
+  function loadSpinner($spinner) {
+    $spinner
+      .toggleClass('is-open')
+      .attr('aria-hidden', 'false')
+      .fadeIn(100)
   }
 
-  function loadSpinner(spinner) {
-    $(spinner).attr('aria-hidden', 'false')
-    $(spinner).fadeIn(100)
-    $(spinner)
-      .find('input:first')
-      .focus()
-  }
-
-  function hideSpinner(spinner, $input, spinnerh, spinnermin, index) {
-    var newTime = $(spinnerh).attr('value') + ':' + $(spinnermin).attr('value')
-    $input.val(newTime).focus()
-    $(spinner).fadeOut(100)
-    $(spinner).attr('aria-hidden', 'true')
-    $('.btnTime').focus()
-    checkForm($input, index)
-  }
-
-  function getValues(that, arrowBtn) {
-    var findInput = that
-    if (arrowBtn == true) {
-      findInput = that.closest('.spinner').find('input')
-      if (that.find('span').hasClass('icon-up')) {
-        findInput = that.closest('.spinner').find('input')
+  function hideSpinner($spinner, $input, $spinnerH, $spinnerM, index) {
+    if ($spinner.hasClass('is-open')) {
+      $spinner
+        .fadeOut(100)
+        .toggleClass('is-open')
+        .attr('aria-hidden', 'true')
+      if ($spinnerH && $spinnerM) {
+        var newTime = $spinnerH.attr('value') + ':' + $spinnerM.attr('value')
+        console.log(
+          'set $input',
+          $spinnerH.attr('value'),
+          ':',
+          $spinnerM.attr('value')
+        )
+        $input.val(newTime)
       }
+      // checkForm($input, index)
     }
-    valMin = parseInt(findInput.attr('aria-valuemin'))
-    valMax = parseInt(findInput.attr('aria-valuemax'))
-    valNow = parseInt(findInput.attr('aria-valuenow'))
-    skipVal = parseInt(findInput.attr('bb-skip'))
-  }
-
-  function spinbutton(id, skipVal, e) {
-    getKeys()
-
-    var that = $('#' + id)
-    that.on('keydown', function(e) {
-      return handleKeyDown(e, id)
-    })
-    that.on('keypress', function(e) {
-      return handleKeyPress(e)
-    })
-  }
-
-  function handleKeyDown(e, id) {
-    var that = $('#' + id)
-    getValues(that, false)
-
-    if (e.altKey || e.ctrlKey || e.shiftKey) {
-      // do nothing
-      return true
-    }
-
-    switch (e.which) {
-      case this.keys.pageup: {
-        if (valNow < valMax) {
-          // if valnow is small enough, increase by the skipVal,
-          // otherwise just set to valmax
-          if (valNow < valMax - skipVal) {
-            valNow += skipVal
-          } else {
-            valNow = valMax
-          }
-          valNow = (valNow < 10 ? '0' : '') + valNow
-          // update the control
-          that.attr('aria-valuenow', setDigit(valNow, id))
-          that.attr('value', setDigit(valNow), id)
-        }
-
-        e.stopPropagation()
-        return false
-      }
-      case this.keys.pagedown: {
-        if (valNow > valMin) {
-          // if valNow is big enough, decrease by the skipVal,
-          // otherwise just set to valmin
-          if (
-            setDigit(valNow, false) >
-            setDigit(valMin, false) + setDigit(skipVal, false)
-          ) {
-            valNow -= setDigit(skipVal, false)
-          } else {
-            valNow = setDigit(valMin, false)
-          }
-          valNow = (valNow < 10 ? '0' : '') + valNow
-          // update the control
-          that.attr('aria-valuenow', setDigit(valNow, id))
-          that.attr('value', setDigit(valNow, id))
-        }
-
-        e.stopPropagation()
-        return false
-      }
-      case this.keys.home: {
-        if (valNow < valMax) {
-          valNow = valMax
-          that.attr('aria-valuenow', setDigit(valNow, id))
-          that.attr('value', setDigit(valNow, id))
-        }
-
-        e.stopPropagation()
-        return false
-      }
-      case this.keys.end: {
-        if (valNow > valMin) {
-          valNow = valMin
-          that.attr('aria-valuenow', setDigit(valNow, id))
-          that.attr('value', setDigit(valNow, id))
-        }
-        e.stopPropagation()
-        return false
-      }
-      case this.keys.right:
-      case this.keys.up: {
-        // if valuemin isn't met, increment valnow
-        if (valNow < valMax) {
-          valNow++
-          valNow = (valNow < 10 ? '0' : '') + valNow
-          that.attr('value', setDigit(valNow, id))
-          that.attr('aria-valuenow', setDigit(valNow, id))
-        }
-        e.stopPropagation()
-        return false
-      }
-      case this.keys.left:
-      case this.keys.down: {
-        // if valuemax isn't met, decrement valnow
-        if (valNow > valMin) {
-          valNow--
-          valNow = (valNow < 10 ? '0' : '') + valNow
-          that.attr('value', setDigit(valNow, id))
-          that.attr('aria-valuenow', setDigit(valNow, id))
-        }
-        e.stopPropagation()
-        return false
-      }
-    }
-    return true
-  }
-
-  function handleKeyPress(e) {
-    if (e.altKey || e.ctrlKey || e.shiftKey) {
-      // do nothing
-      return true
-    }
-
-    switch (e.keyCode) {
-      case this.keys.pageup:
-      case this.keys.pagedown:
-      case this.keys.home:
-      case this.keys.end:
-      case this.keys.left:
-      case this.keys.up:
-      case this.keys.right:
-      case this.keys.down: {
-        e.stopPropagation()
-        return false
-      }
-    }
-    return true
-  }
-
-  function handleClick($button, $el) {
-    var $input = $el.find('.txtTime')
-    var id = $button.attr('id')
-    var findInput = ''
-    getValues($button, true)
-
-    if ($button.find('span').hasClass('icon-up')) {
-      // if valuemax isn't met, increment valnow
-      if (valNow < valMax) {
-        valNow++
-      }
-      findInput = $button.closest('.spinner').find('input')
-    } else {
-      // if valuemax isn't met, decrement valnow
-      if (valNow > valMin) {
-        valNow--
-      }
-      findInput = $button.closest('.spinner').find('input')
-    }
-    if (valNow < 10) {
-      valNow = '0' + valNow
-    }
-    findInput.attr('value', setDigit(valNow, id))
-    findInput.attr('aria-valuenow', setDigit(valNow, id))
-
-    // Set input value with time on change picker
-    var newTime =
-      $el.find('.spinnerHour').val() + ':' + $el.find('.spinnerMin').val()
-    $input.val(newTime)
   }
 
   // save default labels
@@ -227,23 +40,109 @@ $(document).ready(function() {
   // TIME VALIDATION FOR DATA ENTRY
   function checkForm($input, index) {
     var newValue = $input.val()
-    var $label = $input.siblings('label')
+    if (newValue) {
+      var $label = $input.siblings('label')
 
-    var matches = newValue != '' ? newValue.match(timeRegEx) : ''
+      var matches = newValue != '' ? newValue.match(timeRegEx) : ''
 
-    if (matches) {
-      $label.removeClass('error-label').html(defLabels[index])
-    } else {
-      $label.addClass('error-label').html('Formato ora non valido (hh:mm)')
+      if (matches) {
+        $label.removeClass('error-label').html(defLabels[index])
+      } else {
+        $label.addClass('error-label').html('Formato ora non valido (hh:mm)')
+      }
     }
   }
 
   // Loop each input field
   $('.it-timepicker-wrapper').each(function(index) {
+    //GLOBAL VARIABLES
+    var valMin,
+      valMax,
+      valNow,
+      skipVal,
+      $spinnerInput,
+      timeH = '00',
+      timeM = '00'
+
     // wrapper el
     var $el = $(this)
+
     // get input field
     var $input = $el.find('.txtTime')
+    // get bnt-time
+    var $btnTime = $el.find('.btn-time')
+
+    // get spinner
+    var $spinner = $el.find('.spinner-control')
+    var $spinnerH = $el.find('.spinnerHour')
+    var $spinnerM = $el.find('.spinnerMin')
+
+    var $btnHourUp = $el.find('.btnHourUp')
+    var $btnHourDown = $el.find('.btnHourDown')
+    var $btnMinUp = $el.find('.btnMinUp')
+    var $btnMinDown = $el.find('.btnMinDown')
+
+    // $input.attr('data-input', 'input-' + index)
+    // $spinner.attr('data-spinner', 'spinner-' + index)
+
+    var setDigit = number => {
+      if (number < 0) number = 0
+      return number < 10 ? '0' + number : number
+    }
+
+    var getValues = $button => {
+      // get spinner input
+      $spinnerInput = $button.closest('.spinner').find('input')
+      // get set values
+      valMin = parseInt($spinnerInput.attr('aria-valuemin'))
+      valMax = parseInt($spinnerInput.attr('aria-valuemax'))
+      valNow = parseInt($spinnerInput.attr('aria-valuenow'))
+      skipVal = parseInt($spinnerInput.attr('bb-skip'))
+    }
+
+    var handleClick = (action, $button, who) => {
+      getValues($button)
+      // console.log(action, valMin, valMax, skipVal, valNow, who)
+
+      // manage up/down
+      switch (action) {
+        case 'up':
+          if (!valMax || valNow < valMax) valNow++
+          break
+        case 'down':
+          if (!valMin || valNow > valMin) valNow--
+          break
+      }
+
+      // manage skipVal
+      if (skipVal > -1) {
+        switch (true) {
+          case action === 'up' && skipVal === valNow:
+            valNow++
+            break
+          case action === 'down' && skipVal === valNow:
+            valNow--
+            break
+        }
+      }
+
+      switch (true) {
+        case $button.hasClass('btnHourUp') || $button.hasClass('btnHourDown'):
+          timeH = setDigit(valNow)
+          break
+        case $button.hasClass('btnMinUp') || $button.hasClass('btnMinDown'):
+          timeM = setDigit(valNow)
+          break
+      }
+
+      $spinnerInput.val(setDigit(valNow))
+      $spinnerInput.attr('value', setDigit(valNow))
+      $spinnerInput.attr('aria-valuenow', setDigit(valNow))
+
+      // console.log('valNow', valNow, setDigit(valNow), timeH + ':' + timeM)
+
+      $input.val(timeH + ':' + timeM)
+    }
 
     defLabels[index] = $input.siblings('label').text()
 
@@ -252,53 +151,12 @@ $(document).ready(function() {
       .attr('aria-hidden', 'true')
       .attr('tabindex', '-1')
 
-    $el.find('.btn-time').click(function() {
-      var spinner = $el.find('fieldset').next('.spinner-control')
-      var spinnerh = $(spinner).find('.spinnerHour')
-      var spinnermin = $(spinner).find('.spinnerMin')
-      if ($(spinner).attr('aria-hidden') == 'true') {
-        loadSpinner(spinner)
+    $btnTime.on('click', e => {
+      e.stopPropagation()
+      if ($spinner.hasClass('is-open')) {
+        hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
       } else {
-        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
-      }
-    })
-
-    //Hour and Minute
-    $el.find('.spinnerHour, .spinnerMin').each(function(e) {
-      return spinbutton($(this).attr('id'), $(this).attr('bb-skip'), e)
-    })
-
-    $el
-      .find(
-        '.btnHourUp, .btnHourDown, .btnMinUp, .btnMinDown',
-        '.spinner-control'
-      )
-      .click(function() {
-        handleClick($(this), $el)
-      })
-
-    $el.find('.spinner-control *').on('keyup', function(e) {
-      var key = e.which || e.keyCode
-      if (key === 13) {
-        var spinnerh = $(this)
-          .closest('.time-spinner')
-          .find('.spinnerHour')
-          .attr('value')
-        var spinnermin = $(this)
-          .closest('.time-spinner')
-          .find('.spinnerMin')
-          .attr('value')
-
-        var spinner = $(this).closest('.time-spinner')
-        var newTime = spinnerh + ':' + spinnermin
-
-        $input.val(newTime).focus()
-        $('.spinner-control').attr('aria-hidden', 'true')
-        $('.spinner-control').fadeOut(100)
-        return false
-      } else if (key === 27) {
-        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
-        return false
+        loadSpinner($spinner)
       }
     })
 
@@ -307,17 +165,21 @@ $(document).ready(function() {
       var key = e.which || e.keyCode
       var val = $input.val()
 
-      var $sHour = $el.find('.spinnerHour')
-      var $sMin = $el.find('.spinnerMin')
-
       if (val.includes(':')) {
-        var id = $sMin.attr('id')
-        $sMin.attr('aria-valuenow', setDigit(val.split(':')[1], id))
-        $sMin.attr('value', setDigit(val.split(':')[1], id))
+        var hArr = val.split(':')
+        $spinnerH.attr('aria-valuenow', hArr[0].substring(0, 2))
+        $spinnerH.attr('value', hArr[0].substring(0, 2))
+        $spinnerH.val(hArr[0].substring(0, 2))
+        timeH = hArr[0].substring(0, 2)
+        $spinnerM.attr('aria-valuenow', hArr[1].substring(0, 2))
+        $spinnerM.attr('value', hArr[1].substring(0, 2))
+        $spinnerM.val(hArr[1].substring(0, 2))
+        timeM = hArr[1].substring(0, 2)
       } else {
-        var id = $sHour.attr('id')
-        $sHour.attr('aria-valuenow', setDigit(val, id))
-        $sHour.attr('value', setDigit(val, id))
+        $spinnerH.attr('aria-valuenow', val.substring(0, 2))
+        $spinnerH.attr('value', val.substring(0, 2))
+        $spinnerH.val(val.substring(0, 2))
+        timeH = val.substring(0, 2)
       }
 
       if (key === 13) {
@@ -325,29 +187,74 @@ $(document).ready(function() {
       }
     })
 
-    $el.find('.spinner-control, .btn-time').on('click', function(event) {
-      event.stopPropagation()
-    })
-
-    $input.on('blur', function() {
-      if ($input.val()) {
-        checkForm($input, index)
-      }
-    })
-
-    $el
-      .find('input.spinnerHour, input.spinnerMin')
-      .on('keypress', function(event) {
-        return false
+    $input
+      .on('focus', e => {
+        e.stopPropagation()
+        if ($input.val()) {
+          checkForm($input, index)
+        }
+      })
+      .on('blur', e => {
+        // console.log('$input blur')
+        if ($input.val()) {
+          checkForm($input, index)
+        }
       })
 
-    $(window).click(function() {
-      var spinner = $el.find('.spinner-control[aria-hidden="false"]')
-      var spinnerh = $(spinner).find('.spinnerHour')
-      var spinnermin = $(spinner).find('.spinnerMin')
-      if ($(spinner).length > 0) {
-        hideSpinner(spinner, $input, spinnerh, spinnermin, index)
+    $btnHourUp.on('click', e => {
+      handleClick('up', $btnHourUp, 'click hour up')
+    })
+
+    $btnHourDown.on('click', e => {
+      handleClick('down', $btnHourDown, 'click hour down')
+    })
+
+    $btnMinUp.on('click', e => {
+      handleClick('up', $btnMinUp, 'click min up')
+    })
+
+    $btnMinDown.on('click', e => {
+      handleClick('down', $btnMinDown, 'click min down')
+    })
+
+    $spinnerH.on('keydown', e => {
+      var key = e.which || e.keyCode
+      var isNum = numbers.includes(key)
+      switch (true) {
+        case key === 38: // up
+          $btnHourUp.trigger('click')
+          break
+        case key === 40: // down
+          $btnHourDown.trigger('click')
+          break
+        case allowKey(key) || isNum: // tab or numbers
+          return true
       }
+      return false
+    })
+
+    $spinnerM.on('keydown', e => {
+      var key = e.which || e.keyCode
+      var isNum = numbers.includes(key)
+      switch (true) {
+        case key === 38: // up
+          $btnMinUp.trigger('click')
+          break
+        case key === 40: // down
+          $btnMinDown.trigger('click')
+          break
+        case allowKey(key) || isNum: // tab or numbers
+          return true
+      }
+      return false
+    })
+
+    $(document).on('click', e => {
+      hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
+    })
+
+    $spinner.on('click', e => {
+      e.stopPropagation()
     })
   })
 })
