@@ -7,19 +7,6 @@ module.exports.getChangelog = async () => {
     {
       // `conventional-changelog` options
       releaseCount: 2
-    },
-    {
-      // `context` goes here
-    },
-    {
-      // `git-raw-commits` options
-      merges: null
-    },
-    {
-      // `conventional-commits-parser` options
-    },
-    {
-      // `conventional-changelog-writer` options
     }
   );
 
