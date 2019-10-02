@@ -11,10 +11,12 @@ regular:
   - it-arrow-up
   - it-arrow-up-circle
   - it-arrow-up-triangle
+  - it-ban
   - it-burger
   - it-calendar
   - it-camera
   - it-card
+  - it-chart-line
   - it-check
   - it-check-circle
   - it-chevron-left
@@ -36,6 +38,7 @@ regular:
   - it-file
   - it-files
   - it-folder
+  - it-funnel
   - it-hearing
   - it-help
   - it-help-circle
@@ -56,6 +59,7 @@ regular:
   - it-password-visible
   - it-pencil
   - it-pin
+  - it-plug
   - it-plus
   - it-plus-circle
   - it-presentation

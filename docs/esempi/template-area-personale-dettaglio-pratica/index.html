@@ -1,0 +1,310 @@
+---
+layout: base
+title: Template Dettaglio Pratica
+---
+
+{% assign section = "servizi" %} {% include esempi/comuni/header_logged.html %}
+
+<main>
+  <section id="area-riservata">
+    <div class="section section-background-header section-user-header py-5">
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2 position-static">
+            <h4 class="text-center">Bentornato Mario!</h4>
+            <div class="row mr-xl-2 user-settings">
+              <div class="col-12 col-sm-6 offset-sm-3 col-md-12 offset-md-0">
+                <div class="d-flex justify-content-center">
+                  <div class="pr-4">
+                    <a href="#">
+                      <span>Profilo</span>
+                      <svg class="icon icon-primary icon-xs right">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-settings"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="pl-4">
+                    <a href="#">
+                      <span>Logout</span>
+                      <svg class="icon icon-primary icon-xs right">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-arrow-right"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-tabs-hidescroll mt-4 mt-md-5">
+              <ul
+                class="nav nav-tabs auto no-border no-background"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary active"
+                    id="tab1-tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="tab1"
+                    aria-selected="true"
+                    >Le mie pratiche</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab2-tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="tab2"
+                    aria-selected="false"
+                    >Pagamenti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab3-tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="tab3"
+                    aria-selected="false"
+                    >Documenti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab4-tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="tab4"
+                    aria-selected="false"
+                    >Messaggi</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary"
+                    id="tab5-tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="tab5"
+                    aria-selected="false"
+                    >Scadenze</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 mt-md-3">
+          <div class="row pt-md-5">
+            <div class="col bg-white p-4 p-md-5">
+              <div class="row">
+                <div class="col mb-5">
+                  <a href="#">
+                    <svg class="icon icon-xs">
+                      <use
+                        xlink:href="{{
+                          site.baseurl
+                        }}/dist/svg/sprite.svg#it-arrow-left"
+                      ></use>
+                    </svg>
+                    <span>Torna alle pratiche</span>
+                  </a>
+                </div>
+              </div>
+              <h2>Pagamento TARI</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                nihil nobis beatae voluptates pariatur? Consectetur amet quasi
+                quae, adipisci veniam esse, consequatur facere nisi sint
+                molestias dolorum doloremque in quo?
+              </p>
+              <div class="mt-5">
+                <h4>Contenuto</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+                  dolores deleniti pariatur provident, delectus itaque dolor?
+                  Eveniet, distinctio quisquam! Eum accusantium quibusdam quas
+                  alias nobis repellat iusto maiores tempora minima!
+                </p>
+                <p>
+                  <strong>Data:</strong> 10 settembre 2019<br />
+                  <strong>Protocollo:</strong> h34kr3j4h3jh3k4tr
+                </p>
+              </div>
+              <div class="mt-5">
+                <h4>Prossimi passi</h4>
+                <div class="point-list-wrapper point-list-step-wrapper my-4">
+                  <div class="point-list point-list-step">
+                    <div class="point-list-aside point-list-success">
+                      <svg class="icon icon-success">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-check"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="point-list-content">
+                      <div class="py-3 py-md-4">Pagato</div>
+                    </div>
+                  </div>
+                  <div class="point-list point-list-step">
+                    <div class="point-list-aside point-list-success">
+                      <svg class="icon icon-success">
+                        <use
+                          xlink:href="{{
+                            site.baseurl
+                          }}/dist/svg/sprite.svg#it-check"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="point-list-content">
+                      <div class="py-3 py-md-4">Presa in carico</div>
+                    </div>
+                  </div>
+                  <div class="point-list point-list-step">
+                    <div class="point-list-aside point-list-secondary">
+                      <div class="point-date text-monospace">12</div>
+                      <div class="point-month text-monospace">set</div>
+                    </div>
+                    <div class="point-list-content">
+                      <div class="py-3 py-md-4">In elaborazione</div>
+                    </div>
+                  </div>
+                  <div class="point-list point-list-step">
+                    <div class="point-list-aside point-list-secondary">
+                      <div class="point-date text-monospace">24</div>
+                      <div class="point-month text-monospace">set</div>
+                    </div>
+                    <div class="point-list-content">
+                      <div class="py-3 py-md-4">
+                        Termine entro cui la pratica verrà conclusa
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5">
+                <h4>Allegati</h4>
+                <div class="link-list-wrapper multiline d-inline-block">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item icon-left" href="#">
+                        <span>Allegato 1</span>
+                        <svg class="icon icon-primary icon-sm">
+                          <use
+                            xlink:href="{{
+                              site.baseurl
+                            }}/dist/svg/sprite.svg#it-link"
+                          ></use>
+                        </svg>
+                        <p>Testo allegato 1</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item icon-left" href="#">
+                        <span>Allegato 2</span>
+                        <svg class="icon icon-primary icon-sm">
+                          <use
+                            xlink:href="{{
+                              site.baseurl
+                            }}/dist/svg/sprite.svg#it-link"
+                          ></use>
+                        </svg>
+                        <p>Testo allegato 2</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-5">
+                <h4>Documenti</h4>
+                <div class="link-list-wrapper multiline d-inline-block">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item icon-left" href="#">
+                        <span>ricevuta di protocollo</span>
+                        <svg class="icon icon-primary icon-sm">
+                          <use
+                            xlink:href="{{
+                              site.baseurl
+                            }}/dist/svg/sprite.svg#it-file"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item icon-left" href="#">
+                        <span>ricevuta di pagamento</span>
+                        <svg class="icon icon-primary icon-sm">
+                          <use
+                            xlink:href="{{
+                              site.baseurl
+                            }}/dist/svg/sprite.svg#it-file"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="callout mt-5">
+                <div class="callout-title">
+                  <svg class="icon">
+                    <use
+                      xlink:href="{{
+                        site.baseurl
+                      }}/dist/svg/sprite.svg#it-info-circle"
+                    ></use>
+                  </svg>
+                </div>
+                <h4>Ulteriori informazioni</h4>
+                <p>
+                  <span class="d-block mb-3">La pratica è gestita da:</span>
+                  <strong>Ufficio sanzioni</strong><br />
+                  via dei Transiti 21, 50302<br />
+                  <a href="">ufficio@amministrazione.gov.it</a><br />
+                  047.9345893485
+                </p>
+                <div class="mt-4">
+                  <p>Persone</p>
+                  <a href="#">
+                    <div class="chip chip-simple chip-primary">
+                      <span class="chip-label">Mario Rossi</span>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="chip chip-simple chip-primary">
+                      <span class="chip-label">Luisa Bianchi</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include esempi/comuni/footer.html %}

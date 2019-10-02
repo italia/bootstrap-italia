@@ -17,7 +17,7 @@
     width: 0;
     height: 0;
     &:focus + .lever {
-      @extend .focus--keyboard;
+      @extend :focus;
     }
     &:focus.focus--mouse + .lever {
       @extend .focus--mouse;

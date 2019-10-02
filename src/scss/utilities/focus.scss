@@ -1,6 +1,6 @@
-.focus--keyboard {
-  border-color: $orange;
-  box-shadow: 0 0 6px 2px $orange;
+:focus {
+  border-color: $focus-outline-color;
+  box-shadow: 0 0 0 2px $focus-outline-color;
   outline: none;
 }
 

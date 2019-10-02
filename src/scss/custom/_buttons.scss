@@ -88,8 +88,11 @@
   line-height: 1.555;
   @include border-radius(0);
 
+  // allow height 100%
+  align-self: stretch;
+  // height: 100%;
+
   width: inherit;
-  height: 100%;
 
   margin-top: -$header-slim-button-v-padding;
   margin-bottom: -$header-slim-button-v-padding;

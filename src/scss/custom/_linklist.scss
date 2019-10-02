@@ -19,15 +19,15 @@
         &:hover:not(.disabled) {
           text-decoration: none;
           span {
-            color: $color-primary;
+            color: $primary;
             text-decoration: underline;
           }
           p {
-            color: $color-primary;
+            color: $primary;
             text-decoration: none;
           }
           .icon {
-            fill: $color-primary;
+            fill: $primary;
           }
         }
         &.disabled:hover {
@@ -38,7 +38,7 @@
           font-weight: 600;
         }
         span {
-          color: $color-primary;
+          color: $primary;
           display: inline-block;
           margin-right: $link-list-h-pad;
         }
@@ -118,16 +118,16 @@
 
         &.list-item {
           &.icon-left {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
+            position: relative;
+            padding-left: $v-gap * 4;
 
-            padding-left: 0;
-
-            .icon + * {
+            span {
               margin-top: $v-gap / 2;
-              margin-left: $v-gap;
+            }
+
+            .icon {
+              position: absolute;
+              left: 0;
             }
           }
 

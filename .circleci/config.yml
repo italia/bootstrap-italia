@@ -4,9 +4,9 @@ defaults: &defaults
   working_directory: &working_directory ~/repo
   restore_cache: &restore_cache
     keys:
-      - v5-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
+      - v6-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
       # fallback to using the latest cache if no exact match is found
-      - v5-dependencies-
+      - v6-dependencies-
   ruby: &ruby
     name: Ruby dependencies
     command: bundle install
@@ -17,7 +17,7 @@ defaults: &defaults
     paths:
       - vendor/bundle
       - node_modules
-    key: v5-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
+    key: v6-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package.json" }}
   tag_filters: &tag_filters
     branches:
       ignore: /.*/
