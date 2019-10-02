@@ -22,15 +22,9 @@ $(document).ready(function() {
         .attr('aria-hidden', 'true')
       if ($spinnerH && $spinnerM) {
         var newTime = $spinnerH.attr('value') + ':' + $spinnerM.attr('value')
-        console.log(
-          'set $input',
-          $spinnerH.attr('value'),
-          ':',
-          $spinnerM.attr('value')
-        )
         $input.val(newTime)
       }
-      // checkForm($input, index)
+      checkForm($input, index)
     }
   }
 
@@ -100,10 +94,8 @@ $(document).ready(function() {
       skipVal = parseInt($spinnerInput.attr('bb-skip'))
     }
 
-    var handleClick = (action, $button, who) => {
+    var handleClick = (action, $button) => {
       getValues($button)
-      // console.log(action, valMin, valMax, skipVal, valNow, who)
-
       // manage up/down
       switch (action) {
         case 'up':
@@ -115,7 +107,7 @@ $(document).ready(function() {
       }
 
       // manage skipVal
-      if (skipVal > -1) {
+      if (action && skipVal > -1) {
         switch (true) {
           case action === 'up' && skipVal === valNow:
             valNow++
@@ -139,9 +131,14 @@ $(document).ready(function() {
       $spinnerInput.attr('value', setDigit(valNow))
       $spinnerInput.attr('aria-valuenow', setDigit(valNow))
 
-      // console.log('valNow', valNow, setDigit(valNow), timeH + ':' + timeM)
-
       $input.val(timeH + ':' + timeM)
+    }
+
+    var handleType = ($spinnerInput, $button) => {
+      var value = setDigit($spinnerInput.val())
+
+      $spinnerInput.attr('aria-valuenow', value)
+      handleClick(null, $button)
     }
 
     defLabels[index] = $input.siblings('label').text()
@@ -161,33 +158,32 @@ $(document).ready(function() {
     })
 
     //Direct Time Entry
-    $input.on('keyup', function(e) {
-      var key = e.which || e.keyCode
-      var val = $input.val()
-
-      if (val.includes(':')) {
-        var hArr = val.split(':')
-        $spinnerH.attr('aria-valuenow', hArr[0].substring(0, 2))
-        $spinnerH.attr('value', hArr[0].substring(0, 2))
-        $spinnerH.val(hArr[0].substring(0, 2))
-        timeH = hArr[0].substring(0, 2)
-        $spinnerM.attr('aria-valuenow', hArr[1].substring(0, 2))
-        $spinnerM.attr('value', hArr[1].substring(0, 2))
-        $spinnerM.val(hArr[1].substring(0, 2))
-        timeM = hArr[1].substring(0, 2)
-      } else {
-        $spinnerH.attr('aria-valuenow', val.substring(0, 2))
-        $spinnerH.attr('value', val.substring(0, 2))
-        $spinnerH.val(val.substring(0, 2))
-        timeH = val.substring(0, 2)
-      }
-
-      if (key === 13) {
-        return checkForm($input, index)
-      }
-    })
-
     $input
+      .on('keyup', function(e) {
+        var key = e.which || e.keyCode
+        var val = $input.val()
+
+        if (val.includes(':')) {
+          var hArr = val.split(':')
+          $spinnerH.attr('aria-valuenow', hArr[0].substring(0, 2))
+          $spinnerH.attr('value', hArr[0].substring(0, 2))
+          $spinnerH.val(hArr[0].substring(0, 2))
+          timeH = hArr[0].substring(0, 2)
+          $spinnerM.attr('aria-valuenow', hArr[1].substring(0, 2))
+          $spinnerM.attr('value', hArr[1].substring(0, 2))
+          $spinnerM.val(hArr[1].substring(0, 2))
+          timeM = hArr[1].substring(0, 2)
+        } else {
+          $spinnerH.attr('aria-valuenow', val.substring(0, 2))
+          $spinnerH.attr('value', val.substring(0, 2))
+          $spinnerH.val(val.substring(0, 2))
+          timeH = val.substring(0, 2)
+        }
+
+        if (key === 13) {
+          return checkForm($input, index)
+        }
+      })
       .on('focus', e => {
         e.stopPropagation()
         if ($input.val()) {
@@ -217,37 +213,53 @@ $(document).ready(function() {
       handleClick('down', $btnMinDown, 'click min down')
     })
 
-    $spinnerH.on('keydown', e => {
-      var key = e.which || e.keyCode
-      var isNum = numbers.includes(key)
-      switch (true) {
-        case key === 38: // up
-          $btnHourUp.trigger('click')
-          break
-        case key === 40: // down
-          $btnHourDown.trigger('click')
-          break
-        case allowKey(key) || isNum: // tab or numbers
-          return true
-      }
-      return false
-    })
+    $spinnerH
+      .on('keydown', e => {
+        var key = e.which || e.keyCode
+        var isNum = numbers.includes(key)
+        switch (true) {
+          case key === 38: // up
+            $btnHourUp.trigger('click')
+            break
+          case key === 40: // down
+            $btnHourDown.trigger('click')
+            break
+          case allowKey(key) || isNum: // tab or numbers
+            return true
+        }
+        return false
+      })
+      .on('keyup', e => {
+        var key = e.which || e.keyCode
+        var isNum = numbers.includes(key)
+        if (isNum) {
+          handleType($spinnerH, $btnHourUp)
+        }
+      })
 
-    $spinnerM.on('keydown', e => {
-      var key = e.which || e.keyCode
-      var isNum = numbers.includes(key)
-      switch (true) {
-        case key === 38: // up
-          $btnMinUp.trigger('click')
-          break
-        case key === 40: // down
-          $btnMinDown.trigger('click')
-          break
-        case allowKey(key) || isNum: // tab or numbers
-          return true
-      }
-      return false
-    })
+    $spinnerM
+      .on('keydown', e => {
+        var key = e.which || e.keyCode
+        var isNum = numbers.includes(key)
+        switch (true) {
+          case key === 38: // up
+            $btnMinUp.trigger('click')
+            break
+          case key === 40: // down
+            $btnMinDown.trigger('click')
+            break
+          case allowKey(key) || isNum: // tab or numbers
+            return true
+        }
+        return false
+      })
+      .on('keyup', e => {
+        var key = e.which || e.keyCode
+        var isNum = numbers.includes(key)
+        if (isNum) {
+          handleType($spinnerM, $btnMinUp)
+        }
+      })
 
     $(document).on('click', e => {
       hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
