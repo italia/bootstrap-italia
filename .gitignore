@@ -44,8 +44,12 @@ Thumbs.db
 *.komodoproject
 
 # Jekyll metadata and extra config file for `github` script
+.jekyll-cache
 .jekyll-metadata
 
 # Folders to ignore
 node_modules
 prepros-6.config
+
+# Changelog test
+changelog.txt
