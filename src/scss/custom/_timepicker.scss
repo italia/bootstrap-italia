@@ -26,6 +26,10 @@ div[aria-hidden='true'] {
   margin-top: -12px;
 }
 
+.error-label {
+  color: #8b0000;
+}
+
 /*SPINNER*/
 
 .spinner-control > div .ui-spinner {
@@ -71,6 +75,9 @@ div[aria-hidden='true'] {
       padding-bottom: 0;
       width: 100%;
       display: flex;
+      flex-direction: row;
+
+      margin-bottom: 0;
     }
 
     &:after {
@@ -91,6 +98,8 @@ div[aria-hidden='true'] {
       background: transparent;
       color: $dp-label-color;
 
+      flex: 1;
+
       &::placeholder {
         color: $dp-label-color;
       }
@@ -99,7 +108,7 @@ div[aria-hidden='true'] {
     .btn-time {
       border: none;
       background: transparent;
-      margin-right: $v-gap;
+      // margin-right: $v-gap;
 
       &:hover {
         svg {

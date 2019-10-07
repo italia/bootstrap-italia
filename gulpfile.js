@@ -55,7 +55,7 @@ const Paths = {
     'src/js/plugins/progress-donut.js',
     'src/js/plugins/list.js',
     'src/js/plugins/imgresponsive.js',
-    //'src/js/plugins/timepicker.js',
+    'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
