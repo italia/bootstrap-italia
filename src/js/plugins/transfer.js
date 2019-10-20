@@ -92,12 +92,13 @@ $(function() {
       } else {
         disableElement(inverseButton)
       }
-    } else if (listToCheckControl.length == listToCheck.length) {
-      inputHeader.removeClass('semi-checked').prop('checked', true)
-      // controllo quale pulsante centrale disattivare
     } else {
+      if (listToCheckControl.length == listToCheck.length) {
+        inputHeader.removeClass('semi-checked').prop('checked', true)
+      } else {
+        inputHeader.addClass('semi-checked').prop('checked', false)
+      }
       // controllo quale pulsante centrale disattivare
-      inputHeader.addClass('semi-checked').prop('checked', false)
       if (scopeElControl.hasClass('source')) {
         enableElement(addButton)
       } else {
