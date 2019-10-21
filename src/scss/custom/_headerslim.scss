@@ -72,9 +72,11 @@
       ul.link-list {
         margin-top: $v-gap * 2;
         margin-bottom: $v-gap * 3;
-        a {
+        a.list-item {
           &.active {
-            text-decoration: underline;
+            color: $white;
+            cursor: default;
+            text-decoration: none;
           }
           &:hover:not(.active) {
             text-decoration: underline;
