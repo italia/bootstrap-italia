@@ -1,8 +1,6 @@
-$bg-footer: darken($primary, 20%);
-
 //mobile
 .it-footer-main {
-  background-color: $bg-footer;
+  background-color: $primary-a10;
   color: $white;
   font-size: 16px;
 
@@ -77,7 +75,7 @@ $bg-footer: darken($primary, 20%);
 }
 
 .it-footer-small-prints {
-  background-color: darken($bg-footer, 10%);
+  background-color: $primary-a12;
 
   ul.it-footer-small-prints-list {
     padding: 1.5rem 1rem;
