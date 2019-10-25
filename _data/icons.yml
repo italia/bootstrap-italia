@@ -12,6 +12,8 @@ regular:
   - it-arrow-up-circle
   - it-arrow-up-triangle
   - it-ban
+  - it-bookmark
+  - it-box
   - it-burger
   - it-calendar
   - it-camera
@@ -30,6 +32,7 @@ regular:
   - it-collapse
   - it-comment
   - it-copy
+  - it-delete
   - it-download
   - it-error
   - it-exchange-circle
@@ -37,18 +40,28 @@ regular:
   - it-external-link
   - it-file
   - it-files
+  - it-flag
   - it-folder
+  - it-fullscreen
   - it-funnel
   - it-hearing
   - it-help
   - it-help-circle
   - it-horn
+  - it-inbox
   - it-info-circle
   - it-key
   - it-link
   - it-list
   - it-locked
   - it-mail
+  - it-map-marker
+  - it-map-marker-circle
+  - it-map-marker-minus
+  - it-map-marker-plus
+  - it-maximize
+  - it-maximize-alt
+  - it-minimize
   - it-minus
   - it-minus-circle
   - it-more-actions
@@ -64,6 +77,8 @@ regular:
   - it-plus-circle
   - it-presentation
   - it-print
+  - it-refresh
+  - it-restore
   - it-search
   - it-settings
   - it-share
@@ -77,6 +92,7 @@ regular:
   - it-video
   - it-warning
   - it-warning-circle
+  - it-wifi
   - it-zoom-in
   - it-zoom-out
 social:

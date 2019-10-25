@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<title>Funnel</title>
+<title>Bookmark</title>
   <g>
-    <path d="M14,22H13V13.35L20.05,3H4L11,13.35V22H10V13.65L2.05,2H22L14,13.65Z"/>
+    <path d="M18,22.7l-6-6l-6,6V2h12V22.7z M12,15.3l5,5V3H7v17.3L12,15.3z"/>
   </g>
   <g>
     <rect width="24" height="24" fill="none"/>
   </g>
 </svg>
+
