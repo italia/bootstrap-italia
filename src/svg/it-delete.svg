@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Delete</title>
+  <g>
+    <path d="M15.5,4V3.5C15.5,2.7,14.8,2,14,2h-4C9.2,2,8.5,2.7,8.5,3.5V4H3v1h2v15.5C5,21.3,5.7,22,6.5,22h11
+      c0.8,0,1.5-0.7,1.5-1.5V5h2V4H15.5z M9.5,3.5C9.5,3.2,9.7,3,10,3h4c0.3,0,0.5,0.2,0.5,0.5V4h-5V3.5z M18,20.5c0,0.3-0.2,0.5-0.5,0.5
+      h-11C6.2,21,6,20.8,6,20.5V5h12V20.5z"/>
+    <rect x="11.5" y="8" width="1" height="10"/>
+    <rect x="8" y="8" width="1" height="10"/>
+    <rect x="15" y="8" width="1" height="10"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>
+

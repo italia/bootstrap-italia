@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Inbox</title>
+  <g>
+    <path d="M4,2v14h3.7l1,2h6.6l1-2H20V2H4z M19,15h-3.3l-1,2H9.3l-1-2H5V3h14V15z"/>
+    <polygon points="19,17 20,17 20,22 4,22 4,17 5,17 5,21 19,21 "/>
+    <rect x="7" y="5" width="10" height="1"/>
+    <rect x="7" y="8" width="10" height="1"/>
+    <rect x="7" y="11" width="10" height="1"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>
