@@ -90,6 +90,18 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Varianti di colore
+
+Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap:
+
+{% capture example %}
+
+{% for color in site.data.theme-colors %}
+<div class="chip chip-{{ color.name }} chip-lg">
+  <span class="chip-label">{{ color.name | capitalize }}</span>
+</div>{% endfor %}
+{% endcapture %}{% include example.html content=example %}
+
 ## Chip Disabilitata
 
 Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` al `<button>` si ottiene una chip disabilitata.
