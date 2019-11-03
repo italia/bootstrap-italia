@@ -188,7 +188,9 @@
         }
 
         .divider {
+          width: $megamenu-link-small-line-width;
           background: $neutral-2;
+          margin-left: $navigation-h-padding;
         }
       }
     }
