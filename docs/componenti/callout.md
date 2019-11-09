@@ -150,7 +150,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ## Callout Approfondimento
 
-Il Callout di tipo Approfondimento, ottenibile aggiungendo la classe `.callout-more`, ha un aspetto radicalmente differente dagli altri stili disnponibili ed è indicato per testi più estesi.
+Il Callout di tipo Approfondimento, ottenibile aggiungendo la classe `.callout-more`, ha un aspetto radicalmente differente dagli altri stili disponibili ed è indicato per testi più estesi.
 
 Come da esempio, è possibile aggiungere ulteriore testo all'interno di un <a href="../../componenti/collapse/">Collapse</a> standard presente al fondo del contenuto.
 
