@@ -71,7 +71,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+              <a class="btn btn-primary btn-sm" href="#" type="button">Accedi</a>
             </div>
           </div>
         </div>
