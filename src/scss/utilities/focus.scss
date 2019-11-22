@@ -4,6 +4,10 @@
   outline: none;
 }
 
+[tabindex="-1"]:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
 .focus--mouse {
   border-color: inherit;
   box-shadow: none;
