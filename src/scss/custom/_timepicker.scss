@@ -7,10 +7,6 @@
   font-weight: bold;
 }
 
-div[aria-hidden='true'] {
-  display: none;
-}
-
 .off-screen {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
