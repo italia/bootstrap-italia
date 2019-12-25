@@ -12,7 +12,7 @@ redirect_from:
 
 All'interno di un form, nella visualizzazione predefinita gli elementi sono allineati verticalmente, ma è possibile utilizzare classi aggiuntive per variare questo tipo di layout.
 
-Bootstrap Italia applica automa tutti i form `display: block` e `width: 100%`.
+Bootstrap Italia applica automaticamente a tutti i form `display: block` e `width: 100%`.
 
 ## Organizzazione dei campi
 
