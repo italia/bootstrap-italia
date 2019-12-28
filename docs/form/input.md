@@ -72,14 +72,20 @@ In caso di necessità, è anche possibile utilizzare un ulteriore contenuto test
 {% capture callout %}
 **Associazione del testo di aiuto con gli elementi del modulo form**
 
-Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-labelledby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
+Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
 <div class="form-group">
   <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
-  <input type="text" class="form-control" id="formGroupExampleInputWithHelp" placeholder="Testo di esempio">
-  <small class="form-text text-muted">Ulteriore testo informativo</small>
+  <input 
+    type="text" 
+    class="form-control" 
+    id="formGroupExampleInputWithHelp" 
+    placeholder="Testo di esempio" 
+    aria-describedby="formGroupExampleInputWithHelpDescription"
+  >
+  <small id="formGroupExampleInputWithHelpDescription" class="form-text text-muted">Ulteriore testo informativo</small>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
