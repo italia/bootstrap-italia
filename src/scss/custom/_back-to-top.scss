@@ -23,7 +23,7 @@
     visibility: visible;
     opacity: 1;
     transition: $transition-base, transform 0.05s ease-out,
-      visibility 0 linear 0, opacity 0.1s ease-in-out;
+      visibility 0s linear, opacity 0.1s ease-in-out;
     transform: scale(1);
   }
   &:hover {
