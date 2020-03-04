@@ -4,13 +4,21 @@
     - name: Sito di presentazione della app IO
       url: "https://io.italia.it/"
       description: Un sito realizzato in poche ore, anche grazie all'utilizzo di Bootstrap Italia, che presenta il progetto per la realizzazione dell'app del cittadino IO.
-    - name: Prototipo del Comune di Cagliari
-      url: "https://italia.github.io/design-comuni-prototipi/esempi/comune-di-cagliari/pagine-statiche/index.html"
-      description: Un prototipo per il nuovo sito del Comune di Cagliari, costruito per fare ricerca e test con gli utenti, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> in formato scaricabile.
     - name: Docs Italia
       url: "https://docs.italia.it"
       description: Docs Italia, il progetto per la pubblicazione e la consultazione dei documenti pubblici digitali, è stato costruito su una versione preliminare di Bootstrap Italia.
-      status: work in progress
+    - name: Civico 13 - Lo Sportello Giovani del Trentino
+      url: "https://www.sportellogiovanitrentino.it/"
+      description: Il Civico13 è uno sportello giovani unico, un servizio congiunto nato dalla collaborazione tra gli uffici delle Politiche giovanili del Comune di Trento e della Provincia autonoma di Trento.
+    - name: Sito del Comune di Cagliari
+      url: "https://www.comune.cagliari.it/"
+      description: Il nuovo sito ufficiale del Comune di Cagliari, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> di una versione preliminare in formato scaricabile.
+    - name: Sito del Comune di Ala
+      url: "https://www.comune.cagliari.it/"
+      description: Il nuovo sito ufficiale del Comune di Ala in provincia di Trento.
+    - name: Appaltinnovativi.GOV
+      url: "https://appaltinnovativi.gov.it/"
+      description: Il sito per gli appalti di innovazione della Pubblica Amministrazione.
 - category: Temi
   description: Di seguito sono riportati alcuni progetti che semplificano la creazione di progetti con Bootstrap Italia e diversi CMS o framework per il web. Sono tutti in piena evoluzione e necessitano dell'aiuto di tutti per essere completati, resi pienamente conformi ed esenti da problemi. Se vuoi contruibire contattaci o crea una Pull Request sul repository!
   examples:
@@ -18,10 +26,12 @@
       url: "https://github.com/italia/design-wordpress-theme/"
       description: Un tema open-source per il CMS <a href="https://it.wordpress.org/">WordPress</a>, creato dalla community degli sviluppatori.
       status: work in progress
+    - name: Tema WordPress per le Scuole
+      url: "https://github.com/italia/design-scuole-wordpress-theme"
+      description: Il template Wordpress per i siti delle scuole è basato sul modello di siti per le scuole italiane.
     - name: Tema Jekyll
       url: "https://github.com/italia/design-jekyll-theme/"
       description: Un tema open-source per il generatore di siti statici <a href="https://jekyllrb.com/">Jekyll</a>, creato dalla community degli sviluppatori.
-      status: work in progress
     - name: Tema Django
       url: "https://github.com/italia/design-django-theme/"
       description: Un tema open-source per il framework web Python <a href="https://www.djangoproject.com/">Django</a>, creato dalla community degli sviluppatori.
