@@ -99,7 +99,7 @@ const jqueryVersionCheck =
   '  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 4)) {\n' +
   "    throw new Error('Bootstrap\\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0')\n" +
   '  }\n' +
-  '}(jQuery);\n\n'
+  '}(jQuery);\n'
 
 // Library related tasks
 
@@ -149,17 +149,9 @@ gulp.task('js-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(
-      gap.prependText(
-        bootstrapItaliaBanner +
-          '\n' +
-          jqueryCheck +
-          '\n' +
-          jqueryVersionCheck +
-          '\n+function () {\n'
-      )
-    )
-    .pipe(gap.appendText('\n}();\n'))
+    .pipe(gap.prependText(jqueryVersionCheck, '\n\n'))
+    .pipe(gap.prependText(jqueryCheck, '\n\n'))
+    .pipe(gap.prependText(bootstrapItaliaBanner, '\n\n'))
     .pipe(
       rename({
         suffix: '.min',
