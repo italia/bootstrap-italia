@@ -131,7 +131,7 @@ $(document).ready(function() {
       $spinnerInput.attr('value', setDigit(valNow))
       $spinnerInput.attr('aria-valuenow', setDigit(valNow))
 
-      $input.val(timeH + ':' + timeM)
+      $input.val(timeH + ':' + timeM).change()
     }
 
     var handleType = ($spinnerInput, $button) => {
