@@ -207,7 +207,7 @@ Di seguito una modale con un elenco di radio button.
 
 ### Modale con Link List
 
-All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).  
+All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
 {% capture example %}
@@ -225,7 +225,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
@@ -233,7 +233,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
@@ -241,7 +241,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
