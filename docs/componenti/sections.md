@@ -72,7 +72,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% capture example %}
 <div class="section section-primary">
-  <div class="section-conten">
+  <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
       <div class="row mb-3">
