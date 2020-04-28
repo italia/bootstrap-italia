@@ -19,6 +19,9 @@
     - name: Appaltinnovativi.GOV
       url: "https://appaltinnovativi.gov.it/"
       description: Il sito per gli appalti di innovazione della Pubblica Amministrazione.
+    - name: Risorse per una didattica della Vicinanza
+      url: "http://www.comune.torino.it/servizieducativi/risorse/index.html"
+      description: Una selezione dei materiali prodotti dai servizi educativi della Divisione Servizi Educativi - Città di Torino
 - category: Temi
   description: Di seguito sono riportati alcuni progetti che semplificano la creazione di progetti con Bootstrap Italia e diversi CMS o framework per il web. Sono tutti in piena evoluzione e necessitano dell'aiuto di tutti per essere completati, resi pienamente conformi ed esenti da problemi. Se vuoi contruibire contattaci o crea una Pull Request sul repository!
   examples:
@@ -41,10 +44,14 @@
       description: Un tema open-source per il framework web PHP <a href="https://laravel.com/">Laravel</a>, creato dalla community degli sviluppatori.
       status: work in progress
     - name: Tema Hugo
-      url: "https://github.com/francescozaia/hugo-theme-bootstrap-italia/"
+      url: "https://github.com/italia/hugo-theme-bootstrap-italia/"
       description: Un tema open-source per il generatore di siti statici <a href="https://gohugo.io/">Hugo</a>, creato dalla community degli sviluppatori.
       status: work in progress
     - name: Tema Symfony
       url: "https://github.com/ComuneFI/BootstrapitaliaBundle/"
       description: Un tema open-source per il framework web PHP <a href="https://symfony.com/">Symfony</a>, creato dalla community degli sviluppatori.
+      status: work in progress
+    - name: Tema Gatsby
+      url: "https://github.com/italia/design-italia-gatsby-starterkit"
+      description: Un tema open-source per <a href="https://www.gatsbyjs.org/">Gatsby.js</a>, essenziale per iniziare a costruire un sito usando questo generatore per React.
       status: work in progress

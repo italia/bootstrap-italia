@@ -226,7 +226,7 @@ Aggiorna la posizione del tooltip di un elemento.
   <tbody>
     <tr>
       <td>show.bs.tooltip</td>
-      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>show</code>.</td>.
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo <code>show</code>.</td>
     </tr>
     <tr>
       <td>shown.bs.tooltip</td>
