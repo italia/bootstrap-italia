@@ -10,7 +10,7 @@ richieste di nuove funzionalità e creazione di pull request, nel rispetto di qu
 
 - Per favore, **non** usare l'issue tracker per richieste di supporto personali.
   [Slack di Developers Italia](https://slack.developers.italia.it/), [Slack di Bootstrap](https://bootstrap-slack.herokuapp.com/)
-  o Stack Overflow sono i posti giusti a cui fare riferimento, dove sarà anche più facile troverete risposte immediate.
+  o Stack Overflow sono i posti giusti a cui fare riferimento, dove sarà anche più facile trovare risposte immediate.
 
 - Allo stesso modo, per favore **non** provocare gli altri o "trollare" nei commenti alle issue.
   Mantenere la discussione pertinente e rispettare le opinioni di tutti. Per confronti o questioni più articolate,
