@@ -20,7 +20,7 @@ richieste di nuove funzionalità e creazione di pull request, nel rispetto di qu
 
 ## Lavorazione di una issue
 
-Per prendere in carico una issue, è necessario effettuare il fork del repository sul proprio account, secondo normale flusso GitHub.
+Per prendere in carico una issue, è necessario effettuare il fork del repository sul proprio account, secondo il normale flusso GitHub.
 
 Nel caso di contributor con accesso in scrittura al repository, è consigliabile creare un branch nominato in questo modo: `feature/##-descrizione-issue`, dove `##` è il numero di issue lavorata.
 
