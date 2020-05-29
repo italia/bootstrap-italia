@@ -32,14 +32,14 @@ in dettaglio alla [pagina introduttiva della documentazione](https://italia.gith
 
 Vuoi segnalare un bug o fare una richiesta?
 
-Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva 
+Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva
 (in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
 dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md#creare-una-issue).
 
 ## Come contribuire
 
 Vorresti dare una mano su Bootstrap Italia? **Sei nel posto giusto!**
- 
+
 Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle
 [linee guida di design per i servizi web della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/),
 e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md).
@@ -77,8 +77,6 @@ La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICEN
 
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
 
-<a href="https://www.browserstack.com/
-" target="_blank"><img src="https://p14.zdusercontent.com/attachment/1015988/Acl6uTyvwHnAmpEiRm9p8eh1R?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ewB9aVdbiHzfkiZdbgrc2Q.s1B7FuA_Wdegrj1PBZ0pVGgjWhzuJD8yTKRptv2BxFNe-KQSsaVtbkBer5X2rNq81mHZ_kEuAOigMPjgorAAzTUA5AmP_OX4JQJdQk96Vg3UggORRd4UDSdS-tF4o4evvo_8f3cciZcBBiFuqm-GXAclqWRusZxHITpEM7OHNvvMSDV35zbOO0zLwTnHKNQL715Ozitqrx_Q94yYO9NUM-h6jrN76MM5hLdM2umQXsrd0JH5EMp7tp8yDAAyNtoqZUiNFxCh0o1dUAFgZodntaLkGOv4Gzzj5kb7iBWS6JY.Ev5PtLdgCYcC4799H6-GEg" 
-alt="BrowserStack logo" width="200" height="105" /></a>
+<a href="https://www.browserstack.com/" target="_blank"><img src="docs/assets/img/browserstack-logo.png" alt="BrowserStack logo" width="270" height="79" /></a>
 
 We are using BrowserStack for interactive cross browser testing. They are sponsoring our open source project!
