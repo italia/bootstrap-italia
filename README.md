@@ -73,6 +73,15 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 - Compilazione SASS [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, licenza MIT
 - GitHub REST API client per JavaScript [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
 
+### Componenti utilizzati per la documentazione
+
+Di seguito sono elencati invece i componenti utilizzati per il sito della documentazione ma non ridistribuiti nella libreria Bootstrap Italia
+
+- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, licenza MIT
+- [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, licenza MIT
+- [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, licenza MIT
+- [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, licenza MIT
+
 La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICENSE:
 
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)

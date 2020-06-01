@@ -49,24 +49,33 @@ of the documentation. You can find all the information necessary for this purpos
 
 Software components distributed with Bootstrap Italia that have their own different license from CC0 are listed below.
 
-- [jQuery](https://jquery.com/) © jQuery Foundation, MIT
-- [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, MIT
-- [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., MIT
-- [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, MIT
-- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), MIT
+- [jQuery](https://jquery.com/) © jQuery Foundation, MIT license
+- [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, MIT license
+- [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., MIT license
+- [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, MIT license
+- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), MIT license
 - [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, BSD
 
 ### Main dependencies for the compilation and development phase
 
-- [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, licenza MIT
-- [HTML-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
+- [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, MIT license
+- [HTML-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, MIT license
 - [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
 - [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
-- [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, licenza MIT
-- [Babel](https://babeljs.io/), © Sebastian McKenzie, licenza MIT
-- [Prettier](https://prettier.io/), © James Long and contributors, licenza MIT
-- [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, licenza MIT
-- [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
+- [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, MIT license
+- [Babel](https://babeljs.io/), © Sebastian McKenzie, MIT license
+- [Prettier](https://prettier.io/), © James Long and contributorsv
+- [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, MIT license
+- [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, MIT license
+
+### Main dependencies for the documentation
+
+The components used for the documentation site but not redistributed with the Bootstrap Italia library are listed below:
+
+- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, MIT license
+- [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, MIT license
+- [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, MIT license
+- [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, MIT license
 
 Bootstrap Italia is **BSD 3-Clause** licensed:
 
