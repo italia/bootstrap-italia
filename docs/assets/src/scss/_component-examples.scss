@@ -1,13 +1,15 @@
 .bd-example-row {
+  .d-flex,
   .row {
-    background-image:
-      linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%),
-      linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, $neutral-1-a2 75%),
-      linear-gradient(-45deg, transparent 75%, $neutral-1-a2 75%);
+    background-image: linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%),
+    linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, $neutral-1-a2 75%),
+    linear-gradient(-45deg, transparent 75%, $neutral-1-a2 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
 
+  .row {
     > .col,
     > [class^="col-"] {
       padding-top: .75rem;
@@ -16,10 +18,10 @@
       border: 1px solid $primary;
       color: $white;
     }
-  }
 
-  .row + .row {
-    margin-top: 1rem;
+    + .row {
+      margin-top: 1rem;
+    }
   }
 
   .flex-items-top,
@@ -28,15 +30,11 @@
     min-height: 6rem;
     background-color: rgba(255, 0, 0, .1);
   }
-
-  &.bd-example-row-flex-cols .row {
-    min-height: 10rem;
-  }
 }
 
 
 .bd-highlight {
-  background-color: rgba($primary, .55);
+  background-color: rgba($primary, .75);
   border: 1px solid $primary;
   color: white;
 }

@@ -53,16 +53,16 @@ twitter:            'https://twitter.com/teamdigitaleIT'
 twitter_handle:     '@teamdigitaleIT'
 
 # Versions
-current_version:		1.3.10
-bootstrap_version:  4.3.1
-bootstrap_minor:    4.3
+current_version:	1.3.10
+bootstrap_version:  4.5.0
+bootstrap_minor:    4.5
 
 # Analytics
 ga_property:        'UA-114758441-1'
 
 # CDN links
 cdn:
-  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>'
-  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>'
+  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>'
+  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" crossorigin="anonymous"></script>'
   owlcarousel:      '<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>'
 

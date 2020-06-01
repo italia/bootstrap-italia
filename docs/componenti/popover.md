@@ -142,7 +142,7 @@ Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo 
 </button>
 {% endcapture %}{% include example.html content=example %}
 
-### Dismiss al click successivo
+### Chiusura al click successivo
 
 Usa l'evento `focus` per ignorare i popover sul clic successivo dell'utente di un elemento diverso rispetto all'elemento di attivazione / disattivazione.
 
@@ -153,7 +153,7 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture example %}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Dismissible popover</a>
+<a tabindex="0" href="#" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Popover richiudibile" data-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 {% endcapture %}{% include example.html content=example %}
 
 {% highlight js %}
