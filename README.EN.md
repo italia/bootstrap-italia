@@ -37,7 +37,7 @@ you can [create an issue](https://github.com/italia/bootstrap-italia/issues).
 ## How to contribute
 
 Would you like to help with Bootstrap Italia? **You are in the right place!**
- 
+
 If you have not already done so, start by spending a few minutes to deepen your knowledge on [design guidelines for Italian public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/) (in italian), and refer to the [instructions on how to contribute to Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md) (in italian).
 
 At this point, you'll need to configure the local environment to compile the source files and generate them
@@ -72,8 +72,6 @@ Bootstrap Italia is **BSD 3-Clause** licensed:
 
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
 
-<a href="https://www.browserstack.com/
-" target="_blank"><img src="https://p14.zdusercontent.com/attachment/1015988/Acl6uTyvwHnAmpEiRm9p8eh1R?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ewB9aVdbiHzfkiZdbgrc2Q.s1B7FuA_Wdegrj1PBZ0pVGgjWhzuJD8yTKRptv2BxFNe-KQSsaVtbkBer5X2rNq81mHZ_kEuAOigMPjgorAAzTUA5AmP_OX4JQJdQk96Vg3UggORRd4UDSdS-tF4o4evvo_8f3cciZcBBiFuqm-GXAclqWRusZxHITpEM7OHNvvMSDV35zbOO0zLwTnHKNQL715Ozitqrx_Q94yYO9NUM-h6jrN76MM5hLdM2umQXsrd0JH5EMp7tp8yDAAyNtoqZUiNFxCh0o1dUAFgZodntaLkGOv4Gzzj5kb7iBWS6JY.Ev5PtLdgCYcC4799H6-GEg" 
-alt="BrowserStack logo" width="200" height="105" /></a>
+<a href="https://www.browserstack.com/" target="_blank"><img src="docs/assets/img/browserstack-logo.png" alt="BrowserStack logo" width="270" height="79" /></a>
 
 We are using BrowserStack for interactive cross browser testing. They are sponsoring our open source project!
