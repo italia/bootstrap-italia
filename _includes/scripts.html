@@ -5,15 +5,15 @@
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 
 {%- if page.layout == "default" or page.layout == "docs" -%}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha256-+u54FaX9J+k40eAcg5K2YzICSQjrEYBI9gju5nE3HfY=" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/clipboard.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
 <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/1.0.2/tweenjs.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/1.0.2/easeljs.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/easeljs.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/preloadjs.min.js"></script>
 
 <script>
   var manifest = [
@@ -31,7 +31,7 @@
 
 {%- if page.layout == "docs" -%}
 {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',
