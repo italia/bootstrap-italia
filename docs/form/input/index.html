@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Elementi e stili per la creazione di input accessibili e responsivi.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Input · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -538,7 +538,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="esempi-di-campi-di-input">Esempi di campi di input</h2>
 
-<p>Per il corretto funzionamento degli elementi di tipo <code class="highlighter-rouge">&lt;input&gt;</code>, è di fondamentale importanza l’utilizzo uno degli appositi attributi <code class="highlighter-rouge">type</code> (ad esempio, <code class="highlighter-rouge">email</code> per l’inserimento di indirizzi email o <code class="highlighter-rouge">number</code> per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell’email, l’utilizzo di metodo di input numerico e altro.</p>
+<p>Per il corretto funzionamento degli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>, è di fondamentale importanza l’utilizzo uno degli appositi attributi <code class="language-plaintext highlighter-rouge">type</code> (ad esempio, <code class="language-plaintext highlighter-rouge">email</code> per l’inserimento di indirizzi email o <code class="language-plaintext highlighter-rouge">number</code> per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell’email, l’utilizzo di metodo di input numerico e altro.</p>
 
 <p>Per l’inserimento guidato di campi di tipo numerico si può anche utilizzare l’elemento dedicato che fornisce migliorie per la validazione e per l’esperienza complessiva, descritto alla <a href="/bootstrap-italia/docs/form/input-numerico/">pagina dedicata all’input numerico</a>.</p>
 
@@ -617,12 +617,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"formGroupExampleInput2"</span> <span class="na">placeholder=</span><span class="s">"Testo di esempio"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento <code class="highlighter-rouge">&lt;small&gt;</code> con classe <code class="highlighter-rouge">.form-text</code> all’interno di <code class="highlighter-rouge">.form-group</code>. Può essere esteso usando le classi di utilità come <code class="highlighter-rouge">.text-muted</code>.</p>
+<p>In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento <code class="language-plaintext highlighter-rouge">&lt;small&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.form-text</code> all’interno di <code class="language-plaintext highlighter-rouge">.form-group</code>. Può essere esteso usando le classi di utilità come <code class="language-plaintext highlighter-rouge">.text-muted</code>.</p>
 
 <div class="bd-callout bd-callout-warning">
 <p><strong>Associazione del testo di aiuto con gli elementi del modulo form</strong></p>
 
-<p>Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l’attributo <code class="highlighter-rouge">aria-describedby</code>. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l’utente avrà il focus sull’elemento.</p>
+<p>Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l’attributo <code class="language-plaintext highlighter-rouge">aria-describedby</code>. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l’utente avrà il focus sull’elemento.</p>
 </div>
 
 <div class="bd-example">
@@ -723,9 +723,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="input-password">Input password</h3>
 
-<p>Per rendere più semplice l’inserimento della password, l’elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>) per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="highlighter-rouge">.form-password</code>.</p>
+<p>Per rendere più semplice l’inserimento della password, l’elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente <a href="https://www.npmjs.com/package/password-strength-meter">strength meter</a>) per segnalare quanto la password che si sta inserendo sia sicura con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.form-password</code>.</p>
 
-<p>È possibile personalizzare la componente <code class="highlighter-rouge">strength meter</code> usando gli attributi data.</p>
+<p>È possibile personalizzare la componente <code class="language-plaintext highlighter-rouge">strength meter</code> usando gli attributi data.</p>
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -812,7 +812,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="disabilitato">Disabilitato</h3>
 
-<p>Aggiungi l’attributo <code class="highlighter-rouge">disabled</code> ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.</p>
+<p>Aggiungi l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.</p>
 
 <div class="bd-example">
 <div class="form-group">
@@ -827,7 +827,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="readonly">Readonly</h3>
 
-<p>Aggiungi l’attributo <code class="highlighter-rouge">readonly</code> ad un input per impedire la modifica del valore contenuto.</p>
+<p>Aggiungi l’attributo <code class="language-plaintext highlighter-rouge">readonly</code> ad un input per impedire la modifica del valore contenuto.</p>
 
 <div class="bd-example">
 <div class="form-group">
@@ -842,7 +842,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h4 id="readonly-normalizzato">Readonly normalizzato</h4>
 
-<p>Se per qualche motivo vuoi avere gli elementi <code class="highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="highlighter-rouge">.form-control-plaintext</code> anziché <code class="highlighter-rouge">.form-control</code>.</p>
+<p>Se per qualche motivo vuoi avere gli elementi <code class="language-plaintext highlighter-rouge">&lt;input readonly&gt;</code> nella forma stilizzata come testo normale usa la classe <code class="language-plaintext highlighter-rouge">.form-control-plaintext</code> anziché <code class="language-plaintext highlighter-rouge">.form-control</code>.</p>
 
 <div class="bd-example">
 <div>
@@ -861,26 +861,26 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="input-con-risultato-ricerca-o-autocompletamento">Input con risultato ricerca o autocompletamento</h2>
 
-<p>Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all’input la classe <code class="highlighter-rouge">.autocomplete</code> e l’attributo <code class="highlighter-rouge">data-autocomplete</code> con un JSON da filtrare.</p>
+<p>Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all’input la classe <code class="language-plaintext highlighter-rouge">.autocomplete</code> e l’attributo <code class="language-plaintext highlighter-rouge">data-autocomplete</code> con un JSON da filtrare.</p>
 
-<p>L’icona della lente è contenuta in uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.autocomplete-icon</code>, nascosta agli screen reader dall’attributo <code class="highlighter-rouge">aria-hidden="true"</code>.</p>
+<p>L’icona della lente è contenuta in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.autocomplete-icon</code>, nascosta agli screen reader dall’attributo <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code>.</p>
 
 <div class="bd-callout bd-callout-accessibility">
 <h5 id="accessibilità">Accessibilità</h5>
 
-<p>La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe <code class="highlighter-rouge">.sr-only</code>.</p>
+<p>La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe <code class="language-plaintext highlighter-rouge">.sr-only</code>.</p>
 </div>
 
-<p>L’elenco dei risultati generati dalla ricerca è una lista <code class="highlighter-rouge">&lt;ul&gt;</code> con classe <code class="highlighter-rouge">.autocomplete-list</code>, mentre i singoli risultati sono contenuti negli elementi <code class="highlighter-rouge">&lt;li&gt;</code> della lista e si compongono di:</p>
+<p>L’elenco dei risultati generati dalla ricerca è una lista <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.autocomplete-list</code>, mentre i singoli risultati sono contenuti negli elementi <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> della lista e si compongono di:</p>
 
 <ul>
   <li><strong>Avatar</strong> o <strong>Icona</strong>: nel caso in cui non sia presente un’icona adeguata,
-utilizzare come icona di default <code class="highlighter-rouge">#it-file</code> per indicare una pagina generica.</li>
-  <li><strong>Testo</strong>: elemento <code class="highlighter-rouge">&lt;span&gt;</code> contenuto in <code class="highlighter-rouge">.autocomplete-list-text</code></li>
-  <li><strong>Label</strong>: elemento <code class="highlighter-rouge">&lt;em&gt;</code> contenuto nel testo</li>
+utilizzare come icona di default <code class="language-plaintext highlighter-rouge">#it-file</code> per indicare una pagina generica.</li>
+  <li><strong>Testo</strong>: elemento <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> contenuto in <code class="language-plaintext highlighter-rouge">.autocomplete-list-text</code></li>
+  <li><strong>Label</strong>: elemento <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> contenuto nel testo</li>
 </ul>
 
-<p>Il testo corrispondente alla ricerca (<em>“ite”</em>, nell’esempio) deve essere racchiuso in un tag <code class="highlighter-rouge">&lt;mark&gt;</code>.</p>
+<p>Il testo corrispondente alla ricerca (<em>“ite”</em>, nell’esempio) deve essere racchiuso in un tag <code class="language-plaintext highlighter-rouge">&lt;mark&gt;</code>.</p>
 
 <div class="bd-example">
 <div class="form-group">
@@ -1009,7 +1009,7 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
 
 <h3 id="autocomplete-grande">Autocomplete grande</h3>
 
-<p>Per ottenere una versione grande dell’Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe <code class="highlighter-rouge">.autocomplete-wrapper-big</code> al contenitore <code class="highlighter-rouge">.form-group</code>.</p>
+<p>Per ottenere una versione grande dell’Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe <code class="language-plaintext highlighter-rouge">.autocomplete-wrapper-big</code> al contenitore <code class="language-plaintext highlighter-rouge">.form-group</code>.</p>
 
 <div class="bd-example">
 <div class="form-group autocomplete-wrapper-big">
@@ -1109,11 +1109,11 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
 
 <h3 id="autocompletamento-con-dati">Autocompletamento con dati</h3>
 
-<p>Questo autocompletamento è collegato, tramite l’attributo <code class="highlighter-rouge">data-autocomplete</code>, ad una lista di oggetti nella quale sono presenti:</p>
+<p>Questo autocompletamento è collegato, tramite l’attributo <code class="language-plaintext highlighter-rouge">data-autocomplete</code>, ad una lista di oggetti nella quale sono presenti:</p>
 
 <ul>
-  <li>nel campo <code class="highlighter-rouge">text</code> i nomi di tutte le regioni italiane</li>
-  <li>nel campo <code class="highlighter-rouge">link</code> un link associato a ciascuna di esse</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">text</code> i nomi di tutte le regioni italiane</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">link</code> un link associato a ciascuna di esse</li>
 </ul>
 
 <p>Questi sono i minimi dati necessari per il corretto funzionamento dell’autocomplete.</p>
@@ -1140,13 +1140,13 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"autocomplete-regioni"</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Cerca nel sito<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Questo Autocomplete è collegato, sempre tramite l’attributo <code class="highlighter-rouge">data-autocomplete</code>, ad una lista di oggetti nella quale sono presenti:</p>
+<p>Questo Autocomplete è collegato, sempre tramite l’attributo <code class="language-plaintext highlighter-rouge">data-autocomplete</code>, ad una lista di oggetti nella quale sono presenti:</p>
 
 <ul>
-  <li>nel campo <code class="highlighter-rouge">text</code> i nomi di alcune nazioni</li>
-  <li>nel campo <code class="highlighter-rouge">link</code> un link associato a ciascuna di esse</li>
-  <li>nel campo <code class="highlighter-rouge">icon</code> l’icona identificativa del risultato trovato</li>
-  <li>nel campo <code class="highlighter-rouge">label</code> la label aggiuntiva</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">text</code> i nomi di alcune nazioni</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">link</code> un link associato a ciascuna di esse</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">icon</code> l’icona identificativa del risultato trovato</li>
+  <li>nel campo <code class="language-plaintext highlighter-rouge">label</code> la label aggiuntiva</li>
 </ul>
 
 <p>Cerca ad esempio <em>“Italia”</em> per verificarne il comportamento.</p>
@@ -1173,9 +1173,9 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
 
 <h2 id="area-di-testo">Area di testo</h2>
 
-<p>Per permettere agli utenti di inserire del testo (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo <code class="highlighter-rouge">&lt;textarea&gt;</code> ridimensionabile.</p>
+<p>Per permettere agli utenti di inserire del testo (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo <code class="language-plaintext highlighter-rouge">&lt;textarea&gt;</code> ridimensionabile.</p>
 
-<p>Includendo l’elemento all’interno di un <code class="highlighter-rouge">.form-group</code>, la label assumerà lo stesso comportamento dinamico dei campi di input.</p>
+<p>Includendo l’elemento all’interno di un <code class="language-plaintext highlighter-rouge">.form-group</code>, la label assumerà lo stesso comportamento dinamico dei campi di input.</p>
 
 <div class="bd-example">
 <div>
@@ -1209,11 +1209,11 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1230,7 +1230,7 @@ utilizzare come icona di default <code class="highlighter-rouge">#it-file</code>
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

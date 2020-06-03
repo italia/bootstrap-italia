@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentazione ed esempi sull’utilizzo del componente Tab.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Tab · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -573,24 +573,24 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Tab</h1>
           <p class="bd-lead">Documentazione ed esempi sull’utilizzo del componente Tab.</p>
-          <p>L’interfaccia a tab (o schede) di Bootstrap si basa sull’utilizzo del layout di navigazione, con l’aggiunta della classe <code class="highlighter-rouge">.nav-tabs</code>. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un’ulteriore classe: <code class="highlighter-rouge">.nav-dark</code>.</p>
+          <p>L’interfaccia a tab (o schede) di Bootstrap si basa sull’utilizzo del layout di navigazione, con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.nav-tabs</code>. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un’ulteriore classe: <code class="language-plaintext highlighter-rouge">.nav-dark</code>.</p>
 
 <div class="bd-callout bd-callout-accessibility">
 <h5 id="accessibilità">Accessibilità</h5>
 
-<p>Le interfacce a tab, come descritto nelle <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">pratiche di implementazione WAI ARIA</a>, richiedono l’utilizzo di attributi <code class="highlighter-rouge">role="tablist"</code>, <code class="highlighter-rouge">role="tab"</code>, <code class="highlighter-rouge">role="tabpanel"</code>, e ulteriori attributi <code class="highlighter-rouge">aria-</code>, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).</p>
+<p>Le interfacce a tab, come descritto nelle <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel">pratiche di implementazione WAI ARIA</a>, richiedono l’utilizzo di attributi <code class="language-plaintext highlighter-rouge">role="tablist"</code>, <code class="language-plaintext highlighter-rouge">role="tab"</code>, <code class="language-plaintext highlighter-rouge">role="tabpanel"</code>, e ulteriori attributi <code class="language-plaintext highlighter-rouge">aria-</code>, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).</p>
 
 <p>Nota che le interfacce dinamiche a tab <strong>non devono</strong> contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell’usabilità, il fatto che l’elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all’interno del menu a discesa chiuso) può causare confusione.</p>
 </div>
 
 <h2 id="tab-orizzontali-a-tutta-larghezza">Tab orizzontali a tutta larghezza</h2>
-<p>Aggiungendo la classe <code class="highlighter-rouge">.auto</code> al contenitore <code class="highlighter-rouge">.nav-tabs</code> i tab occupano automaticamente l’intera larghezza disponibile. Se su schermi particolarme piccoli (es: smartphone) le dimensioni dei tab dovessero superare quelle dello schermo, verrà attivato lo scrolling orizzontale dei tab stessi.</p>
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.auto</code> al contenitore <code class="language-plaintext highlighter-rouge">.nav-tabs</code> i tab occupano automaticamente l’intera larghezza disponibile. Se su schermi particolarme piccoli (es: smartphone) le dimensioni dei tab dovessero superare quelle dello schermo, verrà attivato lo scrolling orizzontale dei tab stessi.</p>
 
 <h3 id="tab-testuale">Tab testuale</h3>
 
 <p>Lo stato dei tab può essere attivo, non attivo e disabilitato.
-Utilizzare la classe <code class="highlighter-rouge">.active</code> sul link del tab attivo per default.
-Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link dei tab da disabilitare, aggiungendo la proprietà <code class="highlighter-rouge">tabindex="-1"</code> per eliminarlo dalla sequenza di navigazione via tab.</p>
+Utilizzare la classe <code class="language-plaintext highlighter-rouge">.active</code> sul link del tab attivo per default.
+Utilizzare la classe <code class="language-plaintext highlighter-rouge">.disabled</code> sul link dei tab da disabilitare, aggiungendo la proprietà <code class="language-plaintext highlighter-rouge">tabindex="-1"</code> per eliminarlo dalla sequenza di navigazione via tab.</p>
 
 <div class="bd-example">
 <ul class="nav nav-tabs auto">
@@ -609,7 +609,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-con-icona">Tab con icona</h3>
 
-<p>Le label dei tab possono essere sostituite da icone con classi che ne indicano il tipo, avendo cura di includere all’interno del link un elemento <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.sr-only</code> contenente la descrizione dedicata agli screen reader. La classe <code class="highlighter-rouge">.sr-only</code> impedisce la visualizzazione del testo sui browser visuali.</p>
+<p>Le label dei tab possono essere sostituite da icone con classi che ne indicano il tipo, avendo cura di includere all’interno del link un elemento <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> contenente la descrizione dedicata agli screen reader. La classe <code class="language-plaintext highlighter-rouge">.sr-only</code> impedisce la visualizzazione del testo sui browser visuali.</p>
 
 <div class="bd-example">
 <ul class="nav nav-tabs auto">
@@ -628,7 +628,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-con-icona-grande">Tab con icona grande</h3>
 
-<p>Per ottenere icone più grandi utilizzare la classe <code class="highlighter-rouge">.icon-lg</code> alle icone. Aggiungere la classe <code class="highlighter-rouge">.nav-tabs-icon-lg</code> al contenitore <code class="highlighter-rouge">.nav-tabs</code> per ottimizzare i margini fra tab.</p>
+<p>Per ottenere icone più grandi utilizzare la classe <code class="language-plaintext highlighter-rouge">.icon-lg</code> alle icone. Aggiungere la classe <code class="language-plaintext highlighter-rouge">.nav-tabs-icon-lg</code> al contenitore <code class="language-plaintext highlighter-rouge">.nav-tabs</code> per ottimizzare i margini fra tab.</p>
 
 <div class="bd-example">
 <ul class="nav nav-tabs nav-tabs-icon-lg auto">
@@ -647,7 +647,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-con-testo-e-icona">Tab con testo e icona</h3>
 
-<p>Icone e testi possono convivere all’interno dei tab, l’allineamento verticale dei due elementi è automatico. Per ottenere il corretto margine fra testo e icona nei tab a sviluppo orizzontale è necessario aggiungere la classe <code class="highlighter-rouge">.nav-tabs-icon-text</code> al contenitore <code class="highlighter-rouge">.nav-tabs</code>.</p>
+<p>Icone e testi possono convivere all’interno dei tab, l’allineamento verticale dei due elementi è automatico. Per ottenere il corretto margine fra testo e icona nei tab a sviluppo orizzontale è necessario aggiungere la classe <code class="language-plaintext highlighter-rouge">.nav-tabs-icon-text</code> al contenitore <code class="language-plaintext highlighter-rouge">.nav-tabs</code>.</p>
 
 <div class="bd-example">
 <ul class="nav nav-tabs nav-tabs-icon-text auto">
@@ -665,7 +665,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
 <h2 id="tab-orizzontali">Tab orizzontali</h2>
-<p>In assenza della classe <code class="highlighter-rouge">.auto</code> i tab vengono dimensionati in base al contenuto.</p>
+<p>In assenza della classe <code class="language-plaintext highlighter-rouge">.auto</code> i tab vengono dimensionati in base al contenuto.</p>
 
 <h3 id="tab-testuale-1">Tab testuale</h3>
 
@@ -737,7 +737,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h2 id="rimozione-delle-scrollbar-su-dispositivi-touch">Rimozione delle scrollbar su dispositivi touch</h2>
 
-<p>Se per motivi estetici si volessero nascondere le scrollbar che appaiono sui dispositivi touch quando vengono scrollati orizzontalmente i tab sarà necessario inserire l’html dei tab all’interno di un wrapper con classe <code class="highlighter-rouge">.nav-tabs-hidescroll</code>.</p>
+<p>Se per motivi estetici si volessero nascondere le scrollbar che appaiono sui dispositivi touch quando vengono scrollati orizzontalmente i tab sarà necessario inserire l’html dei tab all’interno di un wrapper con classe <code class="language-plaintext highlighter-rouge">.nav-tabs-hidescroll</code>.</p>
 
 <div class="bd-example">
 <div class="nav-tabs-hidescroll">
@@ -750,8 +750,8 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <p>Se i tab contengono icone è necessario aggiungere un’ulteriore classe al wrapper:</p>
 <ul>
-  <li><code class="highlighter-rouge">.hidescroll-ico</code> nel caso di icone normali</li>
-  <li><code class="highlighter-rouge">.hidescroll-ico-lg</code> nel caso di icone piccole</li>
+  <li><code class="language-plaintext highlighter-rouge">.hidescroll-ico</code> nel caso di icone normali</li>
+  <li><code class="language-plaintext highlighter-rouge">.hidescroll-ico-lg</code> nel caso di icone piccole</li>
 </ul>
 
 <h3 id="esempio-rimozione-scrollbar-su-dispositivi-touch">Esempio rimozione scrollbar su dispositivi touch</h3>
@@ -783,7 +783,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h2 id="controllo-dei-pannelli-associati">Controllo dei pannelli associati</h2>
 
-<p>Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al di sotto di essi; per rendere tali interfacce navigabili è necessario collegare Tab e Pannelli collegando il tag <code class="highlighter-rouge">&lt;a&gt;</code> dei primi all’attributo <code class="highlighter-rouge">id</code> dei secondi, come mostrato di seguito:</p>
+<p>Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al di sotto di essi; per rendere tali interfacce navigabili è necessario collegare Tab e Pannelli collegando il tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dei primi all’attributo <code class="language-plaintext highlighter-rouge">id</code> dei secondi, come mostrato di seguito:</p>
 
 <h3 id="tab-testuale-2">Tab testuale</h3>
 
@@ -944,9 +944,9 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane p-4 fade"</span> <span class="na">id=</span><span class="s">"tab4b"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab4b-tab"</span><span class="nt">&gt;</span>Contenuto 4 (non raggiungibile, il tab relativo è disabilitato)<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Allo stesso modo di quanto avviene con i normali <code class="highlighter-rouge">.nav</code>, a seconda delle tue necessità, è possibile modificare tale codice con un markup diverso, diverso dalla classica lista basata su <code class="highlighter-rouge">&lt;ul&gt;</code>. È importante notare però, che nel caso si desideri usare l’elemento <code class="highlighter-rouge">&lt;nav&gt;</code>, l’attributo <code class="highlighter-rouge">role="tablist"</code> non deve essere applicato direttamente su di esso, in quanto sovrascriverebbe il ruolo dell’elemento stesso per la navigazione.</p>
+<p>Allo stesso modo di quanto avviene con i normali <code class="language-plaintext highlighter-rouge">.nav</code>, a seconda delle tue necessità, è possibile modificare tale codice con un markup diverso, diverso dalla classica lista basata su <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>. È importante notare però, che nel caso si desideri usare l’elemento <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>, l’attributo <code class="language-plaintext highlighter-rouge">role="tablist"</code> non deve essere applicato direttamente su di esso, in quanto sovrascriverebbe il ruolo dell’elemento stesso per la navigazione.</p>
 
-<p>Si può, alternativamente, usare un diverso elemento (nell’esempio seguente un semplice <code class="highlighter-rouge">&lt;div&gt;</code>) e racchiuderlo con <code class="highlighter-rouge">&lt;nav&gt;</code>:</p>
+<p>Si può, alternativamente, usare un diverso elemento (nell’esempio seguente un semplice <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>) e racchiuderlo con <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>:</p>
 
 <div class="bd-example">
 <nav>
@@ -977,7 +977,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h2 id="tab-verticali">Tab verticali</h2>
 
-<p>Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare tab a orientamento verticale. Al <code class="highlighter-rouge">&lt;div&gt;</code> contenitore dei link dei tab va aggiunta la classe <code class="highlighter-rouge">.nav-tabs-vertical</code>.</p>
+<p>Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare tab a orientamento verticale. Al <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> contenitore dei link dei tab va aggiunta la classe <code class="language-plaintext highlighter-rouge">.nav-tabs-vertical</code>.</p>
 
 <h3 id="tab-testuale-3">Tab testuale</h3>
 
@@ -1024,7 +1024,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-testuale-con-colore-di-sfondo">Tab testuale con colore di sfondo</h3>
 
-<p>Aggiungendo la classe <code class="highlighter-rouge">.nav-tabs-vertical-background</code> al <code class="highlighter-rouge">&lt;div&gt;</code> contenitore dei link i tab selezionati avranno un colore di sfondo.</p>
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.nav-tabs-vertical-background</code> al <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> contenitore dei link i tab selezionati avranno un colore di sfondo.</p>
 
 <div class="bd-example">
 <div class="bd-example-tabs">
@@ -1112,7 +1112,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-con-icona-2">Tab con icona</h3>
 
-<p>Le label dei Tab possono essere sostituite da icone, avendo cura di includere all’interno del link un elemento <code class="highlighter-rouge">&lt;span&gt;</code> contenente la descrizione per non gli screen reader del tab con classe <code class="highlighter-rouge">.sr-only</code> per nascondere la descrizione agli altri browser. Al tag <code class="highlighter-rouge">&lt;a&gt;</code> contenente l’icona va aggiunta la classe <code class="highlighter-rouge">.justify-content-end</code> per allineare l’icona a destra.</p>
+<p>Le label dei Tab possono essere sostituite da icone, avendo cura di includere all’interno del link un elemento <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> contenente la descrizione per non gli screen reader del tab con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> per nascondere la descrizione agli altri browser. Al tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> contenente l’icona va aggiunta la classe <code class="language-plaintext highlighter-rouge">.justify-content-end</code> per allineare l’icona a destra.</p>
 
 <div class="bd-example">
 <div class="bd-example-tabs">
@@ -1161,7 +1161,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="orizzontale-in-fondo">Orizzontale in fondo</h3>
 
-<p>Per posizionare i tab al di sotto del contenuto è necessario utilizzare un elemento contenitore (ad esempio un &lt;div&gt;) con classi <code class="highlighter-rouge">.d-flex</code> e  <code class="highlighter-rouge">.flex-column-reverse</code>.</p>
+<p>Per posizionare i tab al di sotto del contenuto è necessario utilizzare un elemento contenitore (ad esempio un &lt;div&gt;) con classi <code class="language-plaintext highlighter-rouge">.d-flex</code> e  <code class="language-plaintext highlighter-rouge">.flex-column-reverse</code>.</p>
 
 <div class="bd-example">
 <div class="d-flex flex-column-reverse">
@@ -1196,7 +1196,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="verticale-a-destra">Verticale a destra</h3>
 
-<p>Per posizionare i tab verticali a destra contenuto è necessario applicare la classe <code class="highlighter-rouge">.flex-row-reverse</code> all’elemento con classe <code class="highlighter-rouge">.row</code> che li contiene.</p>
+<p>Per posizionare i tab verticali a destra contenuto è necessario applicare la classe <code class="language-plaintext highlighter-rouge">.flex-row-reverse</code> all’elemento con classe <code class="language-plaintext highlighter-rouge">.row</code> che li contiene.</p>
 
 <div class="bd-example">
 <div class="bd-example-tabs">
@@ -1368,7 +1368,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h2 id="tab-tipo-card">Tab tipo Card</h2>
 
-<p>Aggiungere la classe <code class="highlighter-rouge">.nav-tabs-cards</code> al tag <code class="highlighter-rouge">ul</code> per ottnere un design tipo card.</p>
+<p>Aggiungere la classe <code class="language-plaintext highlighter-rouge">.nav-tabs-cards</code> al tag <code class="language-plaintext highlighter-rouge">ul</code> per ottnere un design tipo card.</p>
 
 <div class="bd-example">
 <ul class="nav nav-tabs nav-tabs-cards" id="card-simple" role="tablist">
@@ -1401,7 +1401,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="tab-tipo-card-con-pulsanti-aggiungielimina">Tab tipo Card con pulsanti aggiungi/elimina</h3>
 
-<p>Aggiungere le classi <code class="highlighter-rouge">.nav-tabs-editable</code> e <code class="highlighter-rouge">.nav-tabs-cards</code> al tag <code class="highlighter-rouge">ul</code> per ottnere un design tipo card editabili. Includere l’hmtl degli ulteriori elementi di interfaccia come da esempio.</p>
+<p>Aggiungere le classi <code class="language-plaintext highlighter-rouge">.nav-tabs-editable</code> e <code class="language-plaintext highlighter-rouge">.nav-tabs-cards</code> al tag <code class="language-plaintext highlighter-rouge">ul</code> per ottnere un design tipo card editabili. Includere l’hmtl degli ulteriori elementi di interfaccia come da esempio.</p>
 
 <div class="bd-example">
 <div class="nav-tabs-wrapper">
@@ -1468,9 +1468,9 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h2 id="attivazione-dei-tab">Attivazione dei Tab</h2>
 
-<h3 id="con-lutilizzo-di-attributi-data-">Con l’utilizzo di attributi <code class="highlighter-rouge">data-</code></h3>
+<h3 id="con-lutilizzo-di-attributi-data-">Con l’utilizzo di attributi <code class="language-plaintext highlighter-rouge">data-</code></h3>
 
-<p>Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente utilizzando la proprietà <code class="highlighter-rouge">data-toggle="tab"</code> nel link all’interno di liste di tipo <code class="highlighter-rouge">.nav-tabs</code>:</p>
+<p>Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente utilizzando la proprietà <code class="language-plaintext highlighter-rouge">data-toggle="tab"</code> nel link all’interno di liste di tipo <code class="language-plaintext highlighter-rouge">.nav-tabs</code>:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">id=</span><span class="s">"myTab"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
@@ -1514,7 +1514,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <h3 id="effetto-a-comparsa">Effetto “a comparsa”</h3>
 
-<p>Per fare in modo che i tab appaiano con un’animazione “a comparsa” (fade in), è sufficiente aggiungere la classe <code class="highlighter-rouge">.fade</code> ad ogni <code class="highlighter-rouge">.tab-pane</code>. Il primo <code class="highlighter-rouge">.tab-pane</code> dovrà anche avere la classe <code class="highlighter-rouge">.show</code> per rendere il contenuto iniziale visibile.</p>
+<p>Per fare in modo che i tab appaiano con un’animazione “a comparsa” (fade in), è sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">.fade</code> ad ogni <code class="language-plaintext highlighter-rouge">.tab-pane</code>. Il primo <code class="language-plaintext highlighter-rouge">.tab-pane</code> dovrà anche avere la classe <code class="language-plaintext highlighter-rouge">.show</code> per rendere il contenuto iniziale visibile.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id=</span><span class="s">"tab1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"content-tab-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
@@ -1523,7 +1523,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"tab4"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"tab4-tab"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla <a href="https://getbootstrap.com/docs/4.3/components/navs/#methods">pagina corrispondente</a> sul sito di Bootstrap.</p>
+<p>Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla <a href="https://getbootstrap.com/docs/4.5/components/navs/#methods">pagina corrispondente</a> sul sito di Bootstrap.</p>
 
         </main>
       </div>
@@ -1541,11 +1541,11 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1562,7 +1562,7 @@ Utilizzare la classe <code class="highlighter-rouge">.disabled</code> sul link d
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

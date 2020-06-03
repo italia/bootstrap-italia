@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Campi input con bottoni per incrementare/decrementare valori numerici">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Input Numerico · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -521,13 +521,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Input Numerico</h1>
           <p class="bd-lead">Campi input con bottoni per incrementare/decrementare valori numerici</p>
-          <p>L’input di tipo numerico va racchiuso in uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.input-number</code>.</p>
+          <p>L’input di tipo numerico va racchiuso in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.input-number</code>.</p>
 
-<p>L’attributo <code class="highlighter-rouge">value=""</code> deve contenere un valore di default.</p>
+<p>L’attributo <code class="language-plaintext highlighter-rouge">value=""</code> deve contenere un valore di default.</p>
 
 <h2 id="esempi">Esempi</h2>
 
-<p>La label va posizionata prima del wrapper e, per garantire l’accessibilità del campo, dovrà avere un attributo <code class="highlighter-rouge">for=""</code> corrispondente al nome e id del campo input.</p>
+<p>La label va posizionata prima del wrapper e, per garantire l’accessibilità del campo, dovrà avere un attributo <code class="language-plaintext highlighter-rouge">for=""</code> corrispondente al nome e id del campo input.</p>
 
 <p>La larghezza del campo predefinita è quella del suo contenitore, per limitare la larghezza alle dimensioni del valore contenuto utilizzare il <a href="#ridimensionamento">ridimensionamento adattivo</a>.</p>
 
@@ -587,7 +587,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="limiti-e-step">Limiti e Step</h3>
 
-<p>Aggiungendo gli attributi HTML <code class="highlighter-rouge">min=""</code>, <code class="highlighter-rouge">max=""</code> e <code class="highlighter-rouge">step=""</code> all’input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui bottoni.</p>
+<p>Aggiungendo gli attributi HTML <code class="language-plaintext highlighter-rouge">min=""</code>, <code class="language-plaintext highlighter-rouge">max=""</code> e <code class="language-plaintext highlighter-rouge">step=""</code> all’input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui bottoni.</p>
 
 <div class="bd-example">
 <label for="inputNumber2" class="input-number-label">Min, Max &amp; Step</label>
@@ -614,7 +614,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="valuta">Valuta</h3>
 
-<p>Per anteporre il simbolo della valuta in Euro, aggiungere la classe <code class="highlighter-rouge">.input-number-currency</code> al wrapper <code class="highlighter-rouge">.input-number</code>.</p>
+<p>Per anteporre il simbolo della valuta in Euro, aggiungere la classe <code class="language-plaintext highlighter-rouge">.input-number-currency</code> al wrapper <code class="language-plaintext highlighter-rouge">.input-number</code>.</p>
 
 <div class="bd-example">
 <label for="inputNumber3" class="input-number-label">Currency</label>
@@ -641,9 +641,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="percentuale">Percentuale</h3>
 
-<p>Per anteporre il simbolo percentuale, aggiungere la classe <code class="highlighter-rouge">.input-number-percentage</code> al wrapper <code class="highlighter-rouge">.input-number</code>.</p>
+<p>Per anteporre il simbolo percentuale, aggiungere la classe <code class="language-plaintext highlighter-rouge">.input-number-percentage</code> al wrapper <code class="language-plaintext highlighter-rouge">.input-number</code>.</p>
 
-<p>Si consiglia di impostare gli attributi <code class="highlighter-rouge">min=0</code> e <code class="highlighter-rouge">max="100"</code>.</p>
+<p>Si consiglia di impostare gli attributi <code class="language-plaintext highlighter-rouge">min=0</code> e <code class="language-plaintext highlighter-rouge">max="100"</code>.</p>
 
 <div class="bd-example">
 <label for="inputNumber4" class="input-number-label">Percentage</label>
@@ -670,8 +670,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="disabilitato">Disabilitato</h3>
 
-<p>Per disabilitare un Input number, aggiungere la classe <code class="highlighter-rouge">.disabled</code> al wrapper <code class="highlighter-rouge">.input-number</code>.
-Aggiungere anche l’attributo <code class="highlighter-rouge">disabled</code> al campo e ai bottoni.</p>
+<p>Per disabilitare un Input number, aggiungere la classe <code class="language-plaintext highlighter-rouge">.disabled</code> al wrapper <code class="language-plaintext highlighter-rouge">.input-number</code>.
+Aggiungere anche l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al campo e ai bottoni.</p>
 
 <div class="bd-example">
 <label for="inputNumber5" class="input-number-label">Disabled</label>
@@ -700,7 +700,7 @@ Aggiungere anche l’attributo <code class="highlighter-rouge">disabled</code> a
 
 <p>È possibile far sì che il campo numerico si ridimensioni automaticamente a
 seconda del valore contenuto in esso. Per ottenere questo comportamento, è
-sufficiente aggiungere la classe <code class="highlighter-rouge">input-number-adaptive</code>.</p>
+sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">input-number-adaptive</code>.</p>
 
 <div class="bd-example">
 
@@ -747,11 +747,11 @@ sufficiente aggiungere la classe <code class="highlighter-rouge">input-number-ad
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -768,7 +768,7 @@ sufficiente aggiungere la classe <code class="highlighter-rouge">input-number-ad
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

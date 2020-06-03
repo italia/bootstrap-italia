@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Elemento contenitore di link, bottoni o dropdown">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Toolbar · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -553,7 +553,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   }
 </style>
 
-<p>L’elemento Toolbar è un contenitore di link, bottoni o dropdown. Consiste in un elenco <code class="highlighter-rouge">&lt;ul&gt;</code> con tanti elementi <code class="highlighter-rouge">&lt;li&gt;</code> quante sono le voci richieste.</p>
+<p>L’elemento Toolbar è un contenitore di link, bottoni o dropdown. Consiste in un elenco <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> con tanti elementi <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> quante sono le voci richieste.</p>
 
 <h2 id="dimensioni">Dimensioni</h2>
 
@@ -638,9 +638,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="toolbar-media">Toolbar media</h3>
 
-<p>Applicando una classe aggiuntiva <code class="highlighter-rouge">.toolbar-medium</code> alla Toolbar si ottiene una versione di dimensioni medie.</p>
+<p>Applicando una classe aggiuntiva <code class="language-plaintext highlighter-rouge">.toolbar-medium</code> alla Toolbar si ottiene una versione di dimensioni medie.</p>
 
-<p>In questo caso le label, nascoste visivamente, devono essere contenute in uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.sr-only</code>, per rendere disponibile la descrizione agli screen reader.</p>
+<p>In questo caso le label, nascoste visivamente, devono essere contenute in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.sr-only</code>, per rendere disponibile la descrizione agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar toolbar-medium">
@@ -727,9 +727,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="toolbar-piccola">Toolbar piccola</h3>
 
-<p>Applicando una classe aggiuntiva <code class="highlighter-rouge">.toolbar-small</code> alla Toolbar si ottiene la versione più piccola.</p>
+<p>Applicando una classe aggiuntiva <code class="language-plaintext highlighter-rouge">.toolbar-small</code> alla Toolbar si ottiene la versione più piccola.</p>
 
-<p>Anche in questo caso le label, non visibile, devono essere contenute in uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.sr-only</code>, per rendere disponibile la descrizione agli screen reader.</p>
+<p>Anche in questo caso le label, non visibile, devono essere contenute in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.sr-only</code>, per rendere disponibile la descrizione agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar toolbar-small">
@@ -816,17 +816,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="stato-degli-elementi">Stato degli elementi</h2>
 
-<p>Al tag <code class="highlighter-rouge">&lt;a&gt;</code> dell’elemento attivo va applicata la classe <code class="highlighter-rouge">.active</code>.</p>
+<p>Al tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dell’elemento attivo va applicata la classe <code class="language-plaintext highlighter-rouge">.active</code>.</p>
 
-<p>Gli elementi disabilitati avranno invece una classe <code class="highlighter-rouge">.disabled</code> con ulteriori accorgimenti relativi all’accessibilità a seconda della tipologia:</p>
+<p>Gli elementi disabilitati avranno invece una classe <code class="language-plaintext highlighter-rouge">.disabled</code> con ulteriori accorgimenti relativi all’accessibilità a seconda della tipologia:</p>
 <ul>
-  <li><strong>link, tag <code class="highlighter-rouge">&lt;a&gt;</code>:</strong> aggiungere la proprietà HTML <code class="highlighter-rouge">disabled</code> al tag. Aggiungere uno span riservato agli screen reader all’interno della label. es.: <code class="highlighter-rouge">&lt;span class="sr-only"&gt; elemento disabilitato&lt;/span&gt;</code></li>
-  <li><strong>dropdown button, tag <code class="highlighter-rouge">&lt;button&gt;</code>:</strong> aggiungere l’attributo <code class="highlighter-rouge">aria-disabled="true"</code>.</li>
+  <li><strong>link, tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>:</strong> aggiungere la proprietà HTML <code class="language-plaintext highlighter-rouge">disabled</code> al tag. Aggiungere uno span riservato agli screen reader all’interno della label. es.: <code class="language-plaintext highlighter-rouge">&lt;span class="sr-only"&gt; elemento disabilitato&lt;/span&gt;</code></li>
+  <li><strong>dropdown button, tag <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>:</strong> aggiungere l’attributo <code class="language-plaintext highlighter-rouge">aria-disabled="true"</code>.</li>
 </ul>
 
 <h2 id="divisori">Divisori</h2>
 
-<p>Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag <code class="highlighter-rouge">&lt;li&gt;</code> con classe <code class="highlighter-rouge">.toolbar-divider</code>, aggiungendo l’attributo <code class="highlighter-rouge">aria-hidden="true"</code> per nasconderli agli screen reader.</p>
+<p>Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.toolbar-divider</code>, aggiungendo l’attributo <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> per nasconderli agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar">
@@ -909,7 +909,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="grande-con-badge">Grande con Badge</h3>
 
-<p>Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all’interno della label in uno <code class="highlighter-rouge">&lt;span&gt;</code> con classe <code class="highlighter-rouge">.sr-only</code> riservato agli screen reader.</p>
+<p>Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all’interno della label in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> riservato agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar">
@@ -988,7 +988,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="media-con-badge">Media con Badge</h3>
 
-<p>Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all’interno della label con classe <code class="highlighter-rouge">.sr-only</code> riservata agli screen reader.</p>
+<p>Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all’interno della label con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> riservata agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar toolbar-medium">
@@ -1091,7 +1091,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="piccola-con-badge">Piccola con Badge</h3>
 
-<p>Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all’interno della label con classe <code class="highlighter-rouge">.sr-only</code> riservata agli screen reader.</p>
+<p>Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all’interno della label con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> riservata agli screen reader.</p>
 
 <div class="bd-example">
 <nav class="toolbar toolbar-small">
@@ -1851,7 +1851,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="toolbar-verticale">Toolbar verticale</h2>
 
-<p>Applicando una classe aggiuntiva <code class="highlighter-rouge">.toolbar-vertical</code> alla Toolbar gli elementi vengono visualizzati in colonna.</p>
+<p>Applicando una classe aggiuntiva <code class="language-plaintext highlighter-rouge">.toolbar-vertical</code> alla Toolbar gli elementi vengono visualizzati in colonna.</p>
 
 <h3 id="grande-verticale">Grande verticale</h3>
 
@@ -2209,11 +2209,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -2230,7 +2230,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

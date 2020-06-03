@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Come personalizzare e sovrascrivere le variabili di default della libreria (es. colori, font-family, misure, ecc.)">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Personalizzazione della libreria · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -514,17 +514,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <h1 class="bd-title" id="content">Personalizzazione della libreria</h1>
           <p class="bd-lead">Come personalizzare e sovrascrivere le variabili di default della libreria (es. colori, font-family, misure, ecc.)</p>
           <p><strong>Bootstrap Italia</strong> eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all’occorenza.<br />
-Un esempio fra tutti è il valore del colore <code class="highlighter-rouge">$primary</code> che in <strong>Bootstrap Italia</strong> è rappresentato dal colore blu <code class="highlighter-rouge">#0066CC</code>, tipico della libreria.</p>
+Un esempio fra tutti è il valore del colore <code class="language-plaintext highlighter-rouge">$primary</code> che in <strong>Bootstrap Italia</strong> è rappresentato dal colore blu <code class="language-plaintext highlighter-rouge">#0066CC</code>, tipico della libreria.</p>
 
-<p>L’utilizzo del blu <code class="highlighter-rouge">#0066CC</code> dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di <strong>Bootstrap Italia</strong>, impostando nuovi valori per le proprie necessità.</p>
+<p>L’utilizzo del blu <code class="language-plaintext highlighter-rouge">#0066CC</code> dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di <strong>Bootstrap Italia</strong>, impostando nuovi valori per le proprie necessità.</p>
 
-<p>L’impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita <strong>prima</strong> della compilazione della libreria. Pertanto non è possibile usare una versione modificata di <strong>Bootstrap Italia</strong> semplicemente caricandola con un <code class="highlighter-rouge">link</code> nella parte <code class="highlighter-rouge">&lt;head&gt;...&lt;/head&gt;</code> del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.</p>
+<p>L’impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita <strong>prima</strong> della compilazione della libreria. Pertanto non è possibile usare una versione modificata di <strong>Bootstrap Italia</strong> semplicemente caricandola con un <code class="language-plaintext highlighter-rouge">link</code> nella parte <code class="language-plaintext highlighter-rouge">&lt;head&gt;...&lt;/head&gt;</code> del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.</p>
 
 <h3 id="sovrascrivere-le-variabili-colore">Sovrascrivere le variabili colore</h3>
 
 <ol>
-  <li>Installare <strong>Bootstrap Italia</strong> con <code class="highlighter-rouge">yarn/npm: yarn add bootstrap-italia --save</code></li>
-  <li>Installare <strong>node-sass</strong>: <code class="highlighter-rouge">yarn add node-sass</code></li>
+  <li>Installare <strong>Bootstrap Italia</strong> con <code class="language-plaintext highlighter-rouge">yarn/npm: yarn add bootstrap-italia --save</code></li>
+  <li>Installare <strong>node-sass</strong>: <code class="language-plaintext highlighter-rouge">yarn add node-sass</code></li>
   <li>Creare all’interno del progetto una cartella <strong>scss</strong></li>
   <li>Dentro alla cartella <strong>scss</strong> creare un file di tipo <strong>bootstrap-italia-custom.scss</strong></li>
   <li>Impostare le variabili di default da modificare con dei valori <strong>personalizzati</strong> (la maggior parte delle variabili usate da Bootstrap Italia sono visibili <a href="https://github.com/italia/bootstrap-italia/blob/master/src/scss/">qui</a>)</li>
@@ -563,7 +563,7 @@ Un esempio fra tutti è il valore del colore <code class="highlighter-rouge">$pr
 <span class="c1">// import libreria</span>
 <span class="k">@import</span> <span class="s2">"../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss"</span><span class="p">;</span></code></pre></figure>
 
-<p>Ad esempio, per una applicazione costruita con ReactJS attraverso <code class="highlighter-rouge">create-react-app</code>, è possibile <strong>importare bootstrap-italia-custom.scss</strong> laddove serva utilizzare la libreria <strong>Bootstrap-Italia</strong>.</p>
+<p>Ad esempio, per una applicazione costruita con ReactJS attraverso <code class="language-plaintext highlighter-rouge">create-react-app</code>, è possibile <strong>importare bootstrap-italia-custom.scss</strong> laddove serva utilizzare la libreria <strong>Bootstrap-Italia</strong>.</p>
 
 <figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">"</span><span class="s2">./scss/bootstrap-italia-custom.scss</span><span class="dl">"</span><span class="p">;</span>
@@ -597,11 +597,11 @@ Un esempio fra tutti è il valore del colore <code class="highlighter-rouge">$pr
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -618,7 +618,7 @@ Un esempio fra tutti è il valore del colore <code class="highlighter-rouge">$pr
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

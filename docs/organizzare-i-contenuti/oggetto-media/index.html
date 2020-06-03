@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentazione ed esempi degli oggetti media per la costruzione di componenti come commenti blog, tweets e similari.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Oggetti Media · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -521,7 +521,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>L’<a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">oggetto <em>“media”</em></a> aiuta a costruire complessi e ripetitivi componenti dove alcuni media si posizionano accanto ai contenuti senza sovrapporsi.</p>
 
-<p>Grazie a flexbox è necessario l’utilizzo di solo due classi: nel contenitore <code class="highlighter-rouge">.media</code> e nell’elemento contenuto <code class="highlighter-rouge">.media-body</code>. Padding e margin possono essere gestiti tramite le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">utility di spaziatura</a>.</p>
+<p>Grazie a flexbox è necessario l’utilizzo di solo due classi: nel contenitore <code class="language-plaintext highlighter-rouge">.media</code> e nell’elemento contenuto <code class="language-plaintext highlighter-rouge">.media-body</code>. Padding e margin possono essere gestiti tramite le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">utility di spaziatura</a>.</p>
 
 <div class="bd-example">
 <div class="media">
@@ -543,14 +543,14 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-callout bd-callout-warning">
 <h5 id="flexbug-12-gli-elementi-inline-non-sono-trattati-come-elementi-flex">Flexbug #12: Gli elementi inline non sono trattati come elementi flex.</h5>
 
-<p>IE10 e IE11 non eseguono il rendering di elementi inline di link o immagini (o <code class="highlighter-rouge">::before</code> e <code class="highlighter-rouge">::after</code> pseudo-elementi) come elementi flex. L’unica soluzione è impostare un valore <code class="highlighter-rouge">display</code> non inline (es.: <code class="highlighter-rouge">block</code>, <code class="highlighter-rouge">inline-block</code> o <code class="highlighter-rouge">flex</code>). Ti suggeriamo di usare <code class="highlighter-rouge">.d-flex</code>, una delle  <a href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">display utility</a>, come soluzione.</p>
+<p>IE10 e IE11 non eseguono il rendering di elementi inline di link o immagini (o <code class="language-plaintext highlighter-rouge">::before</code> e <code class="language-plaintext highlighter-rouge">::after</code> pseudo-elementi) come elementi flex. L’unica soluzione è impostare un valore <code class="language-plaintext highlighter-rouge">display</code> non inline (es.: <code class="language-plaintext highlighter-rouge">block</code>, <code class="language-plaintext highlighter-rouge">inline-block</code> o <code class="language-plaintext highlighter-rouge">flex</code>). Ti suggeriamo di usare <code class="language-plaintext highlighter-rouge">.d-flex</code>, una delle  <a href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">display utility</a>, come soluzione.</p>
 
 <p><strong>Fonte:</strong> <a href="https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items">Flexbugs su GitHub</a></p>
 </div>
 
 <h2 id="annidamento">Annidamento</h2>
 
-<p>Per annidare gli oggetti media posiziona il nuovo elemento <code class="highlighter-rouge">.media</code> all’interno del contenitore <code class="highlighter-rouge">.media-body</code>. In linea teorica gli oggetti media possono essere annidati all’infinito, me per una corretta visualizzazione grafica ti suggeriamo di non creare troppi livelli di annidamento.</p>
+<p>Per annidare gli oggetti media posiziona il nuovo elemento <code class="language-plaintext highlighter-rouge">.media</code> all’interno del contenitore <code class="language-plaintext highlighter-rouge">.media-body</code>. In linea teorica gli oggetti media possono essere annidati all’infinito, me per una corretta visualizzazione grafica ti suggeriamo di non creare troppi livelli di annidamento.</p>
 
 <div class="bd-example">
 <div class="media">
@@ -591,7 +591,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="allineamento">Allineamento</h2>
 
-<p>Il media presente dentro l’oggetto media può essere allineato grazie alle utility flexbox in alto (prefedinito), in mezzo o in basso del contenuto <code class="highlighter-rouge">.media-body</code>.</p>
+<p>Il media presente dentro l’oggetto media può essere allineato grazie alle utility flexbox in alto (prefedinito), in mezzo o in basso del contenuto <code class="language-plaintext highlighter-rouge">.media-body</code>.</p>
 
 <div class="bd-example">
 <div class="media">
@@ -652,7 +652,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="ordinamento">Ordinamento</h2>
 
-<p>Puoi modificare l’ordine del contenuto negli oggetti media utilizzando HTML stesso oppure aggiungendo alcuni CSS personalizzati per impostare la proprietà <code class="highlighter-rouge">order</code> (di un numero intero di tua scelta).</p>
+<p>Puoi modificare l’ordine del contenuto negli oggetti media utilizzando HTML stesso oppure aggiungendo alcuni CSS personalizzati per impostare la proprietà <code class="language-plaintext highlighter-rouge">order</code> (di un numero intero di tua scelta).</p>
 
 <div class="bd-example">
 <div class="media">
@@ -673,7 +673,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="elenco-media">Elenco Media</h2>
 
-<p>Poiché l’oggetto media ha pochi requisiti strutturali, è anche possibile utilizzare queste classi sugli elementi HTML di elenco. Su <code class="highlighter-rouge">&lt;ul&gt;</code> o <code class="highlighter-rouge">&lt;ol&gt;</code> aggiungi <code class="highlighter-rouge">.list-unstyled</code> per rimuovere tutti gli stili di elenco predefiniti del browser, quindi applica <code class="highlighter-rouge">.media</code> ai tuoi <code class="highlighter-rouge">&lt;li&gt;</code>. Come sempre, utilizzare le utilità di spaziatura ovunque sia necessario per ottimizzare la visualizzazione grafica.</p>
+<p>Poiché l’oggetto media ha pochi requisiti strutturali, è anche possibile utilizzare queste classi sugli elementi HTML di elenco. Su <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code> aggiungi <code class="language-plaintext highlighter-rouge">.list-unstyled</code> per rimuovere tutti gli stili di elenco predefiniti del browser, quindi applica <code class="language-plaintext highlighter-rouge">.media</code> ai tuoi <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code>. Come sempre, utilizzare le utilità di spaziatura ovunque sia necessario per ottimizzare la visualizzazione grafica.</p>
 
 <div class="bd-example">
 <ul class="list-unstyled">
@@ -741,11 +741,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -762,7 +762,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

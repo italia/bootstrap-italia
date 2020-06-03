@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Indicatori di stato attivo e di avanzamento di un’operazione">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Progress Indicators · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -543,7 +543,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">progressDonut</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="dl">"</span><span class="s2">#ID_ELEMENTO</span><span class="dl">"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span></code></pre></figure>
 
-<p>Dove il primo parametro corrisponde con l’id univoco dell’elemento <code class="highlighter-rouge">.progress-donut</code> e il secondo con la percentuale di completamento.</p>
+<p>Dove il primo parametro corrisponde con l’id univoco dell’elemento <code class="language-plaintext highlighter-rouge">.progress-donut</code> e il secondo con la percentuale di completamento.</p>
 
 <p>Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:</p>
 
@@ -592,18 +592,18 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="progress-bar">Progress Bar</h2>
 
-<p>Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare la larghezza e alcuni attributi. Non è previsto l’utilizzo dell’elemento <code class="highlighter-rouge">&lt;progress&gt;</code> di HTML5.</p>
+<p>Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare la larghezza e alcuni attributi. Non è previsto l’utilizzo dell’elemento <code class="language-plaintext highlighter-rouge">&lt;progress&gt;</code> di HTML5.</p>
 
 <ul>
-  <li>Utilizziamo <code class="highlighter-rouge">.progress</code> come contenitore che indica il valore massimo della barra di avanzamento.</li>
-  <li>Utilizziamo <code class="highlighter-rouge">.progress-bar</code> come barra interna per indicare fin dove si è arrivati con l’avanzamento.</li>
-  <li>La classe <code class="highlighter-rouge">.progress-bar</code> richiede uno stile inline, una classe di utility di dimensionamento o un CSS personalizzato per impostare la larghezza.</li>
+  <li>Utilizziamo <code class="language-plaintext highlighter-rouge">.progress</code> come contenitore che indica il valore massimo della barra di avanzamento.</li>
+  <li>Utilizziamo <code class="language-plaintext highlighter-rouge">.progress-bar</code> come barra interna per indicare fin dove si è arrivati con l’avanzamento.</li>
+  <li>La classe <code class="language-plaintext highlighter-rouge">.progress-bar</code> richiede uno stile inline, una classe di utility di dimensionamento o un CSS personalizzato per impostare la larghezza.</li>
 </ul>
 
 <div class="bd-callout bd-callout-accessibility">
 <h5 id="accessibilità">Accessibilità</h5>
 
-<p>Per rendere accessibile l’elemento <code class="highlighter-rouge">.progress-bar</code> sono necessari alcuni attributi come role e aria.</p>
+<p>Per rendere accessibile l’elemento <code class="language-plaintext highlighter-rouge">.progress-bar</code> sono necessari alcuni attributi come role e aria.</p>
 </div>
 
 <h3 id="esempio">Esempio</h3>
@@ -619,7 +619,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="etichette">Etichette</h3>
 
-<p>Per aggiungere etichette con testo che indica il progresso racchiudere la Progress Bar in un <code class="highlighter-rouge">&lt;div&gt;</code> con classe <code class="highlighter-rouge">.progress-bar-wrapper</code> e aggiungere un <code class="highlighter-rouge">&lt;div&gt;</code> interno con classe <code class="highlighter-rouge">.progress-bar-label</code>.</p>
+<p>Per aggiungere etichette con testo che indica il progresso racchiudere la Progress Bar in un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.progress-bar-wrapper</code> e aggiungere un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> interno con classe <code class="language-plaintext highlighter-rouge">.progress-bar-label</code>.</p>
 
 <p>Non dimenticare il testo esplicativo dedicato agli Screen Reader all’interno di questo elemento.</p>
 
@@ -640,7 +640,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="progresso-indeterminato">Progresso Indeterminato</h3>
 
-<p>Quando non è possibile stabilire una percentuale di progressione utilizzare una Progress Bar di tipo indeterminato, aggiungendo una classe <code class="highlighter-rouge">.progress-indeterminate</code> al contenitore <code class="highlighter-rouge">.progress</code> ed eliminando gli attributi <code class="highlighter-rouge">aria-</code> dalla Progress Bar.</p>
+<p>Quando non è possibile stabilire una percentuale di progressione utilizzare una Progress Bar di tipo indeterminato, aggiungendo una classe <code class="language-plaintext highlighter-rouge">.progress-indeterminate</code> al contenitore <code class="language-plaintext highlighter-rouge">.progress</code> ed eliminando gli attributi <code class="language-plaintext highlighter-rouge">aria-</code> dalla Progress Bar.</p>
 
 <div class="bd-example">
 <div class="progress progress-indeterminate">
@@ -655,7 +655,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="colori">Colori</h3>
 
-<p>Per variare il colore della barra è sufficiente aggiungere la classe <code class="highlighter-rouge">.progress-color</code> al <code class="highlighter-rouge">&lt;div&gt;</code> contenitore ed applicare una delle classi contenute nelle <a href="/bootstrap-italia/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.</p>
+<p>Per variare il colore della barra è sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">.progress-color</code> al <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> contenitore ed applicare una delle classi contenute nelle <a href="/bootstrap-italia/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.</p>
 
 <div class="bd-example">
 <div class="progress progress-color">
@@ -686,7 +686,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="bottone-con-progress-bar">Bottone con Progress Bar</h3>
 
-<p>La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva <code class="highlighter-rouge">.btn-progress</code> utilizzando la struttura e le classi riportate nei seguenti esempi:</p>
+<p>La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva <code class="language-plaintext highlighter-rouge">.btn-progress</code> utilizzando la struttura e le classi riportate nei seguenti esempi:</p>
 
 <div class="bd-example">
 <div class="container">
@@ -739,7 +739,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>L’elemento Spinner comunica lo stato attivo di un’operazione ma non il progresso percentuale della stessa. È utile quindi quando non è possibile determinare il tempo necessario a completare una procedura.</p>
 
-<p>Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe <code class="highlighter-rouge">.size-sm</code>. Notare l’inclusione di uno <code class="highlighter-rouge">&lt;span&gt;</code> riservato agli screen reader.</p>
+<p>Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe <code class="language-plaintext highlighter-rouge">.size-sm</code>. Notare l’inclusione di uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> riservato agli screen reader.</p>
 
 <div class="bd-example">
 <div class="container">
@@ -802,7 +802,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="spinner-doppio">Spinner doppio</h3>
 
-<p>Aggiungendo la classe <code class="highlighter-rouge">.progress-spinner-double</code> allo Spinner si ottiene un’animazione alternativa.</p>
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.progress-spinner-double</code> allo Spinner si ottiene un’animazione alternativa.</p>
 
 <div class="bd-example">
 <div class="container">
@@ -896,11 +896,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -917,7 +917,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

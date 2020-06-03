@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Usa il plugin Javascript di Bootstrap per aprire finestre modali per mostrare contenuti in evidenza, notifiche agli utenti, o contenuti personalizzati.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Finestre modali · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -558,12 +558,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Assicurati di aggiungere sempre:</p>
 <ul>
-  <li>l’attributo <code class="highlighter-rouge">role="dialog"</code> all’elemento con classe <code class="highlighter-rouge">.modal</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">maggiori info su MDN</a>)</li>
-  <li>l’attributo <code class="highlighter-rouge">aria-labelledby="..."</code> all’elemento con classe <code class="highlighter-rouge">.modal</code>, con riferimento al titolo della modale stesso (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">maggiori info su MDN</a>)</li>
-  <li>l’attributo <code class="highlighter-rouge">role="document"</code> applicato al <code class="highlighter-rouge">.modal-dialog</code> stesso</li>
+  <li>l’attributo <code class="language-plaintext highlighter-rouge">role="dialog"</code> all’elemento con classe <code class="language-plaintext highlighter-rouge">.modal</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">maggiori info su MDN</a>)</li>
+  <li>l’attributo <code class="language-plaintext highlighter-rouge">aria-labelledby="..."</code> all’elemento con classe <code class="language-plaintext highlighter-rouge">.modal</code>, con riferimento al titolo della modale stesso (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">maggiori info su MDN</a>)</li>
+  <li>l’attributo <code class="language-plaintext highlighter-rouge">role="document"</code> applicato al <code class="language-plaintext highlighter-rouge">.modal-dialog</code> stesso</li>
 </ul>
 
-<p>Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con <code class="highlighter-rouge">aria-describedby</code> su <code class="highlighter-rouge">.modal</code>.</p>
+<p>Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con <code class="language-plaintext highlighter-rouge">aria-describedby</code> su <code class="language-plaintext highlighter-rouge">.modal</code>.</p>
 
 <p>Approfondisci l’argomento sul sito delle <a href="https://www.w3.org/TR/wai-aria-practices/#dialog_modal">WAI-ARIA Authoring Practices</a>.</p>
 </div>
@@ -572,9 +572,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <ul>
   <li>Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
-e rimuove lo scroll dal <code class="highlighter-rouge">&lt;body&gt;</code> in modo che il contenuto della modale invece scorra.</li>
+e rimuove lo scroll dal <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> in modo che il contenuto della modale invece scorra.</li>
   <li>Cliccando sulla parte che oscura la pagina (il cosiddetto <em>backdrop</em> della modale), questa verrà chiusa automativamente.</li>
-  <li>A causa di come HTML5 definisce la sua semantica, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">l’attributo HTML <code class="highlighter-rouge">autofocus</code></a>
+  <li>A causa di come HTML5 definisce la sua semantica, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">l’attributo HTML <code class="language-plaintext highlighter-rouge">autofocus</code></a>
 non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:</li>
 </ul>
 
@@ -586,7 +586,7 @@ non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un
 
 <h3 id="componenti-della-modale">Componenti della modale</h3>
 
-<p>In basso un esempio di una modale <em>statica</em>, dove <code class="highlighter-rouge">position</code> e <code class="highlighter-rouge">display</code> sono stati sovrascritti.
+<p>In basso un esempio di una modale <em>statica</em>, dove <code class="language-plaintext highlighter-rouge">position</code> e <code class="language-plaintext highlighter-rouge">display</code> sono stati sovrascritti.
 Sono inclusi l’intestazione, il corpo, e il footer della modale. È
 richiesta l’inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.</p>
 
@@ -632,9 +632,9 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
 
 <h3 id="modale-con-bottone-di-chiusura">Modale con bottone di chiusura</h3>
 
-<p>Per chiudere la modale, si può utilizzare un bottone con classe <code class="highlighter-rouge">.close</code>.</p>
+<p>Per chiudere la modale, si può utilizzare un bottone con classe <code class="language-plaintext highlighter-rouge">.close</code>.</p>
 
-<p><strong>Assicurati di inserire del testo per gli screen readers</strong>, utilizzando l’attributo <code class="highlighter-rouge">aria-label</code>.</p>
+<p><strong>Assicurati di inserire del testo per gli screen readers</strong>, utilizzando l’attributo <code class="language-plaintext highlighter-rouge">aria-label</code>.</p>
 
 <div class="bd-example">
 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -703,7 +703,7 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
 <h3 id="modale-con-icona">Modale con icona</h3>
 
 <p>E’ possibie inserire un icona di alert (o altro tipo) affiancandola all’intestazione.
-Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe <code class="highlighter-rouge">alert-modal</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
+Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe <code class="language-plaintext highlighter-rouge">alert-modal</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="modal"&gt;</code></p>
 
 <div class="bd-example">
 <div class="it-example-modal">
@@ -821,7 +821,7 @@ Di seguito una modale con un elenco di radio button.</p>
 <h3 id="modale-con-link-list">Modale con Link List</h3>
 
 <p>All’interno della modale è possibile inserire delle <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">Liste di link</a>.
-Per formattare correttamente il contenuto di questa modale, aggiungere la classe <code class="highlighter-rouge">it-dialog-link-list</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
+Per formattare correttamente il contenuto di questa modale, aggiungere la classe <code class="language-plaintext highlighter-rouge">it-dialog-link-list</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="modal"&gt;</code></p>
 
 <div class="bd-example">
 <div class="it-example-modal">
@@ -912,9 +912,9 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 
 <h3 id="modale-popconfirm">Modale Popconfirm</h3>
 
-<p>La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe <code class="highlighter-rouge">popconfirm-modal</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code>.</p>
+<p>La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe <code class="language-plaintext highlighter-rouge">popconfirm-modal</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="modal"&gt;</code>.</p>
 
-<p>Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l’intero elemento <code class="highlighter-rouge">&lt;div class="modal-header"&gt;</code>.</p>
+<p>Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l’intero elemento <code class="language-plaintext highlighter-rouge">&lt;div class="modal-header"&gt;</code>.</p>
 
 <div class="bd-example">
 <div class="it-example-modal">
@@ -1116,7 +1116,7 @@ pagina stessa.</p>
 
 <h3 id="scroll-di-contenuti-allinterno-della-modale">Scroll di contenuti all’interno della modale</h3>
 
-<p>Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo sempre visibile l’intestazione ed il footer della modale stessa aggiungendo la classe <code class="highlighter-rouge">.it-dialog-scrollable</code> all’elemento <code class="highlighter-rouge">&lt;div class="modal"&gt;</code></p>
+<p>Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo sempre visibile l’intestazione ed il footer della modale stessa aggiungendo la classe <code class="language-plaintext highlighter-rouge">.it-dialog-scrollable</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="modal"&gt;</code></p>
 
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed">
    <div class="modal-dialog" role="document">
@@ -1170,7 +1170,7 @@ pagina stessa.</p>
 
 <h4 id="centratura-verticale">Centratura verticale</h4>
 
-<p>Aggiungi <code class="highlighter-rouge">.modal-dialog-centered</code> a <code class="highlighter-rouge">.modal-dialog</code> per centrare verticalmente la modale.</p>
+<p>Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-centered</code> a <code class="language-plaintext highlighter-rouge">.modal-dialog</code> per centrare verticalmente la modale.</p>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="modalCenter">
    <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1229,8 +1229,8 @@ pagina stessa.</p>
 <h4 id="allineamento-a-sinistra">Allineamento a sinistra</h4>
 
 <p>Per aprire la modale da sinistra a destra aggiungere le seguenti classi:
-Aggiungi <code class="highlighter-rouge">.it-dialog-scrollable</code> a <code class="highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
-Aggiungi <code class="highlighter-rouge">.modal-dialog-left</code> a <code class="highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
+Aggiungi <code class="language-plaintext highlighter-rouge">.it-dialog-scrollable</code> a <code class="language-plaintext highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
+Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-left</code> a <code class="language-plaintext highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
 
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft">
    <div class="modal-dialog modal-dialog-left" role="document">
@@ -1289,8 +1289,8 @@ Aggiungi <code class="highlighter-rouge">.modal-dialog-left</code> a <code class
 <h4 id="allineamento-a-destra">Allineamento a destra</h4>
 
 <p>Per aprire la modale da destra a sinistra aggiungere le seguenti classi:
-Aggiungi <code class="highlighter-rouge">.it-dialog-scrollable</code> a <code class="highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
-Aggiungi <code class="highlighter-rouge">.modal-dialog-right</code> a <code class="highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
+Aggiungi <code class="language-plaintext highlighter-rouge">.it-dialog-scrollable</code> a <code class="language-plaintext highlighter-rouge">.modal</code> occupare tutta l’altezza disponibile.
+Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-right</code> a <code class="language-plaintext highlighter-rouge">.modal-dialog</code> per allineare a sinistra la modale.</p>
 
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright">
    <div class="modal-dialog modal-dialog-right" role="document">
@@ -1348,7 +1348,7 @@ Aggiungi <code class="highlighter-rouge">.modal-dialog-right</code> a <code clas
 
 <h3 id="rimuovere-lanimazione">Rimuovere l’animazione</h3>
 
-<p>Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe <code class="highlighter-rouge">.fade</code> dal codice della tua modale.</p>
+<p>Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe <code class="language-plaintext highlighter-rouge">.fade</code> dal codice della tua modale.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"..."</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
   ...
@@ -1356,7 +1356,7 @@ Aggiungi <code class="highlighter-rouge">.modal-dialog-right</code> a <code clas
 
 <h3 id="dimensioni-opzionali">Dimensioni opzionali</h3>
 
-<p>Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un <code class="highlighter-rouge">.modal-dialog</code>. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.</p>
+<p>Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un <code class="language-plaintext highlighter-rouge">.modal-dialog</code>. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.</p>
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
@@ -1432,19 +1432,19 @@ Aggiungi <code class="highlighter-rouge">.modal-dialog-right</code> a <code clas
 <h2 id="uso">Uso</h2>
 
 <p>Il plugin per le modali attiva/disattiva il tuo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.
-Aggiunge anche <code class="highlighter-rouge">.modal-open</code> al <code class="highlighter-rouge">&lt;body&gt;</code> per sovrascrivere comportamento di scroll predefinito e genera un <code class="highlighter-rouge">.modal-backdrop</code>
+Aggiunge anche <code class="language-plaintext highlighter-rouge">.modal-open</code> al <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> per sovrascrivere comportamento di scroll predefinito e genera un <code class="language-plaintext highlighter-rouge">.modal-backdrop</code>
 per fornire un’area cliccabile per chiudere le modali mostrate quando si clicca all’esterno di esse.</p>
 
 <h3 id="tramite-data-attributes">Tramite data attributes</h3>
 
-<p>Attiva una modale senza scrivere codice JavaScript. Imposta <code class="highlighter-rouge">data-toggle="modal"</code> su un elemento di controllo, come un
-pulsante, insieme a <code class="highlighter-rouge">data-target="#foo"</code> o <code class="highlighter-rouge">href="#foo"</code> per attivare/disattivare una specifica modale.</p>
+<p>Attiva una modale senza scrivere codice JavaScript. Imposta <code class="language-plaintext highlighter-rouge">data-toggle="modal"</code> su un elemento di controllo, come un
+pulsante, insieme a <code class="language-plaintext highlighter-rouge">data-target="#foo"</code> o <code class="language-plaintext highlighter-rouge">href="#foo"</code> per attivare/disattivare una specifica modale.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"modal"</span> <span class="na">data-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>Lancia la modale<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <h3 id="tramite-javascript">Tramite JavaScript</h3>
 
-<p>Richiama una modale con id <code class="highlighter-rouge">myModal</code> con una singola riga di JavaScript:</p>
+<p>Richiama una modale con id <code class="language-plaintext highlighter-rouge">myModal</code> con una singola riga di JavaScript:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
 
@@ -1458,7 +1458,7 @@ pulsante, insieme a <code class="highlighter-rouge">data-target="#foo"</code> o 
 <p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
 </div>
 
-<h4 id="modaloptions"><code class="highlighter-rouge">.modal(options)</code></h4>
+<h4 id="modaloptions"><code class="language-plaintext highlighter-rouge">.modal(options)</code></h4>
 
 <p>Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).</p>
 
@@ -1466,42 +1466,42 @@ pulsante, insieme a <code class="highlighter-rouge">data-target="#foo"</code> o 
   <span class="na">keyboard</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">})</span></code></pre></figure>
 
-<h4 id="modaltoggle"><code class="highlighter-rouge">.modal('toggle')</code></h4>
+<h4 id="modaltoggle"><code class="language-plaintext highlighter-rouge">.modal('toggle')</code></h4>
 
 <p>Attiva/disattiva manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta</strong>
-(cioè prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.modal</code> o l’evento <code class="highlighter-rouge">hidden.bs.modal</code>).</p>
+(cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.modal</code> o l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.modal</code>).</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggle</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="modalshow"><code class="highlighter-rouge">.modal('show')</code></h4>
+<h4 id="modalshow"><code class="language-plaintext highlighter-rouge">.modal('show')</code></h4>
 
 <p>Apre manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente mostrata</strong>
-(cioè prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.modal</code>).</p>
+(cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.modal</code>).</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="modalhide"><code class="highlighter-rouge">.modal('hide')</code></h4>
+<h4 id="modalhide"><code class="language-plaintext highlighter-rouge">.modal('hide')</code></h4>
 
 <p>Nasconde manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente nascosta</strong>
-(cioè prima che si verifichi l’evento <code class="highlighter-rouge">hidden.bs.modal</code>).</p>
+(cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.modal</code>).</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">hide</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="modalhandleupdate"><code class="highlighter-rouge">.modal('handleUpdate')</code></h4>
+<h4 id="modalhandleupdate"><code class="language-plaintext highlighter-rouge">.modal('handleUpdate')</code></h4>
 
 <p>Riposiziona manualmente la modale se l’altezza della modale cambia nel momento in cui è aperta
 (nel caso appaia una barra di scorrimento).</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">handleUpdate</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="modaldispose"><code class="highlighter-rouge">.modal('dispose')</code></h4>
+<h4 id="modaldispose"><code class="language-plaintext highlighter-rouge">.modal('dispose')</code></h4>
 
 <p>Distrugge la modale di un elemento.</p>
 
 <h3 id="eventi">Eventi</h3>
 
 <p>La classe della modale di Bootstrap espone alcuni eventi per l’aggancio alla funzionalità modale.
-Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="highlighter-rouge">&lt;div class="modal"&gt;</code>).</p>
+Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="language-plaintext highlighter-rouge">&lt;div class="modal"&gt;</code>).</p>
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -1551,11 +1551,11 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="highli
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1572,7 +1572,7 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="highli
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

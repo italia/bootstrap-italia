@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Il classico “menu a tendina”, in nuove varianti.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -523,7 +523,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-classica">Select classica</h3>
 
-<p>La select è composta dal un wrapper esterno <code class="highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
+<p>La select è composta dal un wrapper esterno <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="language-plaintext highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
@@ -569,7 +569,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-disabilitata">Select disabilitata</h3>
 
-<p>Per disabilitare una select, aggiungere la classe <code class="highlighter-rouge">.disabled</code> a <code class="highlighter-rouge">.bootstrap-select-wrapper</code> e aggiungere l’attributo <code class="highlighter-rouge">disabled</code> al tag <code class="highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
+<p>Per disabilitare una select, aggiungere la classe <code class="language-plaintext highlighter-rouge">.disabled</code> a <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> e aggiungere l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al tag <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper disabled">
@@ -597,9 +597,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <h3 id="select-con-reset">Select con reset</h3>
 
 <p>Per creare l’opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all’interno dell’attributo “<strong>data-content</strong>” il seguente html:
-<code class="highlighter-rouge">"Label del tasto reset &lt;span class='reset-label'&gt;&lt;/span&gt;"</code></p>
+<code class="language-plaintext highlighter-rouge">"Label del tasto reset &lt;span class='reset-label'&gt;&lt;/span&gt;"</code></p>
 
-<p>All’interno dell’attributo <code class="highlighter-rouge">title</code> dell’opzione inseriremo il titolo di default della select, in questo caso <code class="highlighter-rouge">"Scegli una opzione"</code>.</p>
+<p>All’interno dell’attributo <code class="language-plaintext highlighter-rouge">title</code> dell’opzione inseriremo il titolo di default della select, in questo caso <code class="language-plaintext highlighter-rouge">"Scegli una opzione"</code>.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
@@ -626,7 +626,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="select-con-ricerca">Select con ricerca</h3>
 
-<p>Per attivare la ricerca è sufficiente aggiungere il parametro <code class="highlighter-rouge">data-live-search="true"</code> al tag <code class="highlighter-rouge">&lt;select&gt;</code> ed il relativo placeholder <code class="highlighter-rouge">data-live-search-placeholder="qui il placeholder..."</code></p>
+<p>Per attivare la ricerca è sufficiente aggiungere il parametro <code class="language-plaintext highlighter-rouge">data-live-search="true"</code> al tag <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> ed il relativo placeholder <code class="language-plaintext highlighter-rouge">data-live-search-placeholder="qui il placeholder..."</code></p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
@@ -687,10 +687,10 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <h3 id="select-multipla">Select Multipla</h3>
 
-<p>Per attivare la multiselezione, aggiungere gli attributi <code class="highlighter-rouge">multiple="true"</code> e <code class="highlighter-rouge">data-multiple-separator=""</code> alla select.</p>
+<p>Per attivare la multiselezione, aggiungere gli attributi <code class="language-plaintext highlighter-rouge">multiple="true"</code> e <code class="language-plaintext highlighter-rouge">data-multiple-separator=""</code> alla select.</p>
 
-<p>Nelle option inseriremo per l’attributo <code class="highlighter-rouge">data-content</code> il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
-<code class="highlighter-rouge">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;label option&lt;/span&gt;&lt;/span&gt;"</code></p>
+<p>Nelle option inseriremo per l’attributo <code class="language-plaintext highlighter-rouge">data-content</code> il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
+<code class="language-plaintext highlighter-rouge">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;label option&lt;/span&gt;&lt;/span&gt;"</code></p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
@@ -715,7 +715,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <h3 id="select-con-gruppi">Select con gruppi</h3>
 
-<p>Per le select con raggruppamenti utilizzare il tag HTML <code class="highlighter-rouge">&lt;optgroup&gt;</code> per raggruppare le <code class="highlighter-rouge">&lt;option&gt;</code>.</p>
+<p>Per le select con raggruppamenti utilizzare il tag HTML <code class="language-plaintext highlighter-rouge">&lt;optgroup&gt;</code> per raggruppare le <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code>.</p>
 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
@@ -748,7 +748,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <h3 id="modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</h3>
 
-<p>Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione <code class="highlighter-rouge">$.setOptionsToSelect(_parametro)</code> che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev’essere chiamata dall’elemento con classe <code class="highlighter-rouge">.bootstrap-select-wrapper</code>, e con parametro in input <code class="highlighter-rouge">_parametro</code> un oggetto Javascript con proprietà “value” e “text” come segue:</p>
+<p>Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione <code class="language-plaintext highlighter-rouge">$.setOptionsToSelect(_parametro)</code> che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev’essere chiamata dall’elemento con classe <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code>, e con parametro in input <code class="language-plaintext highlighter-rouge">_parametro</code> un oggetto Javascript con proprietà “value” e “text” come segue:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.bootstrap-select-wrapper.my-select-wrapper</span><span class="dl">'</span><span class="p">).</span><span class="nx">setOptionsToSelect</span><span class="p">([{</span>
@@ -780,11 +780,11 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -801,7 +801,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

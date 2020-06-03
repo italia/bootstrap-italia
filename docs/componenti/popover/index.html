@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Popover · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -510,7 +510,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#direzioni">Direzioni</a></li>
 <li class="toc-entry toc-h3"><a href="#titolo-con-icona-e-link">Titolo con icona e link</a></li>
 <li class="toc-entry toc-h3"><a href="#modalità-hover">Modalità Hover</a></li>
-<li class="toc-entry toc-h3"><a href="#dismiss-al-click-successivo">Dismiss al click successivo</a></li>
+<li class="toc-entry toc-h3"><a href="#chiusura-al-click-successivo">Chiusura al click successivo</a></li>
 <li class="toc-entry toc-h3"><a href="#elementi-disabilitati">Elementi disabilitati</a></li>
 </ul>
 </li>
@@ -531,7 +531,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <h1 class="bd-title" id="content">Popover</h1>
           <p class="bd-lead">Documentazione ed esempi per aggiungere popover (tooltip informativi) a qualsiasi elemento del tuo sito.</p>
           <p>I popover si basano sulla libreria di terze parti <a href="https://popper.js.org/">Popper.js</a>.
-Per fare in modo che i popover funzionino è necessario includere <code class="highlighter-rouge">popper.min.js</code> prima di
+Per fare in modo che i popover funzionino è necessario includere <code class="language-plaintext highlighter-rouge">popper.min.js</code> prima di
 bootstrap-italia.js o usare la versione <em>bundle</em> che contiene già Popper.js.
 I popovers richiedono il <a href="/bootstrap-italia/docs/componenti/tooltip/">plugin tooltip</a> come dipendenza.</p>
 
@@ -547,25 +547,25 @@ il codice generato per i Popover è accessibile.</p>
 
 <ul>
   <li>I popover sono opt-in per ragioni di performance, quindi <strong>devi inizializzarli tu stesso</strong> con il codice che trovi di seguito.</li>
-  <li>I <code class="highlighter-rouge">title</code> e i <code class="highlighter-rouge">content</code> con valori vuoti non mostreranno mai popover.</li>
-  <li>Specifica <code class="highlighter-rouge">container: 'body'</code> per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).</li>
+  <li>I <code class="language-plaintext highlighter-rouge">title</code> e i <code class="language-plaintext highlighter-rouge">content</code> con valori vuoti non mostreranno mai popover.</li>
+  <li>Specifica <code class="language-plaintext highlighter-rouge">container: 'body'</code> per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).</li>
   <li>Attivare i popover su elementi nascosti non funzionerà.</li>
-  <li>I popover per gli elementi <code class="highlighter-rouge">.disabled</code> o <code class="highlighter-rouge">disabled</code> devono essere attivati da un elemento contenitore.</li>
-  <li>Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa <code class="highlighter-rouge">white-space: nowrap;</code> sugli elementi <code class="highlighter-rouge">&lt;a&gt;</code> per evitare questo comportamento.</li>
+  <li>I popover per gli elementi <code class="language-plaintext highlighter-rouge">.disabled</code> o <code class="language-plaintext highlighter-rouge">disabled</code> devono essere attivati da un elemento contenitore.</li>
+  <li>Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa <code class="language-plaintext highlighter-rouge">white-space: nowrap;</code> sugli elementi <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> per evitare questo comportamento.</li>
   <li>I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.</li>
 </ul>
 
 <h2 id="abilitazione-generale">Abilitazione generale</h2>
 
-<p>Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo <code class="highlighter-rouge">data-toggle</code>:</p>
+<p>Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo <code class="language-plaintext highlighter-rouge">data-toggle</code>:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[data-toggle="popover"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
-<h2 id="abilitazione-con-opzione-container">Abilitazione con opzione <code class="highlighter-rouge">container</code></h2>
+<h2 id="abilitazione-con-opzione-container">Abilitazione con opzione <code class="language-plaintext highlighter-rouge">container</code></h2>
 
-<p>Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un <code class="highlighter-rouge">container</code> personalizzato in modo che l’HTML del popover appaia invece all’interno di quell’elemento.</p>
+<p>Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un <code class="language-plaintext highlighter-rouge">container</code> personalizzato in modo che l’HTML del popover appaia invece all’interno di quell’elemento.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.example-popover</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
@@ -641,11 +641,11 @@ il codice generato per i Popover è accessibile.</p>
 
 <h3 id="titolo-con-icona-e-link">Titolo con icona e link</h3>
 
-<p>È possibile aggiungere un’icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l’attributo <code class="highlighter-rouge">data-html="true"</code> al bottone che apre il Popover.</p>
+<p>È possibile aggiungere un’icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l’attributo <code class="language-plaintext highlighter-rouge">data-html="true"</code> al bottone che apre il Popover.</p>
 
-<p>L’icona va inclusa come HTML nell’attributo <code class="highlighter-rouge">title=""</code> subito prima del vero e proprio titolo.</p>
+<p>L’icona va inclusa come HTML nell’attributo <code class="language-plaintext highlighter-rouge">title=""</code> subito prima del vero e proprio titolo.</p>
 
-<p>Il link come HTML nell’attributo <code class="highlighter-rouge">data-content=""</code> dopo il contenuto testuale, con classe <code class="highlighter-rouge">.popover-inner-link</code>.</p>
+<p>Il link come HTML nell’attributo <code class="language-plaintext highlighter-rouge">data-content=""</code> dopo il contenuto testuale, con classe <code class="language-plaintext highlighter-rouge">.popover-inner-link</code>.</p>
 
 <div class="bd-example">
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-help-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.&lt;a href='#' class='popover-inner-link'&gt;More info&lt;svg class='icon'&gt;&lt;use xlink:href='/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right'&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;">
@@ -658,7 +658,7 @@ il codice generato per i Popover è accessibile.</p>
 
 <h3 id="modalità-hover">Modalità Hover</h3>
 
-<p>Per aprire il Popover all’hover del mouse sull’elemento, aggiungere l’attributo <code class="highlighter-rouge">data-trigger="hover"</code> al tag dello stesso.</p>
+<p>Per aprire il Popover all’hover del mouse sull’elemento, aggiungere l’attributo <code class="language-plaintext highlighter-rouge">data-trigger="hover"</code> al tag dello stesso.</p>
 
 <div class="bd-example">
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="Popover in Hover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
@@ -669,20 +669,20 @@ il codice generato per i Popover è accessibile.</p>
   Apertura in Hover
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<h3 id="dismiss-al-click-successivo">Dismiss al click successivo</h3>
+<h3 id="chiusura-al-click-successivo">Chiusura al click successivo</h3>
 
-<p>Usa l’evento <code class="highlighter-rouge">focus</code> per ignorare i popover sul clic successivo dell’utente di un elemento diverso rispetto all’elemento di attivazione / disattivazione.</p>
+<p>Usa l’evento <code class="language-plaintext highlighter-rouge">focus</code> per ignorare i popover sul clic successivo dell’utente di un elemento diverso rispetto all’elemento di attivazione / disattivazione.</p>
 
 <div class="bd-callout bd-callout-danger">
 <h4 id="markup-specifico-richiesto-per-ignorare-il-click-successivo">Markup specifico richiesto per ignorare il click successivo</h4>
 
-<p>Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag <code class="highlighter-rouge">&lt;a&gt;</code>, <em>non</em> il tag <code class="highlighter-rouge">&lt;button&gt;</code>, ed è necessario anche includere l’attributo <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code class="highlighter-rouge">tabindex</code></a>.</p>
+<p>Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>, <em>non</em> il tag <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>, ed è necessario anche includere l’attributo <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code class="language-plaintext highlighter-rouge">tabindex</code></a>.</p>
 </div>
 
 <div class="bd-example">
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?">Dismissible popover</a>
+<a tabindex="0" href="#" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Popover richiudibile" data-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"focus"</span> <span class="na">title=</span><span class="s">"Dismissible popover"</span> <span class="na">data-content=</span><span class="s">"Ed ecco alcuni contenuti sorprendenti. È molto coinvolgente. Non trovi?"</span><span class="nt">&gt;</span>Dismissible popover<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"focus"</span> <span class="na">title=</span><span class="s">"Popover richiudibile"</span> <span class="na">data-content=</span><span class="s">"Ecco il contenuto del popover richiudibile"</span><span class="nt">&gt;</span>Popover richiudibile<span class="nt">&lt;/a&gt;</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.popover-dismiss</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
   <span class="na">trigger</span><span class="p">:</span> <span class="dl">'</span><span class="s1">focus</span><span class="dl">'</span>
@@ -690,9 +690,9 @@ il codice generato per i Popover è accessibile.</p>
 
 <h3 id="elementi-disabilitati">Elementi disabilitati</h3>
 
-<p>Elementi con l’attributo <code class="highlighter-rouge">disabled</code> non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento <code class="highlighter-rouge">&lt;div&gt;</code> o <code class="highlighter-rouge">&lt;span&gt;</code> contenitore e sovrascrivere il <code class="highlighter-rouge">pointer-events</code> su un elemento disabilitato.</p>
+<p>Elementi con l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> contenitore e sovrascrivere il <code class="language-plaintext highlighter-rouge">pointer-events</code> su un elemento disabilitato.</p>
 
-<p>Per gli eventi dei popover disabilitati, potresti preferire <code class="highlighter-rouge">data-trigger="hover"</code> in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di <em>cliccare</em> su un elemento disabilitato.</p>
+<p>Per gli eventi dei popover disabilitati, potresti preferire <code class="language-plaintext highlighter-rouge">data-trigger="hover"</code> in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di <em>cliccare</em> su un elemento disabilitato.</p>
 
 <div class="bd-example">
 <span class="d-inline-block" data-toggle="popover" data-content="Popover disabilitato">
@@ -711,9 +711,9 @@ il codice generato per i Popover è accessibile.</p>
 
 <h3 id="opzioni">Opzioni</h3>
 
-<p>Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="highlighter-rouge">data-</code>, come in <code class="highlighter-rouge">data-animation=""</code>.</p>
+<p>Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l’opzione nome a <code class="language-plaintext highlighter-rouge">data-</code>, come in <code class="language-plaintext highlighter-rouge">data-animation=""</code>.</p>
 
-<p>Per ulteriori informazioni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.3/components/popovers/">popovers</a> del sito di Bootstrap.</p>
+<p>Per ulteriori informazioni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.5/components/popovers/">popovers</a> del sito di Bootstrap.</p>
 
 <h3 id="metodi">Metodi</h3>
 
@@ -725,53 +725,53 @@ il codice generato per i Popover è accessibile.</p>
 <p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
 </div>
 
-<h4 id="popoveroptions"><code class="highlighter-rouge">$().popover(options)</code></h4>
+<h4 id="popoveroptions"><code class="language-plaintext highlighter-rouge">$().popover(options)</code></h4>
 
 <p>Inizializza i popover per una raccolta di elementi.</p>
 
-<h4 id="popovershow"><code class="highlighter-rouge">.popover('show')</code></h4>
+<h4 id="popovershow"><code class="language-plaintext highlighter-rouge">.popover('show')</code></h4>
 
-<p>Mostra il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.</p>
+<p>Mostra il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato</strong> (prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popoverhide"><code class="highlighter-rouge">.popover('hide')</code></h4>
+<h4 id="popoverhide"><code class="language-plaintext highlighter-rouge">.popover('hide')</code></h4>
 
-<p>Nasconde il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente nascosto</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+<p>Nasconde il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente nascosto</strong> (prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">hide</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popovertoggle"><code class="highlighter-rouge">.popover('toggle')</code></h4>
+<h4 id="popovertoggle"><code class="language-plaintext highlighter-rouge">.popover('toggle')</code></h4>
 
-<p>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto</strong> (prima che si verifichi l’evento <code class="highlighter-rouge">shown.bs.popover</code> o l’evento <code class="highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
+<p>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto</strong> (prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.popover</code> o l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.popover</code>). Questo è considerato un’attivazione “manuale” del popover.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggle</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popoverdispose"><code class="highlighter-rouge">.popover('dispose')</code></h4>
+<h4 id="popoverdispose"><code class="language-plaintext highlighter-rouge">.popover('dispose')</code></h4>
 
 <p>Nasconde e distrugge il popover di un elemento.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">dispose</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popoverenable"><code class="highlighter-rouge">.popover('enable')</code></h4>
+<h4 id="popoverenable"><code class="language-plaintext highlighter-rouge">.popover('enable')</code></h4>
 
 <p>Fornisce al popover di un elemento la possibilità di essere mostrato. <strong>I popover sono abilitati in modo predefinito.</strong></p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">enable</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popoverdisable"><code class="highlighter-rouge">.popover('disable')</code></h4>
+<h4 id="popoverdisable"><code class="language-plaintext highlighter-rouge">.popover('disable')</code></h4>
 
 <p>Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">disable</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popovertoggleenabled"><code class="highlighter-rouge">.popover('toggleEnabled')</code></h4>
+<h4 id="popovertoggleenabled"><code class="language-plaintext highlighter-rouge">.popover('toggleEnabled')</code></h4>
 
 <p>Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggleEnabled</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="popoverupdate"><code class="highlighter-rouge">.popover('update')</code></h4>
+<h4 id="popoverupdate"><code class="language-plaintext highlighter-rouge">.popover('update')</code></h4>
 
 <p>Aggiorna la posizione del popover di un elemento.</p>
 
@@ -831,11 +831,11 @@ il codice generato per i Popover è accessibile.</p>
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -852,7 +852,7 @@ il codice generato per i Popover è accessibile.</p>
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

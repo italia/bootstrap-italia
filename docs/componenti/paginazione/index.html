@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentazione ed esempi del componente di paginazione utile per indicare una serie di contenuti correlati tra più pagine.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Paginazione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -533,9 +533,9 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <p class="bd-lead">Documentazione ed esempi del componente di paginazione utile per indicare una serie di contenuti correlati tra più pagine.</p>
           <h2 id="panoramica">Panoramica</h2>
 
-<p>I collegamenti della paginazione sono contenuti per praticità in un elemento <code class="highlighter-rouge">&lt;nav class="pagination-wrapper"&gt;</code> per dare la possibilità agli screenreader, e altre tecnologie assistive, di identificarli come una sezione di navigazione.</p>
+<p>I collegamenti della paginazione sono contenuti per praticità in un elemento <code class="language-plaintext highlighter-rouge">&lt;nav class="pagination-wrapper"&gt;</code> per dare la possibilità agli screenreader, e altre tecnologie assistive, di identificarli come una sezione di navigazione.</p>
 
-<p>Poiché è molto probabile che la pagina possa contenere più di un elemento <code class="highlighter-rouge">&lt;nav class="pagination-wrapper"&gt;</code> è consigliabile inserire un attributo <code class="highlighter-rouge">aria-label</code> con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un’etichetta appropriata potrebbe essere <code class="highlighter-rouge">aria-label="Pagine dei risultati di ricerca"</code>.</p>
+<p>Poiché è molto probabile che la pagina possa contenere più di un elemento <code class="language-plaintext highlighter-rouge">&lt;nav class="pagination-wrapper"&gt;</code> è consigliabile inserire un attributo <code class="language-plaintext highlighter-rouge">aria-label</code> con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un’etichetta appropriata potrebbe essere <code class="language-plaintext highlighter-rouge">aria-label="Pagine dei risultati di ricerca"</code>.</p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione della pagina">
@@ -580,17 +580,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="stato-disabilitato-e-attivo">Stato disabilitato e attivo</h2>
 
-<p>I link della paginazione assumonono uno stato disabilitato usando la classe <code class="highlighter-rouge">.disabled</code> nel tag <code class="highlighter-rouge">&lt;li&gt;</code>.
-Per indicare la pagina attiva corrente utilizzare l’attributo <code class="highlighter-rouge">aria-current="page"</code> nel tag <code class="highlighter-rouge">&lt;a&gt;</code>, l’aspetto grafico cambierà di conseguenza.</p>
+<p>I link della paginazione assumonono uno stato disabilitato usando la classe <code class="language-plaintext highlighter-rouge">.disabled</code> nel tag <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code>.
+Per indicare la pagina attiva corrente utilizzare l’attributo <code class="language-plaintext highlighter-rouge">aria-current="page"</code> nel tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>, l’aspetto grafico cambierà di conseguenza.</p>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="disabilitazione-link">Disabilitazione link</h5>
 
-<p>La classe <code class="highlighter-rouge">.disabled</code> usa <code class="highlighter-rouge">pointer-events: none</code> per provare a disabilitare l’attivazione dei comportamenti di default dei link <code class="highlighter-rouge">&lt;a&gt;</code>, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l’attributo <code class="highlighter-rouge">tabindex="-1"</code>,  e utilizzare Javascript per disabilitare le loro funzionalità.</p>
+<p>La classe <code class="language-plaintext highlighter-rouge">.disabled</code> usa <code class="language-plaintext highlighter-rouge">pointer-events: none</code> per provare a disabilitare l’attivazione dei comportamenti di default dei link <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l’attributo <code class="language-plaintext highlighter-rouge">tabindex="-1"</code>,  e utilizzare Javascript per disabilitare le loro funzionalità.</p>
 
-<p>È inoltre consigliabile applicare <code class="highlighter-rouge">aria-hidden="true"</code> ai link disabilitati per evitare che vengano considerati nel conteggio degli elementi totali in lista fornito dagli screen reader.</p>
+<p>È inoltre consigliabile applicare <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> ai link disabilitati per evitare che vengano considerati nel conteggio degli elementi totali in lista fornito dagli screen reader.</p>
 
-<p>In alternativa per la paginazione si può sostituire il link disabilitato con uno <code class="highlighter-rouge">&lt;span&gt;</code> avente classe <code class="highlighter-rouge">.page-link</code> e contenuto in un <code class="highlighter-rouge">&lt;li&gt;</code> con classe <code class="highlighter-rouge">.nolink</code> (es.: <code class="highlighter-rouge">&lt;li class="page-item"&gt;&lt;span class="page-link"&gt;1&lt;/span&gt;&lt;/li&gt;</code>).</p>
+<p>In alternativa per la paginazione si può sostituire il link disabilitato con uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> avente classe <code class="language-plaintext highlighter-rouge">.page-link</code> e contenuto in un <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.nolink</code> (es.: <code class="language-plaintext highlighter-rouge">&lt;li class="page-item"&gt;&lt;span class="page-link"&gt;1&lt;/span&gt;&lt;/li&gt;</code>).</p>
 </div>
 
 <div class="bd-example">
@@ -652,7 +652,7 @@ Per indicare la pagina attiva corrente utilizzare l’attributo <code class="hig
 Sui dispositivi mobile la paginazione è centrata per default.</p>
 
 <h3 id="navigazione-centrata">Navigazione centrata</h3>
-<p>Per centrare la navigazione aggiungere la classe <code class="highlighter-rouge">justify-content-center</code> al tag <code class="highlighter-rouge">&lt;nav&gt;</code>.</p>
+<p>Per centrare la navigazione aggiungere la classe <code class="language-plaintext highlighter-rouge">justify-content-center</code> al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>.</p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper justify-content-center" aria-label="Navigazione centrata">
@@ -704,7 +704,7 @@ Sui dispositivi mobile la paginazione è centrata per default.</p>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
 
 <h3 id="navigazione-allineata-a-destra">Navigazione allineata a destra</h3>
-<p>Per allineare a destra la navigazione aggiungere la classe <code class="highlighter-rouge">justify-content-end</code> al tag <code class="highlighter-rouge">&lt;nav&gt;.</code></p>
+<p>Per allineare a destra la navigazione aggiungere la classe <code class="language-plaintext highlighter-rouge">justify-content-end</code> al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;.</code></p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
@@ -832,7 +832,7 @@ Sui dispositivi mobile la paginazione è centrata per default.</p>
 <p>La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numero di pagine è elevato. È inoltre disponbile una versione semplificata ottimizzata per dispositivi mobile.</p>
 
 <h3 id="more">More</h3>
-<p>Quando è presente un grande numero di pagine è consigliabile visualizzare unicamente le pagine più prossime a quella corrente, inserendo delle ellissi (…) fra queste e la prima ed ultima pagina. Non essendo collegate a nessuna pagina le ellissi vanno inserite in un tag <code class="highlighter-rouge">&lt;span&gt;</code>.</p>
+<p>Quando è presente un grande numero di pagine è consigliabile visualizzare unicamente le pagine più prossime a quella corrente, inserendo delle ellissi (…) fra queste e la prima ed ultima pagina. Non essendo collegate a nessuna pagina le ellissi vanno inserite in un tag <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>.</p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con ellissi/more">
@@ -1118,8 +1118,8 @@ Sui dispositivi mobile la paginazione è centrata per default.</p>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
 
 <h3 id="link-testuali">Link testuali</h3>
-<p>Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come “precedente” e “successiva”. In tal caso al tag <code class="highlighter-rouge">&lt;a&gt;</code> contenente il testo dovrà essere aggiunta la classe <code class="highlighter-rouge">.text</code>. Es: <code class="highlighter-rouge">&lt;a class="page-link text" href="#"&gt;Precedente&lt;/a&gt;</code>.
-Notare come sia stato inserito il testo “Pagina” in un elemento <code class="highlighter-rouge">&lt;span class="sr-only"&gt;</code> invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.</p>
+<p>Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come “precedente” e “successiva”. In tal caso al tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> contenente il testo dovrà essere aggiunta la classe <code class="language-plaintext highlighter-rouge">.text</code>. Es: <code class="language-plaintext highlighter-rouge">&lt;a class="page-link text" href="#"&gt;Precedente&lt;/a&gt;</code>.
+Notare come sia stato inserito il testo “Pagina” in un elemento <code class="language-plaintext highlighter-rouge">&lt;span class="sr-only"&gt;</code> invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.</p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
@@ -1171,7 +1171,7 @@ Notare come sia stato inserito il testo “Pagina” in un elemento <code class=
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
 
 <h3 id="total-number">Total number</h3>
-<p>Aggiungendo al classe <code class="highlighter-rouge">.pagination-total</code> al tag <code class="highlighter-rouge">&lt;nav&gt;</code> che contiene la paginazione è possibile indicare il numero totale di pagine all’interno di un tag <code class="highlighter-rouge">&lt;p&gt;</code> collocato priam della chiusura del <code class="highlighter-rouge">&lt;nav&gt;</code>.</p>
+<p>Aggiungendo al classe <code class="language-plaintext highlighter-rouge">.pagination-total</code> al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> che contiene la paginazione è possibile indicare il numero totale di pagine all’interno di un tag <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> collocato priam della chiusura del <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>.</p>
 
 <div class="bd-example">
 <nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
@@ -1253,11 +1253,11 @@ Notare come sia stato inserito il testo “Pagina” in un elemento <code class=
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1274,7 +1274,7 @@ Notare come sia stato inserito il testo “Pagina” in un elemento <code class=
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

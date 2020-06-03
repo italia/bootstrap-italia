@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Classi e utilità per organizzare gli spazi e il posizionamento di componenti all’interno di una pagina web">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -509,7 +509,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <p>Il contenitore, o <em>“container”</em>, è uno degli elementi base nell’utilizzo di Bootstrap Italia, ed è <strong>richiesto quando si utilizza il <a href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">grid system</a></strong>.</p>
 
-<p>La prima scelta è tra un container a larghezza <em>fissa</em>, la cui <code class="highlighter-rouge">max-width</code> cambia ad ogni breakpoint, o <em>fluida</em>, la cui larghezza rimane al 100% per ogni dimensione del viewport.</p>
+<p>La prima scelta è tra un container a larghezza <em>fissa</em>, la cui <code class="language-plaintext highlighter-rouge">max-width</code> cambia ad ogni breakpoint, o <em>fluida</em>, la cui larghezza rimane al 100% per ogni dimensione del viewport.</p>
 
 <div class="bd-example">
   <div class="bd-example-container">
@@ -523,7 +523,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
   <span class="c">&lt;!-- Content here --&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Utilizzando la classe <code class="highlighter-rouge">.container-fluid</code> esso occuperà in larghezza tutta l’area a sua disposizione.</p>
+<p>Utilizzando la classe <code class="language-plaintext highlighter-rouge">.container-fluid</code> esso occuperà in larghezza tutta l’area a sua disposizione.</p>
 
 <div class="bd-example">
   <div class="bd-example-container bd-example-container-fluid">
@@ -592,7 +592,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <div class="bd-callout bd-callout-info">
 <p>Nota che, dal momento che i browser non supportano attualmente i <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>,
-stiamo evitando di utilizzare i limiti dei <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefissi <code class="highlighter-rouge">min-</code> e <code class="highlighter-rouge">max-</code></a>
+stiamo evitando di utilizzare i limiti dei <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max">prefissi <code class="language-plaintext highlighter-rouge">min-</code> e <code class="language-plaintext highlighter-rouge">max-</code></a>
 e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta
 risoluzione), utilizzando valori con maggiore precisione per questi confronti.</p>
 </div>
@@ -642,7 +642,7 @@ la larghezza minima e massima dei breakpoint.</p>
 
 <h2 id="z-index">Z-index</h2>
 
-<p>Alcuni componenti Bootstrap Italia utilizzano <code class="highlighter-rouge">z-index</code>, la proprietà CSS che aiuta a controllare il layout fornendo un
+<p>Alcuni componenti Bootstrap Italia utilizzano <code class="language-plaintext highlighter-rouge">z-index</code>, la proprietà CSS che aiuta a controllare il layout fornendo un
 terzo livello di asse per organizzare graficamente il contenuto. Utilizziamo una scala graduale z-index predefinita che
 è stata progettata per stratificare correttamente navigazione, tooltip, popover, finestre modali e altro ancora.</p>
 
@@ -661,35 +661,35 @@ dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.
 <span class="nv">$zindex-tooltip</span><span class="p">:</span>           <span class="m">1070</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
 
 <p>Per gestire i bordi sovrapposti all’interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori
-di <code class="highlighter-rouge">z-index</code> a una sola cifra di <code class="highlighter-rouge">1</code>,<code class="highlighter-rouge"> 2</code> e <code class="highlighter-rouge">3</code> per default, hover e stati attivi. Al passaggio del mouse/focus/active
+di <code class="language-plaintext highlighter-rouge">z-index</code> a una sola cifra di <code class="language-plaintext highlighter-rouge">1</code>,<code class="language-plaintext highlighter-rouge"> 2</code> e <code class="language-plaintext highlighter-rouge">3</code> per default, hover e stati attivi. Al passaggio del mouse/focus/active
 portiamo un particolare elemento in primo piano con un valore più alto di ‘z-index` per mostrare il loro confine sugli
 elementi di pari livello.</p>
 
 <hr />
 
-<h2 id="modificare-display">Modificare <code class="highlighter-rouge">display</code></h2>
+<h2 id="modificare-display">Modificare <code class="language-plaintext highlighter-rouge">display</code></h2>
 
 <p>Utilizza insieme le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">display utility</a> con il grid system, i contenuti o i
 componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.</p>
 
 <h2 id="opzioni-flexbox">Opzioni Flexbox</h2>
 
-<p>Bootstrap Italia è realizzato con flexbox, ma non tutti i <code class="highlighter-rouge">display</code> utilizzano <code class="highlighter-rouge">display: flex</code> in quanto ciò avrebbe
+<p>Bootstrap Italia è realizzato con flexbox, ma non tutti i <code class="language-plaintext highlighter-rouge">display</code> utilizzano <code class="language-plaintext highlighter-rouge">display: flex</code> in quanto ciò avrebbe
 costretto a molti override non necessari.</p>
 
-<p>Se ritieni necessario aggiungere <code class="highlighter-rouge">display: flex</code> a un elemento puoi farlo con <code class="highlighter-rouge">.d-flex</code> o una delle sue varianti
-responsive (es.: <code class="highlighter-rouge">.d-sm-flex</code>). Avrai bisogno di queste classi <code class="highlighter-rouge">display</code> per consentire l’uso delle
+<p>Se ritieni necessario aggiungere <code class="language-plaintext highlighter-rouge">display: flex</code> a un elemento puoi farlo con <code class="language-plaintext highlighter-rouge">.d-flex</code> o una delle sue varianti
+responsive (es.: <code class="language-plaintext highlighter-rouge">.d-sm-flex</code>). Avrai bisogno di queste classi <code class="language-plaintext highlighter-rouge">display</code> per consentire l’uso delle
 <a href="/bootstrap-italia/docs/organizzare-gli-spazi/flex/">utility flexbox</a> per così modificarne il dimensionamento, l’allineamento, la
 spaziatura e altro ancora.</p>
 
 <h2 id="margin-e-padding">Margin e padding</h2>
 
-<p>Usa il <code class="highlighter-rouge">margin</code> e <code class="highlighter-rouge">padding</code> delle <a href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">utility spaziatura</a> per gestire spazi
+<p>Usa il <code class="language-plaintext highlighter-rouge">margin</code> e <code class="language-plaintext highlighter-rouge">padding</code> delle <a href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">utility spaziatura</a> per gestire spazi
 e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
-una variabile predefinita <code class="highlighter-rouge">$spacer</code> di valore <code class="highlighter-rouge">1rem</code>.</p>
+una variabile predefinita <code class="language-plaintext highlighter-rouge">$spacer</code> di valore <code class="language-plaintext highlighter-rouge">1rem</code>.</p>
 
-<p>Scegli i valori per tutti i viewport (es.: <code class="highlighter-rouge">.mr-3</code> per <code class="highlighter-rouge">margin-right: 1rem</code>), o scegli le varianti responsive per viewport
-specifici (es.: <code class="highlighter-rouge">.mr-md-3</code> per <code class="highlighter-rouge">margin-right: 1rem</code> a partire dal breakpoint <code class="highlighter-rouge">md</code>).</p>
+<p>Scegli i valori per tutti i viewport (es.: <code class="language-plaintext highlighter-rouge">.mr-3</code> per <code class="language-plaintext highlighter-rouge">margin-right: 1rem</code>), o scegli le varianti responsive per viewport
+specifici (es.: <code class="language-plaintext highlighter-rouge">.mr-md-3</code> per <code class="language-plaintext highlighter-rouge">margin-right: 1rem</code> a partire dal breakpoint <code class="language-plaintext highlighter-rouge">md</code>).</p>
 
 <h2 id="modificare-la-visibilità">Modificare la visibilità</h2>
 
@@ -714,11 +714,11 @@ specifici (es.: <code class="highlighter-rouge">.mr-md-3</code> per <code class=
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -735,7 +735,7 @@ specifici (es.: <code class="highlighter-rouge">.mr-md-3</code> per <code class=
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

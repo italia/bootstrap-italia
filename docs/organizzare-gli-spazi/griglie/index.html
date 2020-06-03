@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Nella definizione del layout di una interfaccia utente, la griglia è una suddivisione dello spazio tramite precise spaziature verticali ed orizzontali.">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Le Griglie · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -521,6 +521,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <li class="toc-entry toc-h3"><a href="#tutti-i-breakpoint">Tutti i breakpoint</a></li>
 <li class="toc-entry toc-h3"><a href="#raccolti-in-orizzontale">Raccolti in orizzontale</a></li>
 <li class="toc-entry toc-h3"><a href="#mischiare-e-abbinare">Mischiare e abbinare</a></li>
+<li class="toc-entry toc-h3"><a href="#righe-di-colonne">Righe di colonne</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#allineamento">Allineamento</a>
@@ -589,28 +590,28 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 </div>
 
-<p>L’esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l’utilizzo dell’elemento genitore <code class="highlighter-rouge">.container</code>.</p>
+<p>L’esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli, medi, grandi e extra large usando le classi di griglia predefinite. Le colonne sono centrate nella pagina attraverso l’utilizzo dell’elemento genitore <code class="language-plaintext highlighter-rouge">.container</code>.</p>
 
 <p>Analizzandolo nel dettaglio, ecco come funziona:</p>
 
 <ul>
-  <li>I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza <code class="highlighter-rouge">.container</code> per una larghezza al pixel responsive o <code class="highlighter-rouge">.container-fluid</code> per una larghezza del <code class="highlighter-rouge">width: 100%</code> su tutti i viewport e dimensioni dei device.</li>
-  <li>Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (<code class="highlighter-rouge">gutter</code>) per regolare lo spazio tra di esse. Questo <code class="highlighter-rouge">padding</code> viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.</li>
+  <li>I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza <code class="language-plaintext highlighter-rouge">.container</code> per una larghezza al pixel responsive o <code class="language-plaintext highlighter-rouge">.container-fluid</code> per una larghezza del <code class="language-plaintext highlighter-rouge">width: 100%</code> su tutti i viewport e dimensioni dei device.</li>
+  <li>Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (<code class="language-plaintext highlighter-rouge">gutter</code>) per regolare lo spazio tra di esse. Questo <code class="language-plaintext highlighter-rouge">padding</code> viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.</li>
   <li>In un layout a griglia, il contenuto deve essere posizionato all’interno di colonne e solo le colonne possono essere figlie dirette delle righe.</li>
-  <li>Grazie a flexbox, le colonne della griglia senza uno specifico <code class="highlighter-rouge">width</code> verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di <code class="highlighter-rouge">.col-sm</code> avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione <a href="#colonne-a-disposizione-automatica">colonne a disposizione automatica</a> per maggiori informazioni.</li>
-  <li>Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare <code class="highlighter-rouge">.col-4</code>.</li>
-  <li>Le <code class="highlighter-rouge">width</code> delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.</li>
-  <li>Le colonne hanno un <code class="highlighter-rouge">padding</code> orizzontale per creare il gutter tra le singole colonne. Per rimuovere il <code class="highlighter-rouge">margin</code> dalle righe e il <code class="highlighter-rouge">padding</code> dalle colonne aggiungendo la classe <code class="highlighter-rouge">.no-gutters</code> alla classe <code class="highlighter-rouge">.row</code>.</li>
+  <li>Grazie a flexbox, le colonne della griglia senza uno specifico <code class="language-plaintext highlighter-rouge">width</code> verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di <code class="language-plaintext highlighter-rouge">.col-sm</code> avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione <a href="#colonne-a-disposizione-automatica">colonne a disposizione automatica</a> per maggiori informazioni.</li>
+  <li>Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare <code class="language-plaintext highlighter-rouge">.col-4</code>.</li>
+  <li>Le <code class="language-plaintext highlighter-rouge">width</code> delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.</li>
+  <li>Le colonne hanno un <code class="language-plaintext highlighter-rouge">padding</code> orizzontale per creare il gutter tra le singole colonne. Per rimuovere il <code class="language-plaintext highlighter-rouge">margin</code> dalle righe e il <code class="language-plaintext highlighter-rouge">padding</code> dalle colonne aggiungendo la classe <code class="language-plaintext highlighter-rouge">.no-gutters</code> alla classe <code class="language-plaintext highlighter-rouge">.row</code>.</li>
   <li>Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.</li>
-  <li>I breakpoint della griglia si basano su media query con larghezza minima, significa che <strong>si applicano a quel breakpoint e a tutti quelli sopra di esso</strong> (e.g., <code class="highlighter-rouge">.col-sm-4</code> si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint <code class="highlighter-rouge">xs</code>).</li>
-  <li>È possibile utilizzare classi di griglia predefinite (come <code class="highlighter-rouge">.col-4</code>) per altri markup semantici.</li>
+  <li>I breakpoint della griglia si basano su media query con larghezza minima, significa che <strong>si applicano a quel breakpoint e a tutti quelli sopra di esso</strong> (e.g., <code class="language-plaintext highlighter-rouge">.col-sm-4</code> si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint <code class="language-plaintext highlighter-rouge">xs</code>).</li>
+  <li>È possibile utilizzare classi di griglia predefinite (come <code class="language-plaintext highlighter-rouge">.col-4</code>) per altri markup semantici.</li>
 </ul>
 
 <p>Sii consapevole dei limiti e dei <a href="https://github.com/philipwalton/flexbugs">bug di flexbox</a>, come l’ <a href="https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers">incapacità di utilizzare alcuni elementi HTML come i contenitori di flex</a>.</p>
 
 <h3 id="le-opzioni">Le opzioni</h3>
 
-<p>Mentre Bootstrap utilizza <code class="highlighter-rouge">em</code> or <code class="highlighter-rouge">rem</code> per definire gran parte delle misure, i <code class="highlighter-rouge">px</code> sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>Mentre Bootstrap utilizza <code class="language-plaintext highlighter-rouge">em</code> or <code class="language-plaintext highlighter-rouge">rem</code> per definire gran parte delle misure, i <code class="language-plaintext highlighter-rouge">px</code> sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
 
 <p>Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.</p>
 
@@ -678,11 +679,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="colonne-a-disposizione-automatica">Colonne a disposizione automatica</h2>
 
-<p>Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come <code class="highlighter-rouge">.col-sm-6</code>.</p>
+<p>Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come <code class="language-plaintext highlighter-rouge">.col-sm-6</code>.</p>
 
 <h3 id="uniformare-larghezze-tra-colonne">Uniformare larghezze tra colonne</h3>
 
-<p>Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da <code class="highlighter-rouge">xs</code> a <code class="highlighter-rouge">xl</code>. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.</p>
+<p>Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da <code class="language-plaintext highlighter-rouge">xs</code> a <code class="language-plaintext highlighter-rouge">xl</code>. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -712,7 +713,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 </div>
 
-<p>Colonne con uguale larghezza possono essere spezzate su più linee, ma c’è un <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">bug di flexbox su Safari</a> che gli ha impedito di lavorare senza uno specifico <code class="highlighter-rouge">flex-basis</code> o <code class="highlighter-rouge">border</code>. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.</p>
+<p>Colonne con uguale larghezza possono essere spezzate su più linee, ma c’è un <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">bug di flexbox su Safari</a> che gli ha impedito di lavorare senza uno specifico <code class="language-plaintext highlighter-rouge">flex-basis</code> o <code class="language-plaintext highlighter-rouge">border</code>. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -774,7 +775,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="contenuto-a-larghezza-variabile">Contenuto a larghezza variabile</h3>
 
-<p>Puoi usare la classe <code class="highlighter-rouge">col-{breakpoint}-auto</code> per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.</p>
+<p>Puoi usare la classe <code class="language-plaintext highlighter-rouge">col-{breakpoint}-auto</code> per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -808,7 +809,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="equal-width-multi-row">Equal-width multi-row</h3>
 
-<p>Crea colonne di uguale larghezza che si estendono su più righe inserendo un <code class="highlighter-rouge">.w-100</code> dove vuoi che le colonne vengano divise su un’altra riga.</p>
+<p>Crea colonne di uguale larghezza che si estendono su più righe inserendo un <code class="language-plaintext highlighter-rouge">.w-100</code> dove vuoi che le colonne vengano divise su un’altra riga.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -836,7 +837,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="tutti-i-breakpoint">Tutti i breakpoint</h3>
 
-<p>Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grande, usa le classi <code class="highlighter-rouge">.col</code> e <code class="highlighter-rouge">.col-*</code>. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti, sentiti libero di attenerti alla classe <code class="highlighter-rouge">.col</code>.</p>
+<p>Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grande, usa le classi <code class="language-plaintext highlighter-rouge">.col</code> e <code class="language-plaintext highlighter-rouge">.col-*</code>. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti, sentiti libero di attenerti alla classe <code class="language-plaintext highlighter-rouge">.col</code>.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -866,7 +867,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="raccolti-in-orizzontale">Raccolti in orizzontale</h3>
 
-<p>Utilizzando un singolo set di classi <code class="highlighter-rouge">.col-sm-*</code>, puoi creare un sistema di base che inizia raccolto su dispositivi extra-small prima di diventare orizzontale su dispositivi desktop (medi).</p>
+<p>Utilizzando un singolo set di classi <code class="language-plaintext highlighter-rouge">.col-sm-*</code>, puoi creare un sistema di base che inizia raccolto su dispositivi extra-small prima di diventare orizzontale su dispositivi desktop (medi).</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -938,26 +939,140 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 </div>
 
+<h3 id="righe-di-colonne">Righe di colonne</h3>
+
+<p>Usa le classi reattive <code class="language-plaintext highlighter-rouge">.row-cols-*</code> per impostare rapidamente il numero di colonne che rendono meglio il tuo contenuto e layout. Mentre le normali classi <code class="language-plaintext highlighter-rouge">.col-</code> * si applicano alle singole colonne (ad es. <code class="language-plaintext highlighter-rouge">.col-md-4</code>), le classi delle “righe di colonne” sono impostate sul genitore <code class="language-plaintext highlighter-rouge">.row</code> come scorciatoia.</p>
+
+<div class="bd-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row row-cols-2">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<div class="bd-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<div class="bd-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<div class="bd-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col-6">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
+<div class="bd-example-row">
+<div class="bd-example">
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row-cols-1 row-cols-sm-2 row-cols-md-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+</div>
+
 <h2 id="allineamento">Allineamento</h2>
 
 <p>Usa le utilità d’allineamento di flexbox per allineare orizzontalmente e vericalmente le colonne.</p>
 
 <h3 id="allineamento-verticale">Allineamento verticale</h3>
 
-<div class="bd-example-row bd-example-row-flex-cols">
+<div class="bd-example-row">
 <div class="bd-example">
 <div class="container">
-  <div class="row align-items-start">
+  <div class="row align-items-start" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
   </div>
-  <div class="row align-items-center">
+  <div class="row align-items-center" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
   </div>
-  <div class="row align-items-end">
+  <div class="row align-items-end" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
@@ -965,17 +1080,17 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span> <span class="na">style=</span><span class="s">"min-height: 5rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-center"</span> <span class="na">style=</span><span class="s">"min-height: 5rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-end"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-end"</span> <span class="na">style=</span><span class="s">"min-height: 5rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
@@ -984,10 +1099,10 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 </div>
 
-<div class="bd-example-row bd-example-bg bd-example-row-flex-cols">
+<div class="bd-example-row bd-example-bg">
 <div class="bd-example">
 <div class="container">
-  <div class="row">
+  <div class="row" style="min-height: 5rem;">
     <div class="col align-self-start">Una di tre colonne</div>
     <div class="col align-self-center">Una di tre colonne</div>
     <div class="col align-self-end">Una di tre colonne</div>
@@ -995,7 +1110,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span> <span class="na">style=</span><span class="s">"min-height: 5rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-start"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-center"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-end"</span><span class="nt">&gt;</span>Una di tre colonne<span class="nt">&lt;/div&gt;</span>
@@ -1058,13 +1173,13 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="senza-gutter">Senza gutter</h3>
 
-<p>I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con <code class="highlighter-rouge">.no-gutters</code>.
-Questo rimuove i margini negativi <code class="highlighter-rouge">margin</code> dalla classe <code class="highlighter-rouge">.row</code> e il <code class="highlighter-rouge">padding</code> orizzontale da tutte le colonne figlie dirette.</p>
+<p>I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con <code class="language-plaintext highlighter-rouge">.no-gutters</code>.
+Questo rimuove i margini negativi <code class="language-plaintext highlighter-rouge">margin</code> dalla classe <code class="language-plaintext highlighter-rouge">.row</code> e il <code class="language-plaintext highlighter-rouge">padding</code> orizzontale da tutte le colonne figlie dirette.</p>
 
 <p>Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l’override delle colonne vale solo per le prime colonne figlie e sono agganciate tramite il <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">selettore di attributi</a>.
 Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">utilità di spaziatura</a>.</p>
 
-<p><strong>Hai bisogno di un design edge-to-edge?</strong> Abbandona l’elemento genitore <code class="highlighter-rouge">.container</code> o <code class="highlighter-rouge">.container-fluid</code>.</p>
+<p><strong>Hai bisogno di un design edge-to-edge?</strong> Abbandona l’elemento genitore <code class="language-plaintext highlighter-rouge">.container</code> o <code class="language-plaintext highlighter-rouge">.container-fluid</code>.</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nc">.no-gutters</span> <span class="err">{</span>
   <span class="nl">margin-right</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
@@ -1104,7 +1219,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
   <span class="na">xl</span><span class="p">:</span> <span class="m">28px</span>
 <span class="o">)</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre></figure>
 
-<p>Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe <code class="highlighter-rouge">.row</code>, la classe <code class="highlighter-rouge">.variable-gutters</code>.</p>
+<p>Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe <code class="language-plaintext highlighter-rouge">.row</code>, la classe <code class="language-plaintext highlighter-rouge">.variable-gutters</code>.</p>
 
 <p>In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:</p>
 
@@ -1182,7 +1297,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <h3 id="interruzioni-di-colonna">Interruzioni di colonna</h3>
 
-<p>Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con <code class="highlighter-rouge">width: 100%</code> ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo è realizzato con <code class="highlighter-rouge">.row</code> multiple, ma non tutti i metodi di implementazione possono rendere conto di questo.</p>
+<p>Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con <code class="language-plaintext highlighter-rouge">width: 100%</code> ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo è realizzato con <code class="language-plaintext highlighter-rouge">.row</code> multiple, ma non tutti i metodi di implementazione possono rendere conto di questo.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1234,7 +1349,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <h3 id="classi-order">Classi order</h3>
 
-<p>Usa le classi <code class="highlighter-rouge">.order-</code> per controllare l’ <strong>ordine di visualizzazione</strong> del tuo contenuto. Queste classi sono responsive, così puoi impostare <code class="highlighter-rouge">order</code> tramite breakpoint (e.g., <code class="highlighter-rouge">.order-1.order-md-2</code>). Include il supporto per <code class="highlighter-rouge">1</code> a <code class="highlighter-rouge">12</code> su tutti e cinque i livelli della griglia.</p>
+<p>Usa le classi <code class="language-plaintext highlighter-rouge">.order-</code> per controllare l’ <strong>ordine di visualizzazione</strong> del tuo contenuto. Queste classi sono responsive, così puoi impostare <code class="language-plaintext highlighter-rouge">order</code> tramite breakpoint (e.g., <code class="language-plaintext highlighter-rouge">.order-1.order-md-2</code>). Include il supporto per <code class="language-plaintext highlighter-rouge">1</code> a <code class="language-plaintext highlighter-rouge">12</code> su tutti e cinque i livelli della griglia.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1256,7 +1371,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 </div>
 
-<p>Esiste anche una classe responsive <code class="highlighter-rouge">.order-first</code> che cambia velocemente l’ordine di un elemento applicando <code class="highlighter-rouge">order: -1</code>. Questa classe può anche essere mescolata con le classi numerate <code class="highlighter-rouge">.order-*</code> se necessario.</p>
+<p>Esiste anche una classe responsive <code class="language-plaintext highlighter-rouge">.order-first</code> che cambia velocemente l’ordine di un elemento applicando <code class="language-plaintext highlighter-rouge">order: -1</code>. Questa classe può anche essere mescolata con le classi numerate <code class="language-plaintext highlighter-rouge">.order-*</code> se necessario.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1280,11 +1395,11 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <h3 id="colonne-di-compensazione">Colonne di compensazione</h3>
 
-<p>È possibile sfalsare le colonne della griglia in due modi: con le classi responsive della griglia di Bootstrap <code class="highlighter-rouge">.offset-</code> e con le [utilità per le spaziature] di Bootstrap(/bootstrap-italia/docs/organizzare-gli-spazi/spacing/). Le classi griglia sono dimensionate in modo che corrispondano alle colonne, mentre i margini sono più utili per i layout rapidi in cui la larghezza dell’offset è variabile.</p>
+<p>È possibile sfalsare le colonne della griglia in due modi: con le classi responsive della griglia di Bootstrap <code class="language-plaintext highlighter-rouge">.offset-</code> e con le [utilità per le spaziature] di Bootstrap(/bootstrap-italia/docs/organizzare-gli-spazi/spacing/). Le classi griglia sono dimensionate in modo che corrispondano alle colonne, mentre i margini sono più utili per i layout rapidi in cui la larghezza dell’offset è variabile.</p>
 
 <h4 id="classi-offset">Classi offset</h4>
 
-<p>Sposta le colonne sulla destra usando le classi <code class="highlighter-rouge">.offset-md-*</code>. Queste class aumentano il margine sinistro della colonna con <code class="highlighter-rouge">*</code>. Ad esempio, <code class="highlighter-rouge">.offset-md-4</code> sposta <code class="highlighter-rouge">.col-md-4</code> di quattro colonne.</p>
+<p>Sposta le colonne sulla destra usando le classi <code class="language-plaintext highlighter-rouge">.offset-md-*</code>. Queste class aumentano il margine sinistro della colonna con <code class="language-plaintext highlighter-rouge">*</code>. Ad esempio, <code class="language-plaintext highlighter-rouge">.offset-md-4</code> sposta <code class="language-plaintext highlighter-rouge">.col-md-4</code> di quattro colonne.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1342,7 +1457,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <h4 id="utilità-del-margin">Utilità del margin</h4>
 
-<p>Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come <code class="highlighter-rouge">.mr-auto</code> per forzare lo spazio tra colonne adiacenti.</p>
+<p>Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come <code class="language-plaintext highlighter-rouge">.mr-auto</code> per forzare lo spazio tra colonne adiacenti.</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1376,7 +1491,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <h2 id="annidamento">Annidamento</h2>
 
-<p>Per annidare il contenuto con la griglia predefinita, aggiungi una nuova <code class="highlighter-rouge">.row</code> e un set di colonne <code class="highlighter-rouge">.col-sm-*</code> all’interno di una esistente <code class="highlighter-rouge">.col-sm-*</code>. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario che tu usi tutte e 12 le colonne disponibili).</p>
+<p>Per annidare il contenuto con la griglia predefinita, aggiungi una nuova <code class="language-plaintext highlighter-rouge">.row</code> e un set di colonne <code class="language-plaintext highlighter-rouge">.col-sm-*</code> all’interno di una esistente <code class="language-plaintext highlighter-rouge">.col-sm-*</code>. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario che tu usi tutte e 12 le colonne disponibili).</p>
 
 <div class="bd-example-row">
 <div class="bd-example">
@@ -1418,11 +1533,11 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1439,7 +1554,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -7,19 +7,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità">
 <meta name="author" content="Team per la Trasformazione Digitale">
-<meta name="generator" content="Jekyll v4.0.0">
+<meta name="generator" content="Jekyll v4.1.0">
 
 <title>Bottoni · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202006031556" rel="stylesheet">
 
 <!-- Documentation extras -->
 
 
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet">
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006011648" rel="stylesheet">
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202006031556" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico">
@@ -141,7 +141,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.3.10/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.4.0/bootstrap-italia.zip" aria-label="Download">
           <svg class="icon icon-sm icon-light"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -522,16 +522,16 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
           <p class="bd-lead">Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità</p>
           <h2 id="utilizzo">Utilizzo</h2>
 
-<p>Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe <code class="highlighter-rouge">.btn</code>, associandola a classi di tipo <code class="highlighter-rouge">.btn-</code> per applicarne le varianti di stile, dimensione, ecc.</p>
+<p>Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe <code class="language-plaintext highlighter-rouge">.btn</code>, associandola a classi di tipo <code class="language-plaintext highlighter-rouge">.btn-</code> per applicarne le varianti di stile, dimensione, ecc.</p>
 
 <div class="bd-example">
 <button type="button" class="btn">Link</button>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<p>Le classi <code class="highlighter-rouge">.btn</code> sono state pensate per essere utilizzate con l’elemento <code class="highlighter-rouge">&lt;button&gt;</code>. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo <code class="highlighter-rouge">&lt;a&gt;</code> o <code class="highlighter-rouge">&lt;input&gt;</code>, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.</p>
+<p>Le classi <code class="language-plaintext highlighter-rouge">.btn</code> sono state pensate per essere utilizzate con l’elemento <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.</p>
 
-<p>In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi <code class="highlighter-rouge">role="button"</code> per trasmettere il loro scopo alle tecnologie assistive.</p>
+<p>In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi <code class="language-plaintext highlighter-rouge">role="button"</code> per trasmettere il loro scopo alle tecnologie assistive.</p>
 
 <div class="bd-example">
 <a class="btn" href="#" role="button">Link</a>
@@ -579,8 +579,8 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <h4 id="note-sullo-stato-disabilitato">Note sullo stato disabilitato</h4>
 
 <ul>
-  <li>I tag <code class="highlighter-rouge">&lt;a&gt;</code> non supportano l’attributo <code class="highlighter-rouge">disabled</code>, per cui è necessario usare la classe <code class="highlighter-rouge">.disabled</code> per farli apparire visivamente disabilitati, e in modo da disabilitare <code class="highlighter-rouge">pointer-events</code> su di essi sui browser che lo supportano.</li>
-  <li>I bottoni disabilitati includeranno l’attributo <code class="highlighter-rouge">aria-disabled="true"</code> per indicare lo stato dell’elemento alle tecnologie assistive.</li>
+  <li>I tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> non supportano l’attributo <code class="language-plaintext highlighter-rouge">disabled</code>, per cui è necessario usare la classe <code class="language-plaintext highlighter-rouge">.disabled</code> per farli apparire visivamente disabilitati, e in modo da disabilitare <code class="language-plaintext highlighter-rouge">pointer-events</code> su di essi sui browser che lo supportano.</li>
+  <li>I bottoni disabilitati includeranno l’attributo <code class="language-plaintext highlighter-rouge">aria-disabled="true"</code> per indicare lo stato dell’elemento alle tecnologie assistive.</li>
 </ul>
 
 <div class="bd-example">
@@ -591,7 +591,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-callout bd-callout-warning">
 <h5 id="disabilitazione-link">Disabilitazione link</h5>
 
-<p>La classe <code class="highlighter-rouge">.disabled</code> usa <code class="highlighter-rouge">pointer-events: none</code> per provare a disabilitare l’attivazione dei comportamenti di default dei link <code class="highlighter-rouge">&lt;a&gt;</code>, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l’attributo <code class="highlighter-rouge">tabindex="-1"</code> e utilizzare Javascript per disabilitare le loro funzionalità.</p>
+<p>La classe <code class="language-plaintext highlighter-rouge">.disabled</code> usa <code class="language-plaintext highlighter-rouge">pointer-events: none</code> per provare a disabilitare l’attivazione dei comportamenti di default dei link <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l’attributo <code class="language-plaintext highlighter-rouge">tabindex="-1"</code> e utilizzare Javascript per disabilitare le loro funzionalità.</p>
 </div>
 
 <h4 id="su-sfondo-scuro">Su sfondo scuro</h4>
@@ -625,12 +625,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
 
-<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="highlighter-rouge">.sr-only</code>.</p>
+<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="language-plaintext highlighter-rouge">.sr-only</code>.</p>
 </div>
 
 <h3 id="bottoni-con-icona">Bottoni con icona</h3>
 
-<p>E’ possibile aggiungere un’icona personalizzata al bottone con la classe <code class="highlighter-rouge">.btn-icon</code> in aggiunta alla classe <code class="highlighter-rouge">.btn</code> e alle relative varianti cromatiche e di dimensione.</p>
+<p>E’ possibile aggiungere un’icona personalizzata al bottone con la classe <code class="language-plaintext highlighter-rouge">.btn-icon</code> in aggiunta alla classe <code class="language-plaintext highlighter-rouge">.btn</code> e alle relative varianti cromatiche e di dimensione.</p>
 
 <div class="bd-example">
 <button class="btn btn-success btn-lg btn-icon">
@@ -700,12 +700,12 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <div class="bd-callout bd-callout-warning">
 <h4 id="allineamento-e-spaziatura-dellicona">Allineamento e spaziatura dell’icona</h4>
 
-<p>Nel caso si utilizzi un’icona all’interno di un elemento con classe <code class="highlighter-rouge">.btn</code>, è necessario inserire il <strong>testo</strong> del bottone/link all’interno di un tag <code class="highlighter-rouge">&lt;span/&gt;</code> al fine di garantire un perfetto allineamento ed una corretta spaziatura tra l’icona e lo stesso testo.</p>
+<p>Nel caso si utilizzi un’icona all’interno di un elemento con classe <code class="language-plaintext highlighter-rouge">.btn</code>, è necessario inserire il <strong>testo</strong> del bottone/link all’interno di un tag <code class="language-plaintext highlighter-rouge">&lt;span/&gt;</code> al fine di garantire un perfetto allineamento ed una corretta spaziatura tra l’icona e lo stesso testo.</p>
 </div>
 
 <h4 id="icona-cerchiata">Icona cerchiata</h4>
 
-<p>Inoltre è possibile applicare un contorno cerchiato dell’icona utilizzando un contenitore con classe <code class="highlighter-rouge">.rounded-icon</code> da inserire all’interno della classe <code class="highlighter-rouge">.btn</code> con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori <code class="highlighter-rouge">.rounded-*</code> e <code class="highlighter-rouge">.icon.icon-*</code>.</p>
+<p>Inoltre è possibile applicare un contorno cerchiato dell’icona utilizzando un contenitore con classe <code class="language-plaintext highlighter-rouge">.rounded-icon</code> da inserire all’interno della classe <code class="language-plaintext highlighter-rouge">.btn</code> con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori <code class="language-plaintext highlighter-rouge">.rounded-*</code> e <code class="language-plaintext highlighter-rouge">.icon.icon-*</code>.</p>
 
 <div class="bd-example">
 <button class="btn btn-success btn-lg btn-icon">
@@ -782,7 +782,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h3 id="varianti-di-dimensione">Varianti di dimensione</h3>
 
-<p>Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi <code class="highlighter-rouge">.btn-lg</code>, <code class="highlighter-rouge">.btn-sm</code> e <code class="highlighter-rouge">.btn-xs</code>.</p>
+<p>Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi <code class="language-plaintext highlighter-rouge">.btn-lg</code>, <code class="language-plaintext highlighter-rouge">.btn-sm</code> e <code class="language-plaintext highlighter-rouge">.btn-xs</code>.</p>
 
 <h4 id="large">Large</h4>
 
@@ -811,7 +811,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs"</span><span class="nt">&gt;</span>Primary Mini<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-xs"</span><span class="nt">&gt;</span>Secondary Mini<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<p>Aggiungendo la classe <code class="highlighter-rouge">.btn-block</code> si ottengono invece bottoni che prendono tutta l’ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.</p>
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.btn-block</code> si ottengono invece bottoni che prendono tutta l’ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.</p>
 
 <div class="bd-example">
 <button type="button" class="btn btn-primary btn-lg btn-block">Primary Block</button>
@@ -822,7 +822,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <h2 id="approfondimento">Approfondimento</h2>
 
-<p>Per ulteriori informazioni sui bottoni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.3/components/buttons/">buttons</a> del sito di Bootstrap.</p>
+<p>Per ulteriori informazioni sui bottoni si rimanda alla sezione <a href="https://getbootstrap.com/docs/4.5/components/buttons/">buttons</a> del sito di Bootstrap.</p>
 
         </main>
       </div>
@@ -840,11 +840,11 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
 
 <script>window.__PUBLIC_PATH__ = "/bootstrap-italia/dist/fonts"</script>
 
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006011648"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202006031556"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202006031556"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -861,7 +861,7 @@ if (document.cookie.indexOf('cookies_consent=true') === -1) {
     {src:"/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
   ];
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006011648"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202006031556"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
