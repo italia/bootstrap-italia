@@ -1,4 +1,4 @@
-@mixin text-emphasis-variant($parent, $color) {
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     @if $color == $warning {
       // exception for a11y

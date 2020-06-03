@@ -16,8 +16,9 @@
             color: $header-slim-theme-light-bg-color;
           }
         }
-        button {
+        .btn {
           background: $header-slim-theme-light-button-color;
+          color: $header-slim-theme-light-bg-color;
           &:hover {
             background: $header-slim-theme-light-button-hover-color;
           }

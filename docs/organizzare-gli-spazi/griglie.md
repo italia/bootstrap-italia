@@ -123,7 +123,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
 
 ## Colonne a disposizione automatica
 
-Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come `.col-sm-6`. 
+Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensionamento delle colonne senza una specifica classe numerata come `.col-sm-6`.
 
 ### Uniformare larghezze tra colonne
 
@@ -287,26 +287,95 @@ Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di
 {% endcapture %}{% include example.html content=example %}
 </div>
 
+### Righe di colonne
+
+Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colonne che rendono meglio il tuo contenuto e layout. Mentre le normali classi `.col-` * si applicano alle singole colonne (ad es. `.col-md-4`), le classi delle "righe di colonne" sono impostate sul genitore `.row` come scorciatoia.
+
+<div class="bd-example-row">
+{% capture example %}
+<div class="container">
+  <div class="row row-cols-2">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
+<div class="bd-example-row">
+{% capture example %}
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
+<div class="bd-example-row">
+{% capture example %}
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
+<div class="bd-example-row">
+{% capture example %}
+<div class="container">
+  <div class="row row-cols-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col-6">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
+<div class="bd-example-row">
+{% capture example %}
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+</div>
+
 ## Allineamento
 
 Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e vericalmente le colonne.
 
 ### Allineamento verticale
 
-<div class="bd-example-row bd-example-row-flex-cols">
+<div class="bd-example-row">
 {% capture example %}
 <div class="container">
-  <div class="row align-items-start">
+  <div class="row align-items-start" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
   </div>
-  <div class="row align-items-center">
+  <div class="row align-items-center" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
   </div>
-  <div class="row align-items-end">
+  <div class="row align-items-end" style="min-height: 5rem;">
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
     <div class="col">Una di tre colonne</div>
@@ -315,10 +384,10 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-<div class="bd-example-row bd-example-bg bd-example-row-flex-cols">
+<div class="bd-example-row bd-example-bg">
 {% capture example %}
 <div class="container">
-  <div class="row">
+  <div class="row" style="min-height: 5rem;">
     <div class="col align-self-start">Una di tre colonne</div>
     <div class="col align-self-center">Una di tre colonne</div>
     <div class="col align-self-end">Una di tre colonne</div>
