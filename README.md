@@ -48,6 +48,12 @@ A questo punto, è necessario impostare il tuo ambiente locale per la compilazio
 della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/)
 è possibile avere tutte le informazioni necessarie a questo scopo.
 
+### Ringraziamenti
+
+Molte persone hanno contribuito volontariamente al miglioramento di Bootstrap Italia!
+
+Ringraziamo in particolare [Spottino](https://github.com/Spottino) per la (ri)progettazione delle icone presenti nella libreria, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) e moltissimi altri per i preziosi contributi, e tutti coloro che segnalandoci issue, usando la libreria o semplicemente facendola conoscere ci aiutano a renderla migliore per tutti! 
+
 ## Licenze software dei componenti di terze parti
 
 ### Componenti distribuiti con Bootstrap Italia
