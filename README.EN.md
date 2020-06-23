@@ -43,6 +43,10 @@ If you have not already done so, start by spending a few minutes to deepen your 
 At this point, you'll need to configure the local environment to compile the source files and generate them
 of the documentation. You can find all the information necessary for this purpose at the [page related to the compilation tools](https://translate.google.it/translate?hl=it&sl=it&tl=en&u=https%3A%2F%2Fitalia.github.io%2Fbootstrap-italia%2Fdocs%2Fcome-iniziare%2Fstrumenti-di-compilazione%2F) (automatic translation by Google Translate).
 
+### Acknowledgments
+
+A special thanks to [Spottino](https://github.com/Spottino) for the redesign of the library's icons, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) and many others for their valuable contributions, and anyone who raised issues, used the library or just shared it!
+
 ## Third-party licenses
 
 ### Components distributed by Bootstrap Italia
