@@ -3,6 +3,7 @@
 @import 'node_modules/owl.carousel/src/scss/core';
 @import 'node_modules/owl.carousel/src/scss/animate';
 @import 'node_modules/owl.carousel/src/scss/autoheight';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 
 // funzioni e variabili colore
 @import 'functions';
@@ -62,6 +63,7 @@
 @import 'custom/modal';
 @import 'custom/collapse';
 @import 'custom/carousel';
+@import 'custom/swiper';
 @import 'custom/calendar';
 @import 'custom/alert';
 @import 'custom/buttons';

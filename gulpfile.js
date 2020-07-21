@@ -23,6 +23,7 @@ const Paths = {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/swiper/swiper-bundle.js'
   ],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',

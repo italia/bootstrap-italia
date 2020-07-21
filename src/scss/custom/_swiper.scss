@@ -1,0 +1,10 @@
+.swiper-pagination {
+  position: relative;
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    background: $primary;
+  }
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+}
