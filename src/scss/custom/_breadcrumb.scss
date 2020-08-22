@@ -29,6 +29,7 @@
     // dark version
     &.dark {
       background: $breadcrumb-bg-dark;
+      padding: $breadcrumb-padding;
       color: $breadcrumb-link-color-dark;
       .breadcrumb-item {
         a {
