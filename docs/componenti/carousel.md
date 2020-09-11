@@ -6,6 +6,18 @@ group: componenti
 toc: true
 ---
 
+{% capture callout %}
+##### Plugin opzionale
+
+Per ragioni di performance, dalla versione 1.5 di Bootstrap Italia il codice Javascript del componente Carousel è stato scorporato in un plugin esterno e deve essere incluso separatamente. Per ottenere le funzionalità del componente Carousel è necessario quindi includere anche la libreria dedicata di seguito alla libreria principale di Bootstrap Italia.
+
+{% highlight html %}
+<script src="./bootstrap-italia.bundle.min.js"></script>
+<script src="./bootstrap-italia.plugin.owl.carousel.min.js"></script>
+{% endhighlight %}
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Come funziona
 
 Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e un pò di JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
