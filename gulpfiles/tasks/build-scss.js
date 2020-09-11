@@ -9,7 +9,7 @@ const
 
 module.exports = function (gulp, config) {
   return {
-    lib: function () {
+    buildCSSLibrary: function () {
       return gulp.src(config.Paths.SOURCE_SCSS)
         .pipe(gap.prependText(config.BootstrapItaliaBanner))
         .pipe(sourcemaps.init())
@@ -30,7 +30,7 @@ module.exports = function (gulp, config) {
         .pipe(gulp.dest(config.Paths.DIST + '/css'))
         .pipe(touch())
     },
-    documentation: function () {
+    buildDocsCSSLibrary: function () {
       return gulp.src(config.Paths.SOURCE_DOCUMENTATION_SCSS)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))

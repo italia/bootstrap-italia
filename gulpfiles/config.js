@@ -1,6 +1,7 @@
 const pkg = require('../package.json');
 
 module.exports = {
+  packageJson: pkg,
   Paths: {
     VENDOR_JS: [
       'node_modules/jquery/dist/jquery.js',
@@ -77,6 +78,5 @@ module.exports = {
     '  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 4)) {\n' +
     '   throw new Error("Bootstrap JavaScript requires at least jQuery v1.9.1 but less than v4.0.0")\n' +
     '  }\n' +
-    '}(jQuery);\n',
-  packageJson: require('../package.json')
+    '}(jQuery);\n'
 };

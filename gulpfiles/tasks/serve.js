@@ -43,8 +43,8 @@ module.exports = function (gulp, config) {
           baseDir: config.Paths.SITE,
         },
       })
-      gulp.watch(config.Paths.WATCH, gulp.series('build:library'))
-      gulp.watch(config.Paths.WATCH_DOCUMENTATION, gulp.series('build:docs'))
+      gulp.watch(config.Paths.WATCH, gulp.series('build-library'))
+      gulp.watch(config.Paths.WATCH_DOCUMENTATION, gulp.series('build-docs'))
     }
   }
 }

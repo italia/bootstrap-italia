@@ -24,7 +24,7 @@ const
 
 module.exports = function (gulp, config) {
   return {
-    lib: function () {
+    buildJSLibrary: function () {
       return gulp.src(config.Paths.SOURCE_JS)
         .pipe(concat(config.packageJson.name + '.js'))
         .pipe(sourcemaps.init())
@@ -39,14 +39,8 @@ module.exports = function (gulp, config) {
         .pipe(gulp.dest(config.Paths.DIST + '/js'))
         .pipe(touch())
     },
-    bundle: function () {
-      let sourceFiles = config.Paths.VENDOR_JS
-        .concat(config.Paths.SOURCE_JS)
-        .concat('node_modules/owl.carousel/dist/owl.carousel.js')
-        .concat('src/js/plugins/carousel-owl-carousel.js')
-
-
-      return gulp.src(sourceFiles)
+    buildJSLibraryBundle: function () {
+      return gulp.src(config.Paths.VENDOR_JS.concat(config.Paths.SOURCE_JS))
         .pipe(concat(config.packageJson.name + '.bundle.js'))
         .pipe(sourcemaps.init())
         .pipe(replace(/^(export|import).*/gm, ''))
@@ -58,25 +52,38 @@ module.exports = function (gulp, config) {
         .pipe(gulp.dest(config.Paths.DIST + '/js'))
         .pipe(touch())
     },
-    documentation: {
-      vendor: function () {
-        return gulp
-          .src('docs/assets/src/js/vendor/*.min.js')
-          .pipe(gulp.dest(config.Paths.DIST_DOCUMENTATION + '/js/vendor'))
-          .pipe(touch())
-      },
-      lib: function () {
-        return gulp
-          .src(config.Paths.SOURCE_DOCUMENTATION_JS)
-          .pipe(uglify())
-          .pipe(
-            rename({
-              suffix: '.min',
-            })
-          )
-          .pipe(gulp.dest(config.Paths.DIST_DOCUMENTATION + '/js'))
-          .pipe(touch())
-      }
+    buildJSPluginOwlCarousel: function () {
+      return gulp.src([
+          'node_modules/owl.carousel/dist/owl.carousel.js',
+          'src/js/plugins/carousel-owl-carousel.js'
+        ])
+        .pipe(concat(config.packageJson.name + '.plugin.owl.carousel.js'))
+        .pipe(sourcemaps.init())
+        .pipe(replace(/^(export|import).*/gm, ''))
+        .pipe(babel(BABEL_OPTIONS))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min', }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(config.Paths.DIST + '/js'))
+        .pipe(touch())
+    },
+    buildDocsJSVendor: function () {
+      return gulp
+        .src('docs/assets/src/js/vendor/*.min.js')
+        .pipe(gulp.dest(config.Paths.DIST_DOCUMENTATION + '/js/vendor'))
+        .pipe(touch())
+    },
+    buildDocsJSLibrary: function () {
+      return gulp
+        .src(config.Paths.SOURCE_DOCUMENTATION_JS)
+        .pipe(uglify())
+        .pipe(
+          rename({
+            suffix: '.min',
+          })
+        )
+        .pipe(gulp.dest(config.Paths.DIST_DOCUMENTATION + '/js'))
+        .pipe(touch())
     }
   }
 };
