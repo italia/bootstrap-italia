@@ -67,6 +67,21 @@ module.exports = function (gulp, config) {
         .pipe(gulp.dest(config.Paths.DIST + '/js'))
         .pipe(touch())
     },
+    buildJSPluginSwiper: function () {
+      return gulp.src([
+          'node_modules/swiper/swiper-bundle.js',
+          'src/js/plugins/carousel-swiper.js'
+        ])
+        .pipe(concat(config.packageJson.name + '.plugin.swiper.js'))
+        .pipe(sourcemaps.init())
+        .pipe(replace(/^(export|import).*/gm, ''))
+        .pipe(babel(BABEL_OPTIONS))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min', }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(config.Paths.DIST + '/js'))
+        .pipe(touch())
+    },
     buildDocsJSVendor: function () {
       return gulp
         .src('docs/assets/src/js/vendor/*.min.js')

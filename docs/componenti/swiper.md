@@ -7,6 +7,18 @@ toc: true
 loadScript: swiper
 ---
 
+{% capture callout %}
+##### Plugin opzionale
+
+Per ragioni di performance, dalla versione 1.5 di Bootstrap Italia il codice Javascript del componente Swiper è stato scorporato in un plugin esterno e deve essere incluso separatamente. Per ottenere le funzionalità del componente Swiper è necessario quindi includere anche la libreria dedicata di seguito alla libreria principale di Bootstrap Italia.
+
+{% highlight html %}
+<script src="./bootstrap-italia.bundle.min.js"></script>
+<script src="./bootstrap-italia.plugin.swiper.min.js"></script>
+{% endhighlight %}
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Come funziona
 
 Un componente di tipo *Carousel* presenta i contenuti dentro dei contenitori chiamati *slide* che trammite un'animazione grafica vengono fatti scorrere in orizzontale o in verticale. Il carousel è costruito con trasformazioni CSS 3D e un po' di JavaScript. Ogni slide può contenere un'immagine, un testo, un video, un altro componente della libreria, un codice personalizzato o una qualsiasi combinazione degli elementi appena citati.

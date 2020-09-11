@@ -17,6 +17,7 @@ gulp.task('js-library-bundle', getTask('build-js').buildJSLibraryBundle);
 // Plugins related tasks
 
 gulp.task('js-plugin-owl-carousel', getTask('build-js').buildJSPluginOwlCarousel);
+gulp.task('js-plugin-swiper', getTask('build-js').buildJSPluginSwiper);
 
 // Documentation related tasks
 
@@ -32,7 +33,7 @@ gulp.task('svg-sprite', getTask('build-assets').svgSprite)
 
 // Main build tasks - parallel builds for library and documentation to allow faster watching and rebuild
 
-gulp.task('build-library', gulp.series('assets', 'fonts', 'svg-sprite', 'css-library', 'js-library', 'js-library-bundle', 'js-plugin-owl-carousel'))
+gulp.task('build-library', gulp.series('assets', 'fonts', 'svg-sprite', 'css-library', 'js-library', 'js-library-bundle', 'js-plugin-owl-carousel', 'js-plugin-swiper'))
 gulp.task('build-docs', gulp.series('css-docs', 'js-docs-vendor', 'js-docs'))
 gulp.task('build', gulp.parallel('build-library', 'build-docs'))
 
