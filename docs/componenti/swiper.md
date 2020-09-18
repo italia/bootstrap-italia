@@ -26,7 +26,7 @@ Un componente di tipo *Carousel* presenta i contenuti dentro dei contenitori chi
 Un componente di tipo carousel in genere include il supporto per i controlli, gli indicatori precedente/successivo, il paginatore e tanto altro.
 
 Bootstrap Italia include la libreria [Swiper](https://swiperjs.com/) per realizzare il componente carousel.
-Swiper è un moderno *touch slider* gratuito che utilizza l'accellerazione hardware per le transizioni. È progettato per l'uso in siti web responsive, app web, app native e ibride. Swiper è il componente slider predefinito in Ionic Framework. Si configura tramite dei parametri in json e non richiede quasi mai l'uso di CSS.
+Swiper è un moderno *touch slider* gratuito che utilizza l'accelerazione hardware per le transizioni. È progettato per l'uso in siti web responsive, app web, app native e ibride. Swiper è il componente slider predefinito in Ionic Framework. Si configura tramite dei parametri in json e non richiede quasi mai l'uso di CSS.
 
 Swiper può contenere vari tipi di componenti, solitamente cards o immagini.
 
