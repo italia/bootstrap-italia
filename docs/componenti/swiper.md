@@ -26,7 +26,7 @@ Un componente di tipo *Carousel* presenta i contenuti dentro dei contenitori chi
 Un componente di tipo carousel in genere include il supporto per i controlli, gli indicatori precedente/successivo, il paginatore e tanto altro.
 
 Bootstrap Italia include la libreria [Swiper](https://swiperjs.com/) per realizzare il componente carousel.
-Swiper è un moderno *touch slider* gratuito che utilizza l'accellazione hardware per le transizioni. È progettato per l'uso in siti web responsive, app web, app native e ibride. Swiper è il componente slider predefinito in Ionic Framework. Si configura tramite dei prametri in json e non richiede quasi mai l'uso di CSS.
+Swiper è un moderno *touch slider* gratuito che utilizza l'accelerazione hardware per le transizioni. È progettato per l'uso in siti web responsive, app web, app native e ibride. Swiper è il componente slider predefinito in Ionic Framework. Si configura tramite dei parametri in json e non richiede quasi mai l'uso di CSS.
 
 Swiper può contenere vari tipi di componenti, solitamente cards o immagini.
 
@@ -88,7 +88,7 @@ Basta inserire un qualsiasi componente della libreria dentro una slide (rapprese
 
 ### Titolo e Card semplici
 
-Il seguente è un carousel con card semplici. Nel codice javascript, tramite la configurazione del parametro `breakpoints`, viene impostato il numero di slide visualizzate in base alle dimensioni dello schermo dell'utente.
+Il seguente esempio è un carousel con card semplici. Nel codice javascript, tramite la configurazione del parametro `breakpoints`, viene impostato il numero di slide visualizzate in base alle dimensioni dello schermo dell'utente.
 
 {% capture example %}
 <div class="it-header-block">
@@ -260,7 +260,7 @@ Il codice javascript con la configurazione
 {% endhighlight %}
 
 ### Card "articolo"
-Come il precedente. Basta aggiungere il componente dentro la slide, il codice javascript è identico al precedente.
+Come per il precedente. Basta aggiungere il componente dentro la slide, il codice javascript è identico al precedente.
 
 {% capture example %}
 <!-- Swiper -->
@@ -363,7 +363,7 @@ Come il precedente. Basta aggiungere il componente dentro la slide, il codice ja
 
 ### Card con immagine in evidenza
 
-Contiene un immagine associata ad una card "articolo".
+Contiene un'immagine associata ad una card "articolo".
 
 **Classi da applicare**:
 
