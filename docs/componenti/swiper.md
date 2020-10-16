@@ -4,7 +4,6 @@ title: Swiper
 description: Un componente di tipo carousel per la presentazione di elementi come immagini, video o diapositive di testo.
 group: componenti
 toc: true
-loadScript: swiper
 ---
 
 {% capture callout %}
@@ -21,7 +20,7 @@ Per ragioni di performance, dalla versione 1.5 di Bootstrap Italia il codice Jav
 
 ## Come funziona
 
-Un componente di tipo *Carousel* presenta i contenuti dentro dei contenitori chiamati *slide* che trammite un'animazione grafica vengono fatti scorrere in orizzontale o in verticale. Il carousel è costruito con trasformazioni CSS 3D e un po' di JavaScript. Ogni slide può contenere un'immagine, un testo, un video, un altro componente della libreria, un codice personalizzato o una qualsiasi combinazione degli elementi appena citati.
+Un componente di tipo *Carousel* presenta i contenuti dentro dei contenitori chiamati *slide* che tramite un'animazione grafica vengono fatti scorrere in orizzontale o in verticale. Il carousel è costruito con trasformazioni CSS 3D e un po' di JavaScript. Ogni slide può contenere un'immagine, un testo, un video, un altro componente della libreria, un codice personalizzato o una qualsiasi combinazione degli elementi appena citati.
 
 Un componente di tipo carousel in genere include il supporto per i controlli, gli indicatori precedente/successivo, il paginatore e tanto altro.
 
