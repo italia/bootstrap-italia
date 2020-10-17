@@ -367,7 +367,7 @@ Contiene un'immagine associata ad una card "articolo".
 
 **Classi da applicare**:
 
-div **`swiper-slide`** : viene aggiunta la classe bootstrap `d-lg-flex` che attiva la visualizzazione a 2 colonne per il breackpoint lg.
+div **`swiper-slide`** : viene aggiunta la classe bootstrap `d-lg-flex` che attiva la visualizzazione a 2 colonne per il breakpoint lg.
 
 Per una più ampia documentazione sulle classi flex responsive di bootstrap si rimanda alla guida [bootstrap/Utilities/Flex](https://getbootstrap.com/docs/4.5/utilities/flex/).
 
