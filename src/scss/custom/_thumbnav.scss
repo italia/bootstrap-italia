@@ -8,6 +8,19 @@
   &.thumb-nav-vertical {
     flex-direction: column;
     align-items: baseline;
+    li {
+      height: 160px;
+      width: auto;
+    }
+    .thumb-nav-resizer {
+      width: auto;
+      height: 100%;
+    }
+    &.thumb-nav-small {
+      li {
+        height: 80px;
+      }
+    }
   }
 
   // fixed version
@@ -124,20 +137,19 @@
     position: relative;
     list-style-type: none;
     margin: 8px;
+    width: 240px;
+    flex: 0 1 auto;
   }
 
   // invisible resizer image
   .thumb-nav-resizer {
     width: 100%;
     height: auto;
-    max-width: 240px;
-    max-height: 160px;
     visibility: hidden;
   }
   &.thumb-nav-small {
-    .thumb-nav-resizer {
-      max-width: 120px;
-      max-height: 80px;
+    li {
+      width: 120px;
     }
   }
 
