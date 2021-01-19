@@ -14,8 +14,8 @@ Ogni `.timeline-element` contiene:
 - **PIN**: ogni pin contiene un icona, ed una label indicante la data dell'evento.  
 
 Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
-- `.it-evidence` : per indicare nella timeline eventi del passato (colore bli scuro)  
-- `.it-now` : per indicare nella timeline eventi coloocati nel presente (azzurro)  
+- `.it-evidence` : per indicare nella timeline eventi del passato (colore blu scuro)  
+- `.it-now` : per indicare nella timeline eventi collocati nel presente (azzurro)  
 - Nessuna classe aggiuntiva: per collocare gli eventi nel futuro. (azzurro chiaro)  
 
 {% capture example %}
