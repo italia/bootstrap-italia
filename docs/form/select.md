@@ -58,7 +58,7 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 
 ### Select con reset
 
-Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiserata, all'interno dell'attributo "**data-content**" il seguente html:
+Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all'interno dell'attributo "**data-content**" il seguente html:
 `"Label del tasto reset <span class='reset-label'></span>"`
 
 All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
