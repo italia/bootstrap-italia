@@ -13,7 +13,7 @@ Per l'utilizzo delle icone è necessario aggiungere la sprite presente nella lib
 
 ## Esempi
 
-Ogni icona può essere inclusa semplicemente creando un tag `<svg>` con riferimento all'àncora desiderata: 
+Ogni icona può essere inclusa semplicemente creando un tag `<svg>` con riferimento all'àncora desiderata:
 
 {% capture example %}
 <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-tool"></use></svg>
@@ -55,7 +55,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 ### Allineamenti
 
-È possibile usare le classi di allineamento per posizionare le icone all'interno di un elemento. 
+È possibile usare le classi di allineamento per posizionare le icone all'interno di un elemento.
 
 {% capture example %}
 <div style="line-height: 4em;">

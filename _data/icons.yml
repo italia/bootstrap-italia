@@ -67,10 +67,12 @@ regular:
   - it-more-actions
   - it-more-items
   - it-note
+  - it-open-source
   - it-pa
   - it-password-invisible
   - it-password-visible
   - it-pencil
+  - it-piattaforme
   - it-pin
   - it-plug
   - it-plus
@@ -79,9 +81,12 @@ regular:
   - it-print
   - it-refresh
   - it-restore
+  - it-rss
+  - it-rss-square
   - it-search
   - it-settings
   - it-share
+  - it-software
   - it-star-full
   - it-star-outline
   - it-telephone
@@ -107,6 +112,7 @@ social:
   - it-linkedin-square
   - it-medium
   - it-medium-square
+  - it-telegram
   - it-twitter
   - it-twitter-square
   - it-whatsapp
