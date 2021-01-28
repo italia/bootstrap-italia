@@ -1,9 +1,9 @@
 // primary color ---------------------------------
 .primary-bg {
-  background-color: $primary;
+  background-color: $primary !important;
 }
 .primary-color {
-  color: $primary;
+  color: $primary !important;
 }
 .primary-border-color {
   border-color: $primary !important;
@@ -14,10 +14,10 @@
 
 // white
 .white-bg {
-  background-color: $white;
+  background-color: $white !important;
 }
 .white-color {
-  color: $white;
+  color: $white !important;
 }
 .white-border-color- {
   border-color: $white !important;
@@ -35,10 +35,10 @@ $colorlist: $primary-a1 $primary-a2 $primary-a3 $primary-a4 $primary-a5
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .primary-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .primary-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .primary-border-color-a#{$i} {
     border-color: $color !important;
@@ -54,10 +54,10 @@ $colorlist: $primary-b1 $primary-b2 $primary-b3 $primary-b4 $primary-b5
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .primary-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .primary-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .primary-border-color-b#{$i} {
     border-color: $color !important;
@@ -74,10 +74,10 @@ $colorlist: $primary-c1 $primary-c2 $primary-c3 $primary-c4 $primary-c5
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .primary-bg-c#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .primary-color-c#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .primary-border-color-c#{$i} {
     border-color: $color !important;
@@ -88,10 +88,10 @@ $colorlist: $primary-c1 $primary-c2 $primary-c3 $primary-c4 $primary-c5
 }
 // accent colors-----------------------------------------------------------
 .analogue-1-bg {
-  background-color: $analogue-1;
+  background-color: $analogue-1 !important;
 }
 .analogue-1-color {
-  color: $analogue-1;
+  color: $analogue-1 !important;
 }
 .analogue-1-border-color- {
   border-color: $analogue-1 !important;
@@ -108,10 +108,10 @@ $colorlist: $analogue-1-a1 $analogue-1-a2 $analogue-1-a3 $analogue-1-a4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .analogue-1-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .analogue-1-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .analogue-1-border-color-a#{$i} {
     border-color: $color !important;
@@ -122,10 +122,10 @@ $colorlist: $analogue-1-a1 $analogue-1-a2 $analogue-1-a3 $analogue-1-a4
 }
 // analog 2
 .analogue-2-bg {
-  background-color: $analogue-2;
+  background-color: $analogue-2 !important;
 }
 .analogue-2-color {
-  color: $analogue-2;
+  color: $analogue-2 !important;
 }
 .analogue-2-border-color- {
   border-color: $analogue-2 !important;
@@ -140,10 +140,10 @@ $colorlist: $analogue-2-a1 $analogue-2-a2 $analogue-2-a3 $analogue-2-a4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .analogue-2-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .analogue-2-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .analogue-2-border-color-a#{$i} {
     border-color: $color !important;
@@ -155,10 +155,10 @@ $colorlist: $analogue-2-a1 $analogue-2-a2 $analogue-2-a3 $analogue-2-a4
 
 // complementary 1
 .complementary-1-bg {
-  background-color: $complementary-1;
+  background-color: $complementary-1 !important;
 }
 .complementary-1-color {
-  color: $complementary-2;
+  color: $complementary-2 !important;
 }
 .complementary-1-border-color- {
   border-color: $complementary-1 !important;
@@ -174,10 +174,10 @@ $colorlist: $complementary-1-a1 $complementary-1-a2 $complementary-1-a3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-1-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-1-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-1-border-color-a#{$i} {
     border-color: $color !important;
@@ -189,10 +189,10 @@ $colorlist: $complementary-1-a1 $complementary-1-a2 $complementary-1-a3
 
 // complementary 2
 .complementary-2-bg {
-  background-color: $complementary-2;
+  background-color: $complementary-2 !important;
 }
 .complementary-2-color {
-  color: $complementary-2;
+  color: $complementary-2 !important;
 }
 .complementary-2-border-color- {
   border-color: $complementary-2 !important;
@@ -208,10 +208,10 @@ $colorlist: $complementary-2-a1 $complementary-2-a2 $complementary-2-a3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-2-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-2-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-2-border-color-a#{$i} {
     border-color: $color !important;
@@ -223,10 +223,10 @@ $colorlist: $complementary-2-a1 $complementary-2-a2 $complementary-2-a3
 
 // complementary 3
 .complementary-3-bg {
-  background-color: $complementary-3;
+  background-color: $complementary-3 !important;
 }
 .complementary-3-color {
-  color: $complementary-3;
+  color: $complementary-3 !important;
 }
 .complementary-3-border-color- {
   border-color: $complementary-3 !important;
@@ -242,10 +242,10 @@ $colorlist: $complementary-3-a1 $complementary-3-a2 $complementary-3-a3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-3-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-3-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-3-border-color-a#{$i} {
     border-color: $color !important;
@@ -258,10 +258,10 @@ $colorlist: $complementary-3-a1 $complementary-3-a2 $complementary-3-a3
 // accent colors toni------------------
 // analog 1
 .analogue-1-bg {
-  background-color: $analogue-1;
+  background-color: $analogue-1 !important;
 }
 .analogue-1-color {
-  color: $analogue-1;
+  color: $analogue-1 !important;
 }
 .analogue-1-border-color- {
   border-color: $analogue-1 !important;
@@ -275,10 +275,10 @@ $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .analogue-1-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .analogue-1-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .analogue-1-border-color-b#{$i} {
     border-color: $color !important;
@@ -290,10 +290,10 @@ $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4
 
 // analog 2
 .analogue-2-bg {
-  background-color: $analogue-2;
+  background-color: $analogue-2 !important;
 }
 .analogue-2-color {
-  color: $analogue-2;
+  color: $analogue-2 !important;
 }
 .analogue-2-border-color- {
   border-color: $analogue-2 !important;
@@ -307,10 +307,10 @@ $colorlist: $analogue-2-b1 $analogue-2-b2 $analogue-2-b3 $analogue-2-b4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .analogue-2-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .analogue-2-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .analogue-2-border-color-b#{$i} {
     border-color: $color !important;
@@ -328,10 +328,10 @@ $colorlist: $complementary-1-b1 $complementary-1-b2 $complementary-1-b3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-1-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-1-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-1-border-color-b#{$i} {
     border-color: $color !important;
@@ -349,10 +349,10 @@ $colorlist: $complementary-2-b1 $complementary-2-b2 $complementary-2-b3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-2-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-2-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-2-border-color-b#{$i} {
     border-color: $color !important;
@@ -370,10 +370,10 @@ $colorlist: $complementary-3-b1 $complementary-3-b2 $complementary-3-b3
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .complementary-3-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .complementary-3-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .complementary-3-border-color-b#{$i} {
     border-color: $color !important;
@@ -385,10 +385,10 @@ $colorlist: $complementary-3-b1 $complementary-3-b2 $complementary-3-b3
 
 // neutral 1
 .neutral-1-bg {
-  background-color: $neutral-1;
+  background-color: $neutral-1 !important;
 }
 .neutral-1-color {
-  color: $neutral-1;
+  color: $neutral-1 !important;
 }
 .neutral-1-border-color- {
   border-color: $neutral-1 !important;
@@ -404,10 +404,10 @@ $colorlist: $neutral-1-a1 $neutral-1-a2 $neutral-1-a3 $neutral-1-a4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .neutral-1-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .neutral-1-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .neutral-1-border-color-a#{$i} {
     border-color: $color !important;
@@ -419,10 +419,10 @@ $colorlist: $neutral-1-a1 $neutral-1-a2 $neutral-1-a3 $neutral-1-a4
 
 // neutral 2
 .neutral-2-bg {
-  background-color: $neutral-2;
+  background-color: $neutral-2 !important;
 }
 .neutral-2-color {
-  color: $neutral-2;
+  color: $neutral-2 !important;
 }
 .neutral-2-border-color- {
   border-color: $neutral-2;
@@ -434,10 +434,10 @@ $colorlist: $neutral-2-b1 $neutral-2-b2 $neutral-2-b3 $neutral-2-b4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .neutral-2-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .neutral-2-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .neutral-2-border-color-b#{$i} {
     border-color: $color !important;
@@ -453,10 +453,10 @@ $colorlist: $neutral-2-a1 $neutral-2-a2 $neutral-2-a3 $neutral-2-a4
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .neutral-2-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .neutral-2-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .neutral-2-border-color-a#{$i} {
     border-color: $color !important;
@@ -472,10 +472,10 @@ $colorlist: $lightgrey-a1 $lightgrey-a2 $lightgrey-a3 $lightgrey-a4;
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .lightgrey-bg-a#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .lightgrey-color-a#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .lightgrey-border-color-a#{$i} {
     border-color: $color !important;
@@ -491,10 +491,10 @@ $colorlist: $lightgrey-b1 $lightgrey-b2 $lightgrey-b3 $lightgrey-b4;
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .lightgrey-bg-b#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .lightgrey-color-b#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .lightgrey-border-color-b#{$i} {
     border-color: $color !important;
@@ -510,10 +510,10 @@ $colorlist: $lightgrey-c1 $lightgrey-c2;
 @for $i from 1 through length($colorlist) {
   $color: nth($colorlist, $i);
   .lightgrey-bg-c#{$i} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .lightgrey-color-c#{$i} {
-    color: $color;
+    color: $color !important;
   }
   .lightgrey-border-color-c#{$i} {
     border-color: $color !important;
