@@ -76,6 +76,7 @@
     "jquery": "^3.5.1",
     "owl.carousel": "2.3.4",
     "popper.js": "1.16.1",
-    "svgxuse": "1.2.6"
+    "svgxuse": "1.2.6",
+    "swiper": "^6.0.4"
   }
 }

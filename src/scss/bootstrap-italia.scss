@@ -4,6 +4,21 @@
 @import 'node_modules/owl.carousel/src/scss/animate';
 @import 'node_modules/owl.carousel/src/scss/autoheight';
 
+// Swiper
+@import 'node_modules/swiper/components/a11y/a11y';
+@import 'node_modules/swiper/components/controller/controller';
+@import 'node_modules/swiper/components/effect-coverflow/effect-coverflow';
+@import 'node_modules/swiper/components/effect-cube/effect-cube';
+@import 'node_modules/swiper/components/effect-fade/effect-fade';
+@import 'node_modules/swiper/components/effect-flip/effect-flip';
+@import 'node_modules/swiper/components/lazy/lazy';
+@import 'node_modules/swiper/components/navigation/navigation';
+@import 'node_modules/swiper/components/pagination/pagination';
+@import 'node_modules/swiper/components/scrollbar/scrollbar';
+@import 'node_modules/swiper/components/thumbs/thumbs';
+@import 'node_modules/swiper/components/zoom/zoom';
+@import 'node_modules/swiper/swiper';
+
 // funzioni e variabili colore
 @import 'functions';
 @import 'utilities/colors_vars';
@@ -62,6 +77,7 @@
 @import 'custom/modal';
 @import 'custom/collapse';
 @import 'custom/carousel';
+@import 'custom/swiper';
 @import 'custom/calendar';
 @import 'custom/alert';
 @import 'custom/buttons';
