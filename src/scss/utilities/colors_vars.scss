@@ -2,8 +2,8 @@
 // è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
 
 // Color system
-$black: hsl(0, 0, 0) !default;
-$white: hsl(0, 0, 100) !default;
+$black: hsl(0, 0%, 0%) !default;
+$white: hsl(0, 0%, 100%) !default;
 
 $gray-100: hsb(225, 0, 90) !default;
 $gray-200: hsb(225, 0, 80) !default;
