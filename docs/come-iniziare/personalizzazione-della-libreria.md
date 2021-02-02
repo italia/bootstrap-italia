@@ -6,7 +6,7 @@ group: personalizzazione-libreria
 toc: true
 ---
 
-**Bootstrap Italia** eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all'occorenza.  
+**Bootstrap Italia** eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all'occorenza.
 Un esempio fra tutti è il valore del colore `$primary` che in **Bootstrap Italia** è rappresentato dal colore blu `#0066CC`, tipico della libreria.
 
 L'utilizzo del blu `#0066CC` dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di **Bootstrap Italia**, impostando nuovi valori per le proprie necessità.
@@ -16,7 +16,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 ### Sovrascrivere le variabili colore
 
 1. Installare **Bootstrap Italia** con `yarn/npm: yarn add bootstrap-italia --save`
-2. Installare **node-sass**: `yarn add node-sass`
+2. Installare **sass**: `yarn add sass`
 3. Creare all'interno del progetto una cartella **scss**
 4. Dentro alla cartella **scss** creare un file di tipo **bootstrap-italia-custom.scss**
 5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))
@@ -27,7 +27,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 ##### Bootstrap Italia Playground
 
 <div class="text-center">
-<img class="rounded" src="{{ site.baseurl }}/docs/assets/img/bootstrap-italia-playground.png" width="400" alt="Esempio di pagina personalizzata con Bootstrap Italia Playground"> 
+<img class="rounded" src="{{ site.baseurl }}/docs/assets/img/bootstrap-italia-playground.png" width="400" alt="Esempio di pagina personalizzata con Bootstrap Italia Playground">
 </div>
 
 Il **modo più semplice per creare una versione personalizzata di Bootstrap Italia**, è seguire i passi indicati nel repository di esempio **[Bootstrap Italia Playground](https://github.com/italia/bootstrap-italia-playground)**.
