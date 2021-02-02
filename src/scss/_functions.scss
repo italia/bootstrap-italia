@@ -12,11 +12,11 @@
   }
 
   @if $b-hsb < 1 {
-    @return hsl(0, 0, 0);
+    @return hsl(0, 0%, 0%);
   } @else {
     $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
     $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-    @return hsl($h-hsb, $s-hsl, $l-hsl);
+    @return hsl($h-hsb, $s-hsl * 1%, $l-hsl * 1%);
   }
 }
 

@@ -69,7 +69,7 @@ Software components distributed with Bootstrap Italia that have their own differ
 - [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, MIT license
 - [Babel](https://babeljs.io/), © Sebastian McKenzie, MIT license
 - [Prettier](https://prettier.io/), © James Long and contributorsv
-- [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, MIT license
+- [sass](https://github.com/sass/dart-sass), © Google Inc., MIT license
 - [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, MIT license
 
 ### Main dependencies for the documentation

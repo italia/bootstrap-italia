@@ -103,6 +103,8 @@ const jqueryVersionCheck =
 
 // Library related tasks
 
+sass.compiler = require('sass');
+
 gulp.task('scss-min', () => {
   return gulp
     .src(Paths.SOURCE_SCSS)

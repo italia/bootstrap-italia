@@ -52,7 +52,7 @@ della documentazione. Alla [pagina relativa agli strumenti di compilazione](http
 
 Molte persone hanno contribuito volontariamente al miglioramento di Bootstrap Italia!
 
-Ringraziamo in particolare [Spottino](https://github.com/Spottino) per la (ri)progettazione delle icone presenti nella libreria, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) e moltissimi altri per i preziosi contributi, e tutti coloro che segnalandoci issue, usando la libreria o semplicemente facendola conoscere ci aiutano a renderla migliore per tutti! 
+Ringraziamo in particolare [Spottino](https://github.com/Spottino) per la (ri)progettazione delle icone presenti nella libreria, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) e moltissimi altri per i preziosi contributi, e tutti coloro che segnalandoci issue, usando la libreria o semplicemente facendola conoscere ci aiutano a renderla migliore per tutti!
 
 ## Licenze software dei componenti di terze parti
 
@@ -76,7 +76,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 - Build system per le librerie Javascript e CSS [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, licenza MIT
 - Transpiler per moduli Javascript [Babel](https://babeljs.io/), © Sebastian McKenzie, licenza MIT
 - Code formatter per Javascript [Prettier](https://prettier.io/), © James Long and contributors, licenza MIT
-- Compilazione SASS [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, licenza MIT
+- Compilazione SASS [sass](https://github.com/sass/dart-sass), © Google Inc., licenza MIT
 - GitHub REST API client per JavaScript [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
 
 ### Componenti utilizzati per la documentazione
