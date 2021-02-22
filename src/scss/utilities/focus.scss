@@ -4,7 +4,8 @@
   outline: none;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+:focus:not(:focus-visible) {
+  border-color: initial;
   box-shadow: none;
 }
 
