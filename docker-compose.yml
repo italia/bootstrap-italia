@@ -1,0 +1,15 @@
+#
+# Docker for testing the pdf build of the doc.
+#
+# $ docker-compose up --build bootstrap-italia
+version: "3.0"
+services:
+  bootstrap-italia:
+    build: .
+    volumes:
+    - .:/code
+    working_dir: /code
+      #entrypoint: ["sh", "-c", "sleep 2073600"]
+    ports:
+      - 4000:4000
+    command: bash -c "bundle install && npm install && npm start"
