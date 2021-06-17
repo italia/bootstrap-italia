@@ -89,6 +89,8 @@ const bootstrapItaliaBanner = [
   '',
 ].join('\n')
 
+const jqueryToGlobVar =
+  "var $ = jQuery.noConflict();\n"
 const jqueryCheck =
   "if (typeof jQuery === 'undefined') {\n" +
   "  throw new Error('Bootstrap\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\'s JavaScript.')\n" +
@@ -150,6 +152,7 @@ gulp.task('js-min', () => {
     )
     .pipe(uglify())
     .pipe(gap.prependText(jqueryVersionCheck, '\n\n'))
+    .pipe(gap.prependText(jqueryToGlobVar, '\n\n'))
     .pipe(gap.prependText(jqueryCheck, '\n\n'))
     .pipe(gap.prependText(bootstrapItaliaBanner, '\n\n'))
     .pipe(
