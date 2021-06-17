@@ -179,6 +179,7 @@ gulp.task('js-bundle-min', () => {
       })
     )
     .pipe(uglify())
+    .pipe(gap.prependText(jqueryToGlobVar))
     .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
