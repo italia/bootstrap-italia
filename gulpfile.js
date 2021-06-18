@@ -171,6 +171,7 @@ gulp.task('js-bundle-min', () => {
     .pipe(concat(pkg.name + '.bundle.js'))
     .pipe(sourcemaps.init())
     .pipe(replace(/^(export|import).*/gm, ''))
+    .pipe(gap.appendText(jqueryToGlobVar))
     .pipe(
       babel({
         compact: true,
@@ -179,7 +180,6 @@ gulp.task('js-bundle-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(gap.prependText(jqueryToGlobVar))
     .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
