@@ -39,7 +39,7 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli head
 {% capture example %}
 <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Avviso di successo!</h4>
-  <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sarà più a lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>
+  <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sarà più lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>
   <hr>
   <p class="mb-0">Quando necessario, assicurarti di inserire le utilità di margine per mantenere gli spazi equilibrati.</p>
 </div>
