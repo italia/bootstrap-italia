@@ -203,7 +203,7 @@ textarea {
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
-    left: -9999px;
+    opacity: 0;
 
     + label {
       position: relative;
