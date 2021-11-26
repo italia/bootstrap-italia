@@ -6,7 +6,7 @@
 
 *Read this in other languages: [Italiano](README.md).*
 
-Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
+Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
 Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 4, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
