@@ -284,6 +284,7 @@ gulp.task('jekyll', done => {
           '--drafts',
           '--config',
           '_config.yml',
+          '--force_polling'
         ])
       : spawn('bundle', [
           'exec',
@@ -294,6 +295,7 @@ gulp.task('jekyll', done => {
           '--drafts',
           '--config',
           '_config.yml',
+          '--force_polling'
         ])
 
   const jekyllOutput = buffer => {
@@ -332,6 +334,8 @@ gulp.task('sync', () => {
   browserSync.init({
     files: [DOCUMENTATION_DESTINATION + '/**'],
     port: 4000,
+    proxy: "dev:4000",
+    open: false,
     server: {
       baseDir: DOCUMENTATION_DESTINATION,
     },
