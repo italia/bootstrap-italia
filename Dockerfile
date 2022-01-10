@@ -1,6 +1,6 @@
 FROM timbru31/ruby-node:3.0-16
 
-WORKDIR /app 
+WORKDIR /app
 
 EXPOSE 3001
 EXPOSE 4000

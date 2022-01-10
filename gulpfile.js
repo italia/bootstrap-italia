@@ -104,6 +104,13 @@ const jqueryVersionCheck =
   '  }\n' +
   '}(jQuery);\n'
 
+// Force reload
+
+gulp.task('force-reload', (done) => {
+  browserSync.reload();
+  done();
+})
+
 // Library related tasks
 
 gulp.task('scss-min', () => {
@@ -317,7 +324,8 @@ gulp.task(
     'js-min',
     'js-bundle-min',
     'fonts',
-    'assets'
+    'assets',
+    'force-reload'
   )
 )
 
@@ -325,7 +333,7 @@ gulp.task(
 
 gulp.task(
   'build-documentation',
-  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min')
+  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min', 'force-reload')
 )
 
 // Sync
@@ -334,7 +342,6 @@ gulp.task('sync', () => {
   browserSync.init({
     files: [DOCUMENTATION_DESTINATION + '/**'],
     port: 4000,
-    proxy: "dev:4000",
     open: false,
     server: {
       baseDir: DOCUMENTATION_DESTINATION,
