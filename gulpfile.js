@@ -1,5 +1,9 @@
+
+const gulpSass = require('gulp-sass')
+const nodeSass = require('node-sass')
+
 const gulp = require('gulp'),
-  sass = require('gulp-sass'),
+  sass = gulpSass(nodeSass),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   cleanCSS = require('gulp-clean-css'),
