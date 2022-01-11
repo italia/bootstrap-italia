@@ -80,6 +80,9 @@ const Paths = {
   JS_WATCH: 'src/js/**/**',
   SCSS_DOCUMENTATION_WATCH: 'docs/assets/src/scss/**/**',
   JS_DOCUMENTATION_WATCH: 'docs/assets/src/js/**/**',
+  SVG_WATCH: 'src/svg',
+  FONTS_WATCH: 'src/fonts',
+  ASSETS_WATCH: 'src/assets',
 }
 
 const bootstrapItaliaBanner = [
@@ -317,8 +320,46 @@ gulp.task('jekyll', done => {
   jekyll.stderr.on('data', jekyllOutput)
 })
 
-// Library
 
+// CSS
+gulp.task(
+  'build-css',
+  gulp.series(
+    'scss-min',
+  )
+)
+// SVG
+gulp.task(
+  'build-svg',
+  gulp.series(
+    'svg-sprite',
+  )
+)
+// js
+gulp.task(
+  'build-js',
+  gulp.series(
+    'js-min',
+    'js-bundle-min',
+  )
+)
+// fonts
+gulp.task(
+  'build-fonts',
+  gulp.series(
+    'fonts',
+  )
+)
+
+// Assets
+gulp.task(
+  'build-assets',
+  gulp.series(
+    'assets',
+  )
+)
+
+// Library
 gulp.task(
   'build-library',
   gulp.series(
@@ -352,9 +393,33 @@ gulp.task('sync', () => {
   })
 
   gulp.watch(
-    [Paths.SCSS_WATCH, Paths.JS_WATCH],
+    [Paths.SCSS_WATCH],
     {interval: 1000, usePolling: true},
-    gulp.series('build-library')
+    gulp.series('build-css')
+  )
+
+  gulp.watch(
+    [Paths.JS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-js')
+  )
+  
+  gulp.watch(
+    [Paths.SVG_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-svg')
+  )
+
+  gulp.watch(
+    [Paths.FONTS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-fonts')
+  )
+
+  gulp.watch(
+    [Paths.ASSETS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-assets')
   )
 
   gulp.watch(
