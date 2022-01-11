@@ -10,8 +10,9 @@ COPY ./Gemfile.lock /app
 COPY ./package-lock.json /app
 COPY ./package.json /app
 
+RUN bundle config set --local deployment true
 RUN bundle install
 
-RUN npm i
+RUN npm ci
 
 RUN npm i gulp -g

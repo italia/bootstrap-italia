@@ -5,6 +5,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/vendor
     ports:
       - "3001:3001"
       - "4000:4000"
