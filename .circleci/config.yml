@@ -24,7 +24,7 @@ defaults: &defaults
     tags:
       only: /^v?[0-9]+(\.[0-9]+)*/
   docker:
-    - image: circleci/ruby:2.6.0-node
+    - image: cimg/ruby:3.0.3-node
       environment:
         BUNDLER_VERSION: 2.0.1
         BUNDLE_PATH: vendor/bundle

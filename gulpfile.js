@@ -1,5 +1,9 @@
+
+const gulpSass = require('gulp-sass')
+const nodeSass = require('node-sass')
+
 const gulp = require('gulp'),
-  sass = require('gulp-sass'),
+  sass = gulpSass(nodeSass),
   autoprefixer = require('gulp-autoprefixer'),
   sourcemaps = require('gulp-sourcemaps'),
   cleanCSS = require('gulp-clean-css'),
@@ -42,7 +46,6 @@ const Paths = {
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
-    'src/js/plugins/cookiebar.js',
     'src/js/plugins/dropdown.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
@@ -77,6 +80,9 @@ const Paths = {
   JS_WATCH: 'src/js/**/**',
   SCSS_DOCUMENTATION_WATCH: 'docs/assets/src/scss/**/**',
   JS_DOCUMENTATION_WATCH: 'docs/assets/src/js/**/**',
+  SVG_WATCH: 'src/svg',
+  FONTS_WATCH: 'src/fonts',
+  ASSETS_WATCH: 'src/assets',
 }
 
 const bootstrapItaliaBanner = [
@@ -100,6 +106,13 @@ const jqueryVersionCheck =
   "    throw new Error('Bootstrap\\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0')\n" +
   '  }\n' +
   '}(jQuery);\n'
+
+// Force reload
+
+gulp.task('force-reload', (done) => {
+  browserSync.reload();
+  done();
+})
 
 // Library related tasks
 
@@ -281,6 +294,7 @@ gulp.task('jekyll', done => {
           '--drafts',
           '--config',
           '_config.yml',
+          '--force_polling'
         ])
       : spawn('bundle', [
           'exec',
@@ -291,19 +305,61 @@ gulp.task('jekyll', done => {
           '--drafts',
           '--config',
           '_config.yml',
+          '--force_polling'
         ])
 
   const jekyllOutput = buffer => {
     log('Jekyll: ' + buffer.toString())
-    if (buffer.toString().indexOf('done') > -1) done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
+    if (buffer.toString().indexOf('done') > -1) {
+      browserSync.reload();
+      done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
+    }
   }
 
   jekyll.stdout.on('data', jekyllOutput)
   jekyll.stderr.on('data', jekyllOutput)
 })
 
-// Library
 
+// CSS
+gulp.task(
+  'build-css',
+  gulp.series(
+    'scss-min',
+  )
+)
+// SVG
+gulp.task(
+  'build-svg',
+  gulp.series(
+    'svg-sprite',
+  )
+)
+// js
+gulp.task(
+  'build-js',
+  gulp.series(
+    'js-min',
+    'js-bundle-min',
+  )
+)
+// fonts
+gulp.task(
+  'build-fonts',
+  gulp.series(
+    'fonts',
+  )
+)
+
+// Assets
+gulp.task(
+  'build-assets',
+  gulp.series(
+    'assets',
+  )
+)
+
+// Library
 gulp.task(
   'build-library',
   gulp.series(
@@ -312,7 +368,8 @@ gulp.task(
     'js-min',
     'js-bundle-min',
     'fonts',
-    'assets'
+    'assets',
+    'force-reload'
   )
 )
 
@@ -320,7 +377,7 @@ gulp.task(
 
 gulp.task(
   'build-documentation',
-  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min')
+  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min', 'force-reload')
 )
 
 // Sync
@@ -329,15 +386,45 @@ gulp.task('sync', () => {
   browserSync.init({
     files: [DOCUMENTATION_DESTINATION + '/**'],
     port: 4000,
+    open: false,
     server: {
       baseDir: DOCUMENTATION_DESTINATION,
     },
   })
 
-  gulp.watch([Paths.SCSS_WATCH, Paths.JS_WATCH], gulp.series('build-library'))
+  gulp.watch(
+    [Paths.SCSS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-css')
+  )
+
+  gulp.watch(
+    [Paths.JS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-js')
+  )
+  
+  gulp.watch(
+    [Paths.SVG_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-svg')
+  )
+
+  gulp.watch(
+    [Paths.FONTS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-fonts')
+  )
+
+  gulp.watch(
+    [Paths.ASSETS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-assets')
+  )
 
   gulp.watch(
     [Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH],
+    {interval: 1000, usePolling: true},
     gulp.series('build-documentation')
   )
 })
