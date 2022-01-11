@@ -307,7 +307,10 @@ gulp.task('jekyll', done => {
 
   const jekyllOutput = buffer => {
     log('Jekyll: ' + buffer.toString())
-    if (buffer.toString().indexOf('done') > -1) done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
+    if (buffer.toString().indexOf('done') > -1) {
+      browserSync.reload();
+      done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
+    }
   }
 
   jekyll.stdout.on('data', jekyllOutput)
