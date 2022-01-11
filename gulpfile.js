@@ -348,10 +348,15 @@ gulp.task('sync', () => {
     },
   })
 
-  gulp.watch([Paths.SCSS_WATCH, Paths.JS_WATCH], gulp.series('build-library'))
+  gulp.watch(
+    [Paths.SCSS_WATCH, Paths.JS_WATCH],
+    {interval: 1000, usePolling: true},
+    gulp.series('build-library')
+  )
 
   gulp.watch(
     [Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH],
+    {interval: 1000, usePolling: true},
     gulp.series('build-documentation')
   )
 })
