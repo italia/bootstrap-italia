@@ -52,7 +52,7 @@ della documentazione. Alla [pagina relativa agli strumenti di compilazione](http
 
 Molte persone hanno contribuito volontariamente al miglioramento di Bootstrap Italia!
 
-Ringraziamo in particolare [Spottino](https://github.com/Spottino) per la (ri)progettazione delle icone presenti nella libreria, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) e moltissimi altri per i preziosi contributi, e tutti coloro che segnalandoci issue, usando la libreria o semplicemente facendola conoscere ci aiutano a renderla migliore per tutti! 
+Ringraziamo in particolare [Spottino](https://github.com/Spottino) per la (ri)progettazione delle icone presenti nella libreria, [avol-io](https://github.com/avol-io), [gtico80](https://github.com/gtico80), [smartm0use](https://github.com/smartm0use) e moltissimi altri per i preziosi contributi, e tutti coloro che segnalandoci issue, usando la libreria o semplicemente facendola conoscere ci aiutano a renderla migliore per tutti!
 
 ## Licenze software dei componenti di terze parti
 
@@ -83,7 +83,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 
 Di seguito sono elencati invece i componenti utilizzati per il sito della documentazione ma non ridistribuiti nella libreria Bootstrap Italia
 
-- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, licenza MIT
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, licenza MIT
 - [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, licenza MIT
 - [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, licenza MIT
 - [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, licenza MIT

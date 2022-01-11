@@ -76,7 +76,7 @@ Software components distributed with Bootstrap Italia that have their own differ
 
 The components used for the documentation site but not redistributed with the Bootstrap Italia library are listed below:
 
-- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, MIT license
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, MIT license
 - [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, MIT license
 - [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, MIT license
 - [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, MIT license
