@@ -20,7 +20,7 @@
     "build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
-    "documentation-deploy-to-gh-pages": "bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _site -m 'Update documentation [ci skip]'",
+    "documentation-deploy-to-gh-pages": "JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _site -m 'Update documentation [ci skip]'",
     "release": "node scripts/release",
     "bump-major": "npm version major -m \"Release %s\"",
     "bump-minor": "npm version minor -m \"Release %s\"",
