@@ -6,7 +6,7 @@
 
 *Read this in other languages: [Italiano](README.md).*
 
-Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
+Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
 Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 4, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
@@ -76,7 +76,7 @@ Software components distributed with Bootstrap Italia that have their own differ
 
 The components used for the documentation site but not redistributed with the Bootstrap Italia library are listed below:
 
-- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, MIT license
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, MIT license
 - [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, MIT license
 - [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, MIT license
 - [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, MIT license
