@@ -204,6 +204,10 @@ textarea {
   [type='radio'] {
     position: absolute;
     opacity: 0;
+    left: 9px;
+    top: 9px;
+    margin-left: 0;
+    margin-top: 0;
 
     + label {
       position: relative;
