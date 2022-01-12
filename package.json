@@ -25,7 +25,6 @@
     "bump-major": "npm version major -m \"Release %s\"",
     "bump-minor": "npm version minor -m \"Release %s\"",
     "bump-patch": "npm version patch -m \"Release %s\"",
-    "preversion": "npm test",
     "version": "node scripts/config-sync && git add _config.yml",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
     "test": "npm run test-htmlproofer",
