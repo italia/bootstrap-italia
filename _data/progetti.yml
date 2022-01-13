@@ -37,14 +37,15 @@
 - category: Temi
   description: Di seguito sono riportati alcuni progetti che semplificano la creazione di progetti con Bootstrap Italia e diversi CMS o framework per il web. Sono tutti in piena evoluzione e necessitano dell'aiuto di tutti per essere completati, resi pienamente conformi ed esenti da problemi. Se vuoi contruibire contattaci o crea una Pull Request sul repository!
   examples:
+    - name: Tema Drupal 8/9
+      url: "https://github.com/italia/design-drupal-theme"
+      description: Un tema open-source per il CMS <a href="https://drupal.org/" target="_blank" rel="noopener noreferrer">Drupal</a>, da utilizzare per tutti i siti web delle PA, dai comuni alle scuole.
     - name: Tema WordPress
       url: "https://github.com/italia/design-wordpress-theme/"
       description: Un tema open-source per il CMS <a href="https://it.wordpress.org/" target="_blank" rel="noopener noreferrer">WordPress</a>, creato dalla community degli sviluppatori.
-      status: work in progress
     - name: Tema WordPress ItaliaWP2
       url: "https://github.com/italia/design-wordpress-theme-italiaWP2"
       description: Un tema open-source per il CMS <a href="https://it.wordpress.org/" target="_blank" rel="noopener noreferrer">WordPress</a>, creato da <a href="http://borisamico.it/" target="_blank" rel="noopener noreferrer">Boris Amico</a>.
-      status: work in progress
     - name: Tema WordPress per le Scuole
       url: "https://github.com/italia/design-scuole-wordpress-theme"
       description: Il template Wordpress per i siti delle scuole è basato sul modello di siti per le scuole italiane.
@@ -54,18 +55,12 @@
     - name: Tema Django
       url: "https://github.com/italia/design-django-theme/"
       description: Un tema open-source per il framework web Python <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">Django</a>, creato dalla community degli sviluppatori.
-      status: work in progress
     - name: Tema Laravel
       url: "https://github.com/italia/design-laravel-theme/"
       description: Un tema open-source per il framework web PHP <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a>, creato dalla community degli sviluppatori.
-      status: work in progress
     - name: Tema Hugo
       url: "https://github.com/italia/hugo-theme-bootstrap-italia/"
       description: Un tema open-source per il generatore di siti statici <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>, creato dalla community degli sviluppatori.
-      status: work in progress
-    - name: Tema Symfony
-      url: "https://github.com/ComuneFI/BootstrapitaliaBundle/"
-      description: Un tema open-source per il framework web PHP <a href="https://symfony.com/" target="_blank" rel="noopener noreferrer">Symfony</a>, creato dalla community degli sviluppatori.
       status: work in progress
     - name: Tema Gatsby
       url: "https://github.com/italia/design-italia-gatsby-starterkit"
