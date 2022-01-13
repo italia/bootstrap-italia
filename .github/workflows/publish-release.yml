@@ -1,0 +1,43 @@
+name: Generate new release
+on:  
+  push:
+    tags:
+      - 'v*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: 
+      image: timbru31/ruby-node:3.0-16
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        # Always release the tip of the default branch
+        ref: master
+    - name: git config
+      run: |
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+    - run: apt-get update && apt-get install zip
+    - run: bundle install
+    - run: npm i gulp -g
+    - run: chmod -R 777 .
+    - run: npm ci
+    - run: npm run build
+    - run: npm i extract-changelog-release
+    - name: Generate Release Body
+      run: npx extract-changelog-release > RELEASE_BODY.md
+    - run: sh ./scripts/create-release-attachment.sh
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "./dist/zip/*.zip"
+        bodyFile: "RELEASE_BODY.md"
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish on gh-pages
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        rm -rf ./dist && npm run documentation-deploy-to-gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

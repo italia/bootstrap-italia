@@ -1,4 +1,5 @@
 on: [push, pull_request]
+name: Test project
 jobs:
   container:
     runs-on: ubuntu-latest
