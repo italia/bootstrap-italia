@@ -29,6 +29,7 @@ label {
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 0 $input-spacing-x;
+    width: 100% !important;
     // z-index: 6;
 
     &.active {
