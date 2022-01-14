@@ -81,8 +81,8 @@
         fill: $primary;
         height: $v-gap * 2;
         width: $v-gap * 2;
-        margin-left: $v-gap/2;
-        margin-bottom: $v-gap/2;
+        margin-left: $v-gap*0.5;
+        margin-bottom: $v-gap*0.5;
       }
     }
   }

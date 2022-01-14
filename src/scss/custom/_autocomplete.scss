@@ -22,7 +22,7 @@
   position: absolute;
   right: 0;
   top: 0.5rem;
-  padding: 0 $spacer/2;
+  padding: 0 $spacer*0.5;
   background-color: $white;
   .icon {
     fill: $gray-secondary;
@@ -112,7 +112,7 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         display: block;
-        margin-top: $v-gap/2;
+        margin-top: $v-gap*0.5;
       }
     }
   }

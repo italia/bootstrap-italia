@@ -39,7 +39,7 @@ label {
   small.form-text {
     position: absolute;
     margin: 0;
-    padding: $input-spacing-x/2 $input-spacing-x;
+    padding: $input-spacing-x*0.5 $input-spacing-x;
     font-size: $small-font-size;
   }
 

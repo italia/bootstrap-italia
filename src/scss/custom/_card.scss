@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .card-wrapper {
   padding-bottom: $v-gap * 3;
   display: flex;
@@ -308,8 +310,8 @@
   }
   // cards with background
   &.card-bg {
-    margin-left: $card-padding/3;
-    margin-right: $card-padding/3;
+    margin-left: math.div($card-padding, 3);
+    margin-right: math.div($card-padding, 3);
     box-shadow: $card-shadow;
     background: $card-shadow-bg;
     &:after {
@@ -410,8 +412,8 @@
       }
       &:after {
         background: $primary-a3;
-        left: $card-padding/2;
-        top: $card-padding/2;
+        left: $card-padding*0.5;
+        top: $card-padding*0.5;
         transition: all 0.3s;
       }
       .img-responsive {
@@ -640,8 +642,8 @@
   width: 0;
   height: 0;
   border-bottom: 13px solid $card-shadow-bg;
-  border-left: $flag-icon-w/2 solid transparent;
-  border-right: $flag-icon-w/2 solid transparent;
+  border-left: $flag-icon-w*0.5 solid transparent;
+  border-right: $flag-icon-w*0.5 solid transparent;
 }
 
 // read more text
@@ -711,7 +713,7 @@ a.read-more {
   .card-wrapper {
     padding-bottom: 0;
     &.card-space {
-      padding-bottom: $card-padding/2;
+      padding-bottom: $card-padding*0.5;
     }
     &.card-offset {
       margin-top: 90px;
@@ -720,7 +722,7 @@ a.read-more {
   .card {
     border: none;
     // border-right: 1px solid $card-border-color;
-    margin-right: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width*0.5;
     &.card-bg,
     &.card-img {
       margin: 0;

@@ -611,7 +611,7 @@ $transfer-height: 240px;
 
 //Timeline
 $timeline-width: 4px;
-$timeline-padding: ($v-gap * 3)-$grid-gutter-width/2;
+$timeline-padding: ($v-gap * 3) - calc($grid-gutter-width / 2);
 $timeline-border-color: linear-gradient(0deg, $primary 0%, #004080 100%);
 $timeline-pin-size: $v-gap * 3;
 $timeline-pin-circle-size: 48px;

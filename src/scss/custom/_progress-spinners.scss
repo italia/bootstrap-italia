@@ -75,11 +75,11 @@
       width: $v-gap * 6;
       height: $v-gap * 3;
       overflow: hidden;
-      margin-left: -$v-gap/2;
+      margin-left: -$v-gap*0.5;
       opacity: 0;
       transition: opacity 0.3s;
       &:nth-child(1) {
-        margin-top: -$v-gap/2;
+        margin-top: -$v-gap*0.5;
       }
       &:nth-child(2) {
         transform: rotate(180deg);

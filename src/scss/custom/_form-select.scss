@@ -290,7 +290,7 @@
             //color: rgba(255,255,255,0);
             .select-pill {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap/2 $v-gap;
+              padding: $v-gap*0.5 $v-gap;
               border: 1px solid $select-label-color;
               color: $select-label-color;
               line-height: 1;
@@ -316,7 +316,7 @@
             .form-check [type='checkbox'] + label,
             .form-check [type='radio'] + label {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap/2 $v-gap;
+              padding: $v-gap*0.5 $v-gap;
               border: 1px solid $select-label-color;
               color: $select-label-color;
               line-height: 1;
