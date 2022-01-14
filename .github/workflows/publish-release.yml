@@ -1,12 +1,12 @@
 name: Generate new release
-on:  
+on:
   push:
     tags:
       - 'v*'
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: 
+    container:
       image: timbru31/ruby-node:3.0-16
     permissions:
       contents: write
@@ -26,6 +26,10 @@ jobs:
     - run: chmod -R 777 .
     - run: npm ci
     - run: npm run build
+    - name: Publish package to NPM
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: npm i extract-changelog-release
     - name: Generate Release Body
       run: npx extract-changelog-release > RELEASE_BODY.md
