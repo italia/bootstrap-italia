@@ -1,6 +1,6 @@
 # Bootstrap Italia
 
-[![Version](https://img.shields.io/github/release/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/releases)
+[![Version](https://img.shields.io/npm/v/bootstrap-italia.svg?logo=npm)](https://github.com/italia/bootstrap-italia/releases)
 [![Build](https://github.com/italia/bootstrap-italia/actions/workflows/ci.yml/badge.svg)](https://github.com/italia/bootstrap-italia/actions)
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
