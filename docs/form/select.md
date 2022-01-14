@@ -15,8 +15,8 @@ La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione">
+  <label for="selectExample1">Etichetta</label>
+  <select id="selectExample1" title="Scegli una opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -29,7 +29,8 @@ La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita
 Non utilizzando questa struttura di elementi, la select viene mostrata come prevede il sistema operativo, senza modifiche:
 
 {% capture example %}
-<select title="Scegli una opzione">
+<label for="defaultSelect">Etichetta</label>
+<select id="defaultSelect" title="Scegli una opzione">
   <option value="Value 1">Opzione 1</option>
   <option value="Value 2">Opzione 2</option>
   <option value="Value 3">Opzione 3</option>
@@ -44,8 +45,8 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 
 {% capture example %}
 <div class="bootstrap-select-wrapper disabled">
-  <label>Etichetta</label>
-  <select disabled title="Scegli una opzione">
+  <label for="selectExample2">Etichetta</label>
+  <select id="selectExample2" disabled title="Scegli una opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -65,8 +66,8 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione">
+  <label for="selectExample3">Etichetta</label>
+  <select id="selectExample3" title="Scegli una opzione">
     <option value="" title="Scegli una opzione" data-content="Annulla <span class='reset-label'></span>"></option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -82,8 +83,8 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
+  <label for="selectExample4">Etichetta</label>
+  <select id="selectExample4" title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -125,8 +126,8 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione" multiple="true" data-multiple-separator="">
+  <label for="selectExample5">Etichetta</label>
+  <select id="selectExample5" title="Scegli una opzione" multiple="true" data-multiple-separator="">
     <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
     <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
     <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
@@ -141,8 +142,8 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione">
+  <label for="selectExample6">Etichetta</label>
+  <select id="selectExample6" title="Scegli una opzione">
     <optgroup label="Gruppo 1">
       <option value="1">Opzione 1</option>
       <option value="2">Opzione 2</option>
@@ -169,8 +170,8 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 
 {% capture example %}
 <div class="bootstrap-select-wrapper no-tick">
-  <label>Etichetta</label>
-  <select title="Scegli una opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
+  <label for="selectExample7">Etichetta</label>
+  <select id="selectExample7" title="Scegli una opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
     <optgroup label="Gruppo 1">
       <option value="1" data-content="<span class='form-check' aria-describedby=''><input type='checkbox' data-id='checkbox1' ><label for='checkbox1'>Label di esempio 1</label></span>" check-id="checkbox1"></option>
       <option value="2" data-content="<span class='form-check' aria-describedby=''><input type='checkbox' data-id='checkbox2' ><label for='checkbox2'>Label di esempio 2</label></span>" check-id="checkbox2"></option>
