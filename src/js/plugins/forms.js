@@ -13,7 +13,7 @@ $(function() {
   const inputFileSelector = 'input[type="file"]'
 
   const handleLabelWidth = $input => {
-    const labelsForInput = $input.siblings('label:not(.active)')
+    const labelsForInput = $("label[for='" + $input.attr('id') + "']:not(.active)")
     if (labelsForInput && labelsForInput.length) {
       let labelWidth =
         labelsForInput[0].offsetWidth > $input[0].offsetWidth - 20
@@ -26,8 +26,9 @@ $(function() {
   $(document)
     .on('focus', inputSelector, e => {
       const $this = $(e.target)
-      $this.siblings('label, i').addClass('active')
-      const labelsForInput = $this.siblings('label')
+      const labelSelector = "label[for='" + $this.attr('id') + "']"
+      $(labelSelector).addClass('active')
+      const labelsForInput = $(labelSelector)
       if (labelsForInput && labelsForInput.length) {
         $(labelsForInput[0]).css('width', 'auto')
       }
@@ -38,7 +39,7 @@ $(function() {
       const noPlaceholder = !$this.attr('placeholder')
 
       if (noValue && noPlaceholder) {
-        $this.siblings('label, i').removeClass('active')
+        $("label[for='" + $this.attr('id') + "']").removeClass('active')
         handleLabelWidth($this)
       }
     })
@@ -49,7 +50,7 @@ $(function() {
     })
     .on('blur', inputFileSelector, e => {
       const $this = $(e.target)
-      $this.siblings('label').addClass('active')
+      $("label[for='" + $this.attr('id') + "']").addClass('active')
     })
     .on('change', inputFileSelector, e => {
       const $this = $(e.target)
@@ -65,11 +66,11 @@ $(function() {
       if (numFiles > 1) {
         multi = numFiles + ' file da caricare: '
       }
-      $this.siblings('.form-file-name').text(multi + nomiFiles)
+      $("label[for='" + $this.attr('id') + "']label[class='form-file-name']").text(multi + nomiFiles)
     })
 
   const updateTextFields = $input => {
-    const $labelAndIcon = $input.siblings('label, i')
+    const $labelAndIcon = $("label[for='" + $input.attr('id') + "']")
     const hasValue = $input.val().length
     const hasPlaceholder = !!$input.attr('placeholder')
     if (hasValue || hasPlaceholder) {
@@ -107,14 +108,13 @@ $(function() {
         const hasDefaultValue = !!$this.val()
         const hasPlaceholder = !!$this.attr('placeholder')
         if (hasDefaultValue || hasPlaceholder) {
-          $this
-            .siblings('label, i')
+          $("label[for='" + $this.attr('id') + "']")
             .css('transition', 'none')
             .addClass('active')
         }
 
         if (!hasDefaultValue && !hasPlaceholder) {
-          $this.siblings('label, i').removeClass('active')
+          $("label[for='" + $this.attr('id') + "']").removeClass('active')
           handleLabelWidth($this)
         }
       })
