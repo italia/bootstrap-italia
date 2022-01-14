@@ -1,6 +1,5 @@
-
 const gulpSass = require('gulp-sass')
-const nodeSass = require('node-sass')
+const nodeSass = require('sass')
 
 const gulp = require('gulp'),
   sass = gulpSass(nodeSass),
@@ -407,7 +406,7 @@ gulp.task('sync', () => {
     {interval: 1000, usePolling: true},
     gulp.series('build-js')
   )
-  
+
   gulp.watch(
     [Paths.SVG_WATCH],
     {interval: 1000, usePolling: true},
