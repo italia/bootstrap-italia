@@ -9,5 +9,3 @@ const fs = require('fs');
     console.log('changelog.txt has been created successfully.');
   });
 })();
-
-
