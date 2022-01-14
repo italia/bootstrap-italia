@@ -1,4 +1,6 @@
 //mobile
+@use "sass:math";
+
 .it-header-wrapper {
   .it-nav-wrapper {
     position: relative;
@@ -14,8 +16,8 @@
       top: 50%;
       margin-top: -$header-nav-button-distance;
       nav {
-        padding-left: $header-general-padding - ($grid-columns/2);
-        padding-right: $header-general-padding - ($grid-columns/2);
+        padding-left: $header-general-padding - ($grid-columns*0.5);
+        padding-right: $header-general-padding - ($grid-columns*0.5);
         .custom-navbar-toggler {
           padding: 0;
           transform: translateX(-2px);
@@ -66,8 +68,8 @@
                   }
                   .icon {
                     fill: $header-center-text-color;
-                    width: $header-center-icon-size / 2;
-                    height: $header-center-icon-size / 2;
+                    width: $header-center-icon-size * 0.5;
+                    height: $header-center-icon-size * 0.5;
                     margin-right: $header-center-icon-margin;
                     flex-shrink: 0;
                   }
@@ -79,7 +81,7 @@
               display: flex;
               align-items: center;
               align-self: center;
-              margin-left: $header-center-search-distance / 3;
+              margin-left: math.div($header-center-search-distance, 3);
               font-size: $header-center-text-size;
               color: $header-center-text-color;
               a {
@@ -163,8 +165,8 @@
         top: inherit;
         margin-top: 0;
         nav {
-          padding-left: $header-general-padding - ($grid-columns/2);
-          padding-right: $header-general-padding - ($grid-columns/2);
+          padding-left: $header-general-padding - ($grid-columns*0.5);
+          padding-right: $header-general-padding - ($grid-columns*0.5);
         }
       }
     }

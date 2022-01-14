@@ -225,51 +225,51 @@ $primary-b8: hsb($primary-h, $primary-s - 70, $primary-b - 70);
 //-------------------------Saturazione------------------------------------------
 $primary-c1: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 90/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 90 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c2: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 80/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 80 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c3: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 70/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 70 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c4: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 60/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 60 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c5: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 50/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 50 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c6: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 40/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 40 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c7: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 30/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 30 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c8: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 20/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 20 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
 $primary-c9: hsb(
   $primary-h,
-  $primary-s - ($primary-s * 10/100),
-  $primary-b + ($primary-b * 20 / 100)
+  $primary-s - calc($primary-s * 10 / 100),
+  $primary-b + calc($primary-b * 20 / 100)
 );
-$primary-c10: hsb($primary-h, $primary-s, $primary-b + ($primary-b * 20 / 100));
-$primary-c11: hsb($primary-h, $primary-s, $primary-b + ($primary-b * 10 / 100));
+$primary-c10: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 20 / 100));
+$primary-c11: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 10 / 100));
 $primary-c12: hsb($primary-h, $primary-s, $primary-b);
 
 //***********************************************************************

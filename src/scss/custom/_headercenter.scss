@@ -4,8 +4,8 @@
   height: $header-center-max-height-mob;
   display: flex;
   align-items: center;
-  padding-left: $header-general-padding - ($grid-columns/2);
-  padding-right: $header-general-padding - ($grid-columns/2);
+  padding-left: $header-general-padding - ($grid-columns*0.5);
+  padding-right: $header-general-padding - ($grid-columns*0.5);
   &.it-small-header {
     height: $header-center-small-mob-height;
   }
@@ -80,8 +80,8 @@
       font-size: $header-center-text-size;
       a {
         &.rounded-icon {
-          width: $header-center-search-size/2;
-          height: $header-center-search-size/2;
+          width: $header-center-search-size*0.5;
+          height: $header-center-search-size*0.5;
           display: block;
           display: flex;
           justify-content: center;
@@ -105,7 +105,7 @@
   .it-header-center-wrapper
     .it-header-center-content-wrapper
     .it-search-wrapper {
-    margin-left: $header-center-search-distance/2;
+    margin-left: $header-center-search-distance*0.5;
   }
   .it-header-center-wrapper
     .it-header-center-content-wrapper
@@ -129,12 +129,12 @@
       }
       .it-header-center-content-wrapper .it-brand-wrapper a h3 {
         font-size: $header-center-small-h3-size;
-        margin-top: $v-gap/2;
+        margin-top: $v-gap*0.5;
       }
     }
     .it-header-center-content-wrapper {
-      padding-left: $header-general-padding - ($grid-columns/2);
-      padding-right: $header-general-padding - ($grid-columns/2);
+      padding-left: $header-general-padding - ($grid-columns*0.5);
+      padding-right: $header-general-padding - ($grid-columns*0.5);
       //padding-top:$header-center-pad;
       //padding-bottom:$header-center-pad;
       display: flex;

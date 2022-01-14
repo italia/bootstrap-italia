@@ -268,7 +268,7 @@
       margin-bottom: -$hero-negative-margin-desk;
       .it-hero-text-wrapper {
         padding-bottom: $hero-negative-bottom-padding;
-        padding-top: $hero-text-padding-desk + $hero-negative-margin-desk/2;
+        padding-top: $hero-text-padding-desk + $hero-negative-margin-desk*0.5;
       }
     }
   }

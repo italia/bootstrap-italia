@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .avatar {
   display: inline-flex;
   overflow: hidden;
@@ -180,7 +182,7 @@
       height: 15px;
     }
     .avatar-status {
-      top: $avatar-base-size/48;
+      top: math.div($avatar-base-size, 48);
     }
   }
   &.size-xl {
@@ -203,7 +205,7 @@
       bottom: $avatar-base-size;
     }
     .avatar-status {
-      top: $avatar-base-size/4;
+      top: $avatar-base-size*0.25;
     }
   }
   &.size-xxl {

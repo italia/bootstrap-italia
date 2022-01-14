@@ -2,7 +2,7 @@
 
 .bd-masthead {
   position: relative;
-  padding: 3rem ($grid-gutter-width / 2);
+  padding: 3rem $grid-gutter-width*0.5;
 
   h1 {
     line-height: 1;

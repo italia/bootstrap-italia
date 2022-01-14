@@ -469,7 +469,7 @@
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity $dropdown-menu-animation-speed/2
+        transition: opacity $dropdown-menu-animation-speed*0.5
           cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
@@ -494,7 +494,7 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed/2;
+        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed*0.5;
       }
     }
   }

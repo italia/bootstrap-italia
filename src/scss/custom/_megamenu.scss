@@ -1,4 +1,6 @@
 //megamenu mobile definition
+@use "sass:math";
+
 .navbar {
   .navbar-collapsable {
     .menu-wrapper {
@@ -50,7 +52,7 @@
                 &.it-more a {
                   margin-top: 0;
                   i {
-                    margin-left: $grid-gutter-width/2;
+                    margin-left: $grid-gutter-width*0.5;
                   }
                 }
                 &:last-child {
@@ -104,9 +106,9 @@
 
                 .description-content {
                   padding-left: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width/2;
+                    $grid-gutter-width*0.5;
                   padding-right: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width/2;
+                    $grid-gutter-width*0.5;
                   &:before {
                     content: '';
                     display: block;
@@ -140,7 +142,7 @@
     }
     .margin-right-col {
       .it-external {
-        padding: 0 $grid-gutter-width/2;
+        padding: 0 $grid-gutter-width*0.5;
       }
     }
     .it-external {
@@ -198,7 +200,7 @@
         margin-left: -$megamenu-column-gap;
         margin-right: -$megamenu-column-gap;
         margin-bottom: -$megamenu-padding-top-desktop;
-        padding: $megamenu-column-gap/2 $megamenu-column-gap;
+        padding: $megamenu-column-gap*0.5 $megamenu-column-gap;
         .link-list-wrapper {
           .link-list {
             li a.list-item {
@@ -242,10 +244,10 @@
             .dropdown-menu {
               .row.max-height-col {
                 min-height: 100%;
-                margin-right: -($megamenu-column-gap + $grid-gutter-width / 2 +
+                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 +
                       1);
                 .row.max-height-col {
-                  margin-right: -$grid-gutter-width / 2;
+                  margin-right: -$grid-gutter-width * 0.5;
                 }
                 .margin-right-col {
                   margin-right: $megamenu-column-gap;
@@ -257,7 +259,7 @@
                 margin-top: -$megamenu-padding-top-desktop;
                 margin-bottom: -$megamenu-padding-top-desktop;
                 margin-right: -$megamenu-column-gap;
-                margin-left: ($grid-gutter-width / -2);
+                margin-left: math.div($grid-gutter-width, -2);
                 .link-list-wrapper {
                   ul.link-list {
                     width: 100%;
@@ -383,7 +385,7 @@
                     &.it-more {
                       margin-top: auto;
                       a {
-                        margin-top: $link-list-h-pad/2;
+                        margin-top: $link-list-h-pad*0.5;
                         &:before {
                         }
                         i {

@@ -2,7 +2,7 @@
 .it-header-slim-wrapper {
   background: $header-slim-bg-color;
   padding: $header-slim-v-padding-mob $header-general-padding -
-    ($grid-columns/2);
+    ($grid-columns*0.5);
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;
@@ -132,7 +132,7 @@
           padding-bottom: $header-slim-lang-v-padding;
           text-decoration: none;
           .icon {
-            margin-left: $v-gap/2;
+            margin-left: $v-gap*0.5;
           }
         }
         &.navbar-brand {

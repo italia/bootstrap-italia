@@ -29,7 +29,7 @@
         }
       }
       .modal-footer {
-        padding: $modal-padding/2 $modal-padding;
+        padding: $modal-padding*0.5 $modal-padding;
       }
     }
   }
@@ -68,7 +68,7 @@
 
             span {
               color: $primary-a6;
-              margin-right: $v-gap/2;
+              margin-right: $v-gap*0.5;
             }
           }
         }
@@ -94,7 +94,7 @@
       }
       .modal-header {
         padding-top: $v-gap * 2;
-        margin-bottom: -$v-gap/2;
+        margin-bottom: -$v-gap*0.5;
       }
       .modal-body {
         padding-top: $v-gap * 2;
