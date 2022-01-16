@@ -88,8 +88,8 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
     <div class="col-md-4">
       <div class="bootstrap-select-wrapper">
-        <label>Provincia</label>
-        <select title="Scegli un'opzione">
+        <label for="selectID">Provincia</label>
+        <select id="selectID" title="Scegli un'opzione">
           <option value="Value 1">Opzione 1</option>
           <option value="Value 2">Opzione 2</option>
           <option value="Value 3">Opzione 3</option>
@@ -181,8 +181,8 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
     </div>
     <div class="form-group">
       <div class="bootstrap-select-wrapper">
-        <label>Field Label</label>
-        <select disabled title="Seleziona una opzione">
+        <label for="selectID2">Field Label</label>
+        <select id="selectID2" disabled title="Seleziona una opzione">
           <option value="Value 1">Opzione 1</option>
           <option value="Value 2">Opzione 2</option>
           <option value="Value 3">Opzione 3</option>
