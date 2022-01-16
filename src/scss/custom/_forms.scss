@@ -29,7 +29,7 @@ label {
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 0 $input-spacing-x;
-    // z-index: 6;
+    z-index: 1;
 
     &.active {
       transform: translateY(-75%);
