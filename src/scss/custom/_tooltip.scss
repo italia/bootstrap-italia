@@ -29,14 +29,14 @@
 //small - tablet
 @media (min-width: #{map-get($grid-breakpoints, sm)}) {
   .tooltip {
-    font-size: 0.667rem;
+    font-size: 0.75rem;
   }
 }
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .tooltip {
-    font-size: 0.556rem;
+    font-size: 0.75rem;
     //text
     .tooltip-inner {
       padding: 4.5px $v-gap;
