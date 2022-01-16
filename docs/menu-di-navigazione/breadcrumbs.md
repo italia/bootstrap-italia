@@ -53,11 +53,13 @@ Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire l'SVG co
 
 ### Su sfondo scuro
 
-Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`
+Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`.
+
+Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differente aggiungere la classe di spaziatura `px-3` al `<ol class="breadcrumb dark">` per creare un padding laterale.
 
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="breadcrumb">
-  <ol class="breadcrumb dark">
+  <ol class="breadcrumb dark px-3">
     <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
     <li class="breadcrumb-item"><a href="#">Subsection</a><span class="separator">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Current section</li>
@@ -66,7 +68,7 @@ Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al t
 
 <hr>
 <nav class="breadcrumb-container" aria-label="breadcrumb">
-  <ol class="breadcrumb dark">
+  <ol class="breadcrumb dark px-3">
     <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
     <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Subsection</a><span class="separator">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Current section</li>
