@@ -29,8 +29,8 @@ Clicca sull'icona per visualizzare il datepicker.
 {% capture example %}
 <div class="it-datepicker-wrapper">
   <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
     <label for="date1">Date label</label>
+    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -44,8 +44,8 @@ Clicca sull'icona per visualizzare il datepicker.
 {% capture example %}
 <div class="it-datepicker-wrapper theme-dark">
   <div class="form-group">
-    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
     <label for="date2">Date label</label>
+    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

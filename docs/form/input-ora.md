@@ -31,13 +31,13 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
       <div>
         <div class="calendar-input-container">
           <div class="form-group">
+            <label for="txtTime1">Label timepicker</label>
             <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm">
             <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
               <svg class="icon">
                 <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clock"></use>
               </svg>
             </button>
-            <label for="txtTime1">Label timepicker</label>
           </div>
         </div>
       </div>
@@ -83,13 +83,13 @@ Clicca sull'icona per visualizzare il datepicker.
       <div>
         <div class="calendar-input-container">
           <div class="form-group">
+            <label for="txtTime2">Label timepicker</label>
             <input class="form-control txtTime" id="txtTime2" type="text" placeholder="hh:mm">
             <button class="btn-time" id="btnTime2" aria-label="Time picker - Scadenza">
               <svg class="icon">
                 <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clock"></use>
               </svg>
             </button>
-            <label for="txtTime2">Label timepicker</label>
           </div>
         </div>
       </div>
