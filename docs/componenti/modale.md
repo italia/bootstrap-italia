@@ -29,13 +29,15 @@ Assicurati di aggiungere sempre:
 
 Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
 
+Nel caso non fosse presente un titolo al quale legare l'attributo `aria-labelledby="..."` puoi etichettare la modale direttamente utilizzando l'attributo   `aria-label="Titolo modale"`. Vedi esempio [Modale semplice - Basico](#modale-popconfirm)
+
 Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
 - Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
-e rimuove lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
+e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
 - Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automativamente.
 - A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)
 non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
@@ -56,13 +58,14 @@ Sono inclusi l'intestazione, il corpo, e il footer della modale. È
 richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.
 
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title">
+   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="modal1Title">dialog header</h5>
             </div>
             <div class="modal-body">
+               <p id="modal1Description">Modal purpose description text.</p>
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
@@ -76,13 +79,14 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 
 {% highlight html %}
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title">
+   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="modal1Title">dialog header</h5>
             </div>
             <div class="modal-body">
+               <p id="modal1Description">Modal purpose description text.</p>
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
