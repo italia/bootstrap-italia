@@ -463,10 +463,10 @@ abbr[title] {
       height: 40px;
       cursor: pointer;
 
-	  &:focus:not(.focus--mouse) {
-		  background-color: transparent;
-		  box-shadow: 0 0 0 2px $focus-outline-color;
-	  }
+      &:focus:not(.focus--mouse) {
+        background-color: transparent;
+        box-shadow: 0 0 0 2px $focus-outline-color;
+      }
 
       &:hover {
         all: unset;
