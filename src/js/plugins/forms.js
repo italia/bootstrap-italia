@@ -16,6 +16,7 @@ $(function() {
     const labelsForInput = $input.siblings('label:not(.active)')
     if (labelsForInput && labelsForInput.length) {
       let labelWidth =
+        labelsForInput[0].offsetWidth > 0 && $input[0].offsetWidth > 0 &&
         labelsForInput[0].offsetWidth > $input[0].offsetWidth - 20
           ? $input[0].offsetWidth
           : 'auto'
