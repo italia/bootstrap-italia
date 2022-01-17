@@ -29,13 +29,15 @@ Assicurati di aggiungere sempre:
 
 Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
 
+Nel caso non fosse presente un titolo al quale legare l'attributo `aria-labelledby="..."` puoi etichettare la modale direttamente utilizzando l'attributo   `aria-label="Titolo modale"`. Vedi esempio [Modale semplice - Basico](#modale-popconfirm)
+
 Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
 - Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
-e rimuove lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
+e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
 - Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automativamente.
 - A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)
 non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
@@ -48,21 +50,22 @@ $('#myModal').on('shown.bs.modal', function () {
 
 ## Esempi
 
+In questa sezione gli esempi sono rappresentati da modali _statiche_, dove `position` e `display` sono stati sovrascritti mediante l'inclusione in un container `.it-example-modal`.
+
 ### Componenti della modale
 
-In basso un esempio di una modale _statica_, dove `position` e `display` sono stati sovrascritti.
 Sono inclusi l'intestazione, il corpo, e il footer della modale. È
 richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.
 
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="">
+   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title">dialog header
-               </h5>
+               <h5 class="modal-title" id="modal1Title">dialog header</h5>
             </div>
             <div class="modal-body">
+               <p id="modal1Description">Modal purpose description text.</p>
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
@@ -76,14 +79,14 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 
 {% highlight html %}
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="">
+   <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title">dialog header
-               </h5>
+               <h5 class="modal-title" id="modal1Title">dialog header</h5>
             </div>
             <div class="modal-body">
+               <p id="modal1Description">Modal purpose description text.</p>
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
@@ -114,12 +117,11 @@ Esempio completo:
 
 {% capture example %}
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="">
+   <div class="modal" tabindex="-1" role="dialog" id="modal2" aria-labelledby="modal2Title">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title">This is a notification message
-               </h5>
+               <h5 class="modal-title" id="modal2Title">This is a notification message</h5>
                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                   <svg class="icon">
                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -140,20 +142,19 @@ Esempio completo:
 
 ### Modale con icona
 
-E' possibie inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
+È possibile inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
 Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe `alert-modal` all'elemento `<div class="modal">`
 
 {% capture example %}
 <div class="it-example-modal">
-  <div class="modal alert-modal" tabindex="-1" role="dialog" id="">
+  <div class="modal alert-modal" tabindex="-1" role="dialog" id="modal3" aria-labelledby="modal3Title">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <svg class="icon">
             <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
           </svg>
-          <h5 class="modal-title">This is a notification message more long than usual
-          </h5>
+          <h5 class="modal-title" id="modal3Title">This is a notification message more long than usual</h5>
         </div>
         <div class="modal-body">
           <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
@@ -174,23 +175,22 @@ Di seguito una modale con un elenco di radio button.
 
 {% capture example %}
 <div class="it-example-modal">
-   <div class="modal" tabindex="-1" role="dialog" id="">
+   <div class="modal" tabindex="-1" role="dialog" id="modal4" aria-labelledby="modal4Title">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title">Choose an item
-               </h5>
+               <h5 class="modal-title" id="modal4Title">Choose an item</h5>
             </div>
             <div class="modal-body">
-               <div class="form-check" aria-describedby="">
+               <div class="form-check">
                   <input name="gruppo1" type="radio" id="radio1">
                   <label for="radio1">Opzione 1</label>
                </div>
-               <div class="form-check" aria-describedby="">
+               <div class="form-check">
                   <input name="gruppo1" type="radio" id="radio2">
                   <label for="radio2">Opzione 2</label>
                </div>
-               <div class="form-check" aria-describedby="">
+               <div class="form-check">
                   <input name="gruppo1" type="radio" id="radio3">
                   <label for="radio3">Opzione 3</label>
                </div>
@@ -212,12 +212,11 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 
 {% capture example %}
 <div class="it-example-modal">
-   <div class="modal it-dialog-link-list" tabindex="-1" role="dialog" id="">
+   <div class="modal it-dialog-link-list" tabindex="-1" role="dialog" id="modal5" aria-labelledby="modal5Title">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title"><span>1.</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-               </h5>
+               <h5 class="modal-title" id="modal5Title"><span>1.</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h5>
             </div>
             <div class="modal-body">
                <div class="link-list-wrapper">
@@ -267,7 +266,7 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
     <div class="row">
       <div class="col-12 col-lg-6">
         <p><strong>Basico</strong></p>
-        <div class="modal popconfirm-modal" tabindex="-1" role="dialog" id="">
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog"  id="modal6" aria-label="Modale popconfirm">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-body">
@@ -283,11 +282,11 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
       </div>
       <div class="col-12 col-lg-6">
         <p><strong>Con Header</strong></p>
-        <div class="modal popconfirm-modal" tabindex="-1" role="dialog" id="">
+        <div class="modal popconfirm-modal" tabindex="-1" role="dialog" id="modal7" aria-labelledby="modal7Title">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Popconfirm header</h5>
+                    <h5 class="modal-title" id="modal7Title">Popconfirm header</h5>
                   </div>
                   <div class="modal-body">
                     <p>Font Titillium 14px. Leading 21px.</p>
@@ -311,12 +310,11 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
 
 Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
 
-<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLive">
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLive" aria-labelledby="exampleModalLiveTitle">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">dialog header
-        </h5>
+        <h5 class="modal-title" id="exampleModalLiveTitle">dialog header</h5>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
@@ -341,12 +339,11 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
 </button>
 
 <!-- Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalTitle">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">dialog header
-        </h5>
+        <h5 class="modal-title" id="exampleModalTitle">dialog header</h5>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
@@ -364,11 +361,11 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
 Quando le modali diventano troppo lunghe per il viewport o il dispositivo dell'utente, scorrono indipendentemente dalla
 pagina stessa.
 
-<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong">
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong" aria-labelledby="exampleModalLongTitle">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">dialog header</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -399,11 +396,11 @@ pagina stessa.
 </button>
 
 <!-- Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong">
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong" aria-labelledby="exampleModalLongTitle">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">dialog header</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -426,11 +423,11 @@ pagina stessa.
 
 Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo sempre visibile l'intestazione ed il footer della modale stessa aggiungendo la classe `.it-dialog-scrollable` all'elemento `<div class="modal">`
 
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed" aria-labelledby="exampleModalLongFixedTitle">
    <div class="modal-dialog" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">dialog header
+            <h5 class="modal-title" id="exampleModalLongFixedTitle">dialog header
             </h5>
          </div>
          <div class="modal-body">
@@ -457,12 +454,11 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
 </button>
 
 <!-- Modal -->
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed" aria-labelledby="exampleModalLongFixedTitle">
    <div class="modal-dialog" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">dialog header
-            </h5>
+            <h5 class="modal-title" id="exampleModalLongFixedTitle">dialog header</h5>
          </div>
          <div class="modal-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
@@ -482,12 +478,11 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
 
 Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente la modale.
 
-<div class="modal fade" tabindex="-1" role="dialog" id="modalCenter">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalCenter" aria-labelledby="modalCenterTitle">
    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -515,12 +510,11 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
 </button>
 
 <!-- Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="modalCenter">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalCenter" aria-labelledby="modalCenterTitle">
    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -544,12 +538,11 @@ Per aprire la modale da sinistra a destra aggiungere le seguenti classi:
 Aggiungi `.it-dialog-scrollable` a `.modal` occupare tutta l'altezza disponibile.
 Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la modale.
 
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft" aria-labelledby="modalLeftTitle">
    <div class="modal-dialog modal-dialog-left" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -577,12 +570,11 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
 </button>
 
 <!-- Modal -->
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft" aria-labelledby="modalLeftTitle">
    <div class="modal-dialog modal-dialog-left" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -606,12 +598,11 @@ Per aprire la modale da destra a sinistra aggiungere le seguenti classi:
 Aggiungi `.it-dialog-scrollable` a `.modal` occupare tutta l'altezza disponibile.
 Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la modale.
 
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright" aria-labelledby="modalrightTitle">
    <div class="modal-dialog modal-dialog-right" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -639,12 +630,11 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
 </button>
 
 <!-- Modal -->
-<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright">
+<div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright" aria-labelledby="modalrightTitle">
    <div class="modal-dialog modal-dialog-right" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title">This is a notification message
-            </h5>
+            <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
@@ -667,7 +657,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
 Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe `.fade` dal codice della tua modale.
 
 {% highlight html %}
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="..." aria-hidden="true">
+<div class="modal" tabindex="-1" role="dialog" id="..." aria-labelledby="..." aria-hidden="true">
   ...
 </div>
 {% endhighlight %}
@@ -688,7 +678,8 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      ...
+	<h5 class="modal-title" id="myLargeModalLabel">Modale grande</h5>
+    	...
     </div>
     <div class="modal-footer">
       ...
@@ -702,7 +693,8 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      ...
+	<h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
+	...
     </div>
     <div class="modal-footer">
         ...
