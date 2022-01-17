@@ -12,35 +12,19 @@ $(function() {
 
   const inputFileSelector = 'input[type="file"]'
 
-  const handleLabelWidth = $input => {
-    const labelsForInput = $("label[for='" + $input.attr('id') + "']:not(.active)")
-    if (labelsForInput && labelsForInput.length) {
-      let labelWidth =
-        labelsForInput[0].offsetWidth > $input[0].offsetWidth - 20
-          ? $input[0].offsetWidth
-          : 'auto'
-      $(labelsForInput[0]).css('width', labelWidth)
-    }
-  }
 
   $(document)
     .on('focus', inputSelector, e => {
       const $this = $(e.target)
       const labelSelector = "label[for='" + $this.attr('id') + "']"
       $(labelSelector).addClass('active')
-      const labelsForInput = $(labelSelector)
-      if (labelsForInput && labelsForInput.length) {
-        $(labelsForInput[0]).css('width', 'auto')
-      }
     })
     .on('blur', inputSelector, e => {
       const $this = $(e.target)
       const noValue = !$this.val()
       const noPlaceholder = !$this.attr('placeholder')
-
       if (noValue && noPlaceholder) {
         $("label[for='" + $this.attr('id') + "']").removeClass('active')
-        handleLabelWidth($this)
       }
     })
     .on('change', inputSelector, e => {
@@ -115,17 +99,9 @@ $(function() {
 
         if (!hasDefaultValue && !hasPlaceholder) {
           $("label[for='" + $this.attr('id') + "']").removeClass('active')
-          handleLabelWidth($this)
         }
       })
   }
-
-  $(window).resize(function() {
-    $(inputSelector).each((index, input) => {
-      let $this = $(input)
-      handleLabelWidth($this)
-    })
-  })
 
   handleLabelPosition()
 
