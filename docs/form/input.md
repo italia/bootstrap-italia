@@ -319,7 +319,6 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
       </a>
     </li>
   </ul>
-  
 </div>
 {% endcapture %}{% include example.html content=example %}
 
