@@ -180,6 +180,9 @@ textarea {
       border-bottom: 1px solid #5c6f82;
       border-radius: 0 4px 4px 0;
       box-shadow: none;
+      &:focus:not(.focus--mouse) {
+        box-shadow: inset 0 0 0 2px $focus-outline-color;
+      }
     }
   }
 }
