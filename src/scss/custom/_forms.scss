@@ -30,7 +30,6 @@ label {
     white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
-
     &.active {
       transform: translateY(-75%);
       font-size: $small-font-size;
