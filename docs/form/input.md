@@ -24,24 +24,24 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
 {% capture example %}
 <div>
   <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputText">
     <label for="exampleInputText">Campo di tipo testuale</label>
+    <input type="text" class="form-control" id="exampleInputText">
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1">
     <label for="exampleInputEmail1">Campo di tipo email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1">
   </div>
   <div class="form-group">
-    <input type="number" class="form-control" id="exampleInputNumber">
     <label for="exampleInputNumber">Campo di tipo numerico</label>
+    <input type="number" class="form-control" id="exampleInputNumber">
   </div>
   <div class="form-group">
-    <input type="tel" class="form-control" id="exampleInputTelephone">
     <label for="exampleInputTelephone">Campo di tipo telefono</label>
+    <input type="tel" class="form-control" id="exampleInputTelephone">
   </div>
   <div class="form-group">
+    <label class="active" for="exampleInputTime">Campo di tipo ora</label>
     <input type="time" class="form-control" id="exampleInputTime" min="9:00" max="18:00">
-    <label for="exampleInputTime">Campo di tipo ora</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -181,21 +181,21 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 {% capture example %}
 <div>
   <div class="form-group">
+    <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
     <input type="password" class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
     </span>
-    <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
     <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
+    <label for="exampleInputPassword3">Password con strength meter</label>
     <input type="password" class="form-control input-password input-password-strength-meter" data-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
     </span>
-    <label for="exampleInputPassword3">Password con strength meter</label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -206,8 +206,8 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 
 {% capture example %}
 <div class="form-group">
-  <input class="form-control" type="text" id="input-text-disabled" disabled>
   <label for="input-text-disabled">Contenuto disabilitato</label>
+  <input class="form-control" type="text" id="input-text-disabled" disabled>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -217,8 +217,8 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 
 {% capture example %}
 <div class="form-group">
-  <input class="form-control" type="text" id="input-text-read-only" readonly>
   <label for="input-text-read-only">Contenuto in sola lettura</label>
+  <input class="form-control" type="text" id="input-text-read-only" readonly>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -229,8 +229,8 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 {% capture example %}
 <div>
   <div class="form-group">
-    <input class="form-control-plaintext" type="text" id="input-text-read-only-2" readonly>
     <label for="input-text-read-only-2">Contenuto in sola lettura</label>
+    <input class="form-control-plaintext" value="Sola lettura" type="text" id="input-text-read-only-2" readonly>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -258,6 +258,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 
 {% capture example %}
 <div class="form-group">
+  <label for="autocomplete-one" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
@@ -318,7 +319,6 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
       </a>
     </li>
   </ul>
-  <label for="autocomplete-one" class="sr-only">Cerca nel sito</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -328,6 +328,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 
 {% capture example %}
 <div class="form-group autocomplete-wrapper-big">
+  <label for="autocomplete-two" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
@@ -373,7 +374,6 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
       </a>
     </li>
   </ul>
-  <label for="autocomplete-two" class="sr-only">Cerca nel sito</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -390,6 +390,7 @@ Cerca una regione italiana per verificarne il comportamento.
 
 {% capture example %}
 <div class="form-group">
+  <label for="autocomplete-regioni" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
@@ -397,7 +398,6 @@ Cerca una regione italiana per verificarne il comportamento.
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
   </span>
-  <label for="autocomplete-regioni" class="sr-only">Cerca nel sito</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -412,6 +412,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 
 {% capture example %}
 <div class="form-group">
+  <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-test"
     name="autocomplete-test"
@@ -419,7 +420,6 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
   </span>
-  <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -432,8 +432,8 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% capture example %}
 <div>
   <div class="form-group">
-    <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
     <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
+    <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -447,12 +447,12 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% capture example %}
 <div>
   <div class="form-group">
-    <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
     <label for="input-text-lg">.form-control-lg</label>
+    <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
   </div>
   <div class="form-group">
-    <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
     <label for="input-text-lg">.form-control-sm</label>
+    <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
