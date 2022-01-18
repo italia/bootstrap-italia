@@ -5,6 +5,8 @@ WORKDIR /app
 EXPOSE 3001
 EXPOSE 4000
 
+RUN apt-get update && apt-get install -y chromium
+
 COPY ./Gemfile /app
 COPY ./Gemfile.lock /app
 COPY ./package-lock.json /app

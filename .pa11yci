@@ -1,6 +1,11 @@
 {
   "defaults": {
-    "timeout": 10000,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox"
+      ]
+    },
+    "timeout": 20000,
     "hideElements": [
       ".exclude-a11y-check",
       ".highlight",

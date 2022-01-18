@@ -28,10 +28,8 @@
     "release": "node scripts/release",
     "version": "node scripts/config-sync && git add _config.yml && conventional-changelog -p angular -i CHANGELOG.md -s && node scripts/wait-confirm && git add CHANGELOG.md",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
-    "test": "npm run test-htmlproofer",
-    "test-htmlproofer": "bundle exec htmlproofer ./_site --assume-extension --check-html --allow-hash-href --disable-external",
-    "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml",
-    "test-a11y-one": "npx pa11y-ci"
+    "test-htmlproofer": "JEKYLL_ENV=development bundle exec jekyll build --config _config.yml && bundle exec htmlproofer ./_site --assume-extension --check-html --allow-hash-href --disable-external",
+    "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-find ^/ --sitemap-replace 'http://localhost:4000/'"
   },
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",
