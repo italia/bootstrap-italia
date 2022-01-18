@@ -127,7 +127,7 @@ L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e p
 Il link come HTML nell'attributo `data-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use xlink:href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
   Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}

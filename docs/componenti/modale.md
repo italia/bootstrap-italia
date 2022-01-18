@@ -108,7 +108,7 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 {% capture example %}
 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
    <svg class="icon">
-      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
    </svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -124,7 +124,7 @@ Esempio completo:
                <h5 class="modal-title" id="modal2Title">This is a notification message</h5>
                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                   <svg class="icon">
-                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                   </svg>
                </button>
             </div>
@@ -152,7 +152,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
       <div class="modal-content">
         <div class="modal-header">
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use>
           </svg>
           <h5 class="modal-title" id="modal3Title">This is a notification message more long than usual</h5>
         </div>
@@ -224,7 +224,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+                              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
@@ -232,7 +232,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+                              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
@@ -240,7 +240,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
-                              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+                              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
                            </svg>
                            <span>Link list 1</span>
                         </a>
@@ -368,7 +368,7 @@ pagina stessa.
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
         </button>
       </div>
@@ -403,7 +403,7 @@ pagina stessa.
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
         </button>
       </div>
@@ -485,7 +485,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
             <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>
@@ -517,7 +517,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
             <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>
@@ -545,7 +545,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
             <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>
@@ -577,7 +577,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
             <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>
@@ -605,7 +605,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
             <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>
@@ -637,7 +637,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
             <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
             </button>
          </div>

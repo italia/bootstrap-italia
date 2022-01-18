@@ -11,7 +11,7 @@ description: La lista di immagini è un componente flessibile per la visualizzaz
 Di seguito gli esempi di elemento singolo della grid list:
 - Immagine semplice
 - Immagine con didascalia in basso
-- Immagine con didascalia sovrapposta 
+- Immagine con didascalia sovrapposta
 
 Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`.it-grid-item-overlay`** al div **`it-grid-item-wrapper`**.
 
@@ -41,7 +41,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -59,7 +59,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -152,7 +152,7 @@ Di seguito l'esempio
 
 ### Standard con didascalie
 
-Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-image-label-grid`** al div **`.it-grid-list-wrapper`** se gli elementi al suo interno contengono una didascalia.  
+Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-image-label-grid`** al div **`.it-grid-list-wrapper`** se gli elementi al suo interno contengono una didascalia.
 
 Di seguito l'esempio
 
@@ -170,7 +170,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -187,7 +187,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -204,7 +204,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -221,7 +221,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -238,7 +238,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -255,7 +255,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -293,7 +293,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -312,7 +312,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -329,7 +329,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -346,7 +346,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -360,7 +360,7 @@ Di seguito l'esempio
 
 ### Masonry
 
-Per realizzare l'elemento Masonry è stata usata la classe di bootstrap **`.card-columns`** che contiene al suo interno gli elementi distribuendoli su più colonne. 
+Per realizzare l'elemento Masonry è stata usata la classe di bootstrap **`.card-columns`** che contiene al suo interno gli elementi distribuendoli su più colonne.
 Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-masonry`** al div **`.it-grid-list-wrapper`**.
 
 
@@ -380,7 +380,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -397,7 +397,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -414,7 +414,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -431,7 +431,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -448,7 +448,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -465,7 +465,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -482,7 +482,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -499,7 +499,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -516,7 +516,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -533,7 +533,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -550,7 +550,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -567,7 +567,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>

@@ -66,8 +66,8 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <label for="exampleInputPassword">Password</label>
       <input type="password" class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password">
       <span class="password-icon" aria-hidden="true">
-        <svg class="password-icon-visible icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
-        <svg class="password-icon-invisible icon icon-sm d-none"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
+        <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
+        <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
       </span>
     </div>
   </div>

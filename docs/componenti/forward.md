@@ -12,7 +12,7 @@ Per attivare lo scorrimento automatico del documento all'àncora indicata nell'a
 
 {% capture example %}
 <a href="#sezione-di-esempio" data-attribute="forward" class="forward" aria-hidden="true">
-    <svg class="icon icon-lg icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
 
