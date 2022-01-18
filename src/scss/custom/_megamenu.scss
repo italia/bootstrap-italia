@@ -1,5 +1,5 @@
 //megamenu mobile definition
-@use "sass:math";
+@use 'sass:math';
 
 .navbar {
   .navbar-collapsable {
@@ -52,7 +52,7 @@
                 &.it-more a {
                   margin-top: 0;
                   i {
-                    margin-left: $grid-gutter-width*0.5;
+                    margin-left: $grid-gutter-width * 0.5;
                   }
                 }
                 &:last-child {
@@ -106,9 +106,9 @@
 
                 .description-content {
                   padding-left: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width*0.5;
+                    $grid-gutter-width * 0.5;
                   padding-right: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width*0.5;
+                    $grid-gutter-width * 0.5;
                   &:before {
                     content: '';
                     display: block;
@@ -142,7 +142,7 @@
     }
     .margin-right-col {
       .it-external {
-        padding: 0 $grid-gutter-width*0.5;
+        padding: 0 $grid-gutter-width * 0.5;
       }
     }
     .it-external {
@@ -200,7 +200,7 @@
         margin-left: -$megamenu-column-gap;
         margin-right: -$megamenu-column-gap;
         margin-bottom: -$megamenu-padding-top-desktop;
-        padding: $megamenu-column-gap*0.5 $megamenu-column-gap;
+        padding: $megamenu-column-gap * 0.5 $megamenu-column-gap;
         .link-list-wrapper {
           .link-list {
             li a.list-item {
@@ -385,7 +385,7 @@
                     &.it-more {
                       margin-top: auto;
                       a {
-                        margin-top: $link-list-h-pad*0.5;
+                        margin-top: $link-list-h-pad * 0.5;
                         &:before {
                         }
                         i {

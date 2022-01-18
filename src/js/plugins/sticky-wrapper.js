@@ -1,4 +1,4 @@
-;(function() {
+;(function () {
   const elWrappers = document.getElementsByClassName('sticky-wrapper')
   const elToggler = document.querySelector('.custom-navbar-toggler')
   const isDesktop = isHidden(elToggler)
@@ -17,7 +17,7 @@
   if (elWrappers && elWrappers.length) {
     let isSticky = false
 
-    const initSticky = isDesktop => {
+    const initSticky = (isDesktop) => {
       const getPadding = (parent, size) => {
         return isDesktop
           ? parseInt(
@@ -49,7 +49,7 @@
         // Set monitoring offset top
         const navOffsetTop = elNavigation ? elNavigation.offsetHeight : 0
         // Check the sticky status
-        const runCheckSticky = elSticky => {
+        const runCheckSticky = (elSticky) => {
           // Check is set on bottom
           // Force position of navscroll to bottom
           // const navBottom = elSticky.outerHTML.includes('it-bottom-navscroll')
@@ -104,7 +104,7 @@
           }
         }
 
-        Array.from(elWrappers).forEach(elSticky => {
+        Array.from(elWrappers).forEach((elSticky) => {
           runCheckSticky(elSticky)
         })
       }

@@ -1,7 +1,7 @@
 'use strict'
 
-$(function() {
-  $.fn.autocomplete = function(options) {
+$(function () {
+  $.fn.autocomplete = function (options) {
     // Default options
     var defaults = {
       data: {},
@@ -10,7 +10,7 @@ $(function() {
     // Get options
     options = $.extend(defaults, options)
 
-    return this.each(function() {
+    return this.each(function () {
       let $input = $(this)
       let $autocomplete = null
       let data = $input.data('autocomplete')
@@ -20,7 +20,7 @@ $(function() {
         $autocomplete.insertAfter($(this).next())
 
         // Listen if key was pressed
-        $input.on('keyup', function(e) {
+        $input.on('keyup', function () {
           // get value from input
           const q = $input.val()
 

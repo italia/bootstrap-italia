@@ -1,4 +1,4 @@
-$arrow-size: $font-size-base*0.5;
+$arrow-size: $font-size-base * 0.5;
 
 // collapse toggle
 *[data-toggle='collapse'] {
@@ -11,7 +11,7 @@ $arrow-size: $font-size-base*0.5;
     border-right: $arrow-size solid transparent;
     border-bottom: 0;
     border-left: $arrow-size solid transparent;
-    vertical-align: $btn-padding-y*0.5;
+    vertical-align: $btn-padding-y * 0.5;
   }
   &.collapsed {
     .collapse-icon::before {

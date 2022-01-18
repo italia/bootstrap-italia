@@ -1,4 +1,4 @@
-const ComponenteBase = ($ => {
+const ComponenteBase = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -46,7 +46,7 @@ const ComponenteBase = ($ => {
     // Static
 
     static _jQueryInterface(config) {
-      return this.each(function() {
+      return this.each(function () {
         const $element = $(this)
         let data = $element.data(DATA_KEY)
 
@@ -65,7 +65,7 @@ const ComponenteBase = ($ => {
     }
 
     static _handleConsole(baseInstance) {
-      return function(event) {
+      return function (event) {
         if (event) {
           event.preventDefault()
         }
@@ -95,7 +95,7 @@ const ComponenteBase = ($ => {
 
   $.fn[NAME] = ComponenteBase._jQueryInterface
   $.fn[NAME].Constructor = ComponenteBase
-  $.fn[NAME].noConflict = function() {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return ComponenteBase._jQueryInterface
   }

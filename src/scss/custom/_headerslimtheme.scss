@@ -5,7 +5,8 @@
 
     .it-header-slim-wrapper-content {
       .it-header-slim-right-zone,
-      .header-slim-right-zone { // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+      .header-slim-right-zone {
+        // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
         .dropdown-menu:before {
           background: $header-slim-theme-light-text-color;
         }
@@ -61,8 +62,10 @@
       .it-header-slim-wrapper-content {
         .nav-mobile {
           ul.link-list {
-            border-left: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
-            border-right: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+            border-left: 1px solid
+              rgba($header-slim-theme-light-text-color, 0.2);
+            border-right: 1px solid
+              rgba($header-slim-theme-light-text-color, 0.2);
             a.list-item {
               &.active {
                 color: $primary;

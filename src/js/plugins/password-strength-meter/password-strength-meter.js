@@ -2,10 +2,10 @@
  * Original code by Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
  * @link https://github.com/elboletaire/password-strength-meter
  */
-;(function($) {
+;(function ($) {
   'use strict'
 
-  var Password = function($object, options) {
+  var Password = function ($object, options) {
     var defaults = {
       shortPass: 'Password molto debole',
       badPass: 'Password debole',
@@ -203,9 +203,11 @@
         'aria-valuemin': '0',
         'aria-valuemax': '100',
       })
-      var $insert = $('<div>').attr({
-        class: 'password-strength-meter',
-      }).append($graybar.append($colorbar))
+      var $insert = $('<div>')
+        .attr({
+          class: 'password-strength-meter',
+        })
+        .append($graybar.append($colorbar))
 
       if (options.showText) {
         $text = $('<small>')
@@ -216,11 +218,11 @@
 
       $object.after($insert)
 
-      $object.keyup(function() {
+      $object.keyup(function () {
         var score = calculateScore($object.val())
         $object.trigger('password.score', [score])
         var perc = score < 0 ? 0 : score
-        $colorbar.removeClass(function(index, className) {
+        $colorbar.removeClass(function (index, className) {
           return (className.match(/(^|\s)bg-\S+/g) || []).join(' ')
         })
         $colorbar.addClass('bg-' + scoreColor(score))
@@ -235,14 +237,9 @@
             text = options.enterPass
           }
 
-          if (
-            $text.html() !==
-            $('<div>')
-              .html(text)
-              .html()
-          ) {
+          if ($text.html() !== $('<div>').html(text).html()) {
             $text.html(text)
-            $text.removeClass(function(index, className) {
+            $text.removeClass(function (index, className) {
               return (className.match(/(^|\s)text-\S+/g) || []).join(' ')
             })
             $text.addClass('text-' + scoreColor(score))
@@ -258,8 +255,8 @@
   }
 
   // Bind to jquery
-  $.fn.password = function() {
-    return this.each(function() {
+  $.fn.password = function () {
+    return this.each(function () {
       new Password($(this), $(this).data())
     })
   }
@@ -275,18 +272,18 @@ function showCapsLockMsg($input) {
     )
 }
 
-$(function() {
+$(function () {
   var isShiftPressed = false
   var isCapsOn = null
 
   $('.input-password')
-    .on('keydown', function(e) {
+    .on('keydown', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       if (keyCode == 16) {
         isShiftPressed = true
       }
     })
-    .on('keyup', function(e) {
+    .on('keyup', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       if (keyCode == 16) {
         isShiftPressed = false
@@ -297,13 +294,13 @@ $(function() {
           $('.password-caps').remove()
         } else {
           isCapsOn = true
-          $('input:focus').each(function(e) {
+          $('input:focus').each(function () {
             showCapsLockMsg($(this))
           })
         }
       }
     })
-    .on('keypress', function(e) {
+    .on('keypress', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       // i keyCode dal 65 al 90 identificano i caratteri alfabetici maiuscoli da "A" a "Z"
       if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
@@ -314,10 +311,8 @@ $(function() {
 
   $('.input-password-strength-meter').password()
 
-  $('.password-icon').on('click', function(e) {
-    $(this)
-      .find('[class^="password-icon"]')
-      .toggleClass('d-none')
+  $('.password-icon').on('click', function () {
+    $(this).find('[class^="password-icon"]').toggleClass('d-none')
     var input = $(this).siblings('.input-password')
     var inputType = input.attr('type') === 'password' ? 'text' : 'password'
     input.attr('type', inputType)

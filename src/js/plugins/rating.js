@@ -1,5 +1,5 @@
-$(function() {
-  $('.rating.rating-label input[type=radio]').on('click', function(event) {
+$(function () {
+  $('.rating.rating-label input[type=radio]').on('click', function () {
     var stars = $(this).val()
     var starsLabel = 'stelle'
     if (stars == 1) {

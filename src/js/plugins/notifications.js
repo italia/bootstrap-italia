@@ -12,15 +12,13 @@ function notificationShow(notificationTarget, notificationTimeOut) {
       var timeToFade = 7000
     }
     //fadeout
-    setTimeout(function() {
+    setTimeout(function () {
       $('#' + notificationTarget).fadeOut(100)
     }, timeToFade)
   }
 }
 
 //dismissable close button
-$(document).on('click', '.notification-close', function() {
-  $(this)
-    .closest('.notification')
-    .fadeOut(100)
+$(document).on('click', '.notification-close', function () {
+  $(this).closest('.notification').fadeOut(100)
 })

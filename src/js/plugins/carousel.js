@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   var carouselTarget = $('.owl-carousel.it-carousel-all')
   // parameters
   var cnav
@@ -40,7 +40,7 @@ $(function() {
   var xlstagePadding
   var xlmargin
 
-  $(carouselTarget).each(function() {
+  $(carouselTarget).each(function () {
     // target definition
     if (
       $(this)
@@ -146,9 +146,7 @@ $(function() {
     }
 
     if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-calendar-wrapper')
+      $(this).closest('.it-carousel-wrapper').hasClass('it-calendar-wrapper')
     ) {
       cnav = true
       cloop = false
@@ -347,10 +345,10 @@ $(function() {
             margin: xlmargin,
           },
         },
-        onInitialized: function(event) {
+        onInitialized: function (event) {
           $(event.target)
             .find('.owl-dot')
-            .each(function(index) {
+            .each(function (index) {
               $(this).attr('aria-labelledby', 'owl-dot-' + index)
             })
         },

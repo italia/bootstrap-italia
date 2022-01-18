@@ -3,7 +3,7 @@ CircularLoader-v1.3.js
 Developed by http://technoplugin.com
 For support or web development drop a mail at developer@technoplugin.com
 */
-!(function(r) {
+!(function (r) {
   function t(r) {
     return (r * Math.PI) / 180
   }
@@ -36,21 +36,13 @@ For support or web development drop a mail at developer@technoplugin.com
       (i.strokeStyle = r(n).attr('data-stroke')),
       i.stroke(),
       i.closePath(),
-      'true' ==
-        r(n)
-          .attr('data-text')
-          .toLocaleLowerCase() &&
+      'true' == r(n).attr('data-text').toLocaleLowerCase() &&
         r('#' + s + ' .clProg').val(
           a +
-            ('true' ==
-            r(n)
-              .attr('data-percent')
-              .toLocaleLowerCase()
-              ? '%'
-              : '')
+            ('true' == r(n).attr('data-percent').toLocaleLowerCase() ? '%' : '')
         )
   }
-  r.fn.circularloader = function(t) {
+  r.fn.circularloader = function (t) {
     function a() {
       h.beginPath(),
         h.arc(u, f, i, 0, 2 * Math.PI, !1),

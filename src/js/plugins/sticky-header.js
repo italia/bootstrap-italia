@@ -2,19 +2,17 @@
  * sticky-header js lib
  * @ Fabio Fumis
  */
-;(function() {
+;(function () {
   const elSticky = document.querySelector('.it-header-sticky')
-
-  if (!!elSticky) {
-    function isHidden(el) {
-      let hidden = false
-      if (el) {
-        const style = window.getComputedStyle(el)
-        hidden = style.display === 'none' || style.visibility === 'hidden'
-      }
-      return hidden
+  function isHidden(el) {
+    let hidden = false
+    if (el) {
+      const style = window.getComputedStyle(el)
+      hidden = style.display === 'none' || style.visibility === 'hidden'
     }
-
+    return hidden
+  }
+  if (elSticky) {
     const elToggler = document.querySelector('.custom-navbar-toggler')
     const isDesktop = isHidden(elToggler)
 
@@ -23,7 +21,7 @@
 
     let runCheckSticky = undefined
 
-    const initSticky = isDesktop => {
+    const initSticky = (isDesktop) => {
       const elSlim = document.querySelector('.it-header-slim-wrapper')
       const elCenter = document.querySelector('.it-header-center-wrapper')
       const elNavbar = document.querySelector('.it-header-navbar-wrapper')
@@ -63,7 +61,7 @@
           } else {
             const clonedItems = document.getElementsByClassName('cloned')
             clonedItems &&
-              Array.from(clonedItems).forEach(item => {
+              Array.from(clonedItems).forEach((item) => {
                 item.parentElement.removeChild(item)
               })
 

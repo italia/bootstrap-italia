@@ -3,7 +3,7 @@
  * https://github.com/regru/i-sticky
  * License: MIT
  */
-;(function($) {
+;(function ($) {
   var prefixTestList = ['', '-webkit-', '-ms-', '-moz-', '-o-'],
     stickyTestElement = document.createElement('div'),
     hasNativeSupport = false,
@@ -20,7 +20,7 @@
     idCounter = 0,
     stickies = [],
     methods = {
-      unstick: function() {
+      unstick: function () {
         var currentId = $(this).data('sticky-id'),
           removeIndex,
           el
@@ -61,7 +61,7 @@
     }
   }
 
-  $.fn.iSticky = function(methodOrOptions) {
+  $.fn.iSticky = function (methodOrOptions) {
     if (hasNativeSupport) {
       if (typeof methodOrOptions === 'object' && methodOrOptions.force) {
         attachWindowEvents()
@@ -89,7 +89,7 @@
       ),
       selector = this.selector
 
-    return this.each(function() {
+    return this.each(function () {
       var $this = $(this),
         id = 'sticky-' + ++idCounter,
         topCSSstring,
@@ -347,9 +347,7 @@
       return
     }
 
-    $(window)
-      .on('scroll', updateScrollPos)
-      .on('resize', updateScrollPos)
+    $(window).on('scroll', updateScrollPos).on('resize', updateScrollPos)
 
     updateScrollPos()
     areWindowEventsAttached = true

@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 .avatar {
   display: inline-flex;
@@ -205,7 +205,7 @@
       bottom: $avatar-base-size;
     }
     .avatar-status {
-      top: $avatar-base-size*0.25;
+      top: $avatar-base-size * 0.25;
     }
   }
   &.size-xxl {

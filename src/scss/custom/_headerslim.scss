@@ -2,7 +2,7 @@
 .it-header-slim-wrapper {
   background: $header-slim-bg-color;
   padding: $header-slim-v-padding-mob $header-general-padding -
-    ($grid-columns*0.5);
+    ($grid-columns * 0.5);
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,8 @@
       padding: 0;
     }
     .it-header-slim-right-zone,
-    .header-slim-right-zone { // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+    .header-slim-right-zone {
+      // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
       display: flex;
       align-items: center;
       align-self: flex-start;
@@ -132,7 +133,7 @@
           padding-bottom: $header-slim-lang-v-padding;
           text-decoration: none;
           .icon {
-            margin-left: $v-gap*0.5;
+            margin-left: $v-gap * 0.5;
           }
         }
         &.navbar-brand {
@@ -141,7 +142,8 @@
         }
       }
       .it-header-slim-right-zone,
-      .header-slim-right-zone { // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+      .header-slim-right-zone {
+        // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
         height: $header-slim-height;
       }
     }

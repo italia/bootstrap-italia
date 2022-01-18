@@ -268,8 +268,16 @@ $primary-c9: hsb(
   $primary-s - calc($primary-s * 10 / 100),
   $primary-b + calc($primary-b * 20 / 100)
 );
-$primary-c10: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 20 / 100));
-$primary-c11: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 10 / 100));
+$primary-c10: hsb(
+  $primary-h,
+  $primary-s,
+  $primary-b + calc($primary-b * 20 / 100)
+);
+$primary-c11: hsb(
+  $primary-h,
+  $primary-s,
+  $primary-b + calc($primary-b * 10 / 100)
+);
 $primary-c12: hsb($primary-h, $primary-s, $primary-b);
 
 //***********************************************************************

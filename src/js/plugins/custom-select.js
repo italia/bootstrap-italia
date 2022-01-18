@@ -1,4 +1,4 @@
-const Select = ($ => {
+const Select = (($) => {
   /**
    * ------------------------------------------------------------------------
    * Constants
@@ -86,11 +86,7 @@ const Select = ($ => {
         const selectOptionsListElement = `ul#select-options-${$select.data(
           'select-id'
         )}`
-        $select
-          .parent()
-          .find('span.caret, input')
-          .remove()
-          .unwrap()
+        $select.parent().find('span.caret, input').remove().unwrap()
         $(selectOptionsListElement).remove()
       }
 
@@ -103,7 +99,7 @@ const Select = ($ => {
       }
 
       if (selectChildren && selectChildren.length) {
-        selectChildren.each(function() {
+        selectChildren.each(function () {
           const $this = $(this)
 
           if ($this.is('option')) {
@@ -121,23 +117,26 @@ const Select = ($ => {
             `)
             )
 
-            $this.children('option').each(function() {
+            $this.children('option').each(function () {
               that._appendOptionWithIcon($select, $(this), 'optgroup-option')
             })
           }
         })
       }
 
-      this._customElement.find('li:not(.optgroup)').each(function(i) {
+      this._customElement.find('li:not(.optgroup)').each(function (i) {
         const $this = $(this)
-        $this.click(function(e) {
+        $this.click(function (e) {
           if (!$this.hasClass('disabled') && !$this.hasClass('optgroup')) {
             var selected = true
 
             if (that._isMultiple) {
-              $('input[type="checkbox"]', this).prop('checked', function(i, v) {
-                return !v
-              })
+              $('input[type="checkbox"]', this).prop(
+                'checked',
+                function (i, v) {
+                  return !v
+                }
+              )
               var optgroup = $select.find('optgroup').length
               if (that._isSearchable) {
                 if (optgroup) {
@@ -174,10 +173,7 @@ const Select = ($ => {
             }
 
             that._activateOption(that._customElement, $this)
-            $select
-              .find('option')
-              .eq(i)
-              .prop('selected', selected)
+            $select.find('option').eq(i).prop('selected', selected)
             $select.trigger('change')
           }
 
@@ -225,22 +221,22 @@ const Select = ($ => {
       $select.addClass('initialized')
 
       if (!this._isMultiple && this._isSearchable) {
-        this._customElement.find('li').on('click', function() {
+        this._customElement.find('li').on('click', function () {
           $newSelect.trigger('close')
         })
       }
 
       this._customElement.hover(
-        function() {
+        function () {
           that._optionsHover = true
         },
-        function() {
+        function () {
           that._optionsHover = false
         }
       )
 
       if (this._isMultiple) {
-        $select.find('option:selected:not(:disabled)').each(function() {
+        $select.find('option:selected:not(:disabled)').each(function () {
           var index = $(this).index()
 
           that._toggleEntryFromArray(valuesSelected, index, $select)
@@ -255,9 +251,7 @@ const Select = ($ => {
       $newSelect.on({
         focus: function focus() {
           if (
-            $('ul.select-dropdown')
-              .not(that._customElement[0])
-              .is(':visible')
+            $('ul.select-dropdown').not(that._customElement[0]).is(':visible')
           ) {
             $('input.select-dropdown').trigger('close')
           }
@@ -266,12 +260,8 @@ const Select = ($ => {
             var _label = $(this).val()
             var selectedOption = that._customElement
               .find('li')
-              .filter(function() {
-                return (
-                  $(this)
-                    .text()
-                    .toLowerCase() === _label.toLowerCase()
-                )
+              .filter(function () {
+                return $(this).text().toLowerCase() === _label.toLowerCase()
               })[0]
             that._activateOption(that._customElement, selectedOption)
           }
@@ -311,13 +301,8 @@ const Select = ($ => {
             filterQuery.push(letter)
 
             var string = filterQuery.join(''),
-              newOption = that._customElement.find('li').filter(function() {
-                return (
-                  $(this)
-                    .text()
-                    .toLowerCase()
-                    .indexOf(string) === 0
-                )
+              newOption = that._customElement.find('li').filter(function () {
+                return $(this).text().toLowerCase().indexOf(string) === 0
               })[0]
 
             if (newOption) {
@@ -363,13 +348,13 @@ const Select = ($ => {
             }
           }
 
-          setTimeout(function() {
+          setTimeout(function () {
             filterQuery = []
           }, 1000)
         },
       })
 
-      $(window).on('click', function() {
+      $(window).on('click', function () {
         ;(that._isMultiple || that._isSearchable) &&
           (that._optionsHover || $newSelect.trigger('close'))
       })
@@ -394,14 +379,14 @@ const Select = ($ => {
         </span>
       `)
       this._customElement.append(element)
-      element.find('.search').on('keyup', function() {
+      element.find('.search').on('keyup', function () {
         const $this = $(this)
         var ul = $this.closest('ul')
         var searchValue = $this.val()
 
         ul.find('li')
           .find('span.filtrable')
-          .each(function() {
+          .each(function () {
             const $this = $(this)
             if (typeof this.outerText === 'string') {
               var liValue = this.outerText.toLowerCase()
@@ -481,26 +466,17 @@ const Select = ($ => {
         .eq(entryIndex)
         .toggleClass('active')
 
-      select
-        .find('option')
-        .eq(entryIndex)
-        .prop('selected', notAdded)
+      select.find('option').eq(entryIndex).prop('selected', notAdded)
       var value = ''
 
       for (var i = 0, count = entriesArray.length; i < count; i++) {
-        var text = select
-          .find('option')
-          .eq(entriesArray[i])
-          .text()
+        var text = select.find('option').eq(entriesArray[i]).text()
 
         i === 0 ? (value += text) : (value += `, ${text}`)
       }
 
       if (value === '') {
-        value = select
-          .find('option:disabled')
-          .eq(0)
-          .text()
+        value = select.find('option:disabled').eq(0).text()
       }
 
       select.siblings('.dropdown').val(value)
@@ -522,7 +498,7 @@ const Select = ($ => {
     // static
 
     static _jQueryInterface() {
-      return this.each(function() {
+      return this.each(function () {
         var $this = $(this)
         var data = $this.data(DATA_KEY)
         var config = $.extend(
@@ -561,7 +537,7 @@ const Select = ($ => {
 
   $.fn[NAME] = Select._jQueryInterface
   $.fn[NAME].Constructor = Select
-  $.fn[NAME].noConflict = function() {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Select._jQueryInterface
   }

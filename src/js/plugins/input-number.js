@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   //resize function
   function inputNumberResize($target) {
     var $inputNumber = $target.closest('.input-number')
@@ -27,12 +27,12 @@ $(function() {
   }
 
   //resize all input numbers field on DR
-  $('.input-number input[type=number]').each(function(index) {
+  $('.input-number input[type=number]').each(function (index) {
     inputNumberResize($(this))
   })
 
   //add & sub button
-  $('.input-number button').click(function(e) {
+  $('.input-number button').click(function (e) {
     e.preventDefault()
     //get target input field
     var $inputTarget = $(this)
@@ -78,7 +78,7 @@ $(function() {
   })
 
   //manual input
-  $('.input-number input[type=number]').change(function(e) {
+  $('.input-number input[type=number]').change(function () {
     //get field val
     var $inputTarget = $(this)
     var inputTargetVal = parseFloat($inputTarget.val())
@@ -103,7 +103,7 @@ $(function() {
   })
 
   // Fixing IE11 numeric behavior
-  $('input[type=number]').on('keyup', function(e) {
+  $('input[type=number]').on('keyup', function (e) {
     var value = e && e.target.value
     var regexp = /[^0-9,.]/g
     this.value = value.replace(regexp, '')

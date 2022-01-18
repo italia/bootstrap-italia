@@ -1,4 +1,4 @@
-;(function() {
+;(function () {
   'use strict'
 
   if (typeof Date.dp_locales === 'undefined') {
