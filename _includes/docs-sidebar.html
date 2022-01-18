@@ -25,7 +25,7 @@
               <!-- One:usare ID -->
               <a class="list-item large medium right-icon {% unless active == nil %}active{% endunless %}" href="#collapse-{{ forloop.index }}" data-toggle="collapse" aria-expanded="{{expanded}}" aria-controls="collapse-{{ forloop.index }}">
                 <span>{{ group.title }}</span>
-                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
               </a>
               <ul class="link-sublist collapse {% unless active == nil %}show{% endunless %}" id="collapse-{{ forloop.index }}">
                 {%- for doc in group.pages -%}

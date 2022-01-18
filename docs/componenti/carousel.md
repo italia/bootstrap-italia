@@ -45,7 +45,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -61,7 +61,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -77,7 +77,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -93,7 +93,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -109,7 +109,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -125,7 +125,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -141,7 +141,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -177,7 +177,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -198,7 +198,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -219,7 +219,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -240,7 +240,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -287,7 +287,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -317,7 +317,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -347,7 +347,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -377,7 +377,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -416,7 +416,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -437,7 +437,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -458,7 +458,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -479,7 +479,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>
@@ -500,7 +500,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
             </a>
           </div>

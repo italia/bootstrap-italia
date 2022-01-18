@@ -44,9 +44,9 @@ Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire l'SVG co
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Subsection</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item active" aria-current="page"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>Current section</li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Subsection</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><svg class="icon icon-sm icon-secondary align-top mr-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>Current section</li>
   </ol>
 </nav>
 {% endcapture %}{% include example.html content=example %}
@@ -69,8 +69,8 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 <hr>
 <nav class="breadcrumb-container" aria-label="breadcrumb">
   <ol class="breadcrumb dark px-3">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Subsection</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top mr-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><a href="#">Subsection</a><span class="separator">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Current section</li>
   </ol>
 </nav>

@@ -47,7 +47,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
   <div class="dimmer" id="dimmer1">
     <div class="dimmer-inner">
       <div class="dimmer-icon">
-        <svg class="icon icon-xl"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
+        <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
       </div>
       <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
     </div>

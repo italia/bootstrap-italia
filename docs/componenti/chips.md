@@ -27,16 +27,16 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
     <div class="chip">
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura</p>
     <div class="chip">
-      <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+      <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
@@ -47,7 +47,7 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
       </div>
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
@@ -62,16 +62,16 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
     <div class="chip chip-lg">
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura grande</p>
     <div class="chip chip-lg">
-      <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+      <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
@@ -82,7 +82,7 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
       </div>
       <span class="chip-label">Label</span>
       <button>
-        <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
         <span class="sr-only">Elimina label</span>
       </button>
     </div>
@@ -115,16 +115,16 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 <div class="chip chip-lg chip-disabled">
   <label class="chip-label" for="chip-01">Label disabilitata</label>
   <button id="chip-01" disabled>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
 
 <div class="chip chip-lg chip-disabled">
-  <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
   <label class="chip-label" for="chip-02">Label disabilitata</label>
   <button id="chip-02" disabled>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
@@ -135,7 +135,7 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
   </div>
   <label class="chip-label" for="chip-03">Label disabilitata</label>
   <button id="chip-03" disabled>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
@@ -153,16 +153,16 @@ I gruppi di Chip vengono visualizzati in linea.
 <div class="chip">
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
 
 <div class="chip">
-  <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
@@ -173,7 +173,7 @@ I gruppi di Chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
@@ -187,16 +187,16 @@ I gruppi di Chip vengono visualizzati in linea.
 <div class="chip chip-lg">
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
 
 <div class="chip chip-lg">
-  <svg class="icon icon-xs"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>
@@ -207,7 +207,7 @@ I gruppi di Chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
     <span class="sr-only">Elimina label</span>
   </button>
 </div>

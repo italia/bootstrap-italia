@@ -96,7 +96,7 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -120,7 +120,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
         <div class="card-body">
           <div class="categoryicon-top">
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
             </svg>
             <span class="text">Category<br>Name</span>
           </div>
@@ -155,7 +155,7 @@ semplici utilizzare la classe `.simple-link`.
         <div class="card-body">
           <div class="categoryicon-top">
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-copy"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-copy"></use>
             </svg>
             <span class="text">(2) Files</span>
           </div>
@@ -192,7 +192,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -223,7 +223,7 @@ il div contenente l'icona è di classe `.top-icon`.
         <div class="card-body">
           <div class="top-icon">
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-card"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-card"></use>
             </svg>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
@@ -231,7 +231,7 @@ il div contenente l'icona è di classe `.top-icon`.
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -257,7 +257,7 @@ Per creare un bordo di colore  primario a chiusura card, potete utilizzare la cl
         <div class="flag-icon"></div>
         <div class="etichetta">
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use>
           </svg>
           <span>Sviluppo</span>
         </div>
@@ -267,7 +267,7 @@ Per creare un bordo di colore  primario a chiusura card, potete utilizzare la cl
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -336,7 +336,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg></a>
         </div>
       </div>
@@ -358,7 +358,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
             <svg class="icon">
-              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg></a>
         </div>
       </div>
@@ -384,7 +384,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg></a>
           </div>
         </div>
@@ -410,7 +410,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
               <svg class="icon">
-                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg></a>
           </div>
         </div>
@@ -478,7 +478,7 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
   <!--start card-->
   <div class="card card-teaser rounded shadow">
     <svg class="icon">
-      <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
+      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
     </svg>
     <div class="card-body">
       <h5 class="card-title">

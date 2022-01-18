@@ -33,7 +33,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 <div class="dropdown">
   <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <div class="link-list-wrapper">
@@ -55,7 +55,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
 <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
@@ -70,7 +70,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
@@ -92,7 +92,7 @@ Lo stesso vale per gli elementi `<a>`:
 <div class="dropdown">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <div class="link-list-wrapper">
@@ -210,19 +210,19 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 1</span>
-          <svg class="icon icon-sm icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 2</span>
-          <svg class="icon icon-sm icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 3</span>
-          <svg class="icon icon-sm icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
     </ul>
@@ -240,19 +240,19 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
     <ul class="link-list">
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
           <span>Azione 1</span>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
           <span>Azione 2</span>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
           <span>Azione 3</span>
         </a>
       </li>
@@ -275,32 +275,32 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
       <li>
         <a class="list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
-          <svg class="icon icon-sm icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 2</span>
-          <svg class="icon icon-sm icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 3</span>
-          <svg class="icon icon-sm icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li><span class="divider"></span></li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 4</span>
-          <svg class="icon icon-sm icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon disabled" href="#">
           <span>Azione 5 (disabilitato)</span>
-          <svg class="icon icon-sm icon-light right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </a>
       </li>
     </ul>

@@ -10,7 +10,7 @@ description: Indicatori di stato attivo e di avanzamento di un'operazione
 	//attiva donuts
 	document.addEventListener("DOMContentLoaded", function() {
 		progressDonut.generate("#donut-one", 0);
-		progressDonut.generate("#donut-two", 42);		
+		progressDonut.generate("#donut-two", 42);
 	})
 </script>
 
@@ -132,7 +132,7 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario con cl
     <div class="col-12 col-sm-6">
       <p><strong>Bottone primario</strong></p>
       <button type="button" class="btn btn-primary btn-progress disabled" disabled>
-        Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+        Label bottone <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
         <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>
@@ -141,7 +141,7 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario con cl
     <div class="col-12 col-sm-6">
       <p><strong>Bottone secondario</strong></p>
       <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
-        Label bottone <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
+        Label bottone <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
         <span class="progress">
 				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
 			</span>

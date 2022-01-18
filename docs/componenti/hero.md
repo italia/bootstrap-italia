@@ -200,7 +200,7 @@ Aggiungere al div  `.it-hero-wrapper` la classe `.it-bottom-overlapping-content`
                   <a class="read-more" href="#">
                      <span class="text">Leggi di più</span>
                      <svg class="icon">
-                        <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                        <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                      </svg>
                   </a>
                </div>

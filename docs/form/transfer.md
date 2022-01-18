@@ -14,13 +14,13 @@ Il componente _Transfer_ consente di trasferire gli elementi di una lista di che
 - Pulsanti per il trasferimento dei contenuti da lista a lista
 - Lista checkbox di sinistra
 
-**Le liste di checkbox, sono composte da:**  
+**Le liste di checkbox, sono composte da:**
 - Header: contiene un checkbox per la selezione / deselezione di tutti i campi sottostanti e la label che contiene il numero di elementi della lista
 - Lista checkbox
 
-**Pulsanti per il trasferimento dei contenuti:**  
+**Pulsanti per il trasferimento dei contenuti:**
 - `a.transfer`: Traferisce i campi selezionati a sinistra nella colonna destra
-- `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra  
+- `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
 - `a.reset`: Ripristina lo stato iniziale delle liste
 
 {% capture callout %}
@@ -106,19 +106,19 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
       <div class="it-transfer-buttons">
         <a class="transfer" href="#" aria-label="Sposta avanti">
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
           </svg>
         </a>
         <span class="sr-only">Label for aroow right</span>
         <a class="backtransfer" href="#" aria-label="Sposta indietro">
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use>
           </svg>
         </a>
         <span class="sr-only">Label for aroow left</span>
         <a class="reset" href="#" aria-label="Reset">
           <svg class="icon">
-            <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </a>
         <span class="sr-only">Label for reset icon</span>
