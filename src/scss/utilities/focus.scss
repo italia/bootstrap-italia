@@ -1,15 +1,15 @@
-:focus {
-  border-color: $focus-outline-color;
-  box-shadow: 0 0 0 2px $focus-outline-color;
-  outline: none;
+:focus:not(.focus--mouse){
+  border-color: $focus-outline-color !important;
+  box-shadow: 0 0 0 2px $focus-outline-color !important;
+  outline: none !important;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   box-shadow: none;
 }
 
-.focus--mouse {
-  border-color: inherit;
-  box-shadow: none;
-  outline: none;
+.focus--mouse:not(.btn) {
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
