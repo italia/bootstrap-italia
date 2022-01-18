@@ -78,13 +78,6 @@
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-  .dimmer {
-  }
-}
-
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .dimmer {

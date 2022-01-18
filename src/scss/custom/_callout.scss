@@ -213,7 +213,6 @@
     flex-direction: column-reverse;
     border-bottom: none;
     .collapse-header {
-      margin-top: 1.333rem;
       display: flex;
       justify-content: space-between;
       border-top: 1px solid $gray-border-disabled;
@@ -307,11 +306,12 @@
 }
 
 //fix IE max width ch value (substitute with rem)
+/* stylelint-disable */
 _:-ms-fullscreen,
 .callout {
   max-width: 32rem;
 }
-
+/* stylelint-enable */
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .callout {

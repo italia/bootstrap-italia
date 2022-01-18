@@ -120,51 +120,31 @@
           padding-bottom: $modal-padding;
           background: $modal-sticky-bg;
           flex-shrink: 0;
-          h5 {
-            span {
-            }
-          }
         }
         .modal-body {
           padding-top: 0;
           padding-bottom: $modal-padding;
           overflow-y: auto;
-          .link-list-wrapper {
-            .link-list {
-              li {
-                a {
-                  svg {
-                  }
-                }
-              }
-            }
-          }
         }
         .modal-footer {
           flex-shrink: 0;
           background: $modal-sticky-bg;
         }
       }
-    }
-  }
-  //left variation
-  .modal-dialog {
-    &.modal-dialog-left {
-      height: 100vh;
-      margin: 0 $v-gap * 3 0 0;
-      .modal-content {
+      &.modal-dialog-left {
         height: 100vh;
+        margin: 0 $v-gap * 3 0 0;
+        .modal-content {
+          height: 100vh;
+        }
       }
-    }
-  }
-  //right variaion
-  .modal-dialog {
-    &.modal-dialog-right {
-      height: 100vh;
-      margin: 0 0 0 $v-gap * 3;
-      float: right;
-      .modal-content {
+      &.modal-dialog-right {
         height: 100vh;
+        margin: 0 0 0 $v-gap * 3;
+        float: right;
+        .modal-content {
+          height: 100vh;
+        }
       }
     }
   }
@@ -175,41 +155,22 @@
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
       }
+      &.modal-dialog-right {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      &.modal-dialog-centered {
+        transform: translate(0, -5%);
+      }
     }
     &.show {
       .modal-dialog {
         &.modal-dialog-left {
           transform: translateX(0);
         }
-      }
-    }
-  }
-  // transition right
-  &.fade {
-    .modal-dialog {
-      &.modal-dialog-right {
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    &.show {
-      .modal-dialog {
         &.modal-dialog-right {
           transform: translateX(0);
         }
-      }
-    }
-  }
-  // transition right
-  &.fade {
-    .modal-dialog {
-      &.modal-dialog-centered {
-        transform: translate(0, -5%);
-        //transition: transform .3s ease-in-out;
-      }
-    }
-    &.show {
-      .modal-dialog {
         &.modal-dialog-centered {
           transform: translate(0, 0);
         }
@@ -240,33 +201,25 @@
     .modal-dialog {
       margin-left: auto;
       margin-right: auto;
-    }
-    &.it-dialog-scrollable {
-      .modal-dialog {
-        margin: $v-gap * 8 auto;
-        .modal-content {
-          height: calc(100vh - #{$v-gap * 16});
-        }
-      }
-    }
-  }
-  //left variaion
-  .modal {
-    //right variaion
-    .modal-dialog {
       &.modal-dialog-left {
         margin: 0;
         .modal-content {
           height: 100vh;
         }
       }
-    }
-    .modal-dialog {
       &.modal-dialog-right {
         margin: 0;
         float: right;
         .modal-content {
           height: 100vh;
+        }
+      }
+    }
+    &.it-dialog-scrollable {
+      .modal-dialog {
+        margin: $v-gap * 8 auto;
+        .modal-content {
+          height: calc(100vh - #{$v-gap * 16});
         }
       }
     }
@@ -281,10 +234,6 @@
   .alert-modal {
     .modal-dialog {
       .modal-content {
-        .modal-header {
-          .icon {
-          }
-        }
         .modal-body {
           p {
             padding-left: $modal-alert-p-distance;
@@ -293,21 +242,4 @@
       }
     }
   }
-  // transition right
-  .fade {
-    .modal-dialog {
-      &.modal-dialog-right {
-        //margin-right: -17px;
-      }
-    }
-    &.show {
-      .modal-dialog {
-        &.modal-dialog-right {
-        }
-      }
-    }
-  }
-}
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

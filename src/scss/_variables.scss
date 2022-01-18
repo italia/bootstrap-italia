@@ -621,10 +621,8 @@ $timeline-content-padding: 18px 0 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
 
 // Grid breakpoints
-//
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-//
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -635,13 +633,9 @@ $grid-breakpoints: (
 
 // Hover states breackpoint
 // Define minimum dimension for over states activation
-//
 $grid-breakpoints-hover: 1025px;
-//
 // Grid containers
-//
 // Define the maximum width of `.container` for different screen sizes.
-//
 $container-max-widths: (
   sm: 540px,
   md: 668px,

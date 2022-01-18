@@ -96,9 +96,6 @@
     }
   }
 }
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
@@ -205,7 +202,6 @@
             width: $header-center-search-size;
             height: $header-center-search-size;
             border-radius: $header-center-search-radius;
-            display: block;
             background: $header-center-text-color;
             display: flex;
             justify-content: center;
@@ -225,8 +221,4 @@
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

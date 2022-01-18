@@ -77,7 +77,7 @@ a.datepicker-button {
     padding-top: 1px;
 
     &:after {
-      font-family: 'Glyphicons Halflings';
+      font-family: 'Glyphicons Halflings', sans-serif;
       font-size: 0.6em;
       display: inline-block;
       content: '\e252';
@@ -422,9 +422,6 @@ abbr[title] {
     .datepicker-month {
       margin: 0;
       padding: 0;
-    }
-
-    tr.datepicker-weekdays {
     }
   }
 

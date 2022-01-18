@@ -273,11 +273,6 @@
     margin-top: $card-small-line-margin;
     margin-left: $card-padding;
   }
-
-  &.no-after {
-    content: none;
-  }
-
   a.read-more {
     position: absolute;
     bottom: $v-gap * 3;
@@ -372,8 +367,8 @@
   }
 
   &.no-after {
+    content: none;
     position: relative;
-
     &:after {
       display: none;
     }
@@ -699,15 +694,6 @@ a.read-more {
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .card-wrapper {
@@ -736,8 +722,4 @@ a.read-more {
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

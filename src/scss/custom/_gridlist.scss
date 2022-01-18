@@ -6,8 +6,6 @@
     border-radius: $border-radius;
     .img-responsive {
       padding-bottom: $grid-item-df-proportion;
-      .img-wrapper {
-      }
     }
   }
   // text
@@ -32,13 +30,16 @@
   }
   // text overlay
   &.it-grid-item-overlay {
+    position: relative;
     .it-griditem-text-wrapper {
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba($grid-item-text-overlay-bg, 0.85);
+      background: transparent;
       padding: $v-gap $v-gap * 2;
+      color: $white;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
       .it-griditem-text {
         color: #fff;
       }
@@ -63,22 +64,6 @@
       }
     }
   }
-
-  // overlay
-  &.it-grid-item-overlay {
-    position: relative;
-
-    .it-griditem-text-wrapper {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-
-      color: $white;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-      background-color: transparent;
-    }
-  }
 }
 
 // grid default
@@ -95,9 +80,6 @@
     margin-left: -$grid-list-default-gap;
     margin-right: -$grid-list-default-gap;
     flex-wrap: wrap;
-    // items in grid
-    .it-grid-item-wrapper {
-    }
   }
   // grid with label
   &.it-image-label-grid {
@@ -108,18 +90,15 @@
       padding: 0 $grid-list-text-gap $grid-list-text-gap * 2 $grid-list-text-gap;
     }
     .grid-row {
-      margin-left: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
-      margin-right: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
-
-      .it-grid-item-wrapper {
-      }
+      margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
     }
   }
   // masonry
   &.it-masonry {
     .card-columns {
-      margin-left: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
-      margin-right: -(($grid-list-text-gap * 2)+ ($grid-list-default-gap * 2));
+      margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
       column-gap: 0;
       .it-grid-item-wrapper {
         break-inside: avoid-column;
@@ -142,15 +121,6 @@
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   // grid default
@@ -161,8 +131,6 @@
         padding: $v-gap * 2 $v-gap * 3;
         .it-griditem-text {
           font-size: $grid-item-text-size;
-        }
-        .icon {
         }
       }
     }
@@ -177,16 +145,4 @@
       }
     }
   }
-
-  .it-grid-list-wrapper {
-    .grid-row {
-      // items in grid
-      .it-grid-item-wrapper {
-      }
-    }
-  }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

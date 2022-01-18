@@ -20,10 +20,6 @@
   // small size --------------------------------
   &.it-hero-small-size {
     min-height: $hero-height-sm-mob;
-    .img-responsive-wrapper {
-      .img-responsive {
-      }
-    }
   }
   // Text container ----------------------------
   .it-hero-text-wrapper {
@@ -210,29 +206,13 @@
     position: relative;
     min-height: $hero-height-desk;
     align-items: center;
-    // img -------------------------------------------
-    .img-responsive-wrapper {
-      .img-responsive {
-      }
-    }
     // img small size --------------------------------
     &.it-hero-small-size {
       min-height: $hero-height-sm-desk;
-      .img-responsive-wrapper {
-        .img-responsive {
-        }
-      }
     }
     // Text container ----------------------------
     .it-hero-text-wrapper {
-      padding: $hero-text-padding-desk 40% $hero-text-padding-desk +
-        ($v-gap * 6) ($v-gap * 4)-6;
-      :last-child {
-      }
-      span,
-      h1,
-      p {
-      }
+      padding: $hero-text-padding-desk 40% $hero-text-padding-desk + ($v-gap * 6) ($v-gap * 4)-6;
       span.it-category {
         position: absolute;
         margin-top: -$v-gap * 7;
@@ -251,8 +231,7 @@
     // Text container centered----------------------------
     &.it-text-centered {
       .it-hero-text-wrapper {
-        padding: $hero-text-padding-desk 20% $hero-text-padding-desk +
-          ($v-gap * 3) 20%;
+        padding: $hero-text-padding-desk 20% $hero-text-padding-desk + ($v-gap * 3) 20%;
         span.it-category {
           left: 20%;
           right: 20%;
@@ -272,8 +251,4 @@
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

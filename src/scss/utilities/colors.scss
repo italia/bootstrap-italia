@@ -257,18 +257,6 @@ $colorlist: $complementary-3-a1 $complementary-3-a2 $complementary-3-a3
 
 // accent colors toni------------------
 // analog 1
-.analogue-1-bg {
-  background-color: $analogue-1 !important;
-}
-.analogue-1-color {
-  color: $analogue-1 !important;
-}
-.analogue-1-border-color- {
-  border-color: $analogue-1 !important;
-  &.border {
-    border-color: $analogue-1 !important;
-  }
-}
 $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4
   $analogue-1-b5 $analogue-1-b6 $analogue-1-b7 $analogue-1-b8;
 
@@ -289,18 +277,6 @@ $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4
 }
 
 // analog 2
-.analogue-2-bg {
-  background-color: $analogue-2 !important;
-}
-.analogue-2-color {
-  color: $analogue-2 !important;
-}
-.analogue-2-border-color- {
-  border-color: $analogue-2 !important;
-  &.border {
-    border-color: $analogue-2 !important;
-  }
-}
 $colorlist: $analogue-2-b1 $analogue-2-b2 $analogue-2-b3 $analogue-2-b4
   $analogue-2-b5 $analogue-2-b6 $analogue-2-b7 $analogue-2-b8;
 

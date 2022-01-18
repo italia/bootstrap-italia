@@ -89,7 +89,6 @@
                   width: $header-center-search-size;
                   height: $header-center-search-size;
                   border-radius: $header-center-search-radius;
-                  display: block;
                   background: $header-center-text-color;
                   display: flex;
                   justify-content: center;
@@ -143,14 +142,6 @@
   }
 }
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-header-wrapper {
@@ -179,8 +170,4 @@
       right: 0;
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

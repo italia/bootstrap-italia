@@ -29,13 +29,10 @@
       height: 16px;
       background-color: #e6e9f2;
       border-radius: 10px;
-      margin-right: 10px;
       transition: background 0.3s ease;
       vertical-align: middle;
-      margin: 0 16px;
+      margin: 8px 10px 0 16px;
       float: right;
-      margin-top: 8px;
-
       &:before,
       &:after {
         content: '';
@@ -44,7 +41,6 @@
         width: 26px;
         height: 26px;
         border-radius: 50%;
-        left: 0;
         top: -5px;
         left: -3px;
         transition: left 0.3s ease, background 0.1s ease, transform 0.1s ease;
