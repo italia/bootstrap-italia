@@ -1,7 +1,7 @@
 on: [push, pull_request]
 name: Lint code
 jobs:
-  container:
+  lint-code:
     runs-on: ubuntu-latest
     container: 
       image: timbru31/ruby-node:3.0-16
