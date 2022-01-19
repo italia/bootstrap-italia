@@ -66,83 +66,32 @@
  *
  */
 
-;(function() {
+;(function () {
   'use strict'
   if (typeof Date.dp_locales === 'undefined') {
     Date.dp_locales = {
       texts: {
         buttonTitle: 'Select date ...',
-        buttonLabel:
-          'Click or press the Enter key or the spacebar to open the calendar',
+        buttonLabel: 'Click or press the Enter key or the spacebar to open the calendar',
         prevButtonLabel: 'Go to previous month',
         prevMonthButtonLabel: 'Go to the previous year',
         prevYearButtonLabel: 'Go to the previous twenty years',
         nextButtonLabel: 'Go to next month',
         nextMonthButtonLabel: 'Go to the next year',
         nextYearButtonLabel: 'Go to the next twenty years',
-        changeMonthButtonLabel:
-          'Click or press the Enter key or the spacebar to change the month',
-        changeYearButtonLabel:
-          'Click or press the Enter key or the spacebar to change the year',
-        changeRangeButtonLabel:
-          'Click or press the Enter key or the spacebar to go to the next twenty years',
+        changeMonthButtonLabel: 'Click or press the Enter key or the spacebar to change the month',
+        changeYearButtonLabel: 'Click or press the Enter key or the spacebar to change the year',
+        changeRangeButtonLabel: 'Click or press the Enter key or the spacebar to go to the next twenty years',
         closeButtonTitle: 'Close',
         closeButtonLabel: 'Close the calendar',
         calendarHelp:
           '- Up Arrow and Down Arrow - goes to the same day of the week in the previous or next week respectively. If the end of the month is reached, continues into the next or previous month as appropriate.\r\n- Left Arrow and Right Arrow - advances one day to the next, also in a continuum. Visually focus is moved from day to day and wraps from row to row in the grid of days.\r\n- Control+Page Up - Moves to the same date in the previous year.\r\n- Control+Page Down - Moves to the same date in the next year.\r\n- Home - Moves to the first day of the current month.\r\n- End - Moves to the last day of the current month.\r\n- Page Up - Moves to the same date in the previous month.\r\n- Page Down - Moves to the same date in the next month.\r\n- Enter or Espace - closes the calendar, and the selected date is shown in the associated text box.\r\n- Escape - closes the calendar without any action.',
       },
       directionality: 'LTR',
-      month_names: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
-      month_names_abbreviated: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
-      month_names_narrow: [
-        'J',
-        'F',
-        'M',
-        'A',
-        'M',
-        'J',
-        'J',
-        'A',
-        'S',
-        'O',
-        'N',
-        'D',
-      ],
-      day_names: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-      ],
+      month_names: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      month_names_abbreviated: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      month_names_narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+      day_names: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       day_names_abbreviated: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       day_names_short: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
       day_names_narrow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -161,12 +110,7 @@
         noon: 'n',
         pm: 'p',
       },
-      quarter_names: [
-        '1st quarter',
-        '2nd quarter',
-        '3rd quarter',
-        '4th quarter',
-      ],
+      quarter_names: ['1st quarter', '2nd quarter', '3rd quarter', '4th quarter'],
       quarter_names_abbreviated: ['Q1', 'Q2', 'Q3', 'Q4'],
       quarter_names_narrow: ['1', '2', '3', '4'],
       era_names: ['Before Christ', 'Anno Domini'],
@@ -180,7 +124,7 @@
     }
   }
 })()
-;(function(factory) {
+;(function (factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory)
   } else if (typeof exports === 'object') {
@@ -191,7 +135,8 @@
     }
     factory(jQuery)
   }
-})(function($, undefined) {
+  /* eslint-disable no-shadow-restricted-names */
+})(function ($, undefined) {
   'use strict'
 
   var datepickerButton = [
@@ -238,7 +183,7 @@
     '</div>',
   ]
 
-  var Datepicker = function(target, options) {
+  var Datepicker = function (target, options) {
     var self = this
     this.$target = $(target) // textbox that will receive the selected date string and focus (if modal)
     this.options = $.extend({}, Datepicker.DEFAULTS, options)
@@ -250,7 +195,7 @@
     if (!$.isArray(this.options.datesDisabled)) {
       this.options.datesDisabled = [this.options.datesDisabled]
     }
-    $.each(this.options.datesDisabled, function(i, v) {
+    $.each(this.options.datesDisabled, function (i, v) {
       if (typeof v === 'string') {
         var date = self.parseDate(v)
         if (date === null) {
@@ -284,9 +229,7 @@
     } else if (!(this.options.next instanceof jQuery)) {
       this.options.next = null
     }
-    this.id =
-      this.$target.attr('id') ||
-      'datepicker-' + Math.floor(Math.random() * 100000)
+    this.id = this.$target.attr('id') || 'datepicker-' + Math.floor(Math.random() * 100000)
     var calendar = datepickerCalendar.join('')
     calendar = calendar.replace(/CALENDARID/g, this.id + '')
 
@@ -316,9 +259,7 @@
     if (this.$calendar.parent().css('position') === 'static') {
       this.$calendar.parent().css('position', 'relative')
     }
-    this.$calendar
-      .find('.datepicker-bn-open-label')
-      .html(this.options.buttonLabel)
+    this.$calendar.find('.datepicker-bn-open-label').html(this.options.buttonLabel)
     if (this.$target.attr('id')) {
       this.$calendar.attr('aria-controls', this.$target.attr('id'))
     }
@@ -333,16 +274,11 @@
     if (this.locales.directionality === 'RTL') {
       this.$grid.addClass('rtl')
     }
-    var $days = this.$grid.find('th.datepicker-day abbr')
     this.drawCalendarHeader()
     if (this.options.inline == false && this.options.modal == true) {
       this.$close = this.$calendar.find('.datepicker-close')
-      this.$close
-        .html(this.options.closeButtonTitle)
-        .attr('title', this.options.closeButtonLabel)
-      this.$calendar
-        .find('.datepicker-bn-close-label')
-        .html(this.options.closeButtonLabel)
+      this.$close.html(this.options.closeButtonTitle).attr('title', this.options.closeButtonLabel)
+      this.$calendar.find('.datepicker-bn-close-label').html(this.options.closeButtonLabel)
     } else {
       this.hideObject(this.$calendar.find('.datepicker-close-wrap'))
       this.hideObject(this.$calendar.find('.datepicker-bn-close-label'))
@@ -350,10 +286,7 @@
 
     if (this.options.inline != false) {
       this.hideObject(this.$button)
-      var $container =
-        typeof this.options.inline === 'string'
-          ? $('#' + this.options.inline)
-          : this.options.inline
+      var $container = typeof this.options.inline === 'string' ? $('#' + this.options.inline) : this.options.inline
       $container.append(this.$calendar)
       this.$calendar.css({ position: 'relative', left: '0px' })
       this.initializeDate()
@@ -379,7 +312,7 @@
     }
 
     this.bindHandlers()
-    this.$button.click(function(e) {
+    this.$button.click(function (e) {
       if (!$(this).hasClass('disabled')) {
         if (self.$calendar.attr('aria-hidden') === 'true') {
           self.initializeDate()
@@ -392,14 +325,14 @@
       e.stopPropagation()
       return false
     })
-    this.$button.keydown(function(e) {
+    this.$button.keydown(function (e) {
       var ev = e || event
       if (ev.keyCode == self.keys.enter || ev.keyCode == self.keys.space) {
         $(this).trigger('click')
         return false
       }
     })
-    this.$calendar.on('blur', function(e) {
+    this.$calendar.on('blur', function () {
       if (self.$calendar.attr('aria-hidden') === 'false') {
         self.hide()
       }
@@ -433,7 +366,7 @@
     changeRangeButtonLabel: Date.dp_locales.texts.changeRangeButtonLabel,
     closeButtonTitle: Date.dp_locales.texts.closeButtonTitle,
     closeButtonLabel: Date.dp_locales.texts.closeButtonLabel,
-    onUpdate: function(value) {},
+    onUpdate: function () {},
     previous: null,
     next: null,
     theme: 'default',
@@ -450,7 +383,7 @@
    *	@return N/A
    *
    */
-  Datepicker.prototype.initializeDate = function() {
+  Datepicker.prototype.initializeDate = function () {
     var val = this.$target.val()
     var date = val === '' ? new Date() : this.parseDate(val)
     this.setDate(date, true)
@@ -460,7 +393,7 @@
    * getDate() is a member function to retrieve the current Datepicker date.
    * @return the Date object
    */
-  Datepicker.prototype.getDate = function() {
+  Datepicker.prototype.getDate = function () {
     var val = this.$target.val()
     var date = val === '' ? new Date() : this.parseDate(val)
     return date
@@ -473,7 +406,7 @@
    *	@return N/A
    *
    */
-  Datepicker.prototype.setDate = function(newDate, init) {
+  Datepicker.prototype.setDate = function (newDate, init) {
     this.dateObj = newDate
     init = typeof init === 'undefined' ? false : init
     if (this.dateObj == null) {
@@ -504,26 +437,17 @@
       case 1: // months
         this.populateMonthsCalendar()
         // update the table's activedescdendant to point to the current month
-        this.$grid.attr(
-          'aria-activedescendant',
-          this.$grid.find('.curMonth').attr('id')
-        )
+        this.$grid.attr('aria-activedescendant', this.$grid.find('.curMonth').attr('id'))
         break
       case 2: // years
         this.populateYearsCalendar()
         // update the table's activedescdendant to point to the current year
-        this.$grid.attr(
-          'aria-activedescendant',
-          this.$grid.find('.curYear').attr('id')
-        )
+        this.$grid.attr('aria-activedescendant', this.$grid.find('.curYear').attr('id'))
         break
       default:
         this.populateDaysCalendar()
         // update the table's activedescdendant to point to the current day
-        this.$grid.attr(
-          'aria-activedescendant',
-          this.$grid.find('.curDay').attr('id')
-        )
+        this.$grid.attr('aria-activedescendant', this.$grid.find('.curDay').attr('id'))
     }
   } // end setDate()
 
@@ -532,7 +456,7 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.drawCalendarHeader = function() {
+  Datepicker.prototype.drawCalendarHeader = function () {
     var $days = this.$grid.find('th.datepicker-day')
     var weekday = this.options.firstDayOfWeek
     for (var i = 0; i < 7; i++) {
@@ -541,11 +465,7 @@
         .children('abbr')
         .eq(i)
         .attr('title', this.locales.day_names[weekday])
-        .text(
-          this.options.weekDayFormat === 'short'
-            ? this.locales.day_names_short[weekday]
-            : this.locales.day_names_narrow[weekday]
-        )
+        .text(this.options.weekDayFormat === 'short' ? this.locales.day_names_short[weekday] : this.locales.day_names_narrow[weekday])
       weekday = (weekday + 1) % 7
     }
   } // end drawCalendarHeader()
@@ -557,24 +477,14 @@
    *	@return N/A
    *
    */
-  Datepicker.prototype.populateDaysCalendar = function() {
-    this.$calendar
-      .find('.datepicker-bn-prev-label')
-      .html(this.options.prevButtonLabel)
-    this.$calendar
-      .find('.datepicker-bn-next-label')
-      .html(this.options.nextButtonLabel)
-    this.$calendar
-      .find('.datepicker-bn-fast-prev-label')
-      .html(this.options.prevMonthButtonLabel)
-    this.$calendar
-      .find('.datepicker-bn-fast-next-label')
-      .html(this.options.nextMonthButtonLabel)
+  Datepicker.prototype.populateDaysCalendar = function () {
+    this.$calendar.find('.datepicker-bn-prev-label').html(this.options.prevButtonLabel)
+    this.$calendar.find('.datepicker-bn-next-label').html(this.options.nextButtonLabel)
+    this.$calendar.find('.datepicker-bn-fast-prev-label').html(this.options.prevMonthButtonLabel)
+    this.$calendar.find('.datepicker-bn-fast-next-label').html(this.options.nextMonthButtonLabel)
     if (
       this.options.min != null &&
-      (this.year - 1 < this.options.min.getFullYear() ||
-        (this.year - 1 == this.options.min.getFullYear() &&
-          this.month < this.options.min.getMonth()))
+      (this.year - 1 < this.options.min.getFullYear() || (this.year - 1 == this.options.min.getFullYear() && this.month < this.options.min.getMonth()))
     ) {
       this.$fastprev.attr('title', '')
       this.$fastprev.addClass('disabled')
@@ -588,8 +498,7 @@
     if (
       this.options.min != null &&
       (previousMonth.year < this.options.min.getFullYear() ||
-        (previousMonth.year == this.options.min.getFullYear() &&
-          previousMonth.month < this.options.min.getMonth()))
+        (previousMonth.year == this.options.min.getFullYear() && previousMonth.month < this.options.min.getMonth()))
     ) {
       this.$prev.attr('title', '')
       this.$prev.addClass('disabled')
@@ -603,9 +512,7 @@
     var nextMonth = this.nextMonth(this.year, this.month)
     if (
       this.options.max != null &&
-      (nextMonth.year > this.options.max.getFullYear() ||
-        (nextMonth.year == this.options.max.getFullYear() &&
-          nextMonth.month > this.options.max.getMonth()))
+      (nextMonth.year > this.options.max.getFullYear() || (nextMonth.year == this.options.max.getFullYear() && nextMonth.month > this.options.max.getMonth()))
     ) {
       this.$next.attr('title', '')
       this.$next.addClass('disabled')
@@ -617,9 +524,7 @@
     }
     if (
       this.options.max != null &&
-      (this.year + 1 > this.options.max.getFullYear() ||
-        (this.year + 1 == this.options.max.getFullYear() &&
-          this.month > this.options.max.getMonth()))
+      (this.year + 1 > this.options.max.getFullYear() || (this.year + 1 == this.options.max.getFullYear() && this.month > this.options.max.getMonth()))
     ) {
       this.$fastnext.attr('title', '')
       this.$fastnext.addClass('disabled')
@@ -632,10 +537,7 @@
     this.showObject(this.$fastprev)
     this.showObject(this.$fastnext)
     var numDays = this.getDaysInMonth(this.year, this.month)
-    var numPrevDays = this.getDaysInMonth(
-      previousMonth.year,
-      previousMonth.month
-    )
+    var numPrevDays = this.getDaysInMonth(previousMonth.year, previousMonth.month)
     var startWeekday = new Date(this.year, this.month, 1).getDay()
     var lastDayOfWeek = (this.options.firstDayOfWeek + 6) % 7
     var curDay = 1
@@ -652,114 +554,39 @@
       weekday = (weekday + 1) % 7
     }
     for (; numEmpties > 0; numEmpties--) {
-      gridCells +=
-        '\t\t<td class="empty">' + (numPrevDays - numEmpties + 1) + '</td>\n'
+      gridCells += '\t\t<td class="empty">' + (numPrevDays - numEmpties + 1) + '</td>\n'
     }
-    var isYearDisabled =
-      this.options.isYearDisabled && this.options.isYearDisabled(this.year)
-    var isMonthDisabled =
-      this.options.isMonthDisabled &&
-      this.options.isMonthDisabled(this.year, this.month + 1)
+    var isYearDisabled = this.options.isYearDisabled && this.options.isYearDisabled(this.year)
+    var isMonthDisabled = this.options.isMonthDisabled && this.options.isMonthDisabled(this.year, this.month + 1)
     // insert the days of the month.
     for (curDay = 1; curDay <= numDays; curDay++) {
       var date = new Date(this.year, this.month, curDay, 0, 0, 0, 0)
       var longdate = this.formatDate(date, this.options.titleFormat)
-      var curDayClass =
-        curDay == this.date &&
-        this.month == this.curMonth &&
-        this.year == this.curYear
-          ? ' curDay'
-          : ''
+      var curDayClass = curDay == this.date && this.month == this.curMonth && this.year == this.curYear ? ' curDay' : ''
       if (isYearDisabled || isMonthDisabled) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
       } else if ($.inArray(weekday, this.options.daysOfWeekDisabled) > -1) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
       } else if (this.options.min != null && date < this.options.min) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
       } else if (this.options.max != null && date > this.options.max) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
-      } else if (
-        $.inArray(this.format(date), this.options.datesDisabled) > -1
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
-      } else if (
-        this.options.isDateDisabled &&
-        this.options.isDateDisabled(date)
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day unselectable' +
-          curDayClass +
-          '"'
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
+      } else if ($.inArray(this.format(date), this.options.datesDisabled) > -1) {
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
+      } else if (this.options.isDateDisabled && this.options.isDateDisabled(date)) {
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day unselectable' + curDayClass + '"'
       } else {
-        gridCells +=
-          '\t\t<td id="cell' +
-          curDay +
-          '-' +
-          this.id +
-          '" class="day selectable' +
-          curDayClass +
-          '"'
+        gridCells += '\t\t<td id="cell' + curDay + '-' + this.id + '" class="day selectable' + curDayClass + '"'
       }
       gridCells += ' data-value="' + curDay + '"'
       gridCells += ' title="' + longdate + '"'
       gridCells += ' aria-label="' + longdate + '"'
-      gridCells +=
-        ' headers="day' +
-        weekday +
-        '-header-' +
-        this.id +
-        '" role="gridcell" tabindex="-1" aria-selected="false"><span>' +
-        curDay +
-        '</span>'
+      gridCells += ' headers="day' + weekday + '-header-' + this.id + '" role="gridcell" tabindex="-1" aria-selected="false"><span>' + curDay + '</span>'
       gridCells += '</td>'
       if (weekday == lastDayOfWeek && curDay < numDays) {
         // This was the last day of the week, close it out
         // and begin a new one
-        gridCells +=
-          '\t</tr>\n\t<tr id="row' +
-          rowCount +
-          '-' +
-          this.id +
-          '" role="row">\n'
+        gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '-' + this.id + '" role="row">\n'
         rowCount++
       }
       if (curDay < numDays) {
@@ -785,19 +612,12 @@
    *	@return N/A
    *
    */
-  Datepicker.prototype.populateMonthsCalendar = function() {
-    this.$calendar
-      .find('.datepicker-bn-prev-label')
-      .html(this.options.prevMonthButtonLabel)
-    this.$calendar
-      .find('.datepicker-bn-next-label')
-      .html(this.options.nextMonthButtonLabel)
+  Datepicker.prototype.populateMonthsCalendar = function () {
+    this.$calendar.find('.datepicker-bn-prev-label').html(this.options.prevMonthButtonLabel)
+    this.$calendar.find('.datepicker-bn-next-label').html(this.options.nextMonthButtonLabel)
     this.hideObject(this.$fastprev)
     this.hideObject(this.$fastnext)
-    if (
-      this.options.min != null &&
-      this.year - 1 < this.options.min.getFullYear()
-    ) {
+    if (this.options.min != null && this.year - 1 < this.options.min.getFullYear()) {
       this.$prev.attr('title', '')
       this.$prev.addClass('disabled')
       this.$prev.removeClass('enabled')
@@ -807,10 +627,7 @@
       this.$prev.removeClass('disabled')
     }
     this.$monthObj.attr('title', this.options.changeYearButtonLabel)
-    if (
-      this.options.max != null &&
-      this.year + 1 > this.options.max.getFullYear()
-    ) {
+    if (this.options.max != null && this.year + 1 > this.options.max.getFullYear()) {
       this.$next.attr('title', '')
       this.$next.addClass('disabled')
       this.$next.removeClass('enabled')
@@ -828,86 +645,35 @@
     $tbody.empty()
     $('#datepicker-err-msg-' + this.id).empty()
     var gridCells = '\t<tr id="row0-' + this.id + '" role="row">\n'
-    var isYearDisabled =
-      this.options.isYearDisabled && this.options.isYearDisabled(this.year)
+    var isYearDisabled = this.options.isYearDisabled && this.options.isYearDisabled(this.year)
     // insert the months of the year.
     for (curMonth = 0; curMonth < 12; curMonth++) {
       if (isYearDisabled) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month unselectable"'
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month unselectable"'
       } else if (curMonth == this.month && this.year == this.curYear) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month curMonth selectable"'
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month curMonth selectable"'
       } else if (
         this.options.min != null &&
-        (this.year < this.options.min.getFullYear() ||
-          (this.year == this.options.min.getFullYear() &&
-            curMonth < this.options.min.getMonth()))
+        (this.year < this.options.min.getFullYear() || (this.year == this.options.min.getFullYear() && curMonth < this.options.min.getMonth()))
       ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month unselectable"'
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month unselectable"'
       } else if (
         this.options.max != null &&
-        (this.year > this.options.max.getFullYear() ||
-          (this.year == this.options.max.getFullYear() &&
-            curMonth > this.options.max.getMonth()))
+        (this.year > this.options.max.getFullYear() || (this.year == this.options.max.getFullYear() && curMonth > this.options.max.getMonth()))
       ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month unselectable"'
-      } else if (
-        this.options.isMonthDisabled &&
-        this.options.isMonthDisabled(this.year, curMonth + 1)
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month unselectable"'
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month unselectable"'
+      } else if (this.options.isMonthDisabled && this.options.isMonthDisabled(this.year, curMonth + 1)) {
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month unselectable"'
       } else {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curMonth + 1) +
-          '-' +
-          this.id +
-          '" class="month selectable"'
+        gridCells += '\t\t<td id="cell' + (curMonth + 1) + '-' + this.id + '" class="month selectable"'
       }
       gridCells += ' data-value="' + curMonth + '"'
-      gridCells +=
-        ' title="' + this.locales.month_names[curMonth] + ' ' + this.year + '"'
-      gridCells +=
-        ' aria-label="' +
-        this.locales.month_names[curMonth] +
-        ' ' +
-        this.year +
-        '"'
-      gridCells +=
-        ' role="gridcell" tabindex="-1" aria-selected="false">' +
-        this.locales.month_names_abbreviated[curMonth]
+      gridCells += ' title="' + this.locales.month_names[curMonth] + ' ' + this.year + '"'
+      gridCells += ' aria-label="' + this.locales.month_names[curMonth] + ' ' + this.year + '"'
+      gridCells += ' role="gridcell" tabindex="-1" aria-selected="false">' + this.locales.month_names_abbreviated[curMonth]
       gridCells += '</td>'
       if (curMonth == 3 || curMonth == 7) {
-        gridCells +=
-          '\t</tr>\n\t<tr id="row' +
-          rowCount +
-          '-' +
-          this.id +
-          '" role="row">\n'
+        gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '-' + this.id + '" role="row">\n'
         rowCount++
       }
     }
@@ -923,19 +689,12 @@
    *	@return N/A
    *
    */
-  Datepicker.prototype.populateYearsCalendar = function() {
-    this.$calendar
-      .find('.datepicker-bn-prev-label')
-      .html(this.options.prevYearButtonLabel)
-    this.$calendar
-      .find('.datepicker-bn-next-label')
-      .html(this.options.nextYearButtonLabel)
+  Datepicker.prototype.populateYearsCalendar = function () {
+    this.$calendar.find('.datepicker-bn-prev-label').html(this.options.prevYearButtonLabel)
+    this.$calendar.find('.datepicker-bn-next-label').html(this.options.nextYearButtonLabel)
     this.hideObject(this.$fastprev)
     this.hideObject(this.$fastnext)
-    if (
-      this.options.min != null &&
-      this.year - 20 < this.options.min.getFullYear()
-    ) {
+    if (this.options.min != null && this.year - 20 < this.options.min.getFullYear()) {
       this.$prev.attr('title', '')
       this.$prev.addClass('disabled')
       this.$prev.removeClass('enabled')
@@ -945,10 +704,7 @@
       this.$prev.removeClass('disabled')
     }
     this.$monthObj.attr('title', this.options.changeRangeButtonLabel)
-    if (
-      this.options.max != null &&
-      this.year + 20 > this.options.max.getFullYear()
-    ) {
+    if (this.options.max != null && this.year + 20 > this.options.max.getFullYear()) {
       this.$next.attr('title', '')
       this.$next.addClass('disabled')
       this.$next.removeClass('enabled')
@@ -970,63 +726,23 @@
     // insert the months of the year.
     for (var curYear = startYear; curYear <= endYear; curYear++) {
       if (curYear == this.year) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curYear - startYear + 1) +
-          '-' +
-          this.id +
-          '" class="year curYear selectable"'
-      } else if (
-        this.options.min != null &&
-        curYear < this.options.min.getFullYear()
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curYear - startYear + 1) +
-          '-' +
-          this.id +
-          '" class="year unselectable"'
-      } else if (
-        this.options.max != null &&
-        curYear > this.options.max.getFullYear()
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curYear - startYear + 1) +
-          '-' +
-          this.id +
-          '" class="year unselectable"'
-      } else if (
-        this.options.isYearDisabled &&
-        this.options.isYearDisabled(curYear)
-      ) {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curYear - startYear + 1) +
-          '-' +
-          this.id +
-          '" class="year unselectable"'
+        gridCells += '\t\t<td id="cell' + (curYear - startYear + 1) + '-' + this.id + '" class="year curYear selectable"'
+      } else if (this.options.min != null && curYear < this.options.min.getFullYear()) {
+        gridCells += '\t\t<td id="cell' + (curYear - startYear + 1) + '-' + this.id + '" class="year unselectable"'
+      } else if (this.options.max != null && curYear > this.options.max.getFullYear()) {
+        gridCells += '\t\t<td id="cell' + (curYear - startYear + 1) + '-' + this.id + '" class="year unselectable"'
+      } else if (this.options.isYearDisabled && this.options.isYearDisabled(curYear)) {
+        gridCells += '\t\t<td id="cell' + (curYear - startYear + 1) + '-' + this.id + '" class="year unselectable"'
       } else {
-        gridCells +=
-          '\t\t<td id="cell' +
-          (curYear - startYear + 1) +
-          '-' +
-          this.id +
-          '" class="year selectable"'
+        gridCells += '\t\t<td id="cell' + (curYear - startYear + 1) + '-' + this.id + '" class="year selectable"'
       }
       gridCells += ' data-value="' + curYear + '"'
       gridCells += ' title="' + curYear + '"'
-      gridCells +=
-        ' role="gridcell" tabindex="-1" aria-selected="false">' + curYear
+      gridCells += ' role="gridcell" tabindex="-1" aria-selected="false">' + curYear
       gridCells += '</td>'
       var curPos = curYear - startYear
       if (curPos == 4 || curPos == 9 || curPos == 14) {
-        gridCells +=
-          '\t</tr>\n\t<tr id="row' +
-          rowCount +
-          '-' +
-          this.id +
-          '" role="row">\n'
+        gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '-' + this.id + '" role="row">\n'
         rowCount++
       }
     }
@@ -1042,14 +758,13 @@
    *			focus on a day the specified number of days from the end of the month.
    *	@return true if the previous month is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showDaysOfPrevMonth = function(offset) {
+  Datepicker.prototype.showDaysOfPrevMonth = function (offset) {
     // show the previous month
     var previousMonth = this.previousMonth(this.year, this.month)
     if (
       this.options.min != null &&
       (previousMonth.year < this.options.min.getFullYear() ||
-        (previousMonth.year == this.options.min.getFullYear() &&
-          previousMonth.month < this.options.min.getMonth()))
+        (previousMonth.year == this.options.min.getFullYear() && previousMonth.month < this.options.min.getMonth()))
     ) {
       return false
     }
@@ -1074,20 +789,16 @@
    *	@param	(month int) the month to show.
    *	@return true if the  month is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showDaysOfMonth = function(month) {
+  Datepicker.prototype.showDaysOfMonth = function (month) {
     if (
       this.options.min != null &&
-      (this.year < this.options.min.getFullYear() ||
-        (this.year == this.options.min.getFullYear() &&
-          month < this.options.min.getMonth()))
+      (this.year < this.options.min.getFullYear() || (this.year == this.options.min.getFullYear() && month < this.options.min.getMonth()))
     ) {
       return false
     }
     if (
       this.options.max != null &&
-      (this.year > this.options.max.getFullYear() ||
-        (this.year == this.options.max.getFullYear() &&
-          month > this.options.max.getMonth()))
+      (this.year > this.options.max.getFullYear() || (this.year == this.options.max.getFullYear() && month > this.options.max.getMonth()))
     ) {
       return false
     }
@@ -1107,11 +818,8 @@
    *			focus on a month the specified number of months from the end of the year.
    *	@return true if the previous year is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showMonthsOfPrevYear = function(offset) {
-    if (
-      this.options.min != null &&
-      this.year - 1 < this.options.min.getFullYear()
-    ) {
+  Datepicker.prototype.showMonthsOfPrevYear = function (offset) {
+    if (this.options.min != null && this.year - 1 < this.options.min.getFullYear()) {
       return false
     }
     // show the previous year
@@ -1134,7 +842,7 @@
    *	@param	(year int) the year to show.
    *	@return true if the year is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showMonthsOfYear = function(year) {
+  Datepicker.prototype.showMonthsOfYear = function (year) {
     if (this.options.min != null && year < this.options.min.getFullYear()) {
       return false
     }
@@ -1157,11 +865,8 @@
    *			focus on a year the specified number of years from the end of the range.
    *	@return true if the year - 20 is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showYearsOfPrevRange = function(offset) {
-    if (
-      this.options.min != null &&
-      this.year - 20 < this.options.min.getFullYear()
-    ) {
+  Datepicker.prototype.showYearsOfPrevRange = function (offset) {
+    if (this.options.min != null && this.year - 20 < this.options.min.getFullYear()) {
       return false
     }
     // show the previous range
@@ -1186,14 +891,12 @@
    *			the beginning of the month.
    *	@return true if the nextmMonth is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showDaysOfNextMonth = function(offset) {
+  Datepicker.prototype.showDaysOfNextMonth = function (offset) {
     // show the next month
     var nextMonth = this.nextMonth(this.year, this.month)
     if (
       this.options.max != null &&
-      (nextMonth.year > this.options.max.getFullYear() ||
-        (nextMonth.year == this.options.max.getFullYear() &&
-          nextMonth.month > this.options.max.getMonth()))
+      (nextMonth.year > this.options.max.getFullYear() || (nextMonth.year == this.options.max.getFullYear() && nextMonth.month > this.options.max.getMonth()))
     ) {
       return false
     }
@@ -1219,11 +922,8 @@
    *			the beginning of the year.
    *	@return true if the next year is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showMonthsOfNextYear = function(offset) {
-    if (
-      this.options.max != null &&
-      this.year + 1 > this.options.max.getFullYear()
-    ) {
+  Datepicker.prototype.showMonthsOfNextYear = function (offset) {
+    if (this.options.max != null && this.year + 1 > this.options.max.getFullYear()) {
       return false
     }
     // show the next year
@@ -1248,11 +948,8 @@
    *			the beginning of the range.
    *	@return true if the year + 20 is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showYearsOfNextRange = function(offset) {
-    if (
-      this.options.max != null &&
-      this.year + 20 > this.options.max.getFullYear()
-    ) {
+  Datepicker.prototype.showYearsOfNextRange = function (offset) {
+    if (this.options.max != null && this.year + 20 > this.options.max.getFullYear()) {
       return false
     }
     // show the next year
@@ -1274,12 +971,10 @@
    *
    *	@return true if the previous year is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showDaysOfPrevYear = function() {
+  Datepicker.prototype.showDaysOfPrevYear = function () {
     if (
       this.options.min != null &&
-      (this.year - 1 < this.options.min.getFullYear() ||
-        (this.year - 1 == this.options.min.getFullYear() &&
-          this.month < this.options.min.getMonth()))
+      (this.year - 1 < this.options.min.getFullYear() || (this.year - 1 == this.options.min.getFullYear() && this.month < this.options.min.getMonth()))
     ) {
       return false
     }
@@ -1296,12 +991,10 @@
    *
    *	@return true if the next year is between the minimum and the maximum date otherwise return false
    */
-  Datepicker.prototype.showDaysOfNextYear = function() {
+  Datepicker.prototype.showDaysOfNextYear = function () {
     if (
       this.options.max != null &&
-      (this.year + 1 > this.options.max.getFullYear() ||
-        (this.year + 1 == this.options.max.getFullYear() &&
-          this.month > this.options.max.getMonth()))
+      (this.year + 1 > this.options.max.getFullYear() || (this.year + 1 == this.options.max.getFullYear() && this.month > this.options.max.getMonth()))
     ) {
       return false
     }
@@ -1318,68 +1011,68 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.bindHandlers = function() {
+  Datepicker.prototype.bindHandlers = function () {
     var self = this
 
     // bind button handlers
-    this.$fastprev.click(function(e) {
+    this.$fastprev.click(function (e) {
       return self.handleFastPrevClick(e)
     })
-    this.$prev.click(function(e) {
+    this.$prev.click(function (e) {
       return self.handlePrevClick(e)
     })
-    this.$next.click(function(e) {
+    this.$next.click(function (e) {
       return self.handleNextClick(e)
     })
-    this.$fastnext.click(function(e) {
+    this.$fastnext.click(function (e) {
       return self.handleFastNextClick(e)
     })
-    this.$monthObj.click(function(e) {
+    this.$monthObj.click(function (e) {
       return self.handleMonthClick(e)
     })
-    this.$monthObj.keydown(function(e) {
+    this.$monthObj.keydown(function (e) {
       return self.handleMonthKeyDown(e)
     })
-    this.$fastprev.keydown(function(e) {
+    this.$fastprev.keydown(function (e) {
       return self.handleFastPrevKeyDown(e)
     })
-    this.$prev.keydown(function(e) {
+    this.$prev.keydown(function (e) {
       return self.handlePrevKeyDown(e)
     })
-    this.$next.keydown(function(e) {
+    this.$next.keydown(function (e) {
       return self.handleNextKeyDown(e)
     })
-    this.$fastnext.keydown(function(e) {
+    this.$fastnext.keydown(function (e) {
       return self.handleFastNextKeyDown(e)
     })
     if (this.options.modal == true) {
-      this.$close.click(function(e) {
+      this.$close.click(function (e) {
         return self.handleCloseClick(e)
       })
-      this.$close.keydown(function(e) {
+      this.$close.keydown(function (e) {
         return self.handleCloseKeyDown(e)
       })
     }
 
     // bind grid handlers
-    this.$grid.keydown(function(e) {
+    this.$grid.keydown(function (e) {
       return self.handleGridKeyDown(e)
     })
-    this.$grid.keypress(function(e) {
+    this.$grid.keypress(function (e) {
       return self.handleGridKeyPress(e)
     })
-    this.$grid.focus(function(e) {
+    this.$grid.focus(function (e) {
       return self.handleGridFocus(e)
     })
-    this.$grid.blur(function(e) {
+    this.$grid.blur(function (e) {
       return self.handleGridBlur(e)
     })
-    this.$grid.delegate('td', 'click', function(e) {
+    this.$grid.delegate('td', 'click', function (e) {
       return self.handleGridClick(this, e)
     })
 
     // bind target handlers
-    this.$target.change(function(e) {
+    this.$target.change(function () {
       var date = self.parseDate($(this).val())
       self.updateLinked(date)
     })
@@ -1392,7 +1085,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleFastPrevClick = function(e) {
+  Datepicker.prototype.handleFastPrevClick = function (e) {
     if (this.showDaysOfPrevYear()) {
       var active = this.$grid.attr('aria-activedescendant')
       if (this.month != this.curMonth || this.year != this.curYear) {
@@ -1414,7 +1107,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handlePrevClick = function(e) {
+  Datepicker.prototype.handlePrevClick = function (e) {
     var active = this.$grid.attr('aria-activedescendant')
     switch (this.gridType) {
       case 0: // days grid
@@ -1463,7 +1156,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleMonthClick = function(e) {
+  Datepicker.prototype.handleMonthClick = function (e) {
     this.changeGrid(e)
     e.stopPropagation()
     return false
@@ -1476,7 +1169,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleNextClick = function(e) {
+  Datepicker.prototype.handleNextClick = function (e) {
     var active = this.$grid.attr('aria-activedescendant')
     switch (this.gridType) {
       case 0: // days grid
@@ -1525,7 +1218,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleFastNextClick = function(e) {
+  Datepicker.prototype.handleFastNextClick = function (e) {
     if (this.showDaysOfNextYear()) {
       var active = this.$grid.attr('aria-activedescendant')
       if (this.month != this.curMonth || this.year != this.curYear) {
@@ -1547,7 +1240,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleCloseClick = function(e) {
+  Datepicker.prototype.handleCloseClick = function (e) {
     // dismiss the dialog box
     this.hide()
     e.stopPropagation()
@@ -1561,7 +1254,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleFastPrevKeyDown = function(e) {
+  Datepicker.prototype.handleFastPrevKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1604,7 +1297,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handlePrevKeyDown = function(e) {
+  Datepicker.prototype.handlePrevKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1665,7 +1358,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleMonthKeyDown = function(e) {
+  Datepicker.prototype.handleMonthKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1705,7 +1398,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleNextKeyDown = function(e) {
+  Datepicker.prototype.handleNextKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1763,7 +1456,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleFastNextKeyDown = function(e) {
+  Datepicker.prototype.handleFastNextKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1803,7 +1496,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleCloseKeyDown = function(e) {
+  Datepicker.prototype.handleCloseKeyDown = function (e) {
     if (e.altKey) {
       return true
     }
@@ -1846,18 +1539,11 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleGridKeyDown = function(e) {
+  Datepicker.prototype.handleGridKeyDown = function (e) {
     var $curCell = $('#' + this.$grid.attr('aria-activedescendant'))
     var $cells = this.$grid.find('td.selectable')
-    var colCount = this.$grid
-      .find('tbody tr')
-      .eq(0)
-      .find('td').length
-    if (
-      e.altKey &&
-      e.keyCode != this.keys.pageup &&
-      e.keyCode != this.keys.pagedown
-    ) {
+    var colCount = this.$grid.find('tbody tr').eq(0).find('td').length
+    if (e.altKey && e.keyCode != this.keys.pageup && e.keyCode != this.keys.pagedown) {
       return true
     }
     switch (e.keyCode) {
@@ -1881,7 +1567,6 @@
           e.stopPropagation()
           return false
         }
-        break
       }
       case this.keys.enter:
       case this.keys.space: {
@@ -1913,12 +1598,7 @@
       }
       case this.keys.left:
       case this.keys.right: {
-        if (
-          (e.keyCode == this.keys.left &&
-            this.locales.directionality === 'LTR') ||
-          (e.keyCode == this.keys.right &&
-            this.locales.directionality === 'RTL')
-        ) {
+        if ((e.keyCode == this.keys.left && this.locales.directionality === 'LTR') || (e.keyCode == this.keys.right && this.locales.directionality === 'RTL')) {
           if (e.ctrlKey || e.shiftKey) {
             return true
           }
@@ -1948,7 +1628,7 @@
           if (e.ctrlKey || e.shiftKey) {
             return true
           }
-          var cellIndex = $cells.index($curCell) + 1
+          cellIndex = $cells.index($curCell) + 1
           var $nextCell = null
           if (cellIndex < $cells.length) {
             $nextCell = $cells.eq(cellIndex)
@@ -1977,8 +1657,8 @@
         if (e.ctrlKey || e.shiftKey) {
           return true
         }
-        var cellIndex = $cells.index($curCell) - colCount
-        var $prevCell = null
+        cellIndex = $cells.index($curCell) - colCount
+        $prevCell = null
         if (cellIndex >= 0) {
           $prevCell = $cells.eq(cellIndex)
           this.unSelectGridCell($curCell.attr('id'))
@@ -2006,8 +1686,8 @@
         if (e.ctrlKey || e.shiftKey) {
           return true
         }
-        var cellIndex = $cells.index($curCell) + colCount
-        var $nextCell = null
+        cellIndex = $cells.index($curCell) + colCount
+        $nextCell = null
         if (cellIndex < $cells.length) {
           $nextCell = $cells.eq(cellIndex)
           this.unSelectGridCell($curCell.attr('id'))
@@ -2068,12 +1748,12 @@
         return false
       }
       case this.keys.pagedown: {
-        var active = this.$grid.attr('aria-activedescendant')
+        active = this.$grid.attr('aria-activedescendant')
         if (e.shiftKey || e.ctrlKey) {
           return true
         }
         e.preventDefault()
-        var ok = false
+        ok = false
         switch (this.gridType) {
           case 0: // days grid
             if (e.altKey) {
@@ -2093,7 +1773,7 @@
         if (ok) {
           if ($('#' + active).attr('id') == undefined) {
             $cells = this.$grid.find('td.selectable')
-            var $lastCell = $cells.eq($cells.length - 1)
+            $lastCell = $cells.eq($cells.length - 1)
             this.$grid.attr('aria-activedescendant', $lastCell.attr('id'))
             this.selectGridCell($lastCell.attr('id'))
           } else {
@@ -2118,7 +1798,7 @@
         if (e.ctrlKey || e.shiftKey) {
           return true
         }
-        var $lastCell = $cells.eq($cells.length - 1)
+        $lastCell = $cells.eq($cells.length - 1)
         this.unSelectGridCell($curCell.attr('id'))
         this.$grid.attr('aria-activedescendant', $lastCell.attr('id'))
         this.selectGridCell($lastCell.attr('id'))
@@ -2137,7 +1817,7 @@
    *
    * 	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleGridKeyPress = function(e) {
+  Datepicker.prototype.handleGridKeyPress = function (e) {
     if (e.altKey) {
       return true
     }
@@ -2170,16 +1850,12 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleGridClick = function(id, e) {
+  Datepicker.prototype.handleGridClick = function (id, e) {
     var $cell = $(id)
     if ($cell.is('.empty') || $cell.is('.unselectable')) {
       return true
     }
-    this.$grid
-      .find('.focus')
-      .removeClass('focus')
-      .attr('aria-selected', 'false')
-      .attr('tabindex', -1)
+    this.$grid.find('.focus').removeClass('focus').attr('aria-selected', 'false').attr('tabindex', -1)
     switch (this.gridType) {
       case 0: // days grid
         this.$grid.attr('aria-activedescendant', $cell.attr('id'))
@@ -2207,7 +1883,7 @@
    *
    *	@return (boolean) true
    */
-  Datepicker.prototype.handleGridFocus = function(e) {
+  Datepicker.prototype.handleGridFocus = function () {
     var active = this.$grid.attr('aria-activedescendant')
     if ($('#' + active).attr('id') == undefined) {
       var $cells = this.$grid.find('td.selectable')
@@ -2226,7 +1902,7 @@
    *
    *	@return (boolean) true
    */
-  Datepicker.prototype.handleGridBlur = function(e) {
+  Datepicker.prototype.handleGridBlur = function () {
     this.unSelectGridCell(this.$grid.attr('aria-activedescendant'))
     return true
   } // end handleGridBlur()
@@ -2237,7 +1913,7 @@
    * @param (e obj) e is the event object associated with the event
    * @return (boolean) true
    */
-  Datepicker.prototype.handleTabOut = function(e) {
+  Datepicker.prototype.handleTabOut = function (e) {
     var fields = $('body').find('input:visible,textarea:visible,select:visible')
     var index = fields.index(this.$target)
     if (index > -1 && index < fields.length) {
@@ -2261,7 +1937,7 @@
    *	@param (e obj) e is the event object associated with the event
    *	@return true
    */
-  Datepicker.prototype.changeGrid = function(e) {
+  Datepicker.prototype.changeGrid = function (e) {
     switch (this.gridType) {
       case 0: // days grid
         this.populateMonthsCalendar()
@@ -2269,10 +1945,7 @@
           var $cells = this.$grid.find('td.selectable')
           this.$grid.attr('aria-activedescendant', $cells.eq(0).attr('id'))
         } else {
-          this.$grid.attr(
-            'aria-activedescendant',
-            this.$grid.find('.curMonth').attr('id')
-          )
+          this.$grid.attr('aria-activedescendant', this.$grid.find('.curMonth').attr('id'))
         }
         this.selectGridCell(this.$grid.attr('aria-activedescendant'))
         break
@@ -2284,16 +1957,14 @@
           // goto next twenty years
           this.year += 20
         }
+        break
       case 1: // months grid
         this.populateYearsCalendar()
         if (this.year != this.curYear) {
-          var $cells = this.$grid.find('td.selectable')
+          $cells = this.$grid.find('td.selectable')
           this.$grid.attr('aria-activedescendant', $cells.eq(0).attr('id'))
         } else {
-          this.$grid.attr(
-            'aria-activedescendant',
-            this.$grid.find('.curYear').attr('id')
-          )
+          this.$grid.attr('aria-activedescendant', this.$grid.find('.curYear').attr('id'))
         }
         this.selectGridCell(this.$grid.attr('aria-activedescendant'))
         break
@@ -2306,7 +1977,7 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.selectGridCell = function(cellId) {
+  Datepicker.prototype.selectGridCell = function (cellId) {
     $('#' + cellId)
       .addClass('focus')
       .attr('aria-selected', 'true')
@@ -2319,7 +1990,7 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.unSelectGridCell = function(cellId) {
+  Datepicker.prototype.unSelectGridCell = function (cellId) {
     $('#' + cellId)
       .removeClass('focus')
       .attr('aria-selected', 'false')
@@ -2331,13 +2002,9 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.update = function() {
+  Datepicker.prototype.update = function () {
     var $curDay = $('#' + this.$grid.attr('aria-activedescendant'))
-    var date = new Date(
-      this.year,
-      this.month,
-      parseInt($curDay.attr('data-value'), 10)
-    )
+    var date = new Date(this.year, this.month, parseInt($curDay.attr('data-value'), 10))
     var val = this.formatDate(date, this.options.outputFormat)
     this.$target.val(val)
     this.$target.removeAttr('aria-invalid')
@@ -2354,24 +2021,18 @@
    *	@param	(date Date) the current value of this Datepicker date.
    *	@return N/A
    */
-  Datepicker.prototype.updateLinked = function(date) {
+  Datepicker.prototype.updateLinked = function (date) {
     if (this.options.previous !== null && this.options.previous.val() !== '') {
       var previousDate = this.options.previous.datepicker('getDate')
       if (previousDate > date) {
-        var previousVal = this.formatDate(
-          date,
-          this.options.previous.datepicker('outputFormat')
-        )
+        var previousVal = this.formatDate(date, this.options.previous.datepicker('outputFormat'))
         this.options.previous.val(previousVal)
       }
     }
     if (this.options.next !== null && this.options.next.val() !== '') {
       var nextDate = this.options.next.datepicker('getDate')
       if (nextDate < date) {
-        var nextVal = this.formatDate(
-          date,
-          this.options.next.datepicker('outputFormat')
-        )
+        var nextVal = this.formatDate(date, this.options.next.datepicker('outputFormat'))
         this.options.next.val(nextVal)
       }
     }
@@ -2383,7 +2044,7 @@
    *	@param ($element jQuery object) the element to hide
    *	@return N/A
    */
-  Datepicker.prototype.hideObject = function($element) {
+  Datepicker.prototype.hideObject = function ($element) {
     $element.attr('aria-hidden', true)
     $element.fadeOut(100)
   } // end hideObject()
@@ -2394,7 +2055,7 @@
    *	@param ($element jQuery object) the element to show
    *	@return N/A
    */
-  Datepicker.prototype.showObject = function($element) {
+  Datepicker.prototype.showObject = function ($element) {
     $element.attr('aria-hidden', false)
     $element.fadeIn(100)
   } // end showObject()
@@ -2404,12 +2065,12 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.show = function() {
+  Datepicker.prototype.show = function () {
     var self = this
     $('.datepicker-calendar').trigger('ab.datepicker.opening', [self.id])
     if (this.options.modal == true) {
       if (!this.modalEventHandler) {
-        this.modalEventHandler = function(e) {
+        this.modalEventHandler = function (e) {
           //ensure focus remains on the dialog
           self.$grid.focus()
           // Consume all mouse events and do nothing
@@ -2425,7 +2086,7 @@
     } else {
       // Bind an event listener to the document to capture only the mouse click event
       $(document).on('click', $.proxy(this.handleDocumentClick, this))
-      this.$calendar.on('ab.datepicker.opening', function(e, id) {
+      this.$calendar.on('ab.datepicker.opening', function (e, id) {
         if (id != self.id) {
           self.hide()
         } else {
@@ -2434,33 +2095,21 @@
         }
       })
     }
-    this.$calendar.on('ab.datepicker.opened', function(e, id) {
+    this.$calendar.on('ab.datepicker.opened', function (e, id) {
       if (id == self.id) {
         self.$grid.focus()
       }
     })
 
     // adjust position of the calendar
-    var groupOffsetTop = Math.max(
-      0,
-      Math.floor(this.$group.offset().top - this.$label.offset().top)
-    )
-    var groupOffsetLeft = Math.max(
-      0,
-      Math.floor(this.$group.offset().left - this.$label.offset().left)
-    )
-    var parentPaddingLeft = parseInt(
-      this.$calendar.parent().css('padding-left'),
-      10
-    )
+    var groupOffsetTop = Math.max(0, Math.floor(this.$group.offset().top - this.$label.offset().top))
+    var groupOffsetLeft = Math.max(0, Math.floor(this.$group.offset().left - this.$label.offset().left))
+    var parentPaddingLeft = parseInt(this.$calendar.parent().css('padding-left'), 10)
     var calendarHeight = this.$calendar.outerHeight()
     var groupTop = this.$group.offset().top
-    var groupLeft = this.$group.offset().left
     var groupHeight = this.$group.outerHeight(true)
     var roomBefore = Math.floor(groupTop - $(window).scrollTop())
-    var roomAfter = Math.floor(
-      $(window).height() - (groupTop + groupHeight - $(window).scrollTop())
-    )
+    var roomAfter = Math.floor($(window).height() - (groupTop + groupHeight - $(window).scrollTop()))
     if (roomAfter < calendarHeight && roomAfter < roomBefore) {
       // show calendar above group
       this.$calendar.addClass('above')
@@ -2488,7 +2137,7 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.refresh = function() {
+  Datepicker.prototype.refresh = function () {
     this.drawCalendarHeader()
     switch (this.gridType) {
       case 0:
@@ -2510,7 +2159,7 @@
    *
    *	@return (boolean) false if consuming event, true if propagating
    */
-  Datepicker.prototype.handleDocumentClick = function(e) {
+  Datepicker.prototype.handleDocumentClick = function (e) {
     if ($(e.target).parents('#datepicker-calendar-' + this.id).length == 0) {
       this.hide()
       return true
@@ -2528,7 +2177,7 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.hide = function(omitSettingFocus) {
+  Datepicker.prototype.hide = function (omitSettingFocus) {
     if (this.options.inline == false) {
       var self = this
       // unbind the modal event sinks
@@ -2558,12 +2207,10 @@
    *
    *	@return N/A
    */
-  Datepicker.prototype.greyOut = function(on) {
+  Datepicker.prototype.greyOut = function (on) {
     var $overlay = $('#datepicker-overlay')
     if ($overlay.length == 0 && on) {
-      $('body').append(
-        '<div id="datepicker-overlay" class="datepicker-overlay"></div>'
-      )
+      $('body').append('<div id="datepicker-overlay" class="datepicker-overlay"></div>')
       $overlay = $('#datepicker-overlay')
     }
     if (on) {
@@ -2580,7 +2227,7 @@
    *	@param (element obj) the element of the document
    *	@return an object containing the properties top and left.
    */
-  Datepicker.prototype.absolutePosition = function(element) {
+  Datepicker.prototype.absolutePosition = function (element) {
     var top = 0,
       left = 0
     if (element.getBoundingClientRect) {
@@ -2588,8 +2235,7 @@
       var body = document.body
       var docElem = document.documentElement
       var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
-      var scrollLeft =
-        window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+      var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
       var clientTop = docElem.clientTop || body.clientTop || 0
       var clientLeft = docElem.clientLeft || body.clientLeft || 0
       top = Math.round(box.top + scrollTop - clientTop)
@@ -2612,7 +2258,7 @@
    *
    *	@return (integer) number of days
    */
-  Datepicker.prototype.getDaysInMonth = function(year, month) {
+  Datepicker.prototype.getDaysInMonth = function (year, month) {
     return 32 - new Date(year, month, 32).getDate()
   } // end getDaysInMonth()
 
@@ -2624,7 +2270,7 @@
    *	@param (month int) the given month
    *	@return an object containing the properties year and month.
    */
-  Datepicker.prototype.previousMonth = function(year, month) {
+  Datepicker.prototype.previousMonth = function (year, month) {
     if (month == 0) {
       month = 11
       year--
@@ -2642,7 +2288,7 @@
    *	@param (month int) the given month
    *	@return an object containing the properties year and month.
    */
-  Datepicker.prototype.nextMonth = function(year, month) {
+  Datepicker.prototype.nextMonth = function (year, month) {
     if (month == 11) {
       month = 0
       year++
@@ -2660,22 +2306,22 @@
    *	@param (format string) the given output format
    *	@returns a date in the output format specified.
    */
-  Datepicker.prototype.formatDate = function(date, format) {
-    var zeroPad = function(x) {
+  Datepicker.prototype.formatDate = function (date, format) {
+    var zeroPad = function (x) {
       return (x < 0 || x > 9 ? '' : '0') + x
     }
-    var getWeekOfMonth = function(date) {
+    var getWeekOfMonth = function (date) {
       return Math.ceil((date.getDate() - 1 - date.getDay()) / 7)
     }
-    var getWeekOfYear = function(date) {
+    var getWeekOfYear = function (date) {
       var onejan = new Date(date.getFullYear(), 0, 1)
       return Math.ceil(((date - onejan) / 86400000 + onejan.getDay() + 1) / 7)
     }
-    var getDayOfYear = function(date) {
+    var getDayOfYear = function (date) {
       var start = new Date(date.getFullYear(), 0, 0)
       return Math.floor((date - start) / 86400000)
     }
-    var getMillisecondsInDay = function(date) {
+    var getMillisecondsInDay = function (date) {
       var date1 = new Date(date.getTime())
       date1.setHours(0)
       return date - date1
@@ -2771,10 +2417,8 @@
     }
     return format.replace(
       /('[^']+'|y{1,4}|L{1,5}|M{1,5}|c{1,6}|d{1,2}|D{1,3}|E{1,6}|e{1,6}|F{1,1}|G{1,5}|Q{1,5}|q{1,5}|H{1,2}|h{1,2}|K{1,2}|k{1,2}|m{1,2}|s{1,2}|w{1,2}|W{1,1}|A{1,6})/g,
-      function(mask) {
-        return mask.charAt(0) === "'"
-          ? mask.substr(1, mask.length - 2)
-          : values[mask] || mask
+      function (mask) {
+        return mask.charAt(0) === "'" ? mask.substr(1, mask.length - 2) : values[mask] || mask
       }
     )
   } // end formatDate()
@@ -2786,8 +2430,8 @@
    *	If the date string matches the format string, it returns the
    *	the date object. If it does not match, it returns null.
    */
-  Datepicker.prototype.createDateFromFormat = function(format, value) {
-    var extractInteger = function(str, pos, minlength, maxlength) {
+  Datepicker.prototype.createDateFromFormat = function (format, value) {
+    var extractInteger = function (str, pos, minlength, maxlength) {
       for (var x = maxlength; x >= minlength; x--) {
         var integer = str.substring(pos, pos + x)
         if (integer.length < minlength) {
@@ -2799,13 +2443,10 @@
       }
       return null
     }
-    var skipName = function(names, pos) {
+    var skipName = function (names, pos) {
       for (var i = 0; i < names.length; i++) {
         var name = names[i]
-        if (
-          value.substring(pos, pos + name.length).toLowerCase() ==
-          name.toLowerCase()
-        ) {
+        if (value.substring(pos, pos + name.length).toLowerCase() == name.toLowerCase()) {
           return name.length
         }
       }
@@ -2822,7 +2463,7 @@
     var ampm = ''
     var self = this
 
-    $.each(format.match(/(.).*?\1*/g), function(k, token) {
+    $.each(format.match(/(.).*?\1*/g), function (k, token) {
       // Extract contents of value based on format token
       switch (token) {
         case 'yyyy':
@@ -2846,16 +2487,9 @@
         case 'MMM':
         case 'LLL':
           month = 0
-          for (
-            var i = 0;
-            i < self.locales.month_names_abbreviated.length;
-            i++
-          ) {
+          for (var i = 0; i < self.locales.month_names_abbreviated.length; i++) {
             var month_name = self.locales.month_names_abbreviated[i]
-            if (
-              value.substring(pos, pos + month_name.length).toLowerCase() ==
-              month_name.toLowerCase()
-            ) {
+            if (value.substring(pos, pos + month_name.length).toLowerCase() == month_name.toLowerCase()) {
               month = i + 1
               pos += month_name.length
               break
@@ -2865,12 +2499,9 @@
         case 'MMMM':
         case 'LLLL':
           month = 0
-          for (var i = 0; i < self.locales.month_names.length; i++) {
-            var month_name = self.locales.month_names[i]
-            if (
-              value.substring(pos, pos + month_name.length).toLowerCase() ==
-              month_name.toLowerCase()
-            ) {
+          for (i = 0; i < self.locales.month_names.length; i++) {
+            month_name = self.locales.month_names[i]
+            if (value.substring(pos, pos + month_name.length).toLowerCase() == month_name.toLowerCase()) {
               month = i + 1
               pos += month_name.length
               break
@@ -2963,14 +2594,10 @@
         case 'a':
           var amlength = self.locales.day_periods.am.length
           var pmlength = self.locales.day_periods.pm.length
-          if (
-            value.substring(pos, pos + amlength) == self.locales.day_periods.am
-          ) {
+          if (value.substring(pos, pos + amlength) == self.locales.day_periods.am) {
             ampm = 'AM'
             pos += amlength
-          } else if (
-            value.substring(pos, pos + pmlength) == self.locales.day_periods.pm
-          ) {
+          } else if (value.substring(pos, pos + pmlength) == self.locales.day_periods.pm) {
             ampm = 'PM'
             pos += pmlength
           } else {
@@ -3040,10 +2667,10 @@
    *	@param (value string) the date string
    *	@return a date objet or null
    */
-  Datepicker.prototype.parseDate = function(value) {
+  Datepicker.prototype.parseDate = function (value) {
     var date = null
     var self = this
-    $.each(this.options.inputFormat, function(i, format) {
+    $.each(this.options.inputFormat, function (i, format) {
       date = self.createDateFromFormat(format, value)
       if (date != null) {
         return false
@@ -3062,7 +2689,7 @@
    *	@param (value string) the new date
    *	@return the smallest selectable date
    */
-  Datepicker.prototype.min = function(value) {
+  Datepicker.prototype.min = function (value) {
     if (value != null) {
       this.options.min = value instanceof Date ? value : this.parseDate(value)
       if (this.options.min != null && this.dateObj < this.options.min) {
@@ -3083,7 +2710,7 @@
    *	@param (value string) the new date
    *	@return the biggest selectable date
    */
-  Datepicker.prototype.max = function(value) {
+  Datepicker.prototype.max = function (value) {
     if (value != null) {
       this.options.max = value instanceof Date ? value : this.parseDate(value)
       if (this.options.max != null && this.dateObj > this.options.max) {
@@ -3104,7 +2731,7 @@
    *	@param (value string) the new theme
    *	@return the datepicker theme
    */
-  Datepicker.prototype.theme = function(value) {
+  Datepicker.prototype.theme = function (value) {
     if (value != null) {
       this.$button.removeClass(this.options.theme)
       this.$calendar.removeClass(this.options.theme)
@@ -3121,7 +2748,7 @@
    *	@param (value integer) the new first Day Of Week
    *	@return the first Day Of Week
    */
-  Datepicker.prototype.firstDayOfWeek = function(value) {
+  Datepicker.prototype.firstDayOfWeek = function (value) {
     if (value != null) {
       this.options.firstDayOfWeek = parseInt(value, 10)
       if (this.options.inline == false) {
@@ -3139,14 +2766,14 @@
    *	@param (value string) the new disabled week days
    *	@return the disabled week days
    */
-  Datepicker.prototype.daysOfWeekDisabled = function(value) {
+  Datepicker.prototype.daysOfWeekDisabled = function (value) {
     if (value != null) {
       this.options.daysOfWeekDisabled = []
       if (!$.isArray(value)) {
         value = [value]
       }
       var self = this
-      $.each(value, function(i, val) {
+      $.each(value, function (i, val) {
         if (typeof val === 'number') {
           self.options.daysOfWeekDisabled.push(val)
         } else if (typeof val === 'string') {
@@ -3163,7 +2790,7 @@
    *	@param (value string) the new format. Allowed : 'short' or 'narrow'
    *	@return the format of weekdays name
    */
-  Datepicker.prototype.weekDayFormat = function(value) {
+  Datepicker.prototype.weekDayFormat = function (value) {
     if (value != null) {
       this.options.weekDayFormat = value
       this.drawCalendarHeader()
@@ -3177,7 +2804,7 @@
    *	@param (value string) the new format
    *	@return the input format
    */
-  Datepicker.prototype.inputFormat = function(value) {
+  Datepicker.prototype.inputFormat = function (value) {
     if (value != null) {
       if (!$.isArray(value)) {
         value = [value]
@@ -3196,7 +2823,7 @@
    *	@param (value string) the new format
    *	@return the output format
    */
-  Datepicker.prototype.outputFormat = function(value) {
+  Datepicker.prototype.outputFormat = function (value) {
     if (value != null) {
       this.options.outputFormat = value
     }
@@ -3209,7 +2836,7 @@
    *	@param (value boolean) the new modal mode
    *	@return the modal mode
    */
-  Datepicker.prototype.modal = function(value) {
+  Datepicker.prototype.modal = function (value) {
     if (value != null) {
       this.options.modal = value
       if (this.options.modal == true) {
@@ -3218,17 +2845,13 @@
           this.showObject(this.$calendar.find('.datepicker-bn-close-label'))
         }
         this.$close = this.$calendar.find('.datepicker-close')
-        this.$close
-          .html(this.options.closeButtonTitle)
-          .attr('title', this.options.closeButtonLabel)
-        this.$calendar
-          .find('.datepicker-bn-close-label')
-          .html(this.options.closeButtonLabel)
+        this.$close.html(this.options.closeButtonTitle).attr('title', this.options.closeButtonLabel)
+        this.$calendar.find('.datepicker-bn-close-label').html(this.options.closeButtonLabel)
         var self = this
-        this.$close.click(function(e) {
+        this.$close.click(function (e) {
           return self.handleCloseClick(e)
         })
-        this.$close.keydown(function(e) {
+        this.$close.keydown(function (e) {
           return self.handleCloseKeyDown(e)
         })
       } else {
@@ -3245,7 +2868,7 @@
    *	@param (value string or false) the id or jquery object of the datepicker container, false otherwise (not inline)
    *	@return the given value
    */
-  Datepicker.prototype.inline = function(value) {
+  Datepicker.prototype.inline = function (value) {
     if (value != null) {
       if (value != false) {
         this.hideObject(this.$button)
@@ -3281,14 +2904,14 @@
    *	@param (value date object) the date
    *	@return formatted date string
    */
-  Datepicker.prototype.format = function(date) {
+  Datepicker.prototype.format = function (date) {
     return this.formatDate(date, this.options.outputFormat)
   } // end format()
 
   /**
    *	enable() is a public member function to enable this datepicker.
    */
-  Datepicker.prototype.enable = function() {
+  Datepicker.prototype.enable = function () {
     this.$button.removeClass('disabled')
     this.$button.attr('aria-disabled', false)
     this.$button.attr('tabindex', 0)
@@ -3297,7 +2920,7 @@
   /**
    *	disable() is a public member function to disable this datepicker.
    */
-  Datepicker.prototype.disable = function() {
+  Datepicker.prototype.disable = function () {
     this.hide()
     this.$button.addClass('disabled')
     this.$button.attr('aria-disabled', true)
@@ -3307,13 +2930,13 @@
   /**
    *	datesDisabled() is a public member function to set dates to be disabled.
    */
-  Datepicker.prototype.datesDisabled = function(dates) {
+  Datepicker.prototype.datesDisabled = function (dates) {
     this.options.datesDisabled = []
     if (!$.isArray(dates)) {
       dates = [dates]
     }
     var self = this
-    $.each(dates, function(i, v) {
+    $.each(dates, function (i, v) {
       if (typeof v === 'string') {
         var date = self.parseDate(v)
         if (date !== null) {
@@ -3331,7 +2954,7 @@
    *	@param (value int|string) the new view
    *	@return  N/A
    */
-  Datepicker.prototype.startview = function(view) {
+  Datepicker.prototype.startview = function (view) {
     switch (view) {
       case 1:
       case 'months':
@@ -3352,12 +2975,11 @@
    *	@param (value obj) the new locales
    *	@return N/A
    */
-  Datepicker.prototype.setLocales = function(value) {
+  Datepicker.prototype.setLocales = function (value) {
     this.locales = value
     this.options.inputFormat = [this.locales.short_format]
     this.options.outputFormat = this.locales.short_format
-    ;(this.options.titleFormat = this.locales.full_format),
-      (this.options.firstDayOfWeek = this.locales.firstday_of_week)
+    ;(this.options.titleFormat = this.locales.full_format), (this.options.firstDayOfWeek = this.locales.firstday_of_week)
     this.options.buttonTitle = this.locales.texts.buttonTitle
     this.$button.find('span').attr('title', this.options.buttonTitle)
     this.options.buttonLabel = this.locales.texts.buttonLabel
@@ -3386,24 +3008,16 @@
 
   var old = $.fn.datepicker
 
-  $.fn.datepicker = function(option, value) {
+  $.fn.datepicker = function (option, value) {
     if (typeof option == 'string' && $(this).length == 1) {
-      var data = $(this)
-        .eq(0)
-        .data('ab.datepicker')
+      var data = $(this).eq(0).data('ab.datepicker')
       if (data) return data[option](value)
     } else {
-      return this.each(function() {
+      return this.each(function () {
         var $this = $(this)
         var data = $this.data('ab.datepicker')
-        var options = $.extend(
-          {},
-          Datepicker.DEFAULTS,
-          $this.data(),
-          typeof option == 'object' && option
-        )
-        if (!data)
-          $this.data('ab.datepicker', (data = new Datepicker(this, options)))
+        var options = $.extend({}, Datepicker.DEFAULTS, $this.data(), typeof option == 'object' && option)
+        if (!data) $this.data('ab.datepicker', (data = new Datepicker(this, options)))
         if (typeof option == 'string') data[option](value)
       })
     }
@@ -3414,7 +3028,7 @@
   // DATEPICKER NO CONFLICT
   // ====================
 
-  $.fn.datepicker.noConflict = function() {
+  $.fn.datepicker.noConflict = function () {
     $.fn.datepicker = old
     return this
   }

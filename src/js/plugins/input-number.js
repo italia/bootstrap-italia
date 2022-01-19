@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   //resize function
   function inputNumberResize($target) {
     var $inputNumber = $target.closest('.input-number')
@@ -6,38 +6,25 @@ $(function() {
       // width = padding (12px + 32px) + number of characters
       if (!$inputNumber.hasClass('input-number-percentage')) {
         $target.css('width', 'calc(44px + ' + $target.val().length + 'ch)')
-        if (isIe())
-          $target.css(
-            'width',
-            'calc(44px + (1.5 * ' + $target.val().length + 'ch))'
-          )
+        if (isIe()) $target.css('width', 'calc(44px + (1.5 * ' + $target.val().length + 'ch))')
       }
       if ($inputNumber.hasClass('input-number-currency')) {
-        $target.css(
-          'width',
-          'calc(40px + 44px + ' + $target.val().length + 'ch)'
-        )
-        if (isIe())
-          $target.css(
-            'width',
-            'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))'
-          )
+        $target.css('width', 'calc(40px + 44px + ' + $target.val().length + 'ch)')
+        if (isIe()) $target.css('width', 'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))')
       }
     }
   }
 
   //resize all input numbers field on DR
-  $('.input-number input[type=number]').each(function(index) {
+  $('.input-number input[type=number]').each(function () {
     inputNumberResize($(this))
   })
 
   //add & sub button
-  $('.input-number button').click(function(e) {
+  $('.input-number button').click(function (e) {
     e.preventDefault()
     //get target input field
-    var $inputTarget = $(this)
-      .closest('.input-number')
-      .find('input[type=number]')
+    var $inputTarget = $(this).closest('.input-number').find('input[type=number]')
     var inputTargetVal = parseFloat($inputTarget.val())
 
     if (!isNaN(inputTargetVal)) {
@@ -54,21 +41,13 @@ $(function() {
 
       if ($(this).hasClass('input-number-add')) {
         //add step
-        val =
-          !isNaN(inputTargetMax) &&
-          inputTargetVal + inputTargetStep >= inputTargetMax
-            ? inputTargetMax
-            : inputTargetVal + inputTargetStep
+        val = !isNaN(inputTargetMax) && inputTargetVal + inputTargetStep >= inputTargetMax ? inputTargetMax : inputTargetVal + inputTargetStep
         $inputTarget.val(val)
       }
 
       if ($(this).hasClass('input-number-sub')) {
         //subtract step
-        val =
-          !isNaN(inputTargetMin) &&
-          inputTargetVal - inputTargetStep <= inputTargetMin
-            ? inputTargetMin
-            : inputTargetVal - inputTargetStep
+        val = !isNaN(inputTargetMin) && inputTargetVal - inputTargetStep <= inputTargetMin ? inputTargetMin : inputTargetVal - inputTargetStep
         $inputTarget.val(val)
       }
     }
@@ -78,7 +57,7 @@ $(function() {
   })
 
   //manual input
-  $('.input-number input[type=number]').change(function(e) {
+  $('.input-number input[type=number]').change(function () {
     //get field val
     var $inputTarget = $(this)
     var inputTargetVal = parseFloat($inputTarget.val())
@@ -103,7 +82,7 @@ $(function() {
   })
 
   // Fixing IE11 numeric behavior
-  $('input[type=number]').on('keyup', function(e) {
+  $('input[type=number]').on('keyup', function (e) {
     var value = e && e.target.value
     var regexp = /[^0-9,.]/g
     this.value = value.replace(regexp, '')

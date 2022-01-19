@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     a {
-      display: block;
       transition: all 0.3s;
       margin-top: -1px;
       display: flex;
@@ -75,8 +74,6 @@
         .toggles {
           height: $v-gap * 4;
           margin-right: $v-gap * 3;
-          label {
-          }
         }
         span.metadata {
           color: $list-metadata-color;
@@ -112,18 +109,6 @@
   }
 }
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   //mobile
@@ -148,21 +133,5 @@
         }
       }
     }
-  }
-
-  //small - tablet
-  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
-  }
-
-  //Tablet vertical
-  @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  }
-
-  //Tablet horizontal / small desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  }
-
-  //Desktop
-  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   }
 }

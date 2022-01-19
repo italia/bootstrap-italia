@@ -99,21 +99,11 @@
               }
             }
           }
-          &.expanded {
-            .menu-wrapper {
-            }
-            .close-div {
-            }
-          }
         }
         //wrapper pulsante di chiusura menu
         .close-div {
           .close-menu {
             color: $navigation-dark-text-color;
-            span {
-              &:before {
-              }
-            }
           }
         }
         //dropdown
@@ -123,8 +113,6 @@
             &.it-heading-megacolumn {
               color: $navigation-dark-text-color;
             }
-          }
-          &:before {
           }
           .link-list-wrapper {
             ul {
@@ -170,12 +158,7 @@
     &.theme-light-desk {
       background: $navigation-light-bg-color;
       box-shadow: $dropdown-box-shadow;
-      .navbar
-        .navbar-collapsable
-        .navbar-nav
-        li
-        a.nav-link.dropdown-toggle
-        svg {
+      .navbar .navbar-collapsable .navbar-nav li a.nav-link.dropdown-toggle svg {
         fill: $navigation-light-text-color;
       }
 
@@ -253,12 +236,6 @@
                   border-bottom-color: $navigation-light-text-color;
                 }
               }
-            }
-          }
-          &.expanded {
-            .menu-wrapper {
-            }
-            .close-div {
             }
           }
         }

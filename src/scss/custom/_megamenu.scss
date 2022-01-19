@@ -1,76 +1,6 @@
 //megamenu mobile definition
-@use "sass:math";
+@use 'sass:math';
 
-.navbar {
-  .navbar-collapsable {
-    .menu-wrapper {
-      .nav-item {
-        &.megamenu {
-          .dropdown-menu {
-            .col-12:not(:first-child) {
-              .it-heading-megacolumn {
-                margin-top: $grid-gutter-width * 2;
-                line-height: $link-list-line-height;
-                &:before {
-                  content: '';
-                  display: block;
-                  height: 1px;
-                  width: $megamenu-link-small-line-width;
-                  background: $neutral-2;
-                  margin-bottom: $megamenu-link-small-line-margin-bottom;
-                }
-              }
-              .link-list-wrapper {
-                h3 {
-                  margin-top: $grid-gutter-width * 2;
-
-                  &:before {
-                    content: '';
-                    display: block;
-                    height: 1px;
-                    width: $megamenu-link-small-line-width;
-                    background: $neutral-2;
-                    margin-bottom: $megamenu-link-small-line-margin-bottom;
-                  }
-                }
-              }
-            }
-            .row.max-height-col {
-            }
-            h3.it-heading-megacolumn {
-              margin: $megamenu-linklist-link-v-padding $megamenu-column-gap +
-                $grid-gutter-width * 2;
-              line-height: $megamenu-heading-line-height;
-              font-size: $megamenu-heading-text-size;
-              text-transform: uppercase;
-              padding-bottom: $megamenu-linklist-link-v-padding;
-            }
-            // linklist specs
-            .link-list-wrapper {
-              margin-bottom: 0;
-              ul.link-list li {
-                &.it-more a {
-                  margin-top: 0;
-                  i {
-                    margin-left: $grid-gutter-width*0.5;
-                  }
-                }
-                &:last-child {
-                  &.it-more {
-                    a {
-                      margin-top: $megamenu-link-more-link-list-distance-mobile;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// megamenu vertical cta list
 .navbar {
   .navbar-collapsable {
     .menu-wrapper {
@@ -105,10 +35,8 @@
                 background: transparent;
 
                 .description-content {
-                  padding-left: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width*0.5;
-                  padding-right: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width*0.5;
+                  padding-left: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
+                  padding-right: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
                   &:before {
                     content: '';
                     display: block;
@@ -128,21 +56,72 @@
                 }
               }
             }
+            .col-12:not(:first-child) {
+              .it-heading-megacolumn {
+                margin-top: $grid-gutter-width * 2;
+                line-height: $link-list-line-height;
+                &:before {
+                  content: '';
+                  display: block;
+                  height: 1px;
+                  width: $megamenu-link-small-line-width;
+                  background: $neutral-2;
+                  margin-bottom: $megamenu-link-small-line-margin-bottom;
+                }
+              }
+              .link-list-wrapper {
+                h3 {
+                  margin-top: $grid-gutter-width * 2;
+
+                  &:before {
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    width: $megamenu-link-small-line-width;
+                    background: $neutral-2;
+                    margin-bottom: $megamenu-link-small-line-margin-bottom;
+                  }
+                }
+              }
+            }
+            h3.it-heading-megacolumn {
+              margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + $grid-gutter-width * 2;
+              line-height: $megamenu-heading-line-height;
+              font-size: $megamenu-heading-text-size;
+              text-transform: uppercase;
+              padding-bottom: $megamenu-linklist-link-v-padding;
+            }
+            // linklist specs
+            .link-list-wrapper {
+              margin-bottom: 0;
+              ul.link-list li {
+                &.it-more a {
+                  margin-top: 0;
+                  i {
+                    margin-left: $grid-gutter-width * 0.5;
+                  }
+                }
+                &:last-child {
+                  &.it-more {
+                    a {
+                      margin-top: $megamenu-link-more-link-list-distance-mobile;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
   }
-}
-// external link stule
-.navbar {
   .dropdown-menu {
     > .it-external {
       padding: 0;
     }
     .margin-right-col {
       .it-external {
-        padding: 0 $grid-gutter-width*0.5;
+        padding: 0 $grid-gutter-width * 0.5;
       }
     }
     .it-external {
@@ -163,11 +142,6 @@
         }
       }
     }
-  }
-}
-// megamenu footer version
-.navbar {
-  .dropdown-menu {
     .it-megamenu-footer {
       background: $megamenu-footer-bg-color;
       padding: $v-gap * 2 0;
@@ -182,14 +156,6 @@
     }
   }
 }
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   // megamenu footer version
@@ -200,7 +166,7 @@
         margin-left: -$megamenu-column-gap;
         margin-right: -$megamenu-column-gap;
         margin-bottom: -$megamenu-padding-top-desktop;
-        padding: $megamenu-column-gap*0.5 $megamenu-column-gap;
+        padding: $megamenu-column-gap * 0.5 $megamenu-column-gap;
         .link-list-wrapper {
           .link-list {
             li a.list-item {
@@ -214,11 +180,6 @@
           }
         }
       }
-    }
-  }
-  // external link stule
-  .navbar {
-    .dropdown-menu {
       .it-external {
         width: 100%;
         padding: 0;
@@ -234,18 +195,84 @@
         }
       }
     }
-  }
-  // megamenu vertical cta list
-  .navbar {
     .navbar-collapsable {
       .menu-wrapper {
         .nav-item {
           &.megamenu {
             .dropdown-menu {
+              padding: $megamenu-padding-top-desktop $megamenu-column-gap;
+              .col-12:not(:first-child) {
+                .link-list-wrapper {
+                  display: flex;
+                  min-height: 100%;
+                  h3 {
+                    margin-top: $megamenu-heading-margin-top;
+                    line-height: $megamenu-heading-line-height;
+                    &:before {
+                      display: none;
+                    }
+                  }
+                  ul.link-list {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                      width: 100%;
+                      a,
+                      h3 {
+                        padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                        line-height: inherit;
+                      }
+                      // line after h3
+                      h3 {
+                        line-height: $megamenu-heading-line-height;
+                        font-size: $megamenu-heading-text-size;
+                        text-transform: uppercase;
+                        margin-top: $megamenu-heading-margin-top;
+                        margin-bottom: $megamenu-heading-margin-top;
+                        //margin-bottom: $megamenu-heading-bottom-margin;
+                      }
+                      &.it-more {
+                        margin-top: auto;
+                        a {
+                          margin-top: $link-list-h-pad * 0.5;
+                          i {
+                            font-size: $megamenu-link-arrow-size;
+                            transform: translateY(-1px);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .it-heading-megacolumn {
+                  margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                  line-height: $megamenu-heading-line-height;
+                  font-size: $megamenu-heading-text-size;
+                  text-transform: uppercase;
+                  border-bottom: 1px solid $neutral-2;
+                  padding-bottom: $megamenu-linklist-link-v-padding;
+                  &:before {
+                    content: '';
+                    display: none;
+                  }
+                }
+              }
+              .col-12:first-child {
+                .link-list-wrapper {
+                  margin-bottom: 0;
+                }
+              }
+              h3.it-heading-megacolumn {
+                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                line-height: $megamenu-heading-line-height;
+                font-size: $megamenu-heading-text-size;
+                text-transform: uppercase;
+                border-bottom: 1px solid $neutral-2;
+                padding-bottom: $megamenu-linklist-link-v-padding;
+              }
               .row.max-height-col {
                 min-height: 100%;
-                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 +
-                      1);
+                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 + 1);
                 .row.max-height-col {
                   margin-right: -$grid-gutter-width * 0.5;
                 }
@@ -311,99 +338,4 @@
       }
     }
   }
-
-  // megamenu dropdown & list variation
-  .navbar {
-    .navbar-collapsable {
-      .menu-wrapper {
-        .nav-item {
-          &.megamenu {
-            .dropdown-menu {
-              .col-12:not(:first-child) {
-                .link-list-wrapper {
-                  h3 {
-                    margin-top: $megamenu-heading-margin-top;
-                    line-height: $megamenu-heading-line-height;
-                    &:before {
-                      display: none;
-                    }
-                  }
-                }
-                .it-heading-megacolumn {
-                  margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
-                  line-height: $megamenu-heading-line-height;
-                  font-size: $megamenu-heading-text-size;
-                  text-transform: uppercase;
-                  border-bottom: 1px solid $neutral-2;
-                  padding-bottom: $megamenu-linklist-link-v-padding;
-                  &:before {
-                    content: '';
-                    display: none;
-                  }
-                }
-              }
-              padding: $megamenu-padding-top-desktop $megamenu-column-gap;
-              // padding elementi laterali
-              .col-12:first-child {
-                .link-list-wrapper {
-                  margin-bottom: 0;
-                }
-              }
-              // heading megamenu colonne
-              h3.it-heading-megacolumn {
-                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
-                line-height: $megamenu-heading-line-height;
-                font-size: $megamenu-heading-text-size;
-                text-transform: uppercase;
-                border-bottom: 1px solid $neutral-2;
-                padding-bottom: $megamenu-linklist-link-v-padding;
-              }
-              // linklist specs
-              .link-list-wrapper {
-                display: flex;
-                min-height: 100%;
-                ul.link-list {
-                  display: flex;
-                  flex-direction: column;
-                  li {
-                    width: 100%;
-                    a,
-                    h3 {
-                      padding: $megamenu-linklist-link-v-padding
-                        $megamenu-column-gap;
-                      line-height: inherit;
-                    }
-                    // line after h3
-                    h3 {
-                      line-height: $megamenu-heading-line-height;
-                      font-size: $megamenu-heading-text-size;
-                      text-transform: uppercase;
-                      margin-top: $megamenu-heading-margin-top;
-                      margin-bottom: $megamenu-heading-margin-top;
-                      //margin-bottom: $megamenu-heading-bottom-margin;
-                    }
-                    &.it-more {
-                      margin-top: auto;
-                      a {
-                        margin-top: $link-list-h-pad*0.5;
-                        &:before {
-                        }
-                        i {
-                          font-size: $megamenu-link-arrow-size;
-                          transform: translateY(-1px);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

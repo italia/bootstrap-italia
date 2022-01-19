@@ -29,10 +29,6 @@
   }
 }
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .progress-donut-wrapper {
@@ -45,12 +41,4 @@
     top: -136px;
     left: -136px;
   }
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

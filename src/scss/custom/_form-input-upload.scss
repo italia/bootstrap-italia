@@ -194,7 +194,6 @@
       white-space: nowrap;
       margin-left: 12px;
       overflow: hidden;
-      //
       .upload-file-weight {
         color: $neutral-1-a7;
         font-size: 0.75em;
@@ -442,7 +441,6 @@
     overflow: hidden;
     position: absolute;
     transform-origin: center center;
-    position: absolute;
     top: 50%;
     left: 50%;
     transition: transform 0.4s cubic-bezier(0.33, 1.07, 0.54, 1);
@@ -506,10 +504,6 @@
   }
 }
 
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
 //Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   //avatar version -------------------------------- START
@@ -558,7 +552,6 @@
           fill: $white;
           width: 20px;
           height: 20px;
-          display: block;
         }
       }
 

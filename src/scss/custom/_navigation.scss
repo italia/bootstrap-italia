@@ -53,11 +53,6 @@
 
         .dropdown-menu {
           padding-bottom: 0;
-          // link list variation
-          .link-list {
-            h3 {
-            }
-          }
         }
       }
     }
@@ -87,8 +82,7 @@
           }
 
           &.active {
-            border-left: $navigation-link-active-bar-size solid
-              $navigation-link-active-bar-color;
+            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
           }
 
           &:hover:not(.active) {
@@ -268,11 +262,7 @@
         content: '';
         display: block;
         width: $inline-menu-line-width;
-        background: linear-gradient(
-          to bottom,
-          rgba($neutral-2-a1, 1) 0%,
-          rgba($neutral-2-a1, 0.3) 100%
-        );
+        background: linear-gradient(to bottom, rgba($neutral-2-a1, 1) 0%, rgba($neutral-2-a1, 0.3) 100%);
         position: absolute;
         right: 0;
         top: 0;
@@ -281,15 +271,6 @@
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar {
@@ -469,8 +450,7 @@
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity $dropdown-menu-animation-speed*0.5
-          cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        transition: opacity $dropdown-menu-animation-speed * 0.5 cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
@@ -494,12 +474,8 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed*0.5;
+        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed * 0.5;
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

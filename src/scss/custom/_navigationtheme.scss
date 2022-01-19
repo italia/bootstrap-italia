@@ -93,21 +93,11 @@
             }
           }
         }
-        &.expanded {
-          .menu-wrapper {
-          }
-          .close-div {
-          }
-        }
       }
       //wrapper pulsante di chiusura menu
       .close-div {
         .close-menu {
           color: $navigation-dark-text-color;
-          span {
-            &:before {
-            }
-          }
         }
       }
       //dropdown
@@ -117,8 +107,6 @@
           &.it-heading-megacolumn {
             color: $navigation-dark-text-color;
           }
-        }
-        &:before {
         }
         .link-list-wrapper {
           ul {
@@ -234,12 +222,6 @@
                 border-bottom-color: $navigation-light-text-color;
               }
             }
-          }
-        }
-        &.expanded {
-          .menu-wrapper {
-          }
-          .close-div {
           }
         }
       }

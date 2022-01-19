@@ -1,7 +1,4 @@
-//
 // Base styles
-//
-
 .alert {
   position: relative;
   padding: $alert-padding-y $alert-padding-x;
@@ -24,7 +21,6 @@
 }
 
 // Dismissible alerts
-//
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissible {
@@ -41,20 +37,10 @@
 }
 
 // Alternate styles
-//
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $color, $value in $theme-colors {
-  @if (
-    $color ==
-      'danger' or
-      $color ==
-      'warning' or
-      $color ==
-      'success' or
-      $color ==
-      'info'
-  ) {
+  @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info') {
     .alert-#{$color} {
       background-position: 20px 16px;
       background-repeat: no-repeat;

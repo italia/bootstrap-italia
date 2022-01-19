@@ -333,6 +333,14 @@
 //vertical tabs on right
 .flex-row-reverse {
   .nav-tabs {
+    &.nav-dark {
+      &.nav-tabs-vertical {
+        .nav-link.active,
+        .nav-item.show .nav-link {
+          border-left-color: $cyan;
+        }
+      }
+    }
     &.nav-tabs-vertical {
       border-right: none;
       border-left: 1px solid $gray-border-disabled;
@@ -356,21 +364,6 @@
     }
   }
 }
-
-//vertical tabs on right dark
-.flex-row-reverse {
-  .nav-tabs {
-    &.nav-dark {
-      &.nav-tabs-vertical {
-        .nav-link.active,
-        .nav-item.show .nav-link {
-          border-left-color: $cyan;
-        }
-      }
-    }
-  }
-}
-
 //hide ios horizontal scrollbar
 .nav-tabs-hidescroll {
   height: 2.667rem;

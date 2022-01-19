@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   var carouselTarget = $('.owl-carousel.it-carousel-all')
   // parameters
   var cnav
@@ -40,13 +40,9 @@ $(function() {
   var xlstagePadding
   var xlmargin
 
-  $(carouselTarget).each(function() {
+  $(carouselTarget).each(function () {
     // target definition
-    if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-carousel-landscape-abstract-three-cols')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-carousel-landscape-abstract-three-cols')) {
       cnav = true
       cloop = false
       cmargin = 24
@@ -60,7 +56,7 @@ $(function() {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -125,10 +121,7 @@ $(function() {
         xlitems = 1
       }
       // standard img
-      if (
-        $(this).hasClass('it-img-card') &&
-        $(this).hasClass('it-standard-image')
-      ) {
+      if ($(this).hasClass('it-img-card') && $(this).hasClass('it-standard-image')) {
         cloop = true
         mobstagePadding = 40
         mobmargin = 24
@@ -145,11 +138,7 @@ $(function() {
       }
     }
 
-    if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-calendar-wrapper')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-calendar-wrapper')) {
       cnav = true
       cloop = false
       cmargin = 0
@@ -163,7 +152,7 @@ $(function() {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -228,10 +217,7 @@ $(function() {
         xlitems = 1
       }
       // standard img
-      if (
-        $(this).hasClass('it-img-card') &&
-        $(this).hasClass('it-standard-image')
-      ) {
+      if ($(this).hasClass('it-img-card') && $(this).hasClass('it-standard-image')) {
         cloop = true
         mobstagePadding = 40
         mobmargin = 0
@@ -248,11 +234,7 @@ $(function() {
     }
 
     // Landscape abstract --------------------------------------------------------------------------
-    if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-carousel-landscape-abstract')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-carousel-landscape-abstract')) {
       cnav = true
       cloop = false
       cmargin = 24
@@ -266,7 +248,7 @@ $(function() {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -299,7 +281,7 @@ $(function() {
         //carousel parameters
         nav: cnav,
         loop: cloop,
-        margin: 24, //cmargin
+        margin: cmargin, //cmargin
         items: citems,
         navText: cnavText,
         navSpeed: cnavSpeed, //arrow click
@@ -347,10 +329,10 @@ $(function() {
             margin: xlmargin,
           },
         },
-        onInitialized: function(event) {
+        onInitialized: function (event) {
           $(event.target)
             .find('.owl-dot')
-            .each(function(index) {
+            .each(function (index) {
               $(this).attr('aria-labelledby', 'owl-dot-' + index)
             })
         },

@@ -12,40 +12,6 @@
   .form-check {
     padding: 0 $v-gap * 3;
     position: relative;
-  }
-
-  .transfer-header {
-    font-weight: bold;
-
-    &:after {
-      height: 1px;
-      background: $transfer-header-line-color;
-      width: $transfer-header-line-w;
-      content: '';
-      display: block;
-      margin-left: 62px;
-    }
-
-    .form-check {
-      padding: $v-gap * 3 $v-gap * 3 $v-gap;
-      margin-top: 0;
-
-      [type='checkbox'] + label {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .descr {
-        display: block;
-        font-size: $transfer-descr-size;
-        color: $transfer-descr-color;
-        font-weight: normal;
-      }
-    }
-  }
-
-  // semi checked style
-  .form-check {
     input.semi-checked:not(:checked) + label::before {
       top: 13px;
       left: 4px;
@@ -64,6 +30,35 @@
       border-color: $primary-a5;
       background-color: $primary-a5;
       z-index: 0;
+    }
+  }
+
+  .transfer-header {
+    font-weight: bold;
+
+    &:after {
+      height: 1px;
+      background: $transfer-header-line-color;
+      width: $transfer-header-line-w;
+      content: '';
+      display: block;
+      margin-left: 62px;
+    }
+
+    .form-check {
+      padding: $v-gap * 3 $v-gap * 3 $v-gap;
+      margin-top: 0;
+      [type='checkbox'] + label {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .descr {
+        display: block;
+        font-size: $transfer-descr-size;
+        color: $transfer-descr-color;
+        font-weight: normal;
+      }
     }
   }
 }
@@ -108,10 +103,6 @@
   }
 }
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .it-transfer-buttons {
@@ -130,22 +121,10 @@
       justify-content: center;
       margin: $v-gap $v-gap;
       align-self: center;
-
-      svg {
-      }
-
       &.transfer,
       &.backtransfer {
         transform: none;
       }
     }
   }
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

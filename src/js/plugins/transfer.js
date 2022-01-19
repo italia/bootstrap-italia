@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   // header input
   var headerInput = $('.transfer-header input')
   var listInput = $('.transfer-group input')
@@ -16,44 +16,32 @@ $(function() {
   var leftStart = ''
   var rightStart = ''
 
-  $(elemLeft).each(function(el) {
+  $(elemLeft).each(function () {
     leftStart = leftStart + this
   })
-  $(elemRight).each(function(el) {
+  $(elemRight).each(function () {
     rightStart = rightStart + this
   })
 
   function disableElement($el) {
-    $el
-      .removeClass('active')
-      .attr('disabled', 'disabled')
-      .attr('aria-disabled', 'true')
+    $el.removeClass('active').attr('disabled', 'disabled').attr('aria-disabled', 'true')
   }
 
   function enableElement($el) {
-    $el
-      .addClass('active')
-      .removeAttr('disabled')
-      .removeAttr('aria-disabled')
+    $el.addClass('active').removeAttr('disabled').removeAttr('aria-disabled')
   }
 
   function checkListHeader(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
-    var listToCheckControl = $(scopeElControl).find(
-      '.transfer-group input:checked'
-    )
+    var listToCheckControl = $(scopeElControl).find('.transfer-group input:checked')
     var inputHeader = $(scopeElControl).find('.transfer-header input')
     // contextual buttons
     addButton = scopeElControl.closest('.it-transfer-block').find('a.transfer')
-    inverseButton = scopeElControl
-      .closest('.it-transfer-block')
-      .find('a.backtransfer')
+    inverseButton = scopeElControl.closest('.it-transfer-block').find('a.backtransfer')
 
     if (listToCheckControl.length > 0) {
       $(listToCheck).prop('checked', false)
-      $(inputHeader)
-        .removeClass('semi-checked')
-        .prop('checked', false)
+      $(inputHeader).removeClass('semi-checked').prop('checked', false)
       // controllo quale pulsante centrale disattivare
       if (scopeElControl.hasClass('source')) {
         disableElement(addButton)
@@ -73,16 +61,12 @@ $(function() {
 
   function checkList(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
-    var listToCheckControl = $(scopeElControl).find(
-      '.transfer-group input:checked'
-    )
+    var listToCheckControl = $(scopeElControl).find('.transfer-group input:checked')
     var inputHeader = $(scopeElControl).find('.transfer-header input')
 
     // contextual buttons
     addButton = scopeElControl.closest('.it-transfer-block').find('a.transfer')
-    inverseButton = scopeElControl
-      .closest('.it-transfer-block')
-      .find('a.backtransfer')
+    inverseButton = scopeElControl.closest('.it-transfer-block').find('a.backtransfer')
 
     if (listToCheckControl.length == 0) {
       inputHeader.removeClass('semi-checked').prop('checked', false)
@@ -116,18 +100,13 @@ $(function() {
     var sourceTotalQty = sourceControl.find('.transfer-group input').length
 
     var targetDiv = targetControl.find('.transfer-group')
-    var targetQty =
-      targetControl.find('.transfer-group input').length + sourceItemsQty
+    var targetQty = targetControl.find('.transfer-group input').length + sourceItemsQty
     var targetHeadLabel = targetControl.find('.transfer-header span.num')
     var targetHeadInput = targetControl.find('.transfer-header input')
 
     // ciclo di aggiunta
-    sourceItemsBlock.each(function() {
-      $(this)
-        .detach()
-        .appendTo(targetDiv)
-        .find('input')
-        .prop('checked', false)
+    sourceItemsBlock.each(function () {
+      $(this).detach().appendTo(targetDiv).find('input').prop('checked', false)
     })
     // update label
     var totalSource = sourceTotalQty - sourceItemsQty
@@ -156,49 +135,37 @@ $(function() {
     var header = contextControl.find('.transfer-header input')
     var allElement = contextControl.find('.transfer-group input')
 
-    $(left)
-      .find('.form-check')
-      .detach()
-    $(right)
-      .find('.form-check')
-      .detach()
+    $(left).find('.form-check').detach()
+    $(right).find('.form-check').detach()
     $(left).append(elemLeft)
     $(right).append(elemRight)
 
     $(textLeft).text(elemLeftNum)
     $(textRight).text(elemRightNum)
 
-    $(header)
-      .prop('disabled', false)
-      .removeClass('semi-checked')
+    $(header).prop('disabled', false).removeClass('semi-checked')
     $(header).prop('checked', false)
 
     $(allElement).prop('checked', false)
   }
 
   // click su header
-  $(headerInput).on('click', function() {
+  $(headerInput).on('click', function () {
     var scopeEl = $(this).closest('.it-transfer-wrapper')
     checkListHeader(scopeEl)
   })
 
   //click su lista
-  $(listInput).on('click', function() {
+  $(listInput).on('click', function () {
     var scopeEl = $(this).closest('.it-transfer-wrapper')
     checkList(scopeEl)
   })
 
   //spostamento da sinistra a destra
-  $(addButton).on('click', function(event) {
-    var source = $(this)
-      .closest('.it-transfer-block')
-      .find('.source')
-    var target = $(this)
-      .closest('.it-transfer-block')
-      .find('.target')
-    resetButton = $(this)
-      .closest('.it-transfer-block')
-      .find('a.reset')
+  $(addButton).on('click', function (event) {
+    var source = $(this).closest('.it-transfer-block').find('.source')
+    var target = $(this).closest('.it-transfer-block').find('.target')
+    resetButton = $(this).closest('.it-transfer-block').find('a.reset')
 
     // attivo il pulsante di reset
     enableElement(resetButton)
@@ -211,16 +178,10 @@ $(function() {
   })
 
   //spostamento da destra a sinistra
-  $(inverseButton).on('click', function(event) {
-    var target = $(this)
-      .closest('.it-transfer-block')
-      .find('.source')
-    var source = $(this)
-      .closest('.it-transfer-block')
-      .find('.target')
-    resetButton = $(this)
-      .closest('.it-transfer-block')
-      .find('a.reset')
+  $(inverseButton).on('click', function (event) {
+    var target = $(this).closest('.it-transfer-block').find('.source')
+    var source = $(this).closest('.it-transfer-block').find('.target')
+    resetButton = $(this).closest('.it-transfer-block').find('a.reset')
 
     // attivo il pulsante di reset
     enableElement(resetButton)
@@ -232,7 +193,7 @@ $(function() {
     event.preventDefault()
   })
 
-  $(resetButton).on('click', function(event) {
+  $(resetButton).on('click', function (event) {
     var context = $(this).closest('.it-transfer-block')
     var addButton = context.find('a.transfer')
     var reverseButton = context.find('a.backtransfer')

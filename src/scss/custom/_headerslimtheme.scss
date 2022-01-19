@@ -5,7 +5,8 @@
 
     .it-header-slim-wrapper-content {
       .it-header-slim-right-zone,
-      .header-slim-right-zone { // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+      .header-slim-right-zone {
+        // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
         .dropdown-menu:before {
           background: $header-slim-theme-light-text-color;
         }
@@ -28,8 +29,6 @@
         color: $header-slim-theme-light-text-color;
         .icon {
           fill: $header-slim-theme-light-text-color;
-        }
-        &.dropdown-toggle {
         }
         &.it-opener {
           &[aria-expanded='true'] {

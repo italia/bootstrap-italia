@@ -22,7 +22,7 @@
   position: absolute;
   right: 0;
   top: 0.5rem;
-  padding: 0 $spacer*0.5;
+  padding: 0 $spacer * 0.5;
   background-color: $white;
   .icon {
     fill: $gray-secondary;
@@ -112,7 +112,7 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         display: block;
-        margin-top: $v-gap*0.5;
+        margin-top: $v-gap * 0.5;
       }
     }
   }
@@ -139,7 +139,7 @@
   //search icon
   .autocomplete-icon {
     position: absolute;
-    left: .5rem;
+    left: 0.5rem;
     right: auto;
     top: 1rem;
 
@@ -216,16 +216,4 @@
       }
     }
   }
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

@@ -6,12 +6,6 @@
       .it-brand-wrapper {
         a {
           color: $header-center-theme-light-text-color;
-          h2 {
-          }
-          h3 {
-          }
-          &:hover {
-          }
           .icon {
             fill: $header-center-theme-light-text-color;
           }
@@ -42,38 +36,16 @@
     }
   }
 }
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper {
     &.theme-light {
       .it-header-center-content-wrapper {
-        .it-brand-wrapper {
-          a {
-            h2 {
-            }
-            h3 {
-            }
-            &:hover {
-            }
-            .icon {
-            }
-          }
-        }
-
         //right zone
         .it-right-zone {
           .it-socials {
             ul {
-              .icon {
-              }
               a {
                 &:hover {
                   svg {
@@ -101,8 +73,4 @@
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

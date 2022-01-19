@@ -21,7 +21,6 @@
     position: relative;
     line-height: 1em;
     font-weight: 700;
-    letter-spacing: 0.025em;
   }
   //text
   p {
@@ -170,12 +169,4 @@
       transform: translateY(-50%);
     }
   }
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

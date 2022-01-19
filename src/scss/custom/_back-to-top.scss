@@ -12,9 +12,7 @@
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  transition: $transition-base,
-    transform 0.25s cubic-bezier(0.75, -0.5, 0, 1.75), visibility 0.3s linear,
-    opacity 0.3s ease-in-out;
+  transition: $transition-base, transform 0.25s cubic-bezier(0.75, -0.5, 0, 1.75), visibility 0.3s linear, opacity 0.3s ease-in-out;
   z-index: 1;
   transform: scale(0.7);
   transform-origin: center center;
@@ -22,8 +20,7 @@
   &.back-to-top-show {
     visibility: visible;
     opacity: 1;
-    transition: $transition-base, transform 0.05s ease-out,
-      visibility 0s linear, opacity 0.1s ease-in-out;
+    transition: $transition-base, transform 0.05s ease-out, visibility 0s linear, opacity 0.1s ease-in-out;
     transform: scale(1);
   }
   &:hover {

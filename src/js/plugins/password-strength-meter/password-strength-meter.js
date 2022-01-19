@@ -2,10 +2,10 @@
  * Original code by Òscar Casajuana a.k.a. elboletaire <elboletaire at underave dot net>
  * @link https://github.com/elboletaire/password-strength-meter
  */
-;(function($) {
+;(function ($) {
   'use strict'
 
-  var Password = function($object, options) {
+  var Password = function ($object, options) {
     var defaults = {
       shortPass: 'Password molto debole',
       badPass: 'Password debole',
@@ -117,18 +117,12 @@
       }
 
       // password has number and symbol
-      if (
-        password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) &&
-        password.match(/([0-9])/)
-      ) {
+      if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([0-9])/)) {
         score += 15
       }
 
       // password has char and symbol
-      if (
-        password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) &&
-        password.match(/([a-zA-Z])/)
-      ) {
+      if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([a-zA-Z])/)) {
         score += 15
       }
 
@@ -184,12 +178,9 @@
      * @return void
      */
     function init() {
-      var shown = true
       var $text = options.showText
 
-      var $graybar = $('<div>').addClass(
-        'password-meter progress rounded-0 position-absolute'
-      )
+      var $graybar = $('<div>').addClass('password-meter progress rounded-0 position-absolute')
       $graybar.append(`<div class="row position-absolute w-100 m-0">
         <div class="col-3 border-left border-right border-white"></div>
         <div class="col-3 border-left border-right border-white"></div>
@@ -203,24 +194,24 @@
         'aria-valuemin': '0',
         'aria-valuemax': '100',
       })
-      var $insert = $('<div>').attr({
-        class: 'password-strength-meter',
-      }).append($graybar.append($colorbar))
+      var $insert = $('<div>')
+        .attr({
+          class: 'password-strength-meter',
+        })
+        .append($graybar.append($colorbar))
 
       if (options.showText) {
-        $text = $('<small>')
-          .addClass('form-text text-muted')
-          .html(options.enterPass)
+        $text = $('<small>').addClass('form-text text-muted').html(options.enterPass)
         $insert.prepend($text)
       }
 
       $object.after($insert)
 
-      $object.keyup(function() {
+      $object.keyup(function () {
         var score = calculateScore($object.val())
         $object.trigger('password.score', [score])
         var perc = score < 0 ? 0 : score
-        $colorbar.removeClass(function(index, className) {
+        $colorbar.removeClass(function (index, className) {
           return (className.match(/(^|\s)bg-\S+/g) || []).join(' ')
         })
         $colorbar.addClass('bg-' + scoreColor(score))
@@ -235,14 +226,9 @@
             text = options.enterPass
           }
 
-          if (
-            $text.html() !==
-            $('<div>')
-              .html(text)
-              .html()
-          ) {
+          if ($text.html() !== $('<div>').html(text).html()) {
             $text.html(text)
-            $text.removeClass(function(index, className) {
+            $text.removeClass(function (index, className) {
               return (className.match(/(^|\s)text-\S+/g) || []).join(' ')
             })
             $text.addClass('text-' + scoreColor(score))
@@ -258,8 +244,8 @@
   }
 
   // Bind to jquery
-  $.fn.password = function() {
-    return this.each(function() {
+  $.fn.password = function () {
+    return this.each(function () {
       new Password($(this), $(this).data())
     })
   }
@@ -268,25 +254,21 @@
 // Gestione Password Caps Lock
 function showCapsLockMsg($input) {
   $('.password-caps').remove()
-  $input
-    .parents('.form-group')
-    .append(
-      '<small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>'
-    )
+  $input.parents('.form-group').append('<small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>')
 }
 
-$(function() {
+$(function () {
   var isShiftPressed = false
   var isCapsOn = null
 
   $('.input-password')
-    .on('keydown', function(e) {
+    .on('keydown', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       if (keyCode == 16) {
         isShiftPressed = true
       }
     })
-    .on('keyup', function(e) {
+    .on('keyup', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       if (keyCode == 16) {
         isShiftPressed = false
@@ -297,13 +279,13 @@ $(function() {
           $('.password-caps').remove()
         } else {
           isCapsOn = true
-          $('input:focus').each(function(e) {
+          $('input:focus').each(function () {
             showCapsLockMsg($(this))
           })
         }
       }
     })
-    .on('keypress', function(e) {
+    .on('keypress', function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which
       // i keyCode dal 65 al 90 identificano i caratteri alfabetici maiuscoli da "A" a "Z"
       if (keyCode >= 65 && keyCode <= 90 && !isShiftPressed) {
@@ -314,10 +296,8 @@ $(function() {
 
   $('.input-password-strength-meter').password()
 
-  $('.password-icon').on('click', function(e) {
-    $(this)
-      .find('[class^="password-icon"]')
-      .toggleClass('d-none')
+  $('.password-icon').on('click', function () {
+    $(this).find('[class^="password-icon"]').toggleClass('d-none')
     var input = $(this).siblings('.input-password')
     var inputType = input.attr('type') === 'password' ? 'text' : 'password'
     input.attr('type', inputType)

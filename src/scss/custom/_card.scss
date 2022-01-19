@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 .card-wrapper {
   padding-bottom: $v-gap * 3;
@@ -273,11 +273,6 @@
     margin-top: $card-small-line-margin;
     margin-left: $card-padding;
   }
-
-  &.no-after {
-    content: none;
-  }
-
   a.read-more {
     position: absolute;
     bottom: $v-gap * 3;
@@ -372,8 +367,8 @@
   }
 
   &.no-after {
+    content: none;
     position: relative;
-
     &:after {
       display: none;
     }
@@ -412,8 +407,8 @@
       }
       &:after {
         background: $primary-a3;
-        left: $card-padding*0.5;
-        top: $card-padding*0.5;
+        left: $card-padding * 0.5;
+        top: $card-padding * 0.5;
         transition: all 0.3s;
       }
       .img-responsive {
@@ -642,8 +637,8 @@
   width: 0;
   height: 0;
   border-bottom: 13px solid $card-shadow-bg;
-  border-left: $flag-icon-w*0.5 solid transparent;
-  border-right: $flag-icon-w*0.5 solid transparent;
+  border-left: $flag-icon-w * 0.5 solid transparent;
+  border-right: $flag-icon-w * 0.5 solid transparent;
 }
 
 // read more text
@@ -699,21 +694,12 @@ a.read-more {
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .card-wrapper {
     padding-bottom: 0;
     &.card-space {
-      padding-bottom: $card-padding*0.5;
+      padding-bottom: $card-padding * 0.5;
     }
     &.card-offset {
       margin-top: 90px;
@@ -722,7 +708,7 @@ a.read-more {
   .card {
     border: none;
     // border-right: 1px solid $card-border-color;
-    margin-right: -$grid-gutter-width*0.5;
+    margin-right: -$grid-gutter-width * 0.5;
     &.card-bg,
     &.card-img {
       margin: 0;
@@ -736,8 +722,4 @@ a.read-more {
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

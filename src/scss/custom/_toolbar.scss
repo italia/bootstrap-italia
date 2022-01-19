@@ -121,11 +121,7 @@
       bottom: auto;
       right: 32px;
       z-index: 6;
-      background: radial-gradient(
-        ellipse at center,
-        rgba(0, 0, 0, 0.25) 0%,
-        rgba(0, 0, 0, 0) 60%
-      );
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
       border-radius: 50%;
       transform: translateX(50%) scalex(0.12) scaleY(1.25);
       opacity: 0.18;
@@ -217,11 +213,7 @@
     top: auto;
     bottom: 32px;
     z-index: 6;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0.25) 0%,
-      rgba(0, 0, 0, 0) 60%
-    );
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
     border-radius: 50%;
     transform: translateY(50%) scalex(1.4) scaleY(0.12);
     opacity: 0.18;
@@ -303,10 +295,12 @@
       }
     }
     // hover fix for ie11
+    /* stylelint-disable */
     _:-ms-fullscreen,
     &:not(.disabled):hover {
       text-decoration: none;
     }
+    /* stylelint-enable */
   }
 
   // dropdown button
@@ -399,11 +393,5 @@
     line-height: 1;
     display: block;
     font-weight: 600;
-  }
-
-  //dropdown
-  .btn-dropdown {
-    &:after {
-    }
   }
 }

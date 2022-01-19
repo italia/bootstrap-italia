@@ -75,11 +75,11 @@
       width: $v-gap * 6;
       height: $v-gap * 3;
       overflow: hidden;
-      margin-left: -$v-gap*0.5;
+      margin-left: -$v-gap * 0.5;
       opacity: 0;
       transition: opacity 0.3s;
       &:nth-child(1) {
-        margin-top: -$v-gap*0.5;
+        margin-top: -$v-gap * 0.5;
       }
       &:nth-child(2) {
         transform: rotate(180deg);
@@ -97,8 +97,7 @@
         border-bottom: 4px solid transparent;
         width: 100%;
         height: 200%;
-        animation: spinnerAnimInner1 0.75s cubic-bezier(0.25, 0.1, 0.5, 1)
-          infinite alternate;
+        animation: spinnerAnimInner1 0.75s cubic-bezier(0.25, 0.1, 0.5, 1) infinite alternate;
       }
     }
   }

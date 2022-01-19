@@ -119,11 +119,6 @@
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .it-footer-small-prints {
@@ -140,8 +135,4 @@
       }
     }
   }
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
 }

@@ -54,12 +54,7 @@
   position: relative;
   padding-top: 0;
 
-  &.no-tick
-    .dropdown.bootstrap-select
-    .dropdown-menu
-    li
-    a.selected
-    span.check-mark {
+  &.no-tick .dropdown.bootstrap-select .dropdown-menu li a.selected span.check-mark {
     display: none;
   }
 
@@ -80,14 +75,12 @@
       .dropdown-menu {
         //menu on bottom
         &[x-placement='bottom-start'] {
-          animation: selectDropdownFadeIn forwards
-            $dropdown-menu-animation-speed;
+          animation: selectDropdownFadeIn forwards $dropdown-menu-animation-speed;
         }
 
         //menu on top
         &[x-placement='top-start'] {
-          animation: selectDropdownFadeInTop forwards
-            $dropdown-menu-animation-speed;
+          animation: selectDropdownFadeInTop forwards $dropdown-menu-animation-speed;
         }
       }
     }
@@ -290,7 +283,7 @@
             //color: rgba(255,255,255,0);
             .select-pill {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap*0.5 $v-gap;
+              padding: $v-gap * 0.5 $v-gap;
               border: 1px solid $select-label-color;
               color: $select-label-color;
               line-height: 1;
@@ -316,7 +309,7 @@
             .form-check [type='checkbox'] + label,
             .form-check [type='radio'] + label {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap*0.5 $v-gap;
+              padding: $v-gap * 0.5 $v-gap;
               border: 1px solid $select-label-color;
               color: $select-label-color;
               line-height: 1;
@@ -458,20 +451,4 @@ fieldset.disabled .bootstrap-select-wrapper {
       box-shadow: none;
     }
   }
-}
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

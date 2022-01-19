@@ -14,6 +14,9 @@
       display: none;
       .icon {
         fill: $gray-secondary;
+        margin-right: 0.667rem;
+        width: 24px;
+        height: 24px;
       }
       // states
       &.active,
@@ -40,14 +43,6 @@
             text-decoration: underline;
           }
         }
-      }
-
-      // icons
-      .icon {
-        //font-size: 1.333rem;
-        margin-right: 0.667rem;
-        width: 24px;
-        height: 24px;
       }
       // numbers
       .steppers-number {
@@ -162,11 +157,6 @@
     }
   }
 }
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .steppers {
@@ -188,7 +178,6 @@
         padding: 1.778rem 1.111rem;
         flex-grow: 1;
         border-left: 1px solid $gray-border-disabled;
-        display: block;
         position: relative;
         display: flex;
         align-items: center;
@@ -298,10 +287,6 @@
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }
 
 //mobile ONLY BUTTONS

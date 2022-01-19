@@ -1,4 +1,5 @@
-const progressDonut = (function($) {
+/* eslint-disable no-unused-vars */
+const progressDonut = (function ($) {
   //background colour of inner circle
   const backgroundColor = '#fff'
 
@@ -25,7 +26,7 @@ const progressDonut = (function($) {
    * @param {string} target - The element
    * @param {string} progress - percentage out of 100, start with 0
    */
-  var generate = function(target, progress) {
+  var generate = function (target, progress) {
     $(target).circularloader({
       backgroundColor: backgroundColor,
       fontColor: fontColor,
@@ -46,7 +47,7 @@ const progressDonut = (function($) {
    * @param {string} target - The element
    * @param {string} progress - percentage out of 100, start with 0
    */
-  var update = function(target, progress) {
+  var update = function (target, progress) {
     $(target).circularloader({
       progressPercent: progress,
     })

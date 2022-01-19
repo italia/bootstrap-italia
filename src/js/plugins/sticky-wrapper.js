@@ -1,4 +1,4 @@
-;(function() {
+;(function () {
   const elWrappers = document.getElementsByClassName('sticky-wrapper')
   const elToggler = document.querySelector('.custom-navbar-toggler')
   const isDesktop = isHidden(elToggler)
@@ -17,15 +17,9 @@
   if (elWrappers && elWrappers.length) {
     let isSticky = false
 
-    const initSticky = isDesktop => {
+    const initSticky = (isDesktop) => {
       const getPadding = (parent, size) => {
-        return isDesktop
-          ? parseInt(
-              (window.getComputedStyle
-                ? getComputedStyle(parent, null)
-                : parent.currentStyle)[size]
-            )
-          : 0
+        return isDesktop ? parseInt((window.getComputedStyle ? getComputedStyle(parent, null) : parent.currentStyle)[size]) : 0
       }
 
       const getPosition = (isNavBottom, gap, position) => {
@@ -41,15 +35,13 @@
       }
 
       // Get header height
-      const elNavigation = isDesktop
-        ? document.querySelector('.it-header-navbar-wrapper')
-        : document.querySelector('.it-header-center-wrapper')
+      const elNavigation = isDesktop ? document.querySelector('.it-header-navbar-wrapper') : document.querySelector('.it-header-center-wrapper')
 
       runCheckOnScroll = () => {
         // Set monitoring offset top
         const navOffsetTop = elNavigation ? elNavigation.offsetHeight : 0
         // Check the sticky status
-        const runCheckSticky = elSticky => {
+        const runCheckSticky = (elSticky) => {
           // Check is set on bottom
           // Force position of navscroll to bottom
           // const navBottom = elSticky.outerHTML.includes('it-bottom-navscroll')
@@ -89,14 +81,7 @@
 
           // Check if at bottom of parent
           if (isSticky && isDesktop) {
-            if (
-              distanceToTop < 0 &&
-              Math.abs(distanceToTop) +
-                elHeight +
-                parentPaddingTop +
-                navOffsetTop >
-                parentHeight
-            ) {
+            if (distanceToTop < 0 && Math.abs(distanceToTop) + elHeight + parentPaddingTop + navOffsetTop > parentHeight) {
               elSticky.classList.add('at-bottom')
             } else {
               elSticky.classList.remove('at-bottom')
@@ -104,7 +89,7 @@
           }
         }
 
-        Array.from(elWrappers).forEach(elSticky => {
+        Array.from(elWrappers).forEach((elSticky) => {
           runCheckSticky(elSticky)
         })
       }

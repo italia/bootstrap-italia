@@ -13,7 +13,7 @@
     float: right;
     //margin: 0 $v-gap/4 0 0;
     margin: 0;
-    padding-right: $v-gap*0.25;
+    padding-right: $v-gap * 0.25;
     &:first-of-type {
       margin-right: 0;
     }
@@ -38,7 +38,7 @@
     font-size: 0.875rem;
     float: right;
     width: auto;
-    margin: $v-gap*0.5 0 0 $v-gap * 2;
+    margin: $v-gap * 0.5 0 0 $v-gap * 2;
     font-weight: 500;
   }
 
@@ -75,16 +75,4 @@
       font-size: 0.778rem;
     }
   }
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

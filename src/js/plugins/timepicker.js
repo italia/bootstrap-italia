@@ -2,24 +2,18 @@
 var numbers = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
 var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
-$(document).ready(function() {
+$(document).ready(function () {
   function allowKey(key) {
     return [8, 9, 13].includes(key)
   }
 
   function loadSpinner($spinner) {
-    $spinner
-      .toggleClass('is-open')
-      .attr('aria-hidden', 'false')
-      .fadeIn(100)
+    $spinner.toggleClass('is-open').attr('aria-hidden', 'false').fadeIn(100)
   }
 
   function hideSpinner($spinner, $input, $spinnerH, $spinnerM, index) {
     if ($spinner.hasClass('is-open')) {
-      $spinner
-        .fadeOut(100)
-        .toggleClass('is-open')
-        .attr('aria-hidden', 'true')
+      $spinner.fadeOut(100).toggleClass('is-open').attr('aria-hidden', 'true')
       if ($spinnerH && $spinnerM) {
         var newTime = $spinnerH.attr('value') + ':' + $spinnerM.attr('value')
         $input.val(newTime)
@@ -48,7 +42,7 @@ $(document).ready(function() {
   }
 
   // Loop each input field
-  $('.it-timepicker-wrapper').each(function(index) {
+  $('.it-timepicker-wrapper').each(function (index) {
     //GLOBAL VARIABLES
     var valMin,
       valMax,
@@ -79,12 +73,12 @@ $(document).ready(function() {
     // $input.attr('data-input', 'input-' + index)
     // $spinner.attr('data-spinner', 'spinner-' + index)
 
-    var setDigit = number => {
+    var setDigit = (number) => {
       if (number < 0) number = 0
       return number < 10 ? '0' + number : number
     }
 
-    var getValues = $button => {
+    var getValues = ($button) => {
       // get spinner input
       $spinnerInput = $button.closest('.spinner').find('input')
       // get set values
@@ -143,12 +137,9 @@ $(document).ready(function() {
 
     defLabels[index] = $input.siblings('label').text()
 
-    $el
-      .find('.spinner-control button')
-      .attr('aria-hidden', 'true')
-      .attr('tabindex', '-1')
+    $el.find('.spinner-control button').attr('aria-hidden', 'true').attr('tabindex', '-1')
 
-    $btnTime.on('click', e => {
+    $btnTime.on('click', (e) => {
       e.stopPropagation()
       if ($spinner.hasClass('is-open')) {
         hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
@@ -159,7 +150,7 @@ $(document).ready(function() {
 
     //Direct Time Entry
     $input
-      .on('keyup', function(e) {
+      .on('keyup', function (e) {
         var key = e.which || e.keyCode
         var val = $input.val()
 
@@ -184,37 +175,37 @@ $(document).ready(function() {
           return checkForm($input, index)
         }
       })
-      .on('focus', e => {
+      .on('focus', (e) => {
         e.stopPropagation()
         if ($input.val()) {
           checkForm($input, index)
         }
       })
-      .on('blur', e => {
+      .on('blur', () => {
         // console.log('$input blur')
         if ($input.val()) {
           checkForm($input, index)
         }
       })
 
-    $btnHourUp.on('click', e => {
+    $btnHourUp.on('click', () => {
       handleClick('up', $btnHourUp, 'click hour up')
     })
 
-    $btnHourDown.on('click', e => {
+    $btnHourDown.on('click', () => {
       handleClick('down', $btnHourDown, 'click hour down')
     })
 
-    $btnMinUp.on('click', e => {
+    $btnMinUp.on('click', () => {
       handleClick('up', $btnMinUp, 'click min up')
     })
 
-    $btnMinDown.on('click', e => {
+    $btnMinDown.on('click', () => {
       handleClick('down', $btnMinDown, 'click min down')
     })
 
     $spinnerH
-      .on('keydown', e => {
+      .on('keydown', (e) => {
         var key = e.which || e.keyCode
         var isNum = numbers.includes(key)
         switch (true) {
@@ -229,7 +220,7 @@ $(document).ready(function() {
         }
         return false
       })
-      .on('keyup', e => {
+      .on('keyup', (e) => {
         var key = e.which || e.keyCode
         var isNum = numbers.includes(key)
         if (isNum) {
@@ -238,7 +229,7 @@ $(document).ready(function() {
       })
 
     $spinnerM
-      .on('keydown', e => {
+      .on('keydown', (e) => {
         var key = e.which || e.keyCode
         var isNum = numbers.includes(key)
         switch (true) {
@@ -253,7 +244,7 @@ $(document).ready(function() {
         }
         return false
       })
-      .on('keyup', e => {
+      .on('keyup', (e) => {
         var key = e.which || e.keyCode
         var isNum = numbers.includes(key)
         if (isNum) {
@@ -261,11 +252,11 @@ $(document).ready(function() {
         }
       })
 
-    $(document).on('click', e => {
+    $(document).on('click', () => {
       hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
     })
 
-    $spinner.on('click', e => {
+    $spinner.on('click', (e) => {
       e.stopPropagation()
     })
   })

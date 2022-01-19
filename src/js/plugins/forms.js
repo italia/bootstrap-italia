@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   const inputSelector =
     'input[type="text"],' +
     'input[type="password"],' +
@@ -12,14 +12,13 @@ $(function() {
 
   const inputFileSelector = 'input[type="file"]'
 
-
   $(document)
-    .on('focus', inputSelector, e => {
+    .on('focus', inputSelector, (e) => {
       const $this = $(e.target)
       const labelSelector = "label[for='" + $this.attr('id') + "']"
       $(labelSelector).addClass('active')
     })
-    .on('blur', inputSelector, e => {
+    .on('blur', inputSelector, (e) => {
       const $this = $(e.target)
       const noValue = !$this.val()
       const noPlaceholder = !$this.attr('placeholder')
@@ -27,25 +26,24 @@ $(function() {
         $("label[for='" + $this.attr('id') + "']").removeClass('active')
       }
     })
-    .on('change', inputSelector, e => {
+    .on('change', inputSelector, (e) => {
       const $this = $(e.target)
       updateTextFields($this)
       validateField($this)
     })
-    .on('blur', inputFileSelector, e => {
+    .on('blur', inputFileSelector, (e) => {
       const $this = $(e.target)
       $("label[for='" + $this.attr('id') + "']").addClass('active')
     })
-    .on('change', inputFileSelector, e => {
+    .on('change', inputFileSelector, (e) => {
       const $this = $(e.target)
       var numFiles = e.currentTarget.files.length
       var nomiFiles = ''
       var multi = ''
-      for (i = 0; i < numFiles; i++) {
-        fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024
-        filesize = Math.round(fileSize)
-        nomiFiles =
-          nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); '
+      for (var i = 0; i < numFiles; i++) {
+        var fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024
+        var filesize = Math.round(fileSize)
+        nomiFiles = nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); '
       }
       if (numFiles > 1) {
         multi = numFiles + ' file da caricare: '
@@ -53,7 +51,7 @@ $(function() {
       $("label[for='" + $this.attr('id') + "']label[class='form-file-name']").text(multi + nomiFiles)
     })
 
-  const updateTextFields = $input => {
+  const updateTextFields = ($input) => {
     const $labelAndIcon = $("label[for='" + $input.attr('id') + "']")
     const hasValue = $input.val().length
     const hasPlaceholder = !!$input.attr('placeholder')
@@ -64,7 +62,7 @@ $(function() {
     }
   }
 
-  const validateField = $input => {
+  const validateField = ($input) => {
     if ($input.hasClass('validate')) {
       const value = $input.val()
       const noValue = !value.length
@@ -106,5 +104,4 @@ $(function() {
   handleLabelPosition()
 
   $(document).on('changed.bs.form-control', handleLabelPosition)
-
 })
