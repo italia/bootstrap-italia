@@ -7,7 +7,7 @@ $(function () {
     })
   }
 
-  $.fn.dimmerHide = function (target) {
+  $.fn.dimmerHide = function () {
     return this.each(function () {
       $(this).fadeOut(200)
     })

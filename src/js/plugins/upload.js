@@ -1,6 +1,5 @@
 $(function () {
   var $form = $('.upload-dragdrop:not(.success)')
-  var droppedFiles = false
 
   $form
     .on(

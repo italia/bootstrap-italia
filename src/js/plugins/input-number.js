@@ -27,7 +27,7 @@ $(function () {
   }
 
   //resize all input numbers field on DR
-  $('.input-number input[type=number]').each(function (index) {
+  $('.input-number input[type=number]').each(function () {
     inputNumberResize($(this))
   })
 

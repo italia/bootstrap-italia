@@ -60,7 +60,7 @@ $(function () {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -161,7 +161,7 @@ $(function () {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -264,7 +264,7 @@ $(function () {
       ctouchDrag = true
       cdots = false
       cslideBy = 'page'
-      cstagePadding = cstagePadding
+      cstagePadding = 0
       // mobile params
       mobnav = false
       mobdots = true
@@ -297,7 +297,7 @@ $(function () {
         //carousel parameters
         nav: cnav,
         loop: cloop,
-        margin: 24, //cmargin
+        margin: cmargin, //cmargin
         items: citems,
         navText: cnavText,
         navSpeed: cnavSpeed, //arrow click

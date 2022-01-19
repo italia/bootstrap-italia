@@ -42,7 +42,7 @@ $(function () {
       var multi = ''
       for (var i = 0; i < numFiles; i++) {
         var fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024
-        filesize = Math.round(fileSize)
+        var filesize = Math.round(fileSize)
         nomiFiles =
           nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); '
       }

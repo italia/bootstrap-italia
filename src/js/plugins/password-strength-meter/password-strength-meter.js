@@ -184,7 +184,6 @@
      * @return void
      */
     function init() {
-      var shown = true
       var $text = options.showText
 
       var $graybar = $('<div>').addClass(

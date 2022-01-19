@@ -1,4 +1,4 @@
-function notificationShow(notificationTarget, notificationTimeOut) {
+/*function notificationShow(notificationTarget, notificationTimeOut) {
   $('#' + notificationTarget).fadeIn(300)
 
   if (!$('#' + notificationTarget).hasClass('dismissable')) {
@@ -16,7 +16,7 @@ function notificationShow(notificationTarget, notificationTimeOut) {
       $('#' + notificationTarget).fadeOut(100)
     }, timeToFade)
   }
-}
+}*/
 
 //dismissable close button
 $(document).on('click', '.notification-close', function () {

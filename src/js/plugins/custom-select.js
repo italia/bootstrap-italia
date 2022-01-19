@@ -7,7 +7,9 @@ const Select = (($) => {
 
   const NAME = 'custom-select'
   const DATA_KEY = 'bs.custom-select'
+  /* eslint-disable */
   const VERSION = 'v4.0.0'
+  /* eslint-enable */
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
   const JQUERY_NO_CONFLICT = $.fn[NAME]

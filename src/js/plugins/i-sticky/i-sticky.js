@@ -10,7 +10,6 @@
     areWindowEventsAttached = false,
     isAnimationRequested = false,
     lastKnownScrollTop = 0,
-    lastKnownScrollLeft = 0,
     affectedChromeVersions = ['56'],
     // requestAnimationFrame may be prefixed
     requestAnimationFrame =
@@ -309,8 +308,6 @@
         item.style.height = height
       }
     }
-
-    lastKnownScrollLeft = scrollLeft
   }
 
   var timeout

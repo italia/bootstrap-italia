@@ -207,4 +207,4 @@ styleNode.innerHTML = `
 }
 `
 
-document.getElementsByTagName('head')[0].appendChild(styleNode);
+document.getElementsByTagName('head')[0].appendChild(styleNode)

@@ -141,8 +141,7 @@ For support or web development drop a mail at developer@technoplugin.com
       }
       a()
     } else if (void 0 != t.progressPercent || void 0 != t.progressValue) {
-      var c = 0,
-        d = 0
+      ;(c = 0), (d = 0)
       ;(c =
         void 0 == t.progressPercent
           ? parseInt(t.progressValue) > 100

@@ -13,6 +13,7 @@
     },
     "globals": {
       "$": true,
-      "jQuery": true
+      "jQuery": true,
+      "isIe" : true
     }
   }
