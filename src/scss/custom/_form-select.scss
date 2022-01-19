@@ -54,12 +54,7 @@
   position: relative;
   padding-top: 0;
 
-  &.no-tick
-    .dropdown.bootstrap-select
-    .dropdown-menu
-    li
-    a.selected
-    span.check-mark {
+  &.no-tick .dropdown.bootstrap-select .dropdown-menu li a.selected span.check-mark {
     display: none;
   }
 
@@ -80,14 +75,12 @@
       .dropdown-menu {
         //menu on bottom
         &[x-placement='bottom-start'] {
-          animation: selectDropdownFadeIn forwards
-            $dropdown-menu-animation-speed;
+          animation: selectDropdownFadeIn forwards $dropdown-menu-animation-speed;
         }
 
         //menu on top
         &[x-placement='top-start'] {
-          animation: selectDropdownFadeInTop forwards
-            $dropdown-menu-animation-speed;
+          animation: selectDropdownFadeInTop forwards $dropdown-menu-animation-speed;
         }
       }
     }

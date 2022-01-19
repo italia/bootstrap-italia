@@ -48,9 +48,7 @@ $(function () {
 
   //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo)
   $(navlink).on('blur', function () {
-    var closemenu = $(this)
-      .closest('.navbar-collapsable')
-      .find('.close-div .btn') // determino il pulsante di chiusura
+    var closemenu = $(this).closest('.navbar-collapsable').find('.close-div .btn') // determino il pulsante di chiusura
     /* Act on the event */
     if ($(this).closest('.navbar-collapsable').hasClass('expanded')) {
       // se il navigatore è a perto

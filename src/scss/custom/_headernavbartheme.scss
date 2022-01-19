@@ -158,12 +158,7 @@
     &.theme-light-desk {
       background: $navigation-light-bg-color;
       box-shadow: $dropdown-box-shadow;
-      .navbar
-        .navbar-collapsable
-        .navbar-nav
-        li
-        a.nav-link.dropdown-toggle
-        svg {
+      .navbar .navbar-collapsable .navbar-nav li a.nav-link.dropdown-toggle svg {
         fill: $navigation-light-text-color;
       }
 

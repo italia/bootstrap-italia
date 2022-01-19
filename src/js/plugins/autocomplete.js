@@ -8,6 +8,7 @@ $(function () {
     }
 
     // Get options
+    /* eslint-disable no-unused-vars */
     options = $.extend(defaults, options)
 
     return this.each(function () {
@@ -30,21 +31,13 @@ $(function () {
           if (q.length) {
             for (const item in data) {
               let markText = new RegExp('(' + q + ')', 'gi')
-              let optionText = data[item].text.replace(
-                markText,
-                '<mark>$1</mark>'
-              )
-              let optionLabel = data[item].label
-                ? '<em>' + data[item].label + '</em>'
-                : ''
+              let optionText = data[item].text.replace(markText, '<mark>$1</mark>')
+              let optionLabel = data[item].label ? '<em>' + data[item].label + '</em>' : ''
               let optionIcon = data[item].icon ? data[item].icon : ''
               let optionLink = data[item].link ? data[item].link : '#'
 
               if (optionText.toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-                $(this)
-                  .closest('.form-group')
-                  .find('.autocomplete-list')
-                  .addClass('autocomplete-list-show')
+                $(this).closest('.form-group').find('.autocomplete-list').addClass('autocomplete-list-show')
                 let option = $(`<li>
               <a href="${optionLink}">
                 ${optionIcon}
@@ -58,10 +51,7 @@ $(function () {
               }
             }
           } else {
-            $(this)
-              .closest('.form-group')
-              .find('.autocomplete-list')
-              .removeClass('autocomplete-list-show')
+            $(this).closest('.form-group').find('.autocomplete-list').removeClass('autocomplete-list-show')
           }
         })
       }

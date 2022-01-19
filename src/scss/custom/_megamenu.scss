@@ -35,10 +35,8 @@
                 background: transparent;
 
                 .description-content {
-                  padding-left: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width * 0.5;
-                  padding-right: $megamenu-linklist-vertical-link-padding +
-                    $grid-gutter-width * 0.5;
+                  padding-left: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
+                  padding-right: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
                   &:before {
                     content: '';
                     display: block;
@@ -87,8 +85,7 @@
               }
             }
             h3.it-heading-megacolumn {
-              margin: $megamenu-linklist-link-v-padding $megamenu-column-gap +
-                $grid-gutter-width * 2;
+              margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + $grid-gutter-width * 2;
               line-height: $megamenu-heading-line-height;
               font-size: $megamenu-heading-text-size;
               text-transform: uppercase;
@@ -222,8 +219,7 @@
                       width: 100%;
                       a,
                       h3 {
-                        padding: $megamenu-linklist-link-v-padding
-                          $megamenu-column-gap;
+                        padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
                         line-height: inherit;
                       }
                       // line after h3
@@ -276,8 +272,7 @@
               }
               .row.max-height-col {
                 min-height: 100%;
-                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 +
-                      1);
+                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 + 1);
                 .row.max-height-col {
                   margin-right: -$grid-gutter-width * 0.5;
                 }

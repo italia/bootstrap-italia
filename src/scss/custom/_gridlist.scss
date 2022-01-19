@@ -58,9 +58,7 @@
   &.it-grid-item-double-w {
     .img-responsive-wrapper {
       .img-responsive {
-        padding-bottom: calc(
-          #{$grid-item-df-double-proportion} - #{$grid-list-default-gap}
-        );
+        padding-bottom: calc(#{$grid-item-df-double-proportion} - #{$grid-list-default-gap});
       }
     }
   }
@@ -72,8 +70,7 @@
   padding-right: $grid-list-default-gap * 2;
   // grid changes
   div[class^='col-'] {
-    padding: 0 $grid-list-default-gap $grid-list-default-gap * 2
-      $grid-list-default-gap;
+    padding: 0 $grid-list-default-gap $grid-list-default-gap * 2 $grid-list-default-gap;
   }
   .grid-row {
     display: flex;

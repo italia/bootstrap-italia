@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const progressDonut = (function ($) {
   //background colour of inner circle
   const backgroundColor = '#fff'

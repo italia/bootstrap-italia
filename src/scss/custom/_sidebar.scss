@@ -40,8 +40,7 @@
             }
             &[data-toggle='collapse'] {
               &.active {
-                border-left: $sidebar-dropdown-line-selection-width solid
-                  $sidebar-dropdown-line-selection-color;
+                border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                 span,
                 i {
                   color: $primary;
@@ -84,8 +83,7 @@
             a {
               &[data-toggle='collapse'] {
                 &.active {
-                  border-right: $sidebar-dropdown-line-selection-width solid
-                    $sidebar-dropdown-line-selection-color;
+                  border-right: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                   border-left: none;
                 }
               }

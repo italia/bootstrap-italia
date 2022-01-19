@@ -81,11 +81,7 @@ const ComponenteBase = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $(document).on(
-    Event.CLICK_DATA_API,
-    Selector.COMPONENTE_BASE,
-    ComponenteBase._handleConsole(new ComponenteBase())
-  )
+  $(document).on(Event.CLICK_DATA_API, Selector.COMPONENTE_BASE, ComponenteBase._handleConsole(new ComponenteBase()))
 
   /**
    * ------------------------------------------------------------------------

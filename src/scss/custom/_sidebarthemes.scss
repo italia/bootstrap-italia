@@ -32,8 +32,7 @@
               &[data-toggle='collapse'] {
                 color: $sidebar-dark-text-color;
                 &.active {
-                  border-left: $sidebar-dropdown-line-selection-width solid
-                    $sidebar-dark-text-color;
+                  border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dark-text-color;
                   span,
                   i {
                     color: $sidebar-dark-text-color;

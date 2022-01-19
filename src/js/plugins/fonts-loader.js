@@ -1,8 +1,6 @@
 // Create our stylesheet
 var styleNode = document.createElement('style')
-const __PUBLIC_PATH__ = window.__PUBLIC_PATH__
-  ? window.__PUBLIC_PATH__
-  : '/bootstrap-italia/dist/fonts'
+const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : '/bootstrap-italia/dist/fonts'
 styleNode.innerHTML = `
 /* Titillium+Web:300,400,600,700 */
 

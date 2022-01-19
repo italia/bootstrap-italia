@@ -15,9 +15,7 @@
     @return hsl(0, 0%, 0%);
   } @else {
     $l-hsl: calc($b-hsb / 2) * (2 - calc($s-hsb / 100));
-    $s-hsl: calc(
-      ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
-    );
+    $s-hsl: calc(($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2));
     @return hsl($h-hsb, $s-hsl * 1%, $l-hsl * 1%);
   }
 }

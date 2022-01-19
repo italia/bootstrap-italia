@@ -26,8 +26,7 @@
     position: relative;
     .progress-bar {
       width: 0;
-      animation: progressBarIndeterminate 1.4s cubic-bezier(0.77, 0, 0.175, 1)
-        infinite forwards;
+      animation: progressBarIndeterminate 1.4s cubic-bezier(0.77, 0, 0.175, 1) infinite forwards;
       position: absolute;
       top: 0;
       bottom: 0;

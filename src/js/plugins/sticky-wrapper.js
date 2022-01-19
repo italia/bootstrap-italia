@@ -19,13 +19,7 @@
 
     const initSticky = (isDesktop) => {
       const getPadding = (parent, size) => {
-        return isDesktop
-          ? parseInt(
-              (window.getComputedStyle
-                ? getComputedStyle(parent, null)
-                : parent.currentStyle)[size]
-            )
-          : 0
+        return isDesktop ? parseInt((window.getComputedStyle ? getComputedStyle(parent, null) : parent.currentStyle)[size]) : 0
       }
 
       const getPosition = (isNavBottom, gap, position) => {
@@ -41,9 +35,7 @@
       }
 
       // Get header height
-      const elNavigation = isDesktop
-        ? document.querySelector('.it-header-navbar-wrapper')
-        : document.querySelector('.it-header-center-wrapper')
+      const elNavigation = isDesktop ? document.querySelector('.it-header-navbar-wrapper') : document.querySelector('.it-header-center-wrapper')
 
       runCheckOnScroll = () => {
         // Set monitoring offset top
@@ -89,14 +81,7 @@
 
           // Check if at bottom of parent
           if (isSticky && isDesktop) {
-            if (
-              distanceToTop < 0 &&
-              Math.abs(distanceToTop) +
-                elHeight +
-                parentPaddingTop +
-                navOffsetTop >
-                parentHeight
-            ) {
+            if (distanceToTop < 0 && Math.abs(distanceToTop) + elHeight + parentPaddingTop + navOffsetTop > parentHeight) {
               elSticky.classList.add('at-bottom')
             } else {
               elSticky.classList.remove('at-bottom')

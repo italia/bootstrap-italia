@@ -34,28 +34,18 @@ $(function () {
   // navscroll item on scroll
   $(window)
     .on('scroll', function () {
-      var sectionsContainerTop = $('.it-page-sections-container').length
-        ? $('.it-page-sections-container').offset().top
-        : 0
+      var sectionsContainerTop = $('.it-page-sections-container').length ? $('.it-page-sections-container').offset().top : 0
       var scrollDistance = $(window).scrollTop() - sectionsContainerTop
       // Assign active class to nav links while scolling
       $('.it-page-section').each(function (i) {
         if ($(this).position().top <= scrollDistance) {
-          $('.it-navscroll-wrapper .menu-wrapper a.active').removeClass(
-            'active'
-          )
+          $('.it-navscroll-wrapper .menu-wrapper a.active').removeClass('active')
           $('.it-navscroll-wrapper .menu-wrapper a').eq(i).addClass('active')
-          var parentsection = $('.it-navscroll-wrapper .menu-wrapper a')
-            .eq(i)
-            .closest('ul')
-            .prev('a')
+          var parentsection = $('.it-navscroll-wrapper .menu-wrapper a').eq(i).closest('ul').prev('a')
           var parentparentsection = $(parentsection).closest('ul').prev('a')
           $(parentsection).addClass('active')
           $(parentparentsection).addClass('active')
-          var textContent = $('.it-navscroll-wrapper .menu-wrapper a')
-            .eq(i)
-            .find('span')
-            .text()
+          var textContent = $('.it-navscroll-wrapper .menu-wrapper a').eq(i).find('span').text()
           var $btn = $('.it-navscroll-wrapper .custom-navbar-toggler')
           var $icon = $btn.find('span.it-list')
           $btn.text(textContent)

@@ -24,10 +24,7 @@ $(function () {
   })
 
   function disableElement($el) {
-    $el
-      .removeClass('active')
-      .attr('disabled', 'disabled')
-      .attr('aria-disabled', 'true')
+    $el.removeClass('active').attr('disabled', 'disabled').attr('aria-disabled', 'true')
   }
 
   function enableElement($el) {
@@ -36,15 +33,11 @@ $(function () {
 
   function checkListHeader(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
-    var listToCheckControl = $(scopeElControl).find(
-      '.transfer-group input:checked'
-    )
+    var listToCheckControl = $(scopeElControl).find('.transfer-group input:checked')
     var inputHeader = $(scopeElControl).find('.transfer-header input')
     // contextual buttons
     addButton = scopeElControl.closest('.it-transfer-block').find('a.transfer')
-    inverseButton = scopeElControl
-      .closest('.it-transfer-block')
-      .find('a.backtransfer')
+    inverseButton = scopeElControl.closest('.it-transfer-block').find('a.backtransfer')
 
     if (listToCheckControl.length > 0) {
       $(listToCheck).prop('checked', false)
@@ -68,16 +61,12 @@ $(function () {
 
   function checkList(scopeElControl) {
     var listToCheck = $(scopeElControl).find('.transfer-group input')
-    var listToCheckControl = $(scopeElControl).find(
-      '.transfer-group input:checked'
-    )
+    var listToCheckControl = $(scopeElControl).find('.transfer-group input:checked')
     var inputHeader = $(scopeElControl).find('.transfer-header input')
 
     // contextual buttons
     addButton = scopeElControl.closest('.it-transfer-block').find('a.transfer')
-    inverseButton = scopeElControl
-      .closest('.it-transfer-block')
-      .find('a.backtransfer')
+    inverseButton = scopeElControl.closest('.it-transfer-block').find('a.backtransfer')
 
     if (listToCheckControl.length == 0) {
       inputHeader.removeClass('semi-checked').prop('checked', false)
@@ -111,8 +100,7 @@ $(function () {
     var sourceTotalQty = sourceControl.find('.transfer-group input').length
 
     var targetDiv = targetControl.find('.transfer-group')
-    var targetQty =
-      targetControl.find('.transfer-group input').length + sourceItemsQty
+    var targetQty = targetControl.find('.transfer-group input').length + sourceItemsQty
     var targetHeadLabel = targetControl.find('.transfer-header span.num')
     var targetHeadInput = targetControl.find('.transfer-header input')
 

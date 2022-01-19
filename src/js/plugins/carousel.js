@@ -42,11 +42,7 @@ $(function () {
 
   $(carouselTarget).each(function () {
     // target definition
-    if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-carousel-landscape-abstract-three-cols')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-carousel-landscape-abstract-three-cols')) {
       cnav = true
       cloop = false
       cmargin = 24
@@ -125,10 +121,7 @@ $(function () {
         xlitems = 1
       }
       // standard img
-      if (
-        $(this).hasClass('it-img-card') &&
-        $(this).hasClass('it-standard-image')
-      ) {
+      if ($(this).hasClass('it-img-card') && $(this).hasClass('it-standard-image')) {
         cloop = true
         mobstagePadding = 40
         mobmargin = 24
@@ -145,9 +138,7 @@ $(function () {
       }
     }
 
-    if (
-      $(this).closest('.it-carousel-wrapper').hasClass('it-calendar-wrapper')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-calendar-wrapper')) {
       cnav = true
       cloop = false
       cmargin = 0
@@ -226,10 +217,7 @@ $(function () {
         xlitems = 1
       }
       // standard img
-      if (
-        $(this).hasClass('it-img-card') &&
-        $(this).hasClass('it-standard-image')
-      ) {
+      if ($(this).hasClass('it-img-card') && $(this).hasClass('it-standard-image')) {
         cloop = true
         mobstagePadding = 40
         mobmargin = 0
@@ -246,11 +234,7 @@ $(function () {
     }
 
     // Landscape abstract --------------------------------------------------------------------------
-    if (
-      $(this)
-        .closest('.it-carousel-wrapper')
-        .hasClass('it-carousel-landscape-abstract')
-    ) {
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-carousel-landscape-abstract')) {
       cnav = true
       cloop = false
       cmargin = 24

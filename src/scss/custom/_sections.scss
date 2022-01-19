@@ -1,9 +1,6 @@
 //mobile
 .section {
-  padding: #{map-get($grid-gutter-widths, sm) * 4} #{map-get(
-      $grid-gutter-widths,
-      sm
-    ) * 2};
+  padding: #{map-get($grid-gutter-widths, sm) * 4} #{map-get($grid-gutter-widths, sm) * 2};
 
   //section content
   .section-content {
@@ -74,10 +71,7 @@
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .section {
-    padding: #{map-get($grid-gutter-widths, md) * 4} #{map-get(
-        $grid-gutter-widths,
-        md
-      ) * 2};
+    padding: #{map-get($grid-gutter-widths, md) * 4} #{map-get($grid-gutter-widths, md) * 2};
   }
 }
 

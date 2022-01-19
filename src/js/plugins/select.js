@@ -1,11 +1,7 @@
 $(function () {
   let onSelectChange = function () {
-    $('.dropdown-menu li.selected')
-      .find('input[type="checkbox"]')
-      .prop('checked', true)
-    $('.dropdown-menu li:not(.selected)')
-      .find('input[type="checkbox"]')
-      .prop('checked', false)
+    $('.dropdown-menu li.selected').find('input[type="checkbox"]').prop('checked', true)
+    $('.dropdown-menu li:not(.selected)').find('input[type="checkbox"]').prop('checked', false)
   }
 
   // Allows to rewrite options dynamically with an object in the form of
@@ -26,17 +22,13 @@ $(function () {
     })
 
     // Refreshing selectElement
-    $(selectElement)
-      .selectpicker('refresh')
-      .on('changed.bs.select', onSelectChange)
+    $(selectElement).selectpicker('refresh').on('changed.bs.select', onSelectChange)
 
     return this
   }
 
   // Bootstrap-select initialisation
-  $('.bootstrap-select-wrapper select')
-    .selectpicker()
-    .on('changed.bs.select', onSelectChange)
+  $('.bootstrap-select-wrapper select').selectpicker().on('changed.bs.select', onSelectChange)
 
   // Fixes for W3C and WCAG 2.0 compliance:
   var $selectWrapper = $('.bootstrap-select-wrapper')
@@ -53,19 +45,12 @@ $(function () {
     return $('<span />').addClass('filter-option').append($(this).contents())
   })
   $selectWrapper.find('div.filter-option-inner').replaceWith(function () {
-    return $('<span />')
-      .addClass('filter-option-inner')
-      .append($(this).contents())
+    return $('<span />').addClass('filter-option-inner').append($(this).contents())
   })
   $selectWrapper.find('div.filter-option-inner-inner').replaceWith(function () {
-    return $('<span />')
-      .addClass('filter-option-inner-inner')
-      .append($(this).contents())
+    return $('<span />').addClass('filter-option-inner-inner').append($(this).contents())
   })
 
   // Add title and WAI-ARIA attribute for the input search
-  $selectWrapper
-    .find('.bs-searchbox input')
-    .attr('title', 'Cerca')
-    .attr('aria-expanded', 'false')
+  $selectWrapper.find('.bs-searchbox input').attr('title', 'Cerca').attr('aria-expanded', 'false')
 })

@@ -43,15 +43,12 @@ $(function () {
       for (var i = 0; i < numFiles; i++) {
         var fileSize = parseInt(e.currentTarget.files[i].size, 10) / 1024
         var filesize = Math.round(fileSize)
-        nomiFiles =
-          nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); '
+        nomiFiles = nomiFiles + e.currentTarget.files[i].name + ' (' + filesize + 'kb); '
       }
       if (numFiles > 1) {
         multi = numFiles + ' file da caricare: '
       }
-      $(
-        "label[for='" + $this.attr('id') + "']label[class='form-file-name']"
-      ).text(multi + nomiFiles)
+      $("label[for='" + $this.attr('id') + "']label[class='form-file-name']").text(multi + nomiFiles)
     })
 
   const updateTextFields = ($input) => {

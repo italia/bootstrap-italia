@@ -2,13 +2,10 @@ $(function () {
   var $form = $('.upload-dragdrop:not(.success)')
 
   $form
-    .on(
-      'drag dragstart dragend dragover dragenter dragleave drop',
-      function (e) {
-        e.preventDefault()
-        e.stopPropagation()
-      }
-    )
+    .on('drag dragstart dragend dragover dragenter dragleave drop', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    })
     .on('dragover dragenter', function () {
       $(this).addClass('dragover')
     })

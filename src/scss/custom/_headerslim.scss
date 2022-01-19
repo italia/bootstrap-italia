@@ -1,9 +1,7 @@
 //mobile
 .it-header-slim-wrapper {
   background: $header-slim-bg-color;
-  padding: (
-    $header-slim-v-padding-mob $header-general-padding - ($grid-columns * 0.5)
-  );
+  padding: ($header-slim-v-padding-mob $header-general-padding - ($grid-columns * 0.5));
   .it-header-slim-wrapper-content {
     display: flex;
     justify-content: space-between;

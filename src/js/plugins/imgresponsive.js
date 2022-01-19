@@ -9,9 +9,7 @@ $(function () {
       var $container = $(this),
         imgUrl = $container.find('img').prop('src')
       if (imgUrl) {
-        $container
-          .css('backgroundImage', 'url(' + imgUrl + ')')
-          .addClass('custom-object-fit')
+        $container.css('backgroundImage', 'url(' + imgUrl + ')').addClass('custom-object-fit')
       }
     })
   }

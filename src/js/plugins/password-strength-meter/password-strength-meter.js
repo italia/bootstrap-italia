@@ -117,18 +117,12 @@
       }
 
       // password has number and symbol
-      if (
-        password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) &&
-        password.match(/([0-9])/)
-      ) {
+      if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([0-9])/)) {
         score += 15
       }
 
       // password has char and symbol
-      if (
-        password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) &&
-        password.match(/([a-zA-Z])/)
-      ) {
+      if (password.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && password.match(/([a-zA-Z])/)) {
         score += 15
       }
 
@@ -186,9 +180,7 @@
     function init() {
       var $text = options.showText
 
-      var $graybar = $('<div>').addClass(
-        'password-meter progress rounded-0 position-absolute'
-      )
+      var $graybar = $('<div>').addClass('password-meter progress rounded-0 position-absolute')
       $graybar.append(`<div class="row position-absolute w-100 m-0">
         <div class="col-3 border-left border-right border-white"></div>
         <div class="col-3 border-left border-right border-white"></div>
@@ -209,9 +201,7 @@
         .append($graybar.append($colorbar))
 
       if (options.showText) {
-        $text = $('<small>')
-          .addClass('form-text text-muted')
-          .html(options.enterPass)
+        $text = $('<small>').addClass('form-text text-muted').html(options.enterPass)
         $insert.prepend($text)
       }
 
@@ -264,11 +254,7 @@
 // Gestione Password Caps Lock
 function showCapsLockMsg($input) {
   $('.password-caps').remove()
-  $input
-    .parents('.form-group')
-    .append(
-      '<small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>'
-    )
+  $input.parents('.form-group').append('<small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>')
 }
 
 $(function () {

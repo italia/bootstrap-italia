@@ -12,10 +12,7 @@
     lastKnownScrollTop = 0,
     affectedChromeVersions = ['56'],
     // requestAnimationFrame may be prefixed
-    requestAnimationFrame =
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame,
+    requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame,
     idCounter = 0,
     stickies = [],
     methods = {
@@ -48,10 +45,7 @@
 
   if (!checkIfBrowserAffectedWithBug()) {
     for (var i = 0, l = prefixTestList.length; i < l; i++) {
-      stickyTestElement.setAttribute(
-        'style',
-        'position:' + prefixTestList[i] + 'sticky'
-      )
+      stickyTestElement.setAttribute('style', 'position:' + prefixTestList[i] + 'sticky')
 
       if (stickyTestElement.style.position !== '') {
         hasNativeSupport = true
@@ -70,10 +64,7 @@
     }
 
     if (typeof methodOrOptions === 'string' && methods[methodOrOptions]) {
-      return methods[methodOrOptions].apply(
-        this,
-        Array.prototype.slice.call(arguments, 1)
-      )
+      return methods[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1))
     }
 
     var options = $.extend(
@@ -106,23 +97,13 @@
 
       if (!topCSSstring && !bottomCSSstring) {
         if (options.debug) {
-          console.warn(
-            'i-sticky: element `top` or `bottom` properties must be set in pixels',
-            selector,
-            this
-          )
+          console.warn('i-sticky: element `top` or `bottom` properties must be set in pixels', selector, this)
         }
 
         return
       }
 
-      $this
-        .data('sticky-id', id)
-        .after(
-          '<span class="' +
-            options.holderClass +
-            '" style="display:none;"></span>'
-        )
+      $this.data('sticky-id', id).after('<span class="' + options.holderClass + '" style="display:none;"></span>')
 
       item = {
         id: id,
@@ -218,8 +199,7 @@
   function setPositions() {
     var scrollTop = lastKnownScrollTop,
       scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      windowHeight =
-        window.innerHeight || document.documentElement.clientHeight,
+      windowHeight = window.innerHeight || document.documentElement.clientHeight,
       scrollBottom = scrollTop + windowHeight
 
     isAnimationRequested = false
@@ -228,9 +208,7 @@
       var item = stickies[i],
         height = item.el.offsetHeight,
         parentOffset = getOffset(item.parent),
-        homeOffset = item.style.isStuck
-          ? getOffset(item.holder)
-          : getOffset(item.el),
+        homeOffset = item.style.isStuck ? getOffset(item.holder) : getOffset(item.el),
         topPx = item.style.top ? item.style.top.px : 0,
         bottomPx = item.style.bottom ? item.style.bottom.px : 0,
         style = item.style.home,
@@ -255,17 +233,9 @@
 
       if (item.style.bottom && scrollBottom <= points.parentBottom) {
         style = item.style.bottom.opposite
-      } else if (
-        item.style.bottom &&
-        scrollBottom > points.parentBottom &&
-        scrollBottom < points.homeBottom
-      ) {
+      } else if (item.style.bottom && scrollBottom > points.parentBottom && scrollBottom < points.homeBottom) {
         style = item.style.bottom.fixed
-      } else if (
-        item.style.top &&
-        scrollTop > points.home &&
-        scrollTop < points.under
-      ) {
+      } else if (item.style.top && scrollTop > points.home && scrollTop < points.under) {
         style = item.style.top.fixed
       } else if (item.style.top && scrollTop >= points.under) {
         style = item.style.top.opposite
@@ -286,11 +256,9 @@
       }
 
       if (item.options.fixWidth) {
-        style +=
-          'width:' + (isStuck ? item.holder.offsetWidth + 'px;' : 'auto;')
+        style += 'width:' + (isStuck ? item.holder.offsetWidth + 'px;' : 'auto;')
       } else {
-        style +=
-          'min-width:' + (isStuck ? item.holder.offsetWidth + 'px;' : 'auto;')
+        style += 'min-width:' + (isStuck ? item.holder.offsetWidth + 'px;' : 'auto;')
       }
 
       if (style !== item.style.current) {
@@ -299,11 +267,7 @@
         item.style.current = style
       }
 
-      if (
-        item.options.holderAutoHeight &&
-        isStuck &&
-        height != item.style.height
-      ) {
+      if (item.options.holderAutoHeight && isStuck && height != item.style.height) {
         item.holder.style.height = height + 'px'
         item.style.height = height
       }
@@ -318,8 +282,7 @@
       return
     }
 
-    lastKnownScrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop
+    lastKnownScrollTop = document.documentElement.scrollTop || document.body.scrollTop
 
     // Only trigger a layout change if we’re not already waiting for one
     if (!isAnimationRequested) {

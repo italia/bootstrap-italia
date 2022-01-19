@@ -137,10 +137,7 @@ $(document).ready(function () {
 
     defLabels[index] = $input.siblings('label').text()
 
-    $el
-      .find('.spinner-control button')
-      .attr('aria-hidden', 'true')
-      .attr('tabindex', '-1')
+    $el.find('.spinner-control button').attr('aria-hidden', 'true').attr('tabindex', '-1')
 
     $btnTime.on('click', (e) => {
       e.stopPropagation()

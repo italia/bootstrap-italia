@@ -99,15 +99,10 @@
 
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
-  .it-header-center-wrapper
-    .it-header-center-content-wrapper
-    .it-search-wrapper {
+  .it-header-center-wrapper .it-header-center-content-wrapper .it-search-wrapper {
     margin-left: $header-center-search-distance * 0.5;
   }
-  .it-header-center-wrapper
-    .it-header-center-content-wrapper
-    .it-search-wrapper
-    a.rounded-icon {
+  .it-header-center-wrapper .it-header-center-content-wrapper .it-search-wrapper a.rounded-icon {
     margin-left: $v-gap;
   }
 }

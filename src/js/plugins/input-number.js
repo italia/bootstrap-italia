@@ -6,22 +6,11 @@ $(function () {
       // width = padding (12px + 32px) + number of characters
       if (!$inputNumber.hasClass('input-number-percentage')) {
         $target.css('width', 'calc(44px + ' + $target.val().length + 'ch)')
-        if (isIe())
-          $target.css(
-            'width',
-            'calc(44px + (1.5 * ' + $target.val().length + 'ch))'
-          )
+        if (isIe()) $target.css('width', 'calc(44px + (1.5 * ' + $target.val().length + 'ch))')
       }
       if ($inputNumber.hasClass('input-number-currency')) {
-        $target.css(
-          'width',
-          'calc(40px + 44px + ' + $target.val().length + 'ch)'
-        )
-        if (isIe())
-          $target.css(
-            'width',
-            'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))'
-          )
+        $target.css('width', 'calc(40px + 44px + ' + $target.val().length + 'ch)')
+        if (isIe()) $target.css('width', 'calc(40px + 44px + (1.5 * ' + $target.val().length + 'ch))')
       }
     }
   }
@@ -35,9 +24,7 @@ $(function () {
   $('.input-number button').click(function (e) {
     e.preventDefault()
     //get target input field
-    var $inputTarget = $(this)
-      .closest('.input-number')
-      .find('input[type=number]')
+    var $inputTarget = $(this).closest('.input-number').find('input[type=number]')
     var inputTargetVal = parseFloat($inputTarget.val())
 
     if (!isNaN(inputTargetVal)) {
@@ -54,21 +41,13 @@ $(function () {
 
       if ($(this).hasClass('input-number-add')) {
         //add step
-        val =
-          !isNaN(inputTargetMax) &&
-          inputTargetVal + inputTargetStep >= inputTargetMax
-            ? inputTargetMax
-            : inputTargetVal + inputTargetStep
+        val = !isNaN(inputTargetMax) && inputTargetVal + inputTargetStep >= inputTargetMax ? inputTargetMax : inputTargetVal + inputTargetStep
         $inputTarget.val(val)
       }
 
       if ($(this).hasClass('input-number-sub')) {
         //subtract step
-        val =
-          !isNaN(inputTargetMin) &&
-          inputTargetVal - inputTargetStep <= inputTargetMin
-            ? inputTargetMin
-            : inputTargetVal - inputTargetStep
+        val = !isNaN(inputTargetMin) && inputTargetVal - inputTargetStep <= inputTargetMin ? inputTargetMin : inputTargetVal - inputTargetStep
         $inputTarget.val(val)
       }
     }

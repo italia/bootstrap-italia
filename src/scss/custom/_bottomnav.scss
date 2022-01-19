@@ -13,11 +13,7 @@
     width: 100%;
     top: 32px;
     z-index: 10;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0.25) 0%,
-      rgba(0, 0, 0, 0) 60%
-    );
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
     border-radius: 50%;
     transform: translateY(-50%) scalex(1.4) scaleY(0.12);
     opacity: 0.18;
