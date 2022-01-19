@@ -79,8 +79,6 @@
     border-right: 1px solid $sidebar-border-color;
     .sidebar-linklist-wrapper {
       .link-list-wrapper {
-        h3 {
-        }
         ul {
           li {
             a {
@@ -100,37 +98,5 @@
   // linea sinistra
   &.it-line-left-side {
     border-left: 1px solid $sidebar-border-color;
-    .sidebar-linklist-wrapper {
-      .link-list-wrapper {
-        h3 {
-        }
-        ul {
-          li {
-            a {
-              &[data-toggle='collapse'] {
-                &.active {
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
-}
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

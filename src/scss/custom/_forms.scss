@@ -219,11 +219,11 @@ textarea {
 
     //focus
     &:focus + label {
-      @extend :focus;
+      @extend %focus;
     }
 
     &:focus.focus--mouse + label {
-      @extend .focus--mouse;
+      @extend %focusmouse;
     }
   }
 

@@ -53,11 +53,6 @@
 
         .dropdown-menu {
           padding-bottom: 0;
-          // link list variation
-          .link-list {
-            h3 {
-            }
-          }
         }
       }
     }
@@ -281,15 +276,6 @@
     }
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar {
@@ -498,8 +484,4 @@
       }
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

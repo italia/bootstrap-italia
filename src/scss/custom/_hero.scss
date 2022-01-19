@@ -212,7 +212,8 @@
     }
     // Text container ----------------------------
     .it-hero-text-wrapper {
-      padding: $hero-text-padding-desk 40% $hero-text-padding-desk + ($v-gap * 6) ($v-gap * 4)-6;
+      padding: $hero-text-padding-desk 40% $hero-text-padding-desk +
+        ($v-gap * 6) ($v-gap * 4)-6;
       span.it-category {
         position: absolute;
         margin-top: -$v-gap * 7;
@@ -231,7 +232,8 @@
     // Text container centered----------------------------
     &.it-text-centered {
       .it-hero-text-wrapper {
-        padding: $hero-text-padding-desk 20% $hero-text-padding-desk + ($v-gap * 3) 20%;
+        padding: $hero-text-padding-desk 20% $hero-text-padding-desk +
+          ($v-gap * 3) 20%;
         span.it-category {
           left: 20%;
           right: 20%;

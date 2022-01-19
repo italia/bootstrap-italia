@@ -30,7 +30,6 @@
     display: flex;
     align-items: center;
     position: absolute;
-    left: 0;
     top: -$timeline-pin-circle-size * 0.5;
     z-index: 5;
     left: $timeline-padding;
@@ -218,28 +217,8 @@
     }
     .it-pin-wrapper {
       position: relative;
-      .pin-icon {
-      }
-      svg {
-      }
       .pin-text {
         font-size: 16px;
-        span {
-          &:after {
-          }
-        }
-      }
-      &.it-evidence {
-        .pin-icon {
-        }
-        svg {
-        }
-        .pin-text {
-          span {
-            &:after {
-            }
-          }
-        }
       }
     }
   }

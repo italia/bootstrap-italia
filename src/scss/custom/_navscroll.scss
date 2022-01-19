@@ -4,7 +4,6 @@
     background: $navscroll-bg-color;
 
     .it-back-button {
-      display: block;
       padding: $navscroll-backbutton-padding;
       font-weight: $navscroll-backbutton-weight;
       box-shadow: $navscroll-bottom-box-shadow;
@@ -79,8 +78,6 @@
         color: $navscroll-toggler-color;
         margin-right: $v-gap;
       }
-      span.text {
-      }
     }
     .menu-wrapper {
       padding: $v-gap * 10 0 $v-gap * 3;
@@ -106,15 +103,6 @@
     bottom: auto;
   }
 }
-
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
-//Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
-}
-
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar {
@@ -172,8 +160,6 @@
       }
       .custom-navbar-toggler {
         display: none;
-        span {
-        }
       }
       .menu-wrapper {
         padding: $v-gap * 2 0 $v-gap * 3;
@@ -211,8 +197,4 @@
       border-right: 1px solid $navscroll-line-color;
     }
   }
-}
-
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
 }

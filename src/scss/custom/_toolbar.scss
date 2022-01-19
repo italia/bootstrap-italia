@@ -303,10 +303,12 @@
       }
     }
     // hover fix for ie11
+    /* stylelint-disable */
     _:-ms-fullscreen,
     &:not(.disabled):hover {
       text-decoration: none;
     }
+    /* stylelint-enable */
   }
 
   // dropdown button
@@ -399,11 +401,5 @@
     line-height: 1;
     display: block;
     font-weight: 600;
-  }
-
-  //dropdown
-  .btn-dropdown {
-    &:after {
-    }
   }
 }

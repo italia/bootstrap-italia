@@ -71,10 +71,6 @@
   }
 }
 
-//small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
-}
-
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .section {
