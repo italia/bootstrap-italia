@@ -300,7 +300,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="it-card-footer">
             <span class="card-signature">di Federico De Paolis</span>
-            <button class="btn btn-outline-primary btn-sm">Action</button>
+            <a class="btn btn-outline-primary btn-sm" href="#">Link Button</a>
           </div>
         </div>
       </div>
