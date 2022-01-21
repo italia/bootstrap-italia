@@ -221,7 +221,7 @@ Ecco come funziona la validazione dei form:
 - In alternativa esistono le classi `.is-invalid` e `.is-valid` che possono essere usate al posto delle pseudo-classi per una validazione lato server. Non richiedono la presenza della classe  `.was-validated` nel contenitore padre.
 - A causa dei vincoli nel modo in cui i CSS funzionano, non possiamo (al momento) applicare gli stili a un `<label>` che precede un controllo del form nel DOM senza l'aiuto del codice JavaScript personalizzato.
 - Tutti i browser moderni supportano le [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), una serie di metodi JavaScript per la convalida dei controlli del modulo.
-- I messaggi di feedback possono utilizzare le (diversi da un browser all'altro e non stilizzati tramite CSS) o gli stili di feedback personalizzati con HTML e CSS aggiuntivi.
+- I messaggi di feedback possono essere quelli nativi di HTML5 (diversi da un browser all'altro e non stilizzati tramite CSS) o quelli personalizzati con HTML e CSS aggiuntivi.
 - Puoi fornire messaggi di validazioni personalizzati con `setCustomValidity` in JavaScript.
 
 Tenendo presente tutto questo, prendi in considerazione i seguenti esempi personalizzati per convalidare i moduli.
