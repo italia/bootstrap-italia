@@ -18,6 +18,6 @@ optional: hide_markup - disabled (default)
 
 {%- if include.hide_markup == null -%}
 {%- highlight html -%}
-{{- include.content | replace: 'data-src="holder.js', 'src="...' -}}
+{{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
 {%- endhighlight -%}
 {%- endif -%}
