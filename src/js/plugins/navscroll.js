@@ -38,7 +38,7 @@ $(function () {
       var scrollDistance = $(window).scrollTop() - sectionsContainerTop
       // Assign active class to nav links while scolling
       $('.it-page-section').each(function (i) {
-        if ($(this).position().top <= scrollDistance) {
+        if ($(this).position().top <= scrollDistance + 10) {
           $('.it-navscroll-wrapper .menu-wrapper a.active').removeClass('active')
           $('.it-navscroll-wrapper .menu-wrapper a').eq(i).addClass('active')
           var parentsection = $('.it-navscroll-wrapper .menu-wrapper a').eq(i).closest('ul').prev('a')
