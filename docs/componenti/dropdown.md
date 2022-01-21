@@ -82,6 +82,21 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
     </div>
   </div>
 </div>
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropdown
+    <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+  </button>
+  <div class="dropdown-menu">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Dropdown link
@@ -151,7 +166,7 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <h3 id="esempio-header-1">Esempio Header 1</h3>
+        <h3 id="esempio-header-1" class="no_toc">Esempio Header 1</h3>
       </li>
       <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
       <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
@@ -270,7 +285,7 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <h3 id="esempio-header-2">Esempio Header 2</h3>
+        <h3 id="esempio-header-2" class="no_toc">Esempio Header 2</h3>
       </li>
       <li>
         <a class="list-item right-icon active" href="#">
