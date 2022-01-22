@@ -57,3 +57,7 @@ changelog.txt
 # Ignore cache file from linters
 .eslintcache
 .stylelintcache
+
+# Exclude minified file
+*.min.js
+*.min.css
