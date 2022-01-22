@@ -25,7 +25,7 @@
   })
 
   makeArray(document.querySelectorAll('[data-toggle="popover"]')).forEach(function (popover) {
-    new bootstrap.Popover(popover)
+    new bootstrap.Popover(popover, { sanitize: false })
   })
 
   // Demos within modals

@@ -122,7 +122,7 @@ Popover in alto
 
 ### Titolo con icona e link
 
-È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-html="true"` al bottone che apre il Popover.
+È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-html="true"` al bottone che apre il Popover e disabilitare la funzione di sanitize attraverso l'opzione `{ sanitize: false }`.
 
 L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e proprio titolo.
 
