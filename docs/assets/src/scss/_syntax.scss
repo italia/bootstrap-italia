@@ -9,6 +9,7 @@
     padding: 1.5rem;
   }
   pre {
+    background-color: #404040;
     margin-bottom: 0;
     code {
       font-size: 14px;
@@ -19,9 +20,7 @@
 
 // http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html
 // Native theme
-.highlight pre {
-  background-color: #404040;
-}
+
 .highlight .hll {
   background-color: #404040;
 }

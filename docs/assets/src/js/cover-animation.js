@@ -9804,9 +9804,9 @@
     this.CODE_1.layerIndex = 12
     this.CODE_1.maskLayerName = 0
 
-    var maskedShapeInstanceList = [this.CODE_1]
+    maskedShapeInstanceList = [this.CODE_1]
 
-    for (var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+    for (shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
       maskedShapeInstanceList[shapedInstanceItr].mask = mask_1
     }
 
@@ -10109,11 +10109,11 @@ var createjs, AdobeAn
 
 /* Setup */
 
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation
+var canvas, stage, exportRoot, fnStartAnimation
 
+/* eslint-disable no-unused-vars */
 function initCoverAnimation() {
   canvas = document.querySelector('.cover-canvas')
-  anim_container = document.querySelector('.cover-container')
   var comp = AdobeAn.getComposition('6AA7D013FBED434FAC8063F90B749067')
   var lib = comp.getLibrary()
   var loader = new createjs.LoadQueue(false)
@@ -10123,7 +10123,7 @@ function initCoverAnimation() {
   loader.addEventListener('complete', function (evt) {
     handleComplete(evt, comp)
   })
-  var lib = comp.getLibrary()
+  lib = comp.getLibrary()
   loader.loadManifest(lib.properties.manifest)
 }
 
@@ -10140,7 +10140,7 @@ function handleComplete(evt, comp) {
   var ss = comp.getSpriteSheet()
   var queue = evt.target
   var ssMetadata = lib.ssMetadata
-  for (i = 0; i < ssMetadata.length; i++) {
+  for (var i = 0; i < ssMetadata.length; i++) {
     ss[ssMetadata[i].name] = new createjs.SpriteSheet({
       images: [queue.getResult(ssMetadata[i].name)],
       frames: ssMetadata[i].frames,
@@ -10174,7 +10174,7 @@ function handleComplete(evt, comp) {
       return projMat
     }
 
-    function handleTick(event) {
+    function handleTick() {
       var cameraInstance = exportRoot.___camera___instance
       if (cameraInstance !== undefined && cameraInstance.pinToObject !== undefined) {
         cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX
@@ -10197,7 +10197,7 @@ function handleComplete(evt, comp) {
         projectionCenter.x = stageCenter.x
         projectionCenter.y = stageCenter.y
       }
-      for (child in parent.children) {
+      for (var child in parent.children) {
         var layerObj = parent.children[child]
         if (layerObj == cameraInstance) continue
         applyLayerZDepth(layerObj, cameraInstance)

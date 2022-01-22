@@ -1,6 +1,7 @@
 {
   "extends": ["eslint:recommended", "prettier"],
   "plugins": ["prettier"],
+  "ignorePatterns": ["*.min.js"],
   "rules": {
     "prettier/prettier": ["error"]
   },
@@ -14,9 +15,14 @@
   "globals": {
     "$": true,
     "jQuery": true,
+    "bootstrap": true,
     "isIe": true,
     "define": true,
     "require": true,
-    "options": true
+    "options": true,
+    "createjs": true,
+    "anchors": true,
+    "ClipboardJS": true,
+    "tsParticles": true
   }
 }
