@@ -13,6 +13,7 @@ I collegamenti della paginazione sono contenuti per praticità in un elemento `<
 Poiché è molto probabile che la pagina possa contenere più di un elemento `<nav class="pagination-wrapper">` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione della pagina">
   <ul class="pagination">
     <li class="page-item">
@@ -40,9 +41,10 @@ I link della paginazione assumonono uno stato disabilitato usando la classe `.di
 Per indicare la pagina attiva corrente utilizzare l'attributo `aria-current="page"` nel tag `<a>`, l'aspetto grafico cambierà di conseguenza.
 
 {% capture callout %}
+
 ##### Disabilitazione link
 
-La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"`,  e utilizzare Javascript per disabilitare le loro funzionalità.
+La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"`, e utilizzare Javascript per disabilitare le loro funzionalità.
 
 È inoltre consigliabile applicare `aria-hidden="true"` ai link disabilitati per evitare che vengano considerati nel conteggio degli elementi totali in lista fornito dagli screen reader.
 
@@ -50,6 +52,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di paginazione">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -83,9 +86,11 @@ Grazie alle [utilità di Flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/
 Sui dispositivi mobile la paginazione è centrata per default.
 
 ### Navigazione centrata
+
 Per centrare la navigazione aggiungere la classe `justify-content-center` al tag `<nav>`.
 
 {% capture example %}
+
 <nav class="pagination-wrapper justify-content-center" aria-label="Navigazione centrata">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -112,9 +117,11 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
 {% endcapture %}{% include example.html content=example %}
 
 ### Navigazione allineata a destra
+
 Per allineare a destra la navigazione aggiungere la classe `justify-content-end` al tag `<nav>.`
 
 {% capture example %}
+
 <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -145,6 +152,7 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
 Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilità display]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/) si può trasformare la paginazione in base alla risoluzione del dispositivo in uso dell'utente.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione responsive della pagina">
   <ul class="pagination justify-content-center">
     <li class="page-item">
@@ -181,12 +189,15 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
 {% endcapture %}{% include example.html content=example %}
 
 ## Funzioni aggiuntive
+
 La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numero di pagine è elevato. È inoltre disponbile una versione semplificata ottimizzata per dispositivi mobile.
 
 ### More
+
 Quando è presente un grande numero di pagine è consigliabile visualizzare unicamente le pagine più prossime a quella corrente, inserendo delle ellissi (...) fra queste e la prima ed ultima pagina. Non essendo collegate a nessuna pagina le ellissi vanno inserite in un tag `<span>`.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con ellissi/more">
   <ul class="pagination">
     <li class="page-item">
@@ -223,9 +234,11 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 {% endcapture %}{% include example.html content=example %}
 
 ### Page changer
+
 Per velocizzare la navigazione è possibile inserire un menu "Page changer".
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con page changer">
   <ul class="pagination">
     <li class="page-item">
@@ -272,9 +285,11 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
 {% endcapture %}{% include example.html content=example %}
 
 ### Jump to page
+
 Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di pagina concreto.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con jump to page">
   <ul class="pagination">
     <li class="page-item">
@@ -311,9 +326,11 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
 {% endcapture %}{% include example.html content=example %}
 
 ### Simple mode
+
 La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile. Può essere utilizzata anche su tablet e desktop quando il numero di pagine è ridotto.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione simple mode">
   <ul class="pagination" aria-label="Pagina 1 di 5">
     <li class="page-item disabled">
@@ -339,10 +356,12 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 {% endcapture %}{% include example.html content=example %}
 
 ### Link testuali
+
 Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
 Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr-only">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
 
 {% capture example %}
+
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
   <ul class="pagination">
     <li class="page-item">
@@ -369,9 +388,11 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr
 {% endcapture %}{% include example.html content=example %}
 
 ### Total number
+
 Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di pagine all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
 
 {% capture example %}
+
 <nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
   <ul class="pagination">
     <li class="page-item">

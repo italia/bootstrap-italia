@@ -26,6 +26,7 @@ suggeriscono di usare le seguenti famiglie di caratteri:
 utilizzare la classe `text-sans-serif`.
 
 {% capture example %}
+
 <p class="text-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="text-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
 <p class="text-sans-serif">0123456789</p>
@@ -38,6 +39,7 @@ nato espressamente per la lettura su display. Può essere utilizzato applicando
 la classe `text-serif`.
 
 {% capture example %}
+
 <p class="text-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="text-serif">abcdefghijklmnopqrstuvwxyz</p>
 <p class="text-serif">0123456789</p>
@@ -50,6 +52,7 @@ di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
 Per il suo utilizzo, è sufficiente usare la classe `text-monospace`.
 
 {% capture example %}
+
 <p class="text-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="text-monospace">abcdefghijklmnopqrstuvwxyz</p>
 <p class="text-monospace">0123456789</p>
@@ -66,10 +69,10 @@ spazio quando lo schermo lo permette:
 
 {% highlight scss %}
 html {
-  font-size: 16px;
-  @include media-breakpoint-up(sm) {
-    font-size: 18px;
-  }
+font-size: 16px;
+@include media-breakpoint-up(sm) {
+font-size: 18px;
+}
 }
 {% endhighlight %}
 
@@ -153,7 +156,6 @@ Queste le dimensioni nel dettaglio:
   </tbody>
 </table>
 
-
 ### Intestazioni in evidenza
 
 Gli elementi di intestazione tradizionali sono progettati per funzionare al
@@ -164,6 +166,7 @@ grande.
 
 <span class="h1 display-1">Intestazione di tipo h1</span>
 {% highlight html %}
+
 <h1 class="display-1">Intestazione di tipo h1</h1>
 {% endhighlight %}
 
@@ -173,6 +176,7 @@ grande.
 dare uno stile diverso per testi di intestazione secondaria.
 
 {% capture example %}
+
 <h4>Intestazione <small class="text-muted">con testo secondario</small></h4>
 {% endcapture %}{% include example.html content=example %}
 
@@ -183,6 +187,7 @@ Il semplice paragrafo prevede una dimensione di testo e un'interlinea di
 maggiori di 576px.
 
 {% capture example %}
+
 <p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 <p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 {% endcapture %}{% include example.html content=example %}
@@ -197,15 +202,17 @@ minima è di 12-15 caratteri.
 Per mettere in risalto un paragrafo è sufficiente aggiungere la classe `.lead`.
 
 {% capture example %}
+
 <p class="lead">Paragrafo in evidenza</p>
 {% endcapture %}{% include example.html content=example %}
 
 ### Personalizzazione dei paragrafi
 
 È possibile stilizzare correttamente lo stile anche nel caso vengano utilizzati
-semplicemente gli elementi HTML5 per il trattamento di testo. 
+semplicemente gli elementi HTML5 per il trattamento di testo.
 
 {% capture example %}
+
 <p>Esempio di testo <u>sottolineato</u>.</p>
 <p>Esempio di testo <mark>evidenziato</mark>.</p>
 <p>Esempio di testo <em>corsivo</em>.</p>
@@ -228,14 +235,16 @@ e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 ### Link
 
 {% capture callout %}
+
 ##### Accessibilità
 
-È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale. 
+È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso di link già in evidenza (menu principali, liste di link, link in grassetto, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`.
 
 {% capture example %}
+
 <p>Esempio di <a href="#">link normale</a>.</p>
 <p>Esempio di <a href="#" class="text-decoration-none font-weight-bold">link in grassetto senza sottolineatura</a>.</p>
 {% endcapture %}{% include example.html content=example %}
@@ -252,6 +261,7 @@ Aggiungi `.initialism` a un'abbreviazione per una dimensione del font
 leggermente più piccola.
 
 {% capture example %}
+
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {% endcapture %}{% include example.html content=example %}
@@ -263,6 +273,7 @@ Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno
 di un `<blockquote class="blockquote">` come la citazione.
 
 {% capture example %}
+
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
@@ -274,6 +285,7 @@ Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte.
 Includi il nome delle fonte di origine in `<cite>`.
 
 {% capture example %}
+
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -286,6 +298,7 @@ Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo
 blockquote.
 
 {% capture example %}
+
 <blockquote class="blockquote text-center">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -293,6 +306,7 @@ blockquote.
 {% endcapture %}{% include example.html content=example %}
 
 {% capture example %}
+
 <blockquote class="blockquote text-right">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -307,6 +321,7 @@ lista che sono figli diretti**, il che significa che dovrai aggiungere la classe
 per tutti gli elenchi annidati.
 
 {% capture example %}
+
 <ul class="list-unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -332,6 +347,7 @@ Rimuovi i punti elenco di una lista e applica un leggero `margin` con una
 combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
 {% capture example %}
+
 <ul class="list-inline">
   <li class="list-inline-item">Lorem ipsum</li>
   <li class="list-inline-item">Phasellus iaculis</li>
@@ -347,6 +363,7 @@ facoltativamente aggiungere la classe `.text-truncate` per troncare il testo
 con un `ellipsis`.
 
 {% capture example %}
+
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
   <dd class="col-sm-9">A description list is perfect for defining terms.</dd>

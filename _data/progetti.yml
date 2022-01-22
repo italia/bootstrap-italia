@@ -2,67 +2,67 @@
   description: Di seguito sono riportati alcuni progetti che sono risultato delle esperienze d'uso con le più recenti indicazioni di design e con Bootstrap Italia.
   examples:
     - name: Sito di presentazione della app IO
-      url: "https://io.italia.it/"
+      url: 'https://io.italia.it/'
       description: Un sito realizzato in poche ore, anche grazie all'utilizzo di Bootstrap Italia, che presenta il progetto per la realizzazione dell'app del cittadino IO.
     - name: Docs Italia
-      url: "https://docs.italia.it"
+      url: 'https://docs.italia.it'
       description: Docs Italia, il progetto per la pubblicazione e la consultazione dei documenti pubblici digitali, è stato costruito su una versione preliminare di Bootstrap Italia.
     - name: Civico 13 - Lo Sportello Giovani del Trentino
-      url: "https://www.sportellogiovanitrentino.it/"
+      url: 'https://www.sportellogiovanitrentino.it/'
       description: Il Civico13 è uno sportello giovani unico, un servizio congiunto nato dalla collaborazione tra gli uffici delle Politiche giovanili del Comune di Trento e della Provincia autonoma di Trento.
     - name: Sito del Comune di Cagliari
-      url: "https://www.comune.cagliari.it/"
+      url: 'https://www.comune.cagliari.it/'
       description: Il nuovo sito ufficiale del Comune di Cagliari, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> di una versione preliminare in formato scaricabile.
-    - name : Sito del Comune di Buggerru
-      url: "https://www.comunebuggerru.it/"
+    - name: Sito del Comune di Buggerru
+      url: 'https://www.comunebuggerru.it/'
       description: Il nuovo sito ufficiale del Comune di Buggerru.
     - name: Sito del Comune di Ala
-      url: "https://www.comune.ala.tn.it/"
+      url: 'https://www.comune.ala.tn.it/'
       description: Il nuovo sito ufficiale del Comune di Ala in provincia di Trento.
     - name: Appaltinnovativi.GOV
-      url: "https://appaltinnovativi.gov.it/"
+      url: 'https://appaltinnovativi.gov.it/'
       description: Il sito per gli appalti di innovazione della Pubblica Amministrazione.
     - name: Risorse per una didattica della Vicinanza
-      url: "http://www.comune.torino.it/servizieducativi/risorse/index.html"
+      url: 'http://www.comune.torino.it/servizieducativi/risorse/index.html'
       description: Una selezione dei materiali prodotti dai servizi educativi della Divisione Servizi Educativi - Città di Torino
     - name: Piano strategico Banda Ultralarga
-      url: "https://bandaultralarga.italia.it/"
+      url: 'https://bandaultralarga.italia.it/'
       description: La  piattaforma ufficiale del progetto Banda Ultralarga
-    - name: "#iorestoacasa"
-      url: "https://restoacasa.github.io/"
+    - name: '#iorestoacasa'
+      url: 'https://restoacasa.github.io/'
       description: Sito informativo aggiornato in tempo reale sull'emergenza Covid-19
     - name: Risorse dati su Covid-19
-      url: "https://dati-covid.italia.it/"
+      url: 'https://dati-covid.italia.it/'
       description: Un unico spazio per i dati sulla situazione italiana per l'emergenza Covid-19
 - category: Temi
   description: Di seguito sono riportati alcuni progetti che semplificano la creazione di progetti con Bootstrap Italia e diversi CMS o framework per il web. Sono tutti in piena evoluzione e necessitano dell'aiuto di tutti per essere completati, resi pienamente conformi ed esenti da problemi. Se vuoi contruibire contattaci o crea una Pull Request sul repository!
   examples:
     - name: Tema Drupal 8/9
-      url: "https://github.com/italia/design-drupal-theme"
+      url: 'https://github.com/italia/design-drupal-theme'
       description: Un tema open-source per il CMS <a href="https://drupal.org/" target="_blank" rel="noopener noreferrer">Drupal</a>, da utilizzare per tutti i siti web delle PA, dai comuni alle scuole.
     - name: Tema WordPress
-      url: "https://github.com/italia/design-wordpress-theme/"
+      url: 'https://github.com/italia/design-wordpress-theme/'
       description: Un tema open-source per il CMS <a href="https://it.wordpress.org/" target="_blank" rel="noopener noreferrer">WordPress</a>, creato dalla community degli sviluppatori.
     - name: Tema WordPress ItaliaWP2
-      url: "https://github.com/italia/design-wordpress-theme-italiaWP2"
+      url: 'https://github.com/italia/design-wordpress-theme-italiaWP2'
       description: Un tema open-source per il CMS <a href="https://it.wordpress.org/" target="_blank" rel="noopener noreferrer">WordPress</a>, creato da <a href="http://borisamico.it/" target="_blank" rel="noopener noreferrer">Boris Amico</a>.
     - name: Tema WordPress per le Scuole
-      url: "https://github.com/italia/design-scuole-wordpress-theme"
+      url: 'https://github.com/italia/design-scuole-wordpress-theme'
       description: Il template Wordpress per i siti delle scuole è basato sul modello di siti per le scuole italiane.
     - name: Tema Jekyll
-      url: "https://github.com/italia/design-jekyll-theme/"
+      url: 'https://github.com/italia/design-jekyll-theme/'
       description: Un tema open-source per il generatore di siti statici <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>, creato dalla community degli sviluppatori.
     - name: Tema Django
-      url: "https://github.com/italia/design-django-theme/"
+      url: 'https://github.com/italia/design-django-theme/'
       description: Un tema open-source per il framework web Python <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">Django</a>, creato dalla community degli sviluppatori.
     - name: Tema Laravel
-      url: "https://github.com/italia/design-laravel-theme/"
+      url: 'https://github.com/italia/design-laravel-theme/'
       description: Un tema open-source per il framework web PHP <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a>, creato dalla community degli sviluppatori.
     - name: Tema Hugo
-      url: "https://github.com/italia/hugo-theme-bootstrap-italia/"
+      url: 'https://github.com/italia/hugo-theme-bootstrap-italia/'
       description: Un tema open-source per il generatore di siti statici <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>, creato dalla community degli sviluppatori.
       status: work in progress
     - name: Tema Gatsby
-      url: "https://github.com/italia/design-italia-gatsby-starterkit"
+      url: 'https://github.com/italia/design-italia-gatsby-starterkit'
       description: Un tema open-source per <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby.js</a>, essenziale per iniziare a costruire un sito usando questo generatore per React.
       status: work in progress

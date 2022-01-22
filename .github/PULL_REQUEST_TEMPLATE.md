@@ -2,11 +2,14 @@
 <!--- Inserisci una sintesi delle modifiche nel titolo qui sopra -->
 
 ## Descrizione
+
 <!--- Descrivi le modifiche in dettaglio -->
 <!--- Se necessario, aggiungi "Fixes #XX" per chiudere automaticamente la issue indicata in caso di approvazione. -->
 
 ## Checklist
+
 <!--- Controlla i punti seguenti, e inserisci una `x` nei campi d'interesse. -->
+
 - [ ] Le modifiche sono conformi alle [linee guida di design](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 - [ ] Il codice è coerente con le [indicazioni di progetto](https://italia.github.io/bootstrap-italia/docs/come-iniziare/).
 - [ ] Le modifiche sono state verificate sui [Browser supportati](https://getbootstrap.com/docs/4.6/getting-started/browsers-devices/) e per diverse risoluzioni dello schermo.

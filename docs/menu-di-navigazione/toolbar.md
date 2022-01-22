@@ -30,6 +30,7 @@ Per ottimizzare lo spazio disponibile l'elemento è fornito in tre versioni: gra
 La versione predefinita dell'elemento è quella con icone grandi e label.
 
 {% capture example %}
+
 <nav class="toolbar">
   <ul>
     <li>
@@ -73,6 +74,7 @@ Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una v
 In questo caso le label, nascoste visivamente, devono essere contenute in uno `<span>` con classe `.sr-only`, per rendere disponibile la descrizione agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -122,6 +124,7 @@ Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la ver
 Anche in questo caso le label, non visibile, devono essere contenute in uno `<span>` con classe `.sr-only`, per rendere disponibile la descrizione agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -169,6 +172,7 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
 Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
 
 Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori accorgimenti relativi all'accessibilità a seconda della tipologia:
+
 - **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag. Aggiungere uno span riservato agli screen reader all'interno della label. es.: `<span class="sr-only"> elemento disabilitato</span>`
 - **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.
 
@@ -177,6 +181,7 @@ Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori ac
 Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo l'attributo `aria-hidden="true"` per nasconderli agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar">
   <ul>
     <li>
@@ -224,6 +229,7 @@ I Badge possono essere utilizzati per indicare contenuti non letti o alert di va
 Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.sr-only` riservato agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar">
   <ul>
     <li>
@@ -267,6 +273,7 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
 Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -322,6 +329,7 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
 Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.sr-only` riservata agli screen reader.
 
 {% capture example %}
+
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -379,6 +387,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 ### Grande con Dropdown
 
 {% capture example %}
+
 <nav class="toolbar">
   <ul>
     <li>
@@ -475,6 +484,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 ### Media con Dropdown
 
 {% capture example %}
+
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -594,6 +604,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
 ### Piccola con Dropdown
 
 {% capture example %}
+
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -717,6 +728,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 ### Grande verticale
 
 {% capture example %}
+
 <nav class="toolbar toolbar-vertical">
   <ul>
     <li>
@@ -770,6 +782,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 ### Media verticale
 
 {% capture example %}
+
 <nav class="toolbar toolbar-medium toolbar-vertical">
   <ul>
     <li>
@@ -829,6 +842,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 ### Piccola verticale
 
 {% capture example %}
+
 <nav class="toolbar toolbar-small toolbar-vertical">
   <ul>
     <li>

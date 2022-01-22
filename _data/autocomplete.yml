@@ -1,51 +1,51 @@
 nazioni:
-  - icon: "<div class=\"avatar size-sm\"><img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/it.svg\" alt=\"Italia\"></div>"
+  - icon: '<div class="avatar size-sm"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/it.svg" alt="Italia"></div>'
     text: Italia
     label: Label 1
-    link: "#"
-  - icon: "<div class=\"avatar size-sm\"><img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg\" alt=\"Francia\"></div>"
+    link: '#'
+  - icon: '<div class="avatar size-sm"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg" alt="Francia"></div>'
     text: Francia
     label: Label 2
-    link: "#"
+    link: '#'
 
 regioni:
   - text: Abruzzo
-    link: "#"
+    link: '#'
   - text: Basilicata
-    link: "#"
+    link: '#'
   - text: Calabria
-    link: "#"
+    link: '#'
   - text: Campania
-    link: "#"
+    link: '#'
   - text: Emilia Romagna
-    link: "#"
+    link: '#'
   - text: Friuli Venezia Giulia
-    link: "#"
+    link: '#'
   - text: Lazio
-    link: "#"
+    link: '#'
   - text: Liguria
-    link: "#"
+    link: '#'
   - text: Lombardia
-    link: "#"
+    link: '#'
   - text: Marche
-    link: "#"
+    link: '#'
   - text: Molise
-    link: "#"
+    link: '#'
   - text: Piemonte
-    link: "#"
+    link: '#'
   - text: Puglia
-    link: "#"
+    link: '#'
   - text: Sardegna
-    link: "#"
+    link: '#'
   - text: Sicilia
-    link: "#"
+    link: '#'
   - text: Toscana
-    link: "#"
+    link: '#'
   - text: Trentino Alto Adige
-    link: "#"
+    link: '#'
   - text: Umbria
-    link: "#"
+    link: '#'
   - text: Valle d’Aosta
-    link: "#"
+    link: '#'
   - text: Veneto
-    link: "#"
+    link: '#'

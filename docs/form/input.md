@@ -22,6 +22,7 @@ Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamenta
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
 {% capture example %}
+
 <div>
   <div class="form-group">
     <label for="exampleInputText">Campo di tipo testuale</label>
@@ -51,6 +52,7 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
 Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="formGroupExampleInput">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput">
@@ -60,6 +62,7 @@ Si può includere un'etichetta che si riposiziona automaticamente quando l'utent
 Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="formGroupExampleInput2">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
@@ -68,7 +71,6 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 
 In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`. Può essere esteso usando le classi di utilità come `.text-muted`.
 
-
 {% capture callout %}
 **Associazione del testo di aiuto con gli elementi del modulo form**
 
@@ -76,6 +78,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
+
 <div class="form-group">
   <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
   <input
@@ -92,6 +95,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 ### Input con icona o bottoni
 
 {% capture example %}
+
 <div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
@@ -179,6 +183,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 </table>
 
 {% capture example %}
+
 <div>
   <div class="form-group">
     <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
@@ -205,6 +210,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="input-text-disabled">Contenuto disabilitato</label>
   <input class="form-control" type="text" id="input-text-disabled" disabled>
@@ -216,6 +222,7 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="input-text-read-only">Contenuto in sola lettura</label>
   <input class="form-control" type="text" id="input-text-read-only" readonly>
@@ -227,6 +234,7 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext` anziché `.form-control`.
 
 {% capture example %}
+
 <div>
   <div class="form-group">
     <label for="input-text-read-only-2">Contenuto in sola lettura</label>
@@ -242,6 +250,7 @@ Per ottenere un input con un risultato ricerca o un autocomplete statico è nece
 L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`, nascosta agli screen reader dall'attributo `aria-hidden="true"`.
 
 {% capture callout %}
+
 ##### Accessibilità
 
 La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.sr-only`.
@@ -257,6 +266,7 @@ L'elenco dei risultati generati dalla ricerca è una lista `<ul>` con classe `.a
 Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiuso in un tag `<mark>`.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="autocomplete-one" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -327,6 +337,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
 {% capture example %}
+
 <div class="form-group autocomplete-wrapper-big">
   <label for="autocomplete-two" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -389,6 +400,7 @@ Questi sono i minimi dati necessari per il corretto funzionamento dell'autocompl
 Cerca una regione italiana per verificarne il comportamento.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="autocomplete-regioni" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -411,6 +423,7 @@ Questo Autocomplete è collegato, sempre tramite l'attributo `data-autocomplete`
 Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 
 {% capture example %}
+
 <div class="form-group">
   <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -430,6 +443,7 @@ Per permettere agli utenti di inserire del testo (ad esempio per lasciare commen
 Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo stesso comportamento dinamico dei campi di input.
 
 {% capture example %}
+
 <div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
@@ -445,6 +459,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
 
 {% capture example %}
+
 <div>
   <div class="form-group">
     <label for="input-text-lg">.form-control-lg</label>
@@ -456,7 +471,5 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-
 
 {% endcomment %}

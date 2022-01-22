@@ -14,6 +14,7 @@ Il plugin Javascript per costruire la select nelle sue varianti è basato su una
 La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper">
   <label for="selectExample1">Etichetta</label>
   <select id="selectExample1" title="Scegli una opzione">
@@ -31,6 +32,7 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 {% capture example %}
 <label for="defaultSelect">Etichetta</label>
 <select id="defaultSelect" title="Scegli una opzione">
+
   <option value="Value 1">Opzione 1</option>
   <option value="Value 2">Opzione 2</option>
   <option value="Value 3">Opzione 3</option>
@@ -44,6 +46,7 @@ Non utilizzando questa struttura di elementi, la select viene mostrata come prev
 Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` e aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper disabled">
   <label for="selectExample2">Etichetta</label>
   <select id="selectExample2" disabled title="Scegli una opzione">
@@ -56,7 +59,6 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
 ### Select con reset
 
 Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all'interno dell'attributo "**data-content**" il seguente html:
@@ -65,6 +67,7 @@ Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nel
 All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper">
   <label for="selectExample3">Etichetta</label>
   <select id="selectExample3" title="Scegli una opzione">
@@ -82,6 +85,7 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper">
   <label for="selectExample4">Etichetta</label>
   <select id="selectExample4" title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
@@ -125,6 +129,7 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 `"<span class='select-pill'><span class='select-pill-text'>label option</span></span>"`
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper">
   <label for="selectExample5">Etichetta</label>
   <select id="selectExample5" title="Scegli una opzione" multiple="true" data-multiple-separator="">
@@ -141,6 +146,7 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>`.
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper">
   <label for="selectExample6">Etichetta</label>
   <select id="selectExample6" title="Scegli una opzione">
@@ -158,6 +164,7 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 
 {% comment %}
 {% TODO questo esempio è stato temporaneamente rimosso perché potenzialmente a rischio di XSS %}
+
 ### Select multipla con gruppi e checkboxes
 
 Per la creazione di questo tipo di select:
@@ -169,6 +176,7 @@ Se si vogliono aggiungere i pulsanti per la selezione / deselezione di tutte le 
 Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) inseriamo all'interno delle opzioni l'attributo `data-content` l'html del componente checkbox.
 
 {% capture example %}
+
 <div class="bootstrap-select-wrapper no-tick">
   <label for="selectExample7">Etichetta</label>
   <select id="selectExample7" title="Scegli una opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
@@ -192,16 +200,15 @@ Dal momento che il plugin viene attivato al caricamento del documento mentre a v
 
 {% highlight js %}
 $(document).ready(function() {
-    $('.bootstrap-select-wrapper.my-select-wrapper').setOptionsToSelect([{
-      text: 'push Label 1',
-      value: 'pushValue 1'
-    },{
-      text: 'push Label 2',
-      value: 'pushValue 2'
-    },{
-      text: 'push Label 3',
-      value: 'pushValue 3'
-    }]);
-  });
+$('.bootstrap-select-wrapper.my-select-wrapper').setOptionsToSelect([{
+text: 'push Label 1',
+value: 'pushValue 1'
+},{
+text: 'push Label 2',
+value: 'pushValue 2'
+},{
+text: 'push Label 3',
+value: 'pushValue 3'
+}]);
+});
 {% endhighlight %}
-

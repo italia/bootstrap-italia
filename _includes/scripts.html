@@ -1,6 +1,8 @@
-{% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+{% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
 
-<script>window.__PUBLIC_PATH__ = "{{ site.baseurl }}/dist/fonts"</script>
+<script>
+  window.__PUBLIC_PATH__ = '{{ site.baseurl }}/dist/fonts'
+</script>
 
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 
@@ -17,20 +19,17 @@
 
 <script>
   var manifest = [
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-1.png", id:"cover-1"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-2.png", id:"cover-2"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-3.png", id:"cover-3"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-4.png", id:"cover-4"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-5.png", id:"cover-5"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-6.png", id:"cover-6"},
-    {src:"{{ site.baseurl }}/docs/assets/img/cover/cover-animation-7.png", id:"cover-7"}
-  ];
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-1.png', id: 'cover-1' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-2.png', id: 'cover-2' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-3.png', id: 'cover-3' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-4.png', id: 'cover-4' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-5.png', id: 'cover-5' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-6.png', id: 'cover-6' },
+    { src: '{{ site.baseurl }}/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
+  ]
 </script>
 <script src="{{ site.baseurl }}/docs/assets/dist/js/cover-animation.min.js?{{ buildTime }}"></script>
-{%- endif -%}
-
-{%- if page.layout == "docs" -%}
-{% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
+{%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
@@ -38,22 +37,21 @@
     indexName: 'bootstrap_italia',
     inputSelector: '#search-input',
     handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url;
-      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      var url = suggestion.url
+      url = suggestion.isLvl1 ? url.split('#')[0] : url
       // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url;
+      window.location.href = url
     },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
+    debug: false, // Set debug to true if you want to inspect the dropdown
+  })
 </script>
-{%- endif -%}
-
-{%- if page.layout == "base" -%}
+{%- endif -%} {%- if page.layout == "base" -%}
 <!-- Notification per tornare alla pagina principale -->
 <div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
     <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg>Esempio di utilizzo
+      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg
+    >Esempio di utilizzo
   </h5>
   <p>
     <a href="{{ site.baseurl }}/docs/esempi/">Torna alla pagina principale degli esempi</a>
@@ -67,7 +65,7 @@
 </div>
 
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
     notificationShow('notification-esempi')
   })
 </script>

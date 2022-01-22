@@ -9,7 +9,7 @@
 
     :before {
       // These rules allow to anchor to be positioned under the sticky header
-      content: "";
+      content: '';
       display: block;
       height: 96px; /* fixed header height*/
       margin: -96px 0 0; /* negative fixed header height */
@@ -23,14 +23,14 @@
 
   > h2[id] {
     &::before {
-      border-bottom: 1px solid #EDEDED;
+      border-bottom: 1px solid #ededed;
       margin-bottom: 1.5rem;
     }
   }
 
   > ul li,
   > ol li {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
     max-width: 40rem;
   }
 
@@ -41,7 +41,7 @@
 
 .bd-title {
   margin-top: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .bd-lead {

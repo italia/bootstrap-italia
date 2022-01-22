@@ -6,11 +6,10 @@ group: componenti
 toc: true
 ---
 
-
-
 L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del layout di navigazione, con l'aggiunta della classe `.nav-tabs`. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un'ulteriore classe: `.nav-dark`.
 
 {% capture callout %}
+
 ##### Accessibilità
 
 Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https://www.w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
@@ -19,6 +18,7 @@ Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Tab orizzontali a tutta larghezza
+
 Aggiungendo la classe `.auto` al contenitore `.nav-tabs` i tab occupano automaticamente l'intera larghezza disponibile. Se su schermi particolarme piccoli (es: smartphone) le dimensioni dei tab dovessero superare quelle dello schermo, verrà attivato lo scrolling orizzontale dei tab stessi.
 
 ### Tab testuale
@@ -28,6 +28,7 @@ Utilizzare la classe `.active` sul link del tab attivo per default.
 Utilizzare la classe `.disabled` sul link dei tab da disabilitare, aggiungendo la proprietà `tabindex="-1"` per eliminarlo dalla sequenza di navigazione via tab.
 
 {% capture example %}
+
 <ul class="nav nav-tabs auto">
   <li class="nav-item"><a class="nav-link active" href="#">Tab 1 Attivo</a></li>
   <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
@@ -41,6 +42,7 @@ Utilizzare la classe `.disabled` sul link dei tab da disabilitare, aggiungendo l
 Le label dei tab possono essere sostituite da icone con classi che ne indicano il tipo, avendo cura di includere all'interno del link un elemento `<span>` con classe `.sr-only` contenente la descrizione dedicata agli screen reader. La classe `.sr-only` impedisce la visualizzazione del testo sui browser visuali.
 
 {% capture example %}
+
 <ul class="nav nav-tabs auto">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
@@ -54,6 +56,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
 Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiungere la classe `.nav-tabs-icon-lg` al contenitore `.nav-tabs` per ottimizzare i margini fra tab.
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-lg auto">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
@@ -67,6 +70,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
 Icone e testi possono convivere all'interno dei tab, l'allineamento verticale dei due elementi è automatico. Per ottenere il corretto margine fra testo e icona nei tab a sviluppo orizzontale è necessario aggiungere la classe `.nav-tabs-icon-text` al contenitore `.nav-tabs`.
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-text auto">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg> Tab 2</a></li>
@@ -75,13 +79,14 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-
 ## Tab orizzontali
+
 In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 
 ### Tab testuale
 
 {% capture example %}
+
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#">Tab 1 Attivo</a></li>
   <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
@@ -93,6 +98,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 ### Tab con icona
 
 {% capture example %}
+
 <ul class="nav nav-tabs">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
@@ -104,6 +110,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 ### Tab con icona grande
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-lg">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span class="sr-only">Tab titolo 1</span></a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg><span class="sr-only">Tab titolo 2</span></a></li>
@@ -115,6 +122,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 ### Tab con testo e icona
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-text">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg> Tab 2</a></li>
@@ -128,18 +136,21 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 Se per motivi estetici si volessero nascondere le scrollbar che appaiono sui dispositivi touch quando vengono scrollati orizzontalmente i tab sarà necessario inserire l'html dei tab all'interno di un wrapper con classe `.nav-tabs-hidescroll`.
 
 {% capture example %}
+
 <div class="nav-tabs-hidescroll">
   <!-- HTML dei tab -->
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrapper:
+
 - `.hidescroll-ico` nel caso di icone normali
 - `.hidescroll-ico-lg` nel caso di icone piccole
 
 ### Esempio rimozione scrollbar su dispositivi touch
 
 {% capture example %}
+
 <div class="nav-tabs-hidescroll hidescroll-ico">
   <ul class="nav nav-tabs nav-tabs-icon-text">
     <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
@@ -160,6 +171,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 ### Tab testuale
 
 {% capture example %}
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item"><a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a></li>
@@ -177,6 +189,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 ### Tab con icona grande
 
 {% capture example %}
+
   <ul class="nav nav-tabs nav-tabs-icon-lg" id="myTab2" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="tab1a-tab" data-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true">
@@ -214,6 +227,7 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
 ### Tab con testo e icona
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-text" id="myTab3" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="tab1c-tab" data-toggle="tab" href="#tab1b" role="tab" aria-controls="tab1b" aria-selected="true">
@@ -249,6 +263,7 @@ Allo stesso modo di quanto avviene con i normali `.nav`, a seconda delle tue nec
 Si può, alternativamente, usare un diverso elemento (nell'esempio seguente un semplice `<div>`) e racchiuderlo con `<nav>`:
 
 {% capture example %}
+
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-tab1-tab" data-toggle="tab" href="#nav-tab1" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</a>
@@ -270,6 +285,7 @@ Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare tab a
 ### Tab testuale
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-4 col-md-3">
@@ -296,6 +312,7 @@ Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare tab a
 Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei link i tab selezionati avranno un colore di sfondo.
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-4 col-md-3">
@@ -320,6 +337,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
 ### Tab con testo e icona
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
@@ -346,6 +364,7 @@ Aggiungendo la classe `.nav-tabs-vertical-background` al `<div>` contenitore dei
 Le label dei Tab possono essere sostituite da icone, avendo cura di includere all'interno del link un elemento `<span>` contenente la descrizione per non gli screen reader del tab con classe `.sr-only` per nascondere la descrizione agli altri browser. Al tag `<a>` contenente l'icona va aggiunta la classe `.justify-content-end` per allineare l'icona a destra.
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-3">
@@ -373,9 +392,10 @@ Per questioni di accessibilità è preferibile utilizzare le proprietà Flex di 
 
 ### Orizzontale in fondo
 
-Per posizionare i tab al di sotto del contenuto è necessario utilizzare un elemento contenitore (ad esempio un <div>) con classi `.d-flex` e  `.flex-column-reverse`.
+Per posizionare i tab al di sotto del contenuto è necessario utilizzare un elemento contenitore (ad esempio un <div>) con classi `.d-flex` e `.flex-column-reverse`.
 
 {% capture example %}
+
 <div class="d-flex flex-column-reverse">
   <ul class="nav nav-tabs" id="pos-hr" role="tablist">
     <li class="nav-item"><a class="nav-link active" id="pos-hr1-tab" data-toggle="tab" href="#pos-hrtab1" role="tab" aria-controls="pos-hrtab1" aria-selected="true">Tab 1</a></li>
@@ -397,6 +417,7 @@ Per posizionare i tab al di sotto del contenuto è necessario utilizzare un elem
 Per posizionare i tab verticali a destra contenuto è necessario applicare la classe `.flex-row-reverse` all'elemento con classe `.row` che li contiene.
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row flex-row-reverse">
     <div class="col-5 col-md-4 col-lg-3">
@@ -423,6 +444,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 ### Tab orizzontali a tutta larghezza
 
 {% capture example %}
+
 <ul class="nav nav-tabs auto nav-dark">
   <li class="nav-item"><a class="nav-link active" href="#">Tab 1 Attivo</a></li>
   <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
@@ -434,6 +456,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 ### Tab con testo e icona
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-icon-text nav-dark">
   <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg> Tab 2</a></li>
@@ -445,6 +468,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 ### Tab verticali
 
 {% capture example %}
+
 <div class="bd-example-tabs">
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
@@ -495,6 +519,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottnere un design tipo card.
 
 {% capture example %}
+
 <ul class="nav nav-tabs nav-tabs-cards" id="card-simple" role="tablist">
   <li class="nav-item"><a class="nav-link active" id="card-simple1-tab" data-toggle="tab" href="#card-simpletab1" role="tab" aria-controls="card-simpletab1" aria-selected="true">Tab 1</a></li>
   <li class="nav-item"><a class="nav-link" id="card-simple2-tab" data-toggle="tab" href="#card-simpletab2" role="tab" aria-controls="card-simpletab2" aria-selected="false">Tab 2</a></li>
@@ -515,6 +540,7 @@ Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottnere un design tipo ca
 Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ottnere un design tipo card editabili. Includere l'hmtl degli ulteriori elementi di interfaccia come da esempio.
 
 {% capture example %}
+
 <div class="nav-tabs-wrapper">
   <ul class="nav nav-tabs nav-tabs-cards nav-tabs-editable" id="card-simple-btn" role="tablist">
       <li class="nav-item">
@@ -554,6 +580,7 @@ Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ot
 Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente utilizzando la proprietà `data-toggle="tab"` nel link all'interno di liste di tipo `.nav-tabs`:
 
 {% highlight html %}
+
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
@@ -585,8 +612,8 @@ Alternativamente, è possibile attivare i tab utilizzando Javascript:
 
 {% highlight js %}
 $('#myTab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
+e.preventDefault()
+$(this).tab('show')
 })
 {% endhighlight %}
 
@@ -604,6 +631,7 @@ $('#myTab li:nth-child(3) a').tab('show')
 Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è sufficiente aggiungere la classe `.fade` ad ogni `.tab-pane`. Il primo `.tab-pane` dovrà anche avere la classe `.show` per rendere il contenuto iniziale visibile.
 
 {% highlight html %}
+
 <div class="tab-content">
   <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="content-tab-tab">...</div>
   <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">...</div>

@@ -1,14 +1,14 @@
 # Dependencies
-markdown:       kramdown
-highlighter:    rouge
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  auto_ids:     true
+  auto_ids: true
 
-permalink:      pretty
+permalink: pretty
 
-source:         "."
-destination:    "./_site"
-encoding:       UTF-8
+source: '.'
+destination: './_site'
+encoding: UTF-8
 exclude:
   - .git/
   - .github/
@@ -36,31 +36,30 @@ toc:
   max_level: 3
 
 # Social
-title:              'Bootstrap Italia'
-description:        'Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA'
-authors:            'Team per la Trasformazione Digitale'
-authors_url:        'https://teamdigitale.governo.it/'
-authors_agid:       "Agenzia per l'Italia Digitale"
-authors_agid_url:   'https://www.agid.gov.it/'
-social_card_path:   '/docs/assets/img/favicons/social-card.png'
-social_logo_path:   '/docs/assets/img/favicons/android-chrome-192x192.png'
-repo:               'https://github.com/italia/bootstrap-italia/'
-developers:         'https://developers.italia.it/'
-slack:              'https://slack.developers.italia.it/'
-twitter:            'https://twitter.com/teamdigitaleIT'
-twitter_handle:     '@teamdigitaleIT'
+title: 'Bootstrap Italia'
+description: 'Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA'
+authors: 'Team per la Trasformazione Digitale'
+authors_url: 'https://teamdigitale.governo.it/'
+authors_agid: "Agenzia per l'Italia Digitale"
+authors_agid_url: 'https://www.agid.gov.it/'
+social_card_path: '/docs/assets/img/favicons/social-card.png'
+social_logo_path: '/docs/assets/img/favicons/android-chrome-192x192.png'
+repo: 'https://github.com/italia/bootstrap-italia/'
+developers: 'https://developers.italia.it/'
+slack: 'https://slack.developers.italia.it/'
+twitter: 'https://twitter.com/teamdigitaleIT'
+twitter_handle: '@teamdigitaleIT'
 
 # Versions
-current_version:		1.4.3
-bootstrap_version:  4.5.0
-bootstrap_minor:    4.5
+current_version: 1.4.3
+bootstrap_version: 4.5.0
+bootstrap_minor: 4.5
 
 # Analytics
-ga_property:        'UA-114758441-1'
+ga_property: 'UA-114758441-1'
 
 # CDN links
 cdn:
-  jquery:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>'
-  popper:           '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" crossorigin="anonymous"></script>'
-  owlcarousel:      '<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>'
-
+  jquery: '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>'
+  popper: '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" crossorigin="anonymous"></script>'
+  owlcarousel: '<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>'

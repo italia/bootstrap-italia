@@ -14,17 +14,17 @@
 
 .btn-clipboard {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   z-index: 8;
   display: block;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   font-size: 75%;
-  color: #F2F2F5;
+  color: #f2f2f5;
   cursor: pointer;
   background-color: transparent;
   border: 0;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 
   &:hover {
     color: #fff;

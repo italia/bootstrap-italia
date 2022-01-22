@@ -1,10 +1,10 @@
 # used in documentation as site.data.breakpoints
 
 - breakpoint: xs
-  abbr: ""
+  abbr: ''
   name: Extra small
   min-width: 0px
-  container: ""
+  container: ''
 
 - breakpoint: sm
   abbr: -sm

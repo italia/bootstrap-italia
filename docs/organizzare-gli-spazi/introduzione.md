@@ -5,8 +5,8 @@ toc: false
 description: Classi e utilità per organizzare gli spazi e il posizionamento di componenti all'interno di una pagina web
 group: organizzare-gli-spazi
 redirect_from:
-  - "/organizzare-gli-spazi/"
-  - "/docs/organizzare-gli-spazi/"
+  - '/organizzare-gli-spazi/'
+  - '/docs/organizzare-gli-spazi/'
 ---
 
 In questa sezione potrai trovare tutte le informazioni necessarie per organizzare gli spazi del tuo sito.
@@ -26,6 +26,7 @@ La prima scelta è tra un container a larghezza _fissa_, la cui `max-width` camb
 </div>
 
 {% highlight html %}
+
 <div class="container">
   <!-- Content here -->
 </div>
@@ -42,11 +43,11 @@ Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'are
 </div>
 
 {% highlight html %}
+
 <div class="container-fluid">
   ...
 </div>
 {% endhighlight %}
-
 
 ## Responsive breakpoints
 
@@ -82,13 +83,13 @@ Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disp
 
 // Example usage:
 @include media-breakpoint-up(sm) {
-  .some-class {
-    display: block;
-  }
+.some-class {
+display: block;
+}
 }
 {% endhighlight %}
 
-In casi eccezionali, è possibile utilizzare le media query che vanno nella direzione opposta (la dimensione dello schermo *o inferiore*):
+In casi eccezionali, è possibile utilizzare le media query che vanno nella direzione opposta (la dimensione dello schermo _o inferiore_):
 
 {% highlight scss %}
 // Schermi piccoli (meno di 576px)
@@ -157,7 +158,7 @@ Similmente le media query possono estendersi su più breakpoint:
 
 {% highlight scss %}
 // Esempio
-// Applica gli stili partendo da uno schermo medio fino a uno grande 
+// Applica gli stili partendo da uno schermo medio fino a uno grande
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 {% endhighlight %}
 
@@ -181,12 +182,12 @@ Si scoraggia di personalizzare singolarmente questi valori; se dovessi cambiarne
 
 {% highlight scss %}
 $zindex-dropdown:          1000 !default;
-$zindex-sticky:            1020 !default;
+$zindex-sticky: 1020 !default;
 $zindex-fixed:             1030 !default;
-$zindex-modal-backdrop:    1040 !default;
+$zindex-modal-backdrop: 1040 !default;
 $zindex-modal:             1050 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
 {% endhighlight %}
 
 Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori
@@ -223,6 +224,5 @@ specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md
 ## Modificare la visibilità
 
 Quando è necessario nascondere o rendere visibile un elemento si possono usare le [utility di visibilità]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/#visibilità).
- 
-Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.
 
+Gli elementi invisibili influenzano ancora il layout della pagina, ma sono visivamente nascosti ai visitatori.

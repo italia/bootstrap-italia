@@ -19,6 +19,7 @@ Aggiungendo all'Overlay Panel la classe `.overlay-panel-fullheight` questo copri
 Il colore predefinito dell'Overlay Panel corrisponde al colore Primary.
 
 {% capture example %}
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-6">
@@ -51,6 +52,7 @@ Il colore predefinito dell'Overlay Panel corrisponde al colore Primary.
 Aggiungendo all'Overlay Panel la classe `.overlay-black` si ottiene un overlay di colore nero.
 
 {% capture example %}
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-6">
@@ -87,6 +89,7 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-6">
@@ -118,6 +121,7 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
 Per ottenere un Overlay Panel visibile solo al mouse over sull'immagine aggiungere la classe `.overlay-hover` al wrapper `<figure>`.
 
 {% capture example %}
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-6">

@@ -12,6 +12,7 @@ bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/componenti/tooltip/) come dipendenza.
 
 {% capture callout %}
+
 ##### Accessibilità
 
 I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
@@ -35,7 +36,7 @@ Un modo per inizializzare tutti i popovers in una pagina è quello di selezionar
 
 {% highlight js %}
 $(function () {
-  $('[data-toggle="popover"]').popover()
+$('[data-toggle="popover"]').popover()
 })
 {% endhighlight %}
 
@@ -45,9 +46,9 @@ Quando hai alcuni stili su un elemento genitore che interferiscono con un popove
 
 {% highlight js %}
 $(function () {
-  $('.example-popover').popover({
-    container: 'body'
-  })
+$('.example-popover').popover({
+container: 'body'
+})
 })
 {% endhighlight %}
 
@@ -97,12 +98,13 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
         <div class="col-12 col-md-4"></div>
       </div>
     </div>
+
   </div>
 </div>
 
 {% highlight html %}
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
-  Popover in alto
+Popover in alto
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
@@ -128,7 +130,7 @@ Il link come HTML nell'attributo `data-content=""` dopo il contenuto testuale, c
 
 {% capture example %}
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
-  Popover con icona e link
+Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -138,7 +140,7 @@ Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo 
 
 {% capture example %}
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="Popover in Hover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
-  Apertura in Hover
+Apertura in Hover
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -147,6 +149,7 @@ Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo 
 Usa l'evento `focus` per ignorare i popover sul clic successivo dell'utente di un elemento diverso rispetto all'elemento di attivazione / disattivazione.
 
 {% capture callout %}
+
 #### Markup specifico richiesto per ignorare il click successivo
 
 Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag `<a>`, _non_ il tag `<button>`, ed è necessario anche includere l'attributo [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
@@ -158,7 +161,7 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 
 {% highlight js %}
 $('.popover-dismiss').popover({
-  trigger: 'focus'
+trigger: 'focus'
 })
 {% endhighlight %}
 
@@ -170,7 +173,7 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover
 
 {% capture example %}
 <span class="d-inline-block" data-toggle="popover" data-content="Popover disabilitato">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>
+<button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
 
@@ -277,6 +280,6 @@ Aggiorna la posizione del popover di un elemento.
 
 {% highlight js %}
 $('#myPopover').on('hidden.bs.popover', function () {
-  // azioni
+// azioni
 })
 {% endhighlight %}

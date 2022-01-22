@@ -13,6 +13,7 @@ Il Rating è composto da un `<fieldset>` con classe `.rating` contenente 5 `<inp
 Le `<label>` contengono le icone delle stelle e la descrizione per Screen Reader.
 
 {% capture example %}
+
 <fieldset class="rating">
   <legend>Rating</legend>
   <input type="radio" id="star5a" name="ratingA" value="5" />
@@ -54,6 +55,7 @@ La label con il numero di stelle dev'essere contenuta in uno `<span>` semplice.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <fieldset class="rating rating-label">
   <legend><span class="sr-only">Valutazione</span> <span>4 stelle</span> <span class="sr-only">su 5</span></legend>
   <input type="radio" id="star5b" name="ratingB" value="5" />
@@ -96,6 +98,7 @@ Per rendere accessibile il contenuto è necessario aggiungere un tag `<legend>` 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <fieldset class="rating rating-read-only">
   <legend class="sr-only">Valutazione 4 stelle su 5</legend>
   <input type="radio" id="star5c" name="ratingC" value="5" aria-hidden="true" disabled />

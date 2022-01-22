@@ -13,6 +13,7 @@ A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e ca
 Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap. **Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
 
 {% capture example %}
+
 <table class="table">
   <thead>
     <tr>
@@ -48,6 +49,7 @@ Usando il markup di base della tabella, ecco come appaiono le tabelle che utiliz
 Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark`.
 
 {% capture example %}
+
 <table class="table table-dark">
   <thead>
     <tr>
@@ -85,6 +87,7 @@ Puoi anche invertire i colori, con testo chiaro su sfondi scuri con `.table-dark
 Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.thead-light` o `.thead-dark` per far apparire `<thead>` chiaro o grigio scuro.
 
 {% capture example %}
+
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -153,6 +156,7 @@ Simile alle tabelle e alle tabelle scure, utilizzare le classi di modifica `.the
 Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
 
 {% capture example %}
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -187,9 +191,10 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
 
 ## Tabella con bordi
 
-Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su tutte le celle.
+Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su tutte le celle.
 
 {% capture example %}
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -227,6 +232,7 @@ Aggiungi `.table-bordered`  per avere i bordi a tutti i lati della tabella e su 
 Aggiungi la classe `.table-borderless` per una tabella senza bordi.
 
 {% capture example %}
+
 <table class="table table-borderless">
   <thead>
     <tr>
@@ -261,9 +267,10 @@ Aggiungi la classe `.table-borderless` per una tabella senza bordi.
 
 ## Righe ed hover
 
-Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  contenute in `<tbody>`.
+Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella contenute in `<tbody>`.
 
 {% capture example %}
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -301,6 +308,7 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella  
 Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell padding.
 
 {% capture example %}
+
 <table class="table table-sm">
   <thead>
     <tr>
@@ -367,10 +375,10 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
 </div>
 
 {% highlight html %}
+
 <!-- On rows -->
 <tr class="table-active">...</tr>{% for color in site.data.theme-colors %}
 <tr class="table-{{ color.name }}">...</tr>{% endfor %}
-
 
 <!-- On cells (`td` or `th`) -->
 <tr>
@@ -392,6 +400,7 @@ Nota che in quanto i browser non supportano attualmente i [range context queries
 Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti con screen reader a trovare una tabella e capire di cosa si tratta e decidere se vogliono leggerla.
 
 {% capture example %}
+
 <table class="table">
   <caption>Lista di utenti</caption>
   <thead>
@@ -430,6 +439,7 @@ Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti c
 Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl}`.
 
 {% capture callout %}
+
 ##### Ritaglio / troncamento verticale
 
 Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.
@@ -499,6 +509,7 @@ Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento 
 </div>
 
 {% highlight html %}
+
 <div class="table-responsive">
   <table class="table">
     ...
@@ -557,6 +568,7 @@ Usa `.table-responsive{-sm|-md|-lg|-xl}` come necessario per creare tabelle resp
 
 {% highlight html %}
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+
 <div class="table-responsive{{ bp.abbr }}">
   <table class="table">
     ...

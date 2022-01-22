@@ -11,11 +11,13 @@ Le **card** sono contenitori flessibili ed estendibili. Costruite con flexbox, o
 Di default le card si estendono completamente al 100% del loro elemento contenitore.
 
 ## Card semplice
+
 Negli esempi seguenti le card sono all'interno di una struttura colonnare di bootstrap.  
 L'inizio della card vera e propria è segnalata dal commento `start card`
 Esempio di card semplice con titolo e testo
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-4">
     <!--start card-->
@@ -33,7 +35,9 @@ Esempio di card semplice con titolo e testo
 {% endcapture %}{% include example.html content=example %}
 
 #### Card semplice su più colonne
+
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-4">
     <!--start card-->
@@ -75,11 +79,13 @@ Esempio di card semplice con titolo e testo
 {% endcapture %}{% include example.html content=example %}
 
 ### Articolo semplice
+
 Esempio di card contenente categorizzazione e data, firma dell'articolo e link all'articolo.  
 Per inserire la categorizzazione e/o la data di pubblicazione, usare l'elemento `.category-top` ed inserire al suo interno gli elementi come da esempio.
 La categoria nell'esempio seguente è un link, ma potrebbe essere un testo semplice senza link, utilizzando il tag `<span>` invece del tag `<a>`
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -108,10 +114,12 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
 {% endcapture %}{% include example.html content=example %}
 
 ### Card con icona
+
 Esempio di card contenente categorizzazione e icona.  
 Per inserire la categorizzazione con relativa icona, usare l'elemento `.categoryicon-top` ed inserire al suo interno gli elementi come da esempio.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -136,7 +144,6 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
 Un'altro esempio di card contenente intestazione (in questo caso numero di files
 presenti) e icona: la struttura è uguale alla card precedente, per l'intestazione
 è sufficiente usare l'elemento `.categoryicon-top` ed inserire al suo interno gli
@@ -147,6 +154,7 @@ segue il paragrafo. Per i sottotitoli utilizzare il tag `<h6>`, per i link
 semplici utilizzare la classe `.simple-link`.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -175,12 +183,13 @@ semplici utilizzare la classe `.simple-link`.
 
 ## Card con ombreggiatura
 
-Le card con ombreggiatura sono caratterizzate dalle classi:  
+Le card con ombreggiatura sono caratterizzate dalle classi:
 
-**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile.    
-**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
+**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile.  
+**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -206,7 +215,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
 ### Card grande
 
 Le card con ombreggiatura grandi sono caratterizzate dalle classi:
-  
+
 **`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
 **`.card-big`:** utilizzata nel div (`card`) serve a al dimensionamento dei suoi contenuti.
 
@@ -214,7 +223,9 @@ Nell'esempio seguente è stata inserita un icona grande prima del titolo della c
 il div contenente l'icona è di classe `.top-icon`.
 
 #### Esempio 1:
+
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-8">
     <!--start card-->
@@ -245,10 +256,12 @@ il div contenente l'icona è di classe `.top-icon`.
 L'esempio seguente contiene una icona custom (non SVG ma CSS) ed una categorizzazione con icona SVG.
 L'icona custom viene creata dal div `.flag-icon`.  
 La categorizzazione dal div con classe `.etichetta`.  
-Per creare un bordo di colore  primario a chiusura card, potete utilizzare la classe `.border-bottom-card` applicata al div `.card`
+Per creare un bordo di colore primario a chiusura card, potete utilizzare la classe `.border-bottom-card` applicata al div `.card`
 
 #### Esempio 2:
+
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-8">
     <!--start card-->
@@ -286,6 +299,7 @@ Nell'esempio seguente sono state inseriti firma e pulsante nel footer della card
 Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo spazio inferiore della card.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -314,12 +328,13 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 
 La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.
 
-L'elemento immagine  è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un immagine orizzontale.  
+L'elemento immagine è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un immagine orizzontale.  
 Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile escludendo il resto dell'immagine e centrandola nell'elemento.
 
 È anche possibile aggiungere un piccolo box con l'indicazione della data, per card di tipo _evento_.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -427,6 +442,7 @@ Tutta la card è un link al relativo contenuto.
 Le proporzioni ottimali dell'immagine per questa card sono 17:21.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -458,6 +474,7 @@ Per creare Card con contenuti brevi o di _"anteprima"_ è sufficiente aggiungere
 Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` per aggiungere bordi, effetti di arrotondamento o ombreggiatura.
 
 {% capture example %}
+
 <div class="card-wrapper card-teaser-wrapper">
   <!--start card-->
   <div class="card card-teaser">

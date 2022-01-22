@@ -3,12 +3,12 @@
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   border: 1px solid #eee;
-  border-left-width: .25rem;
-  border-radius: .25rem;
+  border-left-width: 0.25rem;
+  border-radius: 0.25rem;
 
   h4 {
     margin-top: 0;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   p:last-child {
@@ -16,11 +16,11 @@
   }
 
   code {
-    border-radius: .25rem;
+    border-radius: 0.25rem;
   }
 
   & + .bd-callout {
-    margin-top: -.25rem;
+    margin-top: -0.25rem;
   }
 }
 

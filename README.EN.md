@@ -6,7 +6,7 @@
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-*Read this in other languages: [Italiano](README.md).*
+_Read this in other languages: [Italiano](README.md)._
 
 Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 

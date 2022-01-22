@@ -25,7 +25,7 @@
     "lint-scss": "stylelint ./src/scss/",
     "fix-js": "eslint ./src/js --fix",
     "fix-scss": "stylelint ./src/scss/ --fix",
-    "format-code": "npx prettier --write && eslint ./src/js --fix --cache && stylelint ./src/scss/ --fix --cache",
+    "format-code": "npx prettier --write . && eslint ./src/js --fix --cache && stylelint ./src/scss/ --fix --cache",
     "release": "node scripts/release",
     "version": "node scripts/config-sync && git add _config.yml && conventional-changelog -p angular -i CHANGELOG.md -s && node scripts/wait-confirm && git add CHANGELOG.md",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",

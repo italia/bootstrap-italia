@@ -12,6 +12,7 @@ Le icone di Bootstrap Italia utilizzano una sprite SVG, che contiene al suo inte
 Per l'utilizzo delle icone è necessario aggiungere la sprite presente nella libreria alla cartella `dist/svg` e utilizzarla come descritto di seguito, modificandone il path nell'attributo `href`, a seconda di dove viene copiata la sprite SVG nel proprio ambiente.
 
 {% capture callout %}
+
 #### Compatibilità con browser meno recenti
 
 L'attributo `xlink:href` utilizzato nelle precedenti versioni della libreria è stato deprecato dal W3C in favore dell'attributo `href`. I browser meno recenti non supportano quest'ultimo, come indicato su [caniuse.com](https://caniuse.com/mdn-svg_elements_use_href). Per garantire la piena compatibilità con questi browser è consigliabile utilizzare entrambi gli attributi.
@@ -68,6 +69,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 È possibile usare le classi di allineamento per posizionare le icone all'interno di un elemento.
 
 {% capture example %}
+
 <div style="line-height: 4em;">
   <svg class="bg-light icon align-bottom"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>
   <svg class="bg-light icon align-middle"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>
@@ -78,6 +80,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 ### Lista delle icone disponibili
 
 {% capture example %}
+
 <div class="row">
   {% for icona in site.data.icons.regular %}
   <div class="col-12 col-md-6 col-lg-4">
@@ -99,6 +102,3 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
   </div>{% endfor %}
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-
-

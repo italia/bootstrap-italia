@@ -2,7 +2,7 @@
 layout: docs
 group: progetti
 title: Progetti
-redirect_from: "/progetti/"
+redirect_from: '/progetti/'
 toc: true
 ---
 
