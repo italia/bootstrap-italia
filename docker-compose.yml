@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 services:
   dev:
     build: .
@@ -7,6 +7,6 @@ services:
       - /app/node_modules
       - /app/vendor
     ports:
-      - "3001:3001"
-      - "4000:4000"
+      - '3001:3001'
+      - '4000:4000'
     command: npm run start

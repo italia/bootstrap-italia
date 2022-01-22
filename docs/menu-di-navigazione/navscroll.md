@@ -21,14 +21,14 @@ Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore 
 
 Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
 
-**[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="_blank"}**
-
+**[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
 ### Posizionamento a fondo pagina con linea a sinistra
 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
 
 {% capture example %}
+
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
@@ -91,6 +91,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a destra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in alto nella pagina.
 
 {% capture example %}
+
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
@@ -162,6 +163,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 **`.theme-dark-desktop`**: background scuro, testi e links di colore bianco. (modifica unicamente la versione desktop del Navscroll)
 
 {% capture example %}
+
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
@@ -228,6 +230,7 @@ Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che 
 Per maggiori informazioni, si può fare riferimento alla [documentazione dei Link List]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
 
 {% capture example %}
+
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
@@ -265,5 +268,3 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
-
-

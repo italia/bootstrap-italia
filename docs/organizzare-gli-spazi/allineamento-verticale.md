@@ -25,6 +25,7 @@ Con elementi inline:
 Con le celle di tabella:
 
 {% capture example %}
+
 <table style="height: 100px;" class="table table-bordered">
   <tbody>
     <tr>

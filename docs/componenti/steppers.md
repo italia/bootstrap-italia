@@ -76,6 +76,7 @@ L'aspetto della modalità mobile degli Steppers è differente rispetto a quello 
 #### Solo testo
 
 I passi visibili nell'intestazione possono essere corredati da tre classi aggiuntive:
+
 - `.confirmed` per individuare uno step già confermato. È bene corredare tali step con un'icona che ne identifichi il completamento (vedi di seguito).
 - `.active` per individuare lo step attualmente attivo; su dispositivi mobili è l'unico visualizzato.
 - `.steppers-index` per individuare un indice, visibile solo su mobile, che può contenere lo stato attuale di progresso indicato in forma testuale
@@ -83,6 +84,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 È necessario ridurre finestra del browser per apprezzare il comportamente degli Stepper su dispositivi a dimensioni ridotte.
 
 {% capture example %}
+
 <div class="steppers">
 	<ul class="steppers-header">
 		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
@@ -98,6 +100,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 Le label presenti negli step dell'intestazione possono essere anticipate da un'icona.
 
 {% capture example %}
+
 <div class="steppers">
 	<ul class="steppers-header">
 		<li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
@@ -115,6 +118,7 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 È necessario aggiungere la classe `.no-line` al `<li>` attivo per nascondere il bordo inferiore azzurro, in questo caso ridondante.
 
 {% capture example %}
+
 <div class="steppers">
   <ul class="steppers-header">
     <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></span>Label Step 1</li>
@@ -132,6 +136,7 @@ Il passaggio da uno step all'altro attraverso i bottoni contenuti in `.steppers-
 I bottoni "Avanti" e "Indietro" dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle web app e sono dotati di classi `.steppers-btn-prev` e `.steppers-btn-next`.
 
 {% capture example %}
+
 <div class="steppers">
   <ul class="steppers-header">
     <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
@@ -163,6 +168,7 @@ Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi so
 La Progress bar è quella nativa di Bootstrap 4 ed è contenuta in un elemento `.steppers-progress` situato fra i bottoni "Indietro" ed "Avanti".
 
 {% capture example %}
+
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -188,6 +194,7 @@ I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato f
 Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe `.sr-only `riservato agli screen reader con un testo indicante il numero di step e lo stato.
 
 {% capture example %}
+
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -214,6 +221,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 Su dispositivi mobili è possibile inserire un terzo bottone "Salva" di aspetto differente con classe `.steppers-btn-save` fra i bottoni "Indietro" e "Avanti".
 
 {% capture example %}
+
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -233,6 +241,7 @@ Su dispositivi mobili è possibile inserire un terzo bottone "Salva" di aspetto 
 Su dispositivi mobili è possibile sostituire il bottone "Avanti" con un bottone "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
 
 {% capture example %}
+
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -251,6 +260,7 @@ Su dispositivi mobili è possibile sostituire il bottone "Avanti" con un bottone
 Per ottenere una versione scura degli Stepper è sufficiente aggiungere la classe `.bg-dark` al contenitore principale.
 
 {% capture example %}
+
 <div class="steppers bg-dark">
   <ul class="steppers-header">
     <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
@@ -274,6 +284,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 ### Varianti intestazione
 
 {% capture example %}
+
 <!-- Solo testo -->
 <div class="steppers bg-dark">
   <ul class="steppers-header">
@@ -312,6 +323,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 #### Progress bar
 
 {% capture example %}
+
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -333,6 +345,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 #### Pallini
 
 {% capture example %}
+
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -357,6 +370,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 #### Bottone Salva
 
 {% capture example %}
+
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -374,6 +388,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 #### Bottone conferma
 
 {% capture example %}
+
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->

@@ -21,7 +21,7 @@ Esso può essere personalizzato nel testo a seconda delle necessità, ma è impo
 Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
 
 {% capture callout %}
-Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **[Esempio Cookiebar]({{ site.baseurl }}/docs/esempi/cookiebar/){:target="_blank"}**.
+Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **[Esempio Cookiebar]({{ site.baseurl }}/docs/esempi/cookiebar/){:target="\_blank"}**.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ### Codice HTML
@@ -53,6 +53,7 @@ Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **
 </div>
 
 {% highlight html %}
+
 <div class="cookiebar">
     <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
     <div class="cookiebar-buttons">

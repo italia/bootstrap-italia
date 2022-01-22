@@ -1,5 +1,5 @@
 .main-content {
-  color: #17324D;
+  color: #17324d;
 }
 
 .bottom-content {
@@ -18,11 +18,11 @@
   width: 100vw;
   background-attachment: fixed;
   margin: 0 -1rem; // horizontal scroll reset
-  z-index: 0
+  z-index: 0;
 }
 
 .main-content--panel {
-  background-color: #FFF;
+  background-color: #fff;
   @include media-breakpoint-up(sm) {
     margin-top: -16px;
     box-shadow: 0 10px 80px 0 rgba(90, 103, 114, 0.1);
@@ -30,7 +30,7 @@
 }
 
 .main-content--image {
-  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .5));
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
 }
 
 .cover-container,
@@ -42,7 +42,7 @@
   margin: 0 auto;
 }
 .cover-canvas {
-  width: 100%
+  width: 100%;
 }
 
 .cover-progress {

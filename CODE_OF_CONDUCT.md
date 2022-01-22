@@ -20,25 +20,25 @@ Se vedi qualcuno che sta facendo uno sforzo in più per garantire che la nostra 
 
 I seguenti comportamenti sono previsti e richiesti a tutti i membri della comunità:
 
-* Partecipare in modo autentico e attivo. In tal modo, contribuisci alla salute e alla longevità di questa comunità.
-* Esercitare considerazione e rispetto nei propri discorsi e azioni.
-* Tentativo di collaborazione prima del conflitto.
-* Astenersi dal comportamento umiliante, discriminatorio o molesto.
-* Sii consapevole di ciò che ti circonda e dei tuoi compagni partecipanti. Avvisare i leader della comunità se si nota una situazione pericolosa, qualcuno in difficoltà o violazioni di questo Codice di condotta, anche se sembrano irrilevanti.
-* Ricorda che le sedi di eventi comunitari possono essere condivise con membri del pubblico; si prega di essere rispettosi verso tutti i clienti di questi luoghi.
+- Partecipare in modo autentico e attivo. In tal modo, contribuisci alla salute e alla longevità di questa comunità.
+- Esercitare considerazione e rispetto nei propri discorsi e azioni.
+- Tentativo di collaborazione prima del conflitto.
+- Astenersi dal comportamento umiliante, discriminatorio o molesto.
+- Sii consapevole di ciò che ti circonda e dei tuoi compagni partecipanti. Avvisare i leader della comunità se si nota una situazione pericolosa, qualcuno in difficoltà o violazioni di questo Codice di condotta, anche se sembrano irrilevanti.
+- Ricorda che le sedi di eventi comunitari possono essere condivise con membri del pubblico; si prega di essere rispettosi verso tutti i clienti di questi luoghi.
 
 ## 4. Comportamento inaccettabile
 
 I seguenti comportamenti sono considerati molestie e inaccettabili all'interno della nostra comunità:
 
-* Violenza, minacce di violenza o linguaggio violento diretto contro un'altra persona.
-* Scherzi e linguaggio sessista, razzista, omofobo, transfobico, o comunque discriminatorio.
-* Pubblicare o visualizzare materiale sessualmente esplicito o violento.
-* Insulti personali, in particolare quelli relativi al genere, orientamento sessuale, razza, religione o disabilità.
-* Attenzione sessuale sgradita. Ciò include commenti o battute sessualizzate; approcci sessuali inappropriati, toccanti e indesiderati.
-* Intimidazione intenzionale, stalking o seguito (online o di persona).
-* Sostenendo o incoraggiando uno qualsiasi dei suddetti comportamenti.
-* Perturbazione continua degli eventi della comunità, inclusi discorsi e presentazioni.
+- Violenza, minacce di violenza o linguaggio violento diretto contro un'altra persona.
+- Scherzi e linguaggio sessista, razzista, omofobo, transfobico, o comunque discriminatorio.
+- Pubblicare o visualizzare materiale sessualmente esplicito o violento.
+- Insulti personali, in particolare quelli relativi al genere, orientamento sessuale, razza, religione o disabilità.
+- Attenzione sessuale sgradita. Ciò include commenti o battute sessualizzate; approcci sessuali inappropriati, toccanti e indesiderati.
+- Intimidazione intenzionale, stalking o seguito (online o di persona).
+- Sostenendo o incoraggiando uno qualsiasi dei suddetti comportamenti.
+- Perturbazione continua degli eventi della comunità, inclusi discorsi e presentazioni.
 
 ## 5. Conseguenze del comportamento inaccettabile
 

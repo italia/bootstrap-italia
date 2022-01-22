@@ -19,9 +19,11 @@ Per esempio, <code>&lt;section&gt;</code> dovrebbe essere renderizzato come inli
 Utilizzare `<pre>` per più righe di codice. Ancora una volta, assicurati di evitare qualsiasi parentesi angolare nel codice per il rendering appropriato. Puoi opzionalmente aggiungere la classe `.pre-scrollable`, che imposterà un'altezza massima di 350px e fornirà una barra di scorrimento dell'asse y.
 
 {% capture example %}
+
 <pre><code>&lt;p&gt;Testo di esempio qui...&lt;/p&gt;
 &lt;p&gt;E un'altra linea di testo di esempio qui...&lt;/p&gt;
 </code></pre>
+
 {% endcapture %}{% include example.html content=example %}
 
 ## Variabili

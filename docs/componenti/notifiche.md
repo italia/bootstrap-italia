@@ -46,23 +46,26 @@ La Notification appare quando viene attivata dalla seguente funzione Javascript:
 notificationShow('idNotification',6000);
 {% endhighlight %}
 
-- Il primo parametro, la stringa **idNotification**, corrisponde alla proprietà id del `<div>` della Notification `<div class="notification"  id="idNotification">...</div>`
+- Il primo parametro, la stringa **idNotification**, corrisponde alla proprietà id del `<div>` della Notification `<div class="notification" id="idNotification">...</div>`
 - il secondo parametro (opzionale) corrisponde alla durata di visualizzazione in millisecondi. Il valore di default, se non indicato, è di 7000ms ossia 7 secondi.
 
 {% capture callout %}
+
 ##### Accessibilità
 
 Per ragioni di accessibilità è necessario:
+
 - che il titolo `<h5>` contenuto nella Notification abbia un ID univoco
 - che questo ID venga usato come valore della proprietà `aria-labelledby` nel `<div>` della Notification
 - che il `<div>` della Notification abbia la proprietà `role="alert"`
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+  {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Esempio
 
 La Notification può essere composta da un solo titolo oppure da un titolo accompagnato da icona, contentuta nel tag `<h5>` del titolo. In questo caso l'elemento dovrà avere la classe `.with-icon`.
 
 {% capture example %}
+
 <div class="container test-docs">
 	<div class="row">
 		<div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -86,6 +89,7 @@ La Notification può essere composta da un solo titolo oppure da un titolo accom
 Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>`.
 
 {% capture example %}
+
 <div class="container test-docs">
 	<div class="row">
 		<div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -113,6 +117,7 @@ Le Notification Dismissable non vengono nascoste dopo un intervallo di tempo ma 
 Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportamento.
 
 {% capture example %}
+
 <div class="container test-docs">
 	<div class="row">
 		<div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -143,12 +148,14 @@ Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportament
 ## Stati
 
 Alle Notification possono essere applicate classi aggiuntive che ne determinano lo stato modificando il colore delle icone e del bordo:
+
 - `.success` - per messaggi di procedure andate a buon fine
 - `.error` - per messaggi di errore
 - `.info` - per info generiche
 - `.warning` - per messaggi di precauzione
 
 {% capture example %}
+
 <div class="container test-docs">
 	<div class="row mb-5">
 		<div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -190,6 +197,7 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la Notif
 **N.B. queste classi non influenzano il posizionamento su device mobile, in questo caso la Notification è sempre a piede della finestra e ne occupa tutta la larghezza**
 
 {% capture example %}
+
 <div class="container test-docs">
 	<div class="row mb-5">
 		<div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -225,6 +233,7 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la Notif
 Posizionamento predefinito della Notification.
 
 {% capture example %}
+
 <div class="container test-desktop">
 	<div class="notification with-icon success" role="alert" aria-labelledby="not1d-title" id="not1d">
 		<h5 id="not1d-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>Titolo notifica</h5>
@@ -238,6 +247,7 @@ Posizionamento predefinito della Notification.
 Esempi delle quattro posizioni fisse possibili.
 
 {% capture example %}
+
 <div class="container test-desktop">
 	<div class="notification top-fix with-icon success" role="alert" aria-labelledby="not1e-title" id="not1e">
 		<h5 id="not1e-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg>Top fix</h5>

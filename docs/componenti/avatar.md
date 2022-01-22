@@ -16,6 +16,7 @@ description: Rappresentazione grafica di un'immagine utente
 L'elemento Avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.
 
 Gli Avatar sono disponibili in sei diverse dimensioni:
+
 - **xs** con classe `size-xs`
 - **sm** con classe `size-sm`
 - **md** (dimensioni di default) `size-md`
@@ -27,6 +28,7 @@ Per ottenere un elemento grafico non interattivo, utilizzare il tag `<div>`.
 Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
+
 ##### Accessibilità delle immagini
 
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
@@ -43,6 +45,7 @@ Per gli Avatar con icona inserire un testo alternativo: `<span class="sr-only">T
 L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
@@ -70,6 +73,7 @@ L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolar
 
 La versione con testo contiene le iniziali dell'utente (una sola nel caso delle dimensioni xs ed sm).
 Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:
+
 - Primario: aggiungendo la classe `avatar-primary`
 - Secondario: aggiungendo la classe `avatar-secondary`
 - Verde: aggiungendo la classe `avatar-green`
@@ -79,6 +83,7 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:
 In questi casi il testo sarà di colore bianco.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
     <p aria-hidden="true">M</p>
@@ -112,6 +117,7 @@ In questi casi il testo sarà di colore bianco.
 Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle classi disponibili.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
@@ -145,6 +151,7 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata Javascript.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <a class="avatar size-xl" href="#">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
@@ -165,6 +172,7 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 E' possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="{{ site.baseurl }}/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="left" title="<strong>Anna Barbieri</strong><br/><em>Amministratore</em>">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
@@ -193,6 +201,7 @@ Utilizzando un componente <a href="{{ site.baseurl }}/docs/organizzare-i-contenu
 Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 
 {% capture example %}
+
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
@@ -235,6 +244,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 Lista verticale di Avatar di dimensione media con classe `.size-md`.
 
 {% capture example %}
+
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
@@ -281,6 +291,7 @@ Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar
 Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 {% capture example %}
+
 <ul class="avatar-group-stacked">
   <li>
     <a class="avatar size-sm" href="#">
@@ -382,6 +393,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 
 {% capture example %}
+
 <ul class="avatar-group-stacked">
   <li>
     <a class="avatar size-md" href="#">
@@ -467,6 +479,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 ### Presenza utente
 
 Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si otterrà un indicatore dello stato di presenza dell'utente:
+
 - lo stato **attivo** si ottiene aggiungendo la classe `.active`
 - lo stato **non disponibile** si ottiene aggiungendo la classe `.busy`
 - lo stato **invisibile** si ottiene aggiungendo la classe `.hidden`
@@ -474,6 +487,7 @@ Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si ot
 Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="sr-only">Presenza: (stato presenza)</span>`.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
   <div class="avatar-wrapper">
     <div class="avatar size-xl">
@@ -545,17 +559,20 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
 ### Status utente
 
 Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otterrà un indicatore dello stato dell'account utente:
+
 - lo stato **approvato** si ottiene aggiungendo la classe `.approved`
 - lo stato **respinto** si ottiene aggiungendo la classe `.declined`
 - lo stato **notifica** si ottiene aggiungendo la classe `.notify`
 
 {% capture callout %}
+
 ##### Accessibilità dello stato
 
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="sr-only">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
   <div class="avatar-wrapper">
     <div class="avatar size-xl">
@@ -631,6 +648,7 @@ Per ottenere una versione più completa dell'Avatar con nome esteso ed eventuale
 Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può essere contenuto in un `<p>` o in un tag `<time>` nel caso di date/orari.
 
 {% capture example %}
+
 <div class="d-flex align-items-center justify-content-start justify-content-md-around flex-wrap flex-sm-nowrap">
   <div class="avatar-wrapper avatar-extra-text">
     <div class="avatar size-xl">

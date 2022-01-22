@@ -10,15 +10,18 @@ description: Il transfer è un componente che consente la creazione di liste di 
 Il componente _Transfer_ consente di trasferire gli elementi di una lista di checkbox ad un altro elenco di checkbox.
 
 **Il componente _Transfer_ contiene**
+
 - Lista checkbox di destra
 - Pulsanti per il trasferimento dei contenuti da lista a lista
 - Lista checkbox di sinistra
 
 **Le liste di checkbox, sono composte da:**
+
 - Header: contiene un checkbox per la selezione / deselezione di tutti i campi sottostanti e la label che contiene il numero di elementi della lista
 - Lista checkbox
 
 **Pulsanti per il trasferimento dei contenuti:**
+
 - `a.transfer`: Traferisce i campi selezionati a sinistra nella colonna destra
 - `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
 - `a.reset`: Ripristina lo stato iniziale delle liste
@@ -29,6 +32,7 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 {% capture example %}
+
 <div class="it-transfer-block">
   <div class="row">
     <div class="col-xs-12 col-md-5">
@@ -197,6 +201,3 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-
-

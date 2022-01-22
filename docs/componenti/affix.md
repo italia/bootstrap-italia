@@ -40,14 +40,14 @@ Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spes
 
 ## Affix su browser Edge/IE
 
-Gli Affix fanno uso della proprietà CSS `position:sticky`. 
+Gli Affix fanno uso della proprietà CSS `position:sticky`.
 
 Se si volesse ottenere un comportamento identico sui browser che non supportano questa prorietà come Edge ed IE, si può attivare il polyfill iSticky con il seguente codice javascript:
 
 {% highlight js %}
-  $('.affix-top, .affix-bottom').iSticky({
-    holderAutoHeight: true
-  });
+$('.affix-top, .affix-bottom').iSticky({
+holderAutoHeight: true
+});
 {% endhighlight %}
 
 ## Vertical Affix
@@ -59,6 +59,7 @@ Un elemento Affix posizionato al lato del contenuto di pagina può essere ancora
 Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
 
 {% capture example %}
+
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
@@ -83,13 +84,12 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
-
 ### Vertical Affix bottom
 
 Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
 
 {% capture example %}
+
 <div class="affix-example container">
   <div class="row">
     <div class="col-6 col-md-3 p-2 affix-parent">
@@ -129,6 +129,7 @@ Un elemento Affix a sviluppo orizzontale può essere ancorato alla parte alta o 
 Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
 
 {% capture example %}
+
 <div class="affix-example container affix-parent">
   <div class="primary-bg p-3 mb-1 text-center affix-top">
     <p class="mb-0 white-color">Horizontal Affix top</p>
@@ -145,6 +146,7 @@ Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è 
 
 Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
 {% capture example %}
+
 <div class="affix-example container affix-parent">
   <div class="row p-5">
     <p class="h3">Orci varius natoque penatibus et magnis</p>

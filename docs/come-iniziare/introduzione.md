@@ -12,7 +12,7 @@ description: Come usare Bootstrap Italia nel tuo progetto
 
 ## Caricare la libreria
 
-Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui: 
+Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui:
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
@@ -40,12 +40,13 @@ Una volta scaricato e decompresso il file, all'interno della cartella `css` sar�
 Per includere questo file all'interno del tuo progetto sarà quindi sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
 {% highlight html %}
+
 <link rel="stylesheet" href="./bootstrap-italia.min.css">
 {% endhighlight %}
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie *jQuery*, *popper.js* e *Owl Carousel* (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie _jQuery_, _popper.js_ e _Owl Carousel_ (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
 
 <table class="table table-bordered">
   <thead>
@@ -78,12 +79,14 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
 
 In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
 
-
 ### Fonts
+
 È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
 
 {% highlight html %}
+
 <script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
+
 {% endhighlight %}
 
 Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
@@ -99,7 +102,9 @@ Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo de
 Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
 {% highlight html %}
+
 <script src="./bootstrap-italia.bundle.min.js"></script>
+
 {% endhighlight %}
 
 #### Versione semplice
@@ -110,15 +115,17 @@ Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel s
 {{ site.cdn.jquery }}
 {{ site.cdn.popper }}
 {{ site.cdn.owlcarousel }}
-<script src="./bootstrap-italia.min.js"></script>
-{% endhighlight %}
 
+<script src="./bootstrap-italia.min.js"></script>
+
+{% endhighlight %}
 
 ## Pagina HTML di esempio
 
 In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
 
 {% highlight html %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -157,13 +164,14 @@ npm i bootstrap-italia --save
 
 ## Impostazioni globali
 
-Il framework Bootstrap, e di conseguenza il tema Bootstrap Italia, utilizza e richiede alcune impostazioni globali di cui è bene essere al corrente durante lo sviluppo, che tendono *normalizzare* gli stili tra i vari browser. Di seguito alcune di esse.
+Il framework Bootstrap, e di conseguenza il tema Bootstrap Italia, utilizza e richiede alcune impostazioni globali di cui è bene essere al corrente durante lo sviluppo, che tendono _normalizzare_ gli stili tra i vari browser. Di seguito alcune di esse.
 
 ### Doctype HTML5
 
 Bootstrap richiede l'uso del doctype HTML5.
 
 {% highlight html %}
+
 <!doctype html>
 <html lang="it">
   ...
@@ -172,9 +180,10 @@ Bootstrap richiede l'uso del doctype HTML5.
 
 ### Meta tag responsive
 
-Bootstrap è sviluppato in modalità *mobile first*: per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario **aggiungere il meta tag responsive che segue** all'interno del tag `<head>`.
+Bootstrap è sviluppato in modalità _mobile first_: per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario **aggiungere il meta tag responsive che segue** all'interno del tag `<head>`.
 
 {% highlight html %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {% endhighlight %}
 
@@ -188,7 +197,7 @@ Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da 
 
 {% highlight css %}
 .selettore-per-creare-eccezione {
-  box-sizing: content-box;
+box-sizing: content-box;
 }
 {% endhighlight %}
 

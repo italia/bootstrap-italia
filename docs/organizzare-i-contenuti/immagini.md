@@ -30,7 +30,7 @@ Oltre alle [utilità sull'arrotondamento dei bordi]({{ site.baseurl }}/docs/orga
 
 ### Allineamento
 
-Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl }}/docs/organizzare-gli-spazi/float) o con le [classi sull'allineamento dei testi]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/). Le immagini a livello `block` possono essere centrate usando [la classe di utilità  margin `.mx-auto`]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
+Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl }}/docs/organizzare-gli-spazi/float) o con le [classi sull'allineamento dei testi]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/). Le immagini a livello `block` possono essere centrate usando [la classe di utilità margin `.mx-auto`]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
 
 <div class="bd-example bd-example-images">
   <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-left" alt="Un'immagine generica segnaposto con angoli arrotondati">
@@ -57,11 +57,11 @@ Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl
 </div>
 
 {% highlight html %}
+
 <div class="text-center">
   <img src="..." class="rounded" alt="...">
 </div>
 {% endhighlight %}
-
 
 ## Picture
 
@@ -69,6 +69,7 @@ Se stai usando l'elemento `<picture>` per specificare multipli elementi `<source
 
 {% highlight html %}
 ​<picture>
+
   <source srcset="..." type="image/svg+xml">
   <img src="..." alt="..." class="img-fluid img-thumbnail">
 </picture>
@@ -81,6 +82,7 @@ Ogni qual volta sia necessario visualizzare un contenuto, ad esempio un'immagine
 Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire alcuni stili di base per gli elementi HTML5 `<figure>` e `<figcaption>`. Le immagini in figure non hanno determinate dimensioni, assicurati quindi di aggiungere la classe `.img-fluid` al tuo elemento `<img>` per renderlo responsive.
 
 {% capture example %}
+
 <figure class="figure">
   <img src="https://via.placeholder.com/240x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
@@ -90,6 +92,7 @@ Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire al
 Puoi allineare la didascalia di una figura è semplice con le nostre [utilità di testo]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
 
 {% capture example %}
+
 <figure class="figure">
   <img src="https://via.placeholder.com/240x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption text-right">Una didascalia per l'immagine sopra.</figcaption>

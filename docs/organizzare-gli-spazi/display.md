@@ -17,27 +17,28 @@ Le classi _display_ che si applicano a tutte le dimensioni dello schermo, da `xs
 indicazione di breakpoints, per cui ad esempio sarà sufficiente usare `.d-none` per nascondere un elemento ad ogni risoluzione.
 In caso contrario, è sufficiente utilizzare i classici breakpoints utilizzando il formato:
 
-* `.d-{value}` per `xs`
-* `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, e `xl`.
+- `.d-{value}` per `xs`
+- `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, e `xl`.
 
-Dove il *valore* è uno tra:
+Dove il _valore_ è uno tra:
 
-* `none`
-* `inline`
-* `inline-block`
-* `block`
-* `table`
-* `table-cell`
-* `table-row`
-* `flex`
-* `inline-flex`
+- `none`
+- `inline`
+- `inline-block`
+- `block`
+- `table`
+- `table-cell`
+- `table-row`
+- `flex`
+- `inline-flex`
 
-L'utilizzo delle classi `d-` con breakpoint ha effetto su dispositivi dal breakpoint indicato *fino a xl*.
+L'utilizzo delle classi `d-` con breakpoint ha effetto su dispositivi dal breakpoint indicato _fino a xl_.
 Per esempio, `.d-lg-none` imposta `display: none;` sia nella visualizzazione in `lg` che in `xl`.
 
 ## Esempi
 
 {% capture example %}
+
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
 <div class="d-inline p-2 bg-dark text-white">d-inline</div>
 {% endcapture %}{% include example.html content=example %}
@@ -61,22 +62,23 @@ con una classe `.d-*-*`. Ad esempio `.d-none .d-md-block .d-xl-none` nasconderà
 che per i dispositivi di medie e grandi dimensioni (fino alla dimensione `xl`, oltre la quale tornerà ad essere
 nascosto).
 
-| Dimensione dello schermo        | Classe |
-| ---                | --- |
-| Nascosto a tutti      | `.d-none` |
-| Nascosto solo su xs  | `.d-none .d-sm-block` |
-| Nascosto solo su sm  | `.d-sm-none .d-md-block` |
-| Nascosto solo su md  | `.d-md-none .d-lg-block` |
-| Nascosto solo su lg  | `.d-lg-none .d-xl-block` |
-| Nascosto solo su xl  | `.d-xl-none` |
-| Visibile a tutti     | `.d-block` |
-| Visibile solo su xs | `.d-block .d-sm-none` |
-| Visibile solo su sm | `.d-none .d-sm-block .d-md-none` |
-| Visibile solo su md | `.d-none .d-md-block .d-lg-none` |
-| Visibile solo su lg | `.d-none .d-lg-block .d-xl-none` |
-| Visibile solo su xl | `.d-none .d-xl-block` |
+| Dimensione dello schermo | Classe                           |
+| ------------------------ | -------------------------------- |
+| Nascosto a tutti         | `.d-none`                        |
+| Nascosto solo su xs      | `.d-none .d-sm-block`            |
+| Nascosto solo su sm      | `.d-sm-none .d-md-block`         |
+| Nascosto solo su md      | `.d-md-none .d-lg-block`         |
+| Nascosto solo su lg      | `.d-lg-none .d-xl-block`         |
+| Nascosto solo su xl      | `.d-xl-none`                     |
+| Visibile a tutti         | `.d-block`                       |
+| Visibile solo su xs      | `.d-block .d-sm-none`            |
+| Visibile solo su sm      | `.d-none .d-sm-block .d-md-none` |
+| Visibile solo su md      | `.d-none .d-md-block .d-lg-none` |
+| Visibile solo su lg      | `.d-none .d-lg-block .d-xl-none` |
+| Visibile solo su xl      | `.d-none .d-xl-block`            |
 
 {% capture example %}
+
 <div class="d-lg-none">Nascosto su schermi più larghi di lg</div>
 <div class="d-none d-lg-block">Nascosto su schermi più piccoli di lg</div>
 {% endcapture %}{% include example.html content=example %}
@@ -98,6 +100,7 @@ Modifica il valore `display` degli elementi per la stampa con le classi apposite
 Le classi di stampa e di visualizzazione possono essere combinate insieme:
 
 {% capture example %}
+
 <div class="d-print-none">Solo schermo (Nascondi solo su stampa)</div>
 <div class="d-none d-print-block">Solo stampa (Nascondi solo sullo schermo)</div>
 <div class="d-none d-lg-block d-print-block">Nascondi fino al grande schermo, ma mostra sempre sulla stampa</div>
@@ -111,6 +114,7 @@ e sono utili per nascondere i contenuti alla maggior parte degli utenti, ma cons
 Applica `.visible` oppure `.invisible` al bisogno.
 
 {% highlight html %}
+
 <div class="visible">...</div>
 <div class="invisible">...</div>
 {% endhighlight %}
@@ -118,10 +122,10 @@ Applica `.visible` oppure `.invisible` al bisogno.
 {% highlight scss %}
 // Class
 .visible {
-  visibility: visible;
+visibility: visible;
 }
 .invisible {
-  visibility: hidden;
+visibility: hidden;
 }
 {% endhighlight %}
 
@@ -136,7 +140,7 @@ Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la cl
 {% highlight scss %}
 // Usato come mixin
 .skip-navigation {
-  @include sr-only;
-  @include sr-only-focusable;
+@include sr-only;
+@include sr-only-focusable;
 }
 {% endhighlight %}

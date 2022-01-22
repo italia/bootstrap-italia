@@ -51,7 +51,7 @@ $primary-b: 100;
 // Per l'override della famiglia di caratteri
 $font-family-serif:      "Custom Font", Georgia, serif;
 $font-family-sans-serif: "Custom Font", Arial, Helvetica, sans-serif;
-$font-family-monospace:  "Custom Font", "Courier New", Courier, monospace;
+$font-family-monospace: "Custom Font", "Courier New", Courier, monospace;
 
 // import libreria
 @import "../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss";
@@ -65,11 +65,12 @@ import "./scss/bootstrap-italia-custom.scss";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <button className="btn btn-primary">Bottone di esempio</button>
-    </div>
-  );
+return (
+
+<div className="App">
+<button className="btn btn-primary">Bottone di esempio</button>
+</div>
+);
 }
 
 export default App;

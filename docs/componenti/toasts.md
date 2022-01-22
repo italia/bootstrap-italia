@@ -26,6 +26,7 @@ To encourage extensible and predictable toasts, we recommend a header and body. 
 Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
 
 {% capture example %}
+
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use></svg>
@@ -47,6 +48,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the `backdrop-filter` CSS property, we'll also attempt to blur the elements under a toast.
 
 {% capture example %}
+
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use></svg>
@@ -68,6 +70,7 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
 When you have multiple toasts, we default to vertically stacking them in a readable manner.
 
 {% capture example %}
+
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use></svg>
@@ -103,6 +106,7 @@ When you have multiple toasts, we default to vertically stacking them in a reada
 Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
 
 {% capture example %}
+
 <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
   <div class="toast" style="position: absolute; top: 0; right: 0;">
     <div class="toast-header">
@@ -124,6 +128,7 @@ Place toasts with custom CSS as you need them. The top right is often used for n
 For systems that generate more notifications, consider using a wrapping element so they can easily stack.
 
 {% capture example %}
+
 <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
   <!-- Position it -->
   <div style="position: absolute; top: 0; right: 0;">
@@ -156,6 +161,7 @@ For systems that generate more notifications, consider using a wrapping element 
         Heads up, toasts will stack automatically
       </div>
     </div>
+
   </div>
 </div>
 {% endcapture %}
@@ -164,6 +170,7 @@ For systems that generate more notifications, consider using a wrapping element 
 You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
 
 {% capture example %}
+
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
 
@@ -189,13 +196,14 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
 
 Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{ site.baseurl }}/docs/) instead of toast.
 
-Note that the live region needs to be present in the markup *before* the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.
+Note that the live region needs to be present in the markup _before_ the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.
 
 You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
 
 As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
 
 {% highlight html %}
+
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
@@ -204,6 +212,7 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
 
 {% capture example %}
+
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
   <div class="toast-header">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use></svg>
@@ -325,6 +334,6 @@ Hides an element's toast. Your toast will remain on the DOM but won't show anymo
 
 {% highlight js %}
 $('#myToast').on('hidden.bs.toast', function () {
-  // do something...
+// do something...
 })
 {% endhighlight %}

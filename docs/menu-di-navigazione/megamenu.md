@@ -21,6 +21,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** per comporre l'elenco di link desiderato
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -85,15 +86,16 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
 
 ### Classico con link "more"
 
-Il megamenu può contenere un link relativo agli elenchi in esso contenuti.  
+Il megamenu può contenere un link relativo agli elenchi in esso contenuti.
 
-Qualora i link mostrati nel megamenu non siano tutti quelli relativi alla voce primaria (perché troppo numerosi), si può includere l'elemento  `<div class="it-external">` subito dopo il `<div class="row">` che contiene le liste di link.  
-La struttura colonnare dell'elemento `<div class="it-external">` dev'essere la stessa di quella contenente le liste di link.  
+Qualora i link mostrati nel megamenu non siano tutti quelli relativi alla voce primaria (perché troppo numerosi), si può includere l'elemento `<div class="it-external">` subito dopo il `<div class="row">` che contiene le liste di link.  
+La struttura colonnare dell'elemento `<div class="it-external">` dev'essere la stessa di quella contenente le liste di link.
 
 All'interno dell'ultima colonna andremo ad inserire la lista di link contenente il link che porterà ad una eventuale pagina in cui sarà mostrato tutto il contenuto di sezione.  
 Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more` al tag `<li>` che lo contiene.
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -190,6 +192,7 @@ Se ci fosse necessità di categorizzare i contenuti del megamenu, possiamo inser
 Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag `<li>` all'inizio della lista relativa.
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavEi" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavEi">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -269,6 +272,7 @@ Nell'esempio di seguito, il link "more" è relativo alla sola colonna in cui è 
 Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al tag `<li>` al fondo della lista relativa.
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavF" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavF">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -357,6 +361,7 @@ Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag c
 Di seguito un esempio:
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavG" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavG">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -456,6 +461,7 @@ All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag
 Di seguito un esempio:
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavM" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavM">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -551,11 +557,12 @@ Di seguito un esempio:
 Possiamo inserire a destra del megamenu un immagine ed una descrizione riguardante la sezione.
 
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical it-description">` all'interno della quale andremo ad inserire il blocco contenente immagine e testo.  
-Il tag  contenente immagine e descrizione sarà : `<div class="description-content">`
+Il tag contenente immagine e descrizione sarà : `<div class="description-content">`
 
 Di seguito un esempio:
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavQ" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavQ">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -659,6 +666,7 @@ Possiamo creare strutture colonnari asimmetriche per dar spazio a sottosezioni p
 Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra ed una a destra.
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavCa" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavCa">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
@@ -744,6 +752,7 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
 Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destra contenete una lista di call to action.
 
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavE" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavE">
     <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>

@@ -7,17 +7,19 @@ toc: true
 ---
 
 ## Basic sidebar
+
 ### Default
 
 La sidebar semplice può contenere:
 
-* Header
-* Lista di link primaria
-* Lista di link secondaria
+- Header
+- Lista di link primaria
+- Lista di link secondaria
 
 Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)**.
 
 {% capture example %}
+
 <div class="sidebar-wrapper">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -56,6 +58,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
 La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** primaria.
 
 {% capture example %}
+
 <div class="sidebar-wrapper">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -94,6 +97,7 @@ La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/d
 Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere la classe `.it-line-right-side` al wrapper più esterno: `<div class="sidebar-wrapper it-line-right-side">`
 
 {% capture example %}
+
 <div class="sidebar-wrapper it-line-right-side">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -132,6 +136,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
 Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiungere la classe `.it-line-left-side` al wrapper più esterno: `<div class="sidebar-wrapper it-line-left-side">`
 
 {% capture example %}
+
 <div class="sidebar-wrapper it-line-left-side">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -172,6 +177,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** primaria annidata.
 
 {% capture example %}
+
 <div class="sidebar-wrapper">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
@@ -233,6 +239,7 @@ La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizz
 Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al div `<div class="sidebar-wrapper">` la classe `.theme-dark`.
 
 {% capture example %}
+
 <div class="sidebar-wrapper theme-dark">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
@@ -288,4 +295,3 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-

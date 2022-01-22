@@ -1,18 +1,16 @@
-const conventionalChangelog = require("conventional-changelog");
+const conventionalChangelog = require('conventional-changelog')
 
 module.exports.getChangelog = async () => {
-  let content = "";
+  let content = ''
 
-  const changelogStream = conventionalChangelog(
-    {
-      // `conventional-changelog` options
-      releaseCount: 2
-    }
-  );
+  const changelogStream = conventionalChangelog({
+    // `conventional-changelog` options
+    releaseCount: 2,
+  })
 
-  return new Promise(function(resolve, reject) {
-    changelogStream.on("data", buffer => (content += buffer.toString()));
-    changelogStream.on("end", () => resolve(content));
-    changelogStream.on("error", err => reject(err));
-  });
-};
+  return new Promise(function (resolve, reject) {
+    changelogStream.on('data', (buffer) => (content += buffer.toString()))
+    changelogStream.on('end', () => resolve(content))
+    changelogStream.on('error', (err) => reject(err))
+  })
+}

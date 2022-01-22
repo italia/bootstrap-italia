@@ -28,7 +28,7 @@ Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stes
 
 ### Script di compilazione
 
-Il file [package.json]({{ site.repo }}/blob/master/package.json) include il seguente comando, che fa uso di  **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]** per la compilazione dei file sorgente di Bootstrap Italia:
+Il file [package.json]({{ site.repo }}/blob/master/package.json) include il seguente comando, che fa uso di **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]** per la compilazione dei file sorgente di Bootstrap Italia:
 
 `npm run build`
 
@@ -72,19 +72,20 @@ In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché
 
 La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`.
 
-Per poter generare e testare la documentazione in ambiente locale, è necessario: 
+Per poter generare e testare la documentazione in ambiente locale, è necessario:
 
-1. Installare [Ruby][install-ruby]*, che renderà disponibile il comando `gem install *`.
+1. Installare [Ruby][install-ruby]_, che renderà disponibile il comando `gem install _`.
 2. Lanciare il comando `gem install bundler` per installare [Bundler][gembundler].
 3. Lanciare il comando `bundle install`. Questo comando, in modo simile a quanto avviene per `npm install` si occuperà di installare tutte le dipendenze Ruby come descritto nel file [Gemfile]({{ site.repo }}blob/master/Gemfile); in questo caso Jekyll e i suoi plugin.
 
 \* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Ruby e Jekyll senza problemi.
-  
+
 Sono inoltre disponibili maggiori informazioni su Jekyll a [questa pagina][jekyll].
 
 ### Script di compilazione
 
 Il comando `npm start` avvia due azioni: la compilazione dei file sorgente (come visto al paragrafo precedente), e l'esecuzione del comando `jekyll build --watch`. Oltre a questo, lancia un server locale e si mette in ascolto di ogni modifica ai file per:
+
 - ricompilare i file sorgente Javascript/SASS
 - ricompilare i file markdown della documentazione
 - rendere disponibile all'indirizzo `http://127.0.0.1:4000/` e ricaricare automaticamente la documentazione
@@ -108,9 +109,9 @@ $ npm run bump-patch
 
 o `bump-minor` oppure `bump-major`, che produrrà:
 
-* Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
-* Commit delle modifiche
-* Tag del commit con numero di versione in formato `vx.x.x`
+- Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
+- Commit delle modifiche
+- Tag del commit con numero di versione in formato `vx.x.x`
 
 {% highlight sh %}
 $ git push --follow-tags
@@ -125,14 +126,17 @@ Sul branch `master` è eseguita la CI con CircleCI, configurata per eseguire il 
 Il push delle tag sul repository eseguirà il CD composto da:
 
 #### Job build
-Build del progetto con `npm run build` 
+
+Build del progetto con `npm run build`
 
 #### Job github-update-pages
+
 Build della documentazione e deploy sul branch `gh-pages` con `npm run documentation-deploy-to-gh-pages`.
 
 Il comando produrrà l'aggiornamento su GitHub Pages, rendendo la documentazione visibile all'indirizzo [https://italia.github.io/bootstrap-italia/](https://italia.github.io/bootstrap-italia/)
 
 #### Job github-create-release
+
 Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases/) ed upload degli asset `bootstrap-italia.zip`, prodotti nella cartella `/dist` dai precedenti step, e creazione di una release note (che potrà poi essere successivamente modificata) contenente il changelog con `npm run release`.
 
 #### Job npm-publish
@@ -158,4 +162,3 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
 continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).
-

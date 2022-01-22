@@ -20,16 +20,18 @@ toc: true
 </style>
 
 {% capture callout %}
+
 #### Accessibilità
 
 Assicurati di aggiungere sempre:
+
 - l'attributo `role="dialog"` all'elemento con classe `.modal` ([maggiori info su MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role))
 - l'attributo `aria-labelledby="..."` all'elemento con classe `.modal`, con riferimento al titolo della modale stesso ([maggiori info su MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute))
 - l'attributo `role="document"` applicato al `.modal-dialog` stesso
 
 Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale con `aria-describedby` su `.modal`.
 
-Nel caso non fosse presente un titolo al quale legare l'attributo `aria-labelledby="..."` puoi etichettare la modale direttamente utilizzando l'attributo   `aria-label="Titolo modale"`. Vedi esempio [Modale semplice - Basico](#modale-popconfirm)
+Nel caso non fosse presente un titolo al quale legare l'attributo `aria-labelledby="..."` puoi etichettare la modale direttamente utilizzando l'attributo `aria-label="Titolo modale"`. Vedi esempio [Modale semplice - Basico](#modale-popconfirm)
 
 Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
@@ -37,14 +39,14 @@ Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://
 Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
 - Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
-e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
+  e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
 - Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automativamente.
 - A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)
-non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
+  non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
 
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
+$('#myInput').trigger('focus')
 })
 {% endhighlight %}
 
@@ -78,6 +80,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 </div>
 
 {% highlight html %}
+
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
@@ -107,15 +110,16 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 
 {% capture example %}
 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-   <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
-   </svg>
+<svg class="icon">
+<use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
+</svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
 Esempio completo:
 
 {% capture example %}
+
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal2" aria-labelledby="modal2Title">
       <div class="modal-dialog" role="document">
@@ -146,6 +150,7 @@ Esempio completo:
 Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe `alert-modal` all'elemento `<div class="modal">`
 
 {% capture example %}
+
 <div class="it-example-modal">
   <div class="modal alert-modal" tabindex="-1" role="dialog" id="modal3" aria-labelledby="modal3Title">
     <div class="modal-dialog" role="document">
@@ -174,6 +179,7 @@ All'interno della modale è possibile inserire elementi form.
 Di seguito una modale con un elenco di radio button.
 
 {% capture example %}
+
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal4" aria-labelledby="modal4Title">
       <div class="modal-dialog" role="document">
@@ -211,6 +217,7 @@ All'interno della modale è possibile inserire delle [Liste di link]({{ site.bas
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
 {% capture example %}
+
 <div class="it-example-modal">
    <div class="modal it-dialog-link-list" tabindex="-1" role="dialog" id="modal5" aria-labelledby="modal5Title">
       <div class="modal-dialog" role="document">
@@ -261,6 +268,7 @@ La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di confer
 Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l'intero elemento `<div class="modal-header">`.
 
 {% capture example %}
+
 <div class="it-example-modal">
   <div class="container">
     <div class="row">
@@ -333,6 +341,7 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
 </div>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Lancia la demo della modale
@@ -390,6 +399,7 @@ pagina stessa.
 </div>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
   Lancia la demo della modale
@@ -448,6 +458,7 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
 </div>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongFixed">
   Lancia la demo della modale
@@ -504,6 +515,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
 </button>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalCenter">
   Lancia la demo della modale
@@ -564,6 +576,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
 </button>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalLeft">
   Lancia la demo della modale
@@ -624,6 +637,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
 </button>
 
 {% highlight html %}
+
 <!-- Button trigger modal -->
 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalright">
   Lancia la demo della modale
@@ -657,6 +671,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
 Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe `.fade` dal codice della tua modale.
 
 {% highlight html %}
+
 <div class="modal" tabindex="-1" role="dialog" id="..." aria-labelledby="..." aria-hidden="true">
   ...
 </div>
@@ -672,7 +687,9 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 </div>
 
 {% highlight html %}
+
 <!-- Large modal -->
+
 <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -688,6 +705,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 </div>
 
 <!-- Small modal -->
+
 <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -762,8 +780,6 @@ Richiama una modale con id `myModal` con una singola riga di JavaScript:
 
 {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-
-
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
@@ -774,7 +790,7 @@ Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 {% highlight js %}
 $('#myModal').modal({
-  keyboard: false
+keyboard: false
 })
 {% endhighlight %}
 
@@ -844,6 +860,6 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal"
 
 {% highlight js %}
 $('#myModal').on('hidden.bs.modal', function (e) {
-  // fai qualcosa...
+// fai qualcosa...
 })
 {% endhighlight %}

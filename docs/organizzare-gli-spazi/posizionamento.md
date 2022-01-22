@@ -11,6 +11,7 @@ toc: true
 Classi per il posizionamento, tra loro non sono presenti le varianti per gestire il responsive.
 
 {% highlight html %}
+
 <div class="position-static">...</div>
 <div class="position-relative">...</div>
 <div class="position-absolute">...</div>
@@ -24,9 +25,10 @@ Posiziona un elemento in alto al viewport. Attraverso l'utilizzo di ogni classe 
 _fixed_, ancorandosi al viewport (cioè la finestra del browser) ed uscendo quindi dal normale flusso di posizionamento
 del documento.
 Assicurati quindi di comprendere appieno le implicazioni della [posizione `fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed)
-nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi. 
+nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi.
 
 {% highlight html %}
+
 <div class="fixed-top">...</div>
 {% endhighlight %}
 
@@ -35,6 +37,7 @@ nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi.
 Specularmente al paragrafo precedente, posiziona un elemento in basso al viewport.
 
 {% highlight html %}
+
 <div class="fixed-bottom">...</div>
 {% endhighlight %}
 
@@ -48,5 +51,6 @@ racchiuso all'interno di una query `@supports` limitandone così l'uso ai soli b
 correttamente.
 
 {% highlight html %}
+
 <div class="sticky-top">...</div>
 {% endhighlight %}

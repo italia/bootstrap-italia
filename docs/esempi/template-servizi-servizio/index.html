@@ -3,9 +3,7 @@ layout: base
 title: Template Servizio Comunale
 ---
 
-{% assign section = "servizi" %}
-
-{% include esempi/comuni/header.html %}
+{% assign section = "servizi" %} {% include esempi/comuni/header.html %}
 
 <main>
   <div class="container px-4 my-4">
@@ -13,19 +11,10 @@ title: Template Servizio Comunale
       <div class="col px-lg-4">
         <nav class="breadcrumb-container" aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a><span class="separator">/</span>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#">Servizi</a><span class="separator">/</span>
-            </li>
-            <li class="breadcrumb-item" aria-current="page">
-              <a href="#">Categoria Servizio</a
-              ><span class="separator">/</span>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Titolo del Servizio
-            </li>
+            <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
+            <li class="breadcrumb-item"><a href="#">Servizi</a><span class="separator">/</span></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="#">Categoria Servizio</a><span class="separator">/</span></li>
+            <li class="breadcrumb-item active" aria-current="page">Titolo del Servizio</li>
           </ol>
         </nav>
       </div>
@@ -34,9 +23,7 @@ title: Template Servizio Comunale
       <div class="col-lg-8 px-lg-4 py-lg-2">
         <h1>Titolo del Servizio</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-        <div class="alert alert-warning my-md-4 my-lg-4">
-          Avviso riguardante il servizio
-        </div>
+        <div class="alert alert-warning my-md-4 my-lg-4">Avviso riguardante il servizio</div>
       </div>
       <div class="col-lg-3 offset-lg-1">
         {% include esempi/azioni_condividi.html %}
@@ -63,9 +50,7 @@ title: Template Servizio Comunale
     <div class="row border-top row-column-border row-column-menu-left">
       <aside class="col-lg-4">
         <div class="sticky-wrapper navbar-wrapper">
-          <nav
-            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
-          >
+          <nav class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg">
             <button
               class="custom-navbar-toggler"
               type="button"
@@ -79,9 +64,7 @@ title: Template Servizio Comunale
             <div class="navbar-collapsable" id="navbarNav">
               <div class="overlay"></div>
               <div class="close-div sr-only">
-                <button class="btn close-menu" type="button">
-                  <span class="it-close"></span>Chiudi
-                </button>
+                <button class="btn close-menu" type="button"><span class="it-close"></span>Chiudi</button>
               </div>
               <a class="it-back-button" href="#">
                 <svg class="icon icon-sm icon-primary align-top">
@@ -98,54 +81,34 @@ title: Template Servizio Comunale
                   <h3 class="no_toc">Indice della pagina</h3>
                   <ul class="link-list">
                     <li class="nav-item active">
-                      <a class="nav-link active" href="#cos-e"
-                        ><span>Cos'è</span></a
-                      >
+                      <a class="nav-link active" href="#cos-e"><span>Cos'è</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#a-chi-si-rivolge"
-                        ><span>A chi si rivolge</span></a
-                      >
+                      <a class="nav-link" href="#a-chi-si-rivolge"><span>A chi si rivolge</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#accedi-al-servizio"
-                        ><span>Accedi al servizio</span></a
-                      >
+                      <a class="nav-link" href="#accedi-al-servizio"><span>Accedi al servizio</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#cosa-serve"
-                        ><span>Cosa serve</span></a
-                      >
+                      <a class="nav-link" href="#cosa-serve"><span>Cosa serve</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#costi-e-vincoli"
-                        ><span>Costi e vincoli</span></a
-                      >
+                      <a class="nav-link" href="#costi-e-vincoli"><span>Costi e vincoli</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#tempi-e-scadenze"
-                        ><span>Tempi e scadenze</span></a
-                      >
+                      <a class="nav-link" href="#tempi-e-scadenze"><span>Tempi e scadenze</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#casi-particolari"
-                        ><span>Casi particolari</span></a
-                      >
+                      <a class="nav-link" href="#casi-particolari"><span>Casi particolari</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#contatti"
-                        ><span>Contatti</span></a
-                      >
+                      <a class="nav-link" href="#contatti"><span>Contatti</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#documenti"
-                        ><span>Documenti</span></a
-                      >
+                      <a class="nav-link" href="#documenti"><span>Documenti</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#ulteriori-informazioni"
-                        ><span>Ulteriori informazioni</span></a
-                      >
+                      <a class="nav-link" href="#ulteriori-informazioni"><span>Ulteriori informazioni</span></a>
                     </li>
                   </ul>
                 </div>
@@ -176,21 +139,15 @@ title: Template Servizio Comunale
           <p class="text-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="card card-teaser shadow p-4 my-5 rounded">
             <svg class="icon">
-              <use
-                xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"
-              ></use>
+              <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
             </svg>
             <div class="card-body">
-              <h5 class="card-title">
-                Ufficio di riferimento
-              </h5>
+              <h5 class="card-title">Ufficio di riferimento</h5>
               <div class="card-text">
                 <p>Via Roma, 0 - 00100 Roma</p>
                 <p class="mt-3">Mattina: 9.00 - 12.00 dal lunedì al venerdì</p>
                 <p>Pomeriggio: 15.30 - 17.30 martedì e mercoledì</p>
-                <p class="mt-3">
-                  T +39 06 000000 - 111111 - 222222 - 333333
-                </p>
+                <p class="mt-3">T +39 06 000000 - 111111 - 222222 - 333333</p>
                 <p>F +39 06 000111</p>
                 <p><a href="mailto:asili@comune.it">email@esempio.it</a></p>
               </div>
@@ -261,38 +218,27 @@ title: Template Servizio Comunale
             </div>
             <div class="card card-teaser shadow p-4">
               <div class="card-body">
-                <h5 class="card-title">
-                  Area di riferimento
-                </h5>
+                <h5 class="card-title">Area di riferimento</h5>
                 <div class="card-text">
                   <p>Via Roma, 0</p>
                 </div>
               </div>
               <div class="avatar size-xl">
-                <img
-                  src="https://randomuser.me/api/portraits/men/33.jpg"
-                  alt="Carlo Poli"
-                />
+                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlo Poli" />
               </div>
             </div>
           </div>
         </article>
         <article id="documenti" class="it-page-section anchor-offset mt-5">
           <h4>Documenti</h4>
-          <div
-            class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-2"
-          >
+          <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-2">
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use
-                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
-                ></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="#"
-                    >Avviso pubblico di iscrizione</a
-                  >
+                  <a href="#">Avviso pubblico di iscrizione</a>
                 </h5>
                 <div class="card-text">
                   <p>Avviso e documenti allegati</p>
@@ -301,26 +247,20 @@ title: Template Servizio Comunale
             </div>
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use
-                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
-                ></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="#">Guida informativa</a>
                 </h5>
                 <div class="card-text">
-                  <p>
-                    Modalità di iscrizione, esempi, ecc.
-                  </p>
+                  <p>Modalità di iscrizione, esempi, ecc.</p>
                 </div>
               </div>
             </div>
             <div class="card card-teaser shadow p-4">
               <svg class="icon">
-                <use
-                  xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"
-                ></use>
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clip"></use>
               </svg>
               <div class="card-body">
                 <h5 class="card-title">

@@ -3,7 +3,7 @@ name: Lint code
 jobs:
   lint-code:
     runs-on: ubuntu-latest
-    container: 
+    container:
       image: timbru31/ruby-node:3.0-16
     steps:
       - uses: actions/checkout@v2.3.1

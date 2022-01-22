@@ -29,6 +29,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-header-block">
     <div class="it-header-block-title">
@@ -161,6 +162,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel">
     <div class="it-single-slide-wrapper">
@@ -257,12 +259,12 @@ Contiene un immagine associata ad una card "articolo"
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in  Flex.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
 
 div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 
-
 {% capture example %}
+
  <div class="it-carousel-wrapper it-carousel-landscape-abstract">
   <div class="it-carousel-all owl-carousel">
     <div class="it-single-slide-wrapper">
@@ -400,6 +402,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` che specifica il tipo di card contenuta.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel it-img-card">
     <div class="it-single-slide-wrapper">
@@ -522,6 +525,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` che specifica il tipo di card contenuta, `it-special-card` per indicare che la card contenuta è di tipo "special".
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel it-img-card it-special-card">
     <div class="it-single-slide-wrapper">
@@ -619,13 +623,14 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 
 div **`it-carousel-wrapper`** :  
 viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la formattazione colonnare.  
-viene aggiunta la classe  `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
+viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 
 div **`it-carousel-all owl-carousel`** :  
 viene aggiunta la classe `it-img-card` che specifica il tipo di card  
 viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel">
   <div class="it-carousel-all owl-carousel it-img-card it-big-img">
     <div class="it-single-slide-wrapper">
@@ -671,13 +676,14 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
 
 div **`it-carousel-wrapper`** :  
 viene aggiunta la classe `it-carousel-landscape-abstract-3` per la formattazione colonnare.  
-viene aggiunta la classe  `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
+viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 
 div **`it-carousel-all owl-carousel`** :  
 viene aggiunta la classe `it-img-card` che specifica il tipo di card  
 viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenuta è di tipo standard.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-3 it-full-carousel">
   <div class="it-carousel-all owl-carousel it-img-card it-standard-image">
     <div class="it-single-slide-wrapper">
@@ -749,4 +755,3 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-

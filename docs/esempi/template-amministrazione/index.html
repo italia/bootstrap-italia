@@ -2,20 +2,16 @@
 layout: base
 title: Template Amministrazione
 ---
-{%- assign section = "amministrazione" -%}
-{%- include esempi/comuni/header.html -%}
+
+{%- assign section = "amministrazione" -%} {%- include esempi/comuni/header.html -%}
 <main>
   <section id="briciole" class="container px-4 my-4">
     <div class="row">
       <div class="col px-lg-4">
         <nav aria-label="breadcrumb" class="breadcrumb-container">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a><span class="separator">/</span>
-            </li>
-            <li aria-current="page" class="breadcrumb-item active">
-              Amministrazione
-            </li>
+            <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
+            <li aria-current="page" class="breadcrumb-item active">Amministrazione</li>
           </ol>
         </nav>
       </div>
@@ -25,15 +21,11 @@ title: Template Amministrazione
     <div class="row">
       <div class="col-lg-8 px-lg-4 py-lg-2">
         <h1>Amministrazione</h1>
-        <p>
-          Tutte le informazioni sulla Giunta e sul Consiglio comunale, uffici,
-          aree di competenza e personale, luoghi e servizi per il cittadino.
-        </p>
+        <p>Tutte le informazioni sulla Giunta e sul Consiglio comunale, uffici, aree di competenza e personale, luoghi e servizi per il cittadino.</p>
         <div class="form-group mt-5">
           <form>
-            <input id="ricerca-amministrazione" type="search">
-            <label for="ricerca-amministrazione">Cerca contenuti in
-              "Amministrazione"</label>
+            <input id="ricerca-amministrazione" type="search" />
+            <label for="ricerca-amministrazione">Cerca contenuti in "Amministrazione"</label>
             <span aria-hidden="true" class="autocomplete-icon">
               <button type="submit" class="border-0">
                 <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
@@ -84,9 +76,11 @@ title: Template Amministrazione
             <li>
               <a class="list-item" href="#"><span>Enti e fondazioni</span></a>
             </li>
-            <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-              <span>Luoghi</span>
-              <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+            <li>
+              <a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+                <span>Luoghi</span>
+                <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg
+              ></a>
               <ul class="link-sublist collapse" id="collapseOne">
                 <li><a class="list-item" href="#">Area storica e archeologica</a></li>
                 <li><a class="list-item" href="#">Area culturale</a></li>
@@ -150,7 +144,9 @@ title: Template Amministrazione
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -175,7 +171,9 @@ title: Template Amministrazione
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -225,7 +223,9 @@ title: Template Amministrazione
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -250,7 +250,9 @@ title: Template Amministrazione
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -281,7 +283,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Organi politici</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -299,7 +303,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Aree Amministrative</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -317,7 +323,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Uffici</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -335,7 +343,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Politici</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -353,7 +363,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Funzionari Amministrativi</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -371,7 +383,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Enti e fondazioni</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -389,7 +403,9 @@ title: Template Amministrazione
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title big-heading">Luoghi</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
@@ -413,9 +429,15 @@ title: Template Amministrazione
         </div>
         <div class="row">
           <div class="col text-center">
-            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Cultura</span></span></a>
-            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Muoversi</span></span></a>
-            <a href="#"><span class="chip chip-simple chip-primary"><span class="chip-label">Argomento di esempio</span></span></a>
+            <a href="#"
+              ><span class="chip chip-simple chip-primary"><span class="chip-label">Cultura</span></span></a
+            >
+            <a href="#"
+              ><span class="chip chip-simple chip-primary"><span class="chip-label">Muoversi</span></span></a
+            >
+            <a href="#"
+              ><span class="chip chip-simple chip-primary"><span class="chip-label">Argomento di esempio</span></span></a
+            >
           </div>
         </div>
       </div>

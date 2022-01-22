@@ -74,17 +74,20 @@ All'interno di un `<form>` inserire un campo input di tipo file con classe `.upl
 I file caricati sono elencati come elementi `<li>` di una lista `<ul>` con classe `.upload-file-list`.
 
 Ogni elemento può avere tre differenti stati e raltive classi:
--  `.loading` per i file in caricamento
--  `.success` per i file caricati correttamente
--  `.error` in caso di errori
+
+- `.loading` per i file in caricamento
+- `.success` per i file caricati correttamente
+- `.error` in caso di errori
 
 {% capture callout %}
+
 ##### Accessibilità
 
 Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
   <label for="upload1">
@@ -152,6 +155,7 @@ Alla lista `<ul>` con classe `.upload-file-list` va aggiunta la classe `.upload-
 Il componente ottimizza la visualizzazione delle immagini anche quando queste non hanno proporzione quadrata, si consiglia comunque di utilizzare immagini dal peso contenuto.
 
 {% capture example %}
+
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
   <label for="upload2">
@@ -231,6 +235,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
 **L'elemento ha design e comportamento differenti in versione mobile** si consiglia quindi di ridurre le dimensioni della finestra del browser per testare questa versione.
 
 {% capture example %}
+
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -277,13 +282,14 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
 
 ## Upload Gallery
 
-Per gestire il caricamento di una serie di foto e l'anteprima delle stesse in forma di Gallery con thumbail, includere un input file con classi `.upload` e `.pictures-wall`  come elemento `<li>` di una lista `<ul>` con classe `.upload-file-wall`.
+Per gestire il caricamento di una serie di foto e l'anteprima delle stesse in forma di Gallery con thumbail, includere un input file con classi `.upload` e `.pictures-wall` come elemento `<li>` di una lista `<ul>` con classe `.upload-file-wall`.
 
 Le immagini caricate andranno aggiunte in testa alla lista `<ul>` come elementi `<li>` con classe `upload-image`.
 
 Anche in questo caso, nonostante il componente ottimizzi la visualizzazione delle immagini quando queste non hanno proporzione quadrata, si consiglia comunque di utilizzare immagini dal peso contenuto.
 
 {% capture example %}
+
 <form method="post" action="" enctype="multipart/form-data">
   <ul class="upload-pictures-wall">
     <li>
@@ -328,6 +334,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 Questa versione dell'upload permette all'utente di trascinare sull'icona che la caratterizza un file dal proprio dispositivo.
 
 In questo caso è l'interno form ad avere una classe specifica `upload-dragdrop` alla quale possono essere aggiunte due ulteriori classi per la gestione degli stati:
+
 - `.dragover` quando un file è trascinato sull'icona
 - `.loading` quando un file è rilasciato sull'icona
 - `.success` quando un file è stato caricato con successo
@@ -340,11 +347,12 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div id="divPr
 
 {% highlight js %}
 $("#IDPROGRESS").circularloader({
-	progressPercent: 33 // percentuale si caricamento
+progressPercent: 33 // percentuale si caricamento
 });
 {% endhighlight %}
 
 {% capture example %}
+
 <p><strong>Default</strong></p>
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
@@ -413,6 +421,7 @@ $("#IDPROGRESS").circularloader({
 ### Esempio animato
 
 {% capture example %}
+
 <p><button type="button" class="btn btn-primary" onClick="testAnimation()">Simula Upload</button></p>
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">

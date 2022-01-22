@@ -34,6 +34,7 @@ Ogni link `<a>` contiene un icona con classe `.icon` e una label contenuta in un
 Il link `<a>` attivo possiede una una classe `.active`.
 
 {% capture example %}
+
 <nav class="bottom-nav">
   <ul>
     <li>
@@ -61,6 +62,7 @@ Il link `<a>` attivo possiede una una classe `.active`.
 I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un esempio con 4 link.
 
 {% capture example %}
+
 <nav class="bottom-nav">
   <ul>
     <li>
@@ -96,6 +98,7 @@ I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un e
 Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona per visualizzare dei badge con indicazioni numeriche relative, ad esempio, al numero di messaggi non letti.
 
 {% capture example %}
+
 <nav class="bottom-nav">
   <ul>
     <li>
@@ -140,12 +143,14 @@ Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona pe
 Aggiungere uno `<span>` con classe `.bottom-nav-alert` all'interno dell'icona per identificare una sezione che richiede attenzione o presenta nuovi contenuti.
 
 {% capture callout %}
+
 ##### Accessibilità
 
 I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibilità è necessario aggiungere uno `<span>` con classe `.sr-only` all'interno della label che contenga un testo esplicativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
+
 <nav class="bottom-nav">
   <ul>
     <li>

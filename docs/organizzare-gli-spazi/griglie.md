@@ -13,14 +13,15 @@ Bootstrap Italia eredita la potente griglia flexbox mobile-first di Bootstrap pe
 Il sistema di griglie di Bootstrap usa una serie di contenitori, righe e colonne per disporre ed allineare i contenuti, costruito su [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) e completamente responsive.
 
 {% capture callout %}
+
 #### Approfondimento
 
 Se sei poco pratico di flexbox, puoi iniziare da questi link per trovare informazioni di carattere generale, specifiche e frammenti di codice.
 
-* [guida su flexbox su MSDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox){:target="_blank"} (in inglese)
-* [guida su flexbox su CSS tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background){:target="_blank"} (in inglese)
-* [un simpatico quiz per verificare le tue conoscenze](http://flexboxfroggy.com/#it)
-{% endcapture %}{% include callout.html content=callout type="info" %}
+- [guida su flexbox su MSDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox){:target="\_blank"} (in inglese)
+- [guida su flexbox su CSS tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background){:target="\_blank"} (in inglese)
+- [un simpatico quiz per verificare le tue conoscenze](http://flexboxfroggy.com/#it)
+  {% endcapture %}{% include callout.html content=callout type="info" %}
 
 Di seguito puoi trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.
 
@@ -40,16 +41,16 @@ L'esempio precedente crea tre colonne di uguale larghezza su dispositivi piccoli
 
 Analizzandolo nel dettaglio, ecco come funziona:
 
-* I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza `.container` per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e dimensioni dei device.
-* Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
-* In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
-* Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori informazioni.
-* Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
-* Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
-* Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
-* Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.
-* I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
-* È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
+- I contenitori forniscono un mezzo per centrare e riempire orizzontalmente il contenuto del tuo sito. Utilizza `.container` per una larghezza al pixel responsive o `.container-fluid` per una larghezza del `width: 100%` su tutti i viewport e dimensioni dei device.
+- Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
+- In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
+- Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori informazioni.
+- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
+- Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
+- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
+- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.
+- I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
+- È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
 
 Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalton/flexbugs), come l' [incapacità di utilizzare alcuni elementi HTML come i contenitori di flex](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
@@ -289,7 +290,7 @@ Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di
 
 ### Righe di colonne
 
-Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colonne che rendono meglio il tuo contenuto e layout. Mentre le normali classi `.col-` * si applicano alle singole colonne (ad es. `.col-md-4`), le classi delle "righe di colonne" sono impostate sul genitore `.row` come scorciatoia.
+Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colonne che rendono meglio il tuo contenuto e layout. Mentre le normali classi `.col-` \* si applicano alle singole colonne (ad es. `.col-md-4`), le classi delle "righe di colonne" sono impostate sul genitore `.row` come scorciatoia.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -437,14 +438,16 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 {% highlight sass %}
 .no-gutters {
-  margin-right: 0;
-  margin-left: 0;
+margin-right: 0;
+margin-left: 0;
 
-  > .col,
-  > [class*="col-"] {
+> .col,
+> [class*="col-"] {
+
     padding-right: 0;
     padding-left: 0;
-  }
+
+}
 }
 {% endhighlight %}
 
@@ -465,10 +468,10 @@ Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewp
 
 {% highlight sass %}
 $grid-gutter-widths: (
-  sm: 12px,
-  md: 20px,
-  lg: 20px,
-  xl: 28px
+sm: 12px,
+md: 20px,
+lg: 20px,
+xl: 28px
 ) !default;
 {% endhighlight %}
 
@@ -513,7 +516,6 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
     </tr>
   </tbody>
 </table>
-
 
 <div class="bd-example-row">
 {% capture example %}

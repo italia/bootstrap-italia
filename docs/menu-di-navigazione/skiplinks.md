@@ -13,9 +13,10 @@ Gli elementi Skiplink sono contraddistinti dalle classi:
 - `sr-only`: renderizzati solo per gli screen reader
 - `sr-only-focusable`: renderizzati solo al focus
 
-Per attivare la funzionalità si digita da tastiera il tasto: **TAB**. 
+Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
 {% capture example %}
+
 <div class="skiplinks">
   <a class="sr-only sr-only-focusable" href="#">Vai al contenuto principale</a>
   <a class="sr-only sr-only-focusable" href="#">Vai al footer</a>
@@ -26,9 +27,11 @@ Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 #### Visualizzazione degli Skiplinks su macOS
 
 ##### Chrome
-Per attivare la funzionalità si digita da tastiera il tasto: **TAB**. 
 
-##### Safari 
+Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
+
+##### Safari
+
 Per attivare la navigazione via **TAB** è necessario:
 
 1. Aprire il menù Safari > Preferenze
@@ -38,7 +41,8 @@ Per attivare la navigazione via **TAB** è necessario:
 Alternativamente è possibile navigare gli elementi usando **opzione+TAB**
 
 ##### Firefox
-Le impostazioni  di default di macOS non consentono la navigazione di tutti gli elementi interattivi di un sito con l'uso del pulsante TAB.
+
+Le impostazioni di default di macOS non consentono la navigazione di tutti gli elementi interattivi di un sito con l'uso del pulsante TAB.
 Per attivare questa modalità è necessario modificare le preferenze di sistema come segue:
 
 1. Aprire il Menu Apple > Preferenze di Sistema, quindi fare clic su Tastiera.

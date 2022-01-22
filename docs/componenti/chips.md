@@ -97,6 +97,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 {% capture example %}
 
 {% for color in site.data.theme-colors %}
+
 <div class="chip chip-{{ color.name }} chip-lg">
   <span class="chip-label">{{ color.name | capitalize }}</span>
 </div>{% endfor %}
@@ -146,6 +147,7 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 I gruppi di Chip vengono visualizzati in linea.
 
 {% capture example %}
+
 <div class="chip chip-simple">
   <span class="chip-label">Label</span>
 </div>

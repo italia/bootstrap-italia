@@ -15,6 +15,7 @@ Il componente Section ha un padding verticale ed orizzontale predefinito ed uno 
 Il contenuto di una Section va inserito nel `<div>` con classe `.section-content`. Questo elemento occupa tutta la larghezza della Section (meno il padding) ma, nel caso ne venisse definita la `max-width` in CSS, verrà automaticamente centrato orizzontalmente all'interno della Section.
 
 {% capture example %}
+
 <div class="section">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -44,6 +45,7 @@ Il componente Section ha, per default, uno sfondo trasparente. Aggiungendo le cl
 Al componente Section può essere applicato uno sfondo di colore tenue utilizzano la classe aggiuntiva `.section-muted`.
 
 {% capture example %}
+
 <div class="section section-muted">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -71,6 +73,7 @@ Aggiungendo invece classe `.section-primary` si otterrà un sfondo del colore pr
 Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
 {% capture example %}
+
 <div class="section section-primary">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -98,6 +101,7 @@ Infine, utilizzando la classe `.section-neutral` si otterrà un sfondo di colore
 Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
 {% capture example %}
+
 <div class="section section-neutral">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -125,6 +129,7 @@ Aggiungendo la classe `.section-image` alla Section e indicando attraverso CSS i
 A seconda della luminosità dell'immagine si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.
 
 {% capture example %}
+
 <div class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -150,6 +155,7 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare il container `.card-deck` per garantire un corretto margine fra gli elementi `.card`.
 
 {% capture example %}
+
 <div class="section section-muted">
   <div class="section-content">
     <!-- contenuto di esempio START -->

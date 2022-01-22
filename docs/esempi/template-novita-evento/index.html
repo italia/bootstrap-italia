@@ -3,9 +3,7 @@ layout: base
 title: Template Evento Comunale
 ---
 
-{% assign section = "novità" %}
-
-{% include esempi/comuni/header.html %}
+{% assign section = "novità" %} {% include esempi/comuni/header.html %}
 
 <main>
   <div class="container px-4 my-4">
@@ -13,15 +11,9 @@ title: Template Evento Comunale
       <div class="col px-lg-4">
         <nav class="breadcrumb-container" aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a><span class="separator">/</span>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#">Novità</a><span class="separator">/</span>
-            </li>
-            <li class="breadcrumb-item" aria-current="page">
-              <a href="#">Eventi</a><span class="separator">/</span>
-            </li>
+            <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
+            <li class="breadcrumb-item"><a href="#">Novità</a><span class="separator">/</span></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="#">Eventi</a><span class="separator">/</span></li>
             <li class="breadcrumb-item active" aria-current="page">
               <a href="#">Sagra di San Francesco</a>
             </li>
@@ -42,11 +34,13 @@ title: Template Evento Comunale
           <a href="#"
             ><div class="chip chip-simple chip-primary">
               <span class="chip-label">Cultura</span>
-            </div></a>
+            </div></a
+          >
           <a href="#"
             ><div class="chip chip-simple chip-primary">
               <span class="chip-label">Vivere la città</span>
-            </div></a>
+            </div></a
+          >
         </div>
         <div class="mt-5">
           <a href="#" class="btn btn-outline-primary btn-icon">
@@ -60,16 +54,14 @@ title: Template Evento Comunale
     </div>
     <div class="row row-full-width my-3">
       <figure class="figure">
-        <img src="https://picsum.photos/800/400" class="figure-img img-fluid" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+        <img src="https://picsum.photos/800/400" class="figure-img img-fluid" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura." />
         <figcaption class="figure-caption text-center pt-3">Una didascalia per l'immagine sopra.</figcaption>
       </figure>
     </div>
     <div class="row border-top row-column-border row-column-menu-left">
       <aside class="col-lg-4">
         <div class="sticky-wrapper navbar-wrapper">
-          <nav
-            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
-          >
+          <nav class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg">
             <button
               class="custom-navbar-toggler"
               type="button"
@@ -83,9 +75,7 @@ title: Template Evento Comunale
             <div class="navbar-collapsable" id="navbarNav">
               <div class="overlay"></div>
               <div class="close-div sr-only">
-                <button class="btn close-menu" type="button">
-                  <span class="it-close"></span>Chiudi
-                </button>
+                <button class="btn close-menu" type="button"><span class="it-close"></span>Chiudi</button>
               </div>
               <a class="it-back-button" href="#">
                 <svg class="icon icon-sm icon-primary align-top">
@@ -98,44 +88,28 @@ title: Template Evento Comunale
                   <h3 class="no_toc">Indice della pagina</h3>
                   <ul class="link-list">
                     <li class="nav-item active">
-                      <a class="nav-link active" href="#cos-e"
-                        ><span>Cos'è</span></a
-                      >
+                      <a class="nav-link active" href="#cos-e"><span>Cos'è</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#luogo"
-                        ><span>Luogo</span></a
-                      >
+                      <a class="nav-link" href="#luogo"><span>Luogo</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#date-e-orari"
-                        ><span>Date e orari</span></a
-                      >
+                      <a class="nav-link" href="#date-e-orari"><span>Date e orari</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#costi"
-                        ><span>Costi</span></a
-                      >
+                      <a class="nav-link" href="#costi"><span>Costi</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#documenti"
-                        ><span>Documenti</span></a
-                      >
+                      <a class="nav-link" href="#documenti"><span>Documenti</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#contatti"
-                        ><span>Contatti</span></a
-                      >
+                      <a class="nav-link" href="#contatti"><span>Contatti</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#appuntamenti"
-                        ><span>Appuntamenti</span></a
-                      >
+                      <a class="nav-link" href="#appuntamenti"><span>Appuntamenti</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#ulteriori-informazioni"
-                        ><span>Ulteriori informazioni</span></a
-                      >
+                      <a class="nav-link" href="#ulteriori-informazioni"><span>Ulteriori informazioni</span></a>
                     </li>
                   </ul>
                 </div>
@@ -159,43 +133,43 @@ title: Template Evento Comunale
             <div class="it-carousel-all owl-carousel it-card-bg">
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
               <div class="it-single-slide-wrapper">
                 <figure>
-                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid">
+                  <img src="https://via.placeholder.com/250x250/ebebeb/808080/?text=Thumb" alt="Sagra di San Francesco" class="img-fluid" />
                   <figcaption class="figure-caption mt-2">Sagra di San Francesco</figcaption>
                 </figure>
               </div>
@@ -236,7 +210,12 @@ title: Template Evento Comunale
             </div>
           </div>
           <div class="map-wrapper map-column mt-4 mb-5">
-            <img src="https://via.placeholder.com/320x180/ebebeb/808080/?text=Map" alt="Sagra di San Francesco" class="img-fluid" style="object-fit:cover;width:100%;" />
+            <img
+              src="https://via.placeholder.com/320x180/ebebeb/808080/?text=Map"
+              alt="Sagra di San Francesco"
+              class="img-fluid"
+              style="object-fit: cover; width: 100%"
+            />
           </div>
         </article>
         <article id="date-e-orari" class="it-page-section anchor-offset">
@@ -250,9 +229,7 @@ title: Template Evento Comunale
               <div class="point-list-content">
                 <div class="card card-teaser shadow rounded">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      09:00  - Inizio evento
-                    </h5>
+                    <h5 class="card-title">09:00 - Inizio evento</h5>
                   </div>
                 </div>
               </div>
@@ -265,9 +242,7 @@ title: Template Evento Comunale
               <div class="point-list-content">
                 <div class="card card-teaser shadow rounded">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      18:00  - Fine evento
-                    </h5>
+                    <h5 class="card-title">18:00 - Fine evento</h5>
                   </div>
                 </div>
               </div>
@@ -287,36 +262,28 @@ title: Template Evento Comunale
           <h4>Costi</h4>
           <div class="card no-after border-left mt-3">
             <div class="card-body">
-              <div class="category-top">
-                Tribuna 1 e 4
-              </div>
+              <div class="category-top">Tribuna 1 e 4</div>
               <h5 class="card-title big-heading">&euro; 30</h5>
               <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="card no-after border-left mt-3">
             <div class="card-body">
-              <div class="category-top">
-                Tribuna 3
-              </div>
+              <div class="category-top">Tribuna 3</div>
               <h5 class="card-title big-heading">&euro; 30</h5>
               <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="card no-after border-left mt-3">
             <div class="card-body">
-              <div class="category-top">
-                Tribuna 5
-              </div>
+              <div class="category-top">Tribuna 5</div>
               <h5 class="card-title big-heading">&euro; 25</h5>
               <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
           <div class="card no-after border-left mt-3">
             <div class="card-body">
-              <div class="category-top">
-                Tribuna 2
-              </div>
+              <div class="category-top">Tribuna 2</div>
               <h5 class="card-title big-heading">&euro; 15</h5>
               <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -357,9 +324,7 @@ title: Template Evento Comunale
               <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use>
             </svg>
             <div class="card-body">
-              <h5 class="card-title">
-                Ufficio delle Attività Produttive
-              </h5>
+              <h5 class="card-title">Ufficio delle Attività Produttive</h5>
               <div class="card-text">
                 <p>Via Roma, 0 - 00100 Roma</p>
                 <p class="mt-3">Telefono +39 000 000000</p>
@@ -453,15 +418,23 @@ title: Template Evento Comunale
           <strong>Patrocinato da:</strong>
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item px-0" href="#"><span>Regione del Lazio</span></a></li>
+              <li>
+                <a class="list-item px-0" href="#"><span>Regione del Lazio</span></a>
+              </li>
             </ul>
           </div>
           <strong>Sponsor:</strong>
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item px-0" href="#"><span>Provincia di Roma</span></a></li>
-              <li><a class="list-item px-0" href="#"><span>Aeroporto di Roma</span></a></li>
-              <li><a class="list-item px-0" href="#"><span>Autorità Portuale di Roma</span></a></li>
+              <li>
+                <a class="list-item px-0" href="#"><span>Provincia di Roma</span></a>
+              </li>
+              <li>
+                <a class="list-item px-0" href="#"><span>Aeroporto di Roma</span></a>
+              </li>
+              <li>
+                <a class="list-item px-0" href="#"><span>Autorità Portuale di Roma</span></a>
+              </li>
             </ul>
           </div>
           <div class="mt-5">
@@ -503,19 +476,54 @@ title: Template Evento Comunale
                     </div>
                     <div class="rating-list-progress">
                       <div class="progress progress-color">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 60%"
+                          aria-valuenow="60"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
                       </div>
                       <div class="progress progress-color">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
                       </div>
                       <div class="progress progress-color">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 40%"
+                          aria-valuenow="40"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
                       </div>
                       <div class="progress progress-color">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 30%"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
                       </div>
                       <div class="progress progress-color">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          style="width: 20%"
+                          aria-valuenow="20"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -526,27 +534,27 @@ title: Template Evento Comunale
               <fieldset class="rating">
                 <legend class="sr-only">Valuta</legend>
                 <input type="radio" id="star5a" name="ratingA" value="5" />
-                <label class = "full" for="star5a">
+                <label class="full" for="star5a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
                   <span class="sr-only">Valuta 5 stelle su 5</span>
                 </label>
-                <input type="radio" id="star4a" name="ratingA" value="4"/>
-                <label class = "full" for="star4a">
+                <input type="radio" id="star4a" name="ratingA" value="4" />
+                <label class="full" for="star4a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
                   <span class="sr-only">Valuta 4 stelle su 5</span>
                 </label>
                 <input type="radio" id="star3a" name="ratingA" value="3" />
-                <label class = "full" for="star3a">
+                <label class="full" for="star3a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
                   <span class="sr-only">Valuta 3 stelle su 5</span>
                 </label>
                 <input type="radio" id="star2a" name="ratingA" value="2" />
-                <label class = "full" for="star2a">
+                <label class="full" for="star2a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
                   <span class="sr-only">Valuta 2 stelle su 5</span>
                 </label>
                 <input type="radio" id="star1a" name="ratingA" value="1" />
-                <label class = "full" for="star1a">
+                <label class="full" for="star1a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-full"></use></svg>
                   <span class="sr-only">Valuta 1 stelle su 5</span>
                 </label>

@@ -15,10 +15,10 @@ Per inizializzare il plugin, utilizzare il seguente script:
 
 {% highlight js %}
 $(document).ready(function() {
-    $('.it-date-datepicker').datepicker({
-      inputFormat: ["dd/MM/yyyy"],
-      outputFormat: 'dd/MM/yyyy',
-    });
+$('.it-date-datepicker').datepicker({
+inputFormat: ["dd/MM/yyyy"],
+outputFormat: 'dd/MM/yyyy',
+});
 });
 {% endhighlight %}
 
@@ -27,6 +27,7 @@ $(document).ready(function() {
 Clicca sull'icona per visualizzare il datepicker.
 
 {% capture example %}
+
 <div class="it-datepicker-wrapper">
   <div class="form-group">
     <label for="date1">Date label</label>
@@ -42,6 +43,7 @@ Per utilizzare il Datepicker in versione scura, aggiungere la classe `.theme-dar
 Clicca sull'icona per visualizzare il datepicker.
 
 {% capture example %}
+
 <div class="it-datepicker-wrapper theme-dark">
   <div class="form-group">
     <label for="date2">Date label</label>
@@ -58,4 +60,3 @@ Clicca sull'icona per visualizzare il datepicker.
     });
   })
 </script>
-

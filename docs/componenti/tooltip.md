@@ -9,6 +9,7 @@ toc: true
 I Toolip di Bootstrap con CSS e JavaScript utilizzano CSS3 per animazioni e attributi `data` per l'archiviazione di titoli locali.
 
 {% capture callout %}
+
 ##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
@@ -26,8 +27,8 @@ l'attivazione per gli utenti che usano la tastiera per navigare.
 Cose da sapere quando usi il plugin tooltip:
 
 - I tooltip si basano sulla libreria di terze parti [Popper.js](https://popper.js.org/).
-Per fare in modo che i tooltip funzionino è quindi necessario includere `popper.min.js` prima di
-bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
+  Per fare in modo che i tooltip funzionino è quindi necessario includere `popper.min.js` prima di
+  bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 - I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I tooltip con titoli vuoti non saranno mai visualizzati.
 - Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
@@ -42,7 +43,7 @@ Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarl
 
 {% highlight js %}
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+$('[data-toggle="tooltip"]').tooltip()
 })
 {% endhighlight %}
 
@@ -51,6 +52,7 @@ $(function () {
 Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 
 {% capture example %}
+
 <div class="tooltip-demo">
   <p class="text-serif muted">
     Ecco un <a href="#" data-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
@@ -75,6 +77,7 @@ Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei tooltip: sopra, destra, sotto, e sinistra.
 
 {% capture example %}
+
 <div class="tooltip-demo">
   <div class="bd-example-tooltips">
     <div class="container">
@@ -116,7 +119,7 @@ E con codice HTML personalizzato:
 
 {% highlight html %}
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
-  Tooltip con HTML
+Tooltip con HTML
 </button>
 {% endhighlight %}
 
@@ -249,6 +252,6 @@ Aggiorna la posizione del tooltip di un elemento.
 
 {% highlight js %}
 $('#myTooltip').on('hidden.bs.tooltip', function () {
-  // fai qualcosa
+// fai qualcosa
 })
 {% endhighlight %}

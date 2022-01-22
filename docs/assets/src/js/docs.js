@@ -2,59 +2,52 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-(function () {
+;(function () {
   'use strict'
 
   function makeArray(list) {
     return [].slice.call(list)
   }
 
-  makeArray(document.querySelectorAll('.toast'))
-  .forEach(function (toastNode) {
+  makeArray(document.querySelectorAll('.toast')).forEach(function (toastNode) {
     var toast = new bootstrap.Toast(toastNode, {
-      autohide: false
+      autohide: false,
     })
 
     toast.show()
   })
 
   // Tooltip and popover demos
-  makeArray(document.querySelectorAll('.tooltip-demo'))
-    .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip, {
-        selector: '[data-toggle="tooltip"]'
-      })
+  makeArray(document.querySelectorAll('.tooltip-demo')).forEach(function (tooltip) {
+    new bootstrap.Tooltip(tooltip, {
+      selector: '[data-toggle="tooltip"]',
     })
+  })
 
-  makeArray(document.querySelectorAll('[data-toggle="popover"]'))
-    .forEach(function (popover) {
-      new bootstrap.Popover(popover)
-    })
+  makeArray(document.querySelectorAll('[data-toggle="popover"]')).forEach(function (popover) {
+    new bootstrap.Popover(popover)
+  })
 
   // Demos within modals
-  makeArray(document.querySelectorAll('.tooltip-test'))
-    .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip)
-    })
+  makeArray(document.querySelectorAll('.tooltip-test')).forEach(function (tooltip) {
+    new bootstrap.Tooltip(tooltip)
+  })
 
-  makeArray(document.querySelectorAll('.popover-test'))
-    .forEach(function (popover) {
-      new bootstrap.Popover(popover)
-    })
+  makeArray(document.querySelectorAll('.popover-test')).forEach(function (popover) {
+    new bootstrap.Popover(popover)
+  })
 
   // Indeterminate checkbox example
-  makeArray(document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]'))
-    .forEach(function (checkbox) {
-      checkbox.indeterminate = true
-    })
+  makeArray(document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]')).forEach(function (checkbox) {
+    checkbox.indeterminate = true
+  })
 
   // Disable empty links in docs examples
-  makeArray(document.querySelectorAll('.bd-content [href="#"]'))
-    .forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault()
-      })
+  makeArray(document.querySelectorAll('.bd-content [href="#"]')).forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault()
     })
+  })
 
   // Modal relatedTarget demo
   var exampleModal = document.getElementById('exampleModal')
@@ -73,37 +66,34 @@
   }
 
   // Activate animated progress bar
-  makeArray(document.querySelectorAll('.bd-toggle-animated-progress > .progress-bar-striped'))
-    .forEach(function (progressBar) {
-      progressBar.addEventListener('click', function () {
-        if (progressBar.classList.contains('progress-bar-animated')) {
-          progressBar.classList.remove('progress-bar-animated')
-        } else {
-          progressBar.classList.add('progress-bar-animated')
-        }
-      })
+  makeArray(document.querySelectorAll('.bd-toggle-animated-progress > .progress-bar-striped')).forEach(function (progressBar) {
+    progressBar.addEventListener('click', function () {
+      if (progressBar.classList.contains('progress-bar-animated')) {
+        progressBar.classList.remove('progress-bar-animated')
+      } else {
+        progressBar.classList.add('progress-bar-animated')
+      }
     })
+  })
 
   anchors.options = {
-    icon: '#'
+    icon: '#',
   }
   anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
 
   // Wrap inner
-  makeArray(document.querySelectorAll('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5'))
-    .forEach(function (hEl) {
-      hEl.innerHTML = '<span class="bd-content-title">' + hEl.innerHTML + '</span>'
-    })
-
-}())
-
+  makeArray(document.querySelectorAll('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')).forEach(function (hEl) {
+    hEl.innerHTML = '<span class="bd-content-title">' + hEl.innerHTML + '</span>'
+  })
+})()
 
 $(function () {
-
   // Modal with radiobuttons example
-  $('.modal-body').find('input[type=radio]').click(function(){
-    $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled');
-  })
+  $('.modal-body')
+    .find('input[type=radio]')
+    .click(function () {
+      $(this).closest('.modal-content').find('.modal-footer .btn-primary').removeAttr('disabled')
+    })
 
   // Insert copy to clipboard button before .highlight
   $('.highlight').each(function () {
@@ -123,15 +113,10 @@ $(function () {
   var clipboard = new ClipboardJS('.btn-clipboard', {
     target: function (trigger) {
       return trigger.parentNode.nextElementSibling
-    }
+    },
   })
   clipboard.on('success', function (e) {
-    $(e.trigger)
-      .attr('title', 'Copied!')
-      .tooltip('_fixTitle')
-      .tooltip('show')
-      .attr('title', 'Copy to clipboard')
-      .tooltip('_fixTitle')
+    $(e.trigger).attr('title', 'Copied!').tooltip('_fixTitle').tooltip('show').attr('title', 'Copy to clipboard').tooltip('_fixTitle')
 
     e.clearSelection()
   })
@@ -139,28 +124,22 @@ $(function () {
     var modifierKey = /Mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
 
-    $(e.trigger)
-      .attr('title', fallbackMsg)
-      .tooltip('_fixTitle')
-      .tooltip('show')
-      .attr('title', 'Copy to clipboard')
-      .tooltip('_fixTitle')
+    $(e.trigger).attr('title', fallbackMsg).tooltip('_fixTitle').tooltip('show').attr('title', 'Copy to clipboard').tooltip('_fixTitle')
   })
 
   // tsParticles - Docs homepage particles
   if ($('#tsparticles').length) {
     var particlesJSON = {
       particles: {
-        number:{value:160,density:{enable:true,value_area:800}},
-        color:{value:"#FFF"},
-        shape:{type:"circle"},
-        opacity:{value:0.8,random:true,anim:{enable:true,speed:1,opacity_min:0,sync:false}},
-        size:{value:2,random:true},
-        move:{enable:true,speed:0.2,direction:top,random:true,straight:false,out_mode:"out",bounce:false}
+        number: { value: 160, density: { enable: true, value_area: 800 } },
+        color: { value: '#FFF' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.8, random: true, anim: { enable: true, speed: 1, opacity_min: 0, sync: false } },
+        size: { value: 2, random: true },
+        move: { enable: true, speed: 0.2, direction: top, random: true, straight: false, out_mode: 'out', bounce: false },
       },
-      retina_detect:true
+      retina_detect: true,
     }
-    tsParticles.load('tsparticles', particlesJSON);
+    tsParticles.load('tsparticles', particlesJSON)
   }
-
-});
+})

@@ -22,11 +22,7 @@ const gulp = require('gulp'),
 const DOCUMENTATION_DESTINATION = '_site'
 
 const Paths = {
-  VENDOR_JS: [
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/owl.carousel/dist/owl.carousel.js',
-  ],
+  VENDOR_JS: ['node_modules/jquery/dist/jquery.js', 'node_modules/popper.js/dist/umd/popper.js', 'node_modules/owl.carousel/dist/owl.carousel.js'],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
@@ -69,10 +65,7 @@ const Paths = {
 
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
-  SOURCE_DOCUMENTATION_JS: [
-    'docs/assets/src/js/cover-animation.js',
-    'docs/assets/src/js/docs.js',
-  ],
+  SOURCE_DOCUMENTATION_JS: ['docs/assets/src/js/cover-animation.js', 'docs/assets/src/js/docs.js'],
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
@@ -94,8 +87,7 @@ const bootstrapItaliaBanner = [
   '',
 ].join('\n')
 
-const jqueryToGlobVar =
-  "var $ = jQuery.noConflict();\n"
+const jqueryToGlobVar = 'var $ = jQuery.noConflict();\n'
 const jqueryCheck =
   "if (typeof jQuery === 'undefined') {\n" +
   "  throw new Error('Bootstrap\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\'s JavaScript.')\n" +
@@ -111,8 +103,8 @@ const jqueryVersionCheck =
 // Force reload
 
 gulp.task('force-reload', (done) => {
-  browserSync.reload();
-  done();
+  browserSync.reload()
+  done()
 })
 
 // Library related tasks
@@ -246,7 +238,7 @@ gulp.task('documentation-js-min', () => {
     .pipe(touch())
 })
 
-gulp.task('svg-sprite', function() {
+gulp.task('svg-sprite', function () {
   return gulp
     .src('src/svg/it-*.svg')
     .pipe(
@@ -287,34 +279,16 @@ gulp.task('fonts', () => {
 
 // Main Jekyll task
 
-gulp.task('jekyll', done => {
+gulp.task('jekyll', (done) => {
   const jekyll =
     process.platform === 'win32'
-      ? spawn('jekyll.bat', [
-          'build',
-          '--watch',
-          '--incremental',
-          '--drafts',
-          '--config',
-          '_config.yml',
-          '--force_polling'
-        ])
-      : spawn('bundle', [
-          'exec',
-          'jekyll',
-          'build',
-          '--watch',
-          '--incremental',
-          '--drafts',
-          '--config',
-          '_config.yml',
-          '--force_polling'
-        ])
+      ? spawn('jekyll.bat', ['build', '--watch', '--incremental', '--drafts', '--config', '_config.yml', '--force_polling'])
+      : spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--incremental', '--drafts', '--config', '_config.yml', '--force_polling'])
 
-  const jekyllOutput = buffer => {
+  const jekyllOutput = (buffer) => {
     log('Jekyll: ' + buffer.toString())
     if (buffer.toString().indexOf('done') > -1) {
-      browserSync.reload();
+      browserSync.reload()
       done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
     }
   }
@@ -323,65 +297,24 @@ gulp.task('jekyll', done => {
   jekyll.stderr.on('data', jekyllOutput)
 })
 
-
 // CSS
-gulp.task(
-  'build-css',
-  gulp.series(
-    'scss-min',
-  )
-)
+gulp.task('build-css', gulp.series('scss-min'))
 // SVG
-gulp.task(
-  'build-svg',
-  gulp.series(
-    'svg-sprite',
-  )
-)
+gulp.task('build-svg', gulp.series('svg-sprite'))
 // js
-gulp.task(
-  'build-js',
-  gulp.series(
-    'js-min',
-    'js-bundle-min',
-  )
-)
+gulp.task('build-js', gulp.series('js-min', 'js-bundle-min'))
 // fonts
-gulp.task(
-  'build-fonts',
-  gulp.series(
-    'fonts',
-  )
-)
+gulp.task('build-fonts', gulp.series('fonts'))
 
 // Assets
-gulp.task(
-  'build-assets',
-  gulp.series(
-    'assets',
-  )
-)
+gulp.task('build-assets', gulp.series('assets'))
 
 // Library
-gulp.task(
-  'build-library',
-  gulp.series(
-    'svg-sprite',
-    'scss-min',
-    'js-min',
-    'js-bundle-min',
-    'fonts',
-    'assets',
-    'force-reload'
-  )
-)
+gulp.task('build-library', gulp.series('svg-sprite', 'scss-min', 'js-min', 'js-bundle-min', 'fonts', 'assets', 'force-reload'))
 
 // Documentation
 
-gulp.task(
-  'build-documentation',
-  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min', 'force-reload')
-)
+gulp.task('build-documentation', gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min', 'force-reload'))
 
 // Sync
 
@@ -395,41 +328,17 @@ gulp.task('sync', () => {
     },
   })
 
-  gulp.watch(
-    [Paths.SCSS_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-css')
-  )
+  gulp.watch([Paths.SCSS_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-css'))
 
-  gulp.watch(
-    [Paths.JS_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-js')
-  )
+  gulp.watch([Paths.JS_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-js'))
 
-  gulp.watch(
-    [Paths.SVG_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-svg')
-  )
+  gulp.watch([Paths.SVG_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-svg'))
 
-  gulp.watch(
-    [Paths.FONTS_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-fonts')
-  )
+  gulp.watch([Paths.FONTS_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-fonts'))
 
-  gulp.watch(
-    [Paths.ASSETS_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-assets')
-  )
+  gulp.watch([Paths.ASSETS_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-assets'))
 
-  gulp.watch(
-    [Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH],
-    {interval: 1000, usePolling: true},
-    gulp.series('build-documentation')
-  )
+  gulp.watch([Paths.SCSS_DOCUMENTATION_WATCH, Paths.JS_DOCUMENTATION_WATCH], { interval: 1000, usePolling: true }, gulp.series('build-documentation'))
 })
 
 // Main build task

@@ -19,6 +19,7 @@ L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudib
 - `.collapse.show` mostra il contenuto
 
 {% capture example %}
+
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link con href
@@ -40,6 +41,7 @@ Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferi
 Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-target`.
 
 {% capture example %}
+
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Attiva/disattiva primo elemento</a>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Attiva/disattiva secondo elemento</button>
@@ -65,9 +67,10 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 
 ## Gruppi di elementi richiudibili
 
-Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili. 
+Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili.
 
 {% capture example %}
+
 <div id="collapseDiv1" class="collapse-div" role="tablist">
   <div class="collapse-header" id="heading1">
     <button data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -104,9 +107,10 @@ Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati
 
 ## Accordion
 
-Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è sufficiente aggiungere ad ogni elemento `.collapse` l'attributo `data-parent` con il relativo *ID* del contenitore padre.
+Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è sufficiente aggiungere ad ogni elemento `.collapse` l'attributo `data-parent` con il relativo _ID_ del contenitore padre.
 
 {% capture example %}
+
 <div id="accordionDiv1" class="collapse-div" role="tablist">
   <div class="collapse-header" id="headingA1">
     <button data-toggle="collapse" data-target="#accordion1" aria-expanded="true" aria-controls="accordion1">
@@ -146,6 +150,7 @@ Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è
 Più gruppi di collapse possono essere annidati.
 
 {% capture example %}
+
 <div id="collapseDiv2" class="collapse-div" role="tablist">
   <div class="collapse-header" id="heading1a">
     <button data-toggle="collapse" data-target="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
@@ -218,7 +223,7 @@ Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attri
 
 Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l'attributo `data-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento richiudibile stesso.
 
-*Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript.*
+_Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript._
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Sfondo primario
@@ -230,6 +235,7 @@ Applicando classi aggiuntive al wrapper `.collapse-div` è possibile utilizzare 
 Aggiungere la classe `.collapse-background-active` al wrapper per ottenere header con sfondo di colore primario quando questi sono attivi e il contenuto relativo è visibile.
 
 {% capture example %}
+
 <div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
   <div class="collapse-header" id="heading1-sc1">
     <button data-toggle="collapse" data-target="#collapse1-sc1" aria-expanded="true" aria-controls="collapse1-sc1">
@@ -269,6 +275,7 @@ Aggiungere la classe `.collapse-background-active` al wrapper per ottenere heade
 Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header con sfondo di colore primario all'hover.
 
 {% capture example %}
+
 <div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
   <div class="collapse-header" id="heading1-sc2">
     <button data-toggle="collapse" data-target="#collapse1-sc2" aria-expanded="true" aria-controls="collapse1-sc2">
@@ -308,6 +315,7 @@ Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header
 Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante in cui l'icona chevron che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
 
 {% capture example %}
+
 <div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">
   <div class="collapse-header" id="heading1-lft">
     <button data-toggle="collapse" data-target="#collapse1-lft" aria-expanded="true" aria-controls="collapse1-lft">
@@ -397,7 +405,7 @@ Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltati
 
 {% highlight js %}
 $('#myCollapsible').collapse({
-  toggle: false
+toggle: false
 })
 {% endhighlight %}
 
@@ -450,6 +458,6 @@ La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportam
 
 {% highlight js %}
 $('#myCollapsible').on('hidden.bs.collapse', function () {
-  // do something…
+// do something…
 })
 {% endhighlight %}

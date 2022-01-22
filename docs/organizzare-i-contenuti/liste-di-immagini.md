@@ -9,6 +9,7 @@ description: La lista di immagini è un componente flessibile per la visualizzaz
 ## Elemento singolo
 
 Di seguito gli esempi di elemento singolo della grid list:
+
 - Immagine semplice
 - Immagine con didascalia in basso
 - Immagine con didascalia sovrapposta
@@ -16,6 +17,7 @@ Di seguito gli esempi di elemento singolo della grid list:
 Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`.it-grid-item-overlay`** al div **`it-grid-item-wrapper`**.
 
 {% capture example %}
+
 <div class="row">
   <div class="col-12 col-lg-4">
 <!--grid item 1-->
@@ -69,6 +71,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
 {% endcapture %}{% include example.html content=example %}
 
 ## Tipi di griglia
+
 ### Standard
 
 La griglia utilizzata è una variante delle classi di Bootstrap, dove cambiano sostanzialmente i margini.  
@@ -78,6 +81,7 @@ Al posto della classe **`.row`** di bootstrap viene utilizzata la custom class *
 Di seguito l'esempio
 
 {% capture example %}
+
 <div class="it-grid-list-wrapper">
   <div class="grid-row">
     <div class="col-6 col-lg-4">
@@ -157,6 +161,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
 Di seguito l'esempio
 
 {% capture example %}
+
 <div class="it-grid-list-wrapper it-image-label-grid">
   <div class="grid-row">
     <div class="col-6 col-lg-4">
@@ -269,17 +274,19 @@ Di seguito l'esempio
 
 La griglia "proporzionale" contiene elementi griglia con immagine e testo in overlay.  
 Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-quilted-grid`** al div **`.it-grid-list-wrapper`**.
-La griglia utilizza le stesse classi di bootstrap (**`.col`** ). 
+La griglia utilizza le stesse classi di bootstrap (**`.col`** ).
 
-I tipi di immagini utilizzabili sono sostanzialmente 2:  
+I tipi di immagini utilizzabili sono sostanzialmente 2:
+
 - standard
 - orizzontale (come proporzione sono il doppio della larghezza rispetto all'immagine standard e di altezza uguale)
 
-Per utilizzare l'immagine orizzontale, occorre aggiungere la classe **`.it-grid-item-double-w`** al div **`.it-grid-item-wrapper`**  che contiene l'immagine.
+Per utilizzare l'immagine orizzontale, occorre aggiungere la classe **`.it-grid-item-double-w`** al div **`.it-grid-item-wrapper`** che contiene l'immagine.
 
 Di seguito l'esempio
 
 {% capture example %}
+
 <div class="it-grid-list-wrapper it-quilted-grid">
   <div class="grid-row">
     <div class="col-12 col-md-6">
@@ -363,10 +370,10 @@ Di seguito l'esempio
 Per realizzare l'elemento Masonry è stata usata la classe di bootstrap **`.card-columns`** che contiene al suo interno gli elementi distribuendoli su più colonne.
 Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-masonry`** al div **`.it-grid-list-wrapper`**.
 
-
 Di seguito l'esempio
 
 {% capture example %}
+
 <div class="it-grid-list-wrapper it-image-label-grid it-masonry">
   <div class="card-columns">
     <div class="col-12">
