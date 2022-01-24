@@ -93,12 +93,20 @@
   }
   // masonry
   &.it-masonry {
+    &.it-image-label-grid {
+      div[class^='col-'] {
+        padding-bottom: 0;
+      }
+    }
     .card-columns {
       margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
       margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
       column-gap: 0;
       .it-grid-item-wrapper {
         break-inside: avoid-column;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 16px;
         .img-responsive {
           padding-bottom: initial;
           height: auto;
@@ -118,6 +126,15 @@
     }
   }
 }
+
+//fix masonry ie11
+/* stylelint-disable */
+_:-ms-fullscreen,
+.it-grid-list-wrapper.it-masonry .card-columns .it-grid-item-wrapper .img-responsive {
+  padding-bottom: 0;
+}
+/* stylelint-enable */
+
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   // grid default
