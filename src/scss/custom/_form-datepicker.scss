@@ -8,7 +8,13 @@ a.datepicker-button {
     }
   }
 }
-
+.it-datepicker-wrapper{
+  .valid-feedback,
+  .invalid-feedback{
+    position: absolute;
+    top: 100%;
+  }
+}
 .datepicker-calendar {
   margin: 0 10px 10px 0;
   font-size: 0.9em;
