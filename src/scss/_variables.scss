@@ -92,9 +92,9 @@ $border-radius-sm: 2px !default;
 $border-radius-lg: 8px !default;
 
 // Link and button colors
-$btn-primary-bg: $primary;
-$btn-primary-border: $primary;
-$link-color: $primary;
+$btn-primary-bg: $primary !default;
+$btn-primary-border: $primary !default;
+$link-color: $primary !default;
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
