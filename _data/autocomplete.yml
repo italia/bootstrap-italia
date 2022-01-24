@@ -1,9 +1,9 @@
 nazioni:
-  - icon: '<div class="avatar size-sm"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/it.svg" alt="Italia"></div>'
+  - icon: '<div class="avatar size-sm"><img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/it.svg" alt="Italia"></div>'
     text: Italia
     label: Label 1
     link: '#'
-  - icon: '<div class="avatar size-sm"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg" alt="Francia"></div>'
+  - icon: '<div class="avatar size-sm"><img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/fr.svg" alt="Francia"></div>'
     text: Francia
     label: Label 2
     link: '#'
