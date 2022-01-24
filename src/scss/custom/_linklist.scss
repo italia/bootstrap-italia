@@ -15,6 +15,16 @@
         padding: 0 $link-list-h-pad;
         position: relative;
         text-decoration: none;
+        &.icon-right {
+          padding-left: 0;
+          .icon {
+            position: absolute;
+            right: 0;
+          }
+          & + ul {
+            padding-left: 0;
+          }
+        }
         // hover state
         &:hover:not(.disabled) {
           text-decoration: none;
@@ -117,7 +127,8 @@
         }
 
         &.list-item {
-          &.icon-left {
+          &.icon-left,
+          &.left-icon {
             position: relative;
             padding-left: $v-gap * 4;
 
