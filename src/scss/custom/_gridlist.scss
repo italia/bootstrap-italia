@@ -94,7 +94,7 @@
   // masonry
   &.it-masonry {
     &.it-image-label-grid {
-      div[class^=col-] {
+      div[class^='col-'] {
         padding-bottom: 0;
       }
     }
@@ -128,9 +128,12 @@
 }
 
 //fix masonry ie11
-_:-ms-fullscreen, .it-grid-list-wrapper.it-masonry .card-columns .it-grid-item-wrapper .img-responsive {
+/* stylelint-disable */
+_:-ms-fullscreen,
+.it-grid-list-wrapper.it-masonry .card-columns .it-grid-item-wrapper .img-responsive {
   padding-bottom: 0;
 }
+/* stylelint-enable */
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
