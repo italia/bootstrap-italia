@@ -8,13 +8,7 @@ a.datepicker-button {
     }
   }
 }
-.it-datepicker-wrapper{
-  .valid-feedback,
-  .invalid-feedback{
-    position: absolute;
-    top: 100%;
-  }
-}
+
 .datepicker-calendar {
   margin: 0 10px 10px 0;
   font-size: 0.9em;
@@ -317,7 +311,11 @@ abbr[title] {
 
 .it-datepicker-wrapper {
   position: relative;
-
+  .valid-feedback,
+  .invalid-feedback {
+    position: absolute;
+    top: 100%;
+  }
   .form-group > label {
     background-color: rgba(255, 255, 255, 0);
     transform: translateY(-75%);
