@@ -332,14 +332,32 @@ $(function () {
         onInitialized: function (event) {
           hideInvisibleCards(event.target)
 
+          var slideDesc = 'Slide {{i}} di {{n}}'
+          var dotDesc =  'Pagina {{i}} di {{n}} del carousel'
+
+          if ($(event.target).attr('data-slide-desc')) {
+            slideDesc = $(event.target).attr('data-slide-desc')
+          }
+
+          if ($(event.target).attr('data-dot-desc')) {
+            dotDesc = $(event.target).attr('data-dot-desc')
+          }
+
+          console.log('--slideDesc' + slideDesc)
+          console.log('--dotDecs' + dotDesc)
+
           var slides = $(event.target).find('.owl-item')
           $(slides).each(function (index) {
-            $(this).attr('aria-label', 'slide ' + (index + 1) + ' di ' + slides.length)
+            var slideDescText = slideDesc.replace('{{i}}',index + 1)
+            slideDescText = slideDescText.replace('{{n}}',slides.length)
+            $(this).attr('aria-label', slideDescText)
           })
 
           var dots = $(event.target).find('.owl-dot')
           $(dots).each(function (index) {
-            $(this).attr('aria-label', 'pagina ' + (index + 1) + ' di ' + dots.length + ' del carousel')
+            var dotDescText = dotDesc.replace('{{i}}',index + 1)
+            dotDescText = dotDescText.replace('{{n}}',slides.length)
+            $(this).attr('aria-label', dotDescText)
           })
         },
         onTranslate: function (event) {
