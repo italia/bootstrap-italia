@@ -330,13 +330,35 @@ $(function () {
           },
         },
         onInitialized: function (event) {
-          $(event.target)
-            .find('.owl-dot')
-            .each(function (index) {
-              $(this).attr('aria-labelledby', 'owl-dot-' + index)
-            })
+          hideInvisibleCards(event.target)
+
+          var slides = $(event.target).find('.owl-item')
+          $(slides).each(function (index) {
+            $(this).attr('aria-label', 'slide ' + (index + 1) + ' di ' + slides.length)
+          })
+
+          var dots = $(event.target).find('.owl-dot')
+          $(dots).each(function (index) {
+            $(this).attr('aria-label', 'pagina ' + (index + 1) + ' di ' + dots.length + ' del carousel')
+          })
+        },
+        onTranslate: function (event) {
+          showVisibleCards(event.target)
+        },
+        onTranslated: function (event) {
+          hideInvisibleCards(event.target)
         },
       })
     }
   })
 })
+
+function hideInvisibleCards(targetCarousel) {
+  $(targetCarousel).find('.owl-item:not(.active)').attr('aria-hidden', 'true')
+  $(targetCarousel).find('.owl-item:not(.active)').find('a', 'button').attr('tabindex', -1)
+}
+
+function showVisibleCards(targetCarousel) {
+  $(targetCarousel).find('.owl-item').removeAttr('aria-hidden')
+  $(targetCarousel).find('.owl-item').find('a', 'button').removeAttr('tabindex')
+}
