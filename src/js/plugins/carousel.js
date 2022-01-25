@@ -333,7 +333,7 @@ $(function () {
           hideInvisibleCards(event.target)
 
           var slideDesc = 'Slide {{i}} di {{n}}'
-          var dotDesc =  'Pagina {{i}} di {{n}} del carousel'
+          var dotDesc = 'Pagina {{i}} di {{n}} del carousel'
 
           if ($(event.target).attr('data-slide-desc')) {
             slideDesc = $(event.target).attr('data-slide-desc')
@@ -343,20 +343,17 @@ $(function () {
             dotDesc = $(event.target).attr('data-dot-desc')
           }
 
-          console.log('--slideDesc' + slideDesc)
-          console.log('--dotDecs' + dotDesc)
-
           var slides = $(event.target).find('.owl-item')
           $(slides).each(function (index) {
-            var slideDescText = slideDesc.replace('{{i}}',index + 1)
-            slideDescText = slideDescText.replace('{{n}}',slides.length)
+            var slideDescText = slideDesc.replace('{{i}}', index + 1)
+            slideDescText = slideDescText.replace('{{n}}', slides.length)
             $(this).attr('aria-label', slideDescText)
           })
 
           var dots = $(event.target).find('.owl-dot')
           $(dots).each(function (index) {
-            var dotDescText = dotDesc.replace('{{i}}',index + 1)
-            dotDescText = dotDescText.replace('{{n}}',slides.length)
+            var dotDescText = dotDesc.replace('{{i}}', index + 1)
+            dotDescText = dotDescText.replace('{{n}}', slides.length)
             $(this).attr('aria-label', dotDescText)
           })
         },
