@@ -125,6 +125,72 @@ Lo stesso vale per gli elementi `<a>`:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Dropup
+
+Per aprire le voci di menu verso l'alto aggiungere la classe  `.dropup` all'elemento padre
+
+{% capture example %}
+<div class="dropdown dropup">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropup
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuDropup">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Dropright
+
+Per aprire le voci di menu verso destra aggiungere la classe  `.dropright` all'elemento padre
+
+{% capture example %}
+<div class="dropdown dropright">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropright
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuDropright">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Dropleft
+
+Per aprire le voci di menu verso sinistra aggiungere la classe  `.dropleft` all'elemento padre
+
+{% capture example %}
+<div class="dropdown dropleft">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
+    Apri dropleft
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuDropleft">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Dropdown menu
 
 Le voci del menu che viene aperto al click sul bottone possono essere personalizzate, così come il menù stesso.
