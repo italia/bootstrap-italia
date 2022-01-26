@@ -332,11 +332,11 @@ $(function () {
         onInitialized: function (event) {
           hideInvisibleCards(event.target)
 
-          var slideDesc = 'Slide {{i}} di {{n}}'
-          var dotDesc = 'Pagina {{i}} di {{n}} del carousel'
+          var elDesc = 'Elemento {{i}} di {{n}}'
+          var dotDesc = 'Slide {{i}} di {{n}} del carousel'
 
           if ($(event.target).attr('data-slide-desc')) {
-            slideDesc = $(event.target).attr('data-slide-desc')
+            elDesc = $(event.target).attr('data-slide-desc')
           }
 
           if ($(event.target).attr('data-dot-desc')) {
@@ -345,9 +345,9 @@ $(function () {
 
           var slides = $(event.target).find('.owl-item')
           $(slides).each(function (index) {
-            var slideDescText = slideDesc.replace('{{i}}', index + 1)
-            slideDescText = slideDescText.replace('{{n}}', slides.length)
-            $(this).attr('aria-label', slideDescText)
+            var elDescText = elDesc.replace('{{i}}', index + 1)
+            elDescText = elDescText.replace('{{n}}', slides.length)
+            $(this).attr('aria-label', elDescText)
           })
 
           var dots = $(event.target).find('.owl-dot')

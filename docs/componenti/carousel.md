@@ -34,20 +34,20 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
 
 Bootstrap Italia estende il plugin Owl Carousel per renderlo più accessibile.
 
-Alle slide non attive (non visibili) viene aggiunto un attributo `aria-hidden="true"` e viene inibito il focus degli elementi `a` e `button` al loro interno.
+Agli elementi del carousel non attivi (non visibili) viene aggiunto un attributo `aria-hidden="true"` e viene inibito il focus degli elementi `a` e `button` al loro interno.
 
-Alle singole slide viene aggiunto un attributo `aria-label="slide i di n"` dove s è l'indice della slide ed n il numero totale di slide.
-Agli owl-dot viene aggiunto un attributo `aria-label="pagina i di n del carousel"` dove n è l'indice della pagina del carousel attiva ed n il numero totale di pagine.
+Ai singoli elementi viene aggiunto un attributo `aria-label="elemento i di n"` dove i è l'indice dell'elemento ed n il numero totale di elementi.
+Agli owl-dot viene aggiunto un attributo `aria-label="slide i di n del carousel"` dove i è l'indice della slide del carousel attiva ed n il numero totale di slide.
 
 Questi valori vengono calcolati automaticamente e scritti nel DOM all'init del carousel.
 
 Nel caso si volesse modificare il testo dgli `aria-label`, ad esempio per implementare la traduzione in un'altra lingua, è sufficiente aggiungere i seguenti attributi `data` al div `it-carousel-all owl-carousel`:
 
-`data-slide-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}"`  
+`data-el-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}"`  
 `data-dot-desc="Pagina {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel"`
 
-La chiave {% raw %}{{i}}{% endraw %} verrà sostituita dal numero di slide/pagina.  
-La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di slide/pagine.
+La chiave {% raw %}{{i}}{% endraw %} verrà sostituita dal numero di elemento/slide.  
+La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di elementi/slide.
 
 
 Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
@@ -62,7 +62,7 @@ Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
       <h2 class="no_toc">Titolo del Carousel</h2>
     </div>
   </div>
-  <div class="it-carousel-all owl-carousel it-card-bg" data-slide-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}" data-dot-desc="Pagina {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel">
+  <div class="it-carousel-all owl-carousel it-card-bg" data-el-desc="Elemento {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}" data-dot-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper card-space">
         <div class="card card-bg">
