@@ -135,9 +135,28 @@ _:-ms-fullscreen,
 }
 /* stylelint-enable */
 
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  // grid default
+  .it-grid-list-wrapper {
+    &.it-masonry {
+      .card-columns {
+        column-count: 2;
+      }
+    }
+  }
+}
+
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   // grid default
+  .it-grid-list-wrapper {
+    &.it-masonry {
+      .card-columns {
+        column-count: 3;
+      }
+    }
+  }
 
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
