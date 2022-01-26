@@ -316,8 +316,8 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="sr-only">chiudi</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">download</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg>
       </a>
     </li>
   </ul>
@@ -372,8 +372,8 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="sr-only">chiudi</span>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">download</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg>
       </a>
     </li>
   </ul>
@@ -469,9 +469,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -589,9 +589,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -831,8 +831,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="sr-only">chiudi</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">download</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg>
       </a>
     </li>
   </ul>
@@ -897,8 +897,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="sr-only">chiudi</span>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <span class="sr-only">download</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg>
       </a>
     </li>
   </ul>
