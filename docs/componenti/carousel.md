@@ -8,7 +8,7 @@ toc: true
 
 ## Come funziona
 
-Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e un pò di JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
+Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
 
 Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
 
@@ -28,6 +28,32 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
 
+{% capture callout %}
+
+##### Accessibilità del carousel
+
+Bootstrap Italia estende il plugin Owl Carousel per renderlo più accessibile.
+
+Agli elementi del carousel non attivi (non visibili) viene aggiunto un attributo `aria-hidden="true"` e viene inibito il focus degli elementi `a` e `button` al loro interno.
+
+Ai singoli elementi viene aggiunto un attributo `aria-label="elemento i di n"` dove i è l'indice dell'elemento ed n il numero totale di elementi.
+Agli owl-dot viene aggiunto un attributo `aria-label="slide i di n del carousel"` dove i è l'indice della slide del carousel attiva ed n il numero totale di slide.
+
+Questi valori vengono calcolati automaticamente e scritti nel DOM all'init del carousel.
+
+Nel caso si volesse modificare il testo dgli `aria-label`, ad esempio per implementare la traduzione in un'altra lingua, è sufficiente aggiungere i seguenti attributi `data` al div `it-carousel-all owl-carousel`:
+
+`data-el-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}"`  
+`data-dot-desc="Pagina {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel"`
+
+La chiave {% raw %}{{i}}{% endraw %} verrà sostituita dal numero di elemento/slide.  
+La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di elementi/slide.
+
+
+Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
@@ -36,7 +62,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
       <h2 class="no_toc">Titolo del Carousel</h2>
     </div>
   </div>
-  <div class="it-carousel-all owl-carousel it-card-bg">
+  <div class="it-carousel-all owl-carousel it-card-bg" data-el-desc="Elemento {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}" data-dot-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper card-space">
         <div class="card card-bg">
@@ -44,7 +70,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -60,7 +86,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -76,7 +102,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -92,7 +118,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
             <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -105,10 +131,10 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
       <div class="card-wrapper card-space">
         <div class="card card-bg">
           <div class="card-body">
-            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <h5 class="card-title">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -121,10 +147,10 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
       <div class="card-wrapper card-space">
         <div class="card card-bg">
           <div class="card-body">
-            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <h5 class="card-title">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -137,10 +163,10 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
       <div class="card-wrapper card-space">
         <div class="card card-bg">
           <div class="card-body">
-            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+            <h5 class="card-title">7. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">7. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -177,7 +203,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <span class="card-signature">di Federico De Paolis</span>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -198,7 +224,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <span class="card-signature">di Federico De Paolis</span>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -219,7 +245,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <span class="card-signature">di Federico De Paolis</span>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -240,7 +266,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <span class="card-signature">di Federico De Paolis</span>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -287,7 +313,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                 <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
@@ -317,7 +343,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                 <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
@@ -347,7 +373,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                 <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
@@ -377,7 +403,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                 <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                 </svg>
@@ -417,7 +443,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -438,7 +464,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -459,7 +485,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -480,7 +506,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>
@@ -501,7 +527,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
             <p class="card-text"></p>
             <a class="read-more" href="#">
-              <span class="text">Leggi di più</span>
+              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg>

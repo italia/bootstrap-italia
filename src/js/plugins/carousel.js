@@ -330,13 +330,50 @@ $(function () {
           },
         },
         onInitialized: function (event) {
-          $(event.target)
-            .find('.owl-dot')
-            .each(function (index) {
-              $(this).attr('aria-labelledby', 'owl-dot-' + index)
-            })
+          hideInvisibleCards(event.target)
+
+          var elDesc = 'Elemento {{i}} di {{n}}'
+          var dotDesc = 'Slide {{i}} di {{n}} del carousel'
+
+          if ($(event.target).attr('data-slide-desc')) {
+            elDesc = $(event.target).attr('data-slide-desc')
+          }
+
+          if ($(event.target).attr('data-dot-desc')) {
+            dotDesc = $(event.target).attr('data-dot-desc')
+          }
+
+          var slides = $(event.target).find('.owl-item')
+          $(slides).each(function (index) {
+            var elDescText = elDesc.replace('{{i}}', index + 1)
+            elDescText = elDescText.replace('{{n}}', slides.length)
+            $(this).attr('aria-label', elDescText)
+          })
+
+          var dots = $(event.target).find('.owl-dot')
+          $(dots).each(function (index) {
+            var dotDescText = dotDesc.replace('{{i}}', index + 1)
+            dotDescText = dotDescText.replace('{{n}}', slides.length)
+            $(this).attr('aria-label', dotDescText)
+          })
+        },
+        onTranslate: function (event) {
+          showVisibleCards(event.target)
+        },
+        onTranslated: function (event) {
+          hideInvisibleCards(event.target)
         },
       })
     }
   })
 })
+
+function hideInvisibleCards(targetCarousel) {
+  $(targetCarousel).find('.owl-item:not(.active)').attr('aria-hidden', 'true')
+  $(targetCarousel).find('.owl-item:not(.active)').find('a', 'button').attr('tabindex', -1)
+}
+
+function showVisibleCards(targetCarousel) {
+  $(targetCarousel).find('.owl-item').removeAttr('aria-hidden')
+  $(targetCarousel).find('.owl-item').find('a', 'button').removeAttr('tabindex')
+}
