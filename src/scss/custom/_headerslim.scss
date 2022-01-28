@@ -30,7 +30,7 @@
         display: flex;
         align-items: center;
         &[aria-expanded='true'] {
-          .icon {
+          & > .icon:last-of-type {
             transform: scaleY(-1);
           }
         }
@@ -41,7 +41,7 @@
         display: block;
         text-decoration: none;
         &[aria-expanded='true'] {
-          .icon {
+          & > .icon:last-of-type {
             transform: scaleY(-1);
           }
         }
