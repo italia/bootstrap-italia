@@ -238,20 +238,26 @@ Per i messaggi personalizzati di convalida del form, dovrai aggiungere l'attribu
 
 <form class="needs-validation" novalidate>
   <div class="form-row">
-    <div class="form-group col-md-4 mb-3">
+    <div class="form-group col-md-3 mb-3">
       <label for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required>
       <div class="valid-feedback">Validato!</div>
     </div>
-    <div class="form-group col-md-4 mb-3">
+    <div class="form-group col-md-3 mb-3">
       <label for="validationCustom02">Cognome</label>
       <input type="text" class="form-control" id="validationCustom02" value="Rossi" required>
       <div class="valid-feedback">Validato!</div>
     </div>
-    <div class="form-group col-md-4 mb-3">
+    <div class="form-group col-md-3 mb-3">
       <label for="validationCustomUsername">Username</label>
       <input type="text" class="form-control" id="validationCustomUsername" required>
       <div class="invalid-feedback">Per favore scegli un username.</div>
+    </div>
+    <div class="form-group col-md-3 mb-3">
+      <label for="validationAge">Età</label>
+      <input type="number" class="form-control" id="validationAge" value="18" min="18" step="1" required>
+      <div class="valid-feedback">Validato!</div>
+      <div class="invalid-feedback">Utilizza un numero valido maggiore di 18</div>
     </div>
   </div>
   <div class="form-row">
