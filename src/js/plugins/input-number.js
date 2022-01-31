@@ -81,10 +81,12 @@ $(function () {
     inputNumberResize($inputTarget)
   })
 
-  // Fixing IE11 numeric behavior
-  $('input[type=number]').on('keyup', function (e) {
-    var value = e && e.target.value
-    var regexp = /[^0-9,.]/g
-    this.value = value.replace(regexp, '')
-  })
+  if (isIe()) {
+    // Fixing IE11 numeric behavior
+    $('input[type=number]').on('keyup', function (e) {
+      var value = e && e.target.value
+      var regexp = /[^0-9,.]/g
+      this.value = value.replace(regexp, '')
+    })
+  }
 })
