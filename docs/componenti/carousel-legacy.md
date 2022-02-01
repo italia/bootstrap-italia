@@ -1,7 +1,7 @@
 ---
 layout: docs
-splide: true
-title: Carousel
+owl: true
+title: Carousel Legacy
 description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.
 group: componenti
 toc: true

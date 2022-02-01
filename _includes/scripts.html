@@ -32,6 +32,9 @@
 {% if page.owl %}
 <script src="{{ site.baseurl }}/dist/js/vendor/owl.carousel.min.js"></script>
 {% endif %}
+{% if page.splide %}
+<script src="{{ site.baseurl }}/dist/js/vendor/splide.min.js"></script>
+{% endif %}
 {%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>

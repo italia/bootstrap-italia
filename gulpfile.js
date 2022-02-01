@@ -68,7 +68,7 @@ const Paths = {
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
   SOURCE_DOCUMENTATION_JS: ['docs/assets/src/js/cover-animation.js', 'docs/assets/src/js/docs.js'],
   SOURCE_CAROUSEL_JS: ['node_modules/owl.carousel/dist/owl.carousel.min.js', 'node_modules/@splidejs/splide/dist/js/splide.min.js'],
-  SOURCE_CAROUSEL_CSS: ['node_modules/owl.carousel/dist/assets/owl.carousel.min.css', 'node_modules/@splidejs/splide/dist/css/splide.min.css'],
+  SOURCE_CAROUSEL_CSS: ['node_modules/owl.carousel/dist/assets/owl.carousel.min.css', 'node_modules/@splidejs/splide/dist/css/splide-core.min.css'],
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
