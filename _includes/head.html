@@ -10,10 +10,12 @@
   {%- if page.title -%} {{ page.title | smartify }} · {{ site.title | smartify }} {%- else -%} {{ site.title | smartify }} · {{ site.description | smartify }}
   {%- endif -%}
 </title>
-
+<!-- Owl carousel -->
+{% if page.owl %}
+<link href="{{ site.baseurl }}/dist/css/vendor/owl.carousel.min.css" rel="stylesheet" />
+{% endif %}
 <!-- Bootstrap core CSS -->
 <link href="{{ site.baseurl }}/dist/css/bootstrap-italia.min.css?{{ buildTime }}" rel="stylesheet" />
-
 <!-- Documentation extras -->
 {% if page.layout == "docs" %} {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />

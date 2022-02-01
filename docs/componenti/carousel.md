@@ -1,5 +1,6 @@
 ---
 layout: docs
+owl: true
 title: Carousel
 description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.
 group: componenti
