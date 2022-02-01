@@ -56,126 +56,13 @@ Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
-
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-  <div class="it-header-block">
-    <div class="it-header-block-title">
-      <h2 class="no_toc">Titolo del Carousel</h2>
-    </div>
-  </div>
-  <div class="it-carousel-all owl-carousel it-card-bg" data-el-desc="Elemento {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}" data-dot-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel">
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg">
-          <div class="card-body">
-            <h5 class="card-title">7. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">7. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+  <div class="splide__track">
+    <ul class="splide__list it-carousel-all">
+      <li class="splide__slide">Slide 01</li>
+      <li class="splide__slide">Slide 02</li>
+      <li class="splide__slide">Slide 03</li>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

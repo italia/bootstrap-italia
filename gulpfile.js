@@ -55,6 +55,7 @@ const Paths = {
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
+    'src/js/plugins/carousel-legacy.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
     'src/js/plugins/select.js',
