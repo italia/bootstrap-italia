@@ -1,17 +1,35 @@
 ---
 layout: docs
 owl: true
-title: Carousel Legacy
-description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.
+title: Carousel (versione legacy)
+description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel. Compatibile con Internet Explorer 11.
 group: componenti
 toc: true
 ---
 
+Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
+
+    
+{% capture callout %}
+Lo sviluppo di Owl Carousel è terminato nel 2018 e il plugin [non è più supportato](https://github.com/OwlCarousel2/OwlCarousel2/commit/4eedccac4ea061931162a86e3f268332c16a1ad0).  
+
+Per questa ragione, oltre ad alcune mancanze legate all'accessibilità, rendiamo disponibile questa versione *legacy* del Carousel di Boostrap Italia solo per evitare breaking changes e per garantire il funzionamento su <strong>Internet Explorer 11.</strong>  
+
+I più recenti plugin per carousel infatti non supportano questo browser ormai prossimo alla [End of Life](https://docs.microsoft.com/it-it/lifecycle/announcements/internet-explorer-11-end-of-support).  
+
+Se non è richiesta la compatibilità con Explorer 11 è consigliabile utilizzare la [nuova versione]({{ site.baseurl }}/docs/componenti/carousel/) del Carousel basata sul plugin [Splide](https://splidejs.com/).
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+## Implementazione
+
+Owl Carousel non è più incluso nel bundle di Boostrap Italia, pertanto è necessario includere i file CSS e JS della [libreria](https://github.com/OwlCarousel2/OwlCarousel2) all'interno del proprio progetto per utilizzare il Carousel in versione *legacy*:
+
+- linkare il file CSS `owl.carousel.min.css` nella head del progetto, **prima** del CSS di Boostrap Italia.
+- caricare il file JS `owl.carousel.min.js` nel blocco degli script a fondo pagina.
+
 ## Come funziona
 
 Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
-
-Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
 
 Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.
 
