@@ -120,6 +120,9 @@ $(function () {
         xlmargin = 48
         xlitems = 1
       }
+    }
+
+    if ($(this).closest('.it-carousel-wrapper').hasClass('it-carousel-landscape-abstract-3')) {
       // standard img
       if ($(this).hasClass('it-img-card') && $(this).hasClass('it-standard-image')) {
         cloop = true
