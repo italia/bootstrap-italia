@@ -81,8 +81,12 @@ document.addEventListener('DOMContentLoaded', function () {
         i18n: {
           prev: 'Slide precedente',
           next: 'Slide successiva',
-          pageX: 'Vai a pagina %s',
+          first: 'Vai alla prima slide',
+          last: 'Vai all’ultima slide',
           slideX: 'Vai alla slide %s',
+          pageX: 'Vai a pagina %s',
+          play: 'Attiva autoplay',
+          pause: 'Pausa autoplay',
         },
         breakpoints: {
           768: {
