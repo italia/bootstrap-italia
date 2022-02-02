@@ -15,7 +15,7 @@
       letter-spacing: unset;
     }
   }
-  .owl-stage-outer {
+  .owl-stage-outer, .splide__track {
     padding-top: $crs-margin-bottom;
     padding-bottom: 0;
   }
@@ -128,6 +128,26 @@
       border-radius: 50px;
       margin: 0 $v-gap;
       &.active {
+        opacity: 1;
+      }
+    }
+  }
+  // splide pagination
+  .splide__pagination{
+    margin-top: $v-gap;
+    button{
+      width: $crs-dots-simension;
+      height: $crs-dots-simension;
+      background: $crs-dots-color;
+      display: inline-block;
+      opacity: 0.3;
+      transition: all 0.3s;
+      border-radius: 50px;
+      margin: 0 $v-gap;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      &.is-active{
         opacity: 1;
       }
     }
