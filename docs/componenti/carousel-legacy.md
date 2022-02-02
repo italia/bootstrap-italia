@@ -2,30 +2,10 @@
 layout: docs
 owl: true
 title: Carousel (versione legacy)
-description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel. Compatibile con Internet Explorer 11.
+description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.
 group: componenti
 toc: true
 ---
-
-Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
-
-    
-{% capture callout %}
-Lo sviluppo di Owl Carousel è terminato nel 2018 e il plugin [non è più supportato](https://github.com/OwlCarousel2/OwlCarousel2/commit/4eedccac4ea061931162a86e3f268332c16a1ad0).  
-
-Per questa ragione, oltre ad alcune mancanze legate all'accessibilità, rendiamo disponibile questa versione *legacy* del Carousel di Boostrap Italia solo per evitare breaking changes e per garantire il funzionamento su <strong>Internet Explorer 11.</strong>  
-
-I più recenti plugin per carousel infatti non supportano questo browser ormai prossimo alla [End of Life](https://docs.microsoft.com/it-it/lifecycle/announcements/internet-explorer-11-end-of-support).  
-
-Se non è richiesta la compatibilità con Explorer 11 è consigliabile utilizzare la [nuova versione]({{ site.baseurl }}/docs/componenti/carousel/) del Carousel basata sul plugin [Splide](https://splidejs.com/).
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-
-## Implementazione
-
-Owl Carousel non è più incluso nel bundle di Boostrap Italia, pertanto è necessario includere i file CSS e JS della [libreria](https://github.com/OwlCarousel2/OwlCarousel2) all'interno del proprio progetto per utilizzare il Carousel in versione *legacy*:
-
-- linkare il file CSS `owl.carousel.min.css` nella head del progetto, **prima** del CSS di Boostrap Italia.
-- caricare il file JS `owl.carousel.min.js` nel blocco degli script a fondo pagina.
 
 ## Come funziona
 
@@ -33,23 +13,28 @@ Il carousel è una presentazione per scorrere una serie di contenuti, costruito 
 
 Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.
 
-## Esempi di Carousel con diversi contenuti
+Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
 
-I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi necessarie per la corretta visualizzazione dei contenuti.
+{% capture callout %}
+Lo sviluppo di Owl Carousel è terminato nel 2018 e il plugin [non è più supportato](https://github.com/OwlCarousel2/OwlCarousel2/commit/4eedccac4ea061931162a86e3f268332c16a1ad0).  
 
-### Titolo e Card semplici
+Per questa ragione, oltre ad alcune mancanze legate all'accessibilità, rendiamo disponibile questa versione *legacy* del Carousel di Bootstrap Italia solo per evitare breaking changes e per garantire il pieno funzionamento su <strong>Internet Explorer 11.</strong>  
 
-Il seguente è un carousel con card semplici.
+I più recenti plugin per carousel infatti non supportano questo browser ormai prossimo alla [End of Life](https://docs.microsoft.com/it-it/lifecycle/announcements/internet-explorer-11-end-of-support).  
 
-**Classi da applicare**:
+La [nuova versione]({{ site.baseurl }}/docs/componenti/carousel/) del Carousel basata sul plugin [Splide](https://splidejs.com/) supporta in parte IE11, tranne per la funzione di drag. Se non è richiesta piena compatibilità con IE11 è consigliabile utilizzarla.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
+## Implementazione
 
-div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
+Owl Carousel non è più incluso nel bundle di Bootstrap Italia, pertanto se si decidesse di usare il componente Carousel è necessario includere i file CSS e JS della [libreria](https://github.com/OwlCarousel2/OwlCarousel2) all'interno del proprio progetto:
+
+- linkare il file CSS `owl.carousel.min.css` nella head del progetto, **prima** del CSS di Bootstrap Italia.
+- caricare il file JS `owl.carousel.min.js` nel blocco degli script a fondo pagina.
 
 {% capture callout %}
 
-##### Accessibilità del carousel
+#### Accessibilità
 
 Bootstrap Italia estende il plugin Owl Carousel per renderlo più accessibile.
 
@@ -72,6 +57,20 @@ La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di elementi/sl
 Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+## Esempi di Carousel con diversi contenuti
+
+I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi necessarie per la corretta visualizzazione dei contenuti.
+
+### Titolo e Card semplici
+
+Il seguente è un carousel con card semplici.
+
+**Classi da applicare**:
+
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
+
+div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
 
 {% capture example %}
 
