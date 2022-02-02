@@ -544,92 +544,124 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-  <div class="it-carousel-all owl-carousel it-img-card it-special-card">
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <a class="card card-img no-after special-card" href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
-            </div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-          <div class="card-body">
-            <div class="head-tags"><span class="data">10/10/2018</span>
-            </div>
-            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <a class="card card-img no-after special-card" href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
-            </div>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-          <div class="card-body">
-            <div class="head-tags"><span class="data">10/10/2018</span>
-            </div>
-            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <a class="card card-img no-after special-card" href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
-            </div>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-          <div class="card-body">
-            <div class="head-tags"><span class="data">10/10/2018</span>
-            </div>
-            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <a class="card card-img no-after special-card" href="#">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="head-tags"><span class="data">10/10/2018</span>
+                </div>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <p class="card-text"></p>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <a class="card card-img no-after special-card" href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="head-tags"><span class="data">10/10/2018</span>
-            </div>
-            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <a class="card card-img no-after special-card" href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="head-tags"><span class="data">10/10/2018</span>
-            </div>
-            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            
-          </div>
-        </a>
-      </div>
-    </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -647,42 +679,88 @@ viene aggiunta la classe `it-img-card` che specifica il tipo di card
 viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande.
 
 {% capture example %}
-
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel">
-  <div class="it-carousel-all owl-carousel it-img-card it-big-img">
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-big-img it-full-carousel splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -701,74 +779,88 @@ viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenu
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-3 it-full-carousel">
-  <div class="it-carousel-all owl-carousel it-img-card it-standard-image">
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-standard-image it-full-carousel splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
