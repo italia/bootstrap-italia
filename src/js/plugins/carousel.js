@@ -29,6 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
         arrowsMob = false
         arrowsTab = false
         arrowsDesk = false
+      } else if (el.classList.contains('it-carousel-landscape-abstract')) {
+        perPageMob = 1
+        perPageTab = 1
+        perPageDesk = 1
+        gapMob = 24
+        gapTab = 24
+        gapDesk = 24
+        paddingMob = { left: 0, right: 0 }
+        paddingTab = { left: 24, right: 24 }
+        paddingDesk = { left: 0, right: 0 }
+        arrowsMob = false
+        arrowsTab = false
+        arrowsDesk = false
       }
       /*eslint-disable */
       splide = new Splide(el, {

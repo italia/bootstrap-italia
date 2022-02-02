@@ -1,5 +1,27 @@
 //mobile
 .it-carousel-wrapper {
+  // splide pagination
+  .splide__pagination {
+    margin-top: $v-gap;
+    margin-left: 0;
+    padding-left: 0;
+    button {
+      width: $crs-dots-simension;
+      height: $crs-dots-simension;
+      background: $crs-dots-color;
+      display: inline-block;
+      opacity: 0.3;
+      transition: all 0.3s;
+      border-radius: 50px;
+      margin: 0 $v-gap;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
   .it-special-card {
     h5.card-title {
       margin-bottom: 0;
@@ -133,26 +155,6 @@
       }
     }
   }
-  // splide pagination
-  .splide__pagination {
-    margin-top: $v-gap;
-    button {
-      width: $crs-dots-simension;
-      height: $crs-dots-simension;
-      background: $crs-dots-color;
-      display: inline-block;
-      opacity: 0.3;
-      transition: all 0.3s;
-      border-radius: 50px;
-      margin: 0 $v-gap;
-      padding: 0;
-      box-shadow: none;
-      border: none;
-      &.is-active {
-        opacity: 1;
-      }
-    }
-  }
 }
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
@@ -185,9 +187,11 @@
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map-get($container-max-widths, lg)};
-      .owl-stage {
+      .owl-stage,
+      .splide__list {
         display: flex;
-        .owl-item {
+        .owl-item,
+        .splide__slide {
           display: flex;
           .it-single-slide-wrapper {
             height: 100%;
@@ -238,13 +242,15 @@
           }
         }
       }
-      .owl-dots {
+      .owl-dots,
+      .splide__pagination {
         position: absolute;
         left: 50%;
         margin-left: $v-gap * 5;
         right: 0;
         bottom: $crs-landcape-bottom;
         text-align: left;
+        justify-content: left;
       }
     }
     // 3 col card
