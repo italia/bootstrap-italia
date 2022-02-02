@@ -15,7 +15,8 @@
       letter-spacing: unset;
     }
   }
-  .owl-stage-outer, .splide__track {
+  .owl-stage-outer,
+  .splide__track {
     padding-top: $crs-margin-bottom;
     padding-bottom: 0;
   }
@@ -133,9 +134,9 @@
     }
   }
   // splide pagination
-  .splide__pagination{
+  .splide__pagination {
     margin-top: $v-gap;
-    button{
+    button {
       width: $crs-dots-simension;
       height: $crs-dots-simension;
       background: $crs-dots-color;
@@ -147,7 +148,7 @@
       padding: 0;
       box-shadow: none;
       border: none;
-      &.is-active{
+      &.is-active {
         opacity: 1;
       }
     }
