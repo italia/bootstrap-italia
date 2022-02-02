@@ -11,13 +11,21 @@ toc: true
 
 Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
 
-Il plugin utilizzato è [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html).
+Il plugin utilizzato è [Splide](https://splidejs.com/).
 
 Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.
 
+{% capture callout %}
+
+##### Accessibilità del carousel
+
+ddd
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ## Esempi di Carousel con diversi contenuti
 
-I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi utili alla visualizzazione corretta dei contenuti.
+I wrapper più esterni `it-carousel-wrapper splide` e `splide__track` ricevono le classi necessarie per la corretta visualizzazione dei contenuti.
 
 ### Titolo e Card semplici
 
@@ -27,33 +35,9 @@ Il seguente è un carousel con card semplici.
 
 div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 
-div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` che indica che le card contenute in esso hanno background ed ombra.
-
-{% capture callout %}
-
-##### Accessibilità del carousel
-
-Bootstrap Italia estende il plugin Owl Carousel per renderlo più accessibile.
-
-Agli elementi del carousel non attivi (non visibili) viene aggiunto un attributo `aria-hidden="true"` e viene inibito il focus degli elementi `a` e `button` al loro interno.
-
-Ai singoli elementi viene aggiunto un attributo `aria-label="elemento i di n"` dove i è l'indice dell'elemento ed n il numero totale di elementi.
-Agli owl-dot viene aggiunto un attributo `aria-label="slide i di n del carousel"` dove i è l'indice della slide del carousel attiva ed n il numero totale di slide.
-
-Questi valori vengono calcolati automaticamente e scritti nel DOM all'init del carousel.
-
-Nel caso si volesse modificare il testo dgli `aria-label`, ad esempio per implementare la traduzione in un'altra lingua, è sufficiente aggiungere i seguenti attributi `data` al div `it-carousel-all owl-carousel`:
-
-`data-el-desc="Slide {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %}"`  
-`data-dot-desc="Pagina {% raw %}{{i}}{% endraw %} di {% raw %}{{n}}{% endraw %} del carousel"`
-
-La chiave {% raw %}{{i}}{% endraw %} verrà sostituita dal numero di elemento/slide.  
-La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di elementi/slide.
+div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che aggiungono il padding richiesto dal breakpoint `lg` in su.
 
 
-Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
-
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
@@ -183,8 +167,6 @@ Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
 
 div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 
-div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
-
 {% capture example %}
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
   <div class="splide__track">
@@ -293,8 +275,6 @@ Contiene un immagine associata ad una card "articolo"
 **Classi da applicare**:
 
 div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
-
-div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
 
 {% capture example %}
 
@@ -409,8 +389,6 @@ Contiene card con immagine in alto
 **Classi da applicare**:
 
 div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
-
-div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` che specifica il tipo di card contenuta.
 
 {% capture example %}
 

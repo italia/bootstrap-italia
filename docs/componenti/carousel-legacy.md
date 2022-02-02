@@ -35,7 +35,7 @@ Il carousel può contenere vari tipi di componenti, solitamente cards o immagini
 
 ## Esempi di Carousel con diversi contenuti
 
-I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi utili alla visualizzazione corretta dei contenuti.
+I wrapper più esterni `it-carousel-wrapper` e `it-carousel-all owl-carousel` ricevono le classi necessarie per la corretta visualizzazione dei contenuti.
 
 ### Titolo e Card semplici
 
@@ -668,7 +668,6 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 
 div **`it-carousel-wrapper`** :  
 viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la formattazione colonnare.  
-viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 
 div **`it-carousel-all owl-carousel`** :  
 viene aggiunta la classe `it-img-card` che specifica il tipo di card  
@@ -676,7 +675,7 @@ viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è d
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
   <div class="it-carousel-all owl-carousel it-img-card it-big-img">
     <div class="it-single-slide-wrapper">
       <div class="card-wrapper">
