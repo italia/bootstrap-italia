@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gapDesk = 24
         paddingMob = { left: 40, right: 40 }
         paddingTab = { left: 40, right: 40 }
-        paddingDesk = { left: 12, right: 12 }
+        paddingDesk = { left: 0, right: 0 }
         arrowsMob = false
         arrowsTab = false
         arrowsDesk = false

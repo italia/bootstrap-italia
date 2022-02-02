@@ -62,7 +62,7 @@ Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
       <h2 class="no_toc">Titolo del Carousel</h2>
     </div>
   </div>
-  <div class="splide__track">
+  <div class="splide__track pl-lg-3 pr-lg-3">
     <ul class="splide__list it-carousel-all">
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
@@ -315,8 +315,8 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <!-- category heading--><a class="category" href="#">Category</a>
-                    <!-- category data--><span class="data">10/12/2018</span>
+                    <a class="category" href="#">Category</a>
+                    <span class="data">10/12/2018</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -347,8 +347,8 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <!-- category heading--><a class="category" href="#">Category</a>
-                    <!-- category data--><span class="data">10/12/2018</span>
+                    <a class="category" href="#">Category</a>
+                    <span class="data">10/12/2018</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -379,8 +379,8 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <!-- category heading--><a class="category" href="#">Category</a>
-                    <!-- category data--><span class="data">10/12/2018</span>
+                    <a class="category" href="#">Category</a>
+                    <span class="data">10/12/2018</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -397,39 +397,7 @@ div **`it-carousel-all owl-carousel`** : nessuna classe aggiuntiva necessaria.
           </div>
         </div>
       </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
-              </div>
-            </div>
-          </a>
-          <div class="it-text-slider-wrapper-outside">
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <div class="category-top">
-                    <!-- category heading--><a class="category" href="#">Category</a>
-                    <!-- category data--><span class="data">10/12/2018</span>
-                  </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <span class="card-signature">di Federico De Paolis</span>
-                  <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-		</ul>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -446,113 +414,142 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-  <div class="it-carousel-all owl-carousel it-img-card">
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+  <div class="splide__track">
+    <ul class="splide__list it-img-card">
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="it-single-slide-wrapper">
-      <div class="card-wrapper">
-        <div class="card card-img no-after">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
-            <a class="read-more" href="#">
-              <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-              </svg>
-            </a>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper">
+          <div class="card-wrapper">
+            <div class="card card-img no-after">
+              <div class="img-responsive-wrapper">
+                <div class="img-responsive">
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <a class="read-more" href="#">
+                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <svg class="icon">
+                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -582,8 +579,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
           <div class="card-body">
             <div class="head-tags"><span class="data">10/10/2018</span>
             </div>
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           </div>
         </a>
       </div>
@@ -599,8 +595,8 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
           <div class="card-body">
             <div class="head-tags"><span class="data">10/10/2018</span>
             </div>
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            
           </div>
         </a>
       </div>
@@ -616,8 +612,8 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
           <div class="card-body">
             <div class="head-tags"><span class="data">10/10/2018</span>
             </div>
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            
           </div>
         </a>
       </div>
@@ -633,8 +629,8 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
           <div class="card-body">
             <div class="head-tags"><span class="data">10/10/2018</span>
             </div>
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            
           </div>
         </a>
       </div>
@@ -650,8 +646,8 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-img-card` 
           <div class="card-body">
             <div class="head-tags"><span class="data">10/10/2018</span>
             </div>
-            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p>
+            <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+            
           </div>
         </a>
       </div>
