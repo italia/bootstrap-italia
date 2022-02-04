@@ -389,12 +389,6 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-Crea tabelle responsive racchiudendo ogni `.table` con `.table-responsive{-sm|-md|-lg|-xl}`, facendo scorrere orizzontalmente la tabella ad ogni breakpoint, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
-
-{% capture callout %}
-Nota che in quanto i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo aggirando i limiti dei [prefissi `min-` and `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.
-{% endcapture %}{% include callout.html content=callout type="info" %}
-
 ## Captions
 
 Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti con screen reader a trovare una tabella e capire di cosa si tratta e decidere se vogliono leggerla.
@@ -436,7 +430,11 @@ Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti c
 
 ## Tabelle responsive
 
-Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl}`.
+Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl}`, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
+
+{% capture callout %}
+Nota che in quanto non tutti i browser supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context), stiamo aggirando i limiti dei [prefissi `min-` and `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) e viewports con larghezze frazionarie (che possono verificarsi in determinate condizioni su dispositivi ad alta risoluzione, ad esempio) utilizzando valori con maggiore precisione per questi confronti.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 {% capture callout %}
 
