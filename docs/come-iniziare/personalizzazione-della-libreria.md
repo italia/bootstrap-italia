@@ -2,7 +2,7 @@
 layout: docs
 title: Personalizzazione della libreria
 description: Come personalizzare e sovrascrivere le variabili di default della libreria (es. colori, font-family, misure, ecc.)
-group: personalizzazione-libreria
+group: come-iniziare
 toc: true
 ---
 
