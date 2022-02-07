@@ -197,7 +197,7 @@ Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da 
 
 {% highlight css %}
 .selettore-per-creare-eccezione {
-box-sizing: content-box;
+  box-sizing: content-box;
 }
 {% endhighlight %}
 
@@ -211,5 +211,5 @@ Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia 
 
 ###### Continua la lettura >
 
-Se ti interessa contribuire alla libreria o sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
-continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
+Se ti interessa contribuire alla libreria e sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
+continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
