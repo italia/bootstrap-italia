@@ -374,18 +374,25 @@ Usa le classi contestuali per colorare le righe delle tabelle o le singole celle
   </table>
 </div>
 
-{% highlight html %}
-
+```html
 <!-- On rows -->
-<tr class="table-active">...</tr>{% for color in site.data.theme-colors %}
-<tr class="table-{{ color.name }}">...</tr>{% endfor %}
+<tr class="table-active">
+  ...
+</tr>
+{% for color in site.data.theme-colors %}
+<tr class="table-{{ color.name }}">
+  ...
+</tr>
+{% endfor %}
 
 <!-- On cells (`td` or `th`) -->
 <tr>
-  <td class="table-active">...</td>{% for color in site.data.theme-colors %}
-  <td class="table-{{ color.name }}">...</td>{% endfor %}
+  <td class="table-active">...</td>
+  {% for color in site.data.theme-colors %}
+  <td class="table-{{ color.name }}">...</td>
+  {% endfor %}
 </tr>
-{% endhighlight %}
+```
 
 {% include callout-warning-color-assistive-technologies.md %}
 
@@ -506,14 +513,13 @@ Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento 
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="table-responsive">
   <table class="table">
     ...
   </table>
 </div>
-{% endhighlight %}
+```
 
 ### Breakpoint specifici
 
@@ -564,7 +570,7 @@ Usa `.table-responsive{-sm|-md|-lg|-xl}` come necessario per creare tabelle resp
 {% endunless %}{% endfor %}
 </div>
 
-{% highlight html %}
+```html
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
 
 <div class="table-responsive{{ bp.abbr }}">
@@ -573,4 +579,4 @@ Usa `.table-responsive{-sm|-md|-lg|-xl}` come necessario per creare tabelle resp
   </table>
 </div>
 {% endunless %}{% endfor %}
-{% endhighlight %}
+```

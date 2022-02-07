@@ -75,17 +75,17 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 
 Abilita la chiusura di un alert tramite JavaScript:
 
-{% highlight js %}
+```js
 $('.alert').alert()
-{% endhighlight %}
+```
 
 Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno dell'alert**, come nell'esempio seguente:
 
-{% highlight html %}
+```html
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">&times;</span>
+  <span aria-hidden="true">&times;</span>
 </button>
-{% endhighlight %}
+```
 
 Nota che chiudendo un alert lo rimuoverai dal DOM.
 
@@ -97,7 +97,9 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 | `$().alert('close')`   | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                          |
 | `$().alert('dispose')` | L'alert viene rimosso.                                                                                                                                                  |
 
-{% highlight js %}$(".alert").alert('close'){% endhighlight %}
+```js
+$('.alert').alert('close')
+```
 
 ### Eventi
 
@@ -108,8 +110,8 @@ Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare l
 | `close.bs.alert`  | Questo evento si attiva immediatamente quando viene chiamato il metodo di istanza <code>close</code>.           |
 | `closed.bs.alert` | Questo evento viene attivato quando l'avviso è stato chiuso (attenderà il completamento delle transizioni CSS). |
 
-{% highlight js %}
+```js
 $('#myAlert').on('closed.bs.alert', function () {
-// esegue qualcosa
+  // esegue qualcosa
 })
-{% endhighlight %}
+```

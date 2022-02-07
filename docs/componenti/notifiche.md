@@ -42,9 +42,9 @@ Il comportamento delle Notification è verificabile sulla <a href="{{ site.baseu
 
 La Notification appare quando viene attivata dalla seguente funzione Javascript:
 
-{% highlight js %}
-notificationShow('idNotification',6000);
-{% endhighlight %}
+```js
+notificationShow('idNotification', 6000)
+```
 
 - Il primo parametro, la stringa **idNotification**, corrisponde alla proprietà id del `<div>` della Notification `<div class="notification" id="idNotification">...</div>`
 - il secondo parametro (opzionale) corrisponde alla durata di visualizzazione in millisecondi. Il valore di default, se non indicato, è di 7000ms ossia 7 secondi.

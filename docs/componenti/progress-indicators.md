@@ -20,17 +20,17 @@ L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il pro
 
 Va inizializzato con il comando javascript:
 
-{% highlight js %}
-progressDonut.generate("#ID_ELEMENTO", 0);
-{% endhighlight %}
+```js
+progressDonut.generate('#ID_ELEMENTO', 0)
+```
 
 Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-donut` e il secondo con la percentuale di completamento.
 
 Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:
 
-{% highlight js %}
-progressDonut.update("#ID_ELEMENTO", 75);
-{% endhighlight %}
+```js
+progressDonut.update('#ID_ELEMENTO', 75)
+```
 
 Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
 

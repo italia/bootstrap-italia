@@ -202,12 +202,11 @@ You also need to adapt the `role` and `aria-live` level depending on the content
 
 As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
 
-{% highlight html %}
-
+```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
-{% endhighlight %}
+```
 
 When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
 
@@ -235,9 +234,9 @@ When using `autohide: false`, you must add a close button to allow users to dism
 
 Initialize toasts via JavaScript:
 
-{% highlight js %}
+```js
 $('.toast').toast(option)
-{% endhighlight %}
+```
 
 ### Options
 
@@ -289,19 +288,19 @@ Attaches a toast handler to an element collection.
 Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs).
 You have to manually call this method, instead your toast won't show.
 
-{% highlight js %}$('#element').toast('show'){% endhighlight %}
+`js$('#element').toast('show')`
 
 #### `.toast('hide')`
 
 Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`.
 
-{% highlight js %}$('#element').toast('hide'){% endhighlight %}
+`js$('#element').toast('hide')`
 
 #### `.toast('dispose')`
 
 Hides an element's toast. Your toast will remain on the DOM but won't show anymore.
 
-{% highlight js %}$('#element').toast('dispose'){% endhighlight %}
+`js$('#element').toast('dispose')`
 
 ### Events
 
@@ -332,8 +331,8 @@ Hides an element's toast. Your toast will remain on the DOM but won't show anymo
   </tbody>
 </table>
 
-{% highlight js %}
+```js
 $('#myToast').on('hidden.bs.toast', function () {
-// do something...
+  // do something...
 })
-{% endhighlight %}
+```

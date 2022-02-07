@@ -345,11 +345,11 @@ Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> 
 
 Lo stato dell'upload è rappresentato graficamente dall'elemento `<div id="divProgress0" class="upload-progress"></div>` come progress circolare. Si consiglia di attribuire ad ogni `upload-progress` un id univoco per facilitare l'aggiornamento del progresso attraverso il seguente codice JS:
 
-{% highlight js %}
-$("#IDPROGRESS").circularloader({
-progressPercent: 33 // percentuale si caricamento
-});
-{% endhighlight %}
+```js
+$('#IDPROGRESS').circularloader({
+  progressPercent: 33, // percentuale si caricamento
+})
+```
 
 {% capture example %}
 

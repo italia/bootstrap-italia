@@ -579,8 +579,7 @@ Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ot
 
 Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente utilizzando la proprietà `data-toggle="tab"` nel link all'interno di liste di tipo `.nav-tabs`:
 
-{% highlight html %}
-
+```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
@@ -604,40 +603,39 @@ Puoi attivare una navigazione a tab senza scrivere Javascript, semplicemente uti
   <div class="tab-pane" id="data-ex-tab3" role="tabpanel" aria-labelledby="data-ex-tab3-tab">...</div>
   <div class="tab-pane" id="data-ex-tab4" role="tabpanel" aria-labelledby="data-ex-tab4-tab">...</div>
 </div>
-{% endhighlight %}
+```
 
 ### Con Javascript
 
 Alternativamente, è possibile attivare i tab utilizzando Javascript:
 
-{% highlight js %}
+```js
 $('#myTab a').on('click', function (e) {
-e.preventDefault()
-$(this).tab('show')
+  e.preventDefault()
+  $(this).tab('show')
 })
-{% endhighlight %}
+```
 
 È possibile attivare tab individualmente in diversi modi:
 
-{% highlight js %}
+```js
 $('#myTab a[href="#tab1"]').tab('show')
 $('#myTab li:first-child a').tab('show')
 $('#myTab li:last-child a').tab('show')
 $('#myTab li:nth-child(3) a').tab('show')
-{% endhighlight %}
+```
 
 ### Effetto "a comparsa"
 
 Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è sufficiente aggiungere la classe `.fade` ad ogni `.tab-pane`. Il primo `.tab-pane` dovrà anche avere la classe `.show` per rendere il contenuto iniziale visibile.
 
-{% highlight html %}
-
+```html
 <div class="tab-content">
   <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="content-tab-tab">...</div>
   <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">...</div>
   <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">...</div>
   <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">...</div>
 </div>
-{% endhighlight %}
+```
 
 Si possono trovare dettagli aggiuntivi sulla gestione attraverso Javascript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/navs/#methods) sul sito di Bootstrap.

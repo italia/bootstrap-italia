@@ -20,13 +20,13 @@ Un Dimmer occupa tutta l'altezza e la larghezza dell'elemento all'interno del qu
 
 L'elemento contenitore deve avere la classe `.dimmable` mentre il Dimmer avrà un ID univoco che sarà utilizzato per l'attivazione e l'occultamento attraverso i seguenti comandi:
 
-{% highlight js %}
+```js
 // mostra Dimmer
-$('#ID_ELEMENTO').dimmerShow();
+$('#ID_ELEMENTO').dimmerShow()
 
 // nascondi Dimmer
-$('#ID_ELEMENTO').dimmerHide();
-{% endhighlight %}
+$('#ID_ELEMENTO').dimmerHide()
+```
 
 ## Esempio
 

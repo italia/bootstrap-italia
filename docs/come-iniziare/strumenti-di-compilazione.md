@@ -19,20 +19,20 @@ Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap I
 
 ## Utilizzare Docker nello sviluppo
 
-Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started). 
+Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started).
 Grazie a Docker è possibile avere un ambiente di sviluppo pronto e in modalità watch lanciando il comando
 
-{% highlight sh %}
+```sh %}
 docker-compose up
-{% endhighlight %}
+```
 
 Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari e visualizzare una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
 
 Per lanciare un comando all'interno del container Docker sarà sufficiente utilizzare `docker exec`, ad esempio
 
-{% highlight sh %}
+```sh %}
 docker exec -it bootstrap-italia-dev-1 npm run lint-js
-{% endhighlight %}
+```
 
 Se si decide di utilizzare Docker per lo sviluppo, è possibile saltare le sezioni `Processo manuale` nella compilazione della documentazione e della libreria
 
@@ -79,15 +79,15 @@ Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl 
 
 `src/scss/bootstrap-italia.scss`:
 
-{% highlight html %}
+```html
 // @import "custom/cookiebar";
-{% endhighlight %}
+```
 
 `gulpfile.js`:
 
-{% highlight html %}
+```html
 // './src/js/plugins/cookiebar.js',
-{% endhighlight %}
+```
 
 In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.
 
@@ -124,39 +124,39 @@ La struttura delle cartelle della documentazione è la seguente:
 - `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
 - `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**, servono soltanto per documentare la libreria in queste pagine che stai leggendo.
 
-
 ## Come contribuire
 
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch dal ramo principale e assegnare un nome descrittivo: 
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch dal ramo principale e assegnare un nome descrittivo:
+
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component).
 2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252).
+
 - Quando pensi che il branch sia pronto per il merge, apri una pull request (PR) e chiedi una review a uno dei membri del team, che in caso positivo provvederà ad unirla al ramo principale, altrimenti chiederà all’autore di effettuare alcune modifiche o rifiuterà la PR in questione specificando il motivo di tale scelta.
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
-
 
 ## Creare una nuova release
 
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-{% highlight sh %}
+```sh %}
 $ npm run bump-patch
-{% endhighlight %}
+```
 
 o `bump-minor` oppure `bump-major`, che produrrà:
 
 - Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
 - Commit delle modifiche
-- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche. Premere poi un qualsiasi pulsante per continuare. 
-)
+- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche. Premere poi un qualsiasi pulsante per continuare.
+  )
 - Tag del commit con numero di versione in formato `vx.x.x`
 
-{% highlight sh %}
+```sh %}
 $ git push --follow-tags
-{% endhighlight %}
+```
 
 che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
 

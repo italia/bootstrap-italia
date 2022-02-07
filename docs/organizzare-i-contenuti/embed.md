@@ -30,8 +30,7 @@ relative. La classe `.embed-responsive-item` non è strettamente necessaria, ma 
 
 Le proporzioni possono essere personalizzate con delle classi apposite.
 
-{% highlight html %}
-
+```html
 <!-- 21:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-21by9">
   <iframe class="embed-responsive-item" src="..."></iframe>
@@ -51,4 +50,4 @@ Le proporzioni possono essere personalizzate con delle classi apposite.
 <div class="embed-responsive embed-responsive-1by1">
   <iframe class="embed-responsive-item" src="..."></iframe>
 </div>
-{% endhighlight %}
+```

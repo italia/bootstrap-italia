@@ -39,10 +39,9 @@ Una volta scaricato e decompresso il file, all'interno della cartella `css` sar�
 
 Per includere questo file all'interno del tuo progetto sarà quindi sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
-{% highlight html %}
-
-<link rel="stylesheet" href="./bootstrap-italia.min.css">
-{% endhighlight %}
+```html
+<link rel="stylesheet" href="./bootstrap-italia.min.css" />
+```
 
 ### Javascript
 
@@ -83,11 +82,11 @@ In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà 
 
 È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
 
-{% highlight html %}
-
-<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
-
-{% endhighlight %}
+```html
+<script>
+  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
+</script>
+```
 
 Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
 
@@ -101,40 +100,33 @@ Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo de
 
 Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
-{% highlight html %}
-
+```html
 <script src="./bootstrap-italia.bundle.min.js"></script>
-
-{% endhighlight %}
+```
 
 #### Versione semplice
 
 Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
 
-{% highlight html %}
-{{ site.cdn.jquery }}
-{{ site.cdn.popper }}
-{{ site.cdn.owlcarousel }}
-
+```html
+{{ site.cdn.jquery }} {{ site.cdn.popper }} {{ site.cdn.owlcarousel }}
 <script src="./bootstrap-italia.min.js"></script>
-
-{% endhighlight %}
+```
 
 ## Pagina HTML di esempio
 
 In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
 
-{% highlight html %}
-
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <!-- CSS -->
-    <link rel="stylesheet" href="./bootstrap-italia.min.css">
+    <link rel="stylesheet" href="./bootstrap-italia.min.css" />
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -142,7 +134,7 @@ In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
     <script src="./bootstrap-italia.bundle.min.js"></script>
   </body>
 </html>
-{% endhighlight %}
+```
 
 Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalità e gli stili di Bootstrap Italia.
 
@@ -158,9 +150,9 @@ Tra i [progetti]({{ site.baseurl }}/docs/progetti/) si possono trovare molti rif
 
 Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
-{% highlight sh %}
+```sh
 npm i bootstrap-italia --save
-{% endhighlight %}
+```
 
 ## Impostazioni globali
 
@@ -170,22 +162,20 @@ Il framework Bootstrap, e di conseguenza il tema Bootstrap Italia, utilizza e ri
 
 Bootstrap richiede l'uso del doctype HTML5.
 
-{% highlight html %}
-
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="it">
   ...
 </html>
-{% endhighlight %}
+```
 
 ### Meta tag responsive
 
 Bootstrap è sviluppato in modalità _mobile first_: per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario **aggiungere il meta tag responsive che segue** all'interno del tag `<head>`.
 
-{% highlight html %}
-
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{% endhighlight %}
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+```
 
 Puoi vedere un'esempio di tale codice applicato nella [pagina html di esempio](#pagina-html-di-esempio).
 
@@ -195,11 +185,11 @@ Per un migliore dimensionamento degli elementi nella pagina, Bootstrap imposta i
 
 Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare codice simile a quanto segue:
 
-{% highlight css %}
+```css
 .selettore-per-creare-eccezione {
   box-sizing: content-box;
 }
-{% endhighlight %}
+```
 
 Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/#box-sizing) sul sito ufficiale di Bootstrap.
 

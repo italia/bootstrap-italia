@@ -113,34 +113,33 @@ e sono utili per nascondere i contenuti alla maggior parte degli utenti, ma cons
 
 Applica `.visible` oppure `.invisible` al bisogno.
 
-{% highlight html %}
-
+```html
 <div class="visible">...</div>
 <div class="invisible">...</div>
-{% endhighlight %}
+```
 
-{% highlight scss %}
+```scss
 // Class
 .visible {
-visibility: visible;
+  visibility: visible;
 }
 .invisible {
-visibility: hidden;
+  visibility: hidden;
 }
-{% endhighlight %}
+```
 
 ## Screenreaders
 
 Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la classe `.sr-only`. Combina `.sr-only` con `.sr-only-focusable` per mostrare l'elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.
 
-{% highlight html %}
+```html
 <a class="sr-only sr-only-focusable" href="#content">Vai al contenuto principale</a>
-{% endhighlight %}
+```
 
-{% highlight scss %}
+```scss
 // Usato come mixin
 .skip-navigation {
-@include sr-only;
-@include sr-only-focusable;
+  @include sr-only;
+  @include sr-only-focusable;
 }
-{% endhighlight %}
+```

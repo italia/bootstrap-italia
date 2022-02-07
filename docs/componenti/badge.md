@@ -17,15 +17,14 @@ La grandezza di ogni badge si adatta come dimensione a quella del font (misurato
 <div class="h6">Titolo di esempio <span class="badge badge-secondary">New</span></div>
 </div>
 
-{% highlight html %}
-
+```html
 <h1>Titolo di esempio <span class="badge badge-secondary">New</span></h1>
 <h2>Titolo di esempio <span class="badge badge-secondary">New</span></h2>
 <h3>Titolo di esempio <span class="badge badge-secondary">New</span></h3>
 <h4>Titolo di esempio <span class="badge badge-secondary">New</span></h4>
 <h5>Titolo di esempio <span class="badge badge-secondary">New</span></h5>
 <h6>Titolo di esempio <span class="badge badge-secondary">New</span></h6>
-{% endhighlight %}
+```
 
 I badge possono essere utilizzati come parte di link o pulsanti per fornire un contatore.
 

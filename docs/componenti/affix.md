@@ -44,11 +44,11 @@ Gli Affix fanno uso della proprietà CSS `position:sticky`.
 
 Se si volesse ottenere un comportamento identico sui browser che non supportano questa prorietà come Edge ed IE, si può attivare il polyfill iSticky con il seguente codice javascript:
 
-{% highlight js %}
+```js
 $('.affix-top, .affix-bottom').iSticky({
-holderAutoHeight: true
-});
-{% endhighlight %}
+  holderAutoHeight: true,
+})
+```
 
 ## Vertical Affix
 
