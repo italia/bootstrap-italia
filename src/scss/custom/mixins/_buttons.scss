@@ -33,6 +33,7 @@
     color: color-yiq($background);
     background-color: $background;
     border-color: $border;
+    pointer-events: none;
   }
 
   &:not(:disabled):not(.disabled):active,
