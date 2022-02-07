@@ -132,7 +132,7 @@ Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato r
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
 - Per lavorare su qualcosa di nuovo, creare un nuovo branch dal ramo principale e assegnare un nome descrittivo: 
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component).
-2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252) in caso di riferimento al documento inserire un prefisso “d” prima del `<numero_issue>`.
+2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252).
 - Quando pensi che il branch sia pronto per il merge, apri una pull request (PR) e chiedi una review a uno dei membri del team, che in caso positivo provvederà ad unirla al ramo principale, altrimenti chiederà all’autore di effettuare alcune modifiche o rifiuterà la PR in questione specificando il motivo di tale scelta.
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
