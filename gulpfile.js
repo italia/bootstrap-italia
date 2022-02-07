@@ -62,6 +62,7 @@ const Paths = {
     'src/js/plugins/dimmer.js',
     'src/js/plugins/datepicker-validation.js',
     'src/js/' + pkg.name + '.js',
+    'src/js/plugins/version.js',
   ],
 
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
