@@ -60,12 +60,12 @@ Ecco alcuni esempi di utilizzo delle classi di spaziatura:
 }
 
 .ml-1 {
-  margin-left: ($spacer \* 0.25) !important;
+  margin-left: ($spacer * 0.25) !important;
 }
 
 .px-2 {
   padding-left: ($spacer * 0.5) !important;
-  padding-right: ($spacer \* 0.5) !important;
+  padding-right: ($spacer * 0.5) !important;
 }
 
 .p-3 {

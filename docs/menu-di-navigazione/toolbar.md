@@ -665,8 +665,8 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
           </div>
         </div>
       </div>
-	</li>
-	<li>
+  </li>
+  <li>
       <div class="dropdown">
         <span class="sr-only">privacy</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
@@ -682,8 +682,8 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
           </div>
         </div>
       </div>
-	</li>
-	<li>
+  </li>
+  <li>
       <div class="dropdown">
         <span class="sr-only">preferiti</span>
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
@@ -699,8 +699,8 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
           </div>
         </div>
       </div>
-	</li>
-	<li>
+  </li>
+  <li>
       <div class="dropdown">
         <span class="sr-only">altro</span>
         <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
@@ -716,7 +716,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
           </div>
         </div>
       </div>
-	</li>
+  </li>
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %}
@@ -755,15 +755,15 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
           </div>
         </div>
       </div>
-	</li>
-	<li class="toolbar-divider" aria-hidden="true"></li>
-	<li>
+  </li>
+  <li class="toolbar-divider" aria-hidden="true"></li>
+  <li>
       <a href="#">
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         <span class="toolbar-label">documenti</span>
       </a>
     </li>
-	<li>
+  <li>
       <a href="#">
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-locked"></use></svg>
         <span class="toolbar-label">privacy</span>
@@ -875,8 +875,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
           </div>
         </div>
       </div>
-	  </li>
-	  <li class="toolbar-divider" aria-hidden="true"></li>
+    </li>
+    <li class="toolbar-divider" aria-hidden="true"></li>
     <li>
         <a href="#">
         <span class="sr-only">immagini</span>

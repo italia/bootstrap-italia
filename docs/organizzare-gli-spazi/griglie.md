@@ -436,18 +436,16 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 **Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
 
-```sass %}
+```scss
 .no-gutters {
-margin-right: 0;
-margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 
-> .col,
-> [class*="col-"] {
-
+  > .col,
+  > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
-
-}
+  }
 }
 ```
 
@@ -466,12 +464,12 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 
 Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:
 
-```sass %}
+```scss
 $grid-gutter-widths: (
-sm: 12px,
-md: 20px,
-lg: 20px,
-xl: 28px
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px,
 ) !default;
 ```
 

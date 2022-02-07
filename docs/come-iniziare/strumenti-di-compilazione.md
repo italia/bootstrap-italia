@@ -22,7 +22,7 @@ Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap I
 Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started).
 Grazie a Docker è possibile avere un ambiente di sviluppo pronto e in modalità watch lanciando il comando
 
-```sh %}
+```sh
 docker-compose up
 ```
 
@@ -30,15 +30,15 @@ Questo comando oltre ad installare le dipendenze in un container Docker, provved
 
 Per lanciare un comando all'interno del container Docker sarà sufficiente utilizzare `docker exec`, ad esempio
 
-```sh %}
+```sh
 docker exec -it bootstrap-italia-dev-1 npm run lint-js
 ```
 
-Se si decide di utilizzare Docker per lo sviluppo, è possibile saltare le sezioni `Processo manuale` nella compilazione della documentazione e della libreria
+Se si decide di utilizzare Docker per lo sviluppo, è possibile ignorare le sezioni `Processo manuale` nella compilazione della documentazione e della libreria
 
 ## Compilare la libreria
 
-Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Se si utilizza [Docker](https://www.docker.com/get-started) saltare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
+Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Se si utilizza [Docker](https://www.docker.com/get-started) ignorare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
 
 ### Processo manuale
 
@@ -93,7 +93,7 @@ In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché
 
 ## Compilare la documentazione
 
-La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`. Se si utilizza [Docker](https://www.docker.com/get-started) saltare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
+La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`. Se si utilizza [Docker](https://www.docker.com/get-started) ignorare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
 
 ### Processo manuale
 
@@ -142,7 +142,7 @@ Il rilascio di una nuova versione della libreria avverrà unicamente alla creazi
 
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-```sh %}
+```sh
 $ npm run bump-patch
 ```
 
@@ -154,7 +154,7 @@ o `bump-minor` oppure `bump-major`, che produrrà:
   )
 - Tag del commit con numero di versione in formato `vx.x.x`
 
-```sh %}
+```sh
 $ git push --follow-tags
 ```
 

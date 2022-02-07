@@ -11,7 +11,7 @@ description: Elementi e stili per la creazione di input accessibili e responsivi
   /* Style override for Documentation purposes - Autocomplete*/
   #testAutocomplete1, #testAutocomplete2 {
     position: static;
-		display: block;
+    display: block;
   }
 </style>
 

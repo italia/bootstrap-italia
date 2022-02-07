@@ -79,9 +79,9 @@ Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disp
 
 // Example usage:
 @include media-breakpoint-up(sm) {
-.some-class {
-display: block;
-}
+  .some-class {
+    display: block;
+  }
 }
 ```
 

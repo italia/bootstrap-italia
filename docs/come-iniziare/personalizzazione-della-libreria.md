@@ -59,7 +59,7 @@ $font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 
 Ad esempio, per una applicazione costruita con ReactJS attraverso `create-react-app`, è possibile **importare bootstrap-italia-custom.scss** laddove serva utilizzare la libreria **Bootstrap-Italia**.
 
-```jsx %}
+```jsx
 import React from 'react'
 import './scss/bootstrap-italia-custom.scss'
 import './App.css'

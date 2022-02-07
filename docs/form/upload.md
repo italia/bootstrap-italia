@@ -8,59 +8,59 @@ description: Elementi dei form dedicati al caricamento file
 ---
 
 <script>
-	//attiva tooltip esempio loading
-	document.addEventListener("DOMContentLoaded", function() {
-		$("#divProgress1").circularloader({
-			backgroundColor: "#ffffff",//background colour of inner circle
-			fontColor: "#000000",//font color of progress text
-			fontSize: "40px",//font size of progress text
-			radius: 130,//radius of circle
-			progressBarBackground: "transparent",//background colour of circular progress Bar
-			progressBarColor: "#0073e6",//colour of circular progress bar
-			progressBarWidth: 96,//progress bar width
-			progressPercent: 75,//progress percentage out of 100
-		});
-	})
+  //attiva tooltip esempio loading
+  document.addEventListener("DOMContentLoaded", function() {
+    $("#divProgress1").circularloader({
+      backgroundColor: "#ffffff",//background colour of inner circle
+      fontColor: "#000000",//font color of progress text
+      fontSize: "40px",//font size of progress text
+      radius: 130,//radius of circle
+      progressBarBackground: "transparent",//background colour of circular progress Bar
+      progressBarColor: "#0073e6",//colour of circular progress bar
+      progressBarWidth: 96,//progress bar width
+      progressPercent: 75,//progress percentage out of 100
+    });
+  })
 
-	function testAnimation() {
-			$("#divProgress2").circularloader({
-				backgroundColor: "#ffffff",//background colour of inner circle
-				fontColor: "#000000",//font color of progress text
-				fontSize: "40px",//font size of progress text
-				radius: 130,//radius of circle
-				progressBarBackground: "transparent",//background colour of circular progress Bar
-				progressBarColor: "#0073e6",//colour of circular progress bar
-				progressBarWidth: 96,//progress bar width
-				progressPercent: 1,//progress percentage out of 100
-			});
+  function testAnimation() {
+      $("#divProgress2").circularloader({
+        backgroundColor: "#ffffff",//background colour of inner circle
+        fontColor: "#000000",//font color of progress text
+        fontSize: "40px",//font size of progress text
+        radius: 130,//radius of circle
+        progressBarBackground: "transparent",//background colour of circular progress Bar
+        progressBarColor: "#0073e6",//colour of circular progress bar
+        progressBarWidth: 96,//progress bar width
+        progressPercent: 1,//progress percentage out of 100
+      });
 
-			$('#uploadChangeStateTarget').removeClass('success');
-			$('#uploadChangeStateTarget').addClass('loading');
-			$('#simTitle').text('nome_file.pdf');
-			$('#simText').text('Caricamento in corso...');
+      $('#uploadChangeStateTarget').removeClass('success');
+      $('#uploadChangeStateTarget').addClass('loading');
+      $('#simTitle').text('nome_file.pdf');
+      $('#simText').text('Caricamento in corso...');
 
-			setTimeout(function(){
-					$("#divProgress2").circularloader({
-						progressPercent: 33
-					});
-				}, 1000);
-				setTimeout(function(){
-					$("#divProgress2").circularloader({
-						progressPercent: 66
-					});
-				}, 2000);
-				setTimeout(function(){
-					$("#divProgress2").circularloader({
-						progressPercent: 99
-					});
-				}, 3000);
-				setTimeout(function(){
-						$('#divProgress2canvas').remove();
-						$('#uploadChangeStateTarget').removeClass('loading');
-						$('#uploadChangeStateTarget').addClass('success');
-						$('#simText').text('Caricamento completato');
-				}, 3500);
-		}
+      setTimeout(function(){
+          $("#divProgress2").circularloader({
+            progressPercent: 33
+          });
+        }, 1000);
+        setTimeout(function(){
+          $("#divProgress2").circularloader({
+            progressPercent: 66
+          });
+        }, 2000);
+        setTimeout(function(){
+          $("#divProgress2").circularloader({
+            progressPercent: 99
+          });
+        }, 3000);
+        setTimeout(function(){
+            $('#divProgress2canvas').remove();
+            $('#uploadChangeStateTarget').removeClass('loading');
+            $('#uploadChangeStateTarget').addClass('success');
+            $('#simText').text('Caricamento completato');
+        }, 3500);
+    }
 </script>
 
 Fra i tipi di campo disponibili per la compilazione dei form HTML è disponibile anche il tipo **file**. Questi campi di input consentono l'upload di uno o più file attraverso l'invio del form.

@@ -20,46 +20,46 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
   }
 
   .bd-example .steppers-content p {
-	  margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   .bd-example .mobile-examples .steppers-content {
-	  height: 150px;
+    height: 150px;
   }
 
   .bd-example .steppers.bg-dark .steppers-content{
-	  color: #EEE;
-	  border-color: #aaa;
-	  background: #17324d;
-	  opacity: 0.5;
+    color: #EEE;
+    border-color: #aaa;
+    background: #17324d;
+    opacity: 0.5;
   }
   .bd-example .steppers.bg-dark {
-	  padding: 30px;
+    padding: 30px;
   }
 
 @media screen and (min-width: 992px) {
-	.bd-example .mobile-examples .steppers-progress {
-		display: block;
-	}
+  .bd-example .mobile-examples .steppers-progress {
+    display: block;
+  }
 
-	.bd-example .mobile-examples .steppers-dots {
-		display: flex;
-	}
+  .bd-example .mobile-examples .steppers-dots {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 991px) {
-	.bd-example {
-		overflow: hidden;
-		padding: 0;
-		margin-bottom: 6px;
-	}
-	.bd-example .steppers-content {
-		height: 300px;
-		border: none;
-	}
-	.bd-example .steppers.bg-dark {
-		padding: 0;
-	}
+  .bd-example {
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 6px;
+  }
+  .bd-example .steppers-content {
+    height: 300px;
+    border: none;
+  }
+  .bd-example .steppers.bg-dark {
+    padding: 0;
+  }
 }
 </style>
 
@@ -86,12 +86,12 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 {% capture example %}
 
 <div class="steppers">
-	<ul class="steppers-header">
-		<li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
+  <ul class="steppers-header">
+    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -102,12 +102,12 @@ Le label presenti negli step dell'intestazione possono essere anticipate da un'i
 {% capture example %}
 
 <div class="steppers">
-	<ul class="steppers-header">
-		<li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-		<li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
-		<li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
-		<li class="steppers-index" aria-hidden="true">2/6</li>
-	</ul>
+  <ul class="steppers-header">
+    <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
+    <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+    <li class="steppers-index" aria-hidden="true">2/6</li>
+  </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
