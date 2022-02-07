@@ -179,28 +179,58 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
 <div>
   <fieldset disabled aria-label="Form disabilitato">
     <legend>Esempio di form disabilitato</legend>
-    <div class="form-group">
-      <label for="disabledTextInput">Input </label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="input disabilitato">
-    </div>
-    <div class="form-group">
-      <div class="bootstrap-select-wrapper">
-        <label for="selectID2">Field Label</label>
-        <select id="selectID2" disabled title="Seleziona una opzione">
-          <option value="Value 1">Opzione 1</option>
-          <option value="Value 2">Opzione 2</option>
-          <option value="Value 3">Opzione 3</option>
-          <option value="Value 4">Opzione 4</option>
-          <option value="Value 5">Opzione 5</option>
-        </select>
+      <div class="row mt-4">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="disabledFieldsetInput">Input </label>
+            <input type="text" id="disabledFieldsetInput" class="form-control" placeholder="Input disabilitato">
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <div class="bootstrap-select-wrapper">
+              <label for="disabledFieldsetSelect">Select</label>
+              <select id="disabledFieldsetSelect" disabled title="Select disabilitata">
+                <option value="Value 1">Opzione 1</option>
+                <option value="Value 2">Opzione 2</option>
+                <option value="Value 3">Opzione 3</option>
+                <option value="Value 4">Opzione 4</option>
+                <option value="Value 5">Opzione 5</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-      <label class="form-check-label" for="disabledFieldsetCheck">
-        Check disabilitato
-      </label>
-    </div>
+      <div class="row mb-4">
+        <div class="col-12 col-md-6">
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck1">
+            <label class="form-check-label" for="disabledFieldsetCheck1">
+              Check disabilitato 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck2">
+            <label class="form-check-label" for="disabledFieldsetCheck2">
+              Check disabilitato 2
+            </label>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-check">
+            <input name="gruppo1" type="radio" id="disabledFieldsetRadio1" checked>
+            <label for="disabledFieldsetRadio1">
+              Radio disabilitato 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input name="gruppo1" type="radio" id="disabledFieldsetRadio2">
+            <label for="disabledFieldsetRadio2">
+              Radio disabilitato 2
+            </label>
+          </div>
+        </div>
+      </div>
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </fieldset>
 </div>
