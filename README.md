@@ -72,7 +72,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 ### Principali dipendenze per la fase di compilazione e sviluppo
 
 - Generatore di siti statici per ruby [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, licenza MIT
-- Tool per il testing della correttezza formale dell'HTML[html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
+- Tool per il testing della correttezza formale dell'HTML [html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
 - Tool per il reload automatico del browser [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
 - Gestione del versionamento [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
 - Build system per le librerie Javascript e CSS [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, licenza MIT

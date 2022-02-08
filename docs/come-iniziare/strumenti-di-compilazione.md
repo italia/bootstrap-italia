@@ -130,12 +130,10 @@ La struttura delle cartelle della documentazione è la seguente:
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch dal ramo principale e assegnare un nome descrittivo:
-
-1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component).
-2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252).
-
-- Quando pensi che il branch sia pronto per il merge, apri una pull request (PR) e chiedi una review a uno dei membri del team, che in caso positivo provvederà ad unirla al ramo principale, altrimenti chiederà all’autore di effettuare alcune modifiche o rifiuterà la PR in questione specificando il motivo di tale scelta.
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo: 
+1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
+2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252)
+- Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
 
