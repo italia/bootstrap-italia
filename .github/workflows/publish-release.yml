@@ -25,6 +25,7 @@ jobs:
       - run: npm i gulp -g
       - run: chmod -R 777 .
       - run: npm ci
+      - run: rm -f ./.npmrc
       - run: npm run build
       - name: Publish package to NPM
         run: npm publish
