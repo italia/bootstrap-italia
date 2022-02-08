@@ -23,9 +23,11 @@ Per prendere in carico una issue, è necessario effettuare il fork del repositor
 Il flow da seguire per lo sviluppo è semplificato rispetto a un git-flow standard, per permettere una maggior velocità di sviluppo, e la creazione di una history leggibile.
 
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo: 
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo:
+
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
 2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252)
+
 - Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
 I criteri da seguire durante il lavoro sulle feature e sulle issue sono i seguenti:

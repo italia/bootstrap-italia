@@ -26,7 +26,7 @@ Grazie a Docker è possibile avere un ambiente di sviluppo pronto semplicemente 
 docker-compose up
 ```
 
-Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari 
+Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari
 e visualizzare in modalità watch una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
 
 Per lanciare un comando all'interno del container Docker sarà sufficiente utilizzare `docker exec`, ad esempio
@@ -130,9 +130,11 @@ La struttura delle cartelle della documentazione è la seguente:
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo: 
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo:
+
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
 2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252)
+
 - Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
@@ -152,7 +154,7 @@ che produrrà:
 - File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche)
 - Tag del commit con numero di versione in formato `vx.x.x`
 
-Eseguire poi il seguente comando che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag 
+Eseguire poi il seguente comando che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag
 per far partire tutto il processo di deployment della nuova release.
 
 ```sh
