@@ -1,12 +1,14 @@
+# Bootstrap Italia
+
+[![Version](https://img.shields.io/npm/v/bootstrap-italia.svg?logo=npm)](https://github.com/italia/bootstrap-italia/releases)
+[![Build](https://github.com/italia/bootstrap-italia/actions/workflows/ci.yml/badge.svg)](https://github.com/italia/bootstrap-italia/actions)
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-# Bootstrap Italia [![Version](https://img.shields.io/github/release/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/releases) [![CircleCI](https://circleci.com/gh/italia/bootstrap-italia/tree/master.svg?style=svg)](https://circleci.com/gh/italia/bootstrap-italia/tree/master)
+_Read this in other languages: [Italiano](README.md)._
 
-*Read this in other languages: [Italiano](README.md).*
-
-Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
+Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
 Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 4, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
@@ -69,14 +71,14 @@ Software components distributed with Bootstrap Italia that have their own differ
 - [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, MIT license
 - [Babel](https://babeljs.io/), © Sebastian McKenzie, MIT license
 - [Prettier](https://prettier.io/), © James Long and contributorsv
-- [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, MIT license
+- [sass](https://github.com/sass/dart-sass), © Google Inc., MIT license
 - [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, MIT license
 
 ### Main dependencies for the documentation
 
 The components used for the documentation site but not redistributed with the Bootstrap Italia library are listed below:
 
-- [tsParticles](https://particles.matteobruni.it/#bubble) © Matteo Bruni, MIT license
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, MIT license
 - [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, MIT license
 - [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, MIT license
 - [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, MIT license

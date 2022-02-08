@@ -3,4 +3,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: https://italia.github.io/bootstrap-italia/sitemap.xml
+Sitemap: /sitemap.xml

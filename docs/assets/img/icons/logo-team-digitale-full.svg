@@ -13,9 +13,9 @@
             </g>
             <path d="M470.5,0 L470.5,409.1" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
             <g transform="translate(531.000000, 3.000000)">
-                <g><use fill="#FFFFFF" xlink:href="#path-line-1"></use></g>
-                <g><use fill="#FFFFFF" xlink:href="#path-line-2"></use></g>
-                <g><use fill="#FFFFFF" xlink:href="#path-line-3"></use></g>
+                <g><use fill="#FFFFFF" href="#path-line-1" xlink:href="#path-line-1"></use></g>
+                <g><use fill="#FFFFFF" href="#path-line-2" xlink:href="#path-line-2"></use></g>
+                <g><use fill="#FFFFFF" href="#path-line-3" xlink:href="#path-line-3"></use></g>
             </g>
         </g>
     </g>
