@@ -16,7 +16,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 ### Sovrascrivere le variabili colore
 
 1. Installare **Bootstrap Italia** con `yarn/npm: yarn add bootstrap-italia --save`
-2. Installare **sass**: `yarn add sass`
+2. Installare la versione di **sass** che si preferisce
 3. Creare all'interno del progetto una cartella **scss**
 4. Dentro alla cartella **scss** creare un file di tipo **bootstrap-italia-custom.scss**
 5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))

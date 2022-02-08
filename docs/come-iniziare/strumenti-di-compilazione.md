@@ -20,13 +20,14 @@ Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap I
 ## Utilizzare Docker nello sviluppo
 
 Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started).
-Grazie a Docker è possibile avere un ambiente di sviluppo pronto e in modalità watch lanciando il comando
+Grazie a Docker è possibile avere un ambiente di sviluppo pronto semplicemente lanciando il comando
 
 ```sh
 docker-compose up
 ```
 
-Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari e visualizzare una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
+Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari 
+e visualizzare in modalità watch una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
 
 Per lanciare un comando all'interno del container Docker sarà sufficiente utilizzare `docker exec`, ad esempio
 
@@ -143,22 +144,22 @@ Il rilascio di una nuova versione della libreria avverrà unicamente alla creazi
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
 ```sh
-$ npm run bump-patch
+$ npm version [patch, minor, major]
 ```
 
-o `bump-minor` oppure `bump-major`, che produrrà:
+che produrrà:
 
 - Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
 - Commit delle modifiche
-- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche. Premere poi un qualsiasi pulsante per continuare.
-  )
+- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche)
 - Tag del commit con numero di versione in formato `vx.x.x`
+
+Eseguire poi il seguente comando che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag 
+per far partire tutto il processo di deployment della nuova release.
 
 ```sh
 $ git push --follow-tags
 ```
-
-che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
 
 ### Continuous integration e continuous delivery
 
