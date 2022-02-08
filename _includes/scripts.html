@@ -3,8 +3,15 @@
 <script>
   window.__PUBLIC_PATH__ = '{{ site.baseurl }}/dist/fonts'
 </script>
-
+{%- if page.nonbundle -%}
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/dist/js/bootstrap-italia.min.js?{{ buildTime }}"></script>
+{%- else -%}
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
+{%- endif -%}
 
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/vendor/anchor.min.js"></script>
