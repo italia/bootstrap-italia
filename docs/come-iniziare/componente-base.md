@@ -17,7 +17,7 @@ I file sorgente di questo componente sono descritti di seguito.
 
 ### Documentazione
 
-Il file `docs/come-iniziare/componente-base.md` è il codice `markdown` sorgente della pagina che stai leggendo.
+Il file `docs/come-iniziare/componente-base.md` è il codice `markdown` sorgente della pagina che si sta leggendo.
 
 ### Stile
 
@@ -25,7 +25,7 @@ Il file `src/scss/custom/_componente-base.scss` permette al componente di avere 
 
 ### Comportamento dinamico
 
-Il file `src/js/plugins/componente-base.js` abilita all'evento `click` un tracciamento del valore presente nell'attributo `data-value`. Puoi vedere il risultato aprendo la `console` tra gli strumenti per sviluppatori presenti in tutti i browser. Questo file Javascript utilizza una stuttura dettata da una convenzione per la creazione di plugin di Bootstrap {{ site.bootstrap_version }}, che permette di avere più flessibilità nella gestione degli eventi ed esporre le Data-API per l'estensione del loro utilizzo e di esporre proprietà del componente stesso:
+Il file `src/js/plugins/componente-base.js` abilita all'evento `click` un tracciamento del valore presente nell'attributo `data-value`. Per visualizzare il risultato aprire la `console` tra gli strumenti per sviluppatori presenti in tutti i browser. Questo file Javascript utilizza una stuttura dettata da una convenzione per la creazione di plugin di Bootstrap {{ site.bootstrap_version }}, che permette di avere più flessibilità nella gestione degli eventi ed esporre le Data-API per l'estensione del loro utilizzo e di esporre proprietà del componente stesso:
 
 ```js
 $.fn.componenteBase.Constructor.VERSION

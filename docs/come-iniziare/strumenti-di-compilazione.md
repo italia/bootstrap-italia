@@ -14,7 +14,7 @@ Di seguito si possono trovare gli strumenti per:
 - personalizzare e ricompilare i file sorgente di Bootstrap Italia
 - generare la documentazione che stai leggendo in un ambiente di sviluppo locale
 
-Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap Italia come libreria, ma sono caldamente consigliate per **ottimizzare le performance** in termini di tempi di caricamento. Se stai cercando informazioni su come usare Bootstrap Italia, ti può essere utile la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
+Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap Italia come libreria, ma sono caldamente consigliate per **ottimizzare le performance** in termini di tempi di caricamento. Se si sta cercando informazioni su come usare Bootstrap Italia, può essere utile consultare la [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Utilizzare Docker nello sviluppo
