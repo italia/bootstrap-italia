@@ -353,7 +353,7 @@ $(function () {
           var dots = $(event.target).find('.owl-dot')
           $(dots).each(function (index) {
             var dotDescText = dotDesc.replace('{{i}}', index + 1)
-            dotDescText = dotDescText.replace('{{n}}', slides.length)
+            dotDescText = dotDescText.replace('{{n}}', dots.length)
             $(this).attr('aria-label', dotDescText)
           })
         },
