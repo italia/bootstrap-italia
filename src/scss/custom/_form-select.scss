@@ -59,7 +59,17 @@
   }
 
   &.disabled {
-    opacity: 0.3;
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    .bootstrap-select {
+      background-color: $input-disabled-bg;
+      & > .dropdown-toggle.bs-placeholder {
+        color: $dark;
+        opacity: 1;
+      }
+    }
   }
 
   .dropdown-menu {
