@@ -3,7 +3,7 @@
   examples:
     - name: Sito di presentazione della app IO
       url: 'https://io.italia.it/'
-      description: Un sito realizzato in poche ore, anche grazie all'utilizzo di Bootstrap Italia, che presenta il progetto per la realizzazione dell'app del cittadino IO.
+      description: Un sito realizzato con l'utilizzo di Bootstrap Italia che presenta il progetto per la realizzazione dell'app del cittadino IO.
     - name: Docs Italia
       url: 'https://docs.italia.it'
       description: Docs Italia, il progetto per la pubblicazione e la consultazione dei documenti pubblici digitali, è stato costruito su una versione preliminare di Bootstrap Italia.
@@ -12,7 +12,7 @@
       description: Il Civico13 è uno sportello giovani unico, un servizio congiunto nato dalla collaborazione tra gli uffici delle Politiche giovanili del Comune di Trento e della Provincia autonoma di Trento.
     - name: Come partecipo
       url: 'https://come-partecipo.italia.it/'
-      description: Strumento pensato per aiutare gli aspiranti contributori a migliorare, con azioni concrete, il software libero per la pubblica amministrazione, bene comune di tutto il Paese..
+      description: Strumento pensato per aiutare gli aspiranti contributori a migliorare, con azioni concrete, il software libero per la pubblica amministrazione, bene comune di tutto il Paese.
     - name: Sito del Comune di Cagliari
       url: 'https://www.comune.cagliari.it/'
       description: Il nuovo sito ufficiale del Comune di Cagliari, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> di una versione preliminare in formato scaricabile.
