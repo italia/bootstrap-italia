@@ -8,10 +8,9 @@ toc: false
 
 Annulla il `float` del contenuto aggiungendo la classe `.clearfix` **all'elemento padre**.
 
-{% highlight html %}
-
+```html
 <div class="clearfix">...</div>
-{% endhighlight %}
+```
 
 Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo caso il div contenitore non si estende attorno ai pulsanti mostrando un layout incompleto.
 

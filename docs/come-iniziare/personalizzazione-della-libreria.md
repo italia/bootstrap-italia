@@ -2,7 +2,7 @@
 layout: docs
 title: Personalizzazione della libreria
 description: Come personalizzare e sovrascrivere le variabili di default della libreria (es. colori, font-family, misure, ecc.)
-group: personalizzazione-libreria
+group: come-iniziare
 toc: true
 ---
 
@@ -16,7 +16,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 ### Sovrascrivere le variabili colore
 
 1. Installare **Bootstrap Italia** con `yarn/npm: yarn add bootstrap-italia --save`
-2. Installare **sass**: `yarn add sass`
+2. Installare la versione di **sass** che si preferisce
 3. Creare all'interno del progetto una cartella **scss**
 4. Dentro alla cartella **scss** creare un file di tipo **bootstrap-italia-custom.scss**
 5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))
@@ -34,7 +34,7 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-{% highlight scss %}
+```scss
 // file: bootstrap-italia-custom.scss
 
 // modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
@@ -49,31 +49,30 @@ $primary-b: 100;
 // è possibile utilizzare ad esempio il sito https://rgb.to/.
 
 // Per l'override della famiglia di caratteri
-$font-family-serif:      "Custom Font", Georgia, serif;
-$font-family-sans-serif: "Custom Font", Arial, Helvetica, sans-serif;
-$font-family-monospace: "Custom Font", "Courier New", Courier, monospace;
+$font-family-serif: 'Custom Font', Georgia, serif;
+$font-family-sans-serif: 'Custom Font', Arial, Helvetica, sans-serif;
+$font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 
 // import libreria
-@import "../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss";
-{% endhighlight %}
+@import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
+```
 
 Ad esempio, per una applicazione costruita con ReactJS attraverso `create-react-app`, è possibile **importare bootstrap-italia-custom.scss** laddove serva utilizzare la libreria **Bootstrap-Italia**.
 
-{% highlight jsx %}
-import React from "react";
-import "./scss/bootstrap-italia-custom.scss";
-import "./App.css";
+```jsx
+import React from 'react'
+import './scss/bootstrap-italia-custom.scss'
+import './App.css'
 
 function App() {
-return (
-
-<div className="App">
-<button className="btn btn-primary">Bottone di esempio</button>
-</div>
-);
+  return (
+    <div className="App">
+      <button className="btn btn-primary">Bottone di esempio</button>
+    </div>
+  )
 }
 
-export default App;
-{% endhighlight %}
+export default App
+```
 
 In questo semplice e veloce esempio, il bottone con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il default blu.

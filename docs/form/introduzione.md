@@ -190,7 +190,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
           <div class="form-group">
             <div class="bootstrap-select-wrapper">
               <label for="disabledFieldsetSelect">Select</label>
-              <select id="disabledFieldsetSelect" disabled title="Select disabilitata">
+              <select id="disabledFieldsetSelect" title="Select disabilitata">
                 <option value="Value 1">Opzione 1</option>
                 <option value="Value 2">Opzione 2</option>
                 <option value="Value 3">Opzione 3</option>
@@ -231,7 +231,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
           </div>
         </div>
       </div>
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    <button class="btn btn-primary mt-3">Submit</button>
   </fieldset>
 </div>
 {% endcapture %}{% include example.html content=example %}

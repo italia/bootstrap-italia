@@ -19,26 +19,27 @@ Le informazioni di seguito non sono indispensabili per l'utilizzo di Bootstrap I
 
 ## Utilizzare Docker nello sviluppo
 
-Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started). 
-Grazie a Docker è possibile avere un ambiente di sviluppo pronto e in modalità watch lanciando il comando
+Si consiglia per lo sviluppo l'utilizzo [Docker](https://www.docker.com/get-started).
+Grazie a Docker è possibile avere un ambiente di sviluppo pronto semplicemente lanciando il comando
 
-{% highlight sh %}
+```sh
 docker-compose up
-{% endhighlight %}
+```
 
-Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari e visualizzare una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
+Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari
+e visualizzare in modalità watch una preview all'indirizzo [http://localhost:4000/](http://localhost:4000/).
 
 Per lanciare un comando all'interno del container Docker sarà sufficiente utilizzare `docker exec`, ad esempio
 
-{% highlight sh %}
+```sh
 docker exec -it bootstrap-italia-dev-1 npm run lint-js
-{% endhighlight %}
+```
 
-Se si decide di utilizzare Docker per lo sviluppo, è possibile saltare le sezioni `Processo manuale` nella compilazione della documentazione e della libreria
+Se si decide di utilizzare Docker per lo sviluppo, è possibile ignorare le sezioni `Processo manuale` nella compilazione della documentazione e della libreria
 
 ## Compilare la libreria
 
-Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Se si utilizza [Docker](https://www.docker.com/get-started) saltare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
+Il tema Bootstrap Italia, così come Bootstrap {{ site.bootstrap_version }} stesso, usa script `npm` per la compilazione dei file (è ovviamente possibile usare `yarn` in alternativa). Se si utilizza [Docker](https://www.docker.com/get-started) ignorare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
 
 ### Processo manuale
 
@@ -79,21 +80,21 @@ Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl 
 
 `src/scss/bootstrap-italia.scss`:
 
-{% highlight html %}
+```html
 // @import "custom/cookiebar";
-{% endhighlight %}
+```
 
 `gulpfile.js`:
 
-{% highlight html %}
+```html
 // './src/js/plugins/cookiebar.js',
-{% endhighlight %}
+```
 
 In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.
 
 ## Compilare la documentazione
 
-La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`. Se si utilizza [Docker](https://www.docker.com/get-started) saltare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
+La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`. Se si utilizza [Docker](https://www.docker.com/get-started) ignorare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
 
 ### Processo manuale
 
@@ -124,41 +125,41 @@ La struttura delle cartelle della documentazione è la seguente:
 - `docs`: è la cartella principale dove risiede la documentazione in formato Markdown.
 - `docs/assets`: contiene file statici (javascript, css e immagini) necessari al buon funzionamento della documentazione. **Non sono file compilati nella libreria finale Bootstrap Italia**, servono soltanto per documentare la libreria in queste pagine che stai leggendo.
 
-
 ## Come contribuire
 
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
 - Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch dal ramo principale e assegnare un nome descrittivo: 
-1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component).
-2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252).
-- Quando pensi che il branch sia pronto per il merge, apri una pull request (PR) e chiedi una review a uno dei membri del team, che in caso positivo provvederà ad unirla al ramo principale, altrimenti chiederà all’autore di effettuare alcune modifiche o rifiuterà la PR in questione specificando il motivo di tale scelta.
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo:
+
+1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
+2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252)
+
+- Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
-
 
 ## Creare una nuova release
 
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
-{% highlight sh %}
-$ npm run bump-patch
-{% endhighlight %}
+```sh
+$ npm version [patch, minor, major]
+```
 
-o `bump-minor` oppure `bump-major`, che produrrà:
+che produrrà:
 
 - Aggiornamento numero di versione in formato [semver](https://semver.org/) su file `package.json`, `package.lock` e `_config.yml`
 - Commit delle modifiche
-- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche. Premere poi un qualsiasi pulsante per continuare. 
-)
+- File CHANGELOG aggiornato (prima di proseguire verrà richiesto di riguardare il CHANGELOG.md aggiornato così da effettuare, se necessario, possibili modifiche)
 - Tag del commit con numero di versione in formato `vx.x.x`
 
-{% highlight sh %}
-$ git push --follow-tags
-{% endhighlight %}
+Eseguire poi il seguente comando che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag
+per far partire tutto il processo di deployment della nuova release.
 
-che produrrà il push della commit contenente l'avanzamento della versione ed il push della tag.
+```sh
+$ git push --follow-tags
+```
 
 ### Continuous integration e continuous delivery
 

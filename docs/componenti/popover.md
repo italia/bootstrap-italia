@@ -34,23 +34,23 @@ Cose da sapere quando si utilizza il plugin popover:
 
 Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
 
-{% highlight js %}
+```js
 $(function () {
-$('[data-toggle="popover"]').popover()
+  $('[data-toggle="popover"]').popover()
 })
-{% endhighlight %}
+```
 
 ## Abilitazione con opzione `container`
 
 Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un `container` personalizzato in modo che l'HTML del popover appaia invece all'interno di quell'elemento.
 
-{% highlight js %}
+```js
 $(function () {
-$('.example-popover').popover({
-container: 'body'
+  $('.example-popover').popover({
+    container: 'body',
+  })
 })
-})
-{% endhighlight %}
+```
 
 {% capture example %}
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
@@ -102,23 +102,55 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
   </div>
 </div>
 
-{% highlight html %}
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
-Popover in alto
+```html
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="top"
+  title="Titolo del Popover"
+  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+>
+  Popover in alto
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="right"
+  title="Titolo del Popover"
+  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+>
   Popover a destra
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="bottom"
+  title="Titolo del Popover"
+  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+>
   Popover in basso
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-container="body"
+  data-toggle="popover"
+  data-placement="left"
+  title="Titolo del Popover"
+  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+>
   Popover a sinistra
 </button>
-{% endhighlight %}
+```
 
 ### Titolo con icona e link
 
@@ -159,11 +191,11 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 <a tabindex="0" href="#" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Popover richiudibile" data-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 {% endcapture %}{% include example.html content=example %}
 
-{% highlight js %}
+```js
 $('.popover-dismiss').popover({
-trigger: 'focus'
+  trigger: 'focus',
 })
-{% endhighlight %}
+```
 
 ### Elementi disabilitati
 
@@ -181,7 +213,7 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover
 
 Abilita i popover tramite JavaScript:
 
-{% highlight js %}$('#example').popover(options){% endhighlight %}
+`js$('#example').popover(options)`
 
 ### Opzioni
 
@@ -201,49 +233,49 @@ Inizializza i popover per una raccolta di elementi.
 
 Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
 
-{% highlight js %}$('#element').popover('show'){% endhighlight %}
+`js$('#element').popover('show')`
 
 #### `.popover('hide')`
 
 Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
-{% highlight js %}$('#element').popover('hide'){% endhighlight %}
+`js$('#element').popover('hide')`
 
 #### `.popover('toggle')`
 
 Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
-{% highlight js %}$('#element').popover('toggle'){% endhighlight %}
+`js$('#element').popover('toggle')`
 
 #### `.popover('dispose')`
 
 Nasconde e distrugge il popover di un elemento.
 
-{% highlight js %}$('#element').popover('dispose'){% endhighlight %}
+`js$('#element').popover('dispose')`
 
 #### `.popover('enable')`
 
 Fornisce al popover di un elemento la possibilità di essere mostrato. **I popover sono abilitati in modo predefinito.**
 
-{% highlight js %}$('#element').popover('enable'){% endhighlight %}
+`js$('#element').popover('enable')`
 
 #### `.popover('disable')`
 
 Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.
 
-{% highlight js %}$('#element').popover('disable'){% endhighlight %}
+`js$('#element').popover('disable')`
 
 #### `.popover('toggleEnabled')`
 
 Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.
 
-{% highlight js %}$('#element').popover('toggleEnabled'){% endhighlight %}
+`js$('#element').popover('toggleEnabled')`
 
 #### `.popover('update')`
 
 Aggiorna la posizione del popover di un elemento.
 
-{% highlight js %}$('#element').popover('update'){% endhighlight %}
+`js$('#element').popover('update')`
 
 ### Eventi
 
@@ -278,8 +310,8 @@ Aggiorna la posizione del popover di un elemento.
   </tbody>
 </table>
 
-{% highlight js %}
+```js
 $('#myPopover').on('hidden.bs.popover', function () {
-// azioni
+  // azioni
 })
-{% endhighlight %}
+```

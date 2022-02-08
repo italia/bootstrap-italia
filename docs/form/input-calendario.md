@@ -13,14 +13,14 @@ Il datepicker utilizza un plugin Javascript di terze parti, "Accessible Bootstra
 
 Per inizializzare il plugin, utilizzare il seguente script:
 
-{% highlight js %}
-$(document).ready(function() {
-$('.it-date-datepicker').datepicker({
-inputFormat: ["dd/MM/yyyy"],
-outputFormat: 'dd/MM/yyyy',
-});
-});
-{% endhighlight %}
+```js
+$(document).ready(function () {
+  $('.it-date-datepicker').datepicker({
+    inputFormat: ['dd/MM/yyyy'],
+    outputFormat: 'dd/MM/yyyy',
+  })
+})
+```
 
 ## Esempi
 

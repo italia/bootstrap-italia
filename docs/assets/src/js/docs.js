@@ -96,7 +96,7 @@ $(function () {
     })
 
   // Insert copy to clipboard button before .highlight
-  $('.highlight').each(function () {
+  $('figure.highlight,div.highlight').each(function () {
     var btnHtml = '<div class="bd-clipboard"><button class="btn-clipboard" title="Copy to clipboard">Copia</button></div>'
     $(this).before(btnHtml)
     $('.btn-clipboard')
@@ -107,6 +107,10 @@ $(function () {
         // remain visible until focus is moved away
         $(this).tooltip('hide')
       })
+  })
+
+  $('pre.highlight').each(function () {
+    $(this).removeClass('highlight')
   })
 
   // ClipboardJS - Docs copy code handling

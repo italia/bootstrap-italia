@@ -49,7 +49,6 @@ Nel caso si volesse modificare il testo dgli `aria-label`, ad esempio per implem
 La chiave {% raw %}{{i}}{% endraw %} verrà sostituita dal numero di elemento/slide.  
 La chiave {% raw %}{{n}}{% endraw %} verrà sostituita dal totale di elementi/slide.
 
-
 Il carousel sottostante contiene un esempio di utilizzo degli attributi `data`.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

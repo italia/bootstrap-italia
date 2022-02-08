@@ -41,11 +41,11 @@ Cose da sapere quando usi il plugin tooltip:
 
 Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
 
-{% highlight js %}
+```js
 $(function () {
-$('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip()
 })
-{% endhighlight %}
+```
 
 ### Altri esempi
 
@@ -117,11 +117,11 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 
 E con codice HTML personalizzato:
 
-{% highlight html %}
+```html
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
-Tooltip con HTML
+  Tooltip con HTML
 </button>
-{% endhighlight %}
+```
 
 ## Uso
 
@@ -129,9 +129,9 @@ Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefin
 
 Attivare il tooltip tramite JavaScript:
 
-{% highlight js %}
+```js
 $('#example').tooltip(options)
-{% endhighlight %}
+```
 
 ### Markup
 
@@ -140,20 +140,20 @@ Di seguito è mostrato un esempio che esplicita il funzionamento interno di Boot
 Il markup richiesto per un tooltip è costituito da un attributo `data-` e `title` sull'elemento HTML sul quale si vuole
 abilitare un tooltip. Ad esempio, quando nella pagina è scritto questo codice HTML:
 
-{% highlight html %}
+```html
 <a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip">Link che attiva il tooltip</a>
-{% endhighlight %}
+```
 
 Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hover`), Bootstrap genera il markup seguente:
 
-{% highlight html %}
+```html
 <a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip!" aria-describedby="tooltip0123456">Link che attiva il tooltip</a>
 
 <div class="tooltip bs-tooltip-top" role="tooltip" id="tooltip0123456">
   <div class="arrow"></div>
   <div class="tooltip-inner">Testo di esempio del tooltip</div>
 </div>
-{% endhighlight %}
+```
 
 ### Opzioni
 
@@ -173,49 +173,49 @@ Allega un gestore del tooltip a una raccolta di elementi.
 
 Mostra il tootlip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato** (i.e. prima che si verifichi l'evento `shown.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip. I tooltip senza titoli non vengono mai visualizzati.
 
-{% highlight js %}$('#element').tooltip('show'){% endhighlight %}
+`js$('#element').tooltip('show')`
 
 #### `.tooltip('hide')`
 
 Nascondi il tootltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente nascosto** (i.e. prima che si verifichi l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
 
-{% highlight js %}$('#element').tooltip('hide'){% endhighlight %}
+`js$('#element').tooltip('hide')`
 
 #### `.tooltip('toggle')`
 
 Attiva/Disattiva il tooltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato o nascosto** (i.e. prima che si verifichi l'evento `shown.bs.tooltip` o l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
 
-{% highlight js %}$('#element').tooltip('toggle'){% endhighlight %}
+`js$('#element').tooltip('toggle')`
 
 #### `.tooltip('dispose')`
 
 Nasconde e distrugge il tooltip di un elemento.
 
-{% highlight js %}$('#element').tooltip('dispose'){% endhighlight %}
+`js$('#element').tooltip('dispose')`
 
 #### `.tooltip('enable')`
 
 Fornisce al tooltip di un elemento la possibilità di essere mostrato. **I tooltip sono abilitati in modo predefinito.**
 
-{% highlight js %}$('#element').tooltip('enable'){% endhighlight %}
+`js$('#element').tooltip('enable')`
 
 #### `.tooltip('disable')`
 
 Rimuove la capacità di mostrare il tooltip di un elemento. Il tooltip potrà essere mostrato solo se è riattivato.
 
-{% highlight js %}$('#element').tooltip('disable'){% endhighlight %}
+`js$('#element').tooltip('disable')`
 
 #### `.tooltip('toggleEnabled')`
 
 Attiva/disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.
 
-{% highlight js %}$('#element').tooltip('toggleEnabled'){% endhighlight %}
+`js$('#element').tooltip('toggleEnabled')`
 
 #### `.tooltip('update')`
 
 Aggiorna la posizione del tooltip di un elemento.
 
-{% highlight js %}$('#element').tooltip('update'){% endhighlight %}
+`js$('#element').tooltip('update')`
 
 ### Eventi
 
@@ -250,8 +250,8 @@ Aggiorna la posizione del tooltip di un elemento.
   </tbody>
 </table>
 
-{% highlight js %}
+```js
 $('#myTooltip').on('hidden.bs.tooltip', function () {
-// fai qualcosa
+  // fai qualcosa
 })
-{% endhighlight %}
+```

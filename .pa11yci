@@ -11,6 +11,7 @@
       "#preloadjs-container",
       ".exclude-a11y-check",
       ".highlight",
+      ".highlighter-rouge",
       ".disabled"
     ]
   },
@@ -20,6 +21,7 @@
       "#preloadjs-container": "esclude elementi di animazione iniziale",
       ".exclude-a11y-check": "esclude elementi esplicitamente",
       ".highlight": "esclude esempi di codice",
+      ".highlight-rouge": "esclude esempi di codice",
       ".disabled": "esclude elementi disabilitati"
     }
   ]

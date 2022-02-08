@@ -27,8 +27,8 @@ Il file `src/scss/custom/_componente-base.scss` permette al componente di avere 
 
 Il file `src/js/plugins/componente-base.js` abilita all'evento `click` un tracciamento del valore presente nell'attributo `data-value`. Puoi vedere il risultato aprendo la `console` tra gli strumenti per sviluppatori presenti in tutti i browser. Questo file Javascript utilizza una stuttura dettata da una convenzione per la creazione di plugin di Bootstrap {{ site.bootstrap_version }}, che permette di avere più flessibilità nella gestione degli eventi ed esporre le Data-API per l'estensione del loro utilizzo e di esporre proprietà del componente stesso:
 
-{% highlight js %}
+```js
 $.fn.componenteBase.Constructor.VERSION
-{% endhighlight %}
+```
 
 È possibile trovare maggiori informazioni sull'argomento alla [pagina sull'utilizzo di Javascript](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/) al sito di Bootstrap {{ site.bootstrap_version }}.

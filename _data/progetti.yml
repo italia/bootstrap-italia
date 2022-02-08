@@ -10,6 +10,9 @@
     - name: Civico 13 - Lo Sportello Giovani del Trentino
       url: 'https://www.sportellogiovanitrentino.it/'
       description: Il Civico13 è uno sportello giovani unico, un servizio congiunto nato dalla collaborazione tra gli uffici delle Politiche giovanili del Comune di Trento e della Provincia autonoma di Trento.
+    - name: Come partecipo
+      url: 'https://come-partecipo.italia.it/'
+      description: Strumento pensato per aiutare gli aspiranti contributori a migliorare, con azioni concrete, il software libero per la pubblica amministrazione, bene comune di tutto il Paese..
     - name: Sito del Comune di Cagliari
       url: 'https://www.comune.cagliari.it/'
       description: Il nuovo sito ufficiale del Comune di Cagliari, di cui è disponibile anche il <a href="https://italia.github.io/design-comuni-prototipi/">codice sorgente</a> di una versione preliminare in formato scaricabile.

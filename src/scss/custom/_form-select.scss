@@ -441,11 +441,18 @@
 }
 
 // disabilitazione via fieldset
-fieldset.disabled .bootstrap-select-wrapper {
-  opacity: 0.3;
+fieldset:disabled .bootstrap-select-wrapper {
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  .bootstrap-select > .dropdown-toggle.bs-placeholder {
+    color: $dark;
+  }
 
   button {
-    background: transparent;
+    background-color: $input-disabled-bg;
+    opacity: 1;
 
     &.btn-light {
       box-shadow: none;

@@ -67,14 +67,14 @@ impostazione, unita all'utilizzo di dimensioni in `rem` o in semplici valori
 numerici all'interno del CSS, fa sì che testo e altre proprietà occupino più
 spazio quando lo schermo lo permette:
 
-{% highlight scss %}
+```scss
 html {
-font-size: 16px;
-@include media-breakpoint-up(sm) {
-font-size: 18px;
+  font-size: 16px;
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+  }
 }
-}
-{% endhighlight %}
+```
 
 ## Intestazioni
 
@@ -91,14 +91,14 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 <p class="h4">Intestazione di tipo h4</p>
 <p class="h5">Intestazione di tipo h5</p>
 <p class="h6">Intestazione di tipo h6</p>
-{% highlight html %}
+```html
 <h1>Intestazione di tipo h1</h1>
 <h2>Intestazione di tipo h2</h2>
 <h3>Intestazione di tipo h3</h3>
 <h4>Intestazione di tipo h4</h4>
 <h5>Intestazione di tipo h5</h5>
 <h6>Intestazione di tipo h6</h6>
-{% endhighlight %}
+```
 
 Queste le dimensioni nel dettaglio:
 
@@ -165,10 +165,10 @@ della classe `.display-1`, che restituirà una dimensione sensibilmente più
 grande.
 
 <span class="h1 display-1">Intestazione di tipo h1</span>
-{% highlight html %}
 
+```html
 <h1 class="display-1">Intestazione di tipo h1</h1>
-{% endhighlight %}
+```
 
 ### Personalizzazione delle intestazioni
 
