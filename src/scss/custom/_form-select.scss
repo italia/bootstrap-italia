@@ -442,13 +442,11 @@
 
 // disabilitazione via fieldset
 fieldset:disabled .bootstrap-select-wrapper {
-
-
   &:hover {
     cursor: not-allowed;
   }
 
-  .bootstrap-select>.dropdown-toggle.bs-placeholder {
+  .bootstrap-select > .dropdown-toggle.bs-placeholder {
     color: $dark;
   }
 
