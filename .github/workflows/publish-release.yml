@@ -29,6 +29,7 @@ jobs:
       - run: npm run build
       - name: Publish package to NPM
         run: npm publish
+        continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i extract-changelog-release
