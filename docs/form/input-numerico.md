@@ -8,7 +8,7 @@ description: Campi input con bottoni per incrementare/decrementare valori numeri
 ---
 
 L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`.
-
+Tale input emetterà l'evento `change` anche all'incremento/decremento tramite i pulsanti di step.
 L'attributo `value=""` deve contenere un valore di default.
 
 ## Esempi
