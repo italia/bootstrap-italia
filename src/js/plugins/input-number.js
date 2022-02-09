@@ -42,13 +42,13 @@ $(function () {
       if ($(this).hasClass('input-number-add')) {
         //add step
         val = !isNaN(inputTargetMax) && inputTargetVal + inputTargetStep >= inputTargetMax ? inputTargetMax : inputTargetVal + inputTargetStep
-        $inputTarget.val(val)
+        $inputTarget.val(val).trigger("change");
       }
 
       if ($(this).hasClass('input-number-sub')) {
         //subtract step
         val = !isNaN(inputTargetMin) && inputTargetVal - inputTargetStep <= inputTargetMin ? inputTargetMin : inputTargetVal - inputTargetStep
-        $inputTarget.val(val)
+        $inputTarget.val(val).trigger("change");
       }
     }
 
