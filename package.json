@@ -15,7 +15,6 @@
   "style": "dist/css/bootstrap-italia.min.css",
   "main": "dist/js/bootstrap-italia.min.js",
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "gulp serve",
     "build": "gulp build",
     "documentation-build": "bundle exec jekyll build",
@@ -86,7 +85,6 @@
     "bootstrap-select": "^1.13.18",
     "glob-parent": "^6.0.2",
     "jquery": "^3.6.0",
-    "npm-force-resolutions": "^0.0.10",
     "nth-check": "^2.0.1",
     "owl.carousel": "2.3.4",
     "popper.js": "1.16.1",
