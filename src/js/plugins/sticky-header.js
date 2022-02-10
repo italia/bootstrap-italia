@@ -47,11 +47,11 @@
             const clonedSearch = elSearch ? elSearch.cloneNode(true) : null
             const clonedUser = elUser ? elUser.cloneNode(true) : null
 
-            if (clonedBrand) target.insertBefore(clonedBrand, target.childNodes[0]).classList.add('cloned')
-            if (clonedSearch) target.appendChild(clonedSearch).classList.add('cloned')
-            if (clonedUser) target.appendChild(clonedUser).classList.add('cloned').remove('show')
+            if (clonedBrand) target.insertBefore(clonedBrand, target.childNodes[0]).classList.add('cloned-header')
+            if (clonedSearch) target.appendChild(clonedSearch).classList.add('cloned-header')
+            if (clonedUser) target.appendChild(clonedUser).classList.add('cloned-header').remove('show')
           } else {
-            const clonedItems = document.getElementsByClassName('cloned')
+            const clonedItems = document.getElementsByClassName('cloned-header')
             clonedItems &&
               Array.from(clonedItems).forEach((item) => {
                 item.parentElement.removeChild(item)
