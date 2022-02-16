@@ -86,7 +86,8 @@
           }
 
           &.disabled {
-            span, .icon {
+            span,
+            .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
             }
           }
@@ -355,7 +356,8 @@
             }
 
             &.disabled {
-              span, .icon {
+              span,
+              .icon {
                 opacity: $navigation-disabled-item-opacity;
               }
             }
