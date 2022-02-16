@@ -201,7 +201,16 @@
           &.megamenu {
             .dropdown-menu {
               padding: $megamenu-padding-top-desktop $megamenu-column-gap;
-              .col-12:not(:first-child) {
+              .col-12 {
+                &:not(:first-child) {
+                  .link-list-wrapper {
+                    h3 {
+                      &:before {
+                        display: none;
+                      }
+                    }
+                  }
+                }
                 .link-list-wrapper {
                   display: flex;
                   min-height: 100%;
