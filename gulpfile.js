@@ -41,6 +41,7 @@ const Paths = {
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
+    'src/js/plugins/cookiebar.js',
     'src/js/plugins/dropdown.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
