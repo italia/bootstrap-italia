@@ -22,7 +22,12 @@ const gulp = require('gulp'),
 const DOCUMENTATION_DESTINATION = '_site'
 
 const Paths = {
-  VENDOR_JS: ['node_modules/jquery/dist/jquery.js', 'node_modules/popper.js/dist/umd/popper.js', 'node_modules/owl.carousel/dist/owl.carousel.js'],
+  VENDOR_JS: [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/popper.js/dist/umd/popper.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/just-validate/dist/just-validate.production.min.js',
+  ],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',

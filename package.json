@@ -85,6 +85,7 @@
     "bootstrap-select": "^1.13.18",
     "glob-parent": "^6.0.2",
     "jquery": "^3.6.0",
+    "just-validate": "^3.5.0",
     "nth-check": "^2.0.1",
     "owl.carousel": "2.3.4",
     "popper.js": "1.16.1",

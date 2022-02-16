@@ -1,0 +1,40 @@
+---
+layout: base
+title: Just Validate
+---
+<form id="justValidate" action="#" method="post">
+  <div class="container mb-5 mt-5">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary mt-3" type="submit">Invia</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const validate = new window.JustValidate('#justValidate', {
+      errorFieldCssClass: 'is-invalid',
+      errorLabelCssClass: 'form-feedback',
+      errorLabelStyle: '',
+      focusInvalidField: true,
+    });
+    validate
+      .addField(
+        '#nome',
+        [
+          {
+            rule: 'required',
+            errorMessage: 'Questo campo è richiesto'
+          }
+        ]
+      )
+  });
+</script>
