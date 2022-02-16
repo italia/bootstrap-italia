@@ -2,13 +2,19 @@
 layout: base
 title: Just Validate
 ---
-<form id="justValidate" action="#" method="post">
+<form id="justValidate" action="index.html" method="post">
   <div class="container mb-5 mt-5">
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" class="form-control" id="nome" required>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="age">Età</label>
+          <input type="number" class="form-control" id="age" value="18" min="18" max="50" step="1" required>
         </div>
       </div>
     </div>
@@ -27,14 +33,30 @@ title: Just Validate
       focusInvalidField: true,
     });
     validate
-      .addField(
-        '#nome',
-        [
-          {
-            rule: 'required',
-            errorMessage: 'Questo campo è richiesto'
-          }
-        ]
-      )
+      .addField('#nome', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#age', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+        {
+          rule: 'minNumber',
+          value: 18,
+          errorMessage: 'Deve essere maggiore di 17'
+        },
+        {
+          rule: 'maxNumber',
+          value: 50,
+          errorMessage: 'Deve essere minore di 51'
+        },
+      ])
+      .onSuccess((event) => {
+        console.log('Validation passes and form submitted', event);
+      });
   });
 </script>
