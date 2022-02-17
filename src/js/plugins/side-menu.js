@@ -1,15 +1,15 @@
-import ClassWatcher from "./class-watcher";
+import ClassWatcher from './class-watcher'
 
 const STYLE = {
-  opened: "expanded"
+  opened: 'expanded',
 }
 const SELECTOR = {
-  sideMenu: ".navbar-collapsable",
-  navlink: ".nav-link",
+  sideMenu: '.navbar-collapsable',
+  navlink: '.nav-link',
   megamenuNavLink: '.nav-item .list-item',
   closeBtn: '.close-menu',
   navbar: '.navbar',
-  homeBtn: '.custom-navbar-toggler'
+  homeBtn: '.custom-navbar-toggler',
 }
 
 class SideMenu {
@@ -22,21 +22,26 @@ class SideMenu {
   }
 
   init() {
-    this.watcher = new ClassWatcher(this.target, STYLE.opened, this.onOpen, this.onClose)
+    this.watcher = new ClassWatcher(
+      this.target,
+      STYLE.opened,
+      () => this.onOpen(),
+      () => this.onClose()
+    )
     this.bindEvents()
   }
   bindEvents() {
-    this.items.forEach(item => {
-      item.addEventListener('keydown', this.onItemKeyDown)
-      item.addEventListener('keyup', this.onItemKeyUp)
-      item.addEventListener('click', this.onItemClick)
+    this.items.forEach((item) => {
+      item.addEventListener('keydown', (evt) => this.onItemKeyDown(evt))
+      item.addEventListener('keyup', (evt) => this.onItemKeyUp(evt))
+      item.addEventListener('click', (evt) => this.onItemClick(evt))
     })
   }
 
   /**
    * sposta il focus sul primo link all'apertura del menu
    */
-  onOpen = () => {
+  onOpen() {
     const firstItem = this.getNextVisibleItem(1) //in pos 0 c'è il bottone di chiusura
     if (firstItem.item) {
       firstItem.item.focus()
@@ -46,33 +51,33 @@ class SideMenu {
   /**
    * sposta il focus sul bottone di apertura menu alla chiusura del menu
    */
-  onClose = () => {
+  onClose() {
     const homeBtn = this.target.closest(SELECTOR.navbar).querySelector(SELECTOR.homeBtn)
     if (homeBtn) {
       homeBtn.focus()
     }
   }
-  onItemKeyUp = (evt) => {
+  onItemKeyUp(evt) {
     if (evt.key === 'Shift') {
-      this.isKeyShift = false;
+      this.isKeyShift = false
     }
   }
   /**
    * Gestisce la navigazione degli elementi interagibili del menu tramite tastiera
    */
-  onItemKeyDown = (evt) => {
+  onItemKeyDown(evt) {
     if (evt.key === 'Shift') {
-      this.isKeyShift = true;
+      this.isKeyShift = true
     }
     if (evt.key === 'Tab') {
-      evt.preventDefault();
-      this.focusNext();
+      evt.preventDefault()
+      this.focusNext()
     }
   }
   /**
    * Aggiorna l'ultimo elemento con focus al click su un elemento interagibile
    */
-  onItemClick = (evt) => {
+  onItemClick(evt) {
     this.currItemIdx = this.getItemIndex(evt.currentTarget)
   }
   /**
@@ -120,7 +125,7 @@ class SideMenu {
       }
       i = i + incr
       if (i < 0) {
-        i = this.items.length -1
+        i = this.items.length - 1
       } else if (i >= this.items.length) {
         i = 0
       }
@@ -128,7 +133,7 @@ class SideMenu {
 
     return {
       item: found,
-      index: foundIdx
+      index: foundIdx,
     }
   }
 
@@ -138,7 +143,7 @@ class SideMenu {
   focusNext() {
     let nextIdx = this.currItemIdx + (this.isKeyShift ? -1 : 1)
     if (nextIdx < 0) {
-      nextIdx = this.items.length -1
+      nextIdx = this.items.length - 1
     } else if (nextIdx >= this.items.length) {
       nextIdx = 0
     }
@@ -150,8 +155,8 @@ class SideMenu {
   }
 }
 
-const menus = document.querySelectorAll(SELECTOR.sideMenu);
+const menus = document.querySelectorAll(SELECTOR.sideMenu)
 menus.forEach((menu) => {
   const smenu = new SideMenu(menu)
   smenu.init()
-});
+})

@@ -4,7 +4,7 @@ $(function () {
   var closebutton = $('.close-div')
   var overlay = $('.overlay')
   var backbutton = $('.it-back-button')
-  var navlink = $('.navbar-collapsable a')
+  //var navlink = $('.navbar-collapsable a')
 
   //-open button action
   $(openbutton).on('click', function () {
