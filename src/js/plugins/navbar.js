@@ -46,10 +46,10 @@ $(function () {
     }, 300)
   })
 
-  //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo)
-  $(navlink).on('blur', function () {
+  //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo) - DISABILITATO
+  /*$(navlink).on('blur', function () {
     var closemenu = $(this).closest('.navbar-collapsable').find('.close-div .btn') // determino il pulsante di chiusura
-    /* Act on the event */
+    // Act on the event
     if ($(this).closest('.navbar-collapsable').hasClass('expanded')) {
       // se il navigatore è a perto
       setTimeout(function () {
@@ -62,12 +62,12 @@ $(function () {
         }
       }, 50)
     }
-  })
+  })*/
 
-  //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu)
-  $(closebutton).on('blur', function () {
+  //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu) - DISABILITATO
+  /*$(closebutton).on('blur', function () {
     var closemenu = $(this)
-    /* Act on the event */
+    //Act on the event
     if ($(this).closest('.navbar-collapsable').hasClass('expanded')) {
       // se il navigatore è a perto
       setTimeout(function () {
@@ -80,5 +80,5 @@ $(function () {
         }
       }, 50)
     }
-  })
+  })*/
 })
