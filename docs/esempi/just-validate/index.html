@@ -17,6 +17,75 @@ title: Just Validate
           <input type="number" class="form-control" id="age" value="18" min="18" max="50" step="1" required>
         </div>
       </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="cap">Cap</label>
+          <input type="number" class="form-control" id="cap" size="5" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <fieldset id="radiogroup">
+            <legend>Scegli un'opzione</legend>
+            <div class="form-check form-check-inline">
+              <input name="gruppo2" type="radio" id="radio1" required>
+              <label for="radio1">Opzione 1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input name="gruppo2" type="radio" id="radio2" required>
+              <label for="radio2">Opzione 2</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <fieldset id="checkgroup">
+            <legend>Scegli un'opzione</legend>
+            <div class="form-check form-check-inline">
+              <input id="checkbox2" type="checkbox" required>
+              <label for="checkbox2">Checkbox non selezionato</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="checkbox3" type="checkbox" required>
+              <label for="checkbox3">Checkbox selezionato</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="select-wrapper">
+          <label for="defaultSelect">Etichetta</label>
+            <select id="defaultSelect" title="Scegli una opzione" required>
+              <option selected value="">Scegli una opzione</option>
+              <option value="Value 1">Opzione 1</option>
+              <option value="Value 2">Opzione 2</option>
+              <option value="Value 3">Opzione 3</option>
+              <option value="Value 4">Opzione 4</option>
+              <option value="Value 5">Opzione 5</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+            <label class="active" for="date">Inserisci una data</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+      </div>
     </div>
     <div class="row">
       <button class="btn btn-primary mt-3" type="submit">Invia</button>
@@ -26,12 +95,15 @@ title: Just Validate
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+
     const validate = new window.JustValidate('#justValidate', {
       errorFieldCssClass: 'is-invalid',
       errorLabelCssClass: 'form-feedback',
       errorLabelStyle: '',
       focusInvalidField: true,
     });
+
+
     validate
       .addField('#nome', [
         {
@@ -55,8 +127,50 @@ title: Just Validate
           errorMessage: 'Deve essere minore di 51'
         },
       ])
+      .addField('#cap', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+        {
+          rule: 'minLength',
+          value: 5,
+          errorMessage: 'Inserire 5 cifre'
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+        {
+          rule: 'email',
+          errorMessage: 'Inserire email corretta'
+        },
+      ])
+      .addField('#defaultSelect', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+
+      .addRequiredGroup(
+        '#radiogroup',
+        'Scegli almeno una opzione'
+      )
+      .addRequiredGroup(
+        '#checkgroup',
+        'Scegli almeno una opzione'
+      )
+      .addField('#date', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
       .onSuccess((event) => {
-        console.log('Validation passes and form submitted', event);
+        document.forms["justValidate"].submit();
       });
   });
 </script>
