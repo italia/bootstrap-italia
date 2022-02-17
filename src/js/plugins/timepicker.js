@@ -141,6 +141,7 @@ $(document).ready(function () {
 
     $btnTime.on('click', (e) => {
       e.stopPropagation()
+      e.preventDefault()
       if ($spinner.hasClass('is-open')) {
         hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
       } else {

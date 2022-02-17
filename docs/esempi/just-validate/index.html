@@ -86,6 +86,102 @@ title: Just Validate
             <input type="date" id="date" name="date" required>
         </div>
       </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <div class="it-datepicker-wrapper">
+            <div class="form-group">
+              <label for="date2">Date label (posizione validazione errata da sistemare in js)</label>
+              <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
+              <div id="feedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label class="active" for="time">Time</label>
+          <input class="form-control" id="time" type="time" required>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <div class="it-timepicker-wrapper">
+            <section class="time-spinner">
+              <div class="error_container" role="alert" aria-atomic="true"></div>
+              <fieldset>
+                <legend><span class="sr-only">Time</span></legend>
+                <div>
+                  <div class="calendar-input-container">
+                    <div class="form-group">
+                      <label for="txtTime1">Label timepicker (posizione validazione errata da sistemare in js)</label>
+                      <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm">
+                      <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
+                        <svg class="icon">
+                          <use href="/dist/svg/sprite.svg#it-clock"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="spinner-control" aria-hidden="true" role="region" aria-label="Due Date Time" tabindex="-1">
+                <div class="spinner-hour spinner">
+                  <input class="spinnerHour form-control" id="spinnerh" aria-label="hour" type="number" value="00" role="spinbutton" maxlength="2" aria-valuenow="00" aria-valuemax="23" aria-valuemin="0" bb-skip="3">
+                  <div class="button-wrapper">
+                    <button class="button-hour btnHourUp" id="iduph" aria-label="Increase Hour">
+                      <span class="icon-up"></span>
+                    </button>
+                    <button class="button-hour btnHourDown" id="iddownh" aria-label="Decrease Hour">
+                      <span class="icon-down"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="spinner-min spinner">
+                  <input class="spinnerMin form-control" id="spinnerm" aria-label="minute" type="number" value="00" role="spinbutton" aria-valuenow="00" maxlength="2" aria-valuemax="59" aria-valuemin="00" bb-skip="10">
+                  <div class="button-wrapper">
+                    <button class="btnMinUp button-minute" id="idupm" aria-label="Increase Minute">
+                      <span class="icon-up"></span>
+                    </button>
+                    <button class="btnMinDown button-minute" id="iddownm" aria-label="Decrease Minute">
+                      <span class="icon-down"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-12 col-md-6">
+        <div class="form-upload">
+          <label for="upload">Upload standard</label>
+          <input type="file" name="upload" id="upload" multiple="multiple" required/>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="form-upload">
+          <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" required/>
+          <label for="upload1">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprite.svg#it-upload"></use></svg>
+            <span>Upload</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-check col-6 mb-5">
+        <div class="toggles">
+          <label for="toggleEsempio1a">
+            Label dell'interruttore 1
+            <input type="checkbox" id="toggleEsempio1a" required>
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
     </div>
     <div class="row">
       <button class="btn btn-primary mt-3" type="submit">Invia</button>
@@ -95,6 +191,10 @@ title: Just Validate
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    $('.it-date-datepicker').datepicker({
+      inputFormat: ['dd/MM/yyyy'],
+      outputFormat: 'dd/MM/yyyy',
+    })
 
     const validate = new window.JustValidate('#justValidate', {
       errorFieldCssClass: 'is-invalid',
@@ -102,7 +202,6 @@ title: Just Validate
       errorLabelStyle: '',
       focusInvalidField: true,
     });
-
 
     validate
       .addField('#nome', [
@@ -141,7 +240,7 @@ title: Just Validate
       .addField('#email', [
         {
           rule: 'required',
-          errorMessage: 'Questo campo è richiesto'
+          errorMessage: 'Questo campo è richiesto',
         },
         {
           rule: 'email',
@@ -167,6 +266,58 @@ title: Just Validate
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#date2', [
+        {
+          plugin: JustValidatePluginDate(() => ({
+            format: 'dd/MM/yyyy',
+          })),
+          errorMessage: 'Date should be in dd/MM/yyyy',
+          errorsContainer : '#feedback'
+        },
+      ])
+      .addField('#time', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#txtTime1', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#toggleEsempio1a', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#upload1', [
+        {
+          rule: 'minFilesCount',
+          value: 1,
+          errorMessage: 'Caricare almeno un file'
+        },
+        {
+          rule: 'files',
+          value: {
+            files: {
+              extensions: ['jpeg', 'png'],
+              maxSize: 25000,
+              minSize: 1000,
+              types: ['image/jpeg', 'image/png'],
+            },
+          },
+        },
+      ])
+      .addField('#upload', [
+      {
+          rule: 'minFilesCount',
+          value: 1,
+          errorMessage: 'Caricare almeno un file'
         },
       ])
       .onSuccess((event) => {
