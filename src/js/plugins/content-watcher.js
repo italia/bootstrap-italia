@@ -9,7 +9,6 @@ class ContentWatcher {
     this.contentAddedCallback = contentAddedCallback
     this.contentRemovedCallback = contentRemovedCallback
     this.observer = null
-    this.contentCounter = targetNode.querySelectorAll(this.contentSelector).length
 
     this.init()
   }
@@ -30,14 +29,16 @@ class ContentWatcher {
   mutationCallback(mutationsList) {
     for (let mutation of mutationsList) {
       if (mutation.type === 'childList') {
-        let currContentCounter = mutation.target.querySelectorAll(this.contentSelector).length
-        if (currContentCounter > this.contentCounter) {
-          this.contentCounter = currContentCounter
-          this.contentAddedCallback()
-        } else if (currContentCounter < this.contentCounter) {
-          this.contentCounter = currContentCounter
-          this.contentRemovedCallback()
-        }
+        mutation.addedNodes.forEach((node) => {
+          if (node.matches(this.contentSelector)) {
+            this.contentAddedCallback()
+          }
+        })
+        mutation.removedNodes.forEach((node) => {
+          if (node.matches(this.contentSelector)) {
+            this.contentRemovedCallback()
+          }
+        })
       }
     }
   }
