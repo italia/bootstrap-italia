@@ -69,6 +69,9 @@ const Paths = {
     'src/js/plugins/datepicker-validation.js',
     'src/js/' + pkg.name + '.js',
     'src/js/plugins/version.js',
+    'src/js/plugins/justvalidate-it.js',
+    'src/js/plugins/class-watcher.js',
+    'src/js/plugins/content-watcher.js',
   ],
 
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',

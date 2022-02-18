@@ -196,7 +196,7 @@ title: Just Validate
       outputFormat: 'dd/MM/yyyy',
     })
 
-    const validate = new window.JustValidate('#justValidate', {
+    const validate = new window.JustValidateIt('#justValidate', {
       errorFieldCssClass: 'is-invalid',
       errorLabelCssClass: 'form-feedback',
       errorLabelStyle: '',
@@ -323,5 +323,8 @@ title: Just Validate
       .onSuccess((event) => {
         document.forms["justValidate"].submit();
       });
+
   });
+
+
 </script>
