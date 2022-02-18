@@ -133,7 +133,7 @@
     border-top: $dp-border-bottom;
     display: none;
     margin-top: -2px;
-
+    z-index: 1;
     .spinner {
       float: left;
       position: relative;

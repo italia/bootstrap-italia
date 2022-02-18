@@ -305,12 +305,13 @@ title: Just Validate
           rule: 'files',
           value: {
             files: {
-              extensions: ['jpeg', 'png'],
-              maxSize: 25000,
-              minSize: 1000,
+              extensions: ['jpg', 'png'],
+              maxSize: 100000,
+              minSize: 50,
               types: ['image/jpeg', 'image/png'],
             },
           },
+          errorMessage: 'Tipo di file sbagliato o troppo pesante'
         },
       ])
       .addField('#upload', [
