@@ -25,31 +25,39 @@ class SideMenu {
     this.watcher = new ClassWatcher(
       this.target,
       STYLE.opened,
-      () => this.onOpen(),
-      () => this.onClose()
+      () => this.isServiceEnabled() && this.onOpen(),
+      () => this.isServiceEnabled() && this.onClose()
     )
     this.bindEvents()
   }
   bindEvents() {
     this.items.forEach((item) => {
-      item.addEventListener('keydown', (evt) => this.onItemKeyDown(evt))
-      item.addEventListener('keyup', (evt) => this.onItemKeyUp(evt))
-      item.addEventListener('click', (evt) => this.onItemClick(evt))
+      item.addEventListener('keydown', (evt) => this.isServiceEnabled() && this.onItemKeyDown(evt))
+      item.addEventListener('keyup', (evt) => this.isServiceEnabled() && this.onItemKeyUp(evt))
+      item.addEventListener('click', (evt) => this.isServiceEnabled() && this.onItemClick(evt))
     })
   }
 
   /**
-   * sposta il focus sul primo link all'apertura del menu
+   * it tells if the class functionalities can operate based on screensize
+   * @returns true if the class can operate
+   */
+  isServiceEnabled() {
+    return window.matchMedia('(max-width: 991px)').matches
+  }
+
+  /**
+   * Move focus on the first element of the menu
    */
   onOpen() {
-    const firstItem = this.getNextVisibleItem(1) //in pos 0 c'è il bottone di chiusura
+    const firstItem = this.getNextVisibleItem(1) //at pos 0 there's the close button
     if (firstItem.item) {
       firstItem.item.focus()
       this.currItemIdx = firstItem.index
     }
   }
   /**
-   * sposta il focus sul bottone di apertura menu alla chiusura del menu
+   * Move focus on the menu open button when the side menu closes
    */
   onClose() {
     const homeBtn = this.target.closest(SELECTOR.navbar).querySelector(SELECTOR.homeBtn)
