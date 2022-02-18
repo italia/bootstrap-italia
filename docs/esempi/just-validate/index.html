@@ -3,23 +3,34 @@ layout: base
 title: Just Validate
 ---
 <form id="justValidate" action="index.html" method="post">
-  <div class="container mb-5 mt-5">
+  <div class="container mb-5 mt-5 pt-5">
+    <div class="row">
+      <div class="col-12">
+        <h1>Test validazione form</h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-12">
+        <h2>Campi input</h2>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="nome">Nome</label>
+          <label for="nome">Campo testo</label>
           <input type="text" class="form-control" id="nome" required>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="age">Età</label>
-          <input type="number" class="form-control" id="age" value="18" min="18" max="50" step="1" required>
+          <label for="age">Campo numerico (min/max)</label>
+          <input type="number" class="form-control" id="age" min="18" max="50" step="1" required>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="cap">Cap</label>
+          <label for="cap">Campo numerico (5 cifre)</label>
           <input type="number" class="form-control" id="cap" size="5" required>
         </div>
       </div>
@@ -27,47 +38,25 @@ title: Just Validate
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Campo Email</label>
           <input type="email" class="form-control" id="email" required>
         </div>
       </div>
-    </div>
-    <div class="row">
       <div class="col-12 col-md-4">
-        <div class="form-group">
-          <fieldset id="radiogroup">
-            <legend>Scegli un'opzione</legend>
-            <div class="form-check form-check-inline">
-              <input name="gruppo2" type="radio" id="radio1" required>
-              <label for="radio1">Opzione 1</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input name="gruppo2" type="radio" id="radio2" required>
-              <label for="radio2">Opzione 2</label>
-            </div>
-          </fieldset>
+        <div class="bootstrap-select-wrapper">
+          <label for="selectExample1">Select custom (non validabile)</label>
+          <select id="selectExample1" title="Scegli una opzione">
+            <option value="Value 1">Opzione 1</option>
+            <option value="Value 2">Opzione 2</option>
+            <option value="Value 3">Opzione 3</option>
+            <option value="Value 4">Opzione 4</option>
+            <option value="Value 5">Opzione 5</option>
+          </select>
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="form-group">
-          <fieldset id="checkgroup">
-            <legend>Scegli un'opzione</legend>
-            <div class="form-check form-check-inline">
-              <input id="checkbox2" type="checkbox" required>
-              <label for="checkbox2">Checkbox non selezionato</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input id="checkbox3" type="checkbox" required>
-              <label for="checkbox3">Checkbox selezionato</label>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-12 col-md-4">
         <div class="select-wrapper">
-          <label for="defaultSelect">Etichetta</label>
+          <label for="defaultSelect">Select standard (da stilare)</label><br/>
             <select id="defaultSelect" title="Scegli una opzione" required>
               <option selected value="">Scegli una opzione</option>
               <option value="Value 1">Opzione 1</option>
@@ -79,10 +68,10 @@ title: Just Validate
         </div>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-            <label class="active" for="date">Inserisci una data</label>
+            <label class="active" for="date">Datepicker standard</label>
             <input type="date" id="date" name="date" required>
         </div>
       </div>
@@ -90,7 +79,7 @@ title: Just Validate
         <div class="form-group">
           <div class="it-datepicker-wrapper">
             <div class="form-group">
-              <label for="date2">Date label (posizione validazione errata da sistemare in js)</label>
+              <label for="date2">Datepicker custom (pos. validazione errata da fixare in js)</label>
               <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
               <div id="feedback"></div>
             </div>
@@ -101,7 +90,7 @@ title: Just Validate
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label class="active" for="time">Time</label>
+          <label class="active" for="time">Timepicker standard</label>
           <input class="form-control" id="time" type="time" required>
         </div>
       </div>
@@ -115,7 +104,7 @@ title: Just Validate
                 <div>
                   <div class="calendar-input-container">
                     <div class="form-group">
-                      <label for="txtTime1">Label timepicker (posizione validazione errata da sistemare in js)</label>
+                      <label for="txtTime1">Timepicker custom (pos. validazione errata da fixare in js)</label>
                       <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm">
                       <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
                         <svg class="icon">
@@ -155,10 +144,75 @@ title: Just Validate
         </div>
       </div>
     </div>
+
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2>Checkbox / Radio</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <div class="form-check col-6 mb-5">
+            <input id="checkbox1" type="checkbox" required>
+            <label for="checkbox1">Checkbox isolata</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="toggles">
+          <label for="toggleEsempio1a">
+            Toggle isolato
+            <input type="checkbox" id="toggleEsempio1a" required>
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <fieldset id="radiogroup">
+            <legend>Fieldset radio buttons</legend>
+            <div class="form-check form-check-inline">
+              <input name="gruppo2" type="radio" id="radio1" required>
+              <label for="radio1">Radio 1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input name="gruppo2" type="radio" id="radio2" required>
+              <label for="radio2">Radio 2</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <fieldset id="checkgroup">
+            <legend>Fieldset checkbox</legend>
+            <div class="form-check form-check-inline">
+              <input id="checkbox2" type="checkbox" required>
+              <label for="checkbox2">Checkbox 1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="checkbox3" type="checkbox" required>
+              <label for="checkbox3">Checkbox 2</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2>File</h2>
+      </div>
+    </div>
+
     <div class="row mb-5">
       <div class="col-12 col-md-6">
         <div class="form-upload">
-          <label for="upload">Upload standard</label>
+          <label for="upload">Upload standard</label><br>
           <input type="file" name="upload" id="upload" multiple="multiple" required/>
         </div>
       </div>
@@ -167,24 +221,13 @@ title: Just Validate
           <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" required/>
           <label for="upload1">
             <svg class="icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprite.svg#it-upload"></use></svg>
-            <span>Upload</span>
+            <span>Upload custom (solo jpg/png)</span>
           </label>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="form-check col-6 mb-5">
-        <div class="toggles">
-          <label for="toggleEsempio1a">
-            Label dell'interruttore 1
-            <input type="checkbox" id="toggleEsempio1a" required>
-            <span class="lever"></span>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <button class="btn btn-primary mt-3" type="submit">Invia</button>
+      <button class="btn btn-primary mt-3" type="submit">Invia form</button>
     </div>
   </div>
 </form>
@@ -256,11 +299,11 @@ title: Just Validate
 
       .addRequiredGroup(
         '#radiogroup',
-        'Scegli almeno una opzione'
+        'Scegli un’opzione'
       )
       .addRequiredGroup(
         '#checkgroup',
-        'Scegli almeno una opzione'
+        'Scegli almeno un’opzione'
       )
       .addField('#date', [
         {
@@ -295,11 +338,17 @@ title: Just Validate
           errorMessage: 'Questo campo è richiesto'
         },
       ])
+      .addField('#checkbox1', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
       .addField('#upload1', [
         {
           rule: 'minFilesCount',
           value: 1,
-          errorMessage: 'Caricare almeno un file'
+          errorMessage: 'Caricare un file jpg o png'
         },
         {
           rule: 'files',
@@ -318,7 +367,7 @@ title: Just Validate
       {
           rule: 'minFilesCount',
           value: 1,
-          errorMessage: 'Caricare almeno un file'
+          errorMessage: 'Caricare un file'
         },
       ])
       .onSuccess((event) => {
