@@ -64,7 +64,7 @@ class JustValidateIt {
    * @param {Object} target - l'elemento input
    */
   onInputError(target) {
-    const errElements = target.parentNode.querySelectorAll('.' + this.config.errorLabelCssClass)
+    const errElements = this.getErrorMessages(target)
     const errIds = []
     errElements.forEach((el, idx) => {
       const id = target.id + '-error-' + idx
@@ -92,12 +92,14 @@ class JustValidateIt {
    * @param {Object} target - l'elemento fieldset
    */
   onFieldsetError(target) {
-    const errElements = target.querySelectorAll('.' + this.config.errorLabelCssClass)
+    const errElements = this.getErrorMessages(target)
     const errIds = []
+    const errTexts = []
     errElements.forEach((el, idx) => {
       const id = target.id + '-error-' + idx
       el.setAttribute('id', id)
       errIds.push(id)
+      errTexts.push(el.textContent)
     })
 
     if (errIds.length > 0) {
@@ -105,6 +107,12 @@ class JustValidateIt {
       if (legend) {
         legend.setAttribute('aria-describedby', errIds.join(' '))
         legend.setAttribute('aria-invalid', 'true')
+
+        const span = document.createElement('span')
+        span.classList.add('sr-only')
+        span.classList.add('sr-only-justvalidateit')
+        span.textContent = errTexts.join(' ')
+        legend.append(span)
       }
     } /*else {
       console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
@@ -119,7 +127,25 @@ class JustValidateIt {
     if (legend) {
       legend.removeAttribute('aria-describedby')
       legend.setAttribute('aria-invalid', 'false')
+      const span = legend.querySelector('span.sr-only-justvalidateit')
+      if (span) {
+        span.remove()
+      }
     }
+  }
+
+  /**
+   * get the error messages for the target
+   * @param {Object} target - target node
+   */
+  getErrorMessages(target) {
+    let parent = target
+    let messages = parent.querySelectorAll('.' + this.config.errorLabelCssClass)
+    while (parent != null && messages.length === 0) {
+      parent = parent.parentNode
+      messages = parent.querySelectorAll('.' + this.config.errorLabelCssClass)
+    }
+    return messages
   }
 }
 
