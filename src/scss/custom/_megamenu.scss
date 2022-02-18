@@ -56,6 +56,9 @@
                 }
               }
             }
+            .col-12:last-child {
+              padding-bottom: $grid-gutter-width * 2;
+            }
             .col-12:not(:first-child) {
               .it-heading-megacolumn {
                 margin-top: $grid-gutter-width * 2;
@@ -70,7 +73,8 @@
                 }
               }
               .link-list-wrapper {
-                h3 {
+                h3,
+                .link-list-heading {
                   margin-top: $grid-gutter-width * 2;
 
                   &:before {
@@ -84,12 +88,15 @@
                 }
               }
             }
-            h3.it-heading-megacolumn {
-              margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + $grid-gutter-width * 2;
-              line-height: $megamenu-heading-line-height;
-              font-size: $megamenu-heading-text-size;
-              text-transform: uppercase;
-              padding-bottom: $megamenu-linklist-link-v-padding;
+            h3,
+            .link-list-heading {
+              &.it-heading-megacolumn {
+                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + $grid-gutter-width * 2;
+                line-height: $megamenu-heading-line-height;
+                font-size: $megamenu-heading-text-size;
+                text-transform: uppercase;
+                padding-bottom: $megamenu-linklist-link-v-padding;
+              }
             }
             // linklist specs
             .link-list-wrapper {
@@ -202,9 +209,13 @@
             .dropdown-menu {
               padding: $megamenu-padding-top-desktop $megamenu-column-gap;
               .col-12 {
+                &:last-child {
+                  padding-bottom: 0;
+                }
                 &:not(:first-child) {
                   .link-list-wrapper {
-                    h3 {
+                    h3,
+                    .link-list-heading {
                       &:before {
                         display: none;
                       }
@@ -212,11 +223,16 @@
                   }
                 }
                 .link-list-wrapper {
-                  display: flex;
+                  //display: flex;
                   min-height: 100%;
-                  h3 {
-                    margin-top: $megamenu-heading-margin-top;
+                  h3,
+                  .link-list-heading {
+                    margin-top: $megamenu-heading-margin-top !important;
                     line-height: $megamenu-heading-line-height;
+                    padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                    font-size: $megamenu-heading-text-size;
+                    text-transform: uppercase;
+                    margin-bottom: $megamenu-heading-margin-top;
                     &:before {
                       display: none;
                     }
@@ -225,9 +241,13 @@
                     display: flex;
                     flex-direction: column;
                     li {
-                      width: 100%;
-                      a,
-                      h3 {
+                      //width: 100%;
+                      a {
+                        padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                        line-height: inherit;
+                      }
+
+                      /*h3 {
                         padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
                         line-height: inherit;
                       }
@@ -239,7 +259,7 @@
                         margin-top: $megamenu-heading-margin-top;
                         margin-bottom: $megamenu-heading-margin-top;
                         //margin-bottom: $megamenu-heading-bottom-margin;
-                      }
+                      }*/
                       &.it-more {
                         margin-top: auto;
                         a {
@@ -271,13 +291,16 @@
                   margin-bottom: 0;
                 }
               }
-              h3.it-heading-megacolumn {
-                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
-                line-height: $megamenu-heading-line-height;
-                font-size: $megamenu-heading-text-size;
-                text-transform: uppercase;
-                border-bottom: 1px solid $neutral-2;
-                padding-bottom: $megamenu-linklist-link-v-padding;
+              h3,
+              .link-list-heading {
+                &.it-heading-megacolumn {
+                  margin: $megamenu-linklist-link-v-padding $megamenu-column-gap;
+                  line-height: $megamenu-heading-line-height;
+                  font-size: $megamenu-heading-text-size;
+                  text-transform: uppercase;
+                  border-bottom: 1px solid $neutral-2;
+                  padding-bottom: $megamenu-linklist-link-v-padding;
+                }
               }
               .row.max-height-col {
                 min-height: 100%;

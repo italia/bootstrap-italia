@@ -144,18 +144,17 @@ title: Template Header vuoto
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false" id="mainNavDropdown">
                         <span>Menu Dropdown</span>
                         <svg class="icon icon-xs">
                           <use href="/dist/svg/sprite.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-describedby="mainNavDropdown">
+
                         <div class="link-list-wrapper">
-                          <ul class="link-list" aria-label="Intestazione">
-                            <li>
-                              <h3 id="heading-es-5">Intestazione</h3>
-                            </li>
+                          <div class="link-list-heading">Sezione</div>
+                          <ul class="link-list">
                             <li><a class="list-item" href="#"><span>Link lista 1</span></a></li>
                             <li><a class="list-item" href="#"><span>Link lista 2</span></a></li>
                             <li><a class="list-item" href="#"><span>Link lista 3</span></a></li>
@@ -166,19 +165,30 @@ title: Template Header vuoto
                       </div>
                     </li>
                     <li class="nav-item dropdown megamenu">
-                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu">
                         <span>Megamenu</span>
                         <svg class="icon icon-xs">
                           <use href="/dist/svg/sprite.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-describedby="mainNavMegamenu">
                         <div class="row">
                           <div class="col-12 col-lg-4">
+
                             <div class="link-list-wrapper">
-                              <ul class="link-list" aria-label="Intestazione 1">
+                              <div class="link-list-heading">Sezione 1</div>
+                              <ul class="link-list">
+                                <li><a class="list-item" href="#"><span>Link lista 1 </span></a></li>
+                                <li><a class="list-item" href="#"><span>Link lista 2 </span></a></li>
+                                <li><a class="list-item" href="#"><span>Link lista 3 </span></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-4">
+                            <div class="link-list-wrapper">
+                              <ul class="link-list">
                                 <li>
-                                  <h3>Intestazione 1</h3>
+                                  <div class="link-list-heading">Sezione 2</div>
                                 </li>
                                 <li><a class="list-item" href="#"><span>Link lista 1 </span></a></li>
                                 <li><a class="list-item" href="#"><span>Link lista 2 </span></a></li>
@@ -188,21 +198,9 @@ title: Template Header vuoto
                           </div>
                           <div class="col-12 col-lg-4">
                             <div class="link-list-wrapper">
-                              <ul class="link-list" aria-label="Intestazione 2">
+                              <ul class="link-list">
                                 <li>
-                                  <h3>Intestazione 2</h3>
-                                </li>
-                                <li><a class="list-item" href="#"><span>Link lista 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link lista 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link lista 3 </span></a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-12 col-lg-4">
-                            <div class="link-list-wrapper">
-                              <ul class="link-list" aria-label="Intestazione 3">
-                                <li>
-                                  <h3>Intestazione 3</h3>
+                                  <div class="link-list-heading">Sezione 3</div>
                                 </li>
                                 <li><a class="list-item" href="#"><span>Link lista 1 </span></a></li>
                                 <li><a class="list-item" href="#"><span>Link lista 2 </span></a></li>
