@@ -75,9 +75,9 @@ class JustValidateIt {
     if (errIds.length > 0) {
       target.setAttribute('aria-describedby', errIds.join(' '))
       target.setAttribute('aria-invalid', 'true')
-    } else {
+    } /*else {
       console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
-    }
+    }*/
   }
   /**
    * Rimozione degli attributi ARIA dall'input
@@ -106,9 +106,9 @@ class JustValidateIt {
         legend.setAttribute('aria-describedby', errIds.join(' '))
         legend.setAttribute('aria-invalid', 'true')
       }
-    } else {
+    } /*else {
       console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
-    }
+    }*/
   }
   /**
    * Rimozione degli attributi ARIA dal fieldset
