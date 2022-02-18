@@ -2,17 +2,12 @@ import JustValidate from 'just-validate'
 import ClassWatcher from './class-watcher'
 import ContentWatcher from './content-watcher'
 
-const SELECTOR = {
-  tag: 'form[data-jv-ext-access]'
-}
-
 const CONFIG_DEFAULT = {
   errorFieldCssClass: 'is-invalid',
-  errorLabelCssClass: 'just-validate-error-label'
+  errorLabelCssClass: 'just-validate-error-label',
 }
 
 class JustValidateIt {
-
   constructor(selector, config) {
     this.formSelector = selector
     this.target = document.querySelector(selector)
@@ -27,27 +22,38 @@ class JustValidateIt {
 
   init() {
     const inputs = this.target.querySelectorAll('input, select')
-    inputs.forEach(input => {
-      const watcher = new ClassWatcher(input, this.config.errorFieldCssClass, () => this.onInputError(input), () => this.onInputErrorRemove(input), true)
+    inputs.forEach((input) => {
+      const watcher = new ClassWatcher(
+        input,
+        this.config.errorFieldCssClass,
+        () => this.onInputError(input),
+        () => this.onInputErrorRemove(input),
+        true
+      )
       if (!input.id) {
         input.setAttribute('id', 'justvalidate-input-' + Math.random())
       }
       this.formItems.push({
         item: input,
-        watcher
+        watcher,
       })
     })
     const fieldsets = this.target.querySelectorAll('fieldset')
-    fieldsets.forEach(field => {
+    fieldsets.forEach((field) => {
       const inputs = field.querySelectorAll('input[type=radio],input[type=checkbox]')
       if (inputs.length > 0) {
-        const watcher = new ContentWatcher(field, '.' + this.config.errorLabelCssClass, () => this.onFieldsetError(field), () => this.onFieldsetErrorRemove(field))
+        const watcher = new ContentWatcher(
+          field,
+          '.' + this.config.errorLabelCssClass,
+          () => this.onFieldsetError(field),
+          () => this.onFieldsetErrorRemove(field)
+        )
         if (!field.id) {
           field.setAttribute('id', 'justvalidate-fieldset-' + Math.random())
         }
         this.formItems.push({
           item: field,
-          watcher
+          watcher,
         })
       }
     })
@@ -85,7 +91,7 @@ class JustValidateIt {
    * Decorazione fieldset e messaggio di errore con attributi ARIA
    * @param {Object} target - l'elemento fieldset
    */
-   onFieldsetError(target) {
+  onFieldsetError(target) {
     const errElements = target.querySelectorAll('.' + this.config.errorLabelCssClass)
     const errIds = []
     errElements.forEach((el, idx) => {
@@ -115,7 +121,6 @@ class JustValidateIt {
       legend.setAttribute('aria-invalid', 'false')
     }
   }
-
 }
 
 window.JustValidateIt = JustValidateIt
