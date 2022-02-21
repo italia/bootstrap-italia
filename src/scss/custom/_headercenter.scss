@@ -11,8 +11,6 @@
   }
 
   .it-header-center-content-wrapper {
-    //padding-top:$header-center-pad-mob;
-    //padding-bottom:$header-center-pad-mob;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,8 +127,6 @@
     .it-header-center-content-wrapper {
       padding-left: $header-general-padding - ($grid-columns * 0.5);
       padding-right: $header-general-padding - ($grid-columns * 0.5);
-      //padding-top:$header-center-pad;
-      //padding-bottom:$header-center-pad;
       display: flex;
       align-items: center;
       justify-content: space-between;
