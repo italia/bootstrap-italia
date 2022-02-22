@@ -22,7 +22,32 @@
     margin-top: 0;
   }
 }
-
+.select-wrapper {
+  label {
+    position: absolute;
+    color: $select-label-color;
+    font-size: $select-label-size;
+    display: block;
+    font-weight: $select-label-weight;
+    padding: 0 $input-spacing-x;
+    line-height: calc(2.5rem - 1px);
+    top: 0;
+    transform: translateY(-75%);
+  }
+  select {
+    border: none;
+    border-bottom: 1px solid $gray-secondary;
+    border-radius: 0;
+    padding: $input-spacing-y $input-spacing-x;
+    outline: 0;
+    height: $input-height;
+    width: 100%;
+    box-shadow: none;
+    transition: 0.2s ease-out;
+    font-weight: 700;
+    color: $dark;
+  }
+}
 .bootstrap-select:not([class*='col-']):not([class*='form-control']):not(.input-group-btn) {
   width: 100%;
 }

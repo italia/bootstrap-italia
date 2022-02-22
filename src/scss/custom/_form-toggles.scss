@@ -2,6 +2,9 @@
 .toggles * {
   appearance: none;
   user-select: none;
+  .form-feedback {
+    margin-left: 0;
+  }
 }
 
 .toggles label {

@@ -1,7 +1,31 @@
 input[type='file'] + label {
   background-color: transparent;
 }
-
+.form-upload {
+  label {
+    background-color: transparent;
+    font-weight: 600;
+    line-height: calc(#{$input-height} - 1px);
+    transition: 0.2s ease-out;
+    cursor: text;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: $small-font-size;
+    color: $input-label-color;
+    margin-bottom: 0;
+  }
+  input[type='file'] {
+    color: $dark;
+  }
+  .form-feedback {
+    margin-left: 0;
+  }
+}
 /* INPUT FILE */
 .form-file {
   input[type='file'] {
