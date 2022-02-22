@@ -25,13 +25,13 @@ title: Just Validate
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="age">Campo numerico (min/max)</label>
-          <input type="number" class="form-control" id="age" min="18" max="50" step="1" required>
+          <input type="number" class="form-control" id="age" min="18" max="50" size="5" step="1" required>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="cap">Campo numerico (5 cifre)</label>
-          <input type="number" class="form-control" id="cap" size="5" required>
+          <label for="camponumerico">Campo numerico (5 cifre)</label>
+          <input type="number" class="form-control" id="camponumerico" size="5" required>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@ title: Just Validate
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="row">
-          <div class="form-check col-6 mb-5">
+          <div class="form-check mb-5">
             <input id="checkbox1" type="checkbox" required>
             <label for="checkbox1">Checkbox isolata</label>
           </div>
@@ -269,13 +269,18 @@ title: Just Validate
           errorMessage: 'Deve essere minore di 51'
         },
       ])
-      .addField('#cap', [
+      .addField('#camponumerico', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto'
         },
         {
           rule: 'minLength',
+          value: 5,
+          errorMessage: 'Inserire 5 cifre'
+        },
+        {
+          rule: 'maxLength',
           value: 5,
           errorMessage: 'Inserire 5 cifre'
         },
