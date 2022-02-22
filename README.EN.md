@@ -12,6 +12,8 @@ Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-st
 
 Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 4, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
+The project roadmap is available in the [new Designers Italia 2022 activity plan](https://designers.italia.it/piano-attivita/).
+
 **[Check out the documentation »](https://italia.github.io/bootstrap-italia/)** (in italian)
 
 or
