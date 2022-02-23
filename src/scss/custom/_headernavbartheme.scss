@@ -24,15 +24,17 @@
             }
             .navbar-nav {
               .dropdown-menu {
-                .link-list {
-                  h3 {
+                .link-list-wrapper {
+                  h3,
+                  .link-list-heading {
                     color: $navigation-dark-text-color;
                   }
                 }
                 // h3 separator
                 .col-12:not(:first-child) {
                   .link-list-wrapper {
-                    h3 {
+                    h3,
+                    .link-list-heading {
                       &:before {
                         background: $navigation-dark-separator-color;
                       }
@@ -59,6 +61,11 @@
               }
             }
             li {
+              &.dropdown {
+                .icon {
+                  fill: $navigation-dark-text-color;
+                }
+              }
               &.megamenu {
                 // footer cta
                 .it-megamenu-footer {
@@ -108,7 +115,8 @@
         }
         //dropdown
         .dropdown-menu {
-          h3 {
+          h3,
+          .link-list-heading {
             font-weight: 600;
             &.it-heading-megacolumn {
               color: $navigation-dark-text-color;
@@ -131,11 +139,13 @@
                   i {
                     color: $navigation-dark-text-color;
                   }
-                  h3 {
+                  h3,
+                  .link-list-heading {
                     color: $navigation-dark-text-color;
                   }
                 }
-                h3 {
+                h3,
+                .link-list-heading {
                   color: $navigation-dark-text-color;
                 }
                 .divider {
@@ -171,6 +181,10 @@
             background: $navigation-light-bg-color;
             .navbar-nav {
               .dropdown-menu {
+                h3,
+                .link-list-heading {
+                  color: $navigation-light-bg-color;
+                }
                 .link-list {
                   h3 {
                     color: $navigation-light-bg-color;
