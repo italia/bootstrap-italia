@@ -20,6 +20,16 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 - Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use></svg>) per dispositivi mobili.
 
+{% capture callout %}
+##### Accessibilità
+
+Condierando l'importanza delL'Header per la navigazione di un sito, si consiglia di seguire gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
+
+Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo relativo all'Istituzione (es: carousel con ultime notizie) è consigliabile applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina.
+
+Maggiori dettagli sull'accessibilità del **megamenu** sono presenti nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ## Slim header
 
 Lo "slim header" header mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.

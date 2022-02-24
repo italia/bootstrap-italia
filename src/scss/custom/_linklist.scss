@@ -19,6 +19,11 @@
       padding-left: $link-list-h-pad;
     }
     li {
+      h3 {
+        a {
+          padding: 0;
+        }
+      }
       a {
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;

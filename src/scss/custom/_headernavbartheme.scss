@@ -71,6 +71,12 @@
                 .it-megamenu-footer {
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
+                // asymettrical column
+                .it-heading-megacolumn-wrapper {
+                  .it-heading-megacolumn {
+                    color: $navigation-dark-text-color;
+                  }
+                }
                 // vertical cta
                 .dropdown-menu {
                   .it-vertical {
@@ -221,8 +227,14 @@
                 .it-megamenu-footer {
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
-                // vertical cta
                 .dropdown-menu {
+                  // asymettrical column
+                  .it-heading-megacolumn-wrapper {
+                    .it-heading-megacolumn {
+                      color: $navigation-light-bg-color;
+                    }
+                  }
+                  // vertical cta
                   .it-vertical {
                     background: $navigation-light-megamenu-footer-bg-color;
                     .link-list-wrapper {
