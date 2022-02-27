@@ -7,7 +7,11 @@
   width: 100%;
   z-index: $zindex-cookiebar;
   background-color: $neutral-1-a8;
-  padding: $v-gap * 3 $v-gap * 4;
+  padding-top: $v-gap * 3;
+  padding-bottom: $v-gap * 3;
+  padding-left: $v-gap * 4;
+  padding-right: 0;
+  align-items: center;
 
   &.cookiebar-top {
     bottom: auto;
@@ -18,24 +22,24 @@
     display: block;
   }
 
+  a {
+    color: $white;
+  }
+
   p {
     font-size: 1rem;
     line-height: 1.25em;
     color: $white;
     margin-bottom: 0;
-    br {
-      display: none;
-    }
   }
 
   .cookiebar-buttons {
-    text-align: right;
     margin-top: $v-gap * 4;
     padding: 0;
     line-height: 1.25em;
   }
 
-  .cookiebar-btn {
+  @mixin cookiebar-btn {
     background: transparent;
     border: none;
     padding: 0;
@@ -57,6 +61,23 @@
       color: $neutral-2-a1;
     }
   }
+
+  .cookiebar-btn {
+    @include cookiebar-btn;
+  }
+
+  .cookiebar-close {
+    @include cookiebar-btn;
+
+    font-size: $btn-font-size * 2;
+    padding: 0 $v-gap * 4;
+    opacity: 0.5;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
 }
 
 //small - tablet
@@ -74,7 +95,10 @@
 //Tablet vertical
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .cookiebar {
-    padding: $v-gap * 4 $v-gap * 6;
+    padding-top: $v-gap * 4;
+    padding-bottom: $v-gap * 4;
+    padding-left: $v-gap * 6;
+    padding-right: 0;
     &.show {
       display: flex;
       justify-content: space-between;
@@ -107,6 +131,14 @@
     }
     .cookiebar-buttons {
       width: 33%;
+    }
+  }
+}
+
+@media (max-width: #{map-get($grid-breakpoints, md)}) {
+  .cookiebar {
+    .cookiebar-close {
+      display: none;
     }
   }
 }

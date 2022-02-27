@@ -239,13 +239,37 @@
 
 <div class="cookiebar">
   <p>
-    Questo sito utilizza cookie tecnici, analytics e di terze parti.
-    <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.
+    Questo sito usa cookie e altri strumenti di profilazione di terze parti.
+    <br class="mb-3">
+    Chiudendo questo messaggio o selezionando “Non accetto”, proseguirai la navigazione.
+    Se invece vuoi acconsentire alla profilazione, seleziona “Accetta”.
+    <br class="mb-3">
+    Per saperne di più consulta la nostra <a href="https://example.org/privacy-policy">informativa sulla privacy</a>
   </p>
   <div class="cookiebar-buttons">
-    <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
-    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+    <!--
+      Per questo esempio è disabilitato "data-accept", in modo da non salvare
+      il cookie di preferenza.
+
+      <button data-accept="cookiebar" class="cookiebar-btn">Accetto<span class="sr-only"> la profilazione</span></button>
+    -->
+    <button class="cookiebar-btn">Accetto<span class="sr-only"> la profilazione</span></button>
+
+    <!--
+      Per questo esempio è disabilitato "data-close", in modo da non salvare
+      il cookie di preferenza.
+
+      <button data-close="cookiebar" class="cookiebar-btn">Non accetto<span class="sr-only"> la profilazione</span></button>
+    -->
+    <button class="cookiebar-btn">Non accetto<span class="sr-only"> la profilazione</span></button>
   </div>
+  <!--
+    Per questo esempio è disabilitato "data-close", in modo da non salvare
+    il cookie di preferenza.
+
+    <button data-close="cookiebar" class="cookiebar-close ">&times;<span class="sr-only">Chiudi</span></button>
+  -->
+  <button class="cookiebar-close ">&times;<span class="sr-only">Chiudi</span></button>
 </div>
 
 <a href="#" aria-hidden="true" data-attribute="back-to-top" class="back-to-top">

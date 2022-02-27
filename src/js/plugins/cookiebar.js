@@ -11,13 +11,13 @@ const Cookiebar = (($) => {
   const EVENT_KEY = `.${DATA_KEY}`
   const DATA_API_KEY = '.data-api'
   const JQUERY_NO_CONFLICT = $.fn[NAME]
-  const COOKIE_NAME = 'cookies_consent'
-  const COOKIE_VALUE = 'true'
-  const COOKIE_EXPIRE = 30
+  const COOKIE_NAME = 'bootstrap_italia_accept_cookies'
+  const COOKIE_EXPIRE = 180
 
   const Selector = {
     COOKIE_BAR: '.cookiebar',
     ACCEPT: '[data-accept="cookiebar"]',
+    CLOSE: '[data-close="cookiebar"]',
   }
 
   const Event = {
@@ -64,7 +64,6 @@ const Cookiebar = (($) => {
       if (customEvent.isDefaultPrevented()) {
         return
       }
-      this._setCookieEU()
       this._removeElement(rootElement)
     }
 
@@ -75,11 +74,11 @@ const Cookiebar = (($) => {
 
     // Private
 
-    _setCookieEU() {
+    _setConsentCookie(accept) {
       var exdate = new Date()
       exdate.setDate(exdate.getDate() + COOKIE_EXPIRE)
-      var c_value = escape(COOKIE_VALUE) + (COOKIE_EXPIRE == null ? '' : '; expires=' + exdate.toUTCString())
-      document.cookie = COOKIE_NAME + '=' + c_value + '; path=/'
+      var c_value = escape(accept) + (COOKIE_EXPIRE == null ? '' : '; expires=' + exdate.toUTCString())
+      document.cookie = COOKIE_NAME + '=' + c_value + '; path=/; SameSite=Strict;'
     }
 
     _getSelectorFromElement(element) {
@@ -156,21 +155,23 @@ const Cookiebar = (($) => {
           event.preventDefault()
         }
 
+        cookiebarInstance._setConsentCookie(true)
         cookiebarInstance.close(this)
       }
     }
 
-    static _handleConsent(cookiebarInstance) {
+    static _handleClose(cookiebarInstance) {
       return function (event) {
         if (event) {
           event.preventDefault()
         }
 
+        cookiebarInstance._setConsentCookie(false)
         cookiebarInstance.close(this)
       }
     }
 
-    static _getCookieEU() {
+    static _getConsentCookie() {
       var i,
         x,
         y,
@@ -192,12 +193,15 @@ const Cookiebar = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $(document).on(Event.CLICK_DATA_API, Selector.ACCEPT, Cookiebar._handleAccept(new Cookiebar()))
+  const cookiebar = new Cookiebar()
+
+  $(document).on(Event.CLICK_DATA_API, Selector.ACCEPT, Cookiebar._handleAccept(cookiebar))
+  $(document).on(Event.CLICK_DATA_API, Selector.CLOSE, Cookiebar._handleClose(cookiebar))
 
   $(window).on(Event.LOAD_DATA_API, () => {
     const cookiebars = $.makeArray($(Selector.COOKIE_BAR))
-    var consent = Cookiebar._getCookieEU()
-    if (!consent) {
+    var consent = Cookiebar._getConsentCookie()
+    if (consent === undefined) {
       for (let i = cookiebars.length; i--; ) {
         const $cookiebar = $(cookiebars[i])
         Cookiebar._jQueryInterface.call($cookiebar, 'show')
