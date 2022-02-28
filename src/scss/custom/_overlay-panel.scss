@@ -1,0 +1,72 @@
+//overlay wrapper
+.overlay-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  //hover version
+  &.overlay-hover {
+    .overlay-panel {
+      opacity: 0;
+      transition: opacity 0.1s;
+    }
+    &:hover {
+      .overlay-panel {
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+}
+
+//overlay label
+.overlay-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: $v-gap * 2 $v-gap * 3;
+  background-color: rgba($primary, 0.85);
+  color: $white;
+  font-weight: 600;
+  font-size: 1rem;
+  max-height: $v-gap * 7;
+  //text
+  span {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  //fullheight & icon version
+  &.overlay-panel-fullheight,
+  &.overlay-icon {
+    top: 0;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+  }
+  &.overlay-panel-fullheight {
+    align-items: flex-end;
+  }
+  &.overlay-icon {
+    justify-content: center;
+    align-items: center;
+    .icon {
+      fill: $white;
+    }
+  }
+  //black version
+  &.overlay-black {
+    background-color: rgba($black, 0.54);
+  }
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  //overlay label
+  .overlay-panel {
+    font-size: 0.889rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "defaults": {
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox"
+      ]
+    },
+    "timeout": 20000,
+    "hideElements": [
+      "#evidenza",
+      "#preloadjs-container",
+      ".exclude-a11y-check",
+      ".highlight",
+      ".highlighter-rouge",
+      ".disabled"
+    ]
+  },
+  "comments": [
+    {
+      "#evidenza": "esclude errata segnalazione contrasto su home page comuni",
+      "#preloadjs-container": "esclude elementi di animazione iniziale",
+      ".exclude-a11y-check": "esclude elementi esplicitamente",
+      ".highlight": "esclude esempi di codice",
+      ".highlight-rouge": "esclude esempi di codice",
+      ".disabled": "esclude elementi disabilitati"
+    }
+  ]
+}

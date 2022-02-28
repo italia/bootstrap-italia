@@ -1,0 +1,47 @@
+input[type='file'] + label {
+  background-color: transparent;
+}
+
+/* INPUT FILE */
+.form-file {
+  input[type='file'] {
+    filter: alpha(opacity=0);
+    margin: 0;
+    max-width: 100%;
+    opacity: 0;
+  }
+  .form-file-name {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    color: #464a4c;
+    left: 0;
+    line-height: 1.7;
+    overflow: hidden;
+    padding: 0.5rem 0.6rem 2rem;
+    max-height: 2rem;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    user-select: none;
+    z-index: 5;
+    &::before {
+      background-color: $white;
+      border-color: $primary;
+      bottom: -1px;
+      color: $primary;
+      content: 'Sfoglia';
+      display: block;
+      height: $input-height;
+      line-height: 1.7;
+      padding: 0.4rem 1rem 1.5rem;
+      border: 1px solid $primary;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 6;
+      border-top-right-radius: 4px;
+    }
+  }
+}

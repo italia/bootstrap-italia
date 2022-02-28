@@ -1,0 +1,181 @@
+//mobile
+.it-grid-item-wrapper {
+  position: relative;
+  // img default proportion
+  .img-responsive-wrapper {
+    border-radius: $border-radius;
+    .img-responsive {
+      padding-bottom: $grid-item-df-proportion;
+    }
+  }
+  // text
+  .it-griditem-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: $v-gap * 2 $v-gap;
+    align-items: center;
+    .it-griditem-text {
+      font-size: $grid-item-text-size-mob;
+      color: $grid-item-text-color;
+      font-weight: 600;
+    }
+    .icon {
+      flex-shrink: 0;
+      position: relative;
+      right: -$v-gap;
+      fill: $primary-a6;
+      width: $grid-item-icon-mob-size;
+      height: $grid-item-icon-mob-size;
+    }
+  }
+  // text overlay
+  &.it-grid-item-overlay {
+    position: relative;
+    .it-griditem-text-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+      padding: $v-gap $v-gap * 2;
+      color: $white;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      .it-griditem-text {
+        color: #fff;
+      }
+      .icon {
+        fill: #fff;
+      }
+    }
+  }
+  // hover
+  a:hover {
+    .it-griditem-text {
+      text-decoration: underline;
+    }
+  }
+  // double
+  &.it-grid-item-double-w {
+    .img-responsive-wrapper {
+      .img-responsive {
+        padding-bottom: calc(#{$grid-item-df-double-proportion} - #{$grid-list-default-gap});
+      }
+    }
+  }
+}
+
+// grid default
+.it-grid-list-wrapper {
+  padding-left: $grid-list-default-gap * 2;
+  padding-right: $grid-list-default-gap * 2;
+  // grid changes
+  div[class^='col-'] {
+    padding: 0 $grid-list-default-gap $grid-list-default-gap * 2 $grid-list-default-gap;
+  }
+  .grid-row {
+    display: flex;
+    margin-left: -$grid-list-default-gap;
+    margin-right: -$grid-list-default-gap;
+    flex-wrap: wrap;
+  }
+  // grid with label
+  &.it-image-label-grid {
+    padding-left: $grid-list-text-gap * 2;
+    padding-right: $grid-list-text-gap * 2;
+    // grid changes
+    div[class^='col-'] {
+      padding: 0 $grid-list-text-gap $grid-list-text-gap * 2 $grid-list-text-gap;
+    }
+    .grid-row {
+      margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+    }
+  }
+  // masonry
+  &.it-masonry {
+    &.it-image-label-grid {
+      div[class^='col-'] {
+        padding-bottom: 0;
+      }
+    }
+    .card-columns {
+      margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+      margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
+      column-gap: 0;
+      .it-grid-item-wrapper {
+        break-inside: avoid-column;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 16px;
+        .img-responsive {
+          padding-bottom: initial;
+          height: auto;
+          .img-wrapper {
+            position: inherit;
+            left: initial;
+            right: initial;
+            width: initial;
+            height: initial;
+            img {
+              height: auto;
+              object-fit: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//fix masonry ie11
+/* stylelint-disable */
+_:-ms-fullscreen,
+.it-grid-list-wrapper.it-masonry .card-columns .it-grid-item-wrapper .img-responsive {
+  padding-bottom: 0;
+}
+/* stylelint-enable */
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  // grid default
+  .it-grid-list-wrapper {
+    &.it-masonry {
+      .card-columns {
+        column-count: 2;
+      }
+    }
+  }
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  // grid default
+  .it-grid-list-wrapper {
+    &.it-masonry {
+      .card-columns {
+        column-count: 3;
+      }
+    }
+  }
+
+  .it-grid-item-wrapper {
+    &.it-grid-item-overlay {
+      .it-griditem-text-wrapper {
+        padding: $v-gap * 2 $v-gap * 3;
+        .it-griditem-text {
+          font-size: $grid-item-text-size;
+        }
+      }
+    }
+    // text
+    .it-griditem-text-wrapper {
+      .it-griditem-text {
+        font-size: $grid-item-text-size;
+      }
+      .icon {
+        width: $grid-item-icon-size-desk;
+        height: $grid-item-icon-size-desk;
+      }
+    }
+  }
+}

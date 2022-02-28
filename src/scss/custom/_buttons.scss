@@ -1,0 +1,210 @@
+.btn {
+  padding: 12px 24px;
+  font-size: $btn-font-size;
+  white-space: initial;
+  text-decoration: none;
+}
+
+.btn-xs,
+.btn-sm,
+.btn-lg {
+  border-radius: $btn-border-radius;
+  line-height: $input-btn-line-height;
+}
+
+.btn-xs {
+  padding: 8px 8px;
+  font-size: $btn-font-size-sm;
+  line-height: $input-btn-line-height-sm;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: $btn-font-size-sm;
+  line-height: $input-btn-line-height-sm;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: $btn-font-size-lg;
+  line-height: $input-btn-line-height-lg;
+}
+
+.btn-block {
+  @include border-radius(0);
+}
+
+.btn-progress {
+  position: relative;
+}
+
+.btn-icon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .rounded-icon {
+    width: 1.5em;
+    height: 1.5em;
+
+    .icon {
+      margin-right: 0;
+    }
+
+    @include border-radius(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $white;
+
+    @each $color, $value in $theme-colors {
+      &.rounded-#{$color} {
+        background-color: $value;
+      }
+    }
+
+    & + * {
+      margin-left: 0.5em;
+    }
+  }
+
+  .icon {
+    border: none;
+
+    width: 1.2em;
+    height: 1.2em;
+
+    & + * {
+      margin-left: 0.25em;
+    }
+  }
+}
+
+.btn-full {
+  border: none;
+  box-shadow: none;
+  line-height: 1.555;
+  @include border-radius(0);
+
+  // allow height 100%
+  align-self: stretch;
+  // height: 100%;
+
+  width: inherit;
+
+  margin-top: -$header-slim-button-v-padding;
+  margin-bottom: -$header-slim-button-v-padding;
+  margin-right: -$header-slim-button-v-padding;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  // Tablet vertical
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    padding: 16px;
+  }
+
+  // Desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    padding: 12px 24px !important;
+    margin: 0;
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.btn-primary {
+  &:disabled,
+  &.disabled {
+    color: $gray-label-disabled;
+    background-color: $gray-disabled;
+    border-color: $gray-border-disabled;
+    //progress bar button
+    &.btn-progress {
+      background-color: $primary-a3;
+      border-color: $primary-a3;
+      color: $white;
+      opacity: 1;
+    }
+  }
+}
+
+.btn-secondary {
+  &:disabled,
+  &.disabled {
+    //progress bar button
+    &.btn-progress {
+      background-color: lighten($gray-secondary, 10);
+      border-color: lighten($gray-secondary, 10);
+      opacity: 1;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  background: #fcfdff;
+  box-shadow: inset 0 0 0 1px #e6e9f2;
+  &:hover {
+    box-shadow: inset 0 0 0 1px color-hover(#e6e9f2);
+  }
+}
+
+.bg-dark {
+  .btn-link {
+    color: $white;
+  }
+  .btn-primary {
+    @include button-variant($white, $primary, lighten($white, 7.5%), darken($primary, 10%), lighten($white, 10%), darken($primary, 12.5%));
+    color: $primary;
+    &.disabled,
+    &:disabled {
+      color: darken($primary, 10%);
+    }
+  }
+  .btn-outline-primary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: inset 0 0 0 2px $white;
+    &:hover {
+      box-shadow: inset 0 0 0 2px color-hover($white);
+    }
+    &:focus,
+    &.focus {
+      box-shadow: inset 0 0 0 2px $white, 0 0 0 $btn-focus-width rgba($white, 0.5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      box-shadow: inset 0 0 0 2px $white;
+    }
+  }
+  .btn-secondary {
+    @include button-variant($primary, $white, lighten($primary, 7.5%), darken($white, 10%), lighten($primary, 10%), darken($white, 12.5%));
+    color: $white;
+  }
+  .btn-outline-secondary {
+    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $btn-focus-width rgba($white, 0.5);
+    }
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active,
+    .show > &.dropdown-toggle {
+      box-shadow: none;
+    }
+  }
+}

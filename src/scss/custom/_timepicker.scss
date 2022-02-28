@@ -1,0 +1,252 @@
+.calendar-input-container {
+  z-index: 1;
+}
+
+#error_container {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+.off-screen {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+}
+
+.error_container {
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  margin-top: -12px;
+}
+
+.error-label {
+  color: #8b0000;
+}
+
+/*SPINNER*/
+
+.spinner-control > div .ui-spinner {
+  display: block;
+  text-align: center;
+}
+
+.spinner-control > div button {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.spinner-control > div button:hover {
+  border: 1px solid #777;
+  cursor: pointer;
+}
+
+// start override
+.it-timepicker-wrapper {
+  .form-group label {
+    left: 0;
+  }
+
+  label.pickerlabel {
+    color: $gray-secondary;
+    font-weight: 600;
+    line-height: $input-height;
+    transition: 0.2s ease-out;
+    top: 1rem;
+    font-size: $small-font-size;
+    cursor: text;
+    display: block;
+    width: 100%;
+    padding: 0 $input-spacing-x;
+    z-index: 6;
+  }
+
+  .calendar-input-container {
+    position: relative;
+    display: flex;
+
+    .form-group {
+      padding-bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      margin-bottom: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background: $dp-label-color;
+      transform-origin: bottom;
+      transition: all 0.3s;
+      left: 0;
+    }
+
+    input.form-control {
+      border-bottom: none;
+      background: transparent;
+      color: $dp-label-color;
+
+      flex: 1;
+
+      &::placeholder {
+        color: $dp-label-color;
+      }
+    }
+
+    .btn-time {
+      border: none;
+      background: transparent;
+      // margin-right: $v-gap;
+
+      &:hover {
+        svg {
+          fill: $primary-a6;
+        }
+      }
+
+      svg {
+        fill: $dp-label-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .time-spinner {
+    position: relative;
+  }
+
+  .spinner-control {
+    position: absolute;
+    padding: $v-gap * 3;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: $dp-shadow;
+    border-top: $dp-border-bottom;
+    display: none;
+    margin-top: -2px;
+
+    .spinner {
+      float: left;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: $v-gap * 3;
+      }
+
+      .button-wrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        bottom: 0;
+        flex-direction: column;
+
+        button {
+          position: relative;
+          flex-basis: 50%;
+
+          .icon-up {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            left: 1px;
+            border-style: solid;
+            border-width: 0 5px 6px 5px;
+            border-color: transparent transparent #000000 transparent;
+            display: block;
+          }
+
+          .icon-down {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            left: 1px;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: #000000 transparent transparent transparent;
+            display: block;
+          }
+        }
+      }
+    }
+
+    input {
+      color: $dp-label-color;
+      max-width: $v-gap * 10;
+      border: none;
+      border-bottom: $dp-border-bottom;
+      background: transparent;
+      border-radius: 0;
+      font-weight: 600;
+      box-shadow: none;
+    }
+
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+// Theme: dark
+.it-timepicker-wrapper.theme-dark {
+  .calendar-input-container {
+    &:after {
+      content: '';
+      background: $dp-label-color;
+    }
+
+    input.form-control {
+      background: transparent;
+
+      &::placeholder {
+        color: $dp-label-color;
+      }
+    }
+
+    .btn-time {
+      background: transparent;
+    }
+  }
+
+  .spinner-control {
+    background: $primary-a6;
+
+    .spinner {
+      .button-wrapper {
+        button {
+          .icon-up {
+            border-color: transparent transparent #fff transparent;
+          }
+
+          .icon-down {
+            border-color: #fff transparent transparent transparent;
+          }
+        }
+      }
+    }
+
+    input {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+    }
+  }
+}

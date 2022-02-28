@@ -1,0 +1,296 @@
+//mobile
+.chip {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: $chips-background;
+  border: 1px solid $gray-border-disabled;
+  border-radius: $v-gap * 1.5;
+  height: $v-gap * 3;
+  min-width: 100px;
+  padding: 0 $v-gap * 2 2px $v-gap;
+  transition: all 0.05s;
+  margin-right: $v-gap * 0.5;
+  //label
+  .chip-label {
+    font-size: 0.875rem;
+    height: $v-gap * 2;
+    font-weight: 600;
+    color: $chips-label-color;
+    margin-bottom: 0;
+    transform: translateY(-2px);
+    transition: color 0.05s;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  //close button
+  button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    margin-left: auto;
+    width: $v-gap;
+    height: $v-gap;
+    position: relative;
+    &:hover:not([disabled]) {
+      cursor: pointer;
+    }
+    &:hover[disabled] {
+      cursor: not-allowed;
+    }
+    .icon {
+      width: 22px;
+      height: 22px;
+      fill: $gray-secondary;
+      position: absolute;
+      top: -6px;
+      left: 0;
+      transition: fill 0.05s;
+    }
+  }
+  //left icon
+  & > .icon {
+    fill: $primary;
+    transform: translateX(-5px) translateY(1px);
+    transition: fill 0.05s;
+  }
+  //avatar
+  .avatar {
+    transform: translateX(-5px) translateY(1px);
+  }
+
+  //large version-------------------------------
+  &.chip-lg {
+    height: $v-gap * 4;
+    min-width: 120px;
+    border-radius: $v-gap * 2;
+    padding: 2px $v-gap * 3 0 $v-gap * 2;
+    margin: $v-gap * 0.5 $v-gap $v-gap * 0.5 auto;
+    //label
+    .chip-label {
+      font-size: 1rem;
+      height: 12px;
+      transform: translateY(-8px);
+    }
+    //close button
+    button {
+      .icon {
+        width: 28px;
+        height: 28px;
+        top: -12px;
+        left: 0;
+      }
+    }
+    //left icon
+    & > .icon {
+      height: 24px;
+      width: 24px;
+      margin-right: -8px;
+      fill: $primary;
+      transform: translateX(-13px) translateY(-1px);
+    }
+    //avatar
+    .avatar {
+      width: 24px;
+      height: 24px;
+      margin-right: -4px;
+      transform: translateX(-12px) translateY(-1px);
+    }
+
+    //label only version
+    &.chip-simple {
+      padding-right: $v-gap * 2;
+    }
+  }
+
+  //label only version
+  &.chip-simple {
+    padding-right: $v-gap;
+    margin: $v-gap * 0.5 auto;
+  }
+
+  //hover state--------------------------------
+  &:hover:not(.chip-disabled) {
+    background: $chips-background-hover;
+    border-color: $chips-background-hover;
+    transition: background-color 0.1s;
+    //label
+    .chip-label {
+      color: $white;
+      transition: color 0.1s;
+    }
+    //close button
+    button {
+      .icon {
+        fill: $white;
+        transition: fill 0.1s;
+      }
+    }
+    //left icon
+    & > .icon {
+      fill: $white;
+      transition: fill 0.1s;
+    }
+  }
+
+  //disabled state--------------------------------
+  &.chip-disabled {
+    background: $white;
+    &:hover {
+      cursor: not-allowed;
+    }
+    //label
+    .chip-label {
+      color: $chips-label-color-disabled; // Exempt from color contrast requirements: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+    }
+    //close button
+    button {
+      .icon {
+        fill: $neutral-1-a1;
+      }
+    }
+    //left icon
+    & > .icon {
+      fill: $neutral-1-a1;
+    }
+    .avatar {
+      img {
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  &.chip-primary {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+
+    & > .chip-label {
+      color: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-secondary {
+    background-color: transparent;
+    border-color: $secondary;
+    color: $primary;
+
+    & > .chip-label {
+      color: $secondary;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-success {
+    background-color: transparent;
+    border-color: $success;
+    color: $success;
+
+    & > .chip-label {
+      color: $success;
+    }
+
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-danger {
+    background-color: transparent;
+    border-color: $danger;
+    color: $danger;
+
+    & > .chip-label {
+      color: $danger;
+    }
+
+    &:hover {
+      background-color: $danger;
+      border-color: $danger;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-info {
+    background-color: transparent;
+    border-color: $info;
+    color: $info;
+
+    & > .chip-label {
+      color: $info;
+    }
+
+    &:hover {
+      background-color: $info;
+      border-color: $info;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+
+  &.chip-warning {
+    background-color: transparent;
+    border-color: $warning;
+    color: $warning;
+
+    & > .chip-label {
+      color: $warning;
+    }
+
+    &:hover {
+      background-color: $warning;
+      border-color: $warning;
+
+      & > .chip-label {
+        color: $white;
+      }
+    }
+  }
+}
+
+//small - tablet
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  .chip {
+    //label
+    .chip-label {
+      font-size: 0.778rem;
+    }
+
+    //large version-------------------------------
+    &.chip-lg {
+      //label
+      .chip-label {
+        font-size: 0.889rem;
+      }
+    }
+  }
+}

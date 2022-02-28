@@ -1,0 +1,138 @@
+//mobile
+.it-footer-main {
+  background-color: $primary-a10;
+  color: $white;
+  font-size: 16px;
+
+  h4 a {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .link-list-wrapper ul li {
+    a {
+      padding: 0;
+      font-size: 1em;
+      line-height: 2em;
+      color: $white;
+
+      &:hover:not(.disabled) {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .it-brand-wrapper {
+    padding: $v-gap * 4 0;
+
+    .it-brand-text {
+      padding-right: $v-gap * 3;
+    }
+
+    a {
+      display: flex;
+      color: $header-center-text-color;
+      align-items: center;
+      text-decoration: none;
+
+      h2 {
+        font-size: $header-center-h2-size-mob;
+        margin-bottom: 0;
+        font-weight: $header-center-h2-weight;
+        letter-spacing: unset;
+        line-height: 1.1;
+      }
+
+      h3 {
+        font-size: $header-center-h3-size;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .icon {
+        fill: $header-center-text-color;
+        width: $header-center-icon-size-mob;
+        height: $header-center-icon-size-mob;
+        margin-right: $header-center-icon-margin-mob;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  section {
+    padding: 0 $v-gap * 2;
+  }
+
+  label {
+    font-weight: 600;
+  }
+}
+
+.it-footer-small-prints {
+  background-color: $primary-a12;
+
+  ul.it-footer-small-prints-list {
+    padding: 1.5rem 1rem;
+
+    li {
+      padding: 0.5rem 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  a,
+  a:hover:not(.disabled) {
+    color: $white;
+    font-size: 15px;
+    text-decoration: none;
+  }
+}
+
+.form-newsletter {
+  input[type='email'] {
+    font-size: 1em;
+    & ~ * {
+      margin-top: 1em;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    button {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+//Tablet vertical
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+  .it-footer-small-prints {
+    ul.it-footer-small-prints-list {
+      li {
+        padding: 0 1rem;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

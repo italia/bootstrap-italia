@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Pin</title>
+  <g>
+    <path
+      d="M18.1,14,15,10.3V4.6L16.3,2H7.7L9,4.6v5.7L5.9,14h5.6v8h1V14ZM10,5h4v5H10Zm4.7-2-.5,1H9.8L9.3,3Zm-5,8h4.6l1.6,2H8.1Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+# used in documentation as site.data.theme-colors
+
+- name: primary
+- name: secondary
+- name: success
+- name: danger
+- name: warning

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Plus</title>
+  <g>
+    <path d="M20,12.5H12.5V20h-1V12.5H4v-1h7.5V4h1v7.5H20Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

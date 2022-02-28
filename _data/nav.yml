@@ -1,0 +1,111 @@
+# used in documentation as site.data.nav
+
+- title: Come iniziare
+  pages:
+    - title: Introduzione
+    - title: Strumenti di compilazione
+    - title: Personalizzazione della libreria
+    - title: Modificare Componenti
+    - title: Componente base
+
+- title: Organizzare gli spazi
+  pages:
+    - title: Introduzione
+    - title: Allineamento verticale
+    - title: Bordi
+    - title: Clearfix
+    - title: Dimensionamento
+    - title: Display
+    - title: Flex
+    - title: Float
+    - title: Griglie
+    - title: Ombreggiature
+    - title: Posizionamento
+    - title: Spaziature
+
+- title: Organizzare i contenuti
+  pages:
+    - title: Introduzione
+    - title: Codice
+    - title: Embed
+    - title: Immagini
+    - title: Liste
+    - title: Liste di immagini
+    - title: Liste di link
+    - title: Oggetto Media
+    - title: Tabelle
+    - title: Testo
+    - title: Tipografia
+
+- title: Menu di navigazione
+  pages:
+    - title: Introduzione
+    - title: BottomNav
+    - title: Breadcrumbs
+    - title: Header # TODO Rewiew mobile version
+    - title: Megamenu # TODO Review mobile version
+    - title: Navscroll
+    - title: Sidebar
+    - title: Skiplinks
+    - title: Thumbnav
+    - title: Toolbar
+    - title: Torna indietro
+    - title: Torna su
+
+- title: Componenti
+  pages:
+    - title: Introduzione
+    - title: Affix
+    - title: Alert
+    - title: Avatar
+    - title: Badge
+    - title: Bottoni
+    - title: Card
+    - title: Callout
+    - title: Carousel
+    - title: Chips
+    - title: Collapse
+    - title: Cookiebar
+    - title: Dimmer
+    - title: Dropdown
+    - title: Forward
+    - title: Hero
+    - title: Modale
+    - title: Notifiche
+    - title: Overlay
+    - title: Paginazione
+    - title: Popover
+    - title: Progress Indicators
+    - title: Rating
+    - title: Sections
+    - title: Steppers
+    - title: Tab
+    - title: Timeline
+    # - title: Toasts # TODO To be merged with our "Notifiche"?
+    - title: Tooltip
+
+- title: Form
+  pages:
+    - title: Introduzione
+    - title: Input
+    - title: Input Numerico
+    - title: Input Calendario
+    - title: Input Ora # TODO Not working properly yet
+    - title: Upload
+    - title: Radio Button
+    - title: Select
+    - title: Checkbox
+    - title: Toggles
+    - title: Transfer
+
+- title: Utilities
+  pages:
+    - title: Colori
+    - title: Colori Custom
+    - title: Icone
+
+- title: Esempi
+
+- title: Progetti
+
+- title: Informazioni

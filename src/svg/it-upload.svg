@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Upload</title>
+  <g>
+    <path
+      d="M8.4,7.3l-.7-.7L12,2.3l4.3,4.3-.7.7L12.5,4.2v9.3h-1V4.2ZM19,12v7.5a.5.5,0,0,1-.5.5H5.5a.5.5,0,0,1-.5-.5V12H4v7.5A1.5,1.5,0,0,0,5.5,21h13A1.5,1.5,0,0,0,20,19.5V12Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

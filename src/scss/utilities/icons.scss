@@ -1,0 +1,43 @@
+.icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  &.icon-padded {
+    padding: 8px;
+  }
+  &.icon-xs {
+    width: 16px;
+    height: 16px;
+    &.icon-padded {
+      padding: 4px;
+    }
+  }
+  &.icon-sm {
+    width: 24px;
+    height: 24px;
+    &.icon-padded {
+      padding: 6px;
+    }
+  }
+  &.icon-lg {
+    width: 48px;
+    height: 48px;
+    &.icon-padded {
+      padding: 12px;
+    }
+  }
+  &.icon-xl {
+    width: 64px;
+    height: 64px;
+    &.icon-padded {
+      padding: 16px;
+    }
+  }
+}
+
+// Force color when icon-color class is explicitly used
+@each $color, $value in $theme-colors {
+  .icon-#{$color} {
+    fill: $value !important;
+  }
+}

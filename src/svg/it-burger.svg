@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Navigation Burger</title>
+  <g>
+    <path d="M22,5V6H2V5ZM2,12.5H22v-1H2ZM2,19H22V18H2Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

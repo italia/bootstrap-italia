@@ -1,0 +1,95 @@
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .navbar {
+    &.it-navscroll-wrapper {
+      &.theme-dark-mobile {
+        background: $navscroll-dark-bg-color;
+        .custom-navbar-toggler {
+          color: $navscroll-dark-text-color;
+          span.it-list {
+            color: $navscroll-dark-text-color;
+          }
+        }
+        .it-back-button {
+          background: $navscroll-dark-bg-color;
+          color: $navscroll-dark-text-color;
+        }
+        .navbar-collapsable {
+          .menu-wrapper {
+            background: $navscroll-dark-bg-color;
+            color: $navscroll-dark-text-color;
+            .link-list-wrapper {
+              ul {
+                li {
+                  a {
+                    color: $navscroll-dark-text-color;
+                    span {
+                      color: $navscroll-dark-text-color;
+                    }
+                    &.active {
+                      border-left-color: $navscroll-dark-text-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.it-left-side {
+          border-left-color: $navscroll-dark-separator-color;
+        }
+        &.it-right-side {
+          border-right-color: $navscroll-dark-separator-color;
+        }
+      }
+    }
+  }
+}
+/*
+++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .navbar {
+    &.it-navscroll-wrapper {
+      &.theme-dark-desk {
+        background: $navscroll-dark-bg-color;
+        .custom-navbar-toggler {
+          color: $navscroll-dark-text-color;
+          span.it-list {
+            color: $navscroll-dark-text-color;
+          }
+        }
+        .it-back-button {
+          background: $navscroll-dark-bg-color;
+          color: $navscroll-dark-text-color;
+        }
+        .navbar-collapsable {
+          .menu-wrapper {
+            background: $navscroll-dark-bg-color;
+            color: $navscroll-dark-text-color;
+            .link-list-wrapper {
+              ul {
+                li {
+                  a {
+                    color: $navscroll-dark-text-color;
+                    span {
+                      color: $navscroll-dark-text-color;
+                    }
+                    &.active {
+                      border-left-color: $navscroll-dark-text-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.it-left-side {
+          border-left-color: $navscroll-dark-separator-color;
+        }
+        &.it-right-side {
+          border-right-color: $navscroll-dark-separator-color;
+        }
+      }
+    }
+  }
+}

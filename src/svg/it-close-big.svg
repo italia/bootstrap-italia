@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Close Big</title>
+  <g>
+    <path
+      d="M12.7,12l6.7,6.6-.8.8L12,12.7,5.4,19.4l-.8-.8L11.3,12,4.6,5.4l.8-.8L12,11.3l6.6-6.7.8.8Z"
+      />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

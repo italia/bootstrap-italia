@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Circle Check</title>
+  <g>
+    <path
+      d="M17.1,7.9l.7.7L10,16.2,5.3,11.6l.7-.7,4,3.9ZM22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Zm-1,0a9,9,0,1,0-9,9A9,9,0,0,0,21,12Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

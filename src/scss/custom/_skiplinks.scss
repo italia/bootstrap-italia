@@ -1,0 +1,12 @@
+//mobile
+.skiplinks {
+  background-color: $skiplinks-bg;
+  text-align: center;
+  a {
+    padding: $skiplink-padding-y $skiplink-padding-x;
+    display: block;
+    font-weight: 600;
+    color: $skiplinks-color;
+    text-decoration: underline;
+  }
+}

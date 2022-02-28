@@ -1,0 +1,136 @@
+.it-header-slim-wrapper {
+  &.theme-light {
+    background: $header-slim-theme-light-bg-color;
+    border-bottom: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+
+    .it-header-slim-wrapper-content {
+      .it-header-slim-right-zone,
+      .header-slim-right-zone {
+        // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+        .dropdown-menu:before {
+          background: $header-slim-theme-light-text-color;
+        }
+        .dropdown-menu {
+          background-color: $header-slim-theme-light-text-color;
+          a,
+          a span {
+            color: $header-slim-theme-light-bg-color;
+          }
+        }
+        .btn {
+          background: $header-slim-theme-light-button-color;
+          color: $header-slim-theme-light-bg-color;
+          &:hover {
+            background: $header-slim-theme-light-button-hover-color;
+          }
+        }
+      }
+      a {
+        color: $header-slim-theme-light-text-color;
+        .icon {
+          fill: $header-slim-theme-light-text-color;
+        }
+        &.it-opener {
+          &[aria-expanded='true'] {
+            .icon {
+              fill: $header-slim-theme-light-text-color;
+            }
+          }
+        }
+      }
+      .navbar-brand {
+        color: $header-slim-theme-light-text-color;
+      }
+    }
+    .btn-full {
+      &.btn-info,
+      &.btn-danger,
+      &.btn-success,
+      &.btn-warning,
+      &.btn-secondary,
+      &.btn-primary {
+        color: $white !important;
+      }
+    }
+  }
+}
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .it-header-slim-wrapper {
+    &.theme-light {
+      .it-header-slim-wrapper-content {
+        .nav-mobile {
+          ul.link-list {
+            border-left: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+            border-right: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
+            a.list-item {
+              &.active {
+                color: $primary;
+                border-bottom: 2px solid $header-slim-theme-light-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Wrapper for logged-in user in header slim wrapper
+// Cloned by sticky-header
+.it-user-wrapper {
+  .dropdown-menu.show {
+    transform: translate3d(-120px, 42px, 0) !important;
+
+    &::before {
+      right: 12px;
+      left: auto !important;
+    }
+  }
+
+  &.cloned {
+    margin-left: 1em;
+    align-self: center;
+  }
+
+  .link-list-wrapper > ul > li > a {
+    line-height: 3em;
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(-132px, 50px, 0) !important;
+
+      &::before {
+        right: 12px;
+        left: auto !important;
+      }
+    }
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .it-user-wrapper {
+    .dropdown-menu.show {
+      transform: translate3d(0, 56px, 0) !important;
+
+      &::before {
+        right: auto;
+        left: 27px !important;
+      }
+    }
+
+    &.dropdown {
+      .icon {
+        margin-left: 4px;
+      }
+
+      &.cloned {
+        .btn-full {
+          height: 56px;
+        }
+      }
+    }
+  }
+}

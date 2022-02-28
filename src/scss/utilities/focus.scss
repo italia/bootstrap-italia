@@ -1,0 +1,17 @@
+:focus:not(.focus--mouse),
+%focus {
+  border-color: $focus-outline-color !important;
+  box-shadow: 0 0 0 2px $focus-outline-color !important;
+  outline: none !important;
+}
+
+[tabindex='-1']:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.focus--mouse:not(.btn),
+%focusmouse {
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

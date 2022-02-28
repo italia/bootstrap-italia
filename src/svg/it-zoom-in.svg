@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Zoom In</title>
+  <g>
+    <path
+      d="M10.4,9.5h3.3v1H10.4v3.2h-1V10.5H6.2v-1H9.4V6.2h1ZM21.1,21.9,15.3,16A8.3,8.3,0,0,1,10,18a8,8,0,1,1,8-8,8.3,8.3,0,0,1-2,5.3l5.9,5.8ZM17,10a7,7,0,1,0-7,7A7,7,0,0,0,17,10Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

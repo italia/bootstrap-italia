@@ -1,0 +1,13 @@
+.bd-footer {
+  background-color: $docs-dark;
+  color: $white;
+
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+  }
+
+  .small-prints {
+    color: #00fff8;
+    font-weight: 600;
+  }
+}

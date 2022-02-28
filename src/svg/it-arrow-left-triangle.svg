@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Arrow Left</title>
+  <g>
+    <path d="M12,9.2v5.6a1,1,0,0,1-1.7.7L6.8,12l3.5-3.5A1,1,0,0,1,12,9.2Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

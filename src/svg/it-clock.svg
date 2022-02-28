@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Clock</title>
+  <g>
+    <path
+      d="M11.5,5h1v7.5H7v-1h4.5ZM22,12A10,10,0,1,1,12,2,10,10,0,0,1,22,12Zm-1,0a9,9,0,1,0-9,9A9,9,0,0,0,21,12Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

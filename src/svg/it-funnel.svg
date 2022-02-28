@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Funnel</title>
+  <g>
+    <path d="M14,22H13V13.35L20.05,3H4L11,13.35V22H10V13.65L2.05,2H22L14,13.65Z"/>
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

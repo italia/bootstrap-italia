@@ -1,0 +1,40 @@
+<header class="navbar-main navbar navbar-dark bd-navbar px-3 {% if page.layout == "docs" %}bd-navbar--slim{% endif %}">
+  <div class="container{% if page.layout == "docs" %}-fluid{% endif %}">
+    <a class="navbar-brand py-2 text-decoration-none" href="{{ site.baseurl }}/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row">
+        {%- include icons/it-logo.svg height="48" class="d-block" -%}
+        <div class="d-flex flex-column pl-3 pl-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    {% if page.layout == "docs" %}
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    {% endif %}
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item pr-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v{{ site.current_version }}</small>
+          <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pr-2">
+        <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="{{ site.repo }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    {% if page.layout == "docs" %}
+    <div class="bd-search w-100">
+      <label for="search-input" class="sr-only">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+    </div>
+    {% endif %}
+  </div>
+</header>

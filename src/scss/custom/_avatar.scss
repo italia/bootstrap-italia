@@ -1,0 +1,434 @@
+@use 'sass:math';
+
+.avatar {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 50%;
+  width: $avatar-base-size * 4; // default size equals to md
+  height: $avatar-base-size * 4; // default size equals to md
+  justify-content: center;
+  align-items: center;
+  background: $neutral-1-a1; // default background
+  color: #5c6f82;
+  box-sizing: content-box;
+  transition: background-color 0.2s;
+  // image
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.2s;
+    border-radius: 50%;
+  }
+  // text
+  p {
+    font-size: 16px; // default size equals to md
+    margin: 0;
+    text-align: center;
+    line-height: 1em;
+    position: absolute;
+  }
+  // text fix for ie11
+  /* stylelint-disable */
+  _:-ms-fullscreen,
+  p {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  /* stylelint-enable */
+  // icon
+  .icon {
+    height: 16px; // default size equals to md
+    width: 16px;
+  }
+
+  //color variants----------------------------------------- START
+  &.avatar-primary {
+    background: $primary;
+  }
+  &.avatar-secondary {
+    background: $secondary;
+  }
+  &.avatar-green {
+    background: $green;
+  }
+  &.avatar-orange {
+    background: $orange;
+  }
+  &.avatar-red {
+    background: $red;
+  }
+  &.avatar-primary,
+  &.avatar-secondary,
+  &.avatar-green,
+  &.avatar-orange,
+  &.avatar-red {
+    color: $white;
+  }
+  //color variants----------------------------------------- END
+
+  //dropdown variant--------------------------------------- START
+  &.avatar-dropdown {
+    overflow: visible;
+    position: relative;
+    .dropdown {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .btn-dropdown {
+      color: inherit;
+      padding: 0;
+      line-height: 0;
+      font-size: 11px;
+    }
+    .list-item {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 0.889rem;
+    }
+    .link-list {
+      span {
+        line-height: 1em;
+      }
+      li {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      white-space: nowrap;
+      .avatar {
+        margin-right: 16px;
+        &.size-sm {
+          margin-right: 12px;
+        }
+        p {
+          color: $white !important;
+        }
+      }
+    }
+    .dropdown-menu {
+      margin: -25px;
+    }
+    &.size-sm {
+      .dropdown-menu {
+        margin: -27px;
+      }
+    }
+  }
+  //dropdown variant-------------------------------------- END
+
+  //size variants----------------------------------------- START
+  &.size-xs {
+    width: $avatar-base-size * 2;
+    height: $avatar-base-size * 2;
+    p {
+      font-size: 10px;
+    }
+    .icon {
+      height: 10px;
+      width: 10px;
+    }
+  }
+  &.size-sm {
+    width: $avatar-base-size * 3;
+    height: $avatar-base-size * 3;
+    p {
+      font-size: 14px;
+    }
+    .icon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+  &.size-md {
+    width: $avatar-base-size * 4;
+    height: $avatar-base-size * 4;
+    p {
+      font-size: 16px;
+    }
+    .icon {
+      height: 16px;
+      width: 16px;
+    }
+    .avatar-presence,
+    .avatar-status {
+      border-width: 1px;
+      .icon {
+        display: none;
+      }
+    }
+  }
+  &.size-lg {
+    width: $avatar-base-size * 5;
+    height: $avatar-base-size * 5;
+    p {
+      font-size: 18px;
+    }
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+    .avatar-presence,
+    .avatar-status {
+      right: -2px;
+      width: 15px;
+      height: 15px;
+    }
+    .avatar-status {
+      top: math.div($avatar-base-size, 48);
+    }
+  }
+  &.size-xl {
+    width: $avatar-base-size * 10;
+    height: $avatar-base-size * 10;
+    p {
+      font-size: 36px;
+    }
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+    .avatar-presence,
+    .avatar-status {
+      right: 6px;
+      width: 18px;
+      height: 18px;
+    }
+    .avatar-presence {
+      bottom: $avatar-base-size;
+    }
+    .avatar-status {
+      top: $avatar-base-size * 0.25;
+    }
+  }
+  &.size-xxl {
+    width: $avatar-base-size * 16;
+    height: $avatar-base-size * 16;
+    p {
+      font-size: 58px;
+    }
+    .icon {
+      height: 62px;
+      width: 62px;
+    }
+    .avatar-presence,
+    .avatar-status {
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .avatar-presence {
+      bottom: $avatar-base-size * 2;
+    }
+    .avatar-status {
+      top: $avatar-base-size;
+    }
+  }
+  //size variants----------------------------------------- END
+}
+
+//hover & focus states
+a.avatar {
+  filter: brightness(100%);
+  //position: relative;
+  &:hover {
+    img {
+      filter: brightness(90%);
+    }
+    background: darken($neutral-1-a1, 5%);
+    &.avatar-primary {
+      background: darken($primary, 5%);
+    }
+    &.avatar-secondary {
+      background: darken($secondary, 5%);
+    }
+    &.avatar-green {
+      background: darken($green, 5%);
+    }
+    &.avatar-orange {
+      background: darken($orange, 5%);
+    }
+    &.avatar-red {
+      background: darken($red, 12%);
+    }
+  }
+}
+.avatar-dropdown {
+  &:hover,
+  &:focus-within {
+    background: darken($neutral-1-a1, 5%);
+  }
+  .btn-dropdown:focus {
+    box-shadow: none;
+  }
+}
+
+//wrapper for status, presence and extra text -------------- START
+.avatar-wrapper {
+  position: relative;
+
+  //presence and status - common properties
+  .avatar-presence,
+  .avatar-status {
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $white;
+    background: $neutral-1-a3;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //icon
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  //presence
+  .avatar-presence {
+    bottom: $avatar-base-size;
+    &.active {
+      background: $green;
+    }
+    &.busy {
+      background: $red;
+    }
+    &.hidden {
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        background: $white;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  //status
+  .avatar-status {
+    top: 0;
+    &.approved {
+      background: $green;
+    }
+    &.declined {
+      background: $red;
+    }
+    &.notify {
+      background: $primary-b1;
+    }
+  }
+
+  //extra text version
+  &.avatar-extra-text {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .avatar {
+      flex-shrink: 0;
+    }
+
+    //text
+    .extra-text {
+      line-height: 1.2em;
+      margin-left: 16px;
+      h3,
+      h4 {
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.111rem;
+        a {
+          display: inline-block;
+        }
+      }
+      p,
+      time {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.778rem;
+      }
+    }
+  }
+}
+//wrapper for status, presence and extra text -------------- START
+
+// inline group -------------------------------------------- START
+.avatar-group {
+  & > li {
+    margin-bottom: 16px;
+    line-height: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    // link
+    .list-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      line-height: 1em;
+      .avatar {
+        margin-right: 12px;
+        //reset color & font size for avatar
+        p {
+          font-size: 16px;
+        }
+        &.avatar-primary,
+        &.avatar-secondary,
+        &.avatar-green,
+        &.avatar-orange,
+        &.avatar-red {
+          p {
+            color: $white;
+            line-height: 0;
+          }
+        }
+      }
+      span {
+        margin: 0;
+        font-size: 0.889rem;
+      }
+    }
+  }
+}
+// inline group -------------------------------------------- END
+
+// stacked group ------------------------------------------- START
+.avatar-group-stacked {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  li {
+    list-style-type: none;
+    line-height: 0;
+    & > .avatar {
+      margin-left: -6px;
+      border: 2px solid $white;
+    }
+  }
+}
+// stacked group ------------------------------------------- END

@@ -1,0 +1,367 @@
+.bd-example-row {
+  .d-flex,
+  .row {
+    background-image: linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, $neutral-1-a2 75%), linear-gradient(-45deg, transparent 75%, $neutral-1-a2 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  .row {
+    > .col,
+    > [class^='col-'] {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      background-color: rgba($primary, 0.75);
+      border: 1px solid $primary;
+      color: $white;
+    }
+
+    + .row {
+      margin-top: 1rem;
+    }
+  }
+
+  .flex-items-top,
+  .flex-items-middle,
+  .flex-items-bottom {
+    min-height: 6rem;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+.bd-highlight {
+  background-color: rgba($primary, 0.75);
+  border: 1px solid $primary;
+  color: white;
+}
+
+// Grid mixins
+.example-container {
+  width: 800px;
+  @include make-container();
+}
+
+.example-row {
+  @include make-row();
+}
+
+.example-content-main {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+  }
+}
+
+.example-content-secondary {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+}
+
+//
+// Container illustrations
+//
+
+.bd-example-container {
+  min-width: 16rem;
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bd-example-container-header {
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  background-color: lighten($blue, 50%);
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-sidebar {
+  float: right;
+  width: 4rem;
+  height: 8rem;
+  background-color: lighten($blue, 25%);
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-body {
+  height: 8rem;
+  margin-right: 4.5rem;
+  background-color: lighten($primary, 25%);
+  border-radius: 0.25rem;
+}
+
+.bd-example-container-fluid {
+  max-width: none;
+}
+
+//
+// Docs examples
+//
+
+.bd-example {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: solid #f3f3f5;
+  border-width: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 0;
+  @include clearfix();
+
+  @include media-breakpoint-up(sm) {
+    padding: 1.5rem;
+    border-width: 0.2rem;
+  }
+
+  + .highlight,
+  + .clipboard + .highlight {
+    margin-top: 0;
+  }
+
+  + p {
+    margin-top: 2rem;
+  }
+
+  .pos-f-t {
+    position: relative;
+    margin: -1rem;
+
+    @include media-breakpoint-up(sm) {
+      margin: -1.5rem;
+    }
+  }
+
+  > .form-control {
+    + .form-control {
+      margin-top: 0.5rem;
+    }
+  }
+
+  > .nav + .nav,
+  > .alert + .alert,
+  > .navbar + .navbar,
+  > .progress + .progress,
+  > .progress + .btn {
+    margin-top: 1rem;
+  }
+
+  > .dropdown-menu:first-child {
+    position: relative;
+    display: block;
+    top: 0;
+  }
+
+  > .form-group:last-child {
+    margin-bottom: 1rem;
+  }
+
+  > .close {
+    float: none;
+  }
+
+  .btn-example .btn {
+    margin: 4px 8px;
+    width: 200px;
+  }
+
+  // Buttons
+  > .btn-group {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  > .btn-toolbar + .btn-toolbar {
+    margin-top: 0.5rem;
+  }
+
+  // Navbars
+  .fixed-top,
+  .sticky-top {
+    position: static;
+    margin: -1rem -1rem 1rem;
+  }
+
+  .fixed-bottom {
+    position: static;
+    margin: 1rem -1rem -1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .fixed-top,
+    .sticky-top {
+      margin: -1.5rem -1.5rem 1rem;
+    }
+    .fixed-bottom {
+      margin: 1rem -1.5rem -1.5rem;
+    }
+  }
+}
+
+// Typography
+.bd-example-type {
+  .table {
+    .type-info {
+      color: #999;
+      vertical-align: middle;
+    }
+
+    td {
+      padding: 1rem 0;
+      border-color: #eee;
+    }
+
+    tr:first-child td {
+      border-top: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Contextual background colors
+.bd-example-bg-classes p {
+  padding: 1rem;
+}
+
+// Images
+.bd-example > img {
+  + img {
+    margin-left: 0.5rem;
+  }
+}
+
+// Forms
+.bd-example-control-sizing select,
+.bd-example-control-sizing input[type='text'] + input[type='text'] {
+  margin-top: 0.5rem;
+}
+
+.bd-example-form .input-group {
+  margin-bottom: 0.5rem;
+}
+
+.bd-example > textarea.form-control {
+  resize: vertical;
+}
+
+// Pagination
+nav.pagination-wrapper {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// Example modals
+.modal {
+  z-index: 1072;
+
+  .tooltip,
+  .popover {
+    z-index: 1073;
+  }
+}
+
+.modal-backdrop {
+  z-index: 1071;
+}
+
+.bd-example-modal {
+  background-color: #fafafa;
+
+  .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+  }
+
+  .modal-dialog {
+    left: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Example tabbable tabs
+.bd-example-tabs .nav-tabs {
+  margin-bottom: 1rem;
+}
+
+// Popovers
+.bd-example-popover-static {
+  padding-bottom: 1.5rem;
+  background-color: #f9f9f9;
+
+  .popover {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    margin: 1.25rem;
+  }
+}
+
+// Tooltips
+.tooltip-demo a {
+  white-space: nowrap;
+}
+
+.bd-example-tooltip-static .tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+  opacity: 1;
+}
+
+// Scrollspy demo on fixed height div
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.scrollspy-example-2 {
+  position: relative;
+  height: 350px;
+  overflow: auto;
+}
+
+.bd-example-border-utils {
+  [class^='border'] {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.25rem;
+    background-color: #f5f5f5;
+  }
+}
+
+.bd-example-border-utils-0 {
+  [class^='border'] {
+    border: 1px solid $border-color;
+  }
+}

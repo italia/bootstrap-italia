@@ -1,0 +1,32 @@
+//
+// Docs color palette classes
+//
+
+@each $color, $value in $colors {
+  .swatch-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .swatch-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
+
+@each $color, $value in $grays {
+  .swatch-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
+
+$primary-bright: lighten(saturate($primary, 5%), 15%) !default;
+$primary-light: lighten(saturate($primary, 5%), 45%) !default;
+$docs-info: rgb(23, 50, 77) !default;
+$docs-warning: rgb(255, 151, 0) !default;
+$docs-danger: rgb(248, 62, 90) !default;
+$docs-accessibility: rgb(0, 207, 134) !default;
+$docs-dark: #3e5266 !default;

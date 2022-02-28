@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>External Link</title>
+  <g>
+    <path
+      d="M21,3V9H20V4.7l-7.6,7.7-.8-.8L19.3,4H15V3ZM17,19.5a.5.5,0,0,1-.5.5H4.5a.5.5,0,0,1-.5-.5V7.5A.5.5,0,0,1,4.5,7H12V6H4.5A1.5,1.5,0,0,0,3,7.5v12A1.5,1.5,0,0,0,4.5,21h12A1.5,1.5,0,0,0,18,19.5V12H17Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

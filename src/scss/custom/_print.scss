@@ -1,0 +1,14 @@
+// Additional custom CSS for printed media
+
+@media print {
+  [type='checkbox'] {
+    &:checked + label::before {
+      border-color: transparent $primary $primary transparent !important;
+      opacity: 1 !important;
+    }
+
+    &:disabled:checked + label::before {
+      border-color: transparent #e6e9f2 #e6e9f2 transparent !important;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>Search</title>
+  <g>
+    <path
+      d="M21.9,21.1,16,15.3A8.3,8.3,0,0,0,18,10a8,8,0,1,0-8,8,8.3,8.3,0,0,0,5.3-2l5.8,5.9ZM10,17a7,7,0,1,1,7-7A7,7,0,0,1,10,17Z"
+    />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

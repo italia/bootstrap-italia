@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+     viewBox="0 0 24 24">
+  <title>PA</title>
+  <g>
+    <path
+      d="M3,21H21v1H3Zm0-1H21V19H3ZM22,9H2L12,2ZM5.2,8H18.8L12,3.2ZM6,18V10H5v8Zm4,0V10H9v8Zm5,0V10H14v8Zm4,0V10H18v8Z"
+      />
+  </g>
+  <g>
+    <rect width="24" height="24" fill="none"/>
+  </g>
+</svg>

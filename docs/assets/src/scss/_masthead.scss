@@ -1,0 +1,44 @@
+// stylelint-disable declaration-no-important
+
+.bd-masthead {
+  position: relative;
+  padding: 3rem $grid-gutter-width * 0.5;
+
+  h1 {
+    line-height: 1;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+.half-rule {
+  width: 6rem;
+  margin: 2.5rem 0;
+}
+
+.masthead-followup {
+  .bd-clipboard {
+    display: none;
+  }
+
+  .highlight {
+    padding: 0.5rem 0;
+    background-color: transparent;
+  }
+}
