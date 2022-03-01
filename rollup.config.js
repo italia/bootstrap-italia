@@ -2,7 +2,8 @@
 
 import { babel } from '@rollup/plugin-babel'
 import scss from 'rollup-plugin-scss'
-import uglify from "@lopatnov/rollup-plugin-uglify";
+import uglify from '@lopatnov/rollup-plugin-uglify'
+import legacy from '@rollup/plugin-legacy'
 
 export default [
   {
@@ -18,7 +19,7 @@ export default [
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
       }),
-      uglify()
+      uglify(),
     ],
   },
   {
@@ -28,9 +29,26 @@ export default [
       compact: true,
       format: 'iife',
     },
+    plugins: [babel({ babelHelpers: 'bundled' }), uglify()],
+  },
+  {
+    input: 'docs/assets/src/js/docs-entry.js',
+    output: {
+      file: 'docs/assets/dist/js/docs.min.js',
+      compact: true,
+      format: 'iife',
+    },
     plugins: [
+      legacy({
+        './cover-animation.js': {
+          initCoverAnimation: 'animation.initCoverAnimation',
+        },
+      }),
       babel({ babelHelpers: 'bundled' }),
-      uglify()
+      scss({
+        output: 'docs/assets/dist/css/docs.min.css',
+        outputStyle: 'compressed',
+      }),
     ],
   },
 ]
