@@ -29,7 +29,14 @@ export default [
       compact: true,
       format: 'iife',
     },
-    plugins: [babel({ babelHelpers: 'bundled' }), uglify()],
+    plugins: [
+      babel({ babelHelpers: 'bundled' }),
+      scss({
+        output: 'dist/css/bootstrap-italia.min.css',
+        outputStyle: 'compressed',
+      }),
+      uglify(),
+    ],
   },
   {
     input: 'docs/assets/src/js/docs-entry.js',
