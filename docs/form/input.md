@@ -253,7 +253,7 @@ L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`
 
 ##### Accessibilità
 
-La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.sr-only`.
+La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.visually-hidden`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 L'elenco dei risultati generati dalla ricerca è una lista `<ul>` con classe `.autocomplete-list`, mentre i singoli risultati sono contenuti negli elementi `<li>` della lista e si compongono di:
@@ -268,7 +268,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 {% capture example %}
 
 <div class="form-group">
-  <label for="autocomplete-one" class="sr-only">Cerca nel sito</label>
+  <label for="autocomplete-one" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
@@ -339,7 +339,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 {% capture example %}
 
 <div class="form-group autocomplete-wrapper-big">
-  <label for="autocomplete-two" class="sr-only">Cerca nel sito</label>
+  <label for="autocomplete-two" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
@@ -402,7 +402,7 @@ Cerca una regione italiana per verificarne il comportamento.
 {% capture example %}
 
 <div class="form-group">
-  <label for="autocomplete-regioni" class="sr-only">Cerca nel sito</label>
+  <label for="autocomplete-regioni" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
@@ -425,7 +425,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 {% capture example %}
 
 <div class="form-group">
-  <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
+  <label for="autocomplete-test" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-test"
     name="autocomplete-test"

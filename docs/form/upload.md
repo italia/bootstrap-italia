@@ -98,33 +98,33 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
     <li class="upload-file success">
       <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
       <p>
-        <span class="sr-only">File caricato:</span>
+        <span class="visually-hidden">File caricato:</span>
         nome-file-01.pdf <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
-        <span class="sr-only">Caricamento ultimato</span>
+        <span class="visually-hidden">Caricamento ultimato</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file success">
       <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
       <p>
-        <span class="sr-only">File caricato:</span>
+        <span class="visually-hidden">File caricato:</span>
         nome-file-02-nome-file-lungo-per-ellissi.doc <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
-        <span class="sr-only">Caricamento ultimato</span>
+        <span class="visually-hidden">Caricamento ultimato</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file uploading">
       <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
       <p>
-        <span class="sr-only">Caricamento file:</span>
+        <span class="visually-hidden">Caricamento file:</span>
         nome-file-03.png <span class="upload-file-weight"></span>
       </p>
       <button>
-        <span class="sr-only">Annulla caricamento file nome-file-03.png</span>
+        <span class="visually-hidden">Annulla caricamento file nome-file-03.png</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
       <div class="progress">
@@ -134,11 +134,11 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
     <li class="upload-file error">
       <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
       <p>
-        <span class="sr-only">Errore caricamento file:</span>
+        <span class="visually-hidden">Errore caricamento file:</span>
         nome-file-04.jpg <span class="upload-file-weight"></span>
       </p>
       <button>
-        <span class="sr-only">Elimina file caricato nome-file-04.jpg</span>
+        <span class="visually-hidden">Elimina file caricato nome-file-04.jpg</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </li>
@@ -168,11 +168,11 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
         <img src="https://picsum.photos/40/40?image=1055" alt="imagealt">
       </div>
       <p>
-        <span class="sr-only">Immagine caricata:</span>
+        <span class="visually-hidden">Immagine caricata:</span>
         nome-file-01.jpg <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
-        <span class="sr-only">Caricamento ultimato</span>
+        <span class="visually-hidden">Caricamento ultimato</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
       </button>
     </li>
@@ -181,11 +181,11 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
         <img src="https://picsum.photos/80/40?image=1056" alt="imagealt">
       </div>
       <p>
-        <span class="sr-only">Immagine caricata:</span>
+        <span class="visually-hidden">Immagine caricata:</span>
         nome-file-02-nome-file-lungo-per-ellissi.jpg <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
-        <span class="sr-only">Caricamento ultimato</span>
+        <span class="visually-hidden">Caricamento ultimato</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
       </button>
     </li>
@@ -194,11 +194,11 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
         <img src="https://picsum.photos/40/40?image=1057" alt="imagealt">
       </div>
       <p>
-        <span class="sr-only">Caricamento immagine:</span>
+        <span class="visually-hidden">Caricamento immagine:</span>
         nome-file-03.jpg <span class="upload-file-weight"></span>
       </p>
       <button>
-        <span class="sr-only">Annulla caricamento immagine nome-file-03.jpg</span>
+        <span class="visually-hidden">Annulla caricamento immagine nome-file-03.jpg</span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
       <div class="progress progress-image">
@@ -210,11 +210,11 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
         <img src="https://picsum.photos/120/200?image=1058" alt="imagealt">
       </div>
       <p>
-        <span class="sr-only">Errore caricamento immagine:</span>
+        <span class="visually-hidden">Errore caricamento immagine:</span>
         nome-file-04.jpg <span class="upload-file-weight"></span>
       </p>
       <button>
-        <span class="sr-only">Elimina immagine caricata nome-file-04.jpg </span>
+        <span class="visually-hidden">Elimina immagine caricata nome-file-04.jpg </span>
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
       </button>
     </li>
@@ -247,7 +247,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
             <input type="file" name="upload3" id="upload3" class="upload-avatar"/>
             <label for="upload3">
               <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
-              <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+              <span>Aggiorna<span class="visually-hidden"> foto dell'Avatar</span></span>
             </label>
             <input value="Submit" type="submit" class="d-none" />
           </form>
@@ -266,7 +266,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
             <input type="file" name="upload4" id="upload4" class="upload-avatar"/>
             <label for="upload4">
               <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
-              <span>Aggiorna<span class="sr-only"> foto dell'Avatar</span></span>
+              <span>Aggiorna<span class="visually-hidden"> foto dell'Avatar</span></span>
             </label>
             <input value="Submit" type="submit" class="d-none" />
           </form>

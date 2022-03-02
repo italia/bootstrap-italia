@@ -113,19 +113,19 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for aroow right</span>
+        <span class="visually-hidden">Label for aroow right</span>
         <a class="backtransfer" href="#" aria-label="Sposta indietro">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for aroow left</span>
+        <span class="visually-hidden">Label for aroow left</span>
         <a class="reset" href="#" aria-label="Reset">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for reset icon</span>
+        <span class="visually-hidden">Label for reset icon</span>
       </div>
     </div>
     <div class="col-xs-12 col-md-5">

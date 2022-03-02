@@ -34,7 +34,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   </button>
   <div class="navbar-collapsable" id="navbarNav">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
@@ -97,7 +97,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
@@ -169,7 +169,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>

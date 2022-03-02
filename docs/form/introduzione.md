@@ -129,11 +129,11 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
 
 <div class="form-row align-items-center">
   <div class="col-auto">
-    <label class="sr-only" for="inlineFormInput">Nome</label>
+    <label class="visually-hidden" for="inlineFormInput">Nome</label>
     <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
   </div>
   <div class="col-auto">
-    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+    <label class="visually-hidden" for="inlineFormInputGroup">Username</label>
     <div class="input-group">
       <div class="input-group-prepend">
         <div class="input-group-text">@</div>
@@ -159,7 +159,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
 
 ##### Alternative alle etichette nascoste
 
-Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, si può nascondere le etichette usando la classe `.sr-only`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
+Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, si può nascondere le etichette usando la classe `.visually-hidden`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Disabilitazione di campi

@@ -18,13 +18,13 @@ Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo 
 
 ##### Accessibilità
 
-Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="sr-only">Testo alternativo</span>`
+Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="visually-hidden">Testo alternativo</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 
 <div class="callout">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
+  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg><span class="visually-hidden">Confermato</span> Titolo callout</div>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -181,7 +181,7 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
       <button aria-controls="collapse1" aria-expanded="false" class="callout-more-toggle" data-target="#collapse1" data-toggle="collapse">
         Leggi tutto <span></span>
       </button>
-      <a class="callout-more-download" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">PDF </span> Download</a>
+      <a class="callout-more-download" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="visually-hidden">PDF </span> Download</a>
     </div>
     <div aria-labelledby="heading1" class="collapse" id="collapse1" role="tabpanel">
       <div class="collapse-body">
