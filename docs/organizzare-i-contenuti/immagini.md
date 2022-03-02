@@ -33,12 +33,12 @@ Oltre alle [utilità sull'arrotondamento dei bordi]({{ site.baseurl }}/docs/orga
 Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl }}/docs/organizzare-gli-spazi/float) o con le [classi sull'allineamento dei testi]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/). Le immagini a livello `block` possono essere centrate usando [la classe di utilità margin `.mx-auto`]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
 
 <div class="bd-example bd-example-images">
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-left" alt="Un'immagine generica segnaposto con angoli arrotondati">
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-right" alt="Un'immagine generica segnaposto con angoli arrotondati">
+  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-start" alt="Un'immagine generica segnaposto con angoli arrotondati">
+  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-end" alt="Un'immagine generica segnaposto con angoli arrotondati">
 </div>
 
 ```html
-<img src="..." alt="..." class="rounded float-left" /> <img src="..." alt="..." class="rounded float-right" />
+<img src="..." alt="..." class="rounded float-start" /> <img src="..." alt="..." class="rounded float-end" />
 ```
 
 <div class="bd-example bd-example-images">
