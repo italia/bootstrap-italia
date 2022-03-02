@@ -4,6 +4,7 @@ import { babel } from '@rollup/plugin-babel'
 import scss from 'rollup-plugin-scss'
 import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
+import nodeResolve from '@rollup/plugin-node-resolve'
 
 export default [
   {
@@ -34,6 +35,11 @@ export default [
       scss({
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
+      }),
+      nodeResolve({
+        // use "jsnext:main" if possible
+        // see https://github.com/rollup/rollup/wiki/jsnext:main
+        jsnext: true,
       }),
       uglify(),
     ],
