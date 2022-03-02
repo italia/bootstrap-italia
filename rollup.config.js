@@ -23,7 +23,7 @@ export default [
     ],
   },
   {
-    input: 'src/js/bootstrap-italia.bundle.js',
+    input: 'src/js/bootstrap-italia.entry.js',
     output: {
       file: 'dist/js/bootstrap-italia.bundle.min.js',
       compact: true,

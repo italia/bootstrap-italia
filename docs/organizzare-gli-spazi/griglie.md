@@ -581,7 +581,7 @@ Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo
 <div class="container">
   <div class="row">
     <div class="col">Prima, ma non ordinata</div>
-    <div class="col order-5">Seconda, ma ultima</div>
+    <div class="col order-2">Seconda, ma ultima</div>
     <div class="col order-1">Terza ma prima</div>
   </div>
 </div>
