@@ -373,7 +373,7 @@ Le classi `order-` sono accompagnate da un ordinale intero (`1`, `2`, `3`, e cos
 
 Sono previste anche seguenti le varianti responsive per `order`:
 
-{% for bp in site.data.breakpoints %}{% for i in (0..12) %}
+{% for bp in site.data.breakpoints %}{% for i in (0..5) %}
 
 - `.order{{ bp.abbr }}-{{ i }}`{% endfor %}{% endfor %}
 

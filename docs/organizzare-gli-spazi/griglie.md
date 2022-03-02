@@ -47,7 +47,7 @@ Analizzandolo nel dettaglio, ecco come funziona:
 - Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori informazioni.
 - Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
 - Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
-- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.no-gutters` alla classe `.row`.
+- Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.g-0` alla classe `.row`.
 - Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.
 - I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
 - È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
@@ -428,7 +428,7 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 
 ### Senza gutter
 
-I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.no-gutters`.
+I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.g-0`.
 Questo rimuove i margini negativi `margin` dalla classe `.row` e il `padding` orizzontale da tutte le colonne figlie dirette.
 
 Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
@@ -437,7 +437,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 **Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
 
 ```scss
-.no-gutters {
+.g-0 {
   margin-right: 0;
   margin-left: 0;
 
@@ -453,7 +453,7 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 
 <div class="bd-example-row">
 {% capture example %}
-<div class="row no-gutters">
+<div class="row g-0">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
   <div class="col-6 col-md-4">.col-6 .col-md-4</div>
 </div>
@@ -574,14 +574,14 @@ Puoi anche applicare questa interruzione a specifici breakpoint con le [utilità
 
 ### Classi order
 
-Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo contenuto. Queste classi sono responsive, così puoi impostare `order` tramite breakpoint (e.g., `.order-1.order-md-2`). Include il supporto per `1` a `12` su tutti e cinque i livelli della griglia.
+Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo contenuto. Queste classi sono responsive, così puoi impostare `order` tramite breakpoint (e.g., `.order-1.order-md-2`). Include il supporto per `1` a `5` su tutti e cinque i livelli della griglia.
 
 <div class="bd-example-row">
 {% capture example %}
 <div class="container">
   <div class="row">
     <div class="col">Prima, ma non ordinata</div>
-    <div class="col order-12">Seconda, ma ultima</div>
+    <div class="col order-5">Seconda, ma ultima</div>
     <div class="col order-1">Terza ma prima</div>
   </div>
 </div>
