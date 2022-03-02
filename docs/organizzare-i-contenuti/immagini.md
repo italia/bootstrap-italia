@@ -92,6 +92,6 @@ Puoi allineare la didascalia di una figura è semplice con le nostre [utilità d
 
 <figure class="figure">
   <img src="https://via.placeholder.com/240x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-  <figcaption class="figure-caption text-right">Una didascalia per l'immagine sopra.</figcaption>
+  <figcaption class="figure-caption text-end">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endcapture %}{% include example.html content=example %}
