@@ -41,7 +41,7 @@ A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si c
 {% capture example %}
 <button type="button" class="btn btn-primary">
 Profilo <span class="badge badge-light">9</span>
-<span class="sr-only">Messaggi non letti</span>
+<span class="visually-hidden">Messaggi non letti</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 

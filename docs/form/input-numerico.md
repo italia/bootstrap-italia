@@ -24,10 +24,10 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
   <span class="input-number">
     <input type="number" id="inputNumber" name="inputNumber" value="100" step="any" />
     <button class="input-number-add">
-      <span class="sr-only">Aumenta valore</span>
+      <span class="visually-hidden">Aumenta valore</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci valore</span>
+      <span class="visually-hidden">Diminuisci valore</span>
     </button>
   </span>
 </div>
@@ -37,10 +37,10 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
   <span class="input-number">
     <input type="number" id="inputNumber1" name="inputNumber1" value="100" step="any" />
     <button class="input-number-add">
-      <span class="sr-only">Aumenta valore</span>
+      <span class="visually-hidden">Aumenta valore</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci valore</span>
+      <span class="visually-hidden">Diminuisci valore</span>
     </button>
   </span>
 </div>
@@ -58,10 +58,10 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
   <span class="input-number">
     <input type="number" id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
     <button class="input-number-add">
-      <span class="sr-only">Aumenta valore di 500</span>
+      <span class="visually-hidden">Aumenta valore di 500</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci valore di 500</span>
+      <span class="visually-hidden">Diminuisci valore di 500</span>
     </button>
   </span>
 </div>
@@ -78,10 +78,10 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
   <span class="input-number input-number-currency">
     <input type="number" id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
     <button class="input-number-add">
-      <span class="sr-only">Aumenta valore Euro</span>
+      <span class="visually-hidden">Aumenta valore Euro</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci valore Euro</span>
+      <span class="visually-hidden">Diminuisci valore Euro</span>
     </button>
   </span>
 </div>
@@ -100,10 +100,10 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
   <span class="input-number input-number-percentage">
     <input type="number" id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
     <button class="input-number-add">
-      <span class="sr-only">Aumenta del 10%</span>
+      <span class="visually-hidden">Aumenta del 10%</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci del 10%</span>
+      <span class="visually-hidden">Diminuisci del 10%</span>
     </button>
   </span>
 </div>
@@ -121,10 +121,10 @@ Aggiungere anche l'attributo `disabled` al campo e ai bottoni.
   <span class="input-number disabled">
     <input type="number" id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
     <button class="input-number-add" disabled>
-      <span class="sr-only">Aumenta valore</span>
+      <span class="visually-hidden">Aumenta valore</span>
     </button>
     <button class="input-number-sub" disabled>
-      <span class="sr-only">Diminuisci valore</span>
+      <span class="visually-hidden">Diminuisci valore</span>
     </button>
   </span>
 </div>
@@ -143,10 +143,10 @@ sufficiente aggiungere la classe `input-number-adaptive`.
   <span class="input-number input-number-adaptive">
     <input type="number" id="inputNumber6" name="inputNumber6" value="99999" step="any">
     <button class="input-number-add">
-      <span class="sr-only">Aumenta valore</span>
+      <span class="visually-hidden">Aumenta valore</span>
     </button>
     <button class="input-number-sub">
-      <span class="sr-only">Diminuisci valore</span>
+      <span class="visually-hidden">Diminuisci valore</span>
     </button>
   </span>
 </div>

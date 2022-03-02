@@ -130,16 +130,15 @@ Applica `.visible` oppure `.invisible` al bisogno.
 
 ## Screenreaders
 
-Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la classe `.sr-only`. Combina `.sr-only` con `.sr-only-focusable` per mostrare l'elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.
+Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la classe `.visually-hidden`. Combina `.visually-hidden` con `.visually-hidden-focusable` per mostrare l'elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.
 
 ```html
-<a class="sr-only sr-only-focusable" href="#content">Vai al contenuto principale</a>
+<a class="visually-hidden-focusable" href="#content">Vai al contenuto principale</a>
 ```
 
 ```scss
 // Usato come mixin
 .skip-navigation {
-  @include sr-only;
-  @include sr-only-focusable;
+  @include visually-hidden-focusable;
 }
 ```

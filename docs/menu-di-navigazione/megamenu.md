@@ -28,7 +28,7 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -102,7 +102,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
   </button>
   <div class="navbar-collapsable" id="navbarNavD">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -199,7 +199,7 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
   </button>
   <div class="navbar-collapsable" id="navbarNavEi">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -279,7 +279,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
   </button>
   <div class="navbar-collapsable" id="navbarNavF">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -368,7 +368,7 @@ Di seguito un esempio:
   </button>
   <div class="navbar-collapsable" id="navbarNavG">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -468,7 +468,7 @@ Di seguito un esempio:
   </button>
   <div class="navbar-collapsable" id="navbarNavM">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -569,7 +569,7 @@ Di seguito un esempio:
   </button>
   <div class="navbar-collapsable" id="navbarNavQ">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -673,7 +673,7 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
   </button>
   <div class="navbar-collapsable" id="navbarNavCa">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>
@@ -759,7 +759,7 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
   </button>
   <div class="navbar-collapsable" id="navbarNavE">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
       </button>

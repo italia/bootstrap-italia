@@ -30,7 +30,7 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
   <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
-      <legend><span class="sr-only">Time</span></legend>
+      <legend><span class="visually-hidden">Time</span></legend>
       <div>
         <div class="calendar-input-container">
           <div class="form-group">
@@ -84,7 +84,7 @@ Clicca sull'icona per visualizzare il datepicker.
   <section class="time-spinner">
     <div class="error_container" role="alert" aria-atomic="true"></div>
     <fieldset>
-      <legend><span class="sr-only">Time</span></legend>
+      <legend><span class="visually-hidden">Time</span></legend>
       <div>
         <div class="calendar-input-container">
           <div class="form-group">

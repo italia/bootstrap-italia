@@ -126,7 +126,7 @@ Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportament
         <h5 id="not1dms-title">Titolo notifica</h5>
         <button type="button" class="btn notification-close">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-          <span class="sr-only">Chiudi notifica: Titolo notifica</span>
+          <span class="visually-hidden">Chiudi notifica: Titolo notifica</span>
         </button>
       </div>
     </div>
@@ -137,7 +137,7 @@ Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportament
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
         <button type="button" class="btn notification-close">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-          <span class="sr-only">Chiudi notifica: Titolo notifica</span>
+          <span class="visually-hidden">Chiudi notifica: Titolo notifica</span>
         </button>
       </div>
     </div>
