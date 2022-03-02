@@ -23,39 +23,39 @@ suggeriscono di usare le seguenti famiglie di caratteri:
 
 È la famiglia di caratteri utilizzata per i contenuti web, per cui di norma non
 è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
-utilizzare la classe `text-sans-serif`.
+utilizzare la classe `font-sans-serif`.
 
 {% capture example %}
 
-<p class="text-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p class="text-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
-<p class="text-sans-serif">0123456789</p>
+<p class="font-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="font-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="font-sans-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
 ### Lora
 
 È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
 nato espressamente per la lettura su display. Può essere utilizzato applicando
-la classe `text-serif`.
+la classe `font-serif`.
 
 {% capture example %}
 
-<p class="text-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p class="text-serif">abcdefghijklmnopqrstuvwxyz</p>
-<p class="text-serif">0123456789</p>
+<p class="font-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="font-serif">abcdefghijklmnopqrstuvwxyz</p>
+<p class="font-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
 ### Roboto Mono
 
 È una famiglia di caratteri adatta ad essere utilizzata per la rappresentazione
 di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
-Per il suo utilizzo, è sufficiente usare la classe `text-monospace`.
+Per il suo utilizzo, è sufficiente usare la classe `font-monospace`.
 
 {% capture example %}
 
-<p class="text-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p class="text-monospace">abcdefghijklmnopqrstuvwxyz</p>
-<p class="text-monospace">0123456789</p>
+<p class="font-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+<p class="font-monospace">abcdefghijklmnopqrstuvwxyz</p>
+<p class="font-monospace">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
 ## Tipografia responsive

@@ -85,10 +85,10 @@ Modifica rapidamente il testo in grassetto o in corsivo.
 
 ## Monospace
 
-Formatta il testo con carattere a larghezza costante con la classe `.text-monospace`.
+Formatta il testo con carattere a larghezza costante con la classe `.font-monospace`.
 
 {% capture example %}
 
-<p class="text-monospace">Testo monospace</p>
+<p class="font-monospace">Testo monospace</p>
 {% endcapture %}
 {% include example.html content=example %}

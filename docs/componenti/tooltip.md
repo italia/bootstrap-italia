@@ -54,7 +54,7 @@ Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 {% capture example %}
 
 <div class="tooltip-demo">
-  <p class="text-serif muted">
+  <p class="font-serif muted">
     Ecco un <a href="#" data-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
     per tratteggiarvi l’accompagnamento<br/>
     degli oggetti di sfondo che pur vivono.<br/>
