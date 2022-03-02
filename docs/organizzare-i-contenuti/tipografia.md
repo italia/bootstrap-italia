@@ -246,7 +246,7 @@ Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene l
 {% capture example %}
 
 <p>Esempio di <a href="#">link normale</a>.</p>
-<p>Esempio di <a href="#" class="text-decoration-none font-weight-bold">link in grassetto senza sottolineatura</a>.</p>
+<p>Esempio di <a href="#" class="text-decoration-none fw-bold">link in grassetto senza sottolineatura</a>.</p>
 {% endcapture %}{% include example.html content=example %}
 
 ## Abbreviazioni

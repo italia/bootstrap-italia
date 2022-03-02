@@ -76,11 +76,11 @@ Modifica rapidamente il testo in grassetto o in corsivo.
 
 {% capture example %}
 
-<p class="font-weight-bold">Testo in grassetto.</p>
-<p class="font-weight-semibold">Testo in semi-grassetto.</p>
-<p class="font-weight-normal">Testo normale.</p>
-<p class="font-weight-light">Testo sottile.</p>
-<p class="font-italic">Testo in corsivo.</p>
+<p class="fw-bold">Testo in grassetto.</p>
+<p class="fw-semibold">Testo in semi-grassetto.</p>
+<p class="fw-normal">Testo normale.</p>
+<p class="fw-light">Testo sottile.</p>
+<p class="fst-italic">Testo in corsivo.</p>
 {% endcapture %}{% include example.html content=example %}
 
 ## Monospace
