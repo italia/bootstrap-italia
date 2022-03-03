@@ -35,9 +35,9 @@ Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il 
 
 Nel caso di Avatar con immagine è consigliabile utilizzare l'attributo `alt=""` della stessa.
 
-Un Avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="sr-only">Nome Utente</span>`.
+Un Avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="visually-hidden">Nome Utente</span>`.
 
-Per gli Avatar con icona inserire un testo alternativo: `<span class="sr-only">Testo icona</span>`
+Per gli Avatar con icona inserire un testo alternativo: `<span class="visually-hidden">Testo icona</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Avatar con immagine
@@ -87,27 +87,27 @@ In questi casi il testo sarà di colore bianco.
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
     <p aria-hidden="true">M</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
   <div class="avatar avatar-primary size-sm">
     <p aria-hidden="true">M</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
   <div class="avatar avatar-secondary">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
   <div class="avatar avatar-green size-lg">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
   <div class="avatar avatar-orange size-xl">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
   <div class="avatar avatar-red size-xxl">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -121,27 +121,27 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-sm">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-lg">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xl">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xxl">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -158,11 +158,11 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
   </a>
   <a class="avatar avatar-red size-xl" href="#">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </a>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -179,11 +179,11 @@ E' possibile associare un Tooltip con maggiori informazioni relative all'utente 
   </a>
   <a class="avatar avatar-red size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
     <p aria-hidden="true">MR</p>
-    <span class="sr-only">Mario Rossi</span>
+    <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="right" title="<strong>Cerca</strong><br/><em>Archivio notizie</em>">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-    <span class="sr-only">Cerca</span>
+    <span class="visually-hidden">Cerca</span>
   </a>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -306,44 +306,44 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
   <li>
     <a class="avatar avatar-primary size-sm" href="#">
       <p aria-hidden="true">A</p>
-      <span class="sr-only">Andrea Gallo</span>
+      <span class="visually-hidden">Andrea Gallo</span>
     </a>
   </li>
   <li>
     <a class="avatar avatar-secondary size-sm" href="#">
       <p aria-hidden="true">S</p>
-      <span class="sr-only">Sara Ghione</span>
+      <span class="visually-hidden">Sara Ghione</span>
     </a>
   </li>
   <li>
     <a class="avatar avatar-green size-sm" href="#">
       <p aria-hidden="true">T</p>
-      <span class="sr-only">Tommaso Sordi</span>
+      <span class="visually-hidden">Tommaso Sordi</span>
     </a>
   </li>
   <li>
     <a class="avatar avatar-orange size-sm" href="#">
       <p aria-hidden="true">B</p>
-      <span class="sr-only">Barbara Tosi</span>
+      <span class="visually-hidden">Barbara Tosi</span>
     </a>
   </li>
   <li>
     <a class="avatar avatar-red size-sm" href="#">
       <p aria-hidden="true">R</p>
-      <span class="sr-only">Roberto Milano</span>
+      <span class="visually-hidden">Roberto Milano</span>
     </a>
   </li>
   <li>
     <a class="avatar size-sm" href="#">
       <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-      <span class="sr-only">Cerca</span>
+      <span class="visually-hidden">Cerca</span>
     </a>
   </li>
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
         <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Visualizza altri 4 utenti</span>
+          <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -408,26 +408,26 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
   <li>
     <a class="avatar avatar-orange size-md" href="#">
       <p aria-hidden="true">AM</p>
-      <span class="sr-only">Angelica Mola</span>
+      <span class="visually-hidden">Angelica Mola</span>
     </a>
   </li>
   <li>
     <a class="avatar avatar-red size-md" href="#">
       <p aria-hidden="true">SP</p>
-      <span class="sr-only">Sandro Penna</span>
+      <span class="visually-hidden">Sandro Penna</span>
     </a>
   </li>
   <li>
     <a class="avatar size-md" href="#">
       <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
-      <span class="sr-only">Cerca</span>
+      <span class="visually-hidden">Cerca</span>
     </a>
   </li>
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
         <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Visualizza altri 4 utenti</span>
+          <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
@@ -484,7 +484,7 @@ Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si ot
 - lo stato **non disponibile** si ottiene aggiungendo la classe `.busy`
 - lo stato **invisibile** si ottiene aggiungendo la classe `.hidden`
 
-Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="sr-only">Presenza: (stato presenza)</span>`.
+Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="visually-hidden">Presenza: (stato presenza)</span>`.
 
 {% capture example %}
 
@@ -493,7 +493,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
       <div class="avatar-presence active">
-        <span class="sr-only">Presenza: attivo</span>
+        <span class="visually-hidden">Presenza: attivo</span>
       </div>
     </div>
   </div>
@@ -502,7 +502,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-presence busy">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-minus"></use></svg>
-        <span class="sr-only">Presenza: non disponibile</span>
+        <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
   </div>
@@ -510,7 +510,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Gioacchino Romani">
       <div class="avatar-presence hidden">
-        <span class="sr-only">Presenza: invisibile</span>
+        <span class="visually-hidden">Presenza: invisibile</span>
       </div>
     </div>
   </div>
@@ -521,7 +521,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-minus"></use></svg>
-        <span class="sr-only">Presenza: non disponibile</span>
+        <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
   </div>
@@ -530,7 +530,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-minus"></use></svg>
-        <span class="sr-only">Presenza: non disponibile</span>
+        <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
   </div>
@@ -539,7 +539,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-minus"></use></svg>
-        <span class="sr-only">Presenza: non disponibile</span>
+        <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
   </div>
@@ -548,7 +548,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-minus"></use></svg>
-        <span class="sr-only">Presenza: non disponibile</span>
+        <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
   </div>
@@ -568,7 +568,7 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 
 ##### Accessibilità dello stato
 
-Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="sr-only">Stato: (stato utenza)</span>`
+Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="visually-hidden">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
@@ -579,7 +579,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
       <div class="avatar-status approved">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-        <span class="sr-only">Stato: approvato</span>
+        <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
   </div>
@@ -588,7 +588,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-status declined">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-        <span class="sr-only">Stato: respinto</span>
+        <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
   </div>
@@ -596,7 +596,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Gioacchino Romani">
       <div class="avatar-status notify">
-        <span class="sr-only">Testo notifica</span>
+        <span class="visually-hidden">Testo notifica</span>
       </div>
     </div>
   </div>
@@ -607,7 +607,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-        <span class="sr-only">Stato: approvato</span>
+        <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
   </div>
@@ -616,7 +616,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-        <span class="sr-only">Stato: respinto</span>
+        <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
   </div>
@@ -625,7 +625,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
-        <span class="sr-only">Stato: approvato</span>
+        <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
   </div>
@@ -634,7 +634,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
         <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
-        <span class="sr-only">Stato: respinto</span>
+        <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
   </div>

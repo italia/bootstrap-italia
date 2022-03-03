@@ -97,7 +97,7 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
       <figure class="overlay-wrapper">
         <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
         <figcaption class="overlay-panel overlay-icon">
-          <span class="sr-only">Immagine Preferita</span>
+          <span class="visually-hidden">Immagine Preferita</span>
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </figcaption>
       </figure>
@@ -107,7 +107,7 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
       <figure class="overlay-wrapper">
         <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
         <figcaption class="overlay-panel overlay-black overlay-icon">
-          <span class="sr-only">Immagine Preferita</span>
+          <span class="visually-hidden">Immagine Preferita</span>
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </figcaption>
       </figure>

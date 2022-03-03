@@ -200,14 +200,14 @@ Le voci del menu che viene aperto al click sul bottone possono essere personaliz
 
 #### Menu voci attive
 
-Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**. Per questioni di accessibilità è consigliabile aggiungere `<span class="sr-only"> attivo</span>` in coda al testo degli elementi attivi.
+Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**. Per questioni di accessibilità è consigliabile aggiungere `<span class="visually-hidden"> attivo</span>` in coda al testo degli elementi attivi.
 
 {% capture example %}
 
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="sr-only"> attivo</span></a></li>
+        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="visually-hidden"> attivo</span></a></li>
         <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
         <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
       </ul>

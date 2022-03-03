@@ -12,16 +12,16 @@ Riallinea facilmente il contenuto dei componenti con le classi di allineamento t
 
 {% capture example %}
 
-<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+<p class="text-start">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 {% endcapture %}{% include example.html content=example %}
 
 Per l'allineamento a sinistra, a destra e centrale sono disponibili classi che si adattano in base alla griglia utilizzata.
 
 {% capture example %}
 
-<p class="text-left">Testo allineato a sinistra per tutte le dimensioni del viewport.</p>
+<p class="text-start">Testo allineato a sinistra per tutte le dimensioni del viewport.</p>
 <p class="text-center">Testo allineato al centro per tutte le dimensioni del viewport.</p>
-<p class="text-right">Testo allineato a destra per tutte le dimensioni del viewport.</p>
+<p class="text-end">Testo allineato a destra per tutte le dimensioni del viewport.</p>
 
 <p class="text-sm-left">Testo allineato a sinistra per dimensioni SM (small) o maggiori.</p>
 <p class="text-md-left">Testo allineato a sinistra per dimensioni MD (medium) o maggiori.</p>
@@ -76,19 +76,19 @@ Modifica rapidamente il testo in grassetto o in corsivo.
 
 {% capture example %}
 
-<p class="font-weight-bold">Testo in grassetto.</p>
-<p class="font-weight-semibold">Testo in semi-grassetto.</p>
-<p class="font-weight-normal">Testo normale.</p>
-<p class="font-weight-light">Testo sottile.</p>
-<p class="font-italic">Testo in corsivo.</p>
+<p class="fw-bold">Testo in grassetto.</p>
+<p class="fw-semibold">Testo in semi-grassetto.</p>
+<p class="fw-normal">Testo normale.</p>
+<p class="fw-light">Testo sottile.</p>
+<p class="fst-italic">Testo in corsivo.</p>
 {% endcapture %}{% include example.html content=example %}
 
 ## Monospace
 
-Formatta il testo con carattere a larghezza costante con la classe `.text-monospace`.
+Formatta il testo con carattere a larghezza costante con la classe `.font-monospace`.
 
 {% capture example %}
 
-<p class="text-monospace">Testo monospace</p>
+<p class="font-monospace">Testo monospace</p>
 {% endcapture %}
 {% include example.html content=example %}

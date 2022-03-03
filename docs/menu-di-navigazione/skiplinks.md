@@ -10,16 +10,16 @@ toc: true
 
 Gli elementi Skiplink sono contraddistinti dalle classi:
 
-- `sr-only`: renderizzati solo per gli screen reader
-- `sr-only-focusable`: renderizzati solo al focus
+- `visually-hidden`: renderizzati solo per gli screen reader
+- `visually-hidden-focusable`: renderizzati solo al focus
 
 Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
 {% capture example %}
 
 <div class="skiplinks">
-  <a class="sr-only sr-only-focusable" href="#">Vai al contenuto principale</a>
-  <a class="sr-only sr-only-focusable" href="#">Vai al footer</a>
+  <a class="visually-hidden-focusable" href="#">Vai al contenuto principale</a>
+  <a class="visually-hidden-focusable" href="#">Vai al footer</a>
 </div>
 {% endcapture %}{% include example.html content=example %}
     
