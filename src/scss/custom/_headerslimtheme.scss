@@ -54,7 +54,7 @@
     }
   }
 }
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-slim-wrapper {
     &.theme-light {
       .it-header-slim-wrapper-content {
@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(-132px, 50px, 0) !important;
@@ -110,7 +110,7 @@
   }
 }
 
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(0, 56px, 0) !important;

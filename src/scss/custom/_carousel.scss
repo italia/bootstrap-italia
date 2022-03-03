@@ -134,7 +134,7 @@
   }
 }
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .it-carousel-wrapper {
     &.it-carousel-landscape-abstract {
       .owl-stage-outer {
@@ -159,7 +159,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-carousel-wrapper {
     // Landscape abstract
     &.it-carousel-landscape-abstract {
@@ -260,7 +260,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .it-carousel-wrapper {
     // Landscape abstract
     &.it-carousel-landscape-abstract {

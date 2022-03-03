@@ -36,7 +36,7 @@
         z-index: 10; //livello +10 del it-navscroll
       }
 
-      @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      @include media-breakpoint-up(lg) {
         .it-header-slim-wrapper,
         .it-header-center-wrapper {
           display: none;
@@ -143,7 +143,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-wrapper {
     .it-nav-wrapper {
       .it-brand-wrapper {

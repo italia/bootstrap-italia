@@ -79,7 +79,7 @@
   }
 }
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .dimmer {
     padding: $v-gap * 3;
     .dimmer-icon {
@@ -107,7 +107,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .dimmer {
     align-items: center;
   }

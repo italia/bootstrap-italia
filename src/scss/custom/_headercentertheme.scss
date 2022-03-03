@@ -38,7 +38,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-center-wrapper {
     &.theme-light {
       .it-header-center-content-wrapper {

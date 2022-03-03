@@ -30,7 +30,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .progress-donut-wrapper {
     width: 180px;
     height: 180px;

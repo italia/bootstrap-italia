@@ -110,7 +110,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   //mobile
   .it-list-wrapper {
     .it-list {

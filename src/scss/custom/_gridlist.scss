@@ -136,7 +136,7 @@ _:-ms-fullscreen,
 /* stylelint-enable */
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   // grid default
   .it-grid-list-wrapper {
     &.it-masonry {
@@ -148,7 +148,7 @@ _:-ms-fullscreen,
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   // grid default
   .it-grid-list-wrapper {
     &.it-masonry {

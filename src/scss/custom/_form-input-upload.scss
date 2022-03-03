@@ -473,7 +473,7 @@
 //drag/drop version ----------------------------- END
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   //input file
   .upload {
     &[type='file'] + label {
@@ -483,7 +483,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   //drag and drop version
   .upload-dragdrop-image {
     width: 180px;
@@ -505,7 +505,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   //avatar version -------------------------------- START
   .avatar-upload:hover,
   .avatar-upload:focus-within {

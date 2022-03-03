@@ -4,7 +4,7 @@
   display: block;
   height: $anchor-v-offset;
   margin-top: -$anchor-v-offset;
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     height: $anchor-v-offset-lg;
     margin-top: -$anchor-v-offset-lg;
   }

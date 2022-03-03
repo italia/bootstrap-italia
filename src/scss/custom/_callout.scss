@@ -313,7 +313,7 @@ _:-ms-fullscreen,
 }
 /* stylelint-enable */
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .callout {
     // Highlights version
     &.callout-highlight {
