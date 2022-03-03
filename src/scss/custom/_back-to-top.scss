@@ -24,7 +24,7 @@
     transform: scale(1);
   }
   &:hover {
-    background: darken($primary, 10%);
+    background: shade-color($primary, 10%);
     text-decoration: none;
   }
   //caret

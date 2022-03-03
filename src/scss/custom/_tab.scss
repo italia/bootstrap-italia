@@ -288,9 +288,9 @@
         }
       }
       &:hover {
-        color: darken($primary, 10%);
+        color: shade-color($primary, 10%);
         .icon {
-          fill: darken($primary, 10%);
+          fill: shade-color($primary, 10%);
         }
       }
       .it-ico {

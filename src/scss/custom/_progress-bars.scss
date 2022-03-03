@@ -18,7 +18,7 @@
 .progress {
   height: 4px;
   box-shadow: none;
-  background-color: lighten($primary-a1, 4);
+  background-color: tint-color($primary-a1, 4);
   &.progress-color {
     background-color: $neutral-2;
   }
