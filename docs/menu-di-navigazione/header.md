@@ -421,12 +421,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           </button>
           <div class="navbar-collapsable" id="nav1" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div sr-only">
+            <div class="close-div visually-hidden">
               <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
@@ -539,12 +539,12 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
           </button>
           <div class="navbar-collapsable" id="nav0" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div sr-only">
+            <div class="close-div visually-hidden">
               <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
@@ -645,12 +645,12 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
           </button>
           <div class="navbar-collapsable" id="nav2" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div sr-only">
+            <div class="close-div visually-hidden">
               <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
@@ -751,12 +751,12 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
           </button>
           <div class="navbar-collapsable" id="nav3" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div sr-only">
+            <div class="close-div visually-hidden">
               <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
@@ -869,7 +869,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
           </button>
           <div class="navbar-collapsable" id="nav10">
             <div class="overlay"></div>
-            <div class="close-div sr-only">
+            <div class="close-div visually-hidden">
               <button class="btn close-menu" type="button">
                 <span class="it-close"></span>close
               </button>
@@ -879,7 +879,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 <li class="nav-item active">
                   <a class="nav-link active" href="#"
                     ><span>link 1 active</span
-                    ><span class="sr-only">current</span></a
+                    ><span class="visually-hidden">current</span></a
                   >
                 </li>
                 <li class="nav-item">
@@ -1053,12 +1053,12 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
               </button>
               <div class="navbar-collapsable" id="nav02" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
-                <div class="close-div sr-only">
+                <div class="close-div visually-hidden">
                   <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                     <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
@@ -1275,12 +1275,12 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
               </button>
               <div class="navbar-collapsable" id="nav03" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
-                <div class="close-div sr-only">
+                <div class="close-div visually-hidden">
                   <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="sr-only">current</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
                     <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>

@@ -19,7 +19,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -27,7 +27,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -58,7 +58,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -72,7 +72,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
     </li>
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -96,7 +96,7 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -108,7 +108,7 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -127,7 +127,7 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item">
@@ -139,7 +139,7 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -158,7 +158,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item d-none d-sm-flex">
@@ -180,7 +180,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
     </li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -203,7 +203,7 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -225,7 +225,7 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -244,7 +244,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -262,7 +262,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -295,7 +295,7 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -313,14 +313,14 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
   <div class="form-group">
     <input type="text" class="form-control" id="jumpToPage" maxlength="3">
-    <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="sr-only">Indica la pagina desiderata</span></label>
+    <label for="jumpToPage"><span aria-hidden="true">Vai a ...</span><span class="visually-hidden">Indica la pagina desiderata</span></label>
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
@@ -336,18 +336,18 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><span class="page-link">1</span></li>
     <li class="page-item"><span class="page-link">/</span></li>
     <li class="page-item"><span class="page-link">5</span></li>
-    <li class="page-item sr-only">
+    <li class="page-item visually-hidden">
       <a class="page-link" href="#" aria-current="page">Pagina 1 di 5</a>
     </li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
@@ -358,14 +358,14 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 ### Link testuali
 
 Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
-Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr-only">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
+Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="visually-hidden">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
 
 {% capture example %}
 
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Precedente</a>
+      <a class="page-link text" href="#"><span class="visually-hidden">Pagina </span>Precedente</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><span class="page-link">...</span></li>
@@ -381,7 +381,7 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="sr
     <li class="page-item"><span class="page-link">...</span></li>
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
-      <a class="page-link text" href="#"><span class="sr-only">Pagina </span>Successiva</a>
+      <a class="page-link text" href="#"><span class="visually-hidden">Pagina </span>Successiva</a>
     </li>
   </ul>
 </nav>
@@ -398,7 +398,7 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
     <li class="page-item">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
-        <span class="sr-only">Pagina precedente</span>
+        <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -416,11 +416,11 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
     <li class="page-item"><a class="page-link" href="#">50</a></li>
     <li class="page-item">
       <a class="page-link" href="#">
-        <span class="sr-only">Pagina successiva</span>
+        <span class="visually-hidden">Pagina successiva</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
-  <p><span class="sr-only">Pagina</span> 24 di 50</p>
+  <p><span class="visually-hidden">Pagina</span> 24 di 50</p>
 </nav>
 {% endcapture %}{% include example.html content=example %}
