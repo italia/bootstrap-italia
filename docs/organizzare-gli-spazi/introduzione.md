@@ -214,8 +214,8 @@ Si utilizzino il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl
 e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
 una variabile predefinita `$spacer` di valore `1rem`.
 
-Si scelgano quindi i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o le varianti responsive per viewport
-specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
+Si scelgano quindi i valori per tutti i viewport (es.: `.me-3` per `margin-right: 1rem`), o le varianti responsive per viewport
+specifici (es.: `.me-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
 
 ## Modificare la visibilità
 

@@ -469,9 +469,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -589,9 +589,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item icon-left" href="#"><svg class="icon mr-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -709,9 +709,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon mr-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
