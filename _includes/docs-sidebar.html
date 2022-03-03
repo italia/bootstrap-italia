@@ -15,9 +15,11 @@
             {% else %}
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon {% unless active == nil %}active{% endunless %}"
               href="#collapse-{{ forloop.index }}"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-{{ forloop.index }}"
               aria-expanded="{{expanded}}"
               aria-controls="collapse-{{ forloop.index }}"
             >

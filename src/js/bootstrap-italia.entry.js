@@ -1,5 +1,5 @@
 //import '../scss/bootstrap-italia.scss'
-import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap'
 
 import foo from './foo.js'
 
