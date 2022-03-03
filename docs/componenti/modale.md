@@ -71,7 +71,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Action two</button>
+               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
                <button class="btn btn-primary btn-sm" type="button">Action one</button>
             </div>
          </div>
@@ -92,7 +92,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
           <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Action two</button>
+          <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
           <button class="btn btn-primary btn-sm" type="button">Action one</button>
         </div>
       </div>
@@ -108,7 +108,7 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 
 {% capture example %}
-<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+<button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
 <svg class="icon">
 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
 </svg>
@@ -125,7 +125,7 @@ Esempio completo:
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="modal2Title">This is a notification message</h5>
-               <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
                   <svg class="icon">
                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                   </svg>
@@ -201,7 +201,7 @@ Di seguito una modale con un elenco di radio button.
                </div>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
                <button class="btn btn-primary btn-sm" type="button" disabled="">Ok</button>
             </div>
          </div>
@@ -281,7 +281,7 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
                   </div>
                   <div class="modal-footer">
                     <button class="btn btn-primary btn-sm" type="button">Action one</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
                   </div>
               </div>
             </div>
@@ -300,7 +300,7 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
                   </div>
                   <div class="modal-footer">
                     <button class="btn btn-primary btn-sm" type="button">Action one</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-dismiss="modal">Action two</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
                   </div>
               </div>
             </div>
@@ -327,21 +327,21 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Close</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Close</button>
       </div>
     </div>
   </div>
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">
     Lancia la demo della modale
   </button>
 </div>
 
 ```html
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Lancia la demo della modale</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalTitle">
@@ -354,7 +354,7 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Close</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Close</button>
       </div>
     </div>
   </div>
@@ -371,7 +371,7 @@ pagina stessa.
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
           <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -381,7 +381,7 @@ pagina stessa.
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
         <button class="btn btn-primary btn-sm" type="button">Action 1</button>
       </div>
     </div>
@@ -389,14 +389,14 @@ pagina stessa.
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
     Lancia la demo della modale
   </button>
 </div>
 
 ```html
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Lancia la demo della modale</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="exampleModalLong" aria-labelledby="exampleModalLongTitle">
@@ -404,7 +404,7 @@ pagina stessa.
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -436,7 +436,7 @@ pagina stessa.
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
         <button class="btn btn-primary btn-sm" type="button">Action 1</button>
       </div>
     </div>
@@ -459,7 +459,7 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
          </div>
          <div class="modal-footer">
-            <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
             <button class="btn btn-primary btn-sm" type="button">Action 1</button>
          </div>
       </div>
@@ -467,14 +467,14 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongFixed">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLongFixed">
     Lancia la demo della modale
   </button>
 </div>
 
 ```html
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLongFixed">Lancia la demo della modale</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLongFixed">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed" aria-labelledby="exampleModalLongFixedTitle">
@@ -509,7 +509,7 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
         <button class="btn btn-primary btn-sm" type="button">Action 1</button>
       </div>
     </div>
@@ -528,7 +528,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -538,19 +538,19 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
             <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
          </div>
          <div class="modal-footer">
-            <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Ok</button>
+            <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
          </div>
       </div>
    </div>
 </div>
 
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalCenter">
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalCenter">
   Lancia la demo della modale
 </button>
 
 ```html
 <!-- Button trigger modal -->
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalCenter">Lancia la demo della modale</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalCenter">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="modalCenter" aria-labelledby="modalCenterTitle">
@@ -558,7 +558,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -568,7 +568,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
         <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Ok</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
       </div>
     </div>
   </div>
@@ -586,7 +586,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -602,13 +602,13 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
    </div>
 </div>
 
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalLeft">
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalLeft">
   Lancia la demo della modale
 </button>
 
 ```html
 <!-- Button trigger modal -->
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalLeft">Lancia la demo della modale</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalLeft">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalLeft" aria-labelledby="modalLeftTitle">
@@ -616,7 +616,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -666,7 +666,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -682,13 +682,13 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
    </div>
 </div>
 
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalright">
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalright">
   Lancia la demo della modale
 </button>
 
 ```html
 <!-- Button trigger modal -->
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalright">Lancia la demo della modale</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalright">Lancia la demo della modale</button>
 
 <!-- Modal -->
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="modalright" aria-labelledby="modalrightTitle">
@@ -696,7 +696,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -748,14 +748,14 @@ Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe
 Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un `.modal-dialog`. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
 </div>
 
 ```html
 <!-- Large modal -->
 
-<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -769,7 +769,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 
 <!-- Small modal -->
 
-<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -787,7 +787,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="myLargeModalLabel">Modale grande</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -806,7 +806,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -828,11 +828,11 @@ per fornire un'area cliccabile per chiudere le modali mostrate quando si clicca 
 
 ### Tramite data attributes
 
-Attiva una modale senza scrivere codice JavaScript. Imposta `data-toggle="modal"` su un elemento di controllo, come un
-pulsante, insieme a `data-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica modale.
+Attiva una modale senza scrivere codice JavaScript. Imposta `data-bs-toggle="modal"` su un elemento di controllo, come un
+pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica modale.
 
 ```html
-<button type="button" data-toggle="modal" data-target="#myModal">Lancia la modale</button>
+<button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Lancia la modale</button>
 ```
 
 ### Tramite JavaScript
