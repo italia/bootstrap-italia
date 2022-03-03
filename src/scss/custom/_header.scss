@@ -96,7 +96,7 @@
                   margin-left: $v-gap * 2;
                   transition: all 0.3s;
                   &:hover {
-                    background: darken($header-center-text-color, 5%);
+                    background: shade-color($header-center-text-color, 5%);
                   }
                   svg {
                     fill: $header-center-bg-color;

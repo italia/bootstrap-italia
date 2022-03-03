@@ -2,17 +2,17 @@
   #{$parent} {
     @if $color == $warning {
       // exception for a11y
-      color: darken($color, 18%) !important;
+      color: shade-color($color, 18%) !important;
     } @else if $color == $white {
       // exception for white
       color: $white !important;
     } @else {
-      color: darken($color, 15%) !important;
+      color: shade-color($color, 15%) !important;
     }
   }
   a#{$parent} {
     @include hover-focus {
-      color: darken($color, 20%) !important;
+      color: shade-color($color, 20%) !important;
     }
   }
 }

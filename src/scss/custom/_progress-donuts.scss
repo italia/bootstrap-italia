@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     transform: scale(0.85);
-    background: lighten($primary-a1, 4);
+    background: tint-color($primary-a1, 4);
     border-radius: 50%;
   }
 }
