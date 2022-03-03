@@ -127,9 +127,10 @@ Lo stesso vale per gli elementi `<a>`:
 
 ### Dropup
 
-Per aprire le voci di menu verso l'alto aggiungere la classe  `.dropup` all'elemento padre
+Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'elemento padre
 
 {% capture example %}
+
 <div class="dropdown dropup">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropup
@@ -149,9 +150,10 @@ Per aprire le voci di menu verso l'alto aggiungere la classe  `.dropup` all'elem
 
 ### Dropright
 
-Per aprire le voci di menu verso destra aggiungere la classe  `.dropright` all'elemento padre
+Per aprire le voci di menu verso destra aggiungere la classe `.dropright` all'elemento padre
 
 {% capture example %}
+
 <div class="dropdown dropright">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropright
@@ -171,9 +173,10 @@ Per aprire le voci di menu verso destra aggiungere la classe  `.dropright` all'e
 
 ### Dropleft
 
-Per aprire le voci di menu verso sinistra aggiungere la classe  `.dropleft` all'elemento padre
+Per aprire le voci di menu verso sinistra aggiungere la classe `.dropleft` all'elemento padre
 
 {% capture example %}
+
 <div class="dropdown dropleft">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>

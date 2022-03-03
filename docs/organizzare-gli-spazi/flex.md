@@ -112,14 +112,13 @@ Usa le utility `justify-content` col contenitore flexbox per cambiare l'allineam
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex justify-content-start">...</div>
 <div class="d-flex justify-content-end">...</div>
 <div class="d-flex justify-content-center">...</div>
 <div class="d-flex justify-content-between">...</div>
 <div class="d-flex justify-content-around">...</div>
-{% endhighlight %}
+```
 
 Sono previste anche seguenti le varianti responsive per `justify-content`:
 
@@ -163,14 +162,13 @@ Usa le utility `align-items` col contenitore flexbox per cambiare l'allineamento
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-items-start">...</div>
 <div class="d-flex align-items-end">...</div>
 <div class="d-flex align-items-center">...</div>
 <div class="d-flex align-items-baseline">...</div>
 <div class="d-flex align-items-stretch">...</div>
-{% endhighlight %}
+```
 
 Sono previste anche seguenti le varianti responsive per `align-items`:
 
@@ -214,14 +212,13 @@ Usa le utility `align-self` con i singoli elementi flex per cambiarne l'allineam
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="align-self-start">Elemento flex allineato</div>
 <div class="align-self-end">Elemento flex allineato</div>
 <div class="align-self-center">Elemento flex allineato</div>
 <div class="align-self-baseline">Elemento flex allineato</div>
 <div class="align-self-stretch">Elemento flex allineato</div>
-{% endhighlight %}
+```
 
 Sono previste anche seguenti le varianti responsive per `align-self`:
 
@@ -299,12 +296,9 @@ Cambia il modo con cui gli elementi flex si dispongono nel contenitore. Scegli d
   </div>
 </div>
 
-{% highlight html %}
-
-<div class="d-flex flex-nowrap">
-  ...
-</div>
-{% endhighlight %}
+```html
+<div class="d-flex flex-nowrap">...</div>
+```
 
 <div class="bd-example-row">
   <div class="d-flex flex-wrap">
@@ -326,12 +320,9 @@ Cambia il modo con cui gli elementi flex si dispongono nel contenitore. Scegli d
   </div>
 </div>
 
-{% highlight html %}
-
-<div class="d-flex flex-wrap">
-  ...
-</div>
-{% endhighlight %}
+```html
+<div class="d-flex flex-wrap">...</div>
+```
 
 <div class="bd-example-row">
   <div class="d-flex flex-wrap-reverse">
@@ -353,12 +344,9 @@ Cambia il modo con cui gli elementi flex si dispongono nel contenitore. Scegli d
   </div>
 </div>
 
-{% highlight html %}
-
-<div class="d-flex flex-wrap-reverse">
-  ...
-</div>
-{% endhighlight %}
+```html
+<div class="d-flex flex-wrap-reverse">...</div>
+```
 
 Sono previste anche seguenti le varianti responsive per `flex-wrap`:
 
@@ -415,12 +403,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
-<div class="d-flex align-content-start flex-wrap">
-  ...
-</div>
-{% endhighlight %}
+```html
+<div class="d-flex align-content-start flex-wrap">...</div>
+```
 
 <div class="bd-example-row">
   <div class="d-flex align-content-end flex-wrap mb-3" style="height: 200px">
@@ -442,10 +427,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-content-end flex-wrap">...</div>
-{% endhighlight %}
+```
 
 <div class="bd-example-row">
   <div class="d-flex align-content-center flex-wrap mb-3" style="height: 200px">
@@ -467,10 +451,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-content-center flex-wrap">...</div>
-{% endhighlight %}
+```
 
 <div class="bd-example-row">
   <div class="d-flex align-content-between flex-wrap mb-3" style="height: 200px">
@@ -492,10 +475,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-content-between flex-wrap">...</div>
-{% endhighlight %}
+```
 
 <div class="bd-example-row">
   <div class="d-flex align-content-around flex-wrap mb-3" style="height: 200px">
@@ -517,10 +499,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-content-around flex-wrap">...</div>
-{% endhighlight %}
+```
 
 <div class="bd-example-row">
   <div class="d-flex align-content-stretch flex-wrap mb-3" style="height: 200px">
@@ -542,10 +523,9 @@ Usa le utility `align-content` sul contenitore flexbox per cambiare l'allineamen
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="d-flex align-content-stretch flex-wrap">...</div>
-{% endhighlight %}
+```
 
 Sono previste anche seguenti le varianti responsive per `align-content`.
 

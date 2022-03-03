@@ -59,12 +59,12 @@ Tutte le classi per arrotondare facilmente gli angoli di un elemento.
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
 </div>
 
-{% highlight html %}
-<img src="..." alt="..." class="rounded">
-<img src="..." alt="..." class="rounded-top">
-<img src="..." alt="..." class="rounded-right">
-<img src="..." alt="..." class="rounded-bottom">
-<img src="..." alt="..." class="rounded-left">
-<img src="..." alt="..." class="rounded-circle">
-<img src="..." alt="..." class="rounded-0">
-{% endhighlight %}
+```html
+<img src="..." alt="..." class="rounded" />
+<img src="..." alt="..." class="rounded-top" />
+<img src="..." alt="..." class="rounded-right" />
+<img src="..." alt="..." class="rounded-bottom" />
+<img src="..." alt="..." class="rounded-left" />
+<img src="..." alt="..." class="rounded-circle" />
+<img src="..." alt="..." class="rounded-0" />
+```

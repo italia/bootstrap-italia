@@ -56,6 +56,14 @@ Per effettuare invece il test di un singolo componente, è sufficiente utilizzar
 
 `npm run test-a11y-one [indirizzo della documentazione del componente]`
 
+### Test di linting del codice
+
+Bootstrap Italia utilizza [Prettier](https://prettier.io/), [`Eslint`](https://eslint.org/) e [Stylelint](https://stylelint.io/) per fare linting del codice. Utilizzare il comando
+
+`npm run format-code`
+
+per ricevere feedback sui problemi e avviare il processo di auto fix.
+
 #### Esempio
 
 Attraverso questo comando è possibile effettuare il test di accessibilità per il componente di esempio "[componente base]({{ site.baseurl }}/docs/come-iniziare/componente-base/)".

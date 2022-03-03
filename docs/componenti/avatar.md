@@ -7,10 +7,10 @@ description: Rappresentazione grafica di un'immagine utente
 ---
 
 <script>
-	//attiva tooltip
-	document.addEventListener("DOMContentLoaded", function() {
-		$('[data-toggle="tooltip"]').tooltip()
-	})
+  //attiva tooltip
+  document.addEventListener("DOMContentLoaded", function() {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 </script>
 
 L'elemento Avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.

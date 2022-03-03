@@ -8,5 +8,5 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v2.1.0
-      - run: yarn add @commitlint/cli
-      - run: yarn run commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD
+      - run: npm install @commitlint/cli
+      - run: npx commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD

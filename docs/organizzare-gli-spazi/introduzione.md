@@ -9,7 +9,7 @@ redirect_from:
   - '/docs/organizzare-gli-spazi/'
 ---
 
-In questa sezione potrai trovare tutte le informazioni necessarie per organizzare gli spazi del tuo sito.
+In questa sezione è possibile trovare tutte le informazioni necessarie per organizzare gli spazi del tuo sito.
 
 ## Contenitori
 
@@ -25,12 +25,11 @@ La prima scelta è tra un container a larghezza _fissa_, la cui `max-width` camb
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="container">
   <!-- Content here -->
 </div>
-{% endhighlight %}
+```
 
 Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'area a sua disposizione.
 
@@ -42,12 +41,9 @@ Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'are
   </div>
 </div>
 
-{% highlight html %}
-
-<div class="container-fluid">
-  ...
-</div>
-{% endhighlight %}
+```html
+<div class="container-fluid">...</div>
+```
 
 ## Responsive breakpoints
 
@@ -55,7 +51,7 @@ Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstra
 
 Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usati nelle sue griglie e componenti.
 
-{% highlight scss %}
+```scss
 // Schermi piccoli (meno di 576px)
 // Non è necessaria alcuna media query, in quanto la progettazione mobile-first fa sì che questo sia il codice di default
 
@@ -70,11 +66,11 @@ Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usat
 
 // Schermi molto grandi (almeno 1200px)
 @media (min-width: 1200px) { ... }
-{% endhighlight %}
+```
 
 Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 
-{% highlight scss %}
+```scss
 @include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
@@ -83,15 +79,15 @@ Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disp
 
 // Example usage:
 @include media-breakpoint-up(sm) {
-.some-class {
-display: block;
+  .some-class {
+    display: block;
+  }
 }
-}
-{% endhighlight %}
+```
 
 In casi eccezionali, è possibile utilizzare le media query che vanno nella direzione opposta (la dimensione dello schermo _o inferiore_):
 
-{% highlight scss %}
+```scss
 // Schermi piccoli (meno di 576px)
 @media (max-width: 575.98px) { ... }
 
@@ -106,28 +102,28 @@ In casi eccezionali, è possibile utilizzare le media query che vanno nella dire
 
 // Schermi molto grandi (uguale o più di 1200px)
 // Non è necessaria alcuna media query, in quanto la progettazione per schermi molto grandi fa sì che questo sia il codice di default
-{% endhighlight %}
+```
 
 {% capture callout %}
-Nota che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context),
+Si noti che, dal momento che i browser non supportano attualmente i [range context queries](https://www.w3.org/TR/mediaqueries-4/#range-context),
 stiamo evitando di utilizzare i limiti dei [prefissi `min-` e `max-`](https://www.w3.org/TR/mediaqueries-4/#mq-min-max)
 e viewports con larghezze frazionarie (che per esempio possono verificarsi in determinate condizioni su dispositivi ad alta
 risoluzione), utilizzando valori con maggiore precisione per questi confronti.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-Come sopra, quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
+Come sopra, quando si scrive il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 
-{% highlight scss %}
+```scss
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
-{% endhighlight %}
+```
 
 Sono previste anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando
 la larghezza minima e massima dei breakpoint.
 
-{% highlight scss %}
+```scss
 // Schermi piccoli (meno di 576px)
 @media (max-width: 575.98px) { ... }
 
@@ -142,31 +138,31 @@ la larghezza minima e massima dei breakpoint.
 
 // Schermi molto grandi (da 1200px in su)
 @media (min-width: 1200px) { ... }
-{% endhighlight %}
+```
 
 Anche queste media query sono disponibili tramite Sass mixin:
 
-{% highlight scss %}
+```scss
 @include media-breakpoint-only(xs) { ... }
 @include media-breakpoint-only(sm) { ... }
 @include media-breakpoint-only(md) { ... }
 @include media-breakpoint-only(lg) { ... }
 @include media-breakpoint-only(xl) { ... }
-{% endhighlight %}
+```
 
 Similmente le media query possono estendersi su più breakpoint:
 
-{% highlight scss %}
+```scss
 // Esempio
 // Applica gli stili partendo da uno schermo medio fino a uno grande
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
-{% endhighlight %}
+```
 
 Per ottenere il mixin Sass di questo stesso range:
 
-{% highlight scss %}
+```scss
 @include media-breakpoint-between(md, xl) { ... }
-{% endhighlight %}
+```
 
 ## Z-index
 
@@ -180,17 +176,17 @@ dropdown, finestre modali) in modo da potersi comportare coerentemente tra loro.
 
 Si scoraggia di personalizzare singolarmente questi valori; se dovessi cambiarne uno, probabilmente dovrai cambiarli tutti.
 
-{% highlight scss %}
-$zindex-dropdown:          1000 !default;
+```scss
+$zindex-dropdown: 1000 !default;
 $zindex-sticky: 1020 !default;
-$zindex-fixed:             1030 !default;
+$zindex-fixed: 1030 !default;
 $zindex-modal-backdrop: 1040 !default;
-$zindex-modal:             1050 !default;
+$zindex-modal: 1050 !default;
 $zindex-popover: 1060 !default;
 $zindex-tooltip: 1070 !default;
-{% endhighlight %}
+```
 
-Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) utilizziamo valori
+Per gestire i bordi sovrapposti all'interno dei componenti (es.: pulsanti e input nei gruppi di input) occorre utilizzare i valori
 di `z-index` a una sola cifra di `1`,` 2` e `3` per default, hover e stati attivi. Al passaggio del mouse/focus/active
 portiamo un particolare elemento in primo piano con un valore più alto di 'z-index` per mostrare il loro confine sugli
 elementi di pari livello.
@@ -207,18 +203,18 @@ componenti in modo responsive, potrai visualizzare o nascondere questi elementi 
 Bootstrap Italia è realizzato con flexbox, ma non tutti i `display` utilizzano `display: flex` in quanto ciò avrebbe
 costretto a molti override non necessari.
 
-Se ritieni necessario aggiungere `display: flex` a un elemento puoi farlo con `.d-flex` o una delle sue varianti
-responsive (es.: `.d-sm-flex`). Avrai bisogno di queste classi `display` per consentire l'uso delle
+Se si ritiene necessario aggiungere `display: flex` a un elemento è possibile farlo con `.d-flex` o una delle sue varianti
+responsive (es.: `.d-sm-flex`). Saranno necessarie le classi `display` per consentire l'uso delle
 [utility flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) per così modificarne il dimensionamento, l'allineamento, la
 spaziatura e altro ancora.
 
 ## Margin e padding
 
-Usa il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/) per gestire spazi
+Si utilizzino il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/) per gestire spazi
 e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
 una variabile predefinita `$spacer` di valore `1rem`.
 
-Scegli i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o scegli le varianti responsive per viewport
+Si scelgano quindi i valori per tutti i viewport (es.: `.mr-3` per `margin-right: 1rem`), o le varianti responsive per viewport
 specifici (es.: `.mr-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
 
 ## Modificare la visibilità

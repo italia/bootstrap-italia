@@ -59,7 +59,17 @@
   }
 
   &.disabled {
-    opacity: 0.3;
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    .bootstrap-select {
+      background-color: $input-disabled-bg;
+      & > .dropdown-toggle.bs-placeholder {
+        color: $dark;
+        opacity: 1;
+      }
+    }
   }
 
   .dropdown-menu {
@@ -441,11 +451,18 @@
 }
 
 // disabilitazione via fieldset
-fieldset.disabled .bootstrap-select-wrapper {
-  opacity: 0.3;
+fieldset:disabled .bootstrap-select-wrapper {
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  .bootstrap-select > .dropdown-toggle.bs-placeholder {
+    color: $dark;
+  }
 
   button {
-    background: transparent;
+    background-color: $input-disabled-bg;
+    opacity: 1;
 
     &.btn-light {
       box-shadow: none;

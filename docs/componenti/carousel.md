@@ -59,8 +59,6 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
-
-
 {% capture example %}
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" >
   <div class="it-header-block">

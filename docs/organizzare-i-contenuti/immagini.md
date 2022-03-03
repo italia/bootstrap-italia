@@ -12,9 +12,9 @@ Le immagini in Bootstrap Italia sono rese responsive con la classe `.img-fluid`,
   <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="img-fluid" alt="Immagine responsive generica">
 </div>
 
-{% highlight html %}
-<img src="..." alt="..." class="img-fluid">
-{% endhighlight %}
+```html
+<img src="..." alt="..." class="img-fluid" />
+```
 
 ### Thumbnails
 
@@ -24,9 +24,9 @@ Oltre alle [utilità sull'arrotondamento dei bordi]({{ site.baseurl }}/docs/orga
   <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="img-thumbnail" alt="Una generica immagine segnaposto quadrata con un bordo bianco attorno ad essa, che la rende simile a una foto scattata con una vecchia macchina fotografica istantanea">
 </div>
 
-{% highlight html %}
-<img src="..." alt="..." class="img-thumbnail">
-{% endhighlight %}
+```html
+<img src="..." alt="..." class="img-thumbnail" />
+```
 
 ### Allineamento
 
@@ -37,18 +37,17 @@ Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl
   <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-right" alt="Un'immagine generica segnaposto con angoli arrotondati">
 </div>
 
-{% highlight html %}
-<img src="..." alt="..." class="rounded float-left">
-<img src="..." alt="..." class="rounded float-right">
-{% endhighlight %}
+```html
+<img src="..." alt="..." class="rounded float-left" /> <img src="..." alt="..." class="rounded float-right" />
+```
 
 <div class="bd-example bd-example-images">
   <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded mx-auto d-block" alt="Un'immagine generica segnaposto con angoli arrotondati">
 </div>
 
-{% highlight html %}
-<img src="..." alt="..." class="rounded mx-auto d-block">
-{% endhighlight %}
+```html
+<img src="..." alt="..." class="rounded mx-auto d-block" />
+```
 
 <div class="bd-example bd-example-images">
   <div class="text-center">
@@ -56,24 +55,22 @@ Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl
   </div>
 </div>
 
-{% highlight html %}
-
+```html
 <div class="text-center">
-  <img src="..." class="rounded" alt="...">
+  <img src="..." class="rounded" alt="..." />
 </div>
-{% endhighlight %}
+```
 
 ## Picture
 
 Se stai usando l'elemento `<picture>` per specificare multipli elementi `<source>` per una specifica `<img>`, assicurati di aggiungere la classe `.img-*` al tag `<img>` e non al tag `<picture>`.
 
-{% highlight html %}
+```html
 ​<picture>
-
-  <source srcset="..." type="image/svg+xml">
-  <img src="..." alt="..." class="img-fluid img-thumbnail">
+  <source srcset="..." type="image/svg+xml" />
+  <img src="..." alt="..." class="img-fluid img-thumbnail" />
 </picture>
-{% endhighlight %}
+```
 
 ## Figure
 

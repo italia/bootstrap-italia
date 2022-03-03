@@ -362,9 +362,9 @@ Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi 
 
 Abilitarlo manualmente con:
 
-{% highlight js %}
+```js
 $('.collapse').collapse()
-{% endhighlight %}
+```
 
 ### Opzioni
 
@@ -403,11 +403,11 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltativa `object`.
 
-{% highlight js %}
+```js
 $('#myCollapsible').collapse({
-toggle: false
+  toggle: false,
 })
-{% endhighlight %}
+```
 
 #### `.collapse('toggle')`
 
@@ -456,8 +456,8 @@ La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportam
   </tbody>
 </table>
 
-{% highlight js %}
+```js
 $('#myCollapsible').on('hidden.bs.collapse', function () {
-// do something…
+  // do something…
 })
-{% endhighlight %}
+```

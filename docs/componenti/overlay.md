@@ -21,29 +21,29 @@ Il colore predefinito dell'Overlay Panel corrisponde al colore Primary.
 {% capture example %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay ad altezza fissa</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay a tutta altezza</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel overlay-panel-fullheight"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-		<div class="col-12">
-			<p><strong>Esempio con differenti proporzioni</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/800/300?image=1055" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay ad altezza fissa</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay a tutta altezza</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel overlay-panel-fullheight"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+    <div class="col-12">
+      <p><strong>Esempio con differenti proporzioni</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/800/300?image=1055" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -54,29 +54,29 @@ Aggiungendo all'Overlay Panel la classe `.overlay-black` si ottiene un overlay d
 {% capture example %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay ad altezza fissa</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel overlay-black"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay a tutta altezza</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel overlay-panel-fullheight overlay-black"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-		<div class="col-12">
-			<p><strong>Esempio con differenti proporzioni</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/800/300?image=1055" alt="Immagine" class="img-fluid">
-				<figcaption class="overlay-panel overlay-black"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay ad altezza fissa</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel overlay-black"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay a tutta altezza</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel overlay-panel-fullheight overlay-black"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+    <div class="col-12">
+      <p><strong>Esempio con differenti proporzioni</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/800/300?image=1055" alt="Immagine" class="img-fluid">
+        <figcaption class="overlay-panel overlay-black"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -91,28 +91,28 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
 {% capture example %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay Primary (default)</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
-				<figcaption class="overlay-panel overlay-icon">
-					<span class="sr-only">Immagine Preferita</span>
-					<svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
-				</figcaption>
-			</figure>
-		</div>
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay Nero</strong></p>
-			<figure class="overlay-wrapper">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
-				<figcaption class="overlay-panel overlay-black overlay-icon">
-					<span class="sr-only">Immagine Preferita</span>
-					<svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
-				</figcaption>
-			</figure>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay Primary (default)</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
+        <figcaption class="overlay-panel overlay-icon">
+          <span class="sr-only">Immagine Preferita</span>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay Nero</strong></p>
+      <figure class="overlay-wrapper">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
+        <figcaption class="overlay-panel overlay-black overlay-icon">
+          <span class="sr-only">Immagine Preferita</span>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -123,21 +123,21 @@ Per ottenere un Overlay Panel visibile solo al mouse over sull'immagine aggiunge
 {% capture example %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay ad altezza fissa</strong></p>
-			<figure class="overlay-wrapper overlay-hover">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
-				<figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-		<div class="col-12 col-md-6">
-			<p><strong>Overlay a tutta altezza</strong></p>
-			<figure class="overlay-wrapper overlay-hover">
-				<img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
-				<figcaption class="overlay-panel overlay-panel-fullheight"><span>Label immagine</span></figcaption>
-			</figure>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay ad altezza fissa</strong></p>
+      <figure class="overlay-wrapper overlay-hover">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
+        <figcaption class="overlay-panel"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><strong>Overlay a tutta altezza</strong></p>
+      <figure class="overlay-wrapper overlay-hover">
+        <img src="https://picsum.photos/240/160?image=1056" alt="Immagine">
+        <figcaption class="overlay-panel overlay-panel-fullheight"><span>Label immagine</span></figcaption>
+      </figure>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

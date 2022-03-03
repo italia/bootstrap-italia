@@ -9,11 +9,12 @@ RUN apt-get update && apt-get install -y chromium
 
 COPY ./Gemfile /app
 COPY ./Gemfile.lock /app
-COPY ./package-lock.json /app
-COPY ./package.json /app
 
 RUN bundle config set --local deployment true
 RUN bundle install
+
+COPY ./package-lock.json /app
+COPY ./package.json /app
 
 RUN npm ci
 

@@ -22,12 +22,14 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - run: apt-get update && apt-get install zip
       - run: bundle install
-      - run: npm i gulp -g
       - run: chmod -R 777 .
+      - run: mv .npmrc-dist .npmrc
+      - run: npm i gulp -g
       - run: npm ci
       - run: npm run build
       - name: Publish package to NPM
         run: npm publish
+        continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i extract-changelog-release
@@ -42,6 +44,6 @@ jobs:
       - name: Publish on gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          rm -rf ./dist && npm run documentation-deploy-to-gh-pages
+          npm run documentation-deploy-to-gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

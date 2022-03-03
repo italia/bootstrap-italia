@@ -12,7 +12,7 @@ description: Come usare Bootstrap Italia nel tuo progetto
 
 ## Caricare la libreria
 
-Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui:
+Per utilizzare il codice compilato di Bootstrap Italia nel proprio progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui:
 
 <a href="https://github.com/italia/bootstrap-italia/releases/download/v{{ site.current_version }}/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v{{ site.current_version }}</a>
 
@@ -22,10 +22,10 @@ Per utilizzare il codice compilato di Bootstrap Italia nel tuo progetto, è suff
 
 È sempre consigliabile utilizzare la **versione più recente della libreria e mantenerla aggiornata** sui propri progetti.
 
-Non usare semplicemente la versione 1.0.0! La versione più recente tra le [release di progetto](https://github.com/italia/bootstrap-italia/releases) contiene anche tutti i miglioramenti e le correzioni disponibili fino ad oggi.
+Non occorre usare semplicemente la versione 1.0.0! La versione più recente tra le [release di progetto](https://github.com/italia/bootstrap-italia/releases) contiene anche tutti i miglioramenti e le correzioni disponibili fino ad oggi.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-Se preferisci usare i file sorgente di Bootstrap Italia nel tuo progetto attraverso il package manager **npm**, puoi fare riferimento a [queste indicazioni]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
+Se si preferisce usare i file sorgente di Bootstrap Italia nel proprio progetto attraverso il package manager **npm**, si può fare riferimento alle [indicazioni di come utilizzare la libreria come dipendenza]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
 
 Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono anche il codice originale di **Bootstrap {{ site.bootstrap_version }}**, ereditandone quindi tutte i selettori, le funzionalità, ecc., che sono consultabili al sito di Bootstrap stesso.
 
@@ -37,12 +37,11 @@ Di seguito le informazioni per l'utilizzo dei singoli file.
 
 Una volta scaricato e decompresso il file, all'interno della cartella `css` sarà presente un file CSS minificato (`bootstrap-italia.min.css`) con la sua [sourcemap](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) (opzionale).
 
-Per includere questo file all'interno del tuo progetto sarà quindi sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
+Per includere questo file all'interno del proprio progetto sarà sufficiente aggiungere il tag `<link>` di seguito riportato all'interno del tag `<head>` della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:
 
-{% highlight html %}
-
-<link rel="stylesheet" href="./bootstrap-italia.min.css">
-{% endhighlight %}
+```html
+<link rel="stylesheet" href="./bootstrap-italia.min.css" />
+```
 
 ### Javascript
 
@@ -77,17 +76,17 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
   </tbody>
 </table>
 
-In questo caso, dopo aver copiato i file all'interno del vostro progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
+In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
 
 ### Fonts
 
 È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). Il path di base della cartella dei font può essere impostato utilizzando la variabile globale **prima** del caricamento della libreria Javascript di Bootstrap Italia:
 
-{% highlight html %}
-
-<script>window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'</script>
-
-{% endhighlight %}
+```html
+<script>
+  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
+</script>
+```
 
 Se tale variabile non è valorizzata, i font saranno cercati all'interno di una cartella `/bootstrap-italia/dist/fonts/`.
 
@@ -101,40 +100,33 @@ Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo de
 
 Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
-{% highlight html %}
-
+```html
 <script src="./bootstrap-italia.bundle.min.js"></script>
-
-{% endhighlight %}
+```
 
 #### Versione semplice
 
 Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
 
-{% highlight html %}
-{{ site.cdn.jquery }}
-{{ site.cdn.popper }}
-{{ site.cdn.owlcarousel }}
-
+```html
+{{ site.cdn.jquery }} {{ site.cdn.popper }} {{ site.cdn.owlcarousel }}
 <script src="./bootstrap-italia.min.js"></script>
-
-{% endhighlight %}
+```
 
 ## Pagina HTML di esempio
 
 In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
 
-{% highlight html %}
-
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <!-- CSS -->
-    <link rel="stylesheet" href="./bootstrap-italia.min.css">
+    <link rel="stylesheet" href="./bootstrap-italia.min.css" />
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -142,7 +134,7 @@ In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:
     <script src="./bootstrap-italia.bundle.min.js"></script>
   </body>
 </html>
-{% endhighlight %}
+```
 
 Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalità e gli stili di Bootstrap Italia.
 
@@ -158,9 +150,9 @@ Tra i [progetti]({{ site.baseurl }}/docs/progetti/) si possono trovare molti rif
 
 Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
-{% highlight sh %}
+```sh
 npm i bootstrap-italia --save
-{% endhighlight %}
+```
 
 ## Impostazioni globali
 
@@ -170,36 +162,34 @@ Il framework Bootstrap, e di conseguenza il tema Bootstrap Italia, utilizza e ri
 
 Bootstrap richiede l'uso del doctype HTML5.
 
-{% highlight html %}
-
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="it">
   ...
 </html>
-{% endhighlight %}
+```
 
 ### Meta tag responsive
 
 Bootstrap è sviluppato in modalità _mobile first_: per assicurare un rendering e una gestione dello zoom ottimale per ogni dispositivo, è necessario **aggiungere il meta tag responsive che segue** all'interno del tag `<head>`.
 
-{% highlight html %}
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+```
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{% endhighlight %}
-
-Puoi vedere un'esempio di tale codice applicato nella [pagina html di esempio](#pagina-html-di-esempio).
+È possibile visualizzare un'esempio di tale codice applicato nella [pagina html di esempio](#pagina-html-di-esempio).
 
 ### Box-sizing
 
-Per un migliore dimensionamento degli elementi nella pagina, Bootstrap imposta il valore di `box-sizing` da `content-box` a `border-box`. Questo assicura che ogni `padding` non abbia effetto sulla dimensione finale di un elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.
+Per un migliore dimensionamento degli elementi nella pagina, Bootstrap occorre impostare il valore di `box-sizing` da `content-box` a `border-box`. Questo assicura che ogni `padding` non abbia effetto sulla dimensione finale di un elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.
 
 Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare codice simile a quanto segue:
 
-{% highlight css %}
+```css
 .selettore-per-creare-eccezione {
-box-sizing: content-box;
+  box-sizing: content-box;
 }
-{% endhighlight %}
+```
 
 Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/#box-sizing) sul sito ufficiale di Bootstrap.
 
@@ -211,5 +201,5 @@ Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia 
 
 ###### Continua la lettura >
 
-Se ti interessa contribuire alla libreria o sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
-continua a leggere alla pagina [strumenti di compilazione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
+Se ti interessa contribuire alla libreria e sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
+continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).

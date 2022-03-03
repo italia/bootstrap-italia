@@ -8,17 +8,16 @@ description: Sostituisce il testo con una immagine di sfondo tramite la classe a
 
 Utilizza la classe `.text-hide` o il relativo mixin per sostituire del testo in un elemento con una immagine di sfondo.
 
-{% highlight html %}
-
+```html
 <p class="text-hide">Testata personalizzata</p>
-{% endhighlight %}
+```
 
-{% highlight scss %}
+```scss
 // Usato come mixin
 .heading {
-@include text-hide;
+  @include text-hide;
 }
-{% endhighlight %}
+```
 
 Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO dei tags di intestazione pur utilizzando
 un'immagine di sfondo invece del testo.

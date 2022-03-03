@@ -7,11 +7,11 @@ description: Indicatori di stato attivo e di avanzamento di un'operazione
 ---
 
 <script>
-	//attiva donuts
-	document.addEventListener("DOMContentLoaded", function() {
-		progressDonut.generate("#donut-one", 0);
-		progressDonut.generate("#donut-two", 42);
-	})
+  //attiva donuts
+  document.addEventListener("DOMContentLoaded", function() {
+    progressDonut.generate("#donut-one", 0);
+    progressDonut.generate("#donut-two", 42);
+  })
 </script>
 
 ## Donuts
@@ -20,17 +20,17 @@ L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il pro
 
 Va inizializzato con il comando javascript:
 
-{% highlight js %}
-progressDonut.generate("#ID_ELEMENTO", 0);
-{% endhighlight %}
+```js
+progressDonut.generate('#ID_ELEMENTO', 0)
+```
 
 Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-donut` e il secondo con la percentuale di completamento.
 
 Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:
 
-{% highlight js %}
-progressDonut.update("#ID_ELEMENTO", 75);
-{% endhighlight %}
+```js
+progressDonut.update('#ID_ELEMENTO', 75)
+```
 
 Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
 
@@ -141,8 +141,8 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario con cl
       <button type="button" class="btn btn-primary btn-progress disabled" disabled>
         Label bottone <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
         <span class="progress">
-				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
-			</span>
+        <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
+      </span>
       </button>
     </div>
     <div class="col-12 col-sm-6">
@@ -150,8 +150,8 @@ La Progress Bar può essere integrata in un bottone Primario o Secondario con cl
       <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
         Label bottone <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use></svg>
         <span class="progress">
-				<span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
-			</span>
+        <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
+      </span>
       </button>
     </div>
   </div>

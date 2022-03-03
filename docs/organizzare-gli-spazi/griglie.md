@@ -436,20 +436,18 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 
 **Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
 
-{% highlight sass %}
+```scss
 .no-gutters {
-margin-right: 0;
-margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 
-> .col,
-> [class*="col-"] {
-
+  > .col,
+  > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
-
+  }
 }
-}
-{% endhighlight %}
+```
 
 In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).
 
@@ -466,14 +464,14 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 
 Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:
 
-{% highlight sass %}
+```scss
 $grid-gutter-widths: (
-sm: 12px,
-md: 20px,
-lg: 20px,
-xl: 28px
+  sm: 12px,
+  md: 20px,
+  lg: 20px,
+  xl: 28px,
 ) !default;
-{% endhighlight %}
+```
 
 Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe `.row`, la classe `.variable-gutters`.
 
