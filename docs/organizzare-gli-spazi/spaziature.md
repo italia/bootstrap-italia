@@ -59,7 +59,7 @@ Ecco alcuni esempi di utilizzo delle classi di spaziatura:
   margin-top: 0 !important;
 }
 
-.ml-1 {
+.ms-1 {
   margin-left: ($spacer * 0.25) !important;
 }
 

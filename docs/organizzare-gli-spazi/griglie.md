@@ -644,20 +644,20 @@ Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario rei
 
 #### Utilità del margin
 
-Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come `.mr-auto` per forzare lo spazio tra colonne adiacenti.
+Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come `.me-auto` per forzare lo spazio tra colonne adiacenti.
 
 <div class="bd-example-row">
 {% capture example %}
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+  <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
 </div>
 <div class="row">
-  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-  <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+  <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+  <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
 </div>
 <div class="row">
-  <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+  <div class="col-auto me-auto">.col-auto .me-auto</div>
   <div class="col-auto">.col-auto</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
