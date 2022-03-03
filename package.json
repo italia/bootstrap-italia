@@ -17,7 +17,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev-code\" \"npm run dev-docs\" \"npm run start-bs\"",
     "build": "rollup -c",
-    "start-bs": "browser-sync _site/ --port 4000 --watch",
+    "start-bs": "browser-sync _site/ --port 4000 --watch --no-inject-changes",
     "dev-code": "rollup -c --watch",
     "dev-docs": "bundle exec jekyll build --watch --incremental --drafts --config _config.yml --force_polling",
     "documentation-build": "bundle exec jekyll build",

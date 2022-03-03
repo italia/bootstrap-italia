@@ -19,6 +19,7 @@ export default [
       scss({
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
+        watch: 'src/scss',
       }),
       uglify(),
     ],
@@ -61,6 +62,7 @@ export default [
       scss({
         output: 'docs/assets/dist/css/docs.min.css',
         outputStyle: 'compressed',
+        watch: 'src/scss',
       }),
     ],
   },
