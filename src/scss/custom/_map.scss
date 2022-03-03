@@ -6,7 +6,7 @@
   }
 
   // Desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     &.map-column {
       margin-left: -3rem;
       margin-right: 0;

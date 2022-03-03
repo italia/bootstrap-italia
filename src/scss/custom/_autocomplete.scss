@@ -163,7 +163,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   //results list
   .autocomplete-list {
     a {

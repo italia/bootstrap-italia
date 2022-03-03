@@ -86,7 +86,7 @@
     }
 
     // Tablet portrait
-    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    @include media-breakpoint-up(sm) {
       .rating-list-content {
         .rating-list-row {
           .rating-list-stars {
@@ -111,7 +111,7 @@
     }
 
     // Tablet portrait
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    @include media-breakpoint-up(lg) {
       .rating-list-content {
         .rating-list-row {
           .rating-list-stars {

@@ -106,12 +106,12 @@
   }
 
   // Tablet vertical
-  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  @include media-breakpoint-up(sm) {
     padding: 16px;
   }
 
   // Desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     padding: 12px 24px !important;
     margin: 0;
 

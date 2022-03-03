@@ -162,7 +162,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .it-hero-wrapper {
     &.it-wrapped-container {
       min-height: 0 !important; // disable prev min-height
@@ -181,7 +181,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .it-hero-wrapper {
     // img small size --------------------------------
     &.it-hero-small-size {
@@ -201,7 +201,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-hero-wrapper {
     position: relative;
     min-height: $hero-height-desk;

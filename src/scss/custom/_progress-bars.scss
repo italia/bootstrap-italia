@@ -63,7 +63,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   //label
   .progress-bar-label {
     font-size: 0.667rem;

@@ -27,14 +27,14 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .tooltip {
     font-size: 0.75rem;
   }
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .tooltip {
     font-size: 0.75rem;
     //text

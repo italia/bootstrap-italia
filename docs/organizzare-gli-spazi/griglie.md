@@ -84,6 +84,10 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
         Extra large<br>
         <small>&ge;1200px</small>
       </th>
+      <th class="text-center" scope="col">
+        Extra Extra large<br>
+        <small>&ge;1440px</small>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -94,6 +98,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
       <td>720px</td>
       <td>960px</td>
       <td>1140px</td>
+      <td>1320px</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Prefisso della classe</th>
@@ -102,22 +107,23 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
       <td><code>.col-md-</code></td>
       <td><code>.col-lg-</code></td>
       <td><code>.col-xl-</code></td>
+      <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row"># di colonne</th>
-      <td colspan="5">12</td>
+      <td colspan="6">12</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Larghezza del gutter</th>
-      <td colspan="5">30px (15px su ogni lato della colonna)</td>
+      <td colspan="6">30px (15px su ogni lato della colonna)</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Annidabile</th>
-      <td colspan="5">Yes</td>
+      <td colspan="6">Yes</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Ordinamento delle colonne</th>
-      <td colspan="5">Yes</td>
+      <td colspan="6">Yes</td>
     </tr>
   </tbody>
 </table>
@@ -470,6 +476,7 @@ $grid-gutter-widths: (
   md: 20px,
   lg: 20px,
   xl: 28px,
+  xxl: 28px,
 ) !default;
 ```
 
@@ -501,6 +508,10 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
         Extra large<br>
         <small>&ge;1200px</small>
       </th>
+      <th class="text-center" scope="col">
+        Extra large<br>
+        <small>&ge;1440px</small>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -510,6 +521,7 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
       <td><code>12px</code></td>
       <td><code>20px</code></td>
       <td><code>20px</code></td>
+      <td><code>28px</code></td>
       <td><code>28px</code></td>
     </tr>
   </tbody>

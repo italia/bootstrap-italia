@@ -104,7 +104,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .it-transfer-buttons {
     flex-direction: column;
     justify-content: center;

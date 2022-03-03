@@ -380,7 +380,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .nav-tabs {
     overflow-x: hidden;
     flex-wrap: wrap;
