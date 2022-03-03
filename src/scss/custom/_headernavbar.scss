@@ -6,7 +6,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-navbar-wrapper {
     background: $header-center-bg-color;
     .nav-item.megamenu > a.dropdown-toggle:before {

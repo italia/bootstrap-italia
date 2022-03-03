@@ -114,7 +114,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-timeline-wrapper {
     .row {
       &:after {

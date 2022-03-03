@@ -62,7 +62,7 @@ export default [
       scss({
         output: 'docs/assets/dist/css/docs.min.css',
         outputStyle: 'compressed',
-        watch: 'src/scss',
+        watch: 'docs/assets/src/scss',
       }),
     ],
   },

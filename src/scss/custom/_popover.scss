@@ -89,7 +89,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .popover {
     //title
     .popover-header {

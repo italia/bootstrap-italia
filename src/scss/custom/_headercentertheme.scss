@@ -38,7 +38,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-center-wrapper {
     &.theme-light {
       .it-header-center-content-wrapper {
@@ -49,7 +49,7 @@
               a {
                 &:hover {
                   svg {
-                    fill: darken($header-center-theme-light-text-color, 5%);
+                    fill: shade-color($header-center-theme-light-text-color, 5%);
                   }
                 }
               }
@@ -65,7 +65,7 @@
                 fill: $header-center-theme-light-bg-color;
               }
               &:hover {
-                background: darken($header-center-theme-light-text-color, 5%);
+                background: shade-color($header-center-theme-light-text-color, 5%);
               }
             }
           }

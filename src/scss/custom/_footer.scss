@@ -112,7 +112,7 @@
     width: 100%;
   }
 
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     button {
       display: inline-block;
       width: auto;
@@ -120,7 +120,7 @@
   }
 }
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .it-footer-small-prints {
     ul.it-footer-small-prints-list {
       li {

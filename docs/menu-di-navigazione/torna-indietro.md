@@ -13,7 +13,7 @@ Aggiungendo la classe `.go-back` a qualsiasi link o bottone è possibile ottener
 Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'attributo href perché il link sia correttamente navigabile via tastiera.
 
 {% capture example %}
-<a href="#" class="go-back"><svg class="icon icon-sm icon-primary mr-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use></svg> Torna indietro</a>
+<a href="#" class="go-back"><svg class="icon icon-sm icon-primary me-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use></svg> Torna indietro</a>
 {% endcapture %}{% include example.html content=example %}
 
 ## Bottoni
@@ -21,11 +21,11 @@ Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'at
 Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessario.
 
 {% capture example %}
-<button type="button" class="btn btn-primary go-back"><svg class="icon icon-sm icon-white mr-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use></svg> Torna indietro</button>
+<button type="button" class="btn btn-primary go-back"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-left"></use></svg> Torna indietro</button>
 {% endcapture %}{% include example.html content=example %}
 
 {% capture example %}
-<button type="button" class="btn btn-primary go-back"><svg class="icon icon-sm icon-white mr-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-up"></use></svg> Livello superiore</button>
+<button type="button" class="btn btn-primary go-back"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-up"></use></svg> Livello superiore</button>
 {% endcapture %}{% include example.html content=example %}
 
 ### Bottoni con sola icona

@@ -47,7 +47,7 @@
 /*
 ++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
 */
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .navbar {
     &.it-navscroll-wrapper {
       &.theme-dark-desk {

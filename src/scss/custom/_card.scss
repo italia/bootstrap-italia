@@ -101,7 +101,7 @@
     }
 
     //Landscape
-    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+    @include media-breakpoint-up(md) {
       .card-teaser {
         flex: 0 0 49%;
       }
@@ -143,7 +143,7 @@
   }
 
   //Desktop
-  @media (min-width: #{map-get($grid-breakpoints, xl)}) {
+  @include media-breakpoint-up(xl) {
     &.card-teaser-block-4 {
       width: 100%;
       justify-content: space-between;
@@ -695,7 +695,7 @@ a.read-more {
   }
 }
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .card-wrapper {
     padding-bottom: 0;
     &.card-space {

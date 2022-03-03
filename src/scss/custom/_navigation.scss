@@ -272,7 +272,7 @@
   }
 }
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .navbar {
     background: $navigation-bg-color-desktop;
     padding: 0;
@@ -322,7 +322,7 @@
 
         li {
           // Desktop - compatta e allinea in basso link singoli in caso di label lunghe
-          @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+          @include media-breakpoint-up(lg) {
             &.nav-item {
               display: flex;
               .nav-link {

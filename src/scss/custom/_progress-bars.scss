@@ -18,7 +18,7 @@
 .progress {
   height: 4px;
   box-shadow: none;
-  background-color: lighten($primary-a1, 4);
+  background-color: tint-color($primary-a1, 4);
   &.progress-color {
     background-color: $neutral-2;
   }
@@ -63,7 +63,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   //label
   .progress-bar-label {
     font-size: 0.667rem;

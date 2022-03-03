@@ -96,7 +96,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .notification {
     padding: 1.333rem;
     padding-right: 3.556rem;
@@ -117,7 +117,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .notification {
     width: 376px;
     bottom: 16px;
