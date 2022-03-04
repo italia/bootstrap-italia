@@ -3,6 +3,8 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 
 import './plugins/dropdown'
 
+import Dimmer from './plugins/dimmer'
+
 import foo from './foo.js'
 
 export default function () {
@@ -22,4 +24,6 @@ window.bootstrap = {
   Tab,
   Toast,
   Tooltip,
+
+  Dimmer,
 }
