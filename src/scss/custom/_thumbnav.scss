@@ -8,10 +8,6 @@
   &.thumb-nav-vertical {
     flex-direction: column;
     align-items: baseline;
-    li {
-      height: 160px;
-      width: auto;
-    }
     .thumb-nav-resizer {
       width: auto;
       height: 100%;
@@ -155,12 +151,9 @@
 
   // link and image
   a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     overflow: hidden;
+    position: relative;
+    display: block;
     // overlay
     &:after {
       content: '';
@@ -196,6 +189,9 @@
       width: 100%;
       height: 100%;
       transition: transform 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
