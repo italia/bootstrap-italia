@@ -103,12 +103,12 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 
 ### Modale con bottone di chiusura
 
-Per chiudere la modale, si può utilizzare un bottone con classe `.close`.
+Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
 
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 
 {% capture example %}
-<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+<button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
 <svg class="icon">
 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
 </svg>
@@ -125,7 +125,7 @@ Esempio completo:
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title" id="modal2Title">This is a notification message</h5>
-               <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+               <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
                   <svg class="icon">
                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                   </svg>
@@ -371,7 +371,7 @@ pagina stessa.
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -404,7 +404,7 @@ pagina stessa.
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -528,7 +528,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -558,7 +558,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -586,7 +586,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -616,7 +616,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -666,7 +666,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
       <div class="modal-content">
          <div class="modal-header">
             <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
                </svg>
@@ -696,7 +696,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
           </svg>
@@ -787,7 +787,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="myLargeModalLabel">Modale grande</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -806,7 +806,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
