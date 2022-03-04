@@ -22,6 +22,7 @@
 }
 
 .main-content--panel {
+  position: relative;
   background-color: #fff;
   @include media-breakpoint-up(sm) {
     margin-top: -16px;
