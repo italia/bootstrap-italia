@@ -152,23 +152,33 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 ## Section con Card
 
-Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare il container `.card-deck` per garantire un corretto margine fra gli elementi `.card`.
+Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare le griglie per garantire un corretto margine fra gli elementi `.card`.
 
 {% capture example %}
 
 <div class="section section-muted">
   <div class="section-content">
     <!-- contenuto di esempio START -->
-    <h4 class="mb-4">Morbi fermentum amet</h4>
-    <div class="card-deck">
-      <div class="card shadow border-0 mg-md-4">
-        <div class="card-body">
-          <p class="card-text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4 class="mb-4">Morbi fermentum amet</h4>
         </div>
       </div>
-      <div class="card shadow border-0 mg-md-4">
-        <div class="card-body">
-          <p class="card-text">Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus. Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+      <div class="row gy-3">
+        <div class="col-12 col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
