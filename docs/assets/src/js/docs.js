@@ -20,7 +20,7 @@
   // Tooltip and popover demos
   makeArray(document.querySelectorAll('.tooltip-demo')).forEach(function (tooltip) {
     new bootstrap.Tooltip(tooltip, {
-      selector: '[data-toggle="tooltip"]',
+      selector: '[data-bs-toggle="tooltip"]',
     })
   })
 
