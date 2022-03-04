@@ -86,7 +86,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
       </th>
       <th class="text-center" scope="col">
         Extra Extra large<br>
-        <small>&ge;1440px</small>
+        <small>&ge;1400px</small>
       </th>
     </tr>
   </thead>
@@ -510,7 +510,7 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
       </th>
       <th class="text-center" scope="col">
         Extra large<br>
-        <small>&ge;1440px</small>
+        <small>&ge;1400px</small>
       </th>
     </tr>
   </thead>

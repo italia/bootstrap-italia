@@ -172,8 +172,6 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 
 ## Annidata
 
-### Default
-
 La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** primaria annidata.
 
 {% capture example %}
