@@ -25,7 +25,7 @@ description: Obbligano un elemento a mantenere la proporzione scelta. Ottima sol
 
   @media (min-width: 768px) {
     .ratio-example-breakpoint {
-      --bs-aspect-ratio: 50%; // 2x1
+      --bs-aspect-ratio: 50%;
     }
   }
 
@@ -99,7 +99,7 @@ Questa variabile CSS rende semplice modificare la proporzione a seconda del brea
 
 This CSS variable makes it easy to modify the aspect ratio across breakpoints. The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.
 
-```css
+```scss
 .ratio-4x3 {
   @include media-breakpoint-up(md) {
     --bs-aspect-ratio: 50%; // 2x1
@@ -117,7 +117,7 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 
 All'interno del file `src\scss\_variables.scss` è possibile modificare e aggiungere proporzioni predefinite. Questa è la mappa utilizzata di default. Modifica la mappa a piacimento e ricompila il CSS per utilizzarla.
 
-```css
+```scss
   $aspect-ratios: (
     "1x1": 100%,
     "4x3": calc(3 / 4 * 100%),
