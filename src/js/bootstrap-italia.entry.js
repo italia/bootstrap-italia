@@ -1,5 +1,5 @@
 //import '../scss/bootstrap-italia.scss'
-import 'bootstrap'
+import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
 import './plugins/dropdown'
 
@@ -7,4 +7,19 @@ import foo from './foo.js'
 
 export default function () {
   console.log(foo)
+}
+
+window.bootstrap = {
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Offcanvas,
+  Popover,
+  ScrollSpy,
+  Tab,
+  Toast,
+  Tooltip,
 }
