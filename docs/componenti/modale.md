@@ -45,8 +45,11 @@ Prima di descrivere il componente modale di Bootstrap, assicurati di leggere qua
   non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
 
 ```js
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
 })
 ```
 
@@ -839,53 +842,83 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 
 Richiama una modale con id `myModal` con una singola riga di JavaScript:
 
-`js$('#myModal').modal(options)`
+```js
+var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
+```
 
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-#### `.modal(options)`
+#### `Utilizzo delle opzioni`
 
 Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 ```js
-$('#myModal').modal({
-  keyboard: false,
+var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+  keyboard: false
 })
 ```
 
-#### `.modal('toggle')`
+#### `toggle`
 
 Attiva/disattiva manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta**
 (cioè prima che si verifichi l'evento `shown.bs.modal` o l'evento `hidden.bs.modal`).
 
-`js$('#myModal').modal('toggle')`
+```js
+myModal.toggle()
+```
 
-#### `.modal('show')`
+#### `show`
 
 Apre manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata**
 (cioè prima che si verifichi l'evento `shown.bs.modal`).
 
-`js$('#myModal').modal('show')`
+```js
+myModal.show()
+```
 
-#### `.modal('hide')`
+#### `hide`
 
 Nasconde manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente nascosta**
 (cioè prima che si verifichi l'evento `hidden.bs.modal`).
 
-`js$('#myModal').modal('hide')`
+```js
+myModal.hide()
+```
 
-#### `.modal('handleUpdate')`
+#### `handleUpdate`
 
 Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta
 (nel caso appaia una barra di scorrimento).
 
-`js$('#myModal').modal('handleUpdate')`
+```js
+myModal.handleUpdate()
+```
 
-#### `.modal('dispose')`
+#### `dispose`
 
 Distrugge la modale di un elemento.
+
+```js
+myModal.dispose()
+```
+
+#### `getInstance`
+Static method which allows you to get the modal instance associated with a DOM element
+
+```js
+var myModalEl = document.getElementById('myModal')
+var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal instance
+```
+
+#### `getOrCreateInstance`
+Static method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn’t initialised
+
+```js
+var myModalEl = document.querySelector('#myModal')
+var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
+```
 
 ### Eventi
 
@@ -916,11 +949,16 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal"
       <td>hidden.bs.modal</td>
       <td>Questo evento viene attivato quando la modale ha finito di essere nascosta all'utente (attenderà il completamento delle transizioni CSS).</td>
     </tr>
+    <tr>
+      <td>hidePrevented.bs.modal</td>
+      <td>This event is fired when the modal is shown, its backdrop is <code>static</code> and a click outside the modal or an escape key press is performed with the keyboard option or <code>data-bs-keyboard</code> set to <code>false</code>.</td>
+    </tr>
   </tbody>
 </table>
 
 ```js
-$('#myModal').on('hidden.bs.modal', function (e) {
-  // fai qualcosa...
+var myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('hidden.bs.modal', function (event) {
+  // do something...
 })
 ```
