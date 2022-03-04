@@ -52,7 +52,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 ```
 
 {% capture example %}
-<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
+<button type="button" class="btn btn-lg btn-danger fade show" data-bs-toggle="popover" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
 {% endcapture %}{% include example.html content=example %}
 
 ## Esempi
@@ -68,7 +68,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       <div class="row">
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover in alto
           </button>
         </div>
@@ -76,13 +76,13 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       </div>
       <div class="row mt-4">
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover a destra
           </button>
         </div>
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4 mt-4 mt-md-0">
-          <button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover a sinistra
           </button>
         </div>
@@ -90,7 +90,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       <div class="row mt-4">
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover in basso
           </button>
         </div>
@@ -104,7 +104,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 ```html
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
   data-bs-toggle="popover"
   data-bs-placement="top"
@@ -116,7 +116,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
   data-bs-toggle="popover"
   data-bs-placement="right"
@@ -128,7 +128,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
   data-bs-toggle="popover"
   data-bs-placement="bottom"
@@ -140,7 +140,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
   data-bs-toggle="popover"
   data-bs-placement="left"
@@ -160,17 +160,17 @@ L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e p
 Il link come HTML nell'attributo `data-bs-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
+<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
 Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}
 
 ### Modalità Hover
 
-Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-trigger="hover"` al tag dello stesso.
+Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-bs-trigger="hover"` al tag dello stesso.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary" data-container="body" data-bs-toggle="popover" data-trigger="hover" data-bs-placement="right" data-html="true" title="Popover in Hover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-html="true" title="Popover in Hover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
 Apertura in Hover
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -187,7 +187,7 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture example %}
-<a tabindex="0" href="#" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-trigger="focus" title="Popover richiudibile" data-bs-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
+<a tabindex="0" href="#" class="btn btn-lg btn-danger fade show" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Popover richiudibile" data-bs-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 {% endcapture %}{% include example.html content=example %}
 
 ```js
@@ -200,10 +200,10 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 Elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento `<div>` o `<span>` contenitore e sovrascrivere il `pointer-events` su un elemento disabilitato.
 
-Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
+Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
 
 {% capture example %}
-<span class="d-inline-block" data-bs-toggle="popover" data-bs-content="Popover disabilitato">
+<span class="d-inline-block fade show" data-bs-toggle="popover" data-bs-content="Popover disabilitato">
 <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
