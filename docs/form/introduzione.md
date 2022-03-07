@@ -327,6 +327,18 @@ Di seguito un esempio di form con validazione tramite [Just Validate](https://ju
           errorMessage: 'Questo campo è richiesto'
         },
       ])
+      .addField('#validationCustom03', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#validationCustom04', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
       .addField('#validationCustomUsername', [
         {
           rule: 'required',
