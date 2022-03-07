@@ -23,6 +23,7 @@
   }
 }
 .select-wrapper {
+  position: relative;
   label {
     position: absolute;
     color: $select-label-color;
@@ -46,6 +47,12 @@
     transition: 0.2s ease-out;
     font-weight: 700;
     color: $dark;
+    &:disabled {
+      background-color: $input-disabled-bg;
+      color: #17324d;
+      opacity: 1;
+      font-weight: normal;
+    }
   }
 }
 .bootstrap-select:not([class*='col-']):not([class*='form-control']):not(.input-group-btn) {

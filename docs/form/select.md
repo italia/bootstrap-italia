@@ -14,15 +14,31 @@ La select standard è composta dal un wrapper esterno `.select-wrapper` seguita 
 {% capture example %}
 
 <div class="select-wrapper">
-  <label for="defaultSelect">Select standard</label>
-    <select id="defaultSelect">
-      <option selected="" value="">Scegli una opzione</option>
-      <option value="Value 1">Opzione 1</option>
-      <option value="Value 2">Opzione 2</option>
-      <option value="Value 3">Opzione 3</option>
-      <option value="Value 4">Opzione 4</option>
-      <option value="Value 5">Opzione 5</option>
-    </select>
+  <label for="defaultSelect">Etichetta</label>
+  <select id="defaultSelect">
+    <option selected="" value="">Scegli una opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Select standard disabilitata
+Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
+{% capture example %}
+<div class="select-wrapper">
+  <label for="defaultSelectDisabled">Etichetta</label>
+  <select id="defaultSelectDisabled" disabled>
+    <option selected="" value="">Scegli una opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

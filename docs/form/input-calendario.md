@@ -12,7 +12,7 @@ description: Documentazione ed esempi per aggiungere calendari per la selezione 
 {% capture callout %}
 **Compatibilità con Internet Explorer 11**
 
-L'input type="date" non è supportato da IE11, se ne consiglia l'utilizzo congiuntamente al plugin [Just Validate](https://just-validate.dev/) per verificare l'effettiva validità del campo su Internet Exploer.
+L'input type="date" non è supportato da IE11, se ne consiglia l'utilizzo congiuntamente al plugin [Just Validate](https://just-validate.dev/) per verificare l'effettiva validità del campo su Internet Explorer.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Clicca sull’icona a destra per visualizzare il datepicker.

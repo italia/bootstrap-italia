@@ -14,7 +14,7 @@ Il componente input time, o timepicker, è un componente personalizzato per la s
 {% capture callout %}
 **Compatibilità con Internet Explorer 11**
 
-L'input type="time" non è supportato da IE11, se ne consiglia l'utilizzo congiuntamente al plugin [Just Validate](https://just-validate.dev/) per verificare l'effettiva validità del campo su Internet Exploer.
+L'input type="time" non è supportato da IE11, se ne consiglia l'utilizzo congiuntamente al plugin [Just Validate](https://just-validate.dev/) per verificare l'effettiva validità del campo su Internet Explorer.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
