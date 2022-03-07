@@ -42,6 +42,27 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Select standard con gruppi
+
+Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppare le <option>.
+
+{% capture example %}
+<div class="select-wrapper">
+  <label for="defaultSelectGroup">Etichetta</label>
+  <select id="defaultSelectGroup">
+    <option selected="" value="">Scegli una opzione</option>
+    <optgroup label="Gruppo 1">
+      <option value="1">Opzione 1</option>
+      <option value="2">Opzione 2</option>
+    </optgroup>
+    <optgroup label="Gruppo 2">
+      <option value="3">Opzione 3</option>
+      <option value="4">Opzione 4</option>
+    </optgroup>
+  </select>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Select custom
 
 {% capture callout %}
