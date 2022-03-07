@@ -76,7 +76,10 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 Abilita la chiusura di un alert tramite JavaScript:
 
 ```js
-$('.alert').alert()
+var alertList = document.querySelectorAll('.alert')
+alertList.forEach(function (alert) {
+  new bootstrap.Alert(alert)
+})
 ```
 
 Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno dell'alert**, come nell'esempio seguente:
@@ -93,12 +96,15 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 
 | Metodo                 | Descrizione                                                                                                                                                             |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$().alert()`          | Attiva l'ascolto dell'evento click negli elementi che hanno l'attributo `data-dismiss="alert"` (Non è necessario quando c'è l'inizializzazione automatica tramite API). |
-| `$().alert('close')`   | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                          |
-| `$().alert('dispose')` | L'alert viene rimosso.                                                                                                                                                  |
+| `close`                | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                          |
+| `dispose`              | L'alert viene rimosso.                                                                                                                                                  |
+| `getInstance`	         | Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)                      |
+| `getOrCreateInstance`	 | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element) |
 
 ```js
-$('.alert').alert('close')
+var alertNode = document.querySelector('.alert')
+var alert = bootstrap.Alert.getInstance(alertNode)
+alert.close()
 ```
 
 ### Eventi
@@ -111,7 +117,10 @@ Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare l
 | `closed.bs.alert` | Questo evento viene attivato quando l'avviso è stato chiuso (attenderà il completamento delle transizioni CSS). |
 
 ```js
-$('#myAlert').on('closed.bs.alert', function () {
-  // esegue qualcosa
+var myAlert = document.getElementById('myAlert')
+myAlert.addEventListener('closed.bs.alert', function () {
+  // do something, for instance, explicitly move focus to the most appropriate element,
+  // so it doesn't get lost/reset to the start of the page
+  // document.getElementById('...').focus()
 })
 ```

@@ -8,10 +8,21 @@ toc: true
 
 <script>
   window.addEventListener('load', function() {
-    $('.dimmer').css("display", "flex").hide().fadeIn(200);
+    /*$('.dimmer').css("display", "flex").hide().fadeIn(200);
     $('[id^=toggleDimmer]').on('click', function() {
       var dimmer = '#' + $(this).data('dimmer');
       $(this).is(':checked') ? $(dimmer).dimmerShow() : $(dimmer).dimmerHide();
+    })*/
+
+    var toggles = document.querySelectorAll('[id^=toggleDimmer]')
+    toggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var dimmer = document.querySelector('#' + toggle.getAttribute('data-bs-dimmer'))
+        if (dimmer) {
+          var bsDimmer = new bootstrap.Dimmer(dimmer)          
+          toggle.checked ? bsDimmer.show() : bsDimmer.hide()
+        }
+      })
     })
   });
 </script>
@@ -21,11 +32,15 @@ Un Dimmer occupa tutta l'altezza e la larghezza dell'elemento all'interno del qu
 L'elemento contenitore deve avere la classe `.dimmable` mentre il Dimmer avrà un ID univoco che sarà utilizzato per l'attivazione e l'occultamento attraverso i seguenti comandi:
 
 ```js
+// istanziamento componente
+var myDimmer = document.getElementById('ID_ELEMENTO')
+var dimmer = new bootstrap.Dimmer(myDimmer)
+
 // mostra Dimmer
-$('#ID_ELEMENTO').dimmerShow()
+dimmer.show()
 
 // nascondi Dimmer
-$('#ID_ELEMENTO').dimmerHide()
+dimmer.hide()
 ```
 
 ## Esempio
@@ -37,7 +52,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer1">
     Attiva Dimmer 1
-    <input type="checkbox" id="toggleDimmer1" data-dimmer="dimmer1" checked>
+    <input type="checkbox" id="toggleDimmer1" data-bs-dimmer="dimmer1" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -45,7 +60,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer" id="dimmer1">
+  <div class="dimmer fade show" id="dimmer1">
     <div class="dimmer-inner">
       <div class="dimmer-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-unlocked"></use></svg>
@@ -99,7 +114,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer2">
     Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer2" data-dimmer="dimmer2" checked>
+    <input type="checkbox" id="toggleDimmer2" data-bs-dimmer="dimmer2" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -160,7 +175,7 @@ I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer3">
     Attiva Dimmer 3
-    <input type="checkbox" id="toggleDimmer3" data-dimmer="dimmer3" checked>
+    <input type="checkbox" id="toggleDimmer3" data-bs-dimmer="dimmer3" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -223,7 +238,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer4">
     Attiva Dimmer 4
-    <input type="checkbox" id="toggleDimmer4" data-dimmer="dimmer4" checked>
+    <input type="checkbox" id="toggleDimmer4" data-bs-dimmer="dimmer4" checked>
     <span class="lever"></span>
   </label>
 </div>

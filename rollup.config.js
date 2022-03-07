@@ -4,6 +4,8 @@ import { babel } from '@rollup/plugin-babel'
 import scss from 'rollup-plugin-scss'
 import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import injectProcessEnv from 'rollup-plugin-inject-process-env'
 
 export default [
   {
@@ -30,7 +32,22 @@ export default [
       compact: true,
       format: 'iife',
     },
-    plugins: [babel({ babelHelpers: 'bundled' }), uglify()],
+    plugins: [
+      babel({ babelHelpers: 'bundled' }),
+      scss({
+        output: 'dist/css/bootstrap-italia.min.css',
+        outputStyle: 'compressed',
+      }),
+      nodeResolve({
+        // use "jsnext:main" if possible
+        // see https://github.com/rollup/rollup/wiki/jsnext:main
+        jsnext: true,
+      }),
+      injectProcessEnv({
+        NODE_ENV: 'production',
+      }),
+      uglify(),
+    ],
   },
   {
     input: 'docs/assets/src/js/docs-entry.js',

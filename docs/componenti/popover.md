@@ -32,11 +32,12 @@ Cose da sapere quando si utilizza il plugin popover:
 
 ## Abilitazione generale
 
-Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
+Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo `data-bs-toggle`:
 
 ```js
-$(function () {
-  $('[data-toggle="popover"]').popover()
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
 })
 ```
 
@@ -45,15 +46,13 @@ $(function () {
 Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un `container` personalizzato in modo che l'HTML del popover appaia invece all'interno di quell'elemento.
 
 ```js
-$(function () {
-  $('.example-popover').popover({
-    container: 'body',
-  })
+var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  container: 'body'
 })
 ```
 
 {% capture example %}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
+<button type="button" class="btn btn-lg btn-danger fade show" data-bs-toggle="popover" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
 {% endcapture %}{% include example.html content=example %}
 
 ## Esempi
@@ -69,7 +68,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       <div class="row">
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover in alto
           </button>
         </div>
@@ -77,13 +76,13 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       </div>
       <div class="row mt-4">
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover a destra
           </button>
         </div>
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4 mt-4 mt-md-0">
-          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover a sinistra
           </button>
         </div>
@@ -91,7 +90,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
       <div class="row mt-4">
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" title="Titolo del Popover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
             Popover in basso
           </button>
         </div>
@@ -105,48 +104,48 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 ```html
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
-  data-toggle="popover"
-  data-placement="top"
+  data-bs-toggle="popover"
+  data-bs-placement="top"
   title="Titolo del Popover"
-  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
 >
   Popover in alto
 </button>
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
-  data-toggle="popover"
-  data-placement="right"
+  data-bs-toggle="popover"
+  data-bs-placement="right"
   title="Titolo del Popover"
-  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
 >
   Popover a destra
 </button>
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
-  data-toggle="popover"
-  data-placement="bottom"
+  data-bs-toggle="popover"
+  data-bs-placement="bottom"
   title="Titolo del Popover"
-  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
 >
   Popover in basso
 </button>
 
 <button
   type="button"
-  class="btn btn-secondary"
+  class="btn btn-secondary fade show"
   data-container="body"
-  data-toggle="popover"
-  data-placement="left"
+  data-bs-toggle="popover"
+  data-bs-placement="left"
   title="Titolo del Popover"
-  data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
+  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
 >
   Popover a sinistra
 </button>
@@ -158,20 +157,20 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e proprio titolo.
 
-Il link come HTML nell'attributo `data-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
+Il link come HTML nell'attributo `data-bs-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
+<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
 Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}
 
 ### Modalità Hover
 
-Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-trigger="hover"` al tag dello stesso.
+Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-bs-trigger="hover"` al tag dello stesso.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="Popover in Hover" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
+<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-html="true" title="Popover in Hover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
 Apertura in Hover
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -188,12 +187,12 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture example %}
-<a tabindex="0" href="#" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Popover richiudibile" data-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
+<a tabindex="0" href="#" class="btn btn-lg btn-danger fade show" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Popover richiudibile" data-bs-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 {% endcapture %}{% include example.html content=example %}
 
 ```js
-$('.popover-dismiss').popover({
-  trigger: 'focus',
+var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+  trigger: 'focus'
 })
 ```
 
@@ -201,10 +200,10 @@ $('.popover-dismiss').popover({
 
 Elementi con l'attributo `disabled` non sono interattivi, il che significa che gli utenti non possono attivare il popover (o un tooltip) con il passaggio del mouse o facendo click su di essi. Come soluzione, ti consigliamo di attivare il popover da un elemento `<div>` o `<span>` contenitore e sovrascrivere il `pointer-events` su un elemento disabilitato.
 
-Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
+Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
 
 {% capture example %}
-<span class="d-inline-block" data-toggle="popover" data-content="Popover disabilitato">
+<span class="d-inline-block fade show" data-bs-toggle="popover" data-bs-content="Popover disabilitato">
 <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>
 </span>
 {% endcapture %}{% include example.html content=example %}
@@ -213,7 +212,10 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-trigger="hover
 
 Abilita i popover tramite JavaScript:
 
-`js$('#example').popover(options)`
+```js
+var exampleEl = document.getElementById('example')
+var popover = new bootstrap.Popover(exampleEl, options)
+```
 
 ### Opzioni
 
@@ -225,57 +227,89 @@ Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstr
 
 {% include callout-danger-async-methods.md %}
 
-#### `$().popover(options)`
+#### Options
 
 Inizializza i popover per una raccolta di elementi.
 
-#### `.popover('show')`
+#### `show`
 
 Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
 
-`js$('#element').popover('show')`
+```js
+myPopover.show()
+```
 
-#### `.popover('hide')`
+#### `hide`
 
 Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
-`js$('#element').popover('hide')`
+```js
+myPopover.hide()
+```
 
-#### `.popover('toggle')`
+#### `toggle`
 
 Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
 
-`js$('#element').popover('toggle')`
+```js
+myPopover.toggle()
+```
 
-#### `.popover('dispose')`
+#### `dispose`
 
 Nasconde e distrugge il popover di un elemento.
 
-`js$('#element').popover('dispose')`
+```js
+myPopover.dispose()
+```
 
-#### `.popover('enable')`
+#### `enable`
 
 Fornisce al popover di un elemento la possibilità di essere mostrato. **I popover sono abilitati in modo predefinito.**
 
-`js$('#element').popover('enable')`
+```js
+myPopover.enable()
+```
 
-#### `.popover('disable')`
+#### `disable`
 
 Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.
 
-`js$('#element').popover('disable')`
+```js
+myPopover.disable()
+```
 
-#### `.popover('toggleEnabled')`
+#### `toggleEnabled`
 
 Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.
 
-`js$('#element').popover('toggleEnabled')`
+```js
+myPopover.toggleEnabled()
+```
 
-#### `.popover('update')`
+#### `update`
 
 Aggiorna la posizione del popover di un elemento.
 
-`js$('#element').popover('update')`
+```js
+myPopover.update()
+```
+
+#### `getInstance`
+Static method which allows you to get the popover instance associated with a DOM element
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
+```
+
+#### `getOrCreateInstance`
+Static method which allows you to get the popover instance associated with a DOM element, or create a new one in case it wasn’t initialised
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
+```
 
 ### Eventi
 
@@ -311,7 +345,8 @@ Aggiorna la posizione del popover di un elemento.
 </table>
 
 ```js
-$('#myPopover').on('hidden.bs.popover', function () {
-  // azioni
+var myPopoverTrigger = document.getElementById('myPopover')
+myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
+  // do something...
 })
 ```

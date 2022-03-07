@@ -39,11 +39,12 @@ Cose da sapere quando usi il plugin tooltip:
 
 ## Abilitazione di tooltip
 
-Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-toggle`:
+Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-bs-toggle`:
 
 ```js
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 ```
 
@@ -55,17 +56,17 @@ Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 
 <div class="tooltip-demo">
   <p class="font-serif muted">
-    Ecco un <a href="#" data-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
+    Ecco un <a href="#" data-bs-toggle="tooltip" title="Primo tooltip">bianco scenario</a><br/>
     per tratteggiarvi l’accompagnamento<br/>
     degli oggetti di sfondo che pur vivono.<br/>
-    Non ne sarò <a href="#" data-toggle="tooltip" title="Secondo tooltip">l’artefice</a> impaziente.<br/>
+    Non ne sarò <a href="#" data-bs-toggle="tooltip" title="Secondo tooltip">l’artefice</a> impaziente.<br/>
     Berrò alle coppe della nostalgia,<br/>
     avrò preteso d’ozio nelle lacrime...<br/>
     perché non mi ribello alla natura:<br/>
     la mia lentezza li esaspera...<br/>
     La mia lentezza? No, la mia fiducia.<br/>
     Per adesso è deserto.<br/>
-    <a href="#" data-toggle="tooltip" title="Terzo tooltip">Il mondo può rifarsi senza me</a>,<br/>
+    <a href="#" data-bs-toggle="tooltip" title="Terzo tooltip">Il mondo può rifarsi senza me</a>,<br/>
     E intanto gli altri mi denigreranno
   </p>
   <small>
@@ -83,30 +84,30 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
     <div class="container">
       <div class="row mt-3">
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip in alto" style="width: 100%;">Tooltip in alto</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip in alto" style="width: 100%;">Tooltip in alto</button>
         </div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" style="width: 100%;">Tooltip in basso</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom" style="width: 100%;">Tooltip in basso</button>
         </div>
       </div>
       <div class="row mt-5">
         <div class="col-5"></div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip a sinistra" style="width: 100%;">Tooltip a sinistra</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip a sinistra" style="width: 100%;">Tooltip a sinistra</button>
         </div>
         <div class="col-1"></div>
       </div>
       <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip a destra" style="width: 100%;">Tooltip a destra</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip a destra" style="width: 100%;">Tooltip a destra</button>
         </div>
         <div class="col-5"></div>
       </div>
       <div class="row mt-5">
         <div class="col-3"></div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>" style="width: 100%;">Tooltip con HTML</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>" style="width: 100%;">Tooltip con HTML</button>
         </div>
         <div class="col-3"></div>
       </div>
@@ -118,7 +119,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 E con codice HTML personalizzato:
 
 ```html
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
   Tooltip con HTML
 </button>
 ```
@@ -130,7 +131,8 @@ Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefin
 Attivare il tooltip tramite JavaScript:
 
 ```js
-$('#example').tooltip(options)
+var exampleEl = document.getElementById('example')
+var tooltip = new bootstrap.Tooltip(exampleEl, options)
 ```
 
 ### Markup
@@ -141,13 +143,13 @@ Il markup richiesto per un tooltip è costituito da un attributo `data-` e `titl
 abilitare un tooltip. Ad esempio, quando nella pagina è scritto questo codice HTML:
 
 ```html
-<a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip">Link che attiva il tooltip</a>
+<a href="#" data-bs-toggle="tooltip" title="Testo di esempio del tooltip">Link che attiva il tooltip</a>
 ```
 
 Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hover`), Bootstrap genera il markup seguente:
 
 ```html
-<a href="#" data-toggle="tooltip" title="Testo di esempio del tooltip!" aria-describedby="tooltip0123456">Link che attiva il tooltip</a>
+<a href="#" data-bs-toggle="tooltip" title="Testo di esempio del tooltip!" aria-describedby="tooltip0123456">Link che attiva il tooltip</a>
 
 <div class="tooltip bs-tooltip-top" role="tooltip" id="tooltip0123456">
   <div class="arrow"></div>
@@ -159,63 +161,91 @@ Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hov
 
 Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
 
-Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/tooltips/) del sito di Bootstrap.
+Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/tooltips/#options) del sito di Bootstrap.
 
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-#### `$().tooltip(options)`
-
-Allega un gestore del tooltip a una raccolta di elementi.
-
-#### `.tooltip('show')`
+#### `show`
 
 Mostra il tootlip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato** (i.e. prima che si verifichi l'evento `shown.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip. I tooltip senza titoli non vengono mai visualizzati.
 
-`js$('#element').tooltip('show')`
+```js
+tooltip.show()
+```
 
-#### `.tooltip('hide')`
+#### `hide`
 
 Nascondi il tootltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente nascosto** (i.e. prima che si verifichi l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
 
-`js$('#element').tooltip('hide')`
+```js
+tooltip.hide()
+```
 
-#### `.tooltip('toggle')`
+#### `toggle`
 
 Attiva/Disattiva il tooltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato o nascosto** (i.e. prima che si verifichi l'evento `shown.bs.tooltip` o l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
 
-`js$('#element').tooltip('toggle')`
+```js
+tooltip.toggle()
+```
 
-#### `.tooltip('dispose')`
+#### `dispose`
 
 Nasconde e distrugge il tooltip di un elemento.
 
-`js$('#element').tooltip('dispose')`
+```js
+tooltip.dispose()
+```
 
-#### `.tooltip('enable')`
+#### `enable`
 
 Fornisce al tooltip di un elemento la possibilità di essere mostrato. **I tooltip sono abilitati in modo predefinito.**
 
-`js$('#element').tooltip('enable')`
+```js
+tooltip.enable()
+```
 
-#### `.tooltip('disable')`
+#### `disable`
 
 Rimuove la capacità di mostrare il tooltip di un elemento. Il tooltip potrà essere mostrato solo se è riattivato.
 
-`js$('#element').tooltip('disable')`
+```js
+tooltip.disable()
+```
 
-#### `.tooltip('toggleEnabled')`
+#### `toggleEnabled`
 
 Attiva/disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.
 
-`js$('#element').tooltip('toggleEnabled')`
+```js
+tooltip.toggleEnabled()
+```
 
-#### `.tooltip('update')`
+#### `update`
 
 Aggiorna la posizione del tooltip di un elemento.
 
-`js$('#element').tooltip('update')`
+```js
+tooltip.update()
+```
+
+#### `getInstance`
+Static method which allows you to get the tooltip instance associated with a DOM element
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+```
+
+#### `getOrCreateInstance`
+Static method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn’t initialised
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+```
 
 ### Eventi
 
@@ -251,7 +281,12 @@ Aggiorna la posizione del tooltip di un elemento.
 </table>
 
 ```js
-$('#myTooltip').on('hidden.bs.tooltip', function () {
-  // fai qualcosa
+var myTooltipEl = document.getElementById('myTooltip')
+var tooltip = new bootstrap.Tooltip(myTooltipEl)
+
+myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
+  // do something...
 })
+
+tooltip.hide()
 ```
