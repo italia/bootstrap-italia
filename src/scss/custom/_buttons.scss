@@ -30,10 +30,6 @@
   line-height: $input-btn-line-height-lg;
 }
 
-.btn-block {
-  @include border-radius(0);
-}
-
 .btn-progress {
   position: relative;
 }

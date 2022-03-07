@@ -112,7 +112,7 @@ small,
 
 .blockquote-footer {
   color: $blockquote-small-color;
-
+  margin-top: 0;
   .bg-dark & {
     color: $blockquote-small-color-dark;
   }

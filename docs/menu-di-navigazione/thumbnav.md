@@ -34,16 +34,13 @@ Per ragioni di accessibilità è importante indicare all'interno dell'attributo 
 
 <ul class="thumb-nav">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -56,16 +53,13 @@ Applicando la classe `.thumb-nav-small` al contenitore `.thumb-nav` si otterrann
 
 <ul class="thumb-nav thumb-nav-small">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -82,16 +76,13 @@ Utilizzare la classe `.thumb-nav-nozoom` per disabilitare l'effetto di zoom sull
 
 <ul class="thumb-nav thumb-nav-nozoom">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -104,16 +95,13 @@ Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay nero 
 
 <ul class="thumb-nav thumb-nav-black">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -126,16 +114,13 @@ Utilizzare la classe `.thumb-nav-primary` per ottenere un effetto di overlay di 
 
 <ul class="thumb-nav thumb-nav-primary">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -148,16 +133,13 @@ Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` si ottien
 
 <ul class="thumb-nav thumb-nav-vertical">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -181,16 +163,13 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-small thumb-nav-bottom">
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+        <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
       </li>
   </ul>
 </div>
@@ -204,16 +183,13 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-small thumb-nav-top">
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+        <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
       </li>
   </ul>
 </div>
@@ -228,16 +204,13 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-left">
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+        <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
       </li>
   </ul>
 </div>
@@ -252,16 +225,13 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-right">
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#" class="active"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+        <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
       </li>
       <li>
-        <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-        <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+        <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
       </li>
   </ul>
 </div>
@@ -275,24 +245,19 @@ Applicando la classe `.thumb-nav-fixed` alla Thumbnav le thumbnail avranno una l
 
 <ul class="thumb-nav thumb-nav-fixed">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1057" alt="Visualizza immagine 4"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1057" alt="Visualizza immagine 4"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/240/160?image=1037" alt="Visualizza immagine 5"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1037" alt="Visualizza immagine 5"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -313,24 +278,19 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1057" alt="Visualizza immagine 4"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1057" alt="Visualizza immagine 4"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1037" alt="Visualizza immagine 5"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1037" alt="Visualizza immagine 5"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -341,24 +301,19 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-5">
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1057" alt="Visualizza immagine 4"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1057" alt="Visualizza immagine 4"></a>
     </li>
     <li>
-      <img src="{{ site.baseurl }}/dist/assets/resizer-3x2.svg" class="thumb-nav-resizer" aria-hidden="true"/>
-      <a href="#"><img src="https://picsum.photos/480/320?image=1037" alt="Visualizza immagine 5"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1037" alt="Visualizza immagine 5"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}

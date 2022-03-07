@@ -5,12 +5,18 @@
   margin-bottom: $alert-margin-bottom;
   border: 1px solid $gray-300;
   padding-left: 4em;
+  background-color: transparent;
+  border-radius: 0;
+  color: $body-color;
+  .alert-link {
+    color: $link-color;
+  }
 }
 
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
-  color: inherit;
+  color: $body-color;
   line-height: 1;
 }
 
