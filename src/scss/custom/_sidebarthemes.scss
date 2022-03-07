@@ -29,7 +29,7 @@
                   color: $sidebar-dark-text-color;
                 }
               }
-              &[data-toggle='collapse'] {
+              &[data-bs-toggle='collapse'] {
                 color: $sidebar-dark-text-color;
                 &.active {
                   border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dark-text-color;
@@ -67,7 +67,7 @@
           ul {
             li {
               a {
-                &[data-toggle='collapse'] {
+                &[data-bs-toggle='collapse'] {
                   &.active {
                     border-left: none;
                     border-right-color: $sidebar-dark-text-color;
@@ -87,7 +87,7 @@
           ul {
             li {
               a {
-                &[data-toggle='collapse'] {
+                &[data-bs-toggle='collapse'] {
                   &.active {
                     border-left-color: $sidebar-dark-text-color;
                   }

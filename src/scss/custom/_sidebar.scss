@@ -38,7 +38,7 @@
                 transform: translateY(-50%) scaleY(-1);
               }
             }
-            &[data-toggle='collapse'] {
+            &[data-bs-toggle='collapse'] {
               &.active {
                 border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                 span,
@@ -81,7 +81,7 @@
         ul {
           li {
             a {
-              &[data-toggle='collapse'] {
+              &[data-bs-toggle='collapse'] {
                 &.active {
                   border-right: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                   border-left: none;
