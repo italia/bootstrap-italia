@@ -66,6 +66,9 @@ Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usat
 
 // Schermi molto grandi (almeno 1200px)
 @media (min-width: 1200px) { ... }
+
+// Schermi grandissimi (almeno 1400px)
+@media (min-width: 1400px) { ... }
 ```
 
 Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
@@ -76,6 +79,7 @@ Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disp
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
 
 // Example usage:
 @include media-breakpoint-up(sm) {
@@ -100,7 +104,10 @@ In casi eccezionali, è possibile utilizzare le media query che vanno nella dire
 // Schermi grandi (meno di 1200px)
 @media (max-width: 1199.98px) { ... }
 
-// Schermi molto grandi (uguale o più di 1200px)
+// Schermi molto grandi (meno di  1400px)
+@media (max-width: 1399.98px) { ... }
+
+// Schermi grandissimi (uguale o più di 1400px)
 // Non è necessaria alcuna media query, in quanto la progettazione per schermi molto grandi fa sì che questo sia il codice di default
 ```
 
@@ -114,10 +121,11 @@ risoluzione), utilizzando valori con maggiore precisione per questi confronti.
 Come sopra, quando si scrive il codice sorgente in Sass, tutte le media query sono già disponibili tramite i seguenti mixin:
 
 ```scss
-@include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
+@include media-breakpoint-down(xxl) { ... }
 ```
 
 Sono previste anche media query e mixin per il targeting di un singolo segmento di dimensioni dello schermo utilizzando

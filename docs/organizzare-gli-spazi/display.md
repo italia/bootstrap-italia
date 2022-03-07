@@ -13,7 +13,7 @@ Sono presenti solo una parte di tutti i tipi di valori sopportati dalla propriet
 
 ## Responsive
 
-Le classi _display_ che si applicano a tutte le dimensioni dello schermo, da `xs` fino a `xl`, non hanno bisogno di alcuna
+Le classi _display_ che si applicano a tutte le dimensioni dello schermo, da `xs` fino a `xxl`, non hanno bisogno di alcuna
 indicazione di breakpoints, per cui ad esempio sarà sufficiente usare `.d-none` per nascondere un elemento ad ogni risoluzione.
 In caso contrario, è sufficiente utilizzare i classici breakpoints utilizzando il formato:
 
@@ -70,12 +70,14 @@ nascosto).
 | Nascosto solo su md      | `.d-md-none .d-lg-block`         |
 | Nascosto solo su lg      | `.d-lg-none .d-xl-block`         |
 | Nascosto solo su xl      | `.d-xl-none`                     |
+| Nascosto solo su xl      | `.d-xxl-none`                    |
 | Visibile a tutti         | `.d-block`                       |
 | Visibile solo su xs      | `.d-block .d-sm-none`            |
 | Visibile solo su sm      | `.d-none .d-sm-block .d-md-none` |
 | Visibile solo su md      | `.d-none .d-md-block .d-lg-none` |
 | Visibile solo su lg      | `.d-none .d-lg-block .d-xl-none` |
 | Visibile solo su xl      | `.d-none .d-xl-block`            |
+| Visibile solo su xxl     | `.d-none .d-xxl-block`           |
 
 {% capture example %}
 
