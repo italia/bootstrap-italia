@@ -31,7 +31,7 @@ Il datepicker custom utilizza un plugin Javascript di terze parti, "Accessible B
 **Il componente verrà deprecato nella prossima release di Bootstrap Italia**
 
 Il componente datepicker custom presenta alcuni problemi di accessibilità. Non è possibile raggiungere i pulsanti di cambio mese/anno tramite tastiera. Se ne consiglia l'utilizzo nel caso in cui il campo non riguardi ad esempio una data di nascita, o un campo che necessiti la navigazione fra anni.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 ## Abilitazione del Datepicker custom
 
