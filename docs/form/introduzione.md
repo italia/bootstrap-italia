@@ -48,7 +48,7 @@ Si può scegliere di dare una dimensione a una colonna, ad esempio dandogli una 
     </div>
     <div class="form-group col">
       <label for="CAP">CAP</label>
-      <input type="text" class="form-control" id="CAP">
+      <input type="number" class="form-control" id="CAP">
     </div>
   </div>
 </div>
@@ -86,7 +86,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
     <div class="form-group col-md-2">
       <label for="inputCAP">CAP</label>
-      <input type="text" class="form-control" id="inputCAP">
+      <input type="number" class="form-control" id="inputCAP">
     </div>
     <div class="col-md-4">
       <div class="bootstrap-select-wrapper">
@@ -245,92 +245,128 @@ Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 
 
 ## Validazione
 
-Si fornisca un feedback ai tuoi utenti con la validazione del form HTML5 [disponibile nei browser supportati](https://caniuse.com/#feat=form-validation). So scelga tra le risposte di convalida predefinite del browser o implementa messaggi personalizzati con le classi integrate inizializzate con JavaScript.
+Per la validazione dei forms è stato utilizzato il plugin [Just Validate](https://just-validate.dev/)
 
 ### Come funziona
 
-Ecco come funziona la validazione dei form:
+Per il funzionamento e le opzioni disponibili, si consiglia di consultare la documentazione disponibile a questi indirizzi:
 
-- La validazione viene applicata tramite due pseudo-classi CSS: `:invalid` e `:valid`. Si applicano agli elementi `<input>`, `<select>` e `<textarea>`.
-- In alternativa esistono le classi `.is-invalid` e `.is-valid` che possono essere usate al posto delle pseudo-classi per una validazione lato server. Non richiedono la presenza della classe `.was-validated` nel contenitore padre.
-- A causa dei vincoli nel modo in cui i CSS funzionano, non possiamo (al momento) applicare gli stili a un `<label>` che precede un controllo del form nel DOM senza l'aiuto del codice JavaScript personalizzato.
-- Tutti i browser moderni supportano le [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api), una serie di metodi JavaScript per la convalida dei controlli del modulo.
-- I messaggi di feedback possono essere quelli nativi di HTML5 (diversi da un browser all'altro e non stilizzati tramite CSS) o quelli personalizzati con HTML e CSS aggiuntivi.
-- Si possono fornire messaggi di validazioni personalizzati con `setCustomValidity` in JavaScript.
+[Sito ufficiale](https://just-validate.dev/)
 
-Tenendo presente tutto questo, si prendano in considerazione i seguenti esempi personalizzati per convalidare i moduli.
+[Github](https://github.com/horprogs/Just-validate)
 
 ### Stili personalizzati
 
-Per i messaggi personalizzati di convalida del form, è necessario aggiungere l'attributo booleano `novalidate` al tuo `<form>`. Questo disabiliterà le descrizioni di feedback predefinite del browser, ma fornirà comunque l'accesso alle API di validazione JavaScript. Si provi a cliccare sul pulsante `Invia` del modulo sottostante; Javascript intercetterà l'evento e mostrerà i feedback all'utente. Verranno così mostrati gli stili `:invalid` e `:valid` applicati ai controlli del modulo.
+I campi che necessitano di validazione acquisiranno all'invio del form le classi css definiite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`.
+
+I messaggi di errore hanno classe `just-validate-error-label`.
+
+Di seguito un esempio di form con validazione tramite [Just Validate](https://just-validate.dev/)
 
 {% capture example %}
 
-<form class="needs-validation" novalidate>
+<form class="needs-validation" id="justValidateForm">
   <div class="form-row">
-    <div class="form-group col-md-3 mb-3">
+    <div class="form-group col-md-3 mb-4">
       <label for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required>
-      <div class="valid-feedback">Validato!</div>
     </div>
-    <div class="form-group col-md-3 mb-3">
+    <div class="form-group col-md-3 mb-4">
       <label for="validationCustom02">Cognome</label>
       <input type="text" class="form-control" id="validationCustom02" value="Rossi" required>
-      <div class="valid-feedback">Validato!</div>
     </div>
-    <div class="form-group col-md-3 mb-3">
+    <div class="form-group col-md-3 mb-4">
       <label for="validationCustomUsername">Username</label>
       <input type="text" class="form-control" id="validationCustomUsername" required>
-      <div class="invalid-feedback">Per favore scegli un username.</div>
     </div>
-    <div class="form-group col-md-3 mb-3">
-      <label for="validationAge">Età</label>
+    <div class="form-group col-md-3 mb-4">
+      <label for="validationAge">Età (minimo 18 anni)</label>
       <input type="number" class="form-control" id="validationAge" value="18" min="18" step="1" required>
-      <div class="valid-feedback">Validato!</div>
-      <div class="invalid-feedback">Utilizza un numero valido maggiore di 18</div>
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6 mb-3">
+    <div class="form-group col-md-6 mb-4">
       <label for="validationCustom03">Città</label>
       <input type="text" class="form-control" id="validationCustom03" required>
-      <div class="invalid-feedback">Per favore inserisci un nome di città valido.</div>
     </div>
-    <div class="form-group col-md-3 mb-3">
+    <div class="form-group col-md-3 mb-4">
       <label for="validationCustom04">Provincia</label>
       <input type="text" class="form-control" id="validationCustom04" required>
-      <div class="invalid-feedback">Per favore inserisci un nome di provincia valida.</div>
     </div>
-    <div class="form-group col-md-3 mb-3">
-      <label for="validationCustom05">CAP</label>
-      <input type="text" class="form-control" id="validationCustom05" required>
-      <div class="invalid-feedback">Per favore inserisci un CAP valido.</div>
+    <div class="form-group col-md-3 mb-4">
+      <label for="validationCustom05">CAP (5 cifre)</label>
+      <input type="number" class="form-control" id="validationCustom05" maxlenght="5" required>
     </div>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
     <label class="form-check-label" for="invalidCheck">Accetto i termini e le condizioni.</label>
-    <div class="invalid-feedback">Devi accettare i termini e le condizioni prima di inviare il modulo.</div>
   </div>
   <button class="btn btn-primary mt-3" type="submit">Invia</button>
 </form>
 
 <script>
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    var forms = document.getElementsByClassName('needs-validation');
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-      }, false);
-      form.classList.add('was-validated');
+  document.addEventListener("DOMContentLoaded", function() {
+    const validate = new window.JustValidateIt('#justValidateForm', {
+      errorFieldCssClass: 'is-invalid',
+      errorLabelCssClass: 'form-feedback',
+      errorLabelStyle: '',
+      focusInvalidField: true,
     });
-  }, false);
-})();
+    
+    validate
+      .addField('#validationCustom01', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#validationCustom02', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#validationCustomUsername', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#validationAge', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+        {
+          rule: 'minNumber',
+          value: 18,
+          errorMessage: 'Deve essere maggiore di 17'
+        },
+      ])
+      .addField('#validationCustom05', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+        {
+          rule: 'minLength',
+          value: 5,
+          errorMessage: 'Inserire 5 cifre'
+        },
+        {
+          rule: 'maxLength',
+          value: 5,
+          errorMessage: 'Inserire 5 cifre'
+        },
+      ])
+      .addField('#invalidCheck', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+  })
 </script>
 
 {% endcapture %}{% include example.html content=example %}

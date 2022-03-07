@@ -28,6 +28,7 @@ const Paths = {
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/just-validate/dist/just-validate.production.min.js',
     'node_modules/just-validate-plugin-date/dist/just-validate-plugin-date.production.min.js',
+    'node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.js',
   ],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',

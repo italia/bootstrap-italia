@@ -25,13 +25,13 @@ title: Just Validate
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="age">Campo numerico (min/max)</label>
-          <input type="number" class="form-control" id="age" min="18" max="50" size="5" step="1" required>
+          <input type="number" class="form-control" id="age" min="18" max="50" step="1" required>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="camponumerico">Campo numerico (5 cifre)</label>
-          <input type="number" class="form-control" id="camponumerico" size="5" required>
+          <input type="number" class="form-control" id="camponumerico" maxlenght="5" required>
         </div>
       </div>
     </div>
@@ -147,6 +147,27 @@ title: Just Validate
 
     <div class="row mb-4">
       <div class="col-12">
+        <h2>Sccessible autocomplete</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12 col-md-4">
+        <div class="select-wrapper">
+          <label for="accessibleAutocomplete">Select autocomplete</label>
+            <select class="form-control" id="accessibleAutocomplete" title="Scegli una opzione" required>
+              <option selected value="">Scegli una opzione</option>
+              <option value="Value 1">Opzione 1</option>
+              <option value="Value 2">Opzione 2</option>
+              <option value="Value 3">Opzione 3</option>
+              <option value="Value 4">Opzione 4</option>
+              <option value="Value 5">Opzione 5</option>
+            </select>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-12">
         <h2>Checkbox / Radio</h2>
       </div>
     </div>
@@ -246,8 +267,26 @@ title: Just Validate
       focusInvalidField: true,
     });
 
+    accessibleAutocomplete.enhanceSelectElement({
+      selectElement: document.querySelector('#accessibleAutocomplete'),
+      showAllValues: true,
+      defaultValue: '',
+      autoselect: false,
+      showNoOptionsFound: false,
+      dropdownArrow: () => '',
+      onConfirm : () => {
+
+      }
+    })
+
     validate
       .addField('#nome', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto'
+        },
+      ])
+      .addField('#accessibleAutocomplete', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto'

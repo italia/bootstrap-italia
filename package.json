@@ -80,6 +80,7 @@
     "stylelint-scss": "^4.1.0"
   },
   "dependencies": {
+    "accessible-autocomplete": "^2.0.4",
     "ansi-regex": "^6.0.1",
     "bootstrap": "^4.6.1",
     "bootstrap-select": "^1.13.18",
