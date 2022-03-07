@@ -4,7 +4,7 @@ import {
   getElementFromSelector,
   //isRTL,
   isVisible,
-  //reflow,
+  reflow,
   typeCheckConfig,
   //getSelectorFromElement,
 } from 'bootstrap/js/src/util'
@@ -87,7 +87,7 @@ class Notification extends BaseComponent {
     this._showElement(timeoutVal)
   }
 
-  close() {
+  hide() {
     if (!this._isShown || this._isTransitioning) {
       return
     }
@@ -101,12 +101,11 @@ class Notification extends BaseComponent {
 
     this._element.classList.remove(CLASS_NAME_SHOW)
 
-    this._queueCallback(() => this._closeElement(), this._element, isAnimated)
+    this._queueCallback(() => this._hideElement(), this._element, isAnimated)
   }
 
   toggle(relatedTarget) {
-    console.log('---', this._element)
-    this._isShown ? this.close() : this.show(null, relatedTarget)
+    this._isShown ? this.hide() : this.show(null, relatedTarget)
   }
 
   //Private
@@ -123,19 +122,23 @@ class Notification extends BaseComponent {
     //this._element.setAttribute('aria-modal', true)
     //this._element.setAttribute('role', 'dialog')
 
+    if (isAnimated) {
+      reflow(this._element)
+    }
+
     this._element.classList.add(CLASS_NAME_SHOW)
 
     const transitionComplete = () => {
       this._isTransitioning = false
       if (timeout) {
-        this._setTimeout(timeout, () => this.close())
+        this._setTimeout(timeout, () => this.hide())
       }
     }
 
     this._queueCallback(transitionComplete, this._element, isAnimated)
   }
 
-  _closeElement() {
+  _hideElement() {
     this._element.style.display = 'none'
     this._element.setAttribute('aria-hidden', true)
     //this._element.removeAttribute('aria-modal')
@@ -175,20 +178,6 @@ class Notification extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-/*EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-  if (event.target.tagName === 'A' || (event.delegateTarget && event.delegateTarget.tagName === 'A')) {
-    event.preventDefault()
-  }
-
-  const selector = getSelectorFromElement(this)
-  const selectorElements = SelectorEngine.find(selector)
-
-  selectorElements.forEach((element) => {
-    Notification.getOrCreateInstance(element, { toggle: false }).toggle()
-  })
-})*/
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
   const target = getElementFromSelector(this)
