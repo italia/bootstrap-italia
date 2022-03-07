@@ -10,6 +10,7 @@ description: Campi input con bottoni per agevolare la selezione di un orario
 Il componente input time, o timepicker, è un componente personalizzato per la selezione di un orario.
 
 ### Input ora standard
+
 {% capture callout %}
 **Compatibilità con Internet Explorer 11**
 
@@ -19,6 +20,7 @@ L'input type="time" non è supportato da IE11, se ne consiglia l'utilizzo congiu
 Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
 
 {% capture example %}
+
 <div class="form-group">
   <label class="active" for="timeStandard">Timepicker standard</label>
   <input class="form-control" id="timeStandard" type="time">
@@ -33,6 +35,7 @@ Il componente timepicker custom presenta alcuni problemi di accessibilità. Se n
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture callout %}
+
 #### Note importanti
 
 Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
@@ -47,7 +50,6 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
   {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
-
 
 <div class="it-timepicker-wrapper">
   <section class="time-spinner">

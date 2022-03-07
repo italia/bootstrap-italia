@@ -8,9 +8,11 @@ description: Il classico “menu a tendina”, in nuove varianti.
 ---
 
 ### Select standard
+
 La select standard è composta dal un wrapper esterno `.select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà la visualizzazione corretta.
 
 {% capture example %}
+
 <div class="select-wrapper">
   <label for="defaultSelect">Select standard</label>
     <select id="defaultSelect">
@@ -24,7 +26,8 @@ La select standard è composta dal un wrapper esterno `.select-wrapper` seguita 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select custom 
+### Select custom
+
 {% capture callout %}
 
 **Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
@@ -203,7 +206,7 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 
 {% endcomment %}
 
-### Modifica dinamica del campi della select custom 
+### Modifica dinamica del campi della select custom
 
 Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione `$.setOptionsToSelect(_parametro)` che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev'essere chiamata dall'elemento con classe `.bootstrap-select-wrapper`, e con parametro in input `_parametro` un oggetto Javascript con proprietà "value" e "text" come segue:
 

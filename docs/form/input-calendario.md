@@ -6,6 +6,7 @@ toc: true
 title: Input Calendario
 description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 ---
+
 ## Datepicker standard
 
 {% capture callout %}
@@ -17,6 +18,7 @@ L'input type="date" non è supportato da IE11, se ne consiglia l'utilizzo congiu
 Clicca sull’icona a destra per visualizzare il datepicker.
 
 {% capture example %}
+
 <div class="form-group">
     <label class="active" for="dateStandard">Datepicker standard</label>
     <input type="date" id="date" name="dateStandard">
