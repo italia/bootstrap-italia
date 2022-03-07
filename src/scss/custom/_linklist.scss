@@ -211,7 +211,7 @@
   }
 }
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .link-list-wrapper {
     ul {
       li {
@@ -227,7 +227,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .link-list-wrapper {
     ul {
       li {
@@ -242,7 +242,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .link-list-wrapper {
     // classe modificatore per menu laterale
     &.menu-link-list {

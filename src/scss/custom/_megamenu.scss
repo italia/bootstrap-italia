@@ -157,7 +157,7 @@
   }
 }
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   // megamenu footer version
   .navbar {
     .dropdown-menu {

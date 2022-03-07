@@ -106,12 +106,12 @@
   }
 
   // Tablet vertical
-  @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+  @include media-breakpoint-up(sm) {
     padding: 16px;
   }
 
   // Desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     padding: 12px 24px !important;
     margin: 0;
 
@@ -144,8 +144,8 @@
   &.disabled {
     //progress bar button
     &.btn-progress {
-      background-color: lighten($gray-secondary, 10);
-      border-color: lighten($gray-secondary, 10);
+      background-color: tint-color($gray-secondary, 10);
+      border-color: tint-color($gray-secondary, 10);
       opacity: 1;
     }
   }
@@ -164,11 +164,11 @@
     color: $white;
   }
   .btn-primary {
-    @include button-variant($white, $primary, lighten($white, 7.5%), darken($primary, 10%), lighten($white, 10%), darken($primary, 12.5%));
+    @include button-variant($white, $primary, tint-color($white, 7.5%), shade-color($primary, 10%), tint-color($white, 10%), shade-color($primary, 12.5%));
     color: $primary;
     &.disabled,
     &:disabled {
-      color: darken($primary, 10%);
+      color: shade-color($primary, 10%);
     }
   }
   .btn-outline-primary {
@@ -188,7 +188,7 @@
     }
   }
   .btn-secondary {
-    @include button-variant($primary, $white, lighten($primary, 7.5%), darken($white, 10%), lighten($primary, 10%), darken($white, 12.5%));
+    @include button-variant($primary, $white, tint-color($primary, 7.5%), shade-color($white, 10%), tint-color($primary, 10%), shade-color($white, 12.5%));
     color: $white;
   }
   .btn-outline-secondary {

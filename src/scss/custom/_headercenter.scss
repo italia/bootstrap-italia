@@ -98,7 +98,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .it-header-center-wrapper .it-header-center-content-wrapper .it-search-wrapper {
     margin-left: $header-center-search-distance * 0.5;
   }
@@ -108,7 +108,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-header-center-wrapper {
     height: $header-center-max-height;
     padding-left: 0;
@@ -179,7 +179,7 @@
             a {
               &:hover {
                 svg {
-                  fill: darken($header-center-text-color, 5%);
+                  fill: shade-color($header-center-text-color, 5%);
                 }
               }
             }
@@ -204,7 +204,7 @@
             margin-left: $v-gap * 2;
             transition: all 0.3s;
             &:hover {
-              background: darken($header-center-text-color, 5%);
+              background: shade-color($header-center-text-color, 5%);
             }
             svg {
               fill: $header-center-bg-color;

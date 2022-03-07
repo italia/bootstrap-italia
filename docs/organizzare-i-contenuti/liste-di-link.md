@@ -75,7 +75,7 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 <div class="link-list-wrapper">
    <ul class="link-list">
       <li>
-         <h3 id="heading-senza-link">Heading senza link</h3>
+         <h3 id="heading-senza-link" class="no_toc">Heading senza link</h3>
       </li>
       <li>
         <a class="list-item" href="#"><span>Link list 1</span></a>
@@ -103,7 +103,7 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
    <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3 id="heading-con-link"><a href="#">Heading con link</a></h3>
+          <h3 id="heading-con-link" class="no_toc"><a href="#">Heading con link</a></h3>
         </li>
         <li><a class="list-item" href="#"><span>Link list 1</span></a>
         </li>
@@ -129,7 +129,7 @@ Per ogni elemento link list è possibile definire una variante di dimensione mag
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <h3 id="heading">Heading</h3>
+      <h3 id="heading" class="no_toc">Heading</h3>
     </li>
     <li><a class="list-item large" href="#"><span>Link list 1</span></a>
     </li>

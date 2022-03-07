@@ -21,7 +21,7 @@ Le classi che sono applicabili per tutti i breakpoint da `xs` to `xl` non hanno 
 sono applicate da `min-width: 0` in su, e quindi non sono legate a media query.
 
 Le classi sono denominate utilizzando il formato `{proprietà}{lato}-{dimensione}` per `xs` e
-`{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, e `xl`.
+`{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, `xl` e `xxl`.
 
 Dove la _proprietà_ è una tra:
 
@@ -32,8 +32,8 @@ Dove uno dei _lati_ è tra:
 
 - `t` - per le classi che impostano `margin-top` o `padding-top`
 - `b` - per le classi che impostano `margin-bottom` o `padding-bottom`
-- `l` - per le classi che impostano `margin-left` o `padding-left`
-- `r` - per le classi che impostano `margin-right` o `padding-right`
+- `s` - per le classi che impostano `margin-left` o `padding-left`
+- `e` - per le classi che impostano `margin-right` o `padding-right`
 - `x` - per le classi che impostano insieme `*-left` e `*-right`
 - `y` - per le classi che impostano insieme `*-top` e `*-bottom`
 - blank - per le classi che impostano `margin` o `padding` su tutti e quattro i lati dell'elemento
@@ -59,7 +59,7 @@ Ecco alcuni esempi di utilizzo delle classi di spaziatura:
   margin-top: 0 !important;
 }
 
-.ml-1 {
+.ms-1 {
   margin-left: ($spacer * 0.25) !important;
 }
 

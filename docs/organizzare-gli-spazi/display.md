@@ -18,7 +18,7 @@ indicazione di breakpoints, per cui ad esempio sarà sufficiente usare `.d-none`
 In caso contrario, è sufficiente utilizzare i classici breakpoints utilizzando il formato:
 
 - `.d-{value}` per `xs`
-- `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, e `xl`.
+- `.d-{breakpoint}-{value}` per `sm`, `md`, `lg`, `xl` e `xxl`.
 
 Dove il _valore_ è uno tra:
 
@@ -130,7 +130,7 @@ Applica `.visible` oppure `.invisible` al bisogno.
 
 ## Screenreaders
 
-Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la classe `.visually-hidden`. Combina `.visually-hidden` con `.visually-hidden-focusable` per mostrare l'elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.
+Nascondi un elemento su tutti i dispositivi **eccetto screen readers** con la classe `.visually-hidden`. Utilizza `.visually-hidden-focusable` per mostrare l'elemento quando è attivo in focus (es.: da un utente che utilizza la tastiera). Possono anche essere usati come mixin.
 
 ```html
 <a class="visually-hidden-focusable" href="#content">Vai al contenuto principale</a>

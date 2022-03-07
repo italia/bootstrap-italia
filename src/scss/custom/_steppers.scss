@@ -148,7 +148,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .steppers {
     .steppers-header {
       li {
@@ -158,7 +158,7 @@
   }
 }
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .steppers {
     // header
     .steppers-header {

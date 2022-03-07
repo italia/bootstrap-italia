@@ -5,6 +5,7 @@ import scss from 'rollup-plugin-scss'
 import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
+import injectProcessEnv from 'rollup-plugin-inject-process-env'
 
 export default [
   {
@@ -42,6 +43,9 @@ export default [
         // see https://github.com/rollup/rollup/wiki/jsnext:main
         jsnext: true,
       }),
+      injectProcessEnv({
+        NODE_ENV: 'production',
+      }),
       uglify(),
     ],
   },
@@ -62,7 +66,7 @@ export default [
       scss({
         output: 'docs/assets/dist/css/docs.min.css',
         outputStyle: 'compressed',
-        watch: 'src/scss',
+        watch: 'docs/assets/src/scss',
       }),
     ],
   },

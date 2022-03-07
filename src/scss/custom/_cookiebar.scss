@@ -60,7 +60,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   .cookiebar {
     p {
       font-size: 0.889rem;
@@ -72,7 +72,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .cookiebar {
     padding: $v-gap * 4 $v-gap * 6;
     &.show {
@@ -95,7 +95,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .cookiebar {
     max-width: $v-gap * 104;
     left: 50%;

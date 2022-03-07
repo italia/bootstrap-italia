@@ -18,6 +18,7 @@ $grid-gutter-widths: (
   md: 20px,
   lg: 20px,
   xl: 28px,
+  xxl: 28px,
 ) !default;
 
 // Text
@@ -625,6 +626,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
+  xxl: 1400px,
 ) !default;
 
 // Hover states breackpoint
@@ -637,4 +639,5 @@ $container-max-widths: (
   md: 668px,
   lg: 960px,
   xl: 1184px,
+  xxl: 1320px,
 ) !default;

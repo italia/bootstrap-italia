@@ -69,14 +69,14 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   .section {
     padding: #{map-get($grid-gutter-widths, md) * 4} #{map-get($grid-gutter-widths, md) * 2};
   }
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .section {
     padding: #{map-get($grid-gutter-widths, lg) * 4};
 
@@ -95,7 +95,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .section {
     padding: #{map-get($grid-gutter-widths, xl) * 4};
 

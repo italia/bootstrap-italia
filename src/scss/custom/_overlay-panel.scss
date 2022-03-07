@@ -64,7 +64,7 @@
 }
 
 //small - tablet
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@include media-breakpoint-up(sm) {
   //overlay label
   .overlay-panel {
     font-size: 0.889rem;

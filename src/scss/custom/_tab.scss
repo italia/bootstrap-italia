@@ -288,9 +288,9 @@
         }
       }
       &:hover {
-        color: darken($primary, 10%);
+        color: shade-color($primary, 10%);
         .icon {
-          fill: darken($primary, 10%);
+          fill: shade-color($primary, 10%);
         }
       }
       .it-ico {
@@ -380,7 +380,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .nav-tabs {
     overflow-x: hidden;
     flex-wrap: wrap;

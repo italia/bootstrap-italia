@@ -92,7 +92,7 @@
     }
   }
   //Tablet horizontal / small desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     &.point-list-step-wrapper {
       display: flex;
       flex-direction: row;

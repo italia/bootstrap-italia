@@ -1,12 +1,12 @@
 @mixin button-variant(
   $background,
   $border,
-  $hover-background: darken($background, 7.5%),
-  $hover-border: darken($border, 10%),
-  $active-background: darken($background, 10%),
-  $active-border: darken($border, 12.5%)
+  $hover-background: shade-color($background, 8.5%),
+  $hover-border: shade-color($border, 10%),
+  $active-background: shade-color($background, 10%),
+  $active-border: shade-color($border, 12.5%)
 ) {
-  color: color-yiq($background);
+  color: color-contrast($background);
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
@@ -20,11 +20,15 @@
       box-shadow: 0 0 0 $btn-focus-width rgba($border, 0.5);
     }
   }
+  &:hover {
+    background-color: $hover-background;
+    color: color-contrast($background);
+  }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    color: color-yiq($background);
+    color: color-contrast($background);
     background-color: $background;
     border-color: $border;
     pointer-events: none;
@@ -33,7 +37,7 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
+    color: color-contrast($active-background);
     background-color: $active-background;
     @if $enable-gradients {
       background-image: none; // Remove the gradient for the pressed/active state

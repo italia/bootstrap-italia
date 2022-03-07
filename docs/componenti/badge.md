@@ -9,28 +9,28 @@ toc: true
 La grandezza di ogni badge si adatta come dimensione a quella del font (misurato in unità `em`) dell'elemento in cui è contenuto.
 
 <div class="bd-example">
-<div class="h1">Titolo di esempio <span class="badge badge-secondary">New</span></div>
-<div class="h2">Titolo di esempio <span class="badge badge-secondary">New</span></div>
-<div class="h3">Titolo di esempio <span class="badge badge-secondary">New</span></div>
-<div class="h4">Titolo di esempio <span class="badge badge-secondary">New</span></div>
-<div class="h5">Titolo di esempio <span class="badge badge-secondary">New</span></div>
-<div class="h6">Titolo di esempio <span class="badge badge-secondary">New</span></div>
+<div class="h1">Titolo di esempio <span class="badge bg-secondary">New</span></div>
+<div class="h2">Titolo di esempio <span class="badge bg-secondary">New</span></div>
+<div class="h3">Titolo di esempio <span class="badge bg-secondary">New</span></div>
+<div class="h4">Titolo di esempio <span class="badge bg-secondary">New</span></div>
+<div class="h5">Titolo di esempio <span class="badge bg-secondary">New</span></div>
+<div class="h6">Titolo di esempio <span class="badge bg-secondary">New</span></div>
 </div>
 
 ```html
-<h1>Titolo di esempio <span class="badge badge-secondary">New</span></h1>
-<h2>Titolo di esempio <span class="badge badge-secondary">New</span></h2>
-<h3>Titolo di esempio <span class="badge badge-secondary">New</span></h3>
-<h4>Titolo di esempio <span class="badge badge-secondary">New</span></h4>
-<h5>Titolo di esempio <span class="badge badge-secondary">New</span></h5>
-<h6>Titolo di esempio <span class="badge badge-secondary">New</span></h6>
+<h1>Titolo di esempio <span class="badge bg-secondary">New</span></h1>
+<h2>Titolo di esempio <span class="badge bg-secondary">New</span></h2>
+<h3>Titolo di esempio <span class="badge bg-secondary">New</span></h3>
+<h4>Titolo di esempio <span class="badge bg-secondary">New</span></h4>
+<h5>Titolo di esempio <span class="badge bg-secondary">New</span></h5>
+<h6>Titolo di esempio <span class="badge bg-secondary">New</span></h6>
 ```
 
 I badge possono essere utilizzati come parte di link o pulsanti per fornire un contatore.
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Notifiche <span class="badge badge-light">4</span>
+Notifiche <span class="badge neutral-2-bg text-secondary">4</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -40,7 +40,7 @@ A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si c
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Profilo <span class="badge badge-light">9</span>
+Profilo <span class="badge neutral-2-bg text-secondary">9</span>
 <span class="visually-hidden">Messaggi non letti</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -51,18 +51,18 @@ Aggiungi una delle seguenti classi per modificare l'aspetto di un badge.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<span class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
+<span class="badge bg-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
 
 ## Badges arrotondati
 
-Per rendere i badge arrotondati puoi usare la classe `.badge-pill`.
+Per rendere i badge arrotondati puoi usare la classe `.rounded-pill`.
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<span class="badge badge-pill badge-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
+<span class="badge rounded-pill bg-{{ color.name }}">{{ color.name | capitalize }}</span>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
 
 ## Link
@@ -71,5 +71,5 @@ Se hai bisogno che un badge sia anche un link, aggiungi una delle classi contest
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<a href="#" class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</a>{% endfor %}
+<a href="#" class="badge bg-{{ color.name }}">{{ color.name | capitalize }}</a>{% endfor %}
 {% endcapture %}{% include example.html content=example %}

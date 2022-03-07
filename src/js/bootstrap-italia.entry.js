@@ -1,8 +1,26 @@
 //import '../scss/bootstrap-italia.scss'
-import 'bootstrap'
+import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import foo from './foo.js'
+import './plugins/dropdown'
+import './plugins/forward'
 
-export default function () {
-  console.log(foo)
+import Dimmer from './plugins/dimmer'
+//import Notification from './plugins/notification'
+
+window.bootstrap = {
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Offcanvas,
+  Popover,
+  ScrollSpy,
+  Tab,
+  Toast,
+  Tooltip,
+
+  Dimmer,
+  //Notification,
 }

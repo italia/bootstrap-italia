@@ -159,7 +159,7 @@ label {
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .input-number {
     //add + sub buttons
     button {

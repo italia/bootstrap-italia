@@ -73,7 +73,7 @@
   }
 
   // Desktop
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @include media-breakpoint-up(lg) {
     &.row-column-border {
       margin-top: 1rem;
 
@@ -133,7 +133,7 @@
     justify-content: space-between;
 
     // Tablet portrait
-    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    @include media-breakpoint-up(sm) {
       flex-direction: row;
       align-items: flex-start;
     }
@@ -148,7 +148,7 @@
       }
     }
 
-    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+    @include media-breakpoint-up(sm) {
       border-bottom: 1px solid $border-color;
       padding-bottom: 1rem;
       margin-bottom: 1rem;
@@ -197,7 +197,7 @@
     }
 
     // Desktop
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    @include media-breakpoint-up(lg) {
       &.navbar-wrapper {
         z-index: auto;
         left: auto;

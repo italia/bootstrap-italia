@@ -248,28 +248,28 @@ a.avatar {
     img {
       filter: brightness(90%);
     }
-    background: darken($neutral-1-a1, 5%);
+    background: shade-color($neutral-1-a1, 5%);
     &.avatar-primary {
-      background: darken($primary, 5%);
+      background: shade-color($primary, 5%);
     }
     &.avatar-secondary {
-      background: darken($secondary, 5%);
+      background: shade-color($secondary, 5%);
     }
     &.avatar-green {
-      background: darken($green, 5%);
+      background: shade-color($green, 5%);
     }
     &.avatar-orange {
-      background: darken($orange, 5%);
+      background: shade-color($orange, 5%);
     }
     &.avatar-red {
-      background: darken($red, 12%);
+      background: shade-color($red, 12%);
     }
   }
 }
 .avatar-dropdown {
   &:hover,
   &:focus-within {
-    background: darken($neutral-1-a1, 5%);
+    background: shade-color($neutral-1-a1, 5%);
   }
   .btn-dropdown:focus {
     box-shadow: none;

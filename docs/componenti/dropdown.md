@@ -33,7 +33,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 {% capture example %}
 
 <div class="dropdown">
-  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
@@ -56,7 +56,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
 {% capture example %}
 
 <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
@@ -71,7 +71,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
@@ -86,7 +86,7 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </button>
@@ -109,7 +109,7 @@ Lo stesso vale per gli elementi `<a>`:
 {% capture example %}
 
 <div class="dropdown">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </a>
@@ -132,7 +132,7 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 {% capture example %}
 
 <div class="dropdown dropup">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropup
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </a>
@@ -148,15 +148,15 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Dropright
+### Dropend
 
-Per aprire le voci di menu verso destra aggiungere la classe `.dropright` all'elemento padre
+Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elemento padre
 
 {% capture example %}
 
-<div class="dropdown dropright">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Apri dropright
+<div class="dropdown dropend">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropend
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropright">
@@ -171,16 +171,16 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropright` all'el
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Dropleft
+### Dropstart
 
-Per aprire le voci di menu verso sinistra aggiungere la classe `.dropleft` all'elemento padre
+Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'elemento padre
 
 {% capture example %}
 
-<div class="dropdown dropleft">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown dropstart">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg>
-    Apri dropleft
+    Apri dropstart
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropleft">
     <div class="link-list-wrapper">

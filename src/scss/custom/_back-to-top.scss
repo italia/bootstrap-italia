@@ -24,7 +24,7 @@
     transform: scale(1);
   }
   &:hover {
-    background: darken($primary, 10%);
+    background: shade-color($primary, 10%);
     text-decoration: none;
   }
   //caret
@@ -63,7 +63,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@include media-breakpoint-up(md) {
   /*back to top*/
   .back-to-top {
     width: 56px;
@@ -86,7 +86,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .back-to-top {
     bottom: 32px;
     right: 32px;

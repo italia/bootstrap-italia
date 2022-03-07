@@ -189,11 +189,24 @@ Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente ut
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
 {% endcapture %}{% include example.html content=example %}
 
-Aggiungendo la classe `.btn-block` si ottengono invece bottoni che prendono tutta l'ampiezza a loro disposizione, a seconda delle dimensioni del loro contenitore. In questo caso, anche i bordi non sono più arrotondati.
+#### A tutta laghezza
+
+Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_ di Boostrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-block">Primary Block</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Secondary Block</button>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-secondary" type="button">Secondary</button>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+In questo caso è stata implemenentata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
+
+{% capture example %}
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-secondary" type="button">Secondary</button>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ## Approfondimento
