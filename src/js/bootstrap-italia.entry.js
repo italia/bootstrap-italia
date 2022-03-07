@@ -5,12 +5,7 @@ import './plugins/dropdown'
 import './plugins/forward'
 
 import Dimmer from './plugins/dimmer'
-
-import foo from './foo.js'
-
-export default function () {
-  console.log(foo)
-}
+//import Notification from './plugins/notification'
 
 window.bootstrap = {
   Alert,
@@ -27,4 +22,5 @@ window.bootstrap = {
   Tooltip,
 
   Dimmer,
+  //Notification,
 }
