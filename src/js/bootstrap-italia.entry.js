@@ -5,7 +5,7 @@ import './plugins/dropdown'
 import './plugins/forward'
 
 import Dimmer from './plugins/dimmer'
-//import Notification from './plugins/notification'
+import Notification from './plugins/notification'
 
 window.bootstrap = {
   Alert,
@@ -22,5 +22,5 @@ window.bootstrap = {
   Tooltip,
 
   Dimmer,
-  //Notification,
+  Notification,
 }
