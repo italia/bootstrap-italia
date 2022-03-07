@@ -20,7 +20,7 @@ nonbundle: false
         <button onclick="notificationShow('notificationIcnTxt');" type="button" class="btn btn-primary">Notification icon/text - 7s (default)</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDism');" type="button" class="btn btn-primary">Notification Dismissable</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDism" type="button" class="btn btn-primary">TEST Notification Dismissable</button>
       </p>
     </div>
     <div class="col-12 col-md-4">
@@ -68,14 +68,14 @@ nonbundle: false
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification dismissable with-icon success" role="alert" id="notificationDism" aria-labelledby="not6-title">
+<div class="notification dismissable with-icon success fade" role="alert" id="notificationDism" aria-labelledby="not6-title">
   <h5 id="not6-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg
     >Notification Dismissable
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use xlink="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>
