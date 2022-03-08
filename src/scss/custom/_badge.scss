@@ -1,9 +1,28 @@
 .badge {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   @each $color, $value in $theme-colors {
     &.badge-outline-#{$color} {
       color: $value;
       border: 1px solid $value;
       background-color: transparent !important;
+    }
+  }
+  &.rounded-pill {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+}
+
+a {
+  &.badge {
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      @each $color, $value in $theme-colors {
+        &.bg-#{$color} {
+          background-color: shade-color($value, 20%) !important;
+        }
+      }
     }
   }
 }
