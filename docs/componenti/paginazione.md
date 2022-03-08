@@ -268,7 +268,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10</a>
+    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10</a>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">

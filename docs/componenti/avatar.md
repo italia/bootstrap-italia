@@ -342,7 +342,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
@@ -426,7 +426,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
