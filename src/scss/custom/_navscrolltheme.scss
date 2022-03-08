@@ -3,6 +3,9 @@
     &.it-navscroll-wrapper {
       &.theme-dark-mobile {
         background: $navscroll-dark-bg-color;
+        h3 {
+          color: $navscroll-dark-text-color;
+        }
         .custom-navbar-toggler {
           color: $navscroll-dark-text-color;
           span.it-list {
@@ -51,6 +54,9 @@
   .navbar {
     &.it-navscroll-wrapper {
       &.theme-dark-desk {
+        h3 {
+          color: $navscroll-dark-text-color;
+        }
         background: $navscroll-dark-bg-color;
         .custom-navbar-toggler {
           color: $navscroll-dark-text-color;
