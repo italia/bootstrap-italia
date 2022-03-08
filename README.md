@@ -12,6 +12,8 @@ Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/doc
 
 Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
+La roadmap del progetto è consultabile nel [nuovo piano attività 2022 di Designers Italia](https://designers.italia.it/piano-attivita/).
+
 **[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
 
 oppure

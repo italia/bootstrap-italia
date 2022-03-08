@@ -22,7 +22,7 @@ const gulp = require('gulp'),
 const DOCUMENTATION_DESTINATION = '_site'
 
 const Paths = {
-  VENDOR_JS: ['node_modules/jquery/dist/jquery.js', 'node_modules/popper.js/dist/umd/popper.js', 'node_modules/owl.carousel/dist/owl.carousel.js'],
+  VENDOR_JS: ['node_modules/jquery/dist/jquery.js', 'node_modules/popper.js/dist/umd/popper.js'],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
@@ -41,6 +41,7 @@ const Paths = {
     'src/js/plugins/autocomplete.js',
     'src/js/plugins/back-to-top.js',
     'src/js/plugins/componente-base.js',
+    'src/js/plugins/cookiebar.js',
     'src/js/plugins/dropdown.js',
     'src/js/plugins/forms.js',
     'src/js/plugins/track-focus.js',
@@ -55,6 +56,7 @@ const Paths = {
     'src/js/plugins/imgresponsive.js',
     'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
+    'src/js/plugins/carousel-legacy.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
     'src/js/plugins/select.js',
@@ -65,11 +67,14 @@ const Paths = {
     'src/js/plugins/version.js',
     'src/js/plugins/class-watcher.js',
     'src/js/plugins/side-menu.js',
+    'src/js/plugins/collapse.js',
   ],
 
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
   SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
   SOURCE_DOCUMENTATION_JS: ['docs/assets/src/js/cover-animation.js', 'docs/assets/src/js/docs.js'],
+  SOURCE_CAROUSEL_JS: ['node_modules/owl.carousel/dist/owl.carousel.min.js', 'node_modules/@splidejs/splide/dist/js/splide.min.js'],
+  SOURCE_CAROUSEL_CSS: ['node_modules/owl.carousel/dist/assets/owl.carousel.min.css', 'node_modules/@splidejs/splide/dist/css/splide-core.min.css'],
   DIST: 'dist',
   DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
@@ -229,6 +234,22 @@ gulp.task('documentation-js-vendor', () => {
     .pipe(touch())
 })
 
+gulp.task('carousel-js-vendor', () => {
+  return gulp
+    .src(Paths.SOURCE_CAROUSEL_JS)
+    .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/js/vendor'))
+    .pipe(gulp.dest(Paths.DIST + '/js/vendor'))
+    .pipe(touch())
+})
+
+gulp.task('carousel-css-vendor', () => {
+  return gulp
+    .src(Paths.SOURCE_CAROUSEL_CSS)
+    .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/css/vendor'))
+    .pipe(gulp.dest(Paths.DIST + '/css/vendor'))
+    .pipe(touch())
+})
+
 gulp.task('documentation-js-min', () => {
   return gulp
     .src(Paths.SOURCE_DOCUMENTATION_JS)
@@ -318,7 +339,10 @@ gulp.task('build-library', gulp.series('svg-sprite', 'scss-min', 'js-min', 'js-b
 
 // Documentation
 
-gulp.task('build-documentation', gulp.series('documentation-scss-min', 'documentation-js-vendor', 'documentation-js-min', 'force-reload'))
+gulp.task(
+  'build-documentation',
+  gulp.series('documentation-scss-min', 'documentation-js-vendor', 'carousel-js-vendor', 'documentation-js-min', 'carousel-css-vendor', 'force-reload')
+)
 
 // Sync
 
