@@ -21,7 +21,7 @@ Clicca sull’icona a destra per visualizzare il datepicker.
 
 <div class="form-group">
     <label class="active" for="dateStandard">Datepicker standard</label>
-    <input type="date" id="date" name="dateStandard">
+    <input type="date" id="dateStandard" name="dateStandard">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
