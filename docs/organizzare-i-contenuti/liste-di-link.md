@@ -3,7 +3,7 @@ layout: docs
 group: organizzare-i-contenuti
 toc: true
 title: Liste di link
-description: I Link List sono un componente flessibile e potente per la visualizzazione di una serie di link o call to action.
+description: I Link lista sono un componente flessibile e potente per la visualizzazione di una serie di link o call to action.
 ---
 
 ## Esempi
@@ -14,9 +14,9 @@ description: I Link List sono un componente flessibile e potente per la visualiz
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-     <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-     <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-     <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+     <li><a class="list-item" href="#"><span>Link lista 1</span></a></li>
+     <li><a class="list-item" href="#"><span>Link lista 2</span></a></li>
+     <li><a class="list-item" href="#"><span>Link lista 3</span></a></li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -30,13 +30,13 @@ Per determinare l'elemento attivo è sufficiente aggiungere la classe `.active` 
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#"><span>Link list 1</span></a>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
     <li>
-      <a class="list-item active" href="#"><span>Link list 2 active</span></a>
+      <a class="list-item active" href="#"><span>Link lista 2 attivo</span></a>
     </li>
     <li>
-      <a class="list-item" href="#"><span>Link list 3</span></a>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
   </ul>
 </div>
@@ -51,13 +51,13 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item" href="#"><span>Link list 1</span></a>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
     <li>
-      <a class="list-item disabled" href="#"><span>Link list 2 disabled</span></a>
+      <a class="list-item disabled" href="#"><span>Link lista 2 disabilitato</span></a>
     </li>
     <li>
-      <a class="list-item" href="#"><span>Link list 3</span></a>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
   </ul>
 </div>
@@ -65,55 +65,55 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 
 ### Single line con header e divider
 
-I link list possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
+I Link lista possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
 L'header è costituito dall'elemento `<h3>` all'interno del tag `<li>`<br>
 Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`
 
-**Heading senza link**
+**Header senza link**
 {% capture example %}
 
 <div class="link-list-wrapper">
    <ul class="link-list">
       <li>
-         <h3 id="heading-senza-link" class="no_toc">Heading senza link</h3>
+         <h3 id="header-senza-link" class="no_toc">Header senza link</h3>
       </li>
       <li>
-        <a class="list-item" href="#"><span>Link list 1</span></a>
+        <a class="list-item" href="#"><span>Link lista 1</span></a>
       </li>
       <li>
-        <a class="list-item" href="#"><span>Link list</span></a>
+        <a class="list-item" href="#"><span>Link lista</span></a>
       </li>
       <li>
-        <a class="list-item" href="#"><span>Link list 3</span></a>
+        <a class="list-item" href="#"><span>Link lista 3</span></a>
       </li>
       <li>
         <span class="divider"></span>
       </li>
       <li>
-        <a class="list-item" href="#"><span>Link list 4</span></a>
+        <a class="list-item" href="#"><span>Link lista 4</span></a>
       </li>
    </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-**Heading con link**
+**Header con link**
 {% capture example %}
 
 <div class="link-list-wrapper">
    <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <h3 id="heading-con-link" class="no_toc"><a href="#">Heading con link</a></h3>
+          <h3 id="header-con-link" class="no_toc"><a href="#">Header con link</a></h3>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list</span></a>
+        <li><a class="list-item" href="#"><span>Link lista</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 3</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 3</span></a>
         </li>
         <li><span class="divider"></span>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 4</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
     </div>
@@ -122,24 +122,24 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 
 ## Sizing
 
-Per ogni elemento link list è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
+Per ogni elemento Link lista è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
 
 {% capture example %}
 
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <h3 id="heading" class="no_toc">Heading</h3>
+      <h3 id="header" class="no_toc">Header</h3>
     </li>
-    <li><a class="list-item large" href="#"><span>Link list 1</span></a>
+    <li><a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link list</span></a>
+    <li><a class="list-item large" href="#"><span>Link lista</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link list 3</span></a>
+    <li><a class="list-item large" href="#"><span>Link lista 3</span></a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item large" href="#"><span>Link list 4</span></a>
+    <li><a class="list-item large" href="#"><span>Link lista 4</span></a>
     </li>
   </ul>
 </div>
@@ -147,7 +147,7 @@ Per ogni elemento link list è possibile definire una variante di dimensione mag
 
 ## Multiline
 
-Ogni elemento link list può avere un icona (a destra o sinistra del testo) ed un abstract.
+Ogni elemento Link lista può avere un icona (a destra o sinistra del testo) ed un abstract.
 
 **Icone**<br>
 Per aggiungere un icona bisogna aggiungere al tag `<a>` la classi:<br>
@@ -161,21 +161,21 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
     <li><a class="list-item active icon-right" href="#">
-        <span>Link list 1 active</span>
+        <span>Link lista 1 attivo</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item icon-right" href="#">
-        <span>Link list 1</span>
+        <span>Link lista 1</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item disabled icon-right" href="#">
-        <span>Link list 1 disabled</span>
+        <span>Link lista 1 disabilitato</span>
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
@@ -187,7 +187,7 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 
 ## Lista con controlli
 
-I link list con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
+I Link lista con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
 Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript.
 
 Per aggiungere un'icona è possibile aggiungere al tag `<a>` la classe `icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
@@ -205,15 +205,15 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
   <ul class="link-list">
     <li><a class="list-item active icon-left" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-        <span>Link list 1 active</span>
+        <span>Link lista 1 attivo</span>
     </a></li>
     <li><a class="list-item icon-left" href="#">
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-      <span>Link list 1</span>
+      <span>Link lista 1</span>
     </a></li>
     <li><a class="list-item disabled icon-left" href="#">
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-      <span>Link list 1 disabled</span>
+      <span>Link lista 1 disabilitato</span>
     </a></li>
   </ul>
 </div>
@@ -231,15 +231,15 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active icon-right" href="#">
-      <span>Link list 1 active</span>
+      <span>Link lista 1 attivo</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
     </a></li>
     <li><a class="list-item icon-right" href="#">
-      <span>Link list 1</span>
+      <span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
     </a></li>
     <li><a class="list-item disabled icon-right" href="#">
-      <span>Link list 1 disabled</span>
+      <span>Link lista 1 disabilitato</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
     </a></li>
   </ul>
@@ -264,14 +264,14 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
   <ul class="link-list">
     <li><a class="list-item active icon-left" href="#">
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
-      <span>Link list 1 active</span></a>
+      <span>Link lista 1 attivo</span></a>
     </li>
     <li><a class="list-item icon-left" href="#">
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
-      <span>Link list 1</span></a>
+      <span>Link lista 1</span></a>
     </li>
     <li><a class="list-item disabled icon-right" href="#">
-      <span>Link list 1 disabled con icona a destra</span>
+      <span>Link lista 1 disabilitato con icona a destra</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
     </li>
   </ul>
@@ -289,11 +289,11 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 active</span></a>
+    <li><a class="list-item active avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1 attivo</span></a>
     </li>
-    <li><a class="list-item avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1</span></a>
+    <li><a class="list-item avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 disabled</span></a>
+    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1 disabilitato</span></a>
     </li>
   </ul>
 </div>
@@ -303,7 +303,7 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 
 ### List con switch
 
-Un link list può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
+Un Link lista può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
 
 {% capture example %}
 
@@ -318,7 +318,7 @@ Un link list può contenere anche elementi form, si seguito un esempio contenent
     </li>
     <li>
       <div class="toggles">
-        <label for="toggle2">Label per disabled toggle
+        <label for="toggle2">Label per toggle disabilitato
           <input type="checkbox" id="toggle2" disabled><span class="lever"></span>
         </label>
       </div>
@@ -329,7 +329,7 @@ Un link list può contenere anche elementi form, si seguito un esempio contenent
 
 ### List con checkbox
 
-Di seguito un esempio di link list contenente un `<input type="checkbox">` standard.
+Di seguito un esempio di Link lista contenente un `<input type="checkbox">` standard.
 
 {% capture example %}
 
@@ -369,22 +369,22 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium icon-right" href="#"><span>Link list 1</span>
+    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
       </a>
     </li>
-    <li><a class="list-item large medium icon-right" href="#"><span>Link list 1</span>
+    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
       <ul class="link-sublist" id="">
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#"><span>Link list 1</span>
+    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
     </li>
   </ul>
@@ -394,7 +394,7 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 ### Collapsable
 
 Di seguito un esempio di navigazione annidiata collassabile.<br>
-Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
+Per questo tipo di Link lista sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
 **La documentazione è consultabile qui:**<br> <a href="{{ site.baseurl }}/docs/componenti/collapse/#accordion">{{ site.baseurl }}/docs/componenti/collapse/#accordion</a>
 
 {% capture example %}
@@ -402,38 +402,38 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-      <span>Link list 1</span>
+      <span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseOne">
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
       </ul>
     </li>
     <li><a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-      <span>Link list 1</span>
+      <span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseTwo">
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
       </ul>
     </li>
     <li><a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-      <span>Link list 1</span>
+      <span>Link lista 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseThree">
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link list 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
       </ul>
     </li>

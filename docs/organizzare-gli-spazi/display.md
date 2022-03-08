@@ -121,7 +121,7 @@ Applica `.visible` oppure `.invisible` al bisogno.
 ```
 
 ```scss
-// Class
+// Classi
 .visible {
   visibility: visible;
 }

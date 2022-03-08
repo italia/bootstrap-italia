@@ -27,7 +27,7 @@ description: La lista è un componente flessibile per la visualizzazione di list
     </li>
     <li>
       <a class="active" href="#">
-        <div class="it-right-zone"><span class="text">Active Label</span>
+        <div class="it-right-zone"><span class="text">Label attiva</span>
         </div>
       </a>
     </li>
@@ -64,7 +64,7 @@ L'elemento **`.avatar`** precede l'elemento **`.it-right-zone`** che contiene il
     <li>
       <a class="active" href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Active Label</span>
+        <div class="it-right-zone"><span class="text">Label attiva</span>
         </div>
       </a>
     </li>
@@ -109,7 +109,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-folder"></use>
           </svg>
         </div>
-        <div class="it-right-zone"><span class="text">Active Label</span>
+        <div class="it-right-zone"><span class="text">Label attiva</span>
         </div>
       </a>
     </li>
@@ -142,7 +142,7 @@ L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento *
     <li>
       <a class="active" href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
-        <div class="it-right-zone"><span class="text">Active Label</span>
+        <div class="it-right-zone"><span class="text">Label attiva</span>
         </div>
       </a>
     </li>
@@ -185,7 +185,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
     <li>
       <a class="active" href="#">
         <div class="it-right-zone">
-          <span class="text">Active Label</span>
+          <span class="text">Label attiva</span>
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
           </svg>
@@ -227,7 +227,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
     <li>
       <a class="active" href="#">
         <div class="it-right-zone">
-          <span class="text">Active Label</span>
+          <span class="text">Label attiva</span>
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use>
           </svg>
@@ -285,7 +285,7 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
     <li>
       <a class="active" href="#">
         <div class="it-right-zone">
-          <span class="text">Active Label</span>
+          <span class="text">Label attiva</span>
           <span class="it-multiple">
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
@@ -340,7 +340,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
     <li>
       <a class="it-has-checkbox" href="#">
         <div class="it-right-zone">
-          <span class="text">Label</span>
+          <span class="text">Label 3</span>
           <div class="toggles">
             <label for="toggle1">
             <input type="checkbox" id="id3"><span class="lever"></span>
@@ -381,7 +381,7 @@ L'elemento **`.metadata`**, segue l'elemento **`.text`**.
     <li>
       <a class="active" href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Active Label</span><span class="metadata">metadata</span>
+        <div class="it-right-zone"><span class="text">Label attiva</span><span class="metadata">metadata</span>
         </div>
       </a>
     </li>
@@ -429,7 +429,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
       <a class="it-has-checkbox" href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
-          <span class="text">Label</span>
+          <span class="text">Label 3</span>
           <div class="toggles">
             <label for="toggle1">
             <input type="checkbox" id="idt3"><span class="lever"></span>
@@ -491,7 +491,7 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
     <li>
       <a class="active" href="#">
         <div class="it-right-zone">
-          <span class="text">Active Label<em>Font Titillium 14px. Leading 20px.</em></span>
+          <span class="text">Label attiva<em>Font Titillium 14px. Leading 20px.</em></span>
           <span class="it-multiple">
             <span class="metadata">metadata</span>
             <svg class="icon">
@@ -546,7 +546,7 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
           <input id="idc3" type="checkbox">
           <label for="idc3"></label>
         </div>
-        <div class="it-right-zone"><span class="text">Active Label<em>Font Titillium 14px. Leading 20px.</em></span>
+        <div class="it-right-zone"><span class="text">Label attiva<em>Font Titillium 14px. Leading 20px.</em></span>
         </div>
       </a>
     </li>

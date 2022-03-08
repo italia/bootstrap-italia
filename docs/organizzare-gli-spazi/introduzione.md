@@ -27,7 +27,7 @@ La prima scelta è tra un container a larghezza _fissa_, la cui `max-width` camb
 
 ```html
 <div class="container">
-  <!-- Content here -->
+  <!-- Contenuto -->
 </div>
 ```
 
@@ -81,7 +81,7 @@ Quando scriviamo il codice sorgente in Sass, tutte le media query sono già disp
 @include media-breakpoint-up(xl) { ... }
 @include media-breakpoint-up(xxl) { ... }
 
-// Example usage:
+// Esempio di utilizzo:
 @include media-breakpoint-up(sm) {
   .some-class {
     display: block;

@@ -302,10 +302,10 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 {% capture example %}
 <div class="container">
   <div class="row row-cols-2">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -315,10 +315,10 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 {% capture example %}
 <div class="container">
   <div class="row row-cols-3">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -328,10 +328,10 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 {% capture example %}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -341,10 +341,10 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 {% capture example %}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col-6">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col-6">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -354,10 +354,10 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 {% capture example %}
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
+    <div class="col">Colonna</div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -683,10 +683,10 @@ Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` 
 {% capture example %}
 <div class="row">
   <div class="col-sm-9">
-    Level 1: .col-sm-9
+    Livello 1: .col-sm-9
     <div class="row">
-      <div class="col-8 col-sm-6">Level 2: .col-8 .col-sm-6</div>
-      <div class="col-4 col-sm-6">Level 2: .col-4 .col-sm-6</div>
+      <div class="col-8 col-sm-6">Livello 2: .col-8 .col-sm-6</div>
+      <div class="col-4 col-sm-6">Livello 2: .col-4 .col-sm-6</div>
     </div>
   </div>
 </div>
