@@ -4,6 +4,15 @@
     border-bottom: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
 
     .it-header-slim-wrapper-content {
+      .nav-mobile {
+        ul.link-list {
+          a {
+            &.active {
+              color: $primary-b3;
+            }
+          }
+        }
+      }
       .it-header-slim-right-zone,
       .header-slim-right-zone {
         // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility

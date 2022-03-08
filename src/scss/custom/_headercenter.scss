@@ -11,8 +11,6 @@
   }
 
   .it-header-center-content-wrapper {
-    //padding-top:$header-center-pad-mob;
-    //padding-bottom:$header-center-pad-mob;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,14 +24,16 @@
         color: $header-center-text-color;
         align-items: center;
         text-decoration: none;
-        h2 {
+        h2,
+        .it-brand-title {
           font-size: $header-center-h2-size-mob;
           margin-bottom: 0;
           font-weight: $header-center-h2-weight;
           letter-spacing: unset;
           line-height: 1.1;
         }
-        h3 {
+        h3,
+        .it-brand-tagline {
           font-size: $header-center-h3-size;
           font-weight: normal;
           margin-bottom: 0;
@@ -127,8 +127,6 @@
     .it-header-center-content-wrapper {
       padding-left: $header-general-padding - ($grid-columns * 0.5);
       padding-right: $header-general-padding - ($grid-columns * 0.5);
-      //padding-top:$header-center-pad;
-      //padding-bottom:$header-center-pad;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -138,12 +136,14 @@
         a {
           display: flex;
           align-items: center;
-          h2 {
+          h2,
+          .it-brand-title {
             font-size: $header-center-h2-size;
             margin-bottom: 0;
             font-weight: $header-center-h2-weight;
           }
-          h3 {
+          h3,
+          .it-brand-tagline {
             font-size: $header-center-h3-size;
             font-weight: normal;
             margin-bottom: 0;

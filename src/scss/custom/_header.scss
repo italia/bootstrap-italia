@@ -56,7 +56,7 @@
             .it-brand-wrapper {
               align-self: center;
 
-              &.cloned {
+              &.cloned-header {
                 .it-brand-text {
                   display: none;
                 }
@@ -106,7 +106,7 @@
                 }
               }
 
-              &.cloned {
+              &.cloned-header {
                 a {
                   width: 35px;
                   height: 35px;

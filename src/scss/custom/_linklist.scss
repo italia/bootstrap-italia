@@ -1,5 +1,16 @@
 //mobile
 .link-list-wrapper {
+  h3,
+  .link-list-heading {
+    font-size: $link-list-heading-size;
+    color: $neutral-1-a10;
+    padding: 0 $link-list-h-pad;
+    a {
+      line-height: inherit;
+      font-size: 1em;
+      padding: 0;
+    }
+  }
   ul {
     padding: 0;
     list-style-type: none;
@@ -8,6 +19,11 @@
       padding-left: $link-list-h-pad;
     }
     li {
+      h3 {
+        a {
+          padding: 0;
+        }
+      }
       a {
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
@@ -152,16 +168,6 @@
           }
         }
       }
-      h3 {
-        font-size: $link-list-heading-size;
-        color: $neutral-1-a10;
-        padding: 0 $link-list-h-pad;
-        a {
-          line-height: inherit;
-          font-size: 1em;
-          padding: 0;
-        }
-      }
     }
     .divider {
       display: block;
@@ -249,7 +255,8 @@
       position: relative;
 
       h3,
-      h4 {
+      h4,
+      .link-list-heading {
         position: relative;
         padding: 1rem;
         margin-top: 0;

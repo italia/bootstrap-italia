@@ -157,14 +157,16 @@
     }
   }
 
+  //header
+  h3,
+  .link-list-heading {
+    line-height: $link-list-line-height;
+    margin-bottom: 0;
+  }
+
   //link list finetuning
   .link-list {
     margin-bottom: 0;
-    //header
-    h3 {
-      line-height: $link-list-line-height;
-      margin-bottom: 0;
-    }
   }
 
   //notch
@@ -193,6 +195,12 @@
   //dark version
   &.dark {
     background-color: $neutral-1-a8;
+    .link-list-wrapper {
+      h3,
+      .link-list-heading {
+        color: #fff;
+      }
+    }
     .link-list-wrapper ul {
       span.divider {
         background: #2e465e;
@@ -201,7 +209,6 @@
         //link list colors and hovers
         a span,
         a:hover span,
-        h3,
         i {
           color: #fff;
         }
