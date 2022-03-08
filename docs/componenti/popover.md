@@ -153,14 +153,14 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 ### Titolo con icona e link
 
-È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-html="true"` al bottone che apre il Popover e disabilitare la funzione di sanitize attraverso l'opzione `{ sanitize: false }`.
+È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-bs-html="true"` al bottone che apre il Popover e disabilitare la funzione di sanitize attraverso l'opzione `{ sanitize: false }`.
 
 L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e proprio titolo.
 
 Il link come HTML nell'attributo `data-bs-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
 
 {% capture example %}
-<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
+<button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>More info<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right'></use></svg></a>">
 Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -219,7 +219,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
+Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-bs-`, come in `data-bs-animation=""`.
 
 Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/popovers/) del sito di Bootstrap.
 
