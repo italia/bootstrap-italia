@@ -36,7 +36,7 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-4">
@@ -110,7 +110,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-4">
@@ -207,7 +207,7 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-4">
@@ -287,7 +287,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-4">
@@ -376,7 +376,7 @@ Di seguito un esempio:
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-4">
@@ -476,7 +476,7 @@ Di seguito un esempio:
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row max-height-col">
               <div class="col-xs-12 col-lg-8">
@@ -577,7 +577,7 @@ Di seguito un esempio:
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu show">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
           <div class="dropdown-menu show">
             <div class="row max-height-col">
               <div class="col-xs-12 col-lg-8">
@@ -681,7 +681,7 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span>Megamenu Label</span></a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-12 col-lg-8">
@@ -767,7 +767,7 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
     <div class="menu-wrapper">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu show">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true"><span>Megamenu Label</span></a>
           <div class="dropdown-menu show">
             <div class="row max-height-col">
               <div class="col-xs-12 col-lg-8">
