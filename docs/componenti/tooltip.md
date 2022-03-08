@@ -6,7 +6,7 @@ group: componenti
 toc: true
 ---
 
-I Toolip di Bootstrap con CSS e JavaScript utilizzano CSS3 per animazioni e attributi `data` per l'archiviazione di titoli locali.
+Documentazione ed esempi per l'aggiunta di suggerimenti personalizzati con CSS e JavaScript utilizzando CSS3 per le animazioni e gli attributi `data-bs per` l'archiviazione di titoli locali
 
 {% capture callout %}
 
@@ -107,7 +107,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
       <div class="row mt-5">
         <div class="col-3"></div>
         <div class="col-6">
-          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>" style="width: 100%;">Tooltip con HTML</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>" style="width: 100%;">Tooltip con HTML</button>
         </div>
         <div class="col-3"></div>
       </div>
@@ -119,7 +119,7 @@ Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei t
 E con codice HTML personalizzato:
 
 ```html
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>con</u> <strong>HTML</strong>">
   Tooltip con HTML
 </button>
 ```
@@ -139,7 +139,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, options)
 
 Di seguito è mostrato un esempio che esplicita il funzionamento interno di Bootstrap per la gestione di Tooltip.
 
-Il markup richiesto per un tooltip è costituito da un attributo `data-` e `title` sull'elemento HTML sul quale si vuole
+Il markup richiesto per un tooltip è costituito da un attributo `data-bs-` e `title` sull'elemento HTML sul quale si vuole
 abilitare un tooltip. Ad esempio, quando nella pagina è scritto questo codice HTML:
 
 ```html
@@ -152,14 +152,14 @@ Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hov
 <a href="#" data-bs-toggle="tooltip" title="Testo di esempio del tooltip!" aria-describedby="tooltip0123456">Link che attiva il tooltip</a>
 
 <div class="tooltip bs-tooltip-top" role="tooltip" id="tooltip0123456">
-  <div class="arrow"></div>
+  <div class="tooltip-arrow"></div>
   <div class="tooltip-inner">Testo di esempio del tooltip</div>
 </div>
 ```
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-`, come in `data-animation=""`.
+Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-bs-`, come in `data-bs-animation=""`.
 
 Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/tooltips/#options) del sito di Bootstrap.
 
