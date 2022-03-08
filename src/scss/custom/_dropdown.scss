@@ -23,37 +23,6 @@
 
 .dropdown,
 .btn-group {
-  //menu fade in
-  &.show {
-    .dropdown-menu {
-      //menu on bottom
-      &[x-placement='bottom-start'] {
-        animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
-      }
-      //menu on top
-      &[x-placement='top-start'] {
-        animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
-      }
-      //-menu on left
-      &[x-placement='left-start'] {
-        animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
-        &:before {
-          top: 20px;
-          right: -6px;
-          left: auto;
-        }
-      }
-      //-menu on right
-      &[x-placement='right-start'] {
-        animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
-        &:before {
-          top: 20px;
-          left: -6px;
-        }
-      }
-    }
-  }
-
   //dropup
   &.dropup {
     .btn-dropdown {
@@ -181,7 +150,7 @@
   }
 
   //top position
-  &[x-placement='top-start'] {
+  &[data-popper-placement='top-start'] {
     border-radius: $dropdown-menu-radius $dropdown-menu-radius 0 0;
     //notch
     &:before {
@@ -219,6 +188,36 @@
     //notch
     &:before {
       background-color: $neutral-1-a8;
+    }
+  }
+}
+
+.dropdown-menu {
+  &.show {
+    //menu on bottom
+    &[data-popper-placement='bottom-start'] {
+      animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
+    }
+    //menu on top
+    &[data-popper-placement='top-start'] {
+      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+    }
+    //-menu on left
+    &[data-popper-placement='left-start'] {
+      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      &:before {
+        top: 20px;
+        right: -6px;
+        left: auto;
+      }
+    }
+    //-menu on right
+    &[data-popper-placement='right-start'] {
+      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      &:before {
+        top: 20px;
+        left: -6px;
+      }
     }
   }
 }
