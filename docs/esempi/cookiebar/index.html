@@ -4,23 +4,29 @@ title: CookieBar
 ---
 
 <style>
-  .cookiebar {
+  /*.cookiebar {
     display: block !important;
   }
   @media (min-width: 768px) {
     .cookiebar {
       display: flex !important;
     }
-  }
+  }*/
 </style>
 
-<div class="cookiebar">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    bootstrap.Cookiebar.clearCookie()
+  })
+</script>
+
+<div class="cookiebar fade">
   <p>
     Questo sito utilizza cookie tecnici, analytics e di terze parti.
     <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.
   </p>
   <div class="cookiebar-buttons">
     <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
-    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
+    <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
   </div>
 </div>

@@ -6,6 +6,7 @@ import './plugins/forward'
 
 import Dimmer from './plugins/dimmer'
 import Notification from './plugins/notification'
+import Cookiebar from './plugins/cookiebar'
 
 window.bootstrap = {
   Alert,
@@ -23,4 +24,5 @@ window.bootstrap = {
 
   Dimmer,
   Notification,
+  Cookiebar,
 }

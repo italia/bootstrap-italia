@@ -25,39 +25,44 @@ Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ### Codice HTML
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    bootstrap.Cookiebar.clearCookie()
+  })
+</script>
 
 <style>
   /* Style override for Documentation purposes */
 
   .bd-example .cookiebar {
-    display: block !important;
+    /*display: block !important;*/
     position: relative !important;
   }
 
-  @media (min-width: 768px) {
+  /*@media (min-width: 768px) {
     .bd-example .cookiebar {
       display: flex !important;
     }
-  }
+  }*/
 
 }
 </style>
 <div class="bd-example">
-    <div class="cookiebar">
+    <div class="cookiebar fade">
         <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
         <div class="cookiebar-buttons">
             <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
-            <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
+            <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
         </div>
     </div>
 </div>
 
 ```html
-<div class="cookiebar">
+<div class="cookiebar fade">
   <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
   <div class="cookiebar-buttons">
     <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
-    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
+    <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
   </div>
 </div>
 ```
