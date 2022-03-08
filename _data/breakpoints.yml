@@ -29,3 +29,9 @@
   name: Extra large
   min-width: 1200px
   container: 1140px
+
+- breakpoint: xxl
+  abbr: -xxl
+  name: Extra Extra large
+  min-width: 1400px
+  container: 1320px

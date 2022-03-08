@@ -401,7 +401,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium icon-right" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+    <li><a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
       <span>Link list 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseOne">
@@ -413,7 +413,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+    <li><a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
       <span>Link list 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseTwo">
@@ -425,7 +425,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+    <li><a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
       <span>Link list 1</span>
       <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseThree">
