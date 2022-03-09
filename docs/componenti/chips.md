@@ -98,7 +98,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 
 {% for color in site.data.theme-colors %}
 
-<div class="chip chip-{{ color.name }} chip-lg">
+<div class="chip chip-{{ color.name }} chip-lg chip-simple">
   <span class="chip-label">{{ color.name | capitalize }}</span>
 </div>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
