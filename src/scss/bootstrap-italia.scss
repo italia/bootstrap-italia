@@ -54,6 +54,7 @@
 @import 'node_modules/bootstrap/scss/spinners';
 @import 'node_modules/bootstrap/scss/toasts';
 
+
 // Customizzazioni e nuovi componenti
 @import 'custom/type';
 @import 'custom/grid';
@@ -122,6 +123,7 @@
 @import 'custom/badge';
 @import 'custom/print';
 @import 'custom/just-validate';
+@import 'custom/accessible-autocomplete';
 
 // datepicker
 @import 'custom/form-datepicker';
