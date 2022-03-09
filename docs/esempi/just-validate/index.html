@@ -44,20 +44,8 @@ title: Just Validate
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="bootstrap-select-wrapper">
-          <label for="selectExample1">Select custom (non validabile)</label>
-          <select id="selectExample1" title="Scegli una opzione">
-            <option value="Value 1">Opzione 1</option>
-            <option value="Value 2">Opzione 2</option>
-            <option value="Value 3">Opzione 3</option>
-            <option value="Value 4">Opzione 4</option>
-            <option value="Value 5">Opzione 5</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
         <div class="select-wrapper">
-          <label for="defaultSelect">Select standard</label>
+          <label for="defaultSelect">Select</label>
           <select id="defaultSelect" title="Scegli una opzione" required>
             <option selected value="">Scegli una opzione</option>
             <option value="Value 1">Opzione 1</option>
@@ -68,104 +56,18 @@ title: Just Validate
           </select>
         </div>
       </div>
-    </div>
-    <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label class="active" for="date">Datepicker standard</label>
+          <label class="active" for="date">Datepicker</label>
           <input type="date" id="date" name="date" required />
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="form-group">
-          <div class="it-datepicker-wrapper">
-            <div class="form-group">
-              <label for="date2">Datepicker custom (pos. validazione errata da fixare in js)</label>
-              <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa" />
-              <div id="feedback"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="row">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label class="active" for="time">Timepicker standard</label>
+          <label class="active" for="time">Timepicker</label>
           <input class="form-control" id="time" type="time" required />
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="form-group">
-          <div class="it-timepicker-wrapper">
-            <section class="time-spinner">
-              <div class="error_container" role="alert" aria-atomic="true"></div>
-              <fieldset>
-                <legend class="sr-only"><span>Time</span></legend>
-                <div>
-                  <div class="calendar-input-container">
-                    <div class="form-group">
-                      <label for="txtTime1">Timepicker custom (pos. validazione errata da fixare in js)</label>
-                      <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm" />
-                      <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
-                        <svg class="icon">
-                          <use href="/dist/svg/sprite.svg#it-clock"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="spinner-control" aria-hidden="true" role="region" aria-label="Due Date Time" tabindex="-1">
-                <div class="spinner-hour spinner">
-                  <input
-                    class="spinnerHour form-control"
-                    id="spinnerh"
-                    aria-label="hour"
-                    type="number"
-                    value="00"
-                    role="spinbutton"
-                    maxlength="2"
-                    aria-valuenow="00"
-                    aria-valuemax="23"
-                    aria-valuemin="0"
-                    bb-skip="3"
-                  />
-                  <div class="button-wrapper">
-                    <button class="button-hour btnHourUp" id="iduph" aria-label="Increase Hour">
-                      <span class="icon-up"></span>
-                    </button>
-                    <button class="button-hour btnHourDown" id="iddownh" aria-label="Decrease Hour">
-                      <span class="icon-down"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="spinner-min spinner">
-                  <input
-                    class="spinnerMin form-control"
-                    id="spinnerm"
-                    aria-label="minute"
-                    type="number"
-                    value="00"
-                    role="spinbutton"
-                    aria-valuenow="00"
-                    maxlength="2"
-                    aria-valuemax="59"
-                    aria-valuemin="00"
-                    bb-skip="10"
-                  />
-                  <div class="button-wrapper">
-                    <button class="btnMinUp button-minute" id="idupm" aria-label="Increase Minute">
-                      <span class="icon-up"></span>
-                    </button>
-                    <button class="btnMinDown button-minute" id="iddownm" aria-label="Decrease Minute">
-                      <span class="icon-down"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
         </div>
       </div>
     </div>
@@ -258,7 +160,7 @@ title: Just Validate
     <div class="row mb-5">
       <div class="col-12 col-md-6">
         <div class="form-upload">
-          <label for="upload">Upload standard</label>
+          <label for="upload">Upload</label>
           <input type="file" name="upload" id="upload" multiple="multiple" required />
         </div>
       </div>
@@ -277,19 +179,21 @@ title: Just Validate
     </div>
   </div>
 </form>
-
+<div aria-live="polite" class="notification with-icon error bottom-fix" role="alert" aria-labelledby="not2b-title" id="not2b">
+  <h5 id="not2b-title">
+    <svg class="icon">
+      <use href="/dist/svg/sprite.svg#it-close-circle"></use>
+    </svg>
+    Il form contiene degli errori
+  </h5>
+</div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    $('.it-date-datepicker').datepicker({
-      inputFormat: ['dd/MM/yyyy'],
-      outputFormat: 'dd/MM/yyyy',
-    })
-
     const validate = new window.JustValidateIt('#justValidate', {
       errorFieldCssClass: 'is-invalid',
       errorLabelCssClass: 'form-feedback',
       errorLabelStyle: '',
-      focusInvalidField: true,
+      focusInvalidField: false,
     })
 
     accessibleAutocomplete.enhanceSelectElement({
@@ -372,22 +276,7 @@ title: Just Validate
           errorMessage: 'Questo campo è richiesto',
         },
       ])
-      .addField('#date2', [
-        {
-          plugin: JustValidatePluginDate(() => ({
-            format: 'dd/MM/yyyy',
-          })),
-          errorMessage: 'Date should be in dd/MM/yyyy',
-          errorsContainer: '#feedback',
-        },
-      ])
       .addField('#time', [
-        {
-          rule: 'required',
-          errorMessage: 'Questo campo è richiesto',
-        },
-      ])
-      .addField('#txtTime1', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
@@ -433,6 +322,9 @@ title: Just Validate
       ])
       .onSuccess((event) => {
         document.forms['justValidate'].submit()
+      })
+      .onFail((fields) => {
+        notificationShow('not2b', 6000)
       })
   })
 </script>
