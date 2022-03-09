@@ -47,6 +47,10 @@
     transition: 0.2s ease-out;
     font-weight: 700;
     color: $dark;
+    background-color: $white;
+    option {
+      font-weight: normal;
+    }
     &:disabled {
       background-color: $input-disabled-bg;
       color: #17324d;

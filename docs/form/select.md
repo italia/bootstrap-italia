@@ -7,7 +7,7 @@ title: Select
 description: Il classico “menu a tendina”, in nuove varianti.
 ---
 
-### Select standard
+### Select
 
 La select standard è composta dal un wrapper esterno `.select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà la visualizzazione corretta.
 
@@ -26,7 +26,7 @@ La select standard è composta dal un wrapper esterno `.select-wrapper` seguita 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select standard disabilitata
+### Select disabilitata
 Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 {% capture example %}
 <div class="select-wrapper">
@@ -42,7 +42,7 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select standard con gruppi
+### Select con gruppi
 
 Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppare le <option>.
 

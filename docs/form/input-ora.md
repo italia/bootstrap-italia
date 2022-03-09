@@ -9,7 +9,7 @@ description: Campi input con bottoni per agevolare la selezione di un orario
 
 Il componente input time, o timepicker, è un componente personalizzato per la selezione di un orario.
 
-### Input ora standard
+### Input ora
 
 {% capture callout %}
 **Compatibilità con Internet Explorer 11**
