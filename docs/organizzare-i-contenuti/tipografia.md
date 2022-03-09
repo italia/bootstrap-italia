@@ -236,7 +236,7 @@ e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

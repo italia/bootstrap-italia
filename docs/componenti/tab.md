@@ -10,7 +10,7 @@ L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del layout di 
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https://www.w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
 

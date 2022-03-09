@@ -18,7 +18,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Essendo il Megamenu un componente di navigazione critico dal punto di vista dell'accessibilità se ne suggerisce l'uso solo quando strettamente necessario. In questi casi:
 

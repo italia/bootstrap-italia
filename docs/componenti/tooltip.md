@@ -10,7 +10,9 @@ I Toolip di Bootstrap con CSS e JavaScript utilizzano CSS3 per animazioni e attr
 
 {% capture callout %}
 
-##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
+#### Accessibiltà
+
+I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
 bottoni, o elementi di form).

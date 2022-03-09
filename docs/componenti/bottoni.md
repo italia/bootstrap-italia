@@ -17,7 +17,7 @@ Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe `.
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
 {% capture callout %}
-##### Accessibilità
+#### Accessibilità
 
 In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -79,7 +79,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
 {% capture callout %}
-##### Accessibilità
+#### Accessibilità icone
 
 Valutare caso per caso se l'icona ha bisogno di una descrizione `aria-label` o se è preferibile nasconderla (perché non significativa) con l'attributo `aria-hidden="true"`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

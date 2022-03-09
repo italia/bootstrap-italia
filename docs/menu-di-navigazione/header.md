@@ -21,7 +21,7 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 {% capture callout %}
-##### Accessibilità
+#### Accessibilità
 
 Condierando l'importanza delL'Header per la navigazione di un sito, si consiglia di seguire gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
 
