@@ -7,9 +7,35 @@ title: Input Calendario
 description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 ---
 
-Il datepicker utilizza un plugin Javascript di terze parti, "Accessible Bootstrap Date Picker". Per maggiori informazioni è possibile consultarne la [documentazione completa](http://eureka2.github.io/ab-datepicker/#).
+## Datepicker standard
 
-## Abilitazione del Datepicker
+{% capture callout %}
+**Compatibilità con Internet Explorer 11**
+
+L'input type="date" non è supportato da IE11, se ne consiglia l'utilizzo congiuntamente al plugin [Just Validate](https://just-validate.dev/) per verificare l'effettiva validità del campo su Internet Explorer.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+Clicca sull’icona a destra per visualizzare il datepicker.
+
+{% capture example %}
+
+<div class="form-group">
+    <label class="active" for="dateStandard">Datepicker standard</label>
+    <input type="date" id="dateStandard" name="dateStandard">
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Datepicker custom
+
+Il datepicker custom utilizza un plugin Javascript di terze parti, "Accessible Bootstrap Date Picker". Per maggiori informazioni è possibile consultarne la [documentazione completa](http://eureka2.github.io/ab-datepicker/#).
+
+{% capture callout %}
+**Il componente verrà deprecato nella prossima release di Bootstrap Italia**
+
+Il componente datepicker custom presenta alcuni problemi di accessibilità. Non è possibile raggiungere i pulsanti di cambio mese/anno tramite tastiera. Se ne consiglia l'utilizzo nel caso in cui il campo non riguardi ad esempio una data di nascita, o un campo che necessiti la navigazione fra anni.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+## Abilitazione del Datepicker custom
 
 Per inizializzare il plugin, utilizzare il seguente script:
 

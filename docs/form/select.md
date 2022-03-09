@@ -7,9 +7,72 @@ title: Select
 description: Il classico “menu a tendina”, in nuove varianti.
 ---
 
-Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
+### Select standard
 
-### Select classica
+La select standard è composta dal un wrapper esterno `.select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà la visualizzazione corretta.
+
+{% capture example %}
+
+<div class="select-wrapper">
+  <label for="defaultSelect">Etichetta</label>
+  <select id="defaultSelect">
+    <option selected="" value="">Scegli una opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Select standard disabilitata
+Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
+{% capture example %}
+<div class="select-wrapper">
+  <label for="defaultSelectDisabled">Etichetta</label>
+  <select id="defaultSelectDisabled" disabled>
+    <option selected="" value="">Scegli una opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Select standard con gruppi
+
+Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppare le <option>.
+
+{% capture example %}
+<div class="select-wrapper">
+  <label for="defaultSelectGroup">Etichetta</label>
+  <select id="defaultSelectGroup">
+    <option selected="" value="">Scegli una opzione</option>
+    <optgroup label="Gruppo 1">
+      <option value="1">Opzione 1</option>
+      <option value="2">Opzione 2</option>
+    </optgroup>
+    <optgroup label="Gruppo 2">
+      <option value="3">Opzione 3</option>
+      <option value="4">Opzione 4</option>
+    </optgroup>
+  </select>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Select custom
+
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
 
 La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
@@ -27,21 +90,7 @@ La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Non utilizzando questa struttura di elementi, la select viene mostrata come prevede il sistema operativo, senza modifiche:
-
-{% capture example %}
-<label for="defaultSelect">Etichetta</label>
-<select id="defaultSelect" title="Scegli una opzione">
-
-  <option value="Value 1">Opzione 1</option>
-  <option value="Value 2">Opzione 2</option>
-  <option value="Value 3">Opzione 3</option>
-  <option value="Value 4">Opzione 4</option>
-  <option value="Value 5">Opzione 5</option>
-</select>
-{% endcapture %}{% include example.html content=example %}
-
-### Select disabilitata
+### Select custom disabilitata
 
 Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` e aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 
@@ -59,7 +108,7 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select con reset
+### Select custom con reset
 
 Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all'interno dell'attributo "**data-content**" il seguente html:
 `"Label del tasto reset <span class='reset-label'></span>"`
@@ -80,7 +129,7 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select con ricerca
+### Select custom con ricerca
 
 Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
 
@@ -121,7 +170,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 -->
 
-### Select Multipla
+### Select custom Multipla
 
 Per attivare la multiselezione, aggiungere gli attributi `multiple="true"` e `data-multiple-separator=""` alla select.
 
@@ -141,7 +190,7 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select con gruppi
+### Select custom con gruppi
 
 Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>`.
 
@@ -165,7 +214,7 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 {% comment %}
 {% TODO questo esempio è stato temporaneamente rimosso perché potenzialmente a rischio di XSS %}
 
-### Select multipla con gruppi e checkboxes
+### Select custom multipla con gruppi e checkboxes
 
 Per la creazione di questo tipo di select:
 
@@ -194,7 +243,7 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 
 {% endcomment %}
 
-### Modifica dinamica del campi della select
+### Modifica dinamica del campi della select custom
 
 Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione `$.setOptionsToSelect(_parametro)` che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev'essere chiamata dall'elemento con classe `.bootstrap-select-wrapper`, e con parametro in input `_parametro` un oggetto Javascript con proprietà "value" e "text" come segue:
 

@@ -121,6 +121,7 @@
 @import 'custom/rating-list';
 @import 'custom/badge';
 @import 'custom/print';
+@import 'custom/just-validate';
 
 // datepicker
 @import 'custom/form-datepicker';
@@ -149,3 +150,6 @@
 //gestione dei focus
 @import 'utilities/focus';
 @import 'utilities/icons';
+
+//accessible autocomplete
+@import '../../node_modules/accessible-autocomplete/src/autocomplete.css';

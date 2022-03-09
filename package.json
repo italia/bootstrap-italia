@@ -81,12 +81,15 @@
     "stylelint-scss": "^4.1.0"
   },
   "dependencies": {
+    "accessible-autocomplete": "^2.0.4",
     "@splidejs/splide": "^3.6.12",
     "ansi-regex": "^6.0.1",
     "bootstrap": "^4.6.1",
     "bootstrap-select": "^1.13.18",
     "glob-parent": "^6.0.2",
     "jquery": "^3.6.0",
+    "just-validate": "^3.5.0",
+    "just-validate-plugin-date": "^1.1.1",
     "nth-check": "^2.0.1",
     "owl.carousel": "2.3.4",
     "popper.js": "1.16.1",

@@ -22,7 +22,13 @@ const gulp = require('gulp'),
 const DOCUMENTATION_DESTINATION = '_site'
 
 const Paths = {
-  VENDOR_JS: ['node_modules/jquery/dist/jquery.js', 'node_modules/popper.js/dist/umd/popper.js'],
+  VENDOR_JS: [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/popper.js/dist/umd/popper.js',
+    'node_modules/just-validate/dist/just-validate.production.min.js',
+    'node_modules/just-validate-plugin-date/dist/just-validate-plugin-date.production.min.js',
+    'node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.js',
+  ],
   SOURCE_JS: [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/js/bootstrap-select.js',
@@ -65,6 +71,8 @@ const Paths = {
     'src/js/plugins/datepicker-validation.js',
     'src/js/' + pkg.name + '.js',
     'src/js/plugins/version.js',
+    'src/js/plugins/justvalidate-it.js',
+    'src/js/plugins/content-watcher.js',
     'src/js/plugins/class-watcher.js',
     'src/js/plugins/side-menu.js',
     'src/js/plugins/collapse.js',

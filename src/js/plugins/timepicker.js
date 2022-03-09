@@ -141,6 +141,7 @@ $(document).ready(function () {
 
     $btnTime.on('click', (e) => {
       e.stopPropagation()
+      e.preventDefault()
       if ($spinner.hasClass('is-open')) {
         hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
       } else {
@@ -188,20 +189,24 @@ $(document).ready(function () {
         }
       })
 
-    $btnHourUp.on('click', () => {
+    $btnHourUp.on('click', (e) => {
       handleClick('up', $btnHourUp, 'click hour up')
+      e.preventDefault()
     })
 
-    $btnHourDown.on('click', () => {
+    $btnHourDown.on('click', (e) => {
       handleClick('down', $btnHourDown, 'click hour down')
+      e.preventDefault()
     })
 
-    $btnMinUp.on('click', () => {
+    $btnMinUp.on('click', (e) => {
       handleClick('up', $btnMinUp, 'click min up')
+      e.preventDefault()
     })
 
-    $btnMinDown.on('click', () => {
+    $btnMinDown.on('click', (e) => {
       handleClick('down', $btnMinDown, 'click min down')
+      e.preventDefault()
     })
 
     $spinnerH
