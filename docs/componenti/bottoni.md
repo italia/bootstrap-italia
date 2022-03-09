@@ -16,7 +16,11 @@ Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe `.
 
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
+{% capture callout %}
+#### Accessibilità
+
 In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 <a class="btn" href="#" role="button">Link</a>
@@ -74,49 +78,39 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
+{% capture callout %}
+#### Accessibilità icone
+
+Valutare caso per caso se l'icona ha bisogno di una descrizione `aria-label` o se è preferibile nasconderla (perché non significativa) con l'attributo `aria-hidden="true"`
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon">
-<svg class="icon icon-white">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Lg</span>
+  <svg class="icon icon-white" aria-label="Attenzione">
+    <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-warning-circle"></use>
+  </svg>
+  <span>Icon Button Lg</span>
 </button>
 
 <button class="btn btn-primary btn-icon">
-<svg class="icon icon-white">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button</span>
+  <svg class="icon icon-white" aria-hidden="true">
+    <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-star-full"></use>
+  </svg>
+  <span>Icon Button</span>
 </button>
 
 <button class="btn btn-danger btn-sm btn-icon">
-<svg class="icon icon-secondary">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Sm</span>
+  <svg class="icon icon-secondary" aria-hidden="true">
+    <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-star-full"></use>
+  </svg>
+  <span>Icon Button Sm</span>
 </button>
 
 <button class="btn btn-info btn-xs btn-icon">
-<svg class="icon icon-danger">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Xs</span>
+  <svg class="icon icon-danger" aria-hidden="true">
+    <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-star-full"></use>
+  </svg>
+  <span>Icon Button Xs</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -128,39 +122,39 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon">
-<span class="rounded-icon">
-<svg class="icon icon-success">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
-</svg>
-</span>
-<span>Round Icon Lg</span>
+  <span class="rounded-icon">
+    <svg class="icon icon-success" aria-hidden="true">
+      <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+    </svg>
+  </span>
+  <span>Round Icon Lg</span>
 </button>
 
 <button class="btn btn-primary btn-icon">
-<span class="rounded-icon">
-<svg class="icon icon-primary">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
-</svg>
-</span>
-<span>Round Icon</span>
+  <span class="rounded-icon">
+    <svg class="icon icon-primary" aria-hidden="true">
+      <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+    </svg>
+  </span>
+  <span>Round Icon</span>
 </button>
 
 <button class="btn btn-danger btn-sm btn-icon">
-<span class="rounded-icon rounded-secondary">
-<svg class="icon icon-white">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
-</svg>
-</span>
-<span>Round Icon Sm</span>
+  <span class="rounded-icon rounded-secondary">
+    <svg class="icon icon-white" aria-hidden="true">
+      <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+    </svg>
+  </span>
+  <span>Round Icon Sm</span>
 </button>
 
 <button class="btn btn-secondary btn-xs btn-icon">
-<span class="rounded-icon rounded-danger">
-<svg class="icon icon-white">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
-</svg>
-</span>
-<span>Round Icon Xs</span>
+  <span class="rounded-icon rounded-danger">
+    <svg class="icon icon-white" aria-hidden="true">
+      <use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+    </svg>
+  </span>
+  <span>Round Icon Xs</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
