@@ -11,7 +11,6 @@ Le breadcrumbs (in italiano, briciole di pane) mostrano la Nome pagina e danno l
 Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
 
 {% capture callout %}
-
 ##### Accessibilità
 
 Dato che le breadcrumb forniscono una modalità di navigazione alternativa, è buona idea aggiungere un'etichetta significativa come `aria-label="Percorso di navigazione"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la Nome pagina.

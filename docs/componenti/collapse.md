@@ -149,6 +149,12 @@ Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è
 
 Più gruppi di collapse o accordion possono essere annidati.
 
+{% capture callout %}
+##### Accessibilità
+
+Utilizzare questo approccio solo quando strettamente necessario: dal punto di vista dell'accessibilità non si tratta di una soluzione ottimale.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 
 <div id="collapseDiv2" class="collapse-div">
