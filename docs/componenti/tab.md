@@ -29,7 +29,7 @@ Utilizzare la classe `.disabled` sul link dei tab da disabilitare, aggiungendo l
 
 {% capture example %}
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs auto">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Attivo</a>
   </li>
@@ -741,7 +741,7 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 
 ## Tab tipo Card
 
-Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottnere un design tipo card.
+Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottenere un design tipo card.
 
 {% capture example %}
 
@@ -762,7 +762,7 @@ Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottnere un design tipo ca
 
 ### Tab tipo Card con pulsanti aggiungi/elimina
 
-Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ottnere un design tipo card editabili. Includere l'hmtl degli ulteriori elementi di interfaccia come da esempio.
+Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ottenere un design tipo card editabili. Includere l'hmtl degli ulteriori elementi di interfaccia come da esempio.
 
 {% capture example %}
 
