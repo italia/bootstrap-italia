@@ -32,7 +32,7 @@ Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>
 
 {% capture callout %}
 
-##### Accessibilità delle immagini
+#### Accessibilità delle immagini
 
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
 
@@ -569,7 +569,7 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 
 {% capture callout %}
 
-##### Accessibilità dello stato
+#### Accessibilità dello stato
 
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="visually-hidden">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

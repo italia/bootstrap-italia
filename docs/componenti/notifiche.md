@@ -51,7 +51,7 @@ notificationShow('idNotification', 6000)
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Per ragioni di accessibilità è necessario:
 

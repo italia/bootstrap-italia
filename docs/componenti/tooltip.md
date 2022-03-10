@@ -10,7 +10,9 @@ Documentazione ed esempi per l'aggiunta di suggerimenti personalizzati con CSS e
 
 {% capture callout %}
 
-##### Accessibiltà: I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
+#### Accessibiltà
+
+I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
 bottoni, o elementi di form).

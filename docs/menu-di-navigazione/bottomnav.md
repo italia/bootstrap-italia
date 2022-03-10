@@ -144,7 +144,7 @@ Aggiungere uno `<span>` con classe `.bottom-nav-alert` all'interno dell'icona pe
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibilità è necessario aggiungere uno `<span>` con classe `.visually-hidden` all'interno della label che contenga un testo esplicativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

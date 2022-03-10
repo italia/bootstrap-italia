@@ -13,7 +13,7 @@ I popovers richiedono il [plugin tooltip]({{ site.baseurl }}/docs/componenti/too
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 I popover funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 Allo stesso modo di quanto avviene per i [Tooltip]({{ site.baseurl }}/docs/componenti/tooltip/),

@@ -251,7 +251,7 @@ L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.visually-hidden`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

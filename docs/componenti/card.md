@@ -86,7 +86,7 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
 
 {% capture callout %}
 
-##### Accessibilità dei link
+#### Accessibilità dei link
 
 Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi di più” è importante ricordare di aggiungere uno `<span class="visually-hidden">...</span>` a seguito della label nel quale specificare a che contenuto si fa riferimento (idealmente ripetendo il titolo della card). In caso contrario un utente che faccia uso di *screen reader* non avrebbe modo di distinguere link identici a contenuti differenti.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

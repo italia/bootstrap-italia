@@ -16,7 +16,7 @@ Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo 
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="visually-hidden">Testo alternativo</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
