@@ -149,6 +149,38 @@ class JustValidateIt {
   }
 }
 
-window.JustValidateIt = JustValidateIt
+//Plugins
+/**
+ * Validate a custom autocomplete select
+ * @param {string} inputId - the input id
+ * @param {Object} config - { required }
+ */
+const JustValidateItValidatorSelectAutocomplete = (inputId, config = {}) => {
+  return (value, fields) => {
+    let result = false
+    const field = fields[inputId]
+    if (field) {
+      if (!config.required && !value) {
+        result = true
+      } else {
+        document
+          .querySelector('#' + field.elem.id + '-select')
+          .querySelectorAll('option')
+          .forEach((option) => {
+            if (option.text === value) {
+              result = true
+            }
+          })
+      }
+    } else {
+      throw new Error('JustValidateItValidatorSelectAutocomplete: ' + inputId + ' not found as form field')
+    }
 
-export default JustValidateIt
+    return result
+  }
+}
+
+window.JustValidateIt = JustValidateIt
+window.JustValidateItValidatorSelectAutocomplete = JustValidateItValidatorSelectAutocomplete
+
+export { JustValidateIt, JustValidateItValidatorSelectAutocomplete }

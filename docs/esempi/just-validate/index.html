@@ -321,9 +321,10 @@ title: Just Validate
       ])
       .addField('#accessibleAutocomplete', [
         {
-          rule: 'required',
+          //rule: 'required',
           errorMessage: 'Questo campo è richiesto',
-        },
+          validator: window.JustValidateItValidatorSelectAutocomplete('#accessibleAutocomplete', { required: true })
+        }
       ])
       .addField('#age', [
         {
