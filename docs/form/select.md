@@ -132,6 +132,16 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 ### Select custom con ricerca
 
 Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
+{% capture callout %}
+
+**Il componente verrà deprecato per problemi di accessibilità**
+
+Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l'utilizzo del componente [autocompletamento]({{ site.baseurl }}/docs/form/autocompletamento/).
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
+
+La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
 {% capture example %}
 
