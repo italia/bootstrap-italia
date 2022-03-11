@@ -14,52 +14,52 @@ nonbundle: false
   <div class="row">
     <div class="col-12 col-md-4">
       <p>
-        <button onclick="notificationShow('notification');" type="button" class="btn btn-primary">Notification - 7s (default)</button>
+        <button data-bs-toggle="notification" data-bs-target="#notification" type="button" class="btn btn-primary">Notification - 7s (default)</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationIcnTxt');" type="button" class="btn btn-primary">Notification icon/text - 7s (default)</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationIcnTxt" type="button" class="btn btn-primary">Notification icon/text - 7s (default)</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDism');" type="button" class="btn btn-primary">Notification Dismissable</button>
-      </p>
-    </div>
-    <div class="col-12 col-md-4">
-      <p>
-        <button onclick="notificationShow('notificationTop',5000);" type="button" class="btn btn-primary">Notification Top Fix - 5s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationBottom',8000);" type="button" class="btn btn-primary">Notification Bottom Fix - 8s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationLeft',6000);" type="button" class="btn btn-primary">Notification Left Fix - 6s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationRight',12000);" type="button" class="btn btn-primary">Notification Right Fix - 12s</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDism" type="button" class="btn btn-primary">Notification Dismissable</button>
       </p>
     </div>
     <div class="col-12 col-md-4">
       <p>
-        <button onclick="notificationShow('notificationDismTopFix');" type="button" class="btn btn-primary">Notification Dismissable Top Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationTop" data-bs-timeout="5000" type="button" class="btn btn-primary">Notification Top Fix - 5s</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismBotFix');" type="button" class="btn btn-primary">Notification Dismissable Bottom Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationBottom" data-bs-timeout="8000" type="button" class="btn btn-primary">Notification Bottom Fix - 8s</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismLftFix');" type="button" class="btn btn-primary">Notification Dismissable Left Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationLeft" data-bs-timeout="6000" type="button" class="btn btn-primary">Notification Left Fix - 6s</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismRgtFix');" type="button" class="btn btn-primary">Notification Dismissable Right Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationRight" data-bs-timeout="12000" type="button" class="btn btn-primary">Notification Right Fix - 12s</button>
+      </p>
+    </div>
+    <div class="col-12 col-md-4">
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismTopFix" type="button" class="btn btn-primary">Notification Dismissable Top Fix</button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismBotFix" type="button" class="btn btn-primary">Notification Dismissable Bottom Fix</button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismLftFix" type="button" class="btn btn-primary">Notification Dismissable Left Fix</button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismRgtFix" type="button" class="btn btn-primary">Notification Dismissable Right Fix</button>
       </p>
     </div>
   </div>
 </div>
 
 <!-- col1 -->
-<div class="notification" role="alert" id="notification" aria-labelledby="not0-title">
+<div class="notification fade" data-bs-timeout="7000" role="alert" id="notification" aria-labelledby="not0-title">
   <h5 id="not0-title">Notification</h5>
 </div>
 
-<div class="notification with-icon success" role="alert" id="notificationIcnTxt" aria-labelledby="not1-title">
+<div class="notification with-icon success" role="alert" id="notificationIcnTxt" data-bs-timeout="7000" aria-labelledby="not1-title">
   <h5 id="not1-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg
@@ -68,14 +68,14 @@ nonbundle: false
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification dismissable with-icon success" role="alert" id="notificationDism" aria-labelledby="not6-title">
+<div class="notification dismissable with-icon success fade" role="alert" id="notificationDism" aria-labelledby="not6-title">
   <h5 id="not6-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg
     >Notification Dismissable
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use xlink="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>
@@ -85,7 +85,7 @@ nonbundle: false
 <!-- /col1 -->
 
 <!-- col2 -->
-<div class="notification top-fix with-icon success" role="alert" id="notificationTop" aria-labelledby="not2-title">
+<div class="notification top-fix with-icon success fade" role="alert" id="notificationTop" aria-labelledby="not2-title">
   <h5 id="not2-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check-circle"></use></svg
@@ -94,7 +94,7 @@ nonbundle: false
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification bottom-fix with-icon error" role="alert" id="notificationBottom" aria-labelledby="not3-title">
+<div class="notification bottom-fix with-icon error fade" role="alert" id="notificationBottom" aria-labelledby="not3-title">
   <h5 id="not3-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close-circle"></use></svg
@@ -103,7 +103,7 @@ nonbundle: false
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification left-fix with-icon info" role="alert" id="notificationLeft" aria-labelledby="not4-title">
+<div class="notification left-fix with-icon info fade" role="alert" id="notificationLeft" aria-labelledby="not4-title">
   <h5 id="not4-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg
@@ -112,7 +112,7 @@ nonbundle: false
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification right-fix with-icon warning" role="alert" id="notificationRight" aria-labelledby="not5-title">
+<div class="notification right-fix with-icon warning fade" role="alert" id="notificationRight" aria-labelledby="not5-title">
   <h5 id="not5-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error"></use></svg
@@ -123,14 +123,14 @@ nonbundle: false
 <!-- /col2 -->
 
 <!-- col3 -->
-<div class="notification dismissable top-fix with-icon success" role="alert" id="notificationDismTopFix" aria-labelledby="not7-title">
+<div class="notification dismissable top-fix with-icon success fade" role="alert" id="notificationDismTopFix" aria-labelledby="not7-title">
   <h5 id="not7-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error"></use></svg
     >Dismissable Top Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>
@@ -138,14 +138,14 @@ nonbundle: false
   </button>
 </div>
 
-<div class="notification dismissable bottom-fix with-icon error" role="alert" id="notificationDismBotFix" aria-labelledby="not8-title">
+<div class="notification dismissable bottom-fix with-icon error fade" role="alert" id="notificationDismBotFix" aria-labelledby="not8-title">
   <h5 id="not8-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close-circle"></use></svg
     >Dismissable Bottom Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>
@@ -153,14 +153,14 @@ nonbundle: false
   </button>
 </div>
 
-<div class="notification dismissable left-fix with-icon info" role="alert" id="notificationDismLftFix" aria-labelledby="not9-title">
+<div class="notification dismissable left-fix with-icon info fade" role="alert" id="notificationDismLftFix" aria-labelledby="not9-title">
   <h5 id="not9-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle"></use></svg
     >Dismissable Left Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>
@@ -168,14 +168,14 @@ nonbundle: false
   </button>
 </div>
 
-<div class="notification dismissable right-fix with-icon warning" role="alert" id="notificationDismRgtFix" aria-labelledby="not10-title">
+<div class="notification dismissable right-fix with-icon warning fade" role="alert" id="notificationDismRgtFix" aria-labelledby="not10-title">
   <h5 id="not10-title">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-error"></use></svg
     >Dismissable Right Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use>
     </svg>

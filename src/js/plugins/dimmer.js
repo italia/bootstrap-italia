@@ -1,3 +1,4 @@
+import { reflow } from 'bootstrap/js/src/util'
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
 const NAME = 'dimmer'
@@ -65,6 +66,10 @@ class Dimmer extends BaseComponent {
     this._element.removeAttribute('aria-hidden')
     //this._element.setAttribute('aria-modal', true)
     //this._element.setAttribute('role', 'dialog')
+
+    if (isAnimated) {
+      reflow(this._element)
+    }
 
     this._element.classList.add(CLASS_NAME_SHOW)
 

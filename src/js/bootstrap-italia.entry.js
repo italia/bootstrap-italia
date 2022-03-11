@@ -1,11 +1,13 @@
-//import '../scss/bootstrap-italia.scss'
+import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
 import './plugins/dropdown'
 import './plugins/forward'
 
 import Dimmer from './plugins/dimmer'
-//import Notification from './plugins/notification'
+import Notification from './plugins/notification'
+import Cookiebar from './plugins/cookiebar'
+import NavScroll from './plugins/navscroll'
 
 import './icons.js'
 
@@ -24,5 +26,7 @@ window.bootstrap = {
   Tooltip,
 
   Dimmer,
-  //Notification,
+  Notification,
+  Cookiebar,
+  NavScroll,
 }
