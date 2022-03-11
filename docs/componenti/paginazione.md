@@ -18,7 +18,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -28,7 +28,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -57,7 +57,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -73,7 +73,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -95,7 +95,7 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -109,7 +109,7 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -126,7 +126,7 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -140,7 +140,7 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -157,7 +157,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
   <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -181,7 +181,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -202,7 +202,7 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -226,7 +226,7 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -243,7 +243,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -263,7 +263,7 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -294,7 +294,7 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -314,7 +314,7 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -335,7 +335,7 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
   <ul class="pagination" aria-label="Pagina 1 di 5">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -348,7 +348,7 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -397,7 +397,7 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -417,7 +417,7 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>

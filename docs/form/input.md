@@ -99,7 +99,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 <div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+      <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
     </div>
     <label for="input-group-1">Con Etichetta</label>
     <input type="text" class="form-control" id="input-group-1" name="input-group-1">
@@ -111,7 +111,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 <div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+      <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
     </div>
     <label for="input-group-2">Con Etichetta e placeholder</label>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
@@ -123,7 +123,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 <div class="form-group">
   <div class="input-group">
       <div class="input-group-prepend">
-        <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pencil"></use></svg></div>
+        <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
       </div>
       <label for="input-group-3">Con Etichetta e bottone "primary"</label>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
@@ -189,8 +189,8 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
     <input type="password" class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
     <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
+      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
     </span>
     <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
@@ -198,8 +198,8 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <label for="exampleInputPassword3">Password con strength meter</label>
     <input type="password" class="form-control input-password input-password-strength-meter" data-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-password-invisible"></use></svg>
+      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
     </span>
   </div>
 </div>
@@ -274,7 +274,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
     name="autocomplete-one"
     data-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
   <ul class="autocomplete-list" id="testAutocomplete1">
     <li>
@@ -301,7 +301,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
     <li>
       <a href="#">
         <svg class="icon icon-sm">
-          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
+          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
         </svg>
         <span class="autocomplete-list-text">
           <span>List <mark>Ite</mark>m</span><em>Label</em>
@@ -311,7 +311,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
     <li>
       <a href="#">
         <svg class="icon icon-sm">
-          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
+          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
         </svg>
         <span class="autocomplete-list-text">
           <span>List <mark>Ite</mark>m</span><em>Label</em>
@@ -321,7 +321,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
     <li>
       <a href="#">
         <svg class="icon icon-sm">
-          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
+          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
         </svg>
         <span class="autocomplete-list-text">
           <span>List <mark>Ite</mark>m</span><em>Label</em>
@@ -345,7 +345,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
     name="autocomplete-two"
     data-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
   <ul class="autocomplete-list" id="testAutocomplete2">
     <li>
@@ -370,7 +370,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-pa"></use></svg>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
         <span class="autocomplete-list-text">
           <span>Comune di <mark>Pi</mark>sa</span><em>Amministrazione</em>
         </span>
@@ -378,7 +378,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="autocomplete-list-text">
           <span>Linee guida per i cataloghi pubblica amministrazione</span><em>Documento</em>
         </span>
@@ -408,7 +408,7 @@ Cerca una regione italiana per verificarne il comportamento.
     name="autocomplete-regioni"
     data-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
   <span class="autocomplete-icon" aria-hidden="true">
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -431,7 +431,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
     name="autocomplete-test"
     data-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>
   <span class="autocomplete-icon" aria-hidden="true">
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
 </div>
 {% endcapture %}{% include example.html content=example %}
