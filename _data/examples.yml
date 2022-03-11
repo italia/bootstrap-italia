@@ -13,6 +13,9 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
+    - name: Form con validazione
+      url: form
+      description: Pagina con esempio di form comprendente vari tipi di campi e validazione.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.

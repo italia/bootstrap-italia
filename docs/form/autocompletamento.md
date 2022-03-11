@@ -12,13 +12,9 @@ description: Elementi e stili per la creazione di input con autocompletamento.
 
 Il completamento automatico è un componente che aiuta gli utenti a scegliere le risposte da un elenco fornito.
 
-Per la creazione del componente, è stato utilizzato il plugin  **accessible autocomplete**.
+Per la creazione del componente, è stato utilizzato il plugin  [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
 
-Per una corretta implementazione si consiglia di consultare:
-
-**Github** : [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
-
-**Docs** : [accessible autocomplete](https://alphagov.github.io/accessible-autocomplete/).
+Per una corretta implementazione si consiglia di consultare la [documentazione](https://alphagov.github.io/accessible-autocomplete/).
 
 {% capture example %}
 
@@ -154,7 +150,6 @@ Per una corretta implementazione si consiglia di consultare:
 
 ### Validazione
 
-Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin [Just Validate](https://just-validate.dev/)
+Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione).
 
-Qui è possibile analizzare un esempio di validazione: [pagina di esempio validazione]({{ site.baseurl }}/docs/esempi/just-validate/).
-
+È possibile testare la validazione del campo con autocompletamento sulla [pagina di esempio validazione]({{ site.baseurl }}/docs/esempi/form/).

@@ -238,7 +238,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
 
 {% capture callout %}
 
-#### Compatibilità Cross-browser
+#### Compatibilità cross-browser
 
 Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 11 e successivi non supportano completamente l'attributo `disabled` nel `<fieldset>`. Si utilizzi codice JavaScript personalizzato per disabilitare il fieldset in questi browser.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
@@ -249,19 +249,13 @@ Per la validazione dei forms è stato utilizzato il plugin [Just Validate](https
 
 ### Come funziona
 
-Per il funzionamento e le opzioni disponibili, si consiglia di consultare la documentazione disponibile a questi indirizzi:
-
-[Sito ufficiale](https://just-validate.dev/)
-
-[Github](https://github.com/horprogs/Just-validate)
+Per il funzionamento e le opzioni disponibili, si consiglia di consultare la [documentazione](https://just-validate.dev/).
 
 ### Stili personalizzati
 
-I campi che necessitano di validazione acquisiranno all'invio del form le classi css definiite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`.
+I campi che necessitano di validazione acquisiranno all'invio del form le classi css definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`. I messaggi di errore avranno classe `just-validate-error-label`.
 
-I messaggi di errore hanno classe `just-validate-error-label`.
-
-Di seguito un esempio di form con validazione tramite [Just Validate](https://just-validate.dev/)
+Di seguito un esempio di form validato con Just Validate.
 
 {% capture example %}
 
