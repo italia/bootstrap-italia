@@ -284,24 +284,17 @@ title: Just Validate
     </div>
   </div>
 </form>
-<div aria-live="polite"  class="notification  with-icon error bottom-fix dismissable" role="alert" aria-labelledby="not1dms-title" id="not2b" style="display: block;">
-  <h5 id="not2b-title">
-    <svg class="icon">
-      <use href="/dist/svg/sprite.svg#it-close-circle"></use>
-    </svg>
-    <span></span>
-  </h5>
-  <button type="button" class="btn notification-close">
-    <svg class="icon">
-      <use href="/dist/svg/sprite.svg#it-close"></use>
-    </svg>
-    <span class="sr-only">Chiudi notifica: Il form contiene degli errori</span>
-  </button>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div aria-live="polite" id="errorMsgContainer"></div>
+    </div>
+  </div>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const errorMessage = "Il form contiene degli errori";
-    const errorWrapper = document.querySelector('#not2b-title span');
+    const errorMessage = '<div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+    const errorWrapper = document.querySelector('#errorMsgContainer');
     const validate = new window.JustValidateIt('#justValidate', {
       errorFieldCssClass: 'is-invalid',
       errorLabelCssClass: 'form-feedback',
@@ -443,7 +436,7 @@ title: Just Validate
         document.forms['justValidate'].submit()
       })
       .onFail((fields) => {
-        notificationShow('not2b')
+        $('errorMsgContainer').alert();
         errorWrapper.innerHTML = ''
         errorWrapper.innerHTML = errorMessage
       })
