@@ -7,6 +7,7 @@ import './plugins/forward'
 import Dimmer from './plugins/dimmer'
 import Notification from './plugins/notification'
 import Cookiebar from './plugins/cookiebar'
+import NavBarCollapsible from './plugins/navbar-collapsible'
 import NavScroll from './plugins/navscroll'
 
 import './icons.js'
@@ -28,5 +29,6 @@ window.bootstrap = {
   Dimmer,
   Notification,
   Cookiebar,
+  NavBarCollapsible,
   NavScroll,
 }

@@ -20,6 +20,7 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_HIDDEN = `hidden${EVENT_KEY}`
+const EVENT_SHOW = `show${EVENT_KEY}`
 
 const Default = {
   timeout: 0,
@@ -186,7 +187,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
     event.preventDefault()
   }
 
-  EventHandler.one((target, EVENT_SHOW, showEvent) => {
+  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
     if (showEvent.defaultPrevented) {
       // only register focus restorer if modal will actually get shown
       return
