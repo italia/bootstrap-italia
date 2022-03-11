@@ -1,6 +1,8 @@
 // rollup.config.js
 
 import { babel } from '@rollup/plugin-babel'
+import copy from 'rollup-plugin-copy'
+import svgSprite from 'rollup-plugin-svg-sprite'
 import scss from 'rollup-plugin-scss'
 import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
@@ -22,6 +24,15 @@ export default [
         outputStyle: 'compressed',
         watch: 'src/scss',
       }),
+      copy({
+        targets: [
+          { src: 'src/assets', dest: 'dist' },
+          { src: 'src/fonts', dest: 'dist' }
+        ]
+      }),
+      svgSprite({
+        outputFolder: 'dist/svg',
+      }),
       uglify(),
     ],
   },
@@ -37,6 +48,15 @@ export default [
       scss({
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
+      }),
+      copy({
+        targets: [
+          { src: 'src/assets', dest: 'dist' },
+          { src: 'src/fonts', dest: 'dist' }
+        ]
+      }),
+      svgSprite({
+        outputFolder: 'dist/svg'
       }),
       nodeResolve({
         // use "jsnext:main" if possible
