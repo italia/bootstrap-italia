@@ -392,7 +392,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
   <ul>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
           <span class="toolbar-label">messaggi<span class="visually-hidden">da leggere</span></span>
@@ -410,7 +410,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
           <span class="toolbar-label">immagini<span class="visually-hidden">da visualizzare</span></span>
@@ -428,7 +428,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
           <span class="toolbar-label">documenti</span>
         </button>
@@ -445,7 +445,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-locked"></use></svg>
           <span class="toolbar-label">privacy</span>
         </button>
@@ -462,7 +462,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use></svg>
           <span class="toolbar-label">altro</span>
         </button>
@@ -490,7 +490,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">messaggi</span>
-        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuovi messaggi da esaminare</span>
@@ -511,7 +511,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">immagini</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
@@ -532,7 +532,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">documenti</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
@@ -549,7 +549,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">privacy</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-locked"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
@@ -566,7 +566,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">preferiti</span>
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
@@ -583,7 +583,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-med" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
@@ -610,7 +610,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">messaggi</span>
-        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuovi messaggi da esaminare</span>
@@ -631,7 +631,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">immagini</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
@@ -652,7 +652,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
     <li>
       <div class="dropdown">
         <span class="visually-hidden">documenti</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
@@ -669,7 +669,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
   <li>
       <div class="dropdown">
         <span class="visually-hidden">privacy</span>
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-locked"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
@@ -686,7 +686,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
   <li>
       <div class="dropdown">
         <span class="visually-hidden">preferiti</span>
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
@@ -703,7 +703,7 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
   <li>
       <div class="dropdown">
         <span class="visually-hidden">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
@@ -740,7 +740,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
           <span class="toolbar-label">immagini<span class="visually-hidden">da visualizzare</span></span>
@@ -797,7 +797,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-vert" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-vert" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <span class="visually-hidden">immagini</span>
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>
@@ -857,7 +857,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <span class="visually-hidden">immagini</span>
           <div class="badge-wrapper">
             <span class="toolbar-badge"></span>

@@ -1,7 +1,7 @@
 $arrow-size: $font-size-base * 0.5;
 
 // collapse toggle
-*[data-toggle='collapse'] {
+*[data-bs-toggle='collapse'] {
   .collapse-icon::before {
     content: '';
     display: inline-block;
@@ -31,7 +31,7 @@ $arrow-size: $font-size-base * 0.5;
   //background active version
   &.collapse-background-active {
     .collapse-header {
-      *[data-toggle='collapse'][aria-expanded='true'] {
+      *[data-bs-toggle='collapse'][aria-expanded='true'] {
         background-color: $primary;
         color: $white;
         border-color: $primary;
@@ -45,7 +45,7 @@ $arrow-size: $font-size-base * 0.5;
   //background hover version
   &.collapse-background-hover {
     .collapse-header {
-      *[data-toggle='collapse']:hover {
+      *[data-bs-toggle='collapse']:hover {
         background-color: $primary;
         color: $white;
         border-color: $primary;
@@ -59,7 +59,7 @@ $arrow-size: $font-size-base * 0.5;
   //left icon version
   &.collapse-left-icon {
     .collapse-header {
-      *[data-toggle='collapse'] {
+      *[data-bs-toggle='collapse'] {
         &:before {
           content: '-';
           float: left;
@@ -83,7 +83,7 @@ $arrow-size: $font-size-base * 0.5;
 .collapse-header {
   position: relative;
 
-  *[data-toggle='collapse'] {
+  *[data-bs-toggle='collapse'] {
     width: 100%;
     text-align: left;
     border: 0;

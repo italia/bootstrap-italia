@@ -25,7 +25,7 @@ Per indicare il link/thumbail attivo applicare la classe `.active` al relativo t
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Per ragioni di accessibilità è importante indicare all'interno dell'attributo `alt=""` dell'immagine thumbnail l'azione associata al link relativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -278,19 +278,19 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3">
     <li>
-      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1056" alt="Visualizza immagine 1"></a>
     </li>
     <li>
-      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1050" alt="Visualizza immagine 2"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1050" alt="Visualizza immagine 2"></a>
     </li>
     <li>
-      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1044" alt="Visualizza immagine 3"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1044" alt="Visualizza immagine 3"></a>
     </li>
     <li>
-      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1057" alt="Visualizza immagine 4"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1057" alt="Visualizza immagine 4"></a>
     </li>
     <li>
-      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1037" alt="Visualizza immagine 5"></a>
+      <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1037" alt="Visualizza immagine 5"></a>
     </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}

@@ -32,6 +32,7 @@ Esistono variazioni delle classi `float` per i vari tipi di dimensione dello sch
 <div class="float-md-start">Esempio di float a sinistra per dimensioni MD (medium) o maggiori.</div><br>
 <div class="float-lg-start">Esempio di float a sinistra per dimensioni LG (large)  o maggiori.</div><br>
 <div class="float-xl-start">Esempio di float a sinistra per dimensioni XL (extra-large) o maggiori.</div><br>
+<div class="float-xxl-start">Esempio di float a sinistra per dimensioni XXL (extra-extra-large) o maggiori.</div><br>
 {% endcapture %}{% include example.html content=example %}
 
 Di seguito l'elenco completo delle classi a disposizione:

@@ -57,6 +57,7 @@ Tutte le classi per arrotondare facilmente gli angoli di un elemento.
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-start" alt="Esempio di immagine arrotondata a sinistra">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-circle" alt="Esempio di immagine arrotondata a cerchio">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
+  <img src="https://via.placeholder.com/150x75/ebebeb/808080/?text=Immagine" class="rounded-pill" alt="Esempio di immagine arrotondata a pillola">
 </div>
 
 ```html
@@ -67,4 +68,5 @@ Tutte le classi per arrotondare facilmente gli angoli di un elemento.
 <img src="..." alt="..." class="rounded-start" />
 <img src="..." alt="..." class="rounded-circle" />
 <img src="..." alt="..." class="rounded-0" />
+<img src="..." alt="..." class="rounded-pill" />
 ```

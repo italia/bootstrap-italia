@@ -66,7 +66,7 @@ Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attributi come role e aria.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

@@ -12,7 +12,7 @@ Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come s
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Dato che le breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="breadcrumb"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
 

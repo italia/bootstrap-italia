@@ -84,6 +84,13 @@ Esempio di card contenente categorizzazione e data, firma dell'articolo e link a
 Per inserire la categorizzazione e/o la data di pubblicazione, usare l'elemento `.category-top` ed inserire al suo interno gli elementi come da esempio.
 La categoria nell'esempio seguente è un link, ma potrebbe essere un testo semplice senza link, utilizzando il tag `<span>` invece del tag `<a>`
 
+{% capture callout %}
+
+#### Accessibilità dei link
+
+Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi di più” è importante ricordare di aggiungere uno `<span class="visually-hidden">...</span>` a seguito della label nel quale specificare a che contenuto si fa riferimento (idealmente ripetendo il titolo della card). In caso contrario un utente che faccia uso di *screen reader* non avrebbe modo di distinguere link identici a contenuti differenti.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 
 <div class="row">
@@ -93,14 +100,15 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
       <div class="card">
         <div class="card-body">
           <div class="category-top">
-            <a class="category" href="#">Category</a>
-            <span class="data">10/12/2018</span>
+            <a class="category" href="#">Categoria</a>
+            <span class="data">10/12/2022</span>
           </div>
           <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <span class="card-signature">di Federico De Paolis</span>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
@@ -130,7 +138,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use>
             </svg>
-            <span class="text">Category<br>Name</span>
+            <span class="text">Categoria<br>nome</span>
           </div>
           <a href="#">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
@@ -165,14 +173,14 @@ semplici utilizzare la classe `.simple-link`.
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-copy"></use>
             </svg>
-            <span class="text">(2) Files</span>
+            <span class="text">(2) File</span>
           </div>
           <a href="#">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-            <h6 class="card-subtitle">Subtitle</h6>
+            <h6 class="card-subtitle">Sottotitolo</h6>
           </a>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="simple-link" href="#">Link</a>
+          <a class="simple-link" href="#">Link <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></a>
         </div>
       </div>
     </div>
@@ -200,6 +208,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
@@ -241,6 +250,7 @@ il div contenente l'icona è di classe `.top-icon`.
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
@@ -279,6 +289,7 @@ Per creare un bordo di colore primario a chiusura card, potete utilizzare la cla
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg>
@@ -308,13 +319,13 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
         <div class="card-body">
           <div class="head-tags">
             <a class="card-tag" href="#">Tag</a>
-            <span class="data">10/10/2018</span>
+            <span class="data">10/10/2022</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="it-card-footer">
             <span class="card-signature">di Federico De Paolis</span>
-            <a class="btn btn-outline-primary btn-sm" href="#">Link Button</a>
+            <a class="btn btn-outline-primary btn-sm" href="#">Link Button <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></a>
           </div>
         </div>
       </div>
@@ -349,10 +360,14 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         </div>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-          <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+          <p class="card-text"></p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
-            </svg></a>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -371,7 +386,10 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         </div>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-          <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+          <p class="card-text"></p>
+          <a class="read-more" href="#">
+            <span class="text">Leggi di più</span>
+            <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
             <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
             </svg></a>
@@ -397,7 +415,10 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           </div>
           <div class="card-body">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+            <p class="card-text"></p>
+              <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg></a>
@@ -416,14 +437,17 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
                 <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
               </figure>
               <div class="card-calendar d-flex flex-column justify-content-center">
-                <span class="card-date">31</span>
+                <span class="card-date">30</span>
                 <span class="card-day">novembre</span>
               </div>
             </div>
           </div>
           <div class="card-body">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-            <p class="card-text"></p><a class="read-more" href="#"><span class="text">Leggi di più</span>
+            <p class="card-text"></p>
+              <a class="read-more" href="#">
+              <span class="text">Leggi di più</span>
+              <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
               <svg class="icon">
                 <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
               </svg></a>
@@ -456,7 +480,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
           </div>
         </div>
         <div class="card-body">
-          <div class="head-tags"><span class="data">10/10/2018</span>
+          <div class="head-tags"><span class="data">10/10/2022</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
         </div>

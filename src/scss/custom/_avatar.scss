@@ -116,12 +116,7 @@
       }
     }
     .dropdown-menu {
-      margin: -25px;
-    }
-    &.size-sm {
-      .dropdown-menu {
-        margin: -27px;
-      }
+      margin-left: -27px !important;
     }
   }
   //dropdown variant-------------------------------------- END

@@ -6,14 +6,6 @@ title: Affix
 description: Blocca la posizione di un elemento rispetto al viewport
 ---
 
-<script>
-  window.addEventListener('load', function() {
-    $('.affix-top, .affix-bottom').iSticky({
-      holderAutoHeight: true
-    });
-  });
-</script>
-
 <style>
   /* Style override for Documentation purposes */
   @media screen and (min-width: 768px) {
@@ -26,29 +18,11 @@ description: Blocca la posizione di un elemento rispetto al viewport
       top: 89px;
     }
   }
-  /* IE/Edge only hack
-  Header sticky doesnt' work on IE/Edge
-  so affix examples should stick to top of the window*/
-  _:-ms-lang(x), .affix-top {
-    top: 0;
-  }
 </style>
 
 Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spesso utilizzato per i menù di navigazione o per i bottoni condivisione dei social network, per ancorarli in una specifica area mentre il contenuto della pagina viene scrollato in alto o in basso.
 
 È importante ricordare che un elemento Affix non dovrebbe nascondere il contenuto di una pagina, specialmente quando la dimensione del viewport è ridotta.
-
-## Affix su browser Edge/IE
-
-Gli Affix fanno uso della proprietà CSS `position:sticky`.
-
-Se si volesse ottenere un comportamento identico sui browser che non supportano questa prorietà come Edge ed IE, si può attivare il polyfill iSticky con il seguente codice javascript:
-
-```js
-$('.affix-top, .affix-bottom').iSticky({
-  holderAutoHeight: true,
-})
-```
 
 ## Vertical Affix
 

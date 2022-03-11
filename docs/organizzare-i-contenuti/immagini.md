@@ -81,7 +81,7 @@ Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire al
 {% capture example %}
 
 <figure class="figure">
-  <img src="https://via.placeholder.com/240x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endcapture %}{% include example.html content=example %}
@@ -91,7 +91,7 @@ Puoi allineare la didascalia di una figura è semplice con le nostre [utilità d
 {% capture example %}
 
 <figure class="figure">
-  <img src="https://via.placeholder.com/240x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption text-end">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endcapture %}{% include example.html content=example %}

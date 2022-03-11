@@ -1,6 +1,6 @@
 import foo from './foo.js'
 
-//import '../scss/bootstrap-italia.scss'
+import '../scss/bootstrap-italia.scss'
 
 import '../svg/it-arrow-down-circle.svg'
 import '../svg/it-arrow-down-triangle.svg'

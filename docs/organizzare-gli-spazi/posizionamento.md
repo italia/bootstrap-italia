@@ -41,11 +41,7 @@ Specularmente al paragrafo precedente, posiziona un elemento in basso al viewpor
 ## Sticky top
 
 Posiziona un elemento in alto al viewport, ma solo dopo che nella pagina avviene uno scroll verticale.
-La classe `.sticky-top` usa la proprietà `position: sticky` che non è sopportata da tutti i browser.
-
-**I browser IE11 e IE10 restituiranno `position: sticky` come `position: relative`.** Per questo motivo lo stile è
-racchiuso all'interno di una query `@supports` limitandone così l'uso ai soli browser che ne sopportino la proprietà
-correttamente.
+La classe `.sticky-top` usa la proprietà `position: sticky` supportata da tutti i browser moderni.
 
 ```html
 <div class="sticky-top">...</div>

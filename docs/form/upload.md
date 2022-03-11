@@ -81,7 +81,7 @@ Ogni elemento può avere tre differenti stati e raltive classi:
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

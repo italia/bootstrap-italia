@@ -48,6 +48,9 @@
       }
     }
   }
+  a {
+    display: block;
+  }
   // hover
   a:hover {
     .it-griditem-text {
@@ -91,35 +94,24 @@
       margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
     }
   }
-  // masonry
-  &.it-masonry {
-    &.it-image-label-grid {
-      div[class^='col-'] {
-        padding-bottom: 0;
-      }
-    }
-    .card-columns {
-      margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
-      margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
-      column-gap: 0;
-      .it-grid-item-wrapper {
-        break-inside: avoid-column;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 16px;
-        .img-responsive {
-          padding-bottom: initial;
-          height: auto;
-          .img-wrapper {
-            position: inherit;
-            left: initial;
-            right: initial;
-            width: initial;
-            height: initial;
-            img {
-              height: auto;
-              object-fit: initial;
-            }
+}
+
+//small - tablet
+@include media-breakpoint-up(sm) {
+  [data-masonry] {
+    .it-grid-item-wrapper {
+      .img-responsive {
+        padding-bottom: initial;
+        height: auto;
+        .img-wrapper {
+          position: inherit;
+          left: initial;
+          right: initial;
+          width: initial;
+          height: initial;
+          img {
+            height: auto;
+            object-fit: initial;
           }
         }
       }
@@ -127,37 +119,8 @@
   }
 }
 
-//fix masonry ie11
-/* stylelint-disable */
-_:-ms-fullscreen,
-.it-grid-list-wrapper.it-masonry .card-columns .it-grid-item-wrapper .img-responsive {
-  padding-bottom: 0;
-}
-/* stylelint-enable */
-
-//small - tablet
-@include media-breakpoint-up(sm) {
-  // grid default
-  .it-grid-list-wrapper {
-    &.it-masonry {
-      .card-columns {
-        column-count: 2;
-      }
-    }
-  }
-}
-
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
-  // grid default
-  .it-grid-list-wrapper {
-    &.it-masonry {
-      .card-columns {
-        column-count: 3;
-      }
-    }
-  }
-
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {

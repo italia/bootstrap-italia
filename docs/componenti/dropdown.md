@@ -16,7 +16,7 @@ Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertu
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), che però è specifico per i menu applicativi che attivano azioni o funzioni. I menu ARIA possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
 

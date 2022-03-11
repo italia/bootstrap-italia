@@ -30,7 +30,7 @@ div **`it-carousel-all owl-carousel`** : viene aggiunta la classe `it-card-bg` c
 
 {% capture callout %}
 
-##### Accessibilità del carousel
+#### Accessibilità
 
 Bootstrap Italia estende il plugin Owl Carousel per renderlo più accessibile.
 

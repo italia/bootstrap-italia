@@ -85,6 +85,8 @@ Aggiungendo all'Overlay Panel la classe `.overlay-black` si ottiene un overlay d
 Per ottenere un Overlay Panel con icona centrata in verticale ed orizzontale aggiungere la classe `.overlay-icon`.
 
 {% capture callout %}
+#### Accessibilità
+
 Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo stesso messaggio dell'icona.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

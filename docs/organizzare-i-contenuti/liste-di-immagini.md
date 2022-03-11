@@ -25,7 +25,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
       </a>
@@ -37,7 +37,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
@@ -55,7 +55,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
@@ -89,7 +89,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -100,7 +100,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -111,7 +111,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -122,7 +122,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -133,7 +133,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -144,7 +144,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -169,7 +169,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -186,7 +186,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -203,7 +203,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -220,7 +220,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -237,7 +237,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -254,7 +254,7 @@ Di seguito l'esempio
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -294,7 +294,7 @@ Di seguito l'esempio
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -313,7 +313,7 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -330,7 +330,7 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -347,7 +347,7 @@ Di seguito l'esempio
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -367,21 +367,26 @@ Di seguito l'esempio
 
 ### Masonry
 
-Per realizzare l'elemento Masonry è stata usata la classe di bootstrap **`.card-columns`** che contiene al suo interno gli elementi distribuendoli su più colonne.
-Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-masonry`** al div **`.it-grid-list-wrapper`**.
+È possibile integrare [Masonry](https://masonry.desandro.com/) con la griglia di Bootstrap Italia.
 
-Di seguito l'esempio
+Masonry non è incluso in Bootstrap Italia ma può essere aggiunto con l'inclusione del plugin js opure via CDN importando lo script necessario:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+````
+
+Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 
 {% capture example %}
 
-<div class="it-grid-list-wrapper it-image-label-grid it-masonry">
-  <div class="card-columns">
-    <div class="col-12">
+<div class="container-fluid">
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x300/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -393,12 +398,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -410,12 +415,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x700/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -427,12 +432,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -444,12 +449,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -461,12 +466,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -478,12 +483,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -495,12 +500,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -512,12 +517,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -529,12 +534,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -546,12 +551,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -563,12 +568,12 @@ Di seguito l'esempio
         </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="image Alt" title="Image Title"></div>
+              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">

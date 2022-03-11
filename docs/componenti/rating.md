@@ -49,6 +49,8 @@ Le `<label>` contengono le icone delle stelle e la descrizione per Screen Reader
 Per visualizzare una label descrittiva aggiungere la classe `.rating-label` al `<fieldset>` e un tag `<legend>` all'inizio dello stesso.
 
 {% capture callout %}
+#### Accessibilità
+
 Il tag `<legend>` contiene testo aggiuntivo per Screen Reader all'interno di uno `<span class="visually-hidden">`.
 
 La label con il numero di stelle dev'essere contenuta in uno `<span>` semplice.
@@ -94,6 +96,9 @@ Aggiungendo la classe `.rating-read-only` al `<fieldset>` si ottiene un Rating n
 Si consiglia di utilizzare l'attributo `disabled` sugli input radio.
 
 {% capture callout %}
+
+#### Accessibilità versione sola lettura
+
 Per rendere accessibile il contenuto è necessario aggiungere un tag `<legend>` con classe `.visually-hidden` e nascondere gli input radio utilizzando `aria-hidden="true"`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

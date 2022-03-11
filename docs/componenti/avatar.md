@@ -9,7 +9,10 @@ description: Rappresentazione grafica di un'immagine utente
 <script>
   //attiva tooltip
   document.addEventListener("DOMContentLoaded", function() {
-    $('[data-toggle="tooltip"]').tooltip()
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   })
 </script>
 
@@ -29,7 +32,7 @@ Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>
 
 {% capture callout %}
 
-##### Accessibilità delle immagini
+#### Accessibilità delle immagini
 
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
 
@@ -174,14 +177,14 @@ E' possibile associare un Tooltip con maggiori informazioni relative all'utente 
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="left" title="<strong>Anna Barbieri</strong><br/><em>Amministratore</em>">
+  <a class="avatar size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="<strong>Anna Barbieri</strong><br/><em>Amministratore</em>">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
   </a>
-  <a class="avatar avatar-red size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
+  <a class="avatar avatar-red size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </a>
-  <a class="avatar size-xl" href="#" data-toggle="tooltip" data-html="true" data-placement="right" title="<strong>Cerca</strong><br/><em>Archivio notizie</em>">
+  <a class="avatar size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="right" title="<strong>Cerca</strong><br/><em>Archivio notizie</em>">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </a>
@@ -342,7 +345,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
@@ -426,7 +429,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
         </a>
@@ -566,7 +569,7 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 
 {% capture callout %}
 
-##### Accessibilità dello stato
+#### Accessibilità dello stato
 
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="visually-hidden">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

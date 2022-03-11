@@ -16,7 +16,7 @@ Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo 
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="visually-hidden">Testo alternativo</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -178,10 +178,10 @@ Il bottone di controllo del Collapse può essere affiancato da un link per downl
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
   <div class="collapse-div" id="collapseDiv1">
     <div class="collapse-header" id="heading1">
-      <button aria-controls="collapse1" aria-expanded="false" class="callout-more-toggle" data-target="#collapse1" data-toggle="collapse">
+      <button aria-controls="collapse1" aria-expanded="false" class="callout-more-toggle" data-bs-target="#collapse1" data-bs-toggle="collapse">
         Leggi tutto <span></span>
       </button>
-      <a class="callout-more-download" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="visually-hidden">PDF </span> Download</a>
+      <a class="callout-more-download" href="#"><svg class="icon me-2"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-download"></use></svg><span class="visually-hidden">PDF </span>Download</a>
     </div>
     <div aria-labelledby="heading1" class="collapse" id="collapse1" role="tabpanel">
       <div class="collapse-body">
