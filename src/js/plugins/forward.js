@@ -9,7 +9,7 @@ onDOMContentLoaded(() => {
         evt.preventDefault()
         const scrollingElement = document.scrollingElement
         scrollingElement.scrollTop = target.offsetTop
-        console.log({ scrollingElement, target })
+        //console.log({ scrollingElement, target })
       }
     })
     return fwEl
