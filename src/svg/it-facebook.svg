@@ -1,12 +1,7 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
-  <title>Logo Facebook</title>
-  <g stroke="none" stroke-width="1">
-    <g>
-      <rect x="0" y="0" width="24" height="24" fill="none"></rect>
-    </g>
-    <path
-      d="M13.55,22 L13.55,12.89 L16.62,12.89 L17.08,9.33 L13.55,9.33 L13.55,7.05 C13.55,6.05 13.84,5.32 15.32,5.32 L17.19,5.32 L17.19,2.14 C16.2798958,2.0434941 15.3652008,1.99675786 14.45,2 C11.73,2 9.87,3.66 9.87,6.7 L9.87,9.32 L6.81,9.32 L6.81,12.89 L9.87,12.89 L9.87,22 L13.55,22 Z"
-    ></path>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path d="M13.6,22v-9.1h3.1l0.5-3.6h-3.5V7.1c0-1,0.3-1.7,1.8-1.7h1.9V2.1C16.3,2,15.4,2,14.4,2c-2.7,0-4.6,1.7-4.6,4.7v2.6H6.8v3.6
+	h3.1V22H13.6z"/>
 </svg>
