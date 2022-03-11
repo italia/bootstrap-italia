@@ -23,7 +23,7 @@ Per una corretta implementazione si consiglia di consultare:
 {% capture example %}
 
 <div class="select-wrapper">
-  <label for="accessibleAutocomplete">Autocomplete</label>
+  <label for="accessibleAutocomplete">Provincia</label>
   <select class="form-control" id="accessibleAutocomplete" title="Scegli una provincia" required>
     <option selected value="">Scegli una opzione</option>
     <option value='AG'>Agrigento</option>
