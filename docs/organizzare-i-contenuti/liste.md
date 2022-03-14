@@ -84,7 +84,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
       <a href="#">
         <div class="it-rounded-icon">
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-folder"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use>
           </svg>
         </div>
         <div class="it-right-zone"><span class="text">Label 1</span>
@@ -95,7 +95,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
       <a href="#">
         <div class="it-rounded-icon">
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-folder"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use>
           </svg>
         </div>
         <div class="it-right-zone"><span class="text">Label 2</span>
@@ -106,7 +106,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
       <a class="active" href="#">
         <div class="it-rounded-icon">
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-folder"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use>
           </svg>
         </div>
         <div class="it-right-zone"><span class="text">Label attiva</span>
@@ -167,7 +167,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
         </div>
       </a>
@@ -177,7 +177,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label 2</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
         </div>
       </a>
@@ -187,7 +187,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label attiva</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
         </div>
       </a>
@@ -209,7 +209,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use>
           </svg>
         </div>
       </a>
@@ -219,7 +219,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label 2</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use>
           </svg>
         </div>
       </a>
@@ -229,7 +229,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
         <div class="it-right-zone">
           <span class="text">Label attiva</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-more-actions"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use>
           </svg>
         </div>
       </a>
@@ -252,13 +252,13 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
           <span class="text">Label 1</span>
           <span class="it-multiple">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>
@@ -270,13 +270,13 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
           <span class="text">Label 2</span>
           <span class="it-multiple">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>
@@ -288,13 +288,13 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
           <span class="text">Label attiva</span>
           <span class="it-multiple">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>
@@ -457,13 +457,13 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
           <span class="it-multiple">
             <span class="metadata">metadata</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>
@@ -476,13 +476,13 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
           <span class="it-multiple">
             <span class="metadata">metadata</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>
@@ -495,13 +495,13 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
           <span class="it-multiple">
             <span class="metadata">metadata</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </div>

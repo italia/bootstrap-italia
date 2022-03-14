@@ -39,19 +39,19 @@ Il link `<a>` attivo possiede una una classe `.active`.
   <ul>
     <li>
       <a href="#" class="active">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
@@ -67,25 +67,25 @@ I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un e
   <ul>
     <li>
       <a href="#" class="active">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
@@ -104,33 +104,33 @@ Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona pe
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">1</span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="visually-hidden">da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-badge">2</span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini<span class="visually-hidden">da visualizzare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">42</span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="visually-hidden">da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>
@@ -156,32 +156,32 @@ I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibil
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-comment"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         <span class="bottom-nav-label">messaggi<span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         <span class="bottom-nav-label">immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="bottom-nav-label">documenti<span class="visually-hidden">ci sono 42 nuovi documenti da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         <span class="bottom-nav-label">preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-settings"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>
         <span class="bottom-nav-label">preferenze</span>
       </a>
     </li>

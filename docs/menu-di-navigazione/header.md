@@ -18,7 +18,7 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 - Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
 - Una parte centrale che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
 - Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
-  (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use></svg>) per dispositivi mobili.
+  (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 ## Slim header
 
@@ -38,7 +38,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1">
                 <span>Ente appartenenza/Owner</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu1">
@@ -54,7 +54,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>Ita</span>
                 <svg class="icon d-none d-lg-block">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="dropdown-menu">
@@ -108,7 +108,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
                     <use
                       href="{{
                         site.baseurl
-                      }}/dist/svg/sprite.svg#it-expand"
+                      }}/dist/svg/sprites.svg#it-expand"
                     ></use>
                   </svg>
                 </a>
@@ -135,7 +135,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
                     <use
                       href="{{
                         site.baseurl
-                      }}/dist/svg/sprite.svg#it-user"
+                      }}/dist/svg/sprites.svg#it-user"
                     ></use>
                   </svg>
                 </span>
@@ -166,7 +166,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu2" role="button" aria-expanded="false" aria-controls="menu2">
                 <span>Ente appartenenza/Owner</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu2">
@@ -182,7 +182,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="dropdown-menu">
@@ -223,7 +223,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           <div class="it-brand-wrapper">
             <a href="#">
               <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
               <div class="it-brand-text">
                 <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
@@ -238,21 +238,21 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -261,7 +261,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
               <a class="search-link rounded-icon" aria-label="Cerca" href="#">
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use></svg>
+                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
               </a>
             </div>
           </div>
@@ -286,7 +286,7 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
           <div class="it-brand-wrapper">
             <a href="#">
               <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
               <div class="it-brand-text">
                 <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
@@ -301,21 +301,21 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -325,7 +325,7 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
               <span class="d-none d-md-block">Cerca</span>
               <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
                 </svg>
               </a>
             </div>
@@ -351,7 +351,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           <div class="it-brand-wrapper">
             <a href="#">
               <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
               <div class="it-brand-text">
                 <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
@@ -366,21 +366,21 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -390,7 +390,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               <span class="d-none d-md-block">Cerca</span>
               <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
                 </svg>
               </a>
             </div>
@@ -416,7 +416,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
         <nav class="navbar navbar-expand-lg has-megamenu">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav1">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav1" style="display: none;">
@@ -434,7 +434,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -456,7 +456,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Megamenu Label</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -534,7 +534,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <nav class="navbar navbar-expand-lg has-megamenu">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav0">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav0" style="display: none;">
@@ -552,7 +552,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -574,7 +574,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Megamenu Label</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -640,7 +640,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <nav class="navbar navbar-expand-lg has-megamenu">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav2">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav2" style="display: none;">
@@ -658,7 +658,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -680,7 +680,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Megamenu Label</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -746,7 +746,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <nav class="navbar navbar-expand-lg has-megamenu">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav3">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav3" style="display: none;">
@@ -764,7 +764,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Dropdown item</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -786,7 +786,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                     <span>Megamenu Label</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
                   <div class="dropdown-menu">
@@ -863,7 +863,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
               <use
                 href="{{
                   site.baseurl
-                }}/dist/svg/sprite.svg#it-burger"
+                }}/dist/svg/sprites.svg#it-burger"
               ></use>
             </svg>
           </button>
@@ -941,7 +941,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu4" role="button" aria-expanded="false" aria-controls="menu4">
                   <span>Ente appartenenza/Owner</span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menu4">
@@ -957,7 +957,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -991,7 +991,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
               <div class="it-brand-wrapper">
                 <a href="#">
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
                   </svg>
                   <div class="it-brand-text">
                     <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
@@ -1006,21 +1006,21 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                     <li>
                       <a href="#" aria-label="Facebook" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Github" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Twitter" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -1030,7 +1030,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                   <span class="d-none d-md-block">Cerca</span>
                   <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
                     </svg>
                   </a>
                 </div>
@@ -1048,7 +1048,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
             <nav class="navbar navbar-expand-lg has-megamenu">
               <button class="custom-navbar-toggler" type="button" aria-controls="nav02" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav02">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
               <div class="navbar-collapsable" id="nav02" style="display: none;">
@@ -1066,7 +1066,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Dropdown item</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
                       <div class="dropdown-menu">
@@ -1088,7 +1088,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Megamenu Label</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
                       <div class="dropdown-menu">
@@ -1163,7 +1163,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu3" role="button" aria-expanded="false" aria-controls="menu3">
                   <span>Ente appartenenza/Owner</span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menu3">
@@ -1179,7 +1179,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -1213,7 +1213,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
               <div class="it-brand-wrapper">
                 <a href="#">
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
                   </svg>
                   <div class="it-brand-text">
                     <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
@@ -1228,21 +1228,21 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                     <li>
                       <a href="#" aria-label="Facebook" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Github" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Twitter" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-twitter"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -1252,7 +1252,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                   <span class="d-none d-md-block">Cerca</span>
                   <a class="search-link rounded-icon" aria-label="Cerca" href="#">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-search"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
                     </svg>
                   </a>
                 </div>
@@ -1270,7 +1270,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
             <nav class="navbar navbar-expand-lg has-megamenu">
               <button class="custom-navbar-toggler" type="button" aria-controls="nav03" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav03">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-burger"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
               <div class="navbar-collapsable" id="nav03" style="display: none;">
@@ -1288,7 +1288,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Dropdown item</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
                       <div class="dropdown-menu">
@@ -1310,7 +1310,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                         <span>Megamenu Label</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use>
+                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
                       <div class="dropdown-menu">

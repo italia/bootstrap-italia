@@ -102,7 +102,7 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 
 ### Select con icona
 
-Per inserire un icona che affianchi una option è sufficiente inserire all'interno dell'attributo "**data-content**" il seguente html: `"<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#CLASSE-ICONA'></use></svg> Label option"`
+Per inserire un icona che affianchi una option è sufficiente inserire all'interno dell'attributo "**data-content**" il seguente html: `"<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#CLASSE-ICONA'></use></svg> Label option"`
 
 Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile corretto al suo contenuto.
 
@@ -110,11 +110,11 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
   <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
-     <option class="icon-option-li" value="1" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg>"></option>
-     <option class="icon-option-li" value="2" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Duis vestibulum eleifend libero"></option>
-     <option class="icon-option-li" value="3" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Phasellus pretium orci sed odio tempus"></option>
-     <option class="icon-option-li" value="4" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Vestibulum bibendum ex vel augue porttitor sodales"></option>
-     <option class="icon-option-li" value="5" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Praesent quis elementum turpis"></option>
+     <option class="icon-option-li" value="1" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle'></use></svg>"></option>
+     <option class="icon-option-li" value="2" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle'></use></svg> Duis vestibulum eleifend libero"></option>
+     <option class="icon-option-li" value="3" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle'></use></svg> Phasellus pretium orci sed odio tempus"></option>
+     <option class="icon-option-li" value="4" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle'></use></svg> Vestibulum bibendum ex vel augue porttitor sodales"></option>
+     <option class="icon-option-li" value="5" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle'></use></svg> Praesent quis elementum turpis"></option>
   </select>
 </div>
 {% endcapture %}{% include example.html content=example %}

@@ -31,13 +31,13 @@
 
 .alert-dismissible {
   padding-right: ($alert-padding-x * 2);
-
   // Adjust close link position
-  .close {
+  .btn-close {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    padding: 0.8rem $alert-padding-x;
+    transform: translateY(-50%);
+    padding: $alert-padding-x;
     color: inherit;
   }
 }

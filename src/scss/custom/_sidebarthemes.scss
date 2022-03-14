@@ -99,4 +99,16 @@
       }
     }
   }
+
+  .link-list-wrapper {
+    ul {
+      li {
+        a.list-item.left-icon {
+          .icon {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }

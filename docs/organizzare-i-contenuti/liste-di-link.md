@@ -162,21 +162,21 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
   <ul class="link-list">
     <li><a class="list-item active icon-right" href="#">
         <span>Link lista 1 attivo</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item icon-right" href="#">
         <span>Link lista 1</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
     </li>
     <li><a class="list-item disabled icon-right" href="#">
         <span>Link lista 1 disabilitato</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
     </li>
     <li><span class="divider"></span>
@@ -204,15 +204,15 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active icon-left" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         <span>Link lista 1 attivo</span>
     </a></li>
     <li><a class="list-item icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       <span>Link lista 1</span>
     </a></li>
     <li><a class="list-item disabled icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       <span>Link lista 1 disabilitato</span>
     </a></li>
   </ul>
@@ -232,15 +232,15 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
   <ul class="link-list">
     <li><a class="list-item active icon-right" href="#">
       <span>Link lista 1 attivo</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
     </a></li>
     <li><a class="list-item icon-right" href="#">
       <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
     </a></li>
     <li><a class="list-item disabled icon-right" href="#">
       <span>Link lista 1 disabilitato</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
     </a></li>
   </ul>
 </div>
@@ -263,16 +263,16 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item active icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
       <span>Link lista 1 attivo</span></a>
     </li>
     <li><a class="list-item icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
       <span>Link lista 1</span></a>
     </li>
     <li><a class="list-item disabled icon-right" href="#">
       <span>Link lista 1 disabilitato con icona a destra</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
     </li>
   </ul>
 </div>
@@ -370,11 +370,11 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
       </a>
     </li>
     <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
       <ul class="link-sublist" id="">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
@@ -385,7 +385,7 @@ Di seguito un esempio di navigazione annidiata espansa di default.
       </ul>
     </li>
     <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-link"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
     </li>
   </ul>
 </div>
@@ -403,7 +403,7 @@ Per questo tipo di Link lista sono state utilizzate, oltre alle classi custom, l
   <ul class="link-list">
     <li><a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
       <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseOne">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
@@ -415,7 +415,7 @@ Per questo tipo di Link lista sono state utilizzate, oltre alle classi custom, l
     </li>
     <li><a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
       <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseTwo">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
@@ -427,7 +427,7 @@ Per questo tipo di Link lista sono state utilizzate, oltre alle classi custom, l
     </li>
     <li><a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
       <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
       <ul class="link-sublist collapse" id="collapseThree">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>

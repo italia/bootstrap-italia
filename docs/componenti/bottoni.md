@@ -80,7 +80,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 <use
       href="{{
         site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
+      }}/dist/svg/sprites.svg#it-star-full"
     ></use>
 </svg>
 <span>Icon Button Lg</span>
@@ -91,7 +91,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 <use
       href="{{
         site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
+      }}/dist/svg/sprites.svg#it-star-full"
     ></use>
 </svg>
 <span>Icon Button</span>
@@ -102,7 +102,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 <use
       href="{{
         site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
+      }}/dist/svg/sprites.svg#it-star-full"
     ></use>
 </svg>
 <span>Icon Button Sm</span>
@@ -113,7 +113,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 <use
       href="{{
         site.baseurl
-      }}/dist/svg/sprite.svg#it-star-full"
+      }}/dist/svg/sprites.svg#it-star-full"
     ></use>
 </svg>
 <span>Icon Button Xs</span>
@@ -130,7 +130,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <button class="btn btn-success btn-lg btn-icon">
 <span class="rounded-icon">
 <svg class="icon icon-success">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+<use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
 <span>Round Icon Lg</span>
@@ -139,7 +139,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <button class="btn btn-primary btn-icon">
 <span class="rounded-icon">
 <svg class="icon icon-primary">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+<use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
 <span>Round Icon</span>
@@ -148,7 +148,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <button class="btn btn-danger btn-sm btn-icon">
 <span class="rounded-icon rounded-secondary">
 <svg class="icon icon-white">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+<use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
 <span>Round Icon Sm</span>
@@ -157,7 +157,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <button class="btn btn-secondary btn-xs btn-icon">
 <span class="rounded-icon rounded-danger">
 <svg class="icon icon-white">
-<use href="{{site.baseurl}}/dist/svg/sprite.svg#it-user"></use>
+<use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
 <span>Round Icon Xs</span>
