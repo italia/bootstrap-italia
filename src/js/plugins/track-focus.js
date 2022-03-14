@@ -16,7 +16,6 @@ class TrackFocus {
     events.forEach((evtName) => {
       document.addEventListener(evtName, (evt) => {
         this._usingMouse = evt.type === 'mousedown'
-        console.log('---', this._usingMouse)
       })
     })
     document.addEventListener('focusin', (evt) => {
