@@ -48,7 +48,7 @@ Si può scegliere di dare una dimensione a una colonna, ad esempio dandogli una 
     </div>
     <div class="form-group col">
       <label for="CAP">CAP</label>
-      <input type="number" class="form-control" id="CAP">
+      <input type="text" class="form-control" id="CAP">
     </div>
   </div>
 </div>
@@ -86,12 +86,13 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
     <div class="form-group col-md-2">
       <label for="inputCAP">CAP</label>
-      <input type="number" class="form-control" id="inputCAP">
+      <input type="text" class="form-control" id="inputCAP">
     </div>
     <div class="col-md-4">
-      <div class="bootstrap-select-wrapper">
-        <label for="selectID">Provincia</label>
-        <select id="selectID" title="Scegli un'opzione">
+      <div class="select-wrapper">
+        <label for="defaultSelect">Provincia</label>
+        <select id="defaultSelect">
+          <option selected="" value="">Scegli un'opzione</option>
           <option value="Value 1">Opzione 1</option>
           <option value="Value 2">Opzione 2</option>
           <option value="Value 3">Opzione 3</option>
@@ -188,9 +189,10 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <div class="bootstrap-select-wrapper">
-              <label for="disabledFieldsetSelect">Select</label>
-              <select id="disabledFieldsetSelect" title="Select disabilitata">
+            <div class="select-wrapper">
+              <label for="disabledFieldsetSelect">Provincia</label>
+              <select id="disabledFieldsetSelect">
+                <option selected="" value="">Select disabilitata</option>
                 <option value="Value 1">Opzione 1</option>
                 <option value="Value 2">Opzione 2</option>
                 <option value="Value 3">Opzione 3</option>
@@ -289,7 +291,7 @@ Di seguito un esempio di form validato con Just Validate.
     </div>
     <div class="form-group col-md-3 mb-4">
       <label for="validationCustom05">CAP (5 cifre)</label>
-      <input type="number" class="form-control" id="validationCustom05" maxlenght="5" required>
+      <input type="text" class="form-control" id="validationCustom05" required>
     </div>
   </div>
   <div class="form-check">
@@ -364,6 +366,10 @@ Di seguito un esempio di form validato con Just Validate.
           rule: 'maxLength',
           value: 5,
           errorMessage: 'Inserire 5 cifre'
+        },
+        {
+          rule: 'number',
+          errorMessage: 'Inserire un numero'
         },
       ])
       .addField('#invalidCheck', [
