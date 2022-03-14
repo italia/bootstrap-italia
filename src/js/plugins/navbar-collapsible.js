@@ -11,6 +11,8 @@ import {
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
+import { isScreenMobile } from './util/device'
+
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
 const EVENT_KEY = `.${DATA_KEY}`
@@ -48,7 +50,7 @@ class NavBarCollapsible extends BaseComponent {
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._isTransitioning = false
 
-    this._isMobile = this._isMobileScreen()
+    this._isMobile = isScreenMobile()
     this._isKeyShift = false
 
     this._currItemIdx = 0
@@ -151,7 +153,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _onResize() {
-    this._isMobile = this._isMobileScreen()
+    this._isMobile = isScreenMobile()
   }
 
   _onMenuItemKeyUp(evt) {
@@ -178,10 +180,6 @@ class NavBarCollapsible extends BaseComponent {
   _isAnimated() {
     //there's no an animation css class you can toggle with a "show" css class, so it is supposed true
     return true //this._element.classList.contains(CLASS_NAME_EXPANDED)
-  }
-
-  _isMobileScreen() {
-    return window.matchMedia('(max-width: 991px)').matches
   }
 
   _isElementHidden(element) {
