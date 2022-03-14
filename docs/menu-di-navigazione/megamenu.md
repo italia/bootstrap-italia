@@ -24,13 +24,13 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -98,13 +98,13 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavD" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavD">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavD">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -171,7 +171,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                      <li class="it-more"><a class="list-item medium" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                       </li>
                     </ul>
                   </div>
@@ -195,13 +195,13 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavEi" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavEi">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavEi">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -275,13 +275,13 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavF" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavF">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavF">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -302,7 +302,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     </li>
                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                     </li>
-                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
                   </ul>
                 </div>
@@ -319,7 +319,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     </li>
                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                     </li>
-                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
                   </ul>
                 </div>
@@ -336,7 +336,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     </li>
                     <li><a class="list-item" href="#"><span>Link list 3 </span></a>
                     </li>
-                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                    <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
                   </ul>
                 </div>
@@ -364,13 +364,13 @@ Di seguito un esempio:
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavG" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavG">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavG">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -421,7 +421,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -429,7 +429,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -437,7 +437,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -464,13 +464,13 @@ Di seguito un esempio:
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavM" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavM">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavM">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -530,13 +530,13 @@ Di seguito un esempio:
                   <div class="col-12 it-vertical">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
                       </ul>
                     </div>
@@ -565,13 +565,13 @@ Di seguito un esempio:
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavQ" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavQ">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavQ">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -596,7 +596,7 @@ Di seguito un esempio:
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 4 </span></a>
                         </li>
-                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
                       </ul>
                     </div>
@@ -615,7 +615,7 @@ Di seguito un esempio:
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 4 </span></a>
                         </li>
-                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
                       </ul>
                     </div>
@@ -634,7 +634,7 @@ Di seguito un esempio:
                         </li>
                         <li><a class="list-item" href="#"><span>Link list 4 </span></a>
                         </li>
-                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use></svg></a>
+                        <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
                       </ul>
                     </div>
@@ -669,13 +669,13 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavCa" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavCa">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavCa">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -755,13 +755,13 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
 
 <nav class="navbar navbar-expand-lg has-megamenu">
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavE" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavE">
-    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-list"></use></svg>
+    <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-list"></use></svg>
   </button>
   <div class="navbar-collapsable" id="navbarNavE">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
-        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>close
+        <svg class="icon icon-sm icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>close
       </button>
     </div>
     <div class="menu-wrapper">
@@ -833,13 +833,13 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                   <div class="col-12 it-vertical">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-star-outline"></use></svg></a>
+                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
                       </ul>
                     </div>

@@ -38,7 +38,7 @@ Assicurati di aggiungere sempre l'attributo **`id`** ai seguenti tag:
             <input class="form-control txtTime" id="txtTime1" type="text" placeholder="hh:mm">
             <button class="btn-time" id="btnTime1" aria-label="Time picker - Scadenza">
               <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clock"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use>
               </svg>
             </button>
           </div>
@@ -92,7 +92,7 @@ Clicca sull'icona per visualizzare il datepicker.
             <input class="form-control txtTime" id="txtTime2" type="text" placeholder="hh:mm">
             <button class="btn-time" id="btnTime2" aria-label="Time picker - Scadenza">
               <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-clock"></use>
+                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use>
               </svg>
             </button>
           </div>

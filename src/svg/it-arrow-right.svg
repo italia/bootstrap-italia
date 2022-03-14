@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-     viewBox="0 0 24 24">
-  <title>Arrow Right</title>
-  <g>
-    <path d="M13.9,5.4l-.7.7,5.3,5.4H3v1H18.5l-5.3,5.4.7.7L20.5,12ZM19,12Z"
-    />
-  </g>
-  <g>
-    <rect width="24" height="24" fill="none"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+	<path d="M13.9,5.4l-0.7,0.7l5.3,5.4H3v1h15.5l-5.3,5.4l0.7,0.7l6.6-6.6L13.9,5.4z"/>
+</g>
 </svg>

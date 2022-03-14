@@ -38,7 +38,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -101,7 +101,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -173,7 +173,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -234,7 +234,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -244,7 +244,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseTwo">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>
@@ -254,7 +254,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lin
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseThree">
           <li><a class="list-item" href="#"><span>Link list 1</span></a>
           </li>

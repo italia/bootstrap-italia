@@ -30,7 +30,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper it-evidence">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>maggio 2018</span></div>
@@ -48,7 +48,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -61,7 +61,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper it-evidence">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>giugno 2018</span></div>
@@ -81,7 +81,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper it-evidence">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>luglio 2018</span></div>
@@ -99,7 +99,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -113,7 +113,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper it-now">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>agosto 2018</span></div>
@@ -133,7 +133,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>settembre 2018</span></div>
@@ -151,7 +151,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -164,7 +164,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>ottobre 2018</span></div>
@@ -184,7 +184,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>novembre 2018</span></div>
@@ -202,7 +202,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -215,7 +215,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
         <div class="it-pin-wrapper">
           <div class="pin-icon">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
           <div class="pin-text"><span>dicembre 2018</span></div>

@@ -43,7 +43,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -61,7 +61,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
           </svg>
         </span>
       </a>
@@ -175,7 +175,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -192,7 +192,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -209,7 +209,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -226,7 +226,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -243,7 +243,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -260,7 +260,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -300,7 +300,7 @@ Di seguito l'esempio
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -319,7 +319,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -336,7 +336,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -353,7 +353,7 @@ Di seguito l'esempio
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
                 </svg>
               </span>
             </a>
@@ -392,7 +392,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -409,7 +409,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -426,7 +426,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -443,7 +443,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -460,7 +460,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -477,7 +477,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -494,7 +494,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -511,7 +511,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -528,7 +528,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -545,7 +545,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -562,7 +562,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>
@@ -579,7 +579,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-code-circle"></use>
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </span>
         </a>

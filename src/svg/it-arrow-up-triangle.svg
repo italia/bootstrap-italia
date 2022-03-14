@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-     viewBox="0 0 24 24">
-  <title>Arrow Up</title>
-  <g>
-    <path d="M14.8,12H9.2a1,1,0,0,1-.7-1.7L12,6.8l3.5,3.5A1,1,0,0,1,14.8,12Z"
-    />
-  </g>
-  <g>
-    <rect width="24" height="24" fill="none"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+	<path d="M14.8,12H9.2c-0.6,0-1-0.5-1-1c0-0.3,0.1-0.5,0.3-0.7L12,6.8l3.5,3.5c0.4,0.4,0.4,1,0,1.4C15.3,11.9,15.1,12,14.8,12z"/>
+</g>
 </svg>

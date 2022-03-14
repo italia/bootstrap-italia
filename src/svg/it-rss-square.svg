@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g>
-    <rect width="24" height="24" fill="none"/>
-  </g>
-  <g transform="translate(3 3)">
-    <path d="M14.62,0H3.37A3.37,3.37,0,0,0,0,3.38V14.62A3.37,3.37,0,0,0,3.37,18H14.62A3.38,3.38,0,0,0,18,14.62V3.38A3.38,3.38,0,0,0,14.62,0ZM4.5,15.75A2.25,2.25,0,1,1,6.75,13.5,2.25,2.25,0,0,1,4.5,15.75Zm4.5,0A6.75,6.75,0,0,0,2.25,9V6.75a9,9,0,0,1,9,9Zm4.5,0A11.25,11.25,0,0,0,2.25,4.5V2.25a13.5,13.5,0,0,1,13.5,13.5Z"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g transform="translate(3 3)">
+	<path d="M14.6,0H3.4C1.5,0,0,1.5,0,3.4c0,0,0,0,0,0v11.2C0,16.5,1.5,18,3.4,18c0,0,0,0,0,0h11.3c1.9,0,3.4-1.5,3.4-3.4l0,0V3.4
+		C18,1.5,16.5,0,14.6,0C14.6,0,14.6,0,14.6,0z M4.5,15.8c-1.2,0-2.3-1-2.3-2.3s1-2.3,2.3-2.3s2.3,1,2.3,2.3S5.7,15.8,4.5,15.8z
+		 M9,15.8C9,12,6,9,2.3,9V6.8c5,0,9,4,9,9H9z M13.5,15.8c0-6.2-5-11.3-11.3-11.3V2.3c7.5,0,13.5,6,13.5,13.5H13.5z"/>
+</g>
 </svg>

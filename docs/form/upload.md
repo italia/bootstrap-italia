@@ -91,55 +91,55 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
   <label for="upload1">
-    <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-upload"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
     <span>Upload</span>
   </label>
   <ul class="upload-file-list">
     <li class="upload-file success">
-      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       <p>
         <span class="visually-hidden">File caricato:</span>
         nome-file-01.pdf <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
         <span class="visually-hidden">Caricamento ultimato</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file success">
-      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       <p>
         <span class="visually-hidden">File caricato:</span>
         nome-file-02-nome-file-lungo-per-ellissi.doc <span class="upload-file-weight">68 MB</span>
       </p>
       <button disabled>
         <span class="visually-hidden">Caricamento ultimato</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file uploading">
-      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       <p>
         <span class="visually-hidden">Caricamento file:</span>
         nome-file-03.png <span class="upload-file-weight"></span>
       </p>
       <button>
         <span class="visually-hidden">Annulla caricamento file nome-file-03.png</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
       </button>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </li>
     <li class="upload-file error">
-      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg>
+      <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       <p>
         <span class="visually-hidden">Errore caricamento file:</span>
         nome-file-04.jpg <span class="upload-file-weight"></span>
       </p>
       <button>
         <span class="visually-hidden">Elimina file caricato nome-file-04.jpg</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
       </button>
     </li>
   </ul>
@@ -159,7 +159,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
   <label for="upload2">
-    <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-upload"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
     <span>Upload</span>
   </label>
   <ul class="upload-file-list upload-file-list-image">
@@ -173,7 +173,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
       </p>
       <button disabled>
         <span class="visually-hidden">Caricamento ultimato</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file success">
@@ -186,7 +186,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
       </p>
       <button disabled>
         <span class="visually-hidden">Caricamento ultimato</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
       </button>
     </li>
     <li class="upload-file uploading">
@@ -199,7 +199,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
       </p>
       <button>
         <span class="visually-hidden">Annulla caricamento immagine nome-file-03.jpg</span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
       </button>
       <div class="progress progress-image">
         <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
@@ -215,7 +215,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
       </p>
       <button>
         <span class="visually-hidden">Elimina immagine caricata nome-file-04.jpg </span>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-close"></use></svg>
+        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
       </button>
     </li>
   </ul>
@@ -246,14 +246,14 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload3" id="upload3" class="upload-avatar"/>
             <label for="upload3">
-              <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+              <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="visually-hidden"> foto dell'Avatar</span></span>
             </label>
             <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+          <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         </div>
       </div>
     </div>
@@ -265,14 +265,14 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload4" id="upload4" class="upload-avatar"/>
             <label for="upload4">
-              <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+              <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
               <span>Aggiorna<span class="visually-hidden"> foto dell'Avatar</span></span>
             </label>
             <input value="Submit" type="submit" class="d-none" />
           </form>
         </div>
         <div class="avatar-upload-icon">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-camera"></use></svg>
+          <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         </div>
       </div>
     </div>
@@ -295,7 +295,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
     <li>
       <input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
       <label for="upload5">
-        <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus"></use></svg>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-plus"></use></svg>
         <span>Add photo</span>
       </label>
     </li>
@@ -320,7 +320,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
     <li>
       <input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
       <label for="upload6">
-        <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-plus"></use></svg>
+        <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-plus"></use></svg>
         <span>Add photo</span>
       </label>
     </li>
@@ -362,12 +362,12 @@ $('#IDPROGRESS').circularloader({
       <div id="divProgress0" class="upload-progress"></div>
     </div>
     <div class="upload-dragdrop-success">
-      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
     </div>
   </div>
   <div class="upload-dragdrop-text">
     <p class="upload-dragdrop-weight">
-      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg> PDF (3.7MB)
     </p>
     <h5>Trascina il file per caricarlo</h5>
     <p>oppure <input type="file" name="upload7" id="upload7" class="upload-dragdrop-input" /><label for="upload7">selezionalo dal dispositivo</label></p>
@@ -384,12 +384,12 @@ $('#IDPROGRESS').circularloader({
       <div id="divProgress1" class="upload-progress"></div>
     </div>
     <div class="upload-dragdrop-success">
-      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
     </div>
   </div>
   <div class="upload-dragdrop-text">
     <p class="upload-dragdrop-weight">
-      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg> PDF (3.7MB)
     </p>
     <h5>Nome file in caricamento</h5>
     <p>Caricamento in corso...</p>
@@ -404,12 +404,12 @@ $('#IDPROGRESS').circularloader({
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
     <div class="upload-dragdrop-loading"></div>
     <div class="upload-dragdrop-success">
-      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
     </div>
   </div>
   <div class="upload-dragdrop-text">
     <p class="upload-dragdrop-weight">
-      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg> PDF (3.7MB)
     </p>
     <h5>Nome file caricato</h5>
     <p>Caricamento completato</p>
@@ -431,12 +431,12 @@ $('#IDPROGRESS').circularloader({
       <div id="divProgress2" class="upload-progress"></div>
     </div>
     <div class="upload-dragdrop-success">
-      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-check"></use></svg>
+      <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
     </div>
   </div>
   <div class="upload-dragdrop-text">
     <p class="upload-dragdrop-weight">
-      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-file"></use></svg> PDF (3.7MB)
+      <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg> PDF (3.7MB)
     </p>
     <h5 id="simTitle">Trascina il file per caricarlo</h5>
     <p id="simText">oppure <input type="file" name="upload8" id="upload8" class="upload-dragdrop-input" /><label for="upload8">selezionalo dal dispositivo</label></p>
