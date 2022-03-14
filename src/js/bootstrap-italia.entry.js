@@ -11,6 +11,7 @@ import NavBarCollapsible from './plugins/navbar-collapsible'
 import NavScroll from './plugins/navscroll'
 import HeaderSticky from './plugins/header-sticky'
 import Sticky from './plugins/sticky'
+import TrackFocus from './plugins/track-focus'
 
 import './icons.js'
 
@@ -35,4 +36,5 @@ window.bootstrap = {
   NavScroll,
   Notification,
   Sticky,
+  TrackFocus,
 }
