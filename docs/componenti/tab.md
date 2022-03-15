@@ -505,7 +505,7 @@ Si può, alternativamente, usare un diverso elemento (nell'esempio seguente un s
 
 ## Tab verticali
 
-Utilizzando gli strumenti di layout di Bootstrap 4 è possibile realizzare tab a orientamento verticale. Al `<div>` contenitore dei link dei tab va aggiunta la classe `.nav-tabs-vertical`.
+Utilizzando gli strumenti di layout di Bootstrap 5 è possibile realizzare tab a orientamento verticale. Al `<div>` contenitore dei link dei tab va aggiunta la classe `.nav-tabs-vertical`.
 
 ### Tab testuale
 

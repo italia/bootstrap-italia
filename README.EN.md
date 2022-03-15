@@ -8,9 +8,9 @@
 
 _Read this in other languages: [Italiano](README.md)._
 
-Bootstrap Italia is a [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
+Bootstrap Italia is a [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
-Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 4, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
+Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 5, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
 The project roadmap is available in the [new Designers Italia 2022 activity plan](https://designers.italia.it/piano-attivita/).
 
@@ -59,7 +59,7 @@ Software components distributed with Bootstrap Italia that have their own differ
 
 - [jQuery](https://jquery.com/) © jQuery Foundation, MIT license
 - [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, MIT license
-- [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., MIT license
+- [Bootstrap 5](https://getbootstrap.com/) © Twitter, Inc., MIT license
 - [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, MIT license
 - [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), MIT license
 - [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, BSD
