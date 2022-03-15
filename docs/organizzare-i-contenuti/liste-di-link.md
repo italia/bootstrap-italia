@@ -66,33 +66,31 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 ### Single line con header e divider
 
 I Link lista possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
-L'header è costituito dall'elemento `<h3>` all'interno del tag `<li>`<br>
+L'header è costituito dall'elemento `.link-list-heading` che precede il tag `<ul>`<br>
 Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`
 
 **Header senza link**
 {% capture example %}
 
 <div class="link-list-wrapper">
-   <ul class="link-list">
-      <li>
-         <h3 id="header-senza-link" class="no_toc">Header senza link</h3>
-      </li>
-      <li>
-        <a class="list-item" href="#"><span>Link lista 1</span></a>
-      </li>
-      <li>
-        <a class="list-item" href="#"><span>Link lista</span></a>
-      </li>
-      <li>
-        <a class="list-item" href="#"><span>Link lista 3</span></a>
-      </li>
-      <li>
-        <span class="divider"></span>
-      </li>
-      <li>
-        <a class="list-item" href="#"><span>Link lista 4</span></a>
-      </li>
-   </ul>
+  <div class="link-list-heading">Header senza link</div>
+  <ul class="link-list">
+    <li>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
+    </li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista</span></a>
+    </li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
+    </li>
+    <li>
+      <span class="divider"></span>
+    </li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 4</span></a>
+    </li>
+  </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -100,23 +98,19 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 {% capture example %}
 
 <div class="link-list-wrapper">
-   <div class="link-list-wrapper">
-      <ul class="link-list">
-        <li>
-          <h3 id="header-con-link" class="no_toc"><a href="#">Header con link</a></h3>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 3</span></a>
-        </li>
-        <li><span class="divider"></span>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 4</span></a>
-        </li>
-      </ul>
-    </div>
+  <div class="link-list-heading"><a href="#">Header con link</a></div>
+  <ul class="link-list">
+    <li><a class="list-item" href="#"><span>Link lista 1</span></a>
+    </li>
+    <li><a class="list-item" href="#"><span>Link lista</span></a>
+    </li>
+    <li><a class="list-item" href="#"><span>Link lista 3</span></a>
+    </li>
+    <li><span class="divider"></span>
+    </li>
+    <li><a class="list-item" href="#"><span>Link lista 4</span></a>
+    </li>
+  </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -127,10 +121,8 @@ Per ogni elemento Link lista è possibile definire una variante di dimensione ma
 {% capture example %}
 
 <div class="link-list-wrapper">
+  <div class="link-list-heading">Header</div>
   <ul class="link-list">
-    <li>
-      <h3 id="header" class="no_toc">Header</h3>
-    </li>
     <li><a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
     <li><a class="list-item large" href="#"><span>Link lista</span></a>

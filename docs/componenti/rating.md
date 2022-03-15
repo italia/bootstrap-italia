@@ -49,6 +49,7 @@ Le `<label>` contengono le icone delle stelle e la descrizione per Screen Reader
 Per visualizzare una label descrittiva aggiungere la classe `.rating-label` al `<fieldset>` e un tag `<legend>` all'inizio dello stesso.
 
 {% capture callout %}
+
 #### Accessibilità
 
 Il tag `<legend>` contiene testo aggiuntivo per Screen Reader all'interno di uno `<span class="visually-hidden">`.

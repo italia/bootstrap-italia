@@ -25,7 +25,6 @@ const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="navbarcollapsible"]'
 class HeaderSticky extends BaseComponent {
   constructor(element) {
     super(element)
-
   }
   // Getters
 
