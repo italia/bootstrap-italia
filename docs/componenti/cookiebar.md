@@ -25,6 +25,7 @@ Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ### Codice HTML
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     bootstrap.Cookiebar.clearCookie()

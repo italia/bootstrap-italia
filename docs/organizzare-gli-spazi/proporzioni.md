@@ -41,12 +41,11 @@ Le proporzioni predefinite sono dichiarate in un amappa Sass ed incluse in ogni 
 ##### Nota
 
 Le seguenti classi utilizzate negli esempi servono unicamente per gli stessi e vanno ignorate:
+
 - `ratio-example`
 - `ratio-example-breakpoint`
 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
-
-
 
 **Pro-Tip!** Non hai bisogno di includere l'attributo `frameborder="0"` nei tuoi `<iframe>`, questo viene automaticamente
 sovrascritto.
@@ -69,6 +68,7 @@ Le proporzioni possono essere personalizzate con delle classi apposite.
 Vengono fornite le seguenti proporzioni pre-impostate:
 
 {% capture example %}
+
 <div class="ratio ratio-1x1 ratio-example">
   <div>1x1</div>
 </div>
@@ -90,6 +90,7 @@ Ogni classe `.ratio-*` include una variabile CSS nel selettore. Puoi fare un ove
 Ad esempio, per creare una proporzione custom 2x1, utilizza il valore `--bs-aspect-ratio: 50%` sull'elemento `.ratio`.
 
 {% capture example %}
+
 <div class="ratio ratio-example" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
@@ -108,6 +109,7 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 ```
 
 {% capture example %}
+
 <div class="ratio ratio-4x3 ratio-example ratio-example-breakpoint">
   <div>4x3, poi 2x1</div>
 </div>
@@ -118,10 +120,10 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 All'interno del file `src\scss\_variables.scss` è possibile modificare e aggiungere proporzioni predefinite. Questa è la mappa utilizzata di default. Modifica la mappa a piacimento e ricompila il CSS per utilizzarla.
 
 ```scss
-  $aspect-ratios: (
-    "1x1": 100%,
-    "4x3": calc(3 / 4 * 100%),
-    "16x9": calc(9 / 16 * 100%),
-    "21x9": calc(9 / 21 * 100%)
-  );
+$aspect-ratios: (
+  '1x1': 100%,
+  '4x3': calc(3 / 4 * 100%),
+  '16x9': calc(9 / 16 * 100%),
+  '21x9': calc(9 / 21 * 100%),
+);
 ```

@@ -1,5 +1,4 @@
-{% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
-{%- if page.nonbundle -%}
+{% assign buildTime = site.time | date: '%Y%m%d%H%M' %} {%- if page.nonbundle -%}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.min.js?{{ buildTime }}"></script>
 {%- else -%}
@@ -32,7 +31,12 @@
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 {%- if page.title == "Liste di immagini" -%}
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+  integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+  crossorigin="anonymous"
+  async
+></script>
 {%- endif -%}
 
 <script>

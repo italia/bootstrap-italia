@@ -96,12 +96,12 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 
 ### Metodo
 
-| Metodo                 | Descrizione                                                                                                                                                             |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `close`                | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                          |
-| `dispose`              | L'alert viene rimosso.                                                                                                                                                  |
-| `getInstance`	         | Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)                      |
-| `getOrCreateInstance`	 | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element) |
+| Metodo                | Descrizione                                                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `close`               | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                                                      |
+| `dispose`             | L'alert viene rimosso.                                                                                                                                                                              |
+| `getInstance`         | Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)                                                  |
+| `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element) |
 
 ```js
 var alertNode = document.querySelector('.alert')
