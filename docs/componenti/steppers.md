@@ -165,7 +165,7 @@ Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi so
 
 #### Progress bar
 
-La Progress bar è quella nativa di Bootstrap 4 ed è contenuta in un elemento `.steppers-progress` situato fra i bottoni "Indietro" ed "Avanti".
+La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `.steppers-progress` situato fra i bottoni "Indietro" ed "Avanti".
 
 {% capture example %}
 

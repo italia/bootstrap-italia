@@ -23,12 +23,13 @@ export default [
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
         watch: 'src/scss',
+        sourceMap: true,
       }),
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' }
-        ]
+          { src: 'src/fonts', dest: 'dist' },
+        ],
       }),
       svgSprite({
         outputFolder: 'dist/svg',
@@ -48,15 +49,16 @@ export default [
       scss({
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
+        sourceMap: true,
       }),
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' }
-        ]
+          { src: 'src/fonts', dest: 'dist' },
+        ],
       }),
       svgSprite({
-        outputFolder: 'dist/svg'
+        outputFolder: 'dist/svg',
       }),
       nodeResolve({
         // use "jsnext:main" if possible

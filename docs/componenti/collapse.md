@@ -217,6 +217,7 @@ Più gruppi di collapse possono essere annidati.
 {% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
+
 #### Accessibilità
 
 Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento richiudibile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento richiudibile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
@@ -408,7 +409,7 @@ E' possibile creare un'instanza di elementi richiudibili mediante il suo costrut
 ```js
 var myCollapse = document.getElementById('myCollapse')
 var bsCollapse = new bootstrap.Collapse(myCollapse, {
-  toggle: false
+  toggle: false,
 })
 ```
 
@@ -429,9 +430,11 @@ Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento r
 Elimina la possibilità di un elemento di essere richiudibile.
 
 ### `getInstance`
+
 Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `bootstrap.Collapse.getInstance(element)`
 
 ### `getOrCreateInstance`
+
 Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: `bootstrap.Collapse.getOrCreateInstance(element)`
 
 ### Eventi

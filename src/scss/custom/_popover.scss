@@ -6,7 +6,7 @@
 
   &.bs-popover-top {
     margin-bottom: $v-gap * 2;
-    .arrow {
+    .popover-arrow {
       &:after {
         bottom: 2px;
       }
@@ -14,7 +14,7 @@
   }
   &.bs-popover-bottom {
     margin-top: $v-gap * 2;
-    .arrow {
+    .popover-arrow {
       &:after {
         top: 2px;
       }
@@ -22,7 +22,7 @@
   }
   &.bs-popover-left {
     margin-right: $v-gap * 2;
-    .arrow {
+    .popover-arrow {
       &:after {
         right: 2px;
       }
@@ -30,13 +30,13 @@
   }
   &.bs-popover-right {
     margin-left: $v-gap * 2;
-    .arrow {
+    .popover-arrow {
       &:after {
         left: 2px;
       }
     }
   }
-  .arrow {
+  .popover-arrow {
     &:before {
       display: none;
     }

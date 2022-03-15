@@ -8,9 +8,9 @@
 
 _Read this in other languages: [English](README.EN.md)._
 
-Bootstrap Italia è un tema basato su [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
+Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
 
-Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
+Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 5, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
 La roadmap del progetto è consultabile nel [nuovo piano attività 2022 di Designers Italia](https://designers.italia.it/piano-attivita/).
 
@@ -66,7 +66,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 
 - [jQuery](https://jquery.com/) © jQuery Foundation, licenza MIT
 - [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, licenza MIT
-- [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., licenza MIT
+- [Bootstrap 5](https://getbootstrap.com/) © Twitter, Inc., licenza MIT
 - [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, licenza MIT
 - [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), licenza MIT
 - [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, licenza BSD

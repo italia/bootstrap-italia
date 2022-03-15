@@ -30,7 +30,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% capture example %}
 
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNav">
     <div class="overlay"></div>
@@ -93,7 +93,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% capture example %}
 
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="overlay"></div>
@@ -165,7 +165,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 {% capture example %}
 
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>

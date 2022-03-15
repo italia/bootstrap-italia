@@ -34,7 +34,7 @@ Di seguito, alcuni dettagli di ciò che Reboot implementa e che sarebbe bene seg
 Gli elementi `<html>` e `<body>` stessi impostano attraverso Reboot alcuni comportamenti, tra cui:
 
 - `box-sizing` è settato a `border-box` globalmente, anche per `*::before` e `*::after`. Questo assicura che la dimensione dichiarata non aumenti mai per la presenza di padding o bordi.
-- `<html>` e  `<body>` imposta una dimensione di base per `font-size`, assumendola in 16px per i device fino a 575px e a 18px per i device sopra i 575px .
+- `<html>` e `<body>` imposta una dimensione di base per `font-size`, assumendola in 16px per i device fino a 575px e a 18px per i device sopra i 575px .
 - `<body>` imposta anche `font-family`, `line-height`, e `text-align` globali, per evitare inconsistenze in alcuni elementi dei form.
 - `<body>` imposta `background-color` a `#fff`.
 
