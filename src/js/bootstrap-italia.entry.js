@@ -12,6 +12,7 @@ import NavScroll from './plugins/navscroll'
 import HeaderSticky from './plugins/header-sticky'
 import Sticky from './plugins/sticky'
 import TrackFocus from './plugins/track-focus'
+import CarouselBI from './plugins/carousel-bi'
 
 import './icons.js'
 
@@ -29,6 +30,7 @@ window.bootstrap = {
   Toast,
   Tooltip,
 
+  CarouselBI,
   Cookiebar,
   Dimmer,
   HeaderSticky,

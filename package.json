@@ -84,6 +84,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",
+    "@splidejs/splide": "^3.6.12",
     "bootstrap": "^5.1.3"
   }
 }
