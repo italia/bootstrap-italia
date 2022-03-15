@@ -23,6 +23,7 @@ export default [
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
         watch: 'src/scss',
+        sourceMap: true,
       }),
       copy({
         targets: [
@@ -48,6 +49,7 @@ export default [
       scss({
         output: 'dist/css/bootstrap-italia.min.css',
         outputStyle: 'compressed',
+        sourceMap: true,
       }),
       copy({
         targets: [
