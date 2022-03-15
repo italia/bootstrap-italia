@@ -135,7 +135,7 @@ class Sticky extends BaseComponent {
 
 const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
 stickies.forEach((sticky) => {
-  new Sticky(sticky)
+  Sticky.getOrCreateInstance(sticky)
 })
 
 export default Sticky
