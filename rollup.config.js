@@ -28,8 +28,8 @@ export default [
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' }
-        ]
+          { src: 'src/fonts', dest: 'dist' },
+        ],
       }),
       svgSprite({
         outputFolder: 'dist/svg',
@@ -54,11 +54,11 @@ export default [
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' }
-        ]
+          { src: 'src/fonts', dest: 'dist' },
+        ],
       }),
       svgSprite({
-        outputFolder: 'dist/svg'
+        outputFolder: 'dist/svg',
       }),
       nodeResolve({
         // use "jsnext:main" if possible

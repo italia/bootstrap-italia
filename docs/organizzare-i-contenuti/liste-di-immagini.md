@@ -372,8 +372,13 @@ Di seguito l'esempio
 Masonry non è incluso in Bootstrap Italia ma può essere aggiunto con l'inclusione del plugin js opure via CDN importando lo script necessario:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-````
+<script
+  src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+  integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+  crossorigin="anonymous"
+  async
+></script>
+```
 
 Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 

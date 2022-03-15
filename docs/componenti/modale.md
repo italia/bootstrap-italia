@@ -856,7 +856,7 @@ Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 ```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
-  keyboard: false
+  keyboard: false,
 })
 ```
 
@@ -905,6 +905,7 @@ myModal.dispose()
 ```
 
 #### `getInstance`
+
 Static method which allows you to get the modal instance associated with a DOM element
 
 ```js
@@ -913,6 +914,7 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 ```
 
 #### `getOrCreateInstance`
+
 Static method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn’t initialised
 
 ```js
