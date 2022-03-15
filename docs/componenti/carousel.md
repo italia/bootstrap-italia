@@ -78,7 +78,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -96,7 +96,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -114,7 +114,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -132,7 +132,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -150,7 +150,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -168,7 +168,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -206,7 +206,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -229,7 +229,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -252,7 +252,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -275,7 +275,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -324,7 +324,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                     </svg>
                   </a>
                 </div>
@@ -356,7 +356,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                     </svg>
                   </a>
                 </div>
@@ -388,7 +388,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                     </svg>
                   </a>
                 </div>
@@ -429,7 +429,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -451,7 +451,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -473,7 +473,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -495,7 +495,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -517,7 +517,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -539,7 +539,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
                   </svg>
                 </a>
               </div>
