@@ -76,7 +76,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -94,7 +94,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -112,7 +112,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -130,7 +130,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -148,7 +148,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -166,7 +166,7 @@ div **`splide__track`** : vengono aggiunte le classi `pl-lg-3 pr-lg-3` che imple
                 <h5 class="card-title">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -204,7 +204,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -227,7 +227,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -250,7 +250,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -273,7 +273,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -322,7 +322,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
                       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                     </svg>
@@ -354,7 +354,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
                       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                     </svg>
@@ -386,7 +386,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                     <svg class="icon">
                       <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                     </svg>
@@ -427,7 +427,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -449,7 +449,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -471,7 +471,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -493,7 +493,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -515,7 +515,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
@@ -537,7 +537,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
                     <use href="{{ site.baseurl }}/dist/svg/sprite.svg#it-arrow-right"></use>
                   </svg>
