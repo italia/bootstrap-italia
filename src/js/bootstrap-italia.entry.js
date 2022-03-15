@@ -29,7 +29,6 @@ window.bootstrap = {
   Tab,
   Toast,
   Tooltip,
-
   CarouselBI,
   Cookiebar,
   Dimmer,

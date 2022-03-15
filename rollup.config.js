@@ -11,33 +11,6 @@ import injectProcessEnv from 'rollup-plugin-inject-process-env'
 
 export default [
   {
-    input: 'src/js/bootstrap-italia.js',
-    output: {
-      file: 'dist/js/bootstrap-italia.min.js',
-      compact: true,
-      format: 'iife',
-    },
-    plugins: [
-      babel({ babelHelpers: 'bundled' }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        watch: 'src/scss',
-        sourceMap: true,
-      }),
-      copy({
-        targets: [
-          { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' },
-        ],
-      }),
-      svgSprite({
-        outputFolder: 'dist/svg',
-      }),
-      uglify(),
-    ],
-  },
-  {
     input: 'src/js/bootstrap-italia.entry.js',
     output: {
       file: 'dist/js/bootstrap-italia.bundle.min.js',
@@ -46,11 +19,6 @@ export default [
     },
     plugins: [
       babel({ babelHelpers: 'bundled' }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
-      }),
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
@@ -60,13 +28,19 @@ export default [
       svgSprite({
         outputFolder: 'dist/svg',
       }),
+      scss({
+        output: 'dist/css/bootstrap-italia.min.css',
+        outputStyle: 'compressed',
+        sourceMap: true,
+        watch: 'src/scss',
+      }),
+      injectProcessEnv({
+        NODE_ENV: 'production',
+      }),
       nodeResolve({
         // use "jsnext:main" if possible
         // see https://github.com/rollup/rollup/wiki/jsnext:main
         jsnext: true,
-      }),
-      injectProcessEnv({
-        NODE_ENV: 'production',
       }),
       uglify(),
     ],
