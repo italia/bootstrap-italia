@@ -123,6 +123,7 @@ class CarouselBI extends BaseComponent {
   }
 
   dispose() {
+    this._splide.destroy()
     super.dispose()
   }
   // Getters

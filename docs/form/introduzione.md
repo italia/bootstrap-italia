@@ -20,14 +20,14 @@ Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare 
 
 ### Dimensionamento delle colonne
 
-Strutture più complesse possono essere costruite usando il sistema a griglia, da utilizzare per layout che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive. La classe `.form-row` ne assicura una corretta spaziatura.
+Strutture più complesse possono essere costruite usando il sistema a griglia, da utilizzare per layout che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive. La classe `.row` ne assicura una corretta spaziatura.
 
 Si può scegliere di dare una dimensione a una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
 
 {% capture example %}
 
 <div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6">
       <label for="formNome">Nome</label>
       <input type="text" class="form-control" id="formNome">
@@ -37,7 +37,7 @@ Si può scegliere di dare una dimensione a una colonna, ad esempio dandogli una 
       <input type="text" class="form-control" id="formCognome">
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-7">
       <label for="Citta">Città</label>
       <input type="text" class="form-control" id="Citta">
@@ -59,7 +59,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 {% capture example %}
 
 <div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email">
@@ -73,13 +73,13 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       </span>
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col">
       <label for="inputAddress">Indirizzo</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="Via Roma, 1">
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6">
       <label for="inputCity">Comune</label>
       <input type="text" class="form-control" id="inputCity">
@@ -101,7 +101,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       </div>
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6">
       <div class="toggles">
         <label for="toggleEsempio1a">
@@ -112,7 +112,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       </div>
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col text-center">
       <button type="button" class="btn btn-outline-primary">Annulla</button>
       <button type="submit" class="btn btn-primary">Conferma</button>
@@ -127,7 +127,7 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
 
 {% capture example %}
 
-<div class="form-row align-items-center">
+<div class="row align-items-center">
   <div class="col-auto">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
     <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
@@ -267,7 +267,7 @@ Per i messaggi personalizzati di convalida del form, è necessario aggiungere l'
 {% capture example %}
 
 <form class="needs-validation" novalidate>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-3 mb-3">
       <label for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required>
@@ -290,7 +290,7 @@ Per i messaggi personalizzati di convalida del form, è necessario aggiungere l'
       <div class="invalid-feedback">Utilizza un numero valido maggiore di 18</div>
     </div>
   </div>
-  <div class="form-row">
+  <div class="row">
     <div class="form-group col-md-6 mb-3">
       <label for="validationCustom03">Città</label>
       <input type="text" class="form-control" id="validationCustom03" required>

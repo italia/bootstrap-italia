@@ -47,7 +47,7 @@ Quando hai alcuni stili su un elemento genitore che interferiscono con un popove
 
 ```js
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
-  container: 'body'
+  container: 'body',
 })
 ```
 
@@ -192,7 +192,7 @@ Per il giusto comportamento cross-browser e cross-platform, è necessario utiliz
 
 ```js
 var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-  trigger: 'focus'
+  trigger: 'focus',
 })
 ```
 
@@ -296,6 +296,7 @@ myPopover.update()
 ```
 
 #### `getInstance`
+
 Static method which allows you to get the popover instance associated with a DOM element
 
 ```js
@@ -304,6 +305,7 @@ var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Returns a Boots
 ```
 
 #### `getOrCreateInstance`
+
 Static method which allows you to get the popover instance associated with a DOM element, or create a new one in case it wasn’t initialised
 
 ```js
