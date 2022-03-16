@@ -18,7 +18,7 @@ import TrackFocus from './plugins/track-focus'
 import CarouselBI from './plugins/carousel-bi'
 import FormInput from './plugins/form-input'
 import { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate'
-import SelectAutocomplete from './plugins/select-autocomplete'
+//import SelectAutocomplete from './plugins/select-autocomplete'
 
 import './icons.js'
 
@@ -45,7 +45,7 @@ window.bootstrap = {
   NavBarCollapsible,
   NavScroll,
   Notification,
-  SelectAutocomplete,
+  //SelectAutocomplete,
   //Sticky,
   TrackFocus,
   ValidatorSelectAutocomplete,

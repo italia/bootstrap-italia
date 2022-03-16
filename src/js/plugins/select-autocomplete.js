@@ -1,4 +1,4 @@
-import accessibleAutocomplete from 'accessible-autocomplete'
+import * as accessibleAutocomplete from 'accessible-autocomplete'
 
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
