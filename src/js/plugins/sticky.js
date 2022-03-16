@@ -45,6 +45,7 @@ class Sticky extends BaseComponent {
 
     this._isMobile = isScreenMobile()
 
+    this._onScroll()
     this._bindEvents()
   }
 
@@ -78,11 +79,35 @@ class Sticky extends BaseComponent {
   }
 
   _setLimit() {
-    this._stickyLimit = this._stickyTarget.getBoundingClientRect().top
-    this._stickyLimitMobile = this._stickyTargetMobile.getBoundingClientRect().top
+    this._stickyLimit = this._cumulativeOffset(this._stickyTarget).top
+    this._stickyLimitMobile = this._cumulativeOffset(this._stickyTargetMobile).top
+  }
+
+  /**
+   * get the absolute position of an element
+   * @param {*} element - the target element
+   * @returns {Object} - absolute position top and left of the element
+   */
+  _cumulativeOffset(element) {
+    let top = 0
+    let left = 0
+    do {
+      top += element.offsetTop || 0
+      left += element.offsetLeft || 0
+      element = element.offsetParent
+    } while (element)
+
+    return {
+      top: top,
+      left: left,
+    }
   }
 
   _checkSticky() {
+    if (!this._isSticky) {
+      //the target position can change dinamically
+      this._setLimit()
+    }
     const limit = this._isMobile ? this._stickyLimitMobile : this._stickyLimit
     if (window.pageYOffset > limit) {
       this._setSticky()
