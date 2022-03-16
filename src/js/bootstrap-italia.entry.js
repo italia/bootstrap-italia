@@ -4,7 +4,7 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 import './plugins/dropdown'
 import './plugins/forward'
 
-import accessibleAutocomplete from 'accessible-autocomplete'
+//import accessibleAutocomplete from 'accessible-autocomplete'
 
 import Dimmer from './plugins/dimmer'
 import Notification from './plugins/notification'
@@ -12,11 +12,11 @@ import Cookiebar from './plugins/cookiebar'
 import NavBarCollapsible from './plugins/navbar-collapsible'
 import NavScroll from './plugins/navscroll'
 import HeaderSticky from './plugins/header-sticky'
-import Sticky from './plugins/sticky'
+//import Sticky from './plugins/sticky'
 import TrackFocus from './plugins/track-focus'
 import CarouselBI from './plugins/carousel-bi'
-import Form from './plugins/form'
-import { JustValidateBI, JustValidateBIValidatorSelectAutocomplete } from './plugins/justvalidate-bi'
+import FormInput from './plugins/form-input'
+import { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate'
 
 import './icons.js'
 
@@ -33,18 +33,17 @@ window.bootstrap = {
   Tab,
   Toast,
   Tooltip,
+
   CarouselBI,
   Cookiebar,
   Dimmer,
-  Form,
+  FormInput,
+  FormValidate,
   HeaderSticky,
-  JustValidateBI,
-  JustValidateBIValidatorSelectAutocomplete,
   NavBarCollapsible,
   NavScroll,
   Notification,
-  Sticky,
+  //Sticky,
   TrackFocus,
+  ValidatorSelectAutocomplete,
 }
-
-window.accessibleAutocomplete = accessibleAutocomplete

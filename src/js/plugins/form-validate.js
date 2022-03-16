@@ -12,7 +12,7 @@ const CLASS_NAME_SRONLY = 'sr-only-justvalidate-bi'
 
 const SELECTOR_SPAN_SRONLY = `.${CLASS_NAME_SRONLY}`
 
-class JustValidateBI {
+class FormValidate {
   constructor(selector, config) {
     this.formSelector = selector
     this.target = document.querySelector(selector)
@@ -160,7 +160,7 @@ class JustValidateBI {
  * @param {string} inputId - the input id
  * @param {Object} config - { required }
  */
-const JustValidateBIValidatorSelectAutocomplete = (inputId, config = {}) => {
+const ValidatorSelectAutocomplete = (inputId, config = {}) => {
   return (value, fields) => {
     let result = false
     const field = fields[inputId]
@@ -178,7 +178,7 @@ const JustValidateBIValidatorSelectAutocomplete = (inputId, config = {}) => {
           })
       }
     } else {
-      throw new Error('JustValidateBIValidatorSelectAutocomplete: ' + inputId + ' not found as form field')
+      throw new Error('ValidatorSelectAutocomplete: ' + inputId + ' not found as form field')
     }
 
     return result
@@ -188,4 +188,4 @@ const JustValidateBIValidatorSelectAutocomplete = (inputId, config = {}) => {
 //window.JustValidateIt = JustValidateIt
 //window.JustValidateItValidatorSelectAutocomplete = JustValidateItValidatorSelectAutocomplete
 
-export { JustValidateBI, JustValidateBIValidatorSelectAutocomplete }
+export { FormValidate, ValidatorSelectAutocomplete }

@@ -292,17 +292,18 @@ title: Just Validate
   </div>
 </div>
 <script>
+
   document.addEventListener('DOMContentLoaded', function () {
     const errorMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="close" data-dismiss="alert" aria-label="Chiudi avviso"><span aria-hidden="true">&times;</span></button></div>';
     const errorWrapper = document.querySelector('#errorMsgContainer');
-    const validate = new bootstrap.JustValidateBI('#justValidate', {
+    const validate = new bootstrap.FormValidate('#justValidate', {
       errorFieldCssClass: 'is-invalid',
       errorLabelCssClass: 'form-feedback',
       errorLabelStyle: '',
       focusInvalidField: false,
     })
 
-    accessibleAutocomplete.enhanceSelectElement({
+    /*accessibleAutocomplete.enhanceSelectElement({
       selectElement: document.querySelector('#accessibleAutocomplete'),
       showAllValues: true,
       defaultValue: '',
@@ -310,7 +311,7 @@ title: Just Validate
       showNoOptionsFound: false,
       dropdownArrow: () => '',
       onConfirm: () => {},
-    })
+    })*/
 
     validate
       .addField('#nome', [
@@ -328,7 +329,7 @@ title: Just Validate
         {
           //rule: 'required',
           errorMessage: 'Seleziona un\'opzione fra quelle disponibili',
-          validator: bootstrap.JustValidateBIValidatorSelectAutocomplete('#accessibleAutocomplete')
+          validator: bootstrap.ValidatorSelectAutocomplete('#accessibleAutocomplete')
         }
       ])
       .addField('#age', [
@@ -442,4 +443,5 @@ title: Just Validate
         errorWrapper.scrollIntoView()
       })
   })
+
 </script>
