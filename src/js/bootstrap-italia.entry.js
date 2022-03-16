@@ -3,6 +3,7 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 
 import './plugins/dropdown'
 import './plugins/forward'
+import './plugins/fonts-loader'
 
 import Dimmer from './plugins/dimmer'
 import Notification from './plugins/notification'
