@@ -3,6 +3,7 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 
 import './plugins/dropdown'
 import './plugins/forward'
+import './plugins/fonts-loader'
 
 //import accessibleAutocomplete from 'accessible-autocomplete'
 

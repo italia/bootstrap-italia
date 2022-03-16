@@ -91,6 +91,7 @@
     - title: Input Numerico
     - title: Input Calendario
     - title: Input Ora # TODO Not working properly yet
+    - title: Autocompletamento
     - title: Upload
     - title: Radio Button
     - title: Select
