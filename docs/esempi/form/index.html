@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Just Validate
+title: Validazione Form
 ---
 
 <form id="justValidate" action="index.html" method="post">
@@ -273,14 +273,16 @@ title: Just Validate
         <div class="form-upload">
           <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" required />
           <label for="upload1">
-            <svg class="icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprite.svg#it-upload"></use></svg>
+            <svg class="icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-upload"></use></svg>
             <span>Upload custom (solo jpg/png)</span>
           </label>
         </div>
       </div>
     </div>
     <div class="row">
-      <button class="btn btn-primary mt-3" type="submit">Invia form</button>
+      <div class="col-12">
+        <button class="btn btn-primary mt-3" type="submit">Invia form</button>
+      </div>
     </div>
   </div>
 </form>
@@ -294,7 +296,7 @@ title: Just Validate
 <script>
 
   document.addEventListener('DOMContentLoaded', function () {
-    const errorMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="close" data-dismiss="alert" aria-label="Chiudi avviso"><span aria-hidden="true">&times;</span></button></div>';
+    const errorMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso"></div>';
     const errorWrapper = document.querySelector('#errorMsgContainer');
     const validate = new bootstrap.FormValidate('#justValidate', {
       errorFieldCssClass: 'is-invalid',
@@ -303,6 +305,14 @@ title: Just Validate
       focusInvalidField: false,
     })
 
+    const selectAutocomplete = new bootstrap.SelectAutocomplete(document.querySelector('#accessibleAutocomplete'), {
+      showAllValues: true,
+      defaultValue: '',
+      autoselect: false,
+      showNoOptionsFound: false,
+      dropdownArrow: () => '',
+      onConfirm: () => {},
+    })
     /*accessibleAutocomplete.enhanceSelectElement({
       selectElement: document.querySelector('#accessibleAutocomplete'),
       showAllValues: true,
