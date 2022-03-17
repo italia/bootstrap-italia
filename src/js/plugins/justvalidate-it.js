@@ -108,11 +108,12 @@ class JustValidateIt {
         legend.setAttribute('aria-describedby', errIds.join(' '))
         legend.setAttribute('aria-invalid', 'true')
 
-        const span = document.createElement('span')
+        //not needed anymore
+        /*const span = document.createElement('span')
         span.classList.add('sr-only')
         span.classList.add('sr-only-justvalidateit')
         span.textContent = errTexts.join(' ')
-        legend.append(span)
+        legend.append(span)*/
       }
     } /*else {
       console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
