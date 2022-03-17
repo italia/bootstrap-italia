@@ -8,7 +8,7 @@ import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
-//import commonjs from 'rollup-plugin-commonjs'
+import commonjs from 'rollup-plugin-commonjs'
 
 export default [
   {
@@ -22,7 +22,6 @@ export default [
       babel({
         babelHelpers: 'bundled',
         exclude: 'node_modules/**',
-        presets: ['@babel/preset-react'],
       }),
       copy({
         targets: [
@@ -39,14 +38,15 @@ export default [
         sourceMap: true,
         watch: 'src/scss',
       }),
-      injectProcessEnv({
-        NODE_ENV: 'production',
-      }),
       nodeResolve({
         // use "jsnext:main" if possible
         // see https://github.com/rollup/rollup/wiki/jsnext:main
         jsnext: true,
         main: true,
+      }),
+      commonjs(),
+      injectProcessEnv({
+        NODE_ENV: 'production',
       }),
       uglify(),
     ],

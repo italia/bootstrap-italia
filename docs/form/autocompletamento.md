@@ -136,8 +136,7 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    accessibleAutocomplete.enhanceSelectElement({
-      selectElement: document.querySelector('#accessibleAutocomplete'),
+    const selectAutocomplete = new bootstrap.SelectAutocomplete(document.querySelector('#accessibleAutocomplete'), {
       showAllValues: true,
       defaultValue: '',
       autoselect: false,

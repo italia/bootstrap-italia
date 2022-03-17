@@ -1,4 +1,4 @@
-import * as accessibleAutocomplete from 'accessible-autocomplete'
+import accessibleAutocomplete from 'accessible-autocomplete'
 
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
@@ -25,11 +25,9 @@ class SelectAutocomplete extends BaseComponent {
 
   // Private
   _enhance() {
-    //accessibleAutocomplete.enhanceSelectElement(Object.assign({}, { selectElement: this._element }, this._config))
+    accessibleAutocomplete.enhanceSelectElement(Object.assign({}, { selectElement: this._element }, this._config))
   }
 }
-
-console.log('---', { accessibleAutocomplete })
 
 /**
  * ------------------------------------------------------------------------
