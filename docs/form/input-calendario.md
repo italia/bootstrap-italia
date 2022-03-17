@@ -10,6 +10,11 @@ description: Documentazione ed esempi per aggiungere calendari per la selezione 
 ## Datepicker
 
 Clicca sull’icona a destra per visualizzare il datepicker.
+{% capture callout %}
+
+Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
 
 {% capture example %}
 
