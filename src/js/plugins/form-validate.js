@@ -43,7 +43,8 @@ class FormValidate {
         watcher,
       })
     })
-    const fieldsets = this.target.querySelectorAll('fieldset')
+    //not needed anymore
+    /*const fieldsets = this.target.querySelectorAll('fieldset')
     fieldsets.forEach((field) => {
       const inputs = field.querySelectorAll('input[type=radio],input[type=checkbox]')
       if (inputs.length > 0) {
@@ -61,7 +62,7 @@ class FormValidate {
           watcher,
         })
       }
-    })
+    })*/
   }
 
   /**
