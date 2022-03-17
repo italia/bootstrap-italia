@@ -63,6 +63,8 @@
 @import 'node_modules/bootstrap/scss/utilities/api';
 // scss-docs-end import-stack
 
+
+
 // Customizzazioni e nuovi componenti
 @import 'custom/type';
 @import 'custom/grid';
@@ -133,6 +135,7 @@
 @import 'custom/print';
 @import 'custom/code';
 @import 'custom/just-validate';
+@import 'custom/accessible-autocomplete';
 
 // datepicker
 @import 'custom/form-datepicker';
