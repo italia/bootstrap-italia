@@ -9,7 +9,11 @@ description: Campi input per la selezione di un orario
 
 Il componente input time, o timepicker, è un componente per la selezione di un orario.
 
+{% capture callout %}
+
 Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
 
 Clicca sull’icona a destra per visualizzare il timepicker.
 

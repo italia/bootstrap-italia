@@ -1,0 +1,6 @@
+//text-color
+@each $color, $value in $theme-colors {
+  .text-#{$color} {
+    color: darken($value, 15%) !important;
+  }
+}
