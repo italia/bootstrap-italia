@@ -43,8 +43,7 @@ class FormValidate {
         watcher,
       })
     })
-    //not needed anymore
-    /*const fieldsets = this.target.querySelectorAll('fieldset')
+    const fieldsets = this.target.querySelectorAll('fieldset')
     fieldsets.forEach((field) => {
       const inputs = field.querySelectorAll('input[type=radio],input[type=checkbox]')
       if (inputs.length > 0) {
@@ -62,7 +61,7 @@ class FormValidate {
           watcher,
         })
       }
-    })*/
+    })
   }
 
   /**
@@ -114,11 +113,12 @@ class FormValidate {
         legend.setAttribute('aria-describedby', errIds.join(' '))
         legend.setAttribute('aria-invalid', 'true')
 
-        const span = document.createElement('span')
+        //not needed anymore
+        /*const span = document.createElement('span')
         span.classList.add('sr-only')
         span.classList.add(CLASS_NAME_SRONLY)
         span.textContent = errTexts.join(' ')
-        legend.append(span)
+        legend.append(span)*/
       }
     } /*else {
       console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
