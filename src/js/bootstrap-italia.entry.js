@@ -20,6 +20,7 @@ import { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-valida
 import Input from './plugins/input'
 import SelectAutocomplete from './plugins/select-autocomplete'
 import InputSearchAutocomplete from './plugins/input-search-autocomplete'
+import InputPassword from './plugins/input-password'
 
 import './plugins/inputs'
 
@@ -45,6 +46,7 @@ window.bootstrap = {
   FormValidate,
   HeaderSticky,
   Input,
+  InputPassword,
   InputSearchAutocomplete,
   NavBarCollapsible,
   NavScroll,

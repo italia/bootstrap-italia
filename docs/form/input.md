@@ -150,32 +150,32 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </thead>
   <tbody>
     <tr>
-      <td><code>data-short-pass</code></td>
+      <td><code>data-bs-short-pass</code></td>
       <td>Testo per il punteggio di forza della password minimo</td>
       <td>Password molto debole</td>
     </tr>
     <tr>
-      <td><code>data-bad-pass</code></td>
+      <td><code>data-bs-bad-pass</code></td>
       <td>Testo per punteggio di forza della password basso</td>
       <td>Password debole</td>
     </tr>
     <tr>
-      <td><code>data-good-pass</code></td>
+      <td><code>data-bs-good-pass</code></td>
       <td>Testo per punteggio di forza della password buono</td>
       <td>Password sicura</td>
     </tr>
     <tr>
-      <td><code>data-strong-pass</code></td>
+      <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
       <td>Password molto sicura</td>
     </tr>
     <tr>
-      <td><code>data-enter-pass</code></td>
+      <td><code>data-bs-enter-pass</code></td>
       <td>Testo di aiuto</td>
       <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
     </tr>
     <tr>
-      <td><code>data-minimum-length</code></td>
+      <td><code>data-bs-minimum-length</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
       <td>4</td>
     </tr>
@@ -196,7 +196,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" class="form-control input-password input-password-strength-meter" data-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
+    <input type="password" class="form-control input-password input-password-strength-meter" data-bs-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>

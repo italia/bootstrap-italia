@@ -5,8 +5,7 @@ import Input from './input'
 //const SELECTOR_FORM = 'form'
 const SELECTOR_INPUT =
   'input[type="text"],' +
-  'input[type="password"],' +
-  'input[type="email"],' +
+  //'input[type="password"],' +
   'input[type="email"],' +
   'input[type="url"],' +
   'input[type="tel"],' +
