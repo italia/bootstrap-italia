@@ -16,9 +16,12 @@ import HeaderSticky from './plugins/header-sticky'
 //import Sticky from './plugins/sticky'
 import TrackFocus from './plugins/track-focus'
 import CarouselBI from './plugins/carousel-bi'
-import FormInput from './plugins/form-input'
 import { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate'
+import Input from './plugins/input'
 import SelectAutocomplete from './plugins/select-autocomplete'
+import InputSearchAutocomplete from './plugins/input-search-autocomplete'
+
+import './plugins/inputs'
 
 import './icons.js'
 
@@ -39,9 +42,10 @@ window.bootstrap = {
   CarouselBI,
   Cookiebar,
   Dimmer,
-  FormInput,
   FormValidate,
   HeaderSticky,
+  Input,
+  InputSearchAutocomplete,
   NavBarCollapsible,
   NavScroll,
   Notification,
