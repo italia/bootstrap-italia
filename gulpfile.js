@@ -165,6 +165,9 @@ gulp.task('js-min', () => {
               modules: false,
               loose: true,
               exclude: ['transform-typeof-symbol'],
+              targets: {
+                browsers: require('browserslist-config-design-italia')
+              }
             },
           ],
         ],
@@ -196,7 +199,13 @@ gulp.task('js-bundle-min', () => {
     .pipe(
       babel({
         compact: true,
-        presets: [['@babel/env', { modules: false, loose: true }]],
+        presets: [['@babel/env', {
+          modules: false,
+          loose: true,
+          targets: {
+            browsers: require('browserslist-config-design-italia')
+          }
+        }]],
         plugins: ['@babel/plugin-proposal-object-rest-spread'],
       })
     )
