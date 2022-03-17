@@ -388,7 +388,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### ARicarca con autocompletamento e dati
+### Ricerca con autocompletamento e dati
 
 Questo autocompletamento è collegato, tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 
