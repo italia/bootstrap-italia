@@ -9,7 +9,7 @@ const SELECTOR_INPUT =
   'input[type="email"],' +
   'input[type="url"],' +
   'input[type="tel"],' +
-  'input[type="number"],' +
+  //'input[type="number"],' +
   'textarea'
 
 const SELECTOR_INPUT_FILE = 'input[type="file"]'

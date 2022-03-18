@@ -21,6 +21,7 @@ import Input from './plugins/input'
 import SelectAutocomplete from './plugins/select-autocomplete'
 import InputSearchAutocomplete from './plugins/input-search-autocomplete'
 import InputPassword from './plugins/input-password'
+import InputNumber from './plugins/input-number'
 
 import './plugins/inputs'
 
@@ -46,6 +47,7 @@ window.bootstrap = {
   FormValidate,
   HeaderSticky,
   Input,
+  InputNumber,
   InputPassword,
   InputSearchAutocomplete,
   NavBarCollapsible,
