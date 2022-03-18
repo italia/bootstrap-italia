@@ -4,8 +4,8 @@ import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 import Input from './input'
 
-const NAME = 'inputpassword'
-const DATA_KEY = 'bs.inputpassword'
+const NAME = 'inputnumber'
+const DATA_KEY = 'bs.inputnumber'
 const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
