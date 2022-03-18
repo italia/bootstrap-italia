@@ -14,12 +14,12 @@
     width: 100%;
     height: 100%;
     transform: scale(0.85);
-    background: tint-color($primary-a1, 4);
+    //background: tint-color($primary-a1, 4);
     border-radius: 50%;
   }
 }
 
-.progress-donut {
+/*.progress-donut {
   transform: scale(0.355);
   position: absolute;
   top: -162px;
@@ -27,7 +27,7 @@
   .clProg {
     font-weight: 700;
   }
-}
+}*/
 
 //Tablet vertical
 @include media-breakpoint-up(md) {
@@ -36,9 +36,9 @@
     height: 180px;
   }
 
-  .progress-donut {
+  /*.progress-donut {
     transform: scale(0.5);
     top: -136px;
     left: -136px;
-  }
+  }*/
 }
