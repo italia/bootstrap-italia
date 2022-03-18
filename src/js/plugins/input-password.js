@@ -76,10 +76,10 @@ class InputPassword extends Input {
       this._grayBarElement = document.createElement('div')
       this._grayBarElement.classList.add('password-meter', 'progress', 'rounded-0', 'position-absolute')
       this._grayBarElement.innerHTML = `<div class="row position-absolute w-100 m-0">
-          <div class="col-3 border-left border-right border-white"></div>
-          <div class="col-3 border-left border-right border-white"></div>
-          <div class="col-3 border-left border-right border-white"></div>
-          <div class="col-3 border-left border-right border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
         </div>`
 
       this._colorBarElement = document.createElement('div')
