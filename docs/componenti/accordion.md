@@ -265,36 +265,36 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
 
 <div class="accordion accordion-background-hover" id="accordionExampleHh">
   <div class="accordion-item">
-    <div class="accordion-header" id="heading1c">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1c" aria-expanded="true" aria-controls="collapse1c">
+    <div class="accordion-header" id="heading1d">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1d" aria-expanded="true" aria-controls="collapse1d">
         Elemento Accordion #1
       </button>
     </div>
-    <div id="collapse1c" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading1c">
+    <div id="collapse1d" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading1d">
       <div class="accordion-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
       </div>
     </div>
   </div>
   <div class="accordion-item">
-    <div class="accordion-header" id="heading2c">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2c" aria-expanded="false" aria-controls="collapse2c">
+    <div class="accordion-header" id="heading2d">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2d" aria-expanded="false" aria-controls="collapse2d">
         Elemento Accordion #2
       </button>
     </div>
-    <div id="collapse2c" class="accordion-collapse collapse" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading2c">
+    <div id="collapse2d" class="accordion-collapse collapse" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading2d">
       <div class="accordion-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
       </div>
     </div>
   </div>
   <div class="accordion-item">
-    <div class="accordion-header" id="heading3c">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3c" aria-expanded="false" aria-controls="collapse3c">
+    <div class="accordion-header" id="heading3d">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3d" aria-expanded="false" aria-controls="collapse3d">
         Elemento Accordion #3
       </button>
     </div>
-    <div id="collapse3c" class="accordion-collapse collapse" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading3c">
+    <div id="collapse3d" class="accordion-collapse collapse" data-bs-parent="#accordionExampleHh" role="region" aria-labelledby="heading3d">
       <div class="accordion-body">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
       </div>
