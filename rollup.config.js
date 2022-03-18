@@ -27,6 +27,7 @@ export default [
         targets: [
           { src: 'src/assets', dest: 'dist' },
           { src: 'src/fonts', dest: 'dist' },
+          { src: 'node_modules/masonry-layout/dist/masonry.pkgd.min.js', dest: 'dist/js/vendor' },
         ],
       }),
       svgSprite({

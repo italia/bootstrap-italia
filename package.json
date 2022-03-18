@@ -90,6 +90,7 @@
     "accessible-autocomplete": "^2.0.4",
     "bootstrap": "^5.1.3",
     "just-validate": "^3.5.1",
-    "progressbar.js": "^1.1.0"
+    "progressbar.js": "^1.1.0",
+    "masonry-layout": "^4.2.2"
   }
 }
