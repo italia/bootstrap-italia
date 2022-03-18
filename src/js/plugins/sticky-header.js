@@ -49,7 +49,10 @@
 
             if (clonedBrand) target.insertBefore(clonedBrand, target.childNodes[0]).classList.add('cloned-header')
             if (clonedSearch) target.appendChild(clonedSearch).classList.add('cloned-header')
-            if (clonedUser) target.appendChild(clonedUser).classList.add('cloned-header').remove('show')
+            if (clonedUser) {
+              target.appendChild(clonedUser).classList.add('cloned-header')
+              target.appendChild(clonedUser).classList.remove('show')
+            }
           } else {
             const clonedItems = document.getElementsByClassName('cloned-header')
             clonedItems &&
