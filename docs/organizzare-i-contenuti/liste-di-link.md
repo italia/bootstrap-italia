@@ -3,7 +3,7 @@ layout: docs
 group: organizzare-i-contenuti
 toc: true
 title: Liste di link
-description: I Link lista sono un componente flessibile e potente per la visualizzazione di una serie di link o call to action.
+description: I link list sono un componente flessibile e potente per la visualizzazione di una serie di link o call to action.
 ---
 
 ## Esempi
@@ -65,7 +65,7 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 
 ### Single line con header e divider
 
-I Link lista possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
+I link list possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
 L'header è costituito dall'elemento `.link-list-heading` che precede il tag `<ul>`<br>
 Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`
 
@@ -116,7 +116,7 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 
 ## Sizing
 
-Per ogni elemento Link lista è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
+Per ogni elemento link list è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
 
 {% capture example %}
 
@@ -139,7 +139,7 @@ Per ogni elemento Link lista è possibile definire una variante di dimensione ma
 
 ## Multiline
 
-Ogni elemento Link lista può avere un icona (a destra o sinistra del testo) ed un abstract.
+Ogni elemento link list può avere un icona (a destra o sinistra del testo) ed un abstract.
 
 **Icone**<br>
 Per aggiungere un icona bisogna aggiungere al tag `<a>` la classi:<br>
@@ -179,7 +179,7 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 
 ## Lista con controlli
 
-I Link lista con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
+I link list con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
 Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript.
 
 Per aggiungere un'icona è possibile aggiungere al tag `<a>` la classe `icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
@@ -295,7 +295,7 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 
 ### List con switch
 
-Un Link lista può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
+Un link list può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
 
 {% capture example %}
 
@@ -321,7 +321,7 @@ Un Link lista può contenere anche elementi form, si seguito un esempio contenen
 
 ### List con checkbox
 
-Di seguito un esempio di Link lista contenente un `<input type="checkbox">` standard.
+Di seguito un esempio di link list contenente un `<input type="checkbox">` standard.
 
 {% capture example %}
 
@@ -386,7 +386,7 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 ### Collapsable
 
 Di seguito un esempio di navigazione annidiata collassabile.<br>
-Per questo tipo di Link lista sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
+Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
 **La documentazione è consultabile qui:**<br> <a href="{{ site.baseurl }}/docs/componenti/collapse/#accordion">{{ site.baseurl }}/docs/componenti/collapse/#accordion</a>
 
 {% capture example %}
