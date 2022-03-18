@@ -6,14 +6,6 @@ title: Progress Indicators
 description: Indicatori di stato attivo e di avanzamento di un'operazione
 ---
 
-<script>
-  //attiva donuts
-  /*document.addEventListener("DOMContentLoaded", function() {
-    progressDonut.generate("#donut-one", 0);
-    progressDonut.generate("#donut-two", 42);
-  })*/
-</script>
-
 ## Donuts
 
 L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso o l'avanzamento di un'operazione in corso.

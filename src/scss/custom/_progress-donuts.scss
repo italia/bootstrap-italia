@@ -1,33 +1,13 @@
 //mobile
-
 .progress-donut-wrapper {
   width: 128px;
   height: 128px;
   position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(0.85);
-    //background: tint-color($primary-a1, 4);
-    border-radius: 50%;
-  }
-}
-
-/*.progress-donut {
-  transform: scale(0.355);
-  position: absolute;
-  top: -162px;
-  left: -162px;
-  .clProg {
+  .progressbar-text {
+    color: #000 !important;
     font-weight: 700;
   }
-}*/
+}
 
 //Tablet vertical
 @include media-breakpoint-up(md) {
@@ -35,10 +15,4 @@
     width: 180px;
     height: 180px;
   }
-
-  /*.progress-donut {
-    transform: scale(0.5);
-    top: -136px;
-    left: -136px;
-  }*/
 }
