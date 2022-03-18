@@ -20,6 +20,7 @@ const Default = {
   minimumLength: 4,
 }
 
+const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
 const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
@@ -30,6 +31,7 @@ const CLASS_NAME_PASSWORD = 'input-password'
 const CLASS_NAME_METER = 'input-password-strength-meter'
 
 const SELECTOR_PASSWORD = 'input[type="password"]'
+const SELECTOR_BTN_SHOW_PWD = '.password-icon'
 
 class InputPassword extends Input {
   constructor(element, config) {
@@ -45,6 +47,7 @@ class InputPassword extends Input {
     this._colorBarElement = null
     this._textElement = null
     this._capsElement = null
+    this._showPwdElement = null
 
     this._init()
     this._bindEvents()
@@ -71,7 +74,7 @@ class InputPassword extends Input {
   _init() {
     if (this._hasMeter) {
       this._grayBarElement = document.createElement('div')
-      this._grayBarElement.classList.add(['password-meter', 'progress', 'rounded-0', 'position-absolute'])
+      this._grayBarElement.classList.add('password-meter', 'progress', 'rounded-0', 'position-absolute')
       this._grayBarElement.innerHTML = `<div class="row position-absolute w-100 m-0">
           <div class="col-3 border-left border-right border-white"></div>
           <div class="col-3 border-left border-right border-white"></div>
@@ -93,7 +96,7 @@ class InputPassword extends Input {
 
       if (this._config.showText) {
         this._textElement = document.createElement('small')
-        this._textElement.classList.add(['form-text', 'text-muted'])
+        this._textElement.classList.add('form-text', 'text-muted')
         this._textElement.innerHTML = this._config.enterPass
         wrapper.appendChild(this._textElement)
       }
@@ -105,10 +108,13 @@ class InputPassword extends Input {
     if (this._isCustom) {
       this._capsElement = document.createElement('small')
       this._capsElement.style.display = 'none'
-      this._capsElement.classList.add(['password-caps', 'form-text', 'text-warning', 'position-absolute', 'bg-white', 'w-100'])
+      this._capsElement.classList.add('password-caps', 'form-text', 'text-warning', 'position-absolute', 'bg-white', 'w-100')
+      this._capsElement.innerHTML = this._config.alertCaps
 
       this._element.parentNode.appendChild(this._capsElement)
     }
+
+    this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
   }
 
   _bindEvents() {
@@ -136,7 +142,8 @@ class InputPassword extends Input {
         }
       })
       EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => {
-        if (evt.code.match(/Key[A-Z]$/) && !this._isShiftPressed) {
+        const matches = evt.key.match(/[A-Z]$/) || []
+        if (matches.length > 0 && !this._isShiftPressed) {
           this._isCapsOn = true
           this._showCapsMsg()
         } else if (this._isCapsOn) {
@@ -145,6 +152,10 @@ class InputPassword extends Input {
         }
       })
     }
+
+    if (this._showPwdElement) {
+      EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
+    }
   }
 
   _showCapsMsg() {
@@ -152,6 +163,16 @@ class InputPassword extends Input {
   }
   _hideCapsMsg() {
     this._capsElement.style.display = 'none'
+  }
+
+  _toggleShowPassword() {
+    const toShow = this._element.getAttribute('type') === 'password'
+    SelectorEngine.find('[class^="password-icon"]', this._showPwdElement).forEach((icon) => icon.classList.toggle('d-none'))
+    if (toShow) {
+      this._element.setAttribute('type', 'text')
+    } else {
+      this._element.setAttribute('type', 'password')
+    }
   }
 
   _checkPassword() {
@@ -164,7 +185,7 @@ class InputPassword extends Input {
       }
     })
     this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
-    this._colorBarElement.width = perc + '%'
+    this._colorBarElement.style.width = perc + '%'
     this._colorBarElement.setAttribute('aria-valuenow', perc)
 
     EventHandler.trigger(this._element, EVENT_SCORE)
