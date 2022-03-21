@@ -157,7 +157,8 @@
           &.icon-left,
           &.left-icon {
             position: relative;
-
+            display: flex;
+            padding-left: 0;
             span {
               margin-top: $v-gap * 0.5;
             }
