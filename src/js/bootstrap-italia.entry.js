@@ -23,6 +23,7 @@ import InputSearchAutocomplete from './plugins/input-search-autocomplete'
 import InputPassword from './plugins/input-password'
 import InputNumber from './plugins/input-number'
 import ProgressDonut from './plugins/progress-donut'
+import UploadDragDrop from './plugins/upload-dragdrop'
 
 import './plugins/inputs'
 
@@ -58,5 +59,6 @@ window.bootstrap = {
   SelectAutocomplete,
   //Sticky,
   TrackFocus,
+  UploadDragDrop,
   ValidatorSelectAutocomplete,
 }
