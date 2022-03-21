@@ -380,7 +380,7 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
 {% capture example %}
 
 <div class="container-fluid">
-  <div class="row" data-masonry='{"percentPosition": true }'>
+  <div class="row it-masonry" data-masonry='{"percentPosition": true }'>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#" class="">

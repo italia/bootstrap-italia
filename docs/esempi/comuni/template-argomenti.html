@@ -92,6 +92,13 @@ title: Template Argomenti
       </div>
     </div>
   </div>
+  <script src="{{ site.baseurl }}/dist/js/vendor/masonry.pkgd.min.js"></script>
+  <script>
+    // attende che vengano caricate le immagini
+    Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+        //console.log('images finished loading');
+    });
+  </script>
   <section id="in-evidenza">
     <div class="section section-muted section-inset-shadow">
       <div class="section-content">
@@ -100,154 +107,157 @@ title: Template Argomenti
             <h3>In evidenza</h3>
           </div>
         </div>
-        <div class="row mt-lg-4">
-          <div class="col">
-            <div class="it-grid-list-wrapper it-image-label-grid it-masonry">
-              <div class="card-columns">
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/488"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Cultura</h3>
-                      </span>
-                    </a>
+        <div class="row it-masonry" data-masonry='{"percentPosition": true }'>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/488"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/184"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Lavorare</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Cultura</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/184"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/264"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Spazi verdi</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Lavorare</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/264"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/144"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Partecipare</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Spazi verdi</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/489"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/264"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Muoversi</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3 class="shadow">Famiglia</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/144"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/184"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3>Sport</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Partecipare</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/274"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="it-grid-item-wrapper it-grid-item-overlay">
-                    <a href="#" class="">
-                      <div class="img-responsive-wrapper">
-                        <div class="img-responsive">
-                          <div class="img-wrapper">
-                            <img
-                              src="https://picsum.photos/376/488"
-                              alt="image Alt"
-                              title="Image Title"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <span class="it-griditem-text-wrapper">
-                        <h3 class="shadow">Famiglia</h3>
-                      </span>
-                    </a>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Muoversi</h3>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="it-grid-item-wrapper it-grid-item-overlay">
+              <a href="#">
+                <div class="img-responsive-wrapper">
+                  <div class="img-responsive">
+                    <div class="img-wrapper">
+                      <img
+                        src="https://picsum.photos/376/185"
+                        alt="image Alt"
+                        title="Image Title"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+                <span class="it-griditem-text-wrapper">
+                  <h3>Sport</h3>
+                </span>
+              </a>
             </div>
           </div>
         </div>
+        <!--<div class="row mt-lg-4">
+          <div class="col">
+            <div class="it-grid-list-wrapper it-image-label-grid it-masonry">
+              <div class="card-columns">
+
+              </div>
+            </div>
+          </div>
+        </div>-->
         <div class="row mt-lg-4">
           <div class="col">
             <nav
@@ -433,3 +443,6 @@ title: Template Argomenti
 </main>
 
 {%- include esempi/comuni/footer.html -%}
+
+
+
