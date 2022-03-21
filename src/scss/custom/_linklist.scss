@@ -157,15 +157,14 @@
           &.icon-left,
           &.left-icon {
             position: relative;
-            padding-left: $v-gap * 4;
 
             span {
               margin-top: $v-gap * 0.5;
             }
 
             .icon {
-              position: absolute;
               left: 0;
+              margin-left: 0;
             }
           }
 
