@@ -2,7 +2,7 @@
 layout: base
 title: Template Amministrazione
 ---
-{%- assign section = "amministrazione" -%}
+{%- assign section = "servizi" -%}
 {%- include esempi/comuni/header.html -%}
 <main>
   <section id="briciole" class="container px-4 my-4">
@@ -14,7 +14,7 @@ title: Template Amministrazione
               <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">Home</a><span class="separator">/</span>
             </li>
             <li aria-current="page" class="breadcrumb-item active">
-              Amministrazione
+              Servizi
             </li>
           </ol>
         </nav>
@@ -24,13 +24,13 @@ title: Template Amministrazione
   <section id="intro" class="container px-4 my-4">
     <div class="row">
       <div class="col-lg-7 px-lg-4 py-lg-2">
-        <h1>Amministrazione</h1>
+        <h1>Servizi</h1>
         <p>Donec in consequat nunc. Duis semper fermentum lacus, ac condimentum justo auctor a. Nam erat erat, porta vel pharetra in, ullamcorper vel turpis.</p>
         <div class="form-group mt-5">
           <form>
             <input id="ricerca-amministrazione" type="search">
             <label for="ricerca-amministrazione">Cerca contenuti in
-              "Amministrazione"</label>
+              "Servizi"</label>
             <span aria-hidden="true" class="autocomplete-icon">
               <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
             </span>
@@ -59,28 +59,62 @@ title: Template Amministrazione
         <div class="link-list-wrapper">
           <ul class="link-list">
             <li>
-              <h3 id="heading-senza-link">Tutta l'Amministrazione</h3>
+              <h3 id="heading-senza-link">Tutti i servizi</h3>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Organi di governo</span></a>
+              <a class="list-item" href="#">Anagrafe e stato civile</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Aree amministrative</span></a>
+              <a class="list-item" href="#">Cultura e tempo libero</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Uffici</span></a>
+              <a class="list-item" href="#">Vita lavorativa</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Enti e fondazioni</span></a>
+              <a class="list-item" href="#">Attività produttiva e commercio</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Politici</span></a>
+              <a class="list-item" href="#">Appalti pubblici</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Personale amministrativo</span></a>
+              <a class="list-item" href="#">Catasto e urbanistica</a>
             </li>
             <li>
-              <a class="list-item" href="#"><span>Luoghi</span></a>
+              <a class="list-item large medium left-icon" href="#altri-servizi" data-toggle="collapse" aria-expanded="false" aria-controls="altri-servizi">
+                <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-items"></use></svg>
+              </a>
+              <ul class="link-sublist collapse px-0" id="altri-servizi">
+                <li>
+                  <a class="list-item" href="#">Turismo</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Mobilità e trasporti</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Educazione e formazione</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Giustizia e sicurezza pubblica</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Tributi e finanze</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Ambiente</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Salute, benessere e assistenza</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Autorizzazioni</a>
+                </li>
+                <li>
+                  <a class="list-item" href="#">Agricoltura</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="list-item medium" href="#tutti-i-servizi">Tutti i servizi</a>
             </li>
           </ul>
         </div>
@@ -88,11 +122,11 @@ title: Template Amministrazione
     </div>
   </section>
   <section id="in-evidenza">
-    <div class="bg-light py-5">
+    <div class="bg-100 py-5">
       <div class="container px-4">
         <div class="row">
           <div class="col">
-            <h3 class="mb-4">In evidenza</h3>
+            <h3 class="mb-4 text-primary">In evidenza</h3>
           </div>
         </div>
         <div class="row">
@@ -105,12 +139,12 @@ title: Template Amministrazione
                   <svg class="icon">
                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
-                  <span>Luoghi</span>
+                  <span>Scuola e formazione</span>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
-                  <a class="read-more" href="#">
+                  <h5 class="card-title">Iscrizione agli asili nido</h5>
+                  <p class="card-text">Come iscrivere i propri figli agli asili nido comunali, strutture convenzionate, sezioni sperimentali e micronido a domicilio.</p>
+                  <a class="read-more" href="{{ site.baseurl }}/docs/esempi/comuni/template-servizi-servizio/">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
@@ -250,12 +284,12 @@ title: Template Amministrazione
       </div>
     </div>
   </section>
-  <section>
+  <section id="tutti-i-servizi">
     <div class="py-5">
       <div class="container px-4">
         <div class="row">
           <div class="col">
-            <h3 class="mb-4">Tutta l'Amministrazione</h3>
+            <h3 class="mb-4 text-primary">Tutti i servizi</h3>
           </div>
         </div>
         <div class="row">
@@ -264,10 +298,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Organi di Governo</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Anagrafe e stato civile</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -278,10 +316,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Aree Amministrative</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Cultura e tempo libero</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -292,10 +334,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Uffici</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Vita lavorativa</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -306,10 +352,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Politici</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Attività produttiva e commercio</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -320,10 +370,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Funzionari amministrativi</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Appalti pubblici</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -334,10 +388,14 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Enti e fondazioni</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Catasto e urbanistica</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -348,10 +406,158 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <a href="#">
-                    <h5 class="card-title">Luoghi</h5>
-                  </a>
+                  <h5 class="card-title big-heading">Turismo</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Mobilità e trasporti</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Educazione e formazione</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Giustizia e sicurezza pubblica</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Tributi e finanze</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Ambiente</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Salute, benessere e assistenza</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Autorizzazioni</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title big-heading">Agricoltura</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -364,7 +570,7 @@ title: Template Amministrazione
       <div class="container px-4">
         <div class="row">
           <div class="col">
-            <h3 class="mb-4">Argomenti</h3>
+            <h3 class="mb-4 text-primary">Argomenti</h3>
           </div>
         </div>
         <div class="row">
