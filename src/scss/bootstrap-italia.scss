@@ -64,12 +64,13 @@
 // scss-docs-end import-stack
 
 // Customizzazioni e nuovi componenti
+@import 'utilities/text-colors';
 @import 'custom/type';
 @import 'custom/grid';
 @import 'custom/tables';
 @import 'custom/breadcrumb';
 @import 'custom/modal';
-@import 'custom/collapse';
+@import 'custom/accordion';
 @import 'custom/carousel';
 @import 'custom/calendar';
 @import 'custom/alert';
@@ -129,8 +130,11 @@
 @import 'custom/rating-list';
 @import 'custom/badge';
 @import 'custom/figcaption';
+@import 'custom/sticky';
 @import 'custom/print';
 @import 'custom/code';
+@import 'custom/just-validate';
+@import 'custom/accessible-autocomplete';
 
 // datepicker
 @import 'custom/form-datepicker';

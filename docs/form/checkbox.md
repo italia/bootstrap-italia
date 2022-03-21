@@ -29,13 +29,15 @@ Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form
 
 <div>
   <div class="row">
-    <div class="form-check form-check-inline">
-      <input id="checkbox2" type="checkbox">
-      <label for="checkbox2">Checkbox non selezionato</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input id="checkbox3" type="checkbox" checked="checked">
-      <label for="checkbox3">Checkbox selezionato</label>
+    <div class="col-12">
+      <div class="form-check form-check-inline">
+        <input id="checkbox2" type="checkbox">
+        <label for="checkbox2">Checkbox non selezionato</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input id="checkbox3" type="checkbox" checked="checked">
+        <label for="checkbox3">Checkbox selezionato</label>
+      </div>
     </div>
   </div>
 </div>

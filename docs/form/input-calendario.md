@@ -7,56 +7,19 @@ title: Input Calendario
 description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 ---
 
-Il datepicker utilizza un plugin Javascript di terze parti, "Accessible Bootstrap Date Picker". Per maggiori informazioni è possibile consultarne la [documentazione completa](http://eureka2.github.io/ab-datepicker/#).
+## Datepicker
 
-## Abilitazione del Datepicker
+Clicca sull’icona a destra per visualizzare il datepicker.
+{% capture callout %}
 
-Per inizializzare il plugin, utilizzare il seguente script:
+Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
 
-```js
-$(document).ready(function () {
-  $('.it-date-datepicker').datepicker({
-    inputFormat: ['dd/MM/yyyy'],
-    outputFormat: 'dd/MM/yyyy',
-  })
-})
-```
-
-## Esempi
-
-Clicca sull'icona per visualizzare il datepicker.
+{% endcapture %}{% include callout.html content=callout type="alert" %}
 
 {% capture example %}
 
-<div class="it-datepicker-wrapper">
-  <div class="form-group">
-    <label for="date1">Date label</label>
-    <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
-  </div>
+<div class="form-group">
+    <label class="active" for="dateStandard">Datepicker</label>
+    <input type="date" id="dateStandard" name="dateStandard">
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-### Versione scura
-
-Per utilizzare il Datepicker in versione scura, aggiungere la classe `.theme-dark` al div `.it-datepicker-wrapper`.
-
-Clicca sull'icona per visualizzare il datepicker.
-
-{% capture example %}
-
-<div class="it-datepicker-wrapper theme-dark">
-  <div class="form-group">
-    <label for="date2">Date label</label>
-    <input class="form-control it-date-datepicker" id="date2" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    $('.it-date-datepicker').datepicker({
-      inputFormat: ["dd/MM/yyyy"],
-      outputFormat: 'dd/MM/yyyy',
-    });
-  })
-</script>

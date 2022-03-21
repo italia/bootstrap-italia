@@ -3,6 +3,8 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
+import NavBarCollapsible from './navbar-collapsible'
+
 const NAME = 'navscroll'
 const DATA_KEY = 'bs.navscroll'
 const EVENT_KEY = `.${DATA_KEY}`
@@ -25,6 +27,7 @@ const SELECTOR_CONTAINER = '.it-page-sections-container'
 const SELECTOR_PAGE_SECTION = '.it-page-section'
 const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_TOGGLER_ICON = '.it-list'
+const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
 
 class NavScroll extends BaseComponent {
   constructor(element) {
@@ -32,6 +35,9 @@ class NavScroll extends BaseComponent {
 
     this._togglerElement = SelectorEngine.findOne(SELECTOR_TOGGLER, this._element)
     this._sectionContainer = SelectorEngine.findOne(SELECTOR_CONTAINER)
+    this._collapsible = this._getCollapsible()
+    this._isCollapseOpened = false
+    this._callbackQueue = []
 
     this._bindEvents()
   }
@@ -53,12 +59,36 @@ class NavScroll extends BaseComponent {
   _bindEvents() {
     EventHandler.on(window, EVENT_SCROLL, this._onScroll)
 
+    if (this._collapsible) {
+      EventHandler.on(this._collapsible._element, 'shown.bs.navbarcollapsible', () => this._onCollapseOpened())
+      EventHandler.on(this._collapsible._element, 'hidden.bs.navbarcollapsible', () => this._onCollapseClosed())
+    }
+
     SelectorEngine.find(SELECTOR_LINK_CLICKABLE, this._element).forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault()
-        this._scrollToHash(link.hash)
+        const scrollHash = () => this._scrollToHash(link.hash)
+        if (this._isCollapseOpened) {
+          this._callbackQueue.push(scrollHash)
+          this._collapsible.hide()
+        } else {
+          scrollHash()
+        }
       })
     })
+  }
+
+  _onCollapseOpened() {
+    this._isCollapseOpened = true
+  }
+  _onCollapseClosed() {
+    while (this._callbackQueue.length > 0) {
+      const cb = this._callbackQueue.shift()
+      if (typeof cb === 'function') {
+        cb()
+      }
+    }
+    this._isCollapseOpened = false
   }
 
   _getParentLinks(element) {
@@ -130,6 +160,14 @@ class NavScroll extends BaseComponent {
       }
     })
   }
+
+  _getCollapsible() {
+    const coll = SelectorEngine.findOne(SELECTOR_COLLAPSIBLE, this._element)
+    if (coll) {
+      return NavBarCollapsible.getOrCreateInstance(coll)
+    }
+    return null
+  }
 }
 
 /**
@@ -139,7 +177,7 @@ class NavScroll extends BaseComponent {
  */
 const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
 navs.forEach((nav) => {
-  new NavScroll(nav)
+  NavScroll.getOrCreateInstance(nav)
 })
 
 export default NavScroll

@@ -313,7 +313,7 @@ class NavBarCollapsible extends BaseComponent {
  */
 const navs = SelectorEngine.find(SELECTOR_NAVBAR)
 navs.forEach((nav) => {
-  new NavBarCollapsible(nav)
+  NavBarCollapsible.getOrCreateInstance(nav)
 })
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {

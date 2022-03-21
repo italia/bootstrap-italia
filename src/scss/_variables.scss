@@ -151,13 +151,6 @@ $card-spacer-x: 2rem !default;
 $card-border-radius: 0 !default;
 $card-body-spacer: 1rem !default;
 
-// Tables
-$table-cell-padding: 1em !default;
-$table-border-color: #d6dce3 !default;
-$table-cell-text-align: left !default;
-$table-accent-bg: #f6f7f9 !default;
-$table-hover-bg: #e5f1fa !default;
-
 // Tooltips
 $tooltip-max-width: 32em !default;
 $tooltip-opacity: 1 !default;
@@ -654,3 +647,7 @@ $container-max-widths: (
 
 $badge-padding-y: 0.25em;
 $badge-padding-x: 0.4em;
+
+//Autocomplete
+$autocomplete-border: 1px solid $gray-400 !default;
+$autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
