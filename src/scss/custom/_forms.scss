@@ -1,7 +1,27 @@
 label {
   color: $input-label-color;
 }
-
+fieldset {
+  legend {
+    background-color: transparent;
+    font-weight: 700;
+    line-height: calc(#{$input-height} - 1px);
+    transition: 0.2s ease-out;
+    cursor: text;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 $input-spacing-x;
+    z-index: 1;
+    font-size: $small-font-size;
+    color: $input-label-color;
+    margin-bottom: 0;
+    float: none;
+  }
+}
 .form-group {
   position: relative;
   margin-bottom: $form-group-margin-bottom;
@@ -72,7 +92,7 @@ textarea {
   height: $input-height;
   width: 100%;
   box-shadow: none;
-  transition: 0.2s ease-out;
+  transition: none;
   font-weight: 700;
 }
 

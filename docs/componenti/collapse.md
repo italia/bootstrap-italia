@@ -8,6 +8,8 @@ toc: true
 
 Per ottimizzare l'ingombro dei contenuti di una pagina si possono usare degli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_), che possono essere attivati indipendentemente l'uno dall'altro oppure in modo esclusivo con l'attivazione di solo un blocco alla volta (in gergo definiti _fisarmoniche_ o _accordion_).
 
+Il componente [Accordion]({{site.baseurl}}/docs/componenti/accordion/) è basato su Collapse.
+
 ## Come funziona
 
 Puoi usare un bottone con l'attributo `data-bs-target` o in alternativa un link con l'attributo `href`. In entrambi i casi, l'attributo `data-bs-toggle="collapse"` è obbligatorio.
@@ -37,7 +39,7 @@ L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudib
 
 ### Attivazione di elementi richiudibili
 
-Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore jQuery nell'attributo `href` o nell'attributo `data-bs-target`.
+Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore nell'attributo `href` o nell'attributo `data-bs-target`.
 Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-bs-target`.
 
 {% capture example %}
@@ -65,156 +67,6 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Gruppi di elementi richiudibili
-
-Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili.
-
-{% capture example %}
-
-<div id="collapseDiv1" class="collapse-div" role="tablist">
-  <div class="collapse-header" id="heading1">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-      Collapsible Group Item #1
-    </button>
-  </div>
-  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
-    <div class="collapse-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
-    </div>
-  </div>
-  <div class="collapse-header" id="heading2">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-      Collapsible Group Item #2
-    </button>
-  </div>
-  <div id="collapse2" class="collapse show" role="tabpanel" aria-labelledby="heading2">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading3">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-      Collapsible Group Item #3
-    </button>
-  </div>
-  <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-## Accordion
-
-Per ottenere un gruppo di elementi _mutuamente_ richiudibili (o _accordion_), è sufficiente aggiungere ad ogni elemento `.collapse` l'attributo `data-bs-parent` con il relativo _ID_ del contenitore padre.
-
-{% capture example %}
-
-<div id="accordionDiv1" class="collapse-div" role="tablist">
-  <div class="collapse-header" id="headingA1">
-    <button data-bs-toggle="collapse" data-bs-target="#accordion1" aria-expanded="true" aria-controls="accordion1">
-      Accordion Group Item #1
-    </button>
-  </div>
-  <div id="accordion1" class="collapse show" role="tabpanel" aria-labelledby="headingA1" data-bs-parent="#accordionDiv1">
-    <div class="collapse-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
-    </div>
-  </div>
-  <div class="collapse-header" id="headingA2">
-    <button data-bs-toggle="collapse" data-bs-target="#accordion2" aria-expanded="false" aria-controls="accordion2">
-      Accordion Group Item #2
-    </button>
-  </div>
-  <div id="accordion2" class="collapse" role="tabpanel" aria-labelledby="headingA2" data-bs-parent="#accordionDiv1">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="headingA3">
-    <button data-bs-toggle="collapse" data-bs-target="#accordion3" aria-expanded="false" aria-controls="accordion3">
-      Accordion Group Item #3
-    </button>
-  </div>
-  <div id="accordion3" class="collapse" role="tabpanel" aria-labelledby="headingA3" data-bs-parent="#accordionDiv1">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-## Collapse e Accordion innestati
-
-Più gruppi di collapse possono essere annidati.
-
-{% capture example %}
-
-<div id="collapseDiv2" class="collapse-div" role="tablist">
-  <div class="collapse-header" id="heading1a">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
-      Collapse header 1
-    </button>
-  </div>
-  <div id="collapse1a" class="collapse show" role="tabpanel" aria-labelledby="heading1a">
-    <div class="collapse-body">
-      <div id="collapseDiv3" class="collapse-div" role="tablist">
-        <div class="collapse-header" id="heading1b">
-          <button data-bs-toggle="collapse" data-bs-target="#collapse1b" aria-expanded="true" aria-controls="collapse1b">
-            Nested panel header 1
-          </button>
-        </div>
-        <div id="collapse1b" class="collapse show" role="tabpanel" aria-labelledby="heading1b">
-          <div class="collapse-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
-          </div>
-        </div>
-        <div class="collapse-header" id="heading2b">
-          <button data-bs-toggle="collapse" data-bs-target="#collapse2b" aria-expanded="true" aria-controls="collapse2b">
-            Nested panel header 2
-          </button>
-        </div>
-        <div id="collapse2b" class="collapse show" role="tabpanel" aria-labelledby="heading2b">
-          <div class="collapse-body">
-            Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
-        </div>
-        <div class="collapse-header" id="heading3b">
-          <button data-bs-toggle="collapse" data-bs-target="#collapse3b" aria-expanded="false" aria-controls="collapse3b">
-            Nested panel header 3
-          </button>
-        </div>
-        <div id="collapse3b" class="collapse" role="tabpanel" aria-labelledby="heading3b">
-          <div class="collapse-body">
-            Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="collapse-header" id="heading2a">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse2a" aria-expanded="false" aria-controls="collapse2a">
-      Collapse header 2
-    </button>
-  </div>
-  <div id="collapse2a" class="collapse" role="tabpanel" aria-labelledby="heading2a">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading3a">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse3a" aria-expanded="false" aria-controls="collapse3a">
-      Collapse header 3
-    </button>
-  </div>
-  <div id="collapse3a" class="collapse" role="tabpanel" aria-labelledby="heading3a">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
 
@@ -224,132 +76,7 @@ Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attri
 
 Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l'attributo `data-bs-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento richiudibile stesso.
 
-_Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - è quindi necessario includerle separatamente attraverso JavaScript._
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-## Sfondo primario
-
-Applicando classi aggiuntive al wrapper `.collapse-div` è possibile utilizzare il colore primario come sfondo degli header.
-
-### Header attivi
-
-Aggiungere la classe `.collapse-background-active` al wrapper per ottenere header con sfondo di colore primario quando questi sono attivi e il contenuto relativo è visibile.
-
-{% capture example %}
-
-<div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
-  <div class="collapse-header" id="heading1-sc1">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse1-sc1" aria-expanded="true" aria-controls="collapse1-sc1">
-      Collapsible Group Item #1
-    </button>
-  </div>
-  <div id="collapse1-sc1" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc1">
-    <div class="collapse-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading2-sc1">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse2-sc1" aria-expanded="false" aria-controls="collapse2-sc1">
-      Collapsible Group Item #2
-    </button>
-  </div>
-  <div id="collapse2-sc1" class="collapse" role="tabpanel" aria-labelledby="heading2-sc1">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading3-sc1">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse3-sc1" aria-expanded="false" aria-controls="collapse3-sc1">
-      Collapsible Group Item #3
-    </button>
-  </div>
-  <div id="collapse3-sc1" class="collapse" role="tabpanel" aria-labelledby="heading3-sc1">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Hover degli Header
-
-Aggiungere la classe `.collapse-background-hover` al wrapper per ottenere header con sfondo di colore primario all'hover.
-
-{% capture example %}
-
-<div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
-  <div class="collapse-header" id="heading1-sc2">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse1-sc2" aria-expanded="true" aria-controls="collapse1-sc2">
-      Collapsible Group Item #1
-    </button>
-  </div>
-  <div id="collapse1-sc2" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc2">
-    <div class="collapse-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
-    </div>
-  </div>
-  <div class="collapse-header" id="heading2-sc2">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse2-sc2" aria-expanded="false" aria-controls="collapse2-sc2">
-      Collapsible Group Item #2
-    </button>
-  </div>
-  <div id="collapse2-sc2" class="collapse" role="tabpanel" aria-labelledby="heading2-sc2">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading3-sc2">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse3-sc2" aria-expanded="false" aria-controls="collapse3-sc2">
-      Collapsible Group Item #3
-    </button>
-  </div>
-  <div id="collapse3-sc2" class="collapse" role="tabpanel" aria-labelledby="heading3-sc2">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-## Icona a sinistra
-
-Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante in cui l'icona chevron che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
-
-{% capture example %}
-
-<div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">
-  <div class="collapse-header" id="heading1-lft">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse1-lft" aria-expanded="true" aria-controls="collapse1-lft">
-      Collapsible Group Item #1
-    </button>
-  </div>
-  <div id="collapse1-lft" class="collapse show" role="tabpanel" aria-labelledby="heading1-lft">
-    <div class="collapse-body">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
-    </div>
-  </div>
-  <div class="collapse-header" id="heading2-lft">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse2-lft" aria-expanded="false" aria-controls="collapse2-lft">
-      Collapsible Group Item #2
-    </button>
-  </div>
-  <div id="collapse2-lft" class="collapse" role="tabpanel" aria-labelledby="heading2-lft">
-    <div class="collapse-body">
-      Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="collapse-header" id="heading3-lft">
-    <button data-bs-toggle="collapse" data-bs-target="#collapse3-lft" aria-expanded="false" aria-controls="collapse3-lft">
-      Collapsible Group Item #3
-    </button>
-  </div>
-  <div id="collapse3-lft" class="collapse" role="tabpanel" aria-labelledby="heading3-lft">
-    <div class="collapse-body">
-      Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
 
 ## Implementazione
 
@@ -357,7 +84,7 @@ Aggiungendo la classe `.collapse-left-icon` al wrapper si ottiene una variante i
 
 Basta aggiungere `data-bs-toggle="collapse"` e un `data-bs-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi richiudibili. L'attributo `data-bs-target` accetta un selettore CSS per rendere l'elemento richiudibile. Assicurati di aggiungere la classe `collapse` all'elemento richiudibile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
 
-Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`. Fai riferimento alla demo per vederlo in azione.
+Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`. F
 
 ### Tramite JavaScript
 
@@ -372,7 +99,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-`, come in `data-bs-parent=""`.
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -388,7 +115,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>parent</td>
       <td>selector | jQuery object | DOM element </td>
       <td>false</td>
-      <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area comprimibile associata.</td>
+      <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area collassabile associata.</td>
     </tr>
     <tr>
       <td>toggle</td>
@@ -403,8 +130,11 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 {% include callout-danger-async-methods.md %}
 
+#### `.collapse(options)`
+
 Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltativa `object`.
-E' possibile creare un'instanza di elementi richiudibili mediante il suo costruttore, per esempio:
+
+È possibile creare un'istanza con il constructor, ad  esempio:
 
 ```js
 var myCollapse = document.getElementById('myCollapse')
@@ -413,29 +143,40 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
 })
 ```
 
-#### `toggle`
-
-Attiva/disattiva un elemento richiudibile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento `shown.bs.collapse` o `hidden.bs.collapse`).
-
-#### `show`
-
-Mostra un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento `shown.bs.collapse`).
-
-#### `hide`
-
-Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento `hidden.bs.collapse`).
-
-#### `dispose`
-
-Elimina la possibilità di un elemento di essere richiudibile.
-
-### `getInstance`
-
-Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `bootstrap.Collapse.getInstance(element)`
-
-### `getOrCreateInstance`
-
-Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: `bootstrap.Collapse.getOrCreateInstance(element)`
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>toggle</td>
+      <td>Attiva/disattiva un elemento richiudibile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code>).</td>
+    </tr>
+    <tr>
+      <td>show</td>
+      <td>Mostra un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code>).</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento <code>hidden.bs.collapse</code>).</td>
+    </tr>
+    <tr>
+      <td>dispose</td>
+      <td>Elimina la possibilità di un elemento di essere richiudibile.</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza collapse associata ad un elememento del DOM. Esempio: <code>bootstrap.Collapse.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza collapse associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Collapse.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Eventi
 

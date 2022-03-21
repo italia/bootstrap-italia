@@ -6,14 +6,6 @@ title: Progress Indicators
 description: Indicatori di stato attivo e di avanzamento di un'operazione
 ---
 
-<script>
-  //attiva donuts
-  document.addEventListener("DOMContentLoaded", function() {
-    progressDonut.generate("#donut-one", 0);
-    progressDonut.generate("#donut-two", 42);
-  })
-</script>
-
 ## Donuts
 
 L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso o l'avanzamento di un'operazione in corso.
@@ -41,14 +33,14 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
     <div class="col-12 col-sm-6">
       <p><strong>Stato iniziale</strong></p>
       <div class="progress-donut-wrapper">
-        <div id="donut-one" class="progress-donut"></div>
+        <div class="progress-donut"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <p><strong>Attivo</strong></p>
       <div class="progress-donut-wrapper">
-        <div id="donut-two" class="progress-donut"></div>
+        <div class="progress-donut" data-bs-value="0.75"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>

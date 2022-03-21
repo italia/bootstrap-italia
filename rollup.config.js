@@ -8,35 +8,9 @@ import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
+import commonjs from 'rollup-plugin-commonjs'
 
 export default [
-  {
-    input: 'src/js/bootstrap-italia.js',
-    output: {
-      file: 'dist/js/bootstrap-italia.min.js',
-      compact: true,
-      format: 'iife',
-    },
-    plugins: [
-      babel({ babelHelpers: 'bundled' }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        watch: 'src/scss',
-        sourceMap: true,
-      }),
-      copy({
-        targets: [
-          { src: 'src/assets', dest: 'dist' },
-          { src: 'src/fonts', dest: 'dist' },
-        ],
-      }),
-      svgSprite({
-        outputFolder: 'dist/svg',
-      }),
-      uglify(),
-    ],
-  },
   {
     input: 'src/js/bootstrap-italia.entry.js',
     output: {
@@ -45,26 +19,33 @@ export default [
       format: 'iife',
     },
     plugins: [
-      babel({ babelHelpers: 'bundled' }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
+      babel({
+        babelHelpers: 'bundled',
+        exclude: 'node_modules/**',
       }),
       copy({
         targets: [
           { src: 'src/assets', dest: 'dist' },
           { src: 'src/fonts', dest: 'dist' },
+          { src: 'node_modules/masonry-layout/dist/masonry.pkgd.min.js', dest: 'dist/js/vendor' },
         ],
       }),
       svgSprite({
         outputFolder: 'dist/svg',
       }),
+      scss({
+        output: 'dist/css/bootstrap-italia.min.css',
+        outputStyle: 'compressed',
+        sourceMap: true,
+        watch: 'src/scss',
+      }),
       nodeResolve({
         // use "jsnext:main" if possible
         // see https://github.com/rollup/rollup/wiki/jsnext:main
         jsnext: true,
+        main: true,
       }),
+      commonjs(),
       injectProcessEnv({
         NODE_ENV: 'production',
       }),

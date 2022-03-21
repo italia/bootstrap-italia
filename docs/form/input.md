@@ -150,32 +150,32 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </thead>
   <tbody>
     <tr>
-      <td><code>data-short-pass</code></td>
+      <td><code>data-bs-short-pass</code></td>
       <td>Testo per il punteggio di forza della password minimo</td>
       <td>Password molto debole</td>
     </tr>
     <tr>
-      <td><code>data-bad-pass</code></td>
+      <td><code>data-bs-bad-pass</code></td>
       <td>Testo per punteggio di forza della password basso</td>
       <td>Password debole</td>
     </tr>
     <tr>
-      <td><code>data-good-pass</code></td>
+      <td><code>data-bs-good-pass</code></td>
       <td>Testo per punteggio di forza della password buono</td>
       <td>Password sicura</td>
     </tr>
     <tr>
-      <td><code>data-strong-pass</code></td>
+      <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
       <td>Password molto sicura</td>
     </tr>
     <tr>
-      <td><code>data-enter-pass</code></td>
+      <td><code>data-bs-enter-pass</code></td>
       <td>Testo di aiuto</td>
       <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
     </tr>
     <tr>
-      <td><code>data-minimum-length</code></td>
+      <td><code>data-bs-minimum-length</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
       <td>4</td>
     </tr>
@@ -196,7 +196,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" class="form-control input-password input-password-strength-meter" data-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
+    <input type="password" class="form-control input-password input-password-strength-meter" data-bs-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
@@ -243,9 +243,9 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Input con risultato ricerca o autocompletamento
+## Ricerca con autocompletamento
 
-Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-autocomplete` con un JSON da filtrare.
+Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-bs-autocomplete` con un JSON da filtrare.
 
 L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`, nascosta agli screen reader dall'attributo `aria-hidden="true"`.
 
@@ -272,7 +272,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
-    data-autocomplete="[]">
+    data-bs-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
@@ -332,7 +332,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Autocomplete grande
+### Ricerca con autocompletamento grande
 
 Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
@@ -343,7 +343,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
-    data-autocomplete="[]">
+    data-bs-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
@@ -388,9 +388,9 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Autocompletamento con dati
+### Ricerca con autocompletamento e dati
 
-Questo autocompletamento è collegato, tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
+Questo autocompletamento è collegato, tramite l'attributo `data-bs-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 
 - nel campo `text` i nomi di tutte le regioni italiane
 - nel campo `link` un link associato a ciascuna di esse
@@ -406,14 +406,14 @@ Cerca una regione italiana per verificarne il comportamento.
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
-    data-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
+    data-bs-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Questo Autocomplete è collegato, sempre tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
+Questo Autocomplete è collegato, sempre tramite l'attributo `data-bs-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 
 - nel campo `text` i nomi di alcune nazioni
 - nel campo `link` un link associato a ciascuna di esse
@@ -429,7 +429,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
     id="autocomplete-test"
     name="autocomplete-test"
-    data-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>
+    data-bs-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
