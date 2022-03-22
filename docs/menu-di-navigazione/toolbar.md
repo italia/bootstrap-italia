@@ -400,9 +400,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -418,9 +418,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -435,9 +435,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -452,9 +452,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -500,9 +500,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -521,9 +521,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -538,9 +538,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -555,9 +555,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -572,9 +572,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -620,9 +620,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -641,9 +641,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -658,9 +658,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -675,9 +675,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -692,9 +692,9 @@ All'interno della Toolbar è possibile implementare dei bottoni dropdown con rel
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -748,9 +748,9 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -808,9 +808,9 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-vert">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -868,9 +868,9 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>

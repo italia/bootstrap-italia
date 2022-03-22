@@ -273,10 +273,10 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
       <div class="link-list-wrapper">
         <ul class="link-list">
            <li><a class="list-item active" href="#" aria-current="page"><span>pag. 10</span></a></li>
-           <li><a class="list-item" href="#"><span>pag. 20</span></a></li>
-           <li><a class="list-item" href="#"><span>pag. 30</span></a></li>
-           <li><a class="list-item" href="#"><span>pag. 40</span></a></li>
-           <li><a class="list-item" href="#"><span>pag. 50</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>pag. 20</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>pag. 30</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>pag. 40</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>pag. 50</span></a></li>
         </ul>
       </div>
     </div>

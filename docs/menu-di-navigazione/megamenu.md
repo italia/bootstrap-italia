@@ -42,23 +42,11 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -66,11 +54,23 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -116,23 +116,11 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -140,11 +128,23 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -216,11 +216,11 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
                     <li>
                       <h3 class="no_toc">Heading 1</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -231,11 +231,11 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
                     <li>
                       <h3 class="no_toc">Heading 2</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -246,11 +246,11 @@ Per inserire l'header, è sufficiente inserire il tag `<h3>` all'interno del tag
                     <li>
                       <h3 class="no_toc">Heading 3</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -296,11 +296,11 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     <li>
                       <h3 class="no_toc">Heading 1</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                     <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
@@ -313,11 +313,11 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     <li>
                       <h3 class="no_toc">Heading 2</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                     <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
@@ -330,11 +330,11 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
                     <li>
                       <h3 class="no_toc">Heading 3</h3>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                     <li class=" it-more"><a class="list-item medium" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                     </li>
@@ -382,23 +382,11 @@ Di seguito un esempio:
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                    </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -406,11 +394,23 @@ Di seguito un esempio:
               <div class="col-12 col-lg-4">
                 <div class="link-list-wrapper">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                     </li>
-                    <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
+                    </li>
+                    <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                     </li>
                   </ul>
                 </div>
@@ -421,7 +421,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -429,7 +429,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -437,7 +437,7 @@ Di seguito un esempio:
                 <div class="col-12 col-lg-4">
                   <div class="link-list-wrapper">
                     <ul class="link-list">
-                      <li><a class="list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
+                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm icon-primary left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list 1 </span></a>
                       </li>
                     </ul>
                   </div>
@@ -484,27 +484,13 @@ Di seguito un esempio:
                   <div class="col-12 col-lg-4">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-4">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
-                        </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
-                        </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
-                        </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
                         </li>
                       </ul>
                     </div>
@@ -512,13 +498,27 @@ Di seguito un esempio:
                   <div class="col-12 col-lg-4">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
+                        </li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
+                        </li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
+                        </li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
                         </li>
                       </ul>
                     </div>
@@ -530,13 +530,13 @@ Di seguito un esempio:
                   <div class="col-12 it-vertical">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
                       </ul>
                     </div>
@@ -588,13 +588,13 @@ Di seguito un esempio:
                         <li>
                           <h3 class="no_toc">Heading 1</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
                         </li>
                         <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
@@ -607,13 +607,13 @@ Di seguito un esempio:
                         <li>
                           <h3 class="no_toc">Heading 2</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
                         </li>
                         <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
@@ -626,13 +626,13 @@ Di seguito un esempio:
                         <li>
                           <h3 class="no_toc">Heading 3</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span></a>
                         </li>
                         <li class="it-more"><a class="list-item medium it-more" href="#"><span>View More </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
                         </li>
@@ -694,11 +694,11 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                   <div class="col-12 col-lg-6">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
                       </ul>
                     </div>
@@ -706,11 +706,11 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                   <div class="col-12 col-lg-6">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
                       </ul>
                     </div>
@@ -727,11 +727,11 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
                   <div class="col-12 col-lg-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                         </li>
                       </ul>
                     </div>
@@ -782,11 +782,11 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                       <div class="col-12 col-lg-6">
                         <div class="link-list-wrapper">
                           <ul class="link-list">
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                             </li>
                           </ul>
                         </div>
@@ -794,11 +794,11 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                       <div class="col-12 col-lg-6">
                         <div class="link-list-wrapper">
                           <ul class="link-list">
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                             </li>
                           </ul>
                         </div>
@@ -815,11 +815,11 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                       <div class="col-12 col-lg-12">
                         <div class="link-list-wrapper">
                           <ul class="link-list">
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a>
                             </li>
                           </ul>
                         </div>
@@ -833,13 +833,13 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
                   <div class="col-12 it-vertical">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
                         </li>
                       </ul>
                     </div>

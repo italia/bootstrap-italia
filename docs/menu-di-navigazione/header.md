@@ -62,8 +62,8 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>ITA</span></a></li>
-                        <li><a class="list-item" href="#"><span>ENG</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -118,10 +118,10 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
                       <div class="link-list-wrapper">
                         <ul class="link-list">
                           <li>
-                            <a class="list-item" href="#"><span>ITA</span></a>
+                            <a class="dropdown-item list-item" href="#"><span>ITA</span></a>
                           </li>
                           <li>
-                            <a class="list-item" href="#"><span>ENG</span></a>
+                            <a class="dropdown-item list-item" href="#"><span>ENG</span></a>
                           </li>
                         </ul>
                       </div>
@@ -190,8 +190,8 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="list-item" href="#"><span>ITA</span></a></li>
-                        <li><a class="list-item" href="#"><span>ENG</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -443,11 +443,11 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                         <li>
                           <h3 class="no_toc" id="heading-es-1">Heading</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -467,9 +467,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                             <li>
                               <h3 class="no_toc">Heading 1</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -479,9 +479,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                             <li>
                               <h3 class="no_toc">Heading 2</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -491,9 +491,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                             <li>
                               <h3 class="no_toc">Heading 3</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -561,11 +561,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <li>
                           <h3 class="no_toc" id="heading-es-2">Heading</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -585,9 +585,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 1</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -597,9 +597,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 2</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -609,9 +609,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 3</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -667,11 +667,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <li>
                           <h3 class="no_toc" id="heading-es-3">Heading</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -691,9 +691,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 1</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -703,9 +703,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 2</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -715,9 +715,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 3</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -773,11 +773,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <li>
                           <h3 class="no_toc" id="heading-es-4">Heading</h3>
                         </li>
-                        <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -797,9 +797,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 1</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -809,9 +809,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 2</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -821,9 +821,9 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                             <li>
                               <h3 class="no_toc">Heading 3</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -966,8 +966,8 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item" href="#"><span>ITA</span></a></li>
-                          <li><a class="list-item" href="#"><span>ENG</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
@@ -1076,11 +1076,11 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                             <li>
                               <h3 class="no_toc" id="heading-es-5">Heading</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                             <li><span class="divider"></span></li>
-                            <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -1100,9 +1100,9 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                                 <li>
                                   <h3 class="no_toc">Heading 1</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1112,9 +1112,9 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                                 <li>
                                   <h3 class="no_toc">Heading 2</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1124,9 +1124,9 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                                 <li>
                                   <h3 class="no_toc">Heading 3</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1188,8 +1188,8 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item" href="#"><span>ITA</span></a></li>
-                          <li><a class="list-item" href="#"><span>ENG</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
@@ -1298,11 +1298,11 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                             <li>
                               <h3 class="no_toc" id="heading">Heading</h3>
                             </li>
-                            <li><a class="list-item" href="#"><span>Link list 1</span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 2</span></a></li>
-                            <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                             <li><span class="divider"></span></li>
-                            <li><a class="list-item" href="#"><span>Link list 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -1322,9 +1322,9 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                                 <li>
                                   <h3 class="no_toc">Heading 1</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1334,9 +1334,9 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                                 <li>
                                   <h3 class="no_toc">Heading 2</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1346,9 +1346,9 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                                 <li>
                                   <h3 class="no_toc">Heading 3</h3>
                                 </li>
-                                <li><a class="list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="list-item" href="#"><span>Link list 3</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
                               </ul>
                             </div>
                           </div>

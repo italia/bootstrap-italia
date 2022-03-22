@@ -40,9 +40,9 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -63,9 +63,9 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -78,9 +78,9 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -93,9 +93,9 @@ Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/compone
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -116,9 +116,9 @@ Lo stesso vale per gli elementi `<a>`:
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -139,9 +139,9 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropup">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -162,9 +162,9 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elem
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropright">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -185,9 +185,9 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropleft">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
@@ -208,8 +208,8 @@ Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare com
   <div class="link-list-wrapper">
       <ul class="link-list">
         <li><a class="list-item active" href="#"><span>Azione 1</span><span class="visually-hidden"> attivo</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
 </div>
@@ -224,9 +224,9 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item disabled" href="#" aria-disabled="true"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item disabled" href="#" aria-disabled="true"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
 </div>
@@ -244,13 +244,13 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
       <li>
         <h3 id="esempio-header-1" class="no_toc">Esempio Header 1</h3>
       </li>
-      <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       <li>
         <span class="divider"></span>
       </li>
-      <li><a class="list-item" href="#"><span>Azione 4</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 4</span></a></li>
     </ul>
   </div>
 </div>
