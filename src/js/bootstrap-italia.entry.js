@@ -24,6 +24,7 @@ import InputPassword from './plugins/input-password'
 import InputNumber from './plugins/input-number'
 import ProgressDonut from './plugins/progress-donut'
 import UploadDragDrop from './plugins/upload-dragdrop'
+import BackToTop from './plugins/backToTop'
 
 import './plugins/inputs'
 
@@ -44,6 +45,7 @@ window.bootstrap = {
   Tooltip,
 
   Accordion,
+  BackToTop,
   CarouselBI,
   Cookiebar,
   Dimmer,
