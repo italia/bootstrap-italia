@@ -1,9 +1,10 @@
 import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import './plugins/forward'
-import './plugins/fonts-loader'
-
+import * as forward from './plugins/forward'
+import * as fontsLoader from './plugins/fonts-loader'
+import * as inputs from  './plugins/inputs'
+import * as icons from './icons.js'
 
 import {
   Dimmer, Notification, Cookiebar, NavBarCollapsible, Accordion, NavScroll, HeaderSticky,
@@ -11,11 +12,11 @@ import {
   InputSearchAutocomplete, InputPassword, InputNumber, ProgressDonut, UploadDragDrop
 } from './bootstrap-italia'
 
-import './plugins/inputs'
-
-import './icons.js'
-
 window.bootstrap = {
+  fontsLoader,
+  forward,
+  icons,
+  inputs,
   Alert,
   Button,
   Carousel,
