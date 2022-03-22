@@ -3,7 +3,7 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 
 import * as forward from './plugins/forward'
 import * as fontsLoader from './plugins/fonts-loader'
-import * as inputs from  './plugins/inputs'
+import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
 
 import {
@@ -29,8 +29,9 @@ import {
 } from './bootstrap-italia'
 
 window.bootstrap = {
-  fontsLoader,
-  forward,
+  fontsLoader, //!!!
+  forward, //!!!
+
   icons,
   inputs,
   Alert,

@@ -5,7 +5,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
-import DocumentScrollEventHandler from './document-scroll-event-handler'
+import onDocumentScroll from './util/on-document-scroll'
 
 const NAME = 'backtotop'
 const DATA_KEY = 'bs.backtotop'
@@ -23,7 +23,7 @@ const Default = {
   positionTop: 0,
   scrollLimit: 100,
   duration: 800,
-  easing: 'easeInOutQuad',
+  easing: 'easeInOutSine',
 }
 
 class BackToTop extends BaseComponent {
@@ -33,6 +33,7 @@ class BackToTop extends BaseComponent {
     this._config = this._getConfig(config)
     this._scrollCb = null
     this._isAnim = false
+    this._prevScrollBehavior = ''
 
     this._bindEvents()
   }
@@ -59,16 +60,18 @@ class BackToTop extends BaseComponent {
   scrollToTop() {
     if (!this._isAnim) {
       this._isAnim = true
+      const scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement
+      this._prevScrollBehavior = scrollElement.style.scrollBehavior
+      scrollElement.style.scrollBehavior = 'auto'
+      console.log(scrollElement.style)
       anime({
-        targets: window.document.scrollingElement || window.document.body || window.document.documentElement,
+        targets: scrollElement,
         scrollTop: this._config.positionTop,
         duration: this._config.duration,
-        //easing: this._config.easing,
+        easing: this._config.easing,
         complete: () => {
           this._isAnim = false
-        },
-        update: (anim) => {
-          console.log('---', { anim })
+          scrollElement.style.scrollBehavior = this._prevScrollBehavior
         },
       })
     }
@@ -92,7 +95,7 @@ class BackToTop extends BaseComponent {
   }
 
   _bindEvents() {
-    this._scrollCb = DocumentScrollEventHandler.add(() => this._toggleShow())
+    this._scrollCb = onDocumentScroll(() => this._toggleShow())
 
     EventHandler.on(this._element, EVENT_CLICK, (evt) => {
       evt.preventDefault()
