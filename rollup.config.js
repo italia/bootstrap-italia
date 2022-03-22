@@ -9,6 +9,7 @@ import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
 import commonjs from 'rollup-plugin-commonjs'
+import path from "path"
 
 export default [
   {
@@ -51,6 +52,26 @@ export default [
       }),
       uglify(),
     ],
+  },
+  // ESM and CJS
+  {
+    input: 'src/js/bootstrap-italia.js',
+    output: [
+      {
+        format: "es",
+        exports: "named",
+        sourcemap: true,
+        dir: 'dist',
+        // chunkFileNames: '[name].js'
+        preserveModules: true,
+        // // Optionally strip useless path from source
+        // preserveModulesRoot: 'lib',
+      }
+    ],
+    // plugins: [
+    //   commonjs(),
+    // ],
+    // manualChunks: id => path.parse(id).name
   },
   {
     input: 'docs/assets/src/js/docs-entry.js',

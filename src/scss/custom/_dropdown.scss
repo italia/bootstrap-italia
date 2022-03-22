@@ -25,7 +25,7 @@
 .btn-group {
   //dropup
   &.dropup {
-    .btn-dropdown {
+    .dropdown-toggle {
       &:after {
         display: none;
       }
@@ -39,9 +39,9 @@
       }
     }
   }
-  //dropright
-  &.dropright {
-    .btn-dropdown {
+  //dropend
+  &.dropend {
+    .dropdown-toggle {
       &:after {
         display: none;
       }
@@ -55,9 +55,9 @@
       }
     }
   }
-  //dropright
-  &.dropleft {
-    .btn-dropdown {
+  //dropstart
+  &.dropstart {
+    .dropdown-toggle {
       &:before {
         display: none;
       }
@@ -216,5 +216,13 @@
         left: -6px;
       }
     }
+  }
+}
+
+.dropdown-item {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
   }
 }
