@@ -33,7 +33,7 @@ description: Elementi dei form dedicati al caricamento file
     setTimeout(function(){
         element.success()
         text.innerText = 'Caricamento completato'
-      }, 4500);      
+      }, 4500);
   }
 </script>
 
@@ -317,7 +317,7 @@ I primi due stati sono gestiti dal codice JS incluso nello UI-Kit, lo stato di *
 
 Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> del risultato finale.
 
-Lo stato dell'upload è rappresentato graficamente dall'elemento `<div id="divProgress0" class="upload-progress"></div>` come progress circolare. Si consiglia di attribuire ad ogni `upload-progress` un id univoco per facilitare l'aggiornamento del progresso attraverso il seguente codice JS:
+Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut"></div>` come progress circolare. L'aggiornamento del progresso avviene utilizzando il seguente codice JS:
 
 ```js
 $('#IDPROGRESS').circularloader({
@@ -333,7 +333,7 @@ $('#IDPROGRESS').circularloader({
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div id="divProgress0" class="upload-progress"></div>
+      <div class="progress-donut"></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
@@ -355,7 +355,7 @@ $('#IDPROGRESS').circularloader({
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div id="divProgress1" class="upload-progress"></div>
+      <div class="progress-donut"></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
@@ -376,7 +376,9 @@ $('#IDPROGRESS').circularloader({
 <form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
-    <div class="upload-dragdrop-loading"></div>
+    <div class="upload-dragdrop-loading">
+      <div class="progress-donut"></div>
+    </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
     </div>
