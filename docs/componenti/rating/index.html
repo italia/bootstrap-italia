@@ -11,14 +11,14 @@
 
 <title>Rating · Bootstrap Italia</title>
 
-<!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202202221011" rel="stylesheet" />
 
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203221757" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202202221011" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203221757" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.5.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.5.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -408,6 +408,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
+                  <span>Carousel Legacy</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
               </li><li>
@@ -499,6 +502,9 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
                   <span>Input Ora</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
                   <span>Upload</span></a>
@@ -653,6 +659,8 @@
 <p>Per visualizzare una label descrittiva aggiungere la classe <code class="language-plaintext highlighter-rouge">.rating-label</code> al <code class="language-plaintext highlighter-rouge">&lt;fieldset&gt;</code> e un tag <code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code> all’inizio dello stesso.</p>
 
 <div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
 <p>Il tag <code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code> contiene testo aggiuntivo per Screen Reader all’interno di uno <code class="language-plaintext highlighter-rouge">&lt;span class="sr-only"&gt;</code>.</p>
 
 <p>La label con il numero di stelle dev’essere contenuta in uno <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> semplice.</p>
@@ -726,6 +734,8 @@
 <p>Si consiglia di utilizzare l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> sugli input radio.</p>
 
 <div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità-versione-sola-lettura">Accessibilità versione sola lettura</h4>
+
 <p>Per rendere accessibile il contenuto è necessario aggiungere un tag <code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.sr-only</code> e nascondere gli input radio utilizzando <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code>.</p>
 </div>
 
@@ -798,11 +808,11 @@
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202202221011"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203221757"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203221757"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -819,7 +829,9 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203221757"></script>
+
+
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

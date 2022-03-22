@@ -11,14 +11,14 @@
 
 <title>Steppers · Bootstrap Italia</title>
 
-<!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202202221011" rel="stylesheet" />
 
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203221757" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202202221011" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203221757" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.5.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.5.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -408,6 +408,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
+                  <span>Carousel Legacy</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
               </li><li>
@@ -499,6 +502,9 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
                   <span>Input Ora</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
                   <span>Upload</span></a>
@@ -675,18 +681,18 @@
 
 <div class="steppers">
   <ul class="steppers-header">
-    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li>Label Step 3</li>
+    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -699,18 +705,18 @@
 
 <div class="steppers">
   <ul class="steppers-header">
-    <li class="confirmed"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+    <li class="confirmed"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -725,35 +731,42 @@
 
 <div class="steppers">
   <ul class="steppers-header">
-    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></span>Label Step 1</li>
-    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></span>Primo contenuto</li>
+    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Step </span>2</span>Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
   </ul>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Label Step 1<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Primo contenuto<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>1<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>3<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>4<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="navigazione-degli-step">Navigazione degli step</h2>
 
-<p>Il passaggio da uno step all’altro attraverso i bottoni contenuti in <code class="language-plaintext highlighter-rouge">.steppers-nav</code> determina un cambiamento del contenuto presente in <code class="language-plaintext highlighter-rouge">.steppers-content</code>. Il contenitore <code class="language-plaintext highlighter-rouge">.steppers-content</code> ha un attributo ARIA <code class="language-plaintext highlighter-rouge">aria-live="polite"</code> per avvisare gli utilizzatori di screen reader dall’avvenuto cambiamento del contenuto.</p>
-
 <p>I bottoni “Avanti” e “Indietro” dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle web app e sono dotati di classi <code class="language-plaintext highlighter-rouge">.steppers-btn-prev</code> e <code class="language-plaintext highlighter-rouge">.steppers-btn-next</code>.</p>
+
+<p>Il passaggio da uno step all’altro attraverso i bottoni contenuti in <code class="language-plaintext highlighter-rouge">.steppers-nav</code> determina un cambiamento del contenuto presente in <code class="language-plaintext highlighter-rouge">.steppers-content</code>.</p>
+
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<p>Nel caso si stia sviluppando una <em>Single page application</em> oppure una sequenza di step in AJAX il contenitore <code class="language-plaintext highlighter-rouge">.steppers-content</code> dovrebbe avere un attributo ARIA <code class="language-plaintext highlighter-rouge">aria-live="polite"</code> per avvisare gli utilizzatori di screen reader dall’avvenuto cambiamento del contenuto.</p>
+
+</div>
 
 <div class="bd-example">
 
 <div class="steppers">
   <ul class="steppers-header">
-    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li>Label Step 3</li>
+    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
   <div class="steppers-content" aria-live="polite">
@@ -770,9 +783,9 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
@@ -951,9 +964,9 @@
 
 <div class="steppers bg-dark">
   <ul class="steppers-header">
-    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li>Label Step 3</li>
+    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
   <div class="steppers-content" aria-live="polite">
@@ -970,9 +983,9 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers-content"</span> <span class="na">aria-live=</span><span class="s">"polite"</span><span class="nt">&gt;</span>
@@ -994,9 +1007,9 @@
 <!-- Solo testo -->
 <div class="steppers bg-dark">
   <ul class="steppers-header">
-    <li class="confirmed">Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active">Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li>Label Step 3</li>
+    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active">Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
 </div>
@@ -1004,9 +1017,9 @@
 <!-- Testo e icone -->
 <div class="steppers bg-dark">
   <ul class="steppers-header">
-    <li class="confirmed"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Label Step 1 <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
-    <li class="active"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Label Step 2 <span class="sr-only">Attivo</span></li>
-    <li><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Label Step 3</li>
+    <li class="confirmed"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></li>
+    <li class="active"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-lock"></use></svg>Secondo contenuto <span class="sr-only">Attivo</span></li>
+    <li><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-settings"></use></svg>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true">2/6</li>
   </ul>
 </div>
@@ -1014,9 +1027,9 @@
 <!-- Numeri -->
 <div class="steppers bg-dark">
   <ul class="steppers-header">
-    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato Step 1</span></span>Label Step 1</li>
-    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Label Step 2</li>
-    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Label Step 3</li>
+    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato Step 1</span></span>Primo contenuto</li>
+    <li class="active no-line"><span class="steppers-number"><span class="sr-only">Attivo Step </span>2</span>Secondo contenuto</li>
+    <li><span class="steppers-number"><span class="sr-only">Step </span>3</span>Terzo contenuto</li>
     <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
   </ul>
 </div>
@@ -1024,9 +1037,9 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Solo testo --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -1034,9 +1047,9 @@
 <span class="c">&lt;!-- Testo e icone --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 1 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Primo contenuto <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-lock"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Secondo contenuto <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-settings"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>2/6<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -1044,9 +1057,9 @@
 <span class="c">&lt;!-- Numeri --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"steppers bg-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"steppers-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato Step 1<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Label Step 1<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Label Step 2<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Label Step 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"confirmed"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon steppers-success"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Confermato Step 1<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>Primo contenuto<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active no-line"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Attivo Step <span class="nt">&lt;/span&gt;</span>2<span class="nt">&lt;/span&gt;</span>Secondo contenuto<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"steppers-number"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Step <span class="nt">&lt;/span&gt;</span>3<span class="nt">&lt;/span&gt;</span>Terzo contenuto<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"steppers-index"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>1<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>3<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>4<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -1204,11 +1217,11 @@
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202202221011"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203221757"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203221757"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1225,7 +1238,9 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203221757"></script>
+
+
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

@@ -11,14 +11,14 @@
 
 <title>Collapse · Bootstrap Italia</title>
 
-<!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202202221011" rel="stylesheet" />
 
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203221757" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202202221011" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203221757" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.5.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.5.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -408,6 +408,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
+                  <span>Carousel Legacy</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
               </li><li>
@@ -500,6 +503,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
                   <span>Input Ora</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
                   <span>Upload</span></a>
               </li><li>
@@ -575,7 +581,7 @@
 </li>
 <li class="toc-entry toc-h2"><a href="#gruppi-di-elementi-richiudibili">Gruppi di elementi richiudibili</a></li>
 <li class="toc-entry toc-h2"><a href="#accordion">Accordion</a></li>
-<li class="toc-entry toc-h2"><a href="#collapse-e-accordion-innestati">Collapse e Accordion innestati</a></li>
+<li class="toc-entry toc-h2"><a href="#collapse-e-accordion-annidati">Collapse e accordion annidati</a></li>
 <li class="toc-entry toc-h2"><a href="#sfondo-primario">Sfondo primario</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#header-attivi">Header attivi</a></li>
@@ -699,68 +705,80 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <p>Gli elmenti richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili.</p>
 
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<p>Assicurati di aggiungere <code class="language-plaintext highlighter-rouge">aria-expanded</code> all’elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell’elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l’elemento comprimibile è chiuso in modo predefinito, l’attributo sull’elemento di controllo dovrebbe avere il valore <code class="language-plaintext highlighter-rouge">aria-expanded="false"</code>. Se imposti l’elemento comprimibile aperto in modo predefinito utilizzando la classe <code class="language-plaintext highlighter-rouge">show</code>, sul controllo invece imposta <code class="language-plaintext highlighter-rouge">aria-expanded="true"</code>. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all’apertura o alla chiusura dell’elemento richiudibile (via JavaScript, o perché l’utente ha attivato un altro elemento di controllo anch’esso legato allo stesso elemento richiudibile). Se il componente HTML dell’elemento di controllo non è un bottone (ad esempio un <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>), l’attributo <code class="language-plaintext highlighter-rouge">role="button"</code> dovrebbe essere aggiunto al componente.</p>
+
+<p>Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l’attributo <code class="language-plaintext highlighter-rouge">data-target</code> sta puntando a un selettore <code class="language-plaintext highlighter-rouge">id</code> – potresti aggiungere un ulteriore attributo <code class="language-plaintext highlighter-rouge">aria-controls</code> all’elemento di controllo, contenente l’<code class="language-plaintext highlighter-rouge">id</code> dell’elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all’elemento richiudibile stesso.</p>
+
+<p>L’elemento richiudibile deve avere un <code class="language-plaintext highlighter-rouge">role="region"</code> con attributo <code class="language-plaintext highlighter-rouge">aria-labelledby</code> associato all’<code class="language-plaintext highlighter-rouge">id</code> del suo elemento di controllo.</p>
+
+<p><em>Bootstrap Italia estende le funzionalità di Bootstrap implementando i comandi via tastiera descritti nelle <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">WAI-ARIA Authoring Practices 1.1 accordion pattern</a>.</em></p>
+</div>
+
 <div class="bd-example">
 
-<div id="collapseDiv1" class="collapse-div" role="tablist">
+<div id="collapseDiv1" class="collapse-div">
   <div class="collapse-header" id="heading1">
     <button data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     </button>
   </div>
-  <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+  <div id="collapse1" class="collapse show" role="region" aria-labelledby="heading1">
     <div class="collapse-body">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     </div>
   </div>
   <div class="collapse-header" id="heading2">
     <button data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     </button>
   </div>
-  <div id="collapse2" class="collapse show" role="tabpanel" aria-labelledby="heading2">
+  <div id="collapse2" class="collapse show" role="region" aria-labelledby="heading2">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="heading3">
     <button data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     </button>
   </div>
-  <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3">
+  <div id="collapse3" class="collapse" role="region" aria-labelledby="heading3">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1"</span> <span class="na">class=</span><span class="s">"collapse-div"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1"</span> <span class="na">class=</span><span class="s">"collapse-div"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse2"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
@@ -773,113 +791,119 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <div class="bd-example">
 
-<div id="accordionDiv1" class="collapse-div" role="tablist">
+<div id="accordionDiv1" class="collapse-div">
   <div class="collapse-header" id="headingA1">
     <button data-toggle="collapse" data-target="#accordion1" aria-expanded="true" aria-controls="accordion1">
-      Accordion Group Item #1
+      Elemento Accordion #1
     </button>
   </div>
-  <div id="accordion1" class="collapse show" role="tabpanel" aria-labelledby="headingA1" data-parent="#accordionDiv1">
+  <div id="accordion1" class="collapse show" role="region" aria-labelledby="headingA1" data-parent="#accordionDiv1">
     <div class="collapse-body">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     </div>
   </div>
   <div class="collapse-header" id="headingA2">
     <button data-toggle="collapse" data-target="#accordion2" aria-expanded="false" aria-controls="accordion2">
-      Accordion Group Item #2
+      Elemento Accordion #2
     </button>
   </div>
-  <div id="accordion2" class="collapse" role="tabpanel" aria-labelledby="headingA2" data-parent="#accordionDiv1">
+  <div id="accordion2" class="collapse" role="region" aria-labelledby="headingA2" data-parent="#accordionDiv1">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="headingA3">
     <button data-toggle="collapse" data-target="#accordion3" aria-expanded="false" aria-controls="accordion3">
-      Accordion Group Item #3
+      Elemento Accordion #3
     </button>
   </div>
-  <div id="accordion3" class="collapse" role="tabpanel" aria-labelledby="headingA3" data-parent="#accordionDiv1">
+  <div id="accordion3" class="collapse" role="region" aria-labelledby="headingA3" data-parent="#accordionDiv1">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordionDiv1"</span> <span class="na">class=</span><span class="s">"collapse-div"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordionDiv1"</span> <span class="na">class=</span><span class="s">"collapse-div"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"headingA1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"accordion1"</span><span class="nt">&gt;</span>
-      Accordion Group Item #1
+      Elemento Accordion #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA1"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA1"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"headingA2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion2"</span><span class="nt">&gt;</span>
-      Accordion Group Item #2
+      Elemento Accordion #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA2"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA2"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"headingA3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion3"</span><span class="nt">&gt;</span>
-      Accordion Group Item #3
+      Elemento Accordion #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion3"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA3"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion3"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"headingA3"</span> <span class="na">data-parent=</span><span class="s">"#accordionDiv1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h2 id="collapse-e-accordion-innestati">Collapse e Accordion innestati</h2>
+<h2 id="collapse-e-accordion-annidati">Collapse e accordion annidati</h2>
 
-<p>Più gruppi di collapse possono essere annidati.</p>
+<p>Più gruppi di collapse o accordion possono essere annidati.</p>
+
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità-collapse-e-accordion-annidati">Accessibilità collapse e accordion annidati</h4>
+
+<p>Utilizzare questo approccio solo quando strettamente necessario: dal punto di vista dell’accessibilità non si tratta di una soluzione ottimale.</p>
+</div>
 
 <div class="bd-example">
 
-<div id="collapseDiv2" class="collapse-div" role="tablist">
+<div id="collapseDiv2" class="collapse-div">
   <div class="collapse-header" id="heading1a">
     <button data-toggle="collapse" data-target="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
-      Collapse header 1
+      Elemento richiudibile #1
     </button>
   </div>
-  <div id="collapse1a" class="collapse show" role="tabpanel" aria-labelledby="heading1a">
+  <div id="collapse1a" class="collapse show" role="region" aria-labelledby="heading1a">
     <div class="collapse-body">
-      <div id="collapseDiv3" class="collapse-div" role="tablist">
+      <div id="collapseDiv3" class="collapse-div">
         <div class="collapse-header" id="heading1b">
           <button data-toggle="collapse" data-target="#collapse1b" aria-expanded="true" aria-controls="collapse1b">
-            Nested panel header 1
+            Elemento richiudibile annidato 1
           </button>
         </div>
-        <div id="collapse1b" class="collapse show" role="tabpanel" aria-labelledby="heading1b">
+        <div id="collapse1b" class="collapse show" role="region" aria-labelledby="heading1b">
           <div class="collapse-body">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
           </div>
         </div>
         <div class="collapse-header" id="heading2b">
           <button data-toggle="collapse" data-target="#collapse2b" aria-expanded="true" aria-controls="collapse2b">
-            Nested panel header 2
+            Elemento richiudibile annidato 2
           </button>
         </div>
-        <div id="collapse2b" class="collapse show" role="tabpanel" aria-labelledby="heading2b">
+        <div id="collapse2b" class="collapse show" role="region" aria-labelledby="heading2b">
           <div class="collapse-body">
             Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
           </div>
         </div>
         <div class="collapse-header" id="heading3b">
           <button data-toggle="collapse" data-target="#collapse3b" aria-expanded="false" aria-controls="collapse3b">
-            Nested panel header 3
+            Elemento richiudibile annidato 3
           </button>
         </div>
-        <div id="collapse3b" class="collapse" role="tabpanel" aria-labelledby="heading3b">
+        <div id="collapse3b" class="collapse" role="region" aria-labelledby="heading3b">
           <div class="collapse-body">
             Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
           </div>
@@ -889,61 +913,61 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
   </div>
   <div class="collapse-header" id="heading2a">
     <button data-toggle="collapse" data-target="#collapse2a" aria-expanded="false" aria-controls="collapse2a">
-      Collapse header 2
+      Elemento richiudibile #2
     </button>
   </div>
-  <div id="collapse2a" class="collapse" role="tabpanel" aria-labelledby="heading2a">
+  <div id="collapse2a" class="collapse" role="region" aria-labelledby="heading2a">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="heading3a">
     <button data-toggle="collapse" data-target="#collapse3a" aria-expanded="false" aria-controls="collapse3a">
-      Collapse header 3
+      Elemento richiudibile #3
     </button>
   </div>
-  <div id="collapse3a" class="collapse" role="tabpanel" aria-labelledby="heading3a">
+  <div id="collapse3a" class="collapse" role="region" aria-labelledby="heading3a">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv2"</span> <span class="na">class=</span><span class="s">"collapse-div"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv2"</span> <span class="na">class=</span><span class="s">"collapse-div"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1a"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1a"</span><span class="nt">&gt;</span>
-      Collapse header 1
+      Elemento richiudibile #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1a"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1a"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1a"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv3"</span> <span class="na">class=</span><span class="s">"collapse-div"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv3"</span> <span class="na">class=</span><span class="s">"collapse-div"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1b"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1b"</span><span class="nt">&gt;</span>
-            Nested panel header 1
+            Elemento richiudibile annidato 1
           <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1b"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1b"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2b"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse2b"</span><span class="nt">&gt;</span>
-            Nested panel header 2
+            Elemento richiudibile annidato 2
           <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2b"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2b"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
             Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3b"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3b"</span><span class="nt">&gt;</span>
-            Nested panel header 3
+            Elemento richiudibile annidato 3
           <span class="nt">&lt;/button&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3b"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3b"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3b"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
             Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
           <span class="nt">&lt;/div&gt;</span>
@@ -953,35 +977,25 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2a"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse2a"</span><span class="nt">&gt;</span>
-      Collapse header 2
+      Elemento richiudibile #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2a"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2a"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2a"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3a"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3a"</span><span class="nt">&gt;</span>
-      Collapse header 3
+      Elemento richiudibile #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3a"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3a"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3a"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3a"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<div class="bd-callout bd-callout-accessibility">
-<p><strong>Accessibilità</strong></p>
-
-<p>Assicurati di aggiungere <code class="language-plaintext highlighter-rouge">aria-expanded</code> all’elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell’elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l’elemento comprimibile è chiuso in modo predefinito, l’attributo sull’elemento di controllo dovrebbe avere il valore <code class="language-plaintext highlighter-rouge">aria-expanded="false"</code>. Se imposti l’elemento comprimibile aperto in modo predefinito utilizzando la classe <code class="language-plaintext highlighter-rouge">show</code>, sul controllo invece imposta <code class="language-plaintext highlighter-rouge">aria-expanded="true"</code>. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all’apertura o alla chiusura dell’elemento richiudibile (via JavaScript, o perché l’utente ha attivato un altro elemento di controllo anch’esso legato allo stesso elemento richiudibile). Se il componente HTML dell’elemento di controllo non è un bottone (ad esempio un <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>), l’attributo <code class="language-plaintext highlighter-rouge">role="button"</code> dovrebbe essere aggiunto al componente.</p>
-
-<p>Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l’attributo <code class="language-plaintext highlighter-rouge">data-target</code> sta puntando a un selettore <code class="language-plaintext highlighter-rouge">id</code> – potresti aggiungere un ulteriore attributo <code class="language-plaintext highlighter-rouge">aria-controls</code> all’elemento di controllo, contenente l’<code class="language-plaintext highlighter-rouge">id</code> dell’elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all’elemento richiudibile stesso.</p>
-
-<p><em>Al momento Bootstrap Italia, al pari di Bootstrap, non copre la gestione dei comandi attraverso tastiera descritte nelle <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">WAI-ARIA Authoring Practices 1.1 accordion pattern</a> - è quindi necessario includerle separatamente attraverso JavaScript.</em></p>
-</div>
 
 <h2 id="sfondo-primario">Sfondo primario</h2>
 
@@ -993,66 +1007,66 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <div class="bd-example">
 
-<div id="collapseDiv1-sc1" class="collapse-div collapse-background-active" role="tablist">
+<div id="collapseDiv1-sc1" class="collapse-div collapse-background-active">
   <div class="collapse-header" id="heading1-sc1">
     <button data-toggle="collapse" data-target="#collapse1-sc1" aria-expanded="true" aria-controls="collapse1-sc1">
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     </button>
   </div>
-  <div id="collapse1-sc1" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc1">
+  <div id="collapse1-sc1" class="collapse show" role="region" aria-labelledby="heading1-sc1">
     <div class="collapse-body">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
     </div>
   </div>
   <div class="collapse-header" id="heading2-sc1">
     <button data-toggle="collapse" data-target="#collapse2-sc1" aria-expanded="false" aria-controls="collapse2-sc1">
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     </button>
   </div>
-  <div id="collapse2-sc1" class="collapse" role="tabpanel" aria-labelledby="heading2-sc1">
+  <div id="collapse2-sc1" class="collapse" role="region" aria-labelledby="heading2-sc1">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="heading3-sc1">
     <button data-toggle="collapse" data-target="#collapse3-sc1" aria-expanded="false" aria-controls="collapse3-sc1">
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     </button>
   </div>
-  <div id="collapse3-sc1" class="collapse" role="tabpanel" aria-labelledby="heading3-sc1">
+  <div id="collapse3-sc1" class="collapse" role="region" aria-labelledby="heading3-sc1">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-sc1"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-background-active"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-sc1"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-background-active"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1-sc1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1-sc1"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-sc1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-sc1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-sc1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2-sc1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse2-sc1"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-sc1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-sc1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-sc1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3-sc1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3-sc1"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-sc1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-sc1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-sc1"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-sc1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
@@ -1065,66 +1079,66 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <div class="bd-example">
 
-<div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover" role="tablist">
+<div id="collapseDiv1-sc2" class="collapse-div collapse-background-hover">
   <div class="collapse-header" id="heading1-sc2">
     <button data-toggle="collapse" data-target="#collapse1-sc2" aria-expanded="true" aria-controls="collapse1-sc2">
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     </button>
   </div>
-  <div id="collapse1-sc2" class="collapse show" role="tabpanel" aria-labelledby="heading1-sc2">
+  <div id="collapse1-sc2" class="collapse show" role="region" aria-labelledby="heading1-sc2">
     <div class="collapse-body">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     </div>
   </div>
   <div class="collapse-header" id="heading2-sc2">
     <button data-toggle="collapse" data-target="#collapse2-sc2" aria-expanded="false" aria-controls="collapse2-sc2">
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     </button>
   </div>
-  <div id="collapse2-sc2" class="collapse" role="tabpanel" aria-labelledby="heading2-sc2">
+  <div id="collapse2-sc2" class="collapse" role="region" aria-labelledby="heading2-sc2">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="heading3-sc2">
     <button data-toggle="collapse" data-target="#collapse3-sc2" aria-expanded="false" aria-controls="collapse3-sc2">
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     </button>
   </div>
-  <div id="collapse3-sc2" class="collapse" role="tabpanel" aria-labelledby="heading3-sc2">
+  <div id="collapse3-sc2" class="collapse" role="region" aria-labelledby="heading3-sc2">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-sc2"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-background-hover"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-sc2"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-background-hover"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1-sc2"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1-sc2"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-sc2"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-sc2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-sc2"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2-sc2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse2-sc2"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-sc2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-sc2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-sc2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3-sc2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3-sc2"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-sc2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-sc2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-sc2"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-sc2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
@@ -1137,66 +1151,66 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <div class="bd-example">
 
-<div id="collapseDiv1-lft" class="collapse-div collapse-left-icon" role="tablist">
+<div id="collapseDiv1-lft" class="collapse-div collapse-left-icon">
   <div class="collapse-header" id="heading1-lft">
     <button data-toggle="collapse" data-target="#collapse1-lft" aria-expanded="true" aria-controls="collapse1-lft">
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     </button>
   </div>
-  <div id="collapse1-lft" class="collapse show" role="tabpanel" aria-labelledby="heading1-lft">
+  <div id="collapse1-lft" class="collapse show" role="region" aria-labelledby="heading1-lft">
     <div class="collapse-body">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     </div>
   </div>
   <div class="collapse-header" id="heading2-lft">
     <button data-toggle="collapse" data-target="#collapse2-lft" aria-expanded="false" aria-controls="collapse2-lft">
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     </button>
   </div>
-  <div id="collapse2-lft" class="collapse" role="tabpanel" aria-labelledby="heading2-lft">
+  <div id="collapse2-lft" class="collapse" role="region" aria-labelledby="heading2-lft">
     <div class="collapse-body">
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
   <div class="collapse-header" id="heading3-lft">
     <button data-toggle="collapse" data-target="#collapse3-lft" aria-expanded="false" aria-controls="collapse3-lft">
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     </button>
   </div>
-  <div id="collapse3-lft" class="collapse" role="tabpanel" aria-labelledby="heading3-lft">
+  <div id="collapse3-lft" class="collapse" role="region" aria-labelledby="heading3-lft">
     <div class="collapse-body">
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-lft"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-left-icon"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseDiv1-lft"</span> <span class="na">class=</span><span class="s">"collapse-div collapse-left-icon"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading1-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse1-lft"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse1-lft"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #1
+      Elemento richiudibile #1
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-lft"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-lft"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse1-lft"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading1-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading2-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse2-lft"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse2-lft"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #2
+      Elemento richiudibile #2
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-lft"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-lft"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse2-lft"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading2-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-header"</span> <span class="na">id=</span><span class="s">"heading3-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse3-lft"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse3-lft"</span><span class="nt">&gt;</span>
-      Collapsible Group Item #3
+      Elemento richiudibile #3
     <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-lft"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-lft"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse3-lft"</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"heading3-lft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-body"</span><span class="nt">&gt;</span>
       Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
     <span class="nt">&lt;/div&gt;</span>
@@ -1326,11 +1340,11 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202202221011"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203221757"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203221757"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -1347,7 +1361,9 @@ Molteplici <code class="language-plaintext highlighter-rouge">&lt;button&gt;</co
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203221757"></script>
+
+
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({

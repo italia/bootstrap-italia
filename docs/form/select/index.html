@@ -11,14 +11,14 @@
 
 <title>Select · Bootstrap Italia</title>
 
-<!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202202221011" rel="stylesheet" />
 
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203221757" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202202221011" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203221757" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.5.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.5.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -408,6 +408,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
+                  <span>Carousel Legacy</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
               </li><li>
@@ -500,6 +503,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
                   <span>Input Ora</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
                   <span>Upload</span></a>
               </li><li>
@@ -568,13 +574,16 @@
   <div class="sidebar-wrapper">
     <h3>Select</h3>
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h3"><a href="#select-classica">Select classica</a></li>
+<li class="toc-entry toc-h3"><a href="#select">Select</a></li>
 <li class="toc-entry toc-h3"><a href="#select-disabilitata">Select disabilitata</a></li>
-<li class="toc-entry toc-h3"><a href="#select-con-reset">Select con reset</a></li>
-<li class="toc-entry toc-h3"><a href="#select-con-ricerca">Select con ricerca</a></li>
-<li class="toc-entry toc-h3"><a href="#select-multipla">Select Multipla</a></li>
 <li class="toc-entry toc-h3"><a href="#select-con-gruppi">Select con gruppi</a></li>
-<li class="toc-entry toc-h3"><a href="#modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom">Select custom</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom-disabilitata">Select custom disabilitata</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom-con-reset">Select custom con reset</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom-con-ricerca">Select custom con ricerca</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom-multipla">Select custom Multipla</a></li>
+<li class="toc-entry toc-h3"><a href="#select-custom-con-gruppi">Select custom con gruppi</a></li>
+<li class="toc-entry toc-h3"><a href="#modifica-dinamica-del-campi-della-select-custom">Modifica dinamica del campi della select custom</a></li>
 </ul>
   </div>
 </div>
@@ -583,9 +592,107 @@
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Select</h1>
           <p class="bd-lead">Il classico “menu a tendina”, in nuove varianti.</p>
-          <p>Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, <a href="https://developer.snapappointments.com/bootstrap-select/">Bootstrap Select</a>. Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.</p>
+          <h3 id="select">Select</h3>
 
-<h3 id="select-classica">Select classica</h3>
+<p>La select standard è composta dal un wrapper esterno <code class="language-plaintext highlighter-rouge">.select-wrapper</code> seguita dalla label e dall’elemento <code class="language-plaintext highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà la visualizzazione corretta.</p>
+
+<div class="bd-example">
+
+<div class="select-wrapper">
+  <label for="defaultSelect">Etichetta</label>
+  <select id="defaultSelect">
+    <option selected="" value="">Scegli un'opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"defaultSelect"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"defaultSelect"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Scegli un'opzione<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 5"</span><span class="nt">&gt;</span>Opzione 5<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="select-disabilitata">Select disabilitata</h3>
+<p>Per disabilitare una select, aggiungere l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al tag <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
+<div class="bd-example">
+<div class="select-wrapper">
+  <label for="defaultSelectDisabled">Etichetta</label>
+  <select id="defaultSelectDisabled" disabled="">
+    <option selected="" value="">Scegli un'opzione</option>
+    <option value="Value 1">Opzione 1</option>
+    <option value="Value 2">Opzione 2</option>
+    <option value="Value 3">Opzione 3</option>
+    <option value="Value 4">Opzione 4</option>
+    <option value="Value 5">Opzione 5</option>
+  </select>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"defaultSelectDisabled"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"defaultSelectDisabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Scegli un'opzione<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 5"</span><span class="nt">&gt;</span>Opzione 5<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="select-con-gruppi">Select con gruppi</h3>
+
+<p>Per le select con raggruppamenti utilizzare il tag HTML &lt;optgroup&gt; per raggruppare le <option>.</option></p>
+
+<div class="bd-example">
+<div class="select-wrapper">
+  <label for="defaultSelectGroup">Etichetta</label>
+  <select id="defaultSelectGroup">
+    <option selected="" value="">Scegli un'opzione</option>
+    <optgroup label="Gruppo 1">
+      <option value="1">Opzione 1</option>
+      <option value="2">Opzione 2</option>
+    </optgroup>
+    <optgroup label="Gruppo 2">
+      <option value="3">Opzione 3</option>
+      <option value="4">Opzione 4</option>
+    </optgroup>
+  </select>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-wrapper"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"defaultSelectGroup"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"defaultSelectGroup"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">selected=</span><span class="s">""</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Scegli un'opzione<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/optgroup&gt;</span>
+    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/optgroup&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="select-custom">Select custom</h3>
+
+<div class="bd-callout bd-callout-danger">
+<p><strong>Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia</strong></p>
+
+<p>Il componente select custom presenta alcuni problemi di accessibilità si consiglia l’utilizzo della select standard pienamente accessibile.</p>
+</div>
+
+<p>Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, <a href="https://developer.snapappointments.com/bootstrap-select/">Bootstrap Select</a>. Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.</p>
 
 <p>La select è composta dal un wrapper esterno <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="language-plaintext highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
 
@@ -593,7 +700,7 @@
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample1">Etichetta</label>
-  <select id="selectExample1" title="Scegli una opzione">
+  <select id="selectExample1" title="Scegli un'opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -604,7 +711,7 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample1"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample1"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample1"</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
@@ -613,30 +720,7 @@
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<p>Non utilizzando questa struttura di elementi, la select viene mostrata come prevede il sistema operativo, senza modifiche:</p>
-
-<div class="bd-example">
-<label for="defaultSelect">Etichetta</label>
-<select id="defaultSelect" title="Scegli una opzione">
-
-  <option value="Value 1">Opzione 1</option>
-  <option value="Value 2">Opzione 2</option>
-  <option value="Value 3">Opzione 3</option>
-  <option value="Value 4">Opzione 4</option>
-  <option value="Value 5">Opzione 5</option>
-</select>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"defaultSelect"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"defaultSelect"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 5"</span><span class="nt">&gt;</span>Opzione 5<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span></code></pre></figure>
-
-<h3 id="select-disabilitata">Select disabilitata</h3>
+<h3 id="select-custom-disabilitata">Select custom disabilitata</h3>
 
 <p>Per disabilitare una select, aggiungere la classe <code class="language-plaintext highlighter-rouge">.disabled</code> a <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> e aggiungere l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al tag <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> per disabilitare le funzionalità.</p>
 
@@ -644,7 +728,7 @@
 
 <div class="bootstrap-select-wrapper disabled">
   <label for="selectExample2">Etichetta</label>
-  <select id="selectExample2" disabled="" title="Scegli una opzione">
+  <select id="selectExample2" disabled="" title="Scegli un'opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -655,7 +739,7 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper disabled"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample2"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample2"</span> <span class="na">disabled</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample2"</span> <span class="na">disabled</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
@@ -664,19 +748,19 @@
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="select-con-reset">Select con reset</h3>
+<h3 id="select-custom-con-reset">Select custom con reset</h3>
 
 <p>Per creare l’opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all’interno dell’attributo “<strong>data-content</strong>” il seguente html:
 <code class="language-plaintext highlighter-rouge">"Label del tasto reset &lt;span class='reset-label'&gt;&lt;/span&gt;"</code></p>
 
-<p>All’interno dell’attributo <code class="language-plaintext highlighter-rouge">title</code> dell’opzione inseriremo il titolo di default della select, in questo caso <code class="language-plaintext highlighter-rouge">"Scegli una opzione"</code>.</p>
+<p>All’interno dell’attributo <code class="language-plaintext highlighter-rouge">title</code> dell’opzione inseriremo il titolo di default della select, in questo caso <code class="language-plaintext highlighter-rouge">"Scegli un'opzione"</code>.</p>
 
 <div class="bd-example">
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample3">Etichetta</label>
-  <select id="selectExample3" title="Scegli una opzione">
-    <option value="" title="Scegli una opzione" data-content="Annulla &lt;span class='reset-label'&gt;&lt;/span&gt;"></option>
+  <select id="selectExample3" title="Scegli un'opzione">
+    <option value="" title="Scegli un'opzione" data-content="Annulla &lt;span class='reset-label'&gt;&lt;/span&gt;"></option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
     <option value="Value 4">Opzione 4</option>
@@ -686,8 +770,8 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample3"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample3"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">data-content=</span><span class="s">"Annulla &lt;span class='reset-label'&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample3"</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span> <span class="na">data-content=</span><span class="s">"Annulla &lt;span class='reset-label'&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 3"</span><span class="nt">&gt;</span>Opzione 3<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Value 4"</span><span class="nt">&gt;</span>Opzione 4<span class="nt">&lt;/option&gt;</span>
@@ -695,15 +779,24 @@
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="select-con-ricerca">Select con ricerca</h3>
+<h3 id="select-custom-con-ricerca">Select custom con ricerca</h3>
 
 <p>Per attivare la ricerca è sufficiente aggiungere il parametro <code class="language-plaintext highlighter-rouge">data-live-search="true"</code> al tag <code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> ed il relativo placeholder <code class="language-plaintext highlighter-rouge">data-live-search-placeholder="qui il placeholder..."</code></p>
+<div class="bd-callout bd-callout-danger">
+<p><strong>Il componente verrà deprecato per problemi di accessibilità</strong></p>
+
+<p>Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l’utilizzo del componente <a href="/bootstrap-italia/docs/form/autocompletamento/">autocompletamento</a>.</p>
+</div>
+
+<p>Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, <a href="https://developer.snapappointments.com/bootstrap-select/">Bootstrap Select</a>. Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.</p>
+
+<p>La select è composta dal un wrapper esterno <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="language-plaintext highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
 
 <div class="bd-example">
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample4">Etichetta</label>
-  <select id="selectExample4" title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
+  <select id="selectExample4" title="Scegli un'opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -714,7 +807,7 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample4"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample4"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Cerca opzioni"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample4"</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Cerca opzioni"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Duis vestibulum eleifend libero<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Phasellus pretium orci sed odio tempus<span class="nt">&lt;/option&gt;</span>
@@ -734,7 +827,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 <div class="bd-example">
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
+  <select title="Scegli un'opzione" data-live-search="true" data-live-search-placeholder="Search here...">
      <option class="icon-option-li" value="1" data-content="<svg class='icon'><use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'></use></svg>"></option>
      <option class="icon-option-li" value="2" data-content="<svg class='icon'><use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'></use></svg> Duis vestibulum eleifend libero"></option>
      <option class="icon-option-li" value="3" data-content="<svg class='icon'><use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'></use></svg> Phasellus pretium orci sed odio tempus"></option>
@@ -745,7 +838,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Search here..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span> <span class="na">data-live-search=</span><span class="s">"true"</span> <span class="na">data-live-search-placeholder=</span><span class="s">"Search here..."</span><span class="nt">&gt;</span>
      <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
      <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Duis vestibulum eleifend libero"</span><span class="nt">&gt;&lt;/option&gt;</span>
      <span class="nt">&lt;option</span> <span class="na">class=</span><span class="s">"icon-option-li"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">data-content=</span><span class="s">"&lt;svg class='icon'&gt;&lt;use href='/bootstrap-italia/dist/svg/sprite.svg#it-info-circle'&gt;&lt;/use&gt;&lt;/svg&gt; Phasellus pretium orci sed odio tempus"</span><span class="nt">&gt;&lt;/option&gt;</span>
@@ -757,7 +850,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 -->
 
-<h3 id="select-multipla">Select Multipla</h3>
+<h3 id="select-custom-multipla">Select custom Multipla</h3>
 
 <p>Per attivare la multiselezione, aggiungere gli attributi <code class="language-plaintext highlighter-rouge">multiple="true"</code> e <code class="language-plaintext highlighter-rouge">data-multiple-separator=""</code> alla select.</p>
 
@@ -768,7 +861,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample5">Etichetta</label>
-  <select id="selectExample5" title="Scegli una opzione" multiple="true" data-multiple-separator="">
+  <select id="selectExample5" title="Scegli un'opzione" multiple="true" data-multiple-separator="">
     <option value="1" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"></option>
     <option value="2" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"></option>
     <option value="3" data-content="&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"></option>
@@ -778,7 +871,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample5"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample5"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span> <span class="na">multiple=</span><span class="s">"true"</span> <span class="na">data-multiple-separator=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample5"</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span> <span class="na">multiple=</span><span class="s">"true"</span> <span class="na">data-multiple-separator=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 1&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 2&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">data-content=</span><span class="s">"&lt;span class='select-pill'&gt;&lt;span class='select-pill-text'&gt;Opzione 3&lt;/span&gt;&lt;/span&gt;"</span><span class="nt">&gt;&lt;/option&gt;</span>
@@ -786,7 +879,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="select-con-gruppi">Select con gruppi</h3>
+<h3 id="select-custom-con-gruppi">Select custom con gruppi</h3>
 
 <p>Per le select con raggruppamenti utilizzare il tag HTML <code class="language-plaintext highlighter-rouge">&lt;optgroup&gt;</code> per raggruppare le <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code>.</p>
 
@@ -794,7 +887,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample6">Etichetta</label>
-  <select id="selectExample6" title="Scegli una opzione">
+  <select id="selectExample6" title="Scegli un'opzione">
     <optgroup label="Gruppo 1">
       <option value="1">Opzione 1</option>
       <option value="2">Opzione 2</option>
@@ -808,7 +901,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bootstrap-select-wrapper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"selectExample6"</span><span class="nt">&gt;</span>Etichetta<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample6"</span> <span class="na">title=</span><span class="s">"Scegli una opzione"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"selectExample6"</span> <span class="na">title=</span><span class="s">"Scegli un'opzione"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Gruppo 1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Opzione 1<span class="nt">&lt;/option&gt;</span>
       <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Opzione 2<span class="nt">&lt;/option&gt;</span>
@@ -820,7 +913,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="modifica-dinamica-del-campi-della-select">Modifica dinamica del campi della select</h3>
+<h3 id="modifica-dinamica-del-campi-della-select-custom">Modifica dinamica del campi della select custom</h3>
 
 <p>Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione <code class="language-plaintext highlighter-rouge">$.setOptionsToSelect(_parametro)</code> che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev’essere chiamata dall’elemento con classe <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code>, e con parametro in input <code class="language-plaintext highlighter-rouge">_parametro</code> un oggetto Javascript con proprietà “value” e “text” come segue:</p>
 
@@ -850,11 +943,11 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202202221011"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203221757"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203221757"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -871,7 +964,9 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202202221011"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203221757"></script>
+
+
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
