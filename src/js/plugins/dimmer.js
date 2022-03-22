@@ -62,7 +62,7 @@ class Dimmer extends BaseComponent {
   _showElement() {
     const isAnimated = this._isAnimated()
 
-    this._element.style.display = 'block'
+    this._element.style.display = 'flex'
     this._element.removeAttribute('aria-hidden')
     //this._element.setAttribute('aria-modal', true)
     //this._element.setAttribute('role', 'dialog')
