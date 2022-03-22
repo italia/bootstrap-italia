@@ -218,3 +218,11 @@
     }
   }
 }
+
+.dropdown-item {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+}
