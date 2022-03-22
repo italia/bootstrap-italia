@@ -12,6 +12,7 @@ import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 import { isScreenMobile } from './util/device'
+import { getElementIndex } from './util/dom'
 
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
@@ -174,7 +175,7 @@ class NavBarCollapsible extends BaseComponent {
    * Update the last focused element when an interactive element is clicked
    */
   _onMenuItemClick(evt) {
-    this.currItemIdx = this._getItemIndex(evt.currentTarget)
+    this.currItemIdx = getElementIndex(evt.currentTarget)
   }
 
   _isAnimated() {
@@ -289,20 +290,6 @@ class NavBarCollapsible extends BaseComponent {
       item: found,
       index: foundIdx,
     }
-  }
-  /**
-   * get the element index in the array of menu items
-   * @param {Object} target - the target element
-   * @returns {int} the element index
-   */
-  _getItemIndex(target) {
-    let foundIdx = null
-    this._menuItems.forEach((item, idx) => {
-      if (item === target) {
-        foundIdx = idx
-      }
-    })
-    return foundIdx
   }
 }
 
