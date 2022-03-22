@@ -10,6 +10,11 @@
     "framework",
     "web"
   ],
+  "module": "dist/bootstrap-italia.js",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
   "description": "Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
   "style": "dist/css/bootstrap-italia.min.css",
