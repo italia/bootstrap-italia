@@ -7,7 +7,7 @@ title: Input Calendario
 description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
 ---
 
-## Datepicker standard
+## Datepicker
 
 {% capture callout %}
 **Compatibilità con Internet Explorer 11**

@@ -73,7 +73,7 @@ All'interno di un `<form>` inserire un campo input di tipo file con classe `.upl
 
 I file caricati sono elencati come elementi `<li>` di una lista `<ul>` con classe `.upload-file-list`.
 
-Ogni elemento può avere tre differenti stati e raltive classi:
+Ogni elemento può avere tre differenti stati e relative classi:
 
 - `.loading` per i file in caricamento
 - `.success` per i file caricati correttamente
@@ -81,9 +81,18 @@ Ogni elemento può avere tre differenti stati e raltive classi:
 
 {% capture callout %}
 
-##### Accessibilità
+Gli elementi presenti in questa pagina sono disponibili unicamente come HTML/CSS e non includono script di upload.
+Questi dovranno essere sviluppati ed implementati dai developers che intendono farne uso.
 
-Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture callout %}
+
+#### Accessibilità
+
+Durante lo sviluppo degli script di gestione degli upload prestare particolare attenzione all'accessibilità.
+
+Ad esempio, come è evidente dal codice sottostante, è sempre necessario includere informazioni accessibili relative allo stato, quando questo è comunicato solamente attraverso elementi grafici. In questo caso si è fatto uso di testo alternativo riservato agli screen reader utilizzando la classe `.sr-only`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}

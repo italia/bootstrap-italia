@@ -64,7 +64,7 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi avviso">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>

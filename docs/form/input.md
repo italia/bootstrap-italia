@@ -243,7 +243,7 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Input con risultato ricerca o autocompletamento
+## Ricerca con autocompletamento
 
 Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-autocomplete` con un JSON da filtrare.
 
@@ -251,7 +251,7 @@ L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 La descrizione accessibile del campo è ottenuta con una label nascosta visivamente dalla classe `.sr-only`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -332,7 +332,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Autocomplete grande
+### Ricerca con autocompletamento grande
 
 Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
@@ -388,7 +388,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Autocompletamento con dati
+### Ricerca con autocompletamento e dati
 
 Questo autocompletamento è collegato, tramite l'attributo `data-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 

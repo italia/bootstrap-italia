@@ -432,3 +432,12 @@ textarea {
     }
   }
 }
+
+//autocomplete
+.autocomplete__wrapper {
+  .autocomplete__menu {
+    border: $autocomplete-border;
+    border-top: none;
+    box-shadow: $autocomplete-box-shadow;
+  }
+}

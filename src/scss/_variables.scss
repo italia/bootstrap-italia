@@ -639,3 +639,7 @@ $container-max-widths: (
   lg: 960px,
   xl: 1184px,
 ) !default;
+
+//Autocomplete
+$autocomplete-border: 1px solid $gray-400 !default;
+$autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;

@@ -25,7 +25,7 @@ Per indicare il link/thumbail attivo applicare la classe `.active` al relativo t
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Per ragioni di accessibilità è importante indicare all'interno dell'attributo `alt=""` dell'immagine thumbnail l'azione associata al link relativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}

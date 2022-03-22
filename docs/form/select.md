@@ -7,7 +7,7 @@ title: Select
 description: Il classico “menu a tendina”, in nuove varianti.
 ---
 
-### Select standard
+### Select
 
 La select standard è composta dal un wrapper esterno `.select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà la visualizzazione corretta.
 
@@ -16,7 +16,7 @@ La select standard è composta dal un wrapper esterno `.select-wrapper` seguita 
 <div class="select-wrapper">
   <label for="defaultSelect">Etichetta</label>
   <select id="defaultSelect">
-    <option selected="" value="">Scegli una opzione</option>
+    <option selected="" value="">Scegli un'opzione</option>
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -26,13 +26,13 @@ La select standard è composta dal un wrapper esterno `.select-wrapper` seguita 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select standard disabilitata
+### Select disabilitata
 Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 {% capture example %}
 <div class="select-wrapper">
   <label for="defaultSelectDisabled">Etichetta</label>
   <select id="defaultSelectDisabled" disabled>
-    <option selected="" value="">Scegli una opzione</option>
+    <option selected="" value="">Scegli un'opzione</option>
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -42,7 +42,7 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Select standard con gruppi
+### Select con gruppi
 
 Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppare le <option>.
 
@@ -50,7 +50,7 @@ Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppa
 <div class="select-wrapper">
   <label for="defaultSelectGroup">Etichetta</label>
   <select id="defaultSelectGroup">
-    <option selected="" value="">Scegli una opzione</option>
+    <option selected="" value="">Scegli un'opzione</option>
     <optgroup label="Gruppo 1">
       <option value="1">Opzione 1</option>
       <option value="2">Opzione 2</option>
@@ -80,7 +80,7 @@ La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample1">Etichetta</label>
-  <select id="selectExample1" title="Scegli una opzione">
+  <select id="selectExample1" title="Scegli un'opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -98,7 +98,7 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 
 <div class="bootstrap-select-wrapper disabled">
   <label for="selectExample2">Etichetta</label>
-  <select id="selectExample2" disabled title="Scegli una opzione">
+  <select id="selectExample2" disabled title="Scegli un'opzione">
     <option value="Value 1">Opzione 1</option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
@@ -113,14 +113,14 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all'interno dell'attributo "**data-content**" il seguente html:
 `"Label del tasto reset <span class='reset-label'></span>"`
 
-All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli una opzione"`.
+All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default della select, in questo caso `"Scegli un'opzione"`.
 
 {% capture example %}
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample3">Etichetta</label>
-  <select id="selectExample3" title="Scegli una opzione">
-    <option value="" title="Scegli una opzione" data-content="Annulla <span class='reset-label'></span>"></option>
+  <select id="selectExample3" title="Scegli un'opzione">
+    <option value="" title="Scegli un'opzione" data-content="Annulla <span class='reset-label'></span>"></option>
     <option value="Value 2">Opzione 2</option>
     <option value="Value 3">Opzione 3</option>
     <option value="Value 4">Opzione 4</option>
@@ -132,12 +132,22 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 ### Select custom con ricerca
 
 Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
+{% capture callout %}
+
+**Il componente verrà deprecato per problemi di accessibilità**
+
+Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l'utilizzo del componente [autocompletamento]({{ site.baseurl }}/docs/form/autocompletamento/).
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
+
+La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
 
 {% capture example %}
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample4">Etichetta</label>
-  <select id="selectExample4" title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
+  <select id="selectExample4" title="Scegli un'opzione" data-live-search="true" data-live-search-placeholder="Cerca opzioni">
     <option value="1">Lorem ipsum dolor sit amet</option>
     <option value="2">Duis vestibulum eleifend libero</option>
     <option value="3">Phasellus pretium orci sed odio tempus</option>
@@ -158,7 +168,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 {% capture example %}
 <div class="bootstrap-select-wrapper">
   <label>Etichetta</label>
-  <select title="Scegli una opzione" data-live-search="true" data-live-search-placeholder="Search here...">
+  <select title="Scegli un'opzione" data-live-search="true" data-live-search-placeholder="Search here...">
      <option class="icon-option-li" value="1" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg>"></option>
      <option class="icon-option-li" value="2" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Duis vestibulum eleifend libero"></option>
      <option class="icon-option-li" value="3" data-content="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprite.svg#it-info-circle'></use></svg> Phasellus pretium orci sed odio tempus"></option>
@@ -181,7 +191,7 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample5">Etichetta</label>
-  <select id="selectExample5" title="Scegli una opzione" multiple="true" data-multiple-separator="">
+  <select id="selectExample5" title="Scegli un'opzione" multiple="true" data-multiple-separator="">
     <option value="1" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 1</span></span>"></option>
     <option value="2" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 2</span></span>"></option>
     <option value="3" data-content="<span class='select-pill'><span class='select-pill-text'>Opzione 3</span></span>"></option>
@@ -198,7 +208,7 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 
 <div class="bootstrap-select-wrapper">
   <label for="selectExample6">Etichetta</label>
-  <select id="selectExample6" title="Scegli una opzione">
+  <select id="selectExample6" title="Scegli un'opzione">
     <optgroup label="Gruppo 1">
       <option value="1">Opzione 1</option>
       <option value="2">Opzione 2</option>
@@ -228,7 +238,7 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 
 <div class="bootstrap-select-wrapper no-tick">
   <label for="selectExample7">Etichetta</label>
-  <select id="selectExample7" title="Scegli una opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
+  <select id="selectExample7" title="Scegli un'opzione" multiple="true" data-multiple-separator="" data-actions-box="true">
     <optgroup label="Gruppo 1">
       <option value="1" data-content="<span class='form-check' aria-describedby=''><input type='checkbox' data-id='checkbox1' ><label for='checkbox1'>Label di esempio 1</label></span>" check-id="checkbox1"></option>
       <option value="2" data-content="<span class='form-check' aria-describedby=''><input type='checkbox' data-id='checkbox2' ><label for='checkbox2'>Label di esempio 2</label></span>" check-id="checkbox2"></option>

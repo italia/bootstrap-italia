@@ -51,14 +51,14 @@ notificationShow('idNotification', 6000)
 
 {% capture callout %}
 
-##### Accessibilità
+#### Accessibilità
 
 Per ragioni di accessibilità è necessario:
 
 - che il titolo `<h5>` contenuto nella Notification abbia un ID univoco
 - che questo ID venga usato come valore della proprietà `aria-labelledby` nel `<div>` della Notification
 - che il `<div>` della Notification abbia la proprietà `role="alert"`
-  {% endcapture %}{% include callout.html content=callout type="accessibility" %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Esempio
 
