@@ -1,5 +1,5 @@
-export { default as CarouselBI } from './plugins/carousel-bi';
-export { default as InputNumber } from './plugins/input-number';
+export { default as CarouselBI } from './plugins/carousel-bi'
+export { default as InputNumber } from './plugins/input-number'
 //import accessibleAutocomplete from 'accessible-autocomplete'
 
 export { default as Dimmer } from './plugins/dimmer'
@@ -18,3 +18,4 @@ export { default as InputSearchAutocomplete } from './plugins/input-search-autoc
 export { default as InputPassword } from './plugins/input-password'
 export { default as ProgressDonut } from './plugins/progress-donut'
 export { default as UploadDragDrop } from './plugins/upload-dragdrop'
+export { default as BackToTop } from './plugins/backToTop'

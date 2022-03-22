@@ -61,9 +61,8 @@ class BackToTop extends BaseComponent {
       this._isAnim = true
       anime({
         targets: window.document.scrollingElement || window.document.body || window.document.documentElement,
-        scrollTop: 0,
-        duration: 500,
-        easing: 'easeInOutQuad',
+        scrollTop: this._config.positionTop,
+        duration: this._config.duration,
         //easing: this._config.easing,
         complete: () => {
           this._isAnim = false

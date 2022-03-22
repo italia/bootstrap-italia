@@ -4,11 +4,26 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 import './plugins/forward'
 import './plugins/fonts-loader'
 
-
 import {
-  Dimmer, Notification, Cookiebar, NavBarCollapsible, Accordion, NavScroll, HeaderSticky,
-  TrackFocus, CarouselBI, FormValidate, ValidatorSelectAutocomplete, Input, SelectAutocomplete,
-  InputSearchAutocomplete, InputPassword, InputNumber, ProgressDonut, UploadDragDrop
+  Dimmer,
+  Notification,
+  Cookiebar,
+  NavBarCollapsible,
+  Accordion,
+  NavScroll,
+  HeaderSticky,
+  TrackFocus,
+  CarouselBI,
+  FormValidate,
+  ValidatorSelectAutocomplete,
+  Input,
+  SelectAutocomplete,
+  InputSearchAutocomplete,
+  InputPassword,
+  InputNumber,
+  ProgressDonut,
+  UploadDragDrop,
+  BackToTop,
 } from './bootstrap-italia'
 
 import './plugins/inputs'
