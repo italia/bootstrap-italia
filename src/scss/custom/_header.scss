@@ -29,8 +29,9 @@
 
   &.it-header-sticky {
     &.is-sticky {
+      width: 100%;
       .it-nav-wrapper {
-        position: fixed;
+        //position: fixed;
         top: 0;
         width: 100%;
         z-index: 10; //livello +10 del it-navscroll
@@ -43,7 +44,7 @@
         }
 
         .it-header-navbar-wrapper {
-          position: fixed;
+          //position: fixed;
           width: 100%;
           top: 0;
 

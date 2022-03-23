@@ -1,3 +1,7 @@
-.it-header-sticky.is-sticky {
-  position: fixed;
+.bs-is-sticky {
+  position: sticky!important;
+}
+
+.bs-is-fixed {
+  position: fixed!important;
 }

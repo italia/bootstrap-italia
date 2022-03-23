@@ -25,7 +25,7 @@ import {
   ProgressDonut,
   UploadDragDrop,
   BackToTop,
-  //Sticky,
+  Sticky,
   HistoryBack,
   Forward,
 } from './bootstrap-italia'
@@ -66,7 +66,7 @@ window.bootstrap = {
   Notification,
   ProgressDonut,
   SelectAutocomplete,
-  //Sticky,
+  Sticky,
   TrackFocus,
   UploadDragDrop,
   ValidatorSelectAutocomplete,
