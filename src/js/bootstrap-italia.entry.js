@@ -26,6 +26,7 @@ import {
   ProgressDonut,
   UploadDragDrop,
   BackToTop,
+  //Sticky,
 } from './bootstrap-italia'
 
 window.bootstrap = {
