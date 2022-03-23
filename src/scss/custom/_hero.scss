@@ -117,6 +117,7 @@
     background-color: $white;
 
     &.it-hero-bottom-overlapping {
+      position: relative;
       margin-top: $hero-negative-margin;
       margin-bottom: -$hero-negative-margin;
     }

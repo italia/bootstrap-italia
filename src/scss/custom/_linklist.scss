@@ -154,18 +154,27 @@
         }
 
         &.list-item {
+          &.icon-left {
+            .icon {
+              margin-right: calc($grid-gutter-width / 2);
+            }
+            p {
+              margin-left: 30px;
+            }
+          }
           &.icon-left,
           &.left-icon {
             position: relative;
-            padding-left: $v-gap * 4;
-
+            display: flex;
             span {
               margin-top: $v-gap * 0.5;
             }
-
+            p {
+              width: 100%;
+            }
             .icon {
-              position: absolute;
               left: 0;
+              margin-left: 0;
             }
           }
 
