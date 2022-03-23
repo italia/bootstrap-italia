@@ -1,7 +1,6 @@
 import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import * as forward from './plugins/forward'
 import * as fontsLoader from './plugins/fonts-loader'
 import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
@@ -28,11 +27,11 @@ import {
   BackToTop,
   //Sticky,
   HistoryBack,
+  Forward,
 } from './bootstrap-italia'
 
 window.bootstrap = {
   fontsLoader, //!!!
-  forward, //!!!
 
   icons,
   inputs,
@@ -55,6 +54,7 @@ window.bootstrap = {
   Cookiebar,
   Dimmer,
   FormValidate,
+  Forward,
   HeaderSticky,
   HistoryBack,
   Input,

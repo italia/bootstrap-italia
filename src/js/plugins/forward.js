@@ -1,19 +1,78 @@
-import { onDOMContentLoaded } from 'bootstrap/js/src/util/'
+import BaseComponent from 'bootstrap/js/src/base-component.js'
 
-onDOMContentLoaded(() => {
-  const forwardElementList = [].slice.call(document.querySelectorAll('a[data-bs-attribute*="forward"]'))
-  const forwardList = forwardElementList.map((fwEl) => {
-    fwEl.addEventListener('click', (evt) => {
-      const target = document.querySelector(fwEl.hash)
-      if (target) {
-        evt.preventDefault()
-        const scrollingElement = document.scrollingElement
-        scrollingElement.scrollTop = target.offsetTop
-        //console.log({ scrollingElement, target })
-      }
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import Manipulator from 'bootstrap/js/src/dom/manipulator'
+import { getElementFromSelector } from 'bootstrap/js/src/util/index'
+
+import { documentScrollTo } from './util/tween'
+
+const NAME = 'historyback'
+const DATA_KEY = 'bs.historyback'
+const EVENT_KEY = `.${DATA_KEY}`
+//const DATA_API_KEY = '.data-api'
+
+const EVENT_CLICK = `click${EVENT_KEY}`
+
+const SELECTOR_TOGGLE = '[data-bs-toggle="forward"]'
+
+const Default = {
+  duration: 800,
+  easing: 'easeInOutSine',
+}
+
+class Forward extends BaseComponent {
+  constructor(element, config) {
+    super(element)
+
+    this._config = this._getConfig(config)
+
+    this._bindEvents()
+  }
+
+  // Getters
+
+  static get NAME() {
+    return NAME
+  }
+
+  // Public
+  goToTarget() {
+    const target = getElementFromSelector(this._element)
+    if (target) {
+      documentScrollTo(target.offsetTop, {
+        duration: this._config.duration,
+        easing: this._config.easing,
+      })
+    }
+  }
+
+  // Private
+  _getConfig(config) {
+    config = {
+      ...Default,
+      ...Manipulator.getDataAttributes(this._element),
+      ...(typeof config === 'object' ? config : {}),
+    }
+    return config
+  }
+
+  _bindEvents() {
+    EventHandler.on(this._element, EVENT_CLICK, (evt) => {
+      evt.preventDefault()
+      this.goToTarget()
     })
-    return fwEl
-  })
+  }
+}
 
-  return forwardList
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
+toggles.forEach((toggle) => {
+  Forward.getOrCreateInstance(toggle)
 })
+
+export default Forward

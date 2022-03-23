@@ -20,7 +20,8 @@ export { default as ProgressDonut } from './plugins/progress-donut'
 export { default as UploadDragDrop } from './plugins/upload-dragdrop'
 export { default as BackToTop } from './plugins/backToTop'
 export { default as HistoryBack } from './plugins/history-back'
+export { default as Forward } from './plugins/forward'
 
 import * as fontsLoader from './plugins/fonts-loader'
 
-export {fontsLoader}
+export { fontsLoader }
