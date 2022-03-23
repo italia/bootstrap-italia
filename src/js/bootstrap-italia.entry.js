@@ -4,6 +4,7 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 import * as fontsLoader from './plugins/fonts-loader'
 import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
+import * as headerSticky from './plugins/header-sticky'
 
 import {
   Dimmer,
@@ -12,7 +13,6 @@ import {
   NavBarCollapsible,
   Accordion,
   NavScroll,
-  HeaderSticky,
   TrackFocus,
   CarouselBI,
   FormValidate,
@@ -32,6 +32,7 @@ import {
 
 window.bootstrap = {
   fontsLoader, //!!!
+  headerSticky, //!!!
 
   icons,
   inputs,
@@ -55,7 +56,6 @@ window.bootstrap = {
   Dimmer,
   FormValidate,
   Forward,
-  HeaderSticky,
   HistoryBack,
   Input,
   InputNumber,

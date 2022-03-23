@@ -59,6 +59,8 @@ class Sticky extends BaseComponent {
 
     this._isMobile = isScreenMobile()
 
+    this._prevTop = 0
+
     this._onScroll()
     this._bindEvents()
   }
@@ -166,8 +168,9 @@ class Sticky extends BaseComponent {
       if (this._config.stickyClassName) {
         this._element.classList.add(this._config.stickyClassName)
       }
+      this._prevTop = this._element.style.top
       this._element.style.top = this._getPositionTop() + 'px'
-      EventHandler.trigger(EVENT_STICKY_ON)
+      EventHandler.trigger(this._element, EVENT_STICKY_ON)
     }
   }
   _unsetSticky() {
@@ -181,8 +184,9 @@ class Sticky extends BaseComponent {
       if (this._config.stickyClassName) {
         this._element.classList.remove(this._config.stickyClassName)
       }
+      this._element.style.top = this._prevTop
       this._isSticky = false
-      EventHandler.trigger(EVENT_STICKY_OFF)
+      EventHandler.trigger(this._element, EVENT_STICKY_OFF)
     }
   }
 
