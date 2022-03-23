@@ -1,11 +1,11 @@
-import anime from 'animejs/lib/anime.es.js'
-
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
 import onDocumentScroll from './util/on-document-scroll'
+import { documentScrollTo } from './util/tween'
 
 const NAME = 'backtotop'
 const DATA_KEY = 'bs.backtotop'
@@ -60,18 +60,11 @@ class BackToTop extends BaseComponent {
   scrollToTop() {
     if (!this._isAnim) {
       this._isAnim = true
-      const scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement
-      this._prevScrollBehavior = scrollElement.style.scrollBehavior
-      scrollElement.style.scrollBehavior = 'auto'
-      console.log(scrollElement.style)
-      anime({
-        targets: scrollElement,
-        scrollTop: this._config.positionTop,
+      documentScrollTo(this._config.positionTop, {
         duration: this._config.duration,
         easing: this._config.easing,
         complete: () => {
           this._isAnim = false
-          scrollElement.style.scrollBehavior = this._prevScrollBehavior
         },
       })
     }
@@ -89,6 +82,7 @@ class BackToTop extends BaseComponent {
   _getConfig(config) {
     config = {
       ...Default,
+      ...Manipulator.getDataAttributes(this._element),
       ...(typeof config === 'object' ? config : {}),
     }
     return config
