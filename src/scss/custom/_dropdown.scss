@@ -126,14 +126,17 @@
     }
   }
 
-  //link list finetuning
-  .link-list {
-    margin-bottom: 0;
-    //header
-    h3 {
+  //header
+  .link-list-wrapper {
+    .link-list-heading {
       line-height: $link-list-line-height;
       margin-bottom: 0;
     }
+  }
+
+  //link list finetuning
+  .link-list {
+    margin-bottom: 0;
   }
 
   //notch
