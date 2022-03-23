@@ -27,6 +27,7 @@ import {
   UploadDragDrop,
   BackToTop,
   //Sticky,
+  HistoryBack,
 } from './bootstrap-italia'
 
 window.bootstrap = {
@@ -55,6 +56,7 @@ window.bootstrap = {
   Dimmer,
   FormValidate,
   HeaderSticky,
+  HistoryBack,
   Input,
   InputNumber,
   InputPassword,

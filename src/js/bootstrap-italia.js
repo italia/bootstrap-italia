@@ -19,6 +19,7 @@ export { default as InputPassword } from './plugins/input-password'
 export { default as ProgressDonut } from './plugins/progress-donut'
 export { default as UploadDragDrop } from './plugins/upload-dragdrop'
 export { default as BackToTop } from './plugins/backToTop'
+export { default as HistoryBack } from './plugins/history-back'
 
 import * as fontsLoader from './plugins/fonts-loader'
 
