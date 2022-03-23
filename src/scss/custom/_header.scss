@@ -37,6 +37,10 @@
         z-index: 10; //livello +10 del it-navscroll
       }
 
+      .it-header-slim-wrapper {
+        display: none;
+      }
+
       @include media-breakpoint-up(lg) {
         .it-header-slim-wrapper,
         .it-header-center-wrapper {

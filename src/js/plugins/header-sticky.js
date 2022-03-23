@@ -1,7 +1,7 @@
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import { isVisible } from 'bootstrap/js/src/util'
 
-const CLASS_NAME_CLONED_HEADER = 'cloned-header'
+const CLASS_NAME_CLONED_HEADER = 'cloned-element'
 const CLASS_NAME_SHOW = 'show'
 
 const SELECTOR_HEADER = '.it-header-sticky'
