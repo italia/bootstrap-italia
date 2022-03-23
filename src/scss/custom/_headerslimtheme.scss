@@ -4,6 +4,15 @@
     border-bottom: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
 
     .it-header-slim-wrapper-content {
+      .nav-mobile {
+        ul.link-list {
+          a {
+            &.active {
+              color: $primary-b3;
+            }
+          }
+        }
+      }
       .it-header-slim-right-zone,
       .header-slim-right-zone {
         // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
@@ -54,7 +63,7 @@
     }
   }
 }
-@include media-breakpoint-up(lg) {
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-header-slim-wrapper {
     &.theme-light {
       .it-header-slim-wrapper-content {
@@ -97,7 +106,7 @@
   }
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: #{map-get($grid-breakpoints, sm)}) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(-132px, 50px, 0) !important;
@@ -110,7 +119,7 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(0, 56px, 0) !important;

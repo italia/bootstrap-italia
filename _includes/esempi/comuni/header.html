@@ -7,7 +7,7 @@
             <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
                   <span>ITA</span>
                   <svg class="icon icon-white d-none d-lg-block">
                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
@@ -52,7 +52,7 @@
           <div class="col-12">
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper">
-                <a href="#">
+                <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">
                   <svg class="icon">
                     <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
@@ -113,7 +113,7 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
                 class="custom-navbar-toggler"
-                data-target="#nav10"
+                data-bs-target="#nav10"
                 type="button"
               >
                 <svg class="icon">
@@ -128,42 +128,39 @@
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
                     <li class="nav-item {% if section == 'amministrazione' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-amministrazione/">
                         <span>Amministrazione</span>
                         {% if section == 'amministrazione' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
                       </a>
                     </li>
-                    <li class="nav-item {% if section == 'servizi' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'servizi' %}active{%endif%}" href="#">
-                        <span>Servizi</span>
-                        {% if section == 'servizi' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
-                      </a>
-                    </li>
                     <li class="nav-item {% if section == 'novità' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'novità' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'novità' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-novita/">
                         <span>Novità</span>
                         {% if section == 'novità' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
                       </a>
                     </li>
+                    <li class="nav-item {% if section == 'servizi' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'servizi' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-servizi/">
+                        <span>Servizi</span>
+                        {% if section == 'servizi' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
+                      </a>
+                    </li>
                     <li class="nav-item {% if section == 'documenti' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'documenti' %}active{%endif%}" href="#">
-                        <span>Documenti</span>
+                      <a class="nav-link {% if section == 'documenti' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-documenti/">
+                        <span>Documenti e Dati</span>
                         {% if section == 'documenti' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
                       </a>
                     </li>
                   </ul>
                   <ul class="navbar-nav navbar-secondary">
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 1</a>
+                      <a class="nav-link" href="{{ site.baseurl }}/docs/esempi/comuni/template-argomenti-argomento/"> Argomento 1</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 2</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento in evidenza 3</a>
+                      <a class="nav-link" href="#"> Argomento 2</a>
                     </li>
                     <li class="nav-item {% if section == 'argomenti' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-argomenti">
                         <span class="fw-bold">Tutti gli argomenti...</span>
                         {% if section == 'argomenti' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
                       </a>
