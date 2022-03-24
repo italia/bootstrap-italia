@@ -21,6 +21,7 @@ export { default as UploadDragDrop } from './plugins/upload-dragdrop'
 export { default as BackToTop } from './plugins/backToTop'
 export { default as HistoryBack } from './plugins/history-back'
 export { default as Forward } from './plugins/forward'
+export { default as Masonry } from './plugins/masonry'
 
 import * as fontsLoader from './plugins/fonts-loader'
 

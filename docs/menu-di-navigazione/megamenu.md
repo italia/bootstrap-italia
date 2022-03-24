@@ -34,7 +34,7 @@ Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il 
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav1">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -118,7 +118,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav2">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -225,7 +225,7 @@ Per inserire il titolo della sezione, è sufficiente inserire il tag `<div>` con
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav3">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -309,7 +309,7 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav4">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -423,7 +423,7 @@ Di seguito un esempio:
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav5" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav5">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav5" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav5">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -533,7 +533,7 @@ Di seguito un esempio:
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav6" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav6">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav6" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav6">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -644,7 +644,7 @@ Di seguito un esempio:
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav7" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav7">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav7" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav7">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -773,7 +773,7 @@ Nell'esempio seguente abbiamo una struttura composta da due colonne a sinistra e
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav8" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav8">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav8" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav8">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>
@@ -869,7 +869,7 @@ Possiamo creare strutture colonnari asimmetriche ed aggiungere una colonna destr
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav9" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav9">
+  <button class="custom-navbar-toggler" type="button" aria-controls="nav9" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav9">
     <svg class="icon">
       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
     </svg>

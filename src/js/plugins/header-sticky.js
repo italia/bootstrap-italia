@@ -27,16 +27,6 @@ const toggleClonedElement = (targetHeader, toAdd = true) => {
       const clonedSearch = elSearch ? elSearch.cloneNode(true) : null
       const clonedUser = elUser ? elUser.cloneNode(true) : null
 
-      console.log({
-        target,
-        elBrand,
-        elSearch,
-        elUser,
-        clonedBrand,
-        clonedSearch,
-        clonedUser,
-      })
-
       if (clonedBrand) {
         target.insertBefore(clonedBrand, target.childNodes[0]).classList.add(CLASS_NAME_CLONED_HEADER)
       }
