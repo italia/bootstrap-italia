@@ -13,6 +13,9 @@
     - name: Hero
       url: hero
       description: Pagina con vari esempi di Hero.
+    - name: Form con validazione
+      url: form
+      description: Pagina con esempio di form comprendente vari tipi di campi e validazione.
 
 - category: Esempi di template completi
   description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
@@ -23,9 +26,9 @@
     - name: Template vuoto senza "sticky header"
       url: template-vuoto
       description: Un esempio di impostazione per una pagina generica, punto di partenza per iniziare con Bootstrap Italia.
-    - name: Template Comuni Vuoto
-      url: template-comuni-vuoto
-      description: Un esempio di impostazione per una pagina generica relativa al progetto "Comuni".<br/><b>Tutti i template per la creazione del sito di un comune sono scaricabili alla pagina del <a href="https://italia.github.io/design-comuni-prototipi/it/kit.html">kit per i Comuni</a></b>.
+    - name: Template Comuni
+      url: comuni
+      description: Esempi di impostazione per pagine relative al progetto "Comuni".<br/><b>Tutti i template per la creazione del sito di un comune sono scaricabili alla pagina del <a href="https://italia.github.io/design-comuni-prototipi/it/kit.html">kit per i Comuni</a></b>.
 #    - name: Template "Amministrazione"
 #      url: template-amministrazione
 #      description: 'La subhome del menu "Amministrazione"'
@@ -69,5 +72,5 @@
 #      url: template-home-page
 #      description: 'Un esempio di Home Page'
 #      status: work in progress
-- category: Esempi dal sito ufficiale di Bootstrap 5
-  description: La documentazione di Bootstrap 5 contiene <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
+- category: Esempi dal sito ufficiale di Bootstrap 4
+  description: La documentazione di Bootstrap 5 contiene <a href="https://getbootstrap.com/docs/5.0/examples/" target="_blank">molti altri esempi</a> che possono risultare utili nell'utilizzo della libreria.
