@@ -1,0 +1,31 @@
+name: Update documentation
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: timbru31/ruby-node:3.0-16
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: master
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: apt-get update && apt-get install zip
+      - run: bundle install
+      - run: chmod -R 777 .
+      - run: npm i gulp -g
+      - run: npm ci
+      - run: npm run build
+      - name: Publish on gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run documentation-deploy-to-gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
