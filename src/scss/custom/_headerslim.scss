@@ -8,6 +8,9 @@
     align-items: center;
     .dropdown-menu {
       top: -$header-slim-dropdown-distance-mob !important;
+      @include media-breakpoint-down(md) {
+        top: 0 !important;
+      }
     }
     a {
       color: $header-slim-text-color;
