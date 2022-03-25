@@ -22,6 +22,7 @@ export { default as BackToTop } from './plugins/backToTop'
 export { default as HistoryBack } from './plugins/history-back'
 export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
+export { default as List } from './plugins/list'
 
 import * as fontsLoader from './plugins/fonts-loader'
 

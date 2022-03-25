@@ -29,6 +29,7 @@ import {
   HistoryBack,
   Forward,
   Masonry,
+  List,
 } from './bootstrap-italia'
 
 window.bootstrap = {
@@ -62,6 +63,7 @@ window.bootstrap = {
   InputNumber,
   InputPassword,
   InputSearchAutocomplete,
+  List,
   Masonry,
   NavBarCollapsible,
   NavScroll,
