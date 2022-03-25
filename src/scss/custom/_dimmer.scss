@@ -18,7 +18,9 @@
 
   &.dimmer-primary {
     background-color: $primary;
-    opacity: 0.95;
+    &.show {
+      opacity: 0.95;
+    }
   }
   justify-content: center;
   flex-wrap: wrap;
