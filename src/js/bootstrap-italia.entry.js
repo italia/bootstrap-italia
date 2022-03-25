@@ -4,7 +4,9 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 import * as fontsLoader from './plugins/fonts-loader'
 import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
-import * as headerSticky from './plugins/header-sticky'
+import headerSticky from './plugins/header-sticky'
+
+headerSticky()
 
 import {
   Dimmer,
@@ -34,7 +36,6 @@ import {
 
 window.bootstrap = {
   fontsLoader, //!!!
-  headerSticky, //!!!
 
   icons,
   inputs,

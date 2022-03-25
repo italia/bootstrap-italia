@@ -56,6 +56,10 @@ const init = (targetHeader) => {
   targetHeader.addEventListener('off.bs.sticky', () => toggleClonedElement(targetHeader, false))
 }
 
-SelectorEngine.find(SELECTOR_HEADER).forEach((header) => {
-  init(header)
-})
+const headerSticky = () => {
+  SelectorEngine.find(SELECTOR_HEADER).forEach((header) => {
+    init(header)
+  })
+}
+
+export default headerSticky
