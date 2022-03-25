@@ -2,8 +2,6 @@
 var styleNode = document.createElement('style')
 const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : '/bootstrap-italia/dist/fonts'
 styleNode.innerHTML = `
-
-
 /* Titillium+Web:300,400,600,700 */
 
 /* titillium-web-300 - latin-ext_latin */
@@ -233,5 +231,8 @@ styleNode.innerHTML = `
        url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.svg#RobotoMono') format('svg'); /* Legacy iOS */
 }
 `
+const fontsLoader = () => {
+  document.getElementsByTagName('head')[0].appendChild(styleNode)
+}
 
-document.getElementsByTagName('head')[0].appendChild(styleNode)
+export default fontsLoader

@@ -1,11 +1,12 @@
 import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import * as fontsLoader from './plugins/fonts-loader'
+import fontsLoader from './plugins/fonts-loader'
 import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
 import headerSticky from './plugins/header-sticky'
 
+fontsLoader()
 headerSticky()
 
 import {
@@ -35,10 +36,9 @@ import {
 } from './bootstrap-italia'
 
 window.bootstrap = {
-  fontsLoader, //!!!
+  icons, //!!!
+  inputs, //!!!
 
-  icons,
-  inputs,
   Alert,
   Button,
   Carousel,

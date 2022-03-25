@@ -24,6 +24,5 @@ export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
 export { default as List } from './plugins/list'
 
-import * as fontsLoader from './plugins/fonts-loader'
-
-export { fontsLoader }
+//import * as fontsLoader from './plugins/fonts-loader'
+//export { fontsLoader }
