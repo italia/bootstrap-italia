@@ -1,14 +1,16 @@
 import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import fontsLoader from './plugins/fonts-loader'
-import inputs from './plugins/inputs'
+import { loadModule } from './load-module'
+import * as fontsLoader from './plugins/fonts-loader'
+import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
-import headerSticky from './plugins/header-sticky'
+import * as headerSticky from './plugins/header-sticky'
 
-fontsLoader()
-inputs()
-headerSticky()
+loadModule(icons)
+loadModule(fontsLoader)
+loadModule(inputs)
+loadModule(headerSticky)
 
 import {
   Dimmer,
@@ -37,8 +39,6 @@ import {
 } from './bootstrap-italia'
 
 window.bootstrap = {
-  icons, //!!!
-
   Alert,
   Button,
   Carousel,

@@ -20,11 +20,7 @@ const SELECTOR_INPUT_FILE = 'input[type="file"]'
  * ------------------------------------------------------------------------
  */
 
-const inputs = () => {
-  const inputs = SelectorEngine.find([SELECTOR_INPUT, SELECTOR_INPUT_FILE].join(','))
-  inputs.forEach((input) => {
-    Input.getOrCreateInstance(input)
-  })
-}
-
-export default inputs
+const inputs = SelectorEngine.find([SELECTOR_INPUT, SELECTOR_INPUT_FILE].join(','))
+inputs.forEach((input) => {
+  Input.getOrCreateInstance(input)
+})
