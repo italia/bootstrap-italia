@@ -54,6 +54,12 @@
   })
 </script>
 {%- endif -%} {%- if page.layout == "base" -%}
+{% if page.owl %}
+<script src="{{ site.baseurl }}/dist/js/vendor/owl.carousel.min.js"></script>
+{% endif %}
+{% if page.splide %}
+<script src="{{ site.baseurl }}/dist/js/vendor/splide.min.js"></script>
+{% endif %}
 <!-- Notification per tornare alla pagina principale -->
 <div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
