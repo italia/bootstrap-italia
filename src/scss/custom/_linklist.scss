@@ -52,6 +52,16 @@
             padding-left: 0;
           }
         }
+        &[data-bs-toggle] {
+          .icon {
+            transition: transform 0.3s;
+          }
+        }
+        &[aria-expanded='true'] {
+          .icon {
+            transform: scale(-1);
+          }
+        }
         // hover state
         &:hover:not(.disabled) {
           text-decoration: none;
