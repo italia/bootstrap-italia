@@ -23,6 +23,7 @@ export { default as HistoryBack } from './plugins/history-back'
 export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
 export { default as List } from './plugins/list'
+export { default as Transfer } from './plugins/transfer'
 
 //import * as fontsLoader from './plugins/fonts-loader'
 //export { fontsLoader }
