@@ -126,14 +126,17 @@
     }
   }
 
-  //link list finetuning
-  .link-list {
-    margin-bottom: 0;
-    //header
-    h3 {
+  //header
+  .link-list-wrapper {
+    .link-list-heading {
       line-height: $link-list-line-height;
       margin-bottom: 0;
     }
+  }
+
+  //link list finetuning
+  .link-list {
+    margin-bottom: 0;
   }
 
   //notch
@@ -156,6 +159,14 @@
     &:before {
       bottom: -$dropdown-menu-notch-base-size;
       top: auto;
+    }
+  }
+
+  //bottom end position
+  &[data-popper-placement='bottom-end'] {
+    &:before {
+      left: auto;
+      right: $dropdown-menu-notch-position-x / 2;
     }
   }
 

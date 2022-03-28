@@ -110,13 +110,13 @@ $arrow-size: $font-size-base * 0.5;
     box-shadow: none;
     padding: 14px 24px;
     cursor: pointer;
-    color: $gray-secondary;
+    color: $primary;
     font-weight: 600;
     //transition: background-color 0.1s;
     &:not(.collapsed) {
-      color: $primary;
+      color: $gray-secondary;
       &:after {
-        transform: scaleY(-1);
+        transform: scaleY(1);
       }
     }
     &:not(.collapsed):hover:before,
@@ -132,6 +132,7 @@ $arrow-size: $font-size-base * 0.5;
       color: $primary-c5;
       transition: transform 0.3s;
       background-image: none;
+      transform: scaleY(-1);
     }
     &:hover {
       background: none;

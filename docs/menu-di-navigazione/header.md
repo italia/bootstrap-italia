@@ -20,6 +20,16 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 - Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
 
+{% capture callout %}
+#### Accessibilità
+
+Condierando l'importanza delL'Header per la navigazione di un sito, si consiglia di seguire gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
+
+Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo relativo all'Istituzione (es: carousel con ultime notizie) è consigliabile applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina.
+
+Maggiori dettagli sull'accessibilità del **megamenu** sono presenti nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ## Slim header
 
 Lo "slim header" header mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.
@@ -32,19 +42,19 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
-            <nav>
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1">
-                <span>Ente appartenenza/Owner</span>
-                <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            <nav aria-label="Navigazione accessoria">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
+                <span>Ente appartenenza</span>
+                <svg class="icon" aria-hidden="true">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
-              <div class="link-list-wrapper collapse" id="menu1">
+              <div class="link-list-wrapper collapse" id="menu1a">
                 <ul class="link-list">
-                  <li><a class="list-item" href="#">Link 1</a></li>
-                  <li><a class="list-item active" href="#">Link 2 Active</a></li>
+                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                  <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
               </div>
             </nav>
@@ -52,9 +62,10 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <span>Ita</span>
+                <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
+                <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="dropdown-menu">
@@ -62,7 +73,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
@@ -90,63 +101,47 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
 {% capture example %}
 
 <div class="it-header-slim-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="it-header-slim-wrapper-content">
-            <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
-            <div class="it-header-slim-right-zone">
-              <div class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span>ITA</span>
-                  <svg class="icon d-none d-lg-block">
-                    <use
-                      href="{{
-                        site.baseurl
-                      }}/dist/svg/sprites.svg#it-expand"
-                    ></use>
-                  </svg>
-                </a>
-                <div class="dropdown-menu">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="link-list-wrapper">
-                        <ul class="link-list">
-                          <li>
-                            <a class="dropdown-item list-item" href="#"><span>ITA</span></a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item list-item" href="#"><span>ENG</span></a>
-                          </li>
-                        </ul>
-                      </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+          <div class="it-header-slim-right-zone">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
+                <span>ITA</span>
+                <svg class="icon d-none d-lg-block">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary btn-icon btn-full">
-                <span class="rounded-icon">
-                  <svg class="icon icon-primary">
-                    <use
-                      href="{{
-                        site.baseurl
-                      }}/dist/svg/sprites.svg#it-user"
-                    ></use>
-                  </svg>
-                </span>
-                <span class="d-none d-lg-block">Accedi all'area personale</span>
-              </a>
             </div>
+            <a href="#" class="btn btn-primary btn-icon btn-full">
+              <span class="rounded-icon">
+                <svg class="icon icon-primary">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
+                </svg>
+              </span>
+              <span class="d-none d-lg-block">Accedi all'area personale</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione chiara
@@ -160,19 +155,19 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
-            <nav>
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu2" role="button" aria-expanded="false" aria-controls="menu2">
-                <span>Ente appartenenza/Owner</span>
-                <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            <nav aria-label="Navigazione accessoria">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu4">
+                <span>Ente appartenenza</span>
+                <svg class="icon" aria-hidden="true">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
-              <div class="link-list-wrapper collapse" id="menu2">
+              <div class="link-list-wrapper collapse" id="menu1b">
                 <ul class="link-list">
-                  <li><a class="list-item" href="#">Link 1</a></li>
-                  <li><a class="list-item active" href="#">Link 2 Active</a></li>
+                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                  <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
               </div>
             </nav>
@@ -180,9 +175,10 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </a>
               <div class="dropdown-menu">
@@ -190,7 +186,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                   <div class="col-12">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
                     </div>
@@ -222,12 +218,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
         <div class="it-header-center-content-wrapper">
           <div class="it-brand-wrapper">
             <a href="#">
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+              <svg class="icon" aria-hidden="true">
+                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use>
               </svg>
               <div class="it-brand-text">
-                <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                <div class="it-brand-title">Nome dell'Istituzione</div>
+                <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
               </div>
             </a>
           </div>
@@ -238,21 +234,21 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -260,8 +256,10 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+              <a class="search-link rounded-icon" aria-label="Cerca nel sito" href="#">
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-search"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -285,12 +283,12 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
         <div class="it-header-center-content-wrapper">
           <div class="it-brand-wrapper">
             <a href="#">
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+              <svg class="icon" aria-hidden="true">
+                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use>
               </svg>
               <div class="it-brand-text">
-                <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                <div class="it-brand-title">Nome dell'Istituzione</div>
+                <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
               </div>
             </a>
           </div>
@@ -301,21 +299,21 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -323,9 +321,9 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
+              <a class="search-link rounded-icon" aria-label="Cerca nel sito" href="#">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-search"></use>
                 </svg>
               </a>
             </div>
@@ -350,12 +348,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
         <div class="it-header-center-content-wrapper">
           <div class="it-brand-wrapper">
             <a href="#">
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+              <svg class="icon" aria-hidden="true">
+                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use>
               </svg>
               <div class="it-brand-text">
-                <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                <div class="it-brand-title">Nome dell'Istituzione</div>
+                <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
               </div>
             </a>
           </div>
@@ -366,21 +364,21 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <li>
                   <a href="#" aria-label="Facebook" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Github" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-github"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a href="#" aria-label="Twitter" target="_blank">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use>
                     </svg>
                   </a>
                 </li>
@@ -388,9 +386,9 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             </div>
             <div class="it-search-wrapper">
               <span class="d-none d-md-block">Cerca</span>
-              <a class="search-link rounded-icon" aria-label="Cerca" href="#">
+              <a class="search-link rounded-icon" aria-label="Cerca nel sito" href="#">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-search"></use>
                 </svg>
               </a>
             </div>
@@ -413,63 +411,64 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav1">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav1" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div visually-hidden">
-              <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+            <div class="close-div">
+              <button class="btn close-menu" type="button">
+                <span class="visually-hidden">Nascondi la navigazione</span>
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                </svg>
+              </button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Dropdown item</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
+                    <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
                     <div class="link-list-wrapper">
+                      <div class="link-list-heading">Sezione</div>
                       <ul class="link-list">
-                        <li>
-                          <h3 class="no_toc" id="heading-es-1">Heading</h3>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li class="nav-item dropdown megamenu">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Megamenu Label</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu1">
+                    <span>Megamenu</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu1">
                     <div class="row">
                       <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione 1</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc">Heading 1</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -477,11 +476,11 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 2</h3>
+                              <div class="link-list-heading">Sezione 2</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -489,11 +488,11 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 3</h3>
+                              <div class="link-list-heading">Sezione 3</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -531,63 +530,64 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav0">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav0" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div visually-hidden">
-              <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+            <div class="close-div">
+              <button class="btn close-menu" type="button">
+                <span class="visually-hidden">Nascondi la navigazione</span>
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                </svg>
+              </button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Dropdown item</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
+                    <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
                     <div class="link-list-wrapper">
+                      <div class="link-list-heading">Sezione</div>
                       <ul class="link-list">
-                        <li>
-                          <h3 class="no_toc" id="heading-es-2">Heading</h3>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li class="nav-item dropdown megamenu">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Megamenu Label</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu0">
+                    <span>Megamenu</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu0">
                     <div class="row">
                       <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione 1</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc">Heading 1</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -595,11 +595,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 2</h3>
+                              <div class="link-list-heading">Sezione 2</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -607,11 +607,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 3</h3>
+                              <div class="link-list-heading">Sezione 3</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -637,63 +637,64 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav2">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav2" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div visually-hidden">
-              <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+            <div class="close-div">
+              <button class="btn close-menu" type="button">
+                <span class="visually-hidden">Nascondi la navigazione</span>
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                </svg>
+              </button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Dropdown item</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
+                    <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
                     <div class="link-list-wrapper">
+                      <div class="link-list-heading">Sezione</div>
                       <ul class="link-list">
-                        <li>
-                          <h3 class="no_toc" id="heading-es-3">Heading</h3>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li class="nav-item dropdown megamenu">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Megamenu Label</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu2">
+                    <span>Megamenu</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu2">
                     <div class="row">
                       <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione 1</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc">Heading 1</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -701,11 +702,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 2</h3>
+                              <div class="link-list-heading">Sezione 2</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -713,11 +714,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 3</h3>
+                              <div class="link-list-heading">Sezione 3</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -743,63 +744,64 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav3">
             <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav3" style="display: none;">
             <div class="overlay" style="display: none;"></div>
-            <div class="close-div visually-hidden">
-              <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+            <div class="close-div">
+              <button class="btn close-menu" type="button">
+                <span class="visually-hidden">Nascondi la navigazione</span>
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                </svg>
+              </button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Dropdown item</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
+                    <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
                     <div class="link-list-wrapper">
+                      <div class="link-list-heading">Sezione</div>
                       <ul class="link-list">
-                        <li>
-                          <h3 class="no_toc" id="heading-es-4">Heading</h3>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                         <li><span class="divider"></span></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                       </ul>
                     </div>
                   </div>
                 </li>
                 <li class="nav-item dropdown megamenu">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Megamenu Label</span>
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu3">
+                    <span>Megamenu</span>
                     <svg class="icon icon-xs">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                     </svg>
                   </a>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu3">
                     <div class="row">
                       <div class="col-12 col-lg-4">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione 1</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc">Heading 1</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -807,11 +809,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 2</h3>
+                              <div class="link-list-heading">Sezione 2</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -819,11 +821,11 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li>
-                              <h3 class="no_toc">Heading 3</h3>
+                              <div class="link-list-heading">Sezione 3</div>
                             </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -850,72 +852,35 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <nav class="navbar navbar-expand-lg has-megamenu">
-          <button
-            class="custom-navbar-toggler"
-            type="button"
-            aria-controls="nav10"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-bs-toggle="navbarcollapsible"
-            data-bs-target="#nav10"
-          >
+        <!--start nav-->
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav4">
             <svg class="icon">
-              <use
-                href="{{
-                  site.baseurl
-                }}/dist/svg/sprites.svg#it-burger"
-              ></use>
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
-          <div class="navbar-collapsable" id="nav10">
-            <div class="overlay"></div>
-            <div class="close-div visually-hidden">
+          <div class="navbar-collapsable" id="nav4" style="display: none;">
+            <div class="overlay" style="display: none;"></div>
+            <div class="close-div">
               <button class="btn close-menu" type="button">
-                <span class="it-close"></span>close
+                <span class="visually-hidden">Nascondi la navigazione</span>
+                <svg class="icon">
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                </svg>
               </button>
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link active" href="#"
-                    ><span>link 1 active</span
-                    ><span class="visually-hidden">current</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><span>link 2</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><span>link 3</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><span>link 4</span></a>
-                </li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
               </ul>
               <ul class="navbar-nav navbar-secondary">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span>link 5</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><span>link 6</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><span>link 7</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><span
-                      >link 8</span
-                    ></a
-                  >
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 5</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 6</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 7</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link 8</span></a></li>
               </ul>
             </div>
           </div>
@@ -929,26 +894,25 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
 ## Header Completa
 
 {% capture example %}
-
-<div class="it-header-wrapper">
+<header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
-              <nav>
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu4" role="button" aria-expanded="false" aria-controls="menu4">
-                  <span>Ente appartenenza/Owner</span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+              <nav aria-label="Navigazione secondaria">
+                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
+                  <span>Ente appartenenza</span>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
-                <div class="link-list-wrapper collapse" id="menu4">
+                <div class="link-list-wrapper collapse" id="menuC1">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#">Link 1</a></li>
-                    <li><a class="list-item active" href="#">Link 2 Active</a></li>
+                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
               </nav>
@@ -956,9 +920,10 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -966,7 +931,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                           <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
@@ -991,12 +956,12 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper">
                 <a href="#">
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
                   <div class="it-brand-text">
-                    <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                    <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                    <div class="it-brand-title">Nome dell'Istituzione</div>
+                    <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
                   </div>
                 </a>
               </div>
@@ -1007,21 +972,21 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                     <li>
                       <a href="#" aria-label="Facebook" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-facebook"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Github" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-github"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Twitter" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -1029,9 +994,9 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 </div>
                 <div class="it-search-wrapper">
                   <span class="d-none d-md-block">Cerca</span>
-                  <a class="search-link rounded-icon" aria-label="Cerca" href="#">
+                  <a class="search-link rounded-icon" aria-label="Cerca nel sito" href="#">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-search"></use>
                     </svg>
                   </a>
                 </div>
@@ -1046,63 +1011,64 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
         <div class="row">
           <div class="col-12">
             <!--start nav-->
-            <nav class="navbar navbar-expand-lg has-megamenu">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav02" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav02">
+            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#navC1">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav02" style="display: none;">
+              <div class="navbar-collapsable" id="navC1" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
-                <div class="close-div visually-hidden">
-                  <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                <div class="close-div">
+                  <button class="btn close-menu" type="button">
+                    <span class="visually-hidden">Nascondi la navigazione</span>
+                    <svg class="icon">
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Dropdown item</span>
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC1">
+                        <span>Menu Dropdown</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC1">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc" id="heading-es-5">Heading</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                             <li><span class="divider"></span></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                           </ul>
                         </div>
                       </div>
                     </li>
                     <li class="nav-item dropdown megamenu">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Megamenu Label</span>
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenuC1">
+                        <span>Megamenu</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenuC1">
                         <div class="row">
                           <div class="col-12 col-lg-4">
                             <div class="link-list-wrapper">
+                              <div class="link-list-heading">Sezione 1</div>
                               <ul class="link-list">
-                                <li>
-                                  <h3 class="no_toc">Heading 1</h3>
-                                </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1110,11 +1076,11 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                             <div class="link-list-wrapper">
                               <ul class="link-list">
                                 <li>
-                                  <h3 class="no_toc">Heading 2</h3>
+                                  <div class="link-list-heading">Sezione 2</div>
                                 </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1122,11 +1088,11 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                             <div class="link-list-wrapper">
                               <ul class="link-list">
                                 <li>
-                                  <h3 class="no_toc">Heading 3</h3>
+                                  <div class="link-list-heading">Sezione 3</div>
                                 </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1142,7 +1108,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
       </div>
     </div>
   </div>
-</div>
+</header>
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione chiara
@@ -1151,26 +1117,25 @@ Nella versione light è consigliabile aggiungere la classe `it-shadow` al tag `<
 Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto il componente.
 
 {% capture example %}
-
-<div class="it-header-wrapper it-shadow">
+<header class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza/Owner</a>
+            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
-              <nav>
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu3" role="button" aria-expanded="false" aria-controls="menu3">
-                  <span>Ente appartenenza/Owner</span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+              <nav aria-label="Navigazione secondaria">
+                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC2" role="button" aria-expanded="false" aria-controls="menuC2">
+                  <span>Ente appartenenza</span>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
-                <div class="link-list-wrapper collapse" id="menu3">
+                <div class="link-list-wrapper collapse" id="menuC2">
                   <ul class="link-list">
-                    <li><a class="list-item" href="#">Link 1</a></li>
-                    <li><a class="list-item active" href="#">Link 2 Active</a></li>
+                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
               </nav>
@@ -1178,9 +1143,10 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -1188,7 +1154,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="dropdown-item list-item" href="#"><span>ITA</span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                           <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
@@ -1213,12 +1179,12 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper">
                 <a href="#">
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
                   <div class="it-brand-text">
-                    <h2 class="no_toc">Lorem Ipsum Lorem Ipsum</h2>
-                    <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                    <div class="it-brand-title">Nome dell'Istituzione</div>
+                    <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
                   </div>
                 </a>
               </div>
@@ -1229,21 +1195,21 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                     <li>
                       <a href="#" aria-label="Facebook" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-facebook"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Github" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-github"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a href="#" aria-label="Twitter" target="_blank">
                         <svg class="icon">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -1251,9 +1217,9 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </div>
                 <div class="it-search-wrapper">
                   <span class="d-none d-md-block">Cerca</span>
-                  <a class="search-link rounded-icon" aria-label="Cerca" href="#">
+                  <a class="search-link rounded-icon" aria-label="Cerca nel sito" href="#">
                     <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-search"></use>
                     </svg>
                   </a>
                 </div>
@@ -1268,63 +1234,64 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
         <div class="row">
           <div class="col-12">
             <!--start nav-->
-            <nav class="navbar navbar-expand-lg has-megamenu">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav03" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#nav03">
+            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#navC2">
                 <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use>
+                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav03" style="display: none;">
+              <div class="navbar-collapsable" id="navC2" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
-                <div class="close-div visually-hidden">
-                  <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                <div class="close-div">
+                  <button class="btn close-menu" type="button">
+                    <span class="visually-hidden">Nascondi la navigazione</span>
+                    <svg class="icon">
+                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#"><span>link 1 active </span><span class="visually-hidden">current</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#"><span>link 2 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>link 3 </span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Dropdown item</span>
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC2">
+                        <span>Menu Dropdown</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC2">
                         <div class="link-list-wrapper">
+                          <div class="link-list-heading">Sezione</div>
                           <ul class="link-list">
-                            <li>
-                              <h3 class="no_toc" id="heading">Heading</h3>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 1</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 2</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                             <li><span class="divider"></span></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link list 4</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
                           </ul>
                         </div>
                       </div>
                     </li>
                     <li class="nav-item dropdown megamenu">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>Megamenu Label</span>
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenuC2">
+                        <span>Megamenu</span>
                         <svg class="icon icon-xs">
-                          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu">
+                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenuC2">
                         <div class="row">
                           <div class="col-12 col-lg-4">
                             <div class="link-list-wrapper">
+                              <div class="link-list-heading">Sezione 1</div>
                               <ul class="link-list">
-                                <li>
-                                  <h3 class="no_toc">Heading 1</h3>
-                                </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1332,11 +1299,11 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                             <div class="link-list-wrapper">
                               <ul class="link-list">
                                 <li>
-                                  <h3 class="no_toc">Heading 2</h3>
+                                  <div class="link-list-heading">Sezione 2</div>
                                 </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3 </span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1344,11 +1311,11 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                             <div class="link-list-wrapper">
                               <ul class="link-list">
                                 <li>
-                                  <h3 class="no_toc">Heading 3</h3>
+                                  <div class="link-list-heading">Sezione 3</div>
                                 </li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 1 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 2 </span></a></li>
-                                <li><a class="dropdown-item list-item" href="#"><span>Link list 3</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
+                                <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
                               </ul>
                             </div>
                           </div>
@@ -1364,7 +1331,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
       </div>
     </div>
   </div>
-</div>
+</header>
 {% endcapture %}{% include example.html content=example %}
 
 ## Header Sticky
@@ -1375,4 +1342,4 @@ Affinché la testata rimanga parzialmente visibile anche allo scorrere della pag
 <div class="it-header-wrapper it-header-sticky">...</div>
 ```
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/template-comuni-vuoto/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.

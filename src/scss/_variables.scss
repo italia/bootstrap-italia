@@ -235,6 +235,7 @@ $navigation-bg-color-desktop: $primary !default;
 $navigation-h-padding: 24px;
 $navigation-v-padding: 13px;
 $navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6) !default;
+$navigation-close-button-size: 44px !default;
 $navigation-close-button-text-color: $primary !default;
 $navigation-close-button-text-size: 0.75em;
 $navigation-close-button-icon-size: 2em;
@@ -249,7 +250,8 @@ $navigation-toggle-button-icon-size: 1.625em;
 $navigation-dropdown-icon-size: 0.8em;
 $navigation-dropdown-icon-line-height: 2em;
 $navigation-dropdown-icon-width: 1em;
-$navigation-disabled-item-opacity: 0.5;
+$navigation-disabled-item-opacity: 0.7 !default;
+$navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
