@@ -25,7 +25,6 @@ const removeCallBack = (id) => {
 }
 
 const onDocumentScroll = (callback) => {
-
   if (!callbacks.length) {
     document.addEventListener('scroll', (evt) => {
       if (!ticking) {
@@ -33,7 +32,6 @@ const onDocumentScroll = (callback) => {
           callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
           ticking = false
         })
-
         ticking = true
       }
     })
