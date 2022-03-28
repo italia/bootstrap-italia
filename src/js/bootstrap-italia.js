@@ -22,4 +22,4 @@ export { default as BackToTop } from './plugins/backToTop'
 
 import * as fontsLoader from './plugins/fonts-loader'
 
-export {fontsLoader}
+export { fontsLoader }
