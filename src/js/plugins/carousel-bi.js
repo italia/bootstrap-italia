@@ -111,6 +111,27 @@ const CONFIGS = {
       },
     },
   },
+  'it-calendar-wrapper': {
+    type: 'slide',
+    perPage: 4,
+    gap: 0,
+    padding: { left: 0, right: 0 },
+    arrows: false,
+    breakpoints: {
+      768: {
+        perPage: 2,
+        gap: 0,
+        padding: { left: 0, right: 0 },
+        arrows: false,
+      },
+      992: {
+        perPage: 3,
+        gap: 0,
+        padding: { left: 0, right: 0 },
+        arrows: false,
+      },
+    },
+  },
 }
 
 class CarouselBI extends BaseComponent {

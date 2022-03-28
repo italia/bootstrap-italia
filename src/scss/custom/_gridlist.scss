@@ -98,7 +98,7 @@
 
 //small - tablet
 @include media-breakpoint-up(sm) {
-  [data-masonry] {
+  .it-masonry {
     .it-grid-item-wrapper {
       .img-responsive {
         padding-bottom: initial;

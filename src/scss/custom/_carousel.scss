@@ -97,6 +97,15 @@
       }
     }
   }
+  &.it-calendar-wrapper {
+    .splide__track {
+      padding-top: 0;
+      .card.card-bg {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 //Tablet horizontal / small desktop
