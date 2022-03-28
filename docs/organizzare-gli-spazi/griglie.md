@@ -115,7 +115,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Larghezza del gutter</th>
-      <td colspan="6">30px (15px su ogni lato della colonna)</td>
+      <td colspan="6">24px (12px su ogni lato della colonna)</td>
     </tr>
     <tr>
       <th class="text-nowrap" scope="row">Annidabile</th>
