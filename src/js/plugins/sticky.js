@@ -12,6 +12,7 @@ import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 import { isScreenMobile } from './util/device'
+import onDocumentScroll from './util/on-document-scroll'
 
 const NAME = 'sticky'
 const DATA_KEY = 'bs.sticky'
@@ -43,6 +44,8 @@ class Sticky extends BaseComponent {
     this._stickyLimitMobile = 0
     this._setLimit()
 
+    this._scrollCb = null
+
     this._isMobile = isScreenMobile()
 
     this._onScroll()
@@ -66,7 +69,8 @@ class Sticky extends BaseComponent {
   // Private
   _bindEvents() {
     EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
-    EventHandler.on(window, EVENT_SCROLL, () => this._onScroll())
+    //EventHandler.on(window, EVENT_SCROLL, () => this._onScroll())
+    this._scrollCb = onDocumentScroll(() => this._onScroll())
   }
 
   _onResize() {
