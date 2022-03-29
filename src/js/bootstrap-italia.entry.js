@@ -36,6 +36,7 @@ import {
   Forward,
   Masonry,
   List,
+  Transfer,
 } from './bootstrap-italia'
 
 window.bootstrap = {
@@ -73,6 +74,7 @@ window.bootstrap = {
   SelectAutocomplete,
   Sticky,
   TrackFocus,
+  Transfer,
   UploadDragDrop,
   ValidatorSelectAutocomplete,
 }
