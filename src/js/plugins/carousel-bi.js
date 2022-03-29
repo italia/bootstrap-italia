@@ -118,6 +118,12 @@ const CONFIGS = {
     padding: { left: 0, right: 0 },
     arrows: false,
     breakpoints: {
+      560: {
+        perPage: 1,
+        gap: 0,
+        padding: { left: 24, right: 24 },
+        arrows: false,
+      },
       768: {
         perPage: 2,
         gap: 0,

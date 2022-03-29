@@ -412,7 +412,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav1">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
@@ -531,7 +531,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav0">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
@@ -638,7 +638,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav2">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
@@ -745,7 +745,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav3">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
@@ -854,7 +854,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav4">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
@@ -1012,7 +1012,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#navC1">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon">
                   <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
@@ -1235,7 +1235,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#navC2">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
                 <svg class="icon">
                   <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>

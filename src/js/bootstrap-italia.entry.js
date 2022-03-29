@@ -1,10 +1,16 @@
 import '../scss/bootstrap-italia.scss'
 import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
 
-import * as forward from './plugins/forward'
+import { loadModule } from './load-module'
 import * as fontsLoader from './plugins/fonts-loader'
 import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
+import * as headerSticky from './plugins/header-sticky'
+
+loadModule(icons)
+loadModule(fontsLoader)
+loadModule(inputs)
+loadModule(headerSticky)
 
 import {
   Dimmer,
@@ -13,7 +19,6 @@ import {
   NavBarCollapsible,
   Accordion,
   NavScroll,
-  HeaderSticky,
   TrackFocus,
   CarouselBI,
   FormValidate,
@@ -26,15 +31,15 @@ import {
   ProgressDonut,
   UploadDragDrop,
   BackToTop,
-  //Sticky,
+  Sticky,
+  HistoryBack,
+  Forward,
+  Masonry,
+  List,
+  Transfer,
 } from './bootstrap-italia'
 
 window.bootstrap = {
-  fontsLoader, //!!!
-  forward, //!!!
-
-  icons,
-  inputs,
   Alert,
   Button,
   Carousel,
@@ -54,18 +59,22 @@ window.bootstrap = {
   Cookiebar,
   Dimmer,
   FormValidate,
-  HeaderSticky,
+  Forward,
+  HistoryBack,
   Input,
   InputNumber,
   InputPassword,
   InputSearchAutocomplete,
+  List,
+  Masonry,
   NavBarCollapsible,
   NavScroll,
   Notification,
   ProgressDonut,
   SelectAutocomplete,
-  //Sticky,
+  Sticky,
   TrackFocus,
+  Transfer,
   UploadDragDrop,
   ValidatorSelectAutocomplete,
 }

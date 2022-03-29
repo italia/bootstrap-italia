@@ -8,7 +8,7 @@ export { default as Cookiebar } from './plugins/cookiebar'
 export { default as NavBarCollapsible } from './plugins/navbar-collapsible'
 export { default as Accordion } from './plugins/accordion'
 export { default as NavScroll } from './plugins/navscroll'
-export { default as HeaderSticky } from './plugins/header-sticky'
+//export { default as HeaderSticky } from './plugins/header-sticky'
 export { default as Sticky } from './plugins/sticky'
 export { default as TrackFocus } from './plugins/track-focus'
 export { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate'
@@ -19,7 +19,11 @@ export { default as InputPassword } from './plugins/input-password'
 export { default as ProgressDonut } from './plugins/progress-donut'
 export { default as UploadDragDrop } from './plugins/upload-dragdrop'
 export { default as BackToTop } from './plugins/backToTop'
+export { default as HistoryBack } from './plugins/history-back'
+export { default as Forward } from './plugins/forward'
+export { default as Masonry } from './plugins/masonry'
+export { default as List } from './plugins/list'
+export { default as Transfer } from './plugins/transfer'
 
-import * as fontsLoader from './plugins/fonts-loader'
-
-export { fontsLoader }
+//import * as fontsLoader from './plugins/fonts-loader'
+//export { fontsLoader }

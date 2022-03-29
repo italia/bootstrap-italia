@@ -1,17 +1,29 @@
-import { reflow } from 'bootstrap/js/src/util'
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
+import { reflow, getElementFromSelector } from 'bootstrap/js/src/util'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+
 const NAME = 'dimmer'
+const DATA_KEY = 'bs.dimmer'
+const EVENT_KEY = `.${DATA_KEY}`
+//const DATA_API_KEY = '.data-api'
+
+const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
+
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dimmer"]'
 
 class Dimmer extends BaseComponent {
   constructor(element) {
     super(element)
 
-    this._isShown = this._element.classList.contains(CLASS_NAME_SHOW)
+    this._isShown = false
     this._isTransitioning = false
+
+    this._init()
   }
 
   // Getters
@@ -54,6 +66,11 @@ class Dimmer extends BaseComponent {
   }
 
   //Private
+  _init() {
+    if (this._element.classList.contains(CLASS_NAME_SHOW)) {
+      this.show()
+    }
+  }
 
   _isAnimated() {
     return this._element.classList.contains(CLASS_NAME_FADE)
@@ -74,7 +91,7 @@ class Dimmer extends BaseComponent {
     this._element.classList.add(CLASS_NAME_SHOW)
 
     const transitionComplete = () => {
-      //
+      this._isTransitioning = false
     }
 
     this._queueCallback(transitionComplete, this._element, isAnimated)
@@ -88,5 +105,24 @@ class Dimmer extends BaseComponent {
     this._isTransitioning = false
   }
 }
+
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+
+SelectorEngine.find(SELECTOR_DATA_TOGGLE).forEach((toggle) => {
+  const dimmerElement = getElementFromSelector(toggle)
+  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
+
+  EventHandler.on(toggle, EVENT_CLICK, () => {
+    toggle.checked ? dimmer.show() : dimmer.hide()
+  })
+
+  if (toggle.checked) {
+    dimmer.show()
+  }
+})
 
 export default Dimmer

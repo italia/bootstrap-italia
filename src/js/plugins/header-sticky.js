@@ -1,50 +1,61 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
-
-/*
-import {
-  //defineJQueryPlugin,
-  getElementFromSelector,
-  isVisible,
-  reflow,
-  //typeCheckConfig,
-  //getSelectorFromElement,
-} from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-*/
+import { isVisible } from 'bootstrap/js/src/util'
 
-const NAME = 'headersticky'
-/*const DATA_KEY = 'bs.headersticky'
-const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'*/
+const CLASS_NAME_CLONED_HEADER = 'cloned-element'
+const CLASS_NAME_SHOW = 'show'
 
-/*
-const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+const SELECTOR_HEADER = '.it-header-sticky'
+const SELECTOR_TOGGLER = '.custom-navbar-toggler'
+const SELECTOR_MENU_WRAPPER = '.menu-wrapper'
+const SELECTOR_BRAND_WRAPPER = '.it-brand-wrapper'
+const SELECTOR_SEARCH_WRAPPER = '.it-search-wrapper'
+const SELECTOR_USER_WRAPPER = '.it-user-wrapper'
+const SELECTOR_CLONED = `.${CLASS_NAME_CLONED_HEADER}`
 
-const CLASS_NAME_FADE = 'fade'
+const toggleClonedElement = (targetHeader, toAdd = true) => {
+  const isDesktop = !isVisible(SelectorEngine.findOne(SELECTOR_TOGGLER, targetHeader))
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="navbarcollapsible"]'
-*/
+  if (isDesktop) {
+    const target = SelectorEngine.findOne(SELECTOR_MENU_WRAPPER, targetHeader)
 
-class HeaderSticky extends BaseComponent {
-  constructor(element) {
-    super(element)
+    if (toAdd) {
+      const elBrand = SelectorEngine.findOne(SELECTOR_BRAND_WRAPPER, targetHeader)
+      const elSearch = SelectorEngine.findOne(SELECTOR_SEARCH_WRAPPER, targetHeader)
+      const elUser = SelectorEngine.findOne(SELECTOR_USER_WRAPPER, targetHeader)
+
+      const clonedBrand = elBrand ? elBrand.cloneNode(true) : null
+      const clonedSearch = elSearch ? elSearch.cloneNode(true) : null
+      const clonedUser = elUser ? elUser.cloneNode(true) : null
+
+      if (clonedBrand) {
+        target.insertBefore(clonedBrand, target.childNodes[0]).classList.add(CLASS_NAME_CLONED_HEADER)
+      }
+      if (clonedSearch) {
+        target.appendChild(clonedSearch).classList.add(CLASS_NAME_CLONED_HEADER)
+      }
+      if (clonedUser) {
+        target.appendChild(clonedUser).classList.add(CLASS_NAME_CLONED_HEADER)
+        target.appendChild(clonedUser).classList.remove(CLASS_NAME_SHOW)
+      }
+    } else {
+      SelectorEngine.find(SELECTOR_CLONED, targetHeader).forEach((item) => {
+        item.parentElement.removeChild(item)
+      })
+    }
   }
-  // Getters
 
-  static get NAME() {
-    return NAME
-  }
-
-  // Public
-
-  // Private
+  /*if (toAdd) {
+    elSticky.nextElementSibling.style.paddingTop = navbarHeight + (isDesktop ? navOffsetTop - scrollToGap : navbarHeight - scrollToGap) + 'px'
+  } else {
+    elSticky.nextElementSibling.style.paddingTop = 0 + 'px'
+  }*/
 }
 
-/**
- * ------------------------------------------------------------------------
- * Data Api implementation
- * ------------------------------------------------------------------------
- */
+const init = (targetHeader) => {
+  targetHeader.addEventListener('on.bs.sticky', () => toggleClonedElement(targetHeader, true))
+  targetHeader.addEventListener('off.bs.sticky', () => toggleClonedElement(targetHeader, false))
+}
 
-export default HeaderSticky
+SelectorEngine.find(SELECTOR_HEADER).forEach((header) => {
+  init(header)
+})

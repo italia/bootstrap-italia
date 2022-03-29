@@ -1,17 +1,10 @@
-<header class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-target="#header-nav-wrapper">
+<header class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky" data-bs-target="#header-nav-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Nome della Regione</a>
-            <div class="nav-mobile">
-              <nav aria-label="Navigazione accessoria">
-                <a href="#" class="it-opener d-lg-none">
-                  <span>Nome della Regione</span>
-                </a>
-              </nav>
-            </div>
+            <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,13 +100,13 @@
         </div>
       </div>
     </div>
-    <div class="it-header-navbar-wrapper">
+    <div class="it-header-navbar-wrapper" id="header-nav-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav4">
+              <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-target="#nav4" data-bs-toggle="navbarcollapsible">
                 <svg class="icon">
                   <use href="/dist/svg/sprites.svg#it-burger"></use>
                 </svg>

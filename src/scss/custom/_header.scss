@@ -29,11 +29,16 @@
 
   &.it-header-sticky {
     &.is-sticky {
+      width: 100%;
       .it-nav-wrapper {
-        position: fixed;
+        //position: fixed;
         top: 0;
         width: 100%;
         z-index: 10; //livello +10 del it-navscroll
+      }
+
+      .it-header-slim-wrapper {
+        display: none;
       }
 
       @include media-breakpoint-up(lg) {
@@ -43,7 +48,7 @@
         }
 
         .it-header-navbar-wrapper {
-          position: fixed;
+          //position: fixed;
           width: 100%;
           top: 0;
 
@@ -56,7 +61,7 @@
             .it-brand-wrapper {
               align-self: center;
 
-              &.cloned {
+              &.cloned-element {
                 .it-brand-text {
                   display: none;
                 }
@@ -106,7 +111,7 @@
                 }
               }
 
-              &.cloned {
+              &.cloned-element {
                 a {
                   width: 35px;
                   height: 35px;

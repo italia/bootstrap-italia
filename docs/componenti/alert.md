@@ -55,7 +55,7 @@ Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avvi
 
 - Assicurati di aver caricato il plugin di alert o di aver compilato il codice Bootstrap JavaScript.
 - Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.btn-close`.
-- Sul pulsante di chiusura, aggiungi l'attributo `data-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
+- Sul pulsante di chiusura, aggiungi l'attributo `data-bs-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
 - Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi `.fade` e `.show`.
 
 Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:
@@ -64,7 +64,7 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
-  <button type="button" class="btn-close" data-dismiss="alert" aria-label="Chiudi avviso">
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso">
     <svg class="icon">
       <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
     </svg>
@@ -87,7 +87,7 @@ alertList.forEach(function (alert) {
 Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno dell'alert**, come nell'esempio seguente:
 
 ```html
-<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
   <span aria-hidden="true">&times;</span>
 </button>
 ```

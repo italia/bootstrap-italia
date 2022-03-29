@@ -14,16 +14,16 @@ toc: true
       $(this).is(':checked') ? $(dimmer).dimmerShow() : $(dimmer).dimmerHide();
     })*/
 
-    var toggles = document.querySelectorAll('[id^=toggleDimmer]')
+    /*var toggles = document.querySelectorAll('[id^=toggleDimmer]')
     toggles.forEach(function(toggle) {
       toggle.addEventListener('click', function() {
-        var dimmer = document.querySelector('#' + toggle.getAttribute('data-bs-dimmer'))
+        var dimmer = document.querySelector('#' + toggle.getAttribute('data-bs-target'))
         if (dimmer) {
           var bsDimmer = new bootstrap.Dimmer(dimmer)          
           toggle.checked ? bsDimmer.show() : bsDimmer.hide()
         }
       })
-    })
+    })*/
   });
 </script>
 
@@ -52,7 +52,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer1">
     Attiva Dimmer 1
-    <input type="checkbox" id="toggleDimmer1" data-bs-dimmer="dimmer1" checked>
+    <input type="checkbox" id="toggleDimmer1" data-bs-toggle="dimmer" data-bs-target="#dimmer1" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -114,7 +114,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer2">
     Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer2" data-bs-dimmer="dimmer2" checked>
+    <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -122,7 +122,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer dimmer-primary" id="dimmer2">
+  <div class="dimmer dimmer-primary fade" id="dimmer2">
     <div class="dimmer-inner">
       <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
     </div>
@@ -175,7 +175,7 @@ I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer3">
     Attiva Dimmer 3
-    <input type="checkbox" id="toggleDimmer3" data-bs-dimmer="dimmer3" checked>
+    <input type="checkbox" id="toggleDimmer3" data-bs-toggle="dimmer" data-bs-target="#dimmer3" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -183,7 +183,7 @@ I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer" id="dimmer3">
+  <div class="dimmer fade" id="dimmer3">
     <div class="dimmer-inner">
       <h4>Titolo Dimmer</h4>
       <div class="dimmer-buttons bg-dark">
@@ -238,7 +238,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer4">
     Attiva Dimmer 4
-    <input type="checkbox" id="toggleDimmer4" data-bs-dimmer="dimmer4" checked>
+    <input type="checkbox" id="toggleDimmer4" data-bs-toggle="dimmer" data-bs-target="#dimmer4" checked>
     <span class="lever"></span>
   </label>
 </div>
@@ -246,7 +246,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer dimmer-primary" id="dimmer4">
+  <div class="dimmer dimmer-primary fade" id="dimmer4">
     <div class="dimmer-inner">
       <h4>Titolo Dimmer</h4>
       <div class="dimmer-buttons single-button bg-dark">

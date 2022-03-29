@@ -1,0 +1,52 @@
+import BaseComponent from 'bootstrap/js/src/base-component.js'
+
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+
+const NAME = 'historyback'
+const DATA_KEY = 'bs.historyback'
+const EVENT_KEY = `.${DATA_KEY}`
+//const DATA_API_KEY = '.data-api'
+
+const EVENT_CLICK = `click${EVENT_KEY}`
+
+const SELECTOR_TOGGLE = '[data-bs-toggle="historyback"]'
+
+class HistoryBack extends BaseComponent {
+  constructor(element) {
+    super(element)
+
+    this._bindEvents()
+  }
+
+  // Getters
+
+  static get NAME() {
+    return NAME
+  }
+
+  // Public
+  back() {
+    window.history.back()
+  }
+
+  // Private
+  _bindEvents() {
+    EventHandler.on(this._element, EVENT_CLICK, (evt) => {
+      evt.preventDefault()
+      this.back()
+    })
+  }
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
+toggles.forEach((toggle) => {
+  HistoryBack.getOrCreateInstance(toggle)
+})
+
+export default HistoryBack
