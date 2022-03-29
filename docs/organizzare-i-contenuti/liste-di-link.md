@@ -383,11 +383,10 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Collapsable
+### Collapse
 
 Di seguito un esempio di navigazione annidiata collassabile.<br>
-Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del comportamento "collapse"<br>
-**La documentazione è consultabile qui:**<br> <a href="{{ site.baseurl }}/docs/componenti/collapse/#accordion">{{ site.baseurl }}/docs/componenti/collapse/#accordion</a>
+Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del [comportamento "collapse"]({{ site.baseurl }}/docs/componenti/collapse/).
 
 {% capture example %}
 

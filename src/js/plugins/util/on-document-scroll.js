@@ -32,7 +32,6 @@ const onDocumentScroll = (callback) => {
           callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
           ticking = false
         })
-
         ticking = true
       }
     })

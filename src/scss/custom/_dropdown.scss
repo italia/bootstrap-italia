@@ -162,6 +162,14 @@
     }
   }
 
+  //bottom end position
+  &[data-popper-placement='bottom-end'] {
+    &:before {
+      left: auto;
+      right: $dropdown-menu-notch-position-x / 2;
+    }
+  }
+
   //dark version
   &.dark {
     background-color: $neutral-1-a8;
