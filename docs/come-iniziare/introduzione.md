@@ -45,7 +45,7 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie _jQuery_, _popper.js_ e _Owl Carousel_ (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie _jQuery_ e _popper.js_. Vediamo nel dettaglio di cosa si tratta:
 
 <table class="table table-bordered">
   <thead>
@@ -53,7 +53,6 @@ All'interno della cartella `js` saranno invece presenti due file, che si differe
       <th scope="col">JS files</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
-      <th scope="col">OwlCarousel</th>
     </tr>
   </thead>
   <tbody>
@@ -98,7 +97,7 @@ Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo de
 
 #### Versione "bundle"
 
-Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
+Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery e Popper.js, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
 
 ```html
 <script src="./bootstrap-italia.bundle.min.js"></script>
@@ -106,10 +105,10 @@ Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori r
 
 #### Versione semplice
 
-Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
+Al contrario, nel caso si preferisca caricare jQuery e Popper.js separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
 
 ```html
-{{ site.cdn.jquery }} {{ site.cdn.popper }} {{ site.cdn.owlcarousel }}
+{{ site.cdn.jquery }} {{ site.cdn.popper }}
 <script src="./bootstrap-italia.min.js"></script>
 ```
 

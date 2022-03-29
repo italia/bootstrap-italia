@@ -68,7 +68,6 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 - [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, licenza MIT
 - [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., licenza MIT
 - [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, licenza MIT
-- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), licenza MIT
 - [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, licenza BSD
 
 ### Principali dipendenze per la fase di compilazione e sviluppo
