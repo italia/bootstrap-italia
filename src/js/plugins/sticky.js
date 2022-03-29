@@ -193,7 +193,7 @@ class Sticky extends BaseComponent {
   _createWrapper() {
     const wrapper = document.createElement('div')
     wrapper.classList.add(CLASS_NAME_WRAPPER)
-    wrapper.style.width = this._element.getBoundingClientRect().width + 'px'
+    wrapper.style.width = '100%' //this._element.getBoundingClientRect().width + 'px'
     wrapper.style.height = this._element.getBoundingClientRect().height + 'px'
     wrapper.style.overflow = 'hidden'
     // insert wrapper before el in the DOM tree
