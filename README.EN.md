@@ -61,7 +61,6 @@ Software components distributed with Bootstrap Italia that have their own differ
 - [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, MIT license
 - [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., MIT license
 - [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, MIT license
-- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) © Owl (David Deutsch), MIT license
 - [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, BSD
 
 ### Main dependencies for the compilation and development phase
