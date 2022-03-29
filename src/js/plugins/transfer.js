@@ -1,16 +1,16 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
-import {
+/*import {
   //defineJQueryPlugin,
   //getElementFromSelector,
   //isVisible,
   //reflow,
   //typeCheckConfig,
   getSelectorFromElement, //in base al bs-target
-} from 'bootstrap/js/src/util'
+} from 'bootstrap/js/src/util'*/
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+//import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
 const NAME = 'transfer'
 const DATA_KEY = 'bs.transfer'
@@ -46,8 +46,8 @@ class Transfer extends BaseComponent {
     this._invBtnElement = SelectorEngine.findOne(SELECTOR_BTN_TRANS_BACK, this._element)
     this._resetBtnElement = SelectorEngine.findOne(SELECTOR_BTN_RESET, this._element)
     this._listDefault = {
-      source: SelectorEngine.find(SELECTOR_SOURCE + ' ' + SELECTOR_FORM_CHECK, this._element),
-      target: SelectorEngine.find(SELECTOR_TARGET + ' ' + SELECTOR_FORM_CHECK, this._element),
+      source: SelectorEngine.find(SELECTOR_SOURCE + ' ' + SELECTOR_TRANS_GROUP + ' ' + SELECTOR_FORM_CHECK, this._element),
+      target: SelectorEngine.find(SELECTOR_TARGET + ' ' + SELECTOR_TRANS_GROUP + ' ' + SELECTOR_FORM_CHECK, this._element),
     }
 
     this._bindEvents()
@@ -236,15 +236,18 @@ class Transfer extends BaseComponent {
 
     Object.keys(blocks).forEach((key) => {
       blocks[key].list.forEach((item) => item.closest(SELECTOR_FORM_CHECK).remove())
+    })
+
+    Object.keys(blocks).forEach((key) => {
       this._listDefault[key].forEach((item) => {
         item.checked = false
         blocks[key].group.appendChild(item)
       })
       blocks[key].labelNumHead.innerText = this._listDefault[key].length
 
-      blocks[key].head.removeAttribute('disabled')
-      blocks[key].head.classList.remove(CLASS_NAME_SEMICHECKED)
-      blocks[key].head.checked = false
+      blocks[key].inputHead.removeAttribute('disabled')
+      blocks[key].inputHead.classList.remove(CLASS_NAME_SEMICHECKED)
+      blocks[key].inputHead.checked = false
     })
   }
 }
