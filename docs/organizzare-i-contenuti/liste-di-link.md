@@ -408,23 +408,37 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+    <li>
+      <a class="list-item large medium icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span class="list-item-title">Link lista 1</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        </span>
       </a>
     </li>
-    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
+    <li>
+      <a class="list-item large medium icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span class="list-item-title">Link lista 2</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        </span>
+      </a>
       <ul class="link-sublist" id="">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 2</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
+        <li><a class="list-item" href="#"><span>Link lista 3</span></a>
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#"><span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
+    <li>
+      <a class="list-item large medium icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span class="list-item-title">Link lista 3</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        </span>
+      </a>
     </li>
   </ul>
 </div>
@@ -439,9 +453,13 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-      <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+    <li>
+      <a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+        <span class="list-item-title-icon-wrapper">
+          <span>Link lista 1</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+        </span>
+      </a>
       <ul class="link-sublist collapse" id="collapseOne">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
@@ -451,9 +469,13 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-      <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+    <li>
+      <a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+        <span class="list-item-title-icon-wrapper">
+          <span>Link lista 2</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+        </span>
+      </a>
       <ul class="link-sublist collapse" id="collapseTwo">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
@@ -463,9 +485,13 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </li>
       </ul>
     </li>
-    <li><a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-      <span>Link lista 1</span>
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+    <li>
+      <a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+        <span class="list-item-title-icon-wrapper">
+          <span>Link lista 3</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+        </span>
+      </a>
       <ul class="link-sublist collapse" id="collapseThree">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
