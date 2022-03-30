@@ -49,6 +49,12 @@
             padding-left: 0;
           }
         }
+        &.icon-right {
+          .list-item-title-icon-wrapper {
+            justify-content: space-between;
+            margin-right: 0;
+          }
+        }
         &[data-bs-toggle] {
           .icon {
             transition: transform 0.3s;
