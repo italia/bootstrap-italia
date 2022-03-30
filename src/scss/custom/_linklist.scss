@@ -41,7 +41,8 @@
         display: block;
         padding: 0 $link-list-h-pad;
         text-decoration: none;
-        &.icon-right {
+        &.icon-right,
+        &.icon-left {
           padding-left: 0;
           padding-right: 0;
           & + ul {
@@ -88,12 +89,12 @@
         }
         .icon {
           display: inline-block;
-          margin: 8px 0;
           flex-shrink: 0;
         }
         .list-item-title-icon-wrapper {
           display: flex;
           align-items: center;
+          padding: $link-list-icon-v-padding 0;
           .list-item-title {
             margin-right: $link-list-h-pad;
           }
@@ -156,20 +157,12 @@
 
         &.list-item {
           &.icon-left {
-            .icon {
-              margin-right: calc($grid-gutter-width / 2);
-            }
             p {
               margin-left: 30px;
             }
           }
           &.icon-left,
           &.left-icon {
-            position: relative;
-            display: flex;
-            span {
-              margin-top: $v-gap * 0.5;
-            }
             p {
               width: 100%;
             }
@@ -189,7 +182,6 @@
             }
           }
         }
-
       }
     }
     .divider {
@@ -241,6 +233,8 @@
   &.multiline {
     .list-item-title-icon-wrapper {
       justify-content: space-between;
+      margin-bottom: $v-gap / 2;
+      padding: 0;
     }
     .list-item {
       &.icon-right {

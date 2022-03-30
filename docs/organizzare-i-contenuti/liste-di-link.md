@@ -177,7 +177,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo l
     <li>
       <a class="list-item disabled icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
-          <span>Link lista 1 disabilitato</span>
+          <span class="list-item-title">Link lista 1 disabilitato</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
@@ -200,25 +200,37 @@ Per aggiungere un'icona è possibile aggiungere al tag `<a>` la classe `icon-rig
 
 **Icona sinistra**<br>
 
-All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, puoi inserire il tag `svg` necessario
+All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito prima del tag `<span class="list-item-title">` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
 Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`
 
 {% capture example %}
 
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active icon-left" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-        <span>Link lista 1 attivo</span>
-    </a></li>
-    <li><a class="list-item icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-      <span>Link lista 1</span>
-    </a></li>
-    <li><a class="list-item disabled icon-left" href="#">
-      <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-      <span>Link lista 1 disabilitato</span>
-    </a></li>
+    <li>
+      <a class="list-item active icon-left" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+          <span class="list-item-title">Link lista 1 attivo</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="list-item icon-left" href="#">
+       <span class="list-item-title-icon-wrapper">
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+          <span class="list-item-title">Link lista 2</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="list-item icon-left disabled" href="#">
+       <span class="list-item-title-icon-wrapper">
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+          <span class="list-item-title">Link lista 3 disabilitata</span>
+        </span>
+      </a>
+    </li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
