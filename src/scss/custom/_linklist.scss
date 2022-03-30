@@ -107,6 +107,11 @@
         }
         // icone destre dentro link
         &.right-icon {
+          .list-item-title-icon-wrapper {
+            padding-right: 0;
+            margin-right: 0;
+            justify-content: space-between;
+          }
           .icon {
             transition: transform $dropdown-menu-animation-speed;
             &.secondary {

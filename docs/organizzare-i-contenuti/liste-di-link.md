@@ -456,7 +456,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     <li>
       <a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
         <span class="list-item-title-icon-wrapper">
-          <span>Link lista 1</span>
+          <span class="list-item-title">Link lista 1</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
@@ -472,7 +472,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     <li>
       <a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
         <span class="list-item-title-icon-wrapper">
-          <span>Link lista 2</span>
+          <span class="list-item-title">Link lista 2</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
@@ -488,7 +488,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
     <li>
       <a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
         <span class="list-item-title-icon-wrapper">
-          <span>Link lista 3</span>
+          <span class="list-item-title">Link lista 3</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
