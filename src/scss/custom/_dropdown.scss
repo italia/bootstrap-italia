@@ -166,7 +166,7 @@
   &[data-popper-placement='bottom-end'] {
     &:before {
       left: auto;
-      right: $dropdown-menu-notch-position-x / 2;
+      right: calc($dropdown-menu-notch-position-x / 2);
     }
   }
 
