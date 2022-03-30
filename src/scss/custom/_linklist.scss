@@ -178,14 +178,14 @@
             position: relative;
             display: flex;
             span {
-              margin-top: $v-gap;
+              margin-top: $v-gap * 0.5;
             }
             p {
               width: 100%;
             }
             .icon {
               left: 0;
-              margin:4px 8px 4px 0;
+              margin-left: 0;
               flex-shrink: 0;
             }
           }
