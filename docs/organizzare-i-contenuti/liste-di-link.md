@@ -146,32 +146,44 @@ Per aggiungere un icona bisogna aggiungere al tag `<a>` la classi:<br>
 `icon-right` : se si vuole posizionare l'icona a destra del testo<br>
 `icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
 
-All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
+All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
 
 {% capture example %}
 
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
-    <li><a class="list-item active icon-right" href="#">
-        <span>Link lista 1 attivo</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
+    <li>
+      <a class="list-item active icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span class="list-item-title">Link lista 1 attivo</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+        </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+      </a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item icon-right" href="#">
-        <span>Link lista 1</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
+    <li>
+      <a class="list-item icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span class="list-item-title">Link lista 1</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+        </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+      </a>
     </li>
     <li><span class="divider"></span>
     </li>
-    <li><a class="list-item disabled icon-right" href="#">
-        <span>Link lista 1 disabilitato</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p></a>
+    <li>
+      <a class="list-item disabled icon-right" href="#">
+        <span class="list-item-title-icon-wrapper">
+          <span>Link lista 1 disabilitato</span>
+          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+        </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+      </a>
     </li>
-    <li><span class="divider"></span>
+    <li><span class="divider"></span> 
     </li>
   </ul>
 </div>
