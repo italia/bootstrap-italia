@@ -67,6 +67,7 @@
   .upload {
     //button styling
     &[type='file'] + label {
+      font-weight: 600;
       height: 128px;
       width: 128px;
       border-radius: 0;
@@ -190,6 +191,7 @@
     p {
       margin: 0;
       font-size: 0.889rem;
+      font-weight: 600;
       text-overflow: ellipsis;
       white-space: nowrap;
       margin-left: 12px;
@@ -376,7 +378,8 @@
   h5 {
     margin: 0;
     font-size: 1.333rem;
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.3;
     color: $neutral-1;
   }
 }
@@ -429,8 +432,8 @@
     &:before {
       content: '';
       background: #fff;
-      width: 90px;
-      height: 90px;
+      width: 67px;
+      height: 67px;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
@@ -527,8 +530,8 @@
     .progress-donut {
       &:before {
         content: '';
-        width: 120px;
-        height: 120px;
+        width: 94px;
+        height: 94px;
       }
     }
   }
