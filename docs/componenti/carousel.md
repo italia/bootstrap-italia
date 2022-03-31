@@ -876,3 +876,37 @@ div **`it-carousel-wrapper`** :
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+Abilitarlo manualmente con:
+
+```js
+var elementList = [].slice.call(document.querySelectorAll('.splide'))
+var masonryList = elementList.map(function (element) {
+  return new bootstrap.CarouselBI(element)
+})
+```
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dispose</td>
+      <td>Rimuove le funzionalità di CarouselBI</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza CarouselBI associata ad un elememento del DOM. Esempio: <code>bootstrap.CarouselBI.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza CarouselBI associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.CarouselBI.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
