@@ -279,7 +279,11 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+            <span class="list-item-title-icon-wrapper">
+              <span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            </span>
+          </a>
           <ul class="link-sublist collapse show" id="collapseFour">
             <li><a class="list-item active" href="#"><span>Link lista 1.1 (attivo)</span></a>
             </li>
@@ -290,7 +294,11 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="list-item-title-icon-wrapper">
+              <span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            </span>
+          </a>
           <ul class="link-sublist collapse" id="collapseFive">
             <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
             </li>
@@ -301,7 +309,11 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+            <span class="list-item-title-icon-wrapper">
+              <span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            </span>
+          </a>
           <ul class="link-sublist collapse" id="collapseSix">
             <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
             </li>
