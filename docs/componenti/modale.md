@@ -67,15 +67,15 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title" id="modal1Title">dialog header</h5>
+               <h5 class="modal-title" id="modal1Title">Intestazione modale</h5>
             </div>
             <div class="modal-body">
-               <p id="modal1Description">Modal purpose description text.</p>
+               <p id="modal1Description">Descrizione scopo della modale.</p>
                <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
-               <button class="btn btn-primary btn-sm" type="button">Action one</button>
+               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
+               <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
             </div>
          </div>
       </div>
@@ -88,15 +88,15 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modal1Title">dialog header</h5>
+          <h5 class="modal-title" id="modal1Title">Intestazione modale</h5>
         </div>
         <div class="modal-body">
-          <p id="modal1Description">Modal purpose description text.</p>
+          <p id="modal1Description">Descrizione scopo della modale.</p>
           <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
-          <button class="btn btn-primary btn-sm" type="button">Action one</button>
+          <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
+          <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
         </div>
       </div>
     </div>
@@ -111,7 +111,7 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 
 {% capture example %}
-<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
 <svg class="icon">
 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
 </svg>
@@ -127,15 +127,15 @@ Esempio completo:
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title" id="modal2Title">This is a notification message</h5>
-               <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+               <h5 class="modal-title" id="modal2Title">Questo è un messaggio di notifica</h5>
+               <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                   <svg class="icon">
                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
                   </svg>
                </button>
             </div>
             <div class="modal-body">
-               <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+               <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
             </div>
             <div class="modal-footer">
                <button class="btn btn-primary btn-sm" type="button">Ok</button>
@@ -161,10 +161,10 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use>
           </svg>
-          <h5 class="modal-title" id="modal3Title">This is a notification message more long than usual</h5>
+          <h5 class="modal-title" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h5>
         </div>
         <div class="modal-body">
-          <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+          <p>In questo caso viene fornito solo un bottone di conferma della modale.</p>
         </div>
         <div class="modal-footer">
           <button class="btn btn-primary btn-sm" type="button">Ok</button>
@@ -187,7 +187,7 @@ Di seguito una modale con un elenco di radio button.
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h5 class="modal-title" id="modal4Title">Choose an item</h5>
+               <h5 class="modal-title" id="modal4Title">Scegli una opzione</h5>
             </div>
             <div class="modal-body">
                <div class="form-check">
@@ -204,7 +204,7 @@ Di seguito una modale con un elenco di radio button.
                </div>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
+               <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Annulla</button>
                <button class="btn btn-primary btn-sm" type="button" disabled="">Ok</button>
             </div>
          </div>
@@ -235,7 +235,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                            <svg class="icon icon-primary">
                               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
                            </svg>
-                           <span>Link list 1</span>
+                           <span>Link lista 1</span>
                         </a>
                      </li>
                      <li>
@@ -243,7 +243,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                            <svg class="icon icon-primary">
                               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
                            </svg>
-                           <span>Link list 1</span>
+                           <span>Link lista 2</span>
                         </a>
                      </li>
                      <li>
@@ -251,7 +251,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
                            <svg class="icon icon-primary">
                               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
                            </svg>
-                           <span>Link list 1</span>
+                           <span>Link lista 3</span>
                         </a>
                      </li>
                   </ul>
@@ -283,8 +283,8 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
                     <p>Font Titillium 14px. Leading 21px.</p>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
+                    <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
                   </div>
               </div>
             </div>
@@ -296,14 +296,14 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal7Title">Popconfirm header</h5>
+                    <h5 class="modal-title" id="modal7Title">Intestazione Popconfirm</h5>
                   </div>
                   <div class="modal-body">
                     <p>Font Titillium 14px. Leading 21px.</p>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn btn-primary btn-sm" type="button">Action one</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Action two</button>
+                    <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
                   </div>
               </div>
             </div>
@@ -324,13 +324,13 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLiveTitle">dialog header</h5>
+        <h5 class="modal-title" id="exampleModalLiveTitle">Intestazione modale</h5>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Close</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Chiudi modale</button>
       </div>
     </div>
   </div>
@@ -351,13 +351,13 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalTitle">dialog header</h5>
+        <h5 class="modal-title" id="exampleModalTitle">Intestazione modale</h5>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Close</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Chiudi modale</button>
       </div>
     </div>
   </div>
@@ -373,8 +373,8 @@ pagina stessa.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLongTitle">Intestazione modale</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
           </svg>
@@ -384,8 +384,8 @@ pagina stessa.
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" type="button">Action 1</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Annulla</button>
+        <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
       </div>
     </div>
   </div>
@@ -406,8 +406,8 @@ pagina stessa.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">dialog header</h5>
-        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLongTitle">Intestazione modale</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
           </svg>
@@ -439,8 +439,8 @@ pagina stessa.
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" type="button">Action 1</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Annulla</button>
+        <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
       </div>
     </div>
   </div>
@@ -449,21 +449,21 @@ pagina stessa.
 
 ### Scroll di contenuti all'interno della modale
 
-Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo sempre visibile l'intestazione ed il footer della modale stessa aggiungendo la classe `.it-dialog-scrollable` all'elemento `<div class="modal">`
+Si può scegliere di utilizzare uno scroll interno alla modale, mantenendo sempre visibile l'intestazione ed il footer della modale stessa aggiungendo la classe `.it-dialog-scrollable` all'elemento `<div class="modal">`
 
 <div class="modal it-dialog-scrollable fade" tabindex="-1" role="dialog" id="exampleModalLongFixed" aria-labelledby="exampleModalLongFixedTitle">
    <div class="modal-dialog" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongFixedTitle">dialog header
+            <h5 class="modal-title" id="exampleModalLongFixedTitle">Intestazione modale
             </h5>
          </div>
          <div class="modal-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
          </div>
          <div class="modal-footer">
-            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
-            <button class="btn btn-primary btn-sm" type="button">Action 1</button>
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Annulla</button>
+            <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
          </div>
       </div>
    </div>
@@ -484,7 +484,7 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongFixedTitle">dialog header</h5>
+        <h5 class="modal-title" id="exampleModalLongFixedTitle">Intestazione modale</h5>
       </div>
       <div class="modal-body">
         <p>
@@ -512,8 +512,8 @@ Si può scelgliere di utilizzare uno scroll interno alla madole, mantenendo semp
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-primary btn-sm" type="button">Action 1</button>
+        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Annulla</button>
+        <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
       </div>
     </div>
   </div>
@@ -530,15 +530,15 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="modalCenterTitle">Questo è un messaggio di notifica</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
                </svg>
             </button>
          </div>
          <div class="modal-body">
-            <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+            <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
          </div>
          <div class="modal-footer">
             <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
@@ -560,15 +560,15 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalCenterTitle">This is a notification message</h5>
-        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="modalCenterTitle">Questo è un messaggio di notifica</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
           </svg>
         </button>
       </div>
       <div class="modal-body">
-        <p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
+        <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
@@ -588,8 +588,8 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
    <div class="modal-dialog modal-dialog-left" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="modalLeftTitle">Questo è un messaggio di notifica</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
                </svg>
@@ -618,8 +618,8 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
   <div class="modal-dialog modal-dialog-left" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalLeftTitle">This is a notification message</h5>
-        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="modalLeftTitle">Questo è un messaggio di notifica</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
           </svg>
@@ -668,8 +668,8 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
    <div class="modal-dialog modal-dialog-right" role="document">
       <div class="modal-content">
          <div class="modal-header">
-            <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="modalrightTitle">Questo è un messaggio di notifica</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                <svg class="icon">
                   <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
                </svg>
@@ -698,8 +698,8 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
   <div class="modal-dialog modal-dialog-right" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalrightTitle">This is a notification message</h5>
-        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="modalrightTitle">Questo è un messaggio di notifica</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
           </svg>
@@ -790,7 +790,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="myLargeModalLabel">Modale grande</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -809,7 +809,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

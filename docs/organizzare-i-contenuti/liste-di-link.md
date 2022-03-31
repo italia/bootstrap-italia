@@ -264,7 +264,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
     <li>
       <a class="list-item icon-right disabled" href="#">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 2</span>
+          <span class="list-item-title">Link lista 3 disabilitata</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
         </span>
       </a>
@@ -308,7 +308,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito prima 
     <li>
       <a class="list-item disabled icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1 disabilitato con icona a destra</span>
+          <span class="list-item-title">Link lista 3 disabilitato con icona a destra</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
         </span>
       </a>
