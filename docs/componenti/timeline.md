@@ -33,14 +33,14 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>maggio 2022</span></div>
+          <div class="pin-text"><span>maggio {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
               <div class="category-top">
                 <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2022</span>
+                <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
               <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -64,7 +64,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>giugno 2022</span></div>
+          <div class="pin-text"><span>giugno {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
@@ -84,14 +84,14 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>luglio 2022</span></div>
+          <div class="pin-text"><span>luglio {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
               <div class="category-top">
                 <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2022</span>
+                <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
               <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -117,7 +117,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>agosto 2022</span></div>
+          <div class="pin-text"><span>agosto {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
@@ -137,14 +137,14 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>settembre 2022</span></div>
+          <div class="pin-text"><span>settembre {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
               <div class="category-top">
                 <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2022</span>
+                <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
               <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -169,7 +169,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>ottobre 2022</span></div>
+          <div class="pin-text"><span>ottobre {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
@@ -189,14 +189,14 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>novembre 2022</span></div>
+          <div class="pin-text"><span>novembre {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
               <div class="category-top">
                 <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2022</span>
+                <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
               <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -221,7 +221,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
             </svg>
           </div>
-          <div class="pin-text"><span>dicembre 2022</span></div>
+          <div class="pin-text"><span>dicembre {{'now' | date: "%Y"}}</span></div>
         </div>
         <div class="card-wrapper">
           <div class="card">

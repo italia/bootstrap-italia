@@ -101,7 +101,7 @@ Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi 
         <div class="card-body">
           <div class="category-top">
             <a class="category" href="#">Categoria</a>
-            <span class="data">10/12/2022</span>
+            <span class="data">10/12/{{ 'now' | date: "%Y" }}</span>
           </div>
           <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -319,7 +319,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
         <div class="card-body">
           <div class="head-tags">
             <a class="card-tag" href="#">Tag</a>
-            <span class="data">10/10/2022</span>
+            <span class="data">10/10/{{'now' | date: "%Y"}}</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -480,7 +480,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
           </div>
         </div>
         <div class="card-body">
-          <div class="head-tags"><span class="data">10/10/2022</span>
+          <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
         </div>

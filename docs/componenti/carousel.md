@@ -198,7 +198,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <div class="category-top">
                   <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/2022</span>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -221,7 +221,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <div class="category-top">
                   <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/2022</span>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -244,7 +244,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <div class="category-top">
                   <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/2022</span>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -267,7 +267,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card-body">
                 <div class="category-top">
                   <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/2022</span>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -316,7 +316,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <div class="card-body">
                   <div class="category-top">
                     <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/2022</span>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -348,7 +348,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <div class="card-body">
                   <div class="category-top">
                     <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/2022</span>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -380,7 +380,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 <div class="card-body">
                   <div class="category-top">
                     <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/2022</span>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -575,7 +575,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -594,7 +594,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -613,7 +613,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -632,7 +632,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -651,7 +651,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -670,7 +670,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2022</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>

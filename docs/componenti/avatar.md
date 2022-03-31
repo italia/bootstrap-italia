@@ -659,7 +659,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
     </div>
     <div class="extra-text">
       <h4><a href="#">Mario Rossi</a></h4>
-      <time datetime="2022-09-15">15 Set 2022</time>
+      <time datetime="{{'now' | date: "%Y"}}-09-15">15 Set {{'now' | date: "%Y"}}</time>
     </div>
   </div>
   <div class="avatar-wrapper avatar-extra-text">
@@ -677,7 +677,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
     </div>
     <div class="extra-text">
       <h4><a href="#">Michele Dotti</a></h4>
-      <time datetime="2022-05-12">12 Mag 2022</time>
+      <time datetime="{{'now' | date: "%Y"}}-05-12">12 Mag {{'now' | date: "%Y"}}</time>
     </div>
   </div>
 </div>
