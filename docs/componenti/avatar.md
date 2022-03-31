@@ -208,14 +208,14 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
-      <a class="list-item" href="#">
+      <a class="dropdown-item list-item" href="#">
         <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
         </div>
         <span>Mario Rossi</span>
       </a>
     </li>
     <li>
-      <a class="list-item" href="#">
+      <a class="dropdown-item list-item" href="#">
         <div class="avatar avatar-orange size-sm complementary-3-bg">
           <p aria-hidden="true">A</p>
         </div>
@@ -251,7 +251,7 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
-      <a class="list-item" href="#">
+      <a class="dropdown-item list-item" href="#">
         <div class="avatar size-md"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
         </div>
         <span>Mario Rossi</span>
@@ -353,13 +353,13 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
-                <a class="list-item" href="#">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi"></div>
                   <span>Mario Rossi</span>
                 </a>
               </li>
               <li>
-                <a class="list-item" href="#">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar avatar-green size-sm complementary-3-bg">
                     <p aria-hidden="true">A</p>
                   </div>
@@ -437,7 +437,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
-                <a class="list-item" href="#">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-md">
                     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
                   </div>
@@ -445,7 +445,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
                 </a>
               </li>
               <li>
-                <a class="list-item" href="#">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar avatar-green size-md">
                     <p aria-hidden="true">AG</p>
                   </div>
@@ -659,7 +659,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
     </div>
     <div class="extra-text">
       <h4><a href="#">Mario Rossi</a></h4>
-      <time datetime="2018-09-15">15 Set 2018</time>
+      <time datetime="2022-09-15">15 Set 2022</time>
     </div>
   </div>
   <div class="avatar-wrapper avatar-extra-text">
@@ -677,7 +677,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
     </div>
     <div class="extra-text">
       <h4><a href="#">Michele Dotti</a></h4>
-      <time datetime="2018-05-12">12 Mag 2018</time>
+      <time datetime="2022-05-12">12 Mag 2022</time>
     </div>
   </div>
 </div>

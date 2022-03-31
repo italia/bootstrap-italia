@@ -27,13 +27,13 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
-        <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
+        <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
         </li>
-        <li><a class="list-item medium disabled" href="#"><span>Link list disabled </span></a>
+        <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 3</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
     </div>
@@ -41,11 +41,11 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item disabled" href="#"><span>Secondary item disabled </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
@@ -66,13 +66,13 @@ La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/d
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
-        <li><a class="list-item medium active left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list active </span></a>
+        <li><a class="list-item medium active left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (attivo)</span></a>
         </li>
-        <li><a class="list-item medium disabled left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list disabled </span></a>
+        <li><a class="list-item medium disabled left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 2 (disabilitato)</span></a>
         </li>
-        <li><a class="list-item medium left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list</span></a>
+        <li><a class="list-item medium left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 3</span></a>
         </li>
-        <li><a class="list-item medium left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link list</span></a>
+        <li><a class="list-item medium left-icon" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 4</span></a>
         </li>
       </ul>
     </div>
@@ -80,11 +80,11 @@ La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/d
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
@@ -105,13 +105,13 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
-        <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
+        <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
         </li>
-        <li><a class="list-item medium disabled" href="#"><span>Link list disabled </span></a>
+        <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 3</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
     </div>
@@ -119,11 +119,11 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item disabled" href="#"><span>Secondary item disabled </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
@@ -144,13 +144,13 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
-        <li><a class="list-item medium active" href="#"><span>Link list active </span></a>
+        <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
         </li>
-        <li><a class="list-item medium disabled" href="#"><span>Link list disabled </span></a>
+        <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 3</span></a>
         </li>
-        <li><a class="list-item medium" href="#"><span>Link list</span></a>
+        <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
     </div>
@@ -158,11 +158,11 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item disabled" href="#"><span>Secondary item disabled </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
@@ -182,35 +182,35 @@ La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizz
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span>Link list selected </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon active" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse show" id="collapseOne">
-            <li><a class="list-item active" href="#"><span>Link list 1 active </span></a>
+            <li><a class="list-item active" href="#"><span>Link lista 1.1 (attivo)</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
             </li>
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link lista 2</span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse" id="collapseTwo">
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
             </li>
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1 </span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link lista 3</span><svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse" id="collapseThree">
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
             </li>
           </ul>
         </li>
@@ -220,11 +220,11 @@ La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizz
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
@@ -244,35 +244,35 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span>Link list selected </span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse show" id="collapseFour">
-            <li><a class="list-item active" href="#"><span>Link list 1 active </span></a>
+            <li><a class="list-item active" href="#"><span>Link lista 1.1 (attivo)</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
             </li>
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1 </span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse" id="collapseFive">
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
             </li>
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1 </span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
           <ul class="link-sublist collapse" id="collapseSix">
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
             </li>
-            <li><a class="list-item" href="#"><span>Link list 1 </span></a>
+            <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
             </li>
           </ul>
         </li>
@@ -282,11 +282,11 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Secondary item active </span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
         </li>
-        <li><a class="list-item" href="#"><span>Secondary item </span></a>
+        <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
     </div>
