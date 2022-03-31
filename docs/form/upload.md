@@ -139,7 +139,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
   <ul class="upload-file-list upload-file-list-image">
     <li class="upload-file success">
       <div class="upload-image">
-        <img src="https://picsum.photos/40/40?image=1055" alt="imagealt">
+        <img src="https://picsum.photos/40/40?image=1055" alt="descrizione immagine">
       </div>
       <p>
         <span class="visually-hidden">Immagine caricata:</span>
@@ -152,7 +152,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
     </li>
     <li class="upload-file success">
       <div class="upload-image">
-        <img src="https://picsum.photos/80/40?image=1056" alt="imagealt">
+        <img src="https://picsum.photos/80/40?image=1056" alt="descrizione immagine">
       </div>
       <p>
         <span class="visually-hidden">Immagine caricata:</span>
@@ -165,7 +165,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
     </li>
     <li class="upload-file uploading">
       <div class="upload-image">
-        <img src="https://picsum.photos/40/40?image=1057" alt="imagealt">
+        <img src="https://picsum.photos/40/40?image=1057" alt="descrizione immagine">
       </div>
       <p>
         <span class="visually-hidden">Caricamento immagine:</span>
@@ -181,7 +181,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
     </li>
     <li class="upload-file error">
       <div class="upload-image">
-        <img src="https://picsum.photos/120/200?image=1058" alt="imagealt">
+        <img src="https://picsum.photos/120/200?image=1058" alt="descrizione immagine">
       </div>
       <p>
         <span class="visually-hidden">Errore caricamento immagine:</span>
@@ -216,7 +216,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
       <p><strong>Dimensione Standard</strong></p>
       <div class="avatar-upload-wrapper">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="imagealt">
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="descrizione immagine">
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload3" id="upload3" class="upload-avatar"/>
             <label for="upload3">
@@ -235,7 +235,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
       <p><strong>Dimensione Piccola</strong></p>
       <div class="avatar-upload-wrapper size-sm">
         <div class="avatar size-xxl avatar-upload">
-          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="imagealt">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="descrizione immagine">
           <form class="upload-avatar-container" method="post" action="" enctype="multipart/form-data">
             <input type="file" name="upload4" id="upload4" class="upload-avatar"/>
             <label for="upload4">
@@ -283,12 +283,12 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
   <ul class="upload-pictures-wall">
     <li>
       <div class="upload-image">
-        <img src="https://picsum.photos/128/128?image=1020" alt="imagealt">
+        <img src="https://picsum.photos/128/128?image=1020" alt="descrizione immagine">
       </div>
     </li>
     <li>
       <div class="upload-image">
-        <img src="https://picsum.photos/128/128?image=1038" alt="imagealt">
+        <img src="https://picsum.photos/128/128?image=1038" alt="descrizione immagine">
       </div>
     </li>
     <li>
@@ -331,7 +331,7 @@ $('#IDPROGRESS').circularloader({
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
   <div class="upload-dragdrop-image">
-    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
       <div class="progress-donut"></div>
     </div>
@@ -353,7 +353,7 @@ $('#IDPROGRESS').circularloader({
 
 <form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data">
   <div class="upload-dragdrop-image">
-    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
       <div class="progress-donut"></div>
     </div>
@@ -375,7 +375,7 @@ $('#IDPROGRESS').circularloader({
 
 <form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
   <div class="upload-dragdrop-image">
-    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
       <div class="progress-donut"></div>
     </div>
@@ -402,7 +402,7 @@ $('#IDPROGRESS').circularloader({
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">
   <div class="upload-dragdrop-image">
-    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="imagealt" aria-hidden="true">
+    <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
       <div class="progress-donut"></div>
     </div>

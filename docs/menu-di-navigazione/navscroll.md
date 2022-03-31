@@ -47,35 +47,35 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -110,35 +110,35 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -182,35 +182,35 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -225,42 +225,42 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
 
-Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una link list collassabile.
+Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Link lista collassabile.
 
-Per maggiori informazioni, si può fare riferimento alla [documentazione dei Link List]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
+Per maggiori informazioni, si può fare riferimento alla [documentazione dei Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
 
 {% capture example %}
 
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link lista 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseOne">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link lista 2</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseTwo">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li><a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link lista 3</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
         <ul class="link-sublist collapse" id="collapseThree">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
           </li>
         </ul>
       </li>

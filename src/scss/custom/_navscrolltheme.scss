@@ -18,6 +18,9 @@
             background: $navscroll-dark-bg-color;
             color: $navscroll-dark-text-color;
             .link-list-wrapper {
+              h3 {
+                color: $navscroll-dark-text-color;
+              }
               ul {
                 li {
                   a {
@@ -67,6 +70,9 @@
             background: $navscroll-dark-bg-color;
             color: $navscroll-dark-text-color;
             .link-list-wrapper {
+              h3 {
+                color: $navscroll-dark-text-color;
+              }
               ul {
                 li {
                   a {
