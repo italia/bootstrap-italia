@@ -165,13 +165,13 @@
           display: inline;
           font-weight: 600;
         }
-        ul li a{
+        ul li a {
           display: flex;
           align-items: center;
         }
         ul li a .icon {
           margin: $link-list-toggle-margin 0;
-          &.left{
+          &.left {
             margin-right: 8px;
           }
         }

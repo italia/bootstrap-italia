@@ -234,7 +234,13 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lis
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link lista 1</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 1</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
           </li>
@@ -244,7 +250,13 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lis
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link lista 2</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 2</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseTwo">
           <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
           </li>
@@ -254,7 +266,13 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lis
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link lista 3</span><svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 3</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseThree">
           <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
           </li>
