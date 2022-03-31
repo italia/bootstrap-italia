@@ -269,6 +269,7 @@ $navigation-light-megamenu-separator-color: $primary-c5 !default;
 
 //inline
 $inline-menu-line-width: 2px;
+$inline-menu-linklist-v-padding: 0.59em;
 
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
@@ -371,7 +372,7 @@ $navscroll-primary-font-weight: 600;
 $navscroll-font-size: 1em;
 $navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color !default;
 $navscroll-secondary-active-color: $neutral-1-a10 !default;
-$navscroll-links-padding: 0.8em;
+$navscroll-links-padding: 0.55em;
 $navscroll-bg-color-desk: $white !default;
 $navscroll-line-color: $neutral-1-a2 !default;
 $navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;

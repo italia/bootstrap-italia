@@ -169,8 +169,8 @@
 
         &.list-item {
           &.icon-left {
-            p {
-              margin-left: 30px;
+            .icon {
+              margin-right: $v-gap;
             }
           }
           &.icon-left,
