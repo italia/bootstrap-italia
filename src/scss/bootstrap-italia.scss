@@ -2,8 +2,6 @@
 // useful to check for the current version
 @import 'custom/version';
 
-@import 'node_modules/bootstrap-select/sass/bootstrap-select';
-
 // funzioni e variabili colore
 @import 'functions';
 @import 'utilities/colors_vars';
@@ -55,6 +53,7 @@
 @import 'node_modules/bootstrap/scss/toasts';
 
 // Customizzazioni e nuovi componenti
+@import 'custom/bootstrap-select';
 @import 'custom/type';
 @import 'custom/grid';
 @import 'custom/tables';
