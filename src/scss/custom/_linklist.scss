@@ -45,6 +45,8 @@
         &.icon-left {
           padding-left: 0;
           padding-right: 0;
+          padding-top: $link-list-v-pad;
+          padding-bottom: $link-list-v-pad;
           & + ul {
             padding-left: 0;
           }
@@ -100,7 +102,6 @@
         .list-item-title-icon-wrapper {
           display: flex;
           align-items: center;
-          padding: $link-list-icon-v-padding 0;
           .list-item-title {
             margin-right: $link-list-h-pad;
           }
@@ -280,6 +281,8 @@
         a {
           &.large {
             line-height: $link-list-line-height-l;
+            padding-top: $link-list-v-padding-l;
+            padding-bottom: $link-list-v-padding-l;
           }
         }
       }

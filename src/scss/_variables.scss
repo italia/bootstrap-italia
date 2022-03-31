@@ -283,6 +283,7 @@ $link-list-heading-size: 1em;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
+$link-list-v-pad: 0.25em;
 $link-list-paragraph-size: 0.778em;
 $link-list-left-icon-space: 8px;
 $link-list-avatar-radius: 50px;
@@ -290,6 +291,7 @@ $link-list-avatar-margin: 8px;
 $link-list-checkbox-icon-right: 35px;
 $link-list-toggle-margin: 8px;
 $link-list-icon-v-padding: 5px;
+$link-list-v-padding-l: 0.45em;
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -344,14 +346,14 @@ $sidebar-heading-text-size: 0.833em;
 $sidebar-heading-margin-top: 5px;
 $sidebar-heading-letter-spacing: 1px;
 $sidebar-linklist-link-line-height: 1em;
-$sidebar-linklist-link-v-padding: 0.3em;
+$sidebar-linklist-link-v-padding: 0.55em;
 $sidebar-link-small-line-width: 65px;
 $sidebar-link-size: 1em;
 $sidebar-dropdown-icon-size: 0.8em;
 $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 0.889em;
-$sidebar-submenu-link-v-padding: 0.5em;
+$sidebar-submenu-link-v-padding: 0.45em;
 $sidebar-border-color: $neutral-1-a2 !default;
 
 //sidebar dark theme
