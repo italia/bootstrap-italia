@@ -67,6 +67,11 @@
               font-size: $sidebar-submenu-font-size;
               padding-top: $sidebar-submenu-link-v-padding;
               padding-bottom: $sidebar-submenu-link-v-padding;
+              &.active {
+                &::after {
+                  display: none;
+                }
+              }
             }
           }
         }
