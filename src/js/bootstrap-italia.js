@@ -25,5 +25,5 @@ export { default as Masonry } from './plugins/masonry'
 export { default as List } from './plugins/list'
 export { default as Transfer } from './plugins/transfer'
 
-//import * as fontsLoader from './plugins/fonts-loader'
-//export { fontsLoader }
+import * as fontsLoader from './plugins/fonts-loader'
+export { fontsLoader }
