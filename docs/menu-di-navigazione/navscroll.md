@@ -286,3 +286,40 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lis
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+Abilitarlo manualmente con:
+
+È possibile creare un'istanza con il constructor, ad  esempio:
+
+```js
+var navscrollElement = document.querySelector('.it-navscroll-wrapper')
+var navscroll = new bootstrap.NavScroll(navscrollElement, {
+  toggle: false,
+})
+```
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dispose</td>
+      <td>Elimina le funzionalità del componente.</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza NavScroll associata ad un elememento del DOM. Esempio: <code>bootstrap.NavScroll.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza NavScroll associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.NavScroll.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
