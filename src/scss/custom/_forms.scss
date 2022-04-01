@@ -202,7 +202,7 @@ textarea {
     .btn {
       padding-top: 0;
       padding-bottom: 0;
-      border-bottom: 1px solid #5c6f82;
+      border-bottom: 1px solid $neutral-1-a7;
       border-radius: 0 4px 4px 0;
       box-shadow: none;
       height: 100%;
@@ -312,7 +312,7 @@ textarea {
 
     &:not(:checked) + label::after {
       background-color: transparent;
-      border-color: #5c6f82;
+      border-color: $neutral-1-a7;
       z-index: 0;
     }
 
@@ -363,7 +363,7 @@ textarea {
     &:not(:checked) + label {
       &::after,
       &::before {
-        border-color: #5c6f82;
+        border-color: $neutral-1-a7;
       }
 
       &:after {

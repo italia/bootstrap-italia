@@ -42,7 +42,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
                 <a class="category" href="#">Categoria</a>
                 <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
-              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
@@ -93,7 +93,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
                 <a class="category" href="#">Categoria</a>
                 <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
-              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
@@ -146,7 +146,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
                 <a class="category" href="#">Categoria</a>
                 <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
-              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
@@ -198,7 +198,7 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
                 <a class="category" href="#">Categoria</a>
                 <span class="data">10/12/{{'now' | date: "%Y"}}</span>
               </div>
-              <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
