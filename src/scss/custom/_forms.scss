@@ -22,6 +22,9 @@ fieldset {
     float: none;
   }
 }
+.form-text {
+  color: $gray-secondary;
+}
 .form-group {
   position: relative;
   margin-bottom: $form-group-margin-bottom;
@@ -429,11 +432,15 @@ textarea {
     }
 
     .form-text {
-      opacity: 0.6;
       margin: 0;
       padding-left: 8px;
       padding-right: 52px;
       display: block;
+      margin-bottom: $v-gap*2;
+    }
+
+    label {
+      font-weight: 600;
     }
   }
 }
