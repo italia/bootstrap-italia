@@ -151,3 +151,12 @@ sufficiente aggiungere la classe `input-number-adaptive`.
   </span>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+È possibile creare un'istanza con il constructor, ad esempio:
+
+```js
+var inputElement = document.getElementById('inputNumber6');
+var inputNumber = new bootstrap.InputNumber(inputElement);
+```
