@@ -232,9 +232,24 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+
+  .navbar-nav {
+    .megamenu {
+      a.dropdown-toggle:before {
+        z-index: 2;
+      }
+      .dropdown-menu {
+        z-index: 1;
+        box-shadow: $dropdown-menu-shadow;
+      }
+    }
+  }
+
+
   // megamenu footer version
   .navbar {
     .dropdown-menu {
+      box-shadow: $dropdown-menu-shadow;
       .it-megamenu-footer {
         margin-top: $link-list-megamenu-footer-link-padding * 2;
         margin-left: -$megamenu-column-gap;

@@ -111,6 +111,7 @@
 
 .dropdown-menu {
   border-radius: 0 0 $dropdown-menu-radius $dropdown-menu-radius;
+  box-shadow: $dropdown-menu-shadow;
   z-index: 8;
   //fullwidth menu
   &.full-width {
