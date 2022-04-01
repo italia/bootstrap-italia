@@ -48,6 +48,11 @@
               }
             }
             &.active {
+              text-decoration: none;
+              span {
+                color: $primary;
+                text-decoration: none;
+              }
               &:after {
                 content: '';
                 display: block;
@@ -68,6 +73,10 @@
               padding-top: $sidebar-submenu-link-v-padding;
               padding-bottom: $sidebar-submenu-link-v-padding;
               &.active {
+                span {
+                  color: $neutral-1-a10;
+                  text-decoration: underline;
+                }
                 &::after {
                   display: none;
                 }

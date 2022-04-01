@@ -76,7 +76,7 @@
             text-decoration: underline;
           }
           p {
-            color: $primary;
+            color: $neutral-1-a7;
             text-decoration: none;
           }
           .icon {
@@ -128,6 +128,10 @@
           }
         }
         &.active {
+          span {
+            color: $neutral-1-a10;
+            text-decoration: underline;
+          }
           .icon {
             color: $neutral-1-a10;
           }
