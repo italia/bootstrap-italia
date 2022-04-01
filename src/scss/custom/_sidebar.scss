@@ -40,12 +40,23 @@
             }
             &[data-bs-toggle='collapse'] {
               &.active {
-                border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                 span,
                 i {
                   color: $primary;
                   text-decoration: none;
                 }
+              }
+            }
+            &.active {
+              &:after {
+                content: '';
+                display: block;
+                width: $sidebar-dropdown-line-selection-width;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background-color: $sidebar-dropdown-line-selection-color;
               }
             }
           }
@@ -85,6 +96,12 @@
                 &.active {
                   border-right: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
                   border-left: none;
+                }
+              }
+              &.active {
+                &:after {
+                  left: auto;
+                  right: 0;
                 }
               }
             }

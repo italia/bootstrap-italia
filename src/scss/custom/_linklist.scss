@@ -41,6 +41,7 @@
         display: block;
         padding: 0 $link-list-h-pad;
         text-decoration: none;
+        position: relative;
         &.icon-right,
         &.icon-left {
           padding-left: 0;
@@ -127,10 +128,6 @@
           }
         }
         &.active {
-          span {
-            color: $neutral-1-a10;
-            text-decoration: underline;
-          }
           .icon {
             color: $neutral-1-a10;
           }
@@ -182,15 +179,6 @@
               left: 0;
               margin-left: 0;
               flex-shrink: 0;
-            }
-          }
-
-          &.active {
-            color: $primary-b3;
-            text-decoration: underline;
-
-            span {
-              color: $primary-b3;
             }
           }
         }
