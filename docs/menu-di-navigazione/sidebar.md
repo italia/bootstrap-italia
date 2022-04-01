@@ -69,28 +69,28 @@ La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/d
         <li>
           <a class="list-item medium active left-icon" href="#">
             <span class="list-item-title-icon-wrapper">
-              <svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (attivo)</span>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (attivo)</span>
             </span>
           </a>
         </li>
         <li>
           <a class="list-item medium disabled left-icon" href="#">
            <span class="list-item-title-icon-wrapper">
-              <svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 2 (disabilitato)</span>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 2 (disabilitato)</span>
             </span>
           </a>
         </li>
         <li>
           <a class="list-item medium left-icon" href="#">
             <span class="list-item-title-icon-wrapper">
-              <svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 3</span>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 3</span>
             </span>
           </a>
         </li>
         <li>
           <a class="list-item medium left-icon" href="#">
             <span class="list-item-title-icon-wrapper">
-              <svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 4</span>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 4</span>
             </span>
           </a>
         </li>

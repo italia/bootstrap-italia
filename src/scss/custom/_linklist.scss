@@ -41,6 +41,7 @@
         display: block;
         padding: 0 $link-list-h-pad;
         text-decoration: none;
+        position: relative;
         &.icon-right,
         &.icon-left {
           padding-left: 0;
@@ -75,7 +76,7 @@
             text-decoration: underline;
           }
           p {
-            color: $primary;
+            color: $neutral-1-a7;
             text-decoration: none;
           }
           .icon {
@@ -184,15 +185,6 @@
               flex-shrink: 0;
             }
           }
-
-          &.active {
-            color: $primary-b3;
-            text-decoration: underline;
-
-            span {
-              color: $primary-b3;
-            }
-          }
         }
       }
     }
@@ -281,8 +273,11 @@
         a {
           &.large {
             line-height: $link-list-line-height-l;
-            padding-top: $link-list-v-padding-l;
-            padding-bottom: $link-list-v-padding-l;
+            &.icon-left,
+            &.icon-right {
+              padding-top: $link-list-v-padding-l;
+              padding-bottom: $link-list-v-padding-l;
+            }
           }
         }
       }
