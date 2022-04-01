@@ -11,7 +11,7 @@ const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
 const Default = {
-  data: {},
+  autocomplete: [],
 }
 
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
