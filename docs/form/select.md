@@ -139,6 +139,13 @@ Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search
 Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l'utilizzo del componente [autocompletamento]({{ site.baseurl }}/docs/form/autocompletamento/).
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% capture callout %}
+In caso di problemi di layout quando nella select sono presenti più di 599 elementi, disabilitare `virtualScroll` come riportato nella [issue #619](https://github.com/italia/bootstrap-italia/issues/619).
+```js
+$('.select').selectpicker({ virtualScroll: false });
+```
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/). Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.
 
 La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita dalla label e dall'elemento `select`. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.
