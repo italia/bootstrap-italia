@@ -12,7 +12,7 @@
   .it-griditem-text-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: $v-gap * 2 $v-gap;
+    padding: $v-gap;
     align-items: center;
     .it-griditem-text {
       font-size: $grid-item-text-size-mob;
@@ -50,6 +50,8 @@
   }
   a {
     display: block;
+    text-decoration: none;
+    color: $grid-item-text-color;
   }
   // hover
   a:hover {

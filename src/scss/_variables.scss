@@ -227,6 +227,7 @@ $dropdown-menu-vertical-shift: 16px;
 $dropdown-menu-radius: 4px;
 $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
+$dropdown-menu-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
 
 //Navigation
 $navbar-bg-color: $primary !default;
@@ -584,7 +585,7 @@ $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
 $grid-item-text-size: 1rem;
 $grid-item-text-size-mob: 0.8rem;
-$grid-item-text-color: $neutral-1-a8 !default;
+$grid-item-text-color: $neutral-1 !default;
 $grid-item-text-overlay-bg: $neutral-1-a10 !default;
 $grid-list-default-gap: 2px;
 $grid-list-text-gap: $v-gap;
