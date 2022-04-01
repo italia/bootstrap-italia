@@ -269,8 +269,11 @@
         a {
           &.large {
             line-height: $link-list-line-height-l;
-            padding-top: $link-list-v-padding-l;
-            padding-bottom: $link-list-v-padding-l;
+            &.icon-left,
+            &.icon-right {
+              padding-top: $link-list-v-padding-l;
+              padding-bottom: $link-list-v-padding-l;
+            }
           }
         }
       }
