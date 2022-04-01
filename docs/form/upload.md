@@ -7,35 +7,7 @@ title: Upload
 description: Elementi dei form dedicati al caricamento file
 ---
 
-<script>
-  //attiva tooltip esempio loading
-  function testAnimation() {
-    var element = bootstrap.UploadDragDrop.getOrCreateInstance(document.getElementById('uploadChangeStateTarget'))
-    var title = document.getElementById('simTitle')
-    var text = document.getElementById('simText')
 
-    element.start()
-    title.innerText = 'nome_file.pdf'
-    text.innerText = 'Caricamento in corso...'
-
-    setTimeout(function() {
-        element.progress(0.33)
-      }, 1000)
-
-    setTimeout(function(){
-        element.progress(0.66)
-      }, 2000)
-
-    setTimeout(function(){
-        element.progress(0.99)
-      }, 3000)
-
-    setTimeout(function(){
-        element.success()
-        text.innerText = 'Caricamento completato'
-      }, 4500);
-  }
-</script>
 
 Fra i tipi di campo disponibili per la compilazione dei form HTML è disponibile anche il tipo **file**. Questi campi di input consentono l'upload di uno o più file attraverso l'invio del form.
 
@@ -394,6 +366,51 @@ $('#IDPROGRESS').circularloader({
 </form>
 {% endcapture %}{% include example.html content=example %}
 
+### Tramite JavaScript
+
+È possibile creare un'istanza con il constructor, ad esempio:
+
+```js
+var uploadElement = document.getElementById('uploadChangeStateTarget');
+var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement);
+```
+
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>progress</td>
+      <td>fa avanzare la barra e la percentuale di completamento. Deve essere un numero compreso tra 0 e 1.0</td>
+    </tr>
+    <tr>
+      <td>start</td>
+      <td>fa comparire la barra e la percentuale di completamento</td>
+    </tr>
+    <tr>
+      <td>success</td>
+      <td>fa comparire lo stato di avvenuto completamento dell'operazione</td>
+    </tr>
+    <tr>
+      <td>reset</td>
+      <td>riporta la barra e la percentuale di completamento allo stato iniziale</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza UploadDragDrop associata ad un elememento del DOM. Esempio: <code>bootstrap.UploadDragDrop.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza UploadDragDrop associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.UploadDragDrop.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
 ### Esempio animato
 
 {% capture example %}
@@ -419,4 +436,35 @@ $('#IDPROGRESS').circularloader({
   </div>
   <input value="Submit" type="submit" class="d-none" />
 </form>
+
+<script>
+  //attiva tooltip esempio loading
+  function testAnimation() {
+    var element = bootstrap.UploadDragDrop.getOrCreateInstance(document.getElementById('uploadChangeStateTarget'));
+    var title = document.getElementById('simTitle')
+    var text = document.getElementById('simText')
+
+    element.start();
+    title.innerText = 'nome_file.pdf';
+    text.innerText = 'Caricamento in corso...';
+
+    setTimeout(function() {
+        element.progress(0.33)
+      }, 1000);
+
+    setTimeout(function(){
+        element.progress(0.66)
+      }, 2000);
+
+    setTimeout(function(){
+        element.progress(0.99)
+      }, 3000);
+
+    setTimeout(function(){
+        element.success()
+        text.innerText = 'Caricamento completato'
+      }, 4500);
+  }
+</script>
 {% endcapture %}{% include example.html content=example %}
+
