@@ -517,6 +517,17 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Tramite JavaScript
+
+È possibile creare un'istanza con il constructor, ad esempio:
+
+```js
+var inputElement = document.getElementById('autocomplete-test');
+var inputSearch = new bootstrap.InputSearch(inputElement, {
+  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}'
+});
+```
+
 ## Area di testo
 
 Per permettere agli utenti di inserire del testo (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo `<textarea>` ridimensionabile.
