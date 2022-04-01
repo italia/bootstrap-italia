@@ -1,0 +1,185 @@
+---
+layout: docs
+title: Sticky
+description: Rende un elemento della pagina costantemente visibile allo scorrere della pagina
+group: componenti
+toc: true
+---
+
+<style>
+  /* Style override for Documentation purposes */
+ .bd-example {
+   background-color: #F7F7F9;
+ }
+</style>
+
+Talvolta è necessario che uno o più elementi della pagina restino sempre visibili anche quando essa viene fatta scorrere.
+Questo comportamento viene comunemente definito "sticky".
+
+## Come funziona
+
+Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funzionalità sull'elemento.
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper" data-bs-toggle="sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Attivazione tramite target
+
+E' possibile attivare la funzionalità quando un particolare elemento interno esce dalla viewport della pagina.
+In tal caso è necessario utilizzare l'attributo `data-bs-target`.
+
+{% capture example %}
+<header class="it-header-wrapper" data-bs-toggle="sticky"  data-bs-target="#stickyTrigger1">
+  <div class="it-header-slim-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-slim-wrapper-content">
+            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <div class="nav-mobile">
+              <nav aria-label="Navigazione secondaria">
+                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
+                  <span>Ente appartenenza</span>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/dist/svg/sprites.svg#it-expand"></use>
+                  </svg>
+                </a>
+                <div class="link-list-wrapper collapse" id="menuC1">
+                  <ul class="link-list">
+                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="it-nav-wrapper">
+    <div class="it-header-center-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="it-header-center-content-wrapper">
+              <div class="it-brand-wrapper">
+                <a href="#">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/dist/svg/sprites.svg#it-pa"></use>
+                  </svg>
+                  <div class="it-brand-text">
+                    <div class="it-brand-title">Nome dell'Istituzione</div>
+                    <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-header-navbar-wrapper" id="stickyTrigger1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!--start nav-->
+            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
+                <svg class="icon">
+                  <use href="/dist/svg/sprites.svg#it-burger"></use>
+                </svg>
+              </button>
+              <div class="navbar-collapsable" id="navC1" style="display: none;">
+                <div class="overlay" style="display: none;"></div>
+                <div class="close-div">
+                  <button class="btn close-menu" type="button">
+                    <span class="visually-hidden">Nascondi la navigazione</span>
+                    <svg class="icon">
+                      <use href="/dist/svg/sprites.svg#it-close-big"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu-wrapper">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>                    
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endcapture %}{% include example.html content=example %}
+
+#### Position fixed
+
+Il componente ha la proprietà CSS `position` valorizzata con `sticky`. Talvolta questo valore può causare dei problemi di posizionamento, per questo è possibile forzare il valore `fixed` mediante l'attributo `data-bs-position-type`.
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-position-type="fixed">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Versione impilabile
+
+Se sono presenti più componenti sticky nella pagina, è possibile fare in modo che si impilino l'uno sull'altro utilizzando l'attributo `data-bs-stackable`
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-stackable="true">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky impilabile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+
+
+<!-- È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo. -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var stickyElements = document.querySelectorAll('[data-bs-toggle="sticky"]');
+    stickyElements.forEach((element) => {
+      var sticky = bootstrap.Sticky.getInstance(element);
+      if (sticky) {
+        sticky.dispose();
+      }
+    });
+  })  
+</script>
