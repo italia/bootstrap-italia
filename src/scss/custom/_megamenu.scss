@@ -232,7 +232,6 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-
   .navbar-nav {
     .megamenu {
       a.dropdown-toggle:before {
@@ -244,7 +243,6 @@
       }
     }
   }
-
 
   // megamenu footer version
   .navbar {
