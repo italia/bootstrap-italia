@@ -27,7 +27,7 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
     <div class="col-12 col-sm-6">
       <p><strong>Attivo</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" data-bs-value="0.75" id="prog-donut-1"></div>
+        <div class="progress-donut" data-bs-value="0.75" id="prog-donut-2"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>

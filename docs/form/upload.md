@@ -242,7 +242,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
       <input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
       <label for="upload5">
         <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-plus"></use></svg>
-        <span>Add photo</span>
+        <span>Carica foto</span>
       </label>
     </li>
   </ul>
@@ -267,7 +267,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
       <input type="file" name="upload6" id="upload6" class="upload pictures-wall" multiple="multiple" />
       <label for="upload6">
         <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-plus"></use></svg>
-        <span>Add photo</span>
+        <span>Carica foto</span>
       </label>
     </li>
   </ul>
