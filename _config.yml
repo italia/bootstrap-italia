@@ -51,7 +51,7 @@ twitter: 'https://twitter.com/teamdigitaleIT'
 twitter_handle: '@teamdigitaleIT'
 
 # Versions
-current_version:		1.6.1
+current_version:		1.6.2
 bootstrap_version: 4.6.1
 bootstrap_minor: 4.5
 
