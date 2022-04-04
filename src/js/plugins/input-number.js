@@ -42,14 +42,13 @@ $(function () {
       if ($(this).hasClass('input-number-add')) {
         //add step
         val = !isNaN(inputTargetMax) && inputTargetVal + inputTargetStep >= inputTargetMax ? inputTargetMax : inputTargetVal + inputTargetStep
-        $inputTarget.val(val).trigger('change')
       }
 
       if ($(this).hasClass('input-number-sub')) {
         //subtract step
         val = !isNaN(inputTargetMin) && inputTargetVal - inputTargetStep <= inputTargetMin ? inputTargetMin : inputTargetVal - inputTargetStep
-        $inputTarget.val(val).trigger('change')
       }
+      $inputTarget.val(val).trigger('change')
     }
 
     //resize input
@@ -61,6 +60,8 @@ $(function () {
     //get field val
     var $inputTarget = $(this)
     var inputTargetVal = parseFloat($inputTarget.val())
+    //get digits
+    var digits = parseInt($inputTarget.data('digits'))
 
     if (!isNaN(inputTargetVal)) {
       //get min & max
@@ -73,6 +74,9 @@ $(function () {
       //limit max
       if (inputTargetMax && inputTargetVal > inputTargetMax) {
         inputTargetVal = inputTargetMax
+      }
+      if (digits) {
+        inputTargetVal = inputTargetVal.toFixed(digits)
       }
       $inputTarget.val(inputTargetVal)
     }

@@ -67,6 +67,24 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+Nel caso di step con i decimali è possibile aggiungere `data-digits` per specificare il numero di decimali da visualizzare ed evitare eventuali errori di approssimazione.
+
+{% capture example %}
+
+<div>
+  <label for="inputDecimal" class="input-number-label">Capienza cisterna (litri)</label>
+  <span class="input-number">
+    <input type="number" id="inputDecimal" name="inputDecimal" step="0.10" value="2.40" data-digits="2" min="0" />
+    <button class="input-number-add">
+      <span class="sr-only">Aumenta valore di 0.1 litri</span>
+    </button>
+    <button class="input-number-sub">
+      <span class="sr-only">Diminuisci valore di 0.1 litri</span>
+    </button>
+  </span>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Valuta
 
 Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-number-currency` al wrapper `.input-number`.
