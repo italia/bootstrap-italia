@@ -233,9 +233,9 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Page changer
+### Changer
 
-Per velocizzare la navigazione è possibile inserire un menu "Page changer".
+La funzionalità di changer permette di scegliere da un dropdown la quantità di record da visualizzare in una pagina.
 
 {% capture example %}
 
@@ -268,15 +268,18 @@ Per velocizzare la navigazione è possibile inserire un menu "Page changer".
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">pag. 10</a>
+    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">
+    10/pagina
+    <svg class="icon icon-primary icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+    </a>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">
-           <li><a class="list-item active" href="#" aria-current="page"><span>pag. 10</span></a></li>
-           <li><a class="dropdown-item list-item" href="#"><span>pag. 20</span></a></li>
-           <li><a class="dropdown-item list-item" href="#"><span>pag. 30</span></a></li>
-           <li><a class="dropdown-item list-item" href="#"><span>pag. 40</span></a></li>
-           <li><a class="dropdown-item list-item" href="#"><span>pag. 50</span></a></li>
+           <li><a class="list-item active" href="#" aria-current="page"><span>10/pagina</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>20/pagina</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>30/pagina</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>40/pagina</span></a></li>
+           <li><a class="dropdown-item list-item" href="#"><span>50/pagina</span></a></li>
         </ul>
       </div>
     </div>
