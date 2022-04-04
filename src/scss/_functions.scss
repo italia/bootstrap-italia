@@ -28,3 +28,7 @@
 @function color-hover($color) {
   @return desaturate(shade-color($color, 10%), 10%);
 }
+
+@function url-friendly-color($color) {
+  @return '%23' + str-slice('#{$color}', 2, -1);
+}

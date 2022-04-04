@@ -73,16 +73,14 @@
     width: $v-gap * 5;
     height: $v-gap * 5;
     border: $transfer-border;
-    border-radius: 100px;
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
     margin: $v-gap * 3 $v-gap;
     cursor: default;
     pointer-events: none;
 
-    svg {
-      width: $v-gap * 2;
-      height: $v-gap * 2;
+    .icon {
       fill: $transfer-header-line-color;
     }
 
@@ -96,7 +94,7 @@
       cursor: pointer;
       pointer-events: all;
 
-      svg {
+      .icon {
         fill: $primary-a5;
       }
     }
