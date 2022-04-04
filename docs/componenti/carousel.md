@@ -185,13 +185,13 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible">
   <div class="splide__track">
     <ul class="splide__list">
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
@@ -214,7 +214,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
@@ -237,7 +237,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
@@ -260,7 +260,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
@@ -425,7 +425,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -447,7 +447,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -469,7 +469,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -491,7 +491,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -513,7 +513,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -535,7 +535,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
