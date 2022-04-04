@@ -319,13 +319,17 @@
     // Why the margin?
     // margin-left: $card-padding/3;
     // margin-right: $card-padding/3;
-
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &:after {
       //display: none;
     }
     h5.card-title {
       font-size: $card-img-heading-size;
       line-height: $card-img-heading-l-h;
+      margin-bottom: $v-gap * 5;
     }
     border-right: none;
 
