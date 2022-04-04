@@ -69,7 +69,7 @@ nav.pagination-wrapper {
       a.page-link {
         color: $pager-disabled-color;
         .icon {
-          fill: $pager-disabled-color;
+          fill: $pager-disabled-color !important;
         }
       }
     }

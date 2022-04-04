@@ -16,13 +16,13 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
 
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione della pagina">
   <ul class="pagination">
-    <li class="page-item">
+    <li class="page-item disabled">
       <a class="page-link" href="#">
         <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" aria-current="page" href="#" >1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
@@ -339,7 +339,7 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
-    <li class="page-item"><span class="page-link">1</span></li>
+    <li class="page-item"><span class="page-link" aria-current="page">1</span></li>
     <li class="page-item"><span class="page-link">/</span></li>
     <li class="page-item"><span class="page-link">5</span></li>
     <li class="page-item visually-hidden">

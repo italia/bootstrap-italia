@@ -518,11 +518,11 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
   <!--end card-->
   <!--start card-->
   <div class="card card-teaser rounded shadow">
-    <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use>
-    </svg>
     <div class="card-body">
       <h5 class="card-title">
+        <svg class="icon">
+          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use>
+        </svg>
         <a href="#">Lorem ipsum dolor sit amet</a>
       </h5>
       <div class="card-text">
