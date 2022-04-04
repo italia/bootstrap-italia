@@ -13,12 +13,12 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203291152" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202204040934" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203291152" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202204040934" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.1/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.1</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.2/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.2</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -688,6 +688,36 @@ L’attributo <code class="language-plaintext highlighter-rouge">value=""</code>
   <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<p>Nel caso di step con i decimali è possibile aggiungere <code class="language-plaintext highlighter-rouge">data-digits</code> per specificare il numero di decimali da visualizzare ed evitare eventuali errori di approssimazione.</p>
+
+<div class="bd-example">
+
+<div>
+  <label for="inputDecimal" class="input-number-label">Capienza cisterna (litri)</label>
+  <span class="input-number">
+    <input type="number" id="inputDecimal" name="inputDecimal" step="0.10" value="2.40" data-digits="2" min="0" />
+    <button class="input-number-add">
+      <span class="sr-only">Aumenta valore di 0.1 litri</span>
+    </button>
+    <button class="input-number-sub">
+      <span class="sr-only">Diminuisci valore di 0.1 litri</span>
+    </button>
+  </span>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputDecimal"</span> <span class="na">class=</span><span class="s">"input-number-label"</span><span class="nt">&gt;</span>Capienza cisterna (litri)<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-number"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">id=</span><span class="s">"inputDecimal"</span> <span class="na">name=</span><span class="s">"inputDecimal"</span> <span class="na">step=</span><span class="s">"0.10"</span> <span class="na">value=</span><span class="s">"2.40"</span> <span class="na">data-digits=</span><span class="s">"2"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"input-number-add"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Aumenta valore di 0.1 litri<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"input-number-sub"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Diminuisci valore di 0.1 litri<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
 <h3 id="valuta">Valuta</h3>
 
 <p>Per anteporre il simbolo della valuta in Euro, aggiungere la classe <code class="language-plaintext highlighter-rouge">.input-number-currency</code> al wrapper <code class="language-plaintext highlighter-rouge">.input-number</code>.</p>
@@ -830,11 +860,11 @@ sufficiente aggiungere la classe <code class="language-plaintext highlighter-rou
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203291152"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202204040934"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203291152"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202204040934"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -851,7 +881,7 @@ sufficiente aggiungere la classe <code class="language-plaintext highlighter-rou
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203291152"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202204040934"></script>
 
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>

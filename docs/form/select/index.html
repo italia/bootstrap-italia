@@ -13,12 +13,12 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202203291152" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202204040934" rel="stylesheet" />
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202203291152" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202204040934" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -152,8 +152,8 @@
 
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.1/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.1</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.2/bootstrap-italia.zip" aria-label="Download">
+          <small class="pr-2 m-0">v1.6.2</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
         </a>
       </li>
@@ -788,6 +788,12 @@
 <p>Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l’utilizzo del componente <a href="/bootstrap-italia/docs/form/autocompletamento/">autocompletamento</a>.</p>
 </div>
 
+<div class="bd-callout bd-callout-warning">
+<p>In caso di problemi di layout quando nella select sono presenti più di 599 elementi, disabilitare <code class="language-plaintext highlighter-rouge">virtualScroll</code> come riportato nella <a href="https://github.com/italia/bootstrap-italia/issues/619">issue #619</a>.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.select</span><span class="dl">'</span><span class="p">).</span><span class="nx">selectpicker</span><span class="p">({</span> <span class="na">virtualScroll</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+</code></pre></div></div>
+</div>
+
 <p>Il plugin Javascript per costruire la select nelle sue varianti è basato su una libreria di terze parti, <a href="https://developer.snapappointments.com/bootstrap-select/">Bootstrap Select</a>. Nella pagina ufficiale del progetto, è possibile consultare documentazione aggiuntiva sul plugin.</p>
 
 <p>La select è composta dal un wrapper esterno <code class="language-plaintext highlighter-rouge">.bootstrap-select-wrapper</code> seguita dalla label e dall’elemento <code class="language-plaintext highlighter-rouge">select</code>. Includendo la Select in questo modo, essa assumerà una serie di funzionalità descritte di seguito.</p>
@@ -943,11 +949,11 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202203291152"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202204040934"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202203291152"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202204040934"></script>
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
@@ -964,7 +970,7 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202203291152"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202204040934"></script>
 
 
 <script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
