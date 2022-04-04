@@ -210,15 +210,19 @@ Aggiungere al div `.it-hero-wrapper` la classe `.it-bottom-overlapping-content` 
          <div class="card-wrapper card-space">
             <div class="card card-bg">
                <div class="card-body">
-                  <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                     <span class="text">Leggi di più</span>
-                     <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-                     <svg class="icon">
-                        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                     </svg>
-                  </a>
+                  <div class="row">
+                    <div class="col-12 col-lg-10 offset-lg-1">
+                      <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <a class="read-more" href="#">
+                        <span class="text">Leggi di più</span>
+                        <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
+                        <svg class="icon">
+                            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                </div>
             </div>
          </div>
