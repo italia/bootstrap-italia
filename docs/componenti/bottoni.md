@@ -37,7 +37,8 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
   <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
   <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
   <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
-</div>{% endif %}{% endfor %}</div>
+</div>{% endif %}{% endfor %}
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 #### Note sullo stato disabilitato
@@ -75,48 +76,48 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
 {% capture example %}
-<button class="btn btn-success btn-lg btn-icon">
-<svg class="icon icon-white">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprites.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Lg</span>
+<button class="btn btn-success btn-lg btn-icon btn-me">
+  <span>Icon Button Lg</span>
+  <svg class="icon icon-white">
+  <use
+        href="{{
+          site.baseurl
+        }}/dist/svg/sprites.svg#it-star-full"
+      ></use>
+  </svg>
 </button>
 
-<button class="btn btn-primary btn-icon">
-<svg class="icon icon-white">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprites.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button</span>
+<button class="btn btn-primary btn-icon btn-me">
+  <span>Icon Button</span>
+  <svg class="icon icon-white">
+  <use
+        href="{{
+          site.baseurl
+        }}/dist/svg/sprites.svg#it-star-full"
+      ></use>
+  </svg>
 </button>
 
-<button class="btn btn-danger btn-sm btn-icon">
-<svg class="icon icon-secondary">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprites.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Sm</span>
+<button class="btn btn-danger btn-sm btn-icon btn-me">
+  <span>Icon Button Sm</span>
+  <svg class="icon icon-secondary">
+  <use
+        href="{{
+          site.baseurl
+        }}/dist/svg/sprites.svg#it-star-full"
+      ></use>
+  </svg>
 </button>
 
 <button class="btn btn-info btn-xs btn-icon">
-<svg class="icon icon-danger">
-<use
-      href="{{
-        site.baseurl
-      }}/dist/svg/sprites.svg#it-star-full"
-    ></use>
-</svg>
-<span>Icon Button Xs</span>
+  <span>Icon Button Xs</span>
+  <svg class="icon icon-danger">
+  <use
+        href="{{
+          site.baseurl
+        }}/dist/svg/sprites.svg#it-star-full"
+      ></use>
+  </svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -127,7 +128,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un contenitore con classe `.rounded-icon` da inserire all'interno della classe `.btn` con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori `.rounded-*` e `.icon.icon-*`.
 
 {% capture example %}
-<button class="btn btn-success btn-lg btn-icon">
+<button class="btn btn-success btn-lg btn-icon btn-me">
 <span class="rounded-icon">
 <svg class="icon icon-success">
 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
@@ -136,7 +137,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <span>Round Icon Lg</span>
 </button>
 
-<button class="btn btn-primary btn-icon">
+<button class="btn btn-primary btn-icon btn-me">
 <span class="rounded-icon">
 <svg class="icon icon-primary">
 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
@@ -145,7 +146,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 <span>Round Icon</span>
 </button>
 
-<button class="btn btn-danger btn-sm btn-icon">
+<button class="btn btn-danger btn-sm btn-icon btn-me">
 <span class="rounded-icon rounded-secondary">
 <svg class="icon icon-white">
 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
@@ -171,21 +172,21 @@ Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente ut
 #### Large
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg">Primary Large</button>
+<button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
 {% endcapture %}{% include example.html content=example %}
 
 #### Small
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-sm">Primary Small</button>
+<button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
 {% endcapture %}{% include example.html content=example %}
 
 #### Mini
 
 {% capture example %}
-<button type="button" class="btn btn-primary btn-xs">Primary Mini</button>
+<button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -196,7 +197,7 @@ Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_
 {% capture example %}
 
 <div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-primary" type="button btn-me">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -206,7 +207,7 @@ In questo caso è stata implemenentata una variante responsive che visualizza i 
 {% capture example %}
 
 <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-primary btn-me" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 {% endcapture %}{% include example.html content=example %}
