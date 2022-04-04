@@ -5,6 +5,7 @@
   //section content
   .section-content {
     margin: 0 auto;
+    position: relative;
   }
 
   // color and image variants
@@ -20,6 +21,17 @@
   &.section-image {
     background-size: cover;
     background-position: center center;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, 0.5);
+    }
   }
 
   &.section-inset-shadow {

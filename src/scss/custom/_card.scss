@@ -236,7 +236,7 @@
       color: $card-p-color;
       font-weight: 700;
       font-size: $card-signature-size;
-      margin-bottom: $v-gap * 3;
+      margin-bottom: 0;
       display: block;
     }
     .category-top {
@@ -319,13 +319,17 @@
     // Why the margin?
     // margin-left: $card-padding/3;
     // margin-right: $card-padding/3;
-
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &:after {
       //display: none;
     }
     h5.card-title {
       font-size: $card-img-heading-size;
       line-height: $card-img-heading-l-h;
+      margin-bottom: $v-gap * 5;
     }
     border-right: none;
 
@@ -561,10 +565,6 @@
       padding: 0;
       flex: auto;
 
-      .card-title {
-        margin: 0;
-      }
-
       .card-text,
       .card-text > p {
         font-family: $font-family-sans-serif;
@@ -650,12 +650,16 @@ a.read-more {
   font-weight: bold;
   letter-spacing: $card-category-l-spacing;
   font-size: $card-category-size;
+  text-decoration: none;
   .icon {
     margin-left: $v-gap;
     fill: $card-link-color;
     width: $card-link-icon-size;
     height: $card-link-icon-size;
     flex-shrink: 0;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }
 //.etichetta
