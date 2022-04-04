@@ -30,7 +30,7 @@ const EVENT_TEXT = `text${EVENT_KEY}`
 const CLASS_NAME_PASSWORD = 'input-password'
 const CLASS_NAME_METER = 'input-password-strength-meter'
 
-const SELECTOR_PASSWORD = 'input[type="password"]'
+const SELECTOR_PASSWORD = 'input[data-bs-input][type="password"]'
 const SELECTOR_BTN_SHOW_PWD = '.password-icon'
 
 class InputPassword extends Input {

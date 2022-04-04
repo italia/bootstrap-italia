@@ -21,7 +21,7 @@ const CLASS_NAME_AUTOCOMPLETE = 'autocomplete'
 
 const DATA_AUTOCOMPLETE = 'data-bs-autocomplete'
 
-const SELECTOR_SEARCH = 'input[type="search"]'
+const SELECTOR_SEARCH = 'input[' + DATA_AUTOCOMPLETE + '][type="search"]'
 
 class InputSearch extends Input {
   constructor(element, config) {

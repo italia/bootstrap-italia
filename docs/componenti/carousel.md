@@ -41,7 +41,7 @@ Bootstrap Italia fornisce le label già tradotte in italiano come segue:
 
 Per tradurre le label in altre lingue è sufficiente utilizzare l'attributo opzionale `data-splide` sul div `it-carousel-wrapper splide` come nell'esempio seguente:
 
-`<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-splide='{"i18n":{"slideX":"Go to slide %s","pageX":"Go to page %s"}}>`
+`<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"i18n":{"slideX":"Go to slide %s","pageX":"Go to page %s"}}>`
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -60,7 +60,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" >
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="it-header-block">
     <div class="it-header-block-title">
       <h2 class="no_toc">Titolo del Carousel</h2>
@@ -188,7 +188,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
 div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
 {% capture example %}
-<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible">
+<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide lined_slide">
@@ -298,7 +298,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract splide">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
   <div class="splide__track">
 		<ul class="splide__list">
 			<li class="splide__slide">
@@ -412,7 +412,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
@@ -562,7 +562,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
@@ -694,7 +694,7 @@ div **`it-carousel-wrapper`** :
 - viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-big-img splide">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-big-img splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
@@ -791,7 +791,7 @@ div **`it-carousel-wrapper`** :
 
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-standard-image splide">
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-standard-image splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">

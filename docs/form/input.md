@@ -34,7 +34,7 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
   </div>
   <div class="form-group">
     <label for="exampleInputNumber">Campo di tipo numerico</label>
-    <input type="number" class="form-control" id="exampleInputNumber">
+    <input type="number" data-bs-input class="form-control" id="exampleInputNumber">
   </div>
   <div class="form-group">
     <label for="exampleInputTelephone">Campo di tipo telefono</label>
@@ -136,7 +136,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 ### Input password
 
-Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo (grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter)) per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `.form-password`.
+Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo <!--(grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter))--> per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `input-password-strength-meter`.
 
 È possibile personalizzare la componente `strength meter` usando gli attributi data.
 
@@ -197,7 +197,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 <div>
   <div class="form-group">
     <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
-    <input type="password" class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
+    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
@@ -206,7 +206,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" class="form-control input-password input-password-strength-meter" data-bs-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
+    <input type="password" data-bs-input class="form-control input-password input-password-strength-meter" data-bs-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>

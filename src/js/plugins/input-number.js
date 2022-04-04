@@ -19,7 +19,7 @@ const CLASS_CURRENCY = 'input-number-currency'
 const CLASS_DECREMENT = 'input-number-sub'
 
 const SELECTOR_WRAPPER = '.input-number'
-const SELECTOR_INPUT = 'input[type=number]'
+const SELECTOR_INPUT = 'input[data-bs-input][type="number"]'
 const SELECTOR_BTN = 'button'
 
 class InputNumber extends Input {
