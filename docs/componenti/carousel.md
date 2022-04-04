@@ -185,20 +185,20 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
+div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide">
+<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible">
   <div class="splide__track">
     <ul class="splide__list">
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="category-top">
-                  <a class="category" href="#">Category</a>
-                  <span class="data">10/12/2018</span>
+                  <a class="category" href="#">Categoria</a>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -214,14 +214,14 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="category-top">
-                  <a class="category" href="#">Category</a>
-                  <span class="data">10/12/2018</span>
+                  <a class="category" href="#">Categoria</a>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -237,14 +237,14 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="category-top">
-                  <a class="category" href="#">Category</a>
-                  <span class="data">10/12/2018</span>
+                  <a class="category" href="#">Categoria</a>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -260,14 +260,14 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           </div>
         </div>
       </li>
-      <li class="splide__slide">
+      <li class="splide__slide lined_slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="category-top">
-                  <a class="category" href="#">Category</a>
-                  <span class="data">10/12/2018</span>
+                  <a class="category" href="#">Categoria</a>
+                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -306,7 +306,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -315,8 +315,8 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <a class="category" href="#">Category</a>
-                    <span class="data">10/12/2018</span>
+                    <a class="category" href="#">Categoria</a>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -338,7 +338,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -347,8 +347,8 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <a class="category" href="#">Category</a>
-                    <span class="data">10/12/2018</span>
+                    <a class="category" href="#">Categoria</a>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -370,7 +370,7 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -379,8 +379,8 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
               <div class="card">
                 <div class="card-body">
                   <div class="category-top">
-                    <a class="category" href="#">Category</a>
-                    <span class="data">10/12/2018</span>
+                    <a class="category" href="#">Categoria</a>
+                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -421,11 +421,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -443,11 +443,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -465,11 +465,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -487,11 +487,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -509,11 +509,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -531,11 +531,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <h5 class="card-title pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon">
@@ -571,11 +571,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -590,11 +590,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -609,11 +609,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -628,11 +628,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -647,11 +647,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -666,11 +666,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
             <a class="card card-img no-after special-card" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/2018</span>
+                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <p class="card-text"></p>
@@ -703,7 +703,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -716,7 +716,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -729,7 +729,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -742,7 +742,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -755,7 +755,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -768,7 +768,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -800,7 +800,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -813,7 +813,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -826,7 +826,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -839,7 +839,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -852,7 +852,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -865,7 +865,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="img title" alt="imagealt"></div>
+                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -876,3 +876,37 @@ div **`it-carousel-wrapper`** :
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+Abilitarlo manualmente con:
+
+```js
+var elementList = [].slice.call(document.querySelectorAll('.splide'))
+var masonryList = elementList.map(function (element) {
+  return new bootstrap.CarouselBI(element)
+})
+```
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dispose</td>
+      <td>Rimuove le funzionalità di CarouselBI</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza CarouselBI associata ad un elememento del DOM. Esempio: <code>bootstrap.CarouselBI.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza CarouselBI associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.CarouselBI.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>

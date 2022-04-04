@@ -22,6 +22,9 @@ fieldset {
     float: none;
   }
 }
+.form-text {
+  color: $gray-secondary;
+}
 .form-group {
   position: relative;
   margin-bottom: $form-group-margin-bottom;
@@ -57,7 +60,6 @@ fieldset {
   }
 
   small.form-text {
-    position: absolute;
     margin: 0;
     padding: $input-spacing-x * 0.5 $input-spacing-x;
     font-size: $small-font-size;
@@ -94,6 +96,9 @@ textarea {
   box-shadow: none;
   transition: none;
   font-weight: 700;
+  &::placeholder {
+    color: $gray-secondary;
+  }
 }
 
 textarea {
@@ -178,6 +183,10 @@ textarea {
   .input-group-prepend {
     margin-right: 0;
 
+    .icon {
+      fill: $gray-secondary;
+    }
+
     & ~ label {
       left: 2.25rem;
       max-width: calc(100% - 2.25rem);
@@ -193,7 +202,7 @@ textarea {
     .btn {
       padding-top: 0;
       padding-bottom: 0;
-      border-bottom: 1px solid #5c6f82;
+      border-bottom: 1px solid $neutral-1-a7;
       border-radius: 0 4px 4px 0;
       box-shadow: none;
       height: 100%;
@@ -303,7 +312,7 @@ textarea {
 
     &:not(:checked) + label::after {
       background-color: transparent;
-      border-color: #5c6f82;
+      border-color: $neutral-1-a7;
       z-index: 0;
     }
 
@@ -354,7 +363,7 @@ textarea {
     &:not(:checked) + label {
       &::after,
       &::before {
-        border-color: #5c6f82;
+        border-color: $neutral-1-a7;
       }
 
       &:after {
@@ -429,11 +438,15 @@ textarea {
     }
 
     .form-text {
-      opacity: 0.6;
       margin: 0;
       padding-left: 8px;
       padding-right: 52px;
       display: block;
+      margin-bottom: $v-gap * 2;
+    }
+
+    label {
+      font-weight: 600;
     }
   }
 }

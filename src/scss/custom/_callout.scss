@@ -9,7 +9,7 @@
   // Highlights version
   &.callout-highlight {
     border: none;
-    border-left: 2px solid rgba($gray-border-disabled, 0.3);
+    border-left: 2px solid rgba($gray-border-disabled, 1);
     border-radius: 0;
     padding: 0 2.222rem;
     .callout-title {
@@ -17,19 +17,19 @@
     }
     // color versions
     &.success {
-      border-color: rgba($success, 0.2);
+      border-color: rgba($success, 1);
     }
     &.warning {
-      border-color: rgba($warning, 0.2);
+      border-color: rgba($warning, 1);
     }
     &.danger {
-      border-color: rgba($danger, 0.2);
+      border-color: rgba($danger, 1);
     }
     &.important {
-      border-color: rgba($complementary-3-a9, 0.2);
+      border-color: rgba($complementary-3-a9, 1);
     }
     &.note {
-      border-color: rgba($primary-a9, 0.2);
+      border-color: rgba($primary-a9, 1);
     }
   }
 

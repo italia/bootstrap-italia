@@ -9,20 +9,7 @@ description: Indicatori di stato attivo e di avanzamento di un'operazione
 ## Donuts
 
 L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso o l'avanzamento di un'operazione in corso.
-
-Va inizializzato con il comando javascript:
-
-```js
-progressDonut.generate('#ID_ELEMENTO', 0)
-```
-
-Dove il primo parametro corrisponde con l'id univoco dell'elemento `.progress-donut` e il secondo con la percentuale di completamento.
-
-Per aggiornare lo stato del testo, del testo per screen reader e del progresso circolare utilizzare lo stesso comando con il nuovo valore di progresso:
-
-```js
-progressDonut.update('#ID_ELEMENTO', 75)
-```
+Il componente si basa sul plugin javascript [ProgressJS](https://kimmobrunfeldt.github.io/progressbar.js/)
 
 Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
 
@@ -33,20 +20,119 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
     <div class="col-12 col-sm-6">
       <p><strong>Stato iniziale</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut"></div>
+        <div class="progress-donut" id="prog-donut-1"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <p><strong>Attivo</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" data-bs-value="0.75"></div>
+        <div class="progress-donut" data-bs-value="0.75" id="prog-donut-2"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+È possibile creare un'istanza con il constructor, ad esempio:
+
+```js
+var progElement = document.getElementById('prog-donut-1');
+var progDonut = new bootstrap.ProgressDonut(progElement, {
+  value: 0.25
+});
+```
+
+### Opzioni
+
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>color</td>
+      <td>string</td>
+      <td>#0073E6</td>
+      <td>colore della barra</td>
+    </tr>
+    <tr>
+      <td>trailColor</td>
+      <td>string</td>
+      <td>#D4E9FF</td>
+      <td>colore della guida della barra</td>
+    </tr>
+    <tr>
+      <td>strokeWidth</td>
+      <td>number</td>
+      <td>24</td>
+      <td>spessore della barra</td>
+    </tr>
+    <tr>
+      <td>trailWidth</td>
+      <td>number</td>
+      <td>6</td>
+      <td>spessore della guida barra</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOut</td>
+      <td>inerzia dell'animazione</td>
+    </tr>
+    <tr>
+      <td>animate</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>attiva/disattiva l'animazione</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>number</td>
+      <td>0</td>
+      <td>valore che indica la percentuale di completamento. Deve essere compreso tra 0 e 1.0</td>
+    </tr>
+  </tbody>
+</table>
+
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>set</td>
+      <td>modifica lo stato di progressione della barra. E' necessario inserire un numero compreso tra 0 e 1.0</td>
+    </tr>
+    <tr>
+      <td>dispose</td>
+      <td>Elimina la funzionalità del progressive donut.</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza collapse associata ad un elememento del DOM. Esempio: <code>bootstrap.ProgressDonut.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza collapse associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.ProgressDonut.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Progress Bar
 

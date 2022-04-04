@@ -87,7 +87,7 @@ alertList.forEach(function (alert) {
 Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno dell'alert**, come nell'esempio seguente:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso">
   <span aria-hidden="true">&times;</span>
 </button>
 ```

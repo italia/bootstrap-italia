@@ -365,8 +365,8 @@ con un `ellipsis`.
 {% capture example %}
 
 <dl class="row">
-  <dt class="col-sm-3">Description lists</dt>
-  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+  <dt class="col-sm-3">Lista descrizioni</dt>
+  <dd class="col-sm-9">Una lista di discrezioni è lo strumento ideale per definire dei termini.</dd>
 
   <dt class="col-sm-3">Euismod</dt>
   <dd class="col-sm-9">
@@ -377,13 +377,13 @@ con un `ellipsis`.
   <dt class="col-sm-3">Malesuada porta</dt>
   <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
 
-  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dt class="col-sm-3 text-truncate">Testo troncato: questo testo troppo lungo verrà troncato</dt>
   <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
 
-  <dt class="col-sm-3">Nesting</dt>
+  <dt class="col-sm-3">Annidamento</dt>
   <dd class="col-sm-9">
     <dl class="row">
-      <dt class="col-sm-4">Nested definition list</dt>
+      <dt class="col-sm-4">Lista descrizione annidata</dt>
       <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
     </dl>
   </dd>

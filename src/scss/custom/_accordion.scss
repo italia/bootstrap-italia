@@ -64,7 +64,7 @@ $arrow-size: $font-size-base * 0.5;
           content: none;
         }
         &:before {
-          font-weight: 700;
+          font-weight: 300;
           content: '-';
           float: left;
           margin: 0 1rem 0.3333333333333333rem 0;
@@ -73,7 +73,6 @@ $arrow-size: $font-size-base * 0.5;
           line-height: 1.2rem;
           font-family: $font-family-sans-serif;
           transform: none;
-          color: $primary-c5;
         }
         &[aria-expanded='false'] {
           &:before {

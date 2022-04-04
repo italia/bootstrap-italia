@@ -11,7 +11,7 @@ class ScrollCallback {
 
   //Public
   dispose() {
-    removeCallBack(this._id)
+    removeCallBack(this.id)
   }
 
   //Private
@@ -21,7 +21,7 @@ class ScrollCallback {
 }
 
 const removeCallBack = (id) => {
-  callbacks.filter((cb) => cb.id === id)
+  callbacks = callbacks.filter((cb) => cb.id !== id)
 }
 
 const onDocumentScroll = (callback) => {

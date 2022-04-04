@@ -2,7 +2,7 @@
 .link-list-wrapper {
   .link-list-heading {
     font-size: $link-list-heading-size;
-    color: $neutral-1-a10;
+    color: $neutral-1;
     padding: 0 $link-list-h-pad;
     font-weight: 600;
     margin-bottom: $link-list-divider-distance;
@@ -40,16 +40,22 @@
         line-height: $link-list-line-height;
         display: block;
         padding: 0 $link-list-h-pad;
-        position: relative;
         text-decoration: none;
-        &.icon-right {
+        position: relative;
+        &.icon-right,
+        &.icon-left {
           padding-left: 0;
-          .icon {
-            position: absolute;
-            right: 0;
-          }
+          padding-right: 0;
+          padding-top: $link-list-v-pad;
+          padding-bottom: $link-list-v-pad;
           & + ul {
             padding-left: 0;
+          }
+        }
+        &.icon-right {
+          .list-item-title-icon-wrapper {
+            justify-content: space-between;
+            margin-right: 0;
           }
         }
         &[data-bs-toggle] {
@@ -70,7 +76,7 @@
             text-decoration: underline;
           }
           p {
-            color: $primary;
+            color: $neutral-1-a7;
             text-decoration: none;
           }
           .icon {
@@ -92,25 +98,23 @@
         }
         .icon {
           display: inline-block;
-          margin: 8px 0;
-          &.icon-right {
-            position: absolute;
-            right: 0;
-          }
-          &.right {
-            margin-left: 8px;
-          }
-          &.left {
-            margin-right: 8px;
+          flex-shrink: 0;
+        }
+        .list-item-title-icon-wrapper {
+          display: flex;
+          align-items: center;
+          .list-item-title {
+            margin-right: $link-list-h-pad;
           }
         }
-
         // icone destre dentro link
         &.right-icon {
-          .icon.right {
-            position: absolute;
-            top: 0;
-            right: $link-list-h-pad;
+          .list-item-title-icon-wrapper {
+            padding-right: 0;
+            margin-right: 0;
+            justify-content: space-between;
+          }
+          .icon {
             transition: transform $dropdown-menu-animation-speed;
             &.secondary {
               color: $neutral-2-b3;
@@ -167,34 +171,18 @@
         &.list-item {
           &.icon-left {
             .icon {
-              margin-right: calc($grid-gutter-width / 2);
-            }
-            p {
-              margin-left: 30px;
+              margin-right: $v-gap;
             }
           }
           &.icon-left,
           &.left-icon {
-            position: relative;
-            display: flex;
-            span {
-              margin-top: $v-gap * 0.5;
-            }
             p {
               width: 100%;
             }
             .icon {
               left: 0;
               margin-left: 0;
-            }
-          }
-
-          &.active {
-            color: $primary-b3;
-            text-decoration: underline;
-
-            span {
-              color: $primary-b3;
+              flex-shrink: 0;
             }
           }
         }
@@ -246,6 +234,20 @@
       }
     }
   }
+  &.multiline {
+    .list-item-title-icon-wrapper {
+      justify-content: space-between;
+      margin-bottom: calc($v-gap / 2);
+      padding: 0;
+    }
+    .list-item {
+      &.icon-right {
+        .list-item-title-icon-wrapper {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 //small - tablet
 @include media-breakpoint-up(sm) {
@@ -271,6 +273,11 @@
         a {
           &.large {
             line-height: $link-list-line-height-l;
+            &.icon-left,
+            &.icon-right {
+              padding-top: $link-list-v-padding-l;
+              padding-bottom: $link-list-v-padding-l;
+            }
           }
         }
       }

@@ -175,6 +175,16 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
       <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
     </tr>
     <tr>
+      <td><code>data-bs-alert-caps</code></td>
+      <td>Testo per avvertire che il CAPS LOCK è inserito</td>
+      <td>CAPS LOCK inserito</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-show-text</code></td>
+      <td>Attiva/disattiva la visibilità dei messaggi di errore</td>
+      <td>true</td>
+    </tr>
+    <tr>
       <td><code>data-bs-minimum-length</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
       <td>4</td>
@@ -204,6 +214,77 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+Abilitarlo manualmente con:
+
+```js
+var inputElement = document.querySelector('#exampleInputPassword'))
+var passwordComponent = new bootstrap.InputPassword(inputElement, {
+  shortPass: 'Password molto debole',
+  badPass: 'Password debole',
+  goodPass: 'Password sicura',
+  strongPass: 'Password molto sicura',
+  enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola',
+  alertCaps: 'CAPS LOCK inserito',
+  showText: true,
+  minimumLength: 4,
+})
+```
+### Opzioni
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>shortPass</code></td>
+      <td>Testo per il punteggio di forza della password minimo</td>
+      <td>Password molto debole</td>
+    </tr>
+    <tr>
+      <td><code>badPass</code></td>
+      <td>Testo per punteggio di forza della password basso</td>
+      <td>Password debole</td>
+    </tr>
+    <tr>
+      <td><code>goodPass</code></td>
+      <td>Testo per punteggio di forza della password buono</td>
+      <td>Password sicura</td>
+    </tr>
+    <tr>
+      <td><code>strongPass</code></td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+      <td>Password molto sicura</td>
+    </tr>
+    <tr>
+      <td><code>enterPass</code></td>
+      <td>Testo di aiuto</td>
+      <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
+    </tr>
+    <tr>
+      <td><code>alertCaps</code></td>
+      <td>Testo per avvertire che il CAPS LOCK è inserito</td>
+      <td>CAPS LOCK inserito</td>
+    </tr>
+    <tr>
+      <td><code>minimumLength</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><code>showText</code></td>
+      <td>Attiva/disattiva la visibilità dei messaggi di errore</td>
+      <td>true</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Disabilitato
 
@@ -435,6 +516,17 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
   </span>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+È possibile creare un'istanza con il constructor, ad esempio:
+
+```js
+var inputElement = document.getElementById('autocomplete-test');
+var inputSearch = new bootstrap.InputSearch(inputElement, {
+  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}'
+});
+```
 
 ## Area di testo
 

@@ -375,12 +375,12 @@ Masonry non è incluso in Bootstrap Italia ma può essere aggiunto con l'inclusi
 <script src="_PATH_/masonry.pkgd.min.js"></script>
 ```
 
-Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
+Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 
 {% capture example %}
 
 <div class="container-fluid">
-  <div class="row it-masonry" data-masonry='{"percentPosition": true }'>
+  <div class="row it-masonry" data-bs-toggle="masonry">
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#" class="">
@@ -587,4 +587,39 @@ Aggiungendo `data-masonry='{"percentPosition": true }'` al contenitore `row`, ve
     </div>
   </div>
 </div>
+<script src="{{ site.baseurl }}/dist/js/vendor/masonry.pkgd.min.js"></script>
 {% endcapture %}{% include example.html content=example %}
+
+### Tramite JavaScript
+
+Abilitarlo manualmente con:
+
+```js
+var elementList = [].slice.call(document.querySelectorAll('.it-masonry'))
+var masonryList = elementList.map(function (element) {
+  return new bootstrap.Masonry(element)
+})
+```
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dispose</td>
+      <td>Rimuove le funzionalità Masonry</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza Masonry associata ad un elememento del DOM. Esempio: <code>bootstrap.Masonry.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza Masonry associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Masonry.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>

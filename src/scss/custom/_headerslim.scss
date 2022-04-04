@@ -149,4 +149,14 @@
       justify-content: flex-end;
     }
   }
+  .is-sticky {
+    .it-user-wrapper .dropdown-menu.show {
+      transform: translate3d(0, 6px, 0) !important;
+      padding-bottom: 0.5rem;
+    }
+    .link-list-wrapper ul li a .icon {
+      width: $header-slim-icon-size;
+      height: $header-slim-icon-size;
+    }
+  }
 }

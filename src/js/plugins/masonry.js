@@ -44,6 +44,14 @@ class Masonry extends BaseComponent {
   }
 
   // Public
+  dispose() {
+    if (this._masonry) {
+      this._masonry.destroy()
+      this._masonry = null
+    }
+
+    super.dispose()
+  }
 
   // Private
   _getConfig(config) {

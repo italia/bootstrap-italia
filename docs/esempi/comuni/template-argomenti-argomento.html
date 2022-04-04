@@ -12,8 +12,8 @@ title: Template Argomento
         <div class="img-wrapper">
           <img
             src="https://picsum.photos/800/400"
-            title="img title"
-            alt="imagealt"
+            title="titolo immagine"
+            alt="descrizione immagine"
           />
         </div>
       </div>
@@ -27,7 +27,7 @@ title: Template Argomento
 
               <div class="row">
                 <div class="col">
-                  <nav class="breadcrumb-container" aria-label="breadcrumb">
+                  <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item">
                         <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">Home</a><span class="separator">/</span>
@@ -116,8 +116,8 @@ title: Template Argomento
                     <figure class="img-wrapper">
                       <img
                         src="https://picsum.photos/400/200"
-                        title="img title"
-                        alt="imagealt"
+                        title="titolo immagine"
+                        alt="descrizione immagine"
                       />
                     </figure>
                   </div>
@@ -128,7 +128,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
                     </svg>
                     <a class="category" href="#">Notizie</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h4 class="card-title">
                     Una città in costante rinnovamento
@@ -156,7 +156,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
                     </svg>
                     <a class="category" href="#">Notizie</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h4 class="card-title">
                     Dissuasori mobili nel centro
@@ -175,7 +175,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
                     </svg>
                     <a class="category" href="#">Notizie</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h4 class="card-title">
                     Lavori stradali, riqualifiche e servizi
@@ -232,7 +232,7 @@ title: Template Argomento
     <div class="section py-5">
       <div class="container">
         <div class="row row-title">
-          <div class="col-12 d-flex justify-content-between">
+          <div class="col-12 d-lg-flex justify-content-between">
             <h3>Amministrazione</h3>
             <div>
               <button type="button" class="btn btn-secondary btn-sm">
@@ -310,7 +310,7 @@ title: Template Argomento
           </div>
         </div>
         <div class="row row-title pt-5">
-          <div class="col-12 d-flex justify-content-between">
+          <div class="col-12 d-lg-flex justify-content-between">
             <h3>Servizi</h3>
             <div>
               <button type="button" class="btn btn-secondary btn-sm">
@@ -374,7 +374,7 @@ title: Template Argomento
     <div class="section section-muted section-inset-shadow py-5">
       <div class="container">
         <div class="row row-title">
-          <div class="col-12 d-flex justify-content-between">
+          <div class="col-12 d-lg-flex justify-content-between">
             <h3>Novità</h3>
             <div>
               <button type="button" class="btn btn-secondary btn-sm">
@@ -401,8 +401,8 @@ title: Template Argomento
                     <figure class="img-wrapper">
                       <img
                         src="https://picsum.photos/400/200"
-                        title="img title"
-                        alt="imagealt"
+                        title="titolo immagine"
+                        alt="descrizione immagine"
                       />
                     </figure>
                   </div>
@@ -415,7 +415,7 @@ title: Template Argomento
                       ></use>
                     </svg>
                     <a class="category" href="#">Notizie</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h4 class="card-title">
                     Una città in costante rinnovamento
@@ -442,8 +442,8 @@ title: Template Argomento
                     <figure class="img-wrapper">
                       <img
                         src="https://picsum.photos/400/200"
-                        title="img title"
-                        alt="imagealt"
+                        title="titolo immagine"
+                        alt="descrizione immagine"
                       />
                     </figure>
                     <div
@@ -460,7 +460,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
                     </svg>
                     <a class="category" href="#">Eventi</a>
-                    <span class="data">dal 2 al 3 mag 2018</span>
+                    <span class="data">dal 2 al 3 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h4 class="card-title">
                     Tramvia, dibattito aperto a tutti i cittadini
@@ -488,7 +488,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-note"></use>
                     </svg>
                     <a class="category" href="#">Notizie</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title">
                     Tramvia, chiusure notturne in via Valfonda
@@ -507,7 +507,7 @@ title: Template Argomento
                       <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-note"></use>
                     </svg>
                     <a class="category" href="#">Comunicati stampa</a>
-                    <span class="data">18 mag 2018</span>
+                    <span class="data">18 mag {{'now' | date: "%Y"}}</span>
                   </div>
                   <h5 class="card-title">
                     Lavori stradali, riqualifiche e servizi
@@ -562,7 +562,7 @@ title: Template Argomento
     <div class="section py-5">
       <div class="container">
         <div class="row row-title">
-          <div class="col-12 d-flex justify-content-between">
+          <div class="col-12 d-lg-flex justify-content-between">
             <h3>Documenti</h3>
             <div>
               <button type="button" class="btn btn-secondary btn-sm">
@@ -627,7 +627,7 @@ title: Template Argomento
                 </h5>
                 <p class="card-text">
                   Tutte le informazioni e le ultime novità sul piano lavori
-                  previsto per il 2018
+                  previsto per il {{'now' | date: "%Y"}}
                 </p>
               </div>
             </div>

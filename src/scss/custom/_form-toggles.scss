@@ -10,7 +10,7 @@
   margin-bottom: $v-gap;
   height: 32px;
   line-height: 32px;
-  font-weight: bold;
+  font-weight: 600;
 
   input[type='checkbox'] {
     opacity: 0;
@@ -51,7 +51,7 @@
       }
 
       &:after {
-        background-color: #5c6f82;
+        background-color: $neutral-1-a7;
         background-size: 10px 10px;
         background-repeat: no-repeat;
         background-position: center;
