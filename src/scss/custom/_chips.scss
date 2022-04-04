@@ -52,7 +52,7 @@
   }
   //left icon
   & > .icon {
-    fill: $primary;
+    fill: $chips-label-color;
     transform: translateX(-5px) translateY(1px);
     transition: fill 0.05s;
   }
@@ -88,7 +88,6 @@
       height: 24px;
       width: 24px;
       margin-right: -8px;
-      fill: $primary;
       transform: translateX(-13px) translateY(-1px);
     }
     //avatar
@@ -108,7 +107,6 @@
   //label only version
   &.chip-simple {
     padding-right: $v-gap;
-    margin: $v-gap * 0.5 auto;
   }
 
   //hover state--------------------------------
@@ -138,6 +136,7 @@
   //disabled state--------------------------------
   &.chip-disabled {
     background: $white;
+    color: $neutral-1-a7;
     &:hover {
       cursor: not-allowed;
     }
