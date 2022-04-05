@@ -101,7 +101,7 @@ Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi 
         <div class="card-body">
           <div class="category-top">
             <a class="category" href="#">Categoria</a>
-            <span class="data">10/12/2022</span>
+            <span class="data">10/12/{{ 'now' | date: "%Y" }}</span>
           </div>
           <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -319,7 +319,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
         <div class="card-body">
           <div class="head-tags">
             <a class="card-tag" href="#">Tag</a>
-            <span class="data">10/10/2022</span>
+            <span class="data">10/10/{{'now' | date: "%Y"}}</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -354,7 +354,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="descrizione immagine">
             </figure>
           </div>
         </div>
@@ -380,7 +380,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         <div class="img-responsive-wrapper">
           <div class="img-responsive img-responsive-panoramic">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="descrizione immagine">
             </figure>
           </div>
         </div>
@@ -405,7 +405,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
               <figure class="img-wrapper">
-                <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="descrizione immagine">
               </figure>
               <div class="card-calendar d-flex flex-column justify-content-center">
                 <span class="card-date">31</span>
@@ -434,7 +434,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <div class="img-responsive-wrapper">
             <div class="img-responsive img-responsive-panoramic">
               <figure class="img-wrapper">
-                <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="descrizione immagine">
               </figure>
               <div class="card-calendar d-flex flex-column justify-content-center">
                 <span class="card-date">30</span>
@@ -475,12 +475,12 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/174x214/F9F9FE/0066CC/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://via.placeholder.com/174x214/F9F9FE/0066CC/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="descrizione immagine">
             </figure>
           </div>
         </div>
         <div class="card-body">
-          <div class="head-tags"><span class="data">10/10/2022</span>
+          <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
           </div>
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
         </div>
@@ -518,11 +518,11 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
   <!--end card-->
   <!--start card-->
   <div class="card card-teaser rounded shadow">
-    <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use>
-    </svg>
     <div class="card-body">
       <h5 class="card-title">
+        <svg class="icon">
+          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use>
+        </svg>
         <a href="#">Lorem ipsum dolor sit amet</a>
       </h5>
       <div class="card-text">

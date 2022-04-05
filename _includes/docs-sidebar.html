@@ -23,10 +23,12 @@
               aria-expanded="{{expanded}}"
               aria-controls="collapse-{{ forloop.index }}"
             >
-              <span>{{ group.title }}</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">{{ group.title }}</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse {% unless active == nil %}show{% endunless %}" id="collapse-{{ forloop.index }}">
               {%- for doc in group.pages -%} {%- assign doc_slug = doc.title | slugify -%} {%- assign active = nil -%} {%- if page.group == group_slug and

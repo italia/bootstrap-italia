@@ -32,11 +32,15 @@
               &[data-bs-toggle='collapse'] {
                 color: $sidebar-dark-text-color;
                 &.active {
-                  border-left: $sidebar-dropdown-line-selection-width solid $sidebar-dark-text-color;
                   span,
                   i {
                     color: $sidebar-dark-text-color;
                   }
+                }
+              }
+              &.active {
+                &:after {
+                  background-color: $sidebar-dark-text-color;
                 }
               }
             }
@@ -106,6 +110,7 @@
         a.list-item.left-icon {
           .icon {
             margin: 0;
+            margin-right: $v-gap;
           }
         }
       }

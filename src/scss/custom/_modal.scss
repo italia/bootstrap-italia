@@ -2,3 +2,15 @@
 .modal-header {
   @include border-radius($reset-border-radius);
 }
+
+.modal-body {
+  color: $neutral-1-a7;
+}
+
+.modal-footer {
+  position: relative;
+  background-color: $white;
+  &.modal-footer-shadow {
+    box-shadow: 0px 15px 25px 5px rgb(0,0,0,0.3);
+  }
+}

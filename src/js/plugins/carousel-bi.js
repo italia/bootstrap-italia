@@ -48,6 +48,27 @@ const CONFIGS = {
       },
     },
   },
+  'it-carousel-landscape-abstract-three-cols-arrow-visible': {
+    type: 'slide',
+    perPage: 3,
+    gap: 24,
+    padding: { left: 0, right: 0 },
+    arrows: true,
+    breakpoints: {
+      768: {
+        perPage: 1,
+        gap: 24,
+        padding: { left: 40, right: 40 },
+        arrows: true,
+      },
+      992: {
+        perPage: 2,
+        gap: 24,
+        padding: { left: 40, right: 40 },
+        arrows: true,
+      },
+    },
+  },
   'it-big-img': {
     type: 'loop',
     perPage: 1,

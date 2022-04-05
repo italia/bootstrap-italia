@@ -226,7 +226,10 @@
       li {
         a {
           position: relative;
-
+          &.large {
+            padding-top: $inline-menu-linklist-v-padding;
+            padding-bottom: $inline-menu-linklist-v-padding;
+          }
           i {
             color: $primary-a3;
           }
@@ -413,7 +416,7 @@
 
         h3,
         .link-list-heading {
-          color: $body-color;
+          color: $neutral-1;
         }
 
         a {

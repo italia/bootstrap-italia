@@ -41,6 +41,7 @@ $text-muted: $gray-tertiary !default;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
 $font-weight-base: 300;
+$mark-bg: $analogue-2-a1;
 
 // Paragraphs
 $headings-line-height: 1.2 !default;
@@ -74,7 +75,8 @@ $btn-font-size-lg: 18px !default;
 
 // Input
 $input-btn-line-height: 1.5 !default;
-$input-btn-line-height-sm: 1.45 !default;
+$input-btn-line-height-sm: 24px !default;
+$input-btn-line-height-xs: 20px !default;
 $input-btn-line-height-lg: 1.6 !default;
 $input-disabled-bg: $gray-disabled !default;
 $input-spacing-x: 0.5rem;
@@ -176,7 +178,7 @@ $carousel-control-icon-width: 32px !default;
 
 // Inputs
 $input-border: $gray-200 !default;
-$input-label-color: $neutral-1-a8 !default;
+$input-label-color: $neutral-1 !default;
 $input-color-placeholder: $gray-500 !default;
 $input-focus-border-color: $gray-secondary !default;
 
@@ -226,6 +228,7 @@ $dropdown-menu-vertical-shift: 16px;
 $dropdown-menu-radius: 4px;
 $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
+$dropdown-menu-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 
 //Navigation
 $navbar-bg-color: $primary !default;
@@ -269,6 +272,7 @@ $navigation-light-megamenu-separator-color: $primary-c5 !default;
 
 //inline
 $inline-menu-line-width: 2px;
+$inline-menu-linklist-v-padding: 0.59em;
 
 // Componente Base di Esempio
 $componente-base-padding-x: 8px;
@@ -283,12 +287,15 @@ $link-list-heading-size: 1em;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
+$link-list-v-pad: 0.25em;
 $link-list-paragraph-size: 0.778em;
 $link-list-left-icon-space: 8px;
 $link-list-avatar-radius: 50px;
 $link-list-avatar-margin: 8px;
 $link-list-checkbox-icon-right: 35px;
 $link-list-toggle-margin: 8px;
+$link-list-icon-v-padding: 5px;
+$link-list-v-padding-l: 0.45em;
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -343,14 +350,14 @@ $sidebar-heading-text-size: 0.833em;
 $sidebar-heading-margin-top: 5px;
 $sidebar-heading-letter-spacing: 1px;
 $sidebar-linklist-link-line-height: 1em;
-$sidebar-linklist-link-v-padding: 0.8em;
+$sidebar-linklist-link-v-padding: 0.55em;
 $sidebar-link-small-line-width: 65px;
 $sidebar-link-size: 1em;
 $sidebar-dropdown-icon-size: 0.8em;
 $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 0.889em;
-$sidebar-submenu-link-v-padding: 0.7em;
+$sidebar-submenu-link-v-padding: 0.45em;
 $sidebar-border-color: $neutral-1-a2 !default;
 
 //sidebar dark theme
@@ -368,7 +375,7 @@ $navscroll-primary-font-weight: 600;
 $navscroll-font-size: 1em;
 $navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color !default;
 $navscroll-secondary-active-color: $neutral-1-a10 !default;
-$navscroll-links-padding: 0.8em;
+$navscroll-links-padding: 0.55em;
 $navscroll-bg-color-desk: $white !default;
 $navscroll-line-color: $neutral-1-a2 !default;
 $navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;
@@ -579,7 +586,7 @@ $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
 $grid-item-text-size: 1rem;
 $grid-item-text-size-mob: 0.8rem;
-$grid-item-text-color: $neutral-1-a8 !default;
+$grid-item-text-color: $neutral-1 !default;
 $grid-item-text-overlay-bg: $neutral-1-a10 !default;
 $grid-list-default-gap: 2px;
 $grid-list-text-gap: $v-gap;

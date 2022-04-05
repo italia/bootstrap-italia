@@ -18,7 +18,7 @@ const Default = {
   // This has to be the same size as the maximum width to
   // prevent clipping
   strokeWidth: 24,
-  trailWidth: 6,
+  trailWidth: 12,
   easing: 'easeInOut',
   duration: 1400,
   text: {

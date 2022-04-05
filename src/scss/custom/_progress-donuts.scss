@@ -6,6 +6,37 @@
   .progressbar-text {
     color: #000 !important;
     font-weight: 700;
+    z-index: 3;
+  }
+  svg {
+    position: relative;
+    path:first-child {
+      display: none;
+    }
+  }
+  &:after {
+    content: '';
+    background: #fff;
+    width: 67px;
+    height: 67px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    background: #d4e9ff;
+    width: 110px;
+    height: 110px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
   }
 }
 
@@ -14,5 +45,14 @@
   .progress-donut-wrapper {
     width: 180px;
     height: 180px;
+    &:after {
+      width: 94px;
+      height: 94px;
+    }
+    &:before {
+      content: '';
+      width: 150px;
+      height: 150px;
+    }
   }
 }

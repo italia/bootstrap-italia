@@ -79,6 +79,7 @@
     - title: Rating
     - title: Sections
     - title: Steppers
+    - title: Sticky
     - title: Tab
     - title: Timeline
     # - title: Toasts # TODO To be merged with our "Notifiche"?

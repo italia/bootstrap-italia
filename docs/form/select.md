@@ -44,7 +44,7 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 
 ### Select con gruppi
 
-Per le select con raggruppamenti utilizzare il tag HTML <optgroup> per raggruppare le <option>.
+Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>`.
 
 {% capture example %}
 <div class="select-wrapper">

@@ -136,13 +136,14 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const selectAutocomplete = new bootstrap.SelectAutocomplete(document.querySelector('#accessibleAutocomplete'), {
+    var selectElement = document.querySelector('#accessibleAutocomplete');
+    var selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
       showAllValues: true,
       defaultValue: '',
       autoselect: false,
       showNoOptionsFound: false,
       dropdownArrow: () => '',
-    })
+    });
   })
 </script>
 {% endcapture %}{% include example.html content=example %}
