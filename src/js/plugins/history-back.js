@@ -6,9 +6,10 @@ import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 const NAME = 'historyback'
 const DATA_KEY = 'bs.historyback'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK = `click${EVENT_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_TOGGLE = '[data-bs-toggle="historyback"]'
 
@@ -44,9 +45,14 @@ class HistoryBack extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
+
 const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
-  HistoryBack.getOrCreateInstance(toggle)
+  EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
+    evt.preventDefault()
+    const historyBack = HistoryBack.getOrCreateInstance(toggle)
+    historyBack.back()
+  })
 })
 
 export default HistoryBack
