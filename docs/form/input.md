@@ -111,7 +111,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 <div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text"><svg class="icon icon-sm icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
+      <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
     </div>
     <label for="input-group-2">Con Etichetta e placeholder</label>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
@@ -123,7 +123,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 <div class="form-group">
   <div class="input-group">
       <div class="input-group-prepend">
-        <div class="input-group-text"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
+        <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
       </div>
       <label for="input-group-3">Con Etichetta e bottone "primary"</label>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
