@@ -3,16 +3,17 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
+import onDocumentScroll from './util/on-document-scroll'
 import NavBarCollapsible from './navbar-collapsible'
 
 const NAME = 'navscroll'
-const DATA_KEY = 'bs.navscroll'
-const EVENT_KEY = `.${DATA_KEY}`
+//const DATA_KEY = 'bs.navscroll'
+//const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
 const SCROLL_PADDING = 10
 
-const EVENT_SCROLL = `scroll${EVENT_KEY}`
+//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'
 
@@ -38,6 +39,7 @@ class NavScroll extends BaseComponent {
     this._collapsible = this._getCollapsible()
     this._isCollapseOpened = false
     this._callbackQueue = []
+    this._scrollCb = null
 
     this._bindEvents()
   }
@@ -50,14 +52,19 @@ class NavScroll extends BaseComponent {
   // Public
 
   dispose() {
-    EventHandler.off(window, EVENT_SCROLL, this._onScroll)
+    //EventHandler.off(window, EVENT_SCROLL, this._onScroll)
+    if (this._scrollCb) {
+      this._scrollCb.dispose()
+    }
 
     super.dispose()
   }
   // Private
 
   _bindEvents() {
-    EventHandler.on(window, EVENT_SCROLL, this._onScroll)
+    //EventHandler.on(window, EVENT_SCROLL, this._onScroll)
+
+    this._scrollCb = onDocumentScroll(() => this._onScroll())
 
     if (this._collapsible) {
       EventHandler.on(this._collapsible._element, 'shown.bs.navbarcollapsible', () => this._onCollapseOpened())
@@ -175,9 +182,13 @@ class NavScroll extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
-navs.forEach((nav) => {
-  NavScroll.getOrCreateInstance(nav)
+
+const dataApiCb = onDocumentScroll(() => {
+  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
+  navs.forEach((nav) => {
+    NavScroll.getOrCreateInstance(nav)
+  })
+  dataApiCb.dispose()
 })
 
 export default NavScroll
