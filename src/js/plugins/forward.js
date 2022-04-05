@@ -10,9 +10,10 @@ import { documentScrollTo } from './util/tween'
 const NAME = 'historyback'
 const DATA_KEY = 'bs.historyback'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK = `click${EVENT_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_TOGGLE = '[data-bs-toggle="forward"]'
 
@@ -72,7 +73,11 @@ class Forward extends BaseComponent {
  */
 const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
-  Forward.getOrCreateInstance(toggle)
+  EventHandler.on(toggle, EVENT_CLICK_DATA_API, (evt) => {
+    evt.preventDefault()
+    const forward = Forward.getOrCreateInstance(toggle)
+    forward.goToTarget()
+  })
 })
 
 export default Forward
