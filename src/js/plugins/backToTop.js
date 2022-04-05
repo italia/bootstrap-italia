@@ -57,6 +57,14 @@ class BackToTop extends BaseComponent {
     }
   }
 
+  toggleShow() {
+    if (document.scrollingElement.scrollTop > this._config.scrollLimit) {
+      this.show()
+    } else {
+      this.hide()
+    }
+  }
+
   scrollToTop() {
     if (!this._isAnim) {
       this._isAnim = true
@@ -89,20 +97,12 @@ class BackToTop extends BaseComponent {
   }
 
   _bindEvents() {
-    this._scrollCb = onDocumentScroll(() => this._toggleShow())
+    this._scrollCb = onDocumentScroll(() => this.toggleShow())
 
     EventHandler.on(this._element, EVENT_CLICK, (evt) => {
       evt.preventDefault()
       this.scrollToTop()
     })
-  }
-
-  _toggleShow() {
-    if (document.scrollingElement.scrollTop > this._config.scrollLimit) {
-      this.show()
-    } else {
-      this.hide()
-    }
   }
 }
 
@@ -111,9 +111,18 @@ class BackToTop extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
+/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
   BackToTop.getOrCreateInstance(toggle)
+})*/
+
+const dataApiCb = onDocumentScroll(() => {
+  const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
+  toggles.forEach((toggle) => {
+    const backToTop = BackToTop.getOrCreateInstance(toggle)
+    backToTop.toggleShow()
+  })
+  dataApiCb.dispose()
 })
 
 export default BackToTop
