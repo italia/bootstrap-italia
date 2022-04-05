@@ -449,4 +449,23 @@ textarea {
       font-weight: 600;
     }
   }
+  input.semi-checked:not(:checked) + label::before {
+    top: 13px;
+    left: 4px;
+    width: 12px;
+    height: 2px;
+    border-style: none;
+    border-width: 0;
+    border-color: transparent;
+    transform: none;
+    backface-visibility: hidden;
+    opacity: 1;
+    background: #fff;
+  }
+
+  input.semi-checked:not(:checked) + label::after {
+    border-color: $primary-a5;
+    background-color: $primary-a5;
+    z-index: 0;
+  }
 }
