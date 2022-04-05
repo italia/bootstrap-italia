@@ -16,7 +16,7 @@ const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'
 
-const SELECTOR_NAVSCROLL = '.it-navscroll-wrapper'
+const SELECTOR_NAVSCROLL = '[data-bs-navscroll]' //'.it-navscroll-wrapper'
 const SELECTOR_LIST = 'ul.link-list'
 //const SELECTOR_ITEM = '.nav-item'
 const SELECTOR_LINK_CONTAINER = 'li.nav-link, li.nav-item'

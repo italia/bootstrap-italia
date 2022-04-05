@@ -8,7 +8,7 @@ toc: true
 
 ## Layout della Navscroll
 
-Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper`.  
+Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` dell'attributo `data-bs-navscroll`.  
 Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine pagina.
 
 Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
@@ -29,7 +29,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNav">
@@ -92,7 +92,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
@@ -164,7 +164,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
