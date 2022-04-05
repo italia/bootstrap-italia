@@ -8,9 +8,10 @@ import { focusSimbling } from './util/dom'
 const NAME = 'accordion'
 const DATA_KEY = 'bs.accordion'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api'
 
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
+const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_HEADBTN_WRAPPER = '.accordion'
 const SELECTOR_HEADBTN = '.accordion-item > .accordion-header [data-bs-toggle="collapse"]'
@@ -29,22 +30,28 @@ class Accordion extends BaseComponent {
   }
 
   // Public
-
-  // Private
-  _bindEvents() {
-    //fix collapse accessibility (arrow keys, home key, end key functionality)
+  handleKeyDown(keyName, target, evt) {
     const eventKeyCallback = {
       ArrowDown: (target) => this._focusNext(target),
       ArrowUp: (target) => this._focusPrev(target),
       Home: (target) => this._focusFirst(target),
       End: (target) => this._focusLast(target),
     }
+    if (typeof eventKeyCallback[keyName] === 'function') {
+      if (evt) {
+        evt.preventDefault()
+      }
+      eventKeyCallback[keyName](target)
+    }
+  }
+
+  // Private
+  _bindEvents() {
+    //fix collapse accessibility (arrow keys, home key, end key functionality)
+
     SelectorEngine.find(SELECTOR_HEADBTN, this._element).forEach((accHead) => {
       EventHandler.on(accHead, EVENT_KEYDOWN, (evt) => {
-        if (typeof eventKeyCallback[evt.key] === 'function') {
-          evt.preventDefault()
-          eventKeyCallback[evt.key](evt.currentTarget)
-        }
+        this.handleKeyDown(evt.key, evt.currentTarget, evt)
       })
     })
   }
@@ -75,9 +82,20 @@ class Accordion extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const accordions = SelectorEngine.find(SELECTOR_HEADBTN_WRAPPER)
+/*const accordions = SelectorEngine.find(SELECTOR_HEADBTN_WRAPPER)
 accordions.forEach((acc) => {
   Accordion.getOrCreateInstance(acc)
+})*/
+
+const accordionToggles = SelectorEngine.find(SELECTOR_HEADBTN)
+accordionToggles.forEach((toggle) => {
+  EventHandler.one(toggle, EVENT_KEYDOWN_DATA_API, (evt) => {
+    const parent = toggle.closest(SELECTOR_HEADBTN_WRAPPER)
+    if (parent) {
+      const accordion = Accordion.getOrCreateInstance(parent)
+      accordion.handleKeyDown(evt.key, toggle, evt)
+    }
+  })
 })
 
 export default Accordion
