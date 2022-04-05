@@ -1,3 +1,4 @@
+
 .nav-tabs {
   position: relative;
   background-color: $white;
@@ -380,7 +381,15 @@
     padding-bottom: 20px;
   }
 }
-
+@include media-breakpoint-down(md) {
+  .nav-tabs {
+    box-shadow: 0px 12px 25px -20px rgba(0,0,0,0.5);
+    &.nav-tabs-vertical,
+    &.nav-tabs-cards {
+      box-shadow: none;
+    }
+  }
+}
 //Desktop
 @include media-breakpoint-up(xl) {
   .nav-tabs {
