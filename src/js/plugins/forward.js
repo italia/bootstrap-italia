@@ -73,7 +73,7 @@ class Forward extends BaseComponent {
  */
 const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
-  EventHandler.on(toggle, EVENT_CLICK_DATA_API, (evt) => {
+  EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
     evt.preventDefault()
     const forward = Forward.getOrCreateInstance(toggle)
     forward.goToTarget()
