@@ -10,7 +10,7 @@ const NAME = 'progressdonut'
 //const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
-const SELECTOR_DONUT = '.progress-donut'
+const SELECTOR_DONUT = '[data-bs-progress-donut]'
 
 const Default = {
   color: '#0073E6',
