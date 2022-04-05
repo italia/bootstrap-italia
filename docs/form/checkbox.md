@@ -104,3 +104,22 @@ Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-ch
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Mixed Button
+
+Per ottenere la visualizzazione corretta basterà aggiungere la classe `.semi-checked` all'input di tipo `checkbox`.<br>
+Per l'utilizzo dell componente mixed button, è disponibile un esempio integrato nel componente [Transfer]({{ site.baseurl }}/docs/form/transfer/)
+
+{% capture example %}
+
+<div>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-check">
+        <input id="checkbox2" type="checkbox" class="semi-checked">
+        <label for="checkbox2">Mixed button attivo</label>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
