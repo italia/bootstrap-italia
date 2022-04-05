@@ -1,8 +1,10 @@
+import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
-import Input from './input'
+//import Input from './input'
+import InputLabel from './input-label'
 
 const NAME = 'inputpassword'
 const DATA_KEY = 'bs.inputpassword'
@@ -33,7 +35,7 @@ const CLASS_NAME_METER = 'input-password-strength-meter'
 const SELECTOR_PASSWORD = 'input[data-bs-input][type="password"]'
 const SELECTOR_BTN_SHOW_PWD = '.password-icon'
 
-class InputPassword extends Input {
+class InputPassword extends BaseComponent {
   constructor(element, config) {
     super(element)
 
@@ -48,6 +50,8 @@ class InputPassword extends Input {
     this._textElement = null
     this._capsElement = null
     this._showPwdElement = null
+
+    this._label = new InputLabel(element)
 
     this._init()
     this._bindEvents()

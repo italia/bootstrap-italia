@@ -1,32 +1,37 @@
+import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 //import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
-import Input from './input'
+import InputLabel from './input-label'
 
 const NAME = 'inputnumber'
 const DATA_KEY = 'bs.inputnumber'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_CHANGE = `change${EVENT_KEY}`
+const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_ADAPTIVE = 'input-number-adaptive'
-const CLASS_PERCENTAGE = 'input-number-percentage'
-const CLASS_CURRENCY = 'input-number-currency'
-//const CLASS_INCREMENT = 'input-number-add'
-const CLASS_DECREMENT = 'input-number-sub'
+const CLASS_NAME_ADAPTIVE = 'input-number-adaptive'
+const CLASS_NAME_PERCENTAGE = 'input-number-percentage'
+const CLASS_NAME_CURRENCY = 'input-number-currency'
+const CLASS_NAME_INCREMENT = 'input-number-add'
+const CLASS_NAME_DECREMENT = 'input-number-sub'
 
 const SELECTOR_WRAPPER = '.input-number'
 const SELECTOR_INPUT = 'input[data-bs-input][type="number"]'
 const SELECTOR_BTN = 'button'
 
-class InputNumber extends Input {
+class InputNumber extends BaseComponent {
   constructor(element) {
     super(element)
 
     this._wrapperElement = this._element.closest(SELECTOR_WRAPPER)
+
+    this._label = new InputLabel(element)
 
     this._init()
     this._bindEvents()
@@ -52,7 +57,7 @@ class InputNumber extends Input {
       SelectorEngine.find(SELECTOR_BTN, this._wrapperElement).forEach((btn) => {
         EventHandler.on(btn, EVENT_CLICK, (evt) => {
           evt.preventDefault()
-          this._incrDecr(btn.classList.contains(CLASS_DECREMENT))
+          this._incrDecr(btn.classList.contains(CLASS_NAME_DECREMENT))
         })
       })
 
@@ -61,14 +66,14 @@ class InputNumber extends Input {
   }
 
   _inputResize() {
-    if (this._wrapperElement.classList.contains(CLASS_ADAPTIVE)) {
+    if (this._wrapperElement.classList.contains(CLASS_NAME_ADAPTIVE)) {
       let newWidth = null
       //let newWidthIE = null
-      if (!this._wrapperElement.classList.contains(CLASS_PERCENTAGE)) {
+      if (!this._wrapperElement.classList.contains(CLASS_NAME_PERCENTAGE)) {
         newWidth = 'calc(44px + ' + this._element.value.length + 'ch)'
         //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
       }
-      if (this._wrapperElement.classList.contains(CLASS_CURRENCY)) {
+      if (this._wrapperElement.classList.contains(CLASS_NAME_CURRENCY)) {
         newWidth = 'calc(40px + 44px + ' + this._element.value.length + 'ch)'
         //newWidthIE = 'calc(40px + 44px + (1.5 * ' + this._element.value.length + 'ch))'
       }
@@ -126,7 +131,37 @@ class InputNumber extends Input {
 
 const inputs = SelectorEngine.find(SELECTOR_INPUT)
 inputs.forEach((input) => {
-  InputNumber.getOrCreateInstance(input)
+  /*const prevInst = BaseComponent.getInstance(input)
+  if (prevInst.NAME === 'input') {
+    prevInst.dispose()
+  }
+  InputNumber.getOrCreateInstance(input)*/
+
+  EventHandler.one(input, EVENT_FOCUS_DATA_API, (evt) => {
+    evt.preventDefault()
+    InputNumber.getOrCreateInstance(input)
+    EventHandler.trigger(input, 'focus')
+  })
+})
+
+const inputsButtons = SelectorEngine.find(SELECTOR_WRAPPER + ' ' + SELECTOR_BTN)
+inputsButtons.forEach((button) => {
+  EventHandler.one(button, EVENT_CLICK_DATA_API, (evt) => {
+    if (button.classList.contains(CLASS_NAME_INCREMENT) || button.classList.contains(CLASS_NAME_DECREMENT)) {
+      const wrapper = button.closest(SELECTOR_WRAPPER)
+      if (wrapper) {
+        const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
+        if (input) {
+          const inputNumber = InputNumber.getInstance(input)
+          if (!inputNumber) {
+            evt.preventDefault()
+            InputNumber.getOrCreateInstance(input)
+            EventHandler.trigger(button, 'click')
+          }
+        }
+      }
+    }
+  })
 })
 
 export default InputNumber

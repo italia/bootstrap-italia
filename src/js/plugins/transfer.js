@@ -24,7 +24,7 @@ const CLASS_NAME_ACTIVE = 'active'
 const CLASS_NAME_SOURCE = 'source'
 const CLASS_NAME_SEMICHECKED = 'semi-checked'
 
-const SELECTOR_BLOCK = '.it-transfer-block'
+const SELECTOR_BLOCK = '[data-bs-transfer]' //'.it-transfer-block'
 const SELECTOR_BTN_TRANS = 'a.transfer'
 const SELECTOR_BTN_TRANS_BACK = 'a.backtransfer'
 const SELECTOR_BTN_RESET = 'a.reset'

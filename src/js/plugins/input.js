@@ -10,6 +10,8 @@ const DATA_KEY = 'bs.input'
 const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
+//const SELECTOR_INPUT = 'input[data-bs-input]'
+
 const EVENT_CHANGE = `change${EVENT_KEY}`
 
 class Input extends BaseComponent {
@@ -56,5 +58,31 @@ class Input extends BaseComponent {
     }
   }
 }
+
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+const excludes = [
+  'select',
+  'input[data-bs-input][type="number"]',
+  'input[data-bs-input][type="password"]',
+  'input[data-bs-autocomplete][type="search"]',
+  'input[type="time"]',
+]
+
+const inputs = SelectorEngine.find('input, textarea').filter((input) => {
+  let result = true
+  excludes.forEach((selector) => {
+    if (input.matches(selector)) {
+      result = false
+    }
+  })
+  return result
+})
+inputs.forEach((input) => {
+  Input.getOrCreateInstance(input)
+})
 
 export default Input
