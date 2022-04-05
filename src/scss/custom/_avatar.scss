@@ -29,13 +29,6 @@
     line-height: 1em;
     position: absolute;
   }
-  // text fix for ie11
-  /* stylelint-disable */
-  _:-ms-fullscreen,
-  p {
-    transform: translateX(-50%) translateY(-50%);
-  }
-  /* stylelint-enable */
   // icon
   .icon {
     height: 16px; // default size equals to md
@@ -331,6 +324,10 @@ a.avatar {
     }
     &.notify {
       background: $primary-b1;
+    }
+    .icon {
+      stroke-width: 1px;
+      stroke: #fff;
     }
   }
 
