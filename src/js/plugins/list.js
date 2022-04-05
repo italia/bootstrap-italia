@@ -12,8 +12,8 @@ const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'
 
-const SELECTOR_LIST = '.it-list'
-const SELECTOR_ITEM_CHECKBOX = '.it-has-checkbox'
+const SELECTOR_LIST = '[data-bs-list-checkbox]' //'.it-list'
+const SELECTOR_ITEM_CHECKBOX = 'input[type=checkbox]'
 
 class List extends BaseComponent {
   constructor(element) {
@@ -36,9 +36,9 @@ class List extends BaseComponent {
   }
   _initCheckbox() {
     SelectorEngine.find(SELECTOR_ITEM_CHECKBOX, this._element).forEach((item) => {
-      EventHandler.on(item, EVENT_CLICK, (evt) => {
+      EventHandler.on(item.closest('a'), EVENT_CLICK, (evt) => {
         evt.preventDefault()
-        this._toggleCheckbox(item)
+        this._toggleCheckbox(item.closest('a'))
       })
     })
   }
