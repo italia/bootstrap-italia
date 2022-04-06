@@ -38,7 +38,12 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#" role="button">
+      <svg class="icon icon-sm icon-primary align-top">
+        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
+      </svg>
+      <span>Back</span>
+    </a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>

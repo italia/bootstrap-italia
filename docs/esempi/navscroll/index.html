@@ -3,7 +3,9 @@ layout: base
 title: NavScroll
 ---
 
-<div class="container">
+{%- include esempi/comuni/header.html -%}
+
+<div class="container pt-lg-5">
   <div class="row">
     <div class="col-12 col-lg-4">
       <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side affix-top">
@@ -20,14 +22,11 @@ title: NavScroll
         </button>
         <div class="navbar-collapsable" id="navbarNav">
           <div class="overlay"></div>
-          <div class="close-div">
-            <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
-          </div>
-          <a class="it-back-button" href="#">
+          <a class="it-back-button" href="#" role="button">
             <svg class="icon icon-sm icon-primary align-top">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
             </svg>
-            <span>Back</span>
+            <span>Indietro</span>
           </a>
           <div class="menu-wrapper">
             <div class="link-list-wrapper">
