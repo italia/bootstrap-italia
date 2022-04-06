@@ -286,6 +286,8 @@ a.avatar {
     .icon {
       width: 18px;
       height: 18px;
+      stroke-width: 1px;
+      stroke: $white;
     }
   }
 
@@ -324,10 +326,6 @@ a.avatar {
     }
     &.notify {
       background: $primary-b1;
-    }
-    .icon {
-      stroke-width: 1px;
-      stroke: #fff;
     }
   }
 
