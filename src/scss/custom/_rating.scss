@@ -3,8 +3,6 @@
 .rating {
   border: none;
   float: left;
-  display: flex;
-  align-items: center;
   //hide radio
   & > input {
     position: absolute;
@@ -40,9 +38,9 @@
     font-size: 0.875rem;
     float: right;
     width: auto;
-    margin: $v-gap * 0.5 0 0 $v-gap * 2;
+    margin: $v-gap 0 0 $v-gap * 2;
     font-weight: 500;
-    order: 2;
+    line-height: 1.2;
   }
 
   &.rating-read-only {
