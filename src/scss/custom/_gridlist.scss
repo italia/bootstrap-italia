@@ -31,6 +31,18 @@
   // text overlay
   &.it-grid-item-overlay {
     position: relative;
+    .img-responsive-wrapper {
+      &:after {
+        content: '';
+        display: block;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
     .it-griditem-text-wrapper {
       position: absolute;
       left: 0;
