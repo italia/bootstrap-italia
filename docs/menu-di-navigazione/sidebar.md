@@ -236,7 +236,7 @@ La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizz
         <li>
           <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
-              <span>Link lista 3 (selezionato)</span>
+              <span>Link lista 3</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
