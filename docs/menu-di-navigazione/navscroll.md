@@ -23,6 +23,8 @@ Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo 
 
 **[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
+Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
+
 ### Posizionamento a fondo pagina con linea a sinistra
 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
@@ -318,8 +320,21 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>10</td>
       <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
     </tr>
+    <tr>
+      <td>duration</td>
+      <td>number</td>
+      <td>800</td>
+      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOutSine</td>
+      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).<</td>
+    </tr>
   </tbody>
 </table>
+
 ### Metodi
 
 <table class="table table-bordered table-striped">

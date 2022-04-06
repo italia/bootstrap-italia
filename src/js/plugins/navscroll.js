@@ -7,6 +7,8 @@ import Manipulator from 'bootstrap/js/src/dom/manipulator'
 import onDocumentScroll from './util/on-document-scroll'
 import NavBarCollapsible from './navbar-collapsible'
 
+import { documentScrollTo } from './util/tween'
+
 const NAME = 'navscroll'
 //const DATA_KEY = 'bs.navscroll'
 //const EVENT_KEY = `.${DATA_KEY}`
@@ -31,6 +33,8 @@ const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
 
 const Default = {
   scrollPadding: 10,
+  duration: 800,
+  easing: 'easeInOutSine',
 }
 class NavScroll extends BaseComponent {
   constructor(element, config) {
@@ -154,9 +158,12 @@ class NavScroll extends BaseComponent {
   _scrollToHash(hash) {
     const target = SelectorEngine.findOne(hash, this._sectionContainer)
     if (target) {
-      //scroll animation - TODO
-      const scrollingElement = document.scrollingElement
-      scrollingElement.scrollTop = target.offsetTop - this._getScrollPadding()
+      documentScrollTo(target.offsetTop - this._getScrollPadding(), {
+        duration: this._config.duration,
+        easing: this._config.easing,
+        /*complete: () => {
+        },*/
+      })
 
       if (history.pushState) {
         history.pushState(null, null, hash)
