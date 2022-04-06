@@ -103,9 +103,6 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
     </div>
     <label for="input-group-1">Con Etichetta</label>
     <input type="text" class="form-control" id="input-group-1" name="input-group-1">
-    <div class="input-group-append">
-      <button class="btn" type="button" id="button-1">Invio</button>
-    </div>
   </div>
 </div>
 <div class="form-group">
@@ -115,9 +112,6 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
     </div>
     <label for="input-group-2">Con Etichetta e placeholder</label>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
-    <div class="input-group-append">
-      <button class="btn" type="button" id="button-2">Invio</button>
-    </div>
   </div>
 </div>
 <div class="form-group">
