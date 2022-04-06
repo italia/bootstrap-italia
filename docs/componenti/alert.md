@@ -8,7 +8,7 @@ toc: true
 
 ## Esempi
 
-Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando il [plugin _alerts_ di jQuery](#chiusura).
+Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un bottone con attributo `data-bs-dismiss="alert"`.
 
 {% capture example %}
 {% assign colors = "info,success,warning,danger" | split: ','%}
@@ -51,9 +51,8 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli head
 
 ### Chiusura
 
-Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avviso. Ecco come:
+Mediante un bottone di chiusura è possibile eliminare qualsiasi avviso. Ecco come:
 
-- Assicurati di aver caricato il plugin di alert o di aver compilato il codice Bootstrap JavaScript.
 - Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.btn-close`.
 - Sul pulsante di chiusura, aggiungi l'attributo `data-bs-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
 - Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi `.fade` e `.show`.
