@@ -73,6 +73,7 @@ fieldset {
 
 ::placeholder {
   font-weight: 600;
+  color: $gray-secondary;
 }
 
 input[type='date'],
