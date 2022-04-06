@@ -117,7 +117,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   <tbody>
     <tr>
       <td>set</td>
-      <td>modifica lo stato di progressione della barra. E' necessario inserire un numero compreso tra 0 e 1.0</td>
+      <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
     </tr>
     <tr>
       <td>dispose</td>

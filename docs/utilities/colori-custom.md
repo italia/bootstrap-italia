@@ -62,7 +62,7 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
       <div class="c-line primary-bg-a2">a2</div>
       <div class="c-line primary-bg-a3">a3</div>
       <div class="c-line primary-bg-a4">a4</div>
-      <div class="c-line white-color primary-bg-a5">a5</div>
+      <div class="c-line primary-bg-a5">a5</div>
       <div class="c-line white-color primary-bg-a6">a6</div>
       <div class="c-line white-color primary-bg-a7">a7</div>
       <div class="c-line white-color primary-bg-a8">a8</div>
@@ -92,7 +92,7 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
       <div class="c-line primary-bg-c7">c7</div>
       <div class="c-line primary-bg-c8">c8</div>
       <div class="c-line primary-bg-c9">c9</div>
-      <div class="c-line white-color primary-bg-c10">c10</div>
+      <div class="c-line primary-bg-c10">c10</div>
       <div class="c-line white-color primary-bg-c11">c11</div>
       <div class="c-line white-color primary-bg-c12">c12</div>
     </div>
@@ -129,7 +129,7 @@ Devono essere usati in modo parsimonioso.
 <div class="exclude-a11y-check">
 {% capture example %}
 <div class="analogue-1-bg p-3"><span class="white-color">Testo bianco su background colore analogo 1</span></div>
-<div class="analogue-2-bg p-3"><span class="analogue-1-color">Testo colore analogo 1 su background colore analogo 2</span></div>
+<div class="analogue-2-bg p-3"><span>Testo nero su background colore analogo 2</span></div>
 {% endcapture %}{% include example.html content=example %}
 </div>
 
@@ -256,7 +256,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
       <div class="c-line complementary-1-bg-a2">a2</div>
       <div class="c-line complementary-1-bg-a3">a3</div>
       <div class="c-line complementary-1-bg-a4">a4</div>
-      <div class="c-line white-color complementary-1-bg-a5">a5</div>
+      <div class="c-line complementary-1-bg-a5">a5</div>
       <div class="c-line white-color complementary-1-bg-a6">a6</div>
       <div class="c-line white-color complementary-1-bg-a7">a7</div>
       <div class="c-line white-color complementary-1-bg-a8">a8</div>
@@ -280,8 +280,8 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
       <div class="c-line complementary-2-bg-a2">a2</div>
       <div class="c-line complementary-2-bg-a3">a3</div>
       <div class="c-line complementary-2-bg-a4">a4</div>
-      <div class="c-line white-color complementary-2-bg-a5">a5</div>
-      <div class="c-line white-color complementary-2-bg-a6">a6</div>
+      <div class="c-line complementary-2-bg-a5">a5</div>
+      <div class="c-line complementary-2-bg-a6">a6</div>
       <div class="c-line white-color complementary-2-bg-a7">a7</div>
       <div class="c-line white-color complementary-2-bg-a8">a8</div>
       <div class="c-line white-color complementary-2-bg-a9">a9</div>
@@ -306,8 +306,8 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
       <div class="c-line complementary-3-bg-a4">a4</div>
       <div class="c-line complementary-3-bg-a5">a5</div>
       <div class="c-line complementary-3-bg-a6">a6</div>
-      <div class="c-line white-color complementary-3-bg-a7">a7</div>
-      <div class="c-line white-color complementary-3-bg-a8">a8</div>
+      <div class="c-line complementary-3-bg-a7">a7</div>
+      <div class="c-line complementary-3-bg-a8">a8</div>
       <div class="c-line white-color complementary-3-bg-a9">a9</div>
       <div class="c-line white-color complementary-3-bg-a10">a10</div>
       <div class="c-line white-color complementary-3-bg-a11">a11</div>
@@ -374,7 +374,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
     <div class="c-line neutral-1-bg-a3">a3</div>
     <div class="c-line neutral-1-bg-a4">a4</div>
     <div class="c-line neutral-1-bg-a5">a5</div>
-    <div class="c-line white-color neutral-1-bg-a6">a6</div>
+    <div class="c-line neutral-1-bg-a6">a6</div>
     <div class="c-line white-color neutral-1-bg-a7">a7</div>
     <div class="c-line white-color neutral-1-bg-a8">a8</div>
     <div class="c-line white-color neutral-1-bg-a9">a9</div>
@@ -384,7 +384,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
     <div class="c-line neutral-2-bg-b1">b1</div>
     <div class="c-line neutral-2-bg-b2">b2</div>
     <div class="c-line neutral-2-bg-b3">b3</div>
-    <div class="c-line white-color neutral-2-bg-b4">b4</div>
+    <div class="c-line neutral-2-bg-b4">b4</div>
     <div class="c-line white-color neutral-2-bg-b5">b5</div>
     <div class="c-line white-color neutral-2-bg-b6">b6</div>
     <div class="c-line white-color neutral-2-bg-b7">b7</div>
@@ -393,7 +393,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
     <div class="c-line neutral-2-bg-a1">a1</div>
     <div class="c-line neutral-2-bg-a2">a2</div>
     <div class="c-line neutral-2-bg-a3">a3</div>
-    <div class="c-line white-color neutral-2-bg-a4">a4</div>
+    <div class="c-line neutral-2-bg-a4">a4</div>
     <div class="c-line white-color neutral-2-bg-a5">a5</div>
     <div class="c-line white-color neutral-2-bg-a6">a6</div>
     <div class="c-line white-color neutral-2-bg-a7">a7</div>

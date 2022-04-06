@@ -73,7 +73,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 ### Bottoni con icona
 
-E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
+È possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
