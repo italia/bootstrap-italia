@@ -2,6 +2,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
 import onDocumentScroll from './util/on-document-scroll'
 import NavBarCollapsible from './navbar-collapsible'
@@ -10,8 +11,6 @@ const NAME = 'navscroll'
 //const DATA_KEY = 'bs.navscroll'
 //const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
-
-const SCROLL_PADDING = 10
 
 //const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
@@ -30,9 +29,14 @@ const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_TOGGLER_ICON = '.it-list'
 const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
 
+const Default = {
+  scrollPadding: 10,
+}
 class NavScroll extends BaseComponent {
-  constructor(element) {
+  constructor(element, config) {
     super(element)
+
+    this._config = this._getConfig(config)
 
     this._togglerElement = SelectorEngine.findOne(SELECTOR_TOGGLER, this._element)
     this._sectionContainer = SelectorEngine.findOne(SELECTOR_CONTAINER)
@@ -50,6 +54,9 @@ class NavScroll extends BaseComponent {
   }
 
   // Public
+  setScrollPadding(scrollPadding) {
+    this._config.scrollPadding = scrollPadding
+  }
 
   dispose() {
     //EventHandler.off(window, EVENT_SCROLL, this._onScroll)
@@ -59,7 +66,16 @@ class NavScroll extends BaseComponent {
 
     super.dispose()
   }
+
   // Private
+  _getConfig(config) {
+    config = {
+      ...Default,
+      ...Manipulator.getDataAttributes(this._element),
+      ...(typeof config === 'object' ? config : {}),
+    }
+    return config
+  }
 
   _bindEvents() {
     //EventHandler.on(window, EVENT_SCROLL, this._onScroll)
@@ -82,6 +98,11 @@ class NavScroll extends BaseComponent {
           scrollHash()
         }
       })
+    })
+
+    EventHandler.on(window, 'load', () => {
+      //if page is already scrolled
+      setTimeout(() => this._onScroll(), 150)
     })
   }
 
@@ -135,7 +156,7 @@ class NavScroll extends BaseComponent {
     if (target) {
       //scroll animation - TODO
       const scrollingElement = document.scrollingElement
-      scrollingElement.scrollTop = target.offsetTop
+      scrollingElement.scrollTop = target.offsetTop - this._getScrollPadding()
 
       if (history.pushState) {
         history.pushState(null, null, hash)
@@ -151,8 +172,10 @@ class NavScroll extends BaseComponent {
 
     const navItems = SelectorEngine.find(SELECTOR_LINK, this._element)
 
+    const scrollPadding = this._getScrollPadding()
+
     SelectorEngine.find(SELECTOR_PAGE_SECTION).forEach((pageSec, idx) => {
-      if (pageSec.offsetTop <= scrollDistance + SCROLL_PADDING) {
+      if (pageSec.offsetTop - sectionsContainerTop <= scrollDistance + scrollPadding) {
         SelectorEngine.find(SELECTOR_LINK_ACTIVE, this._element).forEach((link) => {
           link.classList.remove(CLASS_NAME_ACTIVE)
         })
@@ -174,6 +197,13 @@ class NavScroll extends BaseComponent {
       return NavBarCollapsible.getOrCreateInstance(coll)
     }
     return null
+  }
+
+  _getScrollPadding() {
+    if (typeof this._config.scrollPadding === 'function') {
+      return this._config.scrollPadding()
+    }
+    return this._config.scrollPadding
   }
 }
 

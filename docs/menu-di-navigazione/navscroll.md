@@ -295,10 +295,31 @@ Abilitarlo manualmente con:
 
 ```js
 var navscrollElement = document.querySelector('.it-navscroll-wrapper')
-var navscroll = new bootstrap.NavScroll(navscrollElement, {
-  toggle: false,
-})
+var navscroll = new bootstrap.NavScroll(navscrollElement, config)
 ```
+
+### Opzioni
+
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scrollPadding</td>
+      <td>number | function </td>
+      <td>10</td>
+      <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
+    </tr>
+  </tbody>
+</table>
 ### Metodi
 
 <table class="table table-bordered table-striped">
@@ -309,6 +330,10 @@ var navscroll = new bootstrap.NavScroll(navscrollElement, {
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>setScrollPadding</td>
+      <td>modfica il valore dell'opzione <code>scrollPadding</code>.</td>
+    </tr>
     <tr>
       <td>dispose</td>
       <td>Elimina le funzionalità del componente.</td>
