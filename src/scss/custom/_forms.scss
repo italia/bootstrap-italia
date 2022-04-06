@@ -73,6 +73,7 @@ fieldset {
 
 ::placeholder {
   font-weight: 600;
+  color: $gray-secondary;
 }
 
 input[type='date'],
@@ -439,7 +440,6 @@ textarea {
 
     .form-text {
       margin: 0;
-      padding-left: 8px;
       padding-right: 52px;
       display: block;
       margin-bottom: $v-gap * 2;

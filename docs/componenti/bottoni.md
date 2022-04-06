@@ -78,7 +78,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
   <span>Icon Button Lg</span>
-  <svg class="icon icon-white">
+  <svg class="icon icon-white ms-1">
   <use
         href="{{
           site.baseurl
@@ -89,7 +89,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 <button class="btn btn-primary btn-icon btn-me">
   <span>Icon Button</span>
-  <svg class="icon icon-white">
+  <svg class="icon icon-white ms-1">
   <use
         href="{{
           site.baseurl
@@ -100,7 +100,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 <button class="btn btn-danger btn-sm btn-icon btn-me">
   <span>Icon Button Sm</span>
-  <svg class="icon icon-secondary">
+  <svg class="icon icon-secondary ms-1">
   <use
         href="{{
           site.baseurl
@@ -109,7 +109,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
   </svg>
 </button>
 
-<button class="btn btn-info btn-xs btn-icon">
+<button class="btn btn-info btn-xs btn-icon ms-1">
   <span>Icon Button Xs</span>
   <svg class="icon icon-danger">
   <use
