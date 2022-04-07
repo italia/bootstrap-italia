@@ -135,14 +135,6 @@
           }
         }
       }
-
-      // Fix stack context issue
-      & ~ * {
-        // fix plugin z-index value (in conflict with sticky header)
-        .owl-carousel {
-          z-index: auto;
-        }
-      }
     }
   }
 }
