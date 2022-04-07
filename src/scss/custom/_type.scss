@@ -97,8 +97,50 @@ h6,
 
 blockquote,
 .blockquote {
-  font-family: $font-family-serif;
+  font-size: inherit;
   margin: 1.5rem 0;
+  margin-left: calc($spacer / 2);
+  border-left: 4px solid $analogue-2;
+  padding: calc($spacer / 4) $spacer;
+  &.text-end {
+    margin-right: calc($spacer / 2);
+    border-right: 4px solid $analogue-2;
+  }
+  &.text-center,
+  &.text-end,
+  &.blockquote-simple {
+    margin-left: 0;
+    border-left: none;
+  }
+  &.text-center,
+  &.blockquote-simple {
+    padding: 0;
+  }
+  &.blockquote-simple {
+    font-style: italic;
+  }
+
+  //card version
+  &.blockquote-card {
+    margin-left: 0;
+    padding: 16px 40px 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .blockquote-footer {
+      font-size: inherit;
+      &:before {
+        content: none;
+      }
+    }
+    &.dark {
+      background-color: $primary;
+      border-left: none;
+      color: $white;
+      padding: 40px;
+      .blockquote-footer {
+        color: $white;
+      }
+    }
+  }
 }
 
 caption {

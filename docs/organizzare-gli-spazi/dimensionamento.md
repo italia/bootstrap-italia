@@ -20,9 +20,12 @@ Le grandezze di default presenti sono: `25%`, `50%`, `75%` e `100%`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Altezza fissa
+
+Le altezze di default presenti sono: `25%`, `50%`, `75%` e `100%`.
 {% capture example %}
 
-<div class="border" style="height: 200px;">
+<div class="border d-flex" style="height: 200px;">
   <div class="bg-primary text-white text-center h-100 d-inline-block" style="width: 120px;">Height 100%</div>
   <div class="bg-primary text-white text-center h-75 d-inline-block" style="width: 120px;">Height 75%</div>
   <div class="bg-primary text-white text-center h-50 d-inline-block" style="width: 120px;">Height 50%</div>

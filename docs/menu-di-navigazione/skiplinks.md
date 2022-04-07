@@ -19,7 +19,7 @@ Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
 <div class="skiplinks">
   <a class="visually-hidden-focusable" href="#">Vai al contenuto principale</a>
-  <a class="visually-hidden-focusable" href="#">Vai al footer</a>
+  <a class="visually-hidden-focusable" href="#">Vai al piede di pagina</a>
 </div>
 {% endcapture %}{% include example.html content=example %}
     

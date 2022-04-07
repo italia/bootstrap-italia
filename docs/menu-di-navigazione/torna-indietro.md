@@ -30,7 +30,7 @@ Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessa
 
 ### Bottoni con sola icona
 
-E' possibile creare bottoni senza testo dotati di sola icona avendo cura di includere il testo alternativo per gli screen reader in un tag `<span>` con classe `.visually-hidden`.
+È possibile creare bottoni senza testo dotati di sola icona avendo cura di includere il testo alternativo per gli screen reader in un tag `<span>` con classe `.visually-hidden`.
 
 {% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg><span class="visually-hidden">Torna indietro</span></button>

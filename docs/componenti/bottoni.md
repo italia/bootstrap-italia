@@ -73,12 +73,12 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 ### Bottoni con icona
 
-E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
+È possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
   <span>Icon Button Lg</span>
-  <svg class="icon icon-white">
+  <svg class="icon icon-white ms-1">
   <use
         href="{{
           site.baseurl
@@ -89,7 +89,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 
 <button class="btn btn-primary btn-icon btn-me">
   <span>Icon Button</span>
-  <svg class="icon icon-white">
+  <svg class="icon icon-white ms-1">
   <use
         href="{{
           site.baseurl
@@ -100,7 +100,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
 
 <button class="btn btn-danger btn-sm btn-icon btn-me">
   <span>Icon Button Sm</span>
-  <svg class="icon icon-secondary">
+  <svg class="icon icon-secondary ms-1">
   <use
         href="{{
           site.baseurl
@@ -109,7 +109,7 @@ E' possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-i
   </svg>
 </button>
 
-<button class="btn btn-info btn-xs btn-icon">
+<button class="btn btn-info btn-xs btn-icon ms-1">
   <span>Icon Button Xs</span>
   <svg class="icon icon-danger">
   <use

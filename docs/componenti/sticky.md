@@ -39,7 +39,7 @@ Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funz
 
 #### Attivazione tramite target
 
-E' possibile attivare la funzionalità quando un particolare elemento interno esce dalla viewport della pagina.
+È possibile attivare la funzionalità quando un particolare elemento interno esce dalla viewport della pagina.
 In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 {% capture example %}

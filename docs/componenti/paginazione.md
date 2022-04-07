@@ -392,7 +392,7 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="vi
 
 ### Total number
 
-Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di pagine all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
+Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi  o il il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
 
 {% capture example %}
 
@@ -424,6 +424,40 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
       </a>
     </li>
   </ul>
-  <p><span class="visually-hidden">Pagina</span> 24 di 50</p>
+  <p>Totale 300 elementi </p>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+{% capture example %}
+
+<nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#">
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span class="visually-hidden">Pagina precedente</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><span class="page-link">...</span></li>
+    <li class="page-item active">
+      <a class="page-link" href="#" aria-current="page">
+        <span class="d-inline-block d-sm-none">Pagina </span>24
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">25</a></li>
+    <li class="page-item"><a class="page-link" href="#">26</a></li>
+    <li class="page-item"><a class="page-link" href="#">27</a></li>
+    <li class="page-item"><a class="page-link" href="#">28</a></li>
+    <li class="page-item"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="#">50</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">
+        <span class="visually-hidden">Pagina successiva</span>
+        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+  <p>100-110 di 300 elementi</p>
 </nav>
 {% endcapture %}{% include example.html content=example %}

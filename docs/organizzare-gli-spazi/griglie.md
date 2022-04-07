@@ -59,74 +59,75 @@ Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalto
 Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
 Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th class="text-center" scope="col">
-        Extra small<br>
-        <small>&lt;576px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Small<br>
-        <small>&ge;576px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Medium<br>
-        <small>&ge;768px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Large<br>
-        <small>&ge;992px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Extra large<br>
-        <small>&ge;1200px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Extra Extra large<br>
-        <small>&ge;1400px</small>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-nowrap" scope="row">Larghezza massima del contenitore</th>
-      <td>Nessuno (auto)</td>
-      <td>540px</td>
-      <td>720px</td>
-      <td>960px</td>
-      <td>1140px</td>
-      <td>1320px</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Prefisso della classe</th>
-      <td><code>.col-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-      <td><code>.col-xl-</code></td>
-      <td><code>.col-xxl-</code></td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row"># di colonne</th>
-      <td colspan="6">12</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
-      <td colspan="6">24px (12px su ogni lato della colonna)</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Annidabile</th>
-      <td colspan="6">Yes</td>
-    </tr>
-    <tr>
-      <th class="text-nowrap" scope="row">Ordinamento delle colonne</th>
-      <td colspan="6">Yes</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th class="text-center" scope="col">
+          Extra small<br>
+          <small>&lt;576px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Small<br>
+          <small>&ge;576px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Medium<br>
+          <small>&ge;768px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Large<br>
+          <small>&ge;992px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Extra large<br>
+          <small>&ge;1200px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Extra Extra large<br>
+          <small>&ge;1400px</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Larghezza massima del contenitore</th>
+        <td>Nessuno (auto)</td>
+        <td>540px</td>
+        <td>720px</td>
+        <td>960px</td>
+        <td>1140px</td>
+        <td>1320px</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Prefisso della classe</th>
+        <td><code>.col-</code></td>
+        <td><code>.col-sm-</code></td>
+        <td><code>.col-md-</code></td>
+        <td><code>.col-lg-</code></td>
+        <td><code>.col-xl-</code></td>
+        <td><code>.col-xxl-</code></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># di colonne</th>
+        <td colspan="6">12</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+        <td colspan="6">24px (12px su ogni lato della colonna)</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Annidabile</th>
+        <td colspan="6">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Ordinamento delle colonne</th>
+        <td colspan="6">Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Colonne a disposizione automatica
 
@@ -483,49 +484,51 @@ $grid-gutter-widths: (
 Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe `.row`, la classe `.variable-gutters`.
 
 In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th class="text-center" scope="col">
+          Extra small<br>
+          <small>&lt;576px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Small<br>
+          <small>&ge;576px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Medium<br>
+          <small>&ge;768px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Large<br>
+          <small>&ge;992px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Extra large<br>
+          <small>&ge;1200px</small>
+        </th>
+        <th class="text-center" scope="col">
+          Extra large<br>
+          <small>&ge;1400px</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Larghezza del gutter</th>
+        <td><code>12px</code></td>
+        <td><code>12px</code></td>
+        <td><code>20px</code></td>
+        <td><code>20px</code></td>
+        <td><code>28px</code></td>
+        <td><code>28px</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th class="text-center" scope="col">
-        Extra small<br>
-        <small>&lt;576px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Small<br>
-        <small>&ge;576px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Medium<br>
-        <small>&ge;768px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Large<br>
-        <small>&ge;992px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Extra large<br>
-        <small>&ge;1200px</small>
-      </th>
-      <th class="text-center" scope="col">
-        Extra large<br>
-        <small>&ge;1400px</small>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-nowrap" scope="row">Larghezza del gutter</th>
-      <td><code>12px</code></td>
-      <td><code>12px</code></td>
-      <td><code>20px</code></td>
-      <td><code>20px</code></td>
-      <td><code>28px</code></td>
-      <td><code>28px</code></td>
-    </tr>
-  </tbody>
-</table>
 
 <div class="bd-example-row">
 {% capture example %}

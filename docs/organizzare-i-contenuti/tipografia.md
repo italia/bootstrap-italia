@@ -275,7 +275,7 @@ di un `<blockquote class="blockquote">` come la citazione.
 {% capture example %}
 
 <blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
 </blockquote>
 {% endcapture %}{% include example.html content=example %}
 
@@ -287,8 +287,8 @@ Includi il nome delle fonte di origine in `<cite>`.
 {% capture example %}
 
 <blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
+  <footer class="blockquote-footer">Nome Cognome da <cite title="Titolo fonte">Titolo fonte</cite></footer>
 </blockquote>
 {% endcapture %}{% include example.html content=example %}
 
@@ -300,23 +300,53 @@ blockquote.
 {% capture example %}
 
 <blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
+  <footer class="blockquote-footer">Nome Cognome da <cite title="Titolo fonte">Titolo fonte</cite></footer>
 </blockquote>
 {% endcapture %}{% include example.html content=example %}
 
 {% capture example %}
 
 <blockquote class="blockquote text-end">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+{% endcapture %}{% include example.html content=example %}
+
+### Semplice
+
+Aggiungendo la classe `.blockquote-simple` si ottiene una versione card del Blockquote.
+
+{% capture example %}
+<blockquote class="blockquote blockquote-simple">
+  <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
+</blockquote>
+{% endcapture %}{% include example.html content=example %}
+
+### Card
+
+Aggiungendo la classe `.blockquote-card` si ottiene un Blockquote di tipo card.
+
+{% capture example %}
+<blockquote class="blockquote blockquote-card">
+  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
+  <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>
+</blockquote>
+{% endcapture %}{% include example.html content=example %}
+
+Aggiungendo un'ulteriore classe `.dark` si ottiene un Blockquote card scuro.
+
+{% capture example %}
+<blockquote class="blockquote blockquote-card dark">
+  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
+  <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>
 </blockquote>
 {% endcapture %}{% include example.html content=example %}
 
 ## Liste
 
 Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi
-elenco (solo per i figli diretti). **Questo si applica solo agli elementi della
+elenco (solo per i figli diretti). **Questo si applica solo agli elementi dellas
 lista che sono figli diretti**, il che significa che dovrai aggiungere la classe
 per tutti gli elenchi annidati.
 

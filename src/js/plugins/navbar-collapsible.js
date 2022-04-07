@@ -144,7 +144,14 @@ class NavBarCollapsible extends BaseComponent {
     if (this._overlay) {
       EventHandler.on(this._overlay, EVENT_CLICK, () => this.hide())
     }
-    EventHandler.on(this._btnClose, EVENT_CLICK, () => this.hide())
+    EventHandler.on(this._btnClose, EVENT_CLICK, (evt) => {
+      evt.preventDefault()
+      this.hide()
+    })
+    EventHandler.on(this._btnBack, EVENT_CLICK, (evt) => {
+      evt.preventDefault()
+      this.hide()
+    })
 
     this._menuItems.forEach((item) => {
       EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))

@@ -286,6 +286,8 @@ a.avatar {
     .icon {
       width: 18px;
       height: 18px;
+      stroke-width: 1px;
+      stroke: $white;
     }
   }
 
@@ -325,10 +327,6 @@ a.avatar {
     &.notify {
       background: $primary-b1;
     }
-    .icon {
-      stroke-width: 1px;
-      stroke: #fff;
-    }
   }
 
   //extra text version
@@ -342,6 +340,10 @@ a.avatar {
       flex-shrink: 0;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     //text
     .extra-text {
       line-height: 1.2em;
@@ -353,6 +355,10 @@ a.avatar {
         font-size: 1.111rem;
         a {
           display: inline-block;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       p,
