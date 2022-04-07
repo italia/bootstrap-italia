@@ -1,7 +1,5 @@
 export { default as CarouselBI } from './plugins/carousel-bi'
 export { default as InputNumber } from './plugins/input-number'
-//import accessibleAutocomplete from 'accessible-autocomplete'
-
 export { default as Dimmer } from './plugins/dimmer'
 export { default as Notification } from './plugins/notification'
 export { default as Cookiebar } from './plugins/cookiebar'
@@ -24,6 +22,8 @@ export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
 export { default as List } from './plugins/list'
 export { default as Transfer } from './plugins/transfer'
+
+export { loadPlugin } from './load-plugin'
 
 import * as fontsLoader from './plugins/fonts-loader'
 export { fontsLoader }
