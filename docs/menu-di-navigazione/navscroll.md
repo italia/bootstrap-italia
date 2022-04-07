@@ -8,7 +8,7 @@ toc: true
 
 ## Layout della Navscroll
 
-Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper`.  
+Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` dell'attributo `data-bs-navscroll`.  
 Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine pagina.
 
 Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
@@ -23,13 +23,15 @@ Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo 
 
 **[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
+Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
+
 ### Posizionamento a fondo pagina con linea a sinistra
 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNav">
@@ -97,7 +99,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
@@ -169,7 +171,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 {% capture example %}
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk">
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
@@ -300,10 +302,44 @@ Abilitarlo manualmente con:
 
 ```js
 var navscrollElement = document.querySelector('.it-navscroll-wrapper')
-var navscroll = new bootstrap.NavScroll(navscrollElement, {
-  toggle: false,
-})
+var navscroll = new bootstrap.NavScroll(navscrollElement, config)
 ```
+
+### Opzioni
+
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scrollPadding</td>
+      <td>number | function </td>
+      <td>10</td>
+      <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
+    </tr>
+    <tr>
+      <td>duration</td>
+      <td>number</td>
+      <td>800</td>
+      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOutSine</td>
+      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).<</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Metodi
 
 <table class="table table-bordered table-striped">
@@ -314,6 +350,10 @@ var navscroll = new bootstrap.NavScroll(navscrollElement, {
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>setScrollPadding</td>
+      <td>modfica il valore dell'opzione <code>scrollPadding</code>.</td>
+    </tr>
     <tr>
       <td>dispose</td>
       <td>Elimina le funzionalità del componente.</td>

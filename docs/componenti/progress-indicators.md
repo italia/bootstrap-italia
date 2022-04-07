@@ -20,14 +20,14 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
     <div class="col-12 col-sm-6">
       <p><strong>Stato iniziale</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" id="prog-donut-1"></div>
+        <div class="progress-donut" id="prog-donut-1" data-bs-progress-donut></div>
         <span class="visually-hidden"></span>
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <p><strong>Attivo</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" data-bs-value="0.75" id="prog-donut-2"></div>
+        <div class="progress-donut" data-bs-progress-donut data-bs-value="0.75" id="prog-donut-2"></div>
         <span class="visually-hidden"></span>
       </div>
     </div>

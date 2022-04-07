@@ -27,13 +27,13 @@ Il componente _Transfer_ consente di trasferire gli elementi di una lista di che
 - `a.reset`: Ripristina lo stato iniziale delle liste
 
 {% capture callout %}
-Per l'attivazione del relativo javascript è importante che il componente che contiene la struttura, abbia classe `.it-transfer-block`  
+Per l'attivazione del relativo javascript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
 Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 {% capture example %}
 
-<div class="it-transfer-block">
+<div data-bs-transfer>
   <div class="row">
     <div class="col-xs-12 col-md-5">
       <div class="it-transfer-wrapper source">

@@ -22,8 +22,8 @@ const CLASS_NAME_SUCCESS = 'success'
 const CLASS_NAME_DRAGOVER = 'dragover'
 const CLASS_NAME_LOADING = 'loading'
 
-const SELECTOR_FORM = 'form.upload-dragdrop'
-const SELECTOR_DONUT = '.progress-donut'
+const SELECTOR_FORM = '[data-bs-upload-dragdrop]'
+const SELECTOR_DONUT = '[data-bs-progress-donut]'
 
 class UploadDragDrop extends BaseComponent {
   constructor(element) {

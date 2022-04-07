@@ -66,7 +66,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
     <div class="form-group col-md-6">
       <label for="exampleInputPassword">Password</label>
-      <input type="password" class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password">
+      <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password">
       <span class="password-icon" aria-hidden="true">
         <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
         <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
@@ -275,7 +275,7 @@ Di seguito un esempio di form validato con Just Validate.
     </div>
     <div class="form-group col-md-3 mb-4">
       <label for="validationAge">Età (minimo 18 anni)</label>
-      <input type="number" class="form-control" id="validationAge" value="18" min="18" step="1" required>
+      <input type="number" data-bs-input class="form-control" id="validationAge" value="18" min="18" step="1" required>
     </div>
   </div>
   <div class="row">

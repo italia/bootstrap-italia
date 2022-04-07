@@ -35,7 +35,7 @@ const CLASS_NAME_EXPANDED = 'expanded'
 
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="navbarcollapsible"]'
 
-const SELECTOR_NAVBAR = '.navbar-collapsable'
+//const SELECTOR_NAVBAR = '.navbar-collapsable'
 const SELECTOR_BTN_CLOSE = '.close-div button'
 const SELECTOR_BTN_MENU_CLOSE = '.close-menu'
 const SELECTOR_BTN_BACK = '.it-back-button'
@@ -182,7 +182,7 @@ class NavBarCollapsible extends BaseComponent {
    * Update the last focused element when an interactive element is clicked
    */
   _onMenuItemClick(evt) {
-    this.currItemIdx = getElementIndex(evt.currentTarget)
+    this.currItemIdx = getElementIndex(evt.currentTarget, this._menuItems)
   }
 
   _isAnimated() {
@@ -305,10 +305,10 @@ class NavBarCollapsible extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const navs = SelectorEngine.find(SELECTOR_NAVBAR)
+/*const navs = SelectorEngine.find(SELECTOR_NAVBAR)
 navs.forEach((nav) => {
   NavBarCollapsible.getOrCreateInstance(nav)
-})
+})*/
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
   const target = getElementFromSelector(this)
@@ -336,55 +336,3 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
 })
 
 export default NavBarCollapsible
-
-/*
-
-$(function () {
-  // open / close navbar actions
-  var openbutton = $('.custom-navbar-toggler')
-  var closebutton = $('.close-div')
-  var overlay = $('.overlay')
-  var backbutton = $('.it-back-button')
-
-  //-open button action
-  $(openbutton).on('click', function () {
-    // Act on the event
-    var target = $(this).attr('data-target')
-    var fadelayer = $(target).find('.overlay')
-    $(this).attr('aria-expanded', 'true')
-    $(backbutton).fadeIn()
-    $(target).show()
-    $(fadelayer).fadeIn()
-    $(target).addClass('expanded')
-  })
-
-  $(overlay).on('click', function () {
-    var target = $(this).closest('.navbar-collapsable')
-    var buttonrel = $(this).closest('.navbar').find('.custom-navbar-toggler')
-    var fadelayer = $(target).find('.overlay')
-    $(buttonrel).attr('aria-expanded', 'false')
-
-    $(target).removeClass('expanded')
-    $(fadelayer).fadeOut()
-    setTimeout(function () {
-      $(target).hide()
-    }, 300)
-  })
-
-  //-close button action
-  $(closebutton).on('click', function () {
-    var target = $(this).closest('.navbar-collapsable')
-    var buttonrel = $(this).closest('.navbar').find('.custom-navbar-toggler')
-    var fadelayer = $(target).find('.overlay')
-
-    $(buttonrel).attr('aria-expanded', 'false')
-
-    $(target).removeClass('expanded')
-    $(fadelayer).fadeOut()
-    setTimeout(function () {
-      $(target).hide()
-    }, 300)
-  })
-})
-
-*/

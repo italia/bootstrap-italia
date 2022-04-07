@@ -3,13 +3,11 @@ import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover,
 
 import { loadModule } from './load-module'
 import * as fontsLoader from './plugins/fonts-loader'
-import * as inputs from './plugins/inputs'
 import * as icons from './icons.js'
 import * as headerSticky from './plugins/header-sticky'
 
 loadModule(icons)
 loadModule(fontsLoader)
-loadModule(inputs)
 loadModule(headerSticky)
 
 import {

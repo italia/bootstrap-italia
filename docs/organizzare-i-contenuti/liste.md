@@ -307,14 +307,14 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
 ### Con toggle
 
 L'elemento **`.toggles`**, segue l'elemento **`.text`**.
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere la classe **`.it-has-checkbox`** nel tag **`<a>`** che lo contiene.
+Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
 
 {% capture example %}
 
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" data-bs-list-checkbox>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <div class="toggles">
@@ -326,7 +326,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 2</span>
           <div class="toggles">
@@ -338,7 +338,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-right-zone">
           <span class="text">Label 3</span>
           <div class="toggles">
@@ -393,14 +393,14 @@ L'elemento **`.metadata`**, segue l'elemento **`.text`**.
 
 Gli elementi a destra e sinistra del testo possono essere combinati.  
 Di seguito un esempio con immagine e toggle.  
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere la classe **`.it-has-checkbox`** nel tag **`<a>`** che lo contiene.
+Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
 
 {% capture example %}
 
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" data-bs-list-checkbox>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label 1</span>
@@ -413,7 +413,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label 2</span>
@@ -426,7 +426,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label 3</span>
@@ -514,14 +514,14 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
 ### Con testo aggiuntivo e checkbox.
 
 L'elemento **`.form-check`** con all'interno il relativo input, precede l'elemento **`.it-right-zone`** che contiene il testo.  
-Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere la classe **`.it-has-checkbox`** nel tag **`<a>`** che lo contiene.
+Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
 
 {% capture example %}
 
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" data-bs-list-checkbox>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="form-check">
           <input id="idc1" type="checkbox">
           <label for="idc1"></label>
@@ -531,7 +531,7 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="form-check">
           <input id="idc2" type="checkbox">
           <label for="idc2"></label>
@@ -541,7 +541,7 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
       </a>
     </li>
     <li>
-      <a class="it-has-checkbox" href="#">
+      <a href="#">
         <div class="form-check">
           <input id="idc3" type="checkbox">
           <label for="idc3"></label>

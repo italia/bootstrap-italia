@@ -2,21 +2,23 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
+import onDocumentScroll from './util/on-document-scroll'
 import NavBarCollapsible from './navbar-collapsible'
 
+import { documentScrollTo } from './util/tween'
+
 const NAME = 'navscroll'
-const DATA_KEY = 'bs.navscroll'
-const EVENT_KEY = `.${DATA_KEY}`
+//const DATA_KEY = 'bs.navscroll'
+//const EVENT_KEY = `.${DATA_KEY}`
 //const DATA_API_KEY = '.data-api'
 
-const SCROLL_PADDING = 10
-
-const EVENT_SCROLL = `scroll${EVENT_KEY}`
+//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'
 
-const SELECTOR_NAVSCROLL = '.it-navscroll-wrapper'
+const SELECTOR_NAVSCROLL = '[data-bs-navscroll]' //'.it-navscroll-wrapper'
 const SELECTOR_LIST = 'ul.link-list'
 //const SELECTOR_ITEM = '.nav-item'
 const SELECTOR_LINK_CONTAINER = 'li.nav-link, li.nav-item'
@@ -29,15 +31,23 @@ const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_TOGGLER_ICON = '.it-list'
 const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
 
+const Default = {
+  scrollPadding: 10,
+  duration: 800,
+  easing: 'easeInOutSine',
+}
 class NavScroll extends BaseComponent {
-  constructor(element) {
+  constructor(element, config) {
     super(element)
+
+    this._config = this._getConfig(config)
 
     this._togglerElement = SelectorEngine.findOne(SELECTOR_TOGGLER, this._element)
     this._sectionContainer = SelectorEngine.findOne(SELECTOR_CONTAINER)
     this._collapsible = this._getCollapsible()
     this._isCollapseOpened = false
     this._callbackQueue = []
+    this._scrollCb = null
 
     this._bindEvents()
   }
@@ -48,16 +58,33 @@ class NavScroll extends BaseComponent {
   }
 
   // Public
+  setScrollPadding(scrollPadding) {
+    this._config.scrollPadding = scrollPadding
+  }
 
   dispose() {
-    EventHandler.off(window, EVENT_SCROLL, this._onScroll)
+    //EventHandler.off(window, EVENT_SCROLL, this._onScroll)
+    if (this._scrollCb) {
+      this._scrollCb.dispose()
+    }
 
     super.dispose()
   }
+
   // Private
+  _getConfig(config) {
+    config = {
+      ...Default,
+      ...Manipulator.getDataAttributes(this._element),
+      ...(typeof config === 'object' ? config : {}),
+    }
+    return config
+  }
 
   _bindEvents() {
-    EventHandler.on(window, EVENT_SCROLL, this._onScroll)
+    //EventHandler.on(window, EVENT_SCROLL, this._onScroll)
+
+    this._scrollCb = onDocumentScroll(() => this._onScroll())
 
     if (this._collapsible) {
       EventHandler.on(this._collapsible._element, 'shown.bs.navbarcollapsible', () => this._onCollapseOpened())
@@ -75,6 +102,11 @@ class NavScroll extends BaseComponent {
           scrollHash()
         }
       })
+    })
+
+    EventHandler.on(window, 'load', () => {
+      //if page is already scrolled
+      setTimeout(() => this._onScroll(), 150)
     })
   }
 
@@ -126,9 +158,12 @@ class NavScroll extends BaseComponent {
   _scrollToHash(hash) {
     const target = SelectorEngine.findOne(hash, this._sectionContainer)
     if (target) {
-      //scroll animation - TODO
-      const scrollingElement = document.scrollingElement
-      scrollingElement.scrollTop = target.offsetTop
+      documentScrollTo(target.offsetTop - this._getScrollPadding(), {
+        duration: this._config.duration,
+        easing: this._config.easing,
+        /*complete: () => {
+        },*/
+      })
 
       if (history.pushState) {
         history.pushState(null, null, hash)
@@ -144,8 +179,10 @@ class NavScroll extends BaseComponent {
 
     const navItems = SelectorEngine.find(SELECTOR_LINK, this._element)
 
+    const scrollPadding = this._getScrollPadding()
+
     SelectorEngine.find(SELECTOR_PAGE_SECTION).forEach((pageSec, idx) => {
-      if (pageSec.offsetTop <= scrollDistance + SCROLL_PADDING) {
+      if (pageSec.offsetTop - sectionsContainerTop <= scrollDistance + scrollPadding) {
         SelectorEngine.find(SELECTOR_LINK_ACTIVE, this._element).forEach((link) => {
           link.classList.remove(CLASS_NAME_ACTIVE)
         })
@@ -168,6 +205,13 @@ class NavScroll extends BaseComponent {
     }
     return null
   }
+
+  _getScrollPadding() {
+    if (typeof this._config.scrollPadding === 'function') {
+      return this._config.scrollPadding()
+    }
+    return this._config.scrollPadding
+  }
 }
 
 /**
@@ -175,9 +219,13 @@ class NavScroll extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
-navs.forEach((nav) => {
-  NavScroll.getOrCreateInstance(nav)
+
+const dataApiCb = onDocumentScroll(() => {
+  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
+  navs.forEach((nav) => {
+    NavScroll.getOrCreateInstance(nav)
+  })
+  dataApiCb.dispose()
 })
 
 export default NavScroll

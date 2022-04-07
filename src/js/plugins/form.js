@@ -28,6 +28,9 @@ const SELECTOR_INPUT =
 
 const SELECTOR_INPUT_FILE = 'input[type="file"]'
 
+/**
+ * DEPRECATED
+ */
 class Form extends BaseComponent {
   constructor(element) {
     super(element)

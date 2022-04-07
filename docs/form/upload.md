@@ -279,7 +279,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 
 Questa versione dell'upload permette all'utente di trascinare sull'icona che la caratterizza un file dal proprio dispositivo.
 
-In questo caso è l'interno form ad avere una classe specifica `upload-dragdrop` alla quale possono essere aggiunte due ulteriori classi per la gestione degli stati:
+In questo caso è l'interno form ad avere una classe specifica `upload-dragdrop` e l'attributo `data-bs-upload-dragdrop` alla quale possono essere aggiunte due ulteriori classi per la gestione degli stati:
 
 - `.dragover` quando un file è trascinato sull'icona
 - `.loading` quando un file è rilasciato sull'icona
@@ -289,23 +289,17 @@ I primi due stati sono gestiti dal codice JS incluso nello UI-Kit, lo stato di *
 
 Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> del risultato finale.
 
-Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut"></div>` come progress circolare. L'aggiornamento del progresso avviene utilizzando il seguente codice JS:
-
-```js
-$('#IDPROGRESS').circularloader({
-  progressPercent: 33, // percentuale si caricamento
-})
-```
+Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut" data-bs-progress-donut></div>` come progress circolare. L'aggiornamento del progresso avviene utilizzando il seguente codice JS:
 
 {% capture example %}
 
 <p><strong>Default</strong></p>
 
-<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data">
+<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div class="progress-donut"></div>
+      <div class="progress-donut" data-bs-progress-donut></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
@@ -323,11 +317,11 @@ $('#IDPROGRESS').circularloader({
 
 <p class="mt-5"><strong>Simula caricamento</strong></p>
 
-<form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data">
+<form class="upload-dragdrop loading" method="post" action="" enctype="multipart/form-data" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div class="progress-donut"></div>
+      <div class="progress-donut" data-bs-progress-donut></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
@@ -345,11 +339,11 @@ $('#IDPROGRESS').circularloader({
 
 <p class="mt-5"><strong>Process completed</strong></p>
 
-<form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data">
+<form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div class="progress-donut"></div>
+      <div class="progress-donut" data-bs-progress-donut></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
@@ -417,11 +411,11 @@ var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement);
 
 <p><button type="button" class="btn btn-primary" onClick="testAnimation()">Simula Upload</button></p>
 
-<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget">
+<form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
     <div class="upload-dragdrop-loading">
-      <div class="progress-donut"></div>
+      <div class="progress-donut" data-bs-progress-donut></div>
     </div>
     <div class="upload-dragdrop-success">
       <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>

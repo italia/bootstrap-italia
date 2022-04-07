@@ -7,6 +7,7 @@ toc: true
 ---
 
 Per aggiungere un bottone che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-bs-toggle="backtotop"` e con una classe `.back-to-top` che lo posiziona nella parte inferiore destra nella pagina.
+Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
 <style>
   /* Style override for Documentation purposes */
@@ -145,7 +146,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>easing</td>
       <td>string</td>
       <td>easeInOutSine</td>
-      <td>inerzia dell'animazione di scroll</td>
+      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).</td>
     </tr>
   </tbody>
 </table>

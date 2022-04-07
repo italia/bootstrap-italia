@@ -9,7 +9,7 @@ title: NavScroll
   <div class="row">
     <div class="col-12 col-lg-4">
       <div data-bs-toggle="sticky" data-bs-stackable="true">
-        <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
+        <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
           <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav">
             <span class="it-list"></span>1. Introduzione
@@ -309,3 +309,14 @@ title: NavScroll
     </div>
   </div>
 </div>
+
+<script>
+  window.addEventListener("load", function() {
+    var navscrollElement = document.querySelector('.it-navscroll-wrapper');
+    var navscroll = bootstrap.NavScroll.getOrCreateInstance(navscrollElement);
+    navscroll.setScrollPadding(function () {
+      var header = document.querySelector('.it-header-wrapper');
+      return header.offsetHeight + 10;
+    });
+  });
+</script>

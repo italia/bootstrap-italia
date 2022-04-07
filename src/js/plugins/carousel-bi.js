@@ -3,15 +3,18 @@ import '@splidejs/splide/dist/css/splide-core.min.css'
 
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
 
 const NAME = 'carousel'
-//const DATA_KEY = 'bs.carousel'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_KEY = 'bs.carousel'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
 
 //const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
-const SELECTOR_CAROUSEL = '.splide'
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+
+const SELECTOR_CAROUSEL = '[data-bs-carousel-splide]'
 
 const CONFIG_DEFAULT = {
   slideFocus: true,
@@ -204,9 +207,11 @@ class CarouselBI extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
-carousels.forEach((carousel) => {
-  CarouselBI.getOrCreateInstance(carousel)
+EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+  const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
+  carousels.forEach((carousel) => {
+    CarouselBI.getOrCreateInstance(carousel)
+  })
 })
 
 export default CarouselBI
