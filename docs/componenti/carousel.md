@@ -902,7 +902,7 @@ var masonryList = elementList.map(function (element) {
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza CarouselBI associata ad un elememento del DOM. Esempio: <code>bootstrap.CarouselBI.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza CarouselBI associata ad un elemento del DOM. Esempio: <code>bootstrap.CarouselBI.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>

@@ -397,7 +397,7 @@ var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement);
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza UploadDragDrop associata ad un elememento del DOM. Esempio: <code>bootstrap.UploadDragDrop.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza UploadDragDrop associata ad un elemento del DOM. Esempio: <code>bootstrap.UploadDragDrop.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>

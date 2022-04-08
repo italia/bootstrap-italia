@@ -125,7 +125,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza collapse associata ad un elememento del DOM. Esempio: <code>bootstrap.ProgressDonut.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza collapse associata ad un elemento del DOM. Esempio: <code>bootstrap.ProgressDonut.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>

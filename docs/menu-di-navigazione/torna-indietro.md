@@ -62,7 +62,7 @@ var historyBack = new bootstrap.HistoryBack(backButtonElement);
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza HistoryBack associata ad un elememento del DOM. Esempio: <code>bootstrap.HistoryBack.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza HistoryBack associata ad un elemento del DOM. Esempio: <code>bootstrap.HistoryBack.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>

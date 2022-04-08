@@ -169,7 +169,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza collapse associata ad un elememento del DOM. Esempio: <code>bootstrap.Collapse.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza collapse associata ad un elemento del DOM. Esempio: <code>bootstrap.Collapse.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>
