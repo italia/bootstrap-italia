@@ -30,7 +30,7 @@ class InputLabel {
   // Private
   _init() {
     const label = this._getLabel()
-    if (!label.classList.contains(CLASS_NAME_ACTIVE)) {
+    if (label && !label.classList.contains(CLASS_NAME_ACTIVE)) {
       //script disabled if active on init
       this._labelOut()
       this._labelOver()

@@ -22,7 +22,7 @@
       display: none;
     }
 
-    color: $gray-secondary;
+    color: $neutral-1-a7;
     padding-right: 32px;
     padding-left: 12px;
     min-width: 86px !important;
@@ -40,7 +40,7 @@
       position: absolute;
       left: 14px;
       top: 0;
-      color: $gray-secondary;
+      color: $neutral-1-a7;
       font-weight: bold;
       font-size: 1rem;
     }
@@ -129,14 +129,14 @@
       top: -6px;
       &:after {
         border-width: 0 5px 6px 5px;
-        border-color: transparent transparent $gray-secondary transparent;
+        border-color: transparent transparent $neutral-1-a7 transparent;
       }
     }
     &.input-number-sub {
       bottom: -6px;
       &:after {
         border-width: 6px 5px 0 5px;
-        border-color: $gray-secondary transparent transparent transparent;
+        border-color: $neutral-1-a7 transparent transparent transparent;
       }
     }
     &:hover {
@@ -149,7 +149,7 @@
 label {
   &.input-number-label {
     display: block;
-    color: $gray-secondary;
+    color: $neutral-1-a7;
     font-weight: 600;
     font-size: $small-font-size;
     cursor: text;
