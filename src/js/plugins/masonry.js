@@ -3,7 +3,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
-import { Masonry as MasonryPlugin } from 'masonry-layout'
+import MasonryPlugin from 'masonry-layout'
 
 const NAME = 'masonry'
 //const DATA_KEY = 'bs.masonry'
