@@ -367,13 +367,9 @@ Di seguito l'esempio
 
 ### Masonry
 
-È possibile integrare [Masonry](https://masonry.desandro.com/) con la griglia di Bootstrap Italia.
+Masonry è incluso in Bootstrap Italia.
 
-Masonry non è incluso in Bootstrap Italia ma può essere aggiunto con l'inclusione del plugin js:
-
-```html
-<script src="_PATH_/masonry.pkgd.min.js"></script>
-```
+Qui la documentazione: [Masonry](https://masonry.desandro.com/).
 
 Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 
@@ -587,7 +583,6 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
     </div>
   </div>
 </div>
-<script src="{{ site.baseurl }}/dist/js/vendor/masonry.pkgd.min.js"></script>
 {% endcapture %}{% include example.html content=example %}
 
 ### Tramite JavaScript

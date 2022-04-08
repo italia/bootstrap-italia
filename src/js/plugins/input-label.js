@@ -15,10 +15,8 @@ const CLASS_NAME_ACTIVE = 'active'
 class InputLabel {
   constructor(element) {
     this._element = element
-    this._bindEvents()
 
-    this._labelOut()
-    this._labelOver()
+    this._init()
   }
 
   // Getters
@@ -30,6 +28,16 @@ class InputLabel {
   // Public
 
   // Private
+  _init() {
+    const label = this._getLabel()
+    if (!label.classList.contains(CLASS_NAME_ACTIVE)) {
+      //script disabled if active on init
+      this._labelOut()
+      this._labelOver()
+      this._bindEvents()
+    }
+  }
+
   _bindEvents() {
     if (this._element.getAttribute('type') === 'file') {
       EventHandler.on(this._element, EVENT_BLUR, () => {

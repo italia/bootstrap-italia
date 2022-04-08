@@ -3,6 +3,8 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
+import MasonryPlugin from 'masonry-layout'
+
 const NAME = 'masonry'
 //const DATA_KEY = 'bs.masonry'
 //const EVENT_KEY = `.${DATA_KEY}`
@@ -18,13 +20,13 @@ const Default = {
   percentPosition: true,
 }
 
-const MASONRY_EXISTS = !!window.Masonry
+//const MASONRY_EXISTS = !!window.Masonry
 
 class Masonry extends BaseComponent {
   constructor(element, config) {
-    if (!MASONRY_EXISTS) {
+    /*if (!MASONRY_EXISTS) {
       throw new Error("[Masonry] you can't instantiate Mesonry component without Masonry Library")
-    }
+    }*/
 
     super(element)
 
@@ -86,7 +88,7 @@ class Masonry extends BaseComponent {
   }
 
   _initMasonry() {
-    this._masonry = new window.Masonry(this._element, this._config)
+    this._masonry = new MasonryPlugin(this._element, this._config)
   }
 
   _createLoader() {
@@ -126,13 +128,16 @@ class Masonry extends BaseComponent {
 
 const masonries = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
 if (masonries.length > 0) {
-  if (!MASONRY_EXISTS) {
+  /*if (!MASONRY_EXISTS) {
     console.warn('[Masonry] Masonry component needs Masonry library to work properly')
   } else {
     masonries.forEach((masonry) => {
       Masonry.getOrCreateInstance(masonry)
     })
-  }
+  }*/
+  masonries.forEach((masonry) => {
+    Masonry.getOrCreateInstance(masonry)
+  })
 }
 
 export default Masonry
