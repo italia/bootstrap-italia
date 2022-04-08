@@ -69,7 +69,7 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`. Può essere esteso usando le classi di utilità come `.text-muted`.
+In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`.
 
 {% capture callout %}
 **Associazione del testo di aiuto con gli elementi del modulo form**
@@ -88,7 +88,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
     placeholder="Testo di esempio"
     aria-describedby="formGroupExampleInputWithHelpDescription"
   >
-  <small id="formGroupExampleInputWithHelpDescription" class="form-text text-muted">Ulteriore testo informativo</small>
+  <small id="formGroupExampleInputWithHelpDescription" class="form-text">Ulteriore testo informativo</small>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -196,7 +196,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
     </span>
-    <small id="infoPassword" class="form-text text-muted">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
+    <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>

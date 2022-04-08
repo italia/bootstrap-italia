@@ -23,7 +23,7 @@ fieldset {
   }
 }
 .form-text {
-  color: $gray-secondary;
+  color: $neutral-1-a7;
 }
 .form-group {
   position: relative;
@@ -73,7 +73,7 @@ fieldset {
 
 ::placeholder {
   font-weight: 600;
-  color: $gray-secondary;
+  color: $neutral-1-a7;
 }
 
 input[type='date'],
@@ -88,7 +88,7 @@ input[type='time'],
 input[type='url'],
 textarea {
   border: none;
-  border-bottom: 1px solid $gray-secondary;
+  border-bottom: 1px solid $neutral-1-a7;
   border-radius: 0;
   padding: $input-spacing-y $input-spacing-x;
   outline: 0;
@@ -98,12 +98,13 @@ textarea {
   transition: none;
   font-weight: 700;
   &::placeholder {
-    color: $gray-secondary;
+    color: $neutral-1-a7;
+    font-weight: 600;
   }
 }
 
 textarea {
-  border: 1px solid $gray-secondary;
+  border: 1px solid $neutral-1-a7;
   height: auto;
 }
 
@@ -177,7 +178,7 @@ textarea {
 .input-group {
   .input-group-text {
     padding: $input-spacing-y $input-spacing-x;
-    border-bottom: 1px solid $gray-secondary;
+    border-bottom: 1px solid $neutral-1-a7;
     height: 100%;
   }
 
@@ -185,7 +186,7 @@ textarea {
     margin-right: 0;
 
     .icon {
-      fill: $gray-secondary;
+      fill: $neutral-1-a7;
     }
 
     & ~ label {
@@ -420,7 +421,7 @@ textarea {
     [type='checkbox'] + label,
     [type='radio'] + label {
       position: static;
-      padding-left: 8px;
+      padding-left: 0;
       padding-right: 52px;
 
       &::after,
