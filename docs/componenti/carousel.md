@@ -17,12 +17,6 @@ Il plugin utilizzato è [Splide](https://splidejs.com/).
 
 ## Implementazione
 
-Splide non è incluso nel bundle di Bootstrap Italia, pertanto se si decidesse di usare il componente Carousel è necessario includere i file CSS e JS della [libreria](https://github.com/Splidejs/splide) all'interno del proprio progetto:
-
-- linkare il file CSS `splide-core.min.css` nella head del progetto, **prima** del CSS di Bootstrap Italia.
-- caricare il file JS `splide.min.js` nel blocco degli script a fondo pagina.
-
-
 {% capture callout %}
 #### Accessibilità
 
