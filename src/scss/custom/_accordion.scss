@@ -73,6 +73,7 @@ $arrow-size: $font-size-base * 0.5;
           line-height: 1.2rem;
           font-family: $font-family-sans-serif;
           transform: none;
+          overflow: hidden;
         }
         &[aria-expanded='false'] {
           &:before {
