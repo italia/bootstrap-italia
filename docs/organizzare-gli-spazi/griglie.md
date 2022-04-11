@@ -521,8 +521,8 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
         <td><code>12px</code></td>
         <td><code>12px</code></td>
         <td><code>20px</code></td>
-        <td><code>20px</code></td>
-        <td><code>28px</code></td>
+        <td><code>24px</code></td>
+        <td><code>24px</code></td>
         <td><code>28px</code></td>
       </tr>
     </tbody>

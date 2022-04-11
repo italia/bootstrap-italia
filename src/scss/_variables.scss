@@ -14,10 +14,11 @@ $v-gap: 8px !default;
 
 // Responsive gutter widths
 $grid-gutter-widths: (
+  xs: 12px,
   sm: 12px,
   md: 20px,
-  lg: 20px,
-  xl: 28px,
+  lg: 24px,
+  xl: 24px,
   xxl: 28px,
 ) !default;
 
