@@ -328,6 +328,7 @@ textarea {
 
     &:disabled + label {
       cursor: not-allowed;
+      opacity: 1;
     }
 
     &:disabled:not(:checked) + label::after {

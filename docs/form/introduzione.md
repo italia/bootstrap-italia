@@ -91,7 +91,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     <div class="col-md-4">
       <div class="select-wrapper">
         <label for="selectID">Provincia</label>
-        <select id="selectID" title="Scegli un'opzione">
+        <select id="selectID">
           <option value="Value 1">Opzione 1</option>
           <option value="Value 2">Opzione 2</option>
           <option value="Value 3">Opzione 3</option>
@@ -183,15 +183,15 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
         <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="disabledFieldsetInput">Input </label>
-            <input type="text" id="disabledFieldsetInput" class="form-control" placeholder="Input disabilitato">
+            <input type="text" id="disabledFieldsetInput" class="form-control" value="Input disabilitato">
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
             <div class="select-wrapper">
               <label for="disabledFieldsetSelect">Select</label>
-              <select id="disabledFieldsetSelect" title="Select disabilitata">
-                <option value="Value 1">Opzione 1</option>
+              <select id="disabledFieldsetSelect">
+                <option value="Value 1">Select disabilitata</option>
                 <option value="Value 2">Opzione 2</option>
                 <option value="Value 3">Opzione 3</option>
                 <option value="Value 4">Opzione 4</option>
@@ -231,7 +231,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
           </div>
         </div>
       </div>
-    <button class="btn btn-primary mt-3">Submit</button>
+    <button class="btn btn-primary mt-3">Bottone disabilitato</button>
   </fieldset>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -274,7 +274,7 @@ Di seguito un esempio di form validato con Just Validate.
       <input type="text" class="form-control" id="validationCustomUsername" required>
     </div>
     <div class="form-group col-md-3 mb-4">
-      <label for="validationAge">Età (minimo 18 anni)</label>
+      <label class="input-number-label" for="validationAge">Età (minimo 18 anni)</label>
       <input type="number" data-bs-input class="form-control" id="validationAge" value="18" min="18" step="1" required>
     </div>
   </div>
