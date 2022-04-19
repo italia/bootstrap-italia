@@ -3,7 +3,7 @@ layout: docs
 group: organizzare-gli-spazi
 toc: true
 title: Proporzioni
-description: Obbligano un elemento a mantenere la proporzione scelta. Ottima soluzione per includere video o slideshow responsive basati sulla larghezza dell'elemento parent.
+description: Obbligano un elemento a mantenere la proporzione scelta. Soluzione ideale per includere video o slideshow responsive basati sulla larghezza dell'elemento parent.
 ---
 
 <style>
@@ -58,7 +58,7 @@ richieste. L'elemento contenuto viene automaticamente ridimensionato grazie al s
 {% capture example %}
 
 <div class="ratio ratio-16x9">
-  <iframe title="Video YouTube" src="https://www.youtube.com/embed/RaHmGbBOP84" allowfullscreen></iframe>
+  <iframe title="Video YouTube" src="https://www.youtube-nocookie.com/embed/RaHmGbBOP84" allowfullscreen></iframe>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -97,8 +97,6 @@ Ad esempio, per creare una proporzione custom 2x1, utilizza il valore `--bs-aspe
 {% endcapture %}{% include example.html content=example %}
 
 Questa variabile CSS rende semplice modificare la proporzione a seconda del breakpoint. Il seguente esempio è un 4x3 inizialmente ma cambia a 2x1 al breakpoint `md`.
-
-This CSS variable makes it easy to modify the aspect ratio across breakpoints. The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.
 
 ```scss
 .ratio-4x3 {

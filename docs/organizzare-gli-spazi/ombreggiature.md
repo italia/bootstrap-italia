@@ -6,7 +6,7 @@ group: organizzare-gli-spazi
 toc: false
 ---
 
-Nonostante le ombreggiature siano disabilitate in Bootstrap e siano attivabili soltanto attraverso l'utilizzo della variabile `$enable-shadows`, è possibile rapidamente aggiungere un'ombreggiatura nella parte sottostante un elemento con le classi che seguono.
+Nonostante le ombreggiature siano disabilitate in Bootstrap e siano attivabili soltanto attraverso l'utilizzo della variabile `$enable-shadows`, è possibile aggiungere rapidamente un'ombreggiatura nella parte sottostante un elemento con le classi che seguono.
 
 {% capture example %}
 

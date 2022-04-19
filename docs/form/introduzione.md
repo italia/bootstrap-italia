@@ -4,25 +4,25 @@ group: form
 toc: true
 
 title: Introduzione
-description: Elementi e stili per la creazione di form accessibili e responsivi
+description: Elementi e stili per la creazione di form accessibili e responsivi.
 redirect_from:
   - '/form/'
   - '/docs/form/'
 ---
 
-All'interno di un form, nella visualizzazione predefinita gli elementi sono allineati verticalmente, ma è possibile utilizzare classi aggiuntive per variare questo tipo di layout.
+Nella visualizzazione predefinita di un form gli elementi sono distribuiti verticalmente, ma è possibile utilizzare classi aggiuntive per variare questo tipo di layout.
 
 Bootstrap Italia applica automaticamente a tutti i form `display: block` e `width: 100%`.
 
 ## Organizzazione dei campi
 
-Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe `.form-group` per ogni singolo blocco, in questo modo l'elemento input, l'etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità predisposte per loro. Si può usare con `<fieldset>`, `<div>` o qualsiasi altro elemento.
+Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe `.form-group` per ogni singolo blocco, in questo modo l'elemento input, l'etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità per loro predisposte. Si può usare con `<fieldset>`, `<div>` o qualsiasi altro elemento.
 
 ### Dimensionamento delle colonne
 
 Strutture più complesse possono essere costruite usando il sistema a griglia, da utilizzare per layout che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive. La classe `.row` ne assicura una corretta spaziatura.
 
-Si può scegliere di dare una dimensione a una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
+Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
 
 {% capture example %}
 
@@ -123,7 +123,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
 #### Auto-dimensionamento
 
-L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
+L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) per centrare verticalmente il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
 
 {% capture example %}
 
@@ -157,17 +157,19 @@ L'esempio seguente usa una delle utilità di flexbox per centrare verticalmente 
 
 {% capture callout %}
 
-##### Alternative alle etichette nascoste
+#### Alternative alle etichette nascoste
 
 Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, si può nascondere le etichette usando la classe `.visually-hidden`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 
 ## Disabilitazione di campi
 
 Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni dell'utente e renderlo più chiaro.
 
 {% capture example %}
-<input class="form-control" id="disabledInput" type="text" placeholder="Esempio di input disabilitato" aria-label="Label" disabled>
+<input class="form-control" id="disabledInput" type="text" value="Esempio di input disabilitato" aria-label="Label" disabled>
 {% endcapture %}{% include example.html content=example %}
 
 ### Disabilitazione di un intero form
@@ -240,12 +242,12 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
 
 #### Compatibilità Cross-browser
 
-Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 11 e successivi non supportano completamente l'attributo `disabled` nel `<fieldset>`. Si utilizzi codice JavaScript personalizzato per disabilitare il fieldset in questi browser.
+Mentre Bootstrap applicherà questi stili in tutti i browser, Internet Explorer 11 e successivi non supportano completamente l'attributo `disabled` nel `<fieldset>`. Utilizza codice JavaScript custom per disabilitare il fieldset in questi browser.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Validazione
 
-Per la validazione dei forms è stato utilizzato il plugin [Just Validate](https://just-validate.dev/)
+Per la validazione dei forms è stato utilizzato il plugin [Just Validate](https://just-validate.dev/).
 
 ### Come funziona
 
@@ -253,7 +255,7 @@ Per il funzionamento e le opzioni disponibili, si consiglia di consultare la [do
 
 ### Stili personalizzati
 
-I campi che necessitano di validazione acquisiranno all'invio del form le classi css definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`. I messaggi di errore avranno classe `just-validate-error-label`.
+I campi che necessitano di validazione acquisiranno all'invio del form le classi CSS definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`. I messaggi di errore avranno classe `just-validate-error-label`.
 
 Di seguito un esempio di form validato con Just Validate.
 
@@ -274,7 +276,7 @@ Di seguito un esempio di form validato con Just Validate.
       <input type="text" class="form-control" id="validationCustomUsername" required>
     </div>
     <div class="form-group col-md-3 mb-4">
-      <label class="input-number-label" for="validationAge">Età (minimo 18 anni)</label>
+      <label class="input-number-label active " for="validationAge">Età (minimo 18 anni)</label>
       <input type="number" data-bs-input class="form-control" id="validationAge" value="18" min="18" step="1" required>
     </div>
   </div>
@@ -391,8 +393,7 @@ Di seguito un esempio di form validato con Just Validate.
 
 {% endcapture %}{% include example.html content=example %}
 
----
 
-###### Continua la lettura >
+##### Continua la lettura
 
 I singoli campi di tipo _input_, _checkbox_, _radio_, _toggle_, ecc. sono trattati in pagine separate della documentazione, continua a leggere alla pagina dedicata ai [campi di input]({{ site.baseurl }}/docs/form/input/).

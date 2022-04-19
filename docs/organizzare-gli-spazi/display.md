@@ -9,7 +9,7 @@ toc: true
 ## Come funziona
 
 Modifica il valore della [proprietà `display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) con le classi apposite.
-Sono presenti solo una parte di tutti i tipi di valori sopportati dalla proprietà. Puoi combinare le classi per ottenere l'effetto di cui hai bisogno.
+Sono presenti solo una parte dei tipi di valori previsti dalla proprietà. Puoi combinare le classi per ottenere l'effetto di cui hai bisogno.
 
 ## Responsive
 
@@ -32,8 +32,8 @@ Dove il _valore_ è uno tra:
 - `flex`
 - `inline-flex`
 
-L'utilizzo delle classi `d-` con breakpoint ha effetto su dispositivi dal breakpoint indicato _fino a xl_.
-Per esempio, `.d-lg-none` imposta `display: none;` sia nella visualizzazione in `lg` che in `xl`.
+L'utilizzo delle classi `d-` con breakpoint ha effetto su dispositivi dal breakpoint indicato _fino a xxl_.
+Per esempio, `.d-lg-none` imposta `display: none;` nella visualizzazione in `lg`, in `xl` ed in `xxl`.
 
 ## Esempi
 
@@ -70,7 +70,7 @@ nascosto).
 | Nascosto solo su md      | `.d-md-none .d-lg-block`         |
 | Nascosto solo su lg      | `.d-lg-none .d-xl-block`         |
 | Nascosto solo su xl      | `.d-xl-none`                     |
-| Nascosto solo su xl      | `.d-xxl-none`                    |
+| Nascosto solo su xxl     | `.d-xxl-none`                    |
 | Visibile a tutti         | `.d-block`                       |
 | Visibile solo su xs      | `.d-block .d-sm-none`            |
 | Visibile solo su sm      | `.d-none .d-sm-block .d-md-none` |

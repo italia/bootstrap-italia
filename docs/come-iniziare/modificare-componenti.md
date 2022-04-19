@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modificare componenti
-description: Come modificare i componenti e i moduli esistenti, e crearne di nuovi
+description: Come modificare i componenti e i moduli esistenti, e crearne di nuovi.
 group: come-iniziare
 toc: true
 ---

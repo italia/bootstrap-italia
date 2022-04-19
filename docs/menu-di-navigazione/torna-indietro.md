@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Torna indietro
-description: Consente agli utenti di avere un link o bottone con un'azione equivalente al "torna indietro" del browser
+description: Consente agli utenti di avere un link o bottone con un'azione equivalente al "torna indietro" del browser.
 group: menu-di-navigazione
 toc: true
 ---
@@ -37,7 +37,7 @@ Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessa
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+## Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad  esempio:
 

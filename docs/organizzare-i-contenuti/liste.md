@@ -41,7 +41,7 @@ Le list possono contenere icone, avatar o immagini.
 
 ### Lista con avatar
 
-L'elemento **`.avatar`** precede l'elemento **`.it-right-zone`** che contiene il testo.
+L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
 
 {% capture example %}
 
@@ -74,7 +74,7 @@ L'elemento **`.avatar`** precede l'elemento **`.it-right-zone`** che contiene il
 
 ### Lista con icona
 
-L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'elemento **`.it-right-zone`** che contiene il testo.
+L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'elemento `.it-right-zone` che contiene il testo.
 
 {% capture example %}
 
@@ -119,7 +119,7 @@ L'elemento **`.it-rounded-icon`** con all'interno il relativo SVG, precede l'ele
 
 ### Lista con immagine
 
-L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento **`.it-right-zone`** che contiene il testo.
+L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo.
 
 {% capture example %}
 
@@ -127,21 +127,21 @@ L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento *
   <ul class="it-list">
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Label 1</span>
         </div>
       </a>
     </li>
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Label 2</span>
         </div>
       </a>
     </li>
     <li>
       <a class="active" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Label attiva</span>
         </div>
       </a>
@@ -152,11 +152,11 @@ L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento *
 
 ## Lista con azioni
 
-Le list con azioni hanno al loro interno icone o elementi da associare ad azioni specifiche decise in base alle esigenze.
+Le liste con azioni hanno al loro interno icone o elementi interattivi da associare ad azioni specifiche decise in base alle esigenze.
 
 ### Con freccia
 
-L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.text`** che contiene il testo.
+L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` che contiene il testo.
 
 {% capture example %}
 
@@ -198,7 +198,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
 
 ### Con "more"
 
-L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.text`** che contiene il testo.
+L'elemento `.icon` con all'interno la relativa icona, segue l'elemento `.text` che contiene il testo.
 
 {% capture example %}
 
@@ -240,7 +240,7 @@ L'elemento **`.icon`** con all'interno il relativo svg, segue l'elemento **`.tex
 
 ### Con azioni multiple
 
-L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento **`.text`**.
+L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.text`.
 
 {% capture example %}
 
@@ -306,8 +306,8 @@ L'elemento **`.it-multiple`** con all'interno i relativi svg, segue l'elemento *
 
 ### Con toggle
 
-L'elemento **`.toggles`**, segue l'elemento **`.text`**.
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
+L'elemento `.toggles`, segue l'elemento `.text`.
+Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo `data-bs-list-checkbox`.
 
 {% capture example %}
 
@@ -357,8 +357,8 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 ### Con metadata
 
-Ad ogni list si può aggiungere un campo "metadata", come nell'esempio seguente.  
-L'elemento **`.metadata`**, segue l'elemento **`.text`**.
+Ad ogni list si può aggiungere un campo testuale _metadata_, come nell'esempio seguente.
+L'elemento `.metadata`, segue l'elemento `.text`.
 
 {% capture example %}
 
@@ -391,9 +391,8 @@ L'elemento **`.metadata`**, segue l'elemento **`.text`**.
 
 ### Con immagine e toggles
 
-Gli elementi a destra e sinistra del testo possono essere combinati.  
-Di seguito un esempio con immagine e toggle.  
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
+Gli elementi a destra e sinistra del testo possono essere combinati. Di seguito un esempio con immagine e toggle.  
+Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo `data-bs-list-checkbox`.
 
 {% capture example %}
 
@@ -401,7 +400,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
   <ul class="it-list" data-bs-list-checkbox>
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <div class="toggles">
@@ -414,7 +413,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
     </li>
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone">
           <span class="text">Label 2</span>
           <div class="toggles">
@@ -427,7 +426,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
     </li>
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone">
           <span class="text">Label 3</span>
           <div class="toggles">
@@ -444,7 +443,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
-Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento **`.text`**.
+Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
 
 {% capture example %}
 
@@ -513,8 +512,8 @@ Per il testo aggiuntivo, utilizzare il tag **`<em>`** all'interno dell'elemento 
 
 ### Con testo aggiuntivo e checkbox.
 
-L'elemento **`.form-check`** con all'interno il relativo input, precede l'elemento **`.it-right-zone`** che contiene il testo.  
-Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere l'attributo **`data-bs-list-checkbox`**.
+L'elemento `.form-check` con all'interno il relativo input, precede l'elemento `.it-right-zone` che contiene il testo.  
+Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere l'attributo `data-bs-list-checkbox`.
 
 {% capture example %}
 

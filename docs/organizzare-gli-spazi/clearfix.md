@@ -12,7 +12,7 @@ Annulla il `float` del contenuto aggiungendo la classe `.clearfix` **all'element
 <div class="clearfix">...</div>
 ```
 
-Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo caso il div contenitore non si estende attorno ai pulsanti mostrando un layout incompleto.
+Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo caso il `div` contenitore non si estende attorno ai pulsanti mostrando un layout incompleto.
 
 <div class="bd-example">
   <div class="neutral-2-bg p-2">
@@ -21,7 +21,7 @@ Esempio di visualizzazione senza l'utilizzo della classe `.clearfix`. In questo 
   </div>
 </div>
 
-Mentre nel seguente esempio con l'utilizzo della classe `.clearfix` viene annullato il float del contenuto permettendo una visualizzazione ottimale.
+Mentre nel seguente esempio, con l'utilizzo della classe `.clearfix`, viene annullato il `float` del contenuto permettendo una visualizzazione ottimale.
 
 {% capture example %}
 

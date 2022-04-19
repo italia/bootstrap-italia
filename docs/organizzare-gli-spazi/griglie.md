@@ -48,7 +48,7 @@ Analizzandolo nel dettaglio, ecco come funziona:
 - Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
 - Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
 - Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.g-0` alla classe `.row`.
-- Per renderla responsive, esistono cinque breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, and extra large.
+- Per renderla responsive, esistono sei breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, extra large ed extra extra large.
 - I breakpoint della griglia si basano su media query con larghezza minima, significa che **si applicano a quel breakpoint e a tutti quelli sopra di esso** (e.g., `.col-sm-4` si applica a device piccoli, medi, grandi e extra large, ma non al primo breakpoint `xs`).
 - È possibile utilizzare classi di griglia predefinite (come `.col-4`) per altri markup semantici.
 
@@ -135,7 +135,7 @@ Utilizza classi di colonne specifiche ad ogni breakpoint per un facile ridimensi
 
 ### Uniformare larghezze tra colonne
 
-Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da `xs` a `xl`. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.
+Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da `xs` a `xxl`. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -153,7 +153,7 @@ Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositiv
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-Colonne con uguale larghezza possono essere spezzate su più linee, ma c'è un [bug di flexbox su Safari](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items) che gli ha impedito di lavorare senza uno specifico `flex-basis` o `border`. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.
+Colonne con uguale larghezza possono essere spezzate su più linee, ma c'è un [bug di flexbox su Safari](https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items), risolto dalla versione 10.1, che ne impediva il funzionamento senza uno specifico `flex-basis` o `border`. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -211,7 +211,7 @@ Puoi usare la classe `col-{breakpoint}-auto` per ridimensionare le colonne in ba
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-### Equal-width multi-row
+### Larghezza identica su più righe
 
 Crea colonne di uguale larghezza che si estendono su più righe inserendo un `.w-100` dove vuoi che le colonne vengano divise su un'altra riga.
 
@@ -229,11 +229,11 @@ Crea colonne di uguale larghezza che si estendono su più righe inserendo un `.w
 
 ## Classi responsive
 
-La griglia di Bootstrap include cinque livelli di classi predefinite per la creazione di layout responsive complessi. Personalizza le dimensioni delle tue colonne su dispositivi piccoli, medi, grandi o extra large a tuo piacimento.
+La griglia di Bootstrap include cinque livelli di classi predefinite per la creazione di layout responsive complessi. Personalizza le dimensioni delle tue colonne su dispositivi piccoli, medi, grandi, extra large o extra extra large a tuo piacimento.
 
 ### Tutti i breakpoint
 
-Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grande, usa le classi `.col` e `.col-*`. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti, sentiti libero di attenerti alla classe `.col`.
+Per griglie con layout identico dal più piccolo dei dispositivi al più grande, usa le classi `.col` e `.col-*`. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti sentiti libero di attenerti alla classe `.col`.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -252,7 +252,7 @@ Per le griglie che sono le stesse dal più piccolo dei dispositivi al più grand
 
 ### Raccolti in orizzontale
 
-Utilizzando un singolo set di classi `.col-sm-*`, puoi creare un sistema di base che inizia raccolto su dispositivi extra-small prima di diventare orizzontale su dispositivi desktop (medi).
+Utilizzando un singolo set di classi `.col-sm-*`, puoi creare un layout di base distribuito in verticale su dispositivi `extra-small` che diventa orizzontale su dispositivi `small`.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -270,7 +270,7 @@ Utilizzando un singolo set di classi `.col-sm-*`, puoi creare un sistema di base
 
 ### Mischiare e abbinare
 
-Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di griglia? Puoi utilizzare una combinazione di classi diverse per ogni riga secondo necessità. Guarda l'esempio di seguito per farti un'idea migliore di come funziona.
+Non vuoi che le tue colonne si dispongano verticalmente su alcuni breakpoints? Puoi utilizzare una combinazione di classi diverse per ogni riga secondo necessità. Guarda l'esempio di seguito per farti un'idea di come funziona.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -297,7 +297,7 @@ Non vuoi che le tue colonne si raccolgano semplicemente su alcune righe della di
 
 ### Righe di colonne
 
-Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colonne che rendono meglio il tuo contenuto e layout. Mentre le normali classi `.col-` \* si applicano alle singole colonne (ad es. `.col-md-4`), le classi delle "righe di colonne" sono impostate sul genitore `.row` come scorciatoia.
+Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colonne del tuo layout. Mentre le normali classi `.col-` \* si applicano alle singole colonne (ad es. `.col-md-4`), le classi delle "righe di colonne" sono impostate sul genitore `.row` come scorciatoia.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -366,7 +366,7 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 
 ## Allineamento
 
-Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e vericalmente le colonne.
+Usa le [utilità d'allineamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) di Flexbox per allineare orizzontalmente e vericalmente le colonne.
 
 ### Allineamento verticale
 
@@ -435,13 +435,15 @@ Usa le utilità d'allineamento di flexbox per allineare orizzontalmente e verica
 
 ### Senza gutter
 
-I gutter tra le colonne nelle classi di griglia predefinite di Bootstrap possono essere rimossi con `.g-0`.
+I _gutter_ (margini) tra le colonne delle griglia predefinite di Bootstrap possono essere rimossi con `.g-0`.
 Questo rimuove i margini negativi `margin` dalla classe `.row` e il `padding` orizzontale da tutte le colonne figlie dirette.
 
-Ecco il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le prime colonne figlie e sono agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+Di seguito il codice sorgente per la creazione di questi stili. Tieni presente che l'override delle colonne vale solo per le prime colonne figlie, agganciate tramite il [selettore di attributi](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
 Mentre questo genera un selettore più specifico, il padding della colonna può essere ulteriormente personalizzata con le [utilità di spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/).
 
-**Hai bisogno di un design edge-to-edge?** Abbandona l'elemento genitore `.container` o `.container-fluid`.
+{% capture callout %}
+**Hai bisogno di un design edge-to-edge?** Elimina l'elemento genitore `.container` o `.container-fluid`.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ```scss
 .g-0 {
@@ -456,7 +458,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 }
 ```
 
-In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).
+In pratica, ecco come appare. Nota che puoi continuare ad usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).
 
 <div class="bd-example-row">
 {% capture example %}
@@ -469,7 +471,7 @@ In pratica, ecco come appare. Nota che puoi continuare a usarlo con tutte le alt
 
 ### Gutter variabile
 
-Bootstrap Italia introduce gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:
+Bootstrap Italia rende disponibili gutter variabili a seconda delle dimensioni del viewport, secondo le indicazioni riportate di seguito:
 
 ```scss
 $grid-gutter-widths: (
@@ -483,7 +485,7 @@ $grid-gutter-widths: (
 
 Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe `.row`, la classe `.variable-gutters`.
 
-In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così distribuite:
+In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così implementate:
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
@@ -541,7 +543,7 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
 
 ### Colonna a capo
 
-Se in una singola riga vengono inserite più di 12 colonne, ogni gruppo di colonne extra, come ogni singola, andrà a capo su una nuova linea.
+Se in una singola riga vengono inserite più di 12 colonne, ogni singola colonna o gruppo di colonne extra andrà a capo su una nuova linea.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -555,7 +557,7 @@ Se in una singola riga vengono inserite più di 12 colonne, ogni gruppo di colon
 
 ### Interruzioni di colonna
 
-Rompere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con `width: 100%` ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo è realizzato con `.row` multiple, ma non tutti i metodi di implementazione possono rendere conto di questo.
+Dividere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con `width: 100%` ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo layout viene realizzato con `.row` multiple, ma non sempre è possibile implementarlo.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -589,7 +591,7 @@ Puoi anche applicare questa interruzione a specifici breakpoint con le [utilità
 
 ### Classi order
 
-Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo contenuto. Queste classi sono responsive, così puoi impostare `order` tramite breakpoint (e.g., `.order-1.order-md-2`). Include il supporto per `1` a `5` su tutti e cinque i livelli della griglia.
+Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo contenuto. Queste classi sono responsive, così puoi impostare `order` tramite breakpoint (e.g., `.order-1.order-md-2`). Include il supporto per numeri da `1` a `5`.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -603,7 +605,7 @@ Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-Esiste anche una classe responsive `.order-first` che cambia velocemente l'ordine di un elemento applicando `order: -1`. Questa classe può anche essere mescolata con le classi numerate `.order-*` se necessario.
+Esistono anche delle classi responsive `.order-first` e `.order-last` che cambiano velocemente l'ordine di un elemento applicando `order: -1` o `order: 6`. Queste classi possono  essere utilizzate insieme con le classi numerate `.order-*` se necessario.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -619,7 +621,7 @@ Esiste anche una classe responsive `.order-first` che cambia velocemente l'ordin
 
 ### Colonne di compensazione
 
-È possibile sfalsare le colonne della griglia in due modi: con le classi responsive della griglia di Bootstrap `.offset-` e con le [utilità per le spaziature] di Bootstrap({{ site.baseurl }}/docs/organizzare-gli-spazi/spacing/). Le classi griglia sono dimensionate in modo che corrispondano alle colonne, mentre i margini sono più utili per i layout rapidi in cui la larghezza dell'offset è variabile.
+È possibile sfalsare le colonne della griglia in due modi: con le classi responsive della griglia di Bootstrap `.offset-` e con le [utilità per le spaziature]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/) di Bootstrap. Le classi di offset della griglia sono dimensionate in modo che corrispondano alle colonne, mentre i margini sono più utili per i layout rapidi in cui la larghezza dell'offset è variabile.
 
 #### Classi offset
 
@@ -659,7 +661,7 @@ Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario rei
 
 #### Utilità del margin
 
-Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come `.me-auto` per forzare lo spazio tra colonne adiacenti.
+Dato che Bootstrap utilizza flexbox per generare le griglie, puoi usare le utilità del margin come `.me-auto` per forzare lo spazio tra colonne adiacenti.
 
 <div class="bd-example-row">
 {% capture example %}
@@ -680,7 +682,7 @@ Con il passaggio a flexbox nella v4, puoi usare le utilità del margin come `.me
 
 ## Annidamento
 
-Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` e un set di colonne `.col-sm-*` all'interno di una esistente `.col-sm-*`. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario che tu usi tutte e 12 le colonne disponibili).
+Per annidare il contenuto con la griglia predefinita, aggiungi una nuova `.row` e un set di colonne `.col-sm-*` all'interno di una esistente `.col-sm-*`. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario usare tutte e 12 le colonne disponibili).
 
 <div class="bd-example-row">
 {% capture example %}

@@ -17,7 +17,7 @@ description: Elementi e stili per la creazione di input accessibili e responsivi
 
 ## Esempi di campi di input
 
-Per il corretto funzionamento degli elementi di tipo `<input>`, è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli di input più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico e altro.
+Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli nativi dei borowser più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico ed altro.
 
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
@@ -72,10 +72,12 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`.
 
 {% capture callout %}
-**Associazione del testo di aiuto con gli elementi del modulo form**
+
+#### Associazione del testo di aiuto con gli elementi del modulo form
 
 Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 
@@ -209,7 +211,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+#### Attivazione tramite JavaScript
 
 Abilitarlo manualmente con:
 
@@ -226,7 +228,7 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
   minimumLength: 4,
 })
 ```
-### Opzioni
+#### Opzioni
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -320,7 +322,7 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 
 ## Ricerca con autocompletamento
 
-Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-bs-autocomplete` con un JSON da filtrare.
+Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-bs-autocomplete` contenente un JSON da filtrare.
 
 L'icona della lente è contenuta in uno `<span>` con classe `.autocomplete-icon`, nascosta agli screen reader dall'attributo `aria-hidden="true"`.
 
@@ -409,7 +411,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 
 ### Ricerca con autocompletamento grande
 
-Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overaly dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
+Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overlay dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
 {% capture example %}
 
@@ -511,7 +513,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+### Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
@@ -524,7 +526,7 @@ var inputSearch = new bootstrap.InputSearch(inputElement, {
 
 ## Area di testo
 
-Per permettere agli utenti di inserire del testo (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo `<textarea>` ridimensionabile.
+Per permettere agli utenti di inserire un testo esteso (ad esempio per lasciare commenti o informazioni), è bene utilizzare un elemento di tipo `<textarea>` ridimensionabile.
 
 Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo stesso comportamento dinamico dei campi di input.
 

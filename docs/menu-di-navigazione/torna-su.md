@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Torna su
-description: Consente agli utenti di scorrere agevolmente verso la parte superiore della pagina
+description: Consente agli utenti di scorrere agevolmente verso la parte superiore della pagina.
 group: menu-di-navigazione
 toc: true
 ---
@@ -99,9 +99,9 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiente un pulsante con om
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+## Attivazione tramite JavaScript
 
-È possibile creare un'istanza con il constructor, ad  esempio:
+È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
 var backToTopElement = document.getElementById('#backToTop')

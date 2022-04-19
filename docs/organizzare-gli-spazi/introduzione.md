@@ -2,7 +2,7 @@
 layout: docs
 title: Introduzione
 toc: false
-description: Classi e utilità per organizzare gli spazi e il posizionamento di componenti all'interno di una pagina web
+description: Classi e utilità per organizzare gli spazi e il posizionamento di componenti all'interno di una pagina web.
 group: organizzare-gli-spazi
 redirect_from:
   - '/organizzare-gli-spazi/'
@@ -201,9 +201,9 @@ elementi di pari livello.
 
 ---
 
-## Modificare `display`
+## Modificare Display
 
-Utilizza insieme le [display utility]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/) con il grid system, i contenuti o i
+Utilizza le [display utility]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/) insieme al grid system, i contenuti o i
 componenti in modo responsive, potrai visualizzare o nascondere questi elementi in determinati viewport.
 
 ## Opzioni Flexbox
@@ -220,10 +220,10 @@ spaziatura e altro ancora.
 
 Si utilizzino il `margin` e `padding` delle [utility spaziatura]({{ site.baseurl }}/docs/organizzare-gli-spazi/spaziature/) per gestire spazi
 e dimensioni di elementi e componenti. Bootstrap Italia include una scala a cinque livelli per queste utility basata su
-una variabile predefinita `$spacer` di valore `1rem`.
+una variabile predefinita `$spacer` di valore `16px`.
 
-Si scelgano quindi i valori per tutti i viewport (es.: `.me-3` per `margin-right: 1rem`), o le varianti responsive per viewport
-specifici (es.: `.me-md-3` per `margin-right: 1rem` a partire dal breakpoint `md`).
+Si scelgano quindi i valori per tutti i viewport (es.: `.me-3` per `margin-right: 16px`), o le varianti responsive per viewport
+specifici (es.: `.me-md-3` per `margin-right: 16px` a partire dal breakpoint `md`).
 
 ## Modificare la visibilità
 

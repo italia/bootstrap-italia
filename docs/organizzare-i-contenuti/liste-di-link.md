@@ -3,12 +3,10 @@ layout: docs
 group: organizzare-i-contenuti
 toc: true
 title: Liste di link
-description: I link list sono un componente flessibile e potente per la visualizzazione di una serie di link o call to action.
+description: Le Liste di lik sono un componente flessibile e potente dedicato alla visualizzazione di una serie di link o call to action.
 ---
 
-## Esempi
-
-## Single line
+## Linea singola
 
 {% capture example %}
 
@@ -21,9 +19,9 @@ description: I link list sono un componente flessibile e potente per la visualiz
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Single line - elemento con stato attivo
+### Elemento con stato attivo
 
-Per determinare l'elemento attivo è sufficiente aggiungere la classe `.active` al relativo link
+Per rendere attivo un elemento è sufficiente aggiungere la classe `.active` al relativo link.
 
 {% capture example %}
 
@@ -42,9 +40,9 @@ Per determinare l'elemento attivo è sufficiente aggiungere la classe `.active` 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Single line - elemento con stato disabilitato
+### Elemento con stato disabilitato
 
-Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabled` al relativo link
+Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al relativo link.
 
 {% capture example %}
 
@@ -63,23 +61,22 @@ Per disabilitare un elemento attivo è sufficiente aggiungere la classe `.disabl
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Single line con header e divider
+### Intestazione e divisore
 
-I link list possono avere un header (con o senza link) e/o divisori per separare gruppi di link<br>
-L'header è costituito dall'elemento `.link-list-heading` che precede il tag `<ul>`<br>
-Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`
+Le liste di link possono avere un'intestazione (con o senza link) e/o divisori per separare gruppi di link.  
+L'intestazione è costituita dall'elemento `.link-list-heading` che precede il tag `<ul>`.  
+Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`.
 
-**Header senza link**
 {% capture example %}
 
 <div class="link-list-wrapper">
-  <div class="link-list-heading">Header senza link</div>
+  <div class="link-list-heading">Intestazione senza link</div>
   <ul class="link-list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
     <li>
-      <a class="list-item" href="#"><span>Link lista</span></a>
+      <a class="list-item" href="#"><span>Link lista 2</span></a>
     </li>
     <li>
       <a class="list-item" href="#"><span>Link lista 3</span></a>
@@ -94,15 +91,14 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-**Header con link**
 {% capture example %}
 
 <div class="link-list-wrapper">
-  <div class="link-list-heading"><a href="#">Header con link</a></div>
+  <div class="link-list-heading"><a href="#">Intestazione con link</a></div>
   <ul class="link-list">
     <li><a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista</span></a>
+    <li><a class="list-item" href="#"><span>Link lista 2</span></a>
     </li>
     <li><a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
@@ -114,18 +110,18 @@ Il separatore è costituito dal tag `<span>` con classe `.divider` all'interno d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Sizing
+## Dimensioni
 
-Per ogni elemento link list è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
+Per ogni elemento di una lista di link è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
 
 {% capture example %}
 
 <div class="link-list-wrapper">
-  <div class="link-list-heading">Header</div>
+  <div class="link-list-heading">Intestazione</div>
   <ul class="link-list">
     <li><a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista</span></a>
+    <li><a class="list-item large" href="#"><span>Link lista 2</span></a>
     </li>
     <li><a class="list-item large" href="#"><span>Link lista 3</span></a>
     </li>
@@ -137,16 +133,15 @@ Per ogni elemento link list è possibile definire una variante di dimensione mag
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Multiline
+## Multiline con icona
 
-Ogni elemento link list può avere un icona (a destra o sinistra del testo) ed un abstract.
+Ogni elemento di una lista di link può avere un'icona (a destra o sinistra del testo) ed un abstract.
 
-**Icone**<br>
-Per aggiungere un icona bisogna aggiungere al tag `<a>` la classi:<br>
-`icon-right` : se si vuole posizionare l'icona a destra del testo<br>
-`icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
+Per includere un'icona bisogna aggiungere al tag `<a>` uan delle segeunti classi:  
+- `icon-right`: se si vuole posizionare l'icona a destra del testo
+- `icon-left`: se si vuole posizionare l'icona a sinistra del testo
 
-All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
+All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
 
 {% capture example %}
 
@@ -191,17 +186,16 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo l
 
 ## Lista con controlli
 
-I link list con controlli sono caratterizzati da icone a destra e sinistra del testo<br>
-Quella di destra descrittiva e quella di sinistra un eventuale azione aggiuntiva da gestire in Javascript.
+Le liste di link con controlli sono caratterizzate da icone a destra e sinistra del testo.  
+Quella di destra è descrittiva mentre quella di sinistra può essere un'eventuale azione aggiuntiva da gestire in Javascript.
 
-Per aggiungere un'icona è possibile aggiungere al tag `<a>` la classe `icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `icon-left` : se si vuole posizionare l'icona a sinistra del testo<br>
+È necessario aggiungere al tag `<a>` la classe `.icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `.icon-left` se si vuole posizionare l'icona a sinistra del testo.
 
-### Primary Action
+### Azione primaria
+#### Icona a sinistra
 
-**Icona sinistra**<br>
-
-All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito prima del tag `<span class="list-item-title">` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).
-Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`
+All'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
+Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`.
 
 {% capture example %}
 
@@ -235,11 +229,11 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Secondary Action
+### Azione secondaria
+#### Icona a destra
 
-**Icona destra**<br>
-All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo il tag `<span class="list-item-title">` contenente il testo, puoi inserire il tag `svg` necessario (per maggiori informazioni consulta la sezione [icone]({{ site.baseurl }}/docs/utilities/icone/)).<br>
-Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`
+All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo il tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
+Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
 
 {% capture example %}
 
@@ -273,17 +267,17 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Primary e Secondary Action
+### Azioni primaria e secondaria
 
-**Icona destra**<br>
-Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
+#### Icona a sinistra
+Per aggiungere un'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`.  
+Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
 
-All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito dopo il tag `<span class="list-item-title">` contenente il testo,  andremo ad inserire l'icona e l'SVG con `.it-(classe icona)` per determinare quale icona inserire.
+#### Icona a destra
+.
+Per aggiungere un'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`.  
+Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
 
-**Icona sinistra**<br>
-Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`
-
-All'interno del tag `<span class="list-item-title-icon-wrapper">`  subito prima del tag `<span class="list-item-title">` contenente il testo,  andremo ad inserire l'icona e l'SVG con `.it-(classe icona)` per determinare quale icona inserire.
 
 {% capture example %}
 
@@ -340,9 +334,9 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 
 -->
 
-### List con switch
+### Lista con toggle
 
-Un link list può contenere anche elementi form, si seguito un esempio contenente uno switch generato da un `<input type="checkbox">`
+Una lista di link può contenere anche elementi appartenenti ai form, di seguito un esempio contenente un [toggle]({{ site.baseurl }}/docs/form/toggles/).
 
 {% capture example %}
 
@@ -368,7 +362,7 @@ Un link list può contenere anche elementi form, si seguito un esempio contenent
 
 ### List con checkbox
 
-Di seguito un esempio di link list contenente un `<input type="checkbox">` standard.
+Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
 
 {% capture example %}
 
@@ -396,13 +390,13 @@ Di seguito un esempio di link list contenente un `<input type="checkbox">` stand
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Liste innestate
+## Liste annidate
 
 Le liste di link possono contenere link con sottosezioni espanse o collassabili.
 
-### Fixed
+### Espansa
 
-Di seguito un esempio di navigazione annidiata espansa di default.
+Di seguito un esempio di navigazione annidata espansa.
 
 {% capture example %}
 
@@ -444,10 +438,10 @@ Di seguito un esempio di navigazione annidiata espansa di default.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Collapse
+### Collassabile
 
-Di seguito un esempio di navigazione annidiata collassabile.<br>
-Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di bootstrap per l'attivazione del [comportamento "collapse"]({{ site.baseurl }}/docs/componenti/collapse/).
+Di seguito un esempio di navigazione annidata collassabile.  
+Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di Bootstrap per l'attivazione del comportamento [collapse]({{ site.baseurl }}/docs/componenti/collapse/).
 
 {% capture example %}
 

@@ -4,9 +4,9 @@
     - name: Cookiebar
       url: cookiebar
       description: Una barra di avviso sui cookie.
-    - name: Notifications
+    - name: Notifiche
       url: notifications
-      description: Pagina con vari esempi di Notifications.
+      description: Pagina con vari esempi di Notifiche.
     - name: Navscroll
       url: navscroll
       description: Pagina con esempio di Navscroll.
@@ -18,7 +18,7 @@
       description: Pagina con esempio di form comprendente vari tipi di campi e validazione.
 
 - category: Esempi di template completi
-  description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali, puoi anche consultare la pagina dei Progetti.
+  description: Questa area conterrà alcuni template di esempio generici. Per applicazioni della libreria su progetti reali puoi consultare anche la pagina dei Progetti.
   examples:
     - name: Bootstrap Italia playground
       url: 'https://github.com/italia/bootstrap-italia-playground/'

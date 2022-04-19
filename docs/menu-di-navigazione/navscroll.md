@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navscroll
-description: L'elemento Navscroll contiene liste di link con ancore a sezioni della pagina in cui è contenuta
+description: L'elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto.
 group: menu-di-navigazione
 toc: true
 ---
@@ -9,11 +9,11 @@ toc: true
 ## Layout della Navscroll
 
 Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` dell'attributo `data-bs-navscroll`.  
-Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine pagina.
+Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine viewport.
 
 Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
 
-La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento, semplicemente aggiungendo al tag `<nav>` la classe `.it-left-side` per aggiungere una linea a sinistra, e `.it-right-side` per aggiungerla a destra.
+La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento. Si ottiene aggiungendo al tag `<nav>` la classe `.it-left-side` per ottenere una linea a sinistra, e `.it-right-side` per ottenere una linea a destra.
 
 {% capture callout %}
 Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
@@ -232,9 +232,9 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
 
-Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Link lista collassabile.
+Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
 
-Per maggiori informazioni, si può fare riferimento alla [documentazione dei Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
+Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
 
 {% capture example %}
 
@@ -294,11 +294,9 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione dei Lis
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+## Attivazione tramite JavaScript
 
-Abilitarlo manualmente con:
-
-È possibile creare un'istanza con il constructor, ad  esempio:
+È possibile creare un'istanza di Navscroll manualmente con il constructor:
 
 ```js
 var navscrollElement = document.querySelector('.it-navscroll-wrapper')

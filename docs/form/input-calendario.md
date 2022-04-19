@@ -4,7 +4,7 @@ group: form
 toc: true
 
 title: Input Calendario
-description: Documentazione ed esempi per aggiungere calendari per la selezione di giorni dell'anno
+description: Campo di tipo calendario per la selezione di giorni dell'anno.
 ---
 
 ## Datepicker

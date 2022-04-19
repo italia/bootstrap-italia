@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Strumenti di compilazione e contribuzione
-description: Come compilare il codice sorgente, generare la documentazione che stai leggendo e contribuire
+description: Come compilare il codice sorgente, generare la documentazione che stai leggendo e contribuire.
 group: come-iniziare
 toc: true
 ---

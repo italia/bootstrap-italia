@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Posizionamento
-description: Classi per configurare la posizione di un elemento.
+description: Classi per impostare la posizione di un elemento.
 group: organizzare-gli-spazi
 toc: true
 ---
 
 ## Valori comuni
 
-Classi per il posizionamento, tra loro non sono presenti le varianti per gestire il responsive.
+Classi per il posizionamento, non sono presenti varianti per la gestione responsive.
 
 ```html
 <div class="position-static">...</div>
@@ -20,11 +20,11 @@ Classi per il posizionamento, tra loro non sono presenti le varianti per gestire
 
 ## Posizione fissa in alto
 
-Posiziona un elemento in alto al viewport. Attraverso l'utilizzo di ogni classe `fixed-*` l'elemento assumerà una posizione
+Posiziona un elemento in alto nel viewport. Attraverso l'utilizzo di ogni classe `fixed-*` l'elemento assumerà una posizione
 _fixed_, ancorandosi al viewport (cioè la finestra del browser) ed uscendo quindi dal normale flusso di posizionamento
 del documento.
-Assicurati quindi di comprendere appieno le implicazioni della [posizione `fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed)
-nel tuo progetto; potrebbe essere necessario aggiungere CSS aggiuntivi.
+Assicurati di comprendere appieno le implicazioni della [posizione `fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed)
+nel tuo progetto: potrebbe essere necessario utilizzare CSS aggiuntivi.
 
 ```html
 <div class="fixed-top">...</div>
@@ -40,7 +40,7 @@ Specularmente al paragrafo precedente, posiziona un elemento in basso al viewpor
 
 ## Sticky top
 
-Posiziona un elemento in alto al viewport, ma solo dopo che nella pagina avviene uno scroll verticale.
+Posiziona un elemento in alto nel viewport, ma solo dopo che nella pagina avviene uno scroll verticale che lo ancori in quella posizione.
 La classe `.sticky-top` usa la proprietà `position: sticky` supportata da tutti i browser moderni.
 
 ```html

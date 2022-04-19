@@ -4,16 +4,16 @@ group: form
 toc: true
 
 title: Transfer
-description: Il transfer è un componente che consente la creazione di liste di checkbox.
+description: Un componente che consente la creazione di liste di checkbox.
 ---
 
-Il componente _Transfer_ consente di trasferire gli elementi di una lista di checkbox ad un altro elenco di checkbox.
+Il componente Transfer consente di trasferire gli elementi di una lista di checkbox ad un'altra lista di checkbox.
 
-**Il componente _Transfer_ contiene**
+**Il componente Transfer_contiene**
 
-- Lista checkbox di destra
-- Pulsanti per il trasferimento dei contenuti da lista a lista
 - Lista checkbox di sinistra
+- Pulsanti per il trasferimento dei contenuti da lista a lista
+- Lista checkbox di destra
 
 **Le liste di checkbox, sono composte da:**
 
@@ -27,9 +27,10 @@ Il componente _Transfer_ consente di trasferire gli elementi di una lista di che
 - `a.reset`: Ripristina lo stato iniziale delle liste
 
 {% capture callout %}
-Per l'attivazione del relativo javascript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
-Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
+Per l'attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
 {% endcapture %}{% include callout.html content=callout type="info" %}
+
+Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 
 {% capture example %}
 

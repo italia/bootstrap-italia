@@ -3,24 +3,23 @@ layout: docs
 group: organizzare-i-contenuti
 toc: true
 title: Liste di immagini
-description: La lista di immagini è un componente flessibile per la visualizzazione di serie di immagini sottoforma di griglia
+description: La lista di immagini è un componente flessibile per la visualizzazione di serie di immagini sotto forma di griglia.
 ---
 
 ## Elemento singolo
 
-Di seguito gli esempi di elemento singolo della grid list:
+Di seguito gli esempi di elemento singolo della lista di immagini:
 
 - Immagine semplice
 - Immagine con didascalia in basso
 - Immagine con didascalia sovrapposta
 
-Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`.it-grid-item-overlay`** al div **`it-grid-item-wrapper`**.
+Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.it-grid-item-overlay` al div `.it-grid-item-wrapper`.
 
 {% capture example %}
 
 <div class="row">
   <div class="col-12 col-lg-4">
-<!--grid item 1-->
     <div class="it-grid-item-wrapper">
       <a href="#">
         <div class="img-responsive-wrapper">
@@ -31,7 +30,6 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
       </a>
     </div>
   </div>
-<!--grid item 2-->
   <div class="col-12 col-lg-4">
     <div class="it-grid-item-wrapper">
       <a href="#">
@@ -49,7 +47,6 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
       </a>
     </div>
   </div>
-<!--grid item 3-->
   <div class="col-12 col-lg-4">
     <div class="it-grid-item-wrapper it-grid-item-overlay">
       <a href="#">
@@ -74,11 +71,8 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe **`
 
 ### Standard
 
-La griglia utilizzata è una variante delle classi di Bootstrap, dove cambiano sostanzialmente i margini.  
-Il div contenitore della griglia è **`.it-grid-list-wrapper`**.  
-Al posto della classe **`.row`** di bootstrap viene utilizzata la custom class **`.grid-row`**
-
-Di seguito l'esempio
+La griglia utilizzata è una variante delle classi di Bootstrap, con margini modificati.  
+Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `.row` di Bootstrap viene utilizzata la classe custom `.grid-row`.
 
 {% capture example %}
 
@@ -156,9 +150,7 @@ Di seguito l'esempio
 
 ### Standard con didascalie
 
-Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-image-label-grid`** al div **`.it-grid-list-wrapper`** se gli elementi al suo interno contengono una didascalia.
-
-Di seguito l'esempio
+Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe `.it-image-label-grid` al div `.it-grid-list-wrapper`.
 
 {% capture example %}
 
@@ -272,18 +264,16 @@ Di seguito l'esempio
 
 ### Proporzionale
 
-La griglia "proporzionale" contiene elementi griglia con immagine e testo in overlay.  
-Per la corretta formattazione degli spazi di questo tipo di griglia, occorre aggiungere la classe **`.it-quilted-grid`** al div **`.it-grid-list-wrapper`**.
-La griglia utilizza le stesse classi di bootstrap (**`.col`** ).
+La griglia proporzionale contiene elementi griglia con immagine e testo in overlay.  
+Per la corretta formattazione degli spazi di questo tipo di griglia occorre aggiungere la classe `.it-quilted-grid` al div `.it-grid-list-wrapper`.
+La griglia utilizza le classi di Bootstrap `.col-` per realizzare il layout colonnare.
 
 I tipi di immagini utilizzabili sono sostanzialmente 2:
 
 - standard
-- orizzontale (come proporzione sono il doppio della larghezza rispetto all'immagine standard e di altezza uguale)
+- orizzontale (con larghezza doppia rispetto all'immagine standard e di altezza uguale)
 
-Per utilizzare l'immagine orizzontale, occorre aggiungere la classe **`.it-grid-item-double-w`** al div **`.it-grid-item-wrapper`** che contiene l'immagine.
-
-Di seguito l'esempio
+Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-item-double-w` al div `.it-grid-item-wrapper` che contiene l'immagine.
 
 {% capture example %}
 
@@ -369,7 +359,7 @@ Di seguito l'esempio
 
 Masonry è incluso in Bootstrap Italia.
 
-Qui la documentazione: [Masonry](https://masonry.desandro.com/).
+Per un elenco di tutti i possibili parametri di configurazione consultare la [documentazione completa](https://masonry.desandro.com/).
 
 Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 
@@ -585,9 +575,9 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+#### Abilitare Masonry via JavaScript
 
-Abilitarlo manualmente con:
+È possibile abilitare Masonry manualmente utilizzando questo script:
 
 ```js
 var elementList = [].slice.call(document.querySelectorAll('.it-masonry'))
@@ -595,6 +585,8 @@ var masonryList = elementList.map(function (element) {
   return new bootstrap.Masonry(element)
 })
 ```
+
+#### Elenco dei metodi disponibili
 
 <table class="table table-bordered table-striped">
   <thead>

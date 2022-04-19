@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Float
-description: Gestisci i float di qualsiasi elemento con le classi apposite
+description: Gestisci i float di qualsiasi elemento con le classi apposite.
 group: organizzare-gli-spazi
 toc: true
 ---

@@ -4,7 +4,7 @@ group: form
 toc: true
 
 title: Upload
-description: Elementi dei form dedicati al caricamento file
+description: Elementi dei form dedicati al caricamento file.
 ---
 
 
@@ -19,7 +19,7 @@ All'interno di un `<form>` inserire un campo input di tipo file con classe `.upl
 
 I file caricati sono elencati come elementi `<li>` di una lista `<ul>` con classe `.upload-file-list`.
 
-Ogni elemento può avere tre differenti stati e raltive classi:
+Ogni elemento può avere tre differenti stati e relative classi:
 
 - `.loading` per i file in caricamento
 - `.success` per i file caricati correttamente
@@ -29,7 +29,7 @@ Ogni elemento può avere tre differenti stati e raltive classi:
 
 #### Accessibilità
 
-Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici.
+Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici come icone o colori.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
@@ -228,7 +228,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
 
 ## Upload Gallery
 
-Per gestire il caricamento di una serie di foto e l'anteprima delle stesse in forma di Gallery con thumbail, includere un input file con classi `.upload` e `.pictures-wall` come elemento `<li>` di una lista `<ul>` con classe `.upload-file-wall`.
+Per gestire il caricamento di una serie di foto e l'anteprima delle stesse in forma di Gallery con thumbnail, includere un input file con classi `.upload` e `.pictures-wall` come elemento `<li>` di una lista `<ul>` con classe `.upload-file-wall`.
 
 Le immagini caricate andranno aggiunte in testa alla lista `<ul>` come elementi `<li>` con classe `upload-image`.
 
@@ -289,7 +289,7 @@ I primi due stati sono gestiti dal codice JS incluso nello UI-Kit, lo stato di *
 
 Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> del risultato finale.
 
-Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut" data-bs-progress-donut></div>` come progress circolare. L'aggiornamento del progresso avviene utilizzando il seguente codice JS:
+Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut" data-bs-progress-donut></div>` come progress circolare.
 
 {% capture example %}
 
@@ -360,7 +360,7 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+### Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad esempio:
 

@@ -1,18 +1,16 @@
 ---
 layout: docs
 title: Megamenu
-description: Presenta un sottomenu contenente elenchi di links relativo ad una voce della navbar.
+description: Visualizza un sottomenu contenente elenchi di links relativo ad una voce della navbar.
 group: menu-di-navigazione
 toc: true
 ---
 
 ## Introduzione
 
-Megamenu contenente un elenco di links.
+Il megamenu, all'interno del `<nav>`, è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) contenente un elenco di links.
 
-Il megamenu all'interno del nav è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
-
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown a cui si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
+Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
@@ -20,7 +18,7 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 
 #### Accessibilità
 
-Essendo il Megamenu un componente di navigazione critico dal punto di vista dell'accessibilità se ne suggerisce l'uso solo quando strettamente necessario. In questi casi:
+Essendo il megamenu un componente di navigazione critico dal punto di vista dell'accessibilità se ne suggerisce l'uso solo quando strettamente necessario. In questi casi:
 
 - Prestare particolare attenzione agli attributi `ARIA` presenti negli esempi.
 - È preferibile non utilizzare le [sezioni](#classico-con-sezioni) all'interno dei megamenu a meno che non siano necessarie.
@@ -112,7 +110,7 @@ Il megamenu può contenere un link relativo agli elenchi in esso contenuti.
 Qualora i link mostrati nel megamenu non siano tutti quelli relativi alla voce primaria (perché troppo numerosi), si può includere l'elemento `<div class="it-external">` subito dopo il `<div class="row">` che contiene le liste di link.  
 La struttura colonnare dell'elemento `<div class="it-external">` dev'essere la stessa di quella contenente le liste di link.
 
-All'interno dell'ultima colonna andremo ad inserire la lista di link contenente il link che porterà ad una eventuale pagina in cui sarà mostrato tutto il contenuto di sezione.  
+All'interno dell'ultima colonna inseriremo la lista di link contenente il link che porterà alla pagina in cui sarà mostrato tutto il contenuto di sezione.  
 Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more` al tag `<li>` che lo contiene.
 
 {% capture example %}
@@ -219,7 +217,7 @@ Per stilare correttamente il link è sufficiente aggiungere la classe `.it-more`
 
 ### Classico con Sezioni
 
-Se ci fosse necessità di categorizzare i contenuti del megamenu, possiamo inserire sezioni in testa alle Link list.  
+Se fosse necessario categorizzare i contenuti del megamenu, possiamo inserire sezioni in testa alle Link list.  
 Per inserire il titolo della sezione, è sufficiente inserire il tag `<div>` con classe `link-list-heading` prima del tag `<ul>` all'inizio della lista relativa.
 
 {% capture example %}
@@ -412,13 +410,11 @@ Per aggiungere il link more è sufficiente aggiungere la classe `.it-more` al ta
 
 ## Megamenu con call to action
 
-I megamenu possono contenere delle liste di call to action che possono essere posizionate in fondo o a sinistra del megamenu.
+I megamenu possono contenere delle liste di call to action, posizionate in fondo o a sinistra del megamenu.
 
 ### Call to action in basso
 
-Per aggiungere un elenco di call to action è sufficiente inserire dopo il tag con classe `.row` contenente l'elenco primario il tag `<div class="it-megamenu-footer">` dove andremo ad inserire in una struttura colonnare identica a quella contenente la lista principale, le liste contenenti le call to action.
-
-Di seguito un esempio:
+Per aggiungere un elenco di call to action è sufficiente aggiungere dopo il tag con classe `.row` contenente l'elenco primario, il tag `<div class="it-megamenu-footer">`. In questo inseriremo una struttura colonnare identica a quella della lista principale che ospiterà le liste delle call to action.
 
 {% capture example %}
 
@@ -528,8 +524,6 @@ Per aggiungere un elenco di call to action posizionato a destra, inseriremo una 
 
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical">` all'interno della quale andremo ad inserire la nostra lista di link contenente le call to action.
 
-Di seguito un esempio:
-
 {% capture example %}
 
 <nav class="navbar navbar-expand-lg has-megamenu">
@@ -637,9 +631,7 @@ Di seguito un esempio:
 Possiamo inserire a destra del megamenu un'immagine ed una descrizione riguardante la sezione.
 
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical it-description">` all'interno della quale andremo ad inserire il blocco contenente immagine e testo.  
-Il tag contenente immagine e descrizione sarà : `<div class="description-content">`
-
-Di seguito un esempio:
+Il tag contenente immagine e descrizione sarà : `<div class="description-content">`.
 
 {% capture example %}
 

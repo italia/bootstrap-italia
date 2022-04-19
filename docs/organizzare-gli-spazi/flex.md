@@ -234,12 +234,6 @@ Sono previste anche seguenti le varianti responsive per `align-self`:
 
 Flexbox può fare cose meravigliose quando si mescolano gli allineamenti flessibili con i margini automatici. Di seguito sono mostrati tre esempi di controllo degli elementi flex tramite margini automatici: predefinito (nessun margine automatico), inserito con due elementi a destra (`.me-auto`) e inserito con due elementi a sinistra (`.ms-auto`).
 
-{% capture callout %}
-Sfortunatamente IE10 e IE11 non supportano correttamente i margini automatici sugli elementi flex quando il contenitore ha un valore dell'utility `justify-content` non predefinito.
-
-Per maggiori dettagli, [leggi questa risposta su StackOverflow](https://stackoverflow.com/a/37535548).
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-
 <div class="bd-example-row">
 {% capture example %}
 <div class="d-flex mb-3">

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Toolbar
-description: Elemento contenitore di link, bottoni o dropdown
+description: Elemento contenitore di link, bottoni o dropdown.
 group: menu-di-navigazione
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: docs
 group: organizzare-i-contenuti
-description: Classi e utilità per organizzare le diverse tipologie di contenuti all'interno di una pagina web
+description: Classi e utilità per organizzare le diverse tipologie di contenuti all'interno di una pagina web.
 toc: false
 title: Introduzione
 redirect_from:
