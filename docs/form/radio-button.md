@@ -30,7 +30,6 @@ Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la c
 {% capture example %}
 
 <div>
-  <div class="row">
     <div class="form-check form-check-inline">
       <input name="gruppo2" type="radio" id="radio4" checked>
       <label for="radio4">Opzione 1</label>
@@ -39,7 +38,6 @@ Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la c
       <input name="gruppo2" type="radio" id="radio5">
       <label for="radio5">Opzione 2</label>
     </div>
-  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

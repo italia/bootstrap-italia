@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Thumbnav
-description: Componente di navigazione con immagini thumbnail
+description: Componente di navigazione con immagini thumbnail.
 group: menu-di-navigazione
 toc: true
 ---
@@ -19,7 +19,7 @@ toc: true
 
 Il componente Thumbnav consiste in una lista `<ul>` con classe `.thumb-nav` contenente tanti elementi `<li>` quante sono i link/thumbnail richiesti.
 
-Ogni elemento `<li>` deve contenere un _resizer_ come da esempio per mantenere le corrette proporzioni di 3:2 a prescindere dalle dimensioni dell'immagine utilizzata per la thumbnail. Il file SVG a cui punta il resizer è fornito con la distribuzione nella cartella "assets".
+Ogni elemento `<li>` deve contenere un [resizer proporzionale]({{ site.baseurl }}/docs/organizzare-gli-spazi/proporzioni/) come da esempio per mantenere le corrette proporzioni di 3:2 a prescindere dalle dimensioni dell'immagine utilizzata per la thumbnail.
 
 Per indicare il link/thumbail attivo applicare la classe `.active` al relativo tag `<a>`.
 

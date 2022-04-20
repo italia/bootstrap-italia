@@ -1,14 +1,12 @@
 ---
 layout: docs
 title: Sidebar
-description: Barra di navigazione laterale, include liste di link e liste di link innestate.
+description: Barra di navigazione laterale, include liste di link e liste di link annidate.
 group: menu-di-navigazione
 toc: true
 ---
 
-## Basic sidebar
-
-### Default
+## Semplice
 
 La sidebar semplice può contenere:
 
@@ -16,7 +14,7 @@ La sidebar semplice può contenere:
 - Lista di link primaria
 - Lista di link secondaria
 
-Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)**.
+Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la [Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
 
 {% capture example %}
 
@@ -55,7 +53,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
 
 ### Con icona
 
-La sidebar può contenere icone nella sua **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** primaria.
+La sidebar può contenere icone nella sua Lista di link.
 
 {% capture example %}
 
@@ -192,7 +190,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 
 ## Annidata
 
-La sidebar può contenere una **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** primaria annidata.
+La sidebar può contenere una Lista di link primaria annidata.
 
 {% capture example %}
 

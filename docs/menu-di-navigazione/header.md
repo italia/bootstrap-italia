@@ -15,25 +15,25 @@ toc: true
 
 L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
 
-- Un cosiddetto **"slim header"**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
-- Una parte centrale che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
-- Una parte dedicata alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
+- Un cosiddetto **Slim Header**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
+- Un **Header Centrale** che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
+- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 {% capture callout %}
 #### Accessibilità
 
-Condierando l'importanza delL'Header per la navigazione di un sito, si consiglia di seguire gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
+Condierando l'importanza dell'Header per la navigazione di un sito, si consiglia di seguire attentamente gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
 
 Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo relativo all'Istituzione (es: carousel con ultime notizie) è consigliabile applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina.
 
 Maggiori dettagli sull'accessibilità del **megamenu** sono presenti nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-## Slim header
+## Slim Header
 
-Lo "slim header" header mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.
-Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl }}/docs/componenti/dropdown/).
+Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
+Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
 
 {% capture example %}
 
@@ -92,9 +92,9 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Right action con bottone full responsive
+#### Zona destra con bottone full-responsive
 
-Per trasformare il bottone di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
+Per trasformare il bottone di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo _full-responsive_ è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 
@@ -207,7 +207,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ## Header Centrale
 
-**Header centrale**, per mostrare il logo dell'ente e la sua descrizione, dei link aggiuntivi ai social media, l'accesso al motore di ricerca, se presente.
+**Header Centrale**, per mostrare il logo dell'ente e la sua descrizione, link aggiuntivi ai social media e l'accesso al motore di ricerca, se presente.
 
 {% capture example %}
 
@@ -272,7 +272,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ### Versione stretta
 
-Per utilizzare la versione più stretta dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
+Per utilizzare la versione più stretta in verticale dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
 
 {% capture example %}
 
@@ -337,7 +337,7 @@ Per utilizzare la versione più stretta dell'header centrale è sufficiente aggi
 
 ### Versione chiara
 
-Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`
+Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`.
 
 {% capture example %}
 
@@ -402,7 +402,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 ## Header Nav
 
-**Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure un [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
+**Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
 
 {% capture example %}
 
@@ -513,13 +513,13 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 I'Header Nav ha due versioni, una chiara ("light") e una scura ("dark"). Lo stile di default ha differenti caratteristiche colore a seconda della versione desktop e mobile:
 
-- Su **Desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) hanno background bianco, testi neri e link di colore primario.
+- Su **Desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi **Dropdown** e **Megamenu** hanno background bianco, testi neri e link di colore primario.
 - Su **Mobile** lo stile di default ha un **background bianco e testi e link di colore primario**.
 
 Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
 
-- La classe **`.theme-dark-mobile`** modifica unicamente la versione mobile del Nav impostando il background di colore primario, testi e link bianchi.
-- La classe **`.theme-light-desktop`** imposta invece un background bianco, testi e links di colore primario. Gli elementi [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/componenti/dropdown/) assumono background di colore primario, testi e link bianchi. (modifica unicamente la versione desktop del Nav).
+- La classe **`.theme-dark-mobile`** modifica unicamente la versione **mobile** dell'Header Nav, impostando il background di colore primario, testi e link bianchi.
+- La classe **`.theme-light-desktop`** modifica unicamente la versione **desktop** dell'Header Nav impostando un background bianco, testi e links di colore primario. Gli elementi **Dropdown** e **Megamenu** assumono background di colore primario, testi e link bianchi.
 
 #### Header Nav standard
 
@@ -844,7 +844,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 #### Navigazione secondaria
 
-Al menù di navigazione principale può essere aggiunto anche un menù di navigazione secondario includendo a `.menu-wrapper` una seconda lista **ul** con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
+Al menù di navigazione principale può essere aggiunto anche un menù di navigazione secondario includendo a `.menu-wrapper` una seconda lista `<ul>` con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
 
 {% capture example %}
 
@@ -1113,8 +1113,8 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
 
 ### Versione chiara
 
-Nella versione light è consigliabile aggiungere la classe `it-shadow` al tag `<div class="it-header-wrapper">`.  
-Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto il componente.
+Nella versione light è consigliabile aggiungere la classe `.it-shadow` al tag `<div class="it-header-wrapper">`.  
+Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è contenuto.
 
 {% capture example %}
 <header class="it-header-wrapper it-shadow">
@@ -1336,7 +1336,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
 
 ## Header Sticky
 
-Affinché la testata rimanga parzialmente visibile anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
+Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
 
 ```html
 <div class="it-header-wrapper it-header-sticky">...</div>

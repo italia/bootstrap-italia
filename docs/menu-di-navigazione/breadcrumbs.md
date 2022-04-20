@@ -6,15 +6,15 @@ group: menu-di-navigazione
 toc: true
 ---
 
-Le breadcrumbs (in italiano, briciole di pane) mostrano la pagina corrente e danno la possibilità di risalire nella gerarchia delle pagine attraverso dei comodi link ai livelli superiori.
+Le breadcrumbs (in italiano: briciole di pane) mostrano la pagina corrente e danno la possibilità di risalire nella gerarchia delle pagine attraverso dei comodi link ai livelli superiori.
 
-Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`
+Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come separatore inserendolo all'interno del tag `<span class="separator">`.
 
 {% capture callout %}
 
 #### Accessibilità
 
-Dato che le breadcrumb forniscono una navigazione, è buona idea aggiungere un'etichetta significativa come `aria-label="Percorso di navigazione"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
+Dato che le breadcrumb sono uno strumento di navigazione del sito, è buona idea aggiungere un'etichetta significativa come `aria-label="Percorso di navigazione"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
 
 Per maggiorni informazioni, guarda le [linee guida WAI-ARIA per la creazione di breadcrumb](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
 

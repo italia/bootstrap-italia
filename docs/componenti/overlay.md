@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Overlay Panel
-description: Per applicare label sovrapposte ad immagini o elementi
+description: Per applicare label sovrapposte ad immagini o elementi.
 ---
 
 La struttura basica è composta da un contenitore `<figure>` con classe `.overlay-wrapper`. L'immagine contenuta conserva la sua dimensione naturale.

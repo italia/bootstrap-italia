@@ -1,18 +1,18 @@
 ---
 layout: docs
 title: Chips
-description: Elementi compatti che rappresentano un input, attributo o azione
+description: Elementi compatti che rappresentano un input, attributo o azione.
 group: componenti
 toc: true
 ---
 
-Una _"chip"_ è composta da un tag `div` con classe `.chip`. Contiene una label e, opzionalmente, un bottone di chiusura/rimozione, un'icona o un avatar.
+Una chip è composta da un tag `div` con classe `.chip`. Contiene una label e, opzionalmente, un bottone di chiusura/rimozione, un'icona o un avatar.
 
 La versione con sola label centra il testo al suo interno e richiede una classe aggiuntiva `.chip-simple`.
 
-L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
+Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più grande della chip.
 
-Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più grande della Chip.
+L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
 
 {% capture example %}
 
@@ -92,7 +92,7 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
 
 ### Varianti di colore
 
-Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap:
+Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i temi di Bootstrap:
 
 {% capture example %}
 
@@ -144,7 +144,7 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 ## Gruppi di Chip
 
-I gruppi di Chip vengono visualizzati in linea.
+I gruppi di chip vengono visualizzati in linea.
 
 {% capture example %}
 

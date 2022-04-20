@@ -174,10 +174,14 @@
   //dark version
   &.dark {
     background-color: $neutral-1-a8;
+    .link-list-wrapper .link-list-heading {
+      color: #fff;
+    }
     .link-list-wrapper ul {
       span.divider {
         background: #2e465e;
       }
+
       li {
         //link list colors and hovers
         a span,

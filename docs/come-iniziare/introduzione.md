@@ -7,7 +7,7 @@ redirect_from:
   - /docs/
 toc: true
 title: Introduzione
-description: Come usare Bootstrap Italia nel tuo progetto
+description: Come usare Bootstrap Italia nel tuo progetto.
 ---
 
 ## Caricare la libreria
@@ -181,9 +181,9 @@ Bootstrap è sviluppato in modalità _mobile first_: per assicurare un rendering
 
 ### Box-sizing
 
-Per un migliore dimensionamento degli elementi nella pagina, Bootstrap occorre impostare il valore di `box-sizing` da `content-box` a `border-box`. Questo assicura che ogni `padding` non abbia effetto sulla dimensione finale di un elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.
+Per un migliore dimensionamento degli elementi nella pagina, Bootstrap imposta il valore di `box-sizing` da `content-box` a `border-box`. Questo assicura che ogni `padding` non abbia effetto sulla dimensione finale di un elemento, ma a volte può causare qualche problema con codice di terze parti come Google Maps o Google Custom Search Engine.
 
-Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare codice simile a quanto segue:
+Nelle rare occasioni sia necessario sovrascrivere il comportamento impostato da Bootstrap, sarà sufficiente utilizzare un codice di questo tipo:
 
 ```css
 .selettore-per-creare-eccezione {

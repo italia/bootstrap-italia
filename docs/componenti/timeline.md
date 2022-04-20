@@ -6,8 +6,6 @@ group: componenti
 toc: true
 ---
 
-## Esempio
-
 Il componente _Timeline_ è caratterizzato dalla classe `.it-timeline-wrapper`.  
 Contiene un elenco di `.timeline-element`.
 
@@ -20,6 +18,8 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
 - `.it-evidence` : per indicare nella timeline eventi del passato (colore blu scuro)
 - `.it-now` : per indicare nella timeline eventi collocati nel presente (azzurro)
 - Nessuna classe aggiuntiva: per collocare gli eventi nel futuro. (azzurro chiaro)
+
+## Esempio
 
 {% capture example %}
 

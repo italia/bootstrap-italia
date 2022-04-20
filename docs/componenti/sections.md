@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Sections
-description: Per creare sezioni di layout orizzontale con differenti sfondi
+description: Per creare sezioni di layout orizzontale con differenti sfondi.
 ---
 
 Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizzare più elementi `<div>` con classe `.section`.

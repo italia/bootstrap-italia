@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Tooltip
-description: Documentazione ed esempi per aggiungere tooltip personalizzati
+description: Documentazione ed esempi per aggiungere tooltip personalizzati.
 group: componenti
 toc: true
 ---
 
-Documentazione ed esempi per l'aggiunta di suggerimenti personalizzati con CSS e JavaScript utilizzando CSS3 per le animazioni e gli attributi `data-bs per` l'archiviazione di titoli locali
+I tooltip sono suggerimenti personalizzati con CSS e JavaScript, utilizzano CSS3 per le animazioni e gli attributi `data-bs` per l'archiviazione di titoli locali.
 
 {% capture callout %}
 
@@ -126,11 +126,13 @@ E con codice HTML personalizzato:
 </button>
 ```
 
-## Uso
+## Implementazione
 
 Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefinito posiziona i tooltip dopo i loro elementi attivati.
 
-Attivare il tooltip tramite JavaScript:
+### Attivazione tramite JavaScript
+
+È possibile attivare un tooltip tramite JavaScript:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -235,7 +237,7 @@ tooltip.update()
 
 #### `getInstance`
 
-Static method which allows you to get the tooltip instance associated with a DOM element
+Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un elemento del DOM.
 
 ```js
 var exampleTriggerEl = document.getElementById('example')
@@ -244,7 +246,7 @@ var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Boots
 
 #### `getOrCreateInstance`
 
-Static method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn’t initialised
+Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
 
 ```js
 var exampleTriggerEl = document.getElementById('example')

@@ -8,17 +8,14 @@ toc: true
 
 ## Come funziona
 
-Assegna agli elementi per impostare i valori di `margin` o di `padding` con le classi apposite per le singole proprietà o
-per coppie di proprietà in base alla direzione (`x` e `y` per orizzontale e verticale).
+Assegna con apposite classi responsive valori di `margin` o di `padding` agli elementi, impostando singole proprietà o coppie di proprietà in base alla direzione (`x` e `y` per orizzontale e verticale).
 
-Le dimensioni delle spaziature possono variare da `.25rem` a `3rem`. Questo si traduce in diversi valori tra mobile e
-desktop, visto che il tema Bootstrap-Italia usa un font-size di base di 16px per dispositivi mobili e 18px per dispositivi
-desktop.
+Le dimensioni delle spaziature possono variare da `4px` per i valori `*-1` a `48px` per i valori `*-5`.
 
 ## Note
 
-Le classi che sono applicabili per tutti i breakpoint da `xs` to `xl` non hanno alcun breakpoint nei loro nome, poiché
-sono applicate da `min-width: 0` in su, e quindi non sono legate a media query.
+Le classi applicabili a tutti i breakpoint da `xs` to `xxl` non hanno alcun breakpoint nei loro nome, poiché
+sono applicate da `min-width: 0` in su, quindi non sono legate a media query specifiche.
 
 Le classi sono denominate utilizzando il formato `{proprietà}{lato}-{dimensione}` per `xs` e
 `{proprietà}{lato}-{breakpoint}-{dimensione}` per `sm`, `md`, `lg`, `xl` e `xxl`.

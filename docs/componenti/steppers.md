@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Steppers
-description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi
+description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.
 ---
 
 <style>
@@ -81,7 +81,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 - `.active` per individuare lo step attualmente attivo; su dispositivi mobili è l'unico visualizzato.
 - `.steppers-index` per individuare un indice, visibile solo su mobile, che può contenere lo stato attuale di progresso indicato in forma testuale
 
-È necessario ridurre finestra del browser per apprezzare il comportamente degli Stepper su dispositivi a dimensioni ridotte.
+È necessario ridurre finestra del browser per apprezzare il comportamente degli Stepper su dispositivi di dimensioni ridotte.
 
 {% capture example %}
 

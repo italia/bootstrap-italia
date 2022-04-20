@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dimmer
-description: Un componente per focalizzare l'attenzione su un contenuto
+description: Un componente per focalizzare l'attenzione su un contenuto.
 group: componenti
 toc: true
 ---
@@ -27,9 +27,9 @@ toc: true
   });
 </script>
 
-Un Dimmer occupa tutta l'altezza e la larghezza dell'elemento all'interno del quale è contenuto.
+Un dimmer occupa tutta l'altezza e la larghezza dell'elemento all'interno del quale è contenuto.
 
-L'elemento contenitore deve avere la classe `.dimmable` mentre il Dimmer avrà un ID univoco che sarà utilizzato per l'attivazione e l'occultamento attraverso i seguenti comandi:
+L'elemento contenitore deve avere la classe `.dimmable` mentre il dimmer avrà un ID univoco che sarà utilizzato per l'attivazione e l'occultamento attraverso i seguenti comandi:
 
 ```js
 // istanziamento componente
@@ -45,7 +45,7 @@ dimmer.hide()
 
 ## Esempio
 
-Il Dimmer si compone di un wrapper generale `.dimmer` e di un contenitore `.dimmer-inner`.
+Il dimmer si compone di un wrapper generale `.dimmer` e di un contenitore `.dimmer-inner`.
 
 Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'icona contenuta in un `<div>` con classe `.dimmer-icon`.
 
@@ -109,7 +109,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 
 ### Colore Primario
 
-Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una versione con sfondo di colore Primario.
+Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una versione con sfondo di colore primario.
 
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer2">
@@ -168,7 +168,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una ver
 
 ## Dimmer con Azioni
 
-Un Dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.
+Un dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.
 
 I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo bottone aggiungere la classe `.single-button`.
 
@@ -233,7 +233,7 @@ I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`
 
 ### Colore Primario
 
-Aggiungendo la classe `.dimmer-primary` al wrapper del Dimmer si ottiene una versione con sfondo di colore Primario.
+Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una versione con sfondo di colore primario.
 
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer4">

@@ -7,9 +7,9 @@ title: Icone
 description: Informazioni e suggerimenti per l'utilizzo di icone con Bootstrap Italia.
 ---
 
-Le icone di Bootstrap Italia utilizzano una sprite SVG, che contiene al suo interno tutte le icone, referenziate attraverso il tag `<use>` attraverso un'àncora.
+Le icone di Bootstrap Italia utilizzano uno sprite SVG, che contiene al suo interno tutte le icone, referenziate con un'àncora attraverso il tag `<use>`.
 
-Per l'utilizzo delle icone è necessario aggiungere la sprite presente nella libreria alla cartella `dist/svg` e utilizzarla come descritto di seguito, modificandone il path nell'attributo `href`, a seconda di dove viene copiata la sprite SVG nel proprio ambiente.
+Per l'utilizzo delle icone è necessario aggiungere lo sprite presente nella libreria alla cartella `dist/svg` e utilizzarlo come descritto di seguito, modificandone il path nell'attributo `href`, a seconda di dove viene copiato la sprite SVG nel proprio ambiente.
 
 {% capture callout %}
 

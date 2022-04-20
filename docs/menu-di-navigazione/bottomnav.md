@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: BottomNav
-description: Componente di navigazione per dispositivi mobile
+description: Componente di navigazione per dispositivi mobile.
 group: menu-di-navigazione
 toc: true
 ---
 
 BottomNav è un componente pensato per la navigazione su dispositivi mobile il cui aspetto ricalca quello di alcune popolari app.
 
-Il componente, di altezza fissa, è ancorato la fondo della pagina e ne occupa tutta la larghezza.
+Il componente, di altezza fissa, è ancorato al fondo della pagina e ne occupa tutta la larghezza.
 
 <style>
   /* Style override for Documentation purposes */
@@ -59,7 +59,7 @@ Il link `<a>` attivo possiede una una classe `.active`.
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-I link occupano automaticamente tutto lo spazio disponibile. Qui di seguito un esempio con 4 link.
+I link occupano automaticamente tutto lo spazio orizzontale disponibile. Qui di seguito un esempio con 4 link.
 
 {% capture example %}
 

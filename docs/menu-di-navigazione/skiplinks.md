@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Skiplinks
-description: Gli Skiplink sono collegamento interno alla pagina che consentono agli utenti di accedere direttamente al contenuto principale della pagina saltando il menu di navigazione.
+description: Gli Skiplinks consentono agli utenti di accedere direttamente al contenuto principale della pagina saltando l'header e il menu di navigazione.
 group: menu-di-navigazione
 toc: true
 ---
 
-È un componente particolarmente utile per coloro che accedono con screen reader e/o da tastiera.
+È un componente particolarmente utile per coloro che utilizzando screen reader e/o navigano utilizzando la tastiera.
 
-Gli elementi Skiplink sono contraddistinti dalle classi:
+Gli elementi Skiplinks sono contraddistinti dalle classi:
 
 - `visually-hidden`: renderizzati solo per gli screen reader
 - `visually-hidden-focusable`: renderizzati solo al focus

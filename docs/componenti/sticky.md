@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Sticky
-description: Rende un elemento della pagina costantemente visibile allo scorrere della pagina
+description: Rende un elemento della pagina costantemente visibile allo scorrere della pagina.
 group: componenti
 toc: true
 ---
@@ -37,9 +37,64 @@ Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funz
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
 
-#### Attivazione tramite target
+### Position fixed
 
-È possibile attivare la funzionalità quando un particolare elemento interno esce dalla viewport della pagina.
+Il componente assegna all'elemento la proprietà CSS `position` con valore `sticky`. Talvolta questo valore può causare dei problemi di posizionamento, soprattutto quando l'elemento varia in altezza quando diventa sticky. Per questo è possibile forzare il valore `fixed` mediante l'attributo `data-bs-position-type`.
+Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà `data-bs-sticky-class-name`: mediante questa proprietà la classe CSS indicata verrà assegnata all'elemento quando diventa sticky e rimossa quando ritorna normale.
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-target="#stickyTrigger1" data-bs-sticky-class-name="is-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+
+### Versione impilabile
+
+Se sono presenti più componenti sticky nella pagina, è possibile fare in modo che si impilino l'uno sull'altro utilizzando l'attributo `data-bs-stackable`
+
+{% capture example %}
+
+<div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-stackable="true">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky impilabile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-stack/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var stickyElements = document.querySelectorAll('[data-bs-toggle="sticky"]');
+    stickyElements.forEach((element) => {
+      var sticky = bootstrap.Sticky.getInstance(element);
+      if (sticky) {
+        sticky.dispose();
+      }
+    });
+  })  
+</script>
+
+### Attivazione tramite target
+
+È possibile attivare la funzionalità quando un particolare elemento interno esce dal viewport della pagina.
 In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 {% capture example %}
@@ -134,62 +189,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-target/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
 
-#### Position fixed
-
-Il componente assegna all'elemento la proprietà CSS `position` con valore `sticky`. Talvolta questo valore può causare dei problemi di posizionamento, soprattutto quando l'elemento varia in altezza quando diventa sticky. Per questo è possibile forzare il valore `fixed` mediante l'attributo `data-bs-position-type`.
-Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà `data-bs-sticky-class-name`: mediante questa proprietà la classe CSS indicata verrà assegnata all'elemento quando diventa sticky e rimossa quando ritorna normale.
-
-{% capture example %}
-
-<div class="it-header-slim-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-target="#stickyTrigger1" data-bs-sticky-class-name="is-sticky">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
-
-### Versione impilabile
-
-Se sono presenti più componenti sticky nella pagina, è possibile fare in modo che si impilino l'uno sull'altro utilizzando l'attributo `data-bs-stackable`
-
-{% capture example %}
-
-<div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-stackable="true">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky impilabile</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-stack/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var stickyElements = document.querySelectorAll('[data-bs-toggle="sticky"]');
-    stickyElements.forEach((element) => {
-      var sticky = bootstrap.Sticky.getInstance(element);
-      if (sticky) {
-        sticky.dispose();
-      }
-    });
-  })  
-</script>
-
-### Tramite JavaScript
+## Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
@@ -205,7 +205,7 @@ var sticky = new bootstrap.Sticky(stickyElement, {
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-position-type=""`.
+Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-position-type=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -271,7 +271,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 ### Eventi
 
-La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso Javascript.
+La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso JavaScript.
 
 <table class="table table-bordered table-striped">
   <thead>

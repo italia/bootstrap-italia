@@ -35,7 +35,7 @@ logica aggiuntiva o sottrattiva.
 
 ## Colore dei bordi
 
-Cambia il colore del bordo usando la palette del tema in uso.
+Cambia il colore del bordo scegliendo dalla palette del tema utilizzato.
 
 <div class="bd-example-border-utils">
 {% capture example %}
@@ -47,7 +47,7 @@ Cambia il colore del bordo usando la palette del tema in uso.
 
 ## Bordi arrotondati
 
-Tutte le classi per arrotondare facilmente gli angoli di un elemento.
+Classi per arrotondare facilmente gli angoli di un elemento.
 
 <div class="bd-example bd-example-images">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded" alt="Esempio di immagine arrotondata">

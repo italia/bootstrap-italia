@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Bottoni
-description: Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità
+description: Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità.
 group: componenti
 toc: true
 ---
@@ -54,7 +54,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 
 ##### Disabilitazione link
 
-La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare Javascript per disabilitare le loro funzionalità.
+La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare JavaScript per disabilitare le loro funzionalità.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Su sfondo scuro
@@ -192,7 +192,7 @@ Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente ut
 
 #### A tutta laghezza
 
-Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_ di Boostrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
+Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
 
 {% capture example %}
 

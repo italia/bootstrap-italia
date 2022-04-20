@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Cookiebar
-description: Banner informativo sull'utilizzo dei cookie all'interno del sito web
+description: Banner informativo sull'utilizzo dei cookie all'interno del sito web.
 ---
 
 ## Perché usarlo
@@ -16,7 +16,7 @@ Per maggiori informazioni si rimanda alla pagina [www.garanteprivacy.it/cookie](
 
 Bootstrap Italia ha predisposto un codice HTML da copiare all'interno delle proprie pagine web inserendolo appena dopo l'apertura del tag `body`.
 
-Esso può essere personalizzato nel testo a seconda delle necessità, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione Javascript che gestisce la visualizzazione della Cookiebar.
+Esso può essere personalizzato nel testo a seconda delle necessità, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione JavaScript che gestisce la visualizzazione della Cookiebar.
 
 Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
 

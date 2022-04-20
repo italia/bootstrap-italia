@@ -4,7 +4,7 @@ group: form
 toc: true
 
 title: Input Numerico
-description: Campi input con bottoni per incrementare/decrementare valori numerici
+description: Campi input con bottoni per incrementare/decrementare valori numerici.
 ---
 
 L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`.
@@ -152,7 +152,7 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+### Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad esempio:
 

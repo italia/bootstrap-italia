@@ -1,20 +1,21 @@
 ---
 layout: docs
 title: Card
-description: Un contenitore di contenuti con molte opzioni e varianti.
+description: Un contenitore di testi e immagini con molte opzioni e varianti.
 group: componenti
 toc: true
 ---
 
-Le **card** sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
+Le card sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
 
-Di default le card si estendono completamente al 100% del loro elemento contenitore.
+Di default le card occupano l'intero spazio orizzontale del loro elemento contenitore.
 
 ## Card semplice
 
-Negli esempi seguenti le card sono all'interno di una struttura colonnare di bootstrap.  
-L'inizio della card vera e propria è segnalata dal commento `start card`
-Esempio di card semplice con titolo e testo
+Negli esempi seguenti le card sono all'interno di una struttura colonnare di Bootstrap.  
+L'inizio della card vera e propria è segnalata dal commento `<!--start card-->`.
+
+Esempio di card semplice con titolo e testo:
 
 {% capture example %}
 
@@ -78,7 +79,7 @@ Esempio di card semplice con titolo e testo
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Articolo semplice
+### Card articolo semplice
 
 Esempio di card contenente categorizzazione e data, firma dell'articolo e link all'articolo.  
 Per inserire la categorizzazione e/o la data di pubblicazione, usare l'elemento `.category-top` ed inserire al suo interno gli elementi come da esempio.
@@ -193,8 +194,8 @@ semplici utilizzare la classe `.simple-link`.
 
 Le card con ombreggiatura sono caratterizzate dalle classi:
 
-**`.card-space`:** utilizzata nel div più esterno (`card-wrapper`) serve a distanziare le card nella loro versione mobile.  
-**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.
+- **`.card-space`:** utilizzata nel div più esterno `card-wrapper` serve a distanziare le card nella loro versione mobile.  
+- **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.
 
 {% capture example %}
 
@@ -225,8 +226,8 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
 
 Le card con ombreggiatura grandi sono caratterizzate dalle classi:
 
-**`.card-bg`:** utilizzata nel div (`card`) serve a creare background e ombra della card.  
-**`.card-big`:** utilizzata nel div (`card`) serve a al dimensionamento dei suoi contenuti.
+- **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.  
+- **`.card-big`:** utilizzata nel div `card` serve al dimensionamento dei suoi contenuti.
 
 Nell'esempio seguente è stata inserita un icona grande prima del titolo della card,
 il div contenente l'icona è di classe `.top-icon`.
@@ -263,7 +264,7 @@ il div contenente l'icona è di classe `.top-icon`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-L'esempio seguente contiene una icona custom (non SVG ma CSS) ed una categorizzazione con icona SVG.
+L'esempio seguente contiene un'icona custom (non SVG ma CSS) ed una categorizzazione con icona SVG.
 L'icona custom viene creata dal div `.flag-icon`.  
 La categorizzazione dal div con classe `.etichetta`.  
 Per creare un bordo di colore primario a chiusura card, potete utilizzare la classe `.border-bottom-card` applicata al div `.card`
@@ -339,7 +340,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 
 La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.
 
-L'elemento immagine è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un immagine orizzontale.  
+L'elemento immagine è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un'immagine orizzontale.  
 Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile escludendo il resto dell'immagine e centrandola nell'elemento.
 
 È anche possibile aggiungere un piccolo box con l'indicazione della data, per card di tipo _evento_.
@@ -493,7 +494,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
 
 ## Card Teaser
 
-Per creare Card con contenuti brevi o di _"anteprima"_ è sufficiente aggiungere all'elemento `.card-wrapper` una classe `.card-teaser-wrapper` e all'elemento `.card` una classe `.card-teaser`.
+Per creare card con contenuti brevi o di _"anteprima"_ è sufficiente aggiungere all'elemento `.card-wrapper` una classe `.card-teaser-wrapper` e all'elemento `.card` una classe `.card-teaser`.
 
 Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` per aggiungere bordi, effetti di arrotondamento o ombreggiatura.
 

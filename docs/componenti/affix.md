@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Affix
-description: Blocca la posizione di un elemento rispetto al viewport
+description: Blocca la posizione di un elemento rispetto al viewport.
 ---
 
 <style>
@@ -20,7 +20,7 @@ description: Blocca la posizione di un elemento rispetto al viewport
   }
 </style>
 
-Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spesso utilizzato per i menù di navigazione o per i bottoni condivisione dei social network, per ancorarli in una specifica area mentre il contenuto della pagina viene scrollato in alto o in basso.
+Un elemento Affix rimane ancorato ad una specifica area della pagina. Viene spesso utilizzato per i menù di navigazione o per i bottoni di condivisione dei social network, per ancorarli in una specifica area mentre il contenuto della pagina viene scrollato in alto o in basso.
 
 È importante ricordare che un elemento Affix non dovrebbe nascondere il contenuto di una pagina, specialmente quando la dimensione del viewport è ridotta.
 

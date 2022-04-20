@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Avatar
-description: Rappresentazione grafica di un'immagine utente
+description: Rappresentazione grafica di un utente.
 ---
 
 <script>
@@ -27,7 +27,7 @@ Gli Avatar sono disponibili in sei diverse dimensioni:
 - **xl** con classe `size-xl`
 - **xxl** con classe `size-xxl`
 
-Per ottenere un elemento grafico non interattivo, utilizzare il tag `<div>`.
+Per ottenere un elemento grafico non interattivo, utilizza il tag `<div>`.
 Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
@@ -123,7 +123,7 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-sm">
@@ -131,19 +131,19 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-lg">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-warning"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xl">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xxl">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
 </div>
@@ -151,7 +151,7 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 
 ## Avatar Link
 
-Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata Javascript.
+Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata JavaScript.
 
 {% capture example %}
 
@@ -197,7 +197,7 @@ Gli Avatar possono essere raggruppati in liste verticali ed orizzontali.
 
 ### Lista
 
-Utilizzando un componente <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/">Link list</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
+Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
 
 #### Lista piccola
 

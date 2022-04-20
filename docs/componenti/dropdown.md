@@ -1,15 +1,15 @@
 ---
 layout: docs
 title: Dropdown
-description: Attiva o disattiva overlay contestuali per visualizzare elenchi di link e altro ancora con questi menù a tendina.
+description: Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina.
 group: componenti
 toc: true
 ---
 
-Il plugin Javascript per costruire dropdown è basato su una libreria di terze parti, [Popper.js](https://popper.js.org/), che si occupa del posizionamento dinamico del dropdown stesso in congiunzione con la sua posizione all'interno del viewport.
+Il plugin JavaScript per costruire dropdown è basato su una libreria di terze parti, [Popper.js](https://popper.js.org/), che si occupa del posizionamento dinamico del dropdown stesso in congiunzione con la sua posizione all'interno del viewport.
 
 {% capture callout %}
-Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file `bootstrap-italia.bundle.min.js` che contiene già ogni dipendenza, oppure che il file `popper.min.js` sia incluso prima del file `bootstrap-italia.min.js`. Maggiori informazioni si possono trovare alla [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/#javascript) sull'utilizzo del Javascript di Bootstrap Italia.
+Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file `bootstrap-italia.bundle.min.js` che contiene già ogni dipendenza, oppure che il file `popper.min.js` sia incluso prima del file `bootstrap-italia.min.js`. Maggiori informazioni si possono trovare alla [pagina introduttiva]({{ site.baseurl }}/docs/come-iniziare/introduzione/#javascript) sull'utilizzo del JavaScript di Bootstrap Italia.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertura e il menu a discesa all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
@@ -51,7 +51,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 
 ### Dropdown button varianti
 
-Ovviamente, funzionano anche [tutte le varianti]({{ site.baseurl }}/docs/componenti/bottoni/#varianti-di-colore) già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
+Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componenti/bottoni/#varianti-di-colore) già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
 {% capture example %}
 
@@ -127,7 +127,7 @@ Lo stesso vale per gli elementi `<a>`:
 
 ### Dropup
 
-Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'elemento padre
+Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'elemento padre.
 
 {% capture example %}
 
@@ -150,7 +150,7 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 
 ### Dropend
 
-Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elemento padre
+Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elemento padre.
 
 {% capture example %}
 
@@ -173,7 +173,7 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elem
 
 ### Dropstart
 
-Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'elemento padre
+Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'elemento padre.
 
 {% capture example %}
 
@@ -232,7 +232,7 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu headers e separatori
+#### Menu con intestazioni e separatori
 
 All'interno del menu dropdown possono essere inseriti header e separatori.
 
@@ -240,10 +240,8 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
 
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
+    <div class="link-list-heading">Intestazione</div>
     <ul class="link-list">
-      <li>
-        <h3 id="esempio-header-1" class="no_toc">Esempio Header 1</h3>
-      </li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -256,7 +254,7 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu con voci large
+#### Menu con voci grandi
 
 Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`.
 
@@ -273,7 +271,7 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu full width
+#### Menu a tutta larghezza
 
 Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
 
@@ -292,7 +290,7 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu icona a destra
+#### Menu con icona a destra
 
 Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
 
@@ -324,7 +322,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu icona a sinistra
+#### Menu con icona a sinistra
 
 Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
 
@@ -364,10 +362,8 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 
 <div class="dropdown-menu dark">
   <div class="link-list-wrapper">
+    <div class="link-list-heading">Intestazione</div>
     <ul class="link-list">
-      <li>
-        <h3 id="esempio-header-2" class="no_toc">Esempio Header 2</h3>
-      </li>
       <li>
         <a class="list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
@@ -406,4 +402,4 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 
 ## Informazioni aggiuntive
 
-Per consultare altri esempi, vedere l'utilizzo di una dropdown con interi form al suo interno, capire meglio come utilizzare attributi `data-` per l'attivazione o come estendere il funzionamento del plugin Javascript del dropdown di Bootstrap {{ site.bootstrap_version }} , si rimanda alla [documentazione](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/dropdowns/) sul sito di Bootstrap.
+Per consultare altri esempi, vedere l'utilizzo di un dropdown con interi form al suo interno, capire meglio come utilizzare attributi `data-` per l'attivazione o come estendere il funzionamento del plugin JavaScript del dropdown di Bootstrap {{ site.bootstrap_version }} , si rimanda alla [documentazione](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/dropdowns/) sul sito di Bootstrap.

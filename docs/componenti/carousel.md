@@ -2,14 +2,14 @@
 layout: docs
 splide: true
 title: Carousel
-description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo, come un carousel.
+description: Un componente di presentazione per scorrere elementi, immagini o diapositive di testo.
 group: componenti
 toc: true
 ---
 
 ## Come funziona
 
-Il carousel è una presentazione per scorrere una serie di contenuti, costruito con trasformazioni CSS 3D e JavaScript. Funziona con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
+Il carousel permette di scorrere una serie di contenuti ed è realizzato con trasformazioni CSS 3D e JavaScript. Può essere utilizzato con una serie di immagini, testo o codice personalizzato. Include anche il supporto per i controlli e gli indicatori precedente/successivo ed i dots di indicazione posizione.
 
 Il carousel può contenere vari tipi di componenti, solitamente cards o immagini.
 
@@ -45,13 +45,12 @@ I wrapper esterni `it-carousel-wrapper` e `splide__track` ricevono le classi nec
 
 ### Titolo e Card semplici
 
-Il seguente è un carousel con card semplici.
+Esempio di carousel con card semplici.
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
-
-div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
+- div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
+- div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
 {% capture example %}
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -179,7 +178,7 @@ div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che imple
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
+- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
 {% capture example %}
 <div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
@@ -284,11 +283,11 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 ### Card con immagine in evidenza
 
-Contiene un immagine associata ad una card "articolo".
+Contiene un'immagine associata ad una card "articolo".
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
+- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
 
 {% capture example %}
 
@@ -398,11 +397,9 @@ div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-
 
 ### Card con immagine in alto
 
-Contiene card con immagine in alto
-
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
+- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
 {% capture example %}
 
@@ -552,7 +549,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
+- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
 {% capture example %}
 
@@ -871,9 +868,9 @@ div **`it-carousel-wrapper`** :
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+## Attivazione tramite JavaScript
 
-Abilitarlo manualmente con:
+È possibile abilitare un Carousel manualmente con:
 
 ```js
 var elementList = [].slice.call(document.querySelectorAll('.splide'))
@@ -881,6 +878,7 @@ var masonryList = elementList.map(function (element) {
   return new bootstrap.CarouselBI(element)
 })
 ```
+### Metodi
 
 <table class="table table-bordered table-striped">
   <thead>

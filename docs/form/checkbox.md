@@ -28,18 +28,14 @@ Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form
 {% capture example %}
 
 <div>
-  <div class="row">
-    <div class="col-12">
-      <div class="form-check form-check-inline">
-        <input id="checkbox2" type="checkbox">
-        <label for="checkbox2">Checkbox non selezionato</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input id="checkbox3" type="checkbox" checked="checked">
-        <label for="checkbox3">Checkbox selezionato</label>
-      </div>
+    <div class="form-check form-check-inline">
+      <input id="checkbox2" type="checkbox">
+      <label for="checkbox2">Checkbox non selezionato</label>
     </div>
-  </div>
+    <div class="form-check form-check-inline">
+      <input id="checkbox3" type="checkbox" checked="checked">
+      <label for="checkbox3">Checkbox selezionato</label>
+    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -107,8 +103,8 @@ Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-ch
 
 ### Mixed Button
 
-Per ottenere la visualizzazione corretta basterà aggiungere la classe `.semi-checked` all'input di tipo `checkbox`.<br>
-Per l'utilizzo dell componente mixed button, è disponibile un esempio integrato nel componente [Transfer]({{ site.baseurl }}/docs/form/transfer/)
+Per ottenere una stato di tipo **Mixed** basterà aggiungere la classe `.semi-checked` all'input di tipo `checkbox`.<br>
+Per l'utilizzo del componente mixed button, è disponibile un esempio integrato nel componente [Transfer]({{ site.baseurl }}/docs/form/transfer/).
 
 {% capture example %}
 

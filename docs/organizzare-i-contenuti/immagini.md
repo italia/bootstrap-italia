@@ -76,7 +76,7 @@ Se stai usando l'elemento `<picture>` per specificare multipli elementi `<source
 
 Ogni qual volta sia necessario visualizzare un contenuto, ad esempio un'immagine, associandola ad una didascalia, è bene considerare l'utilizzo di `<figure>`.
 
-Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire alcuni stili di base per gli elementi HTML5 `<figure>` e `<figcaption>`. Le immagini in figure non hanno determinate dimensioni, assicurati quindi di aggiungere la classe `.img-fluid` al tuo elemento `<img>` per renderlo responsive.
+Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire alcuni stili di base per gli elementi HTML5 `<figure>` e `<figcaption>`. Le immagini in `<figure>` non hanno dimensioni determinate, assicurati quindi di aggiungere la classe `.img-fluid` al tuo elemento `<img>` per renderlo responsive.
 
 {% capture example %}
 
@@ -86,7 +86,7 @@ Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire al
 </figure>
 {% endcapture %}{% include example.html content=example %}
 
-Puoi allineare la didascalia di una figura è semplice con le nostre [utilità di testo]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
+Allineare la didascalia di una figura è semplice con le [utilità di testo]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
 
 {% capture example %}
 

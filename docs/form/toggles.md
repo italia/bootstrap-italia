@@ -4,12 +4,10 @@ group: form
 toc: true
 
 title: Toggles
-description: Campi di tipo "interruttore"
+description: Campi di tipo "interruttore".
 ---
 
-## Toggles
-
-Per ottenere un interruttore con levetta basterà seguire la seguente sintassi html, gli stili css penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
+Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
 {% capture example %}
 

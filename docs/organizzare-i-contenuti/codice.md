@@ -40,7 +40,7 @@ Utilizzare `<kbd>` per indicare l'input che viene in genere immesso tramite tast
 
 {% capture example %}
 Per cambiare directory, digitare <kbd>cd</kbd> seguito dal nome della directory.<br>
-Per modificare le impostazioni, premi <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+Per modificare le impostazioni, premi <kbd>ctrl</kbd> + <kbd>i</kbd>.
 {% endcapture %}{% include example.html content=example %}
 
 ## Output di esempio

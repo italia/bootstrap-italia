@@ -10,7 +10,8 @@ description: Documentazione ed esempi per lo stile delle tabelle.
 
 A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e campi di selezione data, Bootstrap ha progettato le tabelle senza forzarne lo stile. È sufficiente aggiungere la classe `.table` a qualsiasi `<table>`, quindi estendere con stili personalizzati o con le nostre varie classi incluse di modificatori.
 
-Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap. **Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle nidificate saranno stilizzate nello stesso modo del genitore.
+Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap.  
+**Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle annidate avranno lo stesso stile della tabella genitrice.
 
 {% capture example %}
 

@@ -40,7 +40,7 @@ Previeni l'andare a capo del testo con la classe `.text-nowrap`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Per contenuti più lunghi puoi aggiungere la classe `.text-truncate` per troncare il testo con i punti di sospensione. **Necessita della classe `display: inline-block` oppure `display: block`**.
+Per contenuti più lunghi puoi aggiungere la classe `.text-truncate` per troncare il testo con i punti di sospensione. Necessita della classe `display: inline-block` oppure `display: block`.
 
 {% capture example %}
 
@@ -59,7 +59,7 @@ Per contenuti più lunghi puoi aggiungere la classe `.text-truncate` per troncar
 
 ## Trasformazione del testo
 
-Trasforma il testo presente nei componenti con una delle classi per la scrittura in maiuscolo.
+Trasforma il testo con una delle classi per la scrittura in maiuscolo.
 
 {% capture example %}
 

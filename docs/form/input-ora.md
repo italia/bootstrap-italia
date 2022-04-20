@@ -4,10 +4,10 @@ group: form
 toc: true
 
 title: Input Ora
-description: Campi input per la selezione di un orario
+description: Campo per la selezione di un orario.
 ---
 
-Il componente input time, o timepicker, è un componente per la selezione di un orario.
+Il componente input time, o timepicker, è un componente dedicato alla selezione di un orario.
 
 {% capture callout %}
 

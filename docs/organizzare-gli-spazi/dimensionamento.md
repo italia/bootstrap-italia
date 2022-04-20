@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dimensionamento
-description: Per dare larghezza o altezza a un elemento in relazione al contenitore padre.
+description: Per dare larghezza o altezza ad un elemento in relazione al contenitore padre.
 group: organizzare-gli-spazi
 toc: true
 ---

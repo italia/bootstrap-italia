@@ -53,9 +53,10 @@
     }
     &:disabled {
       background-color: $input-disabled-bg;
-      color: $neutral-1;
       opacity: 1;
-      font-weight: normal;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 }
