@@ -3,10 +3,10 @@ layout: docs
 group: componenti
 toc: true
 title: Callout
-description: Componente per evidenziare contenuti testuali
+description: Componente per evidenziare contenuti testuali.
 ---
 
-I Callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento suggerimenti etc.
+I Callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento, suggerimenti, ecc.
 
 ## Esempi
 
@@ -29,7 +29,7 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Al Callout può essere aggiunta una classe che determina il colore del bordo e del titolo. Le classi disponibili elencate qui di seguito.
+Al Callout può essere aggiunta una classe che determina il colore del bordo e del titolo. Le classi disponibili sono elencate qui di seguito.
 
 ### Callout Success
 

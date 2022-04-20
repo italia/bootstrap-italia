@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Collapse
-description: Attiva/disattiva la visibilità di contenuti con l'ausilio di alcune classi e di plug-in JavaScript.
+description: Attiva/disattiva la visibilità di contenuti con l'ausilio di alcune classi e di JavaScript.
 group: componenti
 toc: true
 ---
@@ -40,7 +40,7 @@ L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudib
 ### Attivazione di elementi richiudibili
 
 Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore nell'attributo `href` o nell'attributo `data-bs-target`.
-Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con i loro attributi `href` o `data-bs-target`.
+Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con gli attributi `href` o `data-bs-target`.
 
 {% capture example %}
 
@@ -84,11 +84,11 @@ Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento rich
 
 Basta aggiungere `data-bs-toggle="collapse"` e un `data-bs-target` all'elemento per assegnare automaticamente il controllo di uno o più elementi richiudibili. L'attributo `data-bs-target` accetta un selettore CSS per rendere l'elemento richiudibile. Assicurati di aggiungere la classe `collapse` all'elemento richiudibile. Se desideri che l'impostazione predefinita sia aperta, aggiungi la classe aggiuntiva `show`.
 
-Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`. F
+Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`.
 
 ### Tramite JavaScript
 
-Abilitarlo manualmente con:
+È possibile abilitare manualmente un collapse con:
 
 ```js
 var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
@@ -99,7 +99,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Opzioni
 
-Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
+Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -180,7 +180,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
 
 ### Eventi
 
-La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso Javascript.
+La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso JavaScript.
 
 <table class="table table-bordered table-striped">
   <thead>

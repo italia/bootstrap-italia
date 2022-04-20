@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Rating
-description: Per esprimere una valutazione su un contenuto
+description: Per esprimere una valutazione su un contenuto.
 group: componenti
 toc: true
 ---

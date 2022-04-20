@@ -10,7 +10,12 @@ toc: true
 
 I collegamenti della paginazione sono contenuti per praticità in un elemento `<nav class="pagination-wrapper">` per dare la possibilità agli screenreader, e altre tecnologie assistive, di identificarli come una sezione di navigazione.
 
+{% capture callout %}
+
+#### Accessibilità
+
 Poiché è molto probabile che la pagina possa contenere più di un elemento `<nav class="pagination-wrapper">` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 
@@ -42,9 +47,9 @@ Per indicare la pagina attiva corrente utilizzare l'attributo `aria-current="pag
 
 {% capture callout %}
 
-##### Disabilitazione link
+#### Disabilitazione link
 
-La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"`, e utilizzare Javascript per disabilitare le loro funzionalità.
+La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"`, e utilizzare JavaScript per disabilitare le loro funzionalità.
 
 È inoltre consigliabile applicare `aria-hidden="true"` ai link disabilitati per evitare che vengano considerati nel conteggio degli elementi totali in lista fornito dagli screen reader.
 
@@ -190,7 +195,7 @@ Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilit�
 
 ## Funzioni aggiuntive
 
-La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numero di pagine è elevato. È inoltre disponbile una versione semplificata ottimizzata per dispositivi mobile.
+La paginazione base può essere integrata con elementi aggiuntivi per rendere più fruibile la navigazione quando il numero di pagine è elevato. È inoltre disponibile una versione semplificata ottimizzata per dispositivi mobile.
 
 ### More
 
@@ -360,7 +365,7 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 
 ### Link testuali
 
-Le icone chevron utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
+Le icone _chevron_ utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
 Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="visually-hidden">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
 
 {% capture example %}

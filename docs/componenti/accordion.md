@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Accordion
-description: Costruisci accordion collassabili verticalmente basati su Collapse
+description: Costruisci accordion collassabili verticalmente basati su Collapse.
 group: componenti
 toc: true
 ---
 
 ## Come funziona
 
-Per ottimizzare l'ingombro dei contenuti di una pagina si possono usare degli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_), che possono essere attivati indipendentemente l'uno dall'altro oppure in modo esclusivo con l'attivazione di solo un blocco alla volta (in gergo definiti _fisarmoniche_ o _accordion_).
+Per ottimizzare l'ingombro dei contenuti di una pagina a volte è necessario usare degli elementi richiudibili (in gergo definiti _collassabili_ o _collapse_), che possono essere attivati indipendentemente l'uno dall'altro oppure in modo esclusivo con l'attivazione di solo un blocco alla volta (in gergo definiti _fisarmoniche_ o _accordion_).
 
 L'accordion utilizza il componente [Collapse]({{site.baseurl}}/docs/componenti/collapse) per renderizzare degli elementi collassabili. Fare riferimento ad esso per la documentazione JavaScript.
 
@@ -305,7 +305,7 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
 
 ## Icona a sinistra
 
-Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una variante in cui l'icona chevron che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
+Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una variante in cui l'icona _chevron_ che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
 
 {% capture example %}
 

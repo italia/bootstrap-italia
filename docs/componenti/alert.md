@@ -8,7 +8,7 @@ toc: true
 
 ## Esempi
 
-Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un bottone con attributo `data-bs-dismiss="alert"`.
+Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un bottone con attributo `data-bs-dismiss="alert"`.
 
 {% capture example %}
 {% assign colors = "info,success,warning,danger" | split: ','%}
@@ -36,7 +36,7 @@ Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
 
 ### Contenuto aggiuntivo
 
-I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli heading, paragrafi e divisori.
+I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazioni, paragrafi e divisori.
 
 {% capture example %}
 
@@ -51,7 +51,7 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli head
 
 ### Chiusura
 
-Mediante un bottone di chiusura è possibile eliminare qualsiasi avviso. Ecco come:
+È possibile eliminare qualsiasi avviso mediante un bottone di chiusura:
 
 - Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.btn-close`.
 - Sul pulsante di chiusura, aggiungi l'attributo `data-bs-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
@@ -72,7 +72,7 @@ Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in
 {% endcapture %}
 {% include example.html content=example %}
 
-### Tramite JavaScript
+#### Tramite JavaScript
 
 Abilita la chiusura di un alert tramite JavaScript:
 
@@ -93,7 +93,7 @@ Oppure con l'assegnazione dell'attributo `data` in un pulsante **all'interno del
 
 Nota che chiudendo un alert lo rimuoverai dal DOM.
 
-### Metodo
+#### Metodi
 
 | Metodo                | Descrizione                                                                                                                                                                                         |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 ```
 
-### Eventi
+#### Eventi
 
 Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.
 

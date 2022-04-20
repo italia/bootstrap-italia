@@ -30,7 +30,7 @@ Cose da sapere quando si utilizza il plugin popover:
 - Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa `white-space: nowrap;` sugli elementi `<a>` per evitare questo comportamento.
 - I Popover devono essere nascosti prima che i loro elementi corrispondenti siano stati rimossi dal DOM.
 
-## Abilitazione generale
+## Attivazione generale
 
 Un modo per inizializzare tutti i popovers in una pagina è quello di selezionarli tramite il loro attributo `data-bs-toggle`:
 
@@ -41,7 +41,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 })
 ```
 
-## Abilitazione con opzione `container`
+### Attivazione con opzione container
 
 Quando hai alcuni stili su un elemento genitore che interferiscono con un popover, è consigliato specificare un `container` personalizzato in modo che l'HTML del popover appaia invece all'interno di quell'elemento.
 
@@ -57,7 +57,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 ## Esempi
 
-### Direzioni
+### Posizione
 
 Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.
 
@@ -208,7 +208,7 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="ho
 </span>
 {% endcapture %}{% include example.html content=example %}
 
-## Uso
+## Implementazione
 
 Abilita i popover tramite JavaScript:
 
@@ -223,13 +223,11 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
 
 Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/popovers/) del sito di Bootstrap.
 
+Inizializza i popover per una raccolta di elementi.
+
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
-
-#### Options
-
-Inizializza i popover per una raccolta di elementi.
 
 #### `show`
 

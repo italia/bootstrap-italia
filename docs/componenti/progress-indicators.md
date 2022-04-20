@@ -3,13 +3,13 @@ layout: docs
 group: componenti
 toc: true
 title: Progress Indicators
-description: Indicatori di stato attivo e di avanzamento di un'operazione
+description: Indicatori di stato attivo e di avanzamento di un'operazione.
 ---
 
 ## Donuts
 
 L'elemento Donut utilizza un cerchio, un semicerchio e testo per indicare il progresso o l'avanzamento di un'operazione in corso.
-Il componente si basa sul plugin javascript [ProgressJS](https://kimmobrunfeldt.github.io/progressbar.js/)
+Il componente si basa sul plugin javascript [ProgressJS](https://kimmobrunfeldt.github.io/progressbar.js/).
 
 Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 75%.
 
@@ -35,7 +35,7 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Tramite JavaScript
+### Attivazione tramite JavaScript
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
@@ -46,9 +46,9 @@ var progDonut = new bootstrap.ProgressDonut(progElement, {
 });
 ```
 
-### Opzioni
+#### Opzioni
 
-Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
+Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -146,7 +146,7 @@ Le Progress Bar sono costruite con due elementi HTML, CSS in linea per impostare
 
 #### Accessibilità
 
-Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attributi come role e aria.
+Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attributi `role` e `ARIA`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Esempio

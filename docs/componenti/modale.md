@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Finestre modali
-description: Usa il plugin Javascript di Bootstrap per aprire finestre modali per mostrare contenuti in evidenza, notifiche agli utenti, o contenuti personalizzati.
+description: Usa il plugin JavaScript di Bootstrap per aprire finestre modali per mostrare contenuti in evidenza, notifiche agli utenti, o contenuti personalizzati.
 group: componenti
 toc: true
 ---
@@ -34,9 +34,9 @@ Inoltre, puoi aggiungere una descrizione della tua finestra di dialogo modale co
 Nel caso non fosse presente un titolo al quale legare l'attributo `aria-labelledby="..."` puoi etichettare la modale direttamente utilizzando l'attributo `aria-label="Titolo modale"`. Vedi esempio [Modale semplice - Basico](#modale-popconfirm)
 
 Approfondisci l'argomento sul sito delle [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
-{% endcapture %}{% include callout.html content=callout type="warning" %}
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Prima di descrivere il componente modale di Bootstrap, assicurati di leggere quanto segue:
+Prima di utilizzare il componente modale di Bootstrap, assicurati di leggere quanto segue:
 
 - Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
   e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
@@ -108,7 +108,14 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 
 Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
 
+{% capture callout %}
+
+#### Accessibilità
+
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+
 
 {% capture example %}
 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
@@ -829,7 +836,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   </div>
 </div>
 
-## Uso
+## Implementazione
 
 Il plugin per le modali attiva/disattiva il tuo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.
 Aggiunge anche `.modal-open` al `<body>` per sovrascrivere comportamento di scroll predefinito e genera un `.modal-backdrop`
@@ -912,7 +919,7 @@ myModal.dispose()
 
 #### `getInstance`
 
-Static method which allows you to get the modal instance associated with a DOM element
+Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM.
 
 ```js
 var myModalEl = document.getElementById('myModal')
@@ -921,7 +928,8 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 
 #### `getOrCreateInstance`
 
-Static method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn’t initialised
+Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
+
 
 ```js
 var myModalEl = document.querySelector('#myModal')
@@ -959,7 +967,7 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal"
     </tr>
     <tr>
       <td>hidePrevented.bs.modal</td>
-      <td>This event is fired when the modal is shown, its backdrop is <code>static</code> and a click outside the modal or an escape key press is performed with the keyboard option or <code>data-bs-keyboard</code> set to <code>false</code>.</td>
+      <td>Questo evento viene attivato quando la modale viene mostrata, il suo sfondo è <code>static</code> e un click fuori dalla modale o la pressione del tasto esc avvengono e il <code>data-bs-keyboard</code> è settato a  <code>false</code>.</td>
     </tr>
   </tbody>
 </table>
