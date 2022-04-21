@@ -51,6 +51,41 @@ della documentazione. Puoi usare [Docker](https://docs.docker.com/get-started/) 
 docker-compose up
 ```
 
+## Licenze software dei componenti di terze parti
+
+### Componenti distribuiti con Bootstrap Italia
+
+Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che hanno una propria licenza diversa da CC0.
+
+- [Bootstrap 5](https://getbootstrap.com) © Twitter, Inc., licenza MIT
+- [Popper.js](https://popper.js.org) © Floating UI contributors, licenza MIT
+- [SplideJS](https://splidejs.com) © Naotoshi Fujita, licenza MIT
+- [Accessible Autocomplete](https://alphagov.github.io/accessible-autocomplete) © Crown Copyright (Government Digital Service), licenza MIT
+- [AnimeJS](https://animejs.com) © Julian Garnier, licenza MIT
+- [Just Validate](https://just-validate.dev) © Horprogs, licenza MIT
+- [Masonry Layout](https://masonry.desandro.com) © David DeSandro, licenza MIT
+- [Progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js) © Kimmo Brunfeldt, licenza MIT
+
+### Principali dipendenze per la fase di compilazione e sviluppo
+
+- Generatore di siti statici per ruby [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, licenza MIT
+- Tool per il testing della correttezza formale dell'HTML [html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
+- Tool per il reload automatico del browser [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
+- Gestione del versionamento [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
+- Build system per le librerie Javascript e CSS [Rollup.js](https://rollupjs.org/), © [questi contributori](https://github.com/rollup/rollup/graphs/contributors), licenza MIT
+- Code formatter per Javascript [Prettier](https://prettier.io/), © James Long and contributors, licenza MIT
+- Compilazione SASS [sass](https://github.com/sass/dart-sass), © Google Inc., licenza MIT
+- GitHub REST API client per JavaScript [Octokit rest.js](https://octokit.github.io/rest.js/) © Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
+
+### Componenti utilizzati per la documentazione
+
+Di seguito sono elencati invece i componenti utilizzati per il sito della documentazione ma non ridistribuiti nella libreria Bootstrap Italia
+
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, licenza MIT
+- [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, licenza MIT
+- [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, licenza MIT
+- [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, licenza MIT
+
 ## Licenza
 
 La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICENSE:

@@ -48,6 +48,41 @@ of the documentation. You can use [Docker](https://docs.docker.com/get-started/)
 docker-compose up
 ```
 
+## Third-party licenses
+
+### Components distributed by Bootstrap Italia
+
+Software components distributed with Bootstrap Italia that have their own different license from CC0 are listed below.
+
+- [Bootstrap 5](https://getbootstrap.com) © Twitter, Inc., MIT license
+- [Popper.js](https://popper.js.org) © Floating UI contributors, MIT license
+- [SplideJS](https://splidejs.com) © Naotoshi Fujita, MIT license
+- [Accessible Autocomplete](https://alphagov.github.io/accessible-autocomplete) © Crown Copyright (Government Digital Service), MIT license
+- [AnimeJS](https://animejs.com) © Julian Garnier, MIT license
+- [Just Validate](https://just-validate.dev) © Horprogs, MIT license
+- [Masonry Layout](https://masonry.desandro.com) © David DeSandro, MIT license
+- [Progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js) © Kimmo Brunfeldt, MIT license
+
+### Main dependencies for the compilation and development phase
+
+- [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, MIT license
+- [HTML-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, MIT license
+- [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
+- [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
+- [Rollup.js](https://rollupjs.org/), © [these contributors](https://github.com/rollup/rollup/graphs/contributors), MIT license
+- [Prettier](https://prettier.io/), © James Long and contributorsv
+- [sass](https://github.com/sass/dart-sass), © Google Inc., MIT license
+- [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, MIT license
+
+### Main dependencies for the documentation
+
+The components used for the documentation site but not redistributed with the Bootstrap Italia library are listed below:
+
+- [tsParticles](https://particles.js.org/) © Matteo Bruni, MIT license
+- [clipboard.js](https://clipboardjs.com/) © Zeno Rocha, MIT license
+- [AnchorJS](https://www.bryanbraun.com/anchorjs/) © Bryan Braun, MIT license
+- [Algolia DocSearch](https://docsearch.algolia.com/) © Algolia, MIT license
+
 ## License
 
 Bootstrap Italia is **BSD 3-Clause** licensed:
