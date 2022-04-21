@@ -22,7 +22,7 @@ Per utilizzare il codice compilato di Bootstrap Italia nel proprio progetto, è 
 
 È sempre consigliabile utilizzare la **versione più recente della libreria e mantenerla aggiornata** sui propri progetti.
 
-Non occorre usare semplicemente la versione 1.0.0! La versione più recente tra le [release di progetto](https://github.com/italia/bootstrap-italia/releases) contiene anche tutti i miglioramenti e le correzioni disponibili fino ad oggi.
+La versione più recente è consultabile tra le [release di progetto](https://github.com/italia/bootstrap-italia/releases) e contiene anche tutti i miglioramenti e le correzioni disponibili fino ad oggi.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 Se si preferisce usare i file sorgente di Bootstrap Italia nel proprio progetto attraverso il package manager **npm**, si può fare riferimento alle [indicazioni di come utilizzare la libreria come dipendenza]({{ site.baseurl }}/docs/come-iniziare/introduzione#utilizzo-come-dipendenza).
@@ -45,38 +45,13 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti due file, che si differenziano soltanto per l'inclusione _in linea_ delle librerie _jQuery_, _popper.js_ e _Owl Carousel_ (quest'ultimo necessario soltanto se presenti componenti di tipo [Carousel]({{ site.baseurl }}/docs/componenti/carousel)). Vediamo nel dettaglio di cosa si tratta:
+All'interno della cartella `js` saranno invece presenti il file di bundle e i componenti suddivisi in moduli. 
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">JS files</th>
-      <th scope="col">Popper</th>
-      <th scope="col">jQuery</th>
-      <th scope="col">OwlCarousel</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">bootstrap-italia.bundle.min.js</code></div>
-      </th>
-      <td class="bg-success text-white">Incluso</td>
-      <td class="bg-success text-white">Incluso</td>
-      <td class="bg-success text-white">Incluso</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <div><code class="fw-normal text-nowrap">bootstrap-italia.min.js</code></div>
-      </th>
-      <td>Non Incluso</td>
-      <td>Non Incluso</td>
-      <td>Non Incluso</td>
-    </tr>
-  </tbody>
-</table>
+In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la versione `*.bundle.*` in questo modo
 
-In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi **scegliere** se includere la versione `*.bundle.*` o caricare i singoli file separatamente (questo può rendersi necessario, ad esempio, se jQuery è già incluso nel vostro sito per altri motivi).
+```html
+<script src="./bootstrap-italia.bundle.min.js"></script>
+```
 
 ### Fonts
 
@@ -95,23 +70,6 @@ Se tale variabile non è valorizzata, i font saranno cercati all'interno di una 
 Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG `/bootstrap-italia/dist/svg/`, le cui singole SVG sorgenti sono presenti nel repository.
 
 Per informazioni, si può fare riferimento alla [documentazione sull'utilizzo delle icone]({{ site.baseurl }}/docs/utilities/icone/).
-
-#### Versione "bundle"
-
-Includendo la versione `*.bundle.*`, non sarà necessario aggiungere ulteriori riferimenti a jQuery, Popper.js e Owl Carousel, in quanto già inclusi nel file `bootstrap-italia.bundle.min.js`.
-
-```html
-<script src="./bootstrap-italia.bundle.min.js"></script>
-```
-
-#### Versione semplice
-
-Al contrario, nel caso si preferisca caricare jQuery, Popper.js e Owl Carousel separatamente, sarà necessario includere i tag `<script>` come mostrato di seguito:
-
-```html
-{{ site.cdn.jquery }} {{ site.cdn.popper }} {{ site.cdn.owlcarousel }}
-<script src="./bootstrap-italia.min.js"></script>
-```
 
 ## Pagina HTML di esempio
 
@@ -148,7 +106,7 @@ Tra i [progetti]({{ site.baseurl }}/docs/progetti/) si possono trovare molti rif
 
 ## Utilizzo come dipendenza
 
-Alternativamente, se si utilizza [Webpack](https://webpack.github.io/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
+Alternativamente, se si utilizza [Webpack](https://webpack.github.io/), [Rollup.js](https://rollupjs.org/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
 
 ```sh
 npm i bootstrap-italia --save
