@@ -61,36 +61,39 @@ Tale comando crea una cartella `/dist`, dove vengono pubblicati i file compilati
 Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che contiene tutti i file sorgente, e in particolare i file:
 
 - `/src/scss/bootstrap-italia.scss`
-- `/src/js/bootstrap-italia.js`
+- `/src/js/bootstrap-italia.entry.js` (che genera il bundle)
+- `/src/js/bootstrap-italia.js` (che include i moduli)
 
 ## Ottimizzare la libreria
 
-È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli che non sono di interesse, attraverso le seguenti azioni:
+È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli JavaScript e/o i file scss che non sono di interesse.
 
-- commentare o rimuovere le linee relative allo stile del modulo da escludere nel file `src/scss/bootstrap-italia.scss`
-- commentare o rimuovere le linee relative agli script del modulo da escludere nel file `gulpfile.js`, nella lista `SOURCE_JS`
-- ricompilare la libreria con il comando `npm run build`
+### Ottimizzare i file Sass da importare
+Quando si utilizza Sass nella propria pipeline, si può ottimizzare Bootstrap Italia importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale `bootstrap-italia.scss`, ad esempio
 
-Questo ricompilerà i file all'interno della cartella `dist`, lasciando da parte quei moduli che non sono stati inclusi, riducendo così le dimensioni dei file.
-Di seguito un paio di esempi pratici.
+```scss
+// funzioni e variabili colore
+@import 'bootstrap-italia/src/scss/functions';
+@import 'bootstrap-italia/src/scss/utilities/colors_vars';
 
-### Rimozione Cookiebar
+//variables
+@import 'bootstrap-italia/src/scss/variables';
 
-Se, ad esempio, si desidera escludere il componente [Cookiebar]({{ site.baseurl }}/docs/componenti/cookiebar/), è sufficiente rimuovere le seguenti linee dai file
+//classi colore
+@import 'bootstrap-italia/src/scss/utilities/colors';
 
-`src/scss/bootstrap-italia.scss`:
-
-```html
-// @import "custom/cookiebar";
+// ...
 ```
 
-`gulpfile.js`:
+### Ottimizzare i file JavaScript da importare
 
-```html
-// './src/js/plugins/cookiebar.js',
+Si può ottimizzare l'inclusione del JavaScript utilizzando bundler come Webpack o Rollup, che permettono di importare solo i moduli JavaScript che si vogliono utilizzare. Nell'esempio seguente, mostriamo come includere solo il componente Carousel:
+
+```js
+import { CarouselBI } from 'bootstrap-italia'
+
+const carousel = new CarouselBI(document.getElementById('myCarousel'))
 ```
-
-In questo secondo esempio, il risparmio in termini di bytes è irrisorio poiché il componente è fatto di poche righe di codice. È comunque sempre buona norma non includere codice che non sia indispensabile.
 
 ## Compilare la documentazione
 
@@ -129,7 +132,7 @@ La struttura delle cartelle della documentazione è la seguente:
 
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
-- Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
+- Qualsiasi cosa nel ramo principale (main) è definita come stabile e potenzialmente deployabile.
 - Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo:
 
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
@@ -163,7 +166,7 @@ $ git push --follow-tags
 
 ### Continuous integration e continuous delivery
 
-Sul branch `master` è eseguita la CI con GitHub Action, configurata per eseguire il Job `build`, test `htmlproofer`, test di accessibilità, linting del codice e dei commit (utilizzando lo standard [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)).
+Sul branch `main` è eseguita la CI con GitHub Action, configurata per eseguire il Job `build`, test `htmlproofer`, test di accessibilità, linting del codice e dei commit (utilizzando lo standard [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)).
 
 Il push delle tag sul repository eseguirà il CD composto da:
 
