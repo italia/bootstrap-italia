@@ -11,7 +11,7 @@ description: Consente all'utente di far scorrere automaticamente ad una parte sp
 Per attivare lo scorrimento automatico del documento all'àncora indicata nell'attibuto `href` o dall'attributo `data-bs-target`, è sufficiente aggiungere al tag link l'attributo `data-bs-toggle="forward"` e la classe `.forward`:
 
 {% capture example %}
-<a href="#sezione-di-esempio" data-bs-toggle="forward" class="forward" aria-hidden="true">
+<a href="#sezione-di-esempio" data-bs-toggle="forward" class="forward" aria-label="Vai a: Sezione di esempio">
 <svg class="icon icon-lg icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
