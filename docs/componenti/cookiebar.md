@@ -18,7 +18,7 @@ Bootstrap Italia ha predisposto un codice HTML da copiare all'interno delle prop
 
 Esso può essere personalizzato nel testo a seconda delle necessità, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione JavaScript che gestisce la visualizzazione della Cookiebar.
 
-Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
+Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-bs-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
 
 {% capture callout %}
 Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **[Esempio Cookiebar]({{ site.baseurl }}/docs/esempi/cookiebar/){:target="\_blank"}**.
@@ -49,21 +49,21 @@ Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **
 }
 </style>
 <div class="bd-example">
-    <div class="cookiebar fade">
+    <section class="cookiebar fade" aria-label="Gestione dei cookies">
         <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
         <div class="cookiebar-buttons">
             <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
             <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
         </div>
-    </div>
+    </section>
 </div>
 
 ```html
-<div class="cookiebar fade">
+<section class="cookiebar fade" aria-label="Gestione dei cookies">
   <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
   <div class="cookiebar-buttons">
     <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
     <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
   </div>
-</div>
+</section>
 ```
