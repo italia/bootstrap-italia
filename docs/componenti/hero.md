@@ -18,6 +18,12 @@ Il componente Hero può contenere:
 - Immagine di background
 
 {% capture callout %}
+#### Accessibilità
+Valutare attentantamente l'opportunità di utilizzare più hero nella stessa pagina.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% capture callout %}
 Il componente Hero è un componente full-width.
 Per la visualizzazione reale a schermo fate riferimento alla [pagina di esempio]({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"}.
 {% endcapture %}{% include callout.html content=callout type="info" %}
@@ -28,8 +34,7 @@ Il componente Hero è contenuto all'interno della section `.it-hero-wrapper` al 
 
 {% capture callout %}
 #### Accessibilità
-Nel caso di un componente hero con sola immagine utilizzare il tag `section` con attributo `aria-label`.<br>
-Nei casi con contenuti utilizzare il corretto `h`.
+Nel caso di un componente hero con sola immagine utilizzare il tag `section` con attributo `aria-label="In evidenza"`.<br>
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -63,6 +68,12 @@ aggiungere alla section `.it-hero-wrapper` la classe `.it-hero-small-size`.
 ## Con contenuti testuali
 
 Esempio di Hero con tutti i componenti testuali.
+
+{% capture callout %}
+#### Accessibilità
+Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il livello `h` corretto a seconda del contesto.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 
@@ -114,7 +125,7 @@ Aggiungere alla section `.it-hero-wrapper` la classi:
 
 {% capture callout %}
 #### Accessibilità
-Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispetto al testo
+Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispetto al testo.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
