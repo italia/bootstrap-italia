@@ -45,5 +45,8 @@
 }
 
 .bd-callout-accessibility {
-  @include bs-callout-variant($docs-accessibility);
+  h4 {
+    color: $docs-accessibility;
+  }
+  border-left-color: lighten($docs-accessibility, 10%);
 }
