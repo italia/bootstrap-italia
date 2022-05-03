@@ -21,7 +21,7 @@ Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore 
 
 Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
 
-La Navscroll può mostrare una barra di avanzamento dello scorrimento del contenuto. Per farlo utilizzare il componente Progress Bar, aggiungendo la classe `.it-navscroll-progressbar ` all'elemento `.progress-bar`.
+La Navscroll può mostrare una barra di avanzamento dello scorrimento del contenuto. Per farlo utilizzare il componente Progress Bar, aggiungendo la classe `.it-navscroll-progressbar ` all'elemento `.progress-bar`. Il contenuto a cui si riferisce l'avanzamento dello scorrimento è quello contenuto nell'elemento `.it-page-sections-container`.
 
 **[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
