@@ -87,6 +87,12 @@
         margin-right: $v-gap;
       }
     }
+    .custom-navbar-progressbar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
     .menu-wrapper {
       padding: $v-gap * 10 0 $v-gap * 3;
       right: 0;
