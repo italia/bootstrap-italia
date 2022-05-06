@@ -53,7 +53,7 @@ export default [
   },
   // ESM and CJS
   {
-    input: 'src/js/bootstrap-italia.js',
+    input: 'src/js/bootstrap-italia.esm.js',
     output: [
       {
         format: "es",

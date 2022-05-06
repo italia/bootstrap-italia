@@ -35,7 +35,7 @@ import {
   Masonry,
   List,
   Transfer,
-} from './bootstrap-italia'
+} from './bootstrap-italia.esm'
 
 window.bootstrap = {
   Alert,
