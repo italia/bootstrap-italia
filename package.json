@@ -16,7 +16,8 @@
     "*.css",
     "*.scss",
     "dist/bootstrap-italia.esm.js",
-    "dist/plugins/fonts-loader.js"
+    "dist/plugins/fonts-loader.js",
+    "dist/plugins/header-sticky.js"
   ],
   "description": "Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
