@@ -67,7 +67,9 @@ export default [
       }
     ],
     // plugins: [
-    //   commonjs(),
+    //   injectProcessEnv({
+    //     NODE_ENV: 'production',
+    //   }),
     // ],
     // manualChunks: id => path.parse(id).name
   },
