@@ -38,8 +38,8 @@ toc:
 # Social
 title: 'Bootstrap Italia'
 description: 'Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA'
-authors: 'Team per la Trasformazione Digitale'
-authors_url: 'https://teamdigitale.governo.it/'
+authors: 'Dipartimento per la trasformazione digitale'
+authors_url: 'https://innovazione.gov.it'
 authors_agid: "Agenzia per l'Italia Digitale"
 authors_agid_url: 'https://www.agid.gov.it/'
 social_card_path: '/docs/assets/img/favicons/social-card.png'
@@ -47,8 +47,8 @@ social_logo_path: '/docs/assets/img/favicons/android-chrome-192x192.png'
 repo: 'https://github.com/italia/bootstrap-italia/'
 developers: 'https://developers.italia.it/'
 slack: 'https://slack.developers.italia.it/'
-twitter: 'https://twitter.com/teamdigitaleIT'
-twitter_handle: '@teamdigitaleIT'
+twitter: 'https://twitter.com/designersITA'
+twitter_handle: '@designersITA'
 
 # Versions
 current_version:		1.6.2
