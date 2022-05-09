@@ -58,16 +58,16 @@ A special thanks to [Spottino](https://github.com/Spottino) for the redesign of 
 Software components distributed with Bootstrap Italia that have their own different license from CC0 are listed below.
 
 - [jQuery](https://jquery.com/) © jQuery Foundation, MIT license
-- [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, MIT license
+- [Popper.js](https://popper.js.org/) © Floating UI contributors, MIT license
 - [Bootstrap 4](https://getbootstrap.com/) © Twitter, Inc., MIT license
 - [Bootstrap Select](https://developer.snapappointments.com/bootstrap-select/) © SnapAppointments, LLC, MIT license
-- [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, BSD
+- [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) © George McGinley Smith, 3-Clause BSD license
 
 ### Main dependencies for the compilation and development phase
 
 - [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, MIT license
 - [HTML-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, MIT license
-- [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
+- [Browser Sync](https://www.browsersync.io/), © Shane Osbourne, Apache License Version 2.0
 - [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
 - [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, MIT license
 - [Babel](https://babeljs.io/), © Sebastian McKenzie, MIT license
