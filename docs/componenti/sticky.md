@@ -194,7 +194,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var stickyElement = document.getElementById('#sticky');
+var stickyElement = document.getElementById('sticky');
 var sticky = new bootstrap.Sticky(stickyElement, {
   positionType: 'sticky',
   stickyClassName: 'is-sticky',
