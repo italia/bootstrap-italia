@@ -7,6 +7,7 @@
     - title: Personalizzazione della libreria
     - title: Modificare Componenti
     - title: Componente base
+    - title: Migrazione
 
 - title: Organizzare gli spazi
   pages:
@@ -21,8 +22,8 @@
     - title: Griglie
     - title: Ombreggiature
     - title: Posizionamento
-    - title: Spaziature
     - title: Proporzioni
+    - title: Spaziature
 
 - title: Organizzare i contenuti
   pages:
