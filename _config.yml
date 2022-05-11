@@ -25,7 +25,6 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - gulpfile.js
   - bootstrap/
 
 plugins:

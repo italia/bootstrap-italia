@@ -6,17 +6,13 @@ group: come-iniziare
 toc: true
 ---
 
-Il tema Bootstrap Italia è stato creato secondo le direttive mostrate alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] sul sito ufficiale di Bootstrap {{ site.bootstrap_version }}.
-
 ## Struttura di un componente
 
 Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/custom/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
 
 Queste due cartelle, assieme alla cartella `docs` per la stesura della documentazione, sono le uniche cartelle dove avviene l'editing dei componenti.
 
-Il codice presente in esse, attraverso alcune procedure di compilazione (si può vedere il comando `gulp build` nel file `gulpfile.js`), viene usato per _sovrascrivere_ il codice già presente in Bootstrap {{ site.bootstrap_version }} e ne esporta una versione personalizzata (un tema) nelle cartelle `dist/js` e `dist/css`.
-
-Informazioni aggiuntive si possono trovare alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] sul sito Bootstrap {{ site.bootstrap_version }}.
+Il codice presente in esse, attraverso alcune procedure di compilazione utilizzando `Rollup` viene usato per _sovrascrivere_ il codice già presente in Bootstrap {{ site.bootstrap_version }} e ne esporta una versione personalizzata (un tema) nelle cartelle `dist/js` (con relativi moduli nella cartella `plugins`) e `dist/css`.
 
 In breve, gli elementi su cui intervenire per la creazione o la modifica di componenti personalizzati possono essere:
 
@@ -42,7 +38,7 @@ Il componente dovrebbe utilizzare una classe base `.nome-componente`, che ne def
 
 Per l'implementazione di funzionalità dinamiche che richiedano l'uso di `javascript`, si può invece fare riferimento alla cartella `src/js/plugins/`.
 
-Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella `node_modules/bootstrap/js/` e alla [pagina relativa alla creazione di temi][documentazione-bootstrap-theming] e la [pagina relativa all'utilizzo di Javascript](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/) sul sito Bootstrap {{ site.bootstrap_version }}. In generale, è bene usare attributi `data-` per collegare Javascript ai componenti, e non usare i nomi delle classi.
+Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella `node_modules/bootstrap/js/` e la [pagina relativa all'utilizzo di Javascript](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/) sul sito Bootstrap {{ site.bootstrap_version }}.
 
 ### Test di accessibilità
 
