@@ -30,6 +30,7 @@ const SELECTOR_PAGE_SECTION = '.it-page-section'
 const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_TOGGLER_ICON = '.it-list'
 const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
+const SELECTOR_PROGRESS_BAR = '.it-navscroll-progressbar'
 
 const Default = {
   scrollPadding: 10,
@@ -173,6 +174,26 @@ class NavScroll extends BaseComponent {
     }
   }
 
+  _updateProgress(content) {
+    const progressBars = SelectorEngine.find(SELECTOR_PROGRESS_BAR)
+    if (progressBars) {
+      const offset = Math.abs(content.getBoundingClientRect().top)
+      const height = content.getBoundingClientRect().height
+      const scrollAmount = (offset / height) * 100
+      const scrollValue = Math.min(100, Math.max(0, scrollAmount))
+
+      progressBars.forEach((progressBar) => {
+        if (content.getBoundingClientRect().top <= 0) {
+          progressBar.style.width = scrollValue + '%'
+          progressBar.setAttribute('aria-valuenow', scrollValue)
+        } else {
+          progressBar.style.width = 0 + '%'
+          progressBar.setAttribute('aria-valuenow', 0)
+        }
+      })
+    }
+  }
+
   _onScroll = () => {
     const sectionsContainerTop = this._sectionContainer ? this._sectionContainer.offsetTop : 0
     const scrollDistance = document.scrollingElement.scrollTop - sectionsContainerTop
@@ -196,6 +217,7 @@ class NavScroll extends BaseComponent {
         }
       }
     })
+    this._updateProgress(this._sectionContainer)
   }
 
   _getCollapsible() {

@@ -6,6 +6,20 @@ group: menu-di-navigazione
 toc: true
 ---
 
+<style>
+  /* Style override for Documentation purposes */
+  @media screen and (min-width: 992px) {
+    .bd-example .it-right-side {
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .bd-example .it-right-side {
+      max-width: 33.333%;
+    }
+  }
+</style>
+
 ## Layout della Navscroll
 
 Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` dell'attributo `data-bs-navscroll`.  
@@ -20,8 +34,6 @@ Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
-
-**[Esempio Navscroll >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
 Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
@@ -146,6 +158,83 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
               </li>
               <li class="nav-link">
                 <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+{% endcapture %}{% include example.html content=example %}
+
+### Progress bar
+
+La Navscroll può mostrare una barra di avanzamento dello scorrimento del contenuto. Per farlo utilizzare il componente [Progress Bar]({{site.baseurl}}/docs/componenti/progress-indicators/#progress-bar), aggiungendo la classe `.it-navscroll-progressbar` all'elemento `.progress-bar`. Il contenuto a cui si riferisce l'avanzamento dello scorrimento è relativo all'elemento `.it-page-sections-container`.
+
+**[Esempio Navscroll con Progress bar >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
+
+{% capture example %}
+
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+    aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav">
+    <span class="it-list"></span>1. Introduzione
+  </button>
+  <div class="progress custom-navbar-progressbar">
+    <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="navbar-collapsable" id="navbarNav">
+    <div class="overlay"></div>
+    <a class="it-back-button" href="#" role="button">
+      <svg class="icon icon-sm icon-primary align-top">
+        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"
+          xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
+      </svg>
+      <span>Indietro</span>
+    </a>
+    <div class="menu-wrapper">
+      <div class="link-list-wrapper">
+        <h3>header</h3>
+        <div class="progress">
+          <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <ul class="link-list">
+          <li class="nav-item">
+            <a class="nav-link active" href="#p1">
+              <span>1. Introduzione </span>
+            </a>
+            <ul class="link-list">
+              <li class="nav-link">
+                <a class="nav-link" href="#p1_1">
+                  <span>1.1 Elemento annidato </span>
+                </a>
+                <ul class="tertiary link-list">
+                  <li class="nav-link">
+                    <a class="nav-link" href="#p1_1_1">
+                      <span>1.1.1 Elemento annidato </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#p2">
+              <span>2. Seconda sezione </span>
+            </a>
+            <ul class="link-list">
+              <li class="nav-link">
+                <a class="nav-link" href="#p2_1">
+                  <span>2.1 Elemento annidato </span>
+                </a>
+                <ul class="tertiary link-list">
+                  <li class="nav-link">
+                    <a class="nav-link" href="#p2_1_1">
+                      <span>2.1.1 Elemento annidato </span>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -307,7 +396,7 @@ var navscroll = new bootstrap.NavScroll(navscrollElement, config)
 
 Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
       <th style="width: 100px;">Nome</th>
@@ -340,7 +429,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 ### Metodi
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-responsive">
   <thead>
     <tr>
       <th style="width: 150px;">Metodo</th>
