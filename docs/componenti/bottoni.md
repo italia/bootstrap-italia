@@ -16,7 +16,18 @@ Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe `.
 
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
-In questi casi, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
+{% capture callout %}
+
+#### Accessibilità
+
+La classe `.btn` permette di conferire visivamente agli elementi html l'aspetto di "pulsante". Anche elementi `<a>` o `<span>` possono trasformarsi visivamente in pulsanti, provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
+
+Dove il click sul bottone non genera un cambio di pagina utilizzare esclusivamente il tag `<button>`.
+
+Quando non fosse possibile, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+
 
 {% capture example %}
 <a class="btn" href="#" role="button">Link</a>

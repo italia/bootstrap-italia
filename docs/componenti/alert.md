@@ -57,6 +57,14 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazio
 - Sul pulsante di chiusura, aggiungi l'attributo `data-bs-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
 - Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi `.fade` e `.show`.
 
+{% capture callout %}
+
+#### Accessibilità
+
+L'aria label che assegna il nome accessibile all'icona di chiusura, che nell'esempio è "chiudi avviso", deve essere correlato al contesto.  
+Ad esempio "chiudi nota", "chiudi", "nascondi", ecc. 
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:
 
 {% capture example %}

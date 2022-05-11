@@ -36,7 +36,9 @@ Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>
 
 Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
 
-Nel caso di Avatar con immagine è consigliabile utilizzare l'attributo `alt=""` della stessa.
+Nel caso di Avatar con immagine è utilizzare l'attributo `alt=""` della stessa inserendo in esso il nome dell'utente.
+
+Per Avatar com testo e immagine nascondere l'immagine agli screen reader con l'attributo `aria-hidden="true"` e utilizzare un attributo alt vuoto: `alt=""`.
 
 Un Avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="visually-hidden">Nome Utente</span>`.
 
@@ -209,7 +211,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
   <ul class="link-list avatar-group">
     <li>
       <a class="dropdown-item list-item" href="#">
-        <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
+        <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="" aria-hidden="true">
         </div>
         <span>Mario Rossi</span>
       </a>
@@ -252,7 +254,7 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
   <ul class="link-list avatar-group">
     <li>
       <a class="dropdown-item list-item" href="#">
-        <div class="avatar size-md"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+        <div class="avatar size-md"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="" aria-hidden="true">
         </div>
         <span>Mario Rossi</span>
       </a>
@@ -655,7 +657,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 <div class="d-flex align-items-center justify-content-start justify-content-md-around flex-wrap flex-sm-nowrap">
   <div class="avatar-wrapper avatar-extra-text">
     <div class="avatar size-xl">
-      <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Mario Rossi">
+      <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="" aria-hidden="true">
     </div>
     <div class="extra-text">
       <h4><a href="#">Mario Rossi</a></h4>
@@ -664,7 +666,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
   </div>
   <div class="avatar-wrapper avatar-extra-text">
     <div class="avatar size-xl">
-      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Giulia Neri">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="" aria-hidden="true">
     </div>
     <div class="extra-text">
       <h4>Giulia Neri</h4>
@@ -673,7 +675,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
   </div>
   <div class="avatar-wrapper avatar-extra-text">
     <div class="avatar size-xl">
-      <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Michele Dotti">
+      <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="" aria-hidden="true">
     </div>
     <div class="extra-text">
       <h4><a href="#">Michele Dotti</a></h4>

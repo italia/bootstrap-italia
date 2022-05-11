@@ -11,6 +11,9 @@ toc: true
  .bd-example {
    background-color: #F7F7F9;
  }
+ .bg-override {
+   fill:#06c !important;
+ }
 </style>
 
 L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
@@ -413,7 +416,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
-            <svg class="icon">
+            <svg class="icon bg-override">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
@@ -532,7 +535,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
-            <svg class="icon">
+            <svg class="icon bg-override">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
@@ -639,7 +642,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
-            <svg class="icon">
+            <svg class="icon bg-override">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
@@ -855,7 +858,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
-            <svg class="icon">
+            <svg class="icon bg-override">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>

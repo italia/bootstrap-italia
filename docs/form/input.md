@@ -302,7 +302,7 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 
 <div class="form-group">
   <label for="input-text-read-only">Contenuto in sola lettura</label>
-  <input class="form-control" type="text" id="input-text-read-only" readonly>
+  <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

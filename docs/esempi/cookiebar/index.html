@@ -3,30 +3,32 @@ layout: base
 title: CookieBar
 ---
 
-<style>
-  /*.cookiebar {
-    display: block !important;
-  }
-  @media (min-width: 768px) {
-    .cookiebar {
-      display: flex !important;
-    }
-  }*/
-</style>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     bootstrap.Cookiebar.clearCookie()
   })
 </script>
 
-<div class="cookiebar fade">
-  <p>
-    Questo sito utilizza cookie tecnici, analytics e di terze parti.
-    <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.
-  </p>
+<section class="cookiebar fade" aria-label="Gestione dei cookies">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
   <div class="cookiebar-buttons">
     <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
     <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
   </div>
+</section>
+
+<div class="skiplinks">
+  <a class="visually-hidden-focusable" href="#main">Vai al contenuto principale</a>
 </div>
+
+<main id="main">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <p>Nullam ultrices elit ut libero tincidunt, at vestibulum ligula congue. Integer non elementum massa. Maecenas imperdiet lobortis ligula, quis luctus urna tristique quis. Ut mollis ante risus, eu pellentesque tellus molestie non. Nullam nec nunc ipsum. Sed convallis non nibh vitae lacinia. In iaculis pellentesque magna, ac malesuada lectus sodales vestibulum. Vestibulum consectetur ante rutrum metus faucibus, quis molestie nulla dapibus.</p>
+        <p>Mauris et porttitor magna, at accumsan velit. In nec hendrerit velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet gravida arcu, mattis tempor nisl. Suspendisse felis orci, maximus non pellentesque sed, consectetur ac dolor. Morbi ut bibendum eros.</p>
+      </div>
+    </div>
+  </div>
+</main>

@@ -6,7 +6,7 @@ title: Sections
 description: Per creare sezioni di layout orizzontale con differenti sfondi.
 ---
 
-Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizzare più elementi `<div>` con classe `.section`.
+Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizzare più elementi `<section>` con classe `.section`.
 
 ## Esempio
 
@@ -14,15 +14,23 @@ Il componente Section ha un padding verticale ed orizzontale predefinito ed uno 
 
 Il contenuto di una Section va inserito nel `<div>` con classe `.section-content`. Questo elemento occupa tutta la larghezza della Section (meno il padding) ma, nel caso ne venisse definita la `max-width` in CSS, verrà automaticamente centrato orizzontalmente all'interno della Section.
 
+{% capture callout %}
+#### Accessibilità (draft)
+Il titolo `<h2>` dello snippet è solo indicativo. Il tag `<section>` contraddistingue una sezione semanticamente riconoscibile, associata all'id del titolo dall'attributo `aria-describedby`.
+
+Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per solo scopo decorativo. Qualora si utilizzino sezioni al solo scopo decorativo sostituire `<section>` con `<div>` ed eliminare l'attributo `aria-describedby`.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% capture example %}
 
-<div class="section">
+<section class="section" aria-describedby="titleEx1">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
       <div class="row mb-3">
         <div class="col-12">
-          <h4>Morbi fermentum amet</h4>
+          <h2 id="titleEx1" class="no_toc">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row">
@@ -33,7 +41,7 @@ Il contenuto di una Section va inserito nel `<div>` con classe `.section-content
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}
 
 ## Colori di sfondo
@@ -46,13 +54,13 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 
 {% capture example %}
 
-<div class="section section-muted">
+<section class="section section-muted" aria-describedby="titleEx2">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
       <div class="row mb-3">
         <div class="col-12">
-          <h4>Morbi fermentum amet</h4>
+          <h2 id="titleEx2" class="no_toc">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row">
@@ -63,7 +71,7 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}
 
 ### Sfondo Primario
@@ -74,13 +82,13 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% capture example %}
 
-<div class="section section-primary">
+<section class="section section-primary" aria-describedby="titleEx3">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
       <div class="row mb-3">
         <div class="col-12">
-          <h4>Morbi fermentum amet</h4>
+          <h2 id="titleEx3" class="no_toc">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row">
@@ -91,7 +99,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}
 
 ### Sfondo Neutrale
@@ -102,13 +110,13 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% capture example %}
 
-<div class="section section-neutral">
+<section class="section section-neutral" aria-describedby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
       <div class="row mb-3">
         <div class="col-12">
-          <h4>Morbi fermentum amet</h4>
+          <h2 id="titleEx4" class="no_toc">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row">
@@ -119,7 +127,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}
 
 ## Immagine di sfondo
@@ -130,13 +138,13 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 {% capture example %}
 
-<div class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')">
+<section class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')"  aria-describedby="titleEx5">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
       <div class="row mb-3">
         <div class="col-12">
-          <h4>Morbi fermentum amet</h4>
+          <h2 id="titleEx5" class="no_toc">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row">
@@ -147,7 +155,7 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}
 
 ## Section con Card
@@ -156,13 +164,13 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 
 {% capture example %}
 
-<div class="section section-muted">
+<section class="section section-muted"  aria-describedby="titleEx6">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
       <div class="row">
         <div class="col">
-          <h4 class="mb-4">Morbi fermentum amet</h4>
+          <h2 class="mb-4 no_toc" id="titleEx6">Morbi fermentum amet</h2>
         </div>
       </div>
       <div class="row gy-3">
@@ -184,5 +192,5 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
     </div>
     <!-- contenuto di esempio END -->
   </div>
-</div>
+</section>
 {% endcapture %}{% include example.html content=example %}

@@ -19,23 +19,17 @@ const COOKIE_NAME = 'cookies_consent'
 const COOKIE_VALUE = 'true'
 const COOKIE_EXPIRE = 30
 
-const Selector = {
-  COOKIE_BAR: '.cookiebar',
-  ACCEPT: '[data-bs-accept="cookiebar"]',
-}
+const SELECTOR_COOKIE_BAR = '.cookiebar'
+const SELECTOR_ACCEPT = '[data-bs-accept="cookiebar"]'
 
-const Event = {
-  CLOSE: `close${EVENT_KEY}`,
-  CLOSED: `closed${EVENT_KEY}`,
-  LOAD_DATA_API: `load${EVENT_KEY}${DATA_API_KEY}`,
-  CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
-}
+const EVENT_CLOSE = `close${EVENT_KEY}`
+const EVENT_CLOSED = `closed${EVENT_KEY}`
+const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const ClassName = {
-  COOKIE_BAR: 'cookiebar',
-  SHOW: 'show',
-  FADE: 'fade',
-}
+const CLASS_NAME_COOKIE_BAR = 'cookiebar'
+const CLASS_NAME_SHOW = 'show'
+const CLASS_NAME_FADE = 'fade'
 
 /**
  * ------------------------------------------------------------------------
@@ -47,7 +41,7 @@ class Cookiebar extends BaseComponent {
   constructor(element) {
     super(element)
 
-    this._isShown = this._element.classList.contains(ClassName.SHOW)
+    this._isShown = this._element.classList.contains(CLASS_NAME_SHOW)
     this._isTransitioning = false
   }
 
@@ -88,7 +82,7 @@ class Cookiebar extends BaseComponent {
       this._isTransitioning = true
     }
 
-    this._element.classList.remove(ClassName.SHOW)
+    this._element.classList.remove(CLASS_NAME_SHOW)
 
     this._queueCallback(() => this._hideElement(), this._element, isAnimated)
   }
@@ -99,7 +93,7 @@ class Cookiebar extends BaseComponent {
     const rootElement = this._getRootElement(element)
     const customEvent = this._triggerCloseEvent(rootElement)
 
-    if (customEvent.isDefaultPrevented()) {
+    if (customEvent.defaultPrevented) {
       return
     }
 
@@ -122,7 +116,7 @@ class Cookiebar extends BaseComponent {
   // Private
 
   _isAnimated() {
-    return this._element.classList.contains(ClassName.FADE)
+    return this._element.classList.contains(CLASS_NAME_FADE)
   }
 
   _showElement() {
@@ -135,7 +129,7 @@ class Cookiebar extends BaseComponent {
       reflow(this._element)
     }
 
-    this._element.classList.add(ClassName.SHOW)
+    this._element.classList.add(CLASS_NAME_SHOW)
 
     const transitionComplete = () => {
       this._isTransitioning = false
@@ -158,51 +152,39 @@ class Cookiebar extends BaseComponent {
     document.cookie = COOKIE_NAME + '=' + c_value + '; path=/'
   }
 
-  _getSelectorFromElement(element) {
-    var selector = element.getAttribute('data-target')
-
-    if (!selector || selector === '#') {
-      var hrefAttr = element.getAttribute('href')
-      selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : ''
-    }
-
-    try {
-      return document.querySelector(selector) ? selector : null
-    } catch (err) {
-      return null
-    }
-  }
-
   _getRootElement(element) {
-    const selector = this._getSelectorFromElement(element)
-    let parent = false
+    const selector = getElementFromSelector(element)
+    let parent = null
 
     if (selector) {
-      parent = $(selector)[0]
+      parent = selector
     }
 
     if (!parent) {
-      parent = $(element).closest(`.${ClassName.COOKIE_BAR}`)[0]
+      parent = element.closest(`.${CLASS_NAME_COOKIE_BAR}`) //$(element).closest(`.${CLASS_NAME_COOKIE_BAR}`)[0]
     }
 
     return parent
   }
 
   _triggerCloseEvent(element) {
-    const closeEvent = $.Event(Event.CLOSE)
+    /*const closeEvent = $.Event(EVENT_CLOSE)
 
-    $(element).trigger(closeEvent)
-    return closeEvent
+    $(element).trigger(closeEvent)*/
+
+    return EventHandler.trigger(element, EVENT_CLOSE)
   }
 
   _removeElement(element) {
-    $(element).removeClass(ClassName.SHOW).attr('aria-hidden', 'true').attr('aria-live', 'off')
+    //$(element).removeClass(CLASS_NAME_SHOW).attr('aria-hidden', 'true').attr('aria-live', 'off')
+    element.classList.remove(CLASS_NAME_SHOW)
+    element.setAttribute('aria-hidden', 'true')
+    element.setAttribute('aria-live', 'off')
 
-    this._destroyElement(element)
-  }
+    //this._destroyElement(element)
+    EventHandler.trigger(element, EVENT_CLOSED)
 
-  _destroyElement(element) {
-    $(element).detach().trigger(Event.CLOSED).remove()
+    this.dispose()
   }
 
   // Static
@@ -252,8 +234,8 @@ class Cookiebar extends BaseComponent {
       y,
       ARRcookies = document.cookie.split(';')
     for (i = 0; i < ARRcookies.length; i++) {
-      x = ARRcookies[i].substr(0, ARRcookies[i].indexOf('='))
-      y = ARRcookies[i].substr(ARRcookies[i].indexOf('=') + 1)
+      x = ARRcookies[i].substring(0, ARRcookies[i].indexOf('='))
+      y = ARRcookies[i].substring(ARRcookies[i].indexOf('=') + 1)
       x = x.replace(/^\s+|\s+$/g, '')
       if (x == COOKIE_NAME) {
         return unescape(y)
@@ -268,9 +250,9 @@ class Cookiebar extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-//$(document).on(Event.CLICK_DATA_API, Selector.ACCEPT, Cookiebar._handleAccept(new Cookiebar()))
+//$(document).on(EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, Cookiebar._handleAccept(new Cookiebar()))
 
-EventHandler.on(document, Event.CLICK_DATA_API, Selector.ACCEPT, function (event) {
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, function (event) {
   if (['A', 'AREA'].includes(this.tagName)) {
     event.preventDefault()
   }
@@ -285,10 +267,10 @@ EventHandler.on(document, Event.CLICK_DATA_API, Selector.ACCEPT, function (event
   //Cookiebar._handleAccept(new Cookiebar())
 })
 
-EventHandler.on(window, Event.LOAD_DATA_API, function () {
+EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
   const consent = Cookiebar._getCookieEU()
   if (!consent) {
-    const cookiebars = document.querySelectorAll(Selector.COOKIE_BAR)
+    const cookiebars = document.querySelectorAll(SELECTOR_COOKIE_BAR)
     cookiebars.forEach((bar) => {
       const instance = Cookiebar.getOrCreateInstance(bar)
       instance.show()
@@ -296,8 +278,8 @@ EventHandler.on(window, Event.LOAD_DATA_API, function () {
   }
 })
 
-/*$(window).on(Event.LOAD_DATA_API, () => {
-  const cookiebars = $.makeArray($(Selector.COOKIE_BAR))
+/*$(window).on(EVENT_LOAD_DATA_API, () => {
+  const cookiebars = $.makeArray($(SELECTOR_COOKIE_BAR))
   var consent = Cookiebar._getCookieEU()
   if (!consent) {
     for (let i = cookiebars.length; i--;) {
