@@ -1,5 +1,9 @@
 import '../scss/bootstrap-italia.scss'
-import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap' //importing bootstrap.bundle throws a rollup compiling warning/error
+import {
+  Alert, Button, Carousel, Collapse,
+  Dropdown, Modal, Offcanvas, Popover,
+  ScrollSpy, Tab, Toast, Tooltip
+} from 'bootstrap'
 
 import { loadPlugin } from './load-plugin'
 import * as fontsLoader from './plugins/fonts-loader'
@@ -35,7 +39,7 @@ import {
   Masonry,
   List,
   Transfer,
-} from './bootstrap-italia'
+} from './bootstrap-italia.esm'
 
 window.bootstrap = {
   Alert,

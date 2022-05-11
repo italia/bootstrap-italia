@@ -10,10 +10,13 @@
     "framework",
     "web"
   ],
-  "module": "dist/bootstrap-italia.js",
+  "module": "dist/bootstrap-italia.esm.js",
+  "types": "./decs.d.ts",
   "sideEffects": [
     "*.css",
-    "*.scss"
+    "*.scss",
+    "dist/bootstrap-italia.esm.js",
+    "dist/plugins/fonts-loader.js"
   ],
   "description": "Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
@@ -43,17 +46,15 @@
   "repository": "https://github.com/italia/bootstrap-italia",
   "author": "Presidenza del Consiglio dei Ministri",
   "license": "BSD-3-Clause",
-  "browserslist": [
-    "extends browserslist-config-design-italia"
-  ],
   "files": [
     "dist/",
-    "src/"
+    "src/",
+    "types/"
   ],
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "@lopatnov/rollup-plugin-uglify": "^2.1.2",
     "@octokit/rest": "^18.12.0",
