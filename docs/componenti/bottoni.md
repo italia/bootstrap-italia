@@ -208,7 +208,7 @@ Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_
 {% capture example %}
 
 <div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button btn-me">Primary</button>
+  <button class="btn btn-primary btn-me" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 {% endcapture %}{% include example.html content=example %}
