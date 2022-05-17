@@ -201,7 +201,7 @@ Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente ut
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
 {% endcapture %}{% include example.html content=example %}
 
-#### A tutta laghezza
+#### A tutta larghezza
 
 Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
 
