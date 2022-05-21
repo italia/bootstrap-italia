@@ -23,7 +23,7 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
 - Prestare particolare attenzione agli attributi `ARIA` presenti negli esempi.
 - È preferibile non utilizzare le [sezioni](#classico-con-sezioni) all'interno dei megamenu a meno che non siano necessarie.
 - Non devono essere presenti link con la medesima label che portino a destinazioni diverse. Nel caso dei link ["Vedi tutti"](#classico-con-link-vedi-tutti) è ad esempio importante ricordare di aggiungere uno `<span class="visually-hidden">` alla label per specificare a quale sezione si fa riferimento.
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+  {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Megamenu classico
 

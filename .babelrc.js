@@ -1,9 +1,12 @@
 {
   presets: [
-    ['env', {
-      targets: {
-        browsers: require('browserslist-config-design-italia')
-      }
-    }]
+    [
+      'env',
+      {
+        targets: {
+          browsers: require('browserslist-config-design-italia'),
+        },
+      },
+    ],
   ]
 }

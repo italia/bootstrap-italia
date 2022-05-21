@@ -45,7 +45,7 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 ### Javascript
 
-All'interno della cartella `js` saranno invece presenti il file di bundle e i componenti suddivisi in moduli. 
+All'interno della cartella `js` saranno invece presenti il file di bundle e i componenti suddivisi in moduli.
 
 In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la versione `*.bundle.*` in questo modo
 

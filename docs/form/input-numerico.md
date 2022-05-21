@@ -157,6 +157,6 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('inputNumber6');
-var inputNumber = new bootstrap.InputNumber(inputElement);
+var inputElement = document.getElementById('inputNumber6')
+var inputNumber = new bootstrap.InputNumber(inputElement)
 ```

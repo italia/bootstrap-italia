@@ -318,6 +318,7 @@ blockquote.
 Aggiungendo la classe `.blockquote-simple` si ottiene una versione card del Blockquote.
 
 {% capture example %}
+
 <blockquote class="blockquote blockquote-simple">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
 </blockquote>
@@ -328,6 +329,7 @@ Aggiungendo la classe `.blockquote-simple` si ottiene una versione card del Bloc
 Aggiungendo la classe `.blockquote-card` si ottiene un Blockquote di tipo card.
 
 {% capture example %}
+
 <blockquote class="blockquote blockquote-card">
   <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>
@@ -337,6 +339,7 @@ Aggiungendo la classe `.blockquote-card` si ottiene un Blockquote di tipo card.
 Aggiungendo un'ulteriore classe `.dark` si ottiene un Blockquote card scuro.
 
 {% capture example %}
+
 <blockquote class="blockquote blockquote-card dark">
   <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>

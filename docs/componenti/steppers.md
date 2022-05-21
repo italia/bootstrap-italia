@@ -136,9 +136,10 @@ I bottoni "Avanti" e "Indietro" dovranno essere utilizzati per implementare la l
 Il passaggio da uno step all'altro attraverso i bottoni contenuti in `.steppers-nav` determina un cambiamento del contenuto presente in `.steppers-content`.
 
 {% capture callout %}
+
 #### Accessibilità
 
-Nel caso si stia sviluppando una *Single page application* oppure una sequenza di step in AJAX il contenitore `.steppers-content` dovrebbe avere un attributo ARIA `aria-live="polite"` per avvisare gli utilizzatori di screen reader dall'avvenuto cambiamento del contenuto.
+Nel caso si stia sviluppando una _Single page application_ oppure una sequenza di step in AJAX il contenitore `.steppers-content` dovrebbe avere un attributo ARIA `aria-live="polite"` per avvisare gli utilizzatori di screen reader dall'avvenuto cambiamento del contenuto.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

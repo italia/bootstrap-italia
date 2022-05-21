@@ -106,7 +106,7 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiente un pulsante con om
 ```js
 var backToTopElement = document.getElementById('#backToTop')
 var backToTop = new bootstrap.BackToTop(backToTopElement, {
-  scrollLimit: 100
+  scrollLimit: 100,
 })
 ```
 

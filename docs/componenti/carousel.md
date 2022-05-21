@@ -18,12 +18,14 @@ Il plugin utilizzato è [Splide](https://splidejs.com/).
 ## Implementazione
 
 {% capture callout %}
+
 #### Accessibilità
 
-Splide segue le [indicazioni del W3C](https://www.w3.org/WAI/tutorials/carousels/) per l'implementazione di un [carousel accessibile](https://splidejs.com/guides/accessibility/).  
+Splide segue le [indicazioni del W3C](https://www.w3.org/WAI/tutorials/carousels/) per l'implementazione di un [carousel accessibile](https://splidejs.com/guides/accessibility/).
 
 Il plugin, attraverso l'opzione `i18n`, offre la possibilità di tradurre le `aria-label` utilizzate per gli elementi di interfaccia.  
 Bootstrap Italia fornisce le label già tradotte in italiano come segue:
+
 - prev: 'Slide precedente'
 - next: 'Slide successiva'
 - first: 'Vai alla prima slide'
@@ -53,6 +55,7 @@ Esempio di carousel con card semplici.
 - div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="it-header-block">
     <div class="it-header-block-title">
@@ -181,6 +184,7 @@ Esempio di carousel con card semplici.
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
 {% capture example %}
+
 <div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
@@ -679,12 +683,14 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** :  
+div **`it-carousel-wrapper`** :
+
 - viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la formattazione colonnare
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande
 
 {% capture example %}
+
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-big-img splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
@@ -775,7 +781,8 @@ div **`it-carousel-wrapper`** :
 
 **Classi da applicare**:
 
-div **`it-carousel-wrapper`** :  
+div **`it-carousel-wrapper`** :
+
 - viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la formattazione colonnare
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenuta è di tipo standard.
@@ -878,6 +885,7 @@ var masonryList = elementList.map(function (element) {
   return new bootstrap.CarouselBI(element)
 })
 ```
+
 ### Metodi
 
 <table class="table table-bordered table-striped">

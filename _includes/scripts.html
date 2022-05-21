@@ -29,10 +29,6 @@
 {%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
-{%- if page.title == "Liste di immagini" -%}
-<script src="{{ site.baseurl }}/dist/js/vendor/masonry.pkgd.min.js"></script>
-{%- endif -%}
-
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

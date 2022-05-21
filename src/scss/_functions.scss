@@ -33,6 +33,6 @@
   @if str-slice('#{$color}', 1, 1) == '#' {
     @return '%23' + str-slice('#{$color}', 2, -1);
   } @else {
-    @return $color
+    @return $color;
   }
 }

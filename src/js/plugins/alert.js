@@ -1,7 +1,5 @@
-import {default as BSAlert} from 'bootstrap/js/src/alert'
+import { default as BSAlert } from 'bootstrap/js/src/alert'
 
+class Alert extends BSAlert {}
 
-class Alert extends BSAlert {
-}
-
-export default Alert;
+export default Alert

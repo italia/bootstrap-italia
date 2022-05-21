@@ -26,8 +26,14 @@
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
-                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                          <li>
+                            <a class="dropdown-item list-item" href="#"
+                              ><span>ITA <span class="visually-hidden">selezionata</span></span></a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item list-item" href="#"><span>ENG</span></a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -149,13 +155,20 @@
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-target="#nav4">
+              <button
+                class="custom-navbar-toggler"
+                type="button"
+                aria-controls="nav4"
+                aria-expanded="false"
+                aria-label="Mostra/Nascondi la navigazione"
+                data-target="#nav4"
+              >
                 <svg class="icon">
                   <use href="/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav4" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="nav4" style="display: none">
+                <div class="overlay" style="display: none"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -167,7 +180,10 @@
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
                     <li class="nav-item {% if section == 'amministrazione' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="{{ site.baseurl }}/docs/esempi/comuni/template-amministrazione/">
+                      <a
+                        class="nav-link {% if section == 'amministrazione' %}active{%endif%}"
+                        href="{{ site.baseurl }}/docs/esempi/comuni/template-amministrazione/"
+                      >
                         <span>Amministrazione</span>
                         {% if section == 'amministrazione' %}<span class="visually-hidden">menu selezionato</span>{%endif%}
                       </a>

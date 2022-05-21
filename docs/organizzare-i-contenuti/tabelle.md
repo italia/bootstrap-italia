@@ -110,27 +110,58 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
   </table>
 </div>
 
-
 ```html
 <!-- Su tabelle -->
-<table class="table-primary">...</table>
-<table class="table-secondary">...</table>
-<table class="table-success">...</table>
-<table class="table-danger">...</table>
-<table class="table-warning">...</table>
-<table class="table-info">...</table>
-<table class="table-light">...</table>
-<table class="table-dark">...</table>
+<table class="table-primary">
+  ...
+</table>
+<table class="table-secondary">
+  ...
+</table>
+<table class="table-success">
+  ...
+</table>
+<table class="table-danger">
+  ...
+</table>
+<table class="table-warning">
+  ...
+</table>
+<table class="table-info">
+  ...
+</table>
+<table class="table-light">
+  ...
+</table>
+<table class="table-dark">
+  ...
+</table>
 
 <!-- Su righe -->
-<tr class="table-primary">...</tr>
-<tr class="table-secondary">...</tr>
-<tr class="table-success">...</tr>
-<tr class="table-danger">...</tr>
-<tr class="table-warning">...</tr>
-<tr class="table-info">...</tr>
-<tr class="table-light">...</tr>
-<tr class="table-dark">...</tr>
+<tr class="table-primary">
+  ...
+</tr>
+<tr class="table-secondary">
+  ...
+</tr>
+<tr class="table-success">
+  ...
+</tr>
+<tr class="table-danger">
+  ...
+</tr>
+<tr class="table-warning">
+  ...
+</tr>
+<tr class="table-info">
+  ...
+</tr>
+<tr class="table-light">
+  ...
+</tr>
+<tr class="table-dark">
+  ...
+</tr>
 
 <!-- Su celle (`td` o `th`) -->
 <tr>
@@ -146,6 +177,7 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 ```
 
 {% include callout-warning-color-assistive-technologies.md %}
+
 ### Righe striate
 
 Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
@@ -317,6 +349,7 @@ Le tabelle con hover possono essere combinate con la variante striata.
 ### Tabelle attive
 
 {% capture example %}
+
 <table class="table">
   <thead>
     <tr>
@@ -844,7 +877,9 @@ Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti c
 ```html
 <!-- On rows -->
 <table class="table table-sm">
-  <caption>Lista degli utenti</caption>
+  <caption>
+    Lista degli utenti
+  </caption>
   <thead>
     ...
   </thead>
@@ -891,7 +926,9 @@ Per renderizzare la `<caption>` in cima alla tabella utilizza la classe `.captio
 
 ```html
 <table class="table table-sm caption-top">
-  <caption>Lista degli utenti</caption>
+  <caption>
+    Lista degli utenti
+  </caption>
   <thead>
     ...
   </thead>
@@ -983,13 +1020,12 @@ Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento 
 </div>
 ```
 
-
 ### Breakpoint specifici
 
 Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.
 
-
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+
 <div class="bd-example">
   <div class="table-responsive{{ bp.abbr }}">
     <table class="table">
@@ -1033,7 +1069,6 @@ Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle
   </div>
 </div>
 {% endunless %}{% endfor %}
-
 
 ```html
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}

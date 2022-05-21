@@ -195,23 +195,23 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
     </a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
-        <h3>header</h3>
+        <h3 class="no_toc">header</h3>
         <div class="progress">
           <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <ul class="link-list">
           <li class="nav-item">
-            <a class="nav-link active" href="#p1">
+            <a class="nav-link active" href="#">
               <span>1. Introduzione </span>
             </a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#p1_1">
+                <a class="nav-link" href="#">
                   <span>1.1 Elemento annidato </span>
                 </a>
                 <ul class="tertiary link-list">
                   <li class="nav-link">
-                    <a class="nav-link" href="#p1_1_1">
+                    <a class="nav-link" href="#">
                       <span>1.1.1 Elemento annidato </span>
                     </a>
                   </li>
@@ -220,17 +220,17 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#p2">
+            <a class="nav-link" href="#">
               <span>2. Seconda sezione </span>
             </a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#p2_1">
+                <a class="nav-link" href="#">
                   <span>2.1 Elemento annidato </span>
                 </a>
                 <ul class="tertiary link-list">
                   <li class="nav-link">
-                    <a class="nav-link" href="#p2_1_1">
+                    <a class="nav-link" href="#">
                       <span>2.1.1 Elemento annidato </span>
                     </a>
                   </li>

@@ -67,7 +67,6 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
 {% capture callout %}
 
 #### Accessibilità
@@ -134,7 +133,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 
 Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltativa `object`.
 
-È possibile creare un'istanza con il constructor, ad  esempio:
+È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
 var myCollapse = document.getElementById('myCollapse')

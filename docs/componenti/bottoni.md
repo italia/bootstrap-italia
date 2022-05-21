@@ -27,8 +27,6 @@ Dove il click sul bottone non genera un cambio di pagina utilizzare esclusivamen
 Quando non fosse possibile, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-
-
 {% capture example %}
 <a class="btn" href="#" role="button">Link</a>
 <button class="btn" type="submit">Button</button>
@@ -88,14 +86,14 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
-  <span>Icon Button Lg</span>
-  <svg class="icon icon-white ms-1">
-  <use
+<span>Icon Button Lg</span>
+<svg class="icon icon-white ms-1">
+<use
         href="{{
           site.baseurl
         }}/dist/svg/sprites.svg#it-star-full"
       ></use>
-  </svg>
+</svg>
 </button>
 
 <button class="btn btn-primary btn-icon btn-me">

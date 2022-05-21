@@ -35,6 +35,7 @@ Notifiche <span class="badge neutral-2-bg text-secondary">4</span>
 {% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
+
 #### Accessibilità
 
 A seconda di come i badge vengono utilizzati, questi potrebbero confondere gli utenti che usano lo screen reader e tecnologie assistive simili. Mentre lo stile dei badge fornisce un indizio visivo sul loro scopo, a questi utenti saranno semplicemente presentati come semplice contenuto. A seconda della situazione specifica, questi badge possono sembrare parole o numeri aggiuntivi casuali alla fine di una frase, un collegamento o un pulsante.
@@ -42,7 +43,6 @@ A seconda di come i badge vengono utilizzati, questi potrebbero confondere gli u
 A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si capisce che il "4" è il numero di notifiche), considera l'eventualità di includere un testo aggiuntivo nascosto.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
 
 {% capture example %}
 <button type="button" class="btn btn-primary">

@@ -115,8 +115,6 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-
-
 {% capture example %}
 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
 <svg class="icon">
@@ -929,7 +927,6 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 #### `getOrCreateInstance`
 
 Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
-
 
 ```js
 var myModalEl = document.querySelector('#myModal')

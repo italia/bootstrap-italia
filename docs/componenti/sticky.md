@@ -98,6 +98,7 @@ Se sono presenti più componenti sticky nella pagina, è possibile fare in modo 
 In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 {% capture example %}
+
 <header class="it-header-wrapper" data-bs-toggle="sticky"  data-bs-target="#stickyTrigger1">
   <div class="it-header-slim-wrapper">
     <div class="container">
@@ -194,13 +195,13 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var stickyElement = document.getElementById('sticky');
+var stickyElement = document.getElementById('sticky')
 var sticky = new bootstrap.Sticky(stickyElement, {
   positionType: 'sticky',
   stickyClassName: 'is-sticky',
   stackable: true,
   paddingTop: 0,
-});
+})
 ```
 
 ### Opzioni
@@ -293,8 +294,8 @@ La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportament
 </table>
 
 ```js
-var stickyElement = document.getElementById('sticky');
+var stickyElement = document.getElementById('sticky')
 stickyElement.addEventListener('on.bs.sticky', function () {
   // do something...
-});
+})
 ```

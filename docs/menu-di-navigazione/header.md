@@ -24,6 +24,7 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 {% capture callout %}
+
 #### Accessibilità
 
 Condierando l'importanza dell'Header per la navigazione di un sito, si consiglia di seguire attentamente gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
@@ -897,6 +898,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
 ## Header Completa
 
 {% capture example %}
+
 <header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container">
@@ -1120,6 +1122,7 @@ Nella versione light è consigliabile aggiungere la classe `.it-shadow` al tag `
 Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è contenuto.
 
 {% capture example %}
+
 <header class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
     <div class="container">

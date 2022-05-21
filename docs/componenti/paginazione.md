@@ -397,7 +397,7 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="vi
 
 ### Total number
 
-Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi  o il il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
+Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi o il il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
 
 {% capture example %}
 

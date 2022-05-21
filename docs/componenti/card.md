@@ -16,7 +16,9 @@ Negli esempi seguenti le card sono all'interno di una struttura colonnare di Boo
 L'inizio della card vera e propria è segnalata dal commento `<!--start card-->`.
 
 {% capture callout %}
+
 #### Accessibilità
+
 Negli esempi è stato utilizzato il tag `h3` per il titolo delle card. <br>
 Utilizzare il tag `h` corretto a seconda del contesto.
 
@@ -201,7 +203,7 @@ semplici utilizzare la classe `.simple-link`.
 
 Le card con ombreggiatura sono caratterizzate dalle classi:
 
-- **`.card-space`:** utilizzata nel div più esterno `card-wrapper` serve a distanziare le card nella loro versione mobile.  
+- **`.card-space`:** utilizzata nel div più esterno `card-wrapper` serve a distanziare le card nella loro versione mobile.
 - **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.
 
 {% capture example %}
@@ -233,7 +235,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
 
 Le card con ombreggiatura grandi sono caratterizzate dalle classi:
 
-- **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.  
+- **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.
 - **`.card-big`:** utilizzata nel div `card` serve al dimensionamento dei suoi contenuti.
 
 Nell'esempio seguente è stata inserita un icona grande prima del titolo della card,

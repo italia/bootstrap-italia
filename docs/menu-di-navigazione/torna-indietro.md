@@ -39,11 +39,11 @@ Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessa
 
 ## Attivazione tramite JavaScript
 
-È possibile creare un'istanza con il constructor, ad  esempio:
+È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var backButtonElement = document.getElementById('backButton');
-var historyBack = new bootstrap.HistoryBack(backButtonElement);
+var backButtonElement = document.getElementById('backButton')
+var historyBack = new bootstrap.HistoryBack(backButtonElement)
 ```
 
 ### Metodi

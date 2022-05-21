@@ -1,7 +1,5 @@
-import {default as BSTab} from 'bootstrap/js/src/tab'
+import { default as BSTab } from 'bootstrap/js/src/tab'
 
+class Tab extends BSTab {}
 
-class Tab extends BSTab {
-}
-
-export default Tab;
+export default Tab

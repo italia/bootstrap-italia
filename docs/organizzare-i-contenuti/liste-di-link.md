@@ -137,7 +137,8 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
 
 Ogni elemento di una lista di link può avere un'icona (a destra o sinistra del testo) ed un abstract.
 
-Per includere un'icona bisogna aggiungere al tag `<a>` uan delle segeunti classi:  
+Per includere un'icona bisogna aggiungere al tag `<a>` uan delle segeunti classi:
+
 - `icon-right`: se si vuole posizionare l'icona a destra del testo
 - `icon-left`: se si vuole posizionare l'icona a sinistra del testo
 
@@ -192,6 +193,7 @@ Quella di destra è descrittiva mentre quella di sinistra può essere un'eventua
 È necessario aggiungere al tag `<a>` la classe `.icon-right` se si vuole posizionare l'icona a destra del testo, oppure la classe `.icon-left` se si vuole posizionare l'icona a sinistra del testo.
 
 ### Azione primaria
+
 #### Icona a sinistra
 
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
@@ -230,6 +232,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 {% endcapture %}{% include example.html content=example %}
 
 ### Azione secondaria
+
 #### Icona a destra
 
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo il tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
@@ -270,14 +273,15 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
 ### Azioni primaria e secondaria
 
 #### Icona a sinistra
+
 Per aggiungere un'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`.  
 Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
 
 #### Icona a destra
+
 .
 Per aggiungere un'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`.  
 Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
-
 
 {% capture example %}
 

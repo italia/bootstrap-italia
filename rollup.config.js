@@ -56,15 +56,15 @@ export default [
     input: 'src/js/bootstrap-italia.esm.js',
     output: [
       {
-        format: "es",
-        exports: "named",
+        format: 'es',
+        exports: 'named',
         sourcemap: true,
         dir: 'dist',
         // chunkFileNames: '[name].js'
         preserveModules: true,
         // // Optionally strip useless path from source
         // preserveModulesRoot: 'lib',
-      }
+      },
     ],
     // plugins: [
     //   injectProcessEnv({

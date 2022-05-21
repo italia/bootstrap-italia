@@ -62,7 +62,7 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazio
 #### Accessibilità
 
 L'aria label che assegna il nome accessibile all'icona di chiusura, che nell'esempio è "chiudi avviso", deve essere correlato al contesto.  
-Ad esempio "chiudi nota", "chiudi", "nascondi", ecc. 
+Ad esempio "chiudi nota", "chiudi", "nascondi", ecc.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:

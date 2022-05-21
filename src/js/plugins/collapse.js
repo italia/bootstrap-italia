@@ -1,7 +1,5 @@
-import {default as BSCollapse} from 'bootstrap/js/src/collapse'
+import { default as BSCollapse } from 'bootstrap/js/src/collapse'
 
+class Collapse extends BSCollapse {}
 
-class Collapse extends BSCollapse {
-}
-
-export default Collapse;
+export default Collapse

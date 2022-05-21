@@ -1,9 +1,5 @@
 import '../scss/bootstrap-italia.scss'
-import {
-  Alert, Button, Carousel, Collapse,
-  Dropdown, Modal, Offcanvas, Popover,
-  ScrollSpy, Tab, Toast, Tooltip
-} from 'bootstrap'
+import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap'
 
 import { loadPlugin } from './load-plugin'
 import * as fontsLoader from './plugins/fonts-loader'

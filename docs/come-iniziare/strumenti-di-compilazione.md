@@ -69,6 +69,7 @@ Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che co
 È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli JavaScript e/o i file scss che non sono di interesse.
 
 ### Ottimizzare i file Sass da importare
+
 Quando si utilizza Sass nella propria pipeline, si può ottimizzare Bootstrap Italia importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale `bootstrap-italia.scss`, ad esempio
 
 ```scss

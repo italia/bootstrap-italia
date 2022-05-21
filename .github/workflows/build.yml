@@ -1,0 +1,15 @@
+on: [push]
+name: Build
+jobs:
+  htmlproofer:
+    name: HtmlProofer tests
+    runs-on: ubuntu-latest
+    container:
+      image: timbru31/ruby-node:3.0-16
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: bundle install
+      - run: chmod -R 777 .
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test-htmlproofer

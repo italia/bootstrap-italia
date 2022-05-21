@@ -17,6 +17,7 @@ L'accordion utilizza il componente [Collapse]({{site.baseurl}}/docs/componenti/c
 Gli elementi richiudibili sono molto spesso mostrati in gruppo, tipicamente usati per approfondire voci o argomenti mostrati nelle singole barre cliccabili.
 
 {% capture callout %}
+
 #### Accessibilità
 
 Nell'esempio di codice ogni elemento `<button>` è inserito all'interno di un elemento `<h2>` (o altro livello h in funzione del contesto) in quanto, frequentemente, i pulsanti di azione di un accordion sono anche i titoli della sezione che segue.
@@ -68,6 +69,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
 {% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
+
 #### Attributi ARIA
 
 Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento richiudibile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento richiudibile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
@@ -130,6 +132,7 @@ Per ottenere un gruppo di elementi mutuamente richiudibili (o _accordion_), è s
 Più gruppi di accordion possono essere annidati.
 
 {% capture callout %}
+
 #### Accessibilità collapse e accordion annidati
 
 Utilizzare questo approccio solo quando strettamente necessario: dal punto di vista dell'accessibilità non si tratta di una soluzione ottimale.
@@ -263,8 +266,6 @@ Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-
 
 ### Hover degli Header
 

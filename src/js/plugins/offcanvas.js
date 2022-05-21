@@ -1,7 +1,5 @@
-import {default as BSOffcanvas} from 'bootstrap/js/src/offcanvas'
+import { default as BSOffcanvas } from 'bootstrap/js/src/offcanvas'
 
+class Offcanvas extends BSOffcanvas {}
 
-class Offcanvas extends BSOffcanvas {
-}
-
-export default Offcanvas;
+export default Offcanvas

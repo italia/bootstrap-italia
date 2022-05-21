@@ -813,7 +813,6 @@ Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è
 
 Si possono trovare dettagli aggiuntivi sulla gestione attraverso JavaScript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/navs-tabs/#methods) sul sito di Bootstrap.
 
-
 ## Implementazione
 
 ### Tramite data attributes
@@ -871,4 +870,3 @@ bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
-

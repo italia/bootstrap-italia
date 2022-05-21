@@ -18,7 +18,9 @@ Il componente Hero può contenere:
 - Immagine di background
 
 {% capture callout %}
+
 #### Accessibilità
+
 Valutare attentantamente l'opportunità di utilizzare più hero nella stessa pagina.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -33,7 +35,9 @@ Per la visualizzazione reale a schermo fate riferimento alla [pagina di esempio]
 Il componente Hero è contenuto all'interno della section `.it-hero-wrapper` al quale si possono aggiungere classi che ne varieranno l'aspetto.
 
 {% capture callout %}
+
 #### Accessibilità
+
 Nel caso di un componente hero con sola immagine utilizzare il tag `section` con attributo `aria-label="In evidenza"`.<br>
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -70,7 +74,9 @@ aggiungere alla section `.it-hero-wrapper` la classe `.it-hero-small-size`.
 Esempio di Hero con tutti i componenti testuali.
 
 {% capture callout %}
+
 #### Accessibilità
+
 Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il livello `h` corretto a seconda del contesto.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -119,18 +125,20 @@ aggiungere alla section `.it-hero-wrapper` la classe `.it-text-centered`.
 ## Con testi ed immagine di sfondo
 
 Per visualizzare i testi in overlay sulle immagini, viene creato un div scuro in opacità per migliorare la leggibilità del testo in caso di immagini dai toni chiari.  
-Aggiungere alla section `.it-hero-wrapper` la classi:  
+Aggiungere alla section `.it-hero-wrapper` la classi:
+
 - **`.it-overlay`**: crea il div che si sovrappone all'immagine
 - **`.it-dark`**: definisce il colore di background del div in overlay
 
 {% capture callout %}
+
 #### Accessibilità
+
 Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispetto al testo.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
-
 
 <section class="it-hero-wrapper it-dark it-overlay">
   <!-- - img-->
@@ -158,6 +166,7 @@ Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispe
 ### Con overlay di colore primario
 
 Per un div opaco di colore primario, aggiungere alla section `.it-hero-wrapper` la classi:
+
 - **`.it-overlay`**: crea il div che si sovrappone all'immagine
 - **`.it-primary`**: definisce il colore di background del div in overlay.
 
@@ -189,6 +198,7 @@ Per un div opaco di colore primario, aggiungere alla section `.it-hero-wrapper` 
 ### Con overlay e filtro di colore primario
 
 Per aggiungere un filtro di tipo "screen" aggiungere alla section `.it-hero-wrapper` la classi:
+
 - **`.it-overlay`**: crea il div che si sovrappone all'immagine
 - **`.it-filter`**: definisce il filtro da applicare all'immagine.
 

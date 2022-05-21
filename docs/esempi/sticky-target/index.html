@@ -11,7 +11,13 @@ title: Sticky
   </div>
 </div>
 
-<header class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-target="#stickyTrigger1" data-bs-sticky-class-name="is-sticky">
+<header
+  class="it-header-wrapper it-header-sticky"
+  data-bs-toggle="sticky"
+  data-bs-position-type="fixed"
+  data-bs-target="#stickyTrigger1"
+  data-bs-sticky-class-name="is-sticky"
+>
   <div class="it-header-slim-wrapper">
     <div class="container">
       <div class="row">
@@ -67,13 +73,21 @@ title: Sticky
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
+              <button
+                class="custom-navbar-toggler"
+                type="button"
+                aria-controls="navC1"
+                aria-expanded="false"
+                aria-label="Mostra/Nascondi la navigazione"
+                data-bs-toggle="navbarcollapsible"
+                data-bs-target="#navC1"
+              >
                 <svg class="icon">
                   <use href="/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="navC1" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC1" style="display: none">
+                <div class="overlay" style="display: none"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -84,10 +98,18 @@ title: Sticky
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                    <li class="nav-item active">
+                      <a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span>Link 3</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span>Link 4</span></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -101,8 +123,7 @@ title: Sticky
 
 <div class="container">
   <div class="row">
-    <div class="col-12 padding-block">
-    </div>
+    <div class="col-12 padding-block"></div>
   </div>
 </div>
 
@@ -111,6 +132,6 @@ title: Sticky
     height: 5000px;
     background-color: #eee;
     opacity: 0.8;
-    background: repeating-linear-gradient( 45deg, #ccc, #ccc 5px, #eee 5px, #eee 25px );
+    background: repeating-linear-gradient(45deg, #ccc, #ccc 5px, #eee 5px, #eee 25px);
   }
 </style>

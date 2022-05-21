@@ -1,7 +1,5 @@
-import {default as BSTooltip} from 'bootstrap/js/src/tooltip'
+import { default as BSTooltip } from 'bootstrap/js/src/tooltip'
 
+class Tooltip extends BSTooltip {}
 
-class Tooltip extends BSTooltip {
-}
-
-export default Tooltip;
+export default Tooltip

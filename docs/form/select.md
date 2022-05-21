@@ -27,8 +27,10 @@ La select è composta dal un wrapper esterno `.select-wrapper` contenente la lab
 {% endcapture %}{% include example.html content=example %}
 
 ### Select disabilitata
+
 Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`.
 {% capture example %}
+
 <div class="select-wrapper">
   <label for="defaultSelectDisabled">Etichetta</label>
   <select id="defaultSelectDisabled" disabled>
@@ -47,6 +49,7 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 Per ottenere select con raggruppamenti, utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>` al suo interno.
 
 {% capture example %}
+
 <div class="select-wrapper">
   <label for="defaultSelectGroup">Etichetta</label>
   <select id="defaultSelectGroup">

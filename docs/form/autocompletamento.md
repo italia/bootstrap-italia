@@ -7,12 +7,11 @@ title: Autocompletamento
 description: Elementi e stili per la creazione di input con autocompletamento.
 ---
 
-
 ## Esempio di autocompletamento
 
 Il completamento automatico è un componente che aiuta gli utenti a scegliere le risposte da un elenco fornito.
 
-Per la creazione del componente, è stato utilizzato il plugin  [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
+Per la creazione del componente, è stato utilizzato il plugin [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
 
 Per una corretta implementazione si consiglia di consultare la [documentazione](https://alphagov.github.io/accessible-autocomplete/).
 

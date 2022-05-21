@@ -1,1 +1,1 @@
-declare module "bootstrap-italia"
+declare module 'bootstrap-italia'

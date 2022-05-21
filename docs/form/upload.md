@@ -7,8 +7,6 @@ title: Upload
 description: Elementi dei form dedicati al caricamento file.
 ---
 
-
-
 Fra i tipi di campo disponibili per la compilazione dei form HTML è disponibile anche il tipo **file**. Questi campi di input consentono l'upload di uno o più file attraverso l'invio del form.
 
 In questa pagina vengono presentate varianti grafiche e funzionali per questo tipo di input.
@@ -365,8 +363,8 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var uploadElement = document.getElementById('uploadChangeStateTarget');
-var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement);
+var uploadElement = document.getElementById('uploadChangeStateTarget')
+var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement)
 ```
 
 ### Metodi
@@ -460,5 +458,5 @@ var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement);
       }, 4500);
   }
 </script>
-{% endcapture %}{% include example.html content=example %}
 
+{% endcapture %}{% include example.html content=example %}

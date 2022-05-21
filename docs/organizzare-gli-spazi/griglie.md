@@ -59,6 +59,7 @@ Sii consapevole dei limiti e dei [bug di flexbox](https://github.com/philipwalto
 Mentre Bootstrap utilizza `em` or `rem` per definire gran parte delle misure, i `px` sono utilizzati per i breakpoint della griglia e la larghezza dei contenitori. Questo perché la larghezza della viewport è definita in pixel e non cambia con il [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
 Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositivi con una comoda tabella.
+
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
@@ -486,6 +487,7 @@ $grid-gutter-widths: (
 Si consiglia di usare sempre questa tipologia di spaziature, in quanto ottimizzano la leggibilità e organizzazione dei contenuti a seconda delle dimensioni del dispositivo. Per attivare i gutter variabili, è sufficiente affiancare alla classe `.row`, la classe `.variable-gutters`.
 
 In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno così implementate:
+
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
@@ -530,7 +532,6 @@ In questo modo, secondo la variabile Sass visibile sopra, le spaziature saranno 
     </tbody>
   </table>
 </div>
-
 
 <div class="bd-example-row">
 {% capture example %}
@@ -605,7 +606,7 @@ Usa le classi `.order-` per controllare l' **ordine di visualizzazione** del tuo
 {% endcapture %}{% include example.html content=example %}
 </div>
 
-Esistono anche delle classi responsive `.order-first` e `.order-last` che cambiano velocemente l'ordine di un elemento applicando `order: -1` o `order: 6`. Queste classi possono  essere utilizzate insieme con le classi numerate `.order-*` se necessario.
+Esistono anche delle classi responsive `.order-first` e `.order-last` che cambiano velocemente l'ordine di un elemento applicando `order: -1` o `order: 6`. Queste classi possono essere utilizzate insieme con le classi numerate `.order-*` se necessario.
 
 <div class="bd-example-row">
 {% capture example %}

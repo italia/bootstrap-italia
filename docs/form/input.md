@@ -228,6 +228,7 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
   minimumLength: 4,
 })
 ```
+
 #### Opzioni
 
 <table class="table table-bordered table-striped">
@@ -518,10 +519,10 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('autocomplete-test');
+var inputElement = document.getElementById('autocomplete-test')
 var inputSearch = new bootstrap.InputSearch(inputElement, {
-  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}'
-});
+  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}',
+})
 ```
 
 ## Area di testo
