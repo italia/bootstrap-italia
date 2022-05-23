@@ -762,25 +762,12 @@ Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe
 Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un `.modal-dialog`. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
+  <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
+  <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
+  <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl">Modale molto grande</button>
 </div>
 
 ```html
-<!-- Large modal -->
-
-<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <h2 class="modal-title h5 no_toc" id="myLargeModalLabel">Modale grande</h2>
-      ...
-    </div>
-    <div class="modal-footer">...</div>
-  </div>
-</div>
-
 <!-- Small modal -->
 
 <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
@@ -788,21 +775,9 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <h2 class="modal-title h5 no_toc" id="mySmallModalLabel">Modale piccola</h2>
-      ...
-    </div>
-    <div class="modal-footer">...</div>
-  </div>
-</div>
-```
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title h5 no_toc" id="myLargeModalLabel">Modale grande</h2>
+        <h2 class="modal-title h5 no_toc" id="mySmallModalLabel">Modale piccola</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -815,13 +790,93 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   </div>
 </div>
 
+<!-- Large modal -->
+
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">Modale grande</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5 no_toc" id="myLargeModalLabel">Modale grande</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Extra Large modal -->
+
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl">Modale  molto grande</button>
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5 no_toc" id="myExtraLargeModalLabel">Modale molto grande</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title h5 no_toc" id="mySmallModalLabel">Modale piccola</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5 no_toc" id="myLargeModalLabel">Modale grande</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5 no_toc" id="myExtraLargeModalLabel">Modale molto grande</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
         </button>
       </div>
       <div class="modal-body">
