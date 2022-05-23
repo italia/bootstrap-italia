@@ -12,6 +12,11 @@
   line-height: 32px;
   font-weight: 600;
 
+  &.active {
+    transform: none;
+    font-size: 1rem;
+  }
+
   input[type='checkbox'] {
     opacity: 0;
     width: 0;

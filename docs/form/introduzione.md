@@ -22,7 +22,7 @@ Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare 
 
 Strutture più complesse possono essere costruite usando il sistema a griglia, da utilizzare per layout che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive. La classe `.row` ne assicura una corretta spaziatura.
 
-Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-7`, mentre le restanti `.col` si divideranno il resto dello spazio.
+Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-md-6` per ottenere una certo design dal breakpoint `md` in su, mentre le restanti `.col-md` si divideranno il resto dello spazio.
 
 {% capture example %}
 
@@ -38,15 +38,15 @@ Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-7">
-      <label for="Citta">Città</label>
-      <input type="text" class="form-control" id="Citta">
-    </div>
-    <div class="form-group col">
+    <div class="form-group col-md-6">
       <label for="Comune">Comune</label>
       <input type="text" class="form-control" id="Comune">
     </div>
-    <div class="form-group col">
+    <div class="form-group col-md">
+      <label for="Provincia">Provincia</label>
+      <input type="text" class="form-control" id="Provincia">
+    </div>
+    <div class="form-group col-md">
       <label for="CAP">CAP</label>
       <input type="text" class="form-control" id="CAP">
     </div>
@@ -88,7 +88,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <label for="inputCAP">CAP</label>
       <input type="text" class="form-control" id="inputCAP">
     </div>
-    <div class="col-md-4">
+    <div class="form-group col-md-4">
       <div class="select-wrapper">
         <label for="selectID">Provincia</label>
         <select id="selectID">
@@ -112,7 +112,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row mt-4">
     <div class="form-group col text-center">
       <button type="button" class="btn btn-outline-primary">Annulla</button>
       <button type="submit" class="btn btn-primary">Conferma</button>
@@ -123,16 +123,16 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
 #### Auto-dimensionamento
 
-L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) per centrare verticalmente il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
+L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) per centrare verticalmente dal breakpoint `lg` in su il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
 
 {% capture example %}
 
 <div class="row align-items-center">
-  <div class="col-auto">
+  <div class="col-12 col-md-6 col-lg-auto mb-3">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
     <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
   </div>
-  <div class="col-auto">
+  <div class="col-12 col-md-6 col-lg-auto mb-3">
     <label class="visually-hidden" for="inlineFormInputGroup">Username</label>
     <div class="input-group">
       <div class="input-group-prepend">
@@ -141,7 +141,7 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
       <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
     </div>
   </div>
-  <div class="col-auto">
+  <div class="col-6 col-md-3 offset-md-6 offset-lg-0 col-lg-auto">
     <div class="form-check m-0">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck">
       <label class="form-check-label" for="autoSizingCheck">
@@ -149,7 +149,7 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
       </label>
     </div>
   </div>
-  <div class="col-auto">
+  <div class="col-6 col-md-3 col-lg-auto d-flex justify-content-end">
     <button type="submit" class="btn btn-primary">Invia</button>
   </div>
 </div>
@@ -162,6 +162,7 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
 Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli se non includi un'etichetta per ogni input. Per questi moduli in linea, si può nascondere le etichette usando la classe `.visually-hidden`. Esistono altri metodi alternativi per fornire un'etichetta per le tecnologie assistive, come l'attributo `aria-label`,` aria-labelledby` o `title`. Se nessuno di questi è presente, le tecnologie assistive possono ricorrere all'uso dell'attributo `placeholder`, se presente, ma è sconsigliato.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 
 ## Disabilitazione di campi
 
@@ -262,42 +263,48 @@ Di seguito un esempio di form validato con Just Validate.
 
 <form class="needs-validation" id="justValidateForm">
   <div class="row mt-4">
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required>
     </div>
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label for="validationCustom02">Cognome</label>
       <input type="text" class="form-control" id="validationCustom02" value="Rossi" required>
     </div>
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label for="validationCustomUsername">Username</label>
       <input type="text" class="form-control" id="validationCustomUsername" required>
     </div>
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label class="input-number-label active " for="validationAge">Età (minimo 18 anni)</label>
       <input type="number" data-bs-input class="form-control" id="validationAge" value="18" min="18" step="1" required>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-6 mb-4">
+    <div class="form-group col-md-6">
       <label for="validationCustom03">Città</label>
       <input type="text" class="form-control" id="validationCustom03" required>
     </div>
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label for="validationCustom04">Provincia</label>
       <input type="text" class="form-control" id="validationCustom04" required>
     </div>
-    <div class="form-group col-md-3 mb-4">
+    <div class="form-group col-md-3">
       <label for="validationCustom05">CAP (5 cifre)</label>
       <input type="text" class="form-control" id="validationCustom05" required>
     </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-    <label class="form-check-label" for="invalidCheck">Accetto i termini e le condizioni.</label>
+  <div class="row align-items-center">
+    <div class="col-md-9 col-lg-6">
+      <div class="form-check mt-0">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">Accetto i termini e le condizioni.</label>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-6 mt-3 mt-md-0 d-flex justify-content-center justify-content-md-end justify-content-lg-start">
+        <button class="btn btn-primary" type="submit">Invia</button>
+    </div>
   </div>
-  <button class="btn btn-primary mt-3" type="submit">Invia</button>
 </form>
 <div class="row mt-4">
   <div class="col-12">
@@ -383,14 +390,14 @@ Di seguito un esempio di form validato con Just Validate.
         },
       ])
       .onFail((fields) => {
-        $('errorMsgContainer').alert();
-        errorWrapper.innerHTML = ''
+        errorWrapper.innerHTML = '';
         errorWrapper.innerHTML = errorMessage
       })
   })
 </script>
 
 {% endcapture %}{% include example.html content=example %}
+
 
 ##### Continua la lettura
 
