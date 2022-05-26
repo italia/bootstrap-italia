@@ -523,7 +523,7 @@ I'Header Nav ha due versioni, una chiara ("light") e una scura ("dark"). Lo stil
 Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
 
 - La classe **`.theme-dark-mobile`** modifica unicamente la versione **mobile** dell'Header Nav, impostando il background di colore primario, testi e link bianchi.
-- La classe **`.theme-light-desktop`** modifica unicamente la versione **desktop** dell'Header Nav impostando un background bianco, testi e links di colore primario. Gli elementi **Dropdown** e **Megamenu** assumono background di colore primario, testi e link bianchi.
+- La classe **`.theme-light-desk`** modifica unicamente la versione **desktop** dell'Header Nav impostando un background bianco, testi e links di colore primario. Gli elementi **Dropdown** e **Megamenu** assumono background di colore primario, testi e link bianchi.
 
 #### Header Nav standard
 
