@@ -11,16 +11,27 @@ Un esempio fra tutti è il valore del colore `$primary` che in **Bootstrap Itali
 
 L'utilizzo del blu `#0066CC` dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di **Bootstrap Italia**, impostando nuovi valori per le proprie necessità.
 
+{% capture callout %}
+Questo colore e le altre tonalità vengono generate a partire dalla terna HSB, pertanto occorre modificare le variabili **primary-h**, **primary-s** e **primary-b**.
+
+```scss
+$primary-h: 0;
+$primary-s: 80;
+$primary-b: 100;
+```
+
+Per avere la corrispondenza tra valore esadecimale del colore e HSB si può utilizzare il portale [rgb.to](https://rgb.to), ad esempio [https://rgb.to/0066CC](https://rgb.to/0066CC).
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
 L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un `link` nella parte `<head>...</head>` del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.
 
 ### Sovrascrivere le variabili colore
 
-1. Installare **Bootstrap Italia** con `yarn/npm: yarn add bootstrap-italia --save`
-2. Installare la versione di **sass** che si preferisce
-3. Creare all'interno del progetto una cartella **scss**
-4. Dentro alla cartella **scss** creare un file di tipo **bootstrap-italia-custom.scss**
-5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))
-6. Importare la libreria **bootstrap-italia.scss** da **node_modules** alla fine del file
+1. Installare **Bootstrap Italia** da NPM o da sorgente
+2. Installare **sass** (https://www.npmjs.com/package/sass)
+3. Creare all'interno della cartella **scss** di progetto un file di tipo **bootstrap-italia-custom.scss**
+4. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))
+5. Importare la libreria **bootstrap-italia.scss** da **node_modules** o da sorgente alla fine del file
 
 {% capture callout %}
 
@@ -39,14 +50,10 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
 
 // modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
 
-// Per l'override del colore $primary della palette in formato HSB:
-
-// Per ottenere il colore #FF3333 (https://rgb.to/ff3333)
+// Per l'override del colore $primary della palette in formato HSB (colore #FF3333 https://rgb.to/ff3333):
 $primary-h: 0;
 $primary-s: 80;
 $primary-b: 100;
-// Nota: per convertire il codice esadecimale di un colore formato HSB
-// è possibile utilizzare ad esempio il sito https://rgb.to/.
 
 // Per l'override della famiglia di caratteri
 $font-family-serif: 'Custom Font', Georgia, serif;
