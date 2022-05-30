@@ -748,11 +748,26 @@ Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe
 Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizionare su un `.modal-dialog`. Queste dimensioni entrano in gioco in determinati breakpoint per evitare barre di scorrimento orizzontali su finestre più strette.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+  <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+  <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
+  <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target=".bd-example-modal-xl">Modale molto grande</button>
 </div>
 
 ```html
+<!-- Small modal -->
+
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
+      ...
+    </div>
+    <div class="modal-footer">...</div>
+  </div>
+</div>
+
 <!-- Large modal -->
 
 <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-lg">Modale grande</button>
@@ -767,20 +782,39 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   </div>
 </div>
 
-<!-- Small modal -->
+<!-- Extra large modal -->
 
-<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-sm">Modale piccola</button>
+<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-xl">Modale molto grande</button>
 
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
-      <h5 class="modal-title" id="mySmallModalLabel">Modale piccola</h5>
+      <h5 class="modal-title" id="myExtraLargeModalLabel">Modale molto grande</h5>
       ...
     </div>
     <div class="modal-footer">...</div>
   </div>
 </div>
 ```
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myExtraLargeModalLabel">Modale molto grande</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
