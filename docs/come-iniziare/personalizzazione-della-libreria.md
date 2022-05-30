@@ -41,7 +41,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 <img class="rounded" src="{{ site.baseurl }}/docs/assets/img/bootstrap-italia-playground.png" width="400" alt="Esempio di pagina personalizzata con Bootstrap Italia Playground">
 </div>
 
-Il **modo più semplice per creare una versione personalizzata di Bootstrap Italia**, è seguire i passi indicati nel repository di esempio **[Bootstrap Italia Playground](https://github.com/italia/bootstrap-italia-playground)**.
+Il **modo più semplice per creare una versione personalizzata di Bootstrap Italia**, è seguire i passi indicati nel repository di esempio **[Bootstrap Italia Playground](https://github.com/italia/bootstrap-italia-playground/tree/main)**.
 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
