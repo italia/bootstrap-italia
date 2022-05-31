@@ -1,6 +1,13 @@
 //mobile
 @use 'sass:math';
 
+:target::before {
+  content: '';
+  display: block;
+  height: var(--sticky-height, 0);
+  margin: calc(var(--sticky-height, 0) * -1) 0 0;
+}
+
 .it-header-wrapper {
   .it-nav-wrapper {
     position: relative;

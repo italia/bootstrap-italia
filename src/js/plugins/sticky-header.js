@@ -93,6 +93,10 @@
         } else if (window.scrollY + scrollToGap < navOffsetTop && isSticky) {
           toggleOff()
         }
+        const target = document.querySelector(':target')
+        if (target) {
+          target.style.setProperty('--sticky-height', elNavbar.offsetHeight + 'px')
+        }
       }
 
       window.addEventListener('scroll', runCheckSticky)
