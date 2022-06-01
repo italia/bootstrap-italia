@@ -1,4 +1,4 @@
 // bootstrap italia version variable
 // useful to check for the current version
 // eslint-disable-next-line no-unused-vars
-var BOOTSTRAP_ITALIA_VERSION = '1.6.2'
+var BOOTSTRAP_ITALIA_VERSION = '1.6.3'
