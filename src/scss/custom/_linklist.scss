@@ -150,11 +150,12 @@
 
             span {
               margin-top: $v-gap * 0.5;
+              margin-left: $v-gap * 3;
             }
 
             .icon {
               position: absolute;
-              left: 0;
+              left: $v-gap * 2;
             }
           }
 
