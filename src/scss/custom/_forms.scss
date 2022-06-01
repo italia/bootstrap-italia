@@ -450,6 +450,10 @@ textarea {
     label {
       font-weight: 600;
     }
+    input.semi-checked:not(:checked) + label::before {
+      right: 19px;
+      left: auto;
+    }
   }
   input.semi-checked:not(:checked) + label::before {
     top: 13px;
