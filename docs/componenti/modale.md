@@ -110,7 +110,7 @@ Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità bottone di chiusra
 
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -224,7 +224,7 @@ Di seguito una modale con un elenco di radio button.
 
 ### Modale con Link List
 
-All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
+All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
 {% capture example %}

@@ -112,8 +112,8 @@ Per l'utilizzo del componente mixed button, è disponibile un esempio integrato 
   <div class="row">
     <div class="col-12">
       <div class="form-check">
-        <input id="checkbox2" type="checkbox" class="semi-checked">
-        <label for="checkbox2">Mixed button attivo</label>
+        <input id="checkbox12" type="checkbox" class="semi-checked">
+        <label for="checkbox12">Mixed button attivo</label>
       </div>
     </div>
   </div>

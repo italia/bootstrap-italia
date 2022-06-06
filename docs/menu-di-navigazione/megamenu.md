@@ -27,7 +27,7 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
 
 ## Megamenu classico
 
-Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/)** per comporre l'elenco di link desiderato
+Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione)** per comporre l'elenco di link desiderato
 
 {% capture example %}
 

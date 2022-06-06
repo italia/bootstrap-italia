@@ -36,7 +36,7 @@ Il componente Hero è contenuto all'interno della section `.it-hero-wrapper` al 
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità sola immagine
 
 Nel caso di un componente hero con sola immagine utilizzare il tag `section` con attributo `aria-label="In evidenza"`.<br>
 
@@ -75,7 +75,7 @@ Esempio di Hero con tutti i componenti testuali.
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità contenuti testuali
 
 Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il livello `h` corretto a seconda del contesto.
 
@@ -132,7 +132,7 @@ Aggiungere alla section `.it-hero-wrapper` la classi:
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità e contrasto
 
 Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispetto al testo.
 

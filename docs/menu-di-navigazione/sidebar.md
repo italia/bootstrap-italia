@@ -14,7 +14,7 @@ La sidebar semplice può contenere:
 - Lista di link primaria
 - Lista di link secondaria
 
-Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la [Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste-di-link/).
+Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la [Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
 
 {% capture example %}
 
