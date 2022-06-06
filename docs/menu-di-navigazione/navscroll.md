@@ -22,7 +22,7 @@ toc: true
 
 ## Layout della Navscroll
 
-Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` dell'attributo `data-bs-navscroll`.  
+Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
 Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine viewport.
 
 Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
