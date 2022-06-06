@@ -97,6 +97,8 @@ textarea {
   box-shadow: none;
   transition: none;
   font-weight: 700;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   &::placeholder {
     color: $neutral-1-a7;
     font-weight: 600;
