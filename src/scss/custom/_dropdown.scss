@@ -238,7 +238,8 @@
 .dropdown-item {
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &.active {
     background-color: transparent;
   }
 }
