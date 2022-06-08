@@ -368,4 +368,4 @@ Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navig
 Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
 - src/js/plugins/accordion.js
 
-Seguendo l'apporccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `base-component` di Bootstrap. Utilizza inoltre `event-handler` e `selector-engine`.
+Seguendo l'approccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `BaseComponent` di Bootstrap.
