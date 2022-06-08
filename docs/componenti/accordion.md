@@ -358,3 +358,14 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+# Implementazione
+
+Il componente Accordion si basa su quello nativo di [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/accordion/){:target="\_blank"}, a sua volta basato sul componente [Collapse](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/collapse/){:target="\_blank"}.
+
+Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (su/giù) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
+
+Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
+- src/js/plugins/accordion.js
+
+Seguendo l'apporccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `base-component` di Bootstrap. Utilizza inoltre `event-handler` e `selector-engine`.
