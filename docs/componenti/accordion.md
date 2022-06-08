@@ -366,6 +366,6 @@ Il componente Accordion si basa su quello nativo di [Bootstrap {{ site.bootstrap
 Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (su/giù) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
 
 Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
-- src/js/plugins/accordion.js
+- [src/js/plugins/accordion.js](https://github.com/italia/bootstrap-italia-next/blob/development/src/js/plugins/accordion.js){:target="\_blank"}
 
 Seguendo l'approccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `BaseComponent` di Bootstrap.
