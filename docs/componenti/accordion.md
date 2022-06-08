@@ -30,7 +30,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
 
 <div class="accordion" id="collapseExample">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1c">
+    <h2 class="accordion-header no_toc" id="heading1c">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1c" aria-expanded="true" aria-controls="collapse1c">
         Elemento Richiudibile #1
       </button>
@@ -42,7 +42,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2c">
+    <h2 class="accordion-header no_toc" id="heading2c">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2c" aria-expanded="false" aria-controls="collapse2c">
         Elemento Richiudibile #2
       </button>
@@ -54,7 +54,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3c">
+    <h2 class="accordion-header no_toc" id="heading3c">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3c" aria-expanded="false" aria-controls="collapse3c">
         Elemento Richiudibile #3
       </button>
@@ -89,7 +89,7 @@ Per ottenere un gruppo di elementi mutuamente richiudibili (o _accordion_), è s
 
 <div class="accordion" id="accordionExample1">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1">
+    <h2 class="accordion-header no_toc" id="heading1">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
         Elemento Accordion #1
       </button>
@@ -101,7 +101,7 @@ Per ottenere un gruppo di elementi mutuamente richiudibili (o _accordion_), è s
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2">
+    <h2 class="accordion-header no_toc" id="heading2">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
         Elemento Accordion #2
       </button>
@@ -113,7 +113,7 @@ Per ottenere un gruppo di elementi mutuamente richiudibili (o _accordion_), è s
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3">
+    <h2 class="accordion-header no_toc" id="heading3">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
         Elemento Accordion #3
       </button>
@@ -142,7 +142,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
 
 <div class="accordion" id="accordionExample2">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1a">
+    <h2 class="accordion-header no_toc" id="heading1a">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
         Elemento Accordion #1
       </button>
@@ -151,7 +151,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
       <div class="accordion-body">
         <div class="accordion" id="accordionExample2N">
           <div class="accordion-item">
-            <h3 class="accordion-header" id="heading1n">
+            <h3 class="accordion-header no_toc" id="heading1n">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1n" aria-expanded="true" aria-controls="collapse1n">
                 Elemento Accordion annidato #1
               </button>
@@ -163,7 +163,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
             </div>
           </div>
           <div class="accordion-item">
-            <h3 class="accordion-header" id="heading2n">
+            <h3 class="accordion-header no_toc" id="heading2n">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2n" aria-expanded="false" aria-controls="collapse2n">
                 Elemento Accordion annidato #2
               </button>
@@ -175,7 +175,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
             </div>
           </div>
           <div class="accordion-item">
-            <h3 class="accordion-header" id="heading3n">
+            <h3 class="accordion-header no_toc" id="heading3n">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3n" aria-expanded="false" aria-controls="collapse3n">
                 Elemento Accordion annidato #3
               </button>
@@ -191,7 +191,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2a">
+    <h2 class="accordion-header no_toc" id="heading2a">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2a" aria-expanded="false" aria-controls="collapse2a">
         Elemento Accordion #2
       </button>
@@ -203,7 +203,7 @@ Utilizzare questo approccio solo quando strettamente necessario: dal punto di vi
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3a">
+    <h2 class="accordion-header no_toc" id="heading3a">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3a" aria-expanded="false" aria-controls="collapse3a">
         Elemento Accordion #3
       </button>
@@ -229,7 +229,7 @@ Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere
 
 <div class="accordion accordion-background-active" id="accordionExampleHa">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1b">
+    <h2 class="accordion-header no_toc" id="heading1b">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1b" aria-expanded="true" aria-controls="collapse1b">
         Elemento Accordion #1
       </button>
@@ -241,7 +241,7 @@ Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2b">
+    <h2 class="accordion-header no_toc" id="heading2b">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2b" aria-expanded="false" aria-controls="collapse2b">
         Elemento Accordion #2
       </button>
@@ -253,7 +253,7 @@ Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3b">
+    <h2 class="accordion-header no_toc" id="heading3b">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3b" aria-expanded="false" aria-controls="collapse3b">
         Elemento Accordion #3
       </button>
@@ -275,7 +275,7 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
 
 <div class="accordion accordion-background-hover" id="accordionExampleHh">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1d">
+    <h2 class="accordion-header no_toc" id="heading1d">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1d" aria-expanded="true" aria-controls="collapse1d">
         Elemento Accordion #1
       </button>
@@ -287,7 +287,7 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2d">
+    <h2 class="accordion-header no_toc" id="heading2d">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2d" aria-expanded="false" aria-controls="collapse2d">
         Elemento Accordion #2
       </button>
@@ -299,7 +299,7 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3d">
+    <h2 class="accordion-header no_toc" id="heading3d">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3d" aria-expanded="false" aria-controls="collapse3d">
         Elemento Accordion #3
       </button>
@@ -321,7 +321,7 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
 
 <div class="accordion accordion-left-icon" id="accordionExampleLft">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading1l">
+    <h2 class="accordion-header no_toc" id="heading1l">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1l" aria-expanded="true" aria-controls="collapse1l">
         Elemento Accordion #1
       </button>
@@ -333,7 +333,7 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading2l">
+    <h2 class="accordion-header no_toc" id="heading2l">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2l" aria-expanded="false" aria-controls="collapse2l">
         Elemento Accordion #2
       </button>
@@ -345,7 +345,7 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading3l">
+    <h2 class="accordion-header no_toc" id="heading3l">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3l" aria-expanded="false" aria-controls="collapse3l">
         Elemento Accordion #3
       </button>
