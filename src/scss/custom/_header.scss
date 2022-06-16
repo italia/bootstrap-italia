@@ -4,6 +4,7 @@
 .it-header-wrapper {
   .it-nav-wrapper {
     position: relative;
+    z-index: 2;
     // se ha un menu
     .it-brand-wrapper {
       padding-left: $v-gap * 4;
