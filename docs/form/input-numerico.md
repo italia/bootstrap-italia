@@ -4,7 +4,7 @@ group: form
 toc: true
 
 title: Input Numerico
-description: Campi input con bottoni per incrementare/decrementare valori numerici.
+description: Campi input con pulsanti per incrementare/decrementare valori numerici.
 ---
 
 L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`.
@@ -49,7 +49,7 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
 
 ### Limiti e Step
 
-Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui bottoni.
+Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui pulsanti.
 
 {% capture example %}
 
@@ -112,7 +112,7 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 ### Disabilitato
 
 Per disabilitare un Input number, aggiungere la classe `.disabled` al wrapper `.input-number`.
-Aggiungere anche l'attributo `disabled` al campo e ai bottoni.
+Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
 
 {% capture example %}
 

@@ -131,9 +131,9 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 
 ## Navigazione degli step
 
-I bottoni "Avanti" e "Indietro" dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle web app e sono dotati di classi `.steppers-btn-prev` e `.steppers-btn-next`.
+I pulsanti "Avanti" e "Indietro" dovranno essere utilizzati per implementare la logica di navigazione degli Steppers nelle web app e sono dotati di classi `.steppers-btn-prev` e `.steppers-btn-next`.
 
-Il passaggio da uno step all'altro attraverso i bottoni contenuti in `.steppers-nav` determina un cambiamento del contenuto presente in `.steppers-content`.
+Il passaggio da uno step all'altro attraverso i pulsanti contenuti in `.steppers-nav` determina un cambiamento del contenuto presente in `.steppers-content`.
 
 {% capture callout %}
 
@@ -173,7 +173,7 @@ Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi so
 
 #### Progress bar
 
-La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `.steppers-progress` situato fra i bottoni "Indietro" ed "Avanti".
+La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `.steppers-progress` situato fra i pulsanti "Indietro" ed "Avanti".
 
 {% capture example %}
 
@@ -197,7 +197,7 @@ La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `
 
 #### Pallini
 
-I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato fra i bottoni "Indietro" e "Avanti".
+I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato fra i pulsanti "Indietro" e "Avanti".
 
 Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe `.visually-hidden `riservato agli screen reader con un testo indicante il numero di step e lo stato.
 
@@ -224,9 +224,9 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Bottone Salva
+#### Pulsante Salva
 
-Su dispositivi mobili è possibile inserire un terzo bottone "Salva" di aspetto differente con classe `.steppers-btn-save` fra i bottoni "Indietro" e "Avanti".
+Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto differente con classe `.steppers-btn-save` fra i pulsanti "Indietro" e "Avanti".
 
 {% capture example %}
 
@@ -244,9 +244,9 @@ Su dispositivi mobili è possibile inserire un terzo bottone "Salva" di aspetto 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Bottone conferma
+#### Pulsante conferma
 
-Su dispositivi mobili è possibile sostituire il bottone "Avanti" con un bottone "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
+Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsante "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
 
 {% capture example %}
 
@@ -375,7 +375,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Bottone Salva
+#### Pulsante Salva
 
 {% capture example %}
 
@@ -393,7 +393,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Bottone conferma
+#### Pulsante conferma
 
 {% capture example %}
 

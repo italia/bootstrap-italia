@@ -24,7 +24,7 @@ Cose da sapere quando si utilizza il plugin popover:
 
 - I popover sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I `title` e i `content` con valori vuoti non mostreranno mai popover.
-- Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
+- Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di pulsanti, etc).
 - Attivare i popover su elementi nascosti non funzionerà.
 - I popover per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
 - Quanto attivato da ancore che si estendono su più linee, i popover verranno centrati tra la larghezza complessiva delle ancore. Usa `white-space: nowrap;` sugli elementi `<a>` per evitare questo comportamento.
@@ -153,7 +153,7 @@ Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sini
 
 ### Titolo con icona e link
 
-È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-bs-html="true"` al bottone che apre il Popover e disabilitare la funzione di sanitize attraverso l'opzione `{ sanitize: false }`.
+È possibile aggiungere un'icona in testa al titolo ed un link in coda al contenuto. In questo casi è necessario aggiungere l'attributo `data-bs-html="true"` al pulsante che apre il Popover e disabilitare la funzione di sanitize attraverso l'opzione `{ sanitize: false }`.
 
 L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e proprio titolo.
 

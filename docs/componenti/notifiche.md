@@ -115,7 +115,7 @@ Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>
 
 ## Eliminabili
 
-Le notifiche eliminabili non vengono nascoste dopo un intervallo di tempo ma vengono chiuse solo quando si clicca sul rispettivo bottone di chiusura.
+Le notifiche eliminabili non vengono nascoste dopo un intervallo di tempo ma vengono chiuse solo quando si clicca sul rispettivo pulsante di chiusura.
 
 Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportamento.
 

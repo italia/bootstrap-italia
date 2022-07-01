@@ -94,7 +94,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Input con icona o bottoni
+### Input con icona o pulsanti
 
 {% capture example %}
 
@@ -121,7 +121,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
       <div class="input-group-prepend">
         <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
       </div>
-      <label for="input-group-3">Con Etichetta e bottone "primary"</label>
+      <label for="input-group-3">Con Etichetta e pulsante "primary"</label>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
       <div class="input-group-append">
         <button class="btn btn-primary" type="button" id="button-3">Invio</button>

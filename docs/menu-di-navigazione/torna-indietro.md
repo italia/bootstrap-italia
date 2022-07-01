@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Torna indietro
-description: Consente agli utenti di avere un link o bottone con un'azione equivalente al "torna indietro" del browser.
+description: Consente agli utenti di avere un link o pulsante con un'azione equivalente al "torna indietro" del browser.
 group: menu-di-navigazione
 toc: true
 ---
 
-Aggiungendo l'attributo `data-bs-toggle="historyback"` a qualsiasi link o bottone è possibile ottenere lo stesso comportamento del tasto "Indietro" del browser: retrocedere di un passo nella cronologia di navigazione.
+Aggiungendo l'attributo `data-bs-toggle="historyback"` a qualsiasi link o pulsante è possibile ottenere lo stesso comportamento del tasto "Indietro" del browser: retrocedere di un passo nella cronologia di navigazione.
 
 ## Link
 
@@ -16,9 +16,9 @@ Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'at
 <a href="#" class="go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-primary me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</a>
 {% endcapture %}{% include example.html content=example %}
 
-## Bottoni
+## Pulsanti
 
-Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessario.
+Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necessario.
 
 {% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</button>
@@ -28,9 +28,9 @@ Nel caso dell'utilizzo di un bottone l'accorgimento sopraindicato non è necessa
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg> Livello superiore</button>
 {% endcapture %}{% include example.html content=example %}
 
-### Bottoni con sola icona
+### Pulsanti con sola icona
 
-È possibile creare bottoni senza testo dotati di sola icona avendo cura di includere il testo alternativo per gli screen reader in un tag `<span>` con classe `.visually-hidden`.
+È possibile creare pulsanti senza testo dotati di sola icona avendo cura di includere il testo alternativo per gli screen reader in un tag `<span>` con classe `.visually-hidden`.
 
 {% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg><span class="visually-hidden">Torna indietro</span></button>

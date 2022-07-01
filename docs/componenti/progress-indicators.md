@@ -206,27 +206,27 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Bottone con Progress Bar
+### Pulsante con Progress Bar
 
-La Progress Bar può essere integrata in un bottone Primario o Secondario con classe aggiuntiva `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
+La Progress Bar può essere integrata in un pulsante Primario o Secondario con classe aggiuntiva `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
 
 {% capture example %}
 
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
-      <p><strong>Bottone primario</strong></p>
+      <p><strong>Pulsante primario</strong></p>
       <button type="button" class="btn btn-primary btn-progress disabled" disabled>
-        Label bottone <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>
       </button>
     </div>
     <div class="col-12 col-sm-6">
-      <p><strong>Bottone secondario</strong></p>
+      <p><strong>Pulsante secondario</strong></p>
       <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
-        Label bottone <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>

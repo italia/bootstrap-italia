@@ -6,7 +6,7 @@ group: componenti
 toc: true
 ---
 
-Una chip è composta da un tag `div` con classe `.chip`. Contiene una label e, opzionalmente, un bottone di chiusura/rimozione, un'icona o un avatar.
+Una chip è composta da un tag `div` con classe `.chip`. Contiene una label e, opzionalmente, un pulsante di chiusura/rimozione, un'icona o un avatar.
 
 La versione con sola label centra il testo al suo interno e richiede una classe aggiuntiva `.chip-simple`.
 

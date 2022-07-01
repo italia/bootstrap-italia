@@ -8,7 +8,7 @@ toc: true
 
 ## Esempi
 
-Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un bottone con attributo `data-bs-dismiss="alert"`.
+Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un pulsante con attributo `data-bs-dismiss="alert"`.
 
 {% capture example %}
 {% assign colors = "info,success,warning,danger" | split: ','%}
@@ -51,7 +51,7 @@ I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazio
 
 ### Chiusura
 
-È possibile eliminare qualsiasi avviso mediante un bottone di chiusura:
+È possibile eliminare qualsiasi avviso mediante un pulsante di chiusura:
 
 - Inserisci il pulsante di chiusura e la classe `.alert-dismissible`, verrà così aggiunto un ulteriore padding alla destra dell'avviso e posizionerà correttamente il pulsante `.btn-close`.
 - Sul pulsante di chiusura, aggiungi l'attributo `data-bs-dismiss="alert"`, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l'elemento `<button>` per un comportamento corretto su tutti i dispositivi.
@@ -65,7 +65,7 @@ L'aria label che assegna il nome accessibile all'icona di chiusura, che nell'ese
 Ad esempio "chiudi nota", "chiudi", "nascondi", ecc.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:
+Clicca sul pulsante di chiusura per vedere la funzionalità di rimozione alert in azione:
 
 {% capture example %}
 

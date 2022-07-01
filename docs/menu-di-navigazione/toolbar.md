@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Toolbar
-description: Elemento contenitore di link, bottoni o dropdown.
+description: Elemento contenitore di link, pulsanti o dropdown.
 group: menu-di-navigazione
 toc: true
 ---
@@ -17,7 +17,7 @@ toc: true
   }
 </style>
 
-L'elemento Toolbar è un contenitore di link, bottoni o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.
+L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.
 
 ## Dimensioni
 
@@ -382,7 +382,7 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
 
 ## Toolbar con Dropdown
 
-All'interno della Toolbar è possibile implementare dei bottoni dropdown con relativo sottomenù.
+All'interno della Toolbar è possibile implementare dei pulsanti dropdown con relativo sottomenù.
 
 ### Grande con Dropdown
 

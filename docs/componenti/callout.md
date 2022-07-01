@@ -167,7 +167,7 @@ Il Callout di tipo Approfondimento, ottenibile aggiungendo la classe `.callout-m
 
 Come da esempio, è possibile aggiungere ulteriore testo all'interno di un <a href="../../componenti/collapse/">Collapse</a> standard presente al fondo del contenuto.
 
-Il bottone di controllo del Collapse può essere affiancato da un link per download di PDF o altri tipi di documento, con relativa icona.
+Il pulsante di controllo del Collapse può essere affiancato da un link per download di PDF o altri tipi di documento, con relativa icona.
 
 {% capture example %}
 

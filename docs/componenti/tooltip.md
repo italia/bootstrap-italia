@@ -15,7 +15,7 @@ I tooltip sono suggerimenti personalizzati con CSS e JavaScript, utilizzano CSS3
 I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
-bottoni, o elementi di form).
+pulsanti, o elementi di form).
 
 Sebbene arbitrariamente gli elementi HTML (come `<span>`) possano essere resi attivabili tramite l'attributo `tabindex="0"`,
 ciò aggiungerà interruzioni di tabulazioni potenzialmente dannose per gli utenti che usano la tastiera per navigare.
@@ -33,7 +33,7 @@ Cose da sapere quando usi il plugin tooltip:
   bootstrap-italia.js o usare la versione _bundle_ che contiene già Popper.js.
 - I tooltip sono opt-in per ragioni di performance, quindi **devi inizializzarli tu stesso** con il codice che trovi di seguito.
 - I tooltip con titoli vuoti non saranno mai visualizzati.
-- Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di bottoni, etc).
+- Specifica `container: 'body'` per evitare problemi di rendering in componenti più complessi (come nei gruppi di input, gruppi di pulsanti, etc).
 - Attivare i tooltip su elementi nascosti non funzionerà.
 - I tooltip per gli elementi `.disabled` o `disabled` devono essere attivati da un elemento contenitore.
 - Quando attivati da collegamenti ipertestuali che si estendono su più righe, i tooltip verranno centrati. Usa `white-space: nowrap;`sui tuoi `<a>` per evitare questo comportamento.
@@ -77,7 +77,7 @@ Passa il mouse sopra i link sottostanti per visualizzare i tooltip:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Passa il mouse sopra i bottoni sottostanti per vedere le quattro direzioni dei tooltip: sopra, destra, sotto, e sinistra.
+Passa il mouse sopra i pulsanti sottostanti per vedere le quattro direzioni dei tooltip: sopra, destra, sotto, e sinistra.
 
 {% capture example %}
 

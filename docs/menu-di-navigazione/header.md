@@ -20,7 +20,7 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 
 - Un cosiddetto **Slim Header**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
 - Un **Header Centrale** che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
-- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico bottone di tipo "burger menu"
+- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico pulsante di tipo "burger menu"
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
 
 {% capture callout %}
@@ -96,9 +96,9 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Zona destra con bottone full-responsive
+#### Zona destra con pulsante full-responsive
 
-Per trasformare il bottone di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo _full-responsive_ è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
+Per trasformare il pulsante di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo _full-responsive_ è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/pulsante.
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 

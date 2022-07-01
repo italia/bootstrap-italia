@@ -170,7 +170,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 
 Un dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.
 
-I bottoni vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo bottone aggiungere la classe `.single-button`.
+I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo pulsante aggiungere la classe `.single-button`.
 
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer3">

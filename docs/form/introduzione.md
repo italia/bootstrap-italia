@@ -233,7 +233,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
           </div>
         </div>
       </div>
-    <button class="btn btn-primary mt-3">Bottone disabilitato</button>
+    <button class="btn btn-primary mt-3">Pulsante disabilitato</button>
   </fieldset>
 </div>
 {% endcapture %}{% include example.html content=example %}

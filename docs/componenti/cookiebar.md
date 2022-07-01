@@ -18,7 +18,7 @@ Bootstrap Italia ha predisposto un codice HTML da copiare all'interno delle prop
 
 Esso può essere personalizzato nel testo a seconda delle necessità, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione JavaScript che gestisce la visualizzazione della Cookiebar.
 
-Il bottone permette la chiusura della Cookiebar attraverso il _data attribute_ `data-bs-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
+Il pulsante permette la chiusura della Cookiebar attraverso il _data attribute_ `data-bs-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
 
 {% capture callout %}
 Per le visualizzazione a schermo intero potete guardare la pagina di esempio: **[Esempio Cookiebar]({{ site.baseurl }}/docs/esempi/cookiebar/){:target="\_blank"}**.

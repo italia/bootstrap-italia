@@ -104,13 +104,13 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
 </div>
 ```
 
-### Modale con bottone di chiusura
+### Modale con pulsante di chiusura
 
-Per chiudere la modale, si può utilizzare un bottone con classe `.btn-close`.
+Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 
 {% capture callout %}
 
-#### Accessibilità bottone di chiusra
+#### Accessibilità pulsante di chiusra
 
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -140,7 +140,7 @@ Esempio completo:
                </button>
             </div>
             <div class="modal-body">
-               <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
+               <p>In questo caso vengono forniti un pulsante di conferma e uno di chiusura della modale.</p>
             </div>
             <div class="modal-footer">
                <button class="btn btn-primary btn-sm" type="button">Ok</button>
@@ -169,7 +169,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
           <h2 class="modal-title h5 no_toc" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h2>
         </div>
         <div class="modal-body">
-          <p>In questo caso viene fornito solo un bottone di conferma della modale.</p>
+          <p>In questo caso viene fornito solo un pulsante di conferma della modale.</p>
         </div>
         <div class="modal-footer">
           <button class="btn btn-primary btn-sm" type="button">Ok</button>
@@ -549,7 +549,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
             </button>
          </div>
          <div class="modal-body">
-            <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
+            <p>In questo caso vengono forniti un pulsante di conferma e uno di chiusura della modale.</p>
          </div>
          <div class="modal-footer">
             <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
@@ -579,7 +579,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
         </button>
       </div>
       <div class="modal-body">
-        <p>In questo caso vengono forniti un bottone di conferma e uno di chiusura della modale.</p>
+        <p>In questo caso vengono forniti un pulsante di conferma e uno di chiusura della modale.</p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>

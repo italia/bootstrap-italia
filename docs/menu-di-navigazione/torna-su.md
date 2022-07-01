@@ -6,7 +6,7 @@ group: menu-di-navigazione
 toc: true
 ---
 
-Per aggiungere un bottone che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-bs-toggle="backtotop"` e con una classe `.back-to-top` che lo posiziona nella parte inferiore destra nella pagina.
+Per aggiungere un pulsante che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-bs-toggle="backtotop"` e con una classe `.back-to-top` che lo posiziona nella parte inferiore destra nella pagina.
 Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
 <style>
@@ -163,11 +163,11 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   <tbody>
     <tr>
       <td>show</td>
-      <td>mostra il bottone</td>
+      <td>mostra il pulsante</td>
     </tr>
     <tr>
       <td>hide</td>
-      <td>nasconde nasconde il bottone</td>
+      <td>nasconde nasconde il pulsante</td>
     </tr>
     <tr>
       <td>scrollToTop</td>

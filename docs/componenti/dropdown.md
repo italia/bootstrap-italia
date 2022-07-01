@@ -27,7 +27,7 @@ Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle in
 
 ### Dropdown button
 
-Ogni singolo `.btn` può essere trasformato in un bottone per l'apertura di dropdown con del semplice markdown HTML.
+Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
 
 {% capture example %}
@@ -51,7 +51,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 
 ### Dropdown button varianti
 
-Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componenti/bottoni/#varianti-di-colore) già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
+Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componenti/buttons/#varianti-di-colore) già disponibili per i pulsanti. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
 {% capture example %}
 
@@ -196,7 +196,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 
 ### Dropdown menu
 
-Le voci del menu che viene aperto al click sul bottone possono essere personalizzate, così come il menù stesso.
+Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menù stesso.
 
 #### Menu voci attive
 

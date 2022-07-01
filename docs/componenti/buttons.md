@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: Bottoni
-description: Bootstrap Italia definisce alcuni stili per i bottoni da utilizzare a seconda delle necessità.
+title: Buttons
+description: Bootstrap Italia definisce alcuni stili per i pulsanti da utilizzare a seconda delle necessità.
 group: componenti
 toc: true
 ---
 
 ## Utilizzo
 
-Per aggiungere un bottone personalizzato, è sufficiente utilizzare la classe `.btn`, associandola a classi di tipo `.btn-` per applicarne le varianti di stile, dimensione, ecc.
+Per aggiungere un pulsante personalizzato, è sufficiente utilizzare la classe `.btn`, associandola a classi di tipo `.btn-` per applicarne le varianti di stile, dimensione, ecc.
 
 {% capture example %}
 <button type="button" class="btn">Link</button>
 {% endcapture %}{% include example.html content=example %}
 
-Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i bottoni anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
+Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
 {% capture callout %}
 
@@ -22,7 +22,7 @@ Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<butto
 
 La classe `.btn` permette di conferire visivamente agli elementi html l'aspetto di "pulsante". Anche elementi `<a>` o `<span>` possono trasformarsi visivamente in pulsanti, provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
 
-Dove il click sul bottone non genera un cambio di pagina utilizzare esclusivamente il tag `<button>`.
+Dove il click sul pulsante non genera un cambio di pagina utilizzare esclusivamente il tag `<button>`.
 
 Quando non fosse possibile, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -53,7 +53,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 #### Note sullo stato disabilitato
 
 - I tag `<a>` non supportano l'attributo `disabled`, per cui è necessario usare la classe `.disabled` per farli apparire visivamente disabilitati, e in modo da disabilitare `pointer-events` su di essi sui browser che lo supportano.
-- I bottoni disabilitati includeranno l'attributo `aria-disabled="true"` per indicare lo stato dell'elemento alle tecnologie assistive.
+- I pulsanti disabilitati includeranno l'attributo `aria-disabled="true"` per indicare lo stato dell'elemento alle tecnologie assistive.
 
 {% capture example %}
 <a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
@@ -80,9 +80,9 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-### Bottoni con icona
+### Pulsanti con icona
 
-È possibile aggiungere un'icona personalizzata al bottone con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
+È possibile aggiungere un'icona personalizzata al pulsante con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
@@ -176,7 +176,7 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 
 ### Varianti di dimensione
 
-Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente utilizzare le classi `.btn-lg`, `.btn-sm` e `.btn-xs`.
+Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente utilizzare le classi `.btn-lg`, `.btn-sm` e `.btn-xs`.
 
 #### Large
 
@@ -201,7 +201,7 @@ Per ottenere bottoni di dimensione più grande o più piccola, è sufficiente ut
 
 #### A tutta larghezza
 
-Per creare bottoni o gruppi di bottoni a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
+Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
 
 {% capture example %}
 
@@ -223,4 +223,4 @@ In questo caso è stata implemenentata una variante responsive che visualizza i 
 
 ## Approfondimento
 
-Per ulteriori informazioni sui bottoni si rimanda alla sezione [buttons](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/buttons/) del sito di Bootstrap.
+Per ulteriori informazioni sui pulsanti si rimanda alla sezione [buttons](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/buttons/) del sito di Bootstrap.

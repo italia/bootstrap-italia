@@ -74,7 +74,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <button className="btn btn-primary">Bottone di esempio</button>
+      <button className="btn btn-primary">Pulsante di esempio</button>
     </div>
   )
 }
@@ -82,4 +82,4 @@ function App() {
 export default App
 ```
 
-In questo semplice e veloce esempio, il bottone con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il default blu.
+In questo semplice e veloce esempio, il pulsante con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il default blu.

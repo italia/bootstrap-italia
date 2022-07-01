@@ -12,9 +12,9 @@ Il componente [Accordion]({{site.baseurl}}/docs/componenti/accordion/) è basato
 
 ## Come funziona
 
-Puoi usare un bottone con l'attributo `data-bs-target` o in alternativa un link con l'attributo `href`. In entrambi i casi, l'attributo `data-bs-toggle="collapse"` è obbligatorio.
+Puoi usare un pulsante con l'attributo `data-bs-target` o in alternativa un link con l'attributo `href`. In entrambi i casi, l'attributo `data-bs-toggle="collapse"` è obbligatorio.
 
-L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudibile:
+L'interazione con i pulsanti cambierà le seguenti classi dell'elemento richiudibile:
 
 - `.collapse` nasconde il contenuto
 - `.collapsing` viene applicata durante la transizione
@@ -27,7 +27,7 @@ L'interazione con i bottoni cambierà le seguenti classi dell'elemento richiudib
     Link con href
   </a>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Bottone con data-bs-target
+    Pulsante con data-bs-target
   </button>
 </p>
 <div class="collapse" id="collapseExample">
@@ -71,7 +71,7 @@ Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognun
 
 #### Accessibilità
 
-Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento richiudibile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento richiudibile). Se il componente HTML dell'elemento di controllo non è un bottone (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
+Assicurati di aggiungere `aria-expanded` all'elemento di controllo. Questo attributo trasmette esplicitamente lo stato corrente dell'elemento comprimibile legato al controllo a screen reader e tecnologie assistive simili. Se l'elemento comprimibile è chiuso in modo predefinito, l'attributo sull'elemento di controllo dovrebbe avere il valore `aria-expanded="false"`. Se imposti l'elemento comprimibile aperto in modo predefinito utilizzando la classe `show`, sul controllo invece imposta `aria-expanded="true"`. Il plugin attiva/disattiva automaticamente questo attributo sul controllo in base all'apertura o alla chiusura dell'elemento richiudibile (via JavaScript, o perché l'utente ha attivato un altro elemento di controllo anch'esso legato allo stesso elemento richiudibile). Se il componente HTML dell'elemento di controllo non è un pulsante (ad esempio un `<a>` o `<div>`), l'attributo `role="button"` dovrebbe essere aggiunto al componente.
 
 Inoltre, se il tuo elemento di controllo si riferisce a un singolo elemento richiudibile – cioè l'attributo `data-bs-target` sta puntando a un selettore `id` – potresti aggiungere un ulteriore attributo `aria-controls` all'elemento di controllo, contenente l'`id` dell'elemento richiudibile. I moderni screen reader e tecnologie assistive simili fanno uso di questo attributo per fornire agli utenti scorciatoie aggiuntive per navigare direttamente all'elemento richiudibile stesso.
 

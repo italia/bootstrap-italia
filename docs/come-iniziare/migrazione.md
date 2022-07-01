@@ -116,22 +116,22 @@ Tabelle ridisegnate e ricostruite con variabili CSS per un maggior controllo sul
 - <span class="bg-danger text-white px-2">Breaking</span> Eliminate tutte le classi colore `.badge-*` a favore delle utilities colore (es: usare `.bg-primary` invece di `.badge-primary`).
 - <span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe `.badge-pill`, usare `.rounded-pill` al suo posto.
 
-### Bottoni
+### Buttons
 
-- <span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe `.btn-block`. Per creare bottoni o gruppi di bottoni a tutta larghezza, come i block buttons di Bootstrap 4, utilizzare un mix delle utilities display e gap. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico block button.
-- I bottoni disabilitati ora hanno la proprietà `pointer-events: none;`.
+- <span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe `.btn-block`. Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i block buttons di Bootstrap 4, utilizzare un mix delle utilities display e gap. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico block button.
+- I pulsanti disabilitati ora hanno la proprietà `pointer-events: none;`.
 
 ### Card
 
 - <span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe `.card-deck` a favore delle griglie.
 
-### Bottone di chiusura
+### Pulsante di chiusura
 
 - <span class="bg-danger text-white px-2">Breaking</span> La classe `.close` è stata rinominata in un meno generico `.btn-close`.
 
 ### Dropdown
 
-- <span class="bg-danger text-white px-2">Breaking</span> Tutti gli eventi del dropdown sono ora triggerati sul bottone di toggle dello stesso e passati tramite _bubble up_ all'elemento padre.
+- <span class="bg-danger text-white px-2">Breaking</span> Tutti gli eventi del dropdown sono ora triggerati sul pulsante di toggle dello stesso e passati tramite _bubble up_ all'elemento padre.
 
 ### Popover
 
