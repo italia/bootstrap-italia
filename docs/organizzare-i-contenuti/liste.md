@@ -323,6 +323,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 </div>
 {% endcapture %}{% include example.html content=example %}
 -->
+
 ## Altre variazioni
 
 ### Con metadata
@@ -375,7 +376,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 
 <!--### Con immagine e toggles
 
-Gli elementi a destra e sinistra del testo possono essere combinati. Di seguito un esempio con immagine e toggle.  
+Gli elementi a destra e sinistra del testo possono essere combinati. Di seguito un esempio con immagine e toggle.
 Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo `data-bs-list-checkbox`.
 
 {% capture example %}
@@ -425,6 +426,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 </div>
 {% endcapture %}{% include example.html content=example %}
 -->
+
 ### Con testo aggiuntivo, azioni multiple e metadata
 
 Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
@@ -539,7 +541,7 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
 
 <!--### Con testo aggiuntivo e checkbox.
 
-L'elemento `.form-check` con all'interno il relativo input, precede l'elemento `.it-right-zone` che contiene il testo.  
+L'elemento `.form-check` con all'interno il relativo input, precede l'elemento `.it-right-zone` che contiene il testo.
 Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere l'attributo `data-bs-list-checkbox`.
 
 {% capture example %}
@@ -580,6 +582,7 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
 </div>
 {% endcapture %}{% include example.html content=example %}
 -->
+
 ## Liste per menù di navigazione
 
 Le liste per menù di navigazione, costituite da tag `<ul>` con classe `.link-list` all'interno di un wrapper con classe `.link-list-wrapper`, vengono utilizzate per creare le voci dei menù [Dropdown]({{site.baseurl}}/docs/componenti/dropdown/), [Megamenu]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/), [Sidebar]({{site.baseurl}}/docs/menu-di-navigazione/sidebar/) e [Navscroll]({{site.baseurl}}/docs/menu-di-navigazione/navscroll/).

@@ -163,7 +163,6 @@ Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-
 ## Disabilitazione di campi
 
 Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni dell'utente e renderlo più chiaro.
@@ -397,7 +396,6 @@ Di seguito un esempio di form validato con Just Validate.
 </script>
 
 {% endcapture %}{% include example.html content=example %}
-
 
 ##### Continua la lettura
 

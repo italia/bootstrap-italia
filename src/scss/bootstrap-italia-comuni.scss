@@ -1,0 +1,206 @@
+// color custom variables
+
+/*figma color
+primary: #007A52;
+primary dark: #00402B;
+primary light: #56D6AB;
+primary lighter: #F0F8F5;
+*/
+
+// primary #007A52
+$primary-h: 160;
+$primary-s: 100;
+$primary-b: 48;
+
+//buttons custom vars
+
+// bootstrap italia version variable
+// useful to check for the current version
+@import 'custom/version';
+
+// funzioni e variabili colore
+@import 'functions';
+@import 'utilities/colors_vars';
+
+// color custom variables
+$header-center-bg-color: $primary;
+$header-slim-bg-color: #00402b;
+
+$section-header-background-color: $primary-a10;
+$section-user-header-background-color: #f0f8f5;
+
+$card-link-color: $primary;
+
+$btn-comuni-primary-hover: #fff;
+
+$footer-comuni-bg-color: #202a2e;
+
+$link-list-comuni-color: #455a64;
+$link-list-hover-color: $primary;
+
+$card-comuni-bg-dark: #2c2c2c;
+
+//variables
+@import 'variables';
+
+//classi colore
+@import 'utilities/colors';
+
+// BS5 Configuration
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+//@import 'node_modules/bootstrap/scss/maps';
+@import 'node_modules/bootstrap/scss/mixins';
+// mixins custom
+@import 'custom/mixins/buttons';
+@import 'custom/mixins/text-emphasis';
+//
+@import 'node_modules/bootstrap/scss/utilities';
+
+// BS5 Layout & components
+@import 'node_modules/bootstrap/scss/root';
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/type';
+@import 'node_modules/bootstrap/scss/images';
+@import 'node_modules/bootstrap/scss/containers';
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/tables';
+@import 'node_modules/bootstrap/scss/forms';
+@import 'node_modules/bootstrap/scss/buttons';
+@import 'node_modules/bootstrap/scss/transitions';
+@import 'node_modules/bootstrap/scss/dropdown';
+@import 'node_modules/bootstrap/scss/button-group';
+@import 'node_modules/bootstrap/scss/nav';
+@import 'node_modules/bootstrap/scss/navbar';
+@import 'node_modules/bootstrap/scss/card';
+@import 'node_modules/bootstrap/scss/accordion';
+@import 'node_modules/bootstrap/scss/breadcrumb';
+@import 'node_modules/bootstrap/scss/pagination';
+@import 'node_modules/bootstrap/scss/badge';
+@import 'node_modules/bootstrap/scss/alert';
+@import 'node_modules/bootstrap/scss/progress';
+@import 'node_modules/bootstrap/scss/list-group';
+@import 'node_modules/bootstrap/scss/close';
+@import 'node_modules/bootstrap/scss/toasts';
+@import 'node_modules/bootstrap/scss/modal';
+@import 'node_modules/bootstrap/scss/tooltip';
+@import 'node_modules/bootstrap/scss/popover';
+@import 'node_modules/bootstrap/scss/carousel';
+@import 'node_modules/bootstrap/scss/spinners';
+@import 'node_modules/bootstrap/scss/offcanvas';
+@import 'node_modules/bootstrap/scss/placeholders';
+
+// Helpers
+@import 'node_modules/bootstrap/scss/helpers';
+
+// Utilities
+@import 'node_modules/bootstrap/scss/utilities/api';
+// scss-docs-end import-stack
+
+// Customizzazioni e nuovi componenti
+@import 'utilities/text-colors';
+@import 'custom/type';
+@import 'custom/grid';
+@import 'custom/tables';
+@import 'custom/breadcrumb';
+@import 'custom/modal';
+@import 'custom/accordion';
+@import 'custom/carousel';
+@import 'custom/calendar';
+@import 'custom/alert';
+@import 'custom/buttons';
+@import 'custom/font';
+@import 'custom/forms';
+@import 'custom/form-input-file';
+@import 'custom/form-input-number';
+@import 'custom/form-input-upload';
+@import 'custom/form-toggles';
+@import 'custom/form-password';
+@import 'custom/form-select';
+@import 'custom/form-transfer';
+@import 'custom/dropdown';
+@import 'custom/pager';
+@import 'custom/tab';
+@import 'custom/cookiebar';
+@import 'custom/hero';
+@import 'custom/forward';
+@import 'custom/back-to-top';
+@import 'custom/autocomplete';
+@import 'custom/linklist';
+@import 'custom/navigation';
+@import 'custom/skiplinks';
+@import 'custom/affix';
+@import 'custom/sidebar';
+@import 'custom/sidebarthemes';
+@import 'custom/megamenu';
+@import 'custom/bottomnav';
+@import 'custom/navscroll';
+@import 'custom/navscrolltheme';
+@import 'custom/callout';
+@import 'custom/toolbar';
+@import 'custom/sections';
+@import 'custom/dialog';
+@import 'custom/notifications';
+@import 'custom/avatar';
+@import 'custom/thumbnav';
+@import 'custom/steppers';
+@import 'custom/card';
+@import 'custom/imgresponsive';
+@import 'custom/overlay-panel';
+@import 'custom/progress-donuts';
+@import 'custom/progress-bars';
+@import 'custom/progress-spinners';
+@import 'custom/gridlist';
+@import 'custom/popover';
+@import 'custom/tooltip';
+@import 'custom/list';
+@import 'custom/chips';
+@import 'custom/rating';
+@import 'custom/dimmer';
+@import 'custom/timeline';
+@import 'custom/anchor';
+@import 'custom/map';
+@import 'custom/point-list';
+@import 'custom/rating-list';
+@import 'custom/badge';
+@import 'custom/figcaption';
+@import 'custom/sticky';
+@import 'custom/print';
+@import 'custom/code';
+@import 'custom/images';
+@import 'custom/just-validate';
+@import 'custom/accessible-autocomplete';
+
+// datepicker
+@import 'custom/form-datepicker';
+
+// timepicker
+@import 'custom/timepicker';
+
+// header
+@import 'custom/headerslim';
+@import 'custom/headerslimtheme';
+@import 'custom/headercenter';
+@import 'custom/headercentertheme';
+@import 'custom/headernavbar';
+@import 'custom/headernavbartheme';
+@import 'custom/header';
+
+// footer
+@import 'custom/footer';
+
+//colors theme
+@import 'custom/navigationtheme';
+
+// componente di esempio
+@import 'custom/componente-base';
+
+//gestione dei focus
+@import 'utilities/focus';
+@import 'utilities/icons';
+
+// splide carousel
+@import '../../node_modules/@splidejs/splide/src/css/core/index';
+
+// override comuni
+@import 'override-comuni';

@@ -297,6 +297,7 @@ $link-list-checkbox-icon-right: 35px;
 $link-list-toggle-margin: 8px;
 $link-list-icon-v-padding: 5px;
 $link-list-v-padding-l: 0.45em;
+$link-list-hover-color: $primary-a5 !default;
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -399,7 +400,7 @@ $modal-heading-l-space: 0.5px;
 $modal-heading-color: $neutral-1-a10 !default;
 $modal-p-size: 0.8888888888888888rem;
 $modal-p-l-height: 1.3333333333333333rem;
-$modal-icon-color: $primary-a6 !default;
+$modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
 $modal-heading-border: 1px solid rgba(0, 0, 0, 0.05) !default;
@@ -431,12 +432,12 @@ $header-slim-h-padding: 18px;
 $header-slim-v-padding-mob: 6.5px;
 // Header Slim theme light
 $header-slim-theme-light-bg-color: $white !default;
-$header-slim-theme-light-text-color: $primary-a7 !default;
+$header-slim-theme-light-text-color: $primary !default;
 $header-slim-theme-light-button-color: $primary !default;
-$header-slim-theme-light-button-hover-color: $primary-a6 !default;
+$header-slim-theme-light-button-hover-color: $primary !default;
 
 // Header Center
-$header-center-bg-color: $primary-a6 !default;
+$header-center-bg-color: $primary !default;
 $header-center-text-color: $white !default;
 $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
@@ -466,7 +467,7 @@ $header-center-small-h2-size: 1.333em;
 $header-center-small-h3-size: 0.778em;
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
-$header-center-theme-light-text-color: $primary-a6 !default;
+$header-center-theme-light-text-color: $primary !default;
 
 // Anchors vertical offset:
 $anchor-v-offset-lg: 72px;
@@ -494,7 +495,7 @@ $card-category-m-bottom: $v-gap * 2;
 $card-big-head-size: 1.5555555555555556rem;
 $card-big-head-l-h: 1.7777777777777777rem;
 $card-signature-size: 0.8888888888888888rem;
-$card-link-color: $primary-a6 !default;
+$card-link-color: $primary !default;
 $card-link-icon-size: $v-gap * 2;
 $card-cat-icon-block-margin: $v-gap * 2;
 $card-cat-icon-size: $v-gap * 5;
@@ -510,7 +511,7 @@ $card-img-heading-size: 1.1111111111111112rem;
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
-$flag-icon-color: $primary-a6 !default;
+$flag-icon-color: $primary !default;
 $flag-icon-h: $v-gap * 6;
 $flag-icon-w: $v-gap * 4;
 // tag
@@ -549,7 +550,7 @@ $dp-grid-size: 13px;
 $dp-current-size: $v-gap * 4;
 
 //hero
-$hero-bg-color: $primary-a6 !default;
+$hero-bg-color: $primary !default;
 $hero-height-desk: 620px;
 $hero-height-mob: 380px;
 $hero-height-sm-desk: 400px;
@@ -564,7 +565,7 @@ $hero-p-size: 1rem;
 $hero-cat-spacing: $card-category-l-spacing !default;
 $hero-text-padding-desk: 120px;
 $hero-dark-bg: rgba($neutral-1-a10, 0.54) !default;
-$hero-primary-bg: rgba($primary-a6, 0.85) !default;
+$hero-primary-bg: rgba($primary, 0.85) !default;
 $hero-negative-margin: 80px;
 $hero-negative-margin-desk: 80px;
 $hero-negative-bottom-padding: 240px;
@@ -629,6 +630,10 @@ $timeline-pin-circle-size: 48px;
 $timeline-pin-circle-border: $v-gap solid $white !default;
 $timeline-content-padding: 18px 0 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
+
+//Sections
+$section-header-background-color: $primary-a7 !default;
+$section-user-header-background-color: $primary-a1 !default;
 
 // Grid breakpoints
 // Define the minimum dimensions at which your layout will change,

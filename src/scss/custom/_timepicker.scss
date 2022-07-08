@@ -108,7 +108,7 @@
 
       &:hover {
         svg {
-          fill: $primary-a6;
+          fill: $primary;
         }
       }
 
@@ -227,7 +227,7 @@
   }
 
   .spinner-control {
-    background: $primary-a6;
+    background: $primary;
 
     .spinner {
       .button-wrapper {

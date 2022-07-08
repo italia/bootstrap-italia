@@ -257,7 +257,7 @@ a.datepicker-button {
             background: transparent;
 
             span {
-              background: $primary-a6;
+              background: $primary;
               color: #fff;
             }
           }
@@ -270,7 +270,7 @@ a.datepicker-button {
 
         &.selectable.focus {
           span {
-            background: $primary-a6;
+            background: $primary;
             color: #fff;
           }
         }
@@ -476,7 +476,7 @@ abbr[title] {
         height: 40px;
 
         .icon {
-          fill: $primary-a6;
+          fill: $primary;
         }
       }
 
@@ -541,7 +541,7 @@ abbr[title] {
 
           span {
             background: #fff;
-            color: $primary-a6;
+            color: $primary;
           }
         }
 
@@ -570,7 +570,7 @@ abbr[title] {
   .datepicker-calendar {
     border-top: 2px solid $dp-label-color;
     color: #fff;
-    background-color: $primary-a6;
+    background-color: $primary;
 
     .datepicker-month-wrap {
       color: #fff;

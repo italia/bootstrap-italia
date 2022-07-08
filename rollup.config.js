@@ -94,4 +94,18 @@ export default [
       }),
     ],
   },
+  // Entry comuni
+  {
+    input: 'src/scss/bootstrap-italia-comuni.scss',
+    output: {
+      dir: 'dist',
+    },
+    plugins: [
+      scss({
+        output: 'dist/css/bootstrap-italia-comuni.min.css',
+        outputStyle: 'compressed',
+        watch: 'src/scss',
+      }),
+    ],
+  },
 ]

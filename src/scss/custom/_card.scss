@@ -430,15 +430,15 @@
       text-decoration: none;
       h5 {
         text-decoration: underline;
-        color: $primary-a6;
+        color: $primary;
       }
       .img-responsive-wrapper {
         &:before {
-          background: $primary-a6;
+          background: $primary;
           opacity: 0.3;
         }
         &:after {
-          background: $primary-a6;
+          background: $primary;
         }
       }
     }
@@ -452,7 +452,7 @@
         .icon {
           width: $card-big-top-icon-size;
           height: $card-big-top-icon-size;
-          fill: $primary-a6;
+          fill: $primary;
         }
       }
 
@@ -485,7 +485,7 @@
       right: 0;
       height: 4px;
       bottom: 0;
-      background: $primary-a6;
+      background: $primary;
     }
   }
   //head tag
@@ -500,13 +500,13 @@
     }
   }
   .card-tag {
-    color: $primary-a6;
+    color: $primary;
     font-size: $card-category-size;
     font-weight: bold;
     letter-spacing: $card-category-l-spacing;
     padding: 0 $v-gap * 4;
     border-radius: $tag-radius;
-    border: 1px solid $primary-a6;
+    border: 1px solid $primary;
   }
   // card footer
   .it-card-footer {

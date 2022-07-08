@@ -82,7 +82,7 @@
 
       .icon {
         display: block;
-        fill: $primary-a6;
+        fill: $primary;
         margin: 0 auto;
         width: 48px;
         height: 48px;
@@ -90,7 +90,7 @@
       }
 
       &:hover {
-        border: 2px dashed $primary-a6;
+        border: 2px dashed $primary;
       }
     }
 

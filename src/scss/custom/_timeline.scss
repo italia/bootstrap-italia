@@ -6,7 +6,7 @@
     z-index: 10;
     font-size: 1rem;
     font-family: $font-family-monospace;
-    color: $primary-a6;
+    color: $primary;
     font-weight: 600;
   }
   .row {
@@ -49,7 +49,7 @@
     svg {
       width: $timeline-pin-size;
       height: $timeline-pin-size;
-      fill: $primary-a6;
+      fill: $primary;
     }
     .pin-text {
       color: $select-label-color;
@@ -78,17 +78,17 @@
     }
     &.it-now {
       .pin-icon {
-        background: $primary-a6;
+        background: $primary;
       }
       svg {
         fill: #fff;
       }
       .pin-text {
         color: #fff;
-        background: $primary-a6;
+        background: $primary;
         span {
           &:after {
-            background: $primary-a6;
+            background: $primary;
           }
         }
       }
@@ -149,7 +149,7 @@
           display: inline-block;
           height: 1px;
           width: $v-gap * 2;
-          background: $primary-a6;
+          background: $primary;
           margin-right: $v-gap * 2;
         }
       }
@@ -189,7 +189,7 @@
           .pin-text {
             span {
               &:after {
-                border-color: transparent transparent transparent $primary-a6;
+                border-color: transparent transparent transparent $primary;
               }
             }
           }
@@ -207,7 +207,7 @@
           display: inline-block;
           height: 1px;
           width: $v-gap * 2;
-          background: $primary-a6;
+          background: $primary;
           margin-left: $v-gap * 2;
         }
       }
