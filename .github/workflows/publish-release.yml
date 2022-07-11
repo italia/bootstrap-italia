@@ -1,10 +1,8 @@
 name: Generate new release
 on:
   push:
-    branches:
-      - main
     tags:
-      - 'v*'
+      - 'v2*'
 jobs:
   build:
     runs-on: ubuntu-latest
