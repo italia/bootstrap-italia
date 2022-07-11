@@ -1,0 +1,73 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - website-builder
+description:
+  it:
+    documentation: 'https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/'
+    features:
+      - responsive
+      - accessibility
+      - inclusion
+      - web development
+    genericName: Tema Bootstrap
+    longDescription: |
+      La libreria **Bootstrap Italia** è il modo più semplice e sicuro per
+      costruire interfacce web **moderne**, **inclusive** e **semplici da
+      mantenere**.           
+
+
+      Completamente **open-source**, costruita sulle fondamenta di [Bootstrap
+      4.6.1](https://getbootstrap.com/ "Repository GitHub di Bootstrap"), di cui
+      eredita tutte le funzionalità, componenti, griglie e classi di utilità,
+      personalizzandole secondo le [Linee Guida di Design per i siti web della
+      Pubblica
+      Amministrazione](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/
+      "Linee guida di design per i siti web delle PA"), **Bootstrap Italia** usa
+      i pattern e i componenti definiti nello [UI Kit di Designers
+      Italia](https://designers.italia.it/kit/ui-kit/ "User Interface Kit") e li
+      trasforma in codice già pronto all'uso!
+    shortDescription: |-
+      La libreria Bootstrap Italia è il modo più semplice e sicuro per costruire
+      interfacce web moderne, inclusive e semplici da mantenere. 
+developmentStatus: stable
+isBasedOn:
+  - Bootstrap
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+  riuso:
+    codiceIPA: pcm
+landingURL: 'https://italia.github.io/bootstrap-italia'
+legal:
+  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/master/AUTHORS'
+  license: BSD-3-Clause
+  mainCopyrightOwner: Presidenza del Consiglio dei Ministri
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: Designers Italia
+  type: community
+name: Bootstrap Italia
+platforms:
+  - web
+releaseDate: '2022-06-01'
+roadmap: 'https://designers.italia.it/piano-attivita/'
+softwareType: library
+softwareVersion: v1.6.3
+url: 'https://github.com/italia/bootstrap-italia'
