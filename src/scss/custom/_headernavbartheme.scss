@@ -1,10 +1,10 @@
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
-  .it-header-navbar-wrapper {
-    &.theme-light-desk {
-      .custom-navbar-toggler .icon {
-        fill: $navigation-light-text-color;
-      }
+  .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
+    .custom-navbar-toggler .icon {
+      fill: $navigation-light-text-color;
     }
+  }
+  .it-header-navbar-wrapper {
     &.theme-dark-mobile {
       .navbar {
         // navbar mobile
