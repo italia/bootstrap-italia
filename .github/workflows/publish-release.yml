@@ -1,6 +1,8 @@
 name: Generate new release
 on:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
 jobs:
