@@ -2,9 +2,7 @@ name: Generate new release
 on:
   push:
     tags:
-      - 'v*'
-    branches:
-      - master
+      - 'v1*'
 jobs:
   build:
     runs-on: ubuntu-latest
