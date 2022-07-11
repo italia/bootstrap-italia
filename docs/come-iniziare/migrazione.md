@@ -148,7 +148,7 @@ Tabelle ridisegnate e ricostruite con variabili CSS per un maggior controllo sul
 
 ## Form
 
-- <span class="bg-danger text-white px-2">Breaking</span> Le classi di layout specifiche per i form sono state eliminate. Utilizza le griglie e le utilities invece di `.form-group`, `.form-row`, o `.form-inline`.
+- <span class="bg-danger text-white px-2">Breaking</span> Le classi di layout specifiche per i form sono state eliminate. Utilizza le griglie e le utilities invece di `.form-row` o `.form-inline`.
 - <span class="bg-danger text-white px-2">Breaking</span> La classe `.form-text` non specifica più il display, permettendo la creazione di testo accessorio di tipo inline o block a seconda della necessità, semplicemente utilizzando `<span>` o `<div>`.
 
 ## Javascript
