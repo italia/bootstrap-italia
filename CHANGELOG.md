@@ -1,3 +1,12 @@
+## [1.6.4](https://github.com/italia/bootstrap-italia/compare/v1.6.3...v1.6.4) (2022-07-12)
+
+
+### Bug Fixes
+
+* **core:** burger icon visible on light header ([9915a75](https://github.com/italia/bootstrap-italia/commit/9915a75b0057a9b438f07efc8fd77007f86663df))
+
+
+
 ## [1.6.3](https://github.com/italia/bootstrap-italia/compare/v1.6.2...v1.6.3) (2022-06-01)
 
 
