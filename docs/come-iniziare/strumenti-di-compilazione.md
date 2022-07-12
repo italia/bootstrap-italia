@@ -48,11 +48,11 @@ Per rendere operativo il sistema di compilazione di Bootstrap Italia, è necessa
 1. Clonare attraverso GIT o scaricare l'intero repository in una cartella sul proprio computer.
 2. [Scaricare e installare Node.js](https://nodejs.org/download/), che è necessario per gestire le dipendenze attraverso `npm` o `yarn`.
 3. Verificare che i comandi siano disponibili provando a lanciare `node -v` e `npm -v`.
-4. Dalla cartella del progetto, lanciare il comando `npm install` per installare le dipendenze descritte nel file [package.json]({{ site.repo }}/blob/master/package.json).
+4. Dalla cartella del progetto, lanciare il comando `npm install` per installare le dipendenze descritte nel file [package.json]({{ site.repo }}/blob/1.x/package.json).
 
 ### Script di compilazione
 
-Il file [package.json]({{ site.repo }}/blob/master/package.json) include il seguente comando, che fa uso di **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]** per la compilazione dei file sorgente di Bootstrap Italia:
+Il file [package.json]({{ site.repo }}/blob/1.x/package.json) include il seguente comando, che fa uso di **[SASS][sass], [Autoprefixer][autoprefixer], e [UglifyJS][uglify]** per la compilazione dei file sorgente di Bootstrap Italia:
 
 `npm run build`
 
@@ -102,7 +102,7 @@ Per poter generare e testare la documentazione in ambiente locale, è necessario
 
 1. Installare [Ruby][install-ruby]_, che renderà disponibile il comando `gem install _`.
 2. Lanciare il comando `gem install bundler` per installare [Bundler][gembundler].
-3. Lanciare il comando `bundle install`. Questo comando, in modo simile a quanto avviene per `npm install` si occuperà di installare tutte le dipendenze Ruby come descritto nel file [Gemfile]({{ site.repo }}blob/master/Gemfile); in questo caso Jekyll e i suoi plugin.
+3. Lanciare il comando `bundle install`. Questo comando, in modo simile a quanto avviene per `npm install` si occuperà di installare tutte le dipendenze Ruby come descritto nel file [Gemfile]({{ site.repo }}blob/1.x/Gemfile); in questo caso Jekyll e i suoi plugin.
 
 \* **Utenti Windows:** è bene seguire [questa guida][jekyll-windows] per installare Ruby e Jekyll senza problemi.
 
@@ -129,13 +129,13 @@ La struttura delle cartelle della documentazione è la seguente:
 
 Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato rispetto a un git-flow standard, permettendo così una maggior velocità di sviluppo e la creazione di una history leggibile.
 
-- Qualsiasi cosa nel ramo principale (master) è definita come stabile e potenzialmente deployabile.
-- Per lavorare su qualcosa di nuovo, creare un nuovo branch da master e assegnare un nome descrittivo:
+- Qualsiasi cosa nel ramo principale (1.x) è definita come stabile e potenzialmente deployabile.
+- Per lavorare su qualcosa di nuovo, creare un nuovo branch da 1.x e assegnare un nome descrittivo:
 
 1. in caso di una nuova feature `feat/nome_della_feature` (es: feat/new-button-component)
 2. in caso di fix `fix/nome_descrittivo_<numero_issue>` (es: fix/focus_textarea_252)
 
-- Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
+- Al termine della lavorazione, per proporre il proprio codice per l'approvazione, è sufficiente aprire una Pull Request ([qui](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) le istruzioni nel caso di fork), assicurandosi di rispettare la checklist descritta nel [template preimpostato](https://github.com/italia/bootstrap-italia/blob/1.x/.github/PULL_REQUEST_TEMPLATE.md).
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
 
@@ -163,7 +163,7 @@ $ git push --follow-tags
 
 ### Continuous integration e continuous delivery
 
-Sul branch `master` è eseguita la CI con GitHub Action, configurata per eseguire il Job `build`, test `htmlproofer`, test di accessibilità, linting del codice e dei commit (utilizzando lo standard [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)).
+Sul branch `1.x` è eseguita la CI con GitHub Action, configurata per eseguire il Job `build`, test `htmlproofer`, test di accessibilità, linting del codice e dei commit (utilizzando lo standard [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)).
 
 Il push delle tag sul repository eseguirà il CD composto da:
 

@@ -141,7 +141,7 @@ Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalit�
 
 Assieme a questa documentazione, si possono consultare una vasta quantità di esempi, consultabili sia alla sezione [esempi]({{ site.baseurl }}/docs/esempi/) e [progetti]({{ site.baseurl }}/docs/progetti/) di questo sito, che [sul sito di Bootstrap](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/examples/), con i quali è possibile iniziare a personalizzare la tua pagina semplicemente copiando il loro codice sorgente.
 
-Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella [cartella `docs/esempi/`](https://github.com/italia/bootstrap-italia/tree/master/docs/esempi).
+Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella [cartella `docs/esempi/`](https://github.com/italia/bootstrap-italia/tree/1.x/docs/esempi).
 
 Tra i [progetti]({{ site.baseurl }}/docs/progetti/) si possono trovare molti riferimenti a progetti terzi che fanno uso di Bootstrap Italia, come i temi per alcuni CMS, generatori di siti statici e framework per il web.
 

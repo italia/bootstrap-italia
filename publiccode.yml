@@ -1,4 +1,4 @@
-# This repository adheres to the publiccode.yml standard by including this 
+# This repository adheres to the publiccode.yml standard by including this
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/italia/publiccode.yml
 
@@ -17,7 +17,7 @@ description:
     longDescription: |
       La libreria **Bootstrap Italia** è il modo più semplice e sicuro per
       costruire interfacce web **moderne**, **inclusive** e **semplici da
-      mantenere**.           
+      mantenere**.
 
 
       Completamente **open-source**, costruita sulle fondamenta di [Bootstrap
@@ -32,7 +32,7 @@ description:
       trasforma in codice già pronto all'uso!
     shortDescription: |-
       La libreria Bootstrap Italia è il modo più semplice e sicuro per costruire
-      interfacce web moderne, inclusive e semplici da mantenere. 
+      interfacce web moderne, inclusive e semplici da mantenere.
 developmentStatus: stable
 isBasedOn:
   - Bootstrap
@@ -52,7 +52,7 @@ it:
     codiceIPA: pcm
 landingURL: 'https://italia.github.io/bootstrap-italia'
 legal:
-  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/master/AUTHORS'
+  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/1.x/AUTHORS'
   license: BSD-3-Clause
   mainCopyrightOwner: Presidenza del Consiglio dei Ministri
 localisation:

@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
           # Always release the tip of the default branch
-          ref: master
+          ref: 1.x
       - name: git config
         run: |
           git config user.name "${GITHUB_ACTOR}"

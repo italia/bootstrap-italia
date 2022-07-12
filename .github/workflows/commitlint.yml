@@ -2,10 +2,10 @@ name: Commitlint
 on:
   push:
     branches:
-      - master
+      - 1.x
   pull_request:
     branches:
-      - master
+      - 1.x
 jobs:
   lint-commits:
     runs-on: ubuntu-latest

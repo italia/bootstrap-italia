@@ -19,7 +19,7 @@ L'impostazione di nuovi valori alle variabili di default non può essere applica
 2. Installare la versione di **sass** che si preferisce
 3. Creare all'interno del progetto una cartella **scss**
 4. Dentro alla cartella **scss** creare un file di tipo **bootstrap-italia-custom.scss**
-5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/master/src/scss/))
+5. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia sono visibili [qui](https://github.com/italia/bootstrap-italia/blob/1.x/src/scss/))
 6. Importare la libreria **bootstrap-italia.scss** da **node_modules** alla fine del file
 
 {% capture callout %}
