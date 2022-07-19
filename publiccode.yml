@@ -13,6 +13,10 @@ description:
       - accessibility
       - inclusion
       - web development
+      - PNRR
+      - PNRR/Misura/1.4.1
+      - PNRR/Beneficiari/Comuni
+      - PNRR/Beneficiari/Scuole
     genericName: Tema Bootstrap
     longDescription: |
       La libreria **Bootstrap Italia** è il modo più semplice e sicuro per
