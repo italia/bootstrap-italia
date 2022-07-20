@@ -1,3 +1,7 @@
+## Versione di Bootstrap Italia
+
+<!--- Specifica la versione di Bootstrap Italia (ad esempio 2.0.0 o 1.6.4) -->
+
 ## Comportamento atteso
 
 <!--- In caso di bug, descrivi come ti aspetti che dovrebbe funzionare -->
