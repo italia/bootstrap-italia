@@ -1,0 +1,25 @@
+
+name: Publiccode.yml update
+
+on:
+  schedule:
+    - cron:  '30 17 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Check publiccode.yml version and date ✅
+        uses: italia/publiccode-softwareversion-check-action@master
+        id: pva
+      - name: Create Pull Request ⏫
+        uses: peter-evans/create-pull-request@v3
+        if: failure()
+        with:
+          title: "chore: update software version ${{ steps.pva.outputs.version }} and date in publiccode.yml"
+          branch: feature/publiccode-${{ steps.pva.outputs.version }}
