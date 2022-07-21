@@ -30,7 +30,7 @@
     "dev-docs": "bundle exec jekyll build --watch --incremental --drafts --config _config.yml --force_polling",
     "documentation-build": "bundle exec jekyll build",
     "documentation-serve": "bundle exec jekyll serve",
-    "documentation-deploy-to-gh-pages": "JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_production.yml && gh-pages -d _site -m 'chore: update documentation'",
+    "documentation-deploy-to-gh-pages": "JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_production.yml && ./compile-docs.sh && gh-pages -d _site -m 'chore: update documentation'",
     "lint-js": "eslint ./src/js ./docs/assets/src/js/",
     "lint-scss": "stylelint ./src/scss/ ./docs/assets/src/scss/",
     "fix-js": "eslint ./src/js ./docs/assets/src/js/ --fix",
