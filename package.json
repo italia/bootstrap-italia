@@ -88,7 +88,7 @@
     "stylelint-config-standard": "^24.0.0",
     "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^4.1.0",
-    "terser": "^5.12.0"
+    "terser": "^5.14.2"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",
