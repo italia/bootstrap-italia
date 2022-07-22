@@ -25,6 +25,8 @@ jobs:
       - name: Publish on gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          chown -R 1001:121 "/github/home/.npm"
+          chmod -R 777 /usr/local/bundle/
           npm run documentation-deploy-to-gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
