@@ -6,9 +6,9 @@
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-_🇮🇹 [Versione in italiano](README.md)._
+_🇮🇹 [Versione in italiano](README.md)_
 
-_📦 [Go to Bootstrap Italia 1.x version](https://github.com/italia/bootstrap-italia/tree/1.x)._
+_📦 [Go to Bootstrap Italia 1.x version](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 New Bootstrap Italia version is a [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 

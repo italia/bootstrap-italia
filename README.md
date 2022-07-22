@@ -6,9 +6,9 @@
 [![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-_🇬🇧 [English version](README.EN.md)._
+_🇬🇧 [English version](README.EN.md)_
 
-_📦 [Vai alla versione 1.x di Bootstrap Italia](https://github.com/italia/bootstrap-italia/tree/1.x)._
+_📦 [Vai alla versione 1.x di Bootstrap Italia](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) conforme alle linee guida di design per i servizi web della PA.
 
