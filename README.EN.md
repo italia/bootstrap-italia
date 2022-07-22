@@ -8,7 +8,7 @@
 
 _🇮🇹 [Versione in italiano](README.md)_
 
-_📦 [Go to Bootstrap Italia 1.x version](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_📦 [Go to Bootstrap Italia 1.x version (based on Bootstrap 4)](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 New Bootstrap Italia version is a [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
@@ -39,7 +39,7 @@ you can [create an issue](https://github.com/italia/bootstrap-italia/issues).
 
 Would you like to help with Bootstrap Italia? **You are in the right place!**
 
-If you have not already done so, start by spending a few minutes to deepen your knowledge on [design guidelines for Italian public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/) (in italian), and refer to the [instructions on how to contribute to Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/development/CONTRIBUTING.md) (in italian).
+If you have not already done so, start by spending a few minutes to deepen your knowledge on [design guidelines for Italian public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/) (in italian), and refer to the [instructions on how to contribute to Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md) (in italian).
 
 At this point, you'll need to configure the local environment to compile the source files and generate them
 of the documentation. You can use [Docker](https://docs.docker.com/get-started/) to start your development environment
@@ -87,7 +87,7 @@ The components used for the documentation site but not redistributed with the Bo
 
 Bootstrap Italia is **BSD 3-Clause** licensed:
 
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/development/LICENSE)
+[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
 
 <a href="https://www.browserstack.com/" target="_blank"><img src="docs/assets/img/browserstack-logo.png" alt="BrowserStack logo" width="270" height="79" /></a>
 

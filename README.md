@@ -8,7 +8,7 @@
 
 _🇬🇧 [English version](README.EN.md)_
 
-_📦 [Vai alla versione 1.x di Bootstrap Italia](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_📦 [Vai alla versione 1.x di Bootstrap Italia (basata su Bootstrap 4)](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) conforme alle linee guida di design per i servizi web della PA.
 
@@ -34,7 +34,7 @@ Vuoi segnalare un bug o fare una richiesta?
 
 Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva
 (in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
-dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/development/CONTRIBUTING.md#creare-una-issue).
+dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md#creare-una-issue).
 
 ## Come contribuire
 
@@ -42,7 +42,7 @@ Vorresti dare una mano su Bootstrap Italia? **Sei nel posto giusto!**
 
 Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle
 [linee guida di design per i servizi web della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/),
-e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/development/CONTRIBUTING.md).
+e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md).
 
 A questo punto, è necessario impostare il tuo ambiente locale per la compilazione dei file sorgente e la generazione
 della documentazione. Puoi usare [Docker](https://docs.docker.com/get-started/) per far partire l'ambiente di sviluppo.
@@ -90,7 +90,7 @@ Di seguito sono elencati invece i componenti utilizzati per il sito della docume
 
 La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICENSE:
 
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/development/LICENSE)
+[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
 
 <a href="https://www.browserstack.com/" target="_blank"><img src="docs/assets/img/browserstack-logo.png" alt="BrowserStack logo" width="270" height="79" /></a>
 
