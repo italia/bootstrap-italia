@@ -12,7 +12,7 @@ Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system
 
 La roadmap del progetto è consultabile nel [nuovo piano attività 2022 di Designers Italia](https://designers.italia.it/piano-attivita/).
 
-**[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
+**[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/1.x/)**
 
 oppure
 
